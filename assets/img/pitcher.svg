@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="pitcher-title">
+  <title id="pitcher-title">A pitcher at the top of the delivery — front knee driven up, throwing arm cocked back behind the shoulder.</title>
+  <defs>
+    <linearGradient id="p-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a58"/><stop offset="1" stop-color="#0b1f33"/>
+    </linearGradient>
+    <linearGradient id="p-sun" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#e5794a"/><stop offset="1" stop-color="#c8542c"/>
+    </linearGradient>
+    <clipPath id="p-clip"><rect width="600" height="700"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#p-clip)">
+    <rect width="600" height="700" fill="url(#p-sky)"/>
+    <circle cx="322" cy="296" r="208" fill="url(#p-sun)"/>
+
+    <!-- motion arcs behind the arm -->
+    <g fill="none" stroke="#faf7f2" stroke-opacity=".22" stroke-width="5" stroke-linecap="round">
+      <path d="M470 150 A 150 150 0 0 0 392 350"/>
+      <path d="M508 178 A 178 178 0 0 0 424 396"/>
+    </g>
+
+    <!-- mound -->
+    <path d="M-20 640 Q 300 566 620 640 L620 700 L-20 700 Z" fill="#081726"/>
+    <path d="M-20 640 Q 300 566 620 640" fill="none" stroke="#faf7f2" stroke-opacity=".16" stroke-width="4"/>
+
+    <g stroke="#faf7f2" fill="none" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+      <!-- lifted front leg: knee driven above the hip -->
+      <path d="M330 402 L244 352 L214 452"/>
+      <!-- plant leg -->
+      <path d="M330 402 L338 500 L330 585"/>
+      <!-- torso capsule -->
+      <path d="M330 400 L346 302" stroke-width="80"/>
+      <!-- glove arm reaching toward the plate -->
+      <path d="M338 312 L258 336 L182 296"/>
+      <!-- throwing arm cocked back -->
+      <path d="M354 308 L432 300 L462 224"/>
+    </g>
+
+    <!-- head + cap -->
+    <circle cx="352" cy="236" r="31" fill="#faf7f2"/>
+    <path d="M326 222 q -36 -6 -44 8 q 22 12 48 6 z" fill="#faf7f2"/>
+
+    <!-- ball -->
+    <circle cx="474" cy="208" r="16" fill="#faf7f2"/>
+    <path d="M466 196 a 16 16 0 0 0 0 24 M482 196 a 16 16 0 0 1 0 24" fill="none" stroke="#c8542c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

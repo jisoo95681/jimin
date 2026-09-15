@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="batter-title">
+  <title id="batter-title">A batter at the point of contact — hips rotated through, arms extended, bat meeting the ball.</title>
+  <defs>
+    <linearGradient id="b-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a58"/><stop offset="1" stop-color="#0b1f33"/>
+    </linearGradient>
+    <linearGradient id="b-sun" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#e5794a"/><stop offset="1" stop-color="#c8542c"/>
+    </linearGradient>
+    <clipPath id="b-clip"><rect width="600" height="700"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#b-clip)">
+    <rect width="600" height="700" fill="url(#b-sky)"/>
+    <circle cx="300" cy="300" r="212" fill="url(#b-sun)"/>
+
+    <!-- swing plane arc -->
+    <g fill="none" stroke="#faf7f2" stroke-opacity=".22" stroke-width="5" stroke-linecap="round">
+      <path d="M446 400 A 196 196 0 0 0 150 250" stroke-opacity=".55"/>
+    </g>
+
+    <!-- dirt -->
+    <path d="M-20 634 Q 300 604 620 634 L620 700 L-20 700 Z" fill="#081726"/>
+    <path d="M-20 634 Q 300 604 620 634" fill="none" stroke="#faf7f2" stroke-opacity=".16" stroke-width="4"/>
+
+    <g stroke="#faf7f2" fill="none" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+      <!-- back leg, heel turned over -->
+      <path d="M306 416 L368 518 L392 602"/>
+      <!-- braced front leg -->
+      <path d="M306 416 L238 516 L214 604"/>
+      <!-- torso -->
+      <path d="M306 414 L300 312" stroke-width="80"/>
+      <!-- back arm -->
+      <path d="M310 320 L242 356 L172 306"/>
+      <!-- lead arm, extended -->
+      <path d="M288 316 L216 330 L172 306"/>
+    </g>
+
+    <!-- helmet -->
+    <circle cx="292" cy="250" r="31" fill="#faf7f2"/>
+    <path d="M268 236 q -36 -6 -44 8 q 22 12 48 6 z" fill="#faf7f2"/>
+
+    <!-- bat: thin handle then thick barrel, so the taper reads against the arms -->
+    <g stroke="#faf7f2" fill="none" stroke-linecap="round">
+      <path d="M178 306 L120 272" stroke-width="19"/>
+      <path d="M124 274 L64 238" stroke-width="45"/>
+    </g>
+
+    <!-- ball at the point of contact -->
+    <circle cx="28" cy="206" r="16" fill="#faf7f2"/>
+    <path d="M20 194 a 16 16 0 0 0 0 24 M36 194 a 16 16 0 0 1 0 24" fill="none" stroke="#c8542c" stroke-width="3" stroke-linecap="round"/>
+    <g stroke="#faf7f2" stroke-opacity=".55" stroke-width="5" stroke-linecap="round">
+      <path d="M58 178 L92 160"/><path d="M46 166 L66 132"/>
+    </g>
+  </g>
+</svg>

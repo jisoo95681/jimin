@@ -139,6 +139,49 @@ const EXPERIENCE = [
 ];
 
 /* --------------------------------------------------------------------------
+   HOME PAGE SCROLL PANELS — the image slides sideways to uncover the text.
+   `side` is where the image ENDS UP: "right" or "left".
+   To use a photo instead of the illustration, just change `image` to
+   something like "assets/img/my-photo.jpg".
+   -------------------------------------------------------------------------- */
+
+const PANELS = [
+  {
+    image: "assets/img/pitcher.svg",
+    alt: "Illustration of a pitcher at the top of the delivery, front knee driven up and throwing arm cocked back.",
+    side: "right",
+    eyebrow: "The pitcher",
+    title: "An arm on a countdown",
+    body: [
+      "A pitch is close to the fastest motion the human body produces. The shoulder rotates at a speed that would tear most tissue, and the elbow absorbs a force sitting near the failure point of the ulnar collateral ligament.",
+      "Then it happens again, eighty more times that night, every fifth day, from spring into autumn. The medical staff aren't only treating injuries after the fact — they're managing how much is left."
+    ]
+  },
+  {
+    image: "assets/img/batter.svg",
+    alt: "Illustration of a batter at the point of contact, hips rotated through and arms extended.",
+    side: "left",
+    eyebrow: "The batter",
+    title: "Power that starts at the floor",
+    body: [
+      "A swing looks like arms. It isn't. The force starts at the back foot, travels up through the hips and the obliques, and only reaches the bat at the very end of the chain.",
+      "Which means a hitter's injuries show up somewhere different from a pitcher's — lower back, hip, core. Same sport, same dressing room, a completely different assessment."
+    ]
+  },
+  {
+    image: "assets/img/outfielder.svg",
+    alt: "Illustration of an outfielder fully extended in mid-air, glove arm stretched high to catch the ball above the wall.",
+    side: "right",
+    eyebrow: "The outfielder",
+    title: "The catch isn't the dangerous part",
+    body: [
+      "Everyone watches the ball land in the glove. The part that ends seasons is what happens a second later — an ankle, a shoulder, or a wrist taking the whole body's weight on the way down.",
+      "This is the acute end of the job: reading an injury in real time, on grass, with thirty thousand people waiting, and deciding whether that player gets up."
+    ]
+  }
+];
+
+/* --------------------------------------------------------------------------
    BLOG POSTS — newest first.
    `body` supports simple markdown:
      ## Heading      ### Smaller heading

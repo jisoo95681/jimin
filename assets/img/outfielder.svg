@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="outfield-title">
+  <title id="outfield-title">An outfielder fully extended in mid-air, glove arm stretched high to take the ball above the wall.</title>
+  <defs>
+    <linearGradient id="o-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a58"/><stop offset="1" stop-color="#0b1f33"/>
+    </linearGradient>
+    <linearGradient id="o-sun" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#e5794a"/><stop offset="1" stop-color="#c8542c"/>
+    </linearGradient>
+    <clipPath id="o-clip"><rect width="600" height="700"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#o-clip)">
+    <rect width="600" height="700" fill="url(#o-sky)"/>
+    <circle cx="318" cy="288" r="206" fill="url(#o-sun)"/>
+
+    <!-- flight path of the ball -->
+    <path d="M60 470 Q 250 120 446 126" fill="none" stroke="#faf7f2" stroke-opacity=".28"
+          stroke-width="5" stroke-linecap="round" stroke-dasharray="2 22"/>
+
+    <!-- outfield wall + grass -->
+    <path d="M-20 604 H620 V700 H-20 Z" fill="#0a1c2e"/>
+    <path d="M-20 604 H620" fill="none" stroke="#e5794a" stroke-opacity=".5" stroke-width="6"/>
+    <g stroke="#faf7f2" stroke-opacity=".08" stroke-width="3">
+      <path d="M90 604 V700"/><path d="M250 604 V700"/><path d="M410 604 V700"/><path d="M540 604 V700"/>
+    </g>
+
+    <g stroke="#faf7f2" fill="none" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+      <!-- trailing far leg -->
+      <path d="M256 434 L166 474 L96 510"/>
+      <!-- tucked near leg -->
+      <path d="M252 432 L198 508 L238 572"/>
+      <!-- torso, angled into the jump -->
+      <path d="M254 430 L298 334" stroke-width="80"/>
+      <!-- trailing arm for balance -->
+      <path d="M284 342 L224 390 L184 450"/>
+      <!-- glove arm, fully extended -->
+      <path d="M306 336 L364 264 L404 192"/>
+    </g>
+
+    <!-- glove -->
+    <g transform="rotate(24 416 168)">
+      <ellipse cx="416" cy="168" rx="34" ry="41" fill="#faf7f2"/>
+      <path d="M400 136 v-16 a 8 8 0 0 1 16 0 v14" fill="#faf7f2"/>
+    </g>
+
+    <!-- head + cap -->
+    <circle cx="306" cy="260" r="30" fill="#faf7f2"/>
+    <path d="M328 244 q 32 -18 44 -6 q -14 20 -42 16 z" fill="#faf7f2"/>
+
+    <!-- ball, just above the glove -->
+    <circle cx="438" cy="120" r="16" fill="#faf7f2"/>
+    <path d="M430 108 a 16 16 0 0 0 0 24 M446 108 a 16 16 0 0 1 0 24" fill="none" stroke="#c8542c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

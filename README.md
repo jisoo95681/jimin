@@ -10,7 +10,7 @@ nothing to install. Open `index.html` in a browser and it works.
 
 | Page | What's on it |
 | --- | --- |
-| `index.html` | Home — intro, target leagues, stats, latest experience and entries |
+| `index.html` | Home — intro, target leagues, stats, scroll-reveal panels, latest experience and entries |
 | `about.html` | Bio, the step-by-step route into the profession, skills, reading list |
 | `experience.html` | Full log of internships, work experience, courses and milestones (filterable) |
 | `blog.html` | All journal entries (filterable by tag) |
@@ -109,6 +109,47 @@ out automatically.
 | `![description](assets/img/photo.jpg)` | An image |
 | `---` | A horizontal divider |
 
+### 5. The scrolling picture panels — `PANELS`
+
+The three panels on the home page (pitcher, batter, outfielder). As you scroll,
+the picture slides sideways and uncovers the text that was sitting behind it.
+
+```js
+{
+  image: "assets/img/pitcher.svg",
+  alt: "A short description of the picture, for screen readers.",
+  side: "right",                      // which side the picture ENDS UP on: "right" or "left"
+  eyebrow: "The pitcher",
+  title: "An arm on a countdown",
+  body: [
+    "First paragraph.",
+    "Second paragraph."
+  ]
+},
+```
+
+Alternate `side` between `"right"` and `"left"` so the panels don't all slide
+the same way. Add or remove panels freely — the effect is applied to however
+many there are.
+
+#### Swapping the drawings for photographs
+
+The three pictures are SVG illustrations I drew, because I couldn't download
+photos and most baseball photography is copyrighted. To use a real photo
+instead, drop it into `assets/img/` and change one line:
+
+```js
+image: "assets/img/pitcher.jpg",
+```
+
+Portrait-shaped images work best (the panel is 6:7). Anything else gets
+cropped to fit rather than squashed. If you want photos, look for ones
+released under a licence that allows reuse — [Unsplash](https://unsplash.com)
+and [Pexels](https://pexels.com) are both free for this, and searching
+"baseball pitcher" on either will turn up plenty. Avoid pulling photos off
+Google Images or a team's website; those are almost always someone else's
+copyright.
+
 ### Adding photos
 
 Drop image files into `assets/img/`, then refer to them as
@@ -153,6 +194,25 @@ After a minute or two the site is live at
 Every push to `main` republishes it automatically.
 
 ---
+
+## How the scrolling effect works
+
+Each panel's picture starts on top of the text and slides sideways to uncover
+it as the panel scrolls into view.
+
+Where the browser supports it, this uses a CSS **scroll-driven animation**
+(`animation-timeline: view()`), so the picture tracks your scroll position
+directly and runs on the compositor — it stays smooth even on a slow phone.
+Browsers without that support fall back to an `IntersectionObserver` that
+triggers the same movement as a one-second transition when the panel comes
+into view. Both paths only animate `transform` and `opacity`, which is what
+keeps it from stuttering.
+
+Three things are handled deliberately:
+
+- **Below 820px** there's no room to slide sideways, so panels stack — picture on top, text underneath.
+- **If someone has "reduce motion" turned on** in their system settings, nothing moves; everything is simply shown in place.
+- **The finished, readable layout is the CSS default.** The "covering" position is only ever applied *on top* of that. So if the JavaScript fails or a browser doesn't understand the animation, the worst case is a plain two-column section — the text can't get stuck hidden behind the picture.
 
 ## Changing the name or colours
 

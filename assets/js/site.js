@@ -292,6 +292,60 @@
     }
   }
 
+  /* --- Page: home scroll panels ------------------------------------------- */
+
+  function renderPanels() {
+    const host = $("#panels");
+    if (!host || typeof PANELS === "undefined") return;
+
+    host.innerHTML = PANELS.map(p => `
+      <section class="reveal" data-side="${esc(p.side === "left" ? "left" : "right")}">
+        <div class="reveal__text">
+          <span class="eyebrow">${esc(p.eyebrow || "")}</span>
+          <h2>${esc(p.title)}</h2>
+          ${(p.body || []).map(t => `<p>${esc(t)}</p>`).join("")}
+        </div>
+        <div class="reveal__media">
+          <img src="${esc(p.image)}" alt="${esc(p.alt || "")}" loading="lazy" decoding="async">
+        </div>
+      </section>`).join("");
+  }
+
+  /* --- Scroll observers ---------------------------------------------------
+     The CSS keeps the finished state as its default, so these only ever add
+     classes — nothing here can leave content stuck hidden.
+     ---------------------------------------------------------------------- */
+
+  function initScrollEffects() {
+    const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!("IntersectionObserver" in window) || reduced) {
+      $$(".scroll-in").forEach(el => el.classList.add("is-in"));
+      $$(".reveal").forEach(el => el.classList.add("is-revealed"));
+      return;
+    }
+
+    // Panels: fire once the panel is properly in view.
+    const panels = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-revealed");
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.4 });
+    $$(".reveal").forEach(el => panels.observe(el));
+
+    // Everything else: a short fade-up as it comes in.
+    const fades = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    $$(".scroll-in").forEach(el => fades.observe(el));
+  }
+
   /* --- Page: about -------------------------------------------------------- */
 
   function renderAbout() {
@@ -470,10 +524,12 @@
     renderChrome();
     fillTokens();
     renderHome();
+    renderPanels();
     renderAbout();
     renderExperience();
     renderBlog();
     renderPost();
+    initScrollEffects();
   }
 
   if (document.readyState === "loading") {
