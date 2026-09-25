@@ -1,4 +1,4 @@
-# CFA L2 Concept Questions (개념)
+# CFA L2 Concept Questions
 
 Source: CFA L2 practice sets (Intercorporate Investments, Forward Commitments, Hedge Fund Strategies).
 Answers are at the bottom.

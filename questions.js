@@ -1,4 +1,4 @@
-// Concept (개념) questions from the CFA L2 practice sets:
+// Concept questions from the CFA L2 practice sets:
 // Intercorporate Investments (FSA), Pricing & Valuation of Forward Commitments (Derivatives),
 // and Hedge Fund Strategies (Alternative Investments).
 // Each question: topic (one of the 10 CFA L2 topics), reading, q, options (A/B/C), answer (index into options), why.

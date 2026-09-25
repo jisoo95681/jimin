@@ -187,7 +187,7 @@
   .miss { margin: 12px 0 0; padding-left: 18px; }
   .miss li { margin-bottom: 8px; }
 
-  /* 오답 노트 */
+  /* Wrong answers notebook */
   .note { border-top: 1px solid var(--border); padding: 14px 0; }
   .note:first-of-type { border-top: 0; }
   .note .ans { color: var(--good); font-weight: 600; margin: 6px 0; }
@@ -223,28 +223,40 @@
   .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; vertical-align: middle; }
   @keyframes pulse { 50% { opacity: .3; transform: scale(.8); } }
 
-  /* Study timer */
-  .stopwatch { text-align: center; padding: 34px 20px 28px; }
-  .sw-state { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; background: var(--aqua-pale); color: var(--muted); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-  .sw-state.on { background: var(--good-bg); color: var(--good); }
-  .sw-time { font-size: clamp(3.2rem, 15vw, 5.6rem); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.02em; line-height: 1.1; margin: 18px 0 6px; color: var(--navy); }
-  .sw-btn {
-    width: 124px; height: 124px; border-radius: 50%; margin: 18px auto 10px; display: grid; place-items: center;
-    border: 0; background: var(--blue); color: var(--white); font: inherit; font-size: 1.15rem; font-weight: 750; cursor: pointer;
-    box-shadow: 0 12px 30px rgba(47, 103, 142, .35), inset 0 0 0 6px rgba(255, 255, 255, .15);
-    transition: transform .25s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease);
+  /* Study timer: a full-screen page with just the time and one button.
+     Idle = white page, navy button; concentrating = navy page, white button. */
+  .focus {
+    position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: clamp(28px, 6vh, 64px); background: var(--white); color: var(--navy); opacity: 0;
+    transition: background 1s var(--ease), color 1s var(--ease), opacity .5s var(--ease);
   }
-  .sw-btn:active { transform: scale(.95); }
-  .sw-btn.running { background: var(--navy); box-shadow: 0 12px 30px rgba(41, 38, 69, .35), inset 0 0 0 6px rgba(187, 233, 233, .25); }
-  .sw-today { font-size: 1.05rem; margin: 6px 0 0; }
-  .sw-today b { color: var(--blue); }
+  .focus.show { opacity: 1; }
+  .focus.running { background: var(--navy); color: var(--white); }
+  .focus-time { font-size: clamp(4.5rem, 19vw, 11rem); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.03em; line-height: 1; }
+  .focus-btn {
+    position: relative; width: min(280px, 72vw); height: 76px; border-radius: 999px; border: 0; overflow: hidden; cursor: pointer;
+    font: inherit; font-size: 1.3rem; font-weight: 700; letter-spacing: .02em; background: var(--navy); color: var(--white);
+    box-shadow: 0 14px 34px rgba(41, 38, 69, .25);
+    transition: background 1s var(--ease), color 1s var(--ease), box-shadow 1s var(--ease), transform .25s var(--ease);
+  }
+  .focus-btn:active { transform: scale(.96); }
+  .focus.running .focus-btn { background: var(--white); color: var(--navy); box-shadow: 0 14px 34px rgba(0, 0, 0, .3); }
+  .focus-btn .lbl { position: absolute; inset: 0; display: grid; place-items: center; transition: opacity .6s var(--ease), transform .6s var(--ease); }
+  .focus-btn .pause { opacity: 0; transform: translateY(70%); }
+  .focus.running .focus-btn .go { opacity: 0; transform: translateY(-70%); }
+  .focus.running .focus-btn .pause { opacity: 1; transform: none; }
+  .focus-close {
+    position: absolute; top: calc(12px + env(safe-area-inset-top)); left: calc(12px + env(safe-area-inset-left));
+    background: none; border: 0; padding: 10px 12px; font: inherit; font-weight: 600; color: inherit; opacity: .5; cursor: pointer; transition: opacity .3s;
+  }
+  .focus-close:hover { opacity: .9; }
   .sess { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border); }
   .sess:first-of-type { border-top: 0; }
   .sess .when { flex: 1; font-variant-numeric: tabular-nums; }
   .sess .dur { font-weight: 700; color: var(--blue); font-variant-numeric: tabular-nums; }
   .x { background: none; border: 0; color: var(--muted); font-size: 1.1rem; cursor: pointer; padding: 2px 6px; border-radius: 6px; transition: color .2s, background .2s; }
   .x:hover { color: var(--bad); background: var(--bad-bg); }
-  .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); opacity: 0; background: var(--navy); color: var(--white); padding: 12px 18px; border-radius: 12px; font-weight: 600; box-shadow: 0 12px 30px rgba(41, 38, 69, .3); transition: opacity .4s var(--ease), transform .4s var(--ease); z-index: 50; pointer-events: none; }
+  .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); opacity: 0; background: var(--navy); color: var(--white); padding: 12px 18px; border-radius: 12px; font-weight: 600; box-shadow: 0 12px 30px rgba(41, 38, 69, .3); transition: opacity .4s var(--ease), transform .4s var(--ease); z-index: 70; pointer-events: none; }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
   /* Calendar */
@@ -258,6 +270,17 @@
   .seg { display: inline-flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--aqua-pale); border: 1px solid var(--border); }
   .seg button { border: 0; background: none; font: inherit; font-weight: 600; color: var(--muted); padding: 7px 16px; border-radius: 9px; cursor: pointer; transition: background .3s var(--ease), color .3s, box-shadow .3s; }
   .seg button.on { background: var(--white); color: var(--navy); box-shadow: 0 2px 8px rgba(41, 38, 69, .1); }
+  .month-view { position: relative; overflow: hidden; transition: height .6s var(--ease); touch-action: pan-y; }
+  .month-panel { width: 100%; }
+  .month-panel.leaving { position: absolute; top: 0; left: 0; }
+  .month-panel.from-right { animation: slide-in-right .6s var(--ease) both; }
+  .month-panel.from-left { animation: slide-in-left .6s var(--ease) both; }
+  .month-panel.leaving.to-left { animation: slide-out-left .6s var(--ease) both; }
+  .month-panel.leaving.to-right { animation: slide-out-right .6s var(--ease) both; }
+  @keyframes slide-in-right { from { transform: translateX(100%); opacity: .3; } to { transform: none; opacity: 1; } }
+  @keyframes slide-in-left { from { transform: translateX(-100%); opacity: .3; } to { transform: none; opacity: 1; } }
+  @keyframes slide-out-left { to { transform: translateX(-100%); opacity: .3; } }
+  @keyframes slide-out-right { to { transform: translateX(100%); opacity: .3; } }
   .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
   .dow { text-align: center; font-size: .72rem; font-weight: 700; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; padding-bottom: 2px; }
   .day {
@@ -388,7 +411,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v10 · 2026-09-25";
+  const APP_VERSION = "v11 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -433,7 +456,7 @@
     try { localStorage.setItem(PREFS_KEY, JSON.stringify({ ...loadPrefs(), ...p })); } catch {}
   }
 
-  // Wrong-answer notebook (오답 노트), saved on this device: { [question text]: { count, last } }
+  // Wrong-answers notebook, saved on this device: { [question text]: { count, last } }
   function loadWrong() {
     try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
   }
@@ -595,7 +618,7 @@
     app.append(
       choice("Item sets", "Exam style questions", "Read a vignette with its exhibits, then answer its questions, like the real exam.",
         `${plural(VIGNETTES.length, "vignette")} · ${EXAM_QUESTIONS.length} questions`, () => topics("exam")),
-      choice("개념", "Quick questions", "Short concept questions, one at a time.",
+      choice("Concepts", "Quick questions", "Short concept questions, one at a time.",
         `${QUESTIONS.length} questions`, () => topics("quick"))
     );
     const grid = el("div", { className: "home-grid" });
@@ -761,11 +784,11 @@
   function notebookCard() {
     const n = wrongList().length;
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "kicker" }, "오답 노트"), el("p", { className: "q", style: "margin-bottom:6px" }, `Wrong answers (${n})`));
+    card.append(el("p", { className: "kicker" }, "Review"), el("p", { className: "q", style: "margin-bottom:6px" }, `Wrong answers (${n})`));
     card.append(el("p", { className: "sub" }, n
       ? "Every question you miss is saved here. Review it, practice it, or save it as a file."
       : "Questions you get wrong will be saved here."));
-    const open = el("button", { className: "btn ghost", disabled: !n }, "Open 오답 노트");
+    const open = el("button", { className: "btn ghost", disabled: !n }, "Open wrong answers");
     open.onclick = () => notes();
     card.append(open);
     return card;
@@ -776,7 +799,7 @@
     backTo = () => notes("back");
     const list = wrongList(), w = loadWrong();
     app.append(nav("Menu", () => home("back")));
-    app.append(el("h1", { className: "title" }, "오답 노트"), el("p", { className: "sub" }, plural(list.length, "question")));
+    app.append(el("h1", { className: "title" }, "Wrong answers"), el("p", { className: "sub" }, plural(list.length, "question")));
     const card = el("div", { className: "card" });
 
     const top = el("div", { className: "row", style: "margin-top:0" });
@@ -805,7 +828,7 @@
 
     if (list.length) {
       const clear = el("button", { className: "btn ghost small", style: "margin-top:12px" }, "Clear all");
-      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); home("back"); } };
+      clear.onclick = () => { if (confirm("Delete every question from your wrong answers?")) { saveWrong({}); home("back"); } };
       card.append(clear);
     }
     app.append(card);
@@ -815,7 +838,7 @@
 
   function notesText() {
     const w = loadWrong(), list = wrongList();
-    let out = `CFA L2 오답 노트 (Wrong Answers)\nSaved ${today()}\n`;
+    let out = `CFA L2 Wrong Answers\nSaved ${today()}\n`;
     list.forEach((q, n) => {
       out += `\n${n + 1}. [${qLabel(q)}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
       out += `Q: ${q.q}\n`;
@@ -833,7 +856,7 @@
     const file = new File([notesText()], name, { type: "text/plain" });
     // On iPhone/iPad this opens the Share sheet → Save to Files, Notes, Goodnotes, AirDrop…
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try { await navigator.share({ files: [file], title: "CFA 오답 노트" }); return; }
+      try { await navigator.share({ files: [file], title: "CFA wrong answers" }); return; }
       catch (e) { if (e.name === "AbortError") return; }
     }
     const a = el("a", { href: URL.createObjectURL(file), download: name });
@@ -891,6 +914,11 @@
   }
 
   // The timer stores only its start time, so it keeps counting while the screen is locked or the app is closed.
+  // Today's focused time = saved sessions today + the running part since midnight. Pause freezes it; Concentrate continues it.
+  function todayFocusSec(s = loadStudy()) {
+    const since = s.timer.since ? Math.max(s.timer.since, midnight(new Date()).getTime()) : null;
+    return daySec(s, dkey(new Date())) + (since ? Math.floor((Date.now() - since) / 1000) : 0);
+  }
   function runningSec() { const s = loadStudy(); return s.timer.since ? Math.floor((Date.now() - s.timer.since) / 1000) : 0; }
   function toggleStudy() {
     const s = loadStudy();
@@ -900,11 +928,51 @@
       s.timer.since = null;
       saveStudy(s);
       toast(sec >= MIN_SESSION_SEC ? `Saved ${fmtDur(sec) === "0m" ? `${sec}s` : fmtDur(sec)} to today's calendar` : "Too short to save");
+      lockScreen(false);
     } else {
       s.timer.since = Date.now();
       saveStudy(s);
+      lockScreen(true);
     }
   }
+
+  // Lock screen: iOS web apps can't use Live Activities, so the timer registers as "Now Playing" media.
+  // A silent audio loop keeps the media session alive; the lock screen then shows the elapsed time and a play/pause button.
+  let silentAudio = null;
+  function silentWavUrl() {
+    const rate = 8000, n = rate; // 1 second of silence, 8 kHz mono 16-bit
+    const buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+    const str = (o, t) => [...t].forEach((c, k) => v.setUint8(o + k, c.charCodeAt(0)));
+    str(0, "RIFF"); v.setUint32(4, 36 + n * 2, true); str(8, "WAVEfmt "); v.setUint32(16, 16, true);
+    v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true);
+    v.setUint16(32, 2, true); v.setUint16(34, 16, true); str(36, "data"); v.setUint32(40, n * 2, true);
+    return URL.createObjectURL(new Blob([buf], { type: "audio/wav" }));
+  }
+  function lockScreen(running) {
+    if (!("mediaSession" in navigator)) return;
+    try {
+      if (!silentAudio) {
+        silentAudio = new Audio(silentWavUrl());
+        silentAudio.loop = true;
+        silentAudio.setAttribute("playsinline", "");
+        navigator.mediaSession.setActionHandler("play", () => { if (!loadStudy().timer.since) { toggleStudy(); refreshFocus(); } });
+        navigator.mediaSession.setActionHandler("pause", () => { if (loadStudy().timer.since) { toggleStudy(); refreshFocus(); } });
+      }
+      const today = todayFocusSec();
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: running ? "Concentrating" : "Paused",
+        artist: `Today ${fmtDur(today)} · ${dday(new Date())}`,
+        album: "CFA Level II · Study timer",
+        artwork: [{ src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }]
+      });
+      if (running) silentAudio.play().catch(() => {}); else silentAudio.pause();
+      navigator.mediaSession.playbackState = running ? "playing" : "paused";
+      // The lock screen counts the position up by itself while "playing".
+      if (navigator.mediaSession.setPositionState)
+        navigator.mediaSession.setPositionState({ duration: 24 * 3600, playbackRate: 1, position: Math.min(today, 24 * 3600 - 1) });
+    } catch {}
+  }
+  let refreshFocus = () => {};
 
   let toastTimer = null;
   function toast(text) {
@@ -920,8 +988,7 @@
   function updateStudyDisplays() {
     const s = loadStudy(), run = runningSec(), today = daySec(s, dkey(new Date()));
     const set = (id, text) => { const e = document.getElementById(id); if (e && e.textContent !== text) e.textContent = text; };
-    set("sw-time", hms(run));
-    set("sw-today-val", fmtDur(today + run));
+    set("sw-time", hms(todayFocusSec(s)));
     set("dday-count", countdown());
     const ht = document.getElementById("home-timer");
     if (ht) {
@@ -938,85 +1005,106 @@
   setInterval(updateStudyDisplays, 500);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) updateStudyDisplays(); });
 
-  function studyTimer(dir = "fwd") {
-    screen(dir);
-    app.append(nav("Menu", () => home("back")));
-    app.append(el("h1", { className: "title" }, "Study timer"),
-      el("p", { className: "sub" }, "Start when you begin, pause when you take a break. Each session is added to today in your calendar."));
-
-    const card = el("div", { className: "card stopwatch" });
-    const state = el("span", { className: "sw-state" });
-    const time = el("div", { className: "sw-time", id: "sw-time" }, "0:00:00");
-    const btn = el("button", { className: "sw-btn" });
-    const todayLine = el("p", { className: "sw-today" });
-    todayLine.append("Today: ", el("b", { id: "sw-today-val" }, "0m"));
-    card.append(state, time, btn, todayLine);
-
-    const sessCard = el("div", { className: "card" });
-    function draw() {
-      const s = loadStudy(), on = !!s.timer.since;
-      state.className = "sw-state" + (on ? " on" : "");
-      state.textContent = "";
-      if (on) state.append(el("span", { className: "live-dot", style: "margin:0" }));
-      state.append(on ? "Studying" : "Paused");
-      btn.textContent = on ? "❚❚ Pause" : "▶ Start";
-      btn.classList.toggle("running", on);
-
-      sessCard.innerHTML = "";
-      const key = dkey(new Date()), list = (s.days[key] || {}).sessions || [];
-      sessCard.append(el("p", { className: "kicker" }, "Today's sessions"));
-      if (!list.length) sessCard.append(el("p", { className: "sub", style: "margin:0" }, on ? "Your first session will appear here when you pause." : "No sessions yet today."));
-      list.forEach((x, idx) => {
-        const row = el("div", { className: "sess" });
-        row.append(el("span", { className: "when" }, x.manual ? "Added manually" : `${clock(x.start)} – ${clock(x.end)}`),
-          el("span", { className: "dur" }, fmtDur(x.sec) === "0m" ? `${x.sec}s` : fmtDur(x.sec)));
-        const del = el("button", { className: "x", ariaLabel: "Delete session" }, "×");
-        del.onclick = () => { if (confirm("Delete this session?")) { const st = loadStudy(); st.days[key].sessions.splice(idx, 1); saveStudy(st); draw(); updateStudyDisplays(); } };
-        row.append(del);
-        sessCard.append(row);
-      });
-      updateStudyDisplays();
-    }
-    btn.onclick = () => { toggleStudy(); draw(); };
-    const go = el("button", { className: "btn ghost", style: "margin-top:14px" }, "Open calendar →");
-    go.onclick = () => calendar();
-    draw();
-    app.append(card, sessCard, go);
+  function studyTimer() {
+    document.querySelectorAll(".focus").forEach(f => f.remove());
+    const page = el("div", { className: "focus" });
+    const close = el("button", { className: "focus-close" }, "‹ Menu");
+    const time = el("div", { className: "focus-time", id: "sw-time" }, hms(todayFocusSec()));
+    const btn = el("button", { className: "focus-btn" });
+    btn.append(el("span", { className: "lbl go" }, "Concentrate"), el("span", { className: "lbl pause" }, "Pause"));
+    page.append(close, time, btn);
+    document.body.append(page);
+    refreshFocus = () => { page.classList.toggle("running", !!loadStudy().timer.since); updateStudyDisplays(); };
+    refreshFocus();
+    requestAnimationFrame(() => page.classList.add("show"));
+    btn.onclick = () => { toggleStudy(); refreshFocus(); };
+    close.onclick = () => {
+      refreshFocus = () => {};
+      page.classList.remove("show");
+      setTimeout(() => page.remove(), 500);
+      home("back");
+    };
+    // If the timer was already running (e.g. the app was reopened), reconnect the lock screen on the next tap.
+    if (loadStudy().timer.since) page.addEventListener("pointerdown", () => lockScreen(!!loadStudy().timer.since), { once: true });
   }
 
   let calMonth = null; // index into CAL_MONTHS
   function calendar(dir = "fwd") {
     screen(dir);
-    const s = loadStudy(), now = new Date();
+    const now = new Date();
     if (calMonth === null) {
       const idx = CAL_MONTHS.findIndex(([y, m]) => y === now.getFullYear() && m === now.getMonth());
       calMonth = idx >= 0 ? idx : now < new Date(2026, 8, 1) ? 0 : CAL_MONTHS.length - 1;
     }
-    const [year, month] = CAL_MONTHS[calMonth];
     app.append(nav("Menu", () => home("back")));
 
-    // D-day in the top-left corner, month total on the right.
+    // D-day in the top-left corner, month total on the right. This card never animates when switching months.
     const head = el("div", { className: "card cal-head" });
     const left = el("div");
     left.append(el("p", { className: "kicker" }, "CFA Level II exam"), el("div", { className: "dday-num" }, dday(now)),
       el("div", { className: "dday-sub" }, "Fri, 20 November 2026 · 14:30"), el("div", { className: "dday-count", id: "dday-count" }, countdown()));
-    const monthSec = Object.keys(s.days).filter(k => k.startsWith(`${year}-${String(month + 1).padStart(2, "0")}`)).reduce((n, k) => n + daySec(s, k), 0);
-    const allSec = Object.keys(s.days).reduce((n, k) => n + daySec(s, k), 0);
     const right = el("div", { className: "month-total" });
-    right.append(el("span", { className: "cnt" }, `Studied in ${MONTHS[month]}`), el("b", {}, fmtDur(monthSec)), el("span", { className: "cnt" }, `Total ${fmtDur(allSec)}`));
+    const monthLabel = el("span", { className: "cnt" }), monthVal = el("b"), allVal = el("span", { className: "cnt" });
+    right.append(monthLabel, monthVal, allVal);
     head.append(left, right);
 
     const calCard = el("div", { className: "card" });
     const seg = el("div", { className: "seg" });
-    CAL_MONTHS.forEach(([y, m], idx) => {
-      const b = el("button", { className: idx === calMonth ? "on" : "" }, MONTHS[m].slice(0, 3));
-      b.onclick = () => { if (idx !== calMonth) { const d = idx > calMonth ? "fwd" : "back"; calMonth = idx; calendar(d); } };
+    const segBtns = CAL_MONTHS.map(([y, m], idx) => {
+      const b = el("button", {}, MONTHS[m].slice(0, 3));
+      b.onclick = () => goMonth(idx);
       seg.append(b);
+      return b;
     });
-    const top = el("div", { style: "display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px" });
-    top.append(el("h2", { style: "margin:0;font-size:1.25rem" }, `${MONTHS[month]} ${year}`), seg);
-    calCard.append(top);
+    const top = el("div", { style: "display:flex;justify-content:flex-end;margin-bottom:10px" });
+    top.append(seg);
+    const view = el("div", { className: "month-view" });
+    calCard.append(top, view);
+    app.append(head, calCard);
 
+    function setTotals() {
+      const s = loadStudy(), [year, month] = CAL_MONTHS[calMonth];
+      const prefix = `${year}-${String(month + 1).padStart(2, "0")}`;
+      monthLabel.textContent = `Studied in ${MONTHS[month]}`;
+      monthVal.textContent = fmtDur(Object.keys(s.days).filter(k => k.startsWith(prefix)).reduce((n, k) => n + daySec(s, k), 0));
+      allVal.textContent = `Total ${fmtDur(Object.keys(s.days).reduce((n, k) => n + daySec(s, k), 0))}`;
+      segBtns.forEach((b, idx) => b.classList.toggle("on", idx === calMonth));
+    }
+
+    let busy = false;
+    function goMonth(idx) {
+      if (idx === calMonth || idx < 0 || idx >= CAL_MONTHS.length || busy) return;
+      busy = true;
+      const forward = idx > calMonth;
+      calMonth = idx;
+      setTotals();
+      const old = view.firstChild, next = monthPanel(calMonth);
+      view.style.height = `${view.offsetHeight}px`;
+      old.classList.add("leaving", forward ? "to-left" : "to-right");
+      next.classList.add(forward ? "from-right" : "from-left");
+      view.append(next);
+      requestAnimationFrame(() => (view.style.height = `${next.offsetHeight}px`));
+      setTimeout(() => { old.remove(); next.className = "month-panel"; view.style.height = ""; busy = false; }, 620);
+    }
+
+    // Swipe left/right on the calendar to change months.
+    let sx = null, sy = null;
+    view.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    view.addEventListener("touchend", e => {
+      if (sx === null) return;
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) goMonth(calMonth + (dx < 0 ? 1 : -1));
+      sx = null;
+    });
+
+    setTotals();
+    view.append(monthPanel(calMonth));
+  }
+
+  function monthPanel(idx) {
+    const s = loadStudy(), now = new Date(), [year, month] = CAL_MONTHS[idx];
+    const panel = el("div", { className: "month-panel" });
+    panel.append(el("h2", { style: "margin:0 0 14px;font-size:1.25rem" }, `${MONTHS[month]} ${year}`));
     const grid = el("div", { className: "cal-grid" });
     DOW.forEach(d => grid.append(el("div", { className: "dow" }, d)));
     const first = new Date(year, month, 1), days = new Date(year, month + 1, 0).getDate();
@@ -1039,8 +1127,8 @@
       cell.onclick = () => dayView(key);
       grid.append(cell);
     }
-    calCard.append(grid);
-    app.append(head, calCard);
+    panel.append(grid);
+    return panel;
   }
 
   function dayView(key, dir = "fwd") {
@@ -1188,7 +1276,7 @@
   // Leaving the app (home button, switching apps) pauses the quiz and the timer.
   document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
 
-  // Single flow: one question per screen (quick questions, 오답 노트 practice, retry missed).
+  // Single flow: one question per screen (quick questions, wrong-answer practice, retry missed).
   function begin(questions, review = false) {
     flow = "single"; deck = questions; reviewMode = review;
     startRun();
@@ -1202,7 +1290,7 @@
     const quiz = el("div", { id: "quiz" });
     const card = el("div", { className: "card" });
     const meta = el("div", { className: "meta" });
-    meta.append(el("span", {}, reviewMode ? `오답 노트 · ${qLabel(q)}` : qLabel(q)), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
+    meta.append(el("span", {}, reviewMode ? `Review · ${qLabel(q)}` : qLabel(q)), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
     card.append(meta);
     if (q.vignette) card.append(vignetteDetails(q.vignette));
     card.append(el("p", { className: "q" }, q.q));
@@ -1332,8 +1420,8 @@
       card.append(ul);
     }
     card.append(el("p", { className: "sub", style: "margin-top:12px" }, reviewMode
-      ? `${plural(score, "question")} you got right left your 오답 노트. ${wrongList().length} still there.`
-      : missed.length ? `${missed.length} added to your 오답 노트.` : "Nothing new for your 오답 노트."));
+      ? `${plural(score, "question")} you got right left your wrong answers. ${wrongList().length} still there.`
+      : missed.length ? `${missed.length} added to your wrong answers.` : "Nothing new for your wrong answers."));
     if (missed.length) {
       card.append(el("p", { className: "q" }, "Review what you missed:"));
       const ul = el("ul", { className: "miss" });
@@ -1346,7 +1434,7 @@
       retry.onclick = () => begin(shuffle(missed), reviewMode);
       row.append(retry);
     }
-    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "오답 노트");
+    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "Wrong answers");
     nb.onclick = () => notes();
     const again = el("button", { className: "btn ghost" }, "Start over");
     again.onclick = () => backTo();

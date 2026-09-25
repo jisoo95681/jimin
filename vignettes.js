@@ -469,7 +469,7 @@ const VIGNETTES = [
 ];
 
 
-// Link each question back to its vignette and topic (used by the 오답 노트), and number them in order (1–23 match the original PDF).
+// Link each question back to its vignette and topic (used by the wrong-answers notebook), and number them in order (1–23 match the original PDF).
 let qNum = 0;
 VIGNETTES.forEach(v => v.questions.forEach(q => { q.vignette = v; q.topic = v.topic; q.reading = v.reading; q.num = ++qNum; }));
 
