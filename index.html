@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#2f5bd3">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
-<title>CFA Concept Quiz</title>
+<title>CFA L2 Quiz</title>
 <style>
   :root {
     --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
@@ -30,13 +30,13 @@
     font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", sans-serif;
   }
   main {
-    max-width: 640px; margin: 0 auto;
+    max-width: 720px; margin: 0 auto;
     padding: calc(24px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
   }
   h1 { font-size: 1.4rem; margin: 0 0 4px; }
   .sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-  .meta { display: flex; justify-content: space-between; color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
+  .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
   .q { font-weight: 600; margin: 0 0 16px; }
   .opt {
     display: block; width: 100%; text-align: left; margin: 0 0 10px; padding: 12px 14px;
@@ -80,6 +80,27 @@
   .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
   .timer { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1.05rem; }
   .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 24px; }
+  .choice { display: block; width: 100%; text-align: left; font: inherit; color: var(--text); cursor: pointer; }
+  .choice:hover { border-color: var(--accent); }
+  .choice h2 { margin: 0 0 6px; font-size: 1.2rem; }
+  .choice .go { color: var(--accent); font-weight: 600; margin: 10px 0 0; }
+  .vignette h2 { margin: 0 0 12px; font-size: 1.25rem; }
+  .vignette h3 { font-size: 1rem; margin: 18px 0 6px; }
+  .vignette p { margin: 0 0 12px; }
+  .exhibit { margin: 16px 0; }
+  .ex-title { font-weight: 600; font-size: .9rem; margin: 0 0 6px !important; }
+  .ex-note { font-size: .8rem; color: var(--muted); margin: 6px 0 0 !important; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.subhead td { font-weight: 600; color: var(--muted); }
+  .opt.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  details { margin: 0 0 14px; }
+  details summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+  details[open] summary { margin-bottom: 10px; }
+  .status { color: var(--muted); margin: 0; }
   @media print {
     body { background: #fff; color: #000; }
     .row, .link, .progress, .ver { display: none !important; }
@@ -90,21 +111,28 @@
 </head>
 <body>
 <main>
-  <h1>CFA L2 Concept Quiz (개념)</h1>
+  <h1>CFA L2 Quiz</h1>
   <p class="sub">Intercorporate Investments · Forward Commitments</p>
   <div id="app"></div>
   <p class="ver" id="ver"></p>
 </main>
 <script src="questions.js"></script>
+<script src="vignettes.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v4 · 2026-09-25";
+  const APP_VERSION = "v5 · 2026-09-25";
   const COUNTS = [5, 10, 15, 20];
+  const EXAM_QUESTIONS = VIGNETTES.flatMap(v => v.questions);
+  const ALL_QUESTIONS = QUESTIONS.concat(EXAM_QUESTIONS);
+
+  let mode = null;              // "quick" or "exam": which setup screen to return to
+  let flow = "single";          // "single": one question per screen; "vignette": one item set per screen
   let deck = [], i = 0, score = 0, missed = [], reviewMode = false;
   let inQuiz = false, paused = false, answeredCurrent = false;
+  let vdeck = [], vi = 0, checkedCurrent = false, vscores = [];
 
   // Timer: counts only while a quiz is running and not paused.
   let elapsed = 0, runningSince = null;
@@ -126,7 +154,7 @@
     try { return JSON.parse(localStorage.getItem(PREFS_KEY)) || {}; } catch { return {}; }
   }
   function savePrefs(p) {
-    try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch {}
+    try { localStorage.setItem(PREFS_KEY, JSON.stringify({ ...loadPrefs(), ...p })); } catch {}
   }
 
   // Wrong-answer notebook (오답 노트), saved on this device: { [question text]: { count, last } }
@@ -139,7 +167,7 @@
   function today() { return new Date().toLocaleDateString("en-CA"); }
   function wrongList() {
     const w = loadWrong();
-    return QUESTIONS.filter(q => w[q.q]).sort((a, b) => w[b.q].count - w[a.q].count);
+    return ALL_QUESTIONS.filter(q => w[q.q]).sort((a, b) => w[b.q].count - w[a.q].count);
   }
   function record(q, correct) {
     const w = loadWrong();
@@ -147,6 +175,7 @@
     else if (reviewMode) delete w[q.q]; // got it right while reviewing → it leaves the notebook
     saveWrong(w);
   }
+  function qLabel(q) { return q.vignette ? `Exam · ${q.vignette.title} · Q${q.num}` : q.topic; }
 
   function shuffle(a) {
     a = a.slice();
@@ -164,39 +193,135 @@
     return e;
   }
 
-  function start() {
-    const topics = [...new Set(QUESTIONS.map(q => q.topic))];
+  // ---------- Vignette text and exhibits ----------
+  const isNum = t => /^[–−+-]?[$£]?[\d,.]+%?\*?$/.test(t.trim());
+  function renderBody(v) {
+    const box = el("div", { className: "vignette" });
+    v.body.forEach(([type, data]) => {
+      if (type === "h") box.append(el("h3", {}, data));
+      else if (type === "p") box.append(el("p", {}, data));
+      else if (type === "table") {
+        const ex = el("div", { className: "exhibit" });
+        ex.append(el("p", { className: "ex-title" }, data.title));
+        const table = el("table");
+        if (data.head.some(h => h)) {
+          const tr = el("tr");
+          data.head.forEach((h, c) => tr.append(el("th", { className: c && !/[a-z]{4}/.test(h) ? "num" : "" }, h)));
+          const thead = el("thead");
+          thead.append(tr);
+          table.append(thead);
+        }
+        const tbody = el("tbody");
+        data.rows.forEach(r => {
+          const tr = el("tr");
+          if (r.slice(1).every(c => /^\d{4}\*?$/.test(c))) tr.className = "subhead";
+          r.forEach(c => tr.append(el("td", { className: isNum(c) ? "num" : "" }, c)));
+          tbody.append(tr);
+        });
+        table.append(tbody);
+        const scroll = el("div", { className: "scroll" });
+        scroll.append(table);
+        ex.append(scroll);
+        if (data.note) ex.append(el("p", { className: "ex-note" }, data.note));
+        box.append(ex);
+      }
+    });
+    return box;
+  }
+  function vignetteDetails(v, open = false) {
+    const d = el("details", { open });
+    d.append(el("summary", {}, `Vignette: ${v.title}`), renderBody(v));
+    return d;
+  }
+  function vignetteText(v) {
+    let out = `=== Vignette: ${v.title} (${v.topic}) ===\n`;
+    v.body.forEach(([type, data]) => {
+      if (type === "h") out += `\n${data}\n`;
+      else if (type === "p") out += `${data}\n`;
+      else {
+        out += `\n${data.title}\n`;
+        if (data.head.some(h => h)) out += `  ${data.head.join(" | ")}\n`;
+        data.rows.forEach(r => (out += `  ${r.join(" | ")}\n`));
+        if (data.note) out += `  ${data.note}\n`;
+        out += "\n";
+      }
+    });
+    return out;
+  }
+
+  // ---------- Screens ----------
+  function home() {
+    mode = null;
     app.innerHTML = "";
-    const card = el("div", { className: "card" });
-    const prefs = loadPrefs();
-    card.append(el("p", { className: "q" }, `${QUESTIONS.length} concept questions`));
+    const choice = (title, desc, meta, onclick) => {
+      const b = el("button", { className: "card choice" });
+      b.append(el("h2", {}, title), el("p", { className: "sub", style: "margin:0" }, desc),
+        el("p", { className: "go" }, `${meta}  →`));
+      b.onclick = onclick;
+      return b;
+    };
+    app.append(
+      choice("Exam style questions", "Read a vignette with its exhibits, then answer its item set, like the real exam.",
+        `${VIGNETTES.length} vignettes · ${EXAM_QUESTIONS.length} questions`, examStart),
+      choice("Quick questions (개념)", "Short concept questions, one at a time.",
+        `${QUESTIONS.length} questions`, quickStart),
+      notebookCard()
+    );
+  }
 
-    card.append(el("p", { className: "label" }, "Topic"));
-    const sel = el("select");
-    sel.append(el("option", { value: "" }, "All topics"));
-    topics.forEach(t => sel.append(el("option", { value: t }, t)));
-    if (topics.includes(prefs.topic)) sel.value = prefs.topic;
-    card.append(sel);
+  function setup() { mode === "exam" ? examStart() : mode === "quick" ? quickStart() : home(); }
 
-    // How many questions: 5 / 10 / 15 / 20 / All (options larger than the topic's pool are disabled).
-    card.append(el("p", { className: "label" }, "How many questions"));
+  function menuButton() {
+    const b = el("button", { className: "btn ghost small" }, "← Menu");
+    b.onclick = home;
+    const row = el("div", { className: "row", style: "margin:0 0 12px" });
+    row.append(b);
+    return row;
+  }
+
+  // Count chips: fixed options larger than the pool are disabled; "all" always works.
+  function chipPicker(options, getSize, current, onPick) {
     const chips = el("div", { className: "chips" });
-    let count = prefs.count || "all";
-    const pool = () => QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
-    function drawChips() {
+    let value = current || "all";
+    function draw() {
       chips.innerHTML = "";
-      const size = pool().length;
-      if (count !== "all" && count >= size) count = "all";
-      [...COUNTS, "all"].forEach(c => {
-        const b = el("button", { className: "chip" + (c === count ? " on" : "") }, c === "all" ? `All (${size})` : String(c));
+      const size = getSize();
+      if (value !== "all" && value >= size) value = "all";
+      [...options, "all"].forEach(c => {
+        const b = el("button", { className: "chip" + (c === value ? " on" : "") }, c === "all" ? `All (${size})` : String(c));
         b.disabled = c !== "all" && c >= size;
-        b.onclick = () => { count = c; drawChips(); };
+        b.onclick = () => { value = c; draw(); };
         chips.append(b);
       });
     }
-    sel.onchange = drawChips;
-    drawChips();
-    card.append(chips);
+    draw();
+    return { chips, redraw: draw, get value() { return value; } };
+  }
+
+  function topicSelect(topics, saved) {
+    const sel = el("select");
+    sel.append(el("option", { value: "" }, "All topics"));
+    topics.forEach(t => sel.append(el("option", { value: t }, t)));
+    if (topics.includes(saved)) sel.value = saved;
+    return sel;
+  }
+
+  function quickStart() {
+    mode = "quick";
+    const prefs = loadPrefs();
+    app.innerHTML = "";
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "q" }, `Quick questions · ${QUESTIONS.length} concept questions`));
+
+    card.append(el("p", { className: "label" }, "Topic"));
+    const sel = topicSelect([...new Set(QUESTIONS.map(q => q.topic))], prefs.topic);
+    card.append(sel);
+
+    card.append(el("p", { className: "label" }, "How many questions"));
+    const pool = () => QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
+    const picker = chipPicker(COUNTS, () => pool().length, prefs.count);
+    sel.onchange = picker.redraw;
+    card.append(picker.chips);
 
     const row = el("div", { className: "row" });
     const shuf = el("label");
@@ -204,26 +329,68 @@
     shuf.append(cb, " Shuffle");
     const go = el("button", { className: "btn" }, "Start");
     go.onclick = () => {
-      savePrefs({ topic: sel.value, count, shuffle: cb.checked });
+      savePrefs({ topic: sel.value, count: picker.value, shuffle: cb.checked });
       let qs = cb.checked ? shuffle(pool()) : pool();
-      if (count !== "all") qs = qs.slice(0, count);
+      if (picker.value !== "all") qs = qs.slice(0, picker.value);
       begin(qs);
     };
     row.append(go, shuf);
     card.append(row);
+    app.append(menuButton(), card, notebookCard());
+  }
 
+  function examStart() {
+    mode = "exam";
+    const prefs = loadPrefs();
+    app.innerHTML = "";
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "q" }, `Exam style · ${VIGNETTES.length} vignettes, ${EXAM_QUESTIONS.length} questions`));
+
+    card.append(el("p", { className: "label" }, "Topic"));
+    const sel = topicSelect([...new Set(VIGNETTES.map(v => v.topic))], prefs.examTopic);
+    card.append(sel);
+
+    card.append(el("p", { className: "label" }, "How many vignettes"));
+    const pool = () => VIGNETTES.filter(v => !sel.value || v.topic === sel.value);
+    const picker = chipPicker([1, 2, 3], () => pool().length, prefs.examCount);
+    const info = el("p", { className: "sub", style: "margin:8px 0 0" });
+    const drawInfo = () => {
+      const vs = pool();
+      info.textContent = vs.map(v => `${v.title} (${v.questions.length} Qs)`).join(" · ");
+    };
+    sel.onchange = () => { picker.redraw(); drawInfo(); };
+    drawInfo();
+    card.append(picker.chips, info);
+
+    const row = el("div", { className: "row" });
+    const shuf = el("label");
+    const cb = el("input", { type: "checkbox", checked: prefs.examShuffle === true });
+    shuf.append(cb, " Shuffle vignettes");
+    const go = el("button", { className: "btn" }, "Start");
+    go.onclick = () => {
+      savePrefs({ examTopic: sel.value, examCount: picker.value, examShuffle: cb.checked });
+      let vs = cb.checked ? shuffle(pool()) : pool();
+      if (picker.value !== "all") vs = vs.slice(0, picker.value);
+      beginExam(vs);
+    };
+    row.append(go, shuf);
+    card.append(row);
+    app.append(menuButton(), card, notebookCard());
+  }
+
+  function notebookCard() {
     const n = wrongList().length;
-    const notesCard = el("div", { className: "card" });
-    notesCard.append(el("p", { className: "q" }, `오답 노트 · Wrong answers (${n})`));
-    notesCard.append(el("p", { className: "sub" }, n
-      ? "Every question you miss is saved here. Review it, practice it, or save it as a file."
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "q" }, `오답 노트 · Wrong answers (${n})`));
+    card.append(el("p", { className: "sub" }, n
+      ? "Every question you miss (quick and exam style) is saved here. Review it, practice it, or save it as a file."
       : "Questions you get wrong will be saved here."));
     const open = el("button", { className: "btn", disabled: !n }, "Open 오답 노트");
     open.onclick = notes;
-    const nrow = el("div", { className: "row" });
-    nrow.append(open);
-    notesCard.append(nrow);
-    app.append(card, notesCard);
+    const row = el("div", { className: "row" });
+    row.append(open);
+    card.append(row);
+    return card;
   }
 
   function notes() {
@@ -240,18 +407,20 @@
     const pdf = el("button", { className: "btn ghost", disabled: !list.length }, "Print / PDF");
     pdf.onclick = () => window.print();
     const back = el("button", { className: "btn ghost" }, "Back");
-    back.onclick = start;
+    back.onclick = setup;
     top.append(practice, file, pdf, back);
     card.append(top);
 
     list.forEach((q, n) => {
       const item = el("div", { className: "note" });
-      const meta = el("div", { className: "small" }, `${n + 1}. ${q.topic} · missed ${w[q.q].count}× · last ${w[q.q].last}`);
+      const meta = el("div", { className: "small" }, `${n + 1}. ${qLabel(q)} · missed ${w[q.q].count}× · last ${w[q.q].last}`);
       const rm = el("button", { className: "link" }, "Remove");
       rm.onclick = () => { const x = loadWrong(); delete x[q.q]; saveWrong(x); notes(); };
       meta.append(rm);
-      item.append(meta, el("p", { className: "q" }, q.q));
-      item.append(el("p", { className: "ans" }, `✓ ${q.options[q.answer]}`));
+      item.append(meta);
+      if (q.vignette) item.append(vignetteDetails(q.vignette));
+      item.append(el("p", { className: "q" }, q.q));
+      item.append(el("p", { className: "ans" }, `✓ ${q.vignette ? LETTERS[q.answer] + ". " : ""}${q.options[q.answer]}`));
       item.append(el("div", { className: "why" }, q.why));
       card.append(item);
     });
@@ -259,23 +428,27 @@
     if (list.length) {
       const bottom = el("div", { className: "row" });
       const clear = el("button", { className: "btn ghost" }, "Clear all");
-      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); start(); } };
+      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); setup(); } };
       bottom.append(clear);
       card.append(bottom);
     }
     app.append(card);
   }
+  // Show vignettes in the printout.
+  window.addEventListener("beforeprint", () => document.querySelectorAll("details").forEach(d => (d.open = true)));
 
   function notesText() {
-    const w = loadWrong();
+    const w = loadWrong(), list = wrongList();
     let out = `CFA L2 오답 노트 (Wrong Answers)\nSaved ${today()}\n`;
-    wrongList().forEach((q, n) => {
-      out += `\n${n + 1}. [${q.topic}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
+    list.forEach((q, n) => {
+      out += `\n${n + 1}. [${qLabel(q)}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
       out += `Q: ${q.q}\n`;
       q.options.forEach((o, k) => (out += `   ${LETTERS[k]}. ${o}\n`));
       out += `Answer: ${LETTERS[q.answer]}. ${q.options[q.answer]}\n`;
       out += `Why: ${q.why}\n`;
     });
+    const vs = [...new Set(list.filter(q => q.vignette).map(q => q.vignette))];
+    if (vs.length) out += `\n\nVIGNETTES\n\n` + vs.map(vignetteText).join("\n");
     return out;
   }
 
@@ -292,11 +465,33 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
-  function begin(questions, review = false) {
-    deck = questions; i = 0; score = 0; missed = []; reviewMode = review;
+  // ---------- Running a quiz (both flows) ----------
+  function startRun() {
+    i = 0; score = 0; missed = [];
     inQuiz = true; paused = false;
     timerReset();
-    show();
+  }
+
+  function answeredCount() {
+    if (flow === "vignette")
+      return vdeck.slice(0, vi).reduce((n, v) => n + v.questions.length, 0) + (checkedCurrent ? vdeck[vi].questions.length : 0);
+    return i + (answeredCurrent ? 1 : 0);
+  }
+
+  function topbar() {
+    const top = el("div", { className: "topbar" });
+    const pauseBtn = el("button", { className: "btn ghost small" }, "❚❚ Pause");
+    pauseBtn.onclick = pause;
+    top.append(el("span", { className: "timer", id: "timer" }, `⏱ ${fmt(timeMs())}`), pauseBtn);
+    return top;
+  }
+
+  function progress(frac) {
+    const bar = el("div", { className: "progress" });
+    const fill = el("div");
+    fill.style.width = `${frac * 100}%`;
+    bar.append(fill);
+    return bar;
   }
 
   function pause() {
@@ -304,10 +499,11 @@
     paused = true;
     timerPause();
     document.getElementById("quiz").hidden = true;
-    const answered = i + (answeredCurrent ? 1 : 0);
+    const answered = answeredCount();
     const card = el("div", { className: "card", id: "paused" });
     card.append(el("p", { className: "score" }, "Paused"));
-    card.append(el("p", { className: "sub" }, `Time so far ${fmt(timeMs())} · ${answered} of ${deck.length} answered · Score ${score}`));
+    const where = flow === "vignette" ? `Vignette ${vi + 1} of ${vdeck.length} · ` : "";
+    card.append(el("p", { className: "sub" }, `Time so far ${fmt(timeMs())} · ${where}${answered} of ${deck.length} answered · Score ${score}`));
     const row = el("div", { className: "row" });
     const resume = el("button", { className: "btn" }, "Resume");
     resume.onclick = () => {
@@ -317,10 +513,11 @@
       timerResume();
     };
     const quit = el("button", { className: "btn ghost" }, "Quit");
-    quit.onclick = () => (answered ? results(answered) : endQuiz(start));
+    quit.onclick = () => (answered ? results(answered) : endQuiz(setup));
     row.append(resume, quit);
     card.append(row);
     app.append(card);
+    window.scrollTo(0, 0);
   }
 
   function endQuiz(next) {
@@ -332,26 +529,28 @@
   // Leaving the app (home button, switching apps) pauses the quiz and the timer.
   document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
 
+  // Single flow: one question per screen (quick questions, 오답 노트 practice, retry missed).
+  function begin(questions, review = false) {
+    flow = "single"; deck = questions; reviewMode = review;
+    startRun();
+    show();
+  }
+
   function show() {
     const q = deck[i];
     answeredCurrent = false;
     app.innerHTML = "";
+    window.scrollTo(0, 0);
     const quiz = el("div", { id: "quiz" });
-    const top = el("div", { className: "topbar" });
-    const pauseBtn = el("button", { className: "btn ghost small" }, "❚❚ Pause");
-    pauseBtn.onclick = pause;
-    top.append(el("span", { className: "timer", id: "timer" }, `⏱ ${fmt(timeMs())}`), pauseBtn);
-    const bar = el("div", { className: "progress" });
-    const fill = el("div");
-    fill.style.width = `${(i / deck.length) * 100}%`;
-    bar.append(fill);
     const card = el("div", { className: "card" });
     const meta = el("div", { className: "meta" });
-    meta.append(el("span", {}, reviewMode ? `오답 노트 · ${q.topic}` : q.topic), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
-    card.append(meta, el("p", { className: "q" }, q.q));
+    meta.append(el("span", {}, reviewMode ? `오답 노트 · ${qLabel(q)}` : qLabel(q)), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
+    card.append(meta);
+    if (q.vignette) card.append(vignetteDetails(q.vignette));
+    card.append(el("p", { className: "q" }, q.q));
 
-    // Shuffle the choices so the correct letter isn't predictable.
-    const order = shuffle(q.options.map((_, k) => k));
+    // Shuffle quick-question choices so the letter isn't predictable; exam items keep their A/B/C order.
+    const order = q.vignette ? q.options.map((_, k) => k) : shuffle(q.options.map((_, k) => k));
     const buttons = order.map((k, pos) => {
       const b = el("button", { className: "opt" }, `${LETTERS[pos]}. ${q.options[k]}`);
       b.dataset.k = k;
@@ -359,7 +558,7 @@
       card.append(b);
       return b;
     });
-    quiz.append(top, bar, card);
+    quiz.append(topbar(), progress(i / deck.length), card);
     app.append(quiz);
   }
 
@@ -381,23 +580,108 @@
     next.focus();
   }
 
+  // Vignette flow: the case and its exhibits on top, its questions below, Next at the bottom.
+  function beginExam(vs) {
+    flow = "vignette"; vdeck = vs; vi = 0; vscores = [];
+    deck = vs.flatMap(v => v.questions); reviewMode = false;
+    startRun();
+    showVignette();
+  }
+
+  function showVignette() {
+    const v = vdeck[vi];
+    checkedCurrent = false;
+    app.innerHTML = "";
+    window.scrollTo(0, 0);
+    const quiz = el("div", { id: "quiz" });
+
+    const vcard = el("div", { className: "card" });
+    const meta = el("div", { className: "meta" });
+    meta.append(el("span", {}, `Vignette ${vi + 1} of ${vdeck.length}`), el("span", {}, `${v.topic} · Score ${score}`));
+    const body = renderBody(v);
+    body.prepend(el("h2", {}, v.title));
+    vcard.append(meta, body);
+    quiz.append(topbar(), progress(vi / vdeck.length), vcard);
+
+    const chosen = new Array(v.questions.length).fill(null);
+    const status = el("p", { className: "status" });
+    const check = el("button", { className: "btn" }, "Check answers");
+    const updateStatus = () => {
+      const n = chosen.filter(c => c !== null).length;
+      status.textContent = `${n} of ${v.questions.length} answered`;
+      check.disabled = n < v.questions.length;
+    };
+
+    const qcards = v.questions.map((q, qi) => {
+      const card = el("div", { className: "card" });
+      card.append(el("div", { className: "meta" }, `Question ${q.num}`), el("p", { className: "q" }, q.q));
+      const buttons = q.options.map((text, k) => {
+        const b = el("button", { className: "opt" }, `${LETTERS[k]}. ${text}`);
+        b.onclick = () => {
+          chosen[qi] = k;
+          buttons.forEach((x, kk) => x.classList.toggle("sel", kk === k));
+          updateStatus();
+        };
+        card.append(b);
+        return b;
+      });
+      quiz.append(card);
+      return { card, buttons };
+    });
+
+    const bottom = el("div", { className: "card" });
+    const row = el("div", { className: "row", style: "margin:12px 0 0" });
+    row.append(check);
+    bottom.append(status, row);
+    quiz.append(bottom);
+    updateStatus();
+
+    check.onclick = () => {
+      checkedCurrent = true;
+      let right = 0;
+      v.questions.forEach((q, qi) => {
+        const { card, buttons } = qcards[qi], k = chosen[qi];
+        buttons.forEach(b => { b.disabled = true; b.classList.remove("sel"); });
+        buttons[q.answer].classList.add("correct");
+        if (k === q.answer) { right++; score++; }
+        else { buttons[k].classList.add("wrong"); missed.push(q); }
+        record(q, k === q.answer);
+        card.append(el("div", { className: "why" }, q.why));
+      });
+      vscores.push({ title: v.title, right, total: v.questions.length });
+      status.textContent = `${right} / ${v.questions.length} correct on this set · Score ${score} / ${answeredCount()}`;
+      row.innerHTML = "";
+      const last = vi + 1 >= vdeck.length;
+      const next = el("button", { className: "btn" }, last ? "See results" : "Next vignette →");
+      next.onclick = () => { vi++; last ? results() : showVignette(); };
+      row.append(next);
+    };
+    app.append(quiz);
+  }
+
   function results(answered = deck.length) {
     endQuiz(() => {});
     const total = timeMs();
     app.innerHTML = "";
+    window.scrollTo(0, 0);
     const card = el("div", { className: "card" });
     if (answered < deck.length) card.append(el("p", { className: "sub" }, `Quit early: ${answered} of ${deck.length} answered`));
     card.append(el("p", { className: "score" }, `${score} / ${answered}`));
     const pct = Math.round((score / answered) * 100);
     card.append(el("p", { className: "sub" }, `${pct}% correct`));
     card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / answered)} per question`));
+    if (flow === "vignette" && vscores.length) {
+      const ul = el("ul", { className: "miss" });
+      vscores.forEach(s => ul.append(el("li", {}, `${s.title}: ${s.right} / ${s.total}`)));
+      card.append(ul);
+    }
     card.append(el("p", { className: "sub" }, reviewMode
       ? `${score} question${score === 1 ? "" : "s"} you got right left your 오답 노트. ${wrongList().length} still there.`
       : missed.length ? `${missed.length} added to your 오답 노트.` : "Nothing new for your 오답 노트."));
     if (missed.length) {
       card.append(el("p", { className: "q" }, "Review what you missed:"));
       const ul = el("ul", { className: "miss" });
-      missed.forEach(q => ul.append(el("li", {}, `${q.q} → ${q.options[q.answer]}`)));
+      missed.forEach(q => ul.append(el("li", {}, `${q.vignette ? `Q${q.num}. ` : ""}${q.q} → ${q.vignette ? LETTERS[q.answer] + ". " : ""}${q.options[q.answer]}`)));
       card.append(ul);
     }
     const row = el("div", { className: "row" });
@@ -408,16 +692,17 @@
     }
     const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "오답 노트");
     nb.onclick = notes;
-    row.append(nb);
-    const home = el("button", { className: "btn ghost" }, "Start over");
-    home.onclick = start;
-    row.append(home);
+    const again = el("button", { className: "btn ghost" }, "Start over");
+    again.onclick = setup;
+    const menu = el("button", { className: "btn ghost" }, "Menu");
+    menu.onclick = home;
+    row.append(nb, again, menu);
     card.append(row);
     app.append(card);
   }
 
   document.getElementById("ver").textContent = APP_VERSION;
-  start();
+  home();
 
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js");
