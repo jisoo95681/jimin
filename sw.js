@@ -1,6 +1,6 @@
 // Offline support: serve from the network when online (so new questions show up),
 // fall back to the cached copy when offline.
-const CACHE = "cfa-quiz-v2";
+const CACHE = "cfa-quiz-v4";
 const FILES = ["./", "index.html", "questions.js", "manifest.json", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {
@@ -16,7 +16,7 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
   e.respondWith(
-    fetch(e.request)
+    fetch(e.request, { cache: "no-cache" }) // always check GitHub for a newer version
       .then(res => {
         const copy = res.clone();
         caches.open(CACHE).then(c => c.put(e.request, copy));

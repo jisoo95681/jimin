@@ -48,7 +48,7 @@
   .opt.correct { border-color: var(--good); background: var(--good-bg); }
   .opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
   .why { margin-top: 6px; padding: 12px 14px; border-left: 3px solid var(--accent); color: var(--text); font-size: .95rem; }
-  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
   .btn {
     padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent);
     background: var(--accent); color: #fff; font: inherit; cursor: pointer;
@@ -67,9 +67,22 @@
   .note .small { color: var(--muted); font-size: .85rem; }
   .link { background: none; border: 0; padding: 0; color: var(--bad); font: inherit; font-size: .85rem; cursor: pointer; margin-left: 8px; }
   .btn:disabled { opacity: .45; cursor: default; }
+  .btn.small { padding: 6px 14px; font-size: .9rem; }
+  [hidden] { display: none !important; }
+  .label { font-size: .85rem; color: var(--muted); margin: 14px 0 6px; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+    background: transparent; color: var(--text); font: inherit; cursor: pointer;
+  }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .chip:disabled { opacity: .35; cursor: default; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .timer { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1.05rem; }
+  .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 24px; }
   @media print {
     body { background: #fff; color: #000; }
-    .row, .link, .progress { display: none !important; }
+    .row, .link, .progress, .ver { display: none !important; }
     .card { border: 0; padding: 0; }
     .note { break-inside: avoid; }
   }
@@ -80,13 +93,41 @@
   <h1>CFA L2 Concept Quiz (개념)</h1>
   <p class="sub">Intercorporate Investments · Forward Commitments</p>
   <div id="app"></div>
+  <p class="ver" id="ver"></p>
 </main>
 <script src="questions.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
+  const PREFS_KEY = "cfa-quiz-prefs";
+  const APP_VERSION = "v4 · 2026-09-25";
+  const COUNTS = [5, 10, 15, 20];
   let deck = [], i = 0, score = 0, missed = [], reviewMode = false;
+  let inQuiz = false, paused = false, answeredCurrent = false;
+
+  // Timer: counts only while a quiz is running and not paused.
+  let elapsed = 0, runningSince = null;
+  function timerReset() { elapsed = 0; runningSince = Date.now(); }
+  function timerPause() { if (runningSince) { elapsed += Date.now() - runningSince; runningSince = null; } }
+  function timerResume() { if (!runningSince) runningSince = Date.now(); }
+  function timeMs() { return elapsed + (runningSince ? Date.now() - runningSince : 0); }
+  function fmt(ms) {
+    const t = Math.floor(ms / 1000), h = Math.floor(t / 3600), m = Math.floor((t % 3600) / 60), sec = t % 60;
+    const pad = n => String(n).padStart(2, "0");
+    return h ? `${h}:${pad(m)}:${pad(sec)}` : `${m}:${pad(sec)}`;
+  }
+  setInterval(() => {
+    const t = document.getElementById("timer");
+    if (t) t.textContent = `⏱ ${fmt(timeMs())}`;
+  }, 250);
+
+  function loadPrefs() {
+    try { return JSON.parse(localStorage.getItem(PREFS_KEY)) || {}; } catch { return {}; }
+  }
+  function savePrefs(p) {
+    try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch {}
+  }
 
   // Wrong-answer notebook (오답 노트), saved on this device: { [question text]: { count, last } }
   function loadWrong() {
@@ -127,20 +168,48 @@
     const topics = [...new Set(QUESTIONS.map(q => q.topic))];
     app.innerHTML = "";
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "q" }, `${QUESTIONS.length} concept questions. Choose a topic:`));
+    const prefs = loadPrefs();
+    card.append(el("p", { className: "q" }, `${QUESTIONS.length} concept questions`));
+
+    card.append(el("p", { className: "label" }, "Topic"));
     const sel = el("select");
     sel.append(el("option", { value: "" }, "All topics"));
     topics.forEach(t => sel.append(el("option", { value: t }, t)));
-    const shuf = el("label");
-    const cb = el("input", { type: "checkbox", checked: true });
-    shuf.append(cb, " Shuffle");
+    if (topics.includes(prefs.topic)) sel.value = prefs.topic;
+    card.append(sel);
+
+    // How many questions: 5 / 10 / 15 / 20 / All (options larger than the topic's pool are disabled).
+    card.append(el("p", { className: "label" }, "How many questions"));
+    const chips = el("div", { className: "chips" });
+    let count = prefs.count || "all";
+    const pool = () => QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
+    function drawChips() {
+      chips.innerHTML = "";
+      const size = pool().length;
+      if (count !== "all" && count >= size) count = "all";
+      [...COUNTS, "all"].forEach(c => {
+        const b = el("button", { className: "chip" + (c === count ? " on" : "") }, c === "all" ? `All (${size})` : String(c));
+        b.disabled = c !== "all" && c >= size;
+        b.onclick = () => { count = c; drawChips(); };
+        chips.append(b);
+      });
+    }
+    sel.onchange = drawChips;
+    drawChips();
+    card.append(chips);
+
     const row = el("div", { className: "row" });
+    const shuf = el("label");
+    const cb = el("input", { type: "checkbox", checked: prefs.shuffle !== false });
+    shuf.append(cb, " Shuffle");
     const go = el("button", { className: "btn" }, "Start");
     go.onclick = () => {
-      const pool = QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
-      begin(cb.checked ? shuffle(pool) : pool);
+      savePrefs({ topic: sel.value, count, shuffle: cb.checked });
+      let qs = cb.checked ? shuffle(pool()) : pool();
+      if (count !== "all") qs = qs.slice(0, count);
+      begin(qs);
     };
-    row.append(sel, shuf, go);
+    row.append(go, shuf);
     card.append(row);
 
     const n = wrongList().length;
@@ -225,12 +294,53 @@
 
   function begin(questions, review = false) {
     deck = questions; i = 0; score = 0; missed = []; reviewMode = review;
+    inQuiz = true; paused = false;
+    timerReset();
     show();
   }
 
+  function pause() {
+    if (!inQuiz || paused) return;
+    paused = true;
+    timerPause();
+    document.getElementById("quiz").hidden = true;
+    const answered = i + (answeredCurrent ? 1 : 0);
+    const card = el("div", { className: "card", id: "paused" });
+    card.append(el("p", { className: "score" }, "Paused"));
+    card.append(el("p", { className: "sub" }, `Time so far ${fmt(timeMs())} · ${answered} of ${deck.length} answered · Score ${score}`));
+    const row = el("div", { className: "row" });
+    const resume = el("button", { className: "btn" }, "Resume");
+    resume.onclick = () => {
+      card.remove();
+      document.getElementById("quiz").hidden = false;
+      paused = false;
+      timerResume();
+    };
+    const quit = el("button", { className: "btn ghost" }, "Quit");
+    quit.onclick = () => (answered ? results(answered) : endQuiz(start));
+    row.append(resume, quit);
+    card.append(row);
+    app.append(card);
+  }
+
+  function endQuiz(next) {
+    inQuiz = false; paused = false;
+    timerPause();
+    next();
+  }
+
+  // Leaving the app (home button, switching apps) pauses the quiz and the timer.
+  document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
+
   function show() {
     const q = deck[i];
+    answeredCurrent = false;
     app.innerHTML = "";
+    const quiz = el("div", { id: "quiz" });
+    const top = el("div", { className: "topbar" });
+    const pauseBtn = el("button", { className: "btn ghost small" }, "❚❚ Pause");
+    pauseBtn.onclick = pause;
+    top.append(el("span", { className: "timer", id: "timer" }, `⏱ ${fmt(timeMs())}`), pauseBtn);
     const bar = el("div", { className: "progress" });
     const fill = el("div");
     fill.style.width = `${(i / deck.length) * 100}%`;
@@ -249,11 +359,13 @@
       card.append(b);
       return b;
     });
-    app.append(bar, card);
+    quiz.append(top, bar, card);
+    app.append(quiz);
   }
 
   function answer(k, buttons, card) {
     const q = deck[i];
+    answeredCurrent = true;
     buttons.forEach(b => (b.disabled = true));
     const byK = k2 => buttons.find(b => +b.dataset.k === k2);
     byK(q.answer).classList.add("correct");
@@ -269,12 +381,16 @@
     next.focus();
   }
 
-  function results() {
+  function results(answered = deck.length) {
+    endQuiz(() => {});
+    const total = timeMs();
     app.innerHTML = "";
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "score" }, `${score} / ${deck.length}`));
-    const pct = Math.round((score / deck.length) * 100);
+    if (answered < deck.length) card.append(el("p", { className: "sub" }, `Quit early: ${answered} of ${deck.length} answered`));
+    card.append(el("p", { className: "score" }, `${score} / ${answered}`));
+    const pct = Math.round((score / answered) * 100);
     card.append(el("p", { className: "sub" }, `${pct}% correct`));
+    card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / answered)} per question`));
     card.append(el("p", { className: "sub" }, reviewMode
       ? `${score} question${score === 1 ? "" : "s"} you got right left your 오답 노트. ${wrongList().length} still there.`
       : missed.length ? `${missed.length} added to your 오답 노트.` : "Nothing new for your 오답 노트."));
@@ -300,6 +416,7 @@
     app.append(card);
   }
 
+  document.getElementById("ver").textContent = APP_VERSION;
   start();
 
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
