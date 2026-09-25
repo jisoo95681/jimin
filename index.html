@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFA Concept Quiz</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
+    --border: #e2e2e0; --accent: #2f5bd3; --good: #1e8e3e; --bad: #c5221f;
+    --good-bg: #e6f4ea; --bad-bg: #fce8e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151517; --card: #202024; --text: #ececef; --muted: #9a9aa2;
+      --border: #34343a; --accent: #7d9cff; --good: #6fcf8a; --bad: #f28b82;
+      --good-bg: #1d3325; --bad-bg: #3a1f1d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.4rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .meta { display: flex; justify-content: space-between; color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
+  .q { font-weight: 600; margin: 0 0 16px; }
+  .opt {
+    display: block; width: 100%; text-align: left; margin: 0 0 10px; padding: 12px 14px;
+    background: transparent; color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; font: inherit; cursor: pointer;
+  }
+  .opt:hover:not(:disabled) { border-color: var(--accent); }
+  .opt:disabled { cursor: default; }
+  .opt.correct { border-color: var(--good); background: var(--good-bg); }
+  .opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
+  .why { margin-top: 6px; padding: 12px 14px; border-left: 3px solid var(--accent); color: var(--text); font-size: .95rem; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  .btn {
+    padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent);
+    background: var(--accent); color: #fff; font: inherit; cursor: pointer;
+  }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  select { font: inherit; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
+  .progress { height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 16px; overflow: hidden; }
+  .progress > div { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+  .score { font-size: 2rem; font-weight: 700; margin: 0 0 8px; }
+  .miss { margin: 12px 0 0; padding-left: 18px; }
+  .miss li { margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CFA L2 Concept Quiz (개념)</h1>
+  <p class="sub">Intercorporate Investments · Forward Commitments</p>
+  <div id="app"></div>
+</main>
+<script src="questions.js"></script>
+<script>
+  const app = document.getElementById("app");
+  const LETTERS = ["A", "B", "C", "D"];
+  let deck = [], i = 0, score = 0, missed = [];
+
+  function shuffle(a) {
+    a = a.slice();
+    for (let k = a.length - 1; k > 0; k--) {
+      const j = Math.floor(Math.random() * (k + 1));
+      [a[k], a[j]] = [a[j], a[k]];
+    }
+    return a;
+  }
+
+  function el(tag, attrs = {}, text) {
+    const e = document.createElement(tag);
+    Object.assign(e, attrs);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function start() {
+    const topics = [...new Set(QUESTIONS.map(q => q.topic))];
+    app.innerHTML = "";
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "q" }, `${QUESTIONS.length} concept questions. Choose a topic:`));
+    const sel = el("select");
+    sel.append(el("option", { value: "" }, "All topics"));
+    topics.forEach(t => sel.append(el("option", { value: t }, t)));
+    const shuf = el("label");
+    const cb = el("input", { type: "checkbox", checked: true });
+    shuf.append(cb, " Shuffle");
+    const row = el("div", { className: "row" });
+    const go = el("button", { className: "btn" }, "Start");
+    go.onclick = () => {
+      const pool = QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
+      begin(cb.checked ? shuffle(pool) : pool);
+    };
+    row.append(sel, shuf, go);
+    card.append(row);
+    app.append(card);
+  }
+
+  function begin(questions) {
+    deck = questions; i = 0; score = 0; missed = [];
+    show();
+  }
+
+  function show() {
+    const q = deck[i];
+    app.innerHTML = "";
+    const bar = el("div", { className: "progress" });
+    const fill = el("div");
+    fill.style.width = `${(i / deck.length) * 100}%`;
+    bar.append(fill);
+    const card = el("div", { className: "card" });
+    const meta = el("div", { className: "meta" });
+    meta.append(el("span", {}, q.topic), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
+    card.append(meta, el("p", { className: "q" }, q.q));
+
+    // Shuffle the choices so the correct letter isn't predictable.
+    const order = shuffle(q.options.map((_, k) => k));
+    const buttons = order.map((k, pos) => {
+      const b = el("button", { className: "opt" }, `${LETTERS[pos]}. ${q.options[k]}`);
+      b.dataset.k = k;
+      b.onclick = () => answer(k, buttons, card);
+      card.append(b);
+      return b;
+    });
+    app.append(bar, card);
+  }
+
+  function answer(k, buttons, card) {
+    const q = deck[i];
+    buttons.forEach(b => (b.disabled = true));
+    const byK = k2 => buttons.find(b => +b.dataset.k === k2);
+    byK(q.answer).classList.add("correct");
+    if (k === q.answer) score++;
+    else { byK(k).classList.add("wrong"); missed.push(q); }
+    card.append(el("div", { className: "why" }, q.why));
+    const row = el("div", { className: "row" });
+    const next = el("button", { className: "btn" }, i + 1 < deck.length ? "Next" : "See results");
+    next.onclick = () => { i++; i < deck.length ? show() : results(); };
+    row.append(next);
+    card.append(row);
+    next.focus();
+  }
+
+  function results() {
+    app.innerHTML = "";
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "score" }, `${score} / ${deck.length}`));
+    const pct = Math.round((score / deck.length) * 100);
+    card.append(el("p", { className: "sub" }, `${pct}% correct`));
+    if (missed.length) {
+      card.append(el("p", { className: "q" }, "Review what you missed:"));
+      const ul = el("ul", { className: "miss" });
+      missed.forEach(q => ul.append(el("li", {}, `${q.q} → ${q.options[q.answer]}`)));
+      card.append(ul);
+    }
+    const row = el("div", { className: "row" });
+    if (missed.length) {
+      const retry = el("button", { className: "btn" }, "Retry missed");
+      retry.onclick = () => begin(shuffle(missed));
+      row.append(retry);
+    }
+    const home = el("button", { className: "btn ghost" }, "Start over");
+    home.onclick = start;
+    row.append(home);
+    card.append(row);
+    app.append(card);
+  }
+
+  start();
+</script>
+</body>
+</html>
