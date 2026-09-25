@@ -290,10 +290,180 @@ const VIGNETTES = [
         why: "PV of the dividend (one month from now) = 1.20 / (1.0065)^(1/12) = 1.1994. Ft = (172 − 1.1994) × (1.0065)^0.25 = 171.0776. Vt = (171.0776 − 180.539) / (1.0065)^0.25 = −$9.45."
       }
     ]
+  },
+  {
+    id: "pwpf",
+    title: "Puyallup-Wenatchee Pension Fund",
+    topic: "Hedge Fund Strategies",
+    body: [
+      ["p", "Snohomish Mukilteo is a portfolio analyst for the Puyallup-Wenatchee Pension Fund (PWPF). PWPF's investment committee (IC) asks Mukilteo to research adding hedge funds to the PWPF portfolio."],
+      ["p", "A member of the IC meets with Mukilteo to discuss hedge fund strategies. During the meeting, the IC member admits that her knowledge of hedge fund strategies is fairly limited but tells Mukilteo she believes the following:"],
+      ["p", "Statement 1: Equity market-neutral strategies use a relative value approach."],
+      ["p", "Statement 2: Event-driven strategies are not exposed to equity market beta risk."],
+      ["p", "Statement 3: Opportunistic strategies have risk exposure to market directionality."],
+      ["p", "The IC member also informs Mukilteo that for equity-related strategies, the IC considers low volatility to be more important than negative correlation."],
+      ["p", "Mukilteo researches various hedge fund strategies. First, Mukilteo analyzes an event-driven strategy involving two companies, Algona Applications (AA) and Tukwila Technologies (TT). AA's management, believing that its own shares are overvalued, uses its shares to acquire TT. The IC has expressed concern about this type of strategy because of the potential for loss if the acquisition unexpectedly fails. Mukilteo's research reveals a way to use derivatives to protect against this loss, and he believes that such protection will satisfy the IC's concern."],
+      ["p", "Next, while researching relative value strategies, Mukilteo considers a government bond strategy that involves buying lower-liquidity, off-the-run bonds and selling higher-liquidity, duration-matched, on-the-run bonds."],
+      ["p", "Mukilteo examines an opportunistic strategy implemented by one of the hedge funds under consideration. The hedge fund manager selects 12 AAA rated corporate bonds with actively traded futures contracts and approximately equal durations. For each corporate bond, the manager calculates the 30-day change in the yield spread over a constant risk-free rate. He then ranks the bonds according to this spread change. For the bonds that show the greatest spread narrowing (widening), the hedge fund will take long (short) positions in their futures contracts. The net holding for this strategy is market neutral."],
+      ["p", "Mukilteo also plans to recommend a specialist hedge fund strategy that would allow PWPF to maintain a high Sharpe ratio even during a financial crisis when equity markets fall."],
+      ["p", "The IC has been considering the benefits of allocating to a fund of funds (FoF) or to a multi-strategy fund (MSF). Mukilteo receives the following email from a member of the IC:"],
+      ["p", "\"From my perspective, an FoF is superior even though it entails higher manager-specific operational risk and will require us to pay a double layer of fees without being able to net performance fees on individual managers. I especially like the tactical allocation advantage of FoFs—that they are more likely to be well informed about when to tactically reallocate to a particular strategy and more capable of shifting capital between strategies quickly.\""],
+      ["p", "Finally, Mukilteo creates a model to simulate adding selected individual hedge fund strategies to the current portfolio with a 20% allocation. The IC's primary considerations for a combined portfolio are (1) that the variance of the combined portfolio must be less than 90% of that of the current portfolio and (2) that the combined portfolio maximize the risk-adjusted return with the expectation of large negative events. Exhibit 1 provides historical performance and risk metrics for three simulated portfolios."],
+      ["table", {
+        title: "Exhibit 1: Performance of Various Combined Portfolios",
+        head: ["Hedge fund strategy", "Standard deviation (%)", "Sharpe ratio", "Sortino ratio", "Maximum drawdown (%)"],
+        rows: [
+          ["Current portfolio"],
+          ["NA", "7.95", "0.58", "1.24", "14.18"],
+          ["Three potential portfolios with a 20% hedge fund allocation"],
+          ["Merger arbitrage", "7.22", "0.73", "1.35", "5.60"],
+          ["Systematic futures", "6.94", "0.83", "1.68", "8.04"],
+          ["Equity market neutral", "7.17", "0.73", "1.80", "10.72"]
+        ]
+      }]
+    ],
+    questions: [
+      {
+        q: "Which of the IC member's statements regarding hedge fund strategies is incorrect?",
+        options: ["Statement 1", "Statement 2", "Statement 3"],
+        answer: 1,
+        why: "Statement 2 is incorrect: event-driven strategies such as merger arbitrage have some natural equity market beta. Market stress can disrupt a deal, and deals are more likely to fail in stress periods, so merger arbitrage has market sensitivity and left-tail risk (and high fees make it an expensive form of embedded beta). A is wrong: equity market neutral does use a relative value approach (balanced longs and shorts, near-zero net market exposure, betting on mean reversion of mispriced pairs). C is wrong: opportunistic/global macro strategies depend on spotting global trends, so they are exposed to market directionality (\"trendiness\")."
+      },
+      {
+        q: "Based on what the IC considers important for equity-related strategies, which strategy should Mukilteo most likely avoid?",
+        options: ["Long/short equity", "Equity market neutral", "Dedicated short selling and short biased"],
+        answer: 2,
+        why: "The IC ranks low volatility above negative correlation. Dedicated short / short-biased strategies offer negative correlation but lower return goals and higher volatility (short beta exposure), so avoid them. A is wrong: long/short equity targets about 50% lower standard deviation than long-only with similar returns. B is wrong: equity market neutral is well diversified with steadier, lower-volatility returns (beta ≈ 0), except when heavy leverage forces downsizing."
+      },
+      {
+        q: "Which of the following set of derivative positions will most likely satisfy the IC's concern about the event-driven strategy involving AA and TT?",
+        options: ["Long out-of-the-money puts on AA shares and long out-of-the-money calls on TT shares", "Long out-of-the-money calls on AA shares and long out-of-the-money puts on TT shares", "Long risk-free bonds, short out-of-the-money puts on AA shares, and long out-of-the-money calls on TT shares"],
+        answer: 1,
+        why: "This is stock-for-stock merger arbitrage: long TT (target), short AA (acquirer) in the offer ratio. If the deal fails, TT falls back and AA rises back. OTM calls on AA cover the short; OTM puts on TT protect the long. A has the options reversed. C is the payoff PROFILE of merger arbitrage (riskless bond + short put on acquirer + long call on target, which pays if a white knight bids higher), not protection."
+      },
+      {
+        q: "The government bond strategy that Mukilteo considers is best described as a:",
+        options: ["carry trade.", "yield curve trade.", "long/short credit trade."],
+        answer: 0,
+        why: "Long lower-liquidity off-the-run, short higher-liquidity duration-matched on-the-run is the classic fixed-income carry trade: long the higher yielder, short the lower yielder. Duration and credit are matched, so the key risk is liquidity. B is wrong: yield curve (calendar spread) trades take positions at different curve points to profit from flattening/steepening; interest rate risk is the main risk. C is wrong: long/short credit trades exploit credit quality differences across issuers and are more volatile."
+      },
+      {
+        q: "The opportunistic strategy that Mukilteo considers is most likely to be described as a:",
+        options: ["global macro strategy.", "time-series momentum strategy.", "cross-sectional momentum strategy."],
+        answer: 2,
+        why: "It is a managed futures, cross-sectional momentum strategy: within one asset class (AAA corporate bonds), go long the relative winners (spreads narrowing) and short the relative losers (spreads widening), ending net zero / market neutral. A is wrong: global macro is top-down and trades global trends. B is wrong: time-series momentum sets each position from the asset's own trend, independent of the others, and can be net long or short."
+      },
+      {
+        q: "The specialist hedge fund strategy that Mukilteo plans to recommend is most likely:",
+        options: ["cross-asset volatility trading between the US and Japanese markets.", "selling equity volatility and collecting the volatility risk premium.", "buying longer-dated out-of-the-money options on VIX index futures."],
+        answer: 2,
+        why: "Long equity volatility is a crisis hedge: volatility is about 80% negatively correlated with equity returns, so it lowers portfolio standard deviation and supports the Sharpe ratio (at the cost of premium). Longer-dated options have more vega; OTM options trade at higher implied volatility. A is wrong: cross-asset volatility trading can carry idiosyncratic macro risks that hurt in a crisis. B is wrong: the volatility seller provides crash insurance and loses in a crisis."
+      },
+      {
+        q: "Based on the email that Mukilteo received, the IC member's perspective is correct with regard to:",
+        options: ["layering and netting of fees.", "tactical allocation capabilities.", "manager-specific operational risks."],
+        answer: 0,
+        why: "FoFs do have a double layer of fees and investors can't net performance fees: they pay incentive fees to winning managers even if the FoF is flat or down (netting risk). In an MSF the GP absorbs netting risk (except under a pass-through fee model, where investors implicitly pay part). B is wrong: MSFs have the tactical advantage (faster reallocation, better transparency). C is wrong: MSFs have HIGHER manager-specific operational risk because all teams share systems under one roof."
+      },
+      {
+        q: "Based on the IC's primary considerations for a combined portfolio, which simulated hedge fund strategy portfolio in Exhibit 1 creates the most suitable combined portfolio?",
+        options: ["Merger arbitrage", "Systematic futures", "Equity market neutral"],
+        answer: 2,
+        why: "Max variance = 0.90 × 7.95² = 0.90 × 63.20 = 56.88, so max SD = √56.88 = 7.54%. All three portfolios (7.22, 6.94, 7.17) pass. With large negative events expected, use the Sortino ratio (downside deviation only), not Sharpe. Highest Sortino: equity market neutral, 1.80. A is wrong: lowest max drawdown (5.60) but Sortino only 1.35. B is wrong: highest Sharpe (0.83), but Sortino 1.68 < 1.80."
+      }
+    ]
+  },
+  {
+    id: "ctrf",
+    title: "Cascadia Teachers' Retirement Fund (practice variant)",
+    topic: "Hedge Fund Strategies",
+    body: [
+      ["p", "Talia Moreno is an investment analyst for the Cascadia Teachers' Retirement Fund (CTRF). CTRF's investment committee (IC) has asked Moreno to evaluate a hedge fund allocation."],
+      ["p", "At an initial meeting, an IC member shares the following beliefs:"],
+      ["p", "Statement 1: Event-driven merger arbitrage strategies have left-tail risk because deals are more likely to fail during periods of market stress."],
+      ["p", "Statement 2: Global macro strategies are typically bottom-up and depend little on trends in markets."],
+      ["p", "Statement 3: Equity market-neutral managers construct portfolios with an expected beta of approximately zero."],
+      ["p", "The IC member adds that, because CTRF's existing portfolio is heavily weighted toward equities, for equity-related strategies the IC considers negative correlation with the existing portfolio to be more important than low volatility."],
+      ["p", "Moreno first reviews an event-driven opportunity. Brixton Robotics (BR) has announced it will acquire Halden Sensors (HS) in exchange for BR shares. A hedge fund under consideration has bought HS shares and sold BR shares in the ratio of the offer. The IC is worried about losses if the deal collapses and asks Moreno to identify an option-based hedge."],
+      ["p", "Next, Moreno reviews a fixed-income relative value fund that buys 2-year government notes and sells duration-weighted 10-year government notes of the same issuer, expecting the yield curve to steepen."],
+      ["p", "Moreno then examines a managed futures fund. The manager follows 15 liquid commodity futures. Each month, for each contract separately, the manager goes long if the contract's own trailing 12-month return is positive and short if it is negative. Because each position is set independently, the fund's net exposure can be long or short."],
+      ["p", "The IC also wants a specialist strategy that is expected to produce steady returns in normal market environments by collecting a premium for providing insurance against market crises. The IC accepts that this strategy may suffer losses in a crisis."],
+      ["p", "Moreno receives an email from an IC member: \"I prefer a multi-strategy fund (MSF) to a fund of funds (FoF). An MSF can shift capital between strategies more quickly and efficiently, its operational risk is better diversified than an FoF's, and under a pass-through fee model we would bear none of the netting risk.\""],
+      ["p", "Finally, Moreno simulates adding a 20% allocation to individual hedge fund strategies. The IC requires (1) that the variance of the combined portfolio be less than 85% of the current portfolio's variance and (2) that the combined portfolio maximize risk-adjusted return, given that large negative events are expected. Exhibit 1 shows the results."],
+      ["table", {
+        title: "Exhibit 1: Simulated Combined Portfolios",
+        head: ["Hedge fund strategy", "Standard deviation (%)", "Sharpe ratio", "Sortino ratio", "Maximum drawdown (%)"],
+        rows: [
+          ["Current portfolio"],
+          ["NA", "9.20", "0.52", "1.10", "16.40"],
+          ["Three potential portfolios with a 20% hedge fund allocation"],
+          ["Merger arbitrage", "8.30", "0.66", "1.52", "7.10"],
+          ["Systematic futures", "8.05", "0.74", "1.61", "9.30"],
+          ["Equity market neutral", "8.60", "0.70", "1.75", "11.20"]
+        ]
+      }]
+    ],
+    questions: [
+      {
+        q: "Which of the IC member's statements is incorrect?",
+        options: ["Statement 1", "Statement 2", "Statement 3"],
+        answer: 1,
+        why: "Statement 2 is incorrect: global macro is TOP-DOWN, and its key return source is discerning and capitalizing on trends in global markets, so it is exposed to market directionality. Statement 1 is correct: merger deals fail more often in stress, giving market sensitivity and left-tail risk. Statement 3 is correct: equity market-neutral managers target a portfolio beta of about zero."
+      },
+      {
+        q: "Given the IC's priority for equity-related strategies, which strategy is most appropriate?",
+        options: ["Dedicated short selling and short biased", "Long/short equity", "Equity market neutral"],
+        answer: 0,
+        why: "Here the IC ranks NEGATIVE CORRELATION above low volatility (the reverse of the PWPF case). Dedicated short / short-biased strategies provide the negative correlation benefit, even though they are more volatile and have lower return goals. Long/short equity keeps positive net beta, and equity market neutral is roughly uncorrelated (beta ≈ 0), not negatively correlated."
+      },
+      {
+        q: "Which option positions would best hedge the merger arbitrage position against the deal collapsing?",
+        options: ["Long OTM puts on HS and long OTM calls on BR", "Long OTM calls on HS and long OTM puts on BR", "Long risk-free bonds, short OTM puts on BR, and long OTM calls on HS"],
+        answer: 0,
+        why: "The fund is long HS (target) and short BR (acquirer). If the deal fails, HS drops and BR rises. Puts on HS protect the long; calls on BR cover the short. B reverses the options. C is the payoff profile of merger arbitrage, not a hedge."
+      },
+      {
+        q: "The fixed-income relative value strategy Moreno reviews is best described as a:",
+        options: ["long/short credit trade.", "carry trade.", "yield curve trade."],
+        answer: 2,
+        why: "Long and short positions at different maturities of the same issuer, betting on steepening, is a yield curve (calendar spread) trade. Because the issuer is the same, credit and liquidity risk are largely hedged and interest rate risk is the main concern. A carry trade would be off-the-run vs. on-the-run at the same duration; a long/short credit trade exploits credit quality differences across issuers."
+      },
+      {
+        q: "The managed futures strategy Moreno examines is best described as:",
+        options: ["time-series momentum.", "cross-sectional momentum.", "global macro."],
+        answer: 0,
+        why: "Each position depends only on that contract's own trend, set independently of the others, and the fund can be net long or net short: time-series momentum. Cross-sectional momentum would rank the contracts against each other and end up near market neutral."
+      },
+      {
+        q: "The specialist strategy that fits the IC's description is most likely:",
+        options: ["selling equity volatility to collect the volatility risk premium.", "buying longer-dated OTM options on VIX futures.", "cross-asset volatility trading between two markets."],
+        answer: 0,
+        why: "The volatility SELLER provides insurance against crises and earns the volatility risk premium, with steadier returns in normal markets but losses in a crisis, which matches what the IC accepts. Buying VIX options is the opposite (crisis protection, paying premium). Cross-asset volatility trading carries idiosyncratic macro risk."
+      },
+      {
+        q: "The IC member's email is correct with regard to:",
+        options: ["operational risk.", "netting risk under a pass-through fee model.", "tactical allocation."],
+        answer: 2,
+        why: "MSFs can reallocate capital between strategies faster and more efficiently, so the tactical point is right. Operational risk is HIGHER (less diversified) in an MSF because all teams share one set of systems. Under a pass-through fee model the investor DOES implicitly pay part of the netting risk."
+      },
+      {
+        q: "The maximum standard deviation the IC allows for the combined portfolio is closest to:",
+        options: ["7.82%", "8.74%", "8.48%"],
+        answer: 2,
+        why: "The limit is on VARIANCE: max variance = 0.85 × 9.20² = 0.85 × 84.64 = 71.94, so max SD = √71.94 = 8.48% (equivalently √0.85 × 9.20). Trap: 7.82% applies 85% to the standard deviation directly (0.85 × 9.20)."
+      },
+      {
+        q: "Based on the IC's two requirements, which simulated portfolio in Exhibit 1 is most suitable?",
+        options: ["Merger arbitrage", "Systematic futures", "Equity market neutral"],
+        answer: 1,
+        why: "Max SD = 8.48%. Equity market neutral (8.60%) FAILS the variance test despite the highest Sortino ratio (1.75). Of the two that pass, use the Sortino ratio because large negative events are expected: systematic futures 1.61 > merger arbitrage 1.52. Merger arbitrage's lower max drawdown (7.10) is not the measure the IC asked for."
+      }
+    ]
   }
 ];
 
-// Link each question back to its vignette and topic (used by the 오답 노트), and number them 1–23 as in the PDF.
+
+// Link each question back to its vignette and topic (used by the 오답 노트), and number them in order (1–23 match the original PDF).
 let qNum = 0;
 VIGNETTES.forEach(v => v.questions.forEach(q => { q.vignette = v; q.topic = v.topic; q.num = ++qNum; }));
 
