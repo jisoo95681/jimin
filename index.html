@@ -60,6 +60,19 @@
   .score { font-size: 2rem; font-weight: 700; margin: 0 0 8px; }
   .miss { margin: 12px 0 0; padding-left: 18px; }
   .miss li { margin-bottom: 8px; }
+  .card + .card { margin-top: 16px; }
+  .note { border-top: 1px solid var(--border); padding: 14px 0; }
+  .note:first-of-type { border-top: 0; }
+  .note .ans { color: var(--good); font-weight: 600; margin: 6px 0; }
+  .note .small { color: var(--muted); font-size: .85rem; }
+  .link { background: none; border: 0; padding: 0; color: var(--bad); font: inherit; font-size: .85rem; cursor: pointer; margin-left: 8px; }
+  .btn:disabled { opacity: .45; cursor: default; }
+  @media print {
+    body { background: #fff; color: #000; }
+    .row, .link, .progress { display: none !important; }
+    .card { border: 0; padding: 0; }
+    .note { break-inside: avoid; }
+  }
 </style>
 </head>
 <body>
@@ -72,7 +85,27 @@
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
-  let deck = [], i = 0, score = 0, missed = [];
+  const STORE_KEY = "cfa-quiz-wrong";
+  let deck = [], i = 0, score = 0, missed = [], reviewMode = false;
+
+  // Wrong-answer notebook (오답 노트), saved on this device: { [question text]: { count, last } }
+  function loadWrong() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
+  }
+  function saveWrong(w) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(w)); } catch {}
+  }
+  function today() { return new Date().toLocaleDateString("en-CA"); }
+  function wrongList() {
+    const w = loadWrong();
+    return QUESTIONS.filter(q => w[q.q]).sort((a, b) => w[b.q].count - w[a.q].count);
+  }
+  function record(q, correct) {
+    const w = loadWrong();
+    if (!correct) w[q.q] = { count: ((w[q.q] && w[q.q].count) || 0) + 1, last: today() };
+    else if (reviewMode) delete w[q.q]; // got it right while reviewing → it leaves the notebook
+    saveWrong(w);
+  }
 
   function shuffle(a) {
     a = a.slice();
@@ -109,11 +142,89 @@
     };
     row.append(sel, shuf, go);
     card.append(row);
+
+    const n = wrongList().length;
+    const notesCard = el("div", { className: "card" });
+    notesCard.append(el("p", { className: "q" }, `오답 노트 · Wrong answers (${n})`));
+    notesCard.append(el("p", { className: "sub" }, n
+      ? "Every question you miss is saved here. Review it, practice it, or save it as a file."
+      : "Questions you get wrong will be saved here."));
+    const open = el("button", { className: "btn", disabled: !n }, "Open 오답 노트");
+    open.onclick = notes;
+    const nrow = el("div", { className: "row" });
+    nrow.append(open);
+    notesCard.append(nrow);
+    app.append(card, notesCard);
+  }
+
+  function notes() {
+    const list = wrongList(), w = loadWrong();
+    app.innerHTML = "";
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "q" }, `오답 노트 · ${list.length} question${list.length === 1 ? "" : "s"}`));
+
+    const top = el("div", { className: "row" });
+    const practice = el("button", { className: "btn", disabled: !list.length }, "Practice these");
+    practice.onclick = () => begin(shuffle(list), true);
+    const file = el("button", { className: "btn ghost", disabled: !list.length }, "Save as file");
+    file.onclick = saveFile;
+    const pdf = el("button", { className: "btn ghost", disabled: !list.length }, "Print / PDF");
+    pdf.onclick = () => window.print();
+    const back = el("button", { className: "btn ghost" }, "Back");
+    back.onclick = start;
+    top.append(practice, file, pdf, back);
+    card.append(top);
+
+    list.forEach((q, n) => {
+      const item = el("div", { className: "note" });
+      const meta = el("div", { className: "small" }, `${n + 1}. ${q.topic} · missed ${w[q.q].count}× · last ${w[q.q].last}`);
+      const rm = el("button", { className: "link" }, "Remove");
+      rm.onclick = () => { const x = loadWrong(); delete x[q.q]; saveWrong(x); notes(); };
+      meta.append(rm);
+      item.append(meta, el("p", { className: "q" }, q.q));
+      item.append(el("p", { className: "ans" }, `✓ ${q.options[q.answer]}`));
+      item.append(el("div", { className: "why" }, q.why));
+      card.append(item);
+    });
+
+    if (list.length) {
+      const bottom = el("div", { className: "row" });
+      const clear = el("button", { className: "btn ghost" }, "Clear all");
+      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); start(); } };
+      bottom.append(clear);
+      card.append(bottom);
+    }
     app.append(card);
   }
 
-  function begin(questions) {
-    deck = questions; i = 0; score = 0; missed = [];
+  function notesText() {
+    const w = loadWrong();
+    let out = `CFA L2 오답 노트 (Wrong Answers)\nSaved ${today()}\n`;
+    wrongList().forEach((q, n) => {
+      out += `\n${n + 1}. [${q.topic}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
+      out += `Q: ${q.q}\n`;
+      q.options.forEach((o, k) => (out += `   ${LETTERS[k]}. ${o}\n`));
+      out += `Answer: ${LETTERS[q.answer]}. ${q.options[q.answer]}\n`;
+      out += `Why: ${q.why}\n`;
+    });
+    return out;
+  }
+
+  async function saveFile() {
+    const name = `CFA-wrong-answers-${today()}.txt`;
+    const file = new File([notesText()], name, { type: "text/plain" });
+    // On iPhone/iPad this opens the Share sheet → Save to Files, Notes, Goodnotes, AirDrop…
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: "CFA 오답 노트" }); return; }
+      catch (e) { if (e.name === "AbortError") return; }
+    }
+    const a = el("a", { href: URL.createObjectURL(file), download: name });
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  function begin(questions, review = false) {
+    deck = questions; i = 0; score = 0; missed = []; reviewMode = review;
     show();
   }
 
@@ -126,7 +237,7 @@
     bar.append(fill);
     const card = el("div", { className: "card" });
     const meta = el("div", { className: "meta" });
-    meta.append(el("span", {}, q.topic), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
+    meta.append(el("span", {}, reviewMode ? `오답 노트 · ${q.topic}` : q.topic), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
     card.append(meta, el("p", { className: "q" }, q.q));
 
     // Shuffle the choices so the correct letter isn't predictable.
@@ -148,6 +259,7 @@
     byK(q.answer).classList.add("correct");
     if (k === q.answer) score++;
     else { byK(k).classList.add("wrong"); missed.push(q); }
+    record(q, k === q.answer);
     card.append(el("div", { className: "why" }, q.why));
     const row = el("div", { className: "row" });
     const next = el("button", { className: "btn" }, i + 1 < deck.length ? "Next" : "See results");
@@ -163,6 +275,9 @@
     card.append(el("p", { className: "score" }, `${score} / ${deck.length}`));
     const pct = Math.round((score / deck.length) * 100);
     card.append(el("p", { className: "sub" }, `${pct}% correct`));
+    card.append(el("p", { className: "sub" }, reviewMode
+      ? `${score} question${score === 1 ? "" : "s"} you got right left your 오답 노트. ${wrongList().length} still there.`
+      : missed.length ? `${missed.length} added to your 오답 노트.` : "Nothing new for your 오답 노트."));
     if (missed.length) {
       card.append(el("p", { className: "q" }, "Review what you missed:"));
       const ul = el("ul", { className: "miss" });
@@ -172,9 +287,12 @@
     const row = el("div", { className: "row" });
     if (missed.length) {
       const retry = el("button", { className: "btn" }, "Retry missed");
-      retry.onclick = () => begin(shuffle(missed));
+      retry.onclick = () => begin(shuffle(missed), reviewMode);
       row.append(retry);
     }
+    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "오답 노트");
+    nb.onclick = notes;
+    row.append(nb);
     const home = el("button", { className: "btn ghost" }, "Start over");
     home.onclick = start;
     row.append(home);
