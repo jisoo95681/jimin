@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CFA Quiz">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#2f5bd3">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
 <title>CFA Concept Quiz</title>
 <style>
   :root {
@@ -22,7 +29,10 @@
     margin: 0; background: var(--bg); color: var(--text);
     font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", sans-serif;
   }
-  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  main {
+    max-width: 640px; margin: 0 auto;
+    padding: calc(24px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  }
   h1 { font-size: 1.4rem; margin: 0 0 4px; }
   .sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
@@ -173,6 +183,10 @@
   }
 
   start();
+
+  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+    navigator.serviceWorker.register("sw.js");
+  }
 </script>
 </body>
 </html>
