@@ -263,7 +263,6 @@
   .cal-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .dday-num { font-family: var(--serif); font-size: clamp(2.6rem, 10vw, 3.4rem); font-weight: 700; line-height: 1; color: var(--navy); }
   .dday-sub { color: var(--muted); font-size: .88rem; margin-top: 6px; }
-  .dday-count { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--blue); margin-top: 2px; }
   .month-total { text-align: right; }
   .month-total b { display: block; font-size: 1.4rem; color: var(--blue); }
   @media (max-width: 520px) { .month-total { text-align: left; width: 100%; border-top: 1px solid var(--border); padding-top: 12px; } }
@@ -411,7 +410,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v11 · 2026-09-25";
+  const APP_VERSION = "v12 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -896,12 +895,6 @@
     const days = Math.round((midnight(EXAM) - midnight(date)) / 86400000);
     return days > 0 ? `D-${days}` : days === 0 ? "D-Day" : `D+${-days}`;
   }
-  function countdown() {
-    let t = Math.max(0, Math.floor((EXAM - Date.now()) / 1000));
-    const d = Math.floor(t / 86400); t %= 86400;
-    const h = Math.floor(t / 3600), m = Math.floor((t % 3600) / 60), sec = t % 60;
-    return `${d}d ${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m ${String(sec).padStart(2, "0")}s`;
-  }
 
   // Record a study span, splitting it at midnight so each day gets its own hours.
   function addSpan(s, start, end, manual = false) {
@@ -984,12 +977,11 @@
     toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
   }
 
-  // Refresh every live number on screen (timer, today's total, D-day countdown, home tiles).
+  // Refresh every live number on screen (timer and home tiles).
   function updateStudyDisplays() {
     const s = loadStudy(), run = runningSec(), today = daySec(s, dkey(new Date()));
     const set = (id, text) => { const e = document.getElementById(id); if (e && e.textContent !== text) e.textContent = text; };
     set("sw-time", hms(todayFocusSec(s)));
-    set("dday-count", countdown());
     const ht = document.getElementById("home-timer");
     if (ht) {
       const text = s.timer.since ? `Studying · ${fmt(run * 1000)}  →` : `Today: ${fmtDur(today)}  →`;
@@ -1042,7 +1034,7 @@
     const head = el("div", { className: "card cal-head" });
     const left = el("div");
     left.append(el("p", { className: "kicker" }, "CFA Level II exam"), el("div", { className: "dday-num" }, dday(now)),
-      el("div", { className: "dday-sub" }, "Fri, 20 November 2026 · 14:30"), el("div", { className: "dday-count", id: "dday-count" }, countdown()));
+      el("div", { className: "dday-sub" }, "Fri, 20 November 2026 · 14:30"));
     const right = el("div", { className: "month-total" });
     const monthLabel = el("span", { className: "cnt" }), monthVal = el("b"), allVal = el("span", { className: "cnt" });
     right.append(monthLabel, monthVal, allVal);
