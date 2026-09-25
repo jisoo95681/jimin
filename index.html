@@ -216,6 +216,89 @@
   details[open] summary { margin-bottom: 10px; }
   .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 26px; opacity: .7; }
 
+  /* Home: timer + calendar tiles side by side */
+  .home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+  .home-grid > .card { margin-top: 0; }
+  @media (max-width: 520px) { .home-grid { grid-template-columns: 1fr; } }
+  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; vertical-align: middle; }
+  @keyframes pulse { 50% { opacity: .3; transform: scale(.8); } }
+
+  /* Study timer */
+  .stopwatch { text-align: center; padding: 34px 20px 28px; }
+  .sw-state { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; background: var(--aqua-pale); color: var(--muted); font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .sw-state.on { background: var(--good-bg); color: var(--good); }
+  .sw-time { font-size: clamp(3.2rem, 15vw, 5.6rem); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.02em; line-height: 1.1; margin: 18px 0 6px; color: var(--navy); }
+  .sw-btn {
+    width: 124px; height: 124px; border-radius: 50%; margin: 18px auto 10px; display: grid; place-items: center;
+    border: 0; background: var(--blue); color: var(--white); font: inherit; font-size: 1.15rem; font-weight: 750; cursor: pointer;
+    box-shadow: 0 12px 30px rgba(47, 103, 142, .35), inset 0 0 0 6px rgba(255, 255, 255, .15);
+    transition: transform .25s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .sw-btn:active { transform: scale(.95); }
+  .sw-btn.running { background: var(--navy); box-shadow: 0 12px 30px rgba(41, 38, 69, .35), inset 0 0 0 6px rgba(187, 233, 233, .25); }
+  .sw-today { font-size: 1.05rem; margin: 6px 0 0; }
+  .sw-today b { color: var(--blue); }
+  .sess { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border); }
+  .sess:first-of-type { border-top: 0; }
+  .sess .when { flex: 1; font-variant-numeric: tabular-nums; }
+  .sess .dur { font-weight: 700; color: var(--blue); font-variant-numeric: tabular-nums; }
+  .x { background: none; border: 0; color: var(--muted); font-size: 1.1rem; cursor: pointer; padding: 2px 6px; border-radius: 6px; transition: color .2s, background .2s; }
+  .x:hover { color: var(--bad); background: var(--bad-bg); }
+  .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); opacity: 0; background: var(--navy); color: var(--white); padding: 12px 18px; border-radius: 12px; font-weight: 600; box-shadow: 0 12px 30px rgba(41, 38, 69, .3); transition: opacity .4s var(--ease), transform .4s var(--ease); z-index: 50; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* Calendar */
+  .cal-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .dday-num { font-family: var(--serif); font-size: clamp(2.6rem, 10vw, 3.4rem); font-weight: 700; line-height: 1; color: var(--navy); }
+  .dday-sub { color: var(--muted); font-size: .88rem; margin-top: 6px; }
+  .dday-count { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--blue); margin-top: 2px; }
+  .month-total { text-align: right; }
+  .month-total b { display: block; font-size: 1.4rem; color: var(--blue); }
+  @media (max-width: 520px) { .month-total { text-align: left; width: 100%; border-top: 1px solid var(--border); padding-top: 12px; } }
+  .seg { display: inline-flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--aqua-pale); border: 1px solid var(--border); }
+  .seg button { border: 0; background: none; font: inherit; font-weight: 600; color: var(--muted); padding: 7px 16px; border-radius: 9px; cursor: pointer; transition: background .3s var(--ease), color .3s, box-shadow .3s; }
+  .seg button.on { background: var(--white); color: var(--navy); box-shadow: 0 2px 8px rgba(41, 38, 69, .1); }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+  .dow { text-align: center; font-size: .72rem; font-weight: 700; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; padding-bottom: 2px; }
+  .day {
+    min-height: 92px; border-radius: 11px; border: 1px solid var(--border); background: var(--white); padding: 6px;
+    display: flex; flex-direction: column; gap: 3px; align-items: stretch; text-align: left; font: inherit; color: var(--navy); cursor: pointer; min-width: 0;
+    transition: transform .2s var(--ease), border-color .3s, box-shadow .3s;
+  }
+  .day:hover { border-color: var(--blue); box-shadow: 0 6px 16px rgba(41, 38, 69, .08); }
+  .day:active { transform: scale(.96); }
+  .day.blank { visibility: hidden; }
+  .day .d { font-weight: 700; font-size: .85rem; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; }
+  .day.today .d { background: var(--blue); color: var(--white); }
+  .day.past { opacity: .8; }
+  .day .task { font-size: .68rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .day .task.done { text-decoration: line-through; opacity: .7; }
+  .day .hrs { margin-top: auto; align-self: flex-start; font-size: .7rem; font-weight: 800; color: var(--white); background: var(--blue); border-radius: 6px; padding: 1px 6px; }
+  .day.exam { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .day.exam .tag { margin-top: auto; font-size: .66rem; font-weight: 800; letter-spacing: .06em; color: var(--aqua); }
+  .dot { display: none; }
+  @media (max-width: 520px) {
+    .cal-grid { gap: 4px; }
+    .day { min-height: 58px; padding: 4px; border-radius: 9px; }
+    .day .d { width: 22px; height: 22px; font-size: .78rem; }
+    .day .task { display: none; }
+    .dot { display: block; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); margin-left: 3px; }
+    .day .hrs { font-size: .6rem; padding: 0 4px; }
+    .day.exam .tag { font-size: .55rem; }
+  }
+
+  /* Day detail */
+  .field { font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--white); color: var(--navy); min-width: 0; transition: border-color .2s, box-shadow .2s; }
+  .field:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47, 103, 142, .15); }
+  .field.grow { flex: 1; }
+  .field.small { width: 74px; }
+  .task-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-top: 1px solid var(--border); }
+  .task-row:first-of-type { border-top: 0; }
+  .task-row input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--blue); flex: none; }
+  .task-row span { flex: 1; transition: color .3s, opacity .3s; }
+  .task-row.done span { text-decoration: line-through; color: var(--muted); }
+  .big-total { font-size: 2rem; font-weight: 800; color: var(--blue); margin: 0; font-variant-numeric: tabular-nums; }
+
   /* Screen transitions: the old screen fades out as a ghost while the new one eases in (a crossfade, no blank frame). */
   #app { position: relative; }
   .screen-ghost { position: absolute; pointer-events: none; z-index: 0; }
@@ -305,7 +388,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v9 · 2026-09-25";
+  const APP_VERSION = "v10 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -513,9 +596,16 @@
       choice("Item sets", "Exam style questions", "Read a vignette with its exhibits, then answer its questions, like the real exam.",
         `${plural(VIGNETTES.length, "vignette")} · ${EXAM_QUESTIONS.length} questions`, () => topics("exam")),
       choice("개념", "Quick questions", "Short concept questions, one at a time.",
-        `${QUESTIONS.length} questions`, () => topics("quick")),
-      notebookCard()
+        `${QUESTIONS.length} questions`, () => topics("quick"))
     );
+    const grid = el("div", { className: "home-grid" });
+    const timerTile = choice("Focus", "Study timer", "Start when you sit down, pause for breaks. Time goes to your calendar.", "", () => studyTimer());
+    timerTile.querySelector(".go").id = "home-timer";
+    const calTile = choice("Plan", "Study calendar", "Daily plans and hours studied, September to November.", "", () => calendar());
+    calTile.querySelector(".go").id = "home-dday";
+    grid.append(timerTile, calTile);
+    app.append(grid, notebookCard());
+    updateStudyDisplays();
   }
 
   function topicMeta(mode, t) {
@@ -749,6 +839,288 @@
     const a = el("a", { href: URL.createObjectURL(file), download: name });
     document.body.append(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  // ---------- Study timer and calendar ----------
+  // Stored on this device: { days: { "YYYY-MM-DD": { tasks: [{ text, done }], sessions: [{ start, end, sec, manual }] } }, timer: { since } }
+  const STUDY_KEY = "cfa-study";
+  const EXAM = new Date(2026, 10, 20, 14, 30);          // CFA Level II exam: Fri 20 Nov 2026, 14:30
+  const CAL_MONTHS = [[2026, 8], [2026, 9], [2026, 10]]; // September–November 2026 (months are 0-based)
+  const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const MIN_SESSION_SEC = 5; // ignore accidental start/pause taps
+
+  function loadStudy() {
+    try { const s = JSON.parse(localStorage.getItem(STUDY_KEY)); if (s && s.days) return { timer: {}, ...s }; } catch {}
+    return { days: {}, timer: {} };
+  }
+  function saveStudy(s) {
+    try { localStorage.setItem(STUDY_KEY, JSON.stringify(s)); } catch {}
+  }
+  const dkey = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const fromKey = k => { const [y, m, d] = k.split("-").map(Number); return new Date(y, m - 1, d); };
+  const midnight = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  function dayOf(s, key) { return (s.days[key] = s.days[key] || { tasks: [], sessions: [] }); }
+  function daySec(s, key) { return ((s.days[key] || {}).sessions || []).reduce((n, x) => n + x.sec, 0); }
+  function fmtDur(sec) {
+    const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60);
+    return h ? `${h}h ${m}m` : `${m}m`;
+  }
+  const fmtShort = sec => (sec >= 3600 ? `${(sec / 3600).toFixed(1)}h` : `${Math.max(1, Math.round(sec / 60))}m`);
+  const hms = sec => `${Math.floor(sec / 3600)}:${String(Math.floor((sec % 3600) / 60)).padStart(2, "0")}:${String(sec % 60).padStart(2, "0")}`;
+  const clock = ms => new Date(ms).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  function dday(date) {
+    const days = Math.round((midnight(EXAM) - midnight(date)) / 86400000);
+    return days > 0 ? `D-${days}` : days === 0 ? "D-Day" : `D+${-days}`;
+  }
+  function countdown() {
+    let t = Math.max(0, Math.floor((EXAM - Date.now()) / 1000));
+    const d = Math.floor(t / 86400); t %= 86400;
+    const h = Math.floor(t / 3600), m = Math.floor((t % 3600) / 60), sec = t % 60;
+    return `${d}d ${String(h).padStart(2, "0")}h ${String(m).padStart(2, "0")}m ${String(sec).padStart(2, "0")}s`;
+  }
+
+  // Record a study span, splitting it at midnight so each day gets its own hours.
+  function addSpan(s, start, end, manual = false) {
+    while (start < end) {
+      const next = midnight(new Date(start)); next.setDate(next.getDate() + 1);
+      const stop = Math.min(end, next.getTime());
+      dayOf(s, dkey(new Date(start))).sessions.push({ start, end: stop, sec: Math.round((stop - start) / 1000), manual });
+      start = stop;
+    }
+  }
+
+  // The timer stores only its start time, so it keeps counting while the screen is locked or the app is closed.
+  function runningSec() { const s = loadStudy(); return s.timer.since ? Math.floor((Date.now() - s.timer.since) / 1000) : 0; }
+  function toggleStudy() {
+    const s = loadStudy();
+    if (s.timer.since) {
+      const sec = Math.floor((Date.now() - s.timer.since) / 1000);
+      if (sec >= MIN_SESSION_SEC) addSpan(s, s.timer.since, Date.now());
+      s.timer.since = null;
+      saveStudy(s);
+      toast(sec >= MIN_SESSION_SEC ? `Saved ${fmtDur(sec) === "0m" ? `${sec}s` : fmtDur(sec)} to today's calendar` : "Too short to save");
+    } else {
+      s.timer.since = Date.now();
+      saveStudy(s);
+    }
+  }
+
+  let toastTimer = null;
+  function toast(text) {
+    let t = document.querySelector(".toast");
+    if (!t) { t = el("div", { className: "toast" }); document.body.append(t); }
+    t.textContent = text;
+    requestAnimationFrame(() => t.classList.add("show"));
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
+  }
+
+  // Refresh every live number on screen (timer, today's total, D-day countdown, home tiles).
+  function updateStudyDisplays() {
+    const s = loadStudy(), run = runningSec(), today = daySec(s, dkey(new Date()));
+    const set = (id, text) => { const e = document.getElementById(id); if (e && e.textContent !== text) e.textContent = text; };
+    set("sw-time", hms(run));
+    set("sw-today-val", fmtDur(today + run));
+    set("dday-count", countdown());
+    const ht = document.getElementById("home-timer");
+    if (ht) {
+      const text = s.timer.since ? `Studying · ${fmt(run * 1000)}  →` : `Today: ${fmtDur(today)}  →`;
+      if (ht.dataset.text !== text) {
+        ht.dataset.text = text;
+        ht.textContent = "";
+        if (s.timer.since) ht.append(el("span", { className: "live-dot" }));
+        ht.append(text);
+      }
+    }
+    set("home-dday", `${dday(new Date())} · Exam 20 Nov, 14:30  →`);
+  }
+  setInterval(updateStudyDisplays, 500);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) updateStudyDisplays(); });
+
+  function studyTimer(dir = "fwd") {
+    screen(dir);
+    app.append(nav("Menu", () => home("back")));
+    app.append(el("h1", { className: "title" }, "Study timer"),
+      el("p", { className: "sub" }, "Start when you begin, pause when you take a break. Each session is added to today in your calendar."));
+
+    const card = el("div", { className: "card stopwatch" });
+    const state = el("span", { className: "sw-state" });
+    const time = el("div", { className: "sw-time", id: "sw-time" }, "0:00:00");
+    const btn = el("button", { className: "sw-btn" });
+    const todayLine = el("p", { className: "sw-today" });
+    todayLine.append("Today: ", el("b", { id: "sw-today-val" }, "0m"));
+    card.append(state, time, btn, todayLine);
+
+    const sessCard = el("div", { className: "card" });
+    function draw() {
+      const s = loadStudy(), on = !!s.timer.since;
+      state.className = "sw-state" + (on ? " on" : "");
+      state.textContent = "";
+      if (on) state.append(el("span", { className: "live-dot", style: "margin:0" }));
+      state.append(on ? "Studying" : "Paused");
+      btn.textContent = on ? "❚❚ Pause" : "▶ Start";
+      btn.classList.toggle("running", on);
+
+      sessCard.innerHTML = "";
+      const key = dkey(new Date()), list = (s.days[key] || {}).sessions || [];
+      sessCard.append(el("p", { className: "kicker" }, "Today's sessions"));
+      if (!list.length) sessCard.append(el("p", { className: "sub", style: "margin:0" }, on ? "Your first session will appear here when you pause." : "No sessions yet today."));
+      list.forEach((x, idx) => {
+        const row = el("div", { className: "sess" });
+        row.append(el("span", { className: "when" }, x.manual ? "Added manually" : `${clock(x.start)} – ${clock(x.end)}`),
+          el("span", { className: "dur" }, fmtDur(x.sec) === "0m" ? `${x.sec}s` : fmtDur(x.sec)));
+        const del = el("button", { className: "x", ariaLabel: "Delete session" }, "×");
+        del.onclick = () => { if (confirm("Delete this session?")) { const st = loadStudy(); st.days[key].sessions.splice(idx, 1); saveStudy(st); draw(); updateStudyDisplays(); } };
+        row.append(del);
+        sessCard.append(row);
+      });
+      updateStudyDisplays();
+    }
+    btn.onclick = () => { toggleStudy(); draw(); };
+    const go = el("button", { className: "btn ghost", style: "margin-top:14px" }, "Open calendar →");
+    go.onclick = () => calendar();
+    draw();
+    app.append(card, sessCard, go);
+  }
+
+  let calMonth = null; // index into CAL_MONTHS
+  function calendar(dir = "fwd") {
+    screen(dir);
+    const s = loadStudy(), now = new Date();
+    if (calMonth === null) {
+      const idx = CAL_MONTHS.findIndex(([y, m]) => y === now.getFullYear() && m === now.getMonth());
+      calMonth = idx >= 0 ? idx : now < new Date(2026, 8, 1) ? 0 : CAL_MONTHS.length - 1;
+    }
+    const [year, month] = CAL_MONTHS[calMonth];
+    app.append(nav("Menu", () => home("back")));
+
+    // D-day in the top-left corner, month total on the right.
+    const head = el("div", { className: "card cal-head" });
+    const left = el("div");
+    left.append(el("p", { className: "kicker" }, "CFA Level II exam"), el("div", { className: "dday-num" }, dday(now)),
+      el("div", { className: "dday-sub" }, "Fri, 20 November 2026 · 14:30"), el("div", { className: "dday-count", id: "dday-count" }, countdown()));
+    const monthSec = Object.keys(s.days).filter(k => k.startsWith(`${year}-${String(month + 1).padStart(2, "0")}`)).reduce((n, k) => n + daySec(s, k), 0);
+    const allSec = Object.keys(s.days).reduce((n, k) => n + daySec(s, k), 0);
+    const right = el("div", { className: "month-total" });
+    right.append(el("span", { className: "cnt" }, `Studied in ${MONTHS[month]}`), el("b", {}, fmtDur(monthSec)), el("span", { className: "cnt" }, `Total ${fmtDur(allSec)}`));
+    head.append(left, right);
+
+    const calCard = el("div", { className: "card" });
+    const seg = el("div", { className: "seg" });
+    CAL_MONTHS.forEach(([y, m], idx) => {
+      const b = el("button", { className: idx === calMonth ? "on" : "" }, MONTHS[m].slice(0, 3));
+      b.onclick = () => { if (idx !== calMonth) { const d = idx > calMonth ? "fwd" : "back"; calMonth = idx; calendar(d); } };
+      seg.append(b);
+    });
+    const top = el("div", { style: "display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px" });
+    top.append(el("h2", { style: "margin:0;font-size:1.25rem" }, `${MONTHS[month]} ${year}`), seg);
+    calCard.append(top);
+
+    const grid = el("div", { className: "cal-grid" });
+    DOW.forEach(d => grid.append(el("div", { className: "dow" }, d)));
+    const first = new Date(year, month, 1), days = new Date(year, month + 1, 0).getDate();
+    for (let k = 0; k < first.getDay(); k++) grid.append(el("div", { className: "day blank" }));
+    const todayKey = dkey(now), examKey = dkey(EXAM);
+    for (let d = 1; d <= days; d++) {
+      const date = new Date(year, month, d), key = dkey(date), data = s.days[key] || { tasks: [], sessions: [] };
+      const sec = daySec(s, key) + (key === todayKey ? runningSec() : 0);
+      const cell = el("button", { className: "day" + (key === todayKey ? " today" : "") + (key === examKey ? " exam" : "") + (date < midnight(now) ? " past" : "") });
+      const topRow = el("div", { style: "display:flex;align-items:center" });
+      topRow.append(el("span", { className: "d" }, String(d)));
+      if (data.tasks.length) topRow.append(el("span", { className: "dot" }));
+      cell.append(topRow);
+      data.tasks.slice(0, 2).forEach(t => cell.append(el("span", { className: "task" + (t.done ? " done" : "") }, t.text)));
+      if (data.tasks.length > 2) cell.append(el("span", { className: "task" }, `+${data.tasks.length - 2} more`));
+      if (key === examKey) cell.append(el("span", { className: "tag" }, "EXAM 14:30"));
+      else if (sec > 0) cell.append(el("span", { className: "hrs" }, fmtShort(sec)));
+      // Tint days by how much was studied (darker aqua = more hours).
+      if (sec > 0 && key !== examKey) cell.style.background = `rgba(187, 233, 233, ${Math.min(1, .25 + sec / 3600 / 8)})`;
+      cell.onclick = () => dayView(key);
+      grid.append(cell);
+    }
+    calCard.append(grid);
+    app.append(head, calCard);
+  }
+
+  function dayView(key, dir = "fwd") {
+    screen(dir);
+    const date = fromKey(key), isToday = key === dkey(new Date());
+    app.append(nav("Calendar", () => calendar("back")));
+    app.append(el("h1", { className: "title" }, date.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long", year: "numeric" })),
+      el("p", { className: "sub" }, `${dday(date)} · ${key === dkey(EXAM) ? "Exam day, 14:30" : "until the exam"}`));
+
+    // Plan: what you will work on that day.
+    const plan = el("div", { className: "card" });
+    function drawPlan() {
+      const s = loadStudy(), tasks = (s.days[key] || {}).tasks || [];
+      plan.innerHTML = "";
+      plan.append(el("p", { className: "kicker" }, "Plan"));
+      if (!tasks.length) plan.append(el("p", { className: "sub", style: "margin:0 0 6px" }, "Nothing planned yet."));
+      tasks.forEach((t, idx) => {
+        const row = el("div", { className: "task-row" + (t.done ? " done" : "") });
+        const cb = el("input", { type: "checkbox", checked: t.done });
+        cb.onchange = () => { const st = loadStudy(); dayOf(st, key).tasks[idx].done = cb.checked; saveStudy(st); drawPlan(); };
+        const del = el("button", { className: "x", ariaLabel: "Delete task" }, "×");
+        del.onclick = () => { const st = loadStudy(); dayOf(st, key).tasks.splice(idx, 1); saveStudy(st); drawPlan(); };
+        row.append(cb, el("span", {}, t.text), del);
+        plan.append(row);
+      });
+      const add = el("form", { className: "row", style: "margin-top:12px;flex-wrap:nowrap" });
+      const input = el("input", { className: "field grow", placeholder: "Add a task, e.g. FSA reading 13 + practice" });
+      add.append(input, el("button", { className: "btn", type: "submit" }, "Add"));
+      add.onsubmit = e => {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (!text) return;
+        const st = loadStudy(); dayOf(st, key).tasks.push({ text, done: false }); saveStudy(st);
+        drawPlan();
+        plan.querySelector(".field").focus();
+      };
+      plan.append(add);
+    }
+
+    // Study time: timer sessions plus any time added by hand; everything adds up.
+    const time = el("div", { className: "card" });
+    function drawTime() {
+      const s = loadStudy(), list = (s.days[key] || {}).sessions || [];
+      time.innerHTML = "";
+      time.append(el("p", { className: "kicker" }, "Hours studied"), el("p", { className: "big-total" }, fmtDur(daySec(s, key))));
+      if (isToday && s.timer.since) time.append(el("p", { className: "sub", style: "margin:4px 0 0" }, `Timer running: ${fmtDur(runningSec())} so far, added when you pause.`));
+      const box = el("div", { style: "margin-top:10px" });
+      list.forEach((x, idx) => {
+        const row = el("div", { className: "sess" });
+        row.append(el("span", { className: "when" }, x.manual ? "Added manually" : `${clock(x.start)} – ${clock(x.end)}`),
+          el("span", { className: "dur" }, fmtDur(x.sec) === "0m" ? `${x.sec}s` : fmtDur(x.sec)));
+        const del = el("button", { className: "x", ariaLabel: "Delete session" }, "×");
+        del.onclick = () => { if (confirm("Delete this session?")) { const st = loadStudy(); st.days[key].sessions.splice(idx, 1); saveStudy(st); drawTime(); } };
+        row.append(del);
+        box.append(row);
+      });
+      time.append(box);
+      time.append(el("p", { className: "label" }, "Add time manually"));
+      const add = el("form", { className: "row", style: "margin-top:0" });
+      const h = el("input", { className: "field small", type: "number", min: 0, max: 24, placeholder: "h", inputMode: "numeric" });
+      const m = el("input", { className: "field small", type: "number", min: 0, max: 59, placeholder: "min", inputMode: "numeric" });
+      add.append(h, el("span", { className: "cnt" }, "h"), m, el("span", { className: "cnt" }, "min"), el("button", { className: "btn", type: "submit" }, "Add"));
+      add.onsubmit = e => {
+        e.preventDefault();
+        const sec = (Math.max(0, +h.value || 0) * 60 + Math.max(0, +m.value || 0)) * 60;
+        if (!sec) return;
+        const st = loadStudy(); dayOf(st, key).sessions.push({ start: date.getTime(), end: date.getTime(), sec, manual: true }); saveStudy(st);
+        toast(`Added ${fmtDur(sec)}`);
+        drawTime();
+      };
+      time.append(add);
+    }
+    drawPlan();
+    drawTime();
+    app.append(plan, time);
+    if (isToday) {
+      const go = el("button", { className: "btn ghost", style: "margin-top:14px" }, "Open study timer →");
+      go.onclick = () => studyTimer();
+      app.append(go);
+    }
   }
 
   // ---------- Running a quiz (both flows) ----------

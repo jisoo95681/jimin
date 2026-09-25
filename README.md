@@ -7,6 +7,8 @@ CFA Level 2 concept (개념) quiz. It's a web app you can install on iPhone and 
 - `questions.js`: quick concept questions. Add new questions here. Each question has a `topic` (one of the 10 CFA topics) and a `reading`.
 - **Exam style**: one vignette per screen, with its exhibits on top and its questions below. Pick answers, tap **Check answers** to see results and explanations, then **Next vignette →**. Choose the topic and how many vignettes.
 - **Quiz options**: choose the topic and how many questions (5 / 10 / 15 / 20 / All). A timer runs during the quiz. **Pause** stops it and lets you **Resume** or **Quit** (you still get results for what you answered). Leaving the app pauses automatically.
+- **Study timer**: tap Start/Pause. It stores the start time, so it keeps counting while the screen is locked or the app is closed. Each Start→Pause session is added to that day in the calendar (split at midnight).
+- **Study calendar**: September–November 2026 with a D-day countdown to the exam (Fri 20 Nov 2026, 14:30). Tap a day to plan tasks, see its sessions, and add hours manually; hours add up per day and per month.
 - **오답 노트**: every missed question is saved on the device. You can practice them (answering correctly removes them), save them as a `.txt` file (Share → Save to Files, Notes, Goodnotes…), or use Print → PDF.
 - `concept_questions.md`: the same questions as a printable list with an answer key
 - `manifest.json`, `sw.js`, `icons/`: these let it install to the home screen and work offline
