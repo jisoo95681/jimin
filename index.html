@@ -102,6 +102,28 @@
   details summary { cursor: pointer; color: var(--accent); font-weight: 600; }
   details[open] summary { margin-bottom: 10px; }
   .status { color: var(--muted); margin: 0; }
+  /* Launch splash: blue screen with the title and a loading bar, then fades into the menu. */
+  #splash {
+    position: fixed; inset: 0; z-index: 100; background: #2f5bd3; color: #fff;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    transition: opacity .55s ease, transform .55s ease;
+  }
+  #splash.done { opacity: 0; transform: scale(1.04); pointer-events: none; }
+  .splash-title, .splash-sub, .splash-bar { opacity: 0; transform: translateY(12px); animation: splash-in .6s cubic-bezier(.2, .8, .2, 1) forwards; }
+  .splash-title { font-size: clamp(2.4rem, 9vw, 3.6rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; animation-delay: .1s; }
+  .splash-sub { margin-top: 10px; font-size: .85rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255, 255, 255, .8); animation-delay: .25s; }
+  .splash-bar { width: 140px; height: 3px; margin: 30px auto 0; border-radius: 2px; background: rgba(255, 255, 255, .25); overflow: hidden; animation-delay: .35s; }
+  .splash-bar span { display: block; width: 0; height: 100%; background: #fff; border-radius: 2px; animation: splash-load 1.05s ease-in-out .4s forwards; }
+  @keyframes splash-in { to { opacity: 1; transform: none; } }
+  @keyframes splash-load { to { width: 100%; } }
+  main { transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+  body.loading main { opacity: 0; transform: translateY(16px); }
+  @media (prefers-reduced-motion: reduce) {
+    #splash, main { transition-duration: .2s; }
+    .splash-title, .splash-sub, .splash-bar { animation: none; opacity: 1; transform: none; }
+    .splash-bar span { animation-duration: .3s; animation-delay: 0s; }
+    body.loading main { transform: none; }
+  }
   @media print {
     body { background: #fff; color: #000; }
     .row, .link, .progress, .ver { display: none !important; }
@@ -110,7 +132,14 @@
   }
 </style>
 </head>
-<body>
+<body class="loading">
+<div id="splash" aria-hidden="true">
+  <div>
+    <div class="splash-title">CFA Level 2</div>
+    <div class="splash-sub">Practice Quiz</div>
+    <div class="splash-bar"><span></span></div>
+  </div>
+</div>
 <main>
   <h1>CFA L2 Quiz</h1>
   <p class="sub" id="topics"></p>
@@ -124,7 +153,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v6 · 2026-09-25";
+  const APP_VERSION = "v7 · 2026-09-25";
   const COUNTS = [5, 10, 15, 20];
   const EXAM_QUESTIONS = VIGNETTES.flatMap(v => v.questions);
   const ALL_QUESTIONS = QUESTIONS.concat(EXAM_QUESTIONS);
@@ -708,6 +737,18 @@
   document.getElementById("ver").textContent = APP_VERSION;
   document.getElementById("topics").textContent = [...new Set(ALL_QUESTIONS.map(q => q.topic))].join(" · ");
   home();
+
+  // Hold the splash until the loading bar finishes, then fade it out as the menu slides in.
+  (function hideSplash() {
+    const splash = document.getElementById("splash");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const wait = Math.max(0, (reduce ? 400 : 1500) - performance.now());
+    setTimeout(() => {
+      splash.classList.add("done");
+      document.body.classList.remove("loading");
+      setTimeout(() => splash.remove(), 700);
+    }, wait);
+  })();
 
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     navigator.serviceWorker.register("sw.js");
