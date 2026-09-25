@@ -1,5 +1,5 @@
 // Exam-style vignette sets from the CFA L2 practice set.
-// Each vignette: id, title, topic, body (blocks), questions.
+// Each vignette: id, title, topic (one of the 10 CFA L2 topics), reading, body (blocks), questions.
 // Body blocks: ["h", text] subheading, ["p", text] paragraph,
 //              ["table", { title, head, rows, note }] exhibit.
 // Question: q, options (A/B/C, shown in this order), answer (index), why.
@@ -7,7 +7,8 @@ const VIGNETTES = [
   {
     id: "brannock",
     title: "Brannock plc",
-    topic: "Intercorporate Investments",
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
     body: [
       ["p", "Brannock plc is a packaged-goods manufacturer headquartered in the United Kingdom. It complies with IFRS. In 2019, Brannock held a 5 percent passive stake in Delmar SA. In December 2019, Brannock announced that it would increase its ownership to 50 percent effective 1 January 2020."],
       ["p", "Helena Voss, an analyst following both companies, wants to know how the larger stake will affect Brannock's consolidated financial statements. Because Voss is uncertain how the company will account for the stake, she uses her existing forecasts to compare the alternative outcomes (Exhibits 1 and 2)."],
@@ -75,7 +76,8 @@ const VIGNETTES = [
   {
     id: "halvorsen",
     title: "Halvorsen Group",
-    topic: "Intercorporate Investments",
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
     body: [
       ["p", "Tomas Ekwall is an analyst at an international securities firm. He is preparing a research report on Halvorsen Group, a publicly traded company that complies with IFRS. Ekwall reviews two recent transactions, in Cirrus Co. and Norden Co."],
       ["h", "Investment in Cirrus Co."],
@@ -167,7 +169,8 @@ const VIGNETTES = [
   {
     id: "crestpoint",
     title: "Crestpoint Capital",
-    topic: "Forward Commitments",
+    topic: "Derivatives",
+    reading: "Forward Commitments",
     body: [
       ["p", "Sarah Whitfield is a portfolio manager at Crestpoint Capital, a hedge fund that frequently uses derivatives to hedge or speculate. She works with Marcus Lee, a junior analyst."],
       ["h", "Carry Arbitrage Model"],
@@ -236,7 +239,8 @@ const VIGNETTES = [
   {
     id: "meridian",
     title: "Meridian Capital Partners",
-    topic: "Forward Commitments",
+    topic: "Derivatives",
+    reading: "Forward Commitments",
     body: [
       ["p", "Priya Nandan is a derivatives trader at Meridian Capital Partners."],
       ["h", "Fixed-Income Futures"],
@@ -294,7 +298,8 @@ const VIGNETTES = [
   {
     id: "pwpf",
     title: "Puyallup-Wenatchee Pension Fund",
-    topic: "Hedge Fund Strategies",
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
     body: [
       ["p", "Snohomish Mukilteo is a portfolio analyst for the Puyallup-Wenatchee Pension Fund (PWPF). PWPF's investment committee (IC) asks Mukilteo to research adding hedge funds to the PWPF portfolio."],
       ["p", "A member of the IC meets with Mukilteo to discuss hedge fund strategies. During the meeting, the IC member admits that her knowledge of hedge fund strategies is fairly limited but tells Mukilteo she believes the following:"],
@@ -376,7 +381,8 @@ const VIGNETTES = [
   {
     id: "ctrf",
     title: "Cascadia Teachers' Retirement Fund (practice variant)",
-    topic: "Hedge Fund Strategies",
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
     body: [
       ["p", "Talia Moreno is an investment analyst for the Cascadia Teachers' Retirement Fund (CTRF). CTRF's investment committee (IC) has asked Moreno to evaluate a hedge fund allocation."],
       ["p", "At an initial meeting, an IC member shares the following beliefs:"],
@@ -465,6 +471,6 @@ const VIGNETTES = [
 
 // Link each question back to its vignette and topic (used by the 오답 노트), and number them in order (1–23 match the original PDF).
 let qNum = 0;
-VIGNETTES.forEach(v => v.questions.forEach(q => { q.vignette = v; q.topic = v.topic; q.num = ++qNum; }));
+VIGNETTES.forEach(v => v.questions.forEach(q => { q.vignette = v; q.topic = v.topic; q.reading = v.reading; q.num = ++qNum; }));
 
 if (typeof module !== "undefined") module.exports = VIGNETTES;

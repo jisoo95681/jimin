@@ -6,143 +6,283 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="CFA Quiz">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#2f5bd3">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1b1e1c">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
-<title>CFA L2 Quiz</title>
+<title>CFA Level II Quiz</title>
 <style>
+  /* Palette taken from the SchweserNotes Level II cover: charcoal, lime-green glow, mint "CFA". */
   :root {
-    --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
-    --border: #e2e2e0; --accent: #2f5bd3; --good: #1e8e3e; --bad: #c5221f;
-    --good-bg: #e6f4ea; --bad-bg: #fce8e6;
+    --bg: #171a18; --card: #232824; --card-hi: #2a302b; --border: #373e38;
+    --text: #eef3ee; --muted: #9aa79c; --accent: #62e07c; --accent-soft: rgba(98, 224, 124, .12);
+    --ink: #0c1a0f; --mint: #a9e5b4; --good: #62e07c; --bad: #ff7b70;
+    --good-bg: rgba(98, 224, 124, .13); --bad-bg: rgba(255, 123, 112, .13);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+    color-scheme: dark;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #151517; --card: #202024; --text: #ececef; --muted: #9a9aa2;
-      --border: #34343a; --accent: #7d9cff; --good: #6fcf8a; --bad: #f28b82;
-      --good-bg: #1d3325; --bad-bg: #3a1f1d;
-    }
-  }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { background: var(--bg); }
   body {
-    margin: 0; background: var(--bg); color: var(--text);
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
     font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+  }
+  /* Green light streaks, like the cover. */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(70% 22% at 70% 8%, rgba(98, 224, 124, .20), transparent 70%),
+      radial-gradient(60% 18% at 20% 100%, rgba(98, 224, 124, .10), transparent 70%),
+      linear-gradient(170deg, #22271f 0%, #191c1a 45%, #141715 100%);
   }
   main {
     max-width: 720px; margin: 0 auto;
-    padding: calc(24px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+    padding: calc(20px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
   }
-  h1 { font-size: 1.4rem; margin: 0 0 4px; }
-  .sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+
+  /* Header wordmark */
+  .brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; cursor: pointer; }
+  .brand-cfa { font-family: var(--serif); font-weight: 700; font-size: 2rem; line-height: 1; color: var(--mint); }
+  .brand-level { font-weight: 800; font-style: italic; font-size: 1.15rem; }
+  .brand-sub { color: var(--muted); font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; }
+  .glow-line { height: 2px; margin: 14px 0 20px; background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--mint) 60%, transparent); opacity: .55; border-radius: 2px; }
+
+  /* Cards and text */
+  .card {
+    background: linear-gradient(180deg, var(--card-hi), var(--card));
+    border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04), 0 10px 30px rgba(0, 0, 0, .25);
+  }
+  .card + .card { margin-top: 14px; }
+  .sub { color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
   .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
   .q { font-weight: 600; margin: 0 0 16px; }
-  .opt {
-    display: block; width: 100%; text-align: left; margin: 0 0 10px; padding: 12px 14px;
-    background: transparent; color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; font: inherit; cursor: pointer;
+  .kicker { color: var(--accent); font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 6px; }
+  .label { font-size: .8rem; color: var(--muted); margin: 16px 0 8px; letter-spacing: .06em; text-transform: uppercase; }
+  .score { font-size: 2.4rem; font-weight: 800; margin: 0 0 4px; color: var(--mint); font-family: var(--serif); }
+  [hidden] { display: none !important; }
+
+  /* Buttons */
+  .btn {
+    padding: 11px 18px; border-radius: 11px; border: 1px solid var(--accent);
+    background: var(--accent); color: var(--ink); font: inherit; font-weight: 650; cursor: pointer;
+    transition: transform .15s var(--ease), box-shadow .25s, background .2s, opacity .2s;
   }
-  .opt:hover:not(:disabled) { border-color: var(--accent); }
+  .btn:hover:not(:disabled) { box-shadow: 0 0 22px rgba(98, 224, 124, .35); }
+  .btn:active:not(:disabled) { transform: scale(.97); }
+  .btn.ghost { background: transparent; color: var(--accent); border-color: rgba(98, 224, 124, .4); }
+  .btn.small { padding: 7px 14px; font-size: .9rem; }
+  .btn:disabled { opacity: .35; cursor: default; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 18px; }
+  label.check { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); cursor: pointer; }
+  label.check input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+  /* Navigation on sub-screens */
+  .nav { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .back {
+    background: none; border: 0; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer;
+    padding: 6px 8px 6px 0; transition: opacity .2s;
+  }
+  .back:active { opacity: .6; }
+  .title { font-size: 1.45rem; font-weight: 800; margin: 0 0 4px; letter-spacing: -.01em; }
+
+  /* Home choices */
+  .choice {
+    display: block; width: 100%; text-align: left; font: inherit; color: var(--text); cursor: pointer; position: relative; overflow: hidden;
+    transition: transform .2s var(--ease), border-color .25s, box-shadow .25s;
+  }
+  .choice::after {
+    content: ""; position: absolute; left: -20%; right: -20%; top: 55%; height: 60%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(98, 224, 124, .14), transparent 70%);
+    transform: rotate(-8deg); opacity: .7; transition: opacity .3s; pointer-events: none;
+  }
+  .choice:hover { border-color: rgba(98, 224, 124, .5); box-shadow: 0 0 0 1px rgba(98, 224, 124, .15), 0 14px 34px rgba(0, 0, 0, .35); }
+  .choice:hover::after { opacity: 1; }
+  .choice:active { transform: scale(.985); }
+  .choice h2 { margin: 0 0 6px; font-size: 1.3rem; }
+  .choice .go { color: var(--accent); font-weight: 650; margin: 12px 0 0; }
+
+  /* Topic list */
+  .list { padding: 6px 0; }
+  .topic-row {
+    display: flex; align-items: center; gap: 14px; width: 100%; padding: 13px 18px;
+    background: none; border: 0; border-top: 1px solid var(--border); color: var(--text);
+    text-align: left; font: inherit; cursor: pointer; transition: background .2s;
+  }
+  .topic-row:first-child { border-top: 0; }
+  button.topic-row:hover:not(:disabled) { background: var(--accent-soft); }
+  button.topic-row:active:not(:disabled) { background: rgba(98, 224, 124, .18); }
+  .topic-row:disabled { cursor: default; }
+  .topic-row:disabled .name, .topic-row:disabled .num, .topic-row.off .name, .topic-row.off .num { opacity: .45; }
+  .num {
+    flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+    font-weight: 700; font-size: .85rem; background: var(--accent-soft); color: var(--accent);
+  }
+  .num.plus { background: var(--accent); color: var(--ink); font-size: 1.2rem; }
+  .name { font-weight: 600; }
+  .cnt { font-size: .82rem; color: var(--muted); }
+  .chev { margin-left: auto; color: var(--muted); font-size: 1.3rem; }
+  .custom-row { cursor: default; padding-top: 11px; padding-bottom: 11px; }
+
+  /* Custom stepper */
+  .stepper { margin-left: auto; display: flex; align-items: center; gap: 6px; flex: none; }
+  .step {
+    width: 34px; height: 34px; border-radius: 10px; border: 1px solid var(--border); background: rgba(255, 255, 255, .03);
+    color: var(--text); font: inherit; font-size: 1.1rem; cursor: pointer; transition: background .2s, transform .1s;
+  }
+  .step:active:not(:disabled) { transform: scale(.92); background: var(--accent-soft); }
+  .step:disabled { opacity: .3; cursor: default; }
+  .step.all { width: auto; padding: 0 10px; font-size: .78rem; font-weight: 700; color: var(--accent); }
+  .val { min-width: 26px; text-align: center; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--muted); transition: color .2s; }
+  .val.on { color: var(--accent); }
+  .sticky {
+    position: sticky; bottom: calc(12px + env(safe-area-inset-bottom)); margin-top: 14px;
+    background: rgba(35, 40, 36, .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  }
+  .total { font-weight: 700; margin: 0; }
+  @media (max-width: 480px) {
+    .custom-row { gap: 10px; padding-left: 12px; padding-right: 12px; }
+    .custom-row .num { width: 26px; height: 26px; font-size: .75rem; }
+    .stepper { gap: 4px; }
+    .step { width: 30px; height: 30px; }
+    .step.all { padding: 0 7px; }
+    .val { min-width: 20px; }
+  }
+
+  /* Chips */
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .03); color: var(--text); font: inherit; cursor: pointer;
+    transition: background .2s, border-color .2s, color .2s, transform .1s;
+  }
+  .chip:active:not(:disabled) { transform: scale(.95); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: var(--ink); font-weight: 650; }
+  .chip:disabled { opacity: .3; cursor: default; }
+
+  /* Questions */
+  .opt {
+    display: block; width: 100%; text-align: left; margin: 0 0 10px; padding: 13px 15px;
+    background: rgba(255, 255, 255, .025); color: var(--text); border: 1px solid var(--border);
+    border-radius: 11px; font: inherit; cursor: pointer;
+    transition: border-color .2s, background .2s, transform .1s;
+  }
+  .opt:hover:not(:disabled) { border-color: rgba(98, 224, 124, .6); }
+  .opt:active:not(:disabled) { transform: scale(.99); }
   .opt:disabled { cursor: default; }
+  .opt.sel { border-color: var(--accent); background: var(--accent-soft); }
   .opt.correct { border-color: var(--good); background: var(--good-bg); }
   .opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
-  .why { margin-top: 6px; padding: 12px 14px; border-left: 3px solid var(--accent); color: var(--text); font-size: .95rem; }
-  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
-  .btn {
-    padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent);
-    background: var(--accent); color: #fff; font: inherit; cursor: pointer;
+  .why {
+    margin-top: 6px; padding: 12px 14px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
+    background: rgba(255, 255, 255, .03); font-size: .95rem; animation: fade-up .35s var(--ease);
   }
-  .btn.ghost { background: transparent; color: var(--accent); }
-  select { font: inherit; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
-  .progress { height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 16px; overflow: hidden; }
-  .progress > div { height: 100%; background: var(--accent); width: 0; transition: width .2s; }
-  .score { font-size: 2rem; font-weight: 700; margin: 0 0 8px; }
+  .progress { height: 4px; background: rgba(255, 255, 255, .07); border-radius: 2px; margin-bottom: 16px; overflow: hidden; }
+  .progress > div { height: 100%; background: linear-gradient(90deg, var(--accent), var(--mint)); box-shadow: 0 0 12px rgba(98, 224, 124, .6); transition: width .4s var(--ease); }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .timer { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.05rem; color: var(--mint); }
+  .status { color: var(--muted); margin: 0; }
   .miss { margin: 12px 0 0; padding-left: 18px; }
   .miss li { margin-bottom: 8px; }
-  .card + .card { margin-top: 16px; }
+
+  /* 오답 노트 */
   .note { border-top: 1px solid var(--border); padding: 14px 0; }
   .note:first-of-type { border-top: 0; }
   .note .ans { color: var(--good); font-weight: 600; margin: 6px 0; }
   .note .small { color: var(--muted); font-size: .85rem; }
   .link { background: none; border: 0; padding: 0; color: var(--bad); font: inherit; font-size: .85rem; cursor: pointer; margin-left: 8px; }
-  .btn:disabled { opacity: .45; cursor: default; }
-  .btn.small { padding: 6px 14px; font-size: .9rem; }
-  [hidden] { display: none !important; }
-  .label { font-size: .85rem; color: var(--muted); margin: 14px 0 6px; }
-  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
-  .chip {
-    padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
-    background: transparent; color: var(--text); font: inherit; cursor: pointer;
-  }
-  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .chip:disabled { opacity: .35; cursor: default; }
-  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-  .timer { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1.05rem; }
-  .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 24px; }
-  .choice { display: block; width: 100%; text-align: left; font: inherit; color: var(--text); cursor: pointer; }
-  .choice:hover { border-color: var(--accent); }
-  .choice h2 { margin: 0 0 6px; font-size: 1.2rem; }
-  .choice .go { color: var(--accent); font-weight: 600; margin: 10px 0 0; }
-  .vignette h2 { margin: 0 0 12px; font-size: 1.25rem; }
-  .vignette h3 { font-size: 1rem; margin: 18px 0 6px; }
+
+  /* Vignettes and exhibits */
+  .vignette h2 { margin: 0 0 12px; font-size: 1.3rem; font-family: var(--serif); color: var(--mint); }
+  .vignette h3 { font-size: 1rem; margin: 18px 0 6px; color: var(--accent); }
   .vignette p { margin: 0 0 12px; }
   .exhibit { margin: 16px 0; }
   .ex-title { font-weight: 600; font-size: .9rem; margin: 0 0 6px !important; }
   .ex-note { font-size: .8rem; color: var(--muted); margin: 6px 0 0 !important; }
   .scroll { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; font-size: .9rem; }
-  th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th, td { padding: 7px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
   th { color: var(--muted); font-weight: 600; }
-  .num { text-align: right; font-variant-numeric: tabular-nums; }
-  td.num { white-space: nowrap; }
-  tr.subhead td { font-weight: 600; color: var(--muted); }
-  .opt.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .num-cell { text-align: right; font-variant-numeric: tabular-nums; }
+  td.num-cell { white-space: nowrap; }
+  tr.subhead td { font-weight: 600; color: var(--mint); }
   details { margin: 0 0 14px; }
   details summary { cursor: pointer; color: var(--accent); font-weight: 600; }
   details[open] summary { margin-bottom: 10px; }
-  .status { color: var(--muted); margin: 0; }
-  /* Launch splash: blue screen with the title and a loading bar, then fades into the menu. */
+  .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 26px; opacity: .7; }
+
+  /* Screen transitions */
+  @keyframes in-fwd { from { opacity: 0; transform: translateX(22px); } to { opacity: 1; transform: none; } }
+  @keyframes in-back { from { opacity: 0; transform: translateX(-22px); } to { opacity: 1; transform: none; } }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  #app.enter-fwd { animation: in-fwd .38s var(--ease); }
+  #app.enter-back { animation: in-back .38s var(--ease); }
+  #app.enter-up { animation: fade-up .38s var(--ease); }
+
+  /* Launch splash */
   #splash {
-    position: fixed; inset: 0; z-index: 100; background: #2f5bd3; color: #fff;
+    position: fixed; inset: 0; z-index: 100; overflow: hidden; color: #fff;
+    background: linear-gradient(170deg, #252a24 0%, #1a1d1b 55%, #141715 100%);
     display: flex; align-items: center; justify-content: center; text-align: center;
-    transition: opacity .55s ease, transform .55s ease;
+    transition: opacity .6s ease, transform .6s ease;
   }
-  #splash.done { opacity: 0; transform: scale(1.04); pointer-events: none; }
-  .splash-title, .splash-sub, .splash-bar { opacity: 0; transform: translateY(12px); animation: splash-in .6s cubic-bezier(.2, .8, .2, 1) forwards; }
-  .splash-title { font-size: clamp(2.4rem, 9vw, 3.6rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; animation-delay: .1s; }
-  .splash-sub { margin-top: 10px; font-size: .85rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255, 255, 255, .8); animation-delay: .25s; }
-  .splash-bar { width: 140px; height: 3px; margin: 30px auto 0; border-radius: 2px; background: rgba(255, 255, 255, .25); overflow: hidden; animation-delay: .35s; }
-  .splash-bar span { display: block; width: 0; height: 100%; background: #fff; border-radius: 2px; animation: splash-load 1.05s ease-in-out .4s forwards; }
-  @keyframes splash-in { to { opacity: 1; transform: none; } }
-  @keyframes splash-load { to { width: 100%; } }
-  main { transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+  #splash.done { opacity: 0; transform: scale(1.05); pointer-events: none; }
+  .streak {
+    position: absolute; left: -30%; right: -30%; top: 22%; height: 34%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(140, 255, 150, .55), rgba(70, 210, 100, .18) 45%, transparent 72%);
+    filter: blur(14px); opacity: 0; transform: rotate(-12deg) translateX(-35%);
+    animation: streak 1.5s var(--ease) .05s forwards;
+  }
+  .streak.two { top: 62%; height: 18%; animation-delay: .25s; }
+  .beam {
+    position: absolute; left: -10%; right: -10%; top: 49%; height: 2px;
+    background: linear-gradient(90deg, transparent, #9dffae 40%, #fff 50%, #9dffae 60%, transparent);
+    transform: rotate(-12deg) scaleX(0); animation: beam 1.1s var(--ease) .3s forwards;
+  }
+  @keyframes streak { to { opacity: 1; transform: rotate(-12deg) translateX(0); } }
+  @keyframes beam { to { transform: rotate(-12deg) scaleX(1); } }
+  .splash-body { position: relative; }
+  .s-cfa, .s-level, .s-sub, .s-bar { opacity: 0; transform: translateY(12px); animation: fade-up .7s var(--ease) forwards; }
+  .s-cfa { font-family: var(--serif); font-weight: 700; font-size: clamp(4rem, 18vw, 6.5rem); line-height: 1; color: var(--mint); animation-delay: .1s; text-shadow: 0 0 40px rgba(98, 224, 124, .35); }
+  .s-level { font-weight: 800; font-style: italic; font-size: clamp(1.4rem, 5vw, 1.9rem); margin-top: 6px; animation-delay: .25s; }
+  .s-sub { margin-top: 8px; font-size: .78rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(255, 255, 255, .7); animation-delay: .35s; }
+  .s-bar { width: 150px; height: 3px; margin: 30px auto 0; border-radius: 2px; background: rgba(255, 255, 255, .15); overflow: hidden; animation-delay: .4s; }
+  .s-bar span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--accent), var(--mint)); box-shadow: 0 0 10px var(--accent); animation: load 1.05s ease-in-out .45s forwards; }
+  @keyframes load { to { width: 100%; } }
+  main { transition: opacity .6s ease, transform .6s var(--ease); }
   body.loading main { opacity: 0; transform: translateY(16px); }
+
   @media (prefers-reduced-motion: reduce) {
-    #splash, main { transition-duration: .2s; }
-    .splash-title, .splash-sub, .splash-bar { animation: none; opacity: 1; transform: none; }
-    .splash-bar span { animation-duration: .3s; animation-delay: 0s; }
+    *, *::before, *::after { animation-duration: .01s !important; animation-delay: 0s !important; transition-duration: .15s !important; }
     body.loading main { transform: none; }
   }
   @media print {
-    body { background: #fff; color: #000; }
-    .row, .link, .progress, .ver { display: none !important; }
-    .card { border: 0; padding: 0; }
+    :root { --text: #000; --muted: #444; --border: #ccc; --good: #1e7e34; --mint: #000; --accent: #1e7e34; }
+    body, html { background: #fff; }
+    body::before, .row, .link, .progress, .ver, .glow-line, .nav, .btn { display: none !important; }
+    .card { border: 0; padding: 0; box-shadow: none; background: none; }
     .note { break-inside: avoid; }
   }
 </style>
 </head>
 <body class="loading">
 <div id="splash" aria-hidden="true">
-  <div>
-    <div class="splash-title">CFA Level 2</div>
-    <div class="splash-sub">Practice Quiz</div>
-    <div class="splash-bar"><span></span></div>
+  <div class="streak"></div>
+  <div class="streak two"></div>
+  <div class="beam"></div>
+  <div class="splash-body">
+    <div class="s-cfa">CFA</div>
+    <div class="s-level">Level II</div>
+    <div class="s-sub">Practice Quiz</div>
+    <div class="s-bar"><span></span></div>
   </div>
 </div>
 <main>
-  <h1>CFA L2 Quiz</h1>
-  <p class="sub" id="topics"></p>
+  <header class="brand" id="brand">
+    <span class="brand-cfa">CFA</span><span class="brand-level">Level II</span><span class="brand-sub">Practice Quiz</span>
+  </header>
+  <div class="glow-line"></div>
   <div id="app"></div>
   <p class="ver" id="ver"></p>
 </main>
@@ -153,16 +293,27 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v7 · 2026-09-25";
-  const COUNTS = [5, 10, 15, 20];
+  const APP_VERSION = "v8 · 2026-09-25";
+  const TOPICS = [
+    "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
+    "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
+  ];
   const EXAM_QUESTIONS = VIGNETTES.flatMap(v => v.questions);
   const ALL_QUESTIONS = QUESTIONS.concat(EXAM_QUESTIONS);
+  // Quick mode counts questions; exam mode counts vignettes (each is a whole item set).
+  const MODES = {
+    quick: { name: "Quick questions", unit: "question", counts: [5, 10, 15, 20], items: t => QUESTIONS.filter(q => q.topic === t) },
+    exam: { name: "Exam style", unit: "vignette", counts: [1, 2, 3], items: t => VIGNETTES.filter(v => v.topic === t) }
+  };
 
-  let mode = null;              // "quick" or "exam": which setup screen to return to
-  let flow = "single";          // "single": one question per screen; "vignette": one item set per screen
+  let backTo = () => home("back"); // where "Start over" and quitting return to
+  let flow = "single";             // "single": one question per screen; "vignette": one item set per screen
   let deck = [], i = 0, score = 0, missed = [], reviewMode = false;
   let inQuiz = false, paused = false, answeredCurrent = false;
   let vdeck = [], vi = 0, checkedCurrent = false, vscores = [];
+
+  const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
+  const qCount = vs => vs.reduce((n, v) => n + v.questions.length, 0);
 
   // Timer: counts only while a quiz is running and not paused.
   let elapsed = 0, runningSince = null;
@@ -205,7 +356,7 @@
     else if (reviewMode) delete w[q.q]; // got it right while reviewing → it leaves the notebook
     saveWrong(w);
   }
-  function qLabel(q) { return q.vignette ? `Exam · ${q.vignette.title} · Q${q.num}` : q.topic; }
+  function qLabel(q) { return q.vignette ? `${q.vignette.title} · Q${q.num}` : `${q.topic} · ${q.reading}`; }
 
   function shuffle(a) {
     a = a.slice();
@@ -223,6 +374,23 @@
     return e;
   }
 
+  // Clear the screen and animate the new one in: "fwd" slides from the right, "back" from the left, "up" fades up.
+  function screen(dir = "fwd") {
+    app.innerHTML = "";
+    app.classList.remove("enter-fwd", "enter-back", "enter-up");
+    void app.offsetWidth; // restart the animation
+    app.classList.add(`enter-${dir}`);
+    window.scrollTo(0, 0);
+  }
+
+  function nav(backLabel, onBack) {
+    const bar = el("div", { className: "nav" });
+    const b = el("button", { className: "back" }, `‹ ${backLabel}`);
+    b.onclick = onBack;
+    bar.append(b);
+    return bar;
+  }
+
   // ---------- Vignette text and exhibits ----------
   const isNum = t => /^[–−+-]?[$£]?[\d,.]+%?\*?$/.test(t.trim());
   function renderBody(v) {
@@ -238,7 +406,7 @@
           const tr = el("tr");
           // Right-align a header when its column holds numbers.
           const numCol = c => c > 0 && data.rows.some(r => r.length > 1 && r[c] && isNum(r[c]));
-          data.head.forEach((h, c) => tr.append(el("th", { className: numCol(c) ? "num" : "" }, h)));
+          data.head.forEach((h, c) => tr.append(el("th", { className: numCol(c) ? "num-cell" : "" }, h)));
           const thead = el("thead");
           thead.append(tr);
           table.append(thead);
@@ -248,7 +416,7 @@
           const tr = el("tr");
           if (r.slice(1).every(c => /^\d{4}\*?$/.test(c))) tr.className = "subhead";
           if (r.length === 1) tr.append(el("td", { colSpan: data.head.length }, r[0])); // section row across the table
-          else r.forEach(c => tr.append(el("td", { className: isNum(c) ? "num" : "" }, c)));
+          else r.forEach(c => tr.append(el("td", { className: isNum(c) ? "num-cell" : "" }, c)));
           tbody.append(tr);
         });
         table.append(tbody);
@@ -267,7 +435,7 @@
     return d;
   }
   function vignetteText(v) {
-    let out = `=== Vignette: ${v.title} (${v.topic}) ===\n`;
+    let out = `=== Vignette: ${v.title} (${v.topic} · ${v.reading}) ===\n`;
     v.body.forEach(([type, data]) => {
       if (type === "h") out += `\n${data}\n`;
       else if (type === "p") out += `${data}\n`;
@@ -282,44 +450,62 @@
     return out;
   }
 
-  // ---------- Screens ----------
-  function home() {
-    mode = null;
-    app.innerHTML = "";
-    const choice = (title, desc, meta, onclick) => {
+  // ---------- Menu screens ----------
+  function home(dir = "back") {
+    screen(dir);
+    backTo = () => home("back");
+    const choice = (kicker, title, desc, meta, onclick) => {
       const b = el("button", { className: "card choice" });
-      b.append(el("h2", {}, title), el("p", { className: "sub", style: "margin:0" }, desc),
-        el("p", { className: "go" }, `${meta}  →`));
+      b.append(el("p", { className: "kicker" }, kicker), el("h2", {}, title),
+        el("p", { className: "sub", style: "margin:0" }, desc), el("p", { className: "go" }, `${meta}  →`));
       b.onclick = onclick;
       return b;
     };
     app.append(
-      choice("Exam style questions", "Read a vignette with its exhibits, then answer its item set, like the real exam.",
-        `${VIGNETTES.length} vignettes · ${EXAM_QUESTIONS.length} questions`, examStart),
-      choice("Quick questions (개념)", "Short concept questions, one at a time.",
-        `${QUESTIONS.length} questions`, quickStart),
+      choice("Item sets", "Exam style questions", "Read a vignette with its exhibits, then answer its questions, like the real exam.",
+        `${plural(VIGNETTES.length, "vignette")} · ${EXAM_QUESTIONS.length} questions`, () => topics("exam")),
+      choice("개념", "Quick questions", "Short concept questions, one at a time.",
+        `${QUESTIONS.length} questions`, () => topics("quick")),
       notebookCard()
     );
   }
 
-  function setup() { mode === "exam" ? examStart() : mode === "quick" ? quickStart() : home(); }
-
-  function menuButton() {
-    const b = el("button", { className: "btn ghost small" }, "← Menu");
-    b.onclick = home;
-    const row = el("div", { className: "row", style: "margin:0 0 12px" });
-    row.append(b);
-    return row;
+  function topicMeta(mode, t) {
+    const items = MODES[mode].items(t);
+    if (!items.length) return "No questions yet";
+    return mode === "quick" ? plural(items.length, "question") : `${plural(items.length, "vignette")} · ${plural(qCount(items), "question")}`;
   }
 
-  // Count chips: fixed options larger than the pool are disabled; "all" always works.
-  function chipPicker(options, getSize, current, onPick) {
+  function topics(mode, dir = "fwd") {
+    screen(dir);
+    backTo = () => topics(mode, "back");
+    app.append(nav("Menu", () => home("back")));
+    app.append(el("h1", { className: "title" }, MODES[mode].name), el("p", { className: "sub" }, "Choose a topic, or build your own mix."));
+    const list = el("div", { className: "card list" });
+    TOPICS.forEach((t, idx) => {
+      const row = el("button", { className: "topic-row", disabled: !MODES[mode].items(t).length });
+      const text = el("div");
+      text.append(el("div", { className: "name" }, t), el("div", { className: "cnt" }, topicMeta(mode, t)));
+      row.append(el("span", { className: "num" }, String(idx + 1)), text, el("span", { className: "chev" }, "›"));
+      row.onclick = () => topicSetup(mode, t);
+      list.append(row);
+    });
+    const custom = el("button", { className: "topic-row" });
+    const text = el("div");
+    text.append(el("div", { className: "name" }, "Create custom"),
+      el("div", { className: "cnt" }, `Pick how many ${MODES[mode].unit}s from each topic, like building your own worksheet`));
+    custom.append(el("span", { className: "num plus" }, "+"), text, el("span", { className: "chev" }, "›"));
+    custom.onclick = () => customSetup(mode);
+    list.append(custom);
+    app.append(list);
+  }
+
+  // Count chips: options larger than the pool are disabled; "all" always works.
+  function chipPicker(options, size, current) {
     const chips = el("div", { className: "chips" });
-    let value = current || "all";
+    let value = current !== undefined && (current === "all" || current < size) ? current : "all";
     function draw() {
       chips.innerHTML = "";
-      const size = getSize();
-      if (value !== "all" && value >= size) value = "all";
       [...options, "all"].forEach(c => {
         const b = el("button", { className: "chip" + (c === value ? " on" : "") }, c === "all" ? `All (${size})` : String(c));
         b.disabled = c !== "all" && c >= size;
@@ -328,127 +514,148 @@
       });
     }
     draw();
-    return { chips, redraw: draw, get value() { return value; } };
+    return { chips, get value() { return value; } };
   }
 
-  function topicSelect(topics, saved) {
-    const sel = el("select");
-    sel.append(el("option", { value: "" }, "All topics"));
-    topics.forEach(t => sel.append(el("option", { value: t }, t)));
-    if (topics.includes(saved)) sel.value = saved;
-    return sel;
-  }
+  function topicSetup(mode, t, dir = "fwd") {
+    screen(dir);
+    backTo = () => topicSetup(mode, t, "back");
+    const m = MODES[mode], items = m.items(t), prefs = loadPrefs(), key = `${mode}|${t}`;
+    app.append(nav(m.name, () => topics(mode, "back")));
+    app.append(el("h1", { className: "title" }, t), el("p", { className: "sub" }, topicMeta(mode, t)));
 
-  function quickStart() {
-    mode = "quick";
-    const prefs = loadPrefs();
-    app.innerHTML = "";
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "q" }, `Quick questions · ${QUESTIONS.length} concept questions`));
-
-    card.append(el("p", { className: "label" }, "Topic"));
-    const sel = topicSelect([...new Set(QUESTIONS.map(q => q.topic))], prefs.topic);
-    card.append(sel);
-
-    card.append(el("p", { className: "label" }, "How many questions"));
-    const pool = () => QUESTIONS.filter(q => !sel.value || q.topic === sel.value);
-    const picker = chipPicker(COUNTS, () => pool().length, prefs.count);
-    sel.onchange = picker.redraw;
+    card.append(el("p", { className: "label", style: "margin-top:0" }, "Readings"));
+    card.append(el("p", { style: "margin:0" }, [...new Set(items.map(x => x.reading))].join(" · ")));
+    if (mode === "exam") {
+      card.append(el("p", { className: "label" }, "Vignettes"));
+      card.append(el("p", { style: "margin:0" }, items.map(v => `${v.title} (${v.questions.length} Qs)`).join(" · ")));
+    }
+    card.append(el("p", { className: "label" }, `How many ${m.unit}s`));
+    const picker = chipPicker(m.counts, items.length, (prefs.counts || {})[key]);
     card.append(picker.chips);
 
     const row = el("div", { className: "row" });
-    const shuf = el("label");
-    const cb = el("input", { type: "checkbox", checked: prefs.shuffle !== false });
-    shuf.append(cb, " Shuffle");
+    const shuf = el("label", { className: "check" });
+    const cb = el("input", { type: "checkbox", checked: (prefs.shuffle || {})[mode] ?? mode === "quick" });
+    shuf.append(cb, mode === "quick" ? "Shuffle" : "Shuffle vignettes");
     const go = el("button", { className: "btn" }, "Start");
     go.onclick = () => {
-      savePrefs({ topic: sel.value, count: picker.value, shuffle: cb.checked });
-      let qs = cb.checked ? shuffle(pool()) : pool();
-      if (picker.value !== "all") qs = qs.slice(0, picker.value);
-      begin(qs);
+      savePrefs({ counts: { ...(prefs.counts || {}), [key]: picker.value }, shuffle: { ...(prefs.shuffle || {}), [mode]: cb.checked } });
+      let picked = cb.checked ? shuffle(items) : items;
+      if (picker.value !== "all") picked = picked.slice(0, picker.value);
+      mode === "quick" ? begin(picked) : beginExam(picked);
     };
     row.append(go, shuf);
     card.append(row);
-    app.append(menuButton(), card, notebookCard());
+    app.append(card);
   }
 
-  function examStart() {
-    mode = "exam";
-    const prefs = loadPrefs();
-    app.innerHTML = "";
-    const card = el("div", { className: "card" });
-    card.append(el("p", { className: "q" }, `Exam style · ${VIGNETTES.length} vignettes, ${EXAM_QUESTIONS.length} questions`));
+  // Create custom: choose how many questions (quick) or vignettes (exam) from each of the 10 topics.
+  function customSetup(mode, dir = "fwd") {
+    screen(dir);
+    backTo = () => customSetup(mode, "back");
+    const m = MODES[mode], prefs = loadPrefs(), saved = (prefs.custom || {})[mode] || {};
+    const counts = {};
+    TOPICS.forEach(t => (counts[t] = Math.min(saved[t] || 0, m.items(t).length)));
 
-    card.append(el("p", { className: "label" }, "Topic"));
-    const sel = topicSelect([...new Set(VIGNETTES.map(v => v.topic))], prefs.examTopic);
-    card.append(sel);
+    app.append(nav(m.name, () => topics(mode, "back")));
+    app.append(el("h1", { className: "title" }, "Create custom"),
+      el("p", { className: "sub" }, `Choose how many ${m.unit}s to take from each topic. Use one topic or mix all ten.`));
 
-    card.append(el("p", { className: "label" }, "How many vignettes"));
-    const pool = () => VIGNETTES.filter(v => !sel.value || v.topic === sel.value);
-    const picker = chipPicker([1, 2, 3], () => pool().length, prefs.examCount);
-    const info = el("p", { className: "sub", style: "margin:8px 0 0" });
-    const drawInfo = () => {
-      const vs = pool();
-      info.textContent = vs.map(v => `${v.title} (${v.questions.length} Qs)`).join(" · ");
-    };
-    sel.onchange = () => { picker.redraw(); drawInfo(); };
-    drawInfo();
-    card.append(picker.chips, info);
-
-    const row = el("div", { className: "row" });
-    const shuf = el("label");
-    const cb = el("input", { type: "checkbox", checked: prefs.examShuffle === true });
-    shuf.append(cb, " Shuffle vignettes");
+    const footer = el("div", { className: "card sticky" });
+    const total = el("p", { className: "total" });
+    const detail = el("p", { className: "cnt", style: "margin:2px 0 0" });
+    const row = el("div", { className: "row", style: "margin-top:12px" });
+    const shuf = el("label", { className: "check" });
+    const cb = el("input", { type: "checkbox", checked: (prefs.customMix || {})[mode] ?? true });
+    shuf.append(cb, mode === "quick" ? "Mix topics together" : "Shuffle vignette order");
     const go = el("button", { className: "btn" }, "Start");
-    go.onclick = () => {
-      savePrefs({ examTopic: sel.value, examCount: picker.value, examShuffle: cb.checked });
-      let vs = cb.checked ? shuffle(pool()) : pool();
-      if (picker.value !== "all") vs = vs.slice(0, picker.value);
-      beginExam(vs);
-    };
     row.append(go, shuf);
-    card.append(row);
-    app.append(menuButton(), card, notebookCard());
+    footer.append(total, detail, row);
+
+    function update() {
+      const n = TOPICS.reduce((s, t) => s + counts[t], 0);
+      const used = TOPICS.filter(t => counts[t] > 0).length;
+      total.textContent = n ? `${plural(n, m.unit)} from ${plural(used, "topic")}` : "Nothing selected yet";
+      detail.textContent = !n ? "Use + to add from any topic."
+        : mode === "exam" ? "Each vignette comes with all of its questions." : "Questions are picked at random from each topic.";
+      go.disabled = n === 0;
+    }
+
+    const list = el("div", { className: "card list" });
+    TOPICS.forEach((t, idx) => {
+      const avail = m.items(t).length;
+      const row = el("div", { className: "topic-row custom-row" + (avail ? "" : " off") });
+      const text = el("div");
+      text.append(el("div", { className: "name" }, t), el("div", { className: "cnt" }, avail ? `${plural(avail, m.unit)} available` : "No questions yet"));
+      const stepper = el("div", { className: "stepper" });
+      const minus = el("button", { className: "step", ariaLabel: `Fewer from ${t}` }, "−");
+      const val = el("span", { className: "val" });
+      const plus = el("button", { className: "step", ariaLabel: `More from ${t}` }, "+");
+      const all = el("button", { className: "step all" }, "All");
+      const draw = () => {
+        val.textContent = counts[t];
+        val.classList.toggle("on", counts[t] > 0);
+        minus.disabled = counts[t] === 0;
+        plus.disabled = all.disabled = counts[t] >= avail;
+        update();
+      };
+      minus.onclick = () => { counts[t]--; draw(); };
+      plus.onclick = () => { counts[t]++; draw(); };
+      all.onclick = () => { counts[t] = avail; draw(); };
+      stepper.append(minus, val, plus, all);
+      row.append(el("span", { className: "num" }, String(idx + 1)), text, stepper);
+      list.append(row);
+      draw();
+    });
+
+    go.onclick = () => {
+      savePrefs({ custom: { ...(prefs.custom || {}), [mode]: counts }, customMix: { ...(prefs.customMix || {}), [mode]: cb.checked } });
+      // A random selection of the requested number from each topic, kept in topic order unless mixed.
+      let picked = TOPICS.flatMap(t => shuffle(m.items(t)).slice(0, counts[t]));
+      if (cb.checked) picked = shuffle(picked);
+      mode === "quick" ? begin(picked) : beginExam(picked);
+    };
+    app.append(list, footer);
   }
 
   function notebookCard() {
     const n = wrongList().length;
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "q" }, `오답 노트 · Wrong answers (${n})`));
+    card.append(el("p", { className: "kicker" }, "오답 노트"), el("p", { className: "q", style: "margin-bottom:6px" }, `Wrong answers (${n})`));
     card.append(el("p", { className: "sub" }, n
-      ? "Every question you miss (quick and exam style) is saved here. Review it, practice it, or save it as a file."
+      ? "Every question you miss is saved here. Review it, practice it, or save it as a file."
       : "Questions you get wrong will be saved here."));
-    const open = el("button", { className: "btn", disabled: !n }, "Open 오답 노트");
-    open.onclick = notes;
-    const row = el("div", { className: "row" });
-    row.append(open);
-    card.append(row);
+    const open = el("button", { className: "btn ghost", disabled: !n }, "Open 오답 노트");
+    open.onclick = () => notes();
+    card.append(open);
     return card;
   }
 
-  function notes() {
+  function notes(dir = "fwd") {
+    screen(dir);
+    backTo = () => notes("back");
     const list = wrongList(), w = loadWrong();
-    app.innerHTML = "";
+    app.append(nav("Menu", () => home("back")));
+    app.append(el("h1", { className: "title" }, "오답 노트"), el("p", { className: "sub" }, plural(list.length, "question")));
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "q" }, `오답 노트 · ${list.length} question${list.length === 1 ? "" : "s"}`));
 
-    const top = el("div", { className: "row" });
+    const top = el("div", { className: "row", style: "margin-top:0" });
     const practice = el("button", { className: "btn", disabled: !list.length }, "Practice these");
     practice.onclick = () => begin(shuffle(list), true);
     const file = el("button", { className: "btn ghost", disabled: !list.length }, "Save as file");
     file.onclick = saveFile;
     const pdf = el("button", { className: "btn ghost", disabled: !list.length }, "Print / PDF");
     pdf.onclick = () => window.print();
-    const back = el("button", { className: "btn ghost" }, "Back");
-    back.onclick = setup;
-    top.append(practice, file, pdf, back);
+    top.append(practice, file, pdf);
     card.append(top);
 
     list.forEach((q, n) => {
       const item = el("div", { className: "note" });
       const meta = el("div", { className: "small" }, `${n + 1}. ${qLabel(q)} · missed ${w[q.q].count}× · last ${w[q.q].last}`);
       const rm = el("button", { className: "link" }, "Remove");
-      rm.onclick = () => { const x = loadWrong(); delete x[q.q]; saveWrong(x); notes(); };
+      rm.onclick = () => { const x = loadWrong(); delete x[q.q]; saveWrong(x); notes("up"); };
       meta.append(rm);
       item.append(meta);
       if (q.vignette) item.append(vignetteDetails(q.vignette));
@@ -459,11 +666,9 @@
     });
 
     if (list.length) {
-      const bottom = el("div", { className: "row" });
-      const clear = el("button", { className: "btn ghost" }, "Clear all");
-      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); setup(); } };
-      bottom.append(clear);
-      card.append(bottom);
+      const clear = el("button", { className: "btn ghost small", style: "margin-top:12px" }, "Clear all");
+      clear.onclick = () => { if (confirm("Delete every question from your 오답 노트?")) { saveWrong({}); home("back"); } };
+      card.append(clear);
     }
     app.append(card);
   }
@@ -507,7 +712,7 @@
 
   function answeredCount() {
     if (flow === "vignette")
-      return vdeck.slice(0, vi).reduce((n, v) => n + v.questions.length, 0) + (checkedCurrent ? vdeck[vi].questions.length : 0);
+      return qCount(vdeck.slice(0, vi)) + (checkedCurrent ? vdeck[vi].questions.length : 0);
     return i + (answeredCurrent ? 1 : 0);
   }
 
@@ -534,6 +739,7 @@
     document.getElementById("quiz").hidden = true;
     const answered = answeredCount();
     const card = el("div", { className: "card", id: "paused" });
+    card.style.animation = "fade-up .35s var(--ease)";
     card.append(el("p", { className: "score" }, "Paused"));
     const where = flow === "vignette" ? `Vignette ${vi + 1} of ${vdeck.length} · ` : "";
     card.append(el("p", { className: "sub" }, `Time so far ${fmt(timeMs())} · ${where}${answered} of ${deck.length} answered · Score ${score}`));
@@ -546,7 +752,7 @@
       timerResume();
     };
     const quit = el("button", { className: "btn ghost" }, "Quit");
-    quit.onclick = () => (answered ? results(answered) : endQuiz(setup));
+    quit.onclick = () => (answered ? results(answered) : endQuiz(backTo));
     row.append(resume, quit);
     card.append(row);
     app.append(card);
@@ -566,14 +772,13 @@
   function begin(questions, review = false) {
     flow = "single"; deck = questions; reviewMode = review;
     startRun();
-    show();
+    show("fwd");
   }
 
-  function show() {
+  function show(dir = "fwd") {
     const q = deck[i];
     answeredCurrent = false;
-    app.innerHTML = "";
-    window.scrollTo(0, 0);
+    screen(dir);
     const quiz = el("div", { id: "quiz" });
     const card = el("div", { className: "card" });
     const meta = el("div", { className: "meta" });
@@ -606,11 +811,11 @@
     record(q, k === q.answer);
     card.append(el("div", { className: "why" }, q.why));
     const row = el("div", { className: "row" });
-    const next = el("button", { className: "btn" }, i + 1 < deck.length ? "Next" : "See results");
-    next.onclick = () => { i++; i < deck.length ? show() : results(); };
+    const next = el("button", { className: "btn" }, i + 1 < deck.length ? "Next →" : "See results");
+    next.onclick = () => { i++; i < deck.length ? show("fwd") : results(); };
     row.append(next);
     card.append(row);
-    next.focus();
+    next.focus({ preventScroll: true });
   }
 
   // Vignette flow: the case and its exhibits on top, its questions below, Next at the bottom.
@@ -624,8 +829,7 @@
   function showVignette() {
     const v = vdeck[vi];
     checkedCurrent = false;
-    app.innerHTML = "";
-    window.scrollTo(0, 0);
+    screen("fwd");
     const quiz = el("div", { id: "quiz" });
 
     const vcard = el("div", { className: "card" });
@@ -695,21 +899,20 @@
   function results(answered = deck.length) {
     endQuiz(() => {});
     const total = timeMs();
-    app.innerHTML = "";
-    window.scrollTo(0, 0);
+    screen("up");
     const card = el("div", { className: "card" });
-    if (answered < deck.length) card.append(el("p", { className: "sub" }, `Quit early: ${answered} of ${deck.length} answered`));
+    card.append(el("p", { className: "kicker" }, answered < deck.length ? `Quit early · ${answered} of ${deck.length} answered` : "Results"));
     card.append(el("p", { className: "score" }, `${score} / ${answered}`));
     const pct = Math.round((score / answered) * 100);
-    card.append(el("p", { className: "sub" }, `${pct}% correct`));
+    card.append(el("p", { className: "sub", style: "margin-bottom:6px" }, `${pct}% correct`));
     card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / answered)} per question`));
     if (flow === "vignette" && vscores.length) {
       const ul = el("ul", { className: "miss" });
       vscores.forEach(s => ul.append(el("li", {}, `${s.title}: ${s.right} / ${s.total}`)));
       card.append(ul);
     }
-    card.append(el("p", { className: "sub" }, reviewMode
-      ? `${score} question${score === 1 ? "" : "s"} you got right left your 오답 노트. ${wrongList().length} still there.`
+    card.append(el("p", { className: "sub", style: "margin-top:12px" }, reviewMode
+      ? `${plural(score, "question")} you got right left your 오답 노트. ${wrongList().length} still there.`
       : missed.length ? `${missed.length} added to your 오답 노트.` : "Nothing new for your 오답 노트."));
     if (missed.length) {
       card.append(el("p", { className: "q" }, "Review what you missed:"));
@@ -724,25 +927,25 @@
       row.append(retry);
     }
     const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "오답 노트");
-    nb.onclick = notes;
+    nb.onclick = () => notes();
     const again = el("button", { className: "btn ghost" }, "Start over");
-    again.onclick = setup;
+    again.onclick = () => backTo();
     const menu = el("button", { className: "btn ghost" }, "Menu");
-    menu.onclick = home;
+    menu.onclick = () => home("back");
     row.append(nb, again, menu);
     card.append(row);
     app.append(card);
   }
 
   document.getElementById("ver").textContent = APP_VERSION;
-  document.getElementById("topics").textContent = [...new Set(ALL_QUESTIONS.map(q => q.topic))].join(" · ");
-  home();
+  document.getElementById("brand").onclick = () => { if (!inQuiz) home("back"); };
+  home("up");
 
   // Hold the splash until the loading bar finishes, then fade it out as the menu slides in.
   (function hideSplash() {
     const splash = document.getElementById("splash");
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const wait = Math.max(0, (reduce ? 400 : 1500) - performance.now());
+    const wait = Math.max(0, (reduce ? 400 : 1600) - performance.now());
     setTimeout(() => {
       splash.classList.add("done");
       document.body.classList.remove("loading");

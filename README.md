@@ -2,9 +2,9 @@
 
 CFA Level 2 concept (개념) quiz. It's a web app you can install on iPhone and iPad.
 
-- `index.html`: the quiz app. It opens on a menu: **Exam style questions** or **Quick questions**.
+- `index.html`: the quiz app. It opens on a menu: **Exam style questions** or **Quick questions**. Each mode lists the 10 CFA Level II topics with their question counts, plus **Create custom** to build a worksheet with a chosen number from each topic.
 - `vignettes.js`: exam-style vignettes (case text, exhibits, item-set questions). The Cascadia Teachers' Retirement Fund vignette is a practice variant of the PWPF case with changed names, numbers and answers.
-- `questions.js`: quick concept questions. Add new questions here.
+- `questions.js`: quick concept questions. Add new questions here. Each question has a `topic` (one of the 10 CFA topics) and a `reading`.
 - **Exam style**: one vignette per screen, with its exhibits on top and its questions below. Pick answers, tap **Check answers** to see results and explanations, then **Next vignette →**. Choose the topic and how many vignettes.
 - **Quiz options**: choose the topic and how many questions (5 / 10 / 15 / 20 / All). A timer runs during the quiz. **Pause** stops it and lets you **Resume** or **Quit** (you still get results for what you answered). Leaving the app pauses automatically.
 - **오답 노트**: every missed question is saved on the device. You can practice them (answering correctly removes them), save them as a `.txt` file (Share → Save to Files, Notes, Goodnotes…), or use Print → PDF.
