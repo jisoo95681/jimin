@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#e4f6f6">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-180.png?v=13">
-<title>CFA Level II Quiz</title>
+<title>CFA Level 2 Quiz</title>
 <style>
   /* Palette: navy #292645, white, pale aqua #e4f6f6, aqua #bbe9e9, steel blue #2f678e. */
   :root {
@@ -400,7 +400,7 @@
 </div>
 <main>
   <header class="brand" id="brand">
-    <span class="brand-cfa">CFA</span><span class="brand-level">Level II</span><span class="brand-sub">Practice Quiz</span>
+    <span class="brand-cfa">CFA</span><span class="brand-level">Level 2</span><span class="brand-sub">Practice Quiz</span>
   </header>
   <div class="glow-line"></div>
   <div id="app"></div>
@@ -413,7 +413,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v15 · 2026-09-25";
+  const APP_VERSION = "v16 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -949,7 +949,7 @@
   // ---------- Study timer and calendar ----------
   // Stored on this device: { days: { "YYYY-MM-DD": { tasks: [{ text, done }], sessions: [{ start, end, sec, manual }] } }, timer: { since } }
   const STUDY_KEY = "cfa-study";
-  const EXAM = new Date(2026, 10, 20, 14, 30);          // CFA Level II exam: Fri 20 Nov 2026, 14:30
+  const EXAM = new Date(2026, 10, 20, 14, 30);          // CFA Level 2 exam: Fri 20 Nov 2026, 14:30
   const CAL_MONTHS = [[2026, 8], [2026, 9], [2026, 10]]; // September–November 2026 (months are 0-based)
   const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -1116,7 +1116,7 @@
     // D-day in the top-left corner, month total on the right. This card never animates when switching months.
     const head = el("div", { className: "card cal-head" });
     const left = el("div");
-    left.append(el("p", { className: "kicker" }, "CFA Level II exam"), el("div", { className: "dday-num" }, dday(now)),
+    left.append(el("p", { className: "kicker" }, "CFA Level 2 exam"), el("div", { className: "dday-num" }, dday(now)),
       el("div", { className: "dday-sub" }, "Fri, 20 November 2026 · 14:30"));
     const right = el("div", { className: "month-total" });
     const monthLabel = el("span", { className: "cnt" }), monthVal = el("b"), allVal = el("span", { className: "cnt" });
