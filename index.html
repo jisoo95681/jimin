@@ -84,24 +84,6 @@
   .back:active { opacity: .6; }
   .title { font-size: 1.45rem; font-weight: 800; margin: 0 0 4px; letter-spacing: -.01em; }
 
-  /* Home choices */
-  .choice {
-    display: block; width: 100%; text-align: left; font: inherit; color: var(--text); cursor: pointer; position: relative; overflow: hidden;
-    transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
-  }
-  .choice::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg, var(--blue), var(--navy)); }
-  .choice::after {
-    content: ""; position: absolute; right: -15%; top: -40%; width: 60%; height: 140%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(187, 233, 233, .75), transparent 70%);
-    opacity: .6; transition: opacity .4s var(--ease); pointer-events: none;
-  }
-  .choice:hover { border-color: var(--blue); box-shadow: 0 14px 34px rgba(41, 38, 69, .12); }
-  .choice:hover::after { opacity: 1; }
-  .choice:active { transform: scale(.985); }
-  .choice h2 { margin: 0 0 6px; font-size: 1.3rem; position: relative; }
-  .choice .sub, .choice .kicker { position: relative; }
-  .choice .go { color: var(--blue); font-weight: 650; margin: 12px 0 0; position: relative; }
-
   /* Topic list */
   .list { padding: 6px 0; }
   .topic-row {
@@ -216,10 +198,6 @@
   details[open] summary { margin-bottom: 10px; }
   .ver { color: var(--muted); font-size: .75rem; text-align: center; margin-top: 26px; opacity: .7; }
 
-  /* Home: timer + calendar tiles side by side */
-  .home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
-  .home-grid > .card { margin-top: 0; }
-  @media (max-width: 520px) { .home-grid { grid-template-columns: 1fr; } }
   .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; vertical-align: middle; }
   @keyframes pulse { 50% { opacity: .3; transform: scale(.8); } }
 
@@ -321,6 +299,49 @@
   .task-row.done span { text-decoration: line-through; color: var(--muted); }
   .big-total { font-size: 2rem; font-weight: 800; color: var(--blue); margin: 0; font-variant-numeric: tabular-nums; }
 
+  /* Front page: 3-card carousel (Questions · Timer · Calendar). The centre card is big and sharp; side cards smaller and blurred. */
+  body { overflow-x: hidden; }
+  .home-stage { min-height: calc(100vh - 170px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); min-height: calc(100dvh - 170px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); display: flex; flex-direction: column; justify-content: center; }
+  .carousel {
+    --cs: min(60vw, 44vh, 430px);
+    position: relative; height: calc(var(--cs) + 40px); margin: 6px calc(-16px - env(safe-area-inset-left)) 0;
+    touch-action: pan-y; -webkit-user-select: none; user-select: none; cursor: grab;
+  }
+  .carousel.dragging { cursor: grabbing; }
+  .cc {
+    position: absolute; left: 50%; top: 50%; width: var(--cs); height: var(--cs);
+    margin-left: calc(var(--cs) / -2); margin-top: calc(var(--cs) / -2);
+    border: 0; border-radius: 30px; padding: clamp(20px, 4vw, 32px); cursor: pointer; font: inherit; text-align: left;
+    display: flex; flex-direction: column; justify-content: flex-end; will-change: transform, filter, opacity;
+    box-shadow: 0 24px 50px rgba(41, 38, 69, .18); -webkit-touch-callout: none;
+  }
+  .cc .kicker { margin-bottom: 8px; }
+  .cc h2 { font-size: clamp(2.1rem, 7vw, 3.2rem); line-height: 1.05; margin: 0 0 10px; letter-spacing: -.02em; }
+  .cc .info { font-weight: 600; font-size: clamp(.95rem, 2.4vw, 1.1rem); opacity: .9; }
+  .cc.q { background: var(--white); color: var(--navy); }
+  .cc.t { background: var(--navy); color: var(--white); }
+  .cc.c { background: var(--blue); color: var(--white); }
+  .cc.t .kicker, .cc.c .kicker { color: var(--aqua); }
+  .dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
+  .dots span { width: 8px; height: 8px; border-radius: 4px; background: rgba(41, 38, 69, .2); transition: width .4s var(--ease), background .4s var(--ease); }
+  .dots span.on { width: 24px; background: var(--navy); }
+  .hint { text-align: center; color: var(--muted); font-size: .85rem; margin: 10px 0 0; }
+
+  /* Questions page: three equal boxes in a row */
+  .hub { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 2vw, 16px); }
+  .hub-box {
+    aspect-ratio: 1; border-radius: clamp(14px, 3vw, 22px); padding: clamp(12px, 2.6vw, 22px); border: 1px solid transparent;
+    display: flex; flex-direction: column; justify-content: flex-end; text-align: left; font: inherit; cursor: pointer; min-width: 0;
+    box-shadow: 0 12px 30px rgba(41, 38, 69, .12); transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .hub-box:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(41, 38, 69, .18); }
+  .hub-box:active { transform: scale(.97); }
+  .hub-box h3 { margin: 0 0 6px; font-size: clamp(.95rem, 3.2vw, 1.45rem); line-height: 1.15; }
+  .hub-box span { font-size: clamp(.7rem, 2vw, .9rem); opacity: .85; }
+  .hub-box.exam { background: var(--navy); color: var(--white); }
+  .hub-box.quick { background: var(--blue); color: var(--white); }
+  .hub-box.wrong { background: var(--white); color: var(--navy); border-color: var(--border); }
+
   /* Screen transitions: the old screen fades out as a ghost while the new one eases in (a crossfade, no blank frame). */
   #app { position: relative; }
   .screen-ghost { position: absolute; pointer-events: none; z-index: 0; }
@@ -385,7 +406,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v13 · 2026-09-25";
+  const APP_VERSION = "v14 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -579,30 +600,120 @@
   }
 
   // ---------- Menu screens ----------
+  // Front page: swipe or tap between Questions, Timer and Calendar. Timer starts in the middle.
+  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar (remembered while the app is open)
   function home(dir = "back") {
     screen(dir);
     backTo = () => home("back");
-    const choice = (kicker, title, desc, meta, onclick) => {
-      const b = el("button", { className: "card choice" });
-      b.append(el("p", { className: "kicker" }, kicker), el("h2", {}, title),
-        el("p", { className: "sub", style: "margin:0" }, desc), el("p", { className: "go" }, `${meta}  →`));
-      b.onclick = onclick;
+    const cards = [
+      { cls: "q", kicker: "Practice", title: "Questions", info: `${plural(VIGNETTES.length, "vignette")} · ${QUESTIONS.length} quick`, open: () => questionsHub() },
+      { cls: "t", kicker: "Focus", title: "Timer", id: "home-timer", open: () => studyTimer() },
+      { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() }
+    ];
+    const wrap = el("div", { className: "carousel" });
+    const els = cards.map((c, idx) => {
+      const b = el("button", { className: `cc ${c.cls}` });
+      b.append(el("p", { className: "kicker" }, c.kicker), el("h2", {}, c.title), el("div", { className: "info", id: c.id || "" }, c.info || ""));
+      b.onclick = () => {
+        if (moved) return;
+        if (idx === mod(Math.round(pos), 3)) c.open();
+        else animateTo(nearest(idx));
+      };
+      wrap.append(b);
       return b;
+    });
+    const dots = el("div", { className: "dots" });
+    const dotEls = cards.map(() => dots.appendChild(el("span")));
+    const stage = el("div", { className: "home-stage" });
+    stage.append(wrap, dots, el("p", { className: "hint" }, "Swipe to switch · tap the middle card to open"));
+    app.append(stage);
+
+    const mod = (n, m) => ((n % m) + m) % m;
+    let pos = homePos, anim = null, moved = false;
+    const spacing = () => els[0].offsetWidth * 0.74;
+    // The nearest "virtual" position for card idx, so the carousel always turns the short way round.
+    const nearest = idx => [0, -1, 1].map(d => Math.round(pos) + d).find(k => mod(k, 3) === idx);
+    function render() {
+      const sp = spacing();
+      els.forEach((e, idx) => {
+        const o = mod(idx - pos + 1.5, 3) - 1.5; // -1.5 … 1.5, 0 = centre
+        const a = Math.min(Math.abs(o), 1);
+        const opacity = Math.abs(o) <= 1 ? 1 - .3 * a : Math.max(0, .7 - (Math.abs(o) - 1) * 1.4);
+        e.style.transform = `translateX(${o * sp}px) scale(${1 - .22 * a})`;
+        e.style.filter = a > .01 ? `blur(${(3.5 * a).toFixed(2)}px)` : "none";
+        e.style.opacity = opacity.toFixed(3);
+        e.style.zIndex = String(10 - Math.round(Math.abs(o) * 3));
+      });
+      const active = mod(Math.round(pos), 3);
+      dotEls.forEach((d, idx) => d.classList.toggle("on", idx === active));
+    }
+    function animateTo(target) {
+      cancelAnimationFrame(anim);
+      const from = pos, t0 = performance.now(), dur = 650;
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      const step = now => {
+        const t = Math.min(1, (now - t0) / dur);
+        pos = from + (target - from) * ease(t);
+        render();
+        if (t < 1) anim = requestAnimationFrame(step);
+        else { pos = target; homePos = mod(target, 3); render(); }
+      };
+      anim = requestAnimationFrame(step);
+    }
+
+    // Drag with a finger (or mouse): the cards follow, then settle on the nearest card.
+    let startX = null, startPos = 0, lastX = 0, lastT = 0, vel = 0;
+    wrap.addEventListener("pointerdown", e => {
+      cancelAnimationFrame(anim);
+      startX = lastX = e.clientX; startPos = pos; lastT = performance.now(); vel = 0; moved = false;
+    });
+    wrap.addEventListener("pointermove", e => {
+      if (startX === null) return;
+      const dx = e.clientX - startX;
+      if (!moved && Math.abs(dx) > 8) { moved = true; wrap.classList.add("dragging"); try { wrap.setPointerCapture(e.pointerId); } catch {} }
+      if (!moved) return;
+      const now = performance.now();
+      vel = (e.clientX - lastX) / Math.max(1, now - lastT); lastX = e.clientX; lastT = now;
+      pos = startPos - dx / spacing();
+      render();
+    });
+    const end = () => {
+      if (startX === null) return;
+      startX = null;
+      wrap.classList.remove("dragging");
+      if (!moved) return;
+      let target = Math.round(pos);
+      if (Math.abs(vel) > .3 && target === Math.round(startPos)) target = Math.round(startPos) - Math.sign(vel); // a quick flick moves one card
+      animateTo(target);
+      setTimeout(() => (moved = false), 50);
     };
-    app.append(
-      choice("Item sets", "Exam style questions", "Read a vignette with its exhibits, then answer its questions, like the real exam.",
-        `${plural(VIGNETTES.length, "vignette")} · ${EXAM_QUESTIONS.length} questions`, () => topics("exam")),
-      choice("Concepts", "Quick questions", "Short concept questions, one at a time.",
-        `${QUESTIONS.length} questions`, () => topics("quick"))
-    );
-    const grid = el("div", { className: "home-grid" });
-    const timerTile = choice("Focus", "Study timer", "Start when you sit down, pause for breaks. Time goes to your calendar.", "", () => studyTimer());
-    timerTile.querySelector(".go").id = "home-timer";
-    const calTile = choice("Plan", "Study calendar", "Daily plans and hours studied, September to November.", "", () => calendar());
-    calTile.querySelector(".go").id = "home-dday";
-    grid.append(timerTile, calTile);
-    app.append(grid, notebookCard());
+    wrap.addEventListener("pointerup", end);
+    wrap.addEventListener("pointercancel", end);
+    homeKeys = e => { if (e.key === "ArrowLeft") animateTo(Math.round(pos) - 1); if (e.key === "ArrowRight") animateTo(Math.round(pos) + 1); };
+    new ResizeObserver(render).observe(wrap);
+    render();
     updateStudyDisplays();
+  }
+  let homeKeys = null;
+  document.addEventListener("keydown", e => { if (homeKeys && document.querySelector(".carousel") && !document.querySelector(".focus")) homeKeys(e); });
+
+  // Questions page: three equal boxes in a row.
+  function questionsHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => questionsHub("back");
+    app.append(nav("Menu", () => home("back")), el("h1", { className: "title", style: "margin-bottom:16px" }, "Questions"));
+    const n = wrongList().length;
+    const hub = el("div", { className: "hub" });
+    const box = (cls, title, meta, onclick) => {
+      const b = el("button", { className: `hub-box ${cls}` });
+      b.append(el("h3", {}, title), el("span", {}, meta));
+      b.onclick = onclick;
+      hub.append(b);
+    };
+    box("exam", "Exam style questions", `${plural(VIGNETTES.length, "vignette")} · ${EXAM_QUESTIONS.length} Qs`, () => topics("exam"));
+    box("quick", "Quick questions", plural(QUESTIONS.length, "question"), () => topics("quick"));
+    box("wrong", "Incorrect questions", n ? `${n} to review` : "None yet", () => notes());
+    app.append(hub);
   }
 
   function topicMeta(mode, t) {
@@ -614,7 +725,7 @@
   function topics(mode, dir = "fwd") {
     screen(dir);
     backTo = () => topics(mode, "back");
-    app.append(nav("Menu", () => home("back")));
+    app.append(nav("Questions", () => questionsHub("back")));
     app.append(el("h1", { className: "title" }, MODES[mode].name), el("p", { className: "sub" }, "Choose a topic, or build your own mix."));
     const list = el("div", { className: "card list" });
     TOPICS.forEach((t, idx) => {
@@ -755,25 +866,12 @@
     app.append(list, footer);
   }
 
-  function notebookCard() {
-    const n = wrongList().length;
-    const card = el("div", { className: "card" });
-    card.append(el("p", { className: "kicker" }, "Review"), el("p", { className: "q", style: "margin-bottom:6px" }, `Wrong answers (${n})`));
-    card.append(el("p", { className: "sub" }, n
-      ? "Every question you miss is saved here. Review it, practice it, or save it as a file."
-      : "Questions you get wrong will be saved here."));
-    const open = el("button", { className: "btn ghost", disabled: !n }, "Open wrong answers");
-    open.onclick = () => notes();
-    card.append(open);
-    return card;
-  }
-
   function notes(dir = "fwd") {
     screen(dir);
     backTo = () => notes("back");
     const list = wrongList(), w = loadWrong();
-    app.append(nav("Menu", () => home("back")));
-    app.append(el("h1", { className: "title" }, "Wrong answers"), el("p", { className: "sub" }, plural(list.length, "question")));
+    app.append(nav("Questions", () => questionsHub("back")));
+    app.append(el("h1", { className: "title" }, "Incorrect questions"), el("p", { className: "sub" }, plural(list.length, "question")));
     const card = el("div", { className: "card" });
 
     const top = el("div", { className: "row", style: "margin-top:0" });
@@ -802,7 +900,7 @@
 
     if (list.length) {
       const clear = el("button", { className: "btn ghost small", style: "margin-top:12px" }, "Clear all");
-      clear.onclick = () => { if (confirm("Delete every question from your wrong answers?")) { saveWrong({}); home("back"); } };
+      clear.onclick = () => { if (confirm("Delete every question from your incorrect questions?")) { saveWrong({}); questionsHub("back"); } };
       card.append(clear);
     }
     app.append(card);
@@ -812,7 +910,7 @@
 
   function notesText() {
     const w = loadWrong(), list = wrongList();
-    let out = `CFA L2 Wrong Answers\nSaved ${today()}\n`;
+    let out = `CFA L2 Incorrect Questions\nSaved ${today()}\n`;
     list.forEach((q, n) => {
       out += `\n${n + 1}. [${qLabel(q)}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
       out += `Q: ${q.q}\n`;
@@ -830,7 +928,7 @@
     const file = new File([notesText()], name, { type: "text/plain" });
     // On iPhone/iPad this opens the Share sheet → Save to Files, Notes, Goodnotes, AirDrop…
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try { await navigator.share({ files: [file], title: "CFA wrong answers" }); return; }
+      try { await navigator.share({ files: [file], title: "CFA incorrect questions" }); return; }
       catch (e) { if (e.name === "AbortError") return; }
     }
     const a = el("a", { href: URL.createObjectURL(file), download: name });
@@ -959,7 +1057,7 @@
     set("sw-time", hms(todayFocusSec(s)));
     const ht = document.getElementById("home-timer");
     if (ht) {
-      const text = s.timer.since ? `Studying · ${fmt(run * 1000)}  →` : `Today: ${fmtDur(today)}  →`;
+      const text = s.timer.since ? `Concentrating · ${hms(todayFocusSec(s))}` : `Today ${fmtDur(today)}`;
       if (ht.dataset.text !== text) {
         ht.dataset.text = text;
         ht.textContent = "";
@@ -967,7 +1065,7 @@
         ht.append(text);
       }
     }
-    set("home-dday", `${dday(new Date())} · Exam 20 Nov, 14:30  →`);
+    set("home-dday", `${dday(new Date())} · Exam 20 Nov`);
   }
   setInterval(updateStudyDisplays, 500);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) updateStudyDisplays(); });
@@ -1387,8 +1485,8 @@
       card.append(ul);
     }
     card.append(el("p", { className: "sub", style: "margin-top:12px" }, reviewMode
-      ? `${plural(score, "question")} you got right left your wrong answers. ${wrongList().length} still there.`
-      : missed.length ? `${missed.length} added to your wrong answers.` : "Nothing new for your wrong answers."));
+      ? `${plural(score, "question")} you got right left your incorrect questions. ${wrongList().length} still there.`
+      : missed.length ? `${missed.length} added to your incorrect questions.` : "Nothing new for your incorrect questions."));
     if (missed.length) {
       card.append(el("p", { className: "q" }, "Review what you missed:"));
       const ul = el("ul", { className: "miss" });
@@ -1401,7 +1499,7 @@
       retry.onclick = () => begin(shuffle(missed), reviewMode);
       row.append(retry);
     }
-    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "Wrong answers");
+    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "Incorrect questions");
     nb.onclick = () => notes();
     const again = el("button", { className: "btn ghost" }, "Start over");
     again.onclick = () => backTo();
