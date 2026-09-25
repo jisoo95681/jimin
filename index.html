@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#e4f6f6">
 <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png?v=13">
 <title>CFA Level II Quiz</title>
 <style>
   /* Palette: navy #292645, white, pale aqua #e4f6f6, aqua #bbe9e9, steel blue #2f678e. */
@@ -337,36 +337,16 @@
   @keyframes out-back { to { opacity: 0; transform: translateX(24px); } }
   @keyframes out-up { to { opacity: 0; transform: translateY(-8px); } }
 
-  /* Launch splash */
+  /* Launch splash: plain navy with "CFA" / "Level 2" */
   #splash {
-    position: fixed; inset: 0; z-index: 100; overflow: hidden; color: var(--white);
-    background: linear-gradient(170deg, #34305a 0%, var(--navy) 55%, #1f1d38 100%);
+    position: fixed; inset: 0; z-index: 100; background: var(--navy); color: var(--white);
     display: flex; align-items: center; justify-content: center; text-align: center;
-    transition: opacity .8s var(--ease), transform .8s var(--ease);
+    transition: opacity .8s var(--ease);
   }
-  #splash.done { opacity: 0; transform: scale(1.04); pointer-events: none; }
-  .streak {
-    position: absolute; left: -30%; right: -30%; top: 22%; height: 34%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(187, 233, 233, .5), rgba(47, 103, 142, .35) 45%, transparent 72%);
-    filter: blur(16px); opacity: 0; transform: rotate(-12deg) translateX(-35%);
-    animation: streak 1.6s var(--ease) .05s forwards;
-  }
-  .streak.two { top: 62%; height: 18%; animation-delay: .25s; }
-  .beam {
-    position: absolute; left: -10%; right: -10%; top: 49%; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--aqua) 40%, #fff 50%, var(--aqua) 60%, transparent);
-    transform: rotate(-12deg) scaleX(0); animation: beam 1.2s var(--ease) .3s forwards;
-  }
-  @keyframes streak { to { opacity: 1; transform: rotate(-12deg) translateX(0); } }
-  @keyframes beam { to { transform: rotate(-12deg) scaleX(1); } }
-  .splash-body { position: relative; }
-  .s-cfa, .s-level, .s-sub, .s-bar { opacity: 0; transform: translateY(12px); animation: fade-up .8s var(--ease) forwards; }
-  .s-cfa { font-family: var(--serif); font-weight: 700; font-size: clamp(4rem, 18vw, 6.5rem); line-height: 1; color: var(--aqua); animation-delay: .1s; text-shadow: 0 0 40px rgba(187, 233, 233, .35); }
-  .s-level { font-weight: 800; font-style: italic; font-size: clamp(1.4rem, 5vw, 1.9rem); margin-top: 6px; animation-delay: .25s; }
-  .s-sub { margin-top: 8px; font-size: .78rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(255, 255, 255, .7); animation-delay: .35s; }
-  .s-bar { width: 150px; height: 3px; margin: 30px auto 0; border-radius: 2px; background: rgba(255, 255, 255, .15); overflow: hidden; animation-delay: .4s; }
-  .s-bar span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--aqua), var(--white)); animation: load 1.05s ease-in-out .45s forwards; }
-  @keyframes load { to { width: 100%; } }
+  #splash.done { opacity: 0; pointer-events: none; }
+  .s-cfa, .s-level { opacity: 0; transform: translateY(10px); animation: fade-up .8s var(--ease) forwards; }
+  .s-cfa { font-weight: 700; font-size: clamp(4rem, 18vw, 6.5rem); line-height: 1; letter-spacing: .02em; animation-delay: .1s; }
+  .s-level { font-weight: 400; font-size: clamp(1.6rem, 6vw, 2.3rem); margin-top: 14px; animation-delay: .25s; }
   main { transition: opacity .8s var(--ease), transform .8s var(--ease); }
   body.loading main { opacity: 0; transform: translateY(18px); }
 
@@ -385,14 +365,9 @@
 </head>
 <body class="loading">
 <div id="splash" aria-hidden="true">
-  <div class="streak"></div>
-  <div class="streak two"></div>
-  <div class="beam"></div>
-  <div class="splash-body">
+  <div>
     <div class="s-cfa">CFA</div>
-    <div class="s-level">Level II</div>
-    <div class="s-sub">Practice Quiz</div>
-    <div class="s-bar"><span></span></div>
+    <div class="s-level">Level 2</div>
   </div>
 </div>
 <main>
@@ -410,7 +385,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v12 · 2026-09-25";
+  const APP_VERSION = "v13 · 2026-09-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -955,8 +930,8 @@
       navigator.mediaSession.metadata = new MediaMetadata({
         title: running ? "Concentrating" : "Paused",
         artist: `Today ${fmtDur(today)} · ${dday(new Date())}`,
-        album: "CFA Level II · Study timer",
-        artwork: [{ src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }]
+        album: "CFA Level 2",
+        artwork: [{ src: "icons/icon-512.png?v=13", sizes: "512x512", type: "image/png" }]
       });
       if (running) silentAudio.play().catch(() => {}); else silentAudio.pause();
       navigator.mediaSession.playbackState = running ? "playing" : "paused";
