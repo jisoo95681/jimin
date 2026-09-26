@@ -4,7 +4,7 @@
 // Uses helpers from index.html (loadStudy, saveStudy, daySec, dkey, fromKey, midnight, EXAM, screen, nav, el, app, ...).
 
 const GROW_FULL_SEC = 8 * 3600;
-const GARDEN_EPOCH = new Date(2026, 8, 26); // day 0 of the species rotation (first tree: Baobab)
+const GARDEN_EPOCH = new Date(2026, 8, 26); // the first garden day, whose tree is a Baobab
 const SPECIES = [
   { name: "Baobab", kind: "baobab", trunk: 0x9c7c64, leaf: 0x7fa34e },
   { name: "Lemon Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3f7d3b, fruit: 0xf3d23b, oval: true, size: .85 },
@@ -27,7 +27,25 @@ const SPECIES = [
 // ---------- Data ----------
 const gMod = (n, m) => ((n % m) + m) % m;
 const dayDiff = (a, b) => Math.round((midnight(b) - midnight(a)) / 86400000);
-const speciesFor = key => gMod(dayDiff(GARDEN_EPOCH, fromKey(key)), SPECIES.length);
+// The first day is a Baobab; every day after gets a random species (fixed per date, never the same as the day before).
+const speciesMemo = {};
+function speciesFor(key) {
+  if (key in speciesMemo) return speciesMemo[key];
+  const n = dayDiff(GARDEN_EPOCH, fromKey(key));
+  let idx;
+  if (n === 0) idx = 0;
+  else {
+    const rnd = seeded("species:" + key);
+    if (n < 0) idx = Math.floor(rnd() * SPECIES.length);
+    else {
+      const prev = new Date(fromKey(key)); prev.setDate(prev.getDate() - 1);
+      const avoid = speciesFor(dkey(prev));
+      idx = Math.floor(rnd() * (SPECIES.length - 1));
+      if (idx >= avoid) idx++;
+    }
+  }
+  return (speciesMemo[key] = idx);
+}
 const growthOf = sec => Math.min(1, sec / GROW_FULL_SEC);
 
 // Focused seconds for a day, including the part of a still-running timer session that falls on that day.
