@@ -211,12 +211,11 @@
   .focus.show { opacity: 1; }
   .focus.running { background: var(--navy); color: var(--white); }
   .focus-time { display: flex; justify-content: center; font-size: clamp(4.5rem, 19vw, 11rem); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.03em; line-height: 1.15; }
-  /* Each digit sits in its own slot; when it changes, the old digit rolls up and out while the new one rolls in from below. */
-  .slot { position: relative; display: inline-block; overflow: hidden; }
+  /* Each digit sits in its own slot; when it changes, the old digit slowly fades out in place while the new one fades in. No movement. */
+  .slot { position: relative; display: inline-block; }
   .slot .sizer { visibility: hidden; }
-  .slot .dg { position: absolute; left: 0; right: 0; top: 0; text-align: center; transition: transform .55s cubic-bezier(.22, .61, .36, 1), opacity .55s ease; }
-  .slot .dg.below { transform: translateY(70%); opacity: 0; }
-  .slot .dg.above { transform: translateY(-70%); opacity: 0; }
+  .slot .dg { position: absolute; left: 0; right: 0; top: 0; text-align: center; transition: opacity .8s ease-in-out; }
+  .slot .dg.below, .slot .dg.above { opacity: 0; }
   .focus-btn {
     position: relative; width: min(280px, 72vw); height: 76px; border-radius: 999px; border: 0; overflow: hidden; cursor: pointer;
     font: inherit; font-size: 1.3rem; font-weight: 700; letter-spacing: .02em; background: var(--navy); color: var(--white);
@@ -419,7 +418,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v17 · 2026-09-26";
+  const APP_VERSION = "v18 · 2026-09-26";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1066,7 +1065,7 @@
     toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
   }
 
-  // Show a time like "1:02:37" digit by digit; digits that change roll to the new value.
+  // Show a time like "1:02:37" digit by digit; a digit that changes crossfades to the new value in place.
   function rollTo(box, text) {
     if (!box || box.dataset.value === text) return;
     const animate = box.dataset.value !== undefined && box.dataset.value.length === text.length;
@@ -1087,7 +1086,7 @@
         const next = el("span", { className: "dg below" }, ch);
         slot.append(next);
         cur.classList.add("above");
-        setTimeout(() => cur.remove(), 600);
+        setTimeout(() => cur.remove(), 850);
         requestAnimationFrame(() => requestAnimationFrame(() => next.classList.remove("below")));
       });
     }
