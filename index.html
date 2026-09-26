@@ -346,6 +346,32 @@
   .hub-box.quick { background: var(--blue); color: var(--white); }
   .hub-box.wrong { background: var(--white); color: var(--navy); border-color: var(--border); }
 
+  /* Garden */
+  .cc.g { background: var(--aqua); color: var(--navy); }
+  .garden-card { padding-bottom: 22px; }
+  .g-name { font-family: var(--serif); font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  .g-stage { position: relative; height: min(56vh, 520px); margin: 14px -8px 8px; border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, #eef9f9, #d9f0f0); touch-action: none; }
+  .g-stage.tall { height: min(60vh, 600px); margin-top: 0; }
+  .g-stage canvas { display: block; width: 100%; height: 100%; }
+  .g-offline { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); padding: 20px; text-align: center; }
+  .g-bar { position: relative; height: 10px; border-radius: 5px; background: var(--aqua-pale); margin: 22px 4px 30px; }
+  .g-fill { height: 100%; width: 0; border-radius: 5px; background: linear-gradient(90deg, #7cc35a, #3f8f4a); transition: width 1.2s var(--ease); }
+  .g-mark { position: absolute; top: -4px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
+  .g-mark i { width: 2px; height: 18px; background: var(--white); border-radius: 1px; box-shadow: 0 0 0 1px var(--border); }
+  .g-mark b { font-size: .72rem; color: var(--muted); margin-top: 4px; font-weight: 700; }
+  .g-mark:last-child i { background: transparent; box-shadow: none; }
+  .g-next { margin: 0; }
+  .g-btn { display: block; width: 100%; margin-top: 16px; padding: 18px; font-size: 1.1rem; border-radius: 16px; background: var(--navy); border-color: var(--navy); }
+  .g-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-top: 16px; }
+  .g-tile { display: flex; flex-direction: column; gap: 3px; text-align: left; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--white); font: inherit; color: var(--navy); cursor: pointer; transition: border-color .3s, transform .2s var(--ease); }
+  .g-tile:hover { border-color: var(--blue); }
+  .g-tile:active { transform: scale(.97); }
+  .g-tile.today { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue) inset; }
+  .g-tile span { font-size: .8rem; color: var(--muted); }
+  .g-tile .g-pct { color: var(--navy); font-weight: 700; }
+  .g-mini { height: 5px; border-radius: 3px; background: var(--aqua-pale); overflow: hidden; margin-top: 4px; }
+  .g-mini div { height: 100%; background: #5fae52; }
+
   /* Screen transitions: the old screen fades out as a ghost while the new one eases in (a crossfade, no blank frame). */
   #app { position: relative; }
   .screen-ghost { position: absolute; pointer-events: none; z-index: 0; }
@@ -413,12 +439,13 @@
 </main>
 <script src="questions.js"></script>
 <script src="vignettes.js"></script>
+<script src="garden.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v18 · 2026-09-26";
+  const APP_VERSION = "v19 · 2026-09-26";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -612,23 +639,25 @@
   }
 
   // ---------- Menu screens ----------
-  // Front page: swipe or tap between Questions, Timer and Calendar. Timer starts in the middle.
-  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar (remembered while the app is open)
+  // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
+  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden (remembered while the app is open)
   function home(dir = "back") {
     screen(dir);
     backTo = () => home("back");
     const cards = [
       { cls: "q", kicker: "Practice", title: "Questions", info: `${plural(VIGNETTES.length, "vignette")} · ${QUESTIONS.length} quick`, open: () => questionsHub() },
       { cls: "t", kicker: "Focus", title: "Timer", id: "home-timer", open: () => studyTimer() },
-      { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() }
+      { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
+      { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() }
     ];
+    const N = cards.length;
     const wrap = el("div", { className: "carousel" });
     const els = cards.map((c, idx) => {
       const b = el("button", { className: `cc ${c.cls}` });
       b.append(el("p", { className: "kicker" }, c.kicker), el("h2", {}, c.title), el("div", { className: "info", id: c.id || "" }, c.info || ""));
       b.onclick = () => {
         if (moved) return;
-        if (idx === mod(Math.round(pos), 3)) c.open();
+        if (idx === mod(Math.round(pos), N)) c.open();
         else animateTo(nearest(idx));
       };
       wrap.append(b);
@@ -644,11 +673,11 @@
     let pos = homePos, anim = null, moved = false;
     const spacing = () => els[0].offsetWidth * 0.74;
     // The nearest "virtual" position for card idx, so the carousel always turns the short way round.
-    const nearest = idx => [0, -1, 1].map(d => Math.round(pos) + d).find(k => mod(k, 3) === idx);
+    const nearest = idx => [0, -1, 1, -2, 2].map(d => Math.round(pos) + d).find(k => mod(k, N) === idx);
     function render() {
       const sp = spacing();
       els.forEach((e, idx) => {
-        const o = mod(idx - pos + 1.5, 3) - 1.5; // -1.5 … 1.5, 0 = centre
+        const o = mod(idx - pos + N / 2, N) - N / 2; // 0 = centre, ±1 = sides, further = hidden behind
         const a = Math.min(Math.abs(o), 1);
         const opacity = Math.abs(o) <= 1 ? 1 : Math.max(0, 1 - (Math.abs(o) - 1) * 2); // only the card wrapping round fades
         e.style.transform = `translateX(${o * sp}px) scale(${1 - .22 * a})`;
@@ -657,7 +686,7 @@
         e.style.opacity = opacity.toFixed(3);
         e.style.zIndex = String(10 - Math.round(Math.abs(o) * 3));
       });
-      const active = mod(Math.round(pos), 3);
+      const active = mod(Math.round(pos), N);
       dotEls.forEach((d, idx) => d.classList.toggle("on", idx === active));
     }
     function animateTo(target) {
@@ -669,7 +698,7 @@
         pos = from + (target - from) * ease(t);
         render();
         if (t < 1) anim = requestAnimationFrame(step);
-        else { pos = target; homePos = mod(target, 3); render(); }
+        else { pos = target; homePos = mod(target, N); render(); }
       };
       anim = requestAnimationFrame(step);
     }
@@ -1109,6 +1138,7 @@
       }
     }
     set("home-dday", `${dday(new Date())} · Exam 20 Nov`);
+    if (document.getElementById("home-garden")) set("home-garden", gardenHomeInfo());
   }
   setInterval(updateStudyDisplays, 200); // often enough that each second rolls over on time
   document.addEventListener("visibilitychange", () => { if (!document.hidden) updateStudyDisplays(); });
@@ -1555,6 +1585,7 @@
   }
 
   document.getElementById("ver").textContent = APP_VERSION;
+  gardenSync(); // lock the trees of days that have ended
   document.getElementById("brand").onclick = () => { if (!inQuiz) home("back"); };
   home("up");
 
