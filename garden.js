@@ -122,6 +122,7 @@ function seeded(str) {
   return () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 }
 const smooth = x => { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); };
+const easeOut = x => { x = Math.max(0, Math.min(1, x)); return 1 - (1 - x) * (1 - x); };
 
 // Build one tree. Every part has a growth window [a, b]; update(g) scales parts in as the tree grows.
 function buildTree(T, spec, seedKey) {
@@ -338,12 +339,15 @@ function buildTree(T, spec, seedKey) {
   return {
     group: outer,
     update(g) {
-      root.scale.setScalar(.35 + .65 * smooth(g));
-      const sp = 1 - smooth((g - .03) / .08);
+      // Early growth must read as "growing up": the tree starts at a good size and the trunk shoots up fast (ease-out),
+      // so it is already taller than the seedling before the seedling fades away.
+      root.scale.setScalar(.5 + .5 * easeOut(g));
+      const sp = 1 - smooth((g - .17) / .08);
       sprout.visible = sp > .01;
       sprout.scale.setScalar(Math.max(.001, sp));
       parts.forEach(p => {
-        const t = smooth((g - p.a) / Math.max(.01, p.b - p.a));
+        const x = (g - p.a) / Math.max(.01, p.b - p.a);
+        const t = p.mode === "y" ? easeOut(x) : smooth(x);
         p.obj.visible = t > .002;
         if (!p.obj.visible) return;
         if (p.mode === "y") p.obj.scale.set(p.base.x * (.35 + .65 * t), p.base.y * t, p.base.z * (.35 + .65 * t));
