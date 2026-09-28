@@ -124,28 +124,33 @@ function seeded(str) {
 const smooth = x => { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); };
 const easeOut = x => { x = Math.max(0, Math.min(1, x)); return 1 - (1 - x) * (1 - x); };
 
-// Build one tree. Every part has a growth window [a, b]; update(g) scales parts in as the tree grows.
+// Build one tree as a hierarchy: leaves hang on branches, branches on the trunk. Each part grows (uniform scale) inside
+// its parent, so everything stays connected at every stage. update(g) takes growth 0–1.
 function buildTree(T, spec, seedKey) {
   const rnd = seeded(seedKey + spec.name), R = (lo, hi) => lo + (hi - lo) * rnd();
   const outer = new T.Group(), root = new T.Group();
   outer.add(root);
-  const parts = [];
+  const parts = [], links = [];
   const mats = {};
   const mat = c => (mats[c] = mats[c] || new T.MeshStandardMaterial({ color: c, flatShading: true, roughness: .85, metalness: 0 }));
   const up = new T.Vector3(0, 1, 0);
-  // Growth windows are written on a 0–1 scale; branches and leaves are pulled earlier so every stage shows visible progress.
-  const add = (obj, a, b, mode = "all", parent = root) => {
-    if (a < .8) { a *= .7; b = Math.min(.95, b * .82); }
-    parent.add(obj);
-    parts.push({ obj, a, b: Math.min(1, b), mode, base: obj.scale.clone() });
+  const V = (x, y, z) => new T.Vector3(x, y, z);
+  // Parts are placed in tree coordinates at full size; after building they are re-parented (keeping their place).
+  const grow = (obj, a, b, parent = null) => {
+    if (a < .8) { a *= 1.25; b = Math.min(.92, b * 1.45); } // spread the stages so 25/50/75% look clearly different
+    root.add(obj);
+    parts.push({ obj, a, b: Math.min(1, b) });
+    if (parent) links.push([parent, obj]);
     return obj;
   };
   function limb(from, dir, len, r0, r1, color) {
-    const g = new T.CylinderGeometry(r1, r0, len, 6);
+    const g = new T.CylinderGeometry(r1, r0, len, 7);
     g.translate(0, len / 2, 0);
     const m = new T.Mesh(g, mat(color));
     m.position.copy(from);
     m.quaternion.setFromUnitVectors(up, dir.clone().normalize());
+    m.userData.tip = from.clone().add(dir.clone().normalize().multiplyScalar(len));
+    m.userData.at = f => from.clone().add(dir.clone().normalize().multiplyScalar(len * f));
     return m;
   }
   function blob(pos, r, color, sx = 1, sy = 1, sz = 1, detail = 1) {
@@ -155,210 +160,189 @@ function buildTree(T, spec, seedKey) {
     m.rotation.set(R(0, 3), R(0, 3), R(0, 3));
     return m;
   }
-  const V = (x, y, z) => new T.Vector3(x, y, z);
   const around = (n, k, jitter = .3) => (k / n) * Math.PI * 2 + R(-jitter, jitter);
+  // Leaf clusters around a branch tip, overlapping the wood so they never float.
+  function crown(branch, color, n, r, a, opts = {}) {
+    const tip = branch.userData.tip;
+    for (let i = 0; i < n; i++) {
+      const off = i === 0 ? V(0, 0, 0) : V(R(-1, 1), R(-.4, .8), R(-1, 1)).normalize().multiplyScalar(r * R(.5, .8));
+      const b = blob(tip.clone().add(off), r * (i === 0 ? 1 : R(.7, .9)), color, opts.sx || 1, opts.sy || 1, opts.sz || 1);
+      grow(b, Math.max(0, a - .08) + i * .03, a + .3 + i * .03, branch); // leaves start budding with their branch
+    }
+  }
+  function fruitOn(branch, color, n, spread, a, oval) {
+    const tip = branch.userData.tip;
+    for (let i = 0; i < n; i++) {
+      const p = tip.clone().add(V(R(-1, 1), R(-.9, .2), R(-1, 1)).normalize().multiplyScalar(spread * R(.85, 1.05)));
+      const f = blob(p, .085, color, 1, oval ? 1.35 : 1, 1, 1);
+      f.rotation.set(0, 0, 0);
+      const s = R(.82, .9);
+      grow(f, s, s + .1, branch);
+    }
+  }
 
-  // A seedling that is only visible before the tree really starts growing.
+  // A seedling shown only at the very beginning.
   const sprout = new T.Group();
   sprout.add(limb(V(0, 0, 0), up, .28, .025, .02, 0x6aa84f));
-  const leafA = blob(V(.07, .28, 0), .07, 0x7cc35a, 1.4, .35, .8, 0), leafB = blob(V(-.07, .3, 0), .07, 0x7cc35a, 1.4, .35, .8, 0);
-  sprout.add(leafA, leafB);
+  sprout.add(blob(V(.07, .28, 0), .07, 0x7cc35a, 1.4, .35, .8, 0), blob(V(-.07, .3, 0), .07, 0x7cc35a, 1.4, .35, .8, 0));
   outer.add(sprout);
 
   const k = spec.kind, sz = spec.size || 1;
   if (k === "round") {
     const H = R(1.15, 1.4) * sz;
-    add(limb(V(0, 0, 0), up, H, .14 * sz, .09 * sz, spec.trunk), .02, .5, "y");
+    const trunk = grow(limb(V(0, 0, 0), up, H, .14 * sz, .09 * sz, spec.trunk), 0, .45);
+    const leader = grow(limb(V(0, H * .98, 0), V(R(-.1, .1), 1, R(-.1, .1)), .45 * sz, .08 * sz, .05 * sz, spec.trunk), .15, .5, trunk);
+    const branches = [leader];
     const nb = 4 + Math.floor(R(0, 2));
-    const tips = [];
     for (let i = 0; i < nb; i++) {
-      const ang = around(nb, i), y = H * R(.6, .95), len = R(.55, .85) * sz;
-      const dir = V(Math.cos(ang), R(.7, 1.2), Math.sin(ang));
-      add(limb(V(0, y, 0), dir, len, .07 * sz, .035 * sz, spec.trunk), .18 + i * .05, .5 + i * .05);
-      tips.push(V(0, y, 0).add(dir.normalize().multiplyScalar(len)));
+      const ang = around(nb, i), y = H * R(.62, .95), len = R(.55, .85) * sz;
+      branches.push(grow(limb(V(0, y, 0), V(Math.cos(ang), R(.7, 1.2), Math.sin(ang)), len, .07 * sz, .035 * sz, spec.trunk), .14 + i * .03, .5 + i * .03, trunk));
     }
-    const blobs = [];
-    const nl = 9 + Math.floor(R(0, 4)), spread = .75 * sz, cy = H + .45 * sz;
-    for (let i = 0; i < nl; i++) {
-      const p = i < tips.length ? tips[i].clone().add(V(0, .15, 0)) : V(R(-spread, spread), cy + R(-.3, .45) * sz, R(-spread, spread));
-      const r = R(.42, .62) * sz;
-      const a = .28 + R(0, .4);
-      blobs.push({ p, r, a });
-      add(blob(p, r, spec.leaf, 1, spec.flat ? .72 : .95, 1), a, a + .3);
-    }
-    if (spec.fruit) {
-      const nf = 12 + Math.floor(R(0, 6));
-      for (let i = 0; i < nf; i++) {
-        const b = blobs[Math.floor(R(0, blobs.length))];
-        const d = V(R(-1, 1), R(-1, .4), R(-1, 1)).normalize();
-        const p = b.p.clone().add(d.multiplyScalar(b.r * .92));
-        const f = blob(p, .085 * (spec.oval ? 1 : 1.1), spec.fruit, 1, spec.oval ? 1.35 : 1, 1, 1);
-        const a = R(.8, .9);
-        add(f, a, a + .1);
-      }
-    }
+    branches.forEach((br, i) => {
+      crown(br, spec.leaf, i === 0 ? 3 : 2, R(.4, .55) * sz, .22 + i * .03, { sy: spec.flat ? .75 : .95 });
+      if (spec.fruit) fruitOn(br, spec.fruit, 3, .45 * sz, 0, spec.oval);
+    });
   } else if (k === "pine") {
-    const H1 = R(.9, 1.1), H2 = R(.9, 1.2), lean = R(-.35, .35);
-    add(limb(V(0, 0, 0), V(lean * .4, 1, 0), H1, .16, .12, spec.trunk), .02, .35, "y");
-    const mid = V(lean * .4, 1, 0).normalize().multiplyScalar(H1);
-    add(limb(mid, V(-lean, 1, R(-.2, .2)), H2, .12, .07, spec.trunk), .2, .55, "y");
-    const top = mid.clone().add(V(-lean, 1, 0).normalize().multiplyScalar(H2));
+    const lean = R(-.35, .35);
+    const d1 = V(lean * .4, 1, 0), d2 = V(-lean, 1, R(-.2, .2));
+    const s1 = grow(limb(V(0, 0, 0), d1, R(.9, 1.1), .16, .12, spec.trunk), 0, .35);
+    const s2 = grow(limb(s1.userData.tip, d2, R(.9, 1.2), .12, .07, spec.trunk), .15, .5, s1);
     const layers = 4 + Math.floor(R(0, 2));
     for (let i = 0; i < layers; i++) {
-      const ang = around(layers, i, .5), y = top.y - i * R(.25, .4), len = R(.6, 1);
-      const base = V(top.x * (y / top.y), y, 0);
-      const dir = V(Math.cos(ang), R(.1, .35), Math.sin(ang));
-      add(limb(base, dir, len, .06, .03, spec.trunk), .3 + i * .06, .6 + i * .06);
-      const tip = base.clone().add(dir.normalize().multiplyScalar(len));
-      const a = .4 + i * .08;
-      add(blob(tip.add(V(0, .08, 0)), R(.5, .72), spec.leaf, 1.25, .38, 1.1), a, a + .3);
+      const ang = around(layers, i, .5), base = s2.userData.at(1 - i * .18);
+      const br = grow(limb(base, V(Math.cos(ang), R(.1, .35), Math.sin(ang)), R(.6, 1), .06, .03, spec.trunk), .25 + i * .05, .55 + i * .05, s2);
+      crown(br, spec.leaf, 2, R(.45, .62), .35 + i * .05, { sx: 1.25, sy: .4, sz: 1.1 });
     }
-    add(blob(top.clone().add(V(0, .12, 0)), .6, spec.leaf, 1.3, .4, 1.2), .45, .8);
+    const top = grow(limb(s2.userData.tip, up, .2, .05, .03, spec.trunk), .3, .55, s2);
+    crown(top, spec.leaf, 2, .55, .45, { sx: 1.3, sy: .42, sz: 1.2 });
   } else if (k === "cone") {
-    add(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), .02, .5, "y");
-    const tiers = 6;
-    for (let i = 0; i < tiers; i++) {
-      const y = .45 + i * .38, r = 1.05 - i * .15;
-      const c = new T.Mesh(new T.ConeGeometry(r, .75, 8), mat(spec.leaf));
-      c.position.set(0, y + .3, 0);
+    const trunk = grow(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), 0, .45);
+    for (let i = 0; i < 6; i++) {
+      const c = new T.Mesh(new T.ConeGeometry(1.05 - i * .15, .75, 8), mat(spec.leaf));
+      c.position.set(0, .75 + i * .38, 0);
       c.rotation.y = R(0, 2);
-      const a = .2 + i * .1;
-      add(c, a, a + .35);
+      grow(c, .15 + i * .07, .5 + i * .07, trunk);
     }
   } else if (k === "ginkgo") {
-    add(limb(V(0, 0, 0), up, 2.2, .13, .06, spec.trunk), .02, .5, "y");
-    const nb = 7;
-    for (let i = 0; i < nb; i++) {
-      const ang = around(nb, i), y = .7 + i * .2, len = R(.4, .75) * (1 - i / 12);
-      const dir = V(Math.cos(ang), R(1, 1.6), Math.sin(ang));
-      add(limb(V(0, y, 0), dir, len, .05, .025, spec.trunk), .2 + i * .04, .5 + i * .04);
-      const tip = V(0, y, 0).add(dir.normalize().multiplyScalar(len));
-      const a = .3 + i * .06;
-      add(blob(tip, R(.35, .5) * (1.1 - i / 12), spec.leaf, 1, 1.25, 1), a, a + .3);
+    const trunk = grow(limb(V(0, 0, 0), up, 2.2, .13, .06, spec.trunk), 0, .45);
+    for (let i = 0; i < 7; i++) {
+      const ang = around(7, i), y = .7 + i * .2;
+      const br = grow(limb(V(0, y, 0), V(Math.cos(ang), R(1, 1.6), Math.sin(ang)), R(.45, .75) * (1 - i / 12), .05, .025, spec.trunk), .15 + i * .04, .5 + i * .04, trunk);
+      crown(br, spec.leaf, 2, R(.3, .42) * (1.1 - i / 12), .25 + i * .04, { sy: 1.25 });
     }
-    add(blob(V(0, 2.35, 0), .38, spec.leaf, 1, 1.4, 1), .6, .95);
+    const top = grow(limb(V(0, 2.15, 0), up, .25, .05, .03, spec.trunk), .3, .55, trunk);
+    crown(top, spec.leaf, 1, .38, .45, { sy: 1.4 });
   } else if (k === "baobab") {
     const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
-    add(new T.Mesh(new T.LatheGeometry(pts, 10), mat(spec.trunk)), .02, .55, "y");
-    const nb = 6;
-    for (let i = 0; i < nb; i++) {
-      const ang = around(nb, i), len = R(.5, .8);
-      const dir = V(Math.cos(ang), R(.6, 1.1), Math.sin(ang));
-      const from = V(Math.cos(ang) * .2, 1.95, Math.sin(ang) * .2);
-      add(limb(from, dir, len, .1, .05, spec.trunk), .35 + i * .04, .65 + i * .04);
-      const tip = from.clone().add(dir.normalize().multiplyScalar(len));
-      const a = .5 + i * .05;
-      add(blob(tip.add(V(0, .1, 0)), R(.28, .38), spec.leaf, 1.2, .7, 1.2), a, a + .3);
+    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, 10), mat(spec.trunk)), 0, .45);
+    for (let i = 0; i < 6; i++) {
+      const ang = around(6, i);
+      const br = grow(limb(V(Math.cos(ang) * .15, 1.95, Math.sin(ang) * .15), V(Math.cos(ang), R(.6, 1.1), Math.sin(ang)), R(.5, .8), .1, .05, spec.trunk), .25 + i * .04, .6 + i * .04, trunk);
+      crown(br, spec.leaf, 2, R(.26, .34), .4 + i * .04, { sx: 1.2, sy: .7, sz: 1.2 });
     }
   } else if (k === "palm") {
-    const segs = 8, bend = R(.04, .09);
-    let p = V(0, 0, 0), dir = V(0, 1, 0);
-    for (let i = 0; i < segs; i++) {
-      const s = limb(p, dir, .33, .13 - i * .007, .12 - i * .007, i % 2 ? spec.trunk : 0x8a7358);
-      add(s, .02 + i * .05, .15 + i * .06, "y");
-      p = p.clone().add(dir.clone().normalize().multiplyScalar(.33));
+    let parent = null, p = V(0, 0, 0), dir = V(0, 1, 0);
+    const bend = R(.04, .09);
+    for (let i = 0; i < 8; i++) {
+      parent = grow(limb(p, dir, .33, .13 - i * .007, .12 - i * .007, i % 2 ? spec.trunk : 0x8a7358), i ? .05 : 0, i ? .3 : .25, parent);
+      p = parent.userData.tip;
       dir = V(dir.x + bend, 1, 0);
     }
-    const nf = 9;
-    for (let i = 0; i < nf; i++) {
-      const ang = around(nf, i, .2);
+    for (let i = 0; i < 9; i++) {
       const frond = new T.Mesh(new T.BoxGeometry(.24, .03, 1.35), mat(spec.leaf));
       frond.geometry.translate(0, 0, .67);
-      const g = new T.Group();
-      g.position.copy(p);
-      g.rotation.y = ang;
-      frond.rotation.x = R(.35, .7);
-      g.add(frond);
-      const a = .45 + i * .04;
-      add(g, a, a + .3);
+      frond.position.copy(p);
+      frond.rotation.set(R(.35, .7), around(9, i, .2), 0, "YXZ");
+      grow(frond, .35 + i * .03, .65 + i * .03, parent);
     }
-    if (spec.fruit) for (let i = 0; i < 4; i++) add(blob(p.clone().add(V(R(-.15, .15), -.12, R(-.15, .15))), .1, spec.fruit, 1, 1, 1), .85, .98);
+    if (spec.fruit) for (let i = 0; i < 4; i++) {
+      const c = blob(p.clone().add(V(R(-.15, .15), -.1, R(-.15, .15))), .1, spec.fruit);
+      grow(c, .85, .98, parent);
+    }
   } else if (k === "willow") {
-    add(limb(V(0, 0, 0), up, 1.5, .16, .1, spec.trunk), .02, .45, "y");
+    const trunk = grow(limb(V(0, 0, 0), up, 1.5, .16, .1, spec.trunk), 0, .45);
+    const top = grow(limb(V(0, 1.45, 0), up, .5, .09, .05, spec.trunk), .15, .45, trunk);
     for (let i = 0; i < 4; i++) {
-      const ang = around(4, i), dir = V(Math.cos(ang), 1.1, Math.sin(ang));
-      add(limb(V(0, 1.3, 0), dir, .7, .07, .04, spec.trunk), .2 + i * .05, .5 + i * .05);
+      const ang = around(4, i);
+      const br = grow(limb(V(0, 1.3, 0), V(Math.cos(ang), 1.1, Math.sin(ang)), .7, .07, .04, spec.trunk), .15 + i * .04, .45 + i * .04, trunk);
+      crown(br, spec.leaf, 1, .45, .3 + i * .04, { sx: 1.2, sy: .6, sz: 1.2 });
+      // Drooping strands hang from each branch tip.
+      for (let j = 0; j < 8; j++) {
+        const len = R(1, 1.5), a2 = ang + R(-.8, .8), r = R(.1, .45);
+        const s = new T.Mesh(new T.CylinderGeometry(.035, .02, len, 4), mat(spec.leaf));
+        s.geometry.translate(0, -len / 2, 0);
+        s.position.copy(br.userData.tip.clone().add(V(Math.cos(a2) * r, -.05, Math.sin(a2) * r)));
+        grow(s, .45 + R(0, .3), .8 + R(0, .15), br);
+      }
     }
-    add(blob(V(0, 2.05, 0), .75, spec.leaf, 1.3, .6, 1.3), .35, .7);
-    const strands = 34;
-    for (let i = 0; i < strands; i++) {
-      const ang = (i / strands) * Math.PI * 2, r = R(.75, 1.05), len = R(1, 1.55);
-      const s = new T.Mesh(new T.CylinderGeometry(.035, .02, len, 4), mat(spec.leaf));
-      s.geometry.translate(0, -len / 2, 0);
-      s.position.set(Math.cos(ang) * r, 2.05, Math.sin(ang) * r);
-      s.rotation.set(R(-.08, .08), 0, R(-.08, .08));
-      const a = .45 + R(0, .35);
-      add(s, a, a + .25, "y");
-    }
+    crown(top, spec.leaf, 2, .6, .3, { sx: 1.3, sy: .6, sz: 1.3 });
   } else if (k === "vine") {
-    // A grape vine trained on a small trellis.
     const post = 0x8a6a4a;
-    [-1.1, 1.1].forEach(x => add(limb(V(x, 0, 0), up, 1.25, .045, .04, post), .05, .2, "y"));
-    add(limb(V(-1.15, 1.2, 0), V(1, 0, 0), 2.3, .025, .025, post), .1, .25);
-    add(limb(V(0, 0, 0), V(.12, 1, .05), .65, .11, .08, spec.trunk), .02, .35, "y");
-    add(limb(V(.08, .64, .03), V(-.1, 1, 0), .56, .08, .06, spec.trunk), .15, .45, "y");
+    [-1.1, 1.1].forEach(x => grow(limb(V(x, 0, 0), up, 1.25, .045, .04, post), 0, .12));
+    grow(limb(V(-1.15, 1.2, 0), V(1, 0, 0), 2.3, .025, .025, post), .05, .15);
+    const s1 = grow(limb(V(0, 0, 0), V(.12, 1, .05), .65, .11, .08, spec.trunk), 0, .3);
+    const s2 = grow(limb(s1.userData.tip, V(-.1, 1, 0), .56, .08, .06, spec.trunk), .12, .4, s1);
     [-1, 1].forEach((side, j) => {
-      add(limb(V(0, 1.18, 0), V(side, .03, 0), 1.05, .05, .03, spec.trunk), .3 + j * .05, .6 + j * .05);
+      const arm = grow(limb(s2.userData.tip, V(side, .03, 0), 1.05, .05, .03, spec.trunk), .25 + j * .04, .55 + j * .04, s2);
       for (let i = 0; i < 5; i++) {
-        const x = side * (.2 + i * .2);
-        const a = .45 + i * .06;
-        add(blob(V(x, 1.28 + R(-.05, .1), R(-.15, .15)), R(.18, .26), spec.leaf, 1.3, .6, 1.1), a, a + .25);
+        const b = blob(arm.userData.at(.2 + i * .19).add(V(0, .08, R(-.12, .12))), R(.18, .25), spec.leaf, 1.3, .6, 1.1);
+        grow(b, .35 + i * .05, .65 + i * .05, arm);
       }
       for (let b = 0; b < 2; b++) {
         const bunch = new T.Group();
-        bunch.position.set(side * (.4 + b * .4), 1.12, R(-.05, .1));
+        bunch.position.copy(arm.userData.at(.35 + b * .4).add(V(0, -.06, R(-.05, .1))));
         for (let r = 0; r < 4; r++) for (let q = 0; q < 4 - r; q++) {
           const ball = new T.Mesh(new T.IcosahedronGeometry(.055, 1), mat(spec.fruit));
           ball.position.set((q - (3 - r) / 2) * .09 + R(-.02, .02), -r * .085, R(-.04, .04));
           bunch.add(ball);
         }
-        const a = R(.8, .9);
-        add(bunch, a, a + .1);
+        const s = R(.82, .9);
+        grow(bunch, s, s + .1, arm);
       }
     });
   } else if (k === "birch") {
-    const trunk = add(limb(V(0, 0, 0), up, 2.3, .1, .06, spec.trunk), .02, .5, "y");
+    const trunk = grow(limb(V(0, 0, 0), up, 2.3, .1, .06, spec.trunk), 0, .45);
     for (let i = 0; i < 9; i++) {
       const mark = new T.Mesh(new T.BoxGeometry(.07, .025, .02), mat(0x2b2b2b));
-      const ang = R(0, 6.28), y = R(.2, 2.1);
-      mark.position.set(Math.cos(ang) * .085, y, Math.sin(ang) * .085);
+      const ang = R(0, 6.28);
+      mark.position.set(Math.cos(ang) * .085, R(.2, 2.1), Math.sin(ang) * .085);
       mark.rotation.y = -ang;
       trunk.add(mark);
     }
     for (let i = 0; i < 6; i++) {
-      const ang = around(6, i), y = 1.2 + i * .18, dir = V(Math.cos(ang), 1.4, Math.sin(ang));
-      add(limb(V(0, y, 0), dir, .45, .035, .02, spec.trunk), .2 + i * .05, .5 + i * .05);
-      const a = .35 + i * .07;
-      add(blob(V(0, y, 0).add(dir.normalize().multiplyScalar(.5)), R(.3, .42), spec.leaf, 1, 1.35, 1), a, a + .3);
+      const ang = around(6, i);
+      const br = grow(limb(V(0, 1.2 + i * .18, 0), V(Math.cos(ang), 1.4, Math.sin(ang)), .45, .035, .02, spec.trunk), .15 + i * .04, .5 + i * .04, trunk);
+      crown(br, spec.leaf, 2, R(.26, .36), .25 + i * .05, { sy: 1.35 });
     }
-    add(blob(V(0, 2.45, 0), .32, spec.leaf, 1, 1.4, 1), .6, .95);
+    const top = grow(limb(V(0, 2.25, 0), up, .25, .04, .025, spec.trunk), .3, .55, trunk);
+    crown(top, spec.leaf, 1, .32, .45, { sy: 1.4 });
   }
 
+  // Re-parent every part under its parent while keeping its place, then remember its full-size scale.
+  root.updateMatrixWorld(true);
+  links.forEach(([parent, child]) => parent.attach(child));
+  parts.forEach(p => (p.base = p.obj.scale.clone()));
   outer.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
 
   return {
     group: outer,
     update(g) {
-      // Early growth must read as "growing up": the tree starts at a good size and the trunk shoots up fast (ease-out),
-      // so it is already taller than the seedling before the seedling fades away.
-      root.scale.setScalar(.5 + .5 * easeOut(g));
-      const sp = 1 - smooth((g - .17) / .08);
+      // The seedling fades only once the young trunk is already taller than it.
+      const sp = 1 - smooth((g - .15) / .1);
       sprout.visible = sp > .01;
       sprout.scale.setScalar(Math.max(.001, sp));
       parts.forEach(p => {
-        const x = (g - p.a) / Math.max(.01, p.b - p.a);
-        const t = p.mode === "y" ? easeOut(x) : smooth(x);
+        const t = easeOut((g - p.a) / Math.max(.01, p.b - p.a));
+        const k = Math.max(t, .0001);
         p.obj.visible = t > .002;
-        if (!p.obj.visible) return;
-        if (p.mode === "y") p.obj.scale.set(p.base.x * (.35 + .65 * t), p.base.y * t, p.base.z * (.35 + .65 * t));
-        else p.obj.scale.set(p.base.x * t, p.base.y * t, p.base.z * t);
+        p.obj.scale.set(p.base.x * k, p.base.y * k, p.base.z * k);
       });
     }
   };
 }
 
-// A 3D stage: renderer, lights, ground, slow orbit, drag to rotate, gentle sway.
-function makeStage(T, host, { trees, radius, target, height }) {
+// A 3D stage: renderer, lights and a fixed camera (no spinning). Drag to look around; it stays where you leave it.
+function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   const renderer = new T.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
@@ -366,7 +350,7 @@ function makeStage(T, host, { trees, radius, target, height }) {
   host.append(renderer.domElement);
   const scene = new T.Scene();
   scene.background = new T.Color(0xe7f6f6);
-  scene.fog = new T.Fog(0xe7f6f6, radius * 2.2, radius * 4.5);
+  scene.fog = new T.Fog(0xe7f6f6, radius * 2.4, radius * 5);
   const camera = new T.PerspectiveCamera(38, 1, .1, 200);
   scene.add(new T.HemisphereLight(0xf4fbff, 0x6f8f7a, .62));
   const sun = new T.DirectionalLight(0xfff6e8, .7);
@@ -374,12 +358,12 @@ function makeStage(T, host, { trees, radius, target, height }) {
   sun.castShadow = true;
   sun.shadow.mapSize.set(1024, 1024);
   const sc = sun.shadow.camera;
-  sc.left = sc.bottom = -radius * 1.2; sc.right = sc.top = radius * 1.2; sc.near = .5; sc.far = radius * 5;
+  sc.left = sc.bottom = -radius * 1.6; sc.right = sc.top = radius * 1.6; sc.near = .5; sc.far = radius * 5;
   scene.add(sun);
   trees.forEach(t => scene.add(t.holder));
 
-  let yaw = .6, pitch = .3, dist = radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
-  let dragging = false, lastX = 0, lastY = 0, idleAt = 0;
+  let pitch = .3, dist = radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
+  let dragging = false, lastX = 0, lastY = 0;
   const el3 = renderer.domElement;
   el3.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; lastY = e.clientY; try { el3.setPointerCapture(e.pointerId); } catch {} });
   el3.addEventListener("pointermove", e => {
@@ -388,10 +372,10 @@ function makeStage(T, host, { trees, radius, target, height }) {
     pitch = Math.max(.08, Math.min(.9, pitch + (e.clientY - lastY) * .004));
     lastX = e.clientX; lastY = e.clientY;
   });
-  const stop = () => { dragging = false; idleAt = performance.now(); };
+  const stop = () => (dragging = false);
   el3.addEventListener("pointerup", stop);
   el3.addEventListener("pointercancel", stop);
-  el3.addEventListener("wheel", e => { e.preventDefault(); wantDist = Math.max(radius * .7, Math.min(radius * 3.2, wantDist * (1 + e.deltaY * .001))); }, { passive: false });
+  el3.addEventListener("wheel", e => { e.preventDefault(); wantDist = Math.max(radius * .7, Math.min(radius * 3.4, wantDist * (1 + e.deltaY * .001))); }, { passive: false });
 
   function resize() {
     const w = host.clientWidth, h = host.clientHeight;
@@ -403,29 +387,33 @@ function makeStage(T, host, { trees, radius, target, height }) {
   new ResizeObserver(resize).observe(host);
   resize();
 
+  const hooks = [];
   let last = performance.now(), running = true;
   function frame(now) {
     if (!host.isConnected) { running = false; renderer.dispose(); return; }
     const dt = Math.min(.05, (now - last) / 1000);
     last = now;
-    if (!dragging && now - idleAt > 1500) yaw += dt * .12; // slow orbit
-    focus.lerp(wantFocus, .06);
-    dist += (wantDist - dist) * .06;
+    focus.lerp(wantFocus, .08);
+    dist += (wantDist - dist) * .08;
     camera.position.set(focus.x + Math.sin(yaw) * Math.cos(pitch) * dist, focus.y + Math.sin(pitch) * dist + height * .15, focus.z + Math.cos(yaw) * Math.cos(pitch) * dist);
     camera.lookAt(focus);
-    trees.forEach(t => t.tick(now / 1000, dt));
+    trees.forEach(t => t.tick(dt));
+    hooks.forEach(h => h(now / 1000, dt));
     renderer.render(scene, camera);
     if (running) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
   return {
-    focusOn(pos, d) { wantFocus = pos.clone(); wantDist = d; idleAt = performance.now() + 4000; },
+    scene,
+    get yaw() { return yaw; },
+    onFrame(fn) { hooks.push(fn); return () => hooks.splice(hooks.indexOf(fn), 1); },
+    focusOn(pos, d) { wantFocus = pos.clone(); wantDist = d; },
     reset() { wantFocus = target.clone(); wantDist = radius * 2.7; }
   };
 }
 
-// A tree on its own patch of grass, growing toward `growth` (animated).
-function plantedTree(T, spec, key, growth, pos, delay = 0) {
+// A tree on its own patch of grass. It shows `growth` straight away; grow(to) animates it to a new size.
+function plantedTree(T, spec, key, growth, pos) {
   const holder = new T.Group();
   holder.position.copy(pos);
   const grass = new T.Mesh(new T.CylinderGeometry(1.25, 1.35, .16, 24), new T.MeshStandardMaterial({ color: 0x74a85a, flatShading: true, roughness: 1 }));
@@ -436,27 +424,163 @@ function plantedTree(T, spec, key, growth, pos, delay = 0) {
   holder.add(grass, soil);
   const tree = buildTree(T, spec, key);
   holder.add(tree.group);
-  let shown = 0, goal = growth, startAt = null;
-  const phase = Math.random() * 6;
-  tree.update(0);
+  let shown = growth, goal = growth, speed = 0;
+  tree.update(shown);
   return {
-    holder,
-    setGrowth(g) { goal = g; startAt = null; },
-    tick(t, dt) {
-      if (startAt === null) startAt = t + delay;
-      if (t >= startAt && Math.abs(goal - shown) > .0005) {
-        shown += (goal - shown) * Math.min(1, dt * 1.6); // ease toward the goal
-        if (Math.abs(goal - shown) < .002) shown = goal;
-        tree.update(shown);
-      }
-      tree.group.rotation.z = Math.sin(t * .8 + phase) * .012; // gentle sway
-      tree.group.rotation.x = Math.sin(t * .6 + phase * 2) * .008;
+    holder, soil,
+    get growth() { return shown; },
+    grow(to, seconds = 3) { goal = to; speed = Math.abs(to - shown) / seconds; },
+    set(to) { shown = goal = to; tree.update(shown); },
+    tick(dt) {
+      if (shown === goal) return;
+      const stepTo = Math.min(Math.abs(goal - shown), speed * dt);
+      shown += Math.sign(goal - shown) * stepTo;
+      tree.update(shown);
     }
   };
 }
 
+// ---------- The gardener: a small 3D boy or girl who walks in, waters the tree, and walks away ----------
+function makeGardener(T, girl) {
+  const m = c => new T.MeshStandardMaterial({ color: c, flatShading: true, roughness: .8 });
+  const skin = m(0xf1c7a3), hairC = girl ? 0x5a3521 : 0x2e2320, shirt = m(girl ? 0xf29bb4 : 0x5b9bd5), pants = m(girl ? 0x6b5fb5 : 0x3d4f73), shoe = m(0x3b2f2a);
+  const body = new T.Group();
+  const limbMesh = (r, h, mt) => { const g = new T.CylinderGeometry(r, r * .9, h, 8); g.translate(0, -h / 2, 0); return new T.Mesh(g, mt); };
+  // Legs pivot at the hip.
+  const legL = new T.Group(), legR = new T.Group();
+  [legL, legR].forEach((leg, i) => {
+    leg.position.set(i ? -.09 : .09, .5, 0);
+    const l = limbMesh(.055, .42, pants);
+    const f = new T.Mesh(new T.BoxGeometry(.1, .06, .17), shoe);
+    f.position.set(0, -.45, .03);
+    leg.add(l, f);
+    body.add(leg);
+  });
+  // Torso: a dress-like cone for the girl, a shirt for the boy.
+  const torso = girl ? new T.Mesh(new T.CylinderGeometry(.12, .24, .42, 10), shirt) : new T.Mesh(new T.CylinderGeometry(.15, .16, .4, 10), shirt);
+  torso.position.y = girl ? .68 : .7;
+  body.add(torso);
+  const head = new T.Mesh(new T.SphereGeometry(.15, 14, 12), skin);
+  head.position.y = 1.03;
+  body.add(head);
+  const hair = new T.Mesh(new T.SphereGeometry(.16, 14, 10, 0, Math.PI * 2, 0, Math.PI * .55), m(hairC));
+  hair.position.set(0, 1.05, -.01);
+  hair.rotation.x = -.25;
+  body.add(hair);
+  if (girl) {
+    const tail = new T.Mesh(new T.SphereGeometry(.07, 10, 8), m(hairC));
+    tail.scale.set(1, 1.6, 1);
+    tail.position.set(0, .95, -.16);
+    body.add(tail);
+  }
+  [-.05, .05].forEach(x => { const e = new T.Mesh(new T.SphereGeometry(.018, 8, 6), m(0x222222)); e.position.set(x, 1.05, .14); body.add(e); });
+  // Arms pivot at the shoulder; the right hand carries a watering can.
+  const armL = new T.Group(), armR = new T.Group();
+  [armL, armR].forEach((arm, i) => {
+    arm.position.set(i ? -.2 : .2, .88, 0);
+    arm.add(limbMesh(.04, .36, shirt));
+    const hand = new T.Mesh(new T.SphereGeometry(.045, 8, 6), skin);
+    hand.position.y = -.38;
+    arm.add(hand);
+    body.add(arm);
+  });
+  const can = new T.Group();
+  const tin = m(0x4fa3a5);
+  const pot = new T.Mesh(new T.CylinderGeometry(.09, .1, .16, 12), tin);
+  const spout = new T.Mesh(new T.CylinderGeometry(.015, .022, .24, 6), tin);
+  spout.position.set(0, .03, .15);
+  spout.rotation.x = 1.0;
+  const handle = new T.Mesh(new T.TorusGeometry(.07, .014, 6, 12, Math.PI), tin);
+  handle.position.set(0, .08, -.02);
+  handle.rotation.y = Math.PI / 2;
+  can.add(pot, spout, handle);
+  can.position.set(0, -.44, .06);
+  armL.add(can);
+  const spoutTip = new T.Object3D();
+  spoutTip.position.set(0, .13, .25);
+  can.add(spoutTip);
+  body.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  const figure = new T.Group();
+  figure.add(body);
+  figure.scale.setScalar(1.05);
+  return { figure, body, legL, legR, armL, armR, can, spoutTip };
+}
+
+// Play the watering scene: walk in beside the tree, pour water, let the tree grow, walk away and vanish.
+function waterTree(T, stage, planted, toGrowth, onDone) {
+  const girl = Math.random() < .5, fromLeft = Math.random() < .5;
+  const g = makeGardener(T, girl);
+  const side = new T.Vector3(Math.cos(stage.yaw), 0, -Math.sin(stage.yaw)).multiplyScalar(fromLeft ? -1 : 1); // screen left/right
+  const start = side.clone().multiplyScalar(5.5), stand = side.clone().multiplyScalar(1.05);
+  g.figure.position.copy(start);
+  stage.scene.add(g.figure);
+  const drops = [], dropGeo = new T.SphereGeometry(.028, 6, 4), dropMat = new T.MeshStandardMaterial({ color: 0x6fb7e8, transparent: true, opacity: .9, roughness: .2 });
+  const face = target => { const d = target.clone().sub(g.figure.position); g.figure.rotation.y = Math.atan2(d.x, d.z); };
+  let phase = "in", t0 = null, walkT = 0, grown = false;
+  const trunkPos = new T.Vector3(0, 0, 0);
+  const stopHook = stage.onFrame((now, dt) => {
+    if (t0 === null) t0 = now;
+    const el = now - t0;
+    const walk = (from, to, dur, time) => {
+      const k = Math.min(1, time / dur);
+      const e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      g.figure.position.lerpVectors(from, to, e);
+      walkT += dt * 9;
+      const s = Math.sin(walkT) * (k < 1 ? .5 : 0);
+      g.legL.rotation.x = s; g.legR.rotation.x = -s;
+      g.armR.rotation.x = -s * .8;
+      g.body.position.y = Math.abs(Math.sin(walkT)) * .03 * (k < 1 ? 1 : 0);
+      return k >= 1;
+    };
+    if (phase === "in") {
+      face(stand);
+      if (walk(start, stand, 2.6, el)) { phase = "pour"; t0 = now; }
+    } else if (phase === "pour") {
+      face(trunkPos);
+      g.legL.rotation.x = g.legR.rotation.x = 0;
+      const lift = Math.min(1, el / .6);
+      g.armL.rotation.x = -1.1 * lift;           // raise the can
+      g.can.rotation.x = .9 * lift;              // tip it so water pours
+      if (el > .6 && el < 3.4 && Math.random() < .7) {
+        const d = new T.Mesh(dropGeo, dropMat);
+        g.spoutTip.getWorldPosition(d.position);
+        d.userData.v = trunkPos.clone().sub(d.position).setY(0).normalize().multiplyScalar(.6 + Math.random() * .3);
+        d.userData.v.y = .2;
+        stage.scene.add(d);
+        drops.push(d);
+      }
+      if (el > 1 && !grown) { grown = true; planted.grow(toGrowth, 2.8); }
+      if (el > 4) { phase = "out"; t0 = now; }
+    } else if (phase === "out") {
+      const back = Math.min(1, el / .5);
+      g.armL.rotation.x = -1.1 * (1 - back);
+      g.can.rotation.x = .9 * (1 - back);
+      face(start);
+      if (el > .4 && walk(stand, start, 2.6, el - .4)) {
+        stage.scene.remove(g.figure);
+        stopHook();
+        onDone && onDone();
+      }
+      // Fade out as they leave the frame.
+      const f = Math.max(0, 1 - Math.max(0, el - 1.8) / 1.2);
+      g.figure.scale.setScalar(1.05 * (.4 + .6 * f));
+    }
+    // Water drops fall with gravity and vanish on the soil.
+    for (let i = drops.length - 1; i >= 0; i--) {
+      const d = drops[i];
+      d.userData.v.y -= 9.8 * dt * .35;
+      d.position.addScaledVector(d.userData.v, dt);
+      if (d.position.y < .03) { stage.scene.remove(d); drops.splice(i, 1); }
+    }
+  });
+}
+
 // ---------- Screens ----------
 const pctText = g => `${Math.round(g * 100)}%`;
+
+// Growth last shown for a day, so we know whether the gardener needs to come and water.
+function seenGrowth(key) { const s = loadStudy(); return ((s.garden || {}).seen || {})[key]; }
+function markSeen(key, g) { const s = loadStudy(); s.garden = s.garden || { days: {} }; s.garden.seen = { [key]: g }; saveStudy(s); }
 
 async function gardenScreen(dir = "fwd") {
   screen(dir);
@@ -465,58 +589,60 @@ async function gardenScreen(dir = "fwd") {
   app.append(nav("Menu", () => home("back")));
   const t = gardenToday();
   const card = el("div", { className: "card garden-card" });
-  const stage = el("div", { className: "g-stage" });
+  const btn = el("button", { className: "btn g-btn" }, "Concentration garden");
+  btn.onclick = () => gardenAll();
   if (!t) {
     card.append(el("p", { className: "kicker" }, "Garden"), el("h1", { className: "title" }, "The exam is done"),
       el("p", { className: "sub" }, "Your garden is complete. Every tree stays exactly as you grew it."));
-  } else {
-    const spec = SPECIES[t.species];
-    const date = fromKey(t.key).toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" });
-    const title = el("h1", { className: "title g-name" }, spec.name);
-    const sub = el("p", { className: "sub", id: "g-sub" });
-    card.append(el("p", { className: "kicker" }, "Today's tree"), title, sub, stage);
-    const bar = el("div", { className: "g-bar" });
-    const fill = el("div", { className: "g-fill" });
-    bar.append(fill);
-    [25, 50, 75, 100].forEach((p, i) => {
-      const m = el("span", { className: "g-mark" });
-      m.style.left = `${p}%`;
-      m.append(el("i"), el("b", {}, `${(i + 1) * 2}h`));
-      bar.append(m);
-    });
-    const next = el("p", { className: "sub g-next" });
-    card.append(bar, next);
-    const refresh = g => {
-      const cur = gardenToday() || t;
-      sub.textContent = `${date} · ${fmtDur(cur.sec)} focused · ${pctText(cur.growth)} grown`;
-      fill.style.width = pctText(cur.growth);
-      const nextStage = Math.min(4, Math.floor(cur.growth * 4 + 1e-9) + 1);
-      next.textContent = cur.growth >= 1 ? "Fully grown today. Well done!"
-        : `Next: ${nextStage * 25}% at ${nextStage * 2}h · ${fmtDur(Math.max(0, nextStage * 2 * 3600 - cur.sec))} to go`;
-      return cur;
-    };
-    refresh();
-    const btn = el("button", { className: "btn g-btn" }, "Concentration garden");
-    btn.onclick = () => gardenAll();
     app.append(card, btn);
-    try {
-      const T = await loadThree();
-      if (!stage.isConnected) return;
-      const tree = plantedTree(T, spec, t.key, t.growth, new T.Vector3(0, 0, 0), .35);
-      makeStage(T, stage, { trees: [tree], radius: 2.2, target: new T.Vector3(0, 1.25, 0), height: 2.6 });
-      // Keep growing live while the timer runs.
-      const iv = setInterval(() => {
-        if (!stage.isConnected) return clearInterval(iv);
-        tree.setGrowth(refresh().growth);
-      }, 15000);
-    } catch {
-      stage.append(el("p", { className: "g-offline" }, "The 3D garden could not load. Close and reopen the app to try again."));
-    }
     return;
   }
-  const btn = el("button", { className: "btn g-btn" }, "Concentration garden");
-  btn.onclick = () => gardenAll();
+  const spec = SPECIES[t.species];
+  const date = fromKey(t.key).toLocaleDateString([], { weekday: "long", day: "numeric", month: "long" });
+  const stage = el("div", { className: "g-stage" });
+  const sub = el("p", { className: "sub", id: "g-sub" });
+  card.append(el("p", { className: "kicker" }, "Today's tree"), el("h1", { className: "title g-name" }, spec.name), sub, stage);
+  const bar = el("div", { className: "g-bar" });
+  const fill = el("div", { className: "g-fill" });
+  bar.append(fill);
+  [25, 50, 75, 100].forEach((p, i) => {
+    const mk = el("span", { className: "g-mark" });
+    mk.style.left = `${p}%`;
+    mk.append(el("i"), el("b", {}, `${(i + 1) * 2}h`));
+    bar.append(mk);
+  });
+  const next = el("p", { className: "sub g-next" });
+  card.append(bar, next);
+  const refresh = () => {
+    const cur = gardenToday() || t;
+    sub.textContent = `${date} · ${fmtDur(cur.sec)} focused · ${pctText(cur.growth)} grown`;
+    fill.style.width = pctText(cur.growth);
+    const nextStage = Math.min(4, Math.floor(cur.growth * 4 + 1e-9) + 1);
+    next.textContent = cur.growth >= 1 ? "Fully grown today. Well done!"
+      : `Next: ${nextStage * 25}% at ${nextStage * 2}h · ${fmtDur(Math.max(0, nextStage * 2 * 3600 - cur.sec))} to go`;
+    return cur;
+  };
+  refresh();
   app.append(card, btn);
+  try {
+    const T = await loadThree();
+    if (!stage.isConnected) return;
+    const before = seenGrowth(t.key);
+    const from = before === undefined ? 0 : Math.min(before, t.growth);
+    const tree = plantedTree(T, spec, t.key, from, new T.Vector3(0, 0, 0));
+    const st = makeStage(T, stage, { trees: [tree], radius: 2.2, target: new T.Vector3(0, 1.2, 0), height: 2.6 });
+    // Grown since the last visit? A gardener comes to water the tree, and it grows to today's size.
+    if (t.growth - from > .002) setTimeout(() => stage.isConnected && waterTree(T, st, tree, t.growth), 700);
+    markSeen(t.key, t.growth);
+    // While the timer runs, keep the tree in step (quietly).
+    const iv = setInterval(() => {
+      if (!stage.isConnected) return clearInterval(iv);
+      const cur = refresh();
+      if (cur.growth > tree.growth + .002) { tree.grow(cur.growth, 2); markSeen(t.key, cur.growth); }
+    }, 15000);
+  } catch {
+    stage.append(el("p", { className: "g-offline" }, "The 3D garden could not load. Close and reopen the app to try again."));
+  }
 }
 
 async function gardenAll() {
@@ -532,6 +658,7 @@ async function gardenAll() {
   const stage = el("div", { className: "g-stage tall" });
   card.append(stage);
   const tiles = el("div", { className: "g-tiles" });
+  let stageApi = null, positions = [];
   list.forEach((d, i) => {
     const tile = el("button", { className: "g-tile" + (d.today ? " today" : "") });
     tile.append(el("b", {}, d.today ? "Today" : fromKey(d.key).toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" })),
@@ -540,18 +667,17 @@ async function gardenAll() {
     f.style.width = pctText(d.growth);
     mini.append(f);
     tile.append(mini, el("span", { className: "g-pct" }, d.today ? `${pctText(d.growth)} · growing` : pctText(d.growth)));
-    tile.onclick = () => stageApi && stageApi.focusOn(positions[i].clone().add(new THREE.Vector3(0, 1.2, 0)), 5.2);
+    tile.onclick = () => stageApi && positions[i] && stageApi.focusOn(positions[i].clone().add(new THREE.Vector3(0, 1.2, 0)), 5.2);
     tiles.append(tile);
   });
   card.append(tiles);
   app.append(card);
-  let stageApi = null, positions = [];
   try {
     const T = await loadThree();
     if (!stage.isConnected) return;
     const n = Math.max(1, list.length), cols = Math.ceil(Math.sqrt(n * 1.6)), rows = Math.ceil(n / cols), gap = 2.9;
     positions = list.map((d, i) => new T.Vector3((i % cols - (cols - 1) / 2) * gap, 0, (Math.floor(i / cols) - (rows - 1) / 2) * gap));
-    const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], .2 + i * .06));
+    const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i]));
     const radius = Math.max(3.6, Math.max(cols, rows) * gap * .7);
     stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
   } catch {
