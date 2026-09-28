@@ -7,20 +7,20 @@ const GROW_FULL_SEC = 8 * 3600;
 const GARDEN_EPOCH = new Date(2026, 8, 26); // the first garden day, whose tree is a Baobab
 const SPECIES = [
   { name: "Baobab", kind: "baobab", trunk: 0x9c7c64, leaf: 0x7fa34e },
-  { name: "Lemon Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3f7d3b, fruit: 0xf3d23b, oval: true, size: .85 },
-  { name: "Apple Tree", kind: "round", trunk: 0x7a5230, leaf: 0x4f8f3a, fruit: 0xd5392c, size: 1 },
+  { name: "Lemon Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3f7d3b, fruit: 0xffdc1f, oval: true, size: .85 },
+  { name: "Apple Tree", kind: "round", trunk: 0x7a5230, leaf: 0x4f8f3a, fruit: 0xe3222b, size: 1 },
   { name: "Korean Red Pine", kind: "pine", trunk: 0xa4553a, leaf: 0x2f5e3a },
   { name: "Ginkgo", kind: "ginkgo", trunk: 0x6e5840, leaf: 0xe8c33c },
-  { name: "Grape Vine", kind: "vine", trunk: 0x6b4a33, leaf: 0x5a9a3c, fruit: 0x5b2a6e },
-  { name: "Cherry Blossom", kind: "round", trunk: 0x5a3a30, leaf: 0xf4b3c6, size: 1.05, flat: true },
-  { name: "Orange Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3d7a3a, fruit: 0xf28c28, size: .9 },
+  { name: "Grape Vine", kind: "vine", trunk: 0x6b4a33, leaf: 0x5a9a3c, fruit: 0x7b2fb0 },
+  { name: "Cherry Blossom", kind: "round", trunk: 0x5a3a30, leaf: 0xf2a9c0, flower: [0xffffff, 0xff5c93], size: 1.05, flat: true },
+  { name: "Orange Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3d7a3a, fruit: 0xff8616, size: .9 },
   { name: "Weeping Willow", kind: "willow", trunk: 0x6d5a3e, leaf: 0x9cc45c },
   { name: "Maple", kind: "round", trunk: 0x6a4630, leaf: 0xd4532b, size: 1 },
   { name: "Fir", kind: "cone", trunk: 0x5d4632, leaf: 0x2e5a40 },
   { name: "Palm", kind: "palm", trunk: 0x9d8466, leaf: 0x4e9a3f, fruit: 0x7a5530 },
   { name: "Oak", kind: "round", trunk: 0x6b4d33, leaf: 0x4d7a34, size: 1.2, flat: true },
-  { name: "Olive Tree", kind: "round", trunk: 0x7d6a55, leaf: 0x8aa27a, fruit: 0x3c3a2a, size: .8 },
-  { name: "Jacaranda", kind: "round", trunk: 0x5e4a3a, leaf: 0x8e6bd1, size: 1.05, flat: true },
+  { name: "Olive Tree", kind: "round", trunk: 0x7d6a55, leaf: 0x8aa27a, fruit: 0x55306b, size: .8 },
+  { name: "Jacaranda", kind: "round", trunk: 0x5e4a3a, leaf: 0x8e6bd1, flower: [0xe6d8ff, 0x6f3fd6], size: 1.05, flat: true },
   { name: "Birch", kind: "birch", trunk: 0xeeeae2, leaf: 0xb7cf55 }
 ];
 
@@ -157,28 +157,76 @@ function buildTree(T, spec, seedKey) {
     const m = new T.Mesh(new T.IcosahedronGeometry(r, detail), mat(color));
     m.position.copy(pos);
     m.scale.set(sx, sy, sz);
-    m.rotation.set(R(0, 3), R(0, 3), R(0, 3));
+    m.rotation.y = R(0, 6.28); // spin around the vertical only, so squashed clusters stay level
     return m;
   }
+  // Fruit and flowers use a slightly glossy, glowing material so they stand out against the leaves.
+  const bright = {};
+  const shiny = c => (bright[c] = bright[c] || new T.MeshStandardMaterial({ color: c, emissive: c, emissiveIntensity: .28, roughness: .42, metalness: 0 }));
+  const features = []; // fruit and flowers, for the gardener to touch or smell
   const around = (n, k, jitter = .3) => (k / n) * Math.PI * 2 + R(-jitter, jitter);
   // Leaf clusters around a branch tip, overlapping the wood so they never float.
   function crown(branch, color, n, r, a, opts = {}) {
-    const tip = branch.userData.tip;
+    const tip = branch.userData.tip, made = [];
     for (let i = 0; i < n; i++) {
       const off = i === 0 ? V(0, 0, 0) : V(R(-1, 1), R(-.4, .8), R(-1, 1)).normalize().multiplyScalar(r * R(.5, .8));
-      const b = blob(tip.clone().add(off), r * (i === 0 ? 1 : R(.7, .9)), color, opts.sx || 1, opts.sy || 1, opts.sz || 1);
+      const rr = r * (i === 0 ? 1 : R(.7, .9)), sx = opts.sx || 1, sy = opts.sy || 1, sz = opts.sz || 1;
+      const b = blob(tip.clone().add(off), rr, color, sx, sy, sz);
       grow(b, Math.max(0, a - .08) + i * .03, a + .3 + i * .03, branch); // leaves start budding with their branch
+      made.push({ c: tip.clone().add(off), r: rr, sx, sy, sz });
     }
+    return made;
   }
-  function fruitOn(branch, color, n, spread, a, oval) {
-    const tip = branch.userData.tip;
-    for (let i = 0; i < n; i++) {
-      const p = tip.clone().add(V(R(-1, 1), R(-.9, .2), R(-1, 1)).normalize().multiplyScalar(spread * R(.85, 1.05)));
-      const f = blob(p, .085, color, 1, oval ? 1.35 : 1, 1, 1);
-      f.rotation.set(0, 0, 0);
-      const s = R(.82, .9);
-      grow(f, s, s + .1, branch);
-    }
+  // A point on the outside of a leaf cluster (so fruit and flowers sit on the surface, never hidden inside).
+  const surface = (b, dir, lift = 1) => b.c.clone().add(V(dir.x * b.r * b.sx * lift, dir.y * b.r * b.sy * lift, dir.z * b.r * b.sz * lift));
+  const outward = (b, down) => {
+    const radial = V(b.c.x, 0, b.c.z);
+    if (radial.lengthSq() < .01) radial.set(R(-1, 1), 0, R(-1, 1));
+    return radial.normalize().add(V(R(-.7, .7), R(-down, .45), R(-.7, .7))).normalize();
+  };
+  // Fruit hangs on the outer, lower half of the leaf clusters; appears near full growth.
+  function fruitOn(branch, blobs, color, oval, per = 3) {
+    blobs.forEach(b => {
+      for (let i = 0; i < per; i++) {
+        const f = new T.Mesh(new T.SphereGeometry(oval ? .095 : .11, 14, 10), shiny(color));
+        f.scale.y = oval ? 1.3 : .95;
+        f.position.copy(surface(b, outward(b, .9), .93));
+        f.castShadow = true;
+        const s = R(.8, .86);
+        grow(f, s, s + .08, branch);
+        features.push(f);
+        if (!oval) { // a little stem and leaf make it read as fruit
+          const stem = new T.Mesh(new T.CylinderGeometry(.01, .012, .06, 5), mat(0x5a3d22));
+          stem.position.y = .11;
+          f.add(stem);
+        }
+      }
+    });
+  }
+  // Blossoms: five-petal flowers over the whole outside of the canopy.
+  function flowersOn(branch, blobs, colors, per = 6) {
+    const petal = new T.SphereGeometry(.06, 10, 8);
+    blobs.forEach(b => {
+      for (let i = 0; i < per; i++) {
+        const dir = outward(b, .2), fl = new T.Group();
+        const col = colors[Math.floor(R(0, colors.length))];
+        for (let k = 0; k < 5; k++) {
+          const pt = new T.Mesh(petal, shiny(col));
+          const a = k / 5 * Math.PI * 2;
+          pt.position.set(Math.cos(a) * .06, 0, Math.sin(a) * .06);
+          pt.scale.set(1, .35, 1);
+          fl.add(pt);
+        }
+        const center = new T.Mesh(new T.SphereGeometry(.03, 8, 6), shiny(0xffd84a));
+        center.position.y = .01;
+        fl.add(center);
+        fl.position.copy(surface(b, dir, .96));
+        fl.quaternion.setFromUnitVectors(up, dir);
+        const s = R(.76, .84);
+        grow(fl, s, s + .1, branch);
+        features.push(fl);
+      }
+    });
   }
 
   // A seedling shown only at the very beginning.
@@ -199,8 +247,9 @@ function buildTree(T, spec, seedKey) {
       branches.push(grow(limb(V(0, y, 0), V(Math.cos(ang), R(.7, 1.2), Math.sin(ang)), len, .07 * sz, .035 * sz, spec.trunk), .14 + i * .03, .5 + i * .03, trunk));
     }
     branches.forEach((br, i) => {
-      crown(br, spec.leaf, i === 0 ? 3 : 2, R(.4, .55) * sz, .22 + i * .03, { sy: spec.flat ? .75 : .95 });
-      if (spec.fruit) fruitOn(br, spec.fruit, 3, .45 * sz, 0, spec.oval);
+      const blobs = crown(br, spec.leaf, i === 0 ? 3 : 2, R(.4, .55) * sz, .22 + i * .03, { sy: spec.flat ? .75 : .95 });
+      if (spec.fruit) fruitOn(br, blobs, spec.fruit, spec.oval, spec.name.startsWith("Olive") ? 4 : 3);
+      if (spec.flower) flowersOn(br, blobs, spec.flower, 10);
     });
   } else if (k === "pine") {
     const lean = R(-.35, .35);
@@ -256,8 +305,10 @@ function buildTree(T, spec, seedKey) {
       grow(frond, .35 + i * .03, .65 + i * .03, parent);
     }
     if (spec.fruit) for (let i = 0; i < 4; i++) {
-      const c = blob(p.clone().add(V(R(-.15, .15), -.1, R(-.15, .15))), .1, spec.fruit);
-      grow(c, .85, .98, parent);
+      const c = new T.Mesh(new T.SphereGeometry(.11, 12, 10), shiny(spec.fruit));
+      c.position.copy(p.clone().add(V(R(-.16, .16), -.12, R(-.16, .16))));
+      grow(c, .8, .9, parent);
+      features.push(c);
     }
   } else if (k === "willow") {
     const trunk = grow(limb(V(0, 0, 0), up, 1.5, .16, .1, spec.trunk), 0, .45);
@@ -288,16 +339,17 @@ function buildTree(T, spec, seedKey) {
         const b = blob(arm.userData.at(.2 + i * .19).add(V(0, .08, R(-.12, .12))), R(.18, .25), spec.leaf, 1.3, .6, 1.1);
         grow(b, .35 + i * .05, .65 + i * .05, arm);
       }
-      for (let b = 0; b < 2; b++) {
+      for (let b = 0; b < 3; b++) {
         const bunch = new T.Group();
-        bunch.position.copy(arm.userData.at(.35 + b * .4).add(V(0, -.06, R(-.05, .1))));
+        bunch.position.copy(arm.userData.at(.25 + b * .3).add(V(0, -.06, R(-.05, .12))));
         for (let r = 0; r < 4; r++) for (let q = 0; q < 4 - r; q++) {
-          const ball = new T.Mesh(new T.IcosahedronGeometry(.055, 1), mat(spec.fruit));
+          const ball = new T.Mesh(new T.SphereGeometry(.06, 10, 8), shiny(spec.fruit));
           ball.position.set((q - (3 - r) / 2) * .09 + R(-.02, .02), -r * .085, R(-.04, .04));
           bunch.add(ball);
         }
-        const s = R(.82, .9);
-        grow(bunch, s, s + .1, arm);
+        const s = R(.8, .86);
+        grow(bunch, s, s + .08, arm);
+        features.push(bunch);
       }
     });
   } else if (k === "birch") {
@@ -326,6 +378,7 @@ function buildTree(T, spec, seedKey) {
 
   return {
     group: outer,
+    features,
     update(g) {
       // The seedling fades only once the young trunk is already taller than it.
       const sp = 1 - smooth((g - .15) / .1);
@@ -428,6 +481,7 @@ function plantedTree(T, spec, key, growth, pos) {
   tree.update(shown);
   return {
     holder, soil,
+    features: () => tree.features.filter(f => f.visible),
     get growth() { return shown; },
     grow(to, seconds = 3) { goal = to; speed = Math.abs(to - shown) / seconds; },
     set(to) { shown = goal = to; tree.update(shown); },
@@ -440,137 +494,416 @@ function plantedTree(T, spec, key, growth, pos) {
   };
 }
 
-// ---------- The gardener: a small 3D boy or girl who walks in, waters the tree, and walks away ----------
+// ---------- The gardener (a boy or girl) and sometimes a border collie ----------
+// Smooth-shaded, jointed models so they read as characters rather than blocks, with a natural walk:
+// legs swing from the hip and bend at the knee, arms swing opposite the legs, and the stride matches the
+// distance walked so the feet never slide.
+const soft = (T, c, extra = {}) => new T.MeshStandardMaterial({ color: c, roughness: .75, metalness: 0, ...extra });
+function capsule(T, r, len, mat) {
+  const g = new T.Group();
+  const body = new T.Mesh(new T.CylinderGeometry(r, r, len, 16), mat);
+  body.position.y = -len / 2;
+  const a = new T.Mesh(new T.SphereGeometry(r, 16, 10), mat), b = a.clone();
+  b.position.y = -len;
+  g.add(body, a, b);
+  return g;
+}
+
 function makeGardener(T, girl) {
-  const m = c => new T.MeshStandardMaterial({ color: c, flatShading: true, roughness: .8 });
-  const skin = m(0xf1c7a3), hairC = girl ? 0x5a3521 : 0x2e2320, shirt = m(girl ? 0xf29bb4 : 0x5b9bd5), pants = m(girl ? 0x6b5fb5 : 0x3d4f73), shoe = m(0x3b2f2a);
-  const body = new T.Group();
-  const limbMesh = (r, h, mt) => { const g = new T.CylinderGeometry(r, r * .9, h, 8); g.translate(0, -h / 2, 0); return new T.Mesh(g, mt); };
-  // Legs pivot at the hip.
-  const legL = new T.Group(), legR = new T.Group();
-  [legL, legR].forEach((leg, i) => {
-    leg.position.set(i ? -.09 : .09, .5, 0);
-    const l = limbMesh(.055, .42, pants);
-    const f = new T.Mesh(new T.BoxGeometry(.1, .06, .17), shoe);
-    f.position.set(0, -.45, .03);
-    leg.add(l, f);
-    body.add(leg);
+  const skin = soft(T, 0xf5d0b5), hairM = soft(T, girl ? 0x4b2a1a : 0x2a1f1a, { roughness: .6 });
+  const top = soft(T, girl ? 0xf08aa6 : 0x5aa7d8), bottom = soft(T, girl ? 0xf08aa6 : 0x33466b);
+  const sock = soft(T, 0xffffff), shoe = soft(T, girl ? 0xb5523e : 0x333a48);
+  const fig = new T.Group(), body = new T.Group();
+  fig.add(body);
+
+  // Legs: thigh → knee → shin → foot.
+  const legs = [-1, 1].map(side => {
+    const hip = new T.Group();
+    hip.position.set(side * .07, .55, 0);
+    hip.add(capsule(T, .048, .22, girl ? skin : bottom));
+    const knee = new T.Group();
+    knee.position.y = -.25;
+    knee.add(capsule(T, .042, .2, girl ? skin : skin));
+    const sockM = new T.Mesh(new T.CylinderGeometry(.044, .044, .07, 12), sock);
+    sockM.position.y = -.19;
+    knee.add(sockM);
+    const foot = new T.Mesh(new T.SphereGeometry(.055, 14, 10), shoe);
+    foot.scale.set(.95, .6, 1.55);
+    foot.position.set(0, -.25, .035);
+    knee.add(foot);
+    hip.add(knee);
+    body.add(hip);
+    return { hip, knee };
   });
-  // Torso: a dress-like cone for the girl, a shirt for the boy.
-  const torso = girl ? new T.Mesh(new T.CylinderGeometry(.12, .24, .42, 10), shirt) : new T.Mesh(new T.CylinderGeometry(.15, .16, .4, 10), shirt);
-  torso.position.y = girl ? .68 : .7;
+
+  // Torso: a flared dress for the girl; a t-shirt and shorts for the boy.
+  const profile = girl
+    ? [[.2, .38], [.19, .44], [.15, .56], [.115, .66], [.11, .74], [.13, .82], [.12, .87], [.05, .9]]
+    : [[.13, .45], [.135, .56], [.12, .62], [.125, .72], [.14, .82], [.12, .88], [.05, .9]];
+  const torso = new T.Mesh(new T.LatheGeometry(profile.map(([x, y]) => new T.Vector2(x, y)), 24), top);
   body.add(torso);
-  const head = new T.Mesh(new T.SphereGeometry(.15, 14, 12), skin);
-  head.position.y = 1.03;
-  body.add(head);
-  const hair = new T.Mesh(new T.SphereGeometry(.16, 14, 10, 0, Math.PI * 2, 0, Math.PI * .55), m(hairC));
-  hair.position.set(0, 1.05, -.01);
-  hair.rotation.x = -.25;
-  body.add(hair);
-  if (girl) {
-    const tail = new T.Mesh(new T.SphereGeometry(.07, 10, 8), m(hairC));
-    tail.scale.set(1, 1.6, 1);
-    tail.position.set(0, .95, -.16);
-    body.add(tail);
+  if (!girl) {
+    const shorts = new T.Mesh(new T.CylinderGeometry(.135, .14, .12, 20), bottom);
+    shorts.position.y = .52;
+    body.add(shorts);
+  } else {
+    const collar = new T.Mesh(new T.TorusGeometry(.07, .014, 8, 20), soft(T, 0xffffff));
+    collar.rotation.x = Math.PI / 2;
+    collar.position.y = .885;
+    body.add(collar);
   }
-  [-.05, .05].forEach(x => { const e = new T.Mesh(new T.SphereGeometry(.018, 8, 6), m(0x222222)); e.position.set(x, 1.05, .14); body.add(e); });
-  // Arms pivot at the shoulder; the right hand carries a watering can.
-  const armL = new T.Group(), armR = new T.Group();
-  [armL, armR].forEach((arm, i) => {
-    arm.position.set(i ? -.2 : .2, .88, 0);
-    arm.add(limbMesh(.04, .36, shirt));
-    const hand = new T.Mesh(new T.SphereGeometry(.045, 8, 6), skin);
-    hand.position.y = -.38;
-    arm.add(hand);
-    body.add(arm);
+
+  // Head on a neck pivot so it can nod or tilt (to smell flowers).
+  const neck = new T.Group();
+  neck.position.y = .9;
+  body.add(neck);
+  neck.add(new T.Mesh(new T.CylinderGeometry(.035, .04, .06, 10), skin));
+  const head = new T.Mesh(new T.SphereGeometry(.14, 24, 18), skin);
+  head.position.y = .15;
+  head.scale.set(1, 1.02, .96);
+  neck.add(head);
+  const hair = new T.Mesh(new T.SphereGeometry(.148, 24, 16, 0, Math.PI * 2, 0, Math.PI * .56), hairM);
+  hair.position.set(0, .165, -.012);
+  hair.rotation.x = -.35;
+  neck.add(hair);
+  const bangs = new T.Mesh(new T.SphereGeometry(.12, 18, 10, 0, Math.PI * 2, 0, Math.PI * .3), hairM);
+  bangs.position.set(0, .2, .055);
+  bangs.rotation.x = .55;
+  neck.add(bangs);
+  let tail = null;
+  if (girl) {
+    tail = new T.Group();
+    tail.position.set(0, .23, -.12);
+    const tie = new T.Mesh(new T.TorusGeometry(.025, .012, 6, 12), soft(T, 0xff5c8a));
+    const lock = new T.Mesh(new T.SphereGeometry(.055, 14, 12), hairM);
+    lock.scale.set(.9, 2, .9);
+    lock.position.set(0, -.1, -.03);
+    tail.add(tie, lock);
+    neck.add(tail);
+  }
+  const eyeM = soft(T, 0x2b2320, { roughness: .3 });
+  [-1, 1].forEach(side => {
+    const eye = new T.Mesh(new T.SphereGeometry(.018, 12, 10), eyeM);
+    eye.scale.set(1, 1.3, .6);
+    eye.position.set(side * .05, .16, .13);
+    const shine = new T.Mesh(new T.SphereGeometry(.006, 6, 5), soft(T, 0xffffff, { emissive: 0xffffff, emissiveIntensity: .6 }));
+    shine.position.set(side * .05 + .006, .168, .14);
+    const cheek = new T.Mesh(new T.SphereGeometry(.024, 10, 8), soft(T, 0xff9aa8, { transparent: true, opacity: .55 }));
+    cheek.scale.set(1, .6, .3);
+    cheek.position.set(side * .078, .12, .115);
+    neck.add(eye, shine, cheek);
   });
+  const smile = new T.Mesh(new T.TorusGeometry(.022, .005, 6, 12, Math.PI), soft(T, 0xb4545a));
+  smile.position.set(0, .11, .135);
+  smile.rotation.z = Math.PI;
+  neck.add(smile);
+
+  // Arms: shoulder → elbow → forearm → hand. The left hand holds a watering can.
+  const arms = [-1, 1].map(side => {
+    const shoulder = new T.Group();
+    shoulder.position.set(side * .145, .84, 0);
+    const sleeve = new T.Mesh(new T.SphereGeometry(.048, 14, 10), top);
+    shoulder.add(sleeve, capsule(T, .033, .16, skin));
+    const elbow = new T.Group();
+    elbow.position.y = -.18;
+    elbow.add(capsule(T, .03, .14, skin));
+    const hand = new T.Mesh(new T.SphereGeometry(.036, 12, 10), skin);
+    hand.position.y = -.17;
+    elbow.add(hand);
+    shoulder.add(elbow);
+    body.add(shoulder);
+    return { shoulder, elbow, hand };
+  });
+  const tin = soft(T, 0x4fb0b2, { roughness: .35, metalness: .15 });
   const can = new T.Group();
-  const tin = m(0x4fa3a5);
-  const pot = new T.Mesh(new T.CylinderGeometry(.09, .1, .16, 12), tin);
-  const spout = new T.Mesh(new T.CylinderGeometry(.015, .022, .24, 6), tin);
-  spout.position.set(0, .03, .15);
-  spout.rotation.x = 1.0;
-  const handle = new T.Mesh(new T.TorusGeometry(.07, .014, 6, 12, Math.PI), tin);
-  handle.position.set(0, .08, -.02);
+  const pot = new T.Mesh(new T.CylinderGeometry(.075, .085, .15, 20), tin);
+  const spout = new T.Mesh(new T.CylinderGeometry(.012, .02, .22, 10), tin);
+  spout.position.set(0, .03, .14);
+  spout.rotation.x = 1.05;
+  const rose = new T.Mesh(new T.CylinderGeometry(.03, .014, .03, 12), tin);
+  rose.position.set(0, .12, .235);
+  rose.rotation.x = 1.05;
+  const handle = new T.Mesh(new T.TorusGeometry(.06, .012, 8, 16, Math.PI), tin);
+  handle.position.set(0, .07, -.01);
   handle.rotation.y = Math.PI / 2;
-  can.add(pot, spout, handle);
-  can.position.set(0, -.44, .06);
-  armL.add(can);
+  can.add(pot, spout, rose, handle);
+  can.position.set(0, -.25, .05);
+  arms[1].elbow.add(can);
   const spoutTip = new T.Object3D();
   spoutTip.position.set(0, .13, .25);
   can.add(spoutTip);
-  body.traverse(o => { if (o.isMesh) o.castShadow = true; });
-  const figure = new T.Group();
-  figure.add(body);
-  figure.scale.setScalar(1.05);
-  return { figure, body, legL, legR, armL, armR, can, spoutTip };
+  fig.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  fig.scale.setScalar(1.1);
+
+  let phase = 0;
+  return {
+    fig, body, neck, tail, arms, can, spoutTip,
+    // Natural gait driven by distance walked (stride ≈ 0.5 units per step pair).
+    gait(dist, moving, holdCan) {
+      phase += dist / .5 * Math.PI * 2;
+      const amt = moving;
+      legs.forEach(({ hip, knee }, i) => {
+        const p = phase + i * Math.PI;
+        hip.rotation.x = Math.sin(p) * .42 * amt;
+        knee.rotation.x = Math.max(0, Math.sin(p - 1.3)) * .75 * amt; // knee bends as the leg swings through
+      });
+      if (!amt) { body.position.y = 0; body.rotation.z = 0; return; } // standing still: leave the arms to the current pose
+      arms.forEach(({ shoulder, elbow }, i) => {
+        if (i === 1 && holdCan) return;
+        const p = phase + (i + 1) * Math.PI;
+        shoulder.rotation.x = Math.sin(p) * .38 * amt;
+        elbow.rotation.x = (-.2 - Math.max(0, Math.sin(p)) * .25) * amt;
+      });
+      if (holdCan) { arms[1].shoulder.rotation.x = Math.sin(phase + Math.PI) * .12 * amt; arms[1].elbow.rotation.x = -.35; }
+      body.position.y = (Math.abs(Math.cos(phase)) - .5) * .018 * amt;
+      body.rotation.z = Math.sin(phase) * .025 * amt;
+      if (tail) tail.rotation.x = .15 + Math.sin(phase * 2) * .12 * amt;
+    }
+  };
 }
 
-// Play the watering scene: walk in beside the tree, pour water, let the tree grow, walk away and vanish.
-function waterTree(T, stage, planted, toGrowth, onDone) {
-  const girl = Math.random() < .5, fromLeft = Math.random() < .5;
-  const g = makeGardener(T, girl);
-  const side = new T.Vector3(Math.cos(stage.yaw), 0, -Math.sin(stage.yaw)).multiplyScalar(fromLeft ? -1 : 1); // screen left/right
-  const start = side.clone().multiplyScalar(5.5), stand = side.clone().multiplyScalar(1.05);
-  g.figure.position.copy(start);
-  stage.scene.add(g.figure);
-  const drops = [], dropGeo = new T.SphereGeometry(.028, 6, 4), dropMat = new T.MeshStandardMaterial({ color: 0x6fb7e8, transparent: true, opacity: .9, roughness: .2 });
-  const face = target => { const d = target.clone().sub(g.figure.position); g.figure.rotation.y = Math.atan2(d.x, d.z); };
-  let phase = "in", t0 = null, walkT = 0, grown = false;
-  const trunkPos = new T.Vector3(0, 0, 0);
-  const stopHook = stage.onFrame((now, dt) => {
-    if (t0 === null) t0 = now;
-    const el = now - t0;
-    const walk = (from, to, dur, time) => {
-      const k = Math.min(1, time / dur);
-      const e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-      g.figure.position.lerpVectors(from, to, e);
-      walkT += dt * 9;
-      const s = Math.sin(walkT) * (k < 1 ? .5 : 0);
-      g.legL.rotation.x = s; g.legR.rotation.x = -s;
-      g.armR.rotation.x = -s * .8;
-      g.body.position.y = Math.abs(Math.sin(walkT)) * .03 * (k < 1 ? 1 : 0);
-      return k >= 1;
-    };
+function makeCollie(T) {
+  const black = soft(T, 0x1f1d1d, { roughness: .9 }), white = soft(T, 0xf7f5f0, { roughness: .9 });
+  const dog = new T.Group(), body = new T.Group();
+  dog.add(body);
+  const torso = capsule(T, .11, .32, black); // a rounded body lying along the dog's length
+  torso.rotation.x = Math.PI / 2;
+  torso.position.set(0, .36, .16);
+  body.add(torso);
+  const chest = new T.Mesh(new T.SphereGeometry(.105, 16, 12), white);
+  chest.position.set(0, .34, .17);
+  chest.scale.set(1, 1.1, .8);
+  body.add(chest);
+  const neckG = new T.Group();
+  neckG.position.set(0, .43, .2);
+  body.add(neckG);
+  const ruff = new T.Mesh(new T.SphereGeometry(.09, 16, 12), white);
+  ruff.position.set(0, 0, .02);
+  neckG.add(ruff);
+  const head = new T.Mesh(new T.SphereGeometry(.085, 18, 14), black);
+  head.position.set(0, .08, .07);
+  neckG.add(head);
+  const blaze = new T.Mesh(new T.SphereGeometry(.03, 10, 8), white);
+  blaze.scale.set(.6, 1.6, .5);
+  blaze.position.set(0, .1, .145);
+  neckG.add(blaze);
+  const snout = new T.Mesh(new T.SphereGeometry(.045, 14, 10), white);
+  snout.scale.set(.85, .7, 1.4);
+  snout.position.set(0, .045, .16);
+  neckG.add(snout);
+  const nose = new T.Mesh(new T.SphereGeometry(.017, 8, 6), soft(T, 0x111111, { roughness: .3 }));
+  nose.position.set(0, .06, .222);
+  neckG.add(nose);
+  [-1, 1].forEach(side => {
+    const ear = new T.Mesh(new T.ConeGeometry(.035, .08, 10), black);
+    ear.position.set(side * .05, .165, .05);
+    ear.rotation.set(-.3, 0, side * -.35);
+    const eye = new T.Mesh(new T.SphereGeometry(.013, 8, 6), soft(T, 0x3a2a1a, { roughness: .2 }));
+    eye.position.set(side * .035, .105, .135);
+    neckG.add(ear, eye);
+  });
+  const legs = [[.07, .15], [-.07, .15], [.07, -.15], [-.07, -.15]].map(([x, z]) => {
+    const leg = new T.Group();
+    leg.position.set(x, .32, z);
+    const upper = new T.Mesh(new T.CylinderGeometry(.03, .026, .16, 10), black);
+    upper.position.y = -.08;
+    const lower = new T.Mesh(new T.CylinderGeometry(.024, .022, .14, 10), white);
+    lower.position.y = -.22;
+    const paw = new T.Mesh(new T.SphereGeometry(.03, 10, 8), white);
+    paw.scale.set(1, .6, 1.3);
+    paw.position.set(0, -.3, .01);
+    leg.add(upper, lower, paw);
+    body.add(leg);
+    return leg;
+  });
+  const tail = new T.Group();
+  tail.position.set(0, .4, -.22);
+  const t1 = new T.Mesh(new T.CylinderGeometry(.03, .045, .22, 10), black);
+  t1.position.y = -.1;
+  const tip = new T.Mesh(new T.SphereGeometry(.035, 10, 8), white);
+  tip.position.y = -.22;
+  tail.add(t1, tip);
+  tail.rotation.x = 2.3;
+  body.add(tail);
+  dog.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  dog.scale.setScalar(1.15);
+  let phase = 0;
+  return {
+    fig: dog,
+    gait(dist, moving, running, sitting, now) {
+      phase += dist / (running ? .7 : .38) * Math.PI * 2;
+      const amp = (running ? .75 : .5) * moving;
+      legs.forEach((leg, i) => { leg.rotation.x = Math.sin(phase + (i === 0 || i === 3 ? 0 : Math.PI)) * amp; });
+      body.position.y = Math.abs(Math.sin(phase)) * (running ? .03 : .012) * moving;
+      body.rotation.x = sitting ? -.38 : 0;
+      if (sitting) { legs[2].rotation.x = legs[3].rotation.x = -1.2; legs[0].rotation.x = legs[1].rotation.x = .38; body.position.y = -.06; }
+      tail.rotation.z = Math.sin(now * (sitting ? 9 : 13)) * .45; // happy wag
+      neckG.rotation.x = sitting ? .35 : Math.sin(phase * .5) * .05;
+    }
+  };
+}
+
+// Move an actor toward a point at a speed, turning smoothly. Returns the distance moved this frame.
+function stepToward(actor, target, speed, dt, turnRate = 5) {
+  const pos = actor.fig.position, d = target.clone().sub(pos).setY(0);
+  const len = d.length();
+  if (len < .01) return 0;
+  const want = Math.atan2(d.x, d.z);
+  let diff = want - actor.fig.rotation.y;
+  diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+  actor.fig.rotation.y += diff * Math.min(1, dt * turnRate);
+  const step = Math.min(len, speed * dt * (Math.abs(diff) > 1.2 ? .3 : 1)); // slow down while turning round
+  pos.addScaledVector(d.normalize(), step);
+  return step;
+}
+function turnToward(actor, point, dt, rate = 3) {
+  const d = point.clone().sub(actor.fig.position);
+  let diff = Math.atan2(d.x, d.z) - actor.fig.rotation.y;
+  diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+  actor.fig.rotation.y += diff * Math.min(1, dt * rate);
+  return Math.abs(diff) < .08;
+}
+const ease = x => (x = Math.max(0, Math.min(1, x)), x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
+
+// The watering scene: walk in calmly, water the tree (it grows), maybe touch a fruit or smell the flowers,
+// then turn and stroll away. Sometimes a border collie comes along and does its own thing.
+function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
+  const pick = (key, value) => (key in force ? force[key] : value);
+  const girl = pick("girl", Math.random() < .5), fromLeft = pick("fromLeft", Math.random() < .5);
+  const kid = makeGardener(T, girl);
+  const side = new T.Vector3(Math.cos(stage.yaw), 0, -Math.sin(stage.yaw)).multiplyScalar(fromLeft ? -1 : 1);
+  const toCam = new T.Vector3(Math.sin(stage.yaw), 0, Math.cos(stage.yaw));
+  const start = side.clone().multiplyScalar(4.2).addScaledVector(toCam, .5);
+  const stand = side.clone().multiplyScalar(1.02).addScaledVector(toCam, .3);
+  const trunk = new T.Vector3(0, .1, 0);
+  kid.fig.position.copy(start);
+  kid.fig.rotation.y = Math.atan2(stand.x - start.x, stand.z - start.z);
+  stage.scene.add(kid.fig);
+
+  // What happens after watering, if the tree has fruit or flowers by then.
+  const blooming = toGrowth >= .86 && (spec.fruit || spec.flower);
+  const extra = blooming ? (spec.flower ? "smell" : "touch") : null;
+
+  // Sometimes the border collie comes too.
+  const withDog = pick("dog", Math.random() < .6);
+  const dogMode = pick("dogMode", ["follow", "ahead", "circle"][Math.floor(Math.random() * 3)]);
+  const dog = withDog ? makeCollie(T) : null;
+  if (dog) {
+    dog.fig.position.copy(start).addScaledVector(side, .5).addScaledVector(toCam, .45);
+    dog.fig.rotation.y = kid.fig.rotation.y;
+    stage.scene.add(dog.fig);
+  }
+  const dogSit = stand.clone().addScaledVector(toCam, .55).addScaledVector(side, .25);
+  const dogAheadSit = side.clone().multiplyScalar(.6).addScaledVector(toCam, .85);
+
+  const drops = [], dropGeo = new T.SphereGeometry(.024, 8, 6);
+  const dropMat = new T.MeshStandardMaterial({ color: 0x7cc4f2, emissive: 0x3b8fd0, emissiveIntensity: .25, transparent: true, opacity: .85, roughness: .15 });
+  const WALK = .62; // calm walking speed (units per second)
+  let phase = "in", t = 0, grown = false, circleA = 0, reach = null;
+  const pickFeature = () => {
+    // The feature closest to the kid that is not too high up.
+    const kp = kid.fig.position, list = planted.features();
+    let best = null, bestD = 1e9;
+    list.forEach(f => { const w = new T.Vector3(); f.getWorldPosition(w); const d = w.distanceTo(kp) + Math.max(0, w.y - 1.6) * 2; if (d < bestD) { bestD = d; best = w; } });
+    return best;
+  };
+  const nextPhase = p => { phase = p; t = 0; };
+
+  const stop = stage.onFrame((now, dt) => {
+    t += dt;
+    let kidMoved = 0;
     if (phase === "in") {
-      face(stand);
-      if (walk(start, stand, 2.6, el)) { phase = "pour"; t0 = now; }
+      kidMoved = stepToward(kid, stand, WALK, dt, 3);
+      if (kid.fig.position.distanceTo(stand) < .02) nextPhase("face");
+    } else if (phase === "face") {
+      if (turnToward(kid, trunk, dt, 3) || t > 1.5) nextPhase("pour");
     } else if (phase === "pour") {
-      face(trunkPos);
-      g.legL.rotation.x = g.legR.rotation.x = 0;
-      const lift = Math.min(1, el / .6);
-      g.armL.rotation.x = -1.1 * lift;           // raise the can
-      g.can.rotation.x = .9 * lift;              // tip it so water pours
-      if (el > .6 && el < 3.4 && Math.random() < .7) {
+      // Raise the can gently, pour for a few seconds, then lower it.
+      const up = ease(t / .9), down = ease((t - 4.2) / .8);
+      const lift = t < 4.2 ? up : 1 - down;
+      kid.arms[1].shoulder.rotation.x = -1.05 * lift;
+      kid.arms[1].elbow.rotation.x = -.35 + .15 * lift;
+      kid.can.rotation.x = .85 * lift;
+      kid.neck.rotation.x = .18 * lift; // looks down at the soil
+      if (t > .9 && t < 4.1 && Math.random() < .65) {
         const d = new T.Mesh(dropGeo, dropMat);
-        g.spoutTip.getWorldPosition(d.position);
-        d.userData.v = trunkPos.clone().sub(d.position).setY(0).normalize().multiplyScalar(.6 + Math.random() * .3);
-        d.userData.v.y = .2;
+        kid.spoutTip.getWorldPosition(d.position);
+        d.userData.v = trunk.clone().sub(d.position).setY(0).normalize().multiplyScalar(.45 + Math.random() * .25);
+        d.userData.v.y = .15;
         stage.scene.add(d);
         drops.push(d);
       }
-      if (el > 1 && !grown) { grown = true; planted.grow(toGrowth, 2.8); }
-      if (el > 4) { phase = "out"; t0 = now; }
+      if (t > 1.3 && !grown) { grown = true; planted.grow(toGrowth, 3.2); }
+      if (t > 5.1) nextPhase(extra ? "approach" : "turn");
+    } else if (phase === "approach") {
+      // Step a little closer and reach up to a fruit, or lean in to smell the flowers.
+      const close = stand.clone().multiplyScalar(.78);
+      kidMoved = stepToward(kid, close, WALK * .7, dt, 3);
+      if (kid.fig.position.distanceTo(close) < .02) { reach = pickFeature(); nextPhase(extra); }
+    } else if (phase === "touch") {
+      // Turn to the fruit, reach up with the free hand and rise onto the toes, then lower again.
+      const arm = kid.arms[0], k = t < 2.2 ? ease(t / .8) : 1 - ease((t - 2.2) / .7);
+      if (reach) turnToward(kid, reach, dt, 2);
+      arm.shoulder.rotation.set(-2.5 * k, 0, -.25 * k);
+      arm.elbow.rotation.x = -.25 * k;
+      kid.body.position.y = .035 * k;
+      kid.neck.rotation.x = -.4 * k; // looks up at the fruit
+      if (t > 3) { arm.shoulder.rotation.set(0, 0, 0); kid.body.position.y = 0; nextPhase("turn"); }
+    } else if (phase === "smell") {
+      const k = t < 2.4 ? ease(t / .9) : 1 - ease((t - 2.4) / .8);
+      if (reach) turnToward(kid, reach, dt, 2);
+      kid.body.rotation.x = .22 * k;       // lean in
+      kid.neck.rotation.x = -.3 * k;        // nose up towards the blossoms
+      kid.arms.forEach(a => (a.shoulder.rotation.x = -.25 * k));
+      if (t > 3.3) nextPhase("turn");
+    } else if (phase === "turn") {
+      kid.neck.rotation.x *= .9;
+      if (turnToward(kid, start, dt, 2) || t > 2) nextPhase("out");
     } else if (phase === "out") {
-      const back = Math.min(1, el / .5);
-      g.armL.rotation.x = -1.1 * (1 - back);
-      g.can.rotation.x = .9 * (1 - back);
-      face(start);
-      if (el > .4 && walk(stand, start, 2.6, el - .4)) {
-        stage.scene.remove(g.figure);
-        stopHook();
-        onDone && onDone();
-      }
-      // Fade out as they leave the frame.
-      const f = Math.max(0, 1 - Math.max(0, el - 1.8) / 1.2);
-      g.figure.scale.setScalar(1.05 * (.4 + .6 * f));
+      kidMoved = stepToward(kid, start, WALK, dt, 3);
+      const far = kid.fig.position.distanceTo(start);
+      const fade = Math.min(1, far / 1.2);
+      kid.fig.scale.setScalar(1.1 * (.55 + .45 * fade));
+      if (far < .05) nextPhase("gone");
     }
-    // Water drops fall with gravity and vanish on the soil.
+    kid.gait(kidMoved, kidMoved > 0 ? 1 : 0, phase !== "pour");
+
+    // The border collie.
+    if (dog) {
+      let target = null, speed = WALK, running = false, sitting = false;
+      const kp = kid.fig.position;
+      const beside = kp.clone().addScaledVector(side, .35).addScaledVector(toCam, .4);
+      if (phase === "in" || phase === "face") {
+        if (dogMode === "ahead") { target = dogAheadSit; speed = 2; running = true; }
+        else target = beside;
+      } else if (phase === "pour") {
+        if (dogMode === "circle" && t > .6 && t < 4.6) {
+          circleA += dt * 2.6;
+          target = kp.clone().add(new T.Vector3(Math.cos(circleA) * .6, 0, Math.sin(circleA) * .6));
+          speed = 1.9; running = true;
+        } else target = dogMode === "ahead" ? dogAheadSit : dogSit;
+      } else if (phase === "out" || phase === "turn") {
+        target = kp.clone().addScaledVector(side, .3).addScaledVector(toCam, .45);
+        speed = WALK * 1.15;
+      } else target = dogMode === "ahead" ? dogAheadSit : dogSit;
+      const moved = target ? stepToward(dog, target, speed, dt, running ? 6 : 4) : 0;
+      sitting = moved === 0 && phase !== "out";
+      if (sitting) turnToward(dog, kp, dt, 2);
+      dog.gait(moved, moved > 0 ? 1 : 0, running && moved > 0, sitting, now);
+      if (phase === "out") dog.fig.scale.setScalar(1.15 * (.55 + .45 * Math.min(1, dog.fig.position.distanceTo(start) / 1.2)));
+    }
+
+    // Water drops fall and disappear into the soil.
     for (let i = drops.length - 1; i >= 0; i--) {
       const d = drops[i];
-      d.userData.v.y -= 9.8 * dt * .35;
+      d.userData.v.y -= 3.2 * dt;
       d.position.addScaledVector(d.userData.v, dt);
       if (d.position.y < .03) { stage.scene.remove(d); drops.splice(i, 1); }
+    }
+    if (phase === "gone") {
+      stage.scene.remove(kid.fig);
+      if (dog) stage.scene.remove(dog.fig);
+      stop();
     }
   });
 }
@@ -632,7 +965,7 @@ async function gardenScreen(dir = "fwd") {
     const tree = plantedTree(T, spec, t.key, from, new T.Vector3(0, 0, 0));
     const st = makeStage(T, stage, { trees: [tree], radius: 2.2, target: new T.Vector3(0, 1.2, 0), height: 2.6 });
     // Grown since the last visit? A gardener comes to water the tree, and it grows to today's size.
-    if (t.growth - from > .002) setTimeout(() => stage.isConnected && waterTree(T, st, tree, t.growth), 700);
+    if (t.growth - from > .002) setTimeout(() => stage.isConnected && waterTree(T, st, tree, t.growth, spec), 700);
     markSeen(t.key, t.growth);
     // While the timer runs, keep the tree in step (quietly).
     const iv = setInterval(() => {
