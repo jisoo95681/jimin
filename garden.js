@@ -409,10 +409,17 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   const sun = new T.DirectionalLight(0xfff6e8, .7);
   sun.position.set(radius * .8, radius * 1.6, radius * .6);
   sun.castShadow = true;
-  sun.shadow.mapSize.set(1024, 1024);
+  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.bias = -.0004;
+  sun.shadow.normalBias = .02;
   const sc = sun.shadow.camera;
   sc.left = sc.bottom = -radius * 1.6; sc.right = sc.top = radius * 1.6; sc.near = .5; sc.far = radius * 5;
   scene.add(sun);
+  const fill = new T.DirectionalLight(0xeaf4ff, .22);
+  fill.position.set(-radius, radius * .6, radius * 1.4);
+  const rim = new T.DirectionalLight(0xffffff, .28);
+  rim.position.set(-radius * .6, radius * 1.1, -radius * 1.4);
+  scene.add(fill, rim);
   trees.forEach(t => scene.add(t.holder));
 
   let pitch = .3, dist = radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
@@ -498,247 +505,245 @@ function plantedTree(T, spec, key, growth, pos) {
 // Smooth-shaded, jointed models so they read as characters rather than blocks, with a natural walk:
 // legs swing from the hip and bend at the knee, arms swing opposite the legs, and the stride matches the
 // distance walked so the feet never slide.
-const soft = (T, c, extra = {}) => new T.MeshStandardMaterial({ color: c, roughness: .75, metalness: 0, ...extra });
-function capsule(T, r, len, mat) {
-  const g = new T.Group();
-  const body = new T.Mesh(new T.CylinderGeometry(r, r, len, 16), mat);
-  body.position.y = -len / 2;
-  const a = new T.Mesh(new T.SphereGeometry(r, 16, 10), mat), b = a.clone();
-  b.position.y = -len;
-  g.add(body, a, b);
-  return g;
+// Materials: skin and fabric are soft and matte; hair and eyes get a light clear-coat sheen.
+const soft = (T, c, extra = {}) => new T.MeshStandardMaterial({ color: c, roughness: .72, metalness: 0, ...extra });
+const glossy = (T, c, extra = {}) => new T.MeshPhysicalMaterial({ color: c, roughness: .45, metalness: 0, clearcoat: .35, clearcoatRoughness: .4, ...extra });
+
+// A smooth, tapered limb hanging down from its pivot (radius r0 at the top, r1 at the bottom, length len),
+// made as one lathe with rounded ends so there are no seams at the joints.
+function roundLimb(T, r0, r1, len, mat, seg = 28) {
+  const pts = [];
+  for (let i = 0; i <= 8; i++) { const a = -Math.PI / 2 + (i / 8) * (Math.PI / 2); pts.push(new T.Vector2(Math.cos(a) * r1, -len + r1 + Math.sin(a) * r1)); }
+  for (let i = 0; i <= 8; i++) { const a = (i / 8) * (Math.PI / 2); pts.push(new T.Vector2(Math.cos(a) * r0, -r0 + Math.sin(a) * r0)); }
+  return new T.Mesh(new T.LatheGeometry(pts, seg), mat);
 }
+// A smooth solid of revolution from a rough [radius, height] profile (points are smoothed with a spline).
+function smoothLathe(T, profile, mat, seg = 40, samples = 48) {
+  const curve = new T.SplineCurve(profile.map(([x, y]) => new T.Vector2(x, y)));
+  return new T.Mesh(new T.LatheGeometry(curve.getPoints(samples), seg), mat);
+}
+const ell = (T, r, sx, sy, sz, mat, x = 0, y = 0, z = 0, seg = 32) => {
+  const m = new T.Mesh(new T.SphereGeometry(r, seg, Math.round(seg * .7)), mat);
+  m.scale.set(sx, sy, sz); m.position.set(x, y, z);
+  return m;
+};
+// Kept for anything else that still uses a simple capsule.
+function capsule(T, r, len, mat) { return roundLimb(T, r, r, len, mat); }
 
 function makeGardener(T, girl) {
-  const skin = soft(T, 0xf5d0b5), hairM = soft(T, girl ? 0x4b2a1a : 0x2a1f1a, { roughness: .6 });
-  const top = soft(T, girl ? 0xf08aa6 : 0x5aa7d8), bottom = soft(T, girl ? 0xf08aa6 : 0x33466b);
-  const sock = soft(T, 0xffffff), shoe = soft(T, girl ? 0xb5523e : 0x333a48);
+  const skin = soft(T, 0xf6d2b8, { roughness: .6 });
+  const hairM = glossy(T, girl ? 0x55301c : 0x2c211b);
+  const top = soft(T, girl ? 0xf38fab : 0x5fb0de), bottom = soft(T, girl ? 0xf38fab : 0x34486e);
+  const white = soft(T, 0xffffff), shoe = glossy(T, girl ? 0xc8563f : 0x2f3645, { clearcoat: .6 });
   const fig = new T.Group(), body = new T.Group();
   fig.add(body);
 
-  // Legs: thigh → knee → shin → foot.
+  // Legs: hip → thigh → knee → shin → shoe.
   const legs = [-1, 1].map(side => {
     const hip = new T.Group();
-    hip.position.set(side * .07, .55, 0);
-    hip.add(capsule(T, .048, .22, girl ? skin : bottom));
+    hip.position.set(side * .068, .56, 0);
+    hip.add(roundLimb(T, .054, .046, .27, girl ? skin : bottom));
     const knee = new T.Group();
     knee.position.y = -.25;
-    knee.add(capsule(T, .042, .2, girl ? skin : skin));
-    const sockM = new T.Mesh(new T.CylinderGeometry(.044, .044, .07, 12), sock);
-    sockM.position.y = -.19;
-    knee.add(sockM);
-    const foot = new T.Mesh(new T.SphereGeometry(.055, 14, 10), shoe);
-    foot.scale.set(.95, .6, 1.55);
-    foot.position.set(0, -.25, .035);
+    knee.add(roundLimb(T, .046, .037, .25, skin));
+    const sock = smoothLathe(T, [[.036, -.24], [.041, -.21], [.042, -.18], [.039, -.16]], white, 24, 12);
+    knee.add(sock);
+    const foot = ell(T, .058, 1, .62, 1.7, shoe, 0, -.255, .035, 28);
     knee.add(foot);
     hip.add(knee);
     body.add(hip);
     return { hip, knee };
   });
 
-  // Torso: a flared dress for the girl; a t-shirt and shorts for the boy.
-  const profile = girl
-    ? [[.2, .38], [.19, .44], [.15, .56], [.115, .66], [.11, .74], [.13, .82], [.12, .87], [.05, .9]]
-    : [[.13, .45], [.135, .56], [.12, .62], [.125, .72], [.14, .82], [.12, .88], [.05, .9]];
-  const torso = new T.Mesh(new T.LatheGeometry(profile.map(([x, y]) => new T.Vector2(x, y)), 24), top);
-  body.add(torso);
-  if (!girl) {
-    const shorts = new T.Mesh(new T.CylinderGeometry(.135, .14, .12, 20), bottom);
-    shorts.position.y = .52;
-    body.add(shorts);
+  // Torso: a softly flared dress for the girl; t-shirt and shorts for the boy.
+  if (girl) {
+    body.add(smoothLathe(T, [[.001, .35], [.2, .37], [.205, .41], [.17, .52], [.125, .63], [.112, .72], [.128, .8], [.13, .85], [.1, .885], [.045, .9]], top));
+    const hem = new T.Mesh(new T.TorusGeometry(.2, .012, 10, 48), white);
+    hem.rotation.x = Math.PI / 2; hem.position.y = .375;
+    const collar = new T.Mesh(new T.TorusGeometry(.068, .015, 10, 32), white);
+    collar.rotation.x = Math.PI / 2; collar.position.y = .888;
+    body.add(hem, collar);
   } else {
-    const collar = new T.Mesh(new T.TorusGeometry(.07, .014, 8, 20), soft(T, 0xffffff));
-    collar.rotation.x = Math.PI / 2;
-    collar.position.y = .885;
-    body.add(collar);
+    body.add(smoothLathe(T, [[.001, .5], [.13, .5], [.138, .56], [.13, .63], [.132, .72], [.145, .81], [.125, .87], [.06, .9]], top));
+    body.add(smoothLathe(T, [[.001, .44], [.138, .44], [.142, .5], [.135, .56], [.001, .56]], bottom, 32, 20));
+    const neckband = new T.Mesh(new T.TorusGeometry(.06, .012, 10, 32), soft(T, 0x3d8fc0));
+    neckband.rotation.x = Math.PI / 2; neckband.position.y = .893;
+    body.add(neckband);
   }
 
-  // Head on a neck pivot so it can nod or tilt (to smell flowers).
+  // Head on a neck pivot so it can nod or tilt.
   const neck = new T.Group();
   neck.position.y = .9;
   body.add(neck);
-  neck.add(new T.Mesh(new T.CylinderGeometry(.035, .04, .06, 10), skin));
-  const head = new T.Mesh(new T.SphereGeometry(.14, 24, 18), skin);
-  head.position.y = .15;
-  head.scale.set(1, 1.02, .96);
+  neck.add(roundLimb(T, .038, .042, .08, skin, 20).translateY(.07));
+  const head = ell(T, .145, 1, 1.03, .97, skin, 0, .16, 0, 48);
   neck.add(head);
-  const hair = new T.Mesh(new T.SphereGeometry(.148, 24, 16, 0, Math.PI * 2, 0, Math.PI * .56), hairM);
-  hair.position.set(0, .165, -.012);
-  hair.rotation.x = -.35;
-  neck.add(hair);
-  const bangs = new T.Mesh(new T.SphereGeometry(.12, 18, 10, 0, Math.PI * 2, 0, Math.PI * .3), hairM);
-  bangs.position.set(0, .2, .055);
-  bangs.rotation.x = .55;
-  neck.add(bangs);
+  [-1, 1].forEach(side => neck.add(ell(T, .03, .6, 1, .9, skin, side * .142, .155, 0, 20))); // ears
+  neck.add(ell(T, .015, 1, .8, 1, skin, 0, .135, .142, 16));                                // nose
+  // Hair: a rounded cap, a soft fringe and side locks (plus a ponytail for the girl).
+  const cap = new T.Mesh(new T.SphereGeometry(.155, 48, 32, 0, Math.PI * 2, 0, Math.PI * .58), hairM);
+  cap.position.set(0, .17, -.01); cap.rotation.x = -.32;
+  neck.add(cap);
+  for (let i = -2; i <= 2; i++) neck.add(ell(T, .05, 1.2, .55, .7, hairM, i * .045, .245 - Math.abs(i) * .012, .108 - Math.abs(i) * .012, 20));
+  [-1, 1].forEach(side => neck.add(ell(T, .045, .7, girl ? 1.7 : 1.1, .8, hairM, side * .128, girl ? .12 : .17, .02, 20)));
   let tail = null;
   if (girl) {
     tail = new T.Group();
-    tail.position.set(0, .23, -.12);
-    const tie = new T.Mesh(new T.TorusGeometry(.025, .012, 6, 12), soft(T, 0xff5c8a));
-    const lock = new T.Mesh(new T.SphereGeometry(.055, 14, 12), hairM);
-    lock.scale.set(.9, 2, .9);
-    lock.position.set(0, -.1, -.03);
-    tail.add(tie, lock);
+    tail.position.set(0, .25, -.13);
+    tail.add(new T.Mesh(new T.TorusGeometry(.026, .012, 10, 20), soft(T, 0xff5c8a)));
+    const lock = smoothLathe(T, [[.001, .02], [.045, 0], [.06, -.07], [.05, -.15], [.025, -.21], [.001, -.23]], hairM, 28, 24);
+    lock.position.z = -.02;
+    tail.add(lock);
     neck.add(tail);
   }
-  const eyeM = soft(T, 0x2b2320, { roughness: .3 });
+  // Face: glossy eyes with highlights, brows, blush and a smile.
+  const eyeM = glossy(T, 0x2a211d, { clearcoat: 1, clearcoatRoughness: .1, roughness: .2 });
+  const shineM = soft(T, 0xffffff, { emissive: 0xffffff, emissiveIntensity: .8 });
   [-1, 1].forEach(side => {
-    const eye = new T.Mesh(new T.SphereGeometry(.018, 12, 10), eyeM);
-    eye.scale.set(1, 1.3, .6);
-    eye.position.set(side * .05, .16, .13);
-    const shine = new T.Mesh(new T.SphereGeometry(.006, 6, 5), soft(T, 0xffffff, { emissive: 0xffffff, emissiveIntensity: .6 }));
-    shine.position.set(side * .05 + .006, .168, .14);
-    const cheek = new T.Mesh(new T.SphereGeometry(.024, 10, 8), soft(T, 0xff9aa8, { transparent: true, opacity: .55 }));
-    cheek.scale.set(1, .6, .3);
-    cheek.position.set(side * .078, .12, .115);
-    neck.add(eye, shine, cheek);
+    neck.add(ell(T, .02, 1, 1.35, .55, eyeM, side * .052, .165, .128, 20));
+    neck.add(ell(T, .007, 1, 1, 1, shineM, side * .052 + .007, .174, .139, 10));
+    const brow = roundLimb(T, .005, .005, .032, hairM, 8);
+    brow.rotation.z = Math.PI / 2 + side * .15; brow.position.set(side * .036, .208, .128);
+    neck.add(brow);
+    neck.add(ell(T, .026, 1, .55, .3, soft(T, 0xff9aa9, { transparent: true, opacity: .5 }), side * .082, .122, .112, 16));
   });
-  const smile = new T.Mesh(new T.TorusGeometry(.022, .005, 6, 12, Math.PI), soft(T, 0xb4545a));
-  smile.position.set(0, .11, .135);
-  smile.rotation.z = Math.PI;
+  const smile = new T.Mesh(new T.TorusGeometry(.02, .0045, 8, 20, Math.PI), soft(T, 0xb5505a));
+  smile.position.set(0, .108, .137); smile.rotation.z = Math.PI;
   neck.add(smile);
 
-  // Arms: shoulder → elbow → forearm → hand. The left hand holds a watering can.
+  // Arms: shoulder → upper arm (with sleeve) → elbow → forearm → hand. The right hand carries the can.
   const arms = [-1, 1].map(side => {
     const shoulder = new T.Group();
-    shoulder.position.set(side * .145, .84, 0);
-    const sleeve = new T.Mesh(new T.SphereGeometry(.048, 14, 10), top);
-    shoulder.add(sleeve, capsule(T, .033, .16, skin));
+    shoulder.position.set(side * .142, .845, 0);
+    shoulder.add(roundLimb(T, .034, .03, .19, skin));
+    const sleeve = roundLimb(T, .05, girl ? .05 : .045, girl ? .1 : .11, top, 28); // short sleeve wrapped around the upper arm
+    sleeve.position.y = .012;
+    sleeve.scale.set(1, 1, .92);
+    shoulder.add(sleeve);
     const elbow = new T.Group();
-    elbow.position.y = -.18;
-    elbow.add(capsule(T, .03, .14, skin));
-    const hand = new T.Mesh(new T.SphereGeometry(.036, 12, 10), skin);
-    hand.position.y = -.17;
-    elbow.add(hand);
+    elbow.position.y = -.175;
+    elbow.add(roundLimb(T, .03, .026, .16, skin));
+    elbow.add(ell(T, .033, .9, 1.15, .75, skin, 0, -.172, 0, 20));        // hand
+    elbow.add(ell(T, .012, 1, 1.6, 1, skin, side * -.022, -.158, .018, 12)); // thumb
     shoulder.add(elbow);
     body.add(shoulder);
-    return { shoulder, elbow, hand };
+    return { shoulder, elbow };
   });
-  const tin = soft(T, 0x4fb0b2, { roughness: .35, metalness: .15 });
+  const tin = glossy(T, 0x4fb3b5, { metalness: .25, roughness: .35, clearcoat: .6 });
   const can = new T.Group();
-  const pot = new T.Mesh(new T.CylinderGeometry(.075, .085, .15, 20), tin);
-  const spout = new T.Mesh(new T.CylinderGeometry(.012, .02, .22, 10), tin);
-  spout.position.set(0, .03, .14);
-  spout.rotation.x = 1.05;
-  const rose = new T.Mesh(new T.CylinderGeometry(.03, .014, .03, 12), tin);
-  rose.position.set(0, .12, .235);
-  rose.rotation.x = 1.05;
-  const handle = new T.Mesh(new T.TorusGeometry(.06, .012, 8, 16, Math.PI), tin);
-  handle.position.set(0, .07, -.01);
-  handle.rotation.y = Math.PI / 2;
-  can.add(pot, spout, rose, handle);
+  can.add(smoothLathe(T, [[.001, -.075], [.084, -.075], [.088, -.06], [.08, .05], [.072, .075], [.001, .075]], tin, 36, 20));
+  const spout = roundLimb(T, .012, .019, .24, tin, 16);
+  spout.rotation.x = -(Math.PI - 1.05); spout.position.set(0, 0, .06); // points up and forward
+  const rose = smoothLathe(T, [[.001, 0], [.016, 0], [.032, .03], [.001, .032]], tin, 24, 10);
+  rose.position.set(0, .115, .235); rose.rotation.x = 1.05;
+  const handle = new T.Mesh(new T.TorusGeometry(.058, .011, 10, 24, Math.PI), tin);
+  handle.position.set(0, .07, -.01); handle.rotation.y = Math.PI / 2;
+  can.add(spout, rose, handle);
   can.position.set(0, -.25, .05);
   arms[1].elbow.add(can);
   const spoutTip = new T.Object3D();
   spoutTip.position.set(0, .13, .25);
   can.add(spoutTip);
-  fig.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  fig.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
   fig.scale.setScalar(1.1);
 
-  let phase = 0;
+  // Natural gait driven by distance walked. The walk eases in and out (no snapping when starting or stopping).
+  let phase = 0, amt = 0, last = performance.now();
   return {
     fig, body, neck, tail, arms, can, spoutTip,
-    // Natural gait driven by distance walked (stride ≈ 0.5 units per step pair).
-    gait(dist, moving, holdCan) {
+    gait(dist, moving, holdCan, posing = false) {
+      const now = performance.now(), dt = Math.min(.05, (now - last) / 1000);
+      last = now;
+      amt += ((moving ? 1 : 0) - amt) * Math.min(1, dt * 7);
       phase += dist / .5 * Math.PI * 2;
-      const amt = moving;
       legs.forEach(({ hip, knee }, i) => {
         const p = phase + i * Math.PI;
         hip.rotation.x = Math.sin(p) * .42 * amt;
-        knee.rotation.x = Math.max(0, Math.sin(p - 1.3)) * .75 * amt; // knee bends as the leg swings through
+        knee.rotation.x = Math.max(0, Math.sin(p - 1.3)) * .75 * amt;
       });
-      if (!amt) { body.position.y = 0; body.rotation.z = 0; return; } // standing still: leave the arms to the current pose
-      arms.forEach(({ shoulder, elbow }, i) => {
-        if (i === 1 && holdCan) return;
-        const p = phase + (i + 1) * Math.PI;
-        shoulder.rotation.x = Math.sin(p) * .38 * amt;
-        elbow.rotation.x = (-.2 - Math.max(0, Math.sin(p)) * .25) * amt;
-      });
-      if (holdCan) { arms[1].shoulder.rotation.x = Math.sin(phase + Math.PI) * .12 * amt; arms[1].elbow.rotation.x = -.35; }
       body.position.y = (Math.abs(Math.cos(phase)) - .5) * .018 * amt;
-      body.rotation.z = Math.sin(phase) * .025 * amt;
-      if (tail) tail.rotation.x = .15 + Math.sin(phase * 2) * .12 * amt;
+      body.rotation.z = Math.sin(phase) * .022 * amt;
+      if (tail) tail.rotation.x = .15 + Math.sin(phase * 2) * .1 * amt;
+      if (posing) return; // a pose (pouring, reaching, smelling) owns the arms
+      arms.forEach(({ shoulder, elbow }, i) => {
+        if (i === 1 && holdCan) { shoulder.rotation.x = Math.sin(phase + Math.PI) * .12 * amt; elbow.rotation.x = -.35; return; }
+        const p = phase + (i + 1) * Math.PI;
+        shoulder.rotation.x = Math.sin(p) * .36 * amt;
+        elbow.rotation.x = (-.18 - Math.max(0, Math.sin(p)) * .25) * amt - .06;
+      });
     }
   };
 }
 
 function makeCollie(T) {
-  const black = soft(T, 0x1f1d1d, { roughness: .9 }), white = soft(T, 0xf7f5f0, { roughness: .9 });
+  const black = soft(T, 0x1c1a1a, { roughness: .88 }), white = soft(T, 0xf6f3ec, { roughness: .9 });
   const dog = new T.Group(), body = new T.Group();
   dog.add(body);
-  const torso = capsule(T, .11, .32, black); // a rounded body lying along the dog's length
+  // Body: a smooth lathe lying along the dog's length (deep chest, tucked waist).
+  const torso = smoothLathe(T, [[.001, -.22], [.07, -.21], [.1, -.15], [.112, -.05], [.118, .05], [.125, .13], [.105, .2], [.06, .235], [.001, .24]], black, 40, 40);
   torso.rotation.x = Math.PI / 2;
-  torso.position.set(0, .36, .16);
+  torso.position.set(0, .36, 0);
+  torso.scale.set(1, 1, 1.05);
   body.add(torso);
-  const chest = new T.Mesh(new T.SphereGeometry(.105, 16, 12), white);
-  chest.position.set(0, .34, .17);
-  chest.scale.set(1, 1.1, .8);
-  body.add(chest);
+  body.add(ell(T, .1, 1, 1.15, .8, white, 0, .33, .17, 32)); // white chest
   const neckG = new T.Group();
   neckG.position.set(0, .43, .2);
   body.add(neckG);
-  const ruff = new T.Mesh(new T.SphereGeometry(.09, 16, 12), white);
-  ruff.position.set(0, 0, .02);
-  neckG.add(ruff);
-  const head = new T.Mesh(new T.SphereGeometry(.085, 18, 14), black);
-  head.position.set(0, .08, .07);
-  neckG.add(head);
-  const blaze = new T.Mesh(new T.SphereGeometry(.03, 10, 8), white);
-  blaze.scale.set(.6, 1.6, .5);
-  blaze.position.set(0, .1, .145);
-  neckG.add(blaze);
-  const snout = new T.Mesh(new T.SphereGeometry(.045, 14, 10), white);
-  snout.scale.set(.85, .7, 1.4);
-  snout.position.set(0, .045, .16);
-  neckG.add(snout);
-  const nose = new T.Mesh(new T.SphereGeometry(.017, 8, 6), soft(T, 0x111111, { roughness: .3 }));
-  nose.position.set(0, .06, .222);
-  neckG.add(nose);
+  neckG.add(ell(T, .092, 1.05, 1, .95, white, 0, -.01, .015, 32)); // white ruff
+  neckG.add(ell(T, .085, 1, .95, 1.05, black, 0, .085, .06, 40));  // skull
+  const muzzle = smoothLathe(T, [[.001, 0], [.05, .005], [.046, .05], [.034, .09], [.018, .11], [.001, .112]], white, 32, 20);
+  muzzle.rotation.x = Math.PI / 2; muzzle.position.set(0, .05, .1); muzzle.scale.set(1, 1, .8);
+  neckG.add(muzzle);
+  neckG.add(ell(T, .022, 1.2, .9, 1, glossy(T, 0x111111, { clearcoat: 1, roughness: .25 }), 0, .058, .212, 16)); // nose
+  neckG.add(ell(T, .026, .6, 1.8, .5, white, 0, .11, .135, 16)); // blaze
   [-1, 1].forEach(side => {
-    const ear = new T.Mesh(new T.ConeGeometry(.035, .08, 10), black);
-    ear.position.set(side * .05, .165, .05);
-    ear.rotation.set(-.3, 0, side * -.35);
-    const eye = new T.Mesh(new T.SphereGeometry(.013, 8, 6), soft(T, 0x3a2a1a, { roughness: .2 }));
-    eye.position.set(side * .035, .105, .135);
-    neckG.add(ear, eye);
+    const ear = smoothLathe(T, [[.001, 0], [.035, .005], [.03, .04], [.014, .075], [.001, .085]], black, 20, 16);
+    ear.scale.set(1, 1, .45);
+    ear.position.set(side * .05, .15, .045); ear.rotation.set(-.35, 0, side * -.4);
+    neckG.add(ear);
+    neckG.add(ell(T, .014, 1, 1.1, .7, glossy(T, 0x3a2716, { clearcoat: 1, roughness: .2 }), side * .036, .105, .133, 14));
   });
-  const legs = [[.07, .15], [-.07, .15], [.07, -.15], [-.07, -.15]].map(([x, z]) => {
+  // Legs: tapered, black above and white "socks" below, with soft paws.
+  const legs = [[.07, .15], [-.07, .15], [.07, -.15], [-.07, -.15]].map(([x, z], i) => {
     const leg = new T.Group();
     leg.position.set(x, .32, z);
-    const upper = new T.Mesh(new T.CylinderGeometry(.03, .026, .16, 10), black);
-    upper.position.y = -.08;
-    const lower = new T.Mesh(new T.CylinderGeometry(.024, .022, .14, 10), white);
-    lower.position.y = -.22;
-    const paw = new T.Mesh(new T.SphereGeometry(.03, 10, 8), white);
-    paw.scale.set(1, .6, 1.3);
-    paw.position.set(0, -.3, .01);
-    leg.add(upper, lower, paw);
+    leg.add(roundLimb(T, i < 2 ? .034 : .04, .026, .17, black, 20));
+    const low = roundLimb(T, .026, .024, .15, white, 20);
+    low.position.y = -.145;
+    leg.add(low, ell(T, .03, 1, .6, 1.35, white, 0, -.29, .012, 16));
     body.add(leg);
     return leg;
   });
+  // A fluffy, curved tail with a white tip.
   const tail = new T.Group();
-  tail.position.set(0, .4, -.22);
-  const t1 = new T.Mesh(new T.CylinderGeometry(.03, .045, .22, 10), black);
-  t1.position.y = -.1;
-  const tip = new T.Mesh(new T.SphereGeometry(.035, 10, 8), white);
-  tip.position.y = -.22;
-  tail.add(t1, tip);
-  tail.rotation.x = 2.3;
+  tail.position.set(0, .41, -.21);
+  const curve = new T.CatmullRomCurve3([new T.Vector3(0, 0, 0), new T.Vector3(0, -.06, -.08), new T.Vector3(0, -.16, -.12), new T.Vector3(0, -.24, -.08)]);
+  tail.add(new T.Mesh(new T.TubeGeometry(curve, 24, .035, 14, false), black));
+  tail.add(ell(T, .042, 1, 1.3, 1, white, 0, -.25, -.08, 16));
+  tail.add(ell(T, .036, 1, 1, 1, black, 0, 0, 0, 16));
   body.add(tail);
-  dog.traverse(o => { if (o.isMesh) o.castShadow = true; });
+  dog.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
   dog.scale.setScalar(1.15);
-  let phase = 0;
+  let phase = 0, amt = 0, sit = 0, last = performance.now();
   return {
     fig: dog,
     gait(dist, moving, running, sitting, now) {
+      const t = performance.now(), dt = Math.min(.05, (t - last) / 1000);
+      last = t;
+      amt += ((moving ? 1 : 0) - amt) * Math.min(1, dt * 8);
+      sit += ((sitting ? 1 : 0) - sit) * Math.min(1, dt * 4); // sits down and stands up smoothly
       phase += dist / (running ? .7 : .38) * Math.PI * 2;
-      const amp = (running ? .75 : .5) * moving;
-      legs.forEach((leg, i) => { leg.rotation.x = Math.sin(phase + (i === 0 || i === 3 ? 0 : Math.PI)) * amp; });
-      body.position.y = Math.abs(Math.sin(phase)) * (running ? .03 : .012) * moving;
-      body.rotation.x = sitting ? -.38 : 0;
-      if (sitting) { legs[2].rotation.x = legs[3].rotation.x = -1.2; legs[0].rotation.x = legs[1].rotation.x = .38; body.position.y = -.06; }
-      tail.rotation.z = Math.sin(now * (sitting ? 9 : 13)) * .45; // happy wag
-      neckG.rotation.x = sitting ? .35 : Math.sin(phase * .5) * .05;
+      const amp = (running ? .75 : .5) * amt;
+      legs.forEach((leg, i) => {
+        const swing = Math.sin(phase + (i === 0 || i === 3 ? 0 : Math.PI)) * amp;
+        const sitPose = i < 2 ? .38 : -1.2;
+        leg.rotation.x = swing * (1 - sit) + sitPose * sit;
+      });
+      body.position.y = Math.abs(Math.sin(phase)) * (running ? .03 : .012) * amt - .06 * sit;
+      body.rotation.x = -.38 * sit;
+      tail.rotation.z = Math.sin(now * (sitting ? 9 : 13)) * .45;
+      tail.rotation.x = .2 * sit;
+      neckG.rotation.x = .35 * sit + Math.sin(phase * .5) * .05 * (1 - sit);
     }
   };
 }
@@ -866,7 +871,7 @@ function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
       kid.fig.scale.setScalar(1.1 * (.55 + .45 * fade));
       if (far < .05) nextPhase("gone");
     }
-    kid.gait(kidMoved, kidMoved > 0 ? 1 : 0, phase !== "pour");
+    kid.gait(kidMoved, kidMoved > 0 ? 1 : 0, phase !== "pour", ["pour", "touch", "smell"].includes(phase));
 
     // The border collie.
     if (dog) {
