@@ -126,34 +126,13 @@ const easeOut = x => { x = Math.max(0, Math.min(1, x)); return 1 - (1 - x) * (1 
 
 // Build one tree as a hierarchy: leaves hang on branches, branches on the trunk. Each part grows (uniform scale) inside
 // its parent, so everything stays connected at every stage. update(g) takes growth 0–1.
-function buildTree(T, spec, seedKey, lod = 1) {
+function buildTree(T, spec, seedKey) {
   const rnd = seeded(seedKey + spec.name), R = (lo, hi) => lo + (hi - lo) * rnd();
   const outer = new T.Group(), root = new T.Group();
   outer.add(root);
   const parts = [], links = [];
   const mats = {};
-  // Bark: smooth, matte. Leaves: vertex-coloured (darker underneath and in the dents) so clusters look rounded and full.
-  const mat = c => (mats[c] = mats[c] || new T.MeshStandardMaterial({ color: c, roughness: .92, metalness: 0 }));
-  const leafMat = new T.MeshStandardMaterial({ vertexColors: true, roughness: .88, metalness: 0 });
-  const seg = lod ? [20, 14] : [12, 9];
-  // A leaf cluster: a sphere pushed in and out by a few smooth waves (an organic, bumpy outline), shaded per vertex.
-  function leafGeo(r, color, sx = 1, sy = 1, sz = 1) {
-    const g = new T.SphereGeometry(r, seg[0], seg[1]);
-    const pos = g.attributes.position, n = new T.Vector3(), cols = [], base = new T.Color(color), c = new T.Color();
-    const waves = [0, 1, 2].map(() => [V(R(-1, 1), R(-1, 1), R(-1, 1)).normalize(), R(0, 6.28)]);
-    for (let i = 0; i < pos.count; i++) {
-      n.fromBufferAttribute(pos, i).normalize();
-      const k = Math.sin(n.dot(waves[0][0]) * 4 + waves[0][1]) * .5 + Math.sin(n.dot(waves[1][0]) * 7 + waves[1][1]) * .3 + Math.sin(n.dot(waves[2][0]) * 12 + waves[2][1]) * .2;
-      const d = r * (1 + k * .12);
-      pos.setXYZ(i, n.x * d * sx, n.y * d * sy, n.z * d * sz);
-      const shade = .6 + .4 * (n.y * .5 + .5) + k * .08; // light from above, darker underneath and in the dents
-      c.copy(base).multiplyScalar(Math.min(1.12, shade));
-      cols.push(c.r, c.g, c.b);
-    }
-    g.setAttribute("color", new T.Float32BufferAttribute(cols, 3));
-    g.computeVertexNormals();
-    return g;
-  }
+  const mat = c => (mats[c] = mats[c] || new T.MeshStandardMaterial({ color: c, flatShading: true, roughness: .85, metalness: 0 }));
   const up = new T.Vector3(0, 1, 0);
   const V = (x, y, z) => new T.Vector3(x, y, z);
   // Parts are placed in tree coordinates at full size; after building they are re-parented (keeping their place).
@@ -165,23 +144,19 @@ function buildTree(T, spec, seedKey, lod = 1) {
     return obj;
   };
   function limb(from, dir, len, r0, r1, color) {
-    const g = new T.CylinderGeometry(r1, r0, len, lod ? 12 : 8, 3);
+    const g = new T.CylinderGeometry(r1, r0, len, 7);
     g.translate(0, len / 2, 0);
     const m = new T.Mesh(g, mat(color));
     m.position.copy(from);
     m.quaternion.setFromUnitVectors(up, dir.clone().normalize());
-    // Main trunks get a gentle root flare where they meet the ground.
-    if (from.y === 0 && dir.y > .9 && r0 >= .09) {
-      const fl = new T.Mesh(new T.LatheGeometry([[r0 * 2.1, 0], [r0 * 1.55, .03], [r0 * 1.15, .1], [r0 * 1.01, .22]].map(([x, y]) => new T.Vector2(x, y)), lod ? 16 : 10), mat(color));
-      m.add(fl);
-    }
     m.userData.tip = from.clone().add(dir.clone().normalize().multiplyScalar(len));
     m.userData.at = f => from.clone().add(dir.clone().normalize().multiplyScalar(len * f));
     return m;
   }
-  function blob(pos, r, color, sx = 1, sy = 1, sz = 1) {
-    const m = new T.Mesh(leafGeo(r, color, sx, sy, sz), leafMat); // squash is baked into the shape
+  function blob(pos, r, color, sx = 1, sy = 1, sz = 1, detail = 1) {
+    const m = new T.Mesh(new T.IcosahedronGeometry(r, detail), mat(color));
     m.position.copy(pos);
+    m.scale.set(sx, sy, sz);
     m.rotation.y = R(0, 6.28); // spin around the vertical only, so squashed clusters stay level
     return m;
   }
@@ -213,7 +188,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
   function fruitOn(branch, blobs, color, oval, per = 3) {
     blobs.forEach(b => {
       for (let i = 0; i < per; i++) {
-        const f = new T.Mesh(new T.SphereGeometry(oval ? .095 : .11, lod ? 14 : 9, lod ? 10 : 7), shiny(color));
+        const f = new T.Mesh(new T.SphereGeometry(oval ? .095 : .11, 14, 10), shiny(color));
         f.scale.y = oval ? 1.3 : .95;
         f.position.copy(surface(b, outward(b, .9), .93));
         f.castShadow = true;
@@ -292,17 +267,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
   } else if (k === "cone") {
     const trunk = grow(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), 0, .45);
     for (let i = 0; i < 6; i++) {
-      const cg = new T.ConeGeometry(1.05 - i * .15, .75, lod ? 20 : 10, 3);
-      const cp = cg.attributes.position, col = [], base = new T.Color(spec.leaf), cc = new T.Color();
-      for (let q = 0; q < cp.count; q++) {
-        const x = cp.getX(q), y = cp.getY(q), z = cp.getZ(q), wob = 1 + Math.sin(Math.atan2(z, x) * 7 + i) * .06;
-        cp.setXYZ(q, x * wob, y, z * wob);
-        cc.copy(base).multiplyScalar(.62 + .38 * (y / .75 + .5));
-        col.push(cc.r, cc.g, cc.b);
-      }
-      cg.setAttribute("color", new T.Float32BufferAttribute(col, 3));
-      cg.computeVertexNormals();
-      const c = new T.Mesh(cg, leafMat);
+      const c = new T.Mesh(new T.ConeGeometry(1.05 - i * .15, .75, 8), mat(spec.leaf));
       c.position.set(0, .75 + i * .38, 0);
       c.rotation.y = R(0, 2);
       grow(c, .15 + i * .07, .5 + i * .07, trunk);
@@ -318,7 +283,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
     crown(top, spec.leaf, 1, .38, .45, { sy: 1.4 });
   } else if (k === "baobab") {
     const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
-    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, lod ? 24 : 12), mat(spec.trunk)), 0, .45);
+    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, 10), mat(spec.trunk)), 0, .45);
     for (let i = 0; i < 6; i++) {
       const ang = around(6, i);
       const br = grow(limb(V(Math.cos(ang) * .15, 1.95, Math.sin(ang) * .15), V(Math.cos(ang), R(.6, 1.1), Math.sin(ang)), R(.5, .8), .1, .05, spec.trunk), .25 + i * .04, .6 + i * .04, trunk);
@@ -483,22 +448,18 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   resize();
 
   const hooks = [];
-  let last = performance.now(), running = true, dirty = true;
-  new ResizeObserver(() => (dirty = true)).observe(host);
+  let last = performance.now(), running = true;
   function frame(now) {
     if (!host.isConnected) { running = false; renderer.dispose(); return; }
     const dt = Math.min(.05, (now - last) / 1000);
     last = now;
-    const moving = focus.distanceTo(wantFocus) > .001 || Math.abs(wantDist - dist) > .001;
     focus.lerp(wantFocus, .08);
     dist += (wantDist - dist) * .08;
     camera.position.set(focus.x + Math.sin(yaw) * Math.cos(pitch) * dist, focus.y + Math.sin(pitch) * dist + height * .15, focus.z + Math.cos(yaw) * Math.cos(pitch) * dist);
     camera.lookAt(focus);
-    let changed = moving || dragging || hooks.length > 0 || dirty;
-    trees.forEach(t => { if (t.tick(dt)) changed = true; });
+    trees.forEach(t => t.tick(dt));
     hooks.forEach(h => h(now / 1000, dt));
-    // Only draw when something changed: a still garden costs almost no battery.
-    if (changed) { renderer.render(scene, camera); dirty = false; }
+    renderer.render(scene, camera);
     if (running) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
@@ -512,16 +473,16 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
 }
 
 // A tree on its own patch of grass. It shows `growth` straight away; grow(to) animates it to a new size.
-function plantedTree(T, spec, key, growth, pos, lod = 1) {
+function plantedTree(T, spec, key, growth, pos) {
   const holder = new T.Group();
   holder.position.copy(pos);
-  const grass = new T.Mesh(new T.CylinderGeometry(1.25, 1.35, .16, 48), new T.MeshStandardMaterial({ color: 0x74a85a, roughness: 1 }));
+  const grass = new T.Mesh(new T.CylinderGeometry(1.25, 1.35, .16, 24), new T.MeshStandardMaterial({ color: 0x74a85a, flatShading: true, roughness: 1 }));
   grass.position.y = -.08;
   grass.receiveShadow = true;
-  const soil = new T.Mesh(new T.SphereGeometry(.34, 24, 8, 0, Math.PI * 2, 0, Math.PI / 2), new T.MeshStandardMaterial({ color: 0x7a5a3c, roughness: 1 }));
+  const soil = new T.Mesh(new T.SphereGeometry(.34, 12, 6, 0, Math.PI * 2, 0, Math.PI / 2), new T.MeshStandardMaterial({ color: 0x7a5a3c, flatShading: true, roughness: 1 }));
   soil.scale.y = .35;
   holder.add(grass, soil);
-  const tree = buildTree(T, spec, key, lod);
+  const tree = buildTree(T, spec, key);
   holder.add(tree.group);
   let shown = growth, goal = growth, speed = 0;
   tree.update(shown);
@@ -531,12 +492,11 @@ function plantedTree(T, spec, key, growth, pos, lod = 1) {
     get growth() { return shown; },
     grow(to, seconds = 3) { goal = to; speed = Math.abs(to - shown) / seconds; },
     set(to) { shown = goal = to; tree.update(shown); },
-    tick(dt) { // returns true while the tree is changing (so the stage knows to redraw)
-      if (shown === goal) return false;
+    tick(dt) {
+      if (shown === goal) return;
       const stepTo = Math.min(Math.abs(goal - shown), speed * dt);
       shown += Math.sign(goal - shown) * stepTo;
       tree.update(shown);
-      return true;
     }
   };
 }
@@ -1134,8 +1094,7 @@ async function gardenAll() {
     if (!stage.isConnected) return;
     const n = Math.max(1, list.length), cols = Math.ceil(Math.sqrt(n * 1.6)), rows = Math.ceil(n / cols), gap = 2.9;
     positions = list.map((d, i) => new T.Vector3((i % cols - (cols - 1) / 2) * gap, 0, (Math.floor(i / cols) - (rows - 1) / 2) * gap));
-    const lod = list.length > 12 ? 0 : 1; // lighter trees when the garden gets big
-    const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], lod));
+    const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i]));
     const radius = Math.max(3.6, Math.max(cols, rows) * gap * .7);
     stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
   } catch {
