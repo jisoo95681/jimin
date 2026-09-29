@@ -617,6 +617,80 @@ const QUESTIONS = [
     options: ["Measured at grant-date fair value and recognized over the vesting period", "Remeasured at fair value every year", "Recognized only when the options are exercised"],
     answer: 0,
     why: "Equity-settled options are measured once at grant-date fair value, and that amount is expensed over the vesting (service) period. Later changes in the share price don't change it."
+  },
+
+  // ---------- Equity Valuation: Discounted Dividend Valuation ----------
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "Using the CAPM, the required return for a stock with beta 0.84, a risk-free rate of 4.1% and an equity risk premium of 5.5% is:",
+    options: ["8.72%", "9.60%", "4.62%"],
+    answer: 0,
+    why: "r = rf + β × ERP = 4.1% + 0.84 × 5.5% = 4.1% + 4.62% = 8.72%."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "A two-stage DDM is most appropriate for a company that expects:",
+    options: ["Constant growth forever", "A period of extraordinary growth followed by stable (normal) growth", "Growth that declines smoothly forever"],
+    answer: 1,
+    why: "A two-stage DDM values an initial high-growth period dividend by dividend, then a terminal value for stable growth after it. Constant growth fits the Gordon growth model; a smooth decline fits the H-model."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In a two-stage DDM with an n-year first stage, the Gordon-growth terminal value at time n is:",
+    options: ["Dn / (r − gL)", "Dn × (1 + gL) / (r − gL) = Dn+1 / (r − gL)", "Dn / r"],
+    answer: 1,
+    why: "The terminal value at time n uses the NEXT dividend: Vn = Dn+1 / (r − gL) = Dn(1 + gL)/(r − gL). Example: 0.4992 × 1.07 / (0.0872 − 0.07) = 31.06. It is then discounted back n years."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In a two-stage DDM, the present value of the terminal value is typically:",
+    options: ["A small part of total value", "A large share of total value (e.g. about 90%)", "Exactly half of total value"],
+    answer: 1,
+    why: "Most value comes from the stable-growth stage. Example: PV of V8 = 15.9095 out of 17.6528 total, about 0.90. That is why terminal-value assumptions matter so much."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "Using a trailing P/E to estimate the terminal value Vn, you first find earnings as:",
+    options: ["En = Dn / (1 − b), where b is the retention ratio", "En = Dn × b", "En = Dn / b"],
+    answer: 0,
+    why: "Payout ratio = 1 − b = Dn/En, so En = Dn / (1 − b). Then Vn = trailing P/E × En. Example: E8 = 0.4992 / 0.30 = 1.664; V8 = 17 × 1.664 = 28.29."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "The H-model value of a stock is:",
+    options: ["D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL)", "D1/(r − gS)", "D0 × H / (r − gL)"],
+    answer: 0,
+    why: "The H-model is a Gordon growth value at the long-run rate gL plus a premium for the extra, linearly declining early growth: D0 × H × (gS − gL)/(r − gL)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In the H-model, H equals:",
+    options: ["The full length of the high-growth period", "Half the length of the period over which growth declines", "The long-run growth rate"],
+    answer: 1,
+    why: "H is the half-life of the high-growth period: if growth falls linearly from gS to gL over 8 years, H = 8/2 = 4."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "If intrinsic value (e.g. C$13.74) is BELOW the market price (C$17), the stock is:",
+    options: ["Undervalued", "Fairly valued", "Overvalued"],
+    answer: 2,
+    why: "Market price above intrinsic value means the stock is overvalued (sell/avoid). Intrinsic value above price means it is undervalued."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "If the high-growth first stage is assumed to last LONGER (e.g. 11 years instead of 8), all else equal:",
+    options: ["The stock's value falls and the terminal value's share rises", "The stock's value rises and the terminal value's share of total value falls", "Nothing changes"],
+    answer: 1,
+    why: "More years of extraordinary growth add value. The terminal value is reached later, so its PV is smaller, while the first stage contributes more, so the second stage's share of total value falls."
   }
 ];
 

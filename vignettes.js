@@ -614,6 +614,62 @@ const VIGNETTES = [
         why: "The grant-date fair value of an RSU is the share price, which may be adjusted for expected dividends. Unlike an option, an RSU has no exercise price, so the volatility assumption is not relevant to its valuation."
       }
     ]
+  },
+  {
+    id: "charmed",
+    title: "Charmed Energy",
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    body: [
+      ["p", "Brian Dobson, an analyst at a UK-based globally diversified equity mutual fund, has been assigned the task of estimating a fair value of the common stock of Charmed Energy. Dobson is aware of several approaches that could be used for this purpose. After carefully considering the characteristics of the company and its competitors, he believes Charmed will have extraordinary growth for the next few years and normal growth thereafter. So, he has concluded that a two-stage DDM is the most appropriate for valuing the stock."],
+      ["p", "Charmed pays semi-annual dividends. The total dividends during 2016, 2017, and 2018 have been C$0.114, C$0.15, and C$0.175, respectively. These imply a growth rate of 32% in 2017 and 17% in 2018. Dobson believes that the growth rate will be 14% in the next year. He has estimated that the first stage will include the next eight years."],
+      ["p", "Dobson is using the CAPM to estimate the required return on equity for Charmed. He has estimated that the company's beta, as measured against the S&P/TSX Composite Index (formerly TSE 300 Composite Index), is 0.84. The Canadian risk-free rate, as measured by the annual yield on the 10-year government bond, is 4.1%. The equity risk premium for the Canadian market is estimated at 5.5%. Based on these data, Dobson has estimated that the required return on Charmed Energy's stock is 0.041 + 0.84(0.055) = 0.0872, or 8.72%. Dobson is doing the analysis in January 2019, and the stock price at that time is C$17."],
+      ["p", "Dobson realizes that even within the two-stage DDM, there could be some variations in the approach. He would like to explore how these variations affect the stock's valuation. Specifically, he wants to estimate the value of the stock for each of the following approaches separately."],
+      ["h", "Approach 1"],
+      ["p", "The dividend growth rate will be 14% throughout the first stage of eight years. The dividend growth rate thereafter will be 7%."],
+      ["h", "Approach 2"],
+      ["p", "Instead of using the estimated stable growth rate of 7% in the second stage, Dobson wants to use his estimate that eight years later, Charmed Energy's stock will be worth 17 times its earnings per share (trailing P/E of 17). He expects that the earnings retention ratio at that time will be 0.70."],
+      ["h", "Approach 3"],
+      ["p", "In contrast to the first approach, in which the growth rate declines abruptly from 14% in the eighth year to 7% in the ninth, the growth rate would decline linearly from 14% in the first year to 7% in the ninth."]
+    ],
+    questions: [
+      {
+        q: "What is the terminal value of the stock based on the first approach?",
+        options: ["C$17.65.", "C$31.06.", "C$33.09."],
+        answer: 1,
+        why: "D8 = 0.175 × 1.14⁸ = C$0.4992. Terminal value at the end of year 8: V8 = D9 / (r − g) = 0.4992 × 1.07 / (0.0872 − 0.07) = C$31.0550. Dividends D1–D8: 0.1995, 0.2274, 0.2593, 0.2956, 0.3369, 0.3841, 0.4379, 0.4992; their PVs at 8.72% sum to C$1.7433. PV of V8 = 31.0550 / 1.0872⁸ = C$15.9095. Total value V0 = C$17.6528. Trap: C$17.65 is the stock's value today, not the terminal value."
+      },
+      {
+        q: "In the first approach, what proportion of the stock's total value is represented by the value of second stage?",
+        options: ["0.10.", "0.52.", "0.90."],
+        answer: 2,
+        why: "Value of the second stage = PV of V8 = C$15.9095. Total value = C$17.6528. Proportion = 15.9095 / 17.6528 = 0.90. The terminal value usually dominates a multistage DDM."
+      },
+      {
+        q: "What is the stock's terminal value based on the second approach (earnings multiple)?",
+        options: ["C$12.12.", "C$28.29.", "C$33.09."],
+        answer: 1,
+        why: "V8/E8 = 17 and the payout ratio D8/E8 = 1 − 0.70 = 0.30. With D8 = C$0.4992, E8 = 0.4992 / 0.30 = C$1.6640. So V8 = 17 × 1.6640 = C$28.2880."
+      },
+      {
+        q: "What is the stock's current value based on the second approach?",
+        options: ["C$16.24.", "C$17.65.", "C$28.29."],
+        answer: 0,
+        why: "V8 = 17 × 1.6640 = C$28.2880. PV of V8 = 28.2880 / 1.0872⁸ = C$14.4919. Add the PV of D1 through D8 (C$1.7433): V0 = 14.4919 + 1.7433 = C$16.2352. Trap: C$17.65 is the value from the first approach; C$28.29 is the terminal value."
+      },
+      {
+        q: "Based on the third approach (the H-model), the stock is:",
+        options: ["undervalued.", "fairly valued.", "overvalued."],
+        answer: 2,
+        why: "H-model: V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), with D0 = 0.175, r = 0.0872, gS = 0.14, gL = 0.07 and H = 8/2 = 4 (half the 8-year period of declining growth). V0 = 0.175 × 1.07 / 0.0172 + 0.175 × 4 × 0.07 / 0.0172 = 10.8866 + 2.8488 = C$13.7355. The market price of C$17 is above C$13.74, so the stock is overvalued."
+      },
+      {
+        q: "Dobson is wondering what the consequences would be if the duration of the first stage was assumed to be 11 years instead of 8, with all the other assumptions and estimates remaining the same. Considering this change, which of the following is true?",
+        options: ["In the second approach, the proportion of the total value of the stock represented by the second stage would not change.", "The total value estimated using the third approach would increase.", "Using this new assumption and the first approach will lead Dobson to conclude that the stock is overvalued."],
+        answer: 1,
+        why: "If the extraordinary growth rate is expected to last longer, the stock's value increases (in the H-model, H rises from 4 to 5.5). A is false: the terminal value would be calculated at a later point, so its PV would be smaller, and the longer first stage contributes more, so the second stage's share would fall. C is false: the intrinsic value would be higher, so under the first approach the stock would look undervalued by an even larger margin."
+      }
+    ]
   }
 ];
 
