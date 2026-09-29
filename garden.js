@@ -756,8 +756,13 @@ function makeCollie(T) {
   const neckG = new T.Group();
   neckG.position.set(0, .42, .2);
   body.add(neckG);
-  // Fluffy white ruff around the neck.
-  [[-.06, -.01, .02], [.06, -.01, .02], [0, -.03, .06], [0, .02, -.02]].forEach(([x, y, z]) => neckG.add(ell(T, .075, 1, .9, .9, white, x, y, z, 28)));
+  // A smooth neck joining the head to the body, with a white throat.
+  const neckM = chubbyLimb(T, .072, .088, .2, black, 1.04);
+  neckM.rotation.x = .84; neckM.position.set(0, .07, .04);
+  neckG.add(neckM);
+  const throat = ell(T, .058, .95, 1.6, .55, white, 0, .015, .09, 32);
+  throat.rotation.x = .75;
+  neckG.add(throat);
   // Big round head with a short soft muzzle.
   neckG.add(ell(T, .11, 1.05, .98, 1, black, 0, .1, .05, 48));
   const muzzle = smoothLathe(T, [[.001, 0], [.058, .005], [.055, .045], [.042, .075], [.02, .092], [.001, .095]], white, 40, 24);
