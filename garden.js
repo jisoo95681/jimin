@@ -616,7 +616,7 @@ function makeGardener(T, girl) {
   }
   body.add(torso);
 
-  // Big round head (about a third of the height), soft cheeks, small nose, big eyes.
+  // Big round head (about a third of the height), smooth cheeks, small nose, big eyes.
   const neck = new T.Group();
   neck.position.y = .8;
   body.add(neck);
@@ -624,9 +624,9 @@ function makeGardener(T, girl) {
   const HC = .19; // head centre height above the neck
   neck.add(ell(T, .205, 1.04, .98, .98, skin, 0, HC, 0, 52));
   [-1, 1].forEach(side => {
-    neck.add(ell(T, .085, 1, .85, .75, skin, side * .085, HC - .075, .105, 40));  // round cheeks
     neck.add(ell(T, .038, .55, 1, .9, skin, side * .205, HC - .005, 0, 24));        // ears
-    neck.add(ell(T, .04, 1, .55, .3, soft(T, 0xff8fa3, { transparent: true, opacity: .45 }), side * .11, HC - .06, .165, 24)); // blush
+    const blush = ell(T, .038, 1, .55, .25, soft(T, 0xff8fa3, { transparent: true, opacity: .35 }), side * .108, HC - .055, .158, 24); // soft blush on the face
+    blush.rotation.y = side * .6; neck.add(blush);
   });
   neck.add(ell(T, .016, 1.1, .8, 1, skin, 0, HC - .03, .205, 16)); // nose
   const eyes = [-1, 1].map(side => {
