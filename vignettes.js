@@ -545,6 +545,75 @@ const VIGNETTES = [
         why: "Lower yields mean a lower discount rate, which raises the benefit obligation, but the fair value of plan assets may rise at the same time and offset it, especially plan assets invested in longer-duration fixed-income securities. A is wrong: where remeasurements are recognized doesn't change the funded status. B is wrong: a lower discount rate increases, not decreases, service cost."
       }
     ]
+  },
+  {
+    id: "xyz",
+    title: "XYZ SA",
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    body: [
+      ["p", "XYZ SA is a fictional company that uses a DB pension plan and stock option grants as part of its compensation to qualified employees. XYZ SA prepares its financial statements under IFRS."],
+      ["p", "Information on XYZ's DB plan and volatility assumptions used to value stock option grants were as follows:"],
+      ["table", {
+        title: "XYZ SA Defined Benefit Plan Information, Fiscal Year 2024",
+        head: ["", "FY2024"],
+        rows: [
+          ["Employer contributions", "1,000"],
+          ["Current service costs", "200"],
+          ["Past service costs", "120"],
+          ["Discount rate used to estimate plan liabilities at beginning of year", "7.00%"],
+          ["Benefit obligation at beginning of year", "42,000"],
+          ["Benefit obligation at end of year", "41,720"],
+          ["Actuarial loss due to increase in plan obligation", "460"],
+          ["Plan assets at beginning of year", "39,000"],
+          ["Plan assets at end of year", "38,700"],
+          ["Actual return on plan assets", "2,700"],
+          ["Expected rate of return on plan assets", "8.00%"]
+        ]
+      }],
+      ["table", {
+        title: "Volatility Assumptions Used to Value Stock Option Grants",
+        head: ["Grant year", "Weighted average expected volatility"],
+        rows: [
+          ["2024 valuation assumptions"],
+          ["2020–2024", "21.50%"],
+          ["2023 valuation assumptions"],
+          ["2019–2023", "23.00%"]
+        ]
+      }]
+    ],
+    questions: [
+      {
+        q: "The amount recognized by XYZ as operating expense on the income statement related to its DB plan for fiscal year 2024 is closest to:",
+        options: ["200.", "320.", "1,000."],
+        answer: 1,
+        why: "Service cost, made up of current service cost (200) and past service cost (120), is recognized on the income statement as an operating expense: 200 + 120 = 320. Trap: 200 leaves out past service cost; 1,000 is employer contributions, a cash flow, not an expense."
+      },
+      {
+        q: "If XYZ prepared its financial statements under US GAAP, the total amount recognized by XYZ on the income statement related to its DB plan for fiscal year 2024 (assuming the company chooses not to immediately recognize the actuarial loss and assuming there is no amortization of past service costs or actuarial gains and losses) would be closest to:",
+        options: ["20.", "59.", "530."],
+        answer: 0,
+        why: "Under US GAAP (no immediate recognition of the actuarial loss, no amortization), P&L pension cost = current service cost 200 + interest cost 7.0% × 42,000 = 2,940 − expected return on plan assets 8.0% × 39,000 = 3,120 → 200 + 2,940 − 3,120 = 20. Past service cost goes to OCI under US GAAP and is amortized later, so it is not in this year's P&L."
+      },
+      {
+        q: "An analyst is building a financial statement model for XYZ SA. The analyst assumes that service cost and the discount rate in FY2025 will be the same as in the previous year. The analyst's estimate of pension cost recognized on the income statement in FY2025 is closest to:",
+        options: ["320.", "404.", "531."],
+        answer: 2,
+        why: "IFRS P&L pension cost = service cost + net interest. Service cost stays at 200 + 120 = 320. Net interest = discount rate × net pension liability at the beginning of FY2025 (= end of FY2024): (41,720 − 38,700) × 7% = 3,020 × 7% = 211. Total ≈ 320 + 211 = 531. Trap: 320 leaves out net interest."
+      },
+      {
+        q: "If XYZ had used the same volatility assumption for its FY2024 option grants that it had used in FY2023, its FY2024 net income would have been:",
+        options: ["lower.", "higher.", "the same."],
+        answer: 0,
+        why: "In FY2024 XYZ used a lower volatility (21.50% vs 23.00%). Lower volatility reduces an option's fair value and therefore the expense recognized as the award vests. Using the higher FY2023 volatility would have meant a higher option value, higher compensation expense and lower net income."
+      },
+      {
+        q: "If XYZ SA also granted RSUs to employees in fiscal 2024, the decrease in XYZ SA's share price volatility assumption would:",
+        options: ["increase the grant-date fair value of the RSUs.", "decrease the grant-date fair value of the RSUs.", "not affect the grant-date fair value of the RSUs."],
+        answer: 2,
+        why: "The grant-date fair value of an RSU is the share price, which may be adjusted for expected dividends. Unlike an option, an RSU has no exercise price, so the volatility assumption is not relevant to its valuation."
+      }
+    ]
   }
 ];
 

@@ -545,6 +545,78 @@ const QUESTIONS = [
     options: ["5.48%", "5.56%", "5.94%"],
     answer: 1,
     why: "1,302 / 23,432 = 5.56%. That is 8 bp above a 5.48% discount rate, and the excess (1,302 − 1,284 = 18) is the remeasurement gain in OCI."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "Under IFRS, past service cost (from a plan amendment) is recognized:",
+    options: ["In OCI, then amortized", "Immediately in P&L as part of service cost (operating expense)", "Only in the notes"],
+    answer: 1,
+    why: "IFRS: service cost = current service cost + past service cost, both recognized in P&L straight away as an operating expense. Example: 200 + 120 = 320."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "Under US GAAP, past service cost is:",
+    options: ["Expensed immediately in P&L", "Recognized in OCI and amortized into P&L over time", "Never recognized"],
+    answer: 1,
+    why: "US GAAP puts past service cost in OCI and amortizes it into pension expense over the remaining service period. IFRS expenses it immediately."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "Under US GAAP, periodic pension cost in P&L (before amortization) is:",
+    options: ["Service cost + net interest at the discount rate", "Current service cost + interest cost − EXPECTED return on plan assets", "Employer contributions"],
+    answer: 1,
+    why: "US GAAP P&L pension cost = current service cost + interest cost (discount rate × beginning DBO) − expected return on plan assets (+ amortization of past service cost and actuarial gains/losses). Example: 200 + 2,940 − 3,120 = 20."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "A key IFRS vs US GAAP difference in pension cost is the return on plan assets used in P&L:",
+    options: ["IFRS: the discount rate × plan assets; US GAAP: the expected rate of return × plan assets", "Both use the actual return", "IFRS: the expected return; US GAAP: the discount rate"],
+    answer: 0,
+    why: "IFRS nets interest income on plan assets at the discount rate (as part of net interest). US GAAP subtracts the expected return on plan assets. Under either standard, the difference from the actual return goes to OCI."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "To forecast next year's IFRS pension cost in P&L, use:",
+    options: ["Service cost + discount rate × this year's ENDING net pension liability", "Service cost + discount rate × this year's beginning DBO", "Employer contributions + service cost"],
+    answer: 0,
+    why: "Next year's net interest = discount rate × net pension liability at the start of next year (= this year's end). Example: 320 + 7% × (41,720 − 38,700) = 320 + 211 ≈ 531."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "Employer contributions to a DB plan are:",
+    options: ["An operating expense in P&L", "A cash outflow; they are not the pension expense", "Recognized in OCI"],
+    answer: 1,
+    why: "Contributions move cash into the plan (an operating cash outflow) and raise plan assets. The P&L expense is the periodic pension cost, not the contribution."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "A LOWER expected volatility assumption for stock option grants leads to:",
+    options: ["A higher option fair value and higher compensation expense", "A lower option fair value, lower compensation expense and higher net income", "No change to the expense"],
+    answer: 1,
+    why: "Option value rises with volatility. Lower volatility → lower grant-date fair value → less expense as the award vests → higher net income."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "The grant-date fair value of a restricted stock unit (RSU) is based on:",
+    options: ["An option-pricing model using volatility", "The share price (possibly adjusted for expected dividends)", "The exercise price"],
+    answer: 1,
+    why: "An RSU is a promise of shares, with no exercise price, so it is valued at the share price (adjusted for expected dividends if holders don't receive them). Volatility doesn't affect it."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions and Share-Based Compensation",
+    q: "Stock option compensation expense is:",
+    options: ["Measured at grant-date fair value and recognized over the vesting period", "Remeasured at fair value every year", "Recognized only when the options are exercised"],
+    answer: 0,
+    why: "Equity-settled options are measured once at grant-date fair value, and that amount is expensed over the vesting (service) period. Later changes in the share price don't change it."
   }
 ];
 
