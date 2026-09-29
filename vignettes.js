@@ -465,6 +465,86 @@ const VIGNETTES = [
         why: "Max SD = 8.48%. Equity market neutral (8.60%) FAILS the variance test despite the highest Sortino ratio (1.75). Of the two that pass, use the Sortino ratio because large negative events are expected: systematic futures 1.61 > merger arbitrage 1.52. Merger arbitrage's lower max drawdown (7.10) is not the measure the IC asked for."
       }
     ]
+  },
+  {
+    id: "kensington",
+    title: "Kensington plc",
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    body: [
+      ["p", "Kensington plc, a fictional company based in the United Kingdom, sponsors a DB pension plan for qualifying employees. Kensington prepares its financial statements under IFRS. The discount rate that the company used in estimating the present value of its pension obligation was 5.48%. Disclosures on Kensington's pension plan in the company's notes to financial statements for the year ended 31 December 20X1 included the following."],
+      ["table", {
+        title: "Pension plan disclosures (£ millions)",
+        head: ["", "20X1"],
+        rows: [
+          ["Components of periodic benefit cost"],
+          ["Service cost", "£228"],
+          ["Net interest (income) expense", "273"],
+          ["Remeasurements", "−18"],
+          ["Periodic pension cost", "£483"],
+          ["Change in benefit obligation"],
+          ["Benefit obligations at beginning of year", "£28,416"],
+          ["Service cost", "228"],
+          ["Interest cost", "1,557"],
+          ["Benefits paid", "−1,322"],
+          ["Actuarial gain or loss", "0"],
+          ["Benefit obligations at end of year", "£28,879"],
+          ["Change in plan assets"],
+          ["Fair value of plan assets at beginning of year", "£23,432"],
+          ["Actual return on plan assets", "1,302"],
+          ["Employer contributions", "693"],
+          ["Benefits paid", "−1,322"],
+          ["Fair value of plan assets at end of year", "£24,105"],
+          ["Funded status"],
+          ["Funded status at beginning of year", "−£4,984"],
+          ["Funded status at end of year", "−£4,774"]
+        ]
+      }]
+    ],
+    questions: [
+      {
+        q: "At 31 December 20X1, GBP 28,879 million represents:",
+        options: ["the funded status of the plan.", "the DB obligation.", "the fair value of the plan's assets."],
+        answer: 1,
+        why: "GBP 28,879 million is the present value of future benefits as at 31 December 20X1. This is the \"gross\" liability, before netting the fair value of plan assets to calculate the funded status (24,105 − 28,879 = −4,774)."
+      },
+      {
+        q: "The GBP 1,284 million difference in interest expense reported on the income statement and the interest cost on the benefit obligation in 20X1 is a result of:",
+        options: ["interest income on plan assets.", "the actual return on plan assets.", "different assumed discount rates."],
+        answer: 0,
+        why: "The interest expense on the income statement is a \"net\" amount: discount rate × beginning funded status, i.e. (discount rate × benefit obligation) − (discount rate × fair value of plan assets). 1,557 − 273 = 1,284 = 5.48% × 23,432, the interest income on plan assets at the discount rate. Trap: the actual return (1,302) is not used; the gap between actual return and interest income goes to remeasurements (OCI)."
+      },
+      {
+        q: "The amount recognized by Kensington as an operating expense on the income statement for the year ended 31 December 20X1 is closest to:",
+        options: ["210.", "228.", "483."],
+        answer: 1,
+        why: "Service cost (228) is an operating expense, representing the increase in the benefit obligation from current and past service. Net interest expense/income is financing expense/income recognized below the operating income line. Remeasurements are recognized in OCI, not in earnings. Trap: 483 is the total periodic pension cost."
+      },
+      {
+        q: "The cash outflow recognized by Kensington in cash flows from operating activities for the year ended 31 December 20X1 is closest to:",
+        options: ["228.", "693.", "1,322."],
+        answer: 1,
+        why: "The employer's plan contributions (693) are the cash outflows in operating activities. Trap: benefits paid (1,322) are paid by the plan out of plan assets, not by the company."
+      },
+      {
+        q: "The amount recognized on the balance sheet decreased from 31 December 20X0 to 31 December 20X1 because:",
+        options: ["the sum of service cost and interest cost exceeded benefits paid.", "the discount rate used in estimating the pension obligation exceeded the actual rate of return of plan assets for the year.", "the sum of the actual return on plan assets and employer contributions exceeded the sum of service and interest cost on the benefit obligation."],
+        answer: 2,
+        why: "The net pension liability fell (4,984 → 4,774) because plan assets rose by more than the obligation: actual return + contributions (1,302 + 693 = 1,995) > service + interest cost (228 + 1,557 = 1,785). A is wrong: benefits paid reduce both the obligation and the plan assets, so they don't change the funded status. B is wrong: the actual return was 1,302 / 23,432 = 5.56%, 8 basis points ABOVE the 5.48% discount rate, not below."
+      },
+      {
+        q: "An analyst preparing a discounted cash flow model on 14 January 20X2 to value Kensington's equity should deduct which of the following from the estimate of enterprise value to arrive at equity value?",
+        options: ["4,774", "4,984", "28,879"],
+        answer: 0,
+        why: "Deduct the net pension liability as of 31 December 20X1 (4,774) from enterprise value, as if it were debt. B is wrong: 4,984 is the net pension liability at the beginning of 20X1. C is wrong: 28,879 is the gross benefit obligation; deducting it would ignore plan assets that exist only to pay the plan's beneficiaries."
+      },
+      {
+        q: "A 100 basis point decrease in investment grade corporate bond yields may affect Kensington's plan funded status by less than the increase in the benefit obligation because:",
+        options: ["remeasurements from changes in assumptions are recognized in OCI, not in earnings.", "a decrease in service cost will partially offset the increase.", "the fair value of plan assets may simultaneously increase."],
+        answer: 2,
+        why: "Lower yields mean a lower discount rate, which raises the benefit obligation, but the fair value of plan assets may rise at the same time and offset it, especially plan assets invested in longer-duration fixed-income securities. A is wrong: where remeasurements are recognized doesn't change the funded status. B is wrong: a lower discount rate increases, not decreases, service cost."
+      }
+    ]
   }
 ];
 

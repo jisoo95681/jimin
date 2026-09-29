@@ -447,6 +447,104 @@ const QUESTIONS = [
     options: ["90% × current SD", "√0.90 × current SD (≈ 94.9%)", "0.90² × current SD"],
     answer: 1,
     why: "Variance = SD². Max variance = 0.90 × SD², so max SD = √0.90 × SD. Example: 7.95% → √(0.90 × 63.20) = 7.54%."
+  },
+
+  // ---------- Financial Statement Analysis: Pensions ----------
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "The defined benefit obligation (DBO) is:",
+    options: ["Plan assets minus the obligation", "The present value of future benefits earned to date (the gross liability)", "The fair value of plan assets"],
+    answer: 1,
+    why: "The DBO is the gross liability: the present value of the benefits employees have earned so far. It is shown before netting plan assets."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "A DB plan's funded status equals:",
+    options: ["Fair value of plan assets − DBO", "DBO − service cost", "Employer contributions − benefits paid"],
+    answer: 0,
+    why: "Funded status = plan assets − obligation. A negative number (e.g. 24,105 − 28,879 = −4,774) is a net pension liability on the balance sheet; a positive number is a net asset."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Under IFRS, where does each part of periodic pension cost go?",
+    options: ["All of it goes to operating expense", "Service cost → P&L (operating); net interest → P&L (financing); remeasurements → OCI", "Service cost → OCI; net interest → P&L; remeasurements → P&L"],
+    answer: 1,
+    why: "Service cost is an operating expense. Net interest expense/income is recognized in profit or loss below operating income. Remeasurements go to OCI and are not reclassified to profit or loss."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Under IFRS, net interest expense on a DB plan is calculated as:",
+    options: ["Discount rate × beginning net pension liability (funded status)", "Expected return × plan assets", "Discount rate × ending DBO"],
+    answer: 0,
+    why: "Net interest = discount rate × beginning funded status. Equivalently, (discount rate × DBO) − (discount rate × plan assets): interest cost on the obligation minus interest income on the assets, both at the same discount rate."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Interest cost on the DBO is 1,557 but net interest expense in P&L is only 273. The 1,284 difference is:",
+    options: ["The actual return on plan assets", "Interest income on plan assets at the discount rate", "Benefits paid during the year"],
+    answer: 1,
+    why: "1,284 = 5.48% × 23,432 (beginning plan assets). IFRS nets interest income on plan assets, at the discount rate, against interest cost. The actual return is not used in P&L."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Under IFRS, remeasurements of a DB plan include:",
+    options: ["Service cost and past service cost", "Actuarial gains/losses and the actual return on plan assets minus interest income at the discount rate", "Employer contributions"],
+    answer: 1,
+    why: "Remeasurements = actuarial gains and losses on the obligation, plus the difference between the actual return on plan assets and interest income at the discount rate. They are recognized in OCI and never recycled to profit or loss."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "In the cash flow statement, the sponsor's cash outflow for a DB plan is:",
+    options: ["Service cost", "Benefits paid to retirees", "Employer contributions to the plan (operating activities)"],
+    answer: 2,
+    why: "The company's cash outflow is what it pays into the plan: employer contributions, in operating activities. Benefits are paid by the plan out of plan assets, not by the company."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Benefits paid to retirees affect the funded status by:",
+    options: ["Increasing the net liability", "Nothing: they reduce both the DBO and plan assets by the same amount", "Decreasing the net liability"],
+    answer: 1,
+    why: "Benefits paid come out of plan assets and reduce the obligation equally, so the funded status is unchanged."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "A DB plan's net pension liability decreases over the year when:",
+    options: ["Service cost + interest cost > benefits paid", "Actual return on assets + employer contributions > service cost + interest cost (with no actuarial losses)", "The discount rate is above the actual return on assets"],
+    answer: 1,
+    why: "Assets grow by actual return + contributions; the obligation grows by service + interest cost (+ actuarial losses). Benefits paid cancel out. If assets grow by more, the net liability shrinks. Example: 1,302 + 693 = 1,995 > 228 + 1,557 = 1,785."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "When valuing equity from enterprise value in a DCF, an analyst treats an underfunded DB plan by:",
+    options: ["Deducting the gross DBO", "Deducting the most recent net pension liability, as if it were debt", "Ignoring it; it is non-operating"],
+    answer: 1,
+    why: "Deduct the latest net pension liability (DBO − plan assets) as a debt-like claim. Deducting the gross DBO would ignore plan assets held solely to pay beneficiaries; using last year's figure would be stale."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "If bond yields (and so the discount rate) fall 100 bp, the funded status may worsen by LESS than the rise in the DBO because:",
+    options: ["Remeasurements go to OCI", "Service cost falls", "Plan assets, especially long-duration bonds, may rise in value at the same time"],
+    answer: 2,
+    why: "A lower discount rate raises the DBO, but falling yields also lift the value of fixed-income plan assets (more so for longer duration), partly offsetting it. Where remeasurements are recorded doesn't change the funded status."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Pensions (Post-Employment Benefits)",
+    q: "Plan assets start the year at 23,432 and earn an actual return of 1,302. The actual rate of return is closest to:",
+    options: ["5.48%", "5.56%", "5.94%"],
+    answer: 1,
+    why: "1,302 / 23,432 = 5.56%. That is 8 bp above a 5.48% discount rate, and the excess (1,302 − 1,284 = 18) is the remeasurement gain in OCI."
   }
 ];
 
