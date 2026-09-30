@@ -755,6 +755,62 @@ const QUESTIONS = [
     options: ["Growth / P/E; higher is cheaper", "P/E / expected growth rate in percent; lower is relatively more attractive", "P/E × growth; higher is cheaper"],
     answer: 1,
     why: "PEG = P/E ÷ expected earnings growth (in percentage points, e.g. 18.71 / 12.41 = 1.51). A lower PEG than comparables suggests the stock is relatively undervalued. It assumes a linear P/E–growth relation and ignores risk and growth duration."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Price €50, most recent EPS €5.64, next year's EPS estimate €6.00. The trailing P/E is:",
+    options: ["8.3", "8.9", "9.9"],
+    answer: 1,
+    why: "Trailing P/E = price / last four quarters' EPS = 50 / 5.64 = 8.9. The forward (leading) P/E would be 50 / 6.00 = 8.3."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Justified forward P/E from the Gordon growth model is:",
+    options: ["p(1 + g) / (r − g)", "(D1/E1) / (r − g)", "(r − g) / payout"],
+    answer: 1,
+    why: "P0/E1 = (D1/E1)/(r − g), the forward payout ratio over (r − g). The justified TRAILING P/E is P0/E0 = p(1 + g)/(r − g). E.g. payout 0.485, r = 15%, g = 6%: 0.485 / 0.09 = 5.4."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "When computing book value per share for P/B, what do you do with preferred stock?",
+    options: ["Include it in book value", "Subtract it from total shareholders' equity", "Add its market value"],
+    answer: 1,
+    why: "P/B uses common shareholders' equity: total shareholders' equity − preferred equity, divided by common shares outstanding. Forgetting to subtract preferred overstates BVPS and understates P/B."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Enterprise value is:",
+    options: ["Market value of common − cash", "Market value of common + preferred + debt − cash and short-term investments", "Book value of equity + debt"],
+    answer: 1,
+    why: "EV = market value of common equity + market value of preferred stock + market value of debt − cash, cash equivalents and short-term investments. Leaving out preferred stock is a common mistake."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Peer forward P/Es: 5.9, 8.3, 3.0, 15.0, 4.6. The harmonic mean is closest to:",
+    options: ["5.5", "7.4", "5.9"],
+    answer: 0,
+    why: "Harmonic mean = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5 / 0.9074 = 5.51. The arithmetic mean is 7.36 and the median is 5.9. The harmonic mean is always ≤ the arithmetic mean and dampens large outliers like 15.0."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Normalized EPS by the average ROE method equals:",
+    options: ["Average EPS over the most recent full cycle", "Average ROE over the most recent full cycle × current book value per share", "Current ROE × average book value per share"],
+    answer: 1,
+    why: "Average ROE method: average ROE over the full business cycle × CURRENT BVPS. It reflects changes in company size, which the historical average EPS method does not."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Why is the average ROE method often preferred to the historical average EPS method for normalizing earnings?",
+    options: ["It ignores the business cycle", "It reflects changes in the company's size (current book value)", "It uses forecast data only"],
+    answer: 1,
+    why: "Average EPS from earlier years does not account for growth in the business. Multiplying average ROE by current BVPS scales normalized earnings to the company's current size."
   }
 ];
 

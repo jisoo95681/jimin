@@ -768,6 +768,86 @@ const VIGNETTES = [
         why: "The harmonic mean reduces the impact of large outliers (the main problem with the arithmetic mean multiple) but not the impact of small outliers close to zero; it may even aggravate small outliers, but those are bounded by zero on the downside. The median reduces the impact of both large and small outliers."
       }
     ]
+  },
+  {
+    id: "centralino",
+    title: "Centralino S.p.A.",
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    body: [
+      ["p", "Andrea Risso is a junior analyst with AquistareFianco, an independent equity research firm. Risso's supervisor asks her to update, as of 1 January 2020, a quarterly research report for Centralino S.p.A., a telecommunications company headquartered in Italy. On that date, Centralino's common share price is €50 and its preferred shares trade for €5.25 per share."],
+      ["p", "Risso gathers information on Centralino. Exhibit 1 presents earnings and dividend data, and Exhibit 2 presents balance sheet data. Net sales were €3.182 billion in 2019. Risso estimates a required return of 15% for Centralino and forecasts growth in dividends of 6% into perpetuity."],
+      ["table", {
+        title: "Exhibit 1: Earnings and Dividends for Centralino, 2016–2020",
+        head: ["", "2016", "2017", "2018", "2019", "2020(E)"],
+        rows: [
+          ["Earnings per share (EPS, €)", "4.93", "5.25", "4.46", "5.64", "6.00"],
+          ["Dividends per share (DPS, €)", "2.45", "2.60", "2.60", "2.75", "2.91"],
+          ["Return on equity (ROE)", "13.01%", "13.71%", "11.58%", "14.21%", "14.96%"]
+        ],
+        note: "The data for 2016–2019 are actual and for 2020 are estimated."
+      }],
+      ["table", {
+        title: "Exhibit 2: Summary Balance Sheet for Centralino, Year Ended 31 December 2019 (€ millions)",
+        head: ["Assets", "", "Liabilities and Shareholders' Equity", ""],
+        rows: [
+          ["Cash and cash equivalents", "102", "Current liabilities", "259"],
+          ["Accounts receivable", "305", "Long-term debt", "367"],
+          ["Inventory", "333", "Total liabilities", "626"],
+          ["Total current assets", "740", "Preferred shares", "80"],
+          ["Property and equipment, net", "913", "Common shares", "826"],
+          ["Total assets", "1,653", "Retained earnings", "121"],
+          ["", "", "Total shareholders' equity", "1,027"],
+          ["", "", "Total liabilities and shareholders' equity", "1,653"]
+        ],
+        note: "The market value of long-term debt is equal to its book value. Shares outstanding are 41.94 million common shares and 16.00 million preferred shares."
+      }],
+      ["p", "Exhibit 3 presents forward price-to-earnings ratios (P/Es) for Centralino's peer group. Risso assumes no differences in fundamentals among the peer-group companies."],
+      ["table", {
+        title: "Exhibit 3: Peer Group Forward P/Es",
+        head: ["Company", "Forward P/E"],
+        rows: [["Brinaregalo", "5.9"], ["Camporio", "8.3"], ["Esperto", "3.0"], ["Fornodissione", "15.0"], ["Radoresto", "4.6"]]
+      }],
+      ["p", "Risso also wants to calculate normalized EPS using the average return on equity method. She determines that the 2016–19 time period in Exhibit 1 represents a full business cycle for Centralino."]
+    ],
+    questions: [
+      {
+        q: "Based on Exhibit 1, the trailing P/E for Centralino as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
+        options: ["8.3.", "8.9.", "9.9."],
+        answer: 1,
+        why: "Trailing P/E = current price / most recent four quarters' EPS = €50 / €5.64 = 8.9. Traps: 8.3 is the forward P/E (€50 / €6.00); 9.9 uses the 2016–19 average EPS of €5.07."
+      },
+      {
+        q: "Based on Exhibit 1 and Risso's estimates of return and dividend growth, Centralino's justified forward P/E based on the Gordon growth dividend discount model is closest to:",
+        options: ["5.4.", "5.7.", "8.3."],
+        answer: 0,
+        why: "Justified forward P/E = (D1/E1) / (r − g). Payout = €2.91 / €6.00 = 0.485. P0/E1 = 0.485 / (0.15 − 0.06) = 5.39 ≈ 5.4. Trap: 5.7 is the justified TRAILING P/E, p(1 + g)/(r − g) = (2.75/5.64)(1.06)/0.09 = 5.74. 8.3 is the actual forward P/E."
+      },
+      {
+        q: "Based on Exhibit 2, the price-to-book multiple for Centralino is closest to:",
+        options: ["2.0.", "2.2.", "2.5."],
+        answer: 1,
+        why: "Book value per share uses COMMON equity: total shareholders' equity − preferred = €1,027 − €80 = €947 million. BVPS = €947 million / 41.94 million = €22.58. P/B = €50 / €22.58 = 2.2. Trap: 2.0 forgets to subtract the preferred shares (€1,027m / 41.94m = €24.49)."
+      },
+      {
+        q: "Based on Exhibit 2, the multiple of enterprise value to sales for Centralino as of 31 December 2019 is closest to:",
+        options: ["0.67.", "0.74.", "0.77."],
+        answer: 2,
+        why: "EV = market value of common + market value of preferred + market value of debt − cash = (€50 × 41.94m) + (€5.25 × 16.00m) + €367m − €102m = €2,097m + €84m + €367m − €102m = €2,446 million. EV/sales = €2.446 billion / €3.182 billion = 0.77. Trap: 0.74 leaves out the preferred shares."
+      },
+      {
+        q: "Based on Exhibit 1 and using the harmonic mean of the peer group forward P/Es shown in Exhibit 3 as a valuation indicator, the common shares of Centralino are:",
+        options: ["undervalued.", "fairly valued.", "overvalued."],
+        answer: 2,
+        why: "Harmonic mean = n / Σ(1/P/E) = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5 / (0.1695 + 0.1205 + 0.3333 + 0.0667 + 0.2174) = 5 / 0.9074 = 5.51. Centralino's forward P/E = €50 / €6.00 = 8.3, which is above 5.51, so the shares appear relatively overvalued."
+      },
+      {
+        q: "Based on Exhibits 1 and 2, the normalized earnings per share for Centralino as calculated by Risso should be closest to:",
+        options: ["€2.96.", "€3.21.", "€5.07."],
+        answer: 0,
+        why: "Average ROE method: normalized EPS = average ROE over the full cycle × CURRENT book value per share. Average ROE 2016–19 = (13.01% + 13.71% + 11.58% + 14.21%) / 4 = 13.13%. BVPS = (€1,027m − €80m) / 41.94m = €22.58. Normalized EPS = 0.1313 × €22.58 = €2.96. Traps: €3.21 uses only the 2019 ROE (14.21%); €5.07 is the historical average EPS method."
+      }
+    ]
   }
 ];
 
