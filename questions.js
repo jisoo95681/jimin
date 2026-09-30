@@ -691,6 +691,70 @@ const QUESTIONS = [
     options: ["The stock's value falls and the terminal value's share rises", "The stock's value rises and the terminal value's share of total value falls", "Nothing changes"],
     answer: 1,
     why: "More years of extraordinary growth add value. The terminal value is reached later, so its PV is smaller, while the first stage contributes more, so the second stage's share of total value falls."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "A company just made a major acquisition that will significantly change its future results. Which P/E is most appropriate?",
+    options: ["Trailing P/E", "Forward (leading) P/E", "P/E on normalized historical earnings"],
+    answer: 1,
+    why: "After a major change such as an acquisition or divestiture, trailing earnings no longer represent the business. Forward EPS estimates include the acquired business, so the forward (leading, prospective) P/E is most appropriate."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Price $37.23, sales $67.44 billion, 1.638821 billion shares. The P/S is closest to:",
+    options: ["0.55", "0.90", "1.81"],
+    answer: 1,
+    why: "Sales per share = 67.44 / 1.638821 = $41.15. P/S = 37.23 / 41.15 = 0.90."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "For a cyclical company whose current earnings are depressed by a downturn and restructuring charges, the best P/E approach is:",
+    options: ["P/E on trailing earnings", "P/E on normalized (mid-cycle) earnings", "P/B only"],
+    answer: 1,
+    why: "Normalized earnings estimate the EPS the company could achieve under mid-cyclical conditions, removing the distortion of cyclically depressed or unusual earnings."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Which is a valid reason to prefer the P/E over the P/S?",
+    options: ["Earnings are more stable than sales", "Earnings are harder to manipulate than sales", "Earnings reflect financial leverage, while sales are a pre-financing measure"],
+    answer: 2,
+    why: "Share price reflects the effect of debt; sales does not (it is before financing and ignores cost structure). Earnings reflect operating and financial leverage. Sales are actually MORE stable and LESS easily manipulated than earnings, which is the P/S's advantage."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Which cash flow measure accounts for working capital and noncash revenues AND is after interest, so it matches share price?",
+    options: ["EBITDA", "Earnings plus noncash charges (CF)", "Free cash flow to equity (FCFE)"],
+    answer: 2,
+    why: "FCFE is after operating expenses, interest and debt payments, and investment in working and fixed capital. CF ignores working capital and noncash revenues; EBITDA is before interest, so it is mismatched with equity price (better paired with EV)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Stock A: forward P/E 18.71, growth 12.41%. Peer PEGs: 1.74, 1.31; sector PEG 1.52. Stock A is most likely:",
+    options: ["Overvalued", "Undervalued", "Fairly valued"],
+    answer: 2,
+    why: "PEG = 18.71 / 12.41 = 1.51, in the middle of the peer range and very close to the sector's 1.52, so fairly valued. A lower PEG than peers suggests undervalued; a higher one suggests overvalued."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "To reduce the impact of LARGE outliers but not small outliers (near zero) in a peer P/E, use the:",
+    options: ["Median", "Harmonic mean", "Arithmetic mean"],
+    answer: 1,
+    why: "The harmonic mean dampens large outliers but can aggravate small ones (which are bounded by zero). The median reduces the effect of both large and small outliers; the arithmetic mean is pulled by large outliers."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "How is the PEG ratio calculated, and how is it read?",
+    options: ["Growth / P/E; higher is cheaper", "P/E / expected growth rate in percent; lower is relatively more attractive", "P/E × growth; higher is cheaper"],
+    answer: 1,
+    why: "PEG = P/E ÷ expected earnings growth (in percentage points, e.g. 18.71 / 12.41 = 1.51). A lower PEG than comparables suggests the stock is relatively undervalued. It assumes a linear P/E–growth relation and ignores risk and growth duration."
   }
 ];
 

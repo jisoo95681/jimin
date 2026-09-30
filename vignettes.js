@@ -670,6 +670,104 @@ const VIGNETTES = [
         why: "If the extraordinary growth rate is expected to last longer, the stock's value increases (in the H-model, H rises from 4 to 5.5). A is false: the terminal value would be calculated at a later point, so its PV would be smaller, and the longer first stage contributes more, so the second stage's share would fall. C is false: the intrinsic value would be higher, so under the first approach the stock would look undervalued by an even larger margin."
       }
     ]
+  },
+  {
+    id: "cannan",
+    title: "Delite Beverage & You Fix It",
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    body: [
+      ["p", "Mark Cannan is updating research reports on two well-established consumer companies before first quarter 2021 earnings reports are released. His supervisor, Sharolyn Ritter, has asked Cannan to use market-based valuations when updating the reports."],
+      ["p", "Delite Beverage is a manufacturer and distributor of soft drinks and recently acquired a major water bottling company in order to offer a broader product line. The acquisition will have a significant impact on Delite's future results."],
+      ["p", "You Fix It is a US retail distributor of products for home improvement, primarily for those consumers who choose to do the work themselves. The home improvement industry is cyclical; the industry was adversely affected by the recent downturn in the economy, the level of foreclosures, and slow home sales. Although sales and earnings at You Fix It weakened, same store sales are beginning to improve as consumers undertake more home improvement projects. Poor performing stores were closed, resulting in significant restructuring charges in 2020."],
+      ["p", "Before approving Cannan's work, Ritter wants to discuss the calculations and choices of ratios used in the valuation of Delite and You Fix It. The data used by Cannan in his analysis are summarized in Exhibit 1."],
+      ["table", {
+        title: "Exhibit 1: Select Financial Data for Delite Beverage and You Fix It",
+        head: ["", "Delite Beverage", "You Fix It"],
+        rows: [
+          ["2020 earnings per share (EPS)", "$3.44", "$1.77"],
+          ["2021 estimated EPS", "$3.50", "$1.99"],
+          ["Book value per share end of year", "$62.05", "$11.64"],
+          ["Current share price", "$65.50", "$37.23"],
+          ["Sales (billions)", "$32.13", "$67.44"],
+          ["Free cash flow per share", "$2.68", "$0.21"],
+          ["Shares outstanding end of year", "2,322,034,000", "1,638,821,000"]
+        ]
+      }],
+      ["p", "Cannan advises Ritter that he is considering three different approaches to value the shares of You Fix It:"],
+      ["h", "Approach 1"],
+      ["p", "Price-to-book ratio (P/B)"],
+      ["h", "Approach 2"],
+      ["p", "Price-to-earnings ratio (P/E) using trailing earnings"],
+      ["h", "Approach 3"],
+      ["p", "Price-to-earnings ratio using normalized earnings"],
+      ["p", "Cannan tells Ritter that he calculated the price-to-sales ratio (P/S) for You Fix It but chose not to use it in the valuation of the shares. Cannan states to Ritter that it is more appropriate to use the P/E than the P/S because"],
+      ["h", "Reason 1"],
+      ["p", "Earnings are more stable than sales."],
+      ["h", "Reason 2"],
+      ["p", "Earnings are less easily manipulated than sales."],
+      ["h", "Reason 3"],
+      ["p", "The P/E reflects financial leverage, whereas the P/S does not."],
+      ["p", "Cannan also informs Ritter that he did not use a price-to-cash-flow multiple in valuing the shares of Delite or You Fix It. The reason is that he could not identify a cash flow measure that would both account for working capital and noncash revenues and be after interest expense and thus not be mismatched with share price. Ritter advises Cannan that such a cash flow measure does exist."],
+      ["p", "Ritter provides Cannan with financial data on three close competitors as well as the overall beverage sector, which includes other competitors, in Exhibit 2. She asks Cannan to determine, based on the P/E-to-growth (PEG) ratio, whether Delite shares are overvalued, fairly valued, or undervalued."],
+      ["table", {
+        title: "Exhibit 2: Beverage Sector Data",
+        head: ["", "Forward P/E", "Earnings Growth"],
+        rows: [
+          ["Delite", "—", "12.41%"],
+          ["Fresh Iced Tea Company", "16.59", "9.52%"],
+          ["Nonutter Soda", "15.64", "11.94%"],
+          ["Tasty Root Beer", "44.10", "20%"],
+          ["Beverage sector average", "16.40", "10.80%"]
+        ]
+      }],
+      ["p", "After providing Ritter his answer, Cannan is concerned about the inclusion of Tasty Root Beer in the comparables analysis. Specifically, Cannan says to Ritter: \u201cI feel we should mitigate the effect of large outliers but not the impact of small outliers (i.e., those close to zero) when calculating the beverage sector P/E. What measure of central tendency would you suggest we use to address this concern?\u201d"],
+      ["p", "Ritter requests that Cannan incorporate their discussion points before submitting the reports for final approval."]
+    ],
+    questions: [
+      {
+        q: "Based on the information in Exhibit 1, the most appropriate price-to-earnings ratio to use in the valuation of Delite is closest to:",
+        options: ["18.71.", "19.04.", "24.44."],
+        answer: 0,
+        why: "The forward P/E should be used given the recent significant acquisition of the water bottling company. A major change such as an acquisition or divestiture affects results, so the forward (leading, prospective) P/E is most appropriate: 2021 estimates should include the water bottling business. Forward P/E = $65.50 / $3.50 = 18.71. Trap: 19.04 is the trailing P/E ($65.50 / $3.44)."
+      },
+      {
+        q: "Based on the information in Exhibit 1, the price-to-sales ratio for You Fix It is closest to:",
+        options: ["0.28.", "0.55.", "0.90."],
+        answer: 2,
+        why: "P/S = price per share / annual net sales per share. Sales per share = $67.44 billion / 1.638821 billion shares = $41.15. P/S = $37.23 / $41.15 = 0.90."
+      },
+      {
+        q: "Which valuation approach would be most appropriate in valuing shares of You Fix It?",
+        options: ["Approach 1", "Approach 2", "Approach 3"],
+        answer: 2,
+        why: "You Fix It is in the cyclical home improvement industry (and had large 2020 restructuring charges). Normalized earnings address cyclicality by estimating the EPS the company could achieve currently under mid-cyclical conditions."
+      },
+      {
+        q: "Cannan's preference to use the P/E over the P/S is best supported by:",
+        options: ["Reason 1.", "Reason 2.", "Reason 3."],
+        answer: 2,
+        why: "Sales is a pre-financing income measure and does not reflect the impact of debt in the capital structure (or differences in cost structures), while share price does reflect debt financing. Earnings reflect operating and financial leverage, so the P/E incorporates the effect of debt. Reasons 1 and 2 are backwards: sales are generally more stable and harder to manipulate than earnings."
+      },
+      {
+        q: "The cash flow measure that Ritter would most likely recommend to address Cannan's concern is:",
+        options: ["free cash flow to equity.", "earnings plus noncash charges.", "earnings before interest, tax, depreciation, and amortization."],
+        answer: 0,
+        why: "FCFE is cash flow available to shareholders after all operating expenses, interest and debt payments, and investments in working and fixed capital. It accounts for working capital and noncash revenues and is after interest, so it matches share price. Earnings plus noncash charges ignores working capital and noncash revenues; EBITDA is before interest (a pre-financing measure mismatched with equity price)."
+      },
+      {
+        q: "Based on the information in Exhibits 1 and 2, Cannan would most likely conclude that Delite's shares are:",
+        options: ["overvalued.", "undervalued.", "fairly valued."],
+        answer: 2,
+        why: "PEG = P/E / expected growth (in percent). Delite forward P/E = $65.50 / $3.50 = 18.71 (forward earnings because of the acquisition); PEG = 18.71 / 12.41 = 1.51. Fresh Iced Tea 16.59 / 9.52 = 1.74; Nonutter Soda 15.64 / 11.94 = 1.31; sector average 16.40 / 10.80 = 1.52. Delite's PEG is in the middle of the range and very close to the sector average, so the shares appear fairly valued."
+      },
+      {
+        q: "The measure of central tendency that Ritter will most likely recommend is the:",
+        options: ["median.", "harmonic mean.", "arithmetic mean."],
+        answer: 1,
+        why: "The harmonic mean reduces the impact of large outliers (the main problem with the arithmetic mean multiple) but not the impact of small outliers close to zero; it may even aggravate small outliers, but those are bounded by zero on the downside. The median reduces the impact of both large and small outliers."
+      }
+    ]
   }
 ];
 
