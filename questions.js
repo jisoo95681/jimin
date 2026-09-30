@@ -811,6 +811,70 @@ const QUESTIONS = [
     options: ["It ignores the business cycle", "It reflects changes in the company's size (current book value)", "It uses forecast data only"],
     answer: 1,
     why: "Average EPS from earlier years does not account for growth in the business. Multiplying average ROE by current BVPS scales normalized earnings to the company's current size."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Spot INR/GBP = 79.5093, 360-day MRR: GBP 5.43%, INR 7.52%. The 360-day forward premium (in INR) is closest to:",
+    options: ["1.546", "1.576", "1.662"],
+    answer: 1,
+    why: "F − S = S × (i_f − i_d)τ / (1 + i_d τ), where d is the BASE currency (GBP). = 79.5093 × 0.0209 / 1.0543 = 1.576. Dividing by 1 + i_f (1.0752) gives the wrong 1.546; not discounting at all gives 1.662."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "In an f/d quote, the base currency trades at a forward premium when:",
+    options: ["The base currency has the higher interest rate", "The price currency (f) has the higher interest rate", "Interest rates are equal"],
+    answer: 1,
+    why: "F/S = (1 + i_f)/(1 + i_d). If the price currency's rate i_f is higher, F > S: the base currency is at a forward premium (and the high-yield price currency at a forward discount)."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "CHF/USD 0.9799/0.9801, BRL/USD 4.1698/4.1702. The implied CHF/BRL bid is closest to:",
+    options: ["0.23498", "0.23505", "0.2355"],
+    answer: 0,
+    why: "CHF/BRL = CHF/USD × USD/BRL. The USD/BRL bid is 1 / (BRL/USD OFFER) = 1/4.1702 = 0.23980. Bid = 0.9799 × 0.23980 = 0.23498. Offer = 0.9801 × (1/4.1698) = 0.23505. When inverting a quote, bid and offer swap."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "A dealer bids 0.2355 CHF per BRL while the interbank implied CHF/BRL is 0.23498/0.23505. The arbitrage is:",
+    options: ["Buy BRL from the dealer, sell interbank", "Buy BRL interbank at 0.23505, sell to the dealer at 0.2355", "No arbitrage exists"],
+    answer: 1,
+    why: "Arbitrage exists when a dealer's bid is above the interbank offer (or the dealer's offer below the interbank bid). Buy low interbank, sell high to the dealer: profit 0.0045 CHF per BRL."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Carry trade: borrow USD at 0.80%, invest in EUR at 2.20%. The EUR is expected to depreciate slightly so the unhedged EUR deposit returns 1.632% in USD. The all-in return is:",
+    options: ["0.83%", "1.40%", "1.63%"],
+    answer: 0,
+    why: "All-in carry return = foreign deposit return in domestic currency − domestic borrowing cost = 1.632% − 0.80% = 0.83%. Don't forget to subtract the funding cost."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "A carry trade (borrow low-yield, invest high-yield) profits when:",
+    options: ["Uncovered interest rate parity holds exactly", "The high-yield currency does not depreciate by more than the interest rate differential", "Covered interest rate parity fails"],
+    answer: 1,
+    why: "Under UIP the high-yield currency would depreciate by exactly the rate differential, wiping out the gain. Carry trades bet that UIP fails in the short run. They carry crash risk: sharp reversals in risk-off periods (negatively skewed, fat-tailed returns)."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "For a spot FX trade, which factor is LEAST likely to narrow the bid–offer spread?",
+    options: ["Trading during the London–New York overlap", "A liquid major currency pair", "The client's high (AA vs A) credit rating"],
+    answer: 2,
+    why: "Spot trades settle in two days, so credit risk is small and a better rating barely changes the spread. Spreads depend more on time of day (liquidity), the currency pair, trade size, the client relationship and market volatility. Credit matters more for longer-dated forwards."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "If both covered and uncovered interest rate parity hold, the best forecast of the future spot rate is:",
+    options: ["The current spot rate", "The forward rate", "The inflation differential"],
+    answer: 1,
+    why: "CIP: forward premium = interest differential. UIP: expected spot change = interest differential. Together: F = expected future spot, so the forward rate is an unbiased predictor. If all parity conditions hold, it is called forward rate parity."
   }
 ];
 

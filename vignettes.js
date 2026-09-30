@@ -848,6 +848,74 @@ const VIGNETTES = [
         why: "Average ROE method: normalized EPS = average ROE over the full cycle × CURRENT book value per share. Average ROE 2016–19 = (13.01% + 13.71% + 11.58% + 14.21%) / 4 = 13.13%. BVPS = (€1,027m − €80m) / 41.94m = €22.58. Normalized EPS = 0.1313 × €22.58 = €2.96. Traps: €3.21 uses only the 2019 ROE (14.21%); €5.07 is the historical average EPS method."
       }
     ]
+  },
+  {
+    id: "smith-fx",
+    title: "Ed Smith: FX Services",
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    body: [
+      ["p", "Ed Smith is a new trainee in the foreign exchange (FX) services department of a major global bank. Smith's focus is to assist senior FX trader Feliz Mehmet, CFA. Mehmet mentions that an Indian corporate client exporting to the United Kingdom wants to estimate the potential hedging cost for a sale closing in one year. Smith is to determine the premium/discount for an annual (360-day) forward contract using the exchange rate data presented in Exhibit 1."],
+      ["table", {
+        title: "Exhibit 1: Select Currency Data for GBP and INR",
+        head: ["", ""],
+        rows: [
+          ["Spot (INR/GBP)", "79.5093"],
+          ["Annual (360-day) MRR (GBP)", "5.43%"],
+          ["Annual (360-day) MRR (INR)", "7.52%"]
+        ]
+      }],
+      ["p", "Mehmet is also looking at two possible trades to determine their profit potential. The first trade involves a possible triangular arbitrage trade using the Swiss, US, and Brazilian currencies, to be executed based on a dealer's bid/offer rate quote of 0.2355/0.2358 in CHF/BRL and the interbank spot rate quotes presented in Exhibit 2."],
+      ["table", {
+        title: "Exhibit 2: Interbank Market Quotes",
+        head: ["Currency Pair", "Bid/Offer"],
+        rows: [["CHF/USD", "0.9799/0.9801"], ["BRL/USD", "4.1698/4.1702"]]
+      }],
+      ["p", "Mehmet is also considering a carry trade involving the USD and the EUR. He anticipates it will generate a higher return than buying a one-year domestic note at the current market quote due to low US interest rates and his predictions of exchange rates in one year. To help Mehmet assess the carry trade, Smith provides Mehmet with selected current market data and his one-year forecasts in Exhibit 3."],
+      ["table", {
+        title: "Exhibit 3: Spot Rates and Interest Rates for Proposed Carry Trade",
+        head: ["Today's One-Year MRR", "", "Currency Pair (Price/Base)", "Spot Rate Today", "Projected Spot Rate in One Year"],
+        rows: [
+          ["USD", "0.80%", "CAD/USD", "1.3200", "1.3151"],
+          ["CAD", "1.71%", "EUR/CAD", "0.6506", "0.6567"],
+          ["EUR", "2.20%", "", "", ""]
+        ]
+      }],
+      ["p", "Finally, Mehmet asks Smith to assist with a trade involving a US multinational customer operating in Europe and Japan. The customer is a very cost-conscious industrial company with an AA credit rating and strives to execute its currency trades at the most favorable bid–offer spread. Because its Japanese subsidiary is about to close on a major European acquisition in three business days, the client wants to lock in a trade involving the Japanese yen and the euro as early as possible the next morning, preferably by 8:05 a.m. New York time."],
+      ["p", "At lunch, Smith and other FX trainees discuss how best to analyze currency market volatility from ongoing financial crises. The group agrees that a theoretical explanation of exchange rate movements, such as the framework of the international parity conditions, should be applicable across all trading environments. They note such analysis should enable traders to anticipate future spot exchange rates. But they disagree on which parity condition best predicts exchange rates, voicing several different assessments. Smith concludes the discussion on parity conditions by stating to the trainees, \u201cI believe that in the current environment both covered and uncovered interest rate parity conditions are in effect.\u201d"]
+    ],
+    questions: [
+      {
+        q: "Based on Exhibit 1, the forward premium (discount) for a 360-day INR/GBP forward contract is closest to:",
+        options: ["–1.546.", "1.546.", "1.576."],
+        answer: 2,
+        why: "F − S = S(f/d) × [(i_f − i_d) × (Actual/360)] / [1 + i_d × (Actual/360)]. In INR/GBP, GBP is the base (d) and INR the price currency (f). = 79.5093 × (0.0752 − 0.0543) / (1 + 0.0543) = 79.5093 × 0.0209 / 1.0543 = 1.6617 / 1.0543 = 1.576. The premium is positive because the price currency (INR) has the higher interest rate. Trap: 1.546 divides by 1 + i_f (1.0752) instead of 1 + i_d."
+      },
+      {
+        q: "Based on Exhibit 2, the most appropriate recommendation regarding the triangular arbitrage trade is to:",
+        options: ["decline the trade, because no arbitrage profits are possible.", "execute the trade, buy BRL in the interbank market, and sell BRL to the dealer.", "execute the trade, buy BRL from the dealer, and sell BRL in the interbank market."],
+        answer: 1,
+        why: "Implied CHF/BRL = CHF/USD × USD/BRL. Invert BRL/USD: USD/BRL bid = 1/4.1702 = 0.23980, offer = 1/4.1698 = 0.23982. Interbank CHF/BRL bid = 0.9799 × 0.23980 = 0.23498; offer = 0.9801 × 0.23982 = 0.23505. The dealer's bid for BRL (0.2355) is above the interbank offer (0.23505), so buy BRL interbank at 0.23505 and sell to the dealer at 0.2355: a profit of 0.0045 CHF per BRL."
+      },
+      {
+        q: "Based on Exhibit 3, the potential all-in USD return on the carry trade is closest to:",
+        options: ["0.83%.", "1.23%.", "1.63%."],
+        answer: 0,
+        why: "Borrow the low-yield USD (0.80%), invest in the high-yield EUR (2.20%). EUR/USD today = 1.3200 × 0.6506 = 0.8588; in one year = 1.3151 × 0.6567 = 0.8636. Unhedged EUR return in USD = 0.8588 × 1.022 × (1/0.8636) − 1 = 1.632%. Net of USD borrowing cost: 1.632% − 0.80% = 0.83%. Trap: 1.63% is the gross return before funding costs."
+      },
+      {
+        q: "The factor least likely to lead to a narrow bid–offer spread for the industrial company's needed currency trade is the:",
+        options: ["timing of its trade.", "company's credit rating.", "pair of currencies involved."],
+        answer: 1,
+        why: "The trade is a spot trade (settles T+2), so counterparty credit risk is minimal: an AA rating will not tighten the spread much versus a somewhat lower (still high-quality) rating. Timing matters (8:05 a.m. New York is when London and New York overlap, the most liquid time), and the currency pair matters (JPY/EUR is a liquid major pair). Relationship, trade size and market volatility also matter more than credit rating here."
+      },
+      {
+        q: "If Smith's statement on parity conditions is correct, future spot exchange rates are most likely to be forecast by:",
+        options: ["current spot rates.", "forward exchange rates.", "inflation rate differentials."],
+        answer: 1,
+        why: "Covered interest rate parity makes the forward premium equal the interest rate differential; uncovered interest rate parity makes the expected change in spot equal the same differential. With both holding, F(f/d) = S^e(f/d): the forward rate is an unbiased forecast of the future spot rate. Current spot would be the forecast only if interest rates were equal (random walk); inflation differentials relate to relative PPP."
+      }
+    ]
   }
 ];
 
