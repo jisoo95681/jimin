@@ -916,6 +916,164 @@ const VIGNETTES = [
         why: "Covered interest rate parity makes the forward premium equal the interest rate differential; uncovered interest rate parity makes the expected change in spot equal the same differential. With both holding, F(f/d) = S^e(f/d): the forward rate is an unbiased forecast of the future spot rate. Current spot would be the forecast only if interest rates were equal (random walk); inflation differentials relate to relative PPP."
       }
     ]
+  },
+  {
+    "id": "wagner-growth",
+    "title": "Haus Builders (Luca Wagner)",
+    "topic": "Economics",
+    "reading": "Economic Growth",
+    "body": [
+      [
+        "p",
+        "Luca Wagner is the CEO of Haus Builders and Finance, based in Germany. The company specializes in building low-income housing in developing countries, using new, highly specialized technology that lowers labor costs. Wagner is considering an investment in three neighboring African countries. To fund the investment, he wants to invite both foreign and local institutional investors to participate as equity and debt investors. Wagner knows that the availability of mortgages for low-income earners increases home ownership. As a result, he intends to finance 30-year mortgages through a Special Purpose Vehicle, issuing tranches of publicly traded 30-year bonds. He collects the following information related to economic factors:"
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1",
+          "head": [
+            "",
+            "Country A",
+            "Country B",
+            "Country C"
+          ],
+          "rows": [
+            [
+              "Gross savings as % of GDP",
+              "8",
+              "30",
+              "36"
+            ],
+            [
+              "Market capitalization as a % of GDP (%)",
+              "5.3",
+              "N/A - no securities exchange",
+              "0.7"
+            ],
+            [
+              "Political stability",
+              "Mostly stable",
+              "Civil war in outer regions",
+              "Stable"
+            ],
+            [
+              "Regulatory",
+              "Good investor protection environment but slow court system",
+              "Uncertain investor protection rights",
+              "Improving investor protection rights"
+            ],
+            [
+              "Receptiveness to foreign investment",
+              "Open - no restrictions with free flow of capital, local investor participation encouraged",
+              "Restricted to certain sectors",
+              "Open subject to currency restrictions regarding repatriation of funds"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Wagner travels to each of the three African countries to meet with their Government officials for the purposes of further due diligence. In one of Wagner's meetings with a Minister of Finance, he asks about the long-term growth forecasts of the country's economy that will help him attract debt and equity investors. The Minister responds with the following statements:"
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "We are already seeing a boost in productivity as a result of our investment in public sector infrastructure over the last two years. We expect private sector productivity to make even bigger gains this year as the full impact of these investments are realized."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "Corporate earnings growth over the last five years has been strong and the ratio of corporate profits to GDP is on an upward trend. We acknowledge this level of growth will likely not last forever, but real earnings growth can exceed the growth rate of potential GDP over the long term."
+      ],
+      [
+        "h",
+        "Statement 3"
+      ],
+      [
+        "p",
+        "We are confident our long-term growth forecasts are well-founded. When we extrapolate our GDP growth over the last ten years into the future, we predict growth will be above 3% over the long-term."
+      ],
+      [
+        "p",
+        "Afterwards, Wagner attends a regional capital market development conference regarding the planned future introduction of a regional securities exchange. He wants to understand his options for raising the debt needed for the mortgage funding in each country. Wagner meets with the regulators attending the conference, including the CEO of the Financial Markets Authority (FMA). The FMA CEO says, “I firmly believe in absolute convergence whereby all countries within the region will benefit from steadily improving investment rates via technological advances provided by the new electronic trading. With access to this technology, we expect each of our country's per capita income growth rates to catch up to those of developed countries over time. We should eventually also get to the same per capita income levels as developed countries.”"
+      ],
+      [
+        "p",
+        "Prior to leaving the region, Wagner meets again with the Minister of Finance to ask for tax incentives to make his investment in that country. He makes the following justifications:"
+      ],
+      [
+        "h",
+        "Justification 1"
+      ],
+      [
+        "p",
+        "As a result of my successful investments, more and more foreign investors will be attracted to the country. Therefore, the country will no longer be considered capital poor."
+      ],
+      [
+        "h",
+        "Justification 2"
+      ],
+      [
+        "p",
+        "My high-tech investment will likely cause the local housing industry to become more efficient; some local companies will become more innovative but some will leave the industry."
+      ],
+      [
+        "h",
+        "Justification 3"
+      ],
+      [
+        "p",
+        "My investment will cause capital growth to rise more quickly and will result in higher productivity growth, causing per capita incomes to converge."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based only on the information provided in Exhibit 1, which country has the most favorable economic factors to support Wagner's proposed project?",
+        "options": [
+          "Country A",
+          "Country B",
+          "Country C"
+        ],
+        "answer": 0,
+        "why": "Wagner should invest where the factors limiting growth are weakest. Limiting factors: low saving and investment; poorly developed financial markets; weak or corrupt legal systems and failure to enforce laws; lack of property rights and political instability; poor public education and health; tax and regulatory policies discouraging entrepreneurship; restrictions on trade and capital flows. Country A has a higher market cap/GDP than C (B has no exchange), stronger investor rights than B or C, and no restrictions on foreign capital, unlike B (sector restrictions, civil war) and C (repatriation restrictions). A's savings rate is lower than C's, but since funding comes from foreign and domestic institutional investors, the investment environment matters more. So Country A is most favorable."
+      },
+      {
+        "q": "Which of the statements made by the Minister of Finance about the country's growth prospects is most likely correct?",
+        "options": [
+          "Statement 1",
+          "Statement 2",
+          "Statement 3"
+        ],
+        "answer": 0,
+        "why": "Statement 1 is correct: infrastructure investment is an important source of productivity growth and belongs in the production function. Like R&D, public infrastructure boosts the productivity of private investment beyond the projects' direct benefits. Statement 2 is wrong: in the long run real earnings growth cannot exceed potential GDP growth, because that would require the profit share of GDP to rise forever. Statement 3 is wrong: simply extrapolating past GDP growth can mislead; growth rates change over time (Japan slowed after 1990; Brazil sped up after 1999), and small changes in potential growth have large effects on living standards."
+      },
+      {
+        "q": "Which convergence hypothesis best supports the FMA CEO's belief?",
+        "options": [
+          "Club convergence",
+          "Absolute convergence",
+          "Conditional convergence"
+        ],
+        "answer": 0,
+        "why": "Club convergence: countries that are members of the “club” (rich and middle-income countries) converge to the income LEVEL of the richest countries, with the poorest members growing fastest; countries outside the club fall behind, but poor countries can join by making the appropriate institutional changes (here, the new regional exchange and electronic trading). It allows the same per capita income level. Despite the CEO using the words “absolute convergence”, absolute convergence means developing countries catch up REGARDLESS of their particular characteristics, not because of favorable changes. Conditional convergence requires the same saving rate, population growth rate and production function."
+      },
+      {
+        "q": "Which of Wagner's justifications most likely reflects the neoclassical growth model?",
+        "options": [
+          "Justification 1",
+          "Justification 2",
+          "Justification 3"
+        ],
+        "answer": 2,
+        "why": "Neoclassical model: in an open economy, capital flows from capital-rich (high K/L) to capital-poor countries seeking higher returns, so the capital stock of developing countries grows faster than in rich countries even with low saving; faster capital growth raises productivity growth and per capita incomes converge (Justification 3). Justification 1 is wrong: as foreign capital flows in and the country becomes less capital poor, returns fall and global savers slow their investment. Justification 2 describes the selection effect from endogenous growth models: foreign competition forces less efficient domestic firms to exit and others to innovate."
+      }
+    ]
   }
 ];
 

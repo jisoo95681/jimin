@@ -875,6 +875,70 @@ const QUESTIONS = [
     options: ["The current spot rate", "The forward rate", "The inflation differential"],
     answer: 1,
     why: "CIP: forward premium = interest differential. UIP: expected spot change = interest differential. Together: F = expected future spot, so the forward rate is an unbiased predictor. If all parity conditions hold, it is called forward rate parity."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Which factor is LEAST likely to limit a developing country's growth?",
+    options: ["Restrictions on the flow of foreign capital", "A high domestic saving rate", "Weak investor protection and slow courts"],
+    answer: 1,
+    why: "Low saving and investment limit growth; a high saving rate supports it. Other limiting factors: poorly developed financial markets, weak legal systems, lack of property rights, political instability, poor education and health, anti-entrepreneurship tax/regulation, and restrictions on trade and capital flows."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Public infrastructure investment affects growth mainly by:",
+    options: ["Only its direct project benefits", "Raising the productivity of private investment as well (it belongs in the production function)", "Crowding out all private investment"],
+    answer: 1,
+    why: "Like R&D, infrastructure investment is a source of productivity growth whose full impact extends beyond the projects themselves, because better infrastructure boosts the productivity of private capital."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Can real corporate earnings grow faster than potential GDP over the long run?",
+    options: ["Yes, if companies keep becoming more profitable", "No, because the share of profits in GDP cannot rise forever", "Yes, as long as inflation is low"],
+    answer: 1,
+    why: "Earnings growth above GDP growth requires the profit/GDP ratio to trend upward, which cannot continue indefinitely. In the long run, real earnings growth is bounded by potential GDP growth."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Why is extrapolating the past 10 years of GDP growth a poor long-term forecast?",
+    options: ["GDP data are unreliable", "Potential growth rates change over time (e.g. Japan slowed after 1990, Brazil sped up after 1999)", "GDP growth is always mean-reverting to 3%"],
+    answer: 1,
+    why: "A country's growth rate can slow down or accelerate as its factors and policies change. Small changes in potential growth compound into large differences in living standards, so forecasts should be based on the drivers, not past trends."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Countries that make the right institutional changes can join a group of countries converging to the income LEVEL of the richest countries. This is:",
+    options: ["Absolute convergence", "Conditional convergence", "Club convergence"],
+    answer: 2,
+    why: "Club convergence: club members (rich and middle-income) converge to the richest countries' income level, poorest members growing fastest; non-members fall behind but can join via institutional changes. Absolute: all developing countries catch up regardless of characteristics. Conditional: convergence only among countries with the same saving rate, population growth and production function."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Conditional convergence requires countries to have the same:",
+    options: ["Institutions and political system", "Saving rate, population growth rate and production function", "Current per capita income"],
+    answer: 1,
+    why: "Under the neoclassical model, countries with the same saving rate, population growth and production function converge to the same steady-state per capita income. Differences in these lead to different steady states."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "In the neoclassical model, opening a capital-poor country to foreign investment leads to:",
+    options: ["Capital outflows to rich countries", "Faster capital growth, higher productivity growth and income convergence", "Permanent increase in the steady-state growth rate"],
+    answer: 1,
+    why: "Capital flows from high to low K/L countries seeking higher returns, so the poor country's capital stock grows faster even with low saving, raising productivity and causing convergence. The effect on growth is transitional: long-run steady-state growth depends only on TFP growth."
+  },
+  {
+    topic: "Economics",
+    reading: "Economic Growth",
+    q: "Increased foreign competition forces less efficient domestic firms to exit while others innovate. Which model predicts this selection effect?",
+    options: ["Classical (Malthusian) model", "Neoclassical (Solow) model", "Endogenous growth model"],
+    answer: 2,
+    why: "Endogenous growth models argue that openness raises growth permanently through larger markets, spillovers and the selection effect: competition pushes out inefficient firms and spurs innovation."
   }
 ];
 
