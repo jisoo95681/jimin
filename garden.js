@@ -1,28 +1,30 @@
 // Garden: one tree per study day, drawn in 3D with three.js.
 // Growth follows focused hours: 2h = 25%, 4h = 50%, 6h = 75%, 8h = 100% (linear in between). Trees grow like real ones:
-// seedling with seed leaves, then a slim leafy sapling that gets taller and wider; flowers and fruit only when mature.
+// seedling with seed leaves, then a leafy sapling that branches out and gets taller; fruit trees blossom, then set fruit.
 // When a day ends (after 23:59:59) its tree is locked and never changes again. No new trees after the exam day.
 // Uses helpers from index.html (loadStudy, saveStudy, daySec, dkey, fromKey, midnight, EXAM, screen, nav, el, app, ...).
 
 const GROW_FULL_SEC = 8 * 3600;
 const GARDEN_EPOCH = new Date(2026, 8, 26); // the first garden day, whose tree is a Baobab
+// leaf: colour of the mature leaves (young leaves start out green when "green" is given: autumn colours come with age).
+// shape: leaf outline. bloom: blossom colours on fruit trees (flowers first, then fruit). flower: a flowering tree.
 const SPECIES = [
-  { name: "Baobab", kind: "baobab", trunk: 0x9c7c64, leaf: 0x7fa34e },
-  { name: "Lemon Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3f7d3b, fruit: 0xffdc1f, oval: true, size: .85 },
-  { name: "Apple Tree", kind: "round", trunk: 0x7a5230, leaf: 0x4f8f3a, fruit: 0xe3222b, size: 1 },
-  { name: "Korean Red Pine", kind: "pine", trunk: 0xa4553a, leaf: 0x2f5e3a },
-  { name: "Ginkgo", kind: "ginkgo", trunk: 0x6e5840, leaf: 0xe8c33c },
-  { name: "Grape Vine", kind: "vine", trunk: 0x6b4a33, leaf: 0x5a9a3c, fruit: 0x7b2fb0 },
-  { name: "Cherry Blossom", kind: "round", trunk: 0x5a3a30, leaf: 0xf2a9c0, flower: [0xffffff, 0xff5c93], size: 1.05, flat: true },
-  { name: "Orange Tree", kind: "round", trunk: 0x7b5a3a, leaf: 0x3d7a3a, fruit: 0xff8616, size: .9 },
-  { name: "Weeping Willow", kind: "willow", trunk: 0x6d5a3e, leaf: 0x9cc45c },
-  { name: "Maple", kind: "round", trunk: 0x6a4630, leaf: 0xd4532b, size: 1 },
-  { name: "Fir", kind: "cone", trunk: 0x5d4632, leaf: 0x2e5a40 },
-  { name: "Palm", kind: "palm", trunk: 0x9d8466, leaf: 0x4e9a3f, fruit: 0x7a5530 },
-  { name: "Oak", kind: "round", trunk: 0x6b4d33, leaf: 0x4d7a34, size: 1.2, flat: true },
-  { name: "Olive Tree", kind: "round", trunk: 0x7d6a55, leaf: 0x8aa27a, fruit: 0x55306b, size: .8 },
-  { name: "Jacaranda", kind: "round", trunk: 0x5e4a3a, leaf: 0x8e6bd1, flower: [0xe6d8ff, 0x6f3fd6], size: 1.05, flat: true },
-  { name: "Birch", kind: "birch", trunk: 0xeeeae2, leaf: 0xb7cf55 }
+  { name: "Baobab", kind: "baobab", trunk: 0x9c7c64, leaf: 0x6f9a45, shape: "oval", leafSize: .18 },
+  { name: "Lemon Tree", kind: "round", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2f6e30, shape: "oval", leafSize: .19, fruit: 0xffdc1f, oval: true, bloom: [0xffffff, 0xfff6e0] },
+  { name: "Apple Tree", kind: "round", form: "apple", trunk: 0x7a5230, leaf: 0x4f8f3a, shape: "oval", leafSize: .21, fruit: 0xd8232a, bloom: [0xffffff, 0xffd0dc] },
+  { name: "Korean Red Pine", kind: "pine", trunk: 0xa4553a, leaf: 0x2f5e3a, shape: "pompom", leafSize: .32 },
+  { name: "Ginkgo", kind: "ginkgo", trunk: 0x6e5840, leaf: 0xf0c419, green: 0x76a83a, shape: "fan", leafSize: .19 },
+  { name: "Grape Vine", kind: "vine", trunk: 0x6b4a33, leaf: 0x4f8f35, shape: "grape", leafSize: .26, fruit: 0x5b2a86, bloom: [0xd4e28e] },
+  { name: "Cherry Blossom", kind: "round", form: "cherry", trunk: 0x5a3a30, leaf: 0x5b9440, shape: "oval", leafSize: .18, flower: [0xffd9e4, 0xffb0c8, 0xffffff] },
+  { name: "Orange Tree", kind: "round", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2d6a30, shape: "oval", leafSize: .2, fruit: 0xff8616, bloom: [0xffffff, 0xfff6e0] },
+  { name: "Weeping Willow", kind: "willow", trunk: 0x6d5a3e, leaf: 0x9cc45c, shape: "lance", leafSize: .14 },
+  { name: "Maple", kind: "round", form: "maple", trunk: 0x6a4630, leaf: 0xd4532b, green: 0x5e9a3a, shape: "maple", leafSize: .24 },
+  { name: "Fir", kind: "cone", trunk: 0x5d4632, leaf: 0x2e5a40, shape: "brush", leafSize: .3 },
+  { name: "Palm", kind: "palm", trunk: 0x9d8466, leaf: 0x4e9a3f, shape: "leaflet", leafSize: .34, fruit: 0x6f5a2e, bloom: [0xf3e3a0] },
+  { name: "Oak", kind: "round", form: "oak", trunk: 0x6b4d33, leaf: 0x4d7a34, shape: "oak", leafSize: .22 },
+  { name: "Olive Tree", kind: "round", form: "olive", trunk: 0x7d6a55, leaf: 0x8aa27a, shape: "lance", leafSize: .17, fruit: 0x3d2440, small: true, bloom: [0xf6f2d6] },
+  { name: "Jacaranda", kind: "round", form: "jacaranda", trunk: 0x5e4a3a, leaf: 0x5e9a45, shape: "leaflet", leafSize: .15, flower: [0xb79cf0, 0x8a62dc, 0x9d7ae6] },
+  { name: "Birch", kind: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 }
 ];
 
 // ---------- Data ----------
@@ -125,339 +127,555 @@ function seeded(str) {
 const smooth = x => { x = Math.max(0, Math.min(1, x)); return x * x * (3 - 2 * x); };
 const easeOut = x => { x = Math.max(0, Math.min(1, x)); return 1 - (1 - x) * (1 - x); };
 
-// Build one tree as a hierarchy: leaves hang on branches, branches on the trunk. Each part grows (uniform scale) inside
-// its parent, so everything stays connected at every stage. update(g) takes growth 0–1.
+// ---------- Trees ----------
+// Each tree is a branching skeleton (trunk → limbs → side branches → twigs) with real leaves on the twigs, drawn with a
+// few instanced meshes (wood, leaves, blossoms, fruit) so hundreds of leaves stay cheap.
+// Growth follows real trees: a seedling with two seed leaves, then a slim leafy sapling whose branches appear one by one
+// (each starts once its parent has grown that far) while the whole tree gets taller and the trunk thickens. Leaves on the
+// young stem fall once the crown has formed. Fruit trees blossom first (~60–80%), the petals fall, small green fruit
+// sets and swells, and it ripens to its colour by 100%. Flowering trees stay in bloom at the end.
+
+// Shared shapes (built once).
+const TREE_GEO = {};
+function geoColor(T, g, fn) {
+  const p = g.attributes.position, c = [];
+  for (let i = 0; i < p.count; i++) { const k = fn(p.getX(i), p.getY(i), p.getZ(i)); c.push(k[0], k[1], k[2]); }
+  g.setAttribute("color", new T.Float32BufferAttribute(c, 3));
+  return g;
+}
+function mergeGeo(T, list) {
+  const P = [], N = [], C = [];
+  list.forEach(g => {
+    g = g.index ? g.toNonIndexed() : g;
+    P.push(...g.attributes.position.array); N.push(...g.attributes.normal.array); C.push(...g.attributes.color.array);
+  });
+  const out = new T.BufferGeometry();
+  out.setAttribute("position", new T.Float32BufferAttribute(P, 3));
+  out.setAttribute("normal", new T.Float32BufferAttribute(N, 3));
+  out.setAttribute("color", new T.Float32BufferAttribute(C, 3));
+  return out;
+}
+// Leaf outlines: the stalk end is at (0, 0) and the tip at y = 1 (unit length; each leaf is scaled to size).
+function leafOutline(kind) {
+  const pts = [], N = 7;
+  const side = fx => {
+    for (let i = 0; i <= N; i++) { const t = i / N; pts.push([fx(t), t]); }
+    for (let i = N - 1; i > 0; i--) { const t = i / N; pts.push([-fx(t), t]); }
+  };
+  const S = (t, p, q) => Math.pow(Math.max(0, Math.sin(Math.PI * Math.pow(t, p))), q);
+  if (kind === "oval") side(t => .3 * S(t, .8, .85));
+  else if (kind === "lance") side(t => .11 * S(t, .7, .8));
+  else if (kind === "leaflet") side(t => .08 * S(t, .6, .7));
+  else if (kind === "tri") side(t => .4 * S(t, .5, 1.1) * (1 + .05 * Math.sin(t * 40)));
+  else if (kind === "oak") side(t => .27 * S(t, .9, .7) * (.78 + .26 * Math.sin(t * Math.PI * 8 + 1)));
+  else if (kind === "maple" || kind === "grape") {
+    // Palmate: five lobes around the centre of the blade (deep and pointed for maple, shallow for grape).
+    const deep = kind === "maple" ? .55 : .2, sharp = kind === "maple" ? 3 : 1.5, cy = .46, M = 50;
+    pts.push([0, 0]);
+    for (let i = 0; i <= M; i++) {
+      const a = -Math.PI / 2 + .3 + i / M * (2 * Math.PI - .6);
+      const lobe = Math.pow(.5 + .5 * Math.cos(5 * (a - Math.PI / 2)), sharp), r = .5 * (1 - deep + deep * lobe);
+      pts.push([r * Math.cos(a), cy + r * Math.sin(a)]);
+    }
+  } else if (kind === "fan") {
+    // Ginkgo: a fan with a notch in the middle of the outer edge.
+    pts.push([0, 0]);
+    for (let i = 0; i <= 16; i++) {
+      const a = (35 + i / 16 * 110) * Math.PI / 180, r = .95 * (1 - .22 * Math.exp(-Math.pow((a - Math.PI / 2) / .1, 2)));
+      pts.push([r * Math.cos(a) * .8, r * Math.sin(a)]);
+    }
+  }
+  return pts;
+}
+function leafGeometry(T, kind) {
+  if (TREE_GEO["leaf" + kind]) return TREE_GEO["leaf" + kind];
+  let g;
+  if (kind === "brush" || kind === "pompom") {
+    // Conifer needles: a bottle-brush spray (fir) or a radiating tuft (pine).
+    const tris = [];
+    const needle = (b, tip, w) => {
+      const side = new T.Vector3().subVectors(tip, b).cross(new T.Vector3(0, 1, .3)).normalize().multiplyScalar(w);
+      tris.push(b.x - side.x, b.y - side.y, b.z - side.z, b.x + side.x, b.y + side.y, b.z + side.z, tip.x, tip.y, tip.z);
+    };
+    const V3 = (x, y, z) => new T.Vector3(x, y, z);
+    if (kind === "brush") {
+      for (let k = 0; k < 10; k++) {
+        const y = k / 10 * .9;
+        [[1, .15], [-1, .15], [.55, .8], [-.55, .8]].forEach(([dx, dz]) => needle(V3(0, y, 0), V3(dx * .2, y + .14, dz * .14), .014));
+      }
+    } else {
+      for (let k = 0; k < 18; k++) {
+        const th = Math.sqrt(k / 18) * 1.25, ph = k * 2.4;
+        needle(V3(0, 0, 0), V3(Math.sin(th) * Math.cos(ph), Math.cos(th), Math.sin(th) * Math.sin(ph)), .025);
+      }
+    }
+    g = new T.BufferGeometry();
+    g.setAttribute("position", new T.Float32BufferAttribute(tris, 3));
+    g.computeVertexNormals();
+    geoColor(T, g, (x, y, z) => { const k = .7 + .45 * Math.min(1, Math.hypot(x, z) * 3 + (kind === "pompom" ? y * .5 : 0)); return [k, k, k]; });
+  } else {
+    const sh = new T.Shape();
+    leafOutline(kind).forEach(([x, y], i) => (i ? sh.lineTo(x, y) : sh.moveTo(x, y)));
+    g = new T.ShapeGeometry(sh);
+    const p = g.attributes.position;
+    for (let i = 0; i < p.count; i++) { const x = p.getX(i), y = p.getY(i); p.setZ(i, x * x * .9 - y * y * .2); } // cupped, tip curls down
+    g.computeVertexNormals();
+    geoColor(T, g, (x, y) => { const k = .82 + .22 * y; return [k, k, k]; });
+  }
+  return (TREE_GEO["leaf" + kind] = g);
+}
+// A small cluster of five-petal flowers facing +z (blossoms grow in clusters, like apple blossom), yellow centres.
+function flowerGeometry(T) {
+  if (TREE_GEO.flower) return TREE_GEO.flower;
+  const one = flowerOne(T), parts = [];
+  [[0, 0, .06, 0, 0], [.42, .25, 0, .5, .3], [-.38, .32, 0, -.4, .4], [.05, -.45, 0, .2, -.5]].forEach(([x, y, z, ry, rx], i) => {
+    const g = one.clone();
+    if (i) g.scale(.8, .8, .8);
+    g.rotateX(rx); g.rotateY(ry); g.translate(x, y, z);
+    parts.push(g);
+  });
+  return (TREE_GEO.flower = mergeGeo(T, parts));
+}
+function flowerOne(T) {
+  const parts = [];
+  for (let k = 0; k < 5; k++) {
+    const sh = new T.Shape(), N = 5;
+    for (let i = 0; i <= N; i++) { const t = i / N; const x = .4 * Math.pow(Math.sin(Math.PI * Math.pow(t, .65)), .6); i ? sh.lineTo(x, t) : sh.moveTo(x, t); }
+    for (let i = N - 1; i > 0; i--) { const t = i / N; sh.lineTo(-.4 * Math.pow(Math.sin(Math.PI * Math.pow(t, .65)), .6), t); }
+    const g = new T.ShapeGeometry(sh);
+    g.scale(.5, .5, .5);
+    const p = g.attributes.position;
+    for (let i = 0; i < p.count; i++) p.setZ(i, p.getY(i) * p.getY(i) * .5);
+    g.rotateZ(k / 5 * Math.PI * 2);
+    g.computeVertexNormals();
+    parts.push(geoColor(T, g, () => [1, 1, 1]));
+  }
+  const c = new T.CircleGeometry(.09, 6);
+  c.translate(0, 0, .03);
+  parts.push(geoColor(T, c, () => [1, .82, .25]));
+  return mergeGeo(T, parts);
+}
+function fruitGeometry(T, bunch) {
+  const key = bunch ? "bunch" : "fruit";
+  if (TREE_GEO[key]) return TREE_GEO[key];
+  let g;
+  if (!bunch) g = geoColor(T, new T.SphereGeometry(1, 10, 7), () => [1, 1, 1]);
+  else {
+    // A bunch of grapes: rows of berries getting fewer towards the bottom.
+    const parts = [];
+    [6, 5, 4, 3, 2, 1].forEach((n, r) => {
+      for (let i = 0; i < n; i++) {
+        const a = i / n * Math.PI * 2 + r, rad = n === 1 ? 0 : .07 * n / 2.2;
+        const s = new T.SphereGeometry(.12, 8, 6);
+        s.translate(Math.cos(a) * rad, -.08 - r * .17, Math.sin(a) * rad);
+        parts.push(geoColor(T, s, () => [1 - r * .05, 1 - r * .05, 1 - r * .05]));
+      }
+    });
+    g = mergeGeo(T, parts);
+  }
+  return (TREE_GEO[key] = g);
+}
+const TREE_MAT = {};
+function treeMats(T) {
+  if (TREE_MAT.wood) return TREE_MAT;
+  TREE_MAT.wood = new T.MeshStandardMaterial({ roughness: .95, metalness: 0 });
+  TREE_MAT.leaf = new T.MeshStandardMaterial({ vertexColors: true, roughness: .72, metalness: 0, side: T.DoubleSide });
+  TREE_MAT.bloom = new T.MeshStandardMaterial({ vertexColors: true, roughness: .6, metalness: 0, side: T.DoubleSide, emissive: 0xffffff, emissiveIntensity: .08 });
+  TREE_MAT.fruit = new T.MeshStandardMaterial({ vertexColors: true, roughness: .42, metalness: 0 });
+  TREE_MAT.mark = new T.MeshStandardMaterial({ color: 0x2b2b2b, roughness: 1 });
+  return TREE_MAT;
+}
+
 function buildTree(T, spec, seedKey, lod = 1) {
   const rnd = seeded(seedKey + spec.name), R = (lo, hi) => lo + (hi - lo) * rnd();
+  const V = (x, y, z) => new T.Vector3(x, y, z), UP = V(0, 1, 0);
   const outer = new T.Group(), root = new T.Group();
   outer.add(root);
-  const parts = [], links = [], follow = [];
-  const mats = {};
-  // Bark: smooth, matte. Leaves: vertex-coloured (darker underneath and in the dents) so clusters look rounded and full.
-  const mat = c => (mats[c] = mats[c] || new T.MeshStandardMaterial({ color: c, roughness: .92, metalness: 0 }));
-  const leafMat = new T.MeshStandardMaterial({ vertexColors: true, roughness: .88, metalness: 0 });
-  const seg = lod ? [20, 14] : [12, 9];
-  // A leaf cluster: a sphere pushed in and out by a few smooth waves (an organic, bumpy outline), shaded per vertex.
-  function leafGeo(r, color, sx = 1, sy = 1, sz = 1) {
-    const g = new T.SphereGeometry(r, seg[0], seg[1]);
-    const pos = g.attributes.position, n = new T.Vector3(), cols = [], base = new T.Color(color), c = new T.Color();
-    const waves = [0, 1, 2].map(() => [V(R(-1, 1), R(-1, 1), R(-1, 1)).normalize(), R(0, 6.28)]);
-    for (let i = 0; i < pos.count; i++) {
-      n.fromBufferAttribute(pos, i).normalize();
-      const k = Math.sin(n.dot(waves[0][0]) * 4 + waves[0][1]) * .5 + Math.sin(n.dot(waves[1][0]) * 7 + waves[1][1]) * .3 + Math.sin(n.dot(waves[2][0]) * 12 + waves[2][1]) * .2;
-      const d = r * (1 + k * .12);
-      pos.setXYZ(i, n.x * d * sx, n.y * d * sy, n.z * d * sz);
-      const shade = .6 + .4 * (n.y * .5 + .5) + k * .08; // light from above, darker underneath and in the dents
-      c.copy(base).multiplyScalar(Math.min(1.12, shade));
-      cols.push(c.r, c.g, c.b);
-    }
-    g.setAttribute("color", new T.Float32BufferAttribute(cols, 3));
-    g.computeVertexNormals();
-    return g;
+  const mats = treeMats(T);
+  const nodes = [], sets = { leaf: [], bloom: [], fruit: [], mark: [] }, statics = [];
+  const dense = lod ? 1 : .45; // fewer, larger leaves when many trees are on screen
+  const k = spec.kind;
+
+  // A straight piece of wood growing from its base during [a, b]; its base sits on its parent at fraction "at".
+  function seg(parent, at, dir, len, r, a, dur, o = {}) {
+    dir = dir.clone().normalize();
+    const n = {
+      parent, at, dir, len, r, a, b: Math.min(.8, a + dur), color: o.color ?? spec.trunk, yOnly: o.yOnly,
+      q: new T.Quaternion().setFromUnitVectors(UP, dir), s: 0, pos: V(0, 0, 0), cur: new T.Quaternion(), curDir: V(0, 1, 0)
+    };
+    if (o.young) n.q0 = new T.Quaternion().setFromUnitVectors(UP, o.young.clone().normalize());
+    n.full = parent ? parent.full.clone().addScaledVector(parent.dir, at * parent.len) : (o.origin || V(0, 0, 0)).clone();
+    n.origin = n.full.clone();
+    nodes.push(n);
+    return n;
   }
-  const up = new T.Vector3(0, 1, 0);
-  const V = (x, y, z) => new T.Vector3(x, y, z);
-  // Parts are placed in tree coordinates at full size; after building they are re-parented (keeping their place).
-  // Real trees grow as a whole: a seedling already has leaves, and the stem, branches and leaves get bigger together
-  // (the whole tree is scaled up over the day). Here each part only needs to bud in: branches appear one after another
-  // with their leaves, while flowers and fruit wait for maturity. opts.raw keeps the given window; opts.yOnly grows
-  // only in height (a palm trunk keeps its girth); opts.girth thickens a part late (a baobab trunk swells with age).
-  const grow = (obj, a, b, parent = null, opts = {}) => {
-    if (!opts.raw && a < .74) { const a2 = a * .3; b = Math.min(.75, a2 + (b - a) * .6); a = a2; }
-    root.add(obj);
-    parts.push({ obj, a, b: Math.min(1, b), yOnly: opts.yOnly, girth: opts.girth });
-    if (parent) links.push([parent, obj]);
-    return obj;
-  };
-  function limb(from, dir, len, r0, r1, color) {
-    const g = new T.CylinderGeometry(r1, r0, len, lod ? 12 : 8, 3);
-    g.translate(0, len / 2, 0);
-    const m = new T.Mesh(g, mat(color));
-    m.position.copy(from);
-    m.quaternion.setFromUnitVectors(up, dir.clone().normalize());
-    // Main trunks get a gentle root flare where they meet the ground.
-    if (from.y === 0 && dir.y > .9 && r0 >= .09) {
-      const fl = new T.Mesh(new T.LatheGeometry([[r0 * 2.1, 0], [r0 * 1.55, .03], [r0 * 1.15, .1], [r0 * 1.01, .22]].map(([x, y]) => new T.Vector2(x, y)), lod ? 16 : 10), mat(color));
-      m.add(fl);
-    }
-    m.userData.tip = from.clone().add(dir.clone().normalize().multiplyScalar(len));
-    m.userData.at = f => from.clone().add(dir.clone().normalize().multiplyScalar(len * f));
-    return m;
-  }
-  function blob(pos, r, color, sx = 1, sy = 1, sz = 1) {
-    const m = new T.Mesh(leafGeo(r, color, sx, sy, sz), leafMat); // squash is baked into the shape
-    m.position.copy(pos);
-    m.rotation.y = R(0, 6.28); // spin around the vertical only, so squashed clusters stay level
-    return m;
-  }
-  // Fruit and flowers use a slightly glossy, glowing material so they stand out against the leaves.
-  const bright = {};
-  const shiny = c => (bright[c] = bright[c] || new T.MeshStandardMaterial({ color: c, emissive: c, emissiveIntensity: .28, roughness: .42, metalness: 0 }));
-  const features = []; // fruit and flowers, for the gardener to touch or smell
-  const around = (n, k, jitter = .3) => (k / n) * Math.PI * 2 + R(-jitter, jitter);
-  // Leaf clusters around a branch tip, overlapping the wood so they never float.
-  function crown(branch, color, n, r, a, opts = {}) {
-    const tip = branch.userData.tip, made = [];
+  // When a segment has grown to fraction f of its length (so children there never float).
+  const reach = (n, f) => n.a + (n.b - n.a) * (1 - Math.sqrt(Math.max(0, 1 - Math.min(1, f))));
+  // A gently curving limb of a few segments, each slightly thinner than the last.
+  function limb(parent, at, dir, len, r, a, dur, o = {}) {
+    const n = o.segs || 3, out = [];
+    let p = parent, pat = at, d = dir.clone().normalize(), rr = r, t0 = a;
     for (let i = 0; i < n; i++) {
-      const off = i === 0 ? V(0, 0, 0) : V(R(-1, 1), R(-.4, .8), R(-1, 1)).normalize().multiplyScalar(r * R(.5, .8));
-      const rr = r * (i === 0 ? 1 : R(.7, .9)), sx = opts.sx || 1, sy = opts.sy || 1, sz = opts.sz || 1;
-      const b = blob(tip.clone().add(off), rr, color, sx, sy, sz);
-      grow(b, Math.max(0, a - .08) + i * .03, a + .3 + i * .03, branch); // leaves start budding with their branch
-      made.push({ c: tip.clone().add(off), r: rr, sx, sy, sz });
+      const s = seg(p, pat, d, len / n, rr, t0, dur / n * 1.4, o);
+      out.push(s);
+      p = s; pat = 1; rr *= .72;
+      t0 = s.a + (s.b - s.a) * .7;
+      const w = o.wiggle ?? .12;
+      d = d.clone().add(o.bend || V(0, 0, 0)).add(V(R(-w, w), R(-w, w), R(-w, w))).normalize();
     }
-    return made;
+    return out;
   }
-  // A point on the outside of a leaf cluster (so fruit and flowers sit on the surface, never hidden inside).
-  const surface = (b, dir, lift = 1) => b.c.clone().add(V(dir.x * b.r * b.sx * lift, dir.y * b.r * b.sy * lift, dir.z * b.r * b.sz * lift));
-  const outward = (b, down) => {
-    const radial = V(b.c.x, 0, b.c.z);
-    if (radial.lengthSq() < .01) radial.set(R(-1, 1), 0, R(-1, 1));
-    return radial.normalize().add(V(R(-.7, .7), R(-down, .45), R(-.7, .7))).normalize();
-  };
-  // Fruit hangs on the outer, lower half of the leaf clusters; appears near full growth.
-  function fruitOn(branch, blobs, color, oval, per = 3) {
-    blobs.forEach(b => {
-      for (let i = 0; i < per; i++) {
-        const f = new T.Mesh(new T.SphereGeometry(oval ? .095 : .11, lod ? 14 : 9, lod ? 10 : 7), shiny(color));
-        f.scale.y = oval ? 1.3 : .95;
-        f.position.copy(surface(b, outward(b, .9), .93));
-        f.castShadow = true;
-        const s = R(.8, .86);
-        grow(f, s, s + .08, branch);
-        features.push(f);
-        if (!oval) { // a little stem and leaf make it read as fruit
-          const stem = new T.Mesh(new T.CylinderGeometry(.01, .012, .06, 5), mat(0x5a3d22));
-          stem.position.y = .11;
-          f.add(stem);
-        }
-      }
-    });
+  // A direction at angle th from d, turned by ph around it.
+  function spread(d, th, ph) {
+    const ref = Math.abs(d.y) < .9 ? UP : V(1, 0, 0);
+    const u = V(0, 0, 0).crossVectors(d, ref).normalize(), v = V(0, 0, 0).crossVectors(d, u).normalize();
+    return d.clone().multiplyScalar(Math.cos(th)).add(u.multiplyScalar(Math.cos(ph) * Math.sin(th))).add(v.multiplyScalar(Math.sin(ph) * Math.sin(th))).normalize();
   }
-  // Blossoms: five-petal flowers over the whole outside of the canopy.
-  function flowersOn(branch, blobs, colors, per = 6) {
-    const petal = new T.SphereGeometry(.06, 10, 8);
-    blobs.forEach(b => {
-      for (let i = 0; i < per; i++) {
-        const dir = outward(b, .2), fl = new T.Group();
-        const col = colors[Math.floor(R(0, colors.length))];
-        for (let k = 0; k < 5; k++) {
-          const pt = new T.Mesh(petal, shiny(col));
-          const a = k / 5 * Math.PI * 2;
-          pt.position.set(Math.cos(a) * .06, 0, Math.sin(a) * .06);
-          pt.scale.set(1, .35, 1);
-          fl.add(pt);
-        }
-        const center = new T.Mesh(new T.SphereGeometry(.03, 8, 6), shiny(0xffd84a));
-        center.position.y = .01;
-        fl.add(center);
-        fl.position.copy(surface(b, dir, .96));
-        fl.quaternion.setFromUnitVectors(up, dir);
-        const s = R(.76, .84);
-        grow(fl, s, s + .1, branch);
-        features.push(fl);
-      }
-    });
+  // Hang something on segment n at fraction f: it points along dirW and faces normW (world directions at full size).
+  function attach(set, n, f, dirW, normW, size, a, b, extra = {}) {
+    const y = dirW.clone().normalize(), z = normW.clone().sub(y.clone().multiplyScalar(normW.dot(y)));
+    if (z.lengthSq() < 1e-4) z.copy(spread(y, Math.PI / 2, 0)); else z.normalize();
+    const x = V(0, 0, 0).crossVectors(y, z);
+    const qW = new T.Quaternion().setFromRotationMatrix(new T.Matrix4().makeBasis(x, y, z));
+    const inv = n.q.clone().invert();
+    const off = (extra.off || V(0, 0, 0)).clone().applyQuaternion(inv);
+    const item = { ...extra, n, f, off, q: inv.multiply(qW), size, a, b };
+    sets[set].push(item);
+    return item;
   }
-
-  // A seedling shown only at the very beginning.
-  const sprout = new T.Group();
-  sprout.add(limb(V(0, 0, 0), up, .28, .025, .02, 0x6aa84f));
-  sprout.add(blob(V(.07, .28, 0), .07, 0x7cc35a, 1.4, .35, .8, 0), blob(V(-.07, .3, 0), .07, 0x7cc35a, 1.4, .35, .8, 0));
-  outer.add(sprout);
-
-  const k = spec.kind, sz = spec.size || 1;
-  if (k === "round") {
-    const H = R(1.15, 1.4) * sz;
-    const trunk = grow(limb(V(0, 0, 0), up, H, .14 * sz, .09 * sz, spec.trunk), 0, .45);
-    const leader = grow(limb(V(0, H * .98, 0), V(R(-.1, .1), 1, R(-.1, .1)), .45 * sz, .08 * sz, .05 * sz, spec.trunk), .15, .5, trunk);
-    const branches = [leader];
-    const nb = 4 + Math.floor(R(0, 2));
+  // Leaves spiral up a twig (about 137° apart, like real shoots), angled up and out with the blade facing the light.
+  let phyl = R(0, 6.28);
+  function leaves(n, count, o = {}) {
+    const from = o.from ?? .25, size = (o.size || spec.leafSize) / Math.sqrt(dense);
+    const cnt = Math.max(1, Math.round(count * dense));
+    for (let i = 0; i < cnt; i++) {
+      const f = from + (1 - from) * (cnt === 1 ? 1 : i / (cnt - 1));
+      phyl += 2.4;
+      const around = spread(n.dir, Math.PI / 2, phyl), elev = o.elev ?? .55;
+      const dirW = around.clone().multiplyScalar(Math.cos(elev)).add(n.dir.clone().multiplyScalar(Math.sin(elev)));
+      if (o.droop) dirW.y -= o.droop;
+      const normW = (o.face || UP).clone().add(around.clone().multiplyScalar(.35)).add(V(R(-.3, .3), 0, R(-.3, .3)));
+      const a = reach(n, f) + R(0, .03);
+      attach("leaf", n, f, dirW, normW, size * R(.8, 1.15), a, a + .1, { off: around.multiplyScalar(n.r * (1 - .28 * f)), shed: o.shed, tint: R(.86, 1.12) });
+    }
+    for (let i = 0; i < (o.tip || 0); i++) { // a little rosette at the tip
+      const d = spread(n.dir, R(.35, .7), i / o.tip * 6.28 + R(0, 1)), a = reach(n, 1) + R(0, .03);
+      attach("leaf", n, 1, d, (o.face || UP).clone().add(d.clone().multiplyScalar(.4)), size * R(.75, 1), a, a + .1, { shed: o.shed, tint: R(.86, 1.12) });
+    }
+  }
+  // Blossoms and fruit on a twig. Fruit trees: more blossoms than fruit (not every flower sets), petals fall before
+  // the fruit forms in the same place.
+  function flowersAndFruit(n, nb, nf) {
     for (let i = 0; i < nb; i++) {
-      const ang = around(nb, i), y = H * R(.62, .95), len = R(.55, .85) * sz;
-      branches.push(grow(limb(V(0, y, 0), V(Math.cos(ang), R(.7, 1.2), Math.sin(ang)), len, .07 * sz, .035 * sz, spec.trunk), .14 + i * .03, .5 + i * .03, trunk));
-    }
-    branches.forEach((br, i) => {
-      const blobs = crown(br, spec.leaf, i === 0 ? 3 : 2, R(.4, .55) * sz, .22 + i * .03, { sy: spec.flat ? .75 : .95 });
-      if (spec.fruit) fruitOn(br, blobs, spec.fruit, spec.oval, spec.name.startsWith("Olive") ? 4 : 3);
-      if (spec.flower) flowersOn(br, blobs, spec.flower, 10);
-    });
-  } else if (k === "pine") {
-    const lean = R(-.35, .35);
-    const d1 = V(lean * .4, 1, 0), d2 = V(-lean, 1, R(-.2, .2));
-    const s1 = grow(limb(V(0, 0, 0), d1, R(.9, 1.1), .16, .12, spec.trunk), 0, .35);
-    const s2 = grow(limb(s1.userData.tip, d2, R(.9, 1.2), .12, .07, spec.trunk), .15, .5, s1);
-    const layers = 4 + Math.floor(R(0, 2));
-    for (let i = 0; i < layers; i++) {
-      const ang = around(layers, i, .5), base = s2.userData.at(1 - i * .18);
-      const br = grow(limb(base, V(Math.cos(ang), R(.1, .35), Math.sin(ang)), R(.6, 1), .06, .03, spec.trunk), .12 + i * .05, .45 + i * .05, s2);
-      crown(br, spec.leaf, 2, R(.45, .62), .15 + i * .05, { sx: 1.25, sy: .4, sz: 1.1 });
-    }
-    const top = grow(limb(s2.userData.tip, up, .2, .05, .03, spec.trunk), .15, .45, s2);
-    crown(top, spec.leaf, 2, .55, .2, { sx: 1.3, sy: .42, sz: 1.2 });
-  } else if (k === "cone") {
-    const trunk = grow(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), 0, .3, null, { raw: true });
-    for (let i = 0; i < 6; i++) {
-      const cg = new T.ConeGeometry(1.05 - i * .15, .75, lod ? 20 : 10, 3);
-      const cp = cg.attributes.position, col = [], base = new T.Color(spec.leaf), cc = new T.Color();
-      for (let q = 0; q < cp.count; q++) {
-        const x = cp.getX(q), y = cp.getY(q), z = cp.getZ(q), wob = 1 + Math.sin(Math.atan2(z, x) * 7 + i) * .06;
-        cp.setXYZ(q, x * wob, y, z * wob);
-        cc.copy(base).multiplyScalar(.62 + .38 * (y / .75 + .5));
-        col.push(cc.r, cc.g, cc.b);
+      const f = R(.65, 1), around = spread(n.dir, Math.PI / 2, R(0, 6.28));
+      const face = around.clone().multiplyScalar(.7).add(UP.clone().multiplyScalar(.6)).add(n.dir.clone().multiplyScalar(.3));
+      const flowering = !!spec.flower;
+      const a = flowering ? R(.62, .76) : R(.56, .64);
+      if (i >= nf && rnd() > dense) continue; // lighter when many trees are on screen
+      const size = (flowering ? R(.2, .25) : R(.19, .24)) * (k === "vine" || spec.small || k === "palm" ? .55 : 1);
+      const item = attach("bloom", n, f, n.dir, face, size, a, a + .06, {
+        off: around.clone().multiplyScalar(n.r + .04), fall: flowering ? 0 : R(.77, .83), color: spec.flower ? spec.flower[i % spec.flower.length] : spec.bloom[i % spec.bloom.length]
+      });
+      if (i < nf && spec.fruit) {
+        const r = k === "vine" ? .34 : spec.small ? .04 : k === "palm" ? .12 : spec.oval ? .085 : .1;
+        const fa = Math.max(item.fall || .8, .8) + R(0, .03);
+        attach("fruit", n, f, UP, V(0, 0, 1), r, fa, 1, { off: around.clone().multiplyScalar(n.r), hang: k === "vine" ? 0 : r * 1.15, sy: spec.oval ? 1.3 : spec.small ? 1.25 : 1 });
       }
-      cg.setAttribute("color", new T.Float32BufferAttribute(col, 3));
-      cg.computeVertexNormals();
-      const c = new T.Mesh(cg, leafMat);
-      c.position.set(0, .75 + i * .38, 0);
-      c.rotation.y = R(0, 2);
-      grow(c, 0, .3, trunk, { raw: true }); // a young fir is already a little cone of needles down to the ground
+    }
+  }
+
+  // ----- Shapes of the different trees -----
+  // A broadleaf tree: short trunk, 4–6 main limbs, side branches on each limb, then leafy twigs.
+  function broadleaf(o) {
+    const trunk = limb(null, 0, V(R(-.06, .06), 1, R(-.06, .06)), o.H, o.r, 0, .2, { segs: 2, wiggle: o.twist || .05 });
+    const top = trunk[trunk.length - 1];
+    trunk.forEach(t => leaves(t, 5, { from: .3, shed: .55 })); // leaves on the young stem fall once the crown has formed
+    const twigs = [];
+    for (let i = 0; i < o.n; i++) {
+      const at = i === 0 ? 1 : R(.45, 1), host = i === 0 ? top : trunk[trunk.length - 1];
+      const d = spread(UP, o.th * R(.8, 1.15), i / o.n * 6.283 + R(-.35, .35));
+      const l = limb(host, at, d, o.L * R(.85, 1.1), host.r * .72 * R(.85, 1), reach(host, at) + i * .012, .3, { segs: 3, bend: V(0, -o.droop, 0), wiggle: o.wiggle || .14 });
+      l.forEach((sg, j) => {
+        for (let q = 0; q < (j === 0 ? 1 : 2); q++) {
+          const f = R(.35, 1), d2 = spread(sg.dir, R(.5, .95), R(0, 6.28)).add(V(0, o.up, 0)).normalize();
+          const sub = limb(sg, f, d2, o.L * R(.35, .5) * (1 - j * .15), sg.r * .65, reach(sg, f), .2, { segs: 2, bend: V(0, -o.droop * .8, 0), wiggle: .15 });
+          sub.forEach(s2 => {
+            for (let w = 0; w < o.tw; w++) {
+              const f2 = R(.3, 1), d3 = spread(s2.dir, R(.5, 1), R(0, 6.28)).add(V(0, .2, 0)).normalize();
+              twigs.push(seg(s2, f2, d3, o.L * R(.14, .22), s2.r * .6, reach(s2, f2), .12));
+            }
+          });
+          twigs.push(sub[sub.length - 1]);
+        }
+      });
+      twigs.push(l[l.length - 1]);
+    }
+    twigs.forEach(t => leaves(t, o.lpt, { from: .15, tip: 2 }));
+    if (spec.fruit || spec.flower) twigs.forEach((t, i) => {
+      if (spec.flower) flowersAndFruit(t, o.fpt || 4, 0);
+      else if (rnd() < o.fruitChance) flowersAndFruit(t, 3, 1);
+      else if (rnd() < .6) flowersAndFruit(t, 2, 0);
+    });
+  }
+  const FORMS = {
+    apple: { H: .85, r: .12, n: 5, th: .95, L: 1.05, droop: .12, up: .2, tw: 3, lpt: 7, fruitChance: .22 },
+    citrus: { H: .55, r: .1, n: 6, th: .8, L: .95, droop: .05, up: .35, tw: 3, lpt: 8, fruitChance: .2 },
+    cherry: { H: .95, r: .13, n: 5, th: 1, L: 1.15, droop: .08, up: .15, tw: 3, lpt: 5, fpt: 5 },
+    oak: { H: 1, r: .17, n: 5, th: 1.15, L: 1.25, droop: .02, up: .1, tw: 3, lpt: 8, twist: .12, wiggle: .25 },
+    maple: { H: 1, r: .13, n: 5, th: .8, L: 1.15, droop: .05, up: .3, tw: 3, lpt: 7 },
+    olive: { H: .65, r: .14, n: 4, th: .85, L: 1, droop: .1, up: .2, tw: 3, lpt: 10, twist: .25, wiggle: .2, fruitChance: .32 },
+    jacaranda: { H: 1.1, r: .13, n: 5, th: 1.05, L: 1.25, droop: 0, up: .1, tw: 3, lpt: 9, fpt: 5 }
+  };
+
+  if (k === "round") broadleaf(FORMS[spec.form]);
+  else if (k === "willow") {
+    // Weeping willow: upright limbs, then long thin shoots that arch over and hang almost to the ground.
+    const trunk = limb(null, 0, V(R(-.05, .05), 1, 0), 1.1, .16, 0, .3, { segs: 2, wiggle: .08 });
+    const top = trunk[1];
+    trunk.forEach(t => leaves(t, 3, { from: .4, shed: .4 }));
+    for (let i = 0; i < 5; i++) {
+      const l = limb(top, R(.6, 1), spread(UP, R(.45, .7), i / 5 * 6.283 + R(-.3, .3)), R(.8, 1), top.r * .7, reach(top, .8) + i * .01, .25, { segs: 2, wiggle: .1 });
+      l.forEach(sg => {
+        for (let q = 0; q < 3; q++) {
+          const d = spread(sg.dir, R(.6, 1), R(0, 6.28));
+          d.y = Math.abs(d.y) * .4 + .1;
+          const strand = limb(sg, R(.4, 1), d, R(1.2, 1.6), .025, reach(sg, .7), .3, { segs: 5, bend: V(0, -.5, 0), wiggle: .05, color: 0x8a7a48 });
+          strand.forEach(s => leaves(s, 6, { from: 0, elev: .15, droop: .55, face: V(0, .3, 1) }));
+        }
+      });
+    }
+  } else if (k === "birch") {
+    // Birch: one slender white trunk to the top; thin ascending branches with drooping tips; small triangular leaves.
+    const trunk = limb(null, 0, UP, 2.5, .085, 0, .45, { segs: 4, wiggle: .04 });
+    trunk.forEach(t => leaves(t, 2, { from: .3, shed: .45 }));
+    for (let i = 0; i < 14; i++) {
+      const h = .35 + .6 * i / 13, sg = trunk[Math.min(3, Math.floor(h * 4))], f = h * 4 - Math.floor(h * 4);
+      const len = (1.15 - h * .75) * R(.8, 1.1) * .85;
+      const l = limb(sg, f, spread(UP, R(.6, .9), i * 2.4), len, .03, reach(sg, f), .22, { segs: 2, bend: V(0, -.15, 0) });
+      l.forEach(s => {
+        for (let q = 0; q < 2; q++) {
+          const f2 = R(.3, 1), tw = seg(s, f2, spread(s.dir, R(.5, .9), R(0, 6.28)).add(V(0, -.3, 0)), len * .3, .012, reach(s, f2), .12);
+          leaves(tw, 5, { from: .1, tip: 1 });
+        }
+        leaves(s, 4, { from: .5 });
+      });
+    }
+    for (let i = 0; i < 16; i++) { // dark marks on the white bark
+      const t = trunk[Math.floor(R(0, 3.3))], f = R(.05, .95), around = spread(UP, Math.PI / 2, R(0, 6.28));
+      attach("mark", t, f, UP, around, R(.05, .09), t.a, t.b, { off: around.clone().multiplyScalar(t.r * (1 - .28 * f) * .9) });
     }
   } else if (k === "ginkgo") {
-    const trunk = grow(limb(V(0, 0, 0), up, 2.2, .13, .06, spec.trunk), 0, .45);
-    for (let i = 0; i < 7; i++) {
-      const ang = around(7, i), y = .7 + i * .2;
-      const br = grow(limb(V(0, y, 0), V(Math.cos(ang), R(1, 1.6), Math.sin(ang)), R(.45, .75) * (1 - i / 12), .05, .025, spec.trunk), .15 + i * .04, .5 + i * .04, trunk);
-      crown(br, spec.leaf, 2, R(.3, .42) * (1.1 - i / 12), .25 + i * .04, { sy: 1.25 });
+    // Ginkgo: tall trunk with sparse branches rising at ~45°; fan leaves in little clusters on short spur shoots.
+    const trunk = limb(null, 0, UP, 2.3, .12, 0, .4, { segs: 4, wiggle: .05 });
+    trunk.forEach(t => leaves(t, 3, { from: .3, shed: .45 }));
+    for (let i = 0; i < 11; i++) {
+      const h = .3 + .65 * i / 10, sg = trunk[Math.min(3, Math.floor(h * 4))], f = h * 4 - Math.floor(h * 4);
+      const l = limb(sg, f, spread(UP, R(.6, .85), i * 2.4), (1.05 - h * .6) * R(.85, 1.1), .045, reach(sg, f), .25, { segs: 2, bend: V(0, .05, 0) });
+      l.forEach(s => { for (let c = 0; c < 3; c++) { const f2 = R(.25, 1); const spur = seg(s, f2, spread(s.dir, 1, R(0, 6.28)), .05, .012, reach(s, f2), .08); leaves(spur, 0, { tip: 5 }); } });
     }
-    const top = grow(limb(V(0, 2.15, 0), up, .25, .05, .03, spec.trunk), .3, .55, trunk);
-    crown(top, spec.leaf, 1, .38, .45, { sy: 1.4 });
+    const crownTop = trunk[3];
+    leaves(crownTop, 4, { from: .5, tip: 4 });
+  } else if (k === "pine") {
+    // Korean red pine: a leaning, curving trunk (reddish above), bare below; branches in the upper half reach out and
+    // turn up at the ends, carrying tufts of long needles.
+    const lean = R(-.3, .3);
+    const trunk = limb(null, 0, V(lean * .3, 1, R(-.1, .1)), 2.5, .14, 0, .4, { segs: 4, wiggle: .15, bend: V(-lean * .15, 0, 0) });
+    trunk.forEach(t => leaves(t, 2, { from: .3, shed: .45 }));
+    for (let i = 0; i < 8; i++) {
+      const h = .45 + .5 * i / 7, sg = trunk[Math.min(3, Math.floor(h * 4))], f = h * 4 - Math.floor(h * 4);
+      const l = limb(sg, f, spread(UP, R(1.05, 1.35), i * 2.4), (1.2 - h * .7) * R(.85, 1.1), .06, reach(sg, f), .25, { segs: 3, bend: V(0, .12, 0), wiggle: .15 });
+      l.forEach((s, j) => {
+        if (j) for (let q = 0; q < 2; q++) { const f2 = R(.4, 1), tw = seg(s, f2, spread(s.dir, R(.6, 1), R(0, 6.28)).add(V(0, .4, 0)), .22, .018, reach(s, f2), .12); leaves(tw, 2, { from: .5, elev: 1.2, tip: 2 }); }
+        leaves(s, 1, { from: 1, elev: 1.2 });
+      });
+      leaves(l[2], 0, { tip: 3 });
+    }
+    leaves(trunk[3], 3, { from: .6, elev: 1.3, tip: 3 });
+  } else if (k === "cone") {
+    // Fir: a straight trunk with whorls of branches, longest at the bottom; flat sprays of needles on side twigs.
+    const trunk = limb(null, 0, UP, 2.8, .13, 0, .45, { segs: 3, wiggle: .02 });
+    for (let w = 0; w < 11; w++) {
+      const h = .08 + .87 * w / 10, sg = trunk[Math.min(2, Math.floor(h * 3))], f = h * 3 - Math.floor(h * 3);
+      const L = .15 + 1.05 * (1 - h), nb = w > 7 ? 4 : 5;
+      for (let i = 0; i < nb; i++) {
+        const l = limb(sg, f, spread(UP, R(1.4, 1.6), i / nb * 6.283 + w), L, .022, reach(sg, f), .2, { segs: 2, bend: V(0, .06, 0), wiggle: .06 });
+        l.forEach(s => {
+          const side = V(0, 0, 0).crossVectors(UP, s.dir).normalize();
+          for (let q = 0; q < 3; q++) {
+            const f2 = (q + 1) / 3.5, sd = q % 2 ? 1 : -1;
+            const tw = seg(s, f2, s.dir.clone().multiplyScalar(.75).add(side.clone().multiplyScalar(sd * .65)), L * .32, .008, reach(s, f2), .1);
+            leaves(tw, 3, { from: 0, elev: 1.57, face: UP });
+          }
+          leaves(s, 3, { from: 0, elev: 1.57, face: UP });
+        });
+      }
+    }
+    leaves(trunk[2], 3, { from: .7, elev: 1.57, face: V(1, 0, 0) });
   } else if (k === "baobab") {
-    const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
-    // A young baobab is slender; the huge bottle trunk only swells as it gets old.
-    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, lod ? 24 : 12), mat(spec.trunk)), -1, 0, null, { raw: true, girth: g => .3 + .7 * g * g });
-    for (let i = 0; i < 6; i++) {
-      const ang = around(6, i);
-      const br = grow(limb(V(Math.cos(ang) * .15, 1.95, Math.sin(ang) * .15), V(Math.cos(ang), R(.6, 1.1), Math.sin(ang)), R(.5, .8), .1, .05, spec.trunk), i * .04, .35 + i * .04, trunk);
-      crown(br, spec.leaf, 2, R(.26, .34), .08 + i * .04, { sx: 1.2, sy: .7, sz: 1.2 });
+    // Baobab: a young baobab is a slim tree; the massive bottle trunk swells late. Short, thick, root-like branches
+    // on top with small clusters of leaves.
+    const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [.1, 2.1], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
+    const lathe = new T.Mesh(new T.LatheGeometry(pts, lod ? 28 : 14), new T.MeshStandardMaterial({ color: spec.trunk, roughness: .95 }));
+    root.add(lathe);
+    statics.push(g => lathe.scale.set(.25 + .75 * g * g, 1, .25 + .75 * g * g));
+    for (let i = 0; i < 7; i++) {
+      const ph = i / 7 * 6.283 + R(-.3, .3);
+      const l = limb(null, 0, spread(UP, R(.65, 1.05), ph), R(.6, .85), .16, R(0, .06), .35, { segs: 2, bend: V(0, .1, 0), wiggle: .2, origin: V(Math.cos(ph) * .1, 1.95, Math.sin(ph) * .1) });
+      l.forEach(s => {
+        for (let q = 0; q < 3; q++) { const f = R(.4, 1), tw = seg(s, f, spread(s.dir, R(.5, 1), R(0, 6.28)).add(V(0, .3, 0)), .28, .04, reach(s, f), .15); leaves(tw, 4, { from: .4, tip: 5 }); }
+      });
     }
   } else if (k === "palm") {
-    let parent = null, p = V(0, 0, 0), dir = V(0, 1, 0);
-    const bend = R(.04, .09);
+    // Palm: establishment phase first (fronds standing up at the ground while the stem gets its full width), then the
+    // trunk rises. Feather-like fronds: a curved stalk with many leaflets on both sides.
+    let p = null, dir = V(0, 1, 0);
+    const bend = R(.04, .09), trunk = [];
     for (let i = 0; i < 8; i++) {
-      // Establishment phase: the crown of fronds sits at the ground first, then the trunk rises (full girth from the start).
-      parent = grow(limb(p, dir, .33, .13 - i * .007, .12 - i * .007, i % 2 ? spec.trunk : 0x8a7358), .12 + i * .08, .3 + i * .08, parent, { raw: true, yOnly: true });
-      p = parent.userData.tip;
+      p = seg(p, 1, dir, .33, .13 - i * .007, .12 + i * .08, .18, { yOnly: true, color: i % 2 ? spec.trunk : 0x8a7358 });
+      trunk.push(p);
       dir = V(dir.x + bend, 1, 0);
     }
-    // The fronds hang on a crown that follows the top of the trunk as it rises.
-    const crownG = new T.Group();
-    crownG.position.copy(p);
-    root.add(crownG);
-    const topSeg = parent;
-    topSeg.userData.tipWorld = p.clone(); // turned into the segment's own coordinates after re-parenting
-    const fronds = [];
-    follow.push(g => {
-      crownG.position.copy(topSeg.localToWorld(topSeg.userData.tipLocal.clone())); root.worldToLocal(crownG.position);
-      const up2 = 1 - smooth((g - .15) / .55); // a young palm's fronds stand up like a fan; they arch out with age
-      fronds.forEach(f => (f.rotation.x = f.userData.rx * (1 - up2) - .75 * up2));
-    });
-    for (let i = 0; i < 9; i++) {
-      const frond = new T.Mesh(new T.BoxGeometry(.24, .03, 1.35), mat(spec.leaf));
-      frond.geometry.translate(0, 0, .67);
-      frond.position.copy(p);
-      frond.rotation.set(R(.35, .7), around(9, i, .2), 0, "YXZ");
-      frond.userData.rx = frond.rotation.x;
-      fronds.push(frond);
-      grow(frond, i * .02, .3 + i * .04, crownG, { raw: true });
-    }
-    if (spec.fruit) for (let i = 0; i < 4; i++) {
-      const c = new T.Mesh(new T.SphereGeometry(.11, 12, 10), shiny(spec.fruit));
-      c.position.copy(p.clone().add(V(R(-.16, .16), -.12, R(-.16, .16))));
-      grow(c, .8, .9, crownG, { raw: true });
-      features.push(c);
-    }
-  } else if (k === "willow") {
-    const trunk = grow(limb(V(0, 0, 0), up, 1.5, .16, .1, spec.trunk), 0, .45);
-    const top = grow(limb(V(0, 1.45, 0), up, .5, .09, .05, spec.trunk), .15, .45, trunk);
-    for (let i = 0; i < 4; i++) {
-      const ang = around(4, i);
-      const br = grow(limb(V(0, 1.3, 0), V(Math.cos(ang), 1.1, Math.sin(ang)), .7, .07, .04, spec.trunk), .15 + i * .04, .45 + i * .04, trunk);
-      crown(br, spec.leaf, 1, .45, .3 + i * .04, { sx: 1.2, sy: .6, sz: 1.2 });
-      // Drooping strands hang from each branch tip.
-      for (let j = 0; j < 8; j++) {
-        const len = R(1, 1.5), a2 = ang + R(-.8, .8), r = R(.1, .45);
-        const s = new T.Mesh(new T.CylinderGeometry(.035, .02, len, 4), mat(spec.leaf));
-        s.geometry.translate(0, -len / 2, 0);
-        s.position.copy(br.userData.tip.clone().add(V(Math.cos(a2) * r, -.05, Math.sin(a2) * r)));
-        grow(s, .45 + R(0, .3), .8 + R(0, .15), br);
-      }
-    }
-    crown(top, spec.leaf, 2, .6, .3, { sx: 1.3, sy: .6, sz: 1.3 });
-  } else if (k === "vine") {
-    const post = 0x8a6a4a;
-    // A vine is planted at a trellis: the stem climbs to the wire, then the arms (cordons) run along it with leaves
-    // opening from the base outwards; grapes come last.
-    [-1.1, 1.1].forEach(x => grow(limb(V(x, 0, 0), up, 1.25, .045, .04, post), -1, 0, null, { raw: true }));
-    grow(limb(V(-1.15, 1.2, 0), V(1, 0, 0), 2.3, .025, .025, post), -1, 0, null, { raw: true });
-    const s1 = grow(limb(V(0, 0, 0), V(.12, 1, .05), .65, .11, .08, spec.trunk), .02, .25, null, { raw: true });
-    const s2 = grow(limb(s1.userData.tip, V(-.1, 1, 0), .56, .08, .06, spec.trunk), .18, .4, s1, { raw: true });
-    [[s1, .5, .05], [s1, .85, .1], [s2, .6, .22]].forEach(([st, f, a], j) => grow(blob(st.userData.at(f).add(V(j % 2 ? -.1 : .1, 0, .04)), .13, spec.leaf, 1.3, .6, 1.1), a, a + .2, st, { raw: true }));
-    [-1, 1].forEach((side, j) => {
-      const arm = grow(limb(s2.userData.tip, V(side, .03, 0), 1.05, .05, .03, spec.trunk), .36 + j * .03, .7 + j * .03, s2, { raw: true });
-      for (let i = 0; i < 5; i++) {
-        const b = blob(arm.userData.at(.2 + i * .19).add(V(0, .08, R(-.12, .12))), R(.18, .25), spec.leaf, 1.3, .6, 1.1);
-        grow(b, .4 + i * .07, .6 + i * .07, arm, { raw: true });
-      }
-      for (let b = 0; b < 3; b++) {
-        const bunch = new T.Group();
-        bunch.position.copy(arm.userData.at(.25 + b * .3).add(V(0, -.06, R(-.05, .12))));
-        for (let r = 0; r < 4; r++) for (let q = 0; q < 4 - r; q++) {
-          const ball = new T.Mesh(new T.SphereGeometry(.06, 10, 8), shiny(spec.fruit));
-          ball.position.set((q - (3 - r) / 2) * .09 + R(-.02, .02), -r * .085, R(-.04, .04));
-          bunch.add(ball);
+    const top = p;
+    for (let i = 0; i < 11; i++) {
+      const ph = i / 11 * 6.283 + R(-.2, .2), th = R(.9, 1.35), a = i * .02;
+      let par = top, at = 1;
+      for (let j = 0; j < 4; j++) {
+        const d = spread(UP, th + j * .32, ph), young = spread(UP, .2 + j * .08, ph);
+        const s = seg(par, at, d, .36, .03 - j * .005, a + j * .04, .2, { young, color: 0x6f8a3a });
+        const side = V(0, 0, 0).crossVectors(d, UP).normalize();
+        for (let q = 0; q < Math.round(7 * dense); q++) {
+          const f = (q + .5) / Math.round(7 * dense);
+          [-1, 1].forEach(sd => {
+            const dw = side.clone().multiplyScalar(sd * .85).add(d.clone().multiplyScalar(.45)).add(V(0, -.3, 0));
+            attach("leaf", s, f, dw, UP, spec.leafSize * (j === 3 ? .7 : 1) / Math.sqrt(dense) * R(.85, 1.1), reach(s, f), reach(s, f) + .1, { tint: R(.88, 1.1) });
+          });
         }
-        const s = R(.8, .86);
-        grow(bunch, s, s + .08, arm);
-        features.push(bunch);
+        par = s; at = 1;
       }
+    }
+    for (let i = 0; i < 5; i++) flowersAndFruit(top, 1, 1);
+  } else if (k === "vine") {
+    // Grape vine on a trellis: the stem climbs to the wire, two arms run along it, green shoots rise from the arms with
+    // lobed leaves; tiny flower clusters come first, then bunches of grapes that turn from green to purple.
+    const postM = new T.MeshStandardMaterial({ color: 0x8a6a4a, roughness: .95 });
+    [-1.1, 1.1].forEach(x => { const m = new T.Mesh(new T.CylinderGeometry(.04, .045, 1.25, 8), postM); m.position.set(x, .625, 0); root.add(m); });
+    const wire = new T.Mesh(new T.CylinderGeometry(.012, .012, 2.3, 6), postM);
+    wire.rotation.z = Math.PI / 2; wire.position.set(0, 1.2, 0); root.add(wire);
+    const stem = limb(null, 0, V(.12, 1, .05), 1.18, .1, .02, .35, { segs: 2, wiggle: .1 });
+    leaves(stem[0], 3, { from: .4, shed: .55 });
+    leaves(stem[1], 3, { from: .2, shed: .55 });
+    [-1, 1].forEach(sd => {
+      const arm = limb(stem[1], 1, V(sd, .02, 0), 1.05, .05, reach(stem[1], 1), .3, { segs: 4, wiggle: .05 });
+      arm.forEach(s => {
+        const shoot = limb(s, R(.3, .9), V(R(-.25, .25), 1, R(-.35, .35)), R(.3, .45), .018, reach(s, .6), .18, { segs: 2, color: 0x7d6b3c, wiggle: .2 });
+        shoot.forEach(sh => leaves(sh, 2, { from: .3, tip: 1, elev: .3, face: V(0, .4, 1) }));
+        flowersAndFruit(s, 1, 1);
+      });
     });
-  } else if (k === "birch") {
-    const trunk = grow(limb(V(0, 0, 0), up, 2.3, .1, .06, spec.trunk), 0, .45);
-    for (let i = 0; i < 9; i++) {
-      const mark = new T.Mesh(new T.BoxGeometry(.07, .025, .02), mat(0x2b2b2b));
-      const ang = R(0, 6.28);
-      mark.position.set(Math.cos(ang) * .085, R(.2, 2.1), Math.sin(ang) * .085);
-      mark.rotation.y = -ang;
-      trunk.add(mark);
-    }
-    for (let i = 0; i < 6; i++) {
-      const ang = around(6, i);
-      const br = grow(limb(V(0, 1.2 + i * .18, 0), V(Math.cos(ang), 1.4, Math.sin(ang)), .45, .035, .02, spec.trunk), .15 + i * .04, .5 + i * .04, trunk);
-      crown(br, spec.leaf, 2, R(.26, .36), .25 + i * .05, { sy: 1.35 });
-    }
-    const top = grow(limb(V(0, 2.25, 0), up, .25, .04, .025, spec.trunk), .3, .55, trunk);
-    crown(top, spec.leaf, 1, .32, .45, { sy: 1.4 });
   }
 
-  // Re-parent every part under its parent while keeping its place, then remember its full-size scale.
-  root.updateMatrixWorld(true);
-  links.forEach(([parent, child]) => parent.attach(child));
-  parts.forEach(p => (p.base = p.obj.scale.clone()));
-  root.updateMatrixWorld(true);
-  root.traverse(o => { if (o.userData.tipWorld) o.userData.tipLocal = o.worldToLocal(root.localToWorld(o.userData.tipWorld.clone())); });
-  outer.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+  // Seedling: two seed leaves on a little green stem; shown only at the very start.
+  const sprout = new T.Group();
+  const stemM = new T.Mesh(new T.CylinderGeometry(.018, .025, .26, 6), new T.MeshStandardMaterial({ color: 0x6aa84f, roughness: .8 }));
+  stemM.position.y = .13;
+  sprout.add(stemM);
+  [-1, 1].forEach(sd => {
+    const l = new T.Mesh(leafGeometry(T, "oval"), new T.MeshStandardMaterial({ color: 0x7cc35a, roughness: .7, side: T.DoubleSide, vertexColors: true }));
+    l.scale.setScalar(.13); l.position.y = .25; l.rotation.set(-1.25, 0, sd * 1.35);
+    sprout.add(l);
+  });
+  outer.add(sprout);
+
+  // Instanced meshes.
+  const col = new T.Color();
+  const mk = (geo, mat, count, shadow = true) => {
+    const m = new T.InstancedMesh(geo, mat, Math.max(1, count));
+    m.count = count; m.frustumCulled = false; m.castShadow = shadow; m.receiveShadow = true;
+    m.setColorAt(0, col.set(0xffffff)); // every instanced mesh carries colours, so the shared materials always match
+    root.add(m);
+    return m;
+  };
+  const woodGeo = TREE_GEO["wood" + lod] || (TREE_GEO["wood" + lod] = new T.CylinderGeometry(.72, 1, 1, lod ? 8 : 5, 1, true).translate(0, .5, 0));
+  const wood = mk(woodGeo, mats.wood, nodes.length);
+  nodes.forEach((n, i) => wood.setColorAt(i, col.setHex(n.color).multiplyScalar(R(.9, 1.08))));
+  const leafMesh = mk(leafGeometry(T, spec.shape), mats.leaf, sets.leaf.length);
+  leafMesh.receiveShadow = false;
+  const bloomMesh = mk(flowerGeometry(T), mats.bloom, sets.bloom.length, false);
+  sets.bloom.forEach((it, i) => bloomMesh.setColorAt(i, col.setHex(it.color)));
+  const fruitMesh = mk(fruitGeometry(T, k === "vine"), mats.fruit, sets.fruit.length);
+  const markMesh = mk(new T.BoxGeometry(1, .3, .3), mats.mark, sets.mark.length, false);
+  const leafBase = new T.Color(spec.green ?? spec.leaf), leafAutumn = new T.Color(spec.leaf);
+  const unripe = new T.Color(0x6f9e3a), ripe = new T.Color(spec.fruit ?? 0xffffff);
+
+  // Fruit and blossoms the gardener can reach for (a few placeholders that follow them).
+  const features = [];
+  const pickFrom = sets.fruit.length ? sets.fruit : sets.bloom;
+  pickFrom.forEach((it, i) => { if (i % 2 === 0 && features.length < 14) { const o = new T.Object3D(); it.feat = o; root.add(o); features.push(o); } });
+  if (sets.fruit.length) sets.bloom.forEach((it, i) => { if (i % 3 === 0 && features.length < 24) { const o = new T.Object3D(); it.feat = o; root.add(o); features.push(o); } });
+
+  const M = new T.Matrix4(), S = V(1, 1, 1), P = V(0, 0, 0), Qt = new T.Quaternion(), ZERO = new T.Matrix4().makeScale(0, 0, 0);
+  const prog = (g, a, b) => easeOut((g - a) / Math.max(.01, b - a));
+  let firstColor = true;
+  function place(list, mesh, scaleOf, colorOf, thick) {
+    let any = false;
+    list.forEach((it, i) => {
+      const n = it.n, s = n.s > .002 ? scaleOf(it) : 0;
+      if (it.feat) it.feat.visible = s > .5;
+      if (s < .003) { mesh.setMatrixAt(i, ZERO); return; }
+      any = true;
+      P.copy(it.off).applyQuaternion(n.cur).multiplyScalar(n.yOnly ? 1 : Math.max(n.s, .05) * thick).add(n.pos).addScaledVector(n.curDir, it.f * n.len * n.s);
+      if (it.hang) P.y -= it.hang * s;
+      Qt.copy(n.cur).multiply(it.q);
+      S.setScalar(it.size * s);
+      if (it.sy) S.y *= it.sy;
+      M.compose(P, Qt, S);
+      mesh.setMatrixAt(i, M);
+      if (it.feat) it.feat.position.copy(P);
+      if (colorOf) mesh.setColorAt(i, colorOf(it));
+    });
+    mesh.visible = any; // nothing to draw (e.g. blossoms before they open or after they fall)
+    mesh.instanceMatrix.needsUpdate = true;
+    if (colorOf && mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+  }
 
   return {
     group: outer,
     features,
     update(g) {
-      // Seedling (two seed leaves) first; it hands over to the young tree once that has its own leaves.
       const sp = 1 - smooth((g - .1) / .12);
       sprout.visible = sp > .01;
       sprout.scale.setScalar(Math.max(.001, sp * .75));
-      // The whole tree gets taller all day; young trees are slimmer (height first, then spread and girth).
+      // The whole tree gets taller through the day; the trunk thickens with age; a young tree's leaves are already
+      // nearly full size.
       const h = k === "vine" ? 1 : .14 + .86 * (1 - Math.pow(1 - Math.min(1, g), 1.5));
-      const w = k === "vine" || k === "palm" ? h : h * (.68 + .32 * g);
-      root.scale.set(w, h, w);
-      parts.forEach(p => {
-        const t = easeOut((g - p.a) / Math.max(.01, p.b - p.a));
-        const s = Math.max(t, .0001);
-        p.obj.visible = t > .002;
-        const gx = p.girth ? p.girth(g) : 1;
-        if (p.yOnly) { p.obj.visible = true; p.obj.scale.set(p.base.x, p.base.y * Math.max(.02, s), p.base.z); }
-        else p.obj.scale.set(p.base.x * s * gx, p.base.y * s, p.base.z * s * gx);
+      root.scale.setScalar(h);
+      const thick = .55 + .45 * g, big = Math.pow(1 / h, .45), mature = smooth((g - .1) / .6);
+      statics.forEach(f => f(g));
+      const gs = Math.min(1, g / .62); // the branching structure (and its leaves) forms by ~60%; then blossom and fruit
+      nodes.forEach((n, i) => {
+        n.s = prog(gs, n.a, n.b);
+        if (n.q0) n.cur.copy(n.q0).slerp(n.q, mature); else n.cur.copy(n.q);
+        n.curDir.set(0, 1, 0).applyQuaternion(n.cur);
+        if (n.parent) n.pos.copy(n.parent.pos).addScaledVector(n.parent.curDir, n.at * n.parent.len * n.parent.s);
+        else n.pos.copy(n.origin);
+        if (n.s < .002) { wood.setMatrixAt(i, ZERO); return; }
+        const rr = n.yOnly ? n.r : n.r * Math.max(n.s, .05) * thick;
+        M.compose(n.pos, n.cur, S.set(rr, n.len * n.s, rr));
+        wood.setMatrixAt(i, M);
       });
-      if (follow.length) { outer.updateMatrixWorld(true); follow.forEach(f => f(g)); }
+      wood.instanceMatrix.needsUpdate = true;
+      if (wood.instanceColor) wood.instanceColor.needsUpdate = true;
+      // Leaves (autumn colour with age for maple and ginkgo).
+      const autumn = spec.green ? smooth((g - .7) / .28) : 0;
+      const recolor = firstColor || spec.green;
+      place(sets.leaf, leafMesh, it => prog(gs, it.a, it.b) * (it.shed ? 1 - smooth((gs - it.shed) / .12) : 1) * big,
+        recolor ? it => col.copy(leafBase).lerp(leafAutumn, autumn).multiplyScalar(it.tint) : null, thick);
+      place(sets.bloom, bloomMesh, it => prog(g, it.a, it.b) * (it.fall ? 1 - smooth((g - it.fall) / .05) : 1), null, thick);
+      const ripeK = smooth((g - .88) / .12);
+      place(sets.fruit, fruitMesh, it => smooth((g - it.a) / .04) * (.3 + .7 * smooth((g - it.a) / (1.02 - it.a))),
+        it => col.copy(unripe).lerp(ripe, ripeK), thick);
+      place(sets.mark, markMesh, it => it.n.s, null, thick);
+      firstColor = false;
     }
   };
 }
@@ -938,8 +1156,10 @@ function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
   stage.scene.add(kid.fig);
 
   // What happens after watering, if the tree has fruit or flowers by then.
-  const blooming = toGrowth >= .86 && (spec.fruit || spec.flower);
-  const extra = blooming ? (spec.flower ? "smell" : "touch") : null;
+  // Flowering trees: smell the blossoms. Fruit trees: smell the blossoms while in flower, touch the fruit once it is ripe.
+  const inFlower = spec.flower ? toGrowth >= .8 : spec.bloom && toGrowth >= .62 && toGrowth <= .8;
+  const ripe = spec.fruit && toGrowth >= .9;
+  const extra = inFlower ? "smell" : ripe ? "touch" : null;
 
   // Sometimes the border collie comes too.
   const withDog = pick("dog", Math.random() < .6);
@@ -1167,7 +1387,7 @@ async function gardenAll() {
     if (!stage.isConnected) return;
     const n = Math.max(1, list.length), cols = Math.ceil(Math.sqrt(n * 1.6)), rows = Math.ceil(n / cols), gap = 2.9;
     positions = list.map((d, i) => new T.Vector3((i % cols - (cols - 1) / 2) * gap, 0, (Math.floor(i / cols) - (rows - 1) / 2) * gap));
-    const lod = list.length > 12 ? 0 : 1; // lighter trees when the garden gets big
+    const lod = list.length > 6 ? 0 : 1; // lighter trees when the garden gets big
     const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], lod));
     const radius = Math.max(3.6, Math.max(cols, rows) * gap * .7);
     stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
