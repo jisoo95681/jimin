@@ -7,24 +7,24 @@
 const GROW_FULL_SEC = 8 * 3600;
 const GARDEN_EPOCH = new Date(2026, 8, 26); // the first garden day, whose tree is a Baobab
 // leaf: colour of the mature leaves (young leaves start out green when "green" is given: autumn colours come with age).
-// shape: leaf outline. bloom: blossom colours on fruit trees (flowers first, then fruit). flower: a flowering tree.
+// bark: bark pattern. shape: leaf outline. bloom: blossom colours on fruit trees (flowers first, then fruit). flower: a flowering tree.
 const SPECIES = [
-  { name: "Baobab", kind: "baobab", trunk: 0x9c7c64, leaf: 0x6f9a45, shape: "oval", leafSize: .18 },
-  { name: "Lemon Tree", kind: "round", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2f6e30, shape: "oval", leafSize: .19, fruit: 0xffdc1f, oval: true, bloom: [0xffffff, 0xfff6e0] },
-  { name: "Apple Tree", kind: "round", form: "apple", trunk: 0x7a5230, leaf: 0x4f8f3a, shape: "oval", leafSize: .21, fruit: 0xd8232a, bloom: [0xffffff, 0xffd0dc] },
-  { name: "Korean Red Pine", kind: "pine", trunk: 0xa4553a, leaf: 0x2f5e3a, shape: "pompom", leafSize: .32 },
-  { name: "Ginkgo", kind: "ginkgo", trunk: 0x6e5840, leaf: 0xf0c419, green: 0x76a83a, shape: "fan", leafSize: .19 },
-  { name: "Grape Vine", kind: "vine", trunk: 0x6b4a33, leaf: 0x4f8f35, shape: "grape", leafSize: .26, fruit: 0x5b2a86, bloom: [0xd4e28e] },
-  { name: "Cherry Blossom", kind: "round", form: "cherry", trunk: 0x5a3a30, leaf: 0x5b9440, shape: "oval", leafSize: .18, flower: [0xffd9e4, 0xffb0c8, 0xffffff] },
-  { name: "Orange Tree", kind: "round", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2d6a30, shape: "oval", leafSize: .2, fruit: 0xff8616, bloom: [0xffffff, 0xfff6e0] },
-  { name: "Weeping Willow", kind: "willow", trunk: 0x6d5a3e, leaf: 0x9cc45c, shape: "lance", leafSize: .14 },
-  { name: "Maple", kind: "round", form: "maple", trunk: 0x6a4630, leaf: 0xd4532b, green: 0x5e9a3a, shape: "maple", leafSize: .24 },
-  { name: "Fir", kind: "cone", trunk: 0x5d4632, leaf: 0x2e5a40, shape: "brush", leafSize: .3 },
-  { name: "Palm", kind: "palm", trunk: 0x9d8466, leaf: 0x4e9a3f, shape: "leaflet", leafSize: .34, fruit: 0x6f5a2e, bloom: [0xf3e3a0] },
-  { name: "Oak", kind: "round", form: "oak", trunk: 0x6b4d33, leaf: 0x4d7a34, shape: "oak", leafSize: .22 },
-  { name: "Olive Tree", kind: "round", form: "olive", trunk: 0x7d6a55, leaf: 0x8aa27a, shape: "lance", leafSize: .17, fruit: 0x3d2440, small: true, bloom: [0xf6f2d6] },
-  { name: "Jacaranda", kind: "round", form: "jacaranda", trunk: 0x5e4a3a, leaf: 0x5e9a45, shape: "leaflet", leafSize: .15, flower: [0xb79cf0, 0x8a62dc, 0x9d7ae6] },
-  { name: "Birch", kind: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 }
+  { name: "Baobab", kind: "baobab", bark: "smooth", trunk: 0xa88a74, leaf: 0x6f9a45, shape: "digit", leafSize: .17 },
+  { name: "Lemon Tree", kind: "round", bark: "smooth", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2f6e30, shape: "oval", leafSize: .19, fruit: 0xffdc1f, oval: true, bloom: [0xffffff, 0xfff6e0] },
+  { name: "Apple Tree", kind: "round", bark: "scaly", form: "apple", trunk: 0x7a5230, leaf: 0x4f8f3a, shape: "oval", leafSize: .21, fruit: 0xd8232a, bloom: [0xffffff, 0xffd0dc] },
+  { name: "Korean Red Pine", kind: "pine", bark: "plates", trunk: 0xa4553a, leaf: 0x2f5e3a, shape: "pompom", leafSize: .32 },
+  { name: "Ginkgo", kind: "ginkgo", bark: "fissured", trunk: 0x6e5840, leaf: 0xf0c419, green: 0x76a83a, shape: "fan", leafSize: .19 },
+  { name: "Grape Vine", kind: "vine", bark: "fissured", trunk: 0x6b4a33, leaf: 0x4f8f35, shape: "grape", leafSize: .26, fruit: 0x5b2a86, bloom: [0xd4e28e] },
+  { name: "Cherry Blossom", kind: "round", bark: "lenticel", form: "cherry", trunk: 0x5a3a30, leaf: 0x5b9440, shape: "oval", leafSize: .18, flower: [0xffd9e4, 0xffb0c8, 0xffffff] },
+  { name: "Orange Tree", kind: "round", bark: "smooth", form: "citrus", trunk: 0x7b5a3a, leaf: 0x2d6a30, shape: "oval", leafSize: .2, fruit: 0xff8616, bloom: [0xffffff, 0xfff6e0] },
+  { name: "Weeping Willow", kind: "willow", bark: "fissured", trunk: 0x6d5a3e, leaf: 0x9cc45c, shape: "lance", leafSize: .14 },
+  { name: "Maple", kind: "round", bark: "scaly", form: "maple", trunk: 0x6a4630, leaf: 0xd4532b, green: 0x5e9a3a, shape: "maple", leafSize: .24 },
+  { name: "Fir", kind: "cone", bark: "smooth", trunk: 0x6a5a4c, leaf: 0x2f5f42, shape: "brush", leafSize: .4 },
+  { name: "Palm", kind: "palm", bark: "rings", trunk: 0x9d8466, leaf: 0x4e9a3f, shape: "leaflet", leafSize: .34, fruit: 0x6f5a2e, bloom: [0xf3e3a0] },
+  { name: "Oak", kind: "round", bark: "fissured", form: "oak", trunk: 0x6b4d33, leaf: 0x4d7a34, shape: "oak", leafSize: .22 },
+  { name: "Olive Tree", kind: "round", bark: "fissured", form: "olive", trunk: 0x7d6a55, leaf: 0x8aa27a, shape: "lance", leafSize: .17, fruit: 0x3d2440, small: true, bloom: [0xf6f2d6] },
+  { name: "Jacaranda", kind: "round", bark: "scaly", form: "jacaranda", trunk: 0x5e4a3a, leaf: 0x5e9a45, shape: "leaflet", leafSize: .15, flower: [0xb79cf0, 0x8a62dc, 0x9d7ae6] },
+  { name: "Birch", kind: "birch", bark: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 }
 ];
 
 // ---------- Data ----------
@@ -166,6 +166,7 @@ function leafOutline(kind) {
   if (kind === "oval") side(t => .3 * S(t, .8, .85));
   else if (kind === "lance") side(t => .11 * S(t, .7, .8));
   else if (kind === "leaflet") side(t => .08 * S(t, .6, .7));
+  else if (kind === "digit1") side(t => .21 * S(t, .7, .75));
   else if (kind === "tri") side(t => .4 * S(t, .5, 1.1) * (1 + .05 * Math.sin(t * 40)));
   else if (kind === "oak") side(t => .27 * S(t, .9, .7) * (.78 + .26 * Math.sin(t * Math.PI * 8 + 1)));
   else if (kind === "maple" || kind === "grape") {
@@ -213,6 +214,21 @@ function leafGeometry(T, kind) {
     g.setAttribute("position", new T.Float32BufferAttribute(tris, 3));
     g.computeVertexNormals();
     geoColor(T, g, (x, y, z) => { const k = .7 + .45 * Math.min(1, Math.hypot(x, z) * 3 + (kind === "pompom" ? y * .5 : 0)); return [k, k, k]; });
+  } else if (kind === "digit") {
+    // Palmately compound leaf (baobab): five leaflets spreading from the tip of the stalk.
+    const parts = [];
+    for (let k = 0; k < 5; k++) {
+      const sh = new T.Shape();
+      leafOutline("digit1").forEach(([x, y], i) => (i ? sh.lineTo(x, y) : sh.moveTo(x, y)));
+      const one = new T.ShapeGeometry(sh);
+      const p = one.attributes.position;
+      for (let i = 0; i < p.count; i++) { const x = p.getX(i), y = p.getY(i); p.setZ(i, x * x * 1.2 - y * y * .15); }
+      one.scale(.75, .75, .75);
+      one.rotateZ((k - 2) * .42);
+      one.computeVertexNormals();
+      parts.push(geoColor(T, one, (x, y) => { const c = .82 + .25 * Math.hypot(x, y); return [c, c, c]; }));
+    }
+    g = mergeGeo(T, parts);
   } else {
     const sh = new T.Shape();
     leafOutline(kind).forEach(([x, y], i) => (i ? sh.lineTo(x, y) : sh.moveTo(x, y)));
@@ -274,6 +290,78 @@ function fruitGeometry(T, bunch) {
     g = mergeGeo(T, parts);
   }
   return (TREE_GEO[key] = g);
+}
+// Bark: a grey-scale pattern drawn once per bark type (tinted per branch by the instance colour) and also used as a
+// bump map, so the trunk shows furrows, plates, lenticels or rings instead of a flat colour.
+const BARK_TEX = {};
+function barkTexture(T, kind) {
+  if (BARK_TEX[kind]) return BARK_TEX[kind];
+  const S = 256, cv = document.createElement("canvas");
+  cv.width = cv.height = S;
+  const c = cv.getContext("2d"), rnd = seeded("bark-" + kind), R = (a, b) => a + (b - a) * rnd();
+  const gray = (v, a = 1) => `rgba(${v | 0},${v | 0},${v | 0},${a})`;
+  // Each element is drawn nine times (shifted by a tile) so the pattern repeats seamlessly around and along a branch.
+  const each = (n, make) => {
+    for (let i = 0; i < n; i++) {
+      const draw = make();
+      for (const dx of [-S, 0, S]) for (const dy of [-S, 0, S]) { c.save(); c.translate(dx, dy); draw(); c.restore(); }
+    }
+  };
+  const rrect = (x, y, w, h, r) => { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); };
+  const base = { smooth: 225, birch: 244, lenticel: 205, rings: 205, plates: 95, fissured: 200, scaly: 140 }[kind];
+  c.fillStyle = gray(base);
+  c.fillRect(0, 0, S, S);
+  if (kind === "fissured") {
+    // Deep vertical furrows between long, interlacing ridges (oak, willow, olive, ginkgo, vine).
+    each(34, () => {
+      const x0 = R(0, S), ph = R(0, 6.28), w = R(2.5, 7), amp = R(3, 10), v = R(35, 85);
+      return () => { c.strokeStyle = gray(v, .9); c.lineWidth = w; c.beginPath(); for (let y = -8; y <= S + 8; y += 8) { const x = x0 + Math.sin(y * .045 + ph) * amp; y < 0 ? c.moveTo(x, y) : c.lineTo(x, y); } c.stroke(); };
+    });
+    each(24, () => {
+      const x0 = R(0, S), ph = R(0, 6.28), amp = R(2, 7);
+      return () => { c.strokeStyle = gray(240, .45); c.lineWidth = 2; c.beginPath(); for (let y = -8; y <= S + 8; y += 8) { const x = x0 + Math.sin(y * .05 + ph) * amp; y < 0 ? c.moveTo(x, y) : c.lineTo(x, y); } c.stroke(); };
+    });
+  } else if (kind === "plates" || kind === "scaly") {
+    // Irregular plates separated by dark cracks: big flaky plates (pine), small scales (apple, maple, jacaranda).
+    const big = kind === "plates";
+    each(big ? 80 : 170, () => {
+      const x = R(0, S), y = R(0, S), w = big ? R(18, 42) : R(8, 20), h = big ? R(28, 64) : R(10, 28), v = big ? R(155, 230) : R(185, 235), r = R(2, 6);
+      return () => { c.fillStyle = gray(v); rrect(x, y, w, h, r); c.fill(); };
+    });
+  } else if (kind === "lenticel") {
+    // Cherry: smooth, shiny bark with short horizontal lenticel stripes.
+    each(170, () => { const x = R(0, S), y = R(0, S), w = R(6, 24), h = R(1.5, 3.5), v = R(55, 105); return () => { c.fillStyle = gray(v, .85); c.fillRect(x, y, w, h); }; });
+    each(10, () => { const y = R(0, S); return () => { c.fillStyle = gray(170, .35); c.fillRect(0, y, S, R(2, 5)); }; });
+  } else if (kind === "birch") {
+    // Birch: white, papery bark with black horizontal marks and a few dark chevrons.
+    each(80, () => { const x = R(0, S), y = R(0, S), w = R(6, 36), h = R(2, 6), v = R(20, 60); return () => { c.fillStyle = gray(v, .9); rrect(x, y, w, h, 1.5); c.fill(); }; });
+    each(5, () => { const x = R(0, S), y = R(0, S), w = R(24, 40); return () => { c.fillStyle = gray(45, .85); c.beginPath(); c.moveTo(x, y); c.lineTo(x + w / 2, y + w * .45); c.lineTo(x + w, y); c.lineTo(x + w / 2, y + w * .2); c.closePath(); c.fill(); }; });
+    each(40, () => { const x = R(0, S), y = R(0, S), w = R(20, 70); return () => { c.fillStyle = gray(205, .6); c.fillRect(x, y, w, 1); }; });
+  } else if (kind === "rings") {
+    // Palm: rings left by old leaf bases, with fibres in between.
+    for (let y = 0; y < S; y += 128) { c.fillStyle = gray(135); c.fillRect(0, y, S, 6); c.fillStyle = gray(235, .6); c.fillRect(0, y + 6, S, 4); }
+    each(90, () => { const x = R(0, S), y = R(0, S), h = R(6, 22), v = R(150, 195); return () => { c.fillStyle = gray(v, .45); c.fillRect(x, y, 1.5, h); }; });
+  } else {
+    // Smooth bark (baobab, fir, citrus): faint horizontal wrinkles and a few vertical streaks.
+    each(70, () => {
+      const x0 = R(0, S), y0 = R(0, S), len = R(30, 130), ph = R(0, 6.28), v = R(120, 170), w = R(.8, 1.8);
+      return () => { c.strokeStyle = gray(v, .25); c.lineWidth = w; c.beginPath(); for (let x = 0; x <= len; x += 6) { const y = y0 + Math.sin(x * .06 + ph) * 2; x ? c.lineTo(x0 + x, y) : c.moveTo(x0 + x, y); } c.stroke(); };
+    });
+    each(25, () => { const x = R(0, S), y = R(0, S), h = R(20, 70); return () => { c.fillStyle = gray(150, .18); c.fillRect(x, y, R(2, 5), h); }; });
+  }
+  // Fine grain.
+  const im = c.getImageData(0, 0, S, S), d = im.data;
+  for (let i = 0; i < d.length; i += 4) { const n = (rnd() - .5) * 20; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+  c.putImageData(im, 0, 0);
+  const tex = new T.CanvasTexture(cv);
+  tex.wrapS = tex.wrapT = T.RepeatWrapping;
+  tex.repeat.set(1, 2);
+  return (BARK_TEX[kind] = tex);
+}
+function woodMat(T, kind) {
+  const key = "wood-" + kind;
+  if (!TREE_MAT[key]) { const tex = barkTexture(T, kind); TREE_MAT[key] = new T.MeshStandardMaterial({ map: tex, bumpMap: tex, bumpScale: kind === "smooth" ? .2 : .9, roughness: .95, metalness: 0 }); }
+  return TREE_MAT[key];
 }
 const TREE_MAT = {};
 function treeMats(T) {
@@ -391,10 +479,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
     const top = trunk[trunk.length - 1];
     trunk.forEach(t => leaves(t, 5, { from: .3, shed: .55 })); // leaves on the young stem fall once the crown has formed
     const twigs = [];
-    for (let i = 0; i < o.n; i++) {
-      const at = i === 0 ? 1 : R(.45, 1), host = i === 0 ? top : trunk[trunk.length - 1];
-      const d = spread(UP, o.th * R(.8, 1.15), i / o.n * 6.283 + R(-.35, .35));
-      const l = limb(host, at, d, o.L * R(.85, 1.1), host.r * .72 * R(.85, 1), reach(host, at) + i * .012, .3, { segs: 3, bend: V(0, -o.droop, 0), wiggle: o.wiggle || .14 });
+    const scaffold = l => {
       l.forEach((sg, j) => {
         for (let q = 0; q < (j === 0 ? 1 : 2); q++) {
           const f = R(.35, 1), d2 = spread(sg.dir, R(.5, .95), R(0, 6.28)).add(V(0, o.up, 0)).normalize();
@@ -409,6 +494,17 @@ function buildTree(T, spec, seedKey, lod = 1) {
         }
       });
       twigs.push(l[l.length - 1]);
+    };
+    // Main limbs fan out where the trunk divides...
+    for (let i = 0; i < o.n; i++) {
+      const at = i === 0 ? 1 : R(.45, 1);
+      const d = spread(UP, o.th * R(.8, 1.15), i / o.n * 6.283 + R(-.35, .35));
+      scaffold(limb(top, at, d, o.L * R(.85, 1.1), top.r * .72 * R(.85, 1), reach(top, at) + i * .012, .3, { segs: 3, bend: V(0, -o.droop, 0), wiggle: o.wiggle || .14 }));
+    }
+    // ...and a few limbs leave the trunk lower down, reaching out sideways before turning up.
+    for (let i = 0; i < (o.low || 0); i++) {
+      const host = trunk[0], at = R(.55, .95), d = spread(UP, R(1.1, 1.4), R(0, 6.28));
+      scaffold(limb(host, at, d, o.L * R(.7, .9), host.r * .55, reach(host, at), .3, { segs: 3, bend: V(0, .12, 0), wiggle: o.wiggle || .14 }));
     }
     twigs.forEach(t => leaves(t, o.lpt, { from: .15, tip: 2 }));
     if (spec.fruit || spec.flower) twigs.forEach((t, i) => {
@@ -418,13 +514,16 @@ function buildTree(T, spec, seedKey, lod = 1) {
     });
   }
   const FORMS = {
-    apple: { H: .85, r: .12, n: 5, th: .95, L: 1.05, droop: .12, up: .2, tw: 3, lpt: 7, fruitChance: .22 },
-    citrus: { H: .55, r: .1, n: 6, th: .8, L: .95, droop: .05, up: .35, tw: 3, lpt: 8, fruitChance: .2 },
-    cherry: { H: .95, r: .13, n: 5, th: 1, L: 1.15, droop: .08, up: .15, tw: 3, lpt: 5, fpt: 5 },
-    oak: { H: 1, r: .17, n: 5, th: 1.15, L: 1.25, droop: .02, up: .1, tw: 3, lpt: 8, twist: .12, wiggle: .25 },
-    maple: { H: 1, r: .13, n: 5, th: .8, L: 1.15, droop: .05, up: .3, tw: 3, lpt: 7 },
-    olive: { H: .65, r: .14, n: 4, th: .85, L: 1, droop: .1, up: .2, tw: 3, lpt: 10, twist: .25, wiggle: .2, fruitChance: .32 },
-    jacaranda: { H: 1.1, r: .13, n: 5, th: 1.05, L: 1.25, droop: 0, up: .1, tw: 3, lpt: 9, fpt: 5 }
+    // apple: short trunk, open vase of wide-angled limbs; citrus: low, dense and rounded, branching near the ground;
+    // cherry: spreading; oak: massive, nearly horizontal limbs and a broad crown; maple: dense, rounded;
+    // olive: gnarled and twisted, several limbs from low down; jacaranda: an open umbrella.
+    apple: { H: .8, r: .12, n: 4, th: 1.05, L: 1.05, droop: .12, up: .2, tw: 3, lpt: 7, fruitChance: .22, low: 1 },
+    citrus: { H: .45, r: .1, n: 5, th: .85, L: .95, droop: .05, up: .35, tw: 3, lpt: 8, fruitChance: .2, low: 2 },
+    cherry: { H: .9, r: .13, n: 5, th: 1.1, L: 1.15, droop: .1, up: .15, tw: 3, lpt: 5, fpt: 5, low: 1 },
+    oak: { H: .95, r: .18, n: 4, th: 1.25, L: 1.3, droop: 0, up: .12, tw: 3, lpt: 8, twist: .12, wiggle: .25, low: 2 },
+    maple: { H: 1, r: .13, n: 5, th: .8, L: 1.15, droop: .05, up: .3, tw: 3, lpt: 7, low: 1 },
+    olive: { H: .6, r: .15, n: 3, th: .9, L: 1, droop: .1, up: .2, tw: 3, lpt: 10, twist: .3, wiggle: .22, fruitChance: .32, low: 2 },
+    jacaranda: { H: 1.1, r: .13, n: 5, th: 1.2, L: 1.25, droop: -.06, up: .05, tw: 3, lpt: 9, fpt: 5 }
   };
 
   if (k === "round") broadleaf(FORMS[spec.form]);
@@ -451,19 +550,16 @@ function buildTree(T, spec, seedKey, lod = 1) {
     for (let i = 0; i < 14; i++) {
       const h = .35 + .6 * i / 13, sg = trunk[Math.min(3, Math.floor(h * 4))], f = h * 4 - Math.floor(h * 4);
       const len = (1.15 - h * .75) * R(.8, 1.1) * .85;
-      const l = limb(sg, f, spread(UP, R(.6, .9), i * 2.4), len, .03, reach(sg, f), .22, { segs: 2, bend: V(0, -.15, 0) });
+      const l = limb(sg, f, spread(UP, R(.6, .9), i * 2.4), len, .03, reach(sg, f), .22, { segs: 2, bend: V(0, -.15, 0), color: 0xd9d3c8 });
       l.forEach(s => {
         for (let q = 0; q < 2; q++) {
-          const f2 = R(.3, 1), tw = seg(s, f2, spread(s.dir, R(.5, .9), R(0, 6.28)).add(V(0, -.3, 0)), len * .3, .012, reach(s, f2), .12);
+          const f2 = R(.3, 1), tw = seg(s, f2, spread(s.dir, R(.5, .9), R(0, 6.28)).add(V(0, -.3, 0)), len * .3, .012, reach(s, f2), .12, { color: 0x5a4436 });
           leaves(tw, 5, { from: .1, tip: 1 });
         }
         leaves(s, 4, { from: .5 });
       });
     }
-    for (let i = 0; i < 16; i++) { // dark marks on the white bark
-      const t = trunk[Math.floor(R(0, 3.3))], f = R(.05, .95), around = spread(UP, Math.PI / 2, R(0, 6.28));
-      attach("mark", t, f, UP, around, R(.05, .09), t.a, t.b, { off: around.clone().multiplyScalar(t.r * (1 - .28 * f) * .9) });
-    }
+    trunk[0].color = 0xb9b2a6; // older, rougher bark at the base
   } else if (k === "ginkgo") {
     // Ginkgo: tall trunk with sparse branches rising at ~45°; fan leaves in little clusters on short spur shoots.
     const trunk = limb(null, 0, UP, 2.3, .12, 0, .4, { segs: 4, wiggle: .05 });
@@ -480,10 +576,11 @@ function buildTree(T, spec, seedKey, lod = 1) {
     // turn up at the ends, carrying tufts of long needles.
     const lean = R(-.3, .3);
     const trunk = limb(null, 0, V(lean * .3, 1, R(-.1, .1)), 2.5, .14, 0, .4, { segs: 4, wiggle: .15, bend: V(-lean * .15, 0, 0) });
+    trunk.forEach((t, i) => (t.color = new T.Color(0x6e5c4e).lerp(new T.Color(0xc4683c), i / 3).getHex())); // red, flaky bark higher up
     trunk.forEach(t => leaves(t, 2, { from: .3, shed: .45 }));
     for (let i = 0; i < 8; i++) {
       const h = .45 + .5 * i / 7, sg = trunk[Math.min(3, Math.floor(h * 4))], f = h * 4 - Math.floor(h * 4);
-      const l = limb(sg, f, spread(UP, R(1.05, 1.35), i * 2.4), (1.2 - h * .7) * R(.85, 1.1), .06, reach(sg, f), .25, { segs: 3, bend: V(0, .12, 0), wiggle: .15 });
+      const l = limb(sg, f, spread(UP, R(1.1, 1.4), i * 2.4), (1.25 - h * .7) * R(.85, 1.1), .06, reach(sg, f), .25, { segs: 3, bend: V(0, .12, 0), wiggle: .15, color: 0xb8653e });
       l.forEach((s, j) => {
         if (j) for (let q = 0; q < 2; q++) { const f2 = R(.4, 1), tw = seg(s, f2, spread(s.dir, R(.6, 1), R(0, 6.28)).add(V(0, .4, 0)), .22, .018, reach(s, f2), .12); leaves(tw, 2, { from: .5, elev: 1.2, tip: 2 }); }
         leaves(s, 1, { from: 1, elev: 1.2 });
@@ -495,8 +592,8 @@ function buildTree(T, spec, seedKey, lod = 1) {
     // Fir: a straight trunk with whorls of branches, longest at the bottom; flat sprays of needles on side twigs.
     const trunk = limb(null, 0, UP, 2.8, .13, 0, .45, { segs: 3, wiggle: .02 });
     for (let w = 0; w < 11; w++) {
-      const h = .08 + .87 * w / 10, sg = trunk[Math.min(2, Math.floor(h * 3))], f = h * 3 - Math.floor(h * 3);
-      const L = .15 + 1.05 * (1 - h), nb = w > 7 ? 4 : 5;
+      const h = .12 + .83 * w / 10, sg = trunk[Math.min(2, Math.floor(h * 3))], f = h * 3 - Math.floor(h * 3);
+      const L = .15 + .9 * (1 - h), nb = w > 7 ? 4 : 5;
       for (let i = 0; i < nb; i++) {
         const l = limb(sg, f, spread(UP, R(1.4, 1.6), i / nb * 6.283 + w), L, .022, reach(sg, f), .2, { segs: 2, bend: V(0, .06, 0), wiggle: .06 });
         l.forEach(s => {
@@ -506,25 +603,36 @@ function buildTree(T, spec, seedKey, lod = 1) {
             const tw = seg(s, f2, s.dir.clone().multiplyScalar(.75).add(side.clone().multiplyScalar(sd * .65)), L * .32, .008, reach(s, f2), .1);
             leaves(tw, 3, { from: 0, elev: 1.57, face: UP });
           }
-          leaves(s, 3, { from: 0, elev: 1.57, face: UP });
+          leaves(s, 4, { from: 0, elev: 1.57, face: UP });
         });
       }
     }
     leaves(trunk[2], 3, { from: .7, elev: 1.57, face: V(1, 0, 0) });
   } else if (k === "baobab") {
-    // Baobab: a young baobab is a slim tree; the massive bottle trunk swells late. Short, thick, root-like branches
-    // on top with small clusters of leaves.
-    const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [.1, 2.1], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
-    const lathe = new T.Mesh(new T.LatheGeometry(pts, lod ? 28 : 14), new T.MeshStandardMaterial({ color: spec.trunk, roughness: .95 }));
+    // Grandidier's baobab (Madagascar): a very tall, straight, cylindrical trunk with smooth reddish-grey bark, slightly
+    // flared at the base; a flat-topped crown of near-horizontal main branches that turn up at the ends, plus a few side
+    // branches lower on the trunk; dense flat pads of palmate leaves. Young baobabs are slender; the trunk swells with age.
+    const pts = [[.46, 0], [.43, .06], [.38, .2], [.355, .5], [.345, 1], [.33, 1.5], [.3, 1.85], [.25, 2.05], [.16, 2.15], [0, 2.18]].map(([x, y]) => new T.Vector2(x, y));
+    const tex = barkTexture(T, "smooth").clone();
+    tex.needsUpdate = true;
+    tex.repeat.set(2, 3);
+    const lathe = new T.Mesh(new T.LatheGeometry(pts, lod ? 32 : 16), new T.MeshStandardMaterial({ color: spec.trunk, map: tex, bumpMap: tex, bumpScale: .15, roughness: .9 }));
     root.add(lathe);
-    statics.push(g => lathe.scale.set(.25 + .75 * g * g, 1, .25 + .75 * g * g));
-    for (let i = 0; i < 7; i++) {
-      const ph = i / 7 * 6.283 + R(-.3, .3);
-      const l = limb(null, 0, spread(UP, R(.65, 1.05), ph), R(.6, .85), .16, R(0, .06), .35, { segs: 2, bend: V(0, .1, 0), wiggle: .2, origin: V(Math.cos(ph) * .1, 1.95, Math.sin(ph) * .1) });
-      l.forEach(s => {
-        for (let q = 0; q < 3; q++) { const f = R(.4, 1), tw = seg(s, f, spread(s.dir, R(.5, 1), R(0, 6.28)).add(V(0, .3, 0)), .28, .04, reach(s, f), .15); leaves(tw, 4, { from: .4, tip: 5 }); }
+    statics.push(g => { const w = .24 + .76 * g * g; lathe.scale.set(w, 1, w); });
+    const crownLimb = (origin, ph, th, len, r, a) => {
+      const l = limb(null, 0, spread(UP, th, ph), len, r, a, .35, { segs: 3, bend: V(0, .14, 0), wiggle: .1, origin });
+      l.forEach((sg, j) => {
+        for (let q = 0; q < 2; q++) {
+          const f = R(.3, 1), side = spread(sg.dir, R(.5, .9), R(0, 6.28));
+          side.y = Math.abs(side.y) * .4 + .05;
+          const sub = limb(sg, f, side, len * R(.3, .45), sg.r * .6, reach(sg, f), .18, { segs: 2, bend: V(0, .12, 0), wiggle: .15 });
+          sub.forEach(sb => { const tw = seg(sb, R(.5, 1), spread(sb.dir, .5, R(0, 6.28)).add(V(0, .25, 0)), .16, .02, reach(sb, .8), .1); leaves(tw, 3, { from: .3, tip: 5, elev: .2, face: UP }); });
+        }
+        leaves(sg, 2, { from: .6, tip: j === 2 ? 5 : 0, elev: .2, face: UP });
       });
-    }
+    };
+    for (let i = 0; i < 6; i++) crownLimb(V(0, 2.1, 0), i / 6 * 6.283 + R(-.3, .3), R(1, 1.35), R(.75, 1), .12, R(0, .05));
+    for (let i = 0; i < 2; i++) crownLimb(V(0, R(1.55, 1.85), 0), R(0, 6.28), R(1.25, 1.45), R(.7, .9), .09, R(.05, .12));
   } else if (k === "palm") {
     // Palm: establishment phase first (fronds standing up at the ground while the stem gets its full width), then the
     // trunk rises. Feather-like fronds: a curved stalk with many leaflets on both sides.
@@ -596,7 +704,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
     return m;
   };
   const woodGeo = TREE_GEO["wood" + lod] || (TREE_GEO["wood" + lod] = new T.CylinderGeometry(.72, 1, 1, lod ? 8 : 5, 1, true).translate(0, .5, 0));
-  const wood = mk(woodGeo, mats.wood, nodes.length);
+  const wood = mk(woodGeo, woodMat(T, spec.bark || "fissured"), nodes.length);
   nodes.forEach((n, i) => wood.setColorAt(i, col.setHex(n.color).multiplyScalar(R(.9, 1.08))));
   const leafMesh = mk(leafGeometry(T, spec.shape), mats.leaf, sets.leaf.length);
   leafMesh.receiveShadow = false;
