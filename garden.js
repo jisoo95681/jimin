@@ -788,6 +788,137 @@ function buildTree(T, spec, seedKey, lod = 1) {
   };
 }
 
+// ---------- The landscape ----------
+// One continuous meadow instead of a disc per tree: the ground is flat where the trees stand (so the gardener can walk
+// there) and rolls gently into low hills further out, with grass that varies in colour, a patch of bare soil under each
+// tree, thousands of grass blades, clumps of wildflowers, a few half-buried stones, bushes and a soft sky.
+function landNoise(x, z) {
+  const h = (i, j) => { const n = Math.sin(i * 127.1 + j * 311.7) * 43758.5453; return n - Math.floor(n); };
+  const xi = Math.floor(x), zi = Math.floor(z), xf = x - xi, zf = z - zi;
+  const u = xf * xf * (3 - 2 * xf), v = zf * zf * (3 - 2 * zf);
+  return (h(xi, zi) * (1 - u) + h(xi + 1, zi) * u) * (1 - v) + (h(xi, zi + 1) * (1 - u) + h(xi + 1, zi + 1) * u) * v;
+}
+const landFbm = (x, z) => landNoise(x, z) * .55 + landNoise(x * 2.1 + 7, z * 2.1 + 3) * .3 + landNoise(x * 4.3 + 1, z * 4.3 + 9) * .15;
+function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
+  const rnd = seeded("meadow" + spots.length), R = (a, b) => a + (b - a) * rnd();
+  const near = (x, z) => { let d = 1e9; spots.forEach(p => (d = Math.min(d, Math.hypot(x - p.x, z - p.z)))); return d; };
+  const reach = Math.max(...spots.map(p => Math.hypot(p.x, p.z)), 0); // how far out the trees go
+  const flatR = reach + 4.6; // flat enough for the gardener to walk in from the side
+  const height = (x, z) => {
+    const r = Math.hypot(x, z), out = kidSstep(flatR, flatR + 4, r);
+    const hills = (landFbm(x * .16, z * .16) - .35) * 1.6 * out + kidSstep(flatR + 3, flatR + 14, r) * (1.5 + landFbm(x * .08 + 5, z * .08) * 3.5);
+    const bumps = (landFbm(x * 1.3, z * 1.3) - .5) * .05 * kidSstep(.6, 1.6, near(x, z));
+    return Math.max(0, hills) + bumps;
+  };
+  // Ground: vertex-coloured grass (lighter and yellower in places, deeper green in others), soil under each tree.
+  const size = flatR * 2 + 40, segs = lod ? 180 : 120;
+  const geo = new T.PlaneGeometry(size, size, segs, segs);
+  geo.rotateX(-Math.PI / 2);
+  const p = geo.attributes.position, cols = [], c = new T.Color();
+  const light = new T.Color(0x8fbb58), mid = new T.Color(0x6a9f48), deep = new T.Color(0x4d8a3e), soil = new T.Color(0x7d5a3e), dry = new T.Color(0xa3b465);
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), z = p.getZ(i);
+    p.setY(i, height(x, z));
+    const n = landFbm(x * .45, z * .45), n2 = landNoise(x * 2.5, z * 2.5);
+    c.copy(mid).lerp(n > .5 ? light : deep, Math.abs(n - .5) * 1.6);
+    c.lerp(dry, kidSstep(.62, .85, landNoise(x * .2 + 11, z * .2)) * .5);
+    c.multiplyScalar(.94 + n2 * .1);
+    const d = near(x, z), edge = .42 + (landNoise(x * 6, z * 6) - .5) * .12;
+    c.lerp(soil, 1 - kidSstep(edge - .08, edge + .06, d));
+    cols.push(c.r, c.g, c.b);
+  }
+  geo.setAttribute("color", new T.Float32BufferAttribute(cols, 3));
+  geo.computeVertexNormals();
+  const ground = new T.Mesh(geo, new T.MeshStandardMaterial({ vertexColors: true, roughness: 1, metalness: 0 }));
+  ground.receiveShadow = true;
+  scene.add(ground);
+
+  // Grass blades: a curved, tapering blade, darker at the root.
+  const blade = new T.BufferGeometry();
+  { const v = [], cl = [], s = [[.009, 0], [.007, .45], [.004, .8], [0, 1]], bend = y => y * y * .3;
+    for (let k = 0; k < 3; k++) {
+      const [w0, y0] = s[k], [w1, y1] = s[k + 1];
+      v.push(-w0, y0, bend(y0), w0, y0, bend(y0), -w1, y1, bend(y1), w0, y0, bend(y0), w1, y1, bend(y1), -w1, y1, bend(y1));
+      [y0, y0, y1, y0, y1, y1].forEach(y => { const g = .72 + .38 * y; cl.push(g, g, g); });
+    }
+    blade.setAttribute("position", new T.Float32BufferAttribute(v, 3));
+    blade.setAttribute("color", new T.Float32BufferAttribute(cl, 3));
+    blade.computeVertexNormals(); }
+  const area = Math.PI * (flatR + 5) ** 2, count = Math.min(lod ? 9000 : 6000, Math.round(area * (lod ? 70 : 45)));
+  const grass = new T.InstancedMesh(blade, new T.MeshStandardMaterial({ vertexColors: true, roughness: .9, side: T.DoubleSide }), count);
+  const m = new T.Matrix4(), q = new T.Quaternion(), sc = new T.Vector3(), pos = new T.Vector3(), e = new T.Euler(), gc = new T.Color();
+  let placed = 0;
+  for (let tries = 0; placed < count && tries < count * 3; tries++) {
+    const a = R(0, Math.PI * 2), r = Math.sqrt(rnd()) * (flatR + 5), x = Math.cos(a) * r, z = Math.sin(a) * r;
+    if (near(x, z) < .5) continue; // not on the soil
+    const tall = .05 + landFbm(x * .7, z * .7) * .09;
+    pos.set(x, height(x, z), z);
+    q.setFromEuler(e.set(R(-.15, .15), R(0, 6.28), R(-.15, .15)));
+    sc.set(R(.8, 1.4), tall * R(.6, 1.3), 1);
+    grass.setMatrixAt(placed, m.compose(pos, q, sc));
+    const n = landFbm(x * .45, z * .45);
+    grass.setColorAt(placed, gc.copy(mid).lerp(n > .5 ? light : deep, Math.abs(n - .5) * 1.6).multiplyScalar(R(.9, 1.15)));
+    placed++;
+  }
+  grass.count = placed;
+  grass.receiveShadow = true;
+  scene.add(grass);
+
+  // Wildflowers in small clumps (white daisies, yellow buttercups, purple and pink).
+  const petals = flowerOne(T); // a single five-petal flower facing +z
+  const flowers = new T.InstancedMesh(petals, new T.MeshStandardMaterial({ vertexColors: true, roughness: .7, side: T.DoubleSide }), 420);
+  const fcols = [0xffffff, 0xfff2a8, 0xffd23f, 0xc8a2ff, 0xff9ec4];
+  let fi = 0;
+  for (let k = 0; k < 28 && fi < 420; k++) {
+    const a = R(0, Math.PI * 2), r = R(1.2, flatR + 4), cx = Math.cos(a) * r, cz = Math.sin(a) * r, col = fcols[Math.floor(R(0, fcols.length))];
+    if (near(cx, cz) < 1.1) continue;
+    for (let j = 0; j < 15 && fi < 420; j++) {
+      const x = cx + R(-.45, .45), z = cz + R(-.45, .45);
+      pos.set(x, height(x, z) + R(.06, .13), z);
+      q.setFromEuler(e.set(-Math.PI / 2 + R(-.4, .4), 0, R(0, 6.28)));
+      sc.setScalar(R(.05, .08));
+      flowers.setMatrixAt(fi, m.compose(pos, q, sc));
+      flowers.setColorAt(fi, gc.setHex(col));
+      fi++;
+    }
+  }
+  flowers.count = fi;
+  scene.add(flowers);
+
+  // A few half-buried stones and some round bushes further out.
+  const stoneM = new T.MeshStandardMaterial({ color: 0x9a9890, roughness: .95, flatShading: true });
+  for (let k = 0; k < 10; k++) {
+    const a = R(0, Math.PI * 2), r = R(2, flatR + 3), x = Math.cos(a) * r, z = Math.sin(a) * r;
+    if (near(x, z) < 1.4) continue;
+    const st = new T.Mesh(new T.DodecahedronGeometry(R(.08, .22), 1), stoneM);
+    st.position.set(x, height(x, z) - .03, z); st.scale.set(R(1, 1.6), R(.5, .8), R(.9, 1.3)); st.rotation.y = R(0, 6.28);
+    st.castShadow = st.receiveShadow = true;
+    scene.add(st);
+  }
+  const bushM = new T.MeshStandardMaterial({ color: 0x4f8a40, roughness: .95 });
+  for (let k = 0; k < 26; k++) {
+    const a = R(0, Math.PI * 2), r = R(flatR + 3, flatR + 12), x = Math.cos(a) * r, z = Math.sin(a) * r;
+    const b = new T.Group(), s = R(.3, .65);
+    for (let j = 0; j < 4; j++) {
+      const ball = new T.Mesh(new T.IcosahedronGeometry(s * R(.55, .85), 2), bushM);
+      ball.position.set(R(-.5, .5) * s, s * R(.3, .6), R(-.5, .5) * s);
+      ball.castShadow = true;
+      b.add(ball);
+    }
+    b.position.set(x, height(x, z), z);
+    scene.add(b);
+  }
+
+  // Sky: a soft gradient from blue overhead to a pale horizon; the fog matches the horizon.
+  const cv = document.createElement("canvas"); cv.width = 4; cv.height = 256;
+  const g2 = cv.getContext("2d"), grad = g2.createLinearGradient(0, 0, 0, 256);
+  grad.addColorStop(0, "#9fd0ee"); grad.addColorStop(.55, "#cfe9f2"); grad.addColorStop(1, "#eef7f2");
+  g2.fillStyle = grad; g2.fillRect(0, 0, 4, 256);
+  scene.background = new T.CanvasTexture(cv);
+  scene.fog = new T.Fog(0xe4f2ee, radius * 3, radius * 3 + flatR * 2 + 30);
+  return { height };
+}
+
 // A 3D stage: renderer, lights and a fixed camera (no spinning). Drag to look around; it stays where you leave it.
 function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   const renderer = new T.WebGLRenderer({ antialias: true });
@@ -796,8 +927,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   renderer.shadowMap.type = T.PCFSoftShadowMap;
   host.append(renderer.domElement);
   const scene = new T.Scene();
-  scene.background = new T.Color(0xe7f6f6);
-  scene.fog = new T.Fog(0xe7f6f6, radius * 2.4, radius * 5);
+  makeLandscape(T, scene, { radius, spots: trees.map(t => t.holder.position), lod: trees.length > 6 ? 0 : 1 });
   const camera = new T.PerspectiveCamera(38, 1, .1, 200);
   scene.add(new T.HemisphereLight(0xf4fbff, 0x6f8f7a, .62));
   const sun = new T.DirectionalLight(0xfff6e8, .7);
@@ -870,22 +1000,16 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   };
 }
 
-// A tree on its own patch of grass. It shows `growth` straight away; grow(to) animates it to a new size.
+// A tree planted in the meadow (the stage draws the ground). It shows `growth` straight away; grow(to) animates it.
 function plantedTree(T, spec, key, growth, pos, lod = 1) {
   const holder = new T.Group();
   holder.position.copy(pos);
-  const grass = new T.Mesh(new T.CylinderGeometry(1.25, 1.35, .16, 48), new T.MeshStandardMaterial({ color: 0x74a85a, roughness: 1 }));
-  grass.position.y = -.08;
-  grass.receiveShadow = true;
-  const soil = new T.Mesh(new T.SphereGeometry(.34, 24, 8, 0, Math.PI * 2, 0, Math.PI / 2), new T.MeshStandardMaterial({ color: 0x7a5a3c, roughness: 1 }));
-  soil.scale.y = .35;
-  holder.add(grass, soil);
   const tree = buildTree(T, spec, key, lod);
   holder.add(tree.group);
   let shown = growth, goal = growth, speed = 0;
   tree.update(shown);
   return {
-    holder, soil,
+    holder,
     features: () => tree.features.filter(f => f.visible),
     get growth() { return shown; },
     grow(to, seconds = 3) { goal = to; speed = Math.abs(to - shown) / seconds; },
@@ -969,145 +1093,204 @@ function cartoonEye(T, iris) {
   return eye;
 }
 
-function makeGardener(T, girl) {
-  const skin = skinMat(T, 0xf9d6c1);
-  const hairM = soft(T, girl ? 0x5b331f : 0x3a2a20, { roughness: .82 }); // matte hair, no shiny highlight
-  const top = soft(T, girl ? 0xf48fb1 : 0x5fb3e4, { roughness: .8 }), bottom = soft(T, girl ? 0xf48fb1 : 0x3a5ba0, { roughness: .85 });
-  const white = soft(T, 0xffffff), shoe = glossy(T, girl ? 0xe0526b : 0xf2f2f2, { clearcoat: .8, clearcoatRoughness: .2 });
-  const sole = soft(T, girl ? 0xffffff : 0x8a93a6);
-  const fig = new T.Group(), body = new T.Group();
-  fig.add(body, blobShadow(T, .32));
+// ---------- Toca Boca-style kids ----------
+// Flat two-tone (toon) colours with a clean, even outline; a tall oval head with dot eyes, soft brows, blush and a
+// happy open smile; long noodle arms and legs. Hair is one smooth closed volume whose face side tucks into the head,
+// so the hairline is a soft rolled edge instead of a helmet rim.
+const kidSstep = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+function kidMesh(geo, mat, p, s, r) {
+  const m = new THREE.Mesh(geo, mat);
+  if (p) m.position.set(...p);
+  if (s) m.scale.set(...s);
+  if (r) m.rotation.set(...r);
+  return m;
+}
+function kidLathe(T, profile, seg = 48, samples = 48) {
+  const c = new T.SplineCurve(profile.map(([x, y]) => new T.Vector2(x, y)));
+  return new T.LatheGeometry(c.getPoints(samples), seg);
+}
+// A smooth tapered limb hanging down from its origin, rounded at both ends.
+function kidLimb(T, r0, r1, len) {
+  const pts = [];
+  for (let i = 0; i <= 8; i++) { const a = -Math.PI / 2 + i / 8 * Math.PI / 2; pts.push([Math.cos(a) * r1, -len + r1 + Math.sin(a) * r1]); }
+  pts.push([(r0 + r1) / 2 * 1.02, -len / 2]);
+  for (let i = 0; i <= 8; i++) { const a = i / 8 * Math.PI / 2; pts.push([Math.cos(a) * r0, -r0 + Math.sin(a) * r0]); }
+  return kidLathe(T, pts, 24, 36);
+}
+// Hair: a sphere slightly larger than the head whose face region is pulled inside the head along a smooth hairline.
+function hairCap(T, R, o) {
+  const g = new T.SphereGeometry(R, 96, 72), p = g.attributes.position, v = new T.Vector3();
+  for (let i = 0; i < p.count; i++) {
+    v.fromBufferAttribute(p, i).normalize();
+    const az = Math.atan2(v.x, v.z);
+    const face = kidSstep(o.faceW + .35, o.faceW - .05, Math.abs(az));
+    const line = face * o.front(az) + (1 - face) * o.nape(az);
+    const k = kidSstep(line - o.soft, line + o.soft * .35, v.y);
+    const r = o.inR + (R - o.inR) * k;
+    p.setXYZ(i, v.x * r, v.y * r, v.z * r);
+  }
+  g.computeVertexNormals();
+  return g;
+}
+// Put something on the head's surface (az: around, 0 = front; el: up/down), facing outwards.
+function onHead(head, obj, az, el, out = 0) {
+  const { rx, ry, rz, c } = head;
+  const d = new THREE.Vector3(Math.sin(az) * Math.cos(el), Math.sin(el), Math.cos(az) * Math.cos(el));
+  obj.position.set(c.x + d.x * rx * (1 + out), c.y + d.y * ry * (1 + out), c.z + d.z * rz * (1 + out));
+  obj.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), new THREE.Vector3(d.x / rx, d.y / ry, d.z / rz).normalize());
+  return obj;
+}
+let kidBlushTex = null, kidToonGrad = null;
+function blushDecal(T, col, size) {
+  if (!kidBlushTex) {
+    const c = document.createElement("canvas"); c.width = c.height = 64;
+    const x = c.getContext("2d"), g = x.createRadialGradient(32, 32, 2, 32, 32, 31);
+    g.addColorStop(0, "rgba(255,255,255,1)"); g.addColorStop(1, "rgba(255,255,255,0)");
+    x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+    kidBlushTex = new T.CanvasTexture(c);
+  }
+  const m = new T.Mesh(new T.PlaneGeometry(size * 1.5, size), new T.MeshBasicMaterial({ color: col, map: kidBlushTex, transparent: true, opacity: .7, depthWrite: false }));
+  m.renderOrder = 2; m.userData.noOutline = true;
+  return m;
+}
+function toonMat(T, c) {
+  if (!kidToonGrad) {
+    kidToonGrad = new T.DataTexture(new Uint8Array([212, 255]), 2, 1, T.LuminanceFormat);
+    kidToonGrad.minFilter = kidToonGrad.magFilter = T.NearestFilter;
+    kidToonGrad.needsUpdate = true;
+  }
+  return new T.MeshToonMaterial({ color: c, gradientMap: kidToonGrad });
+}
+// Outline: a back-face copy of each part pushed out along its normals, with the thickness set per part so the line
+// is equally wide everywhere.
+const kidOutlineMats = {};
+function addOutlines(T, root, width = .0065) {
+  const list = [];
+  root.traverse(o => { if (o.isMesh && !o.userData.noOutline) list.push(o); });
+  root.updateMatrixWorld(true);
+  const ws = new T.Vector3();
+  list.forEach(o => {
+    o.getWorldScale(ws);
+    const key = (width / ((ws.x + ws.y + ws.z) / 3)).toFixed(5);
+    let m = kidOutlineMats[key];
+    if (!m) {
+      m = kidOutlineMats[key] = new T.MeshBasicMaterial({ color: 0x2a2440, side: T.BackSide });
+      m.onBeforeCompile = sh => { sh.vertexShader = sh.vertexShader.replace("#include <begin_vertex>", "#include <begin_vertex>\ntransformed += normalize(normal) * " + key + ";"); };
+      m.customProgramCacheKey = () => "outline" + key;
+    }
+    const c = new T.Mesh(o.geometry, m);
+    c.userData.noOutline = true;
+    o.add(c);
+  });
+}
 
-  // Short, chubby legs with chunky shoes (chibi proportions).
+function makeGardener(T, girl) {
+  const skin = toonMat(T, 0xf0bf98), hairM = toonMat(T, girl ? 0x231c1d : 0x2b211d);
+  const top = toonMat(T, girl ? 0xffd84d : 0x52d6ab), bottom = toonMat(T, girl ? 0x3f7fe0 : 0xff7a63);
+  const shoe = toonMat(T, 0x262c48), white = toonMat(T, 0xffffff);
+  const fig = new T.Group(), body = new T.Group();
+  const shadow = blobShadow(T, .26);
+  shadow.userData.noOutline = true;
+  fig.add(body, shadow);
+
+  // Long, straight legs (white socks for the girl, long trousers for the boy) and round shoes.
   const legs = [-1, 1].map(side => {
     const hip = new T.Group();
-    hip.position.set(side * .07, .43, 0);
-    hip.add(chubbyLimb(T, .06, .052, .22, girl ? skin : bottom));
+    hip.position.set(side * .05, .33, 0);
+    hip.add(kidMesh(kidLimb(T, .031, .029, .17), girl ? skin : bottom));
     const knee = new T.Group();
-    knee.position.y = -.2;
-    knee.add(chubbyLimb(T, .052, .045, .2, skin));
-    knee.add(smoothLathe(T, [[.044, -.2], [.05, -.17], [.052, -.14], [.049, -.12]], white, 28, 12)); // sock
-    const shoeG = new T.Group();
-    shoeG.position.set(0, -.205, .03);
-    shoeG.add(ell(T, .066, 1, .7, 1.55, shoe, 0, 0, 0, 36));
-    shoeG.add(ell(T, .068, 1.02, .22, 1.58, sole, 0, -.035, 0, 36));
-    knee.add(shoeG);
+    knee.position.y = -.15;
+    knee.add(kidMesh(kidLimb(T, .029, .027, .155), girl ? skin : bottom));
+    if (girl) knee.add(kidMesh(kidLimb(T, .031, .03, .1), white, [0, -.045, 0]));
+    knee.add(kidMesh(new T.SphereGeometry(.05, 32, 24), shoe, [0, -.145, .022], [.85, .62, 1.45]));
     hip.add(knee);
     body.add(hip);
     return { hip, knee };
   });
-
-  // Torso: a round, soft body. The girl wears a flared dress with puff sleeves; the boy a t-shirt and shorts.
-  let torso;
-  if (girl) {
-    torso = smoothLathe(T, [[.001, .28], [.25, .3], [.255, .34], [.2, .46], [.155, .56], [.145, .64], [.16, .72], [.15, .77], [.1, .8], [.04, .81]], top, 56, 60);
-    const hem = new T.Mesh(new T.TorusGeometry(.25, .016, 12, 64), white);
-    hem.rotation.x = Math.PI / 2; hem.position.y = .302;
-    const collar = new T.Mesh(new T.TorusGeometry(.085, .02, 12, 40), white);
-    collar.rotation.x = Math.PI / 2; collar.position.y = .79;
-    body.add(hem, collar);
-  } else {
-    torso = smoothLathe(T, [[.001, .42], [.16, .42], [.175, .5], [.17, .6], [.175, .7], [.16, .77], [.1, .805], [.04, .81]], top, 56, 60);
-    body.add(smoothLathe(T, [[.001, .33], [.17, .33], [.178, .38], [.17, .45], [.001, .45]], bottom, 48, 24));
-    const band = new T.Mesh(new T.TorusGeometry(.072, .016, 12, 40), soft(T, 0x3d93c8));
-    band.rotation.x = Math.PI / 2; band.position.y = .8;
-    body.add(band);
-  }
+  // Clothes: an A-line dress for the girl; a t-shirt and trousers for the boy.
+  const torso = girl
+    ? kidMesh(kidLathe(T, [[.001, .3], [.19, .3], [.2, .31], [.15, .45], [.11, .58], [.085, .63], [.001, .64]]), top)
+    : kidMesh(kidLathe(T, [[.001, .43], [.115, .43], [.12, .5], [.118, .58], [.09, .63], [.001, .64]]), top);
   body.add(torso);
+  if (!girl) body.add(kidMesh(kidLathe(T, [[.001, .3], [.12, .3], [.125, .37], [.12, .44], [.001, .44]]), bottom));
 
-  // Big round head (about a third of the height), smooth cheeks, small nose, big eyes.
+  // Neck and head (the neck group turns to look up or down).
   const neck = new T.Group();
-  neck.position.y = .8;
+  neck.position.y = .63;
   body.add(neck);
-  neck.add(chubbyLimb(T, .05, .055, .07, skin, 1, 24).translateY(.06));
-  const HC = .19; // head centre height above the neck
-  neck.add(ell(T, .205, 1.04, .98, .98, skin, 0, HC, 0, 52));
-  [-1, 1].forEach(side => {
-    neck.add(ell(T, .038, .55, 1, .9, skin, side * .205, HC - .005, 0, 24));        // ears
-    const blush = ell(T, .038, 1, .55, .25, soft(T, 0xff8fa3, { transparent: true, opacity: .35 }), side * .108, HC - .055, .158, 24); // soft blush on the face
-    blush.rotation.y = side * .6; neck.add(blush);
-  });
-  neck.add(ell(T, .016, 1.1, .8, 1, skin, 0, HC - .03, .205, 16)); // nose
-  const eyes = [-1, 1].map(side => {
-    const e = cartoonEye(T, girl ? 0x6b3f23 : 0x2f5f8a);
-    e.position.set(side * .078, HC + .005, .178);
-    e.rotation.y = side * .32; e.rotation.x = -.05;
-    neck.add(e);
+  neck.add(kidMesh(kidLimb(T, .032, .032, .1), skin, [0, .03, 0]));
+  const head = { rx: .175, ry: .23, rz: .17, c: new T.Vector3(0, .21, 0) };
+  neck.add(kidMesh(new T.SphereGeometry(1, 64, 48), skin, [0, head.c.y, 0], [head.rx, head.ry, head.rz]));
+  [-1, 1].forEach(s => neck.add(onHead(head, kidMesh(new T.SphereGeometry(.032, 20, 16), skin, null, [.6, 1, .6]), s * 1.57, -.02, -.04)));
+  const ink = new T.MeshBasicMaterial({ color: 0x1b1b24 }), sparkM = new T.MeshBasicMaterial({ color: 0xffffff });
+  const eyes = [-1, 1].map(s => {
+    const holder = onHead(head, new T.Group(), s * .42, .02, -.005);
+    neck.add(holder);
+    const e = new T.Group();
+    holder.add(e);
+    const dot = kidMesh(new T.SphereGeometry(.022, 20, 16), ink, null, [1, 1.15, .4]);
+    const spark = kidMesh(new T.SphereGeometry(.006, 10, 8), sparkM, [.007, .009, .008]);
+    dot.userData.noOutline = spark.userData.noOutline = true;
+    e.add(dot, spark);
+    const brow = kidMesh(new T.CylinderGeometry(.005, .005, .045, 8), ink, [0, .055, .002], null, [0, 0, Math.PI / 2 - s * .15]);
+    brow.userData.noOutline = true;
+    holder.add(brow);
+    neck.add(onHead(head, blushDecal(T, 0xff7d7d, .07), s * .62, -.2, .012));
     return e;
   });
-  [-1, 1].forEach(side => {
-    const brow = chubbyLimb(T, .007, .006, .05, hairM, 1, 10);
-    brow.rotation.z = Math.PI / 2 + side * .12; brow.position.set(side * .052 + side * .025, HC + .078, .186);
-    neck.add(brow);
-  });
-  const smile = new T.Mesh(new T.TorusGeometry(.026, .006, 10, 24, Math.PI), soft(T, 0xb84a58));
-  smile.position.set(0, HC - .085, .19); smile.rotation.set(-.2, 0, Math.PI);
-  neck.add(smile);
-
-  // Hair: a glossy rounded cap, a swept fringe of soft locks, side locks; the girl gets a ponytail with a bow.
-  const cap = new T.Mesh(new T.SphereGeometry(.218, 64, 40, 0, Math.PI * 2, 0, Math.PI * .56), hairM);
-  cap.position.set(0, HC + .012, -.012); cap.rotation.x = -.38;
-  neck.add(cap);
-  // One smooth swept fringe over the forehead (a slice of a slightly larger sphere), plus two soft sweeping locks.
-  const fringe = new T.Mesh(new T.SphereGeometry(.224, 64, 40, 0, Math.PI * 2, 0, Math.PI * .3), hairM);
-  fringe.position.set(0, HC + .014, .004); fringe.rotation.set(.36, 0, -.1); // edge sits just above the brows
-  neck.add(fringe);
-  [[-1, .15], [1, .125]].forEach(([side, y]) => {
-    const sweep = ell(T, .08, 1.3, .42, .6, hairM, side * .085, HC + y, .135, 40);
-    sweep.rotation.set(.55, side * -.25, side * -.45);
-    neck.add(sweep);
-  });
-  [-1, 1].forEach(side => { const s = ell(T, .07, .6, girl ? 1.9 : 1.1, .85, hairM, side * .19, girl ? HC - .07 : HC + .02, -.01, 28); s.rotation.z = side * .12; neck.add(s); });
-  if (!girl) { const tuft = ell(T, .05, .8, 1.3, .8, hairM, .03, HC + .23, -.02, 20); tuft.rotation.z = -.5; neck.add(tuft); }
+  neck.add(onHead(head, kidMesh(new T.SphereGeometry(.02, 16, 12), skin, null, [.85, 1, .9]), 0, -.08, -.02));
+  const smile = kidMesh(new T.CircleGeometry(.032, 24, Math.PI, Math.PI), new T.MeshBasicMaterial({ color: 0x8a2234 }));
+  const tongue = kidMesh(new T.CircleGeometry(.016, 16, Math.PI, Math.PI), new T.MeshBasicMaterial({ color: 0xff8a8a }), [0, -.016, .001]);
+  smile.userData.noOutline = tongue.userData.noOutline = true;
+  smile.add(tongue);
+  neck.add(onHead(head, new T.Group().add(smile), 0, -.4, .004));
+  // Hair: straight-cut fringe and a big round bun for the girl; a tidy side-parted quiff for the boy.
   let tail = null;
   if (girl) {
-    tail = new T.Group();
-    tail.position.set(0, HC + .1, -.2);
-    const bowM = glossy(T, 0xff4f86, { clearcoat: .6 });
-    [-1, 1].forEach(side => { const loop = ell(T, .045, 1.2, .8, .5, bowM, side * .045, 0, .015, 20); loop.rotation.z = side * .4; tail.add(loop); });
-    tail.add(ell(T, .018, 1, 1, 1, bowM, 0, 0, .02, 12));
-    const lock = smoothLathe(T, [[.001, .02], [.06, 0], [.08, -.09], [.068, -.18], [.035, -.25], [.001, -.27]], hairM, 40, 30);
-    lock.position.z = -.03; lock.rotation.x = .25;
-    tail.add(lock);
+    neck.add(kidMesh(hairCap(T, 1.08, { inR: .9, soft: .06, faceW: .9, front: () => .38, nape: () => -.25 }), hairM, [0, head.c.y, 0], [head.rx, head.ry, head.rz]));
+    tail = new T.Group(); // the bun bobs a little as she walks
+    tail.position.set(0, head.c.y + .17, -.025);
+    tail.add(kidMesh(new T.SphereGeometry(.12, 40, 30), hairM, [0, .1, -.005]));
+    tail.add(kidMesh(new T.TorusGeometry(.07, .018, 12, 32), toonMat(T, 0xff6fa2), [0, .02, .005], null, [Math.PI / 2 - .2, 0, 0]));
     neck.add(tail);
+  } else {
+    neck.add(kidMesh(hairCap(T, 1.08, { inR: .9, soft: .06, faceW: 1.05, front: az => .5 + .12 * az, nape: az => -.18 - .4 * Math.max(0, -Math.cos(az)) }), hairM, [0, head.c.y, 0], [head.rx, head.ry, head.rz]));
+    neck.add(kidMesh(new T.SphereGeometry(.1, 40, 30), hairM, [-.02, head.c.y + .2, .05], [1.25, .75, 1], [.3, 0, .25]));
   }
 
-  // Short chubby arms with round mitten hands; the girl has puff sleeves. The right hand carries the can.
+  // Long noodle arms with short sleeves and round hands; the right hand carries the watering can.
+  const rest = girl ? .5 : .22; // the girl's arms stand away from her dress so they are always visible
   const arms = [-1, 1].map(side => {
     const shoulder = new T.Group();
-    shoulder.position.set(side * .165, .74, 0);
-    shoulder.add(chubbyLimb(T, .052, .046, .17, skin, 1.1));
-    const sleeve = girl ? ell(T, .07, 1, .85, 1, top, 0, -.01, 0, 32) : chubbyLimb(T, .058, .054, .1, top, 1.02);
-    if (!girl) sleeve.position.y = .025;
-    shoulder.add(sleeve);
+    shoulder.position.set(side * (girl ? .105 : .1), .6, girl ? .015 : 0);
+    shoulder.rotation.z = side * rest;
+    shoulder.add(kidMesh(kidLimb(T, .04, .036, .09), top));
+    shoulder.add(kidMesh(kidLimb(T, .026, .025, .16), skin, [0, -.02, 0]));
     const elbow = new T.Group();
-    elbow.position.y = -.155;
-    elbow.add(chubbyLimb(T, .046, .041, .14, skin, 1.1));
-    elbow.add(ell(T, .05, 1, 1.05, .85, skin, 0, -.152, 0, 28));
-    elbow.add(ell(T, .017, 1, 1.5, 1, skin, side * -.032, -.136, .02, 16));
+    elbow.position.y = -.16;
+    elbow.add(kidMesh(kidLimb(T, .025, .024, .13), skin));
+    elbow.add(kidMesh(new T.SphereGeometry(.032, 20, 16), skin, [0, -.14, 0], [1, 1.1, .85]));
     shoulder.add(elbow);
     body.add(shoulder);
     return { shoulder, elbow };
   });
-  const tin = glossy(T, 0x4fb3b5, { metalness: .25, roughness: .3, clearcoat: .7 });
+  const tin = toonMat(T, 0x3fb0c0);
   const can = new T.Group();
-  can.add(smoothLathe(T, [[.001, -.075], [.084, -.075], [.09, -.06], [.082, .05], [.072, .075], [.001, .075]], tin, 40, 24));
-  const spout = roundLimb(T, .013, .02, .24, tin, 20);
-  spout.rotation.x = -(Math.PI - 1.05); spout.position.set(0, 0, .06);
-  const rose = smoothLathe(T, [[.001, 0], [.016, 0], [.033, .03], [.001, .033]], tin, 28, 12);
-  rose.position.set(0, .115, .235); rose.rotation.x = 1.05;
-  const handle = new T.Mesh(new T.TorusGeometry(.058, .012, 12, 28, Math.PI), tin);
-  handle.position.set(0, .07, -.01); handle.rotation.y = Math.PI / 2;
+  can.add(kidMesh(kidLathe(T, [[.001, -.065], [.072, -.065], [.077, -.05], [.07, .043], [.062, .065], [.001, .065]], 32, 20), tin));
+  const spout = kidMesh(kidLimb(T, .011, .017, .2), tin, [0, 0, .05], null, [-(Math.PI - 1.05), 0, 0]);
+  const rose = kidMesh(kidLathe(T, [[.001, 0], [.014, 0], [.028, .026], [.001, .028]], 24, 10), tin, [0, .097, .2], null, [1.05, 0, 0]);
+  const handle = kidMesh(new T.TorusGeometry(.05, .01, 10, 24, Math.PI), tin, [0, .06, -.01], null, [0, Math.PI / 2, 0]);
   can.add(spout, rose, handle);
-  can.position.set(0, -.22, .05);
+  can.position.set(0, -.2, .05);
   arms[1].elbow.add(can);
   const spoutTip = new T.Object3D();
-  spoutTip.position.set(0, .13, .25);
+  spoutTip.position.set(0, .11, .215);
   can.add(spoutTip);
-  fig.traverse(o => { if (o.isMesh && o.material !== blobTex) { o.castShadow = !o.material.transparent; o.receiveShadow = true; } });
-  fig.scale.setScalar(1.12);
+  fig.traverse(o => { if (o.isMesh && !o.userData.noOutline) { o.castShadow = true; o.receiveShadow = true; } });
+  addOutlines(T, fig);
+  fig.scale.setScalar(1.1);
 
-  // Natural gait driven by distance walked, easing in and out; plus breathing and blinking so they feel alive.
+  // Natural gait driven by distance walked, easing in and out; plus breathing and blinking.
   let phase = 0, amt = 0, last = performance.now(), nextBlink = 1 + Math.random() * 2, blink = 0, clock = 0;
   return {
     fig, body, neck, tail, arms, can, spoutTip,
@@ -1115,27 +1298,27 @@ function makeGardener(T, girl) {
       const now = performance.now(), dt = Math.min(.05, (now - last) / 1000);
       last = now; clock += dt;
       amt += ((moving ? 1 : 0) - amt) * Math.min(1, dt * 7);
-      phase += dist / .42 * Math.PI * 2;
+      phase += dist / .5 * Math.PI * 2;
       legs.forEach(({ hip, knee }, i) => {
         const p = phase + i * Math.PI;
-        hip.rotation.x = Math.sin(p) * .45 * amt;
-        knee.rotation.x = Math.max(0, Math.sin(p - 1.3)) * .7 * amt;
+        hip.rotation.x = Math.sin(p) * .42 * amt;
+        knee.rotation.x = Math.max(0, Math.sin(p - 1.3)) * .65 * amt;
       });
-      body.position.y = (Math.abs(Math.cos(phase)) - .5) * .02 * amt;
-      body.rotation.z = Math.sin(phase) * .025 * amt;
+      body.position.y = (Math.abs(Math.cos(phase)) - .5) * .018 * amt;
+      body.rotation.z = Math.sin(phase) * .022 * amt;
       torso.scale.set(1 + Math.sin(clock * 2.2) * .008, 1, 1 + Math.sin(clock * 2.2) * .012); // breathing
-      if (tail) tail.rotation.x = Math.sin(phase * 2) * .12 * amt + Math.sin(clock * 1.5) * .03;
-      // Blink every few seconds.
+      if (tail) tail.rotation.x = Math.sin(phase * 2) * .08 * amt + Math.sin(clock * 1.5) * .02;
       if (clock > nextBlink) { blink = .14; nextBlink = clock + 2 + Math.random() * 3; }
       blink = Math.max(0, blink - dt);
       const lid = blink > 0 ? Math.max(.08, Math.abs(blink - .07) / .07) : 1;
       eyes.forEach(e => (e.scale.y = lid));
       if (posing) return; // a pose (pouring, reaching, smelling) owns the arms
       arms.forEach(({ shoulder, elbow }, i) => {
-        if (i === 1 && holdCan) { shoulder.rotation.x = Math.sin(phase + Math.PI) * .12 * amt; shoulder.rotation.z = -.08; elbow.rotation.x = -.3; return; }
+        const side = i ? 1 : -1;
+        if (i === 1 && holdCan) { shoulder.rotation.x = Math.sin(phase + Math.PI) * .12 * amt; shoulder.rotation.z = girl ? .38 : .1; elbow.rotation.x = -.3; return; }
         const p = phase + (i + 1) * Math.PI;
         shoulder.rotation.x = Math.sin(p) * .4 * amt;
-        shoulder.rotation.z = (i ? -1 : 1) * .12; // arms rest slightly away from the body
+        shoulder.rotation.z = side * rest;
         elbow.rotation.x = (-.18 - Math.max(0, Math.sin(p)) * .25) * amt - .08;
       });
     }
@@ -1599,11 +1782,15 @@ async function gardenAll() {
   try {
     const T = await loadThree();
     if (!stage.isConnected) return;
-    const n = Math.max(1, list.length), cols = Math.ceil(Math.sqrt(n * 1.6)), rows = Math.ceil(n / cols), gap = 2.9;
-    positions = list.map((d, i) => new T.Vector3((i % cols - (cols - 1) / 2) * gap, 0, (Math.floor(i / cols) - (rows - 1) / 2) * gap));
+    // Planted like a natural grove rather than a grid: a sunflower spiral with a little jitter, about 2.6 apart.
+    const n = Math.max(1, list.length), c = 1.5;
+    positions = list.map((d, i) => {
+      const jr = seeded("spot" + d.key), a = i * 2.39996 + (jr() - .5) * .5, r = c * Math.sqrt(i + (i ? .3 : 0)) + (i ? (jr() - .5) * .35 : 0);
+      return new T.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r);
+    });
     const lod = list.length > 6 ? 0 : 1; // lighter trees when the garden gets big
     const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], lod));
-    const radius = Math.max(3.6, Math.max(cols, rows) * gap * .7);
+    const radius = Math.max(3.6, c * Math.sqrt(n) + 1.6);
     stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
   } catch {
     stage.append(el("p", { className: "g-offline" }, "The 3D garden could not load. Close and reopen the app to try again."));
