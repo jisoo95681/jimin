@@ -612,7 +612,7 @@ function cartoonEye(T, iris) {
 
 function makeGardener(T, girl) {
   const skin = skinMat(T, 0xf9d6c1);
-  const hairM = glossy(T, girl ? 0x5b331f : 0x3a2a20, { clearcoat: .7, clearcoatRoughness: .25, roughness: .4 });
+  const hairM = soft(T, girl ? 0x5b331f : 0x3a2a20, { roughness: .82 }); // matte hair, no shiny highlight
   const top = soft(T, girl ? 0xf48fb1 : 0x5fb3e4, { roughness: .8 }), bottom = soft(T, girl ? 0xf48fb1 : 0x3a5ba0, { roughness: .85 });
   const white = soft(T, 0xffffff), shoe = glossy(T, girl ? 0xe0526b : 0xf2f2f2, { clearcoat: .8, clearcoatRoughness: .2 });
   const sole = soft(T, girl ? 0xffffff : 0x8a93a6);
