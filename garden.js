@@ -1,5 +1,6 @@
 // Garden: one tree per study day, drawn in 3D with three.js.
-// Growth follows focused hours: 2h = 25%, 4h = 50%, 6h = 75%, 8h = 100% (linear in between).
+// Growth follows focused hours: 2h = 25%, 4h = 50%, 6h = 75%, 8h = 100% (linear in between). Trees grow like real ones:
+// seedling with seed leaves, then a slim leafy sapling that gets taller and wider; flowers and fruit only when mature.
 // When a day ends (after 23:59:59) its tree is locked and never changes again. No new trees after the exam day.
 // Uses helpers from index.html (loadStudy, saveStudy, daySec, dkey, fromKey, midnight, EXAM, screen, nav, el, app, ...).
 
@@ -130,7 +131,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
   const rnd = seeded(seedKey + spec.name), R = (lo, hi) => lo + (hi - lo) * rnd();
   const outer = new T.Group(), root = new T.Group();
   outer.add(root);
-  const parts = [], links = [];
+  const parts = [], links = [], follow = [];
   const mats = {};
   // Bark: smooth, matte. Leaves: vertex-coloured (darker underneath and in the dents) so clusters look rounded and full.
   const mat = c => (mats[c] = mats[c] || new T.MeshStandardMaterial({ color: c, roughness: .92, metalness: 0 }));
@@ -157,10 +158,14 @@ function buildTree(T, spec, seedKey, lod = 1) {
   const up = new T.Vector3(0, 1, 0);
   const V = (x, y, z) => new T.Vector3(x, y, z);
   // Parts are placed in tree coordinates at full size; after building they are re-parented (keeping their place).
-  const grow = (obj, a, b, parent = null) => {
-    if (a < .8) { a *= 1.25; b = Math.min(.92, b * 1.45); } // spread the stages so 25/50/75% look clearly different
+  // Real trees grow as a whole: a seedling already has leaves, and the stem, branches and leaves get bigger together
+  // (the whole tree is scaled up over the day). Here each part only needs to bud in: branches appear one after another
+  // with their leaves, while flowers and fruit wait for maturity. opts.raw keeps the given window; opts.yOnly grows
+  // only in height (a palm trunk keeps its girth); opts.girth thickens a part late (a baobab trunk swells with age).
+  const grow = (obj, a, b, parent = null, opts = {}) => {
+    if (!opts.raw && a < .74) { const a2 = a * .3; b = Math.min(.75, a2 + (b - a) * .6); a = a2; }
     root.add(obj);
-    parts.push({ obj, a, b: Math.min(1, b) });
+    parts.push({ obj, a, b: Math.min(1, b), yOnly: opts.yOnly, girth: opts.girth });
     if (parent) links.push([parent, obj]);
     return obj;
   };
@@ -284,13 +289,13 @@ function buildTree(T, spec, seedKey, lod = 1) {
     const layers = 4 + Math.floor(R(0, 2));
     for (let i = 0; i < layers; i++) {
       const ang = around(layers, i, .5), base = s2.userData.at(1 - i * .18);
-      const br = grow(limb(base, V(Math.cos(ang), R(.1, .35), Math.sin(ang)), R(.6, 1), .06, .03, spec.trunk), .25 + i * .05, .55 + i * .05, s2);
-      crown(br, spec.leaf, 2, R(.45, .62), .35 + i * .05, { sx: 1.25, sy: .4, sz: 1.1 });
+      const br = grow(limb(base, V(Math.cos(ang), R(.1, .35), Math.sin(ang)), R(.6, 1), .06, .03, spec.trunk), .12 + i * .05, .45 + i * .05, s2);
+      crown(br, spec.leaf, 2, R(.45, .62), .15 + i * .05, { sx: 1.25, sy: .4, sz: 1.1 });
     }
-    const top = grow(limb(s2.userData.tip, up, .2, .05, .03, spec.trunk), .3, .55, s2);
-    crown(top, spec.leaf, 2, .55, .45, { sx: 1.3, sy: .42, sz: 1.2 });
+    const top = grow(limb(s2.userData.tip, up, .2, .05, .03, spec.trunk), .15, .45, s2);
+    crown(top, spec.leaf, 2, .55, .2, { sx: 1.3, sy: .42, sz: 1.2 });
   } else if (k === "cone") {
-    const trunk = grow(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), 0, .45);
+    const trunk = grow(limb(V(0, 0, 0), up, 2.6, .13, .05, spec.trunk), 0, .3, null, { raw: true });
     for (let i = 0; i < 6; i++) {
       const cg = new T.ConeGeometry(1.05 - i * .15, .75, lod ? 20 : 10, 3);
       const cp = cg.attributes.position, col = [], base = new T.Color(spec.leaf), cc = new T.Color();
@@ -305,7 +310,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
       const c = new T.Mesh(cg, leafMat);
       c.position.set(0, .75 + i * .38, 0);
       c.rotation.y = R(0, 2);
-      grow(c, .15 + i * .07, .5 + i * .07, trunk);
+      grow(c, 0, .3, trunk, { raw: true }); // a young fir is already a little cone of needles down to the ground
     }
   } else if (k === "ginkgo") {
     const trunk = grow(limb(V(0, 0, 0), up, 2.2, .13, .06, spec.trunk), 0, .45);
@@ -318,31 +323,47 @@ function buildTree(T, spec, seedKey, lod = 1) {
     crown(top, spec.leaf, 1, .38, .45, { sy: 1.4 });
   } else if (k === "baobab") {
     const pts = [[.62, 0], [.66, .15], [.6, .5], [.55, 1], [.48, 1.5], [.36, 1.9], [.28, 2.05], [0, 2.1]].map(([x, y]) => new T.Vector2(x, y));
-    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, lod ? 24 : 12), mat(spec.trunk)), 0, .45);
+    // A young baobab is slender; the huge bottle trunk only swells as it gets old.
+    const trunk = grow(new T.Mesh(new T.LatheGeometry(pts, lod ? 24 : 12), mat(spec.trunk)), -1, 0, null, { raw: true, girth: g => .3 + .7 * g * g });
     for (let i = 0; i < 6; i++) {
       const ang = around(6, i);
-      const br = grow(limb(V(Math.cos(ang) * .15, 1.95, Math.sin(ang) * .15), V(Math.cos(ang), R(.6, 1.1), Math.sin(ang)), R(.5, .8), .1, .05, spec.trunk), .25 + i * .04, .6 + i * .04, trunk);
-      crown(br, spec.leaf, 2, R(.26, .34), .4 + i * .04, { sx: 1.2, sy: .7, sz: 1.2 });
+      const br = grow(limb(V(Math.cos(ang) * .15, 1.95, Math.sin(ang) * .15), V(Math.cos(ang), R(.6, 1.1), Math.sin(ang)), R(.5, .8), .1, .05, spec.trunk), i * .04, .35 + i * .04, trunk);
+      crown(br, spec.leaf, 2, R(.26, .34), .08 + i * .04, { sx: 1.2, sy: .7, sz: 1.2 });
     }
   } else if (k === "palm") {
     let parent = null, p = V(0, 0, 0), dir = V(0, 1, 0);
     const bend = R(.04, .09);
     for (let i = 0; i < 8; i++) {
-      parent = grow(limb(p, dir, .33, .13 - i * .007, .12 - i * .007, i % 2 ? spec.trunk : 0x8a7358), i ? .05 : 0, i ? .3 : .25, parent);
+      // Establishment phase: the crown of fronds sits at the ground first, then the trunk rises (full girth from the start).
+      parent = grow(limb(p, dir, .33, .13 - i * .007, .12 - i * .007, i % 2 ? spec.trunk : 0x8a7358), .12 + i * .08, .3 + i * .08, parent, { raw: true, yOnly: true });
       p = parent.userData.tip;
       dir = V(dir.x + bend, 1, 0);
     }
+    // The fronds hang on a crown that follows the top of the trunk as it rises.
+    const crownG = new T.Group();
+    crownG.position.copy(p);
+    root.add(crownG);
+    const topSeg = parent;
+    topSeg.userData.tipWorld = p.clone(); // turned into the segment's own coordinates after re-parenting
+    const fronds = [];
+    follow.push(g => {
+      crownG.position.copy(topSeg.localToWorld(topSeg.userData.tipLocal.clone())); root.worldToLocal(crownG.position);
+      const up2 = 1 - smooth((g - .15) / .55); // a young palm's fronds stand up like a fan; they arch out with age
+      fronds.forEach(f => (f.rotation.x = f.userData.rx * (1 - up2) - .75 * up2));
+    });
     for (let i = 0; i < 9; i++) {
       const frond = new T.Mesh(new T.BoxGeometry(.24, .03, 1.35), mat(spec.leaf));
       frond.geometry.translate(0, 0, .67);
       frond.position.copy(p);
       frond.rotation.set(R(.35, .7), around(9, i, .2), 0, "YXZ");
-      grow(frond, .35 + i * .03, .65 + i * .03, parent);
+      frond.userData.rx = frond.rotation.x;
+      fronds.push(frond);
+      grow(frond, i * .02, .3 + i * .04, crownG, { raw: true });
     }
     if (spec.fruit) for (let i = 0; i < 4; i++) {
       const c = new T.Mesh(new T.SphereGeometry(.11, 12, 10), shiny(spec.fruit));
       c.position.copy(p.clone().add(V(R(-.16, .16), -.12, R(-.16, .16))));
-      grow(c, .8, .9, parent);
+      grow(c, .8, .9, crownG, { raw: true });
       features.push(c);
     }
   } else if (k === "willow") {
@@ -364,15 +385,18 @@ function buildTree(T, spec, seedKey, lod = 1) {
     crown(top, spec.leaf, 2, .6, .3, { sx: 1.3, sy: .6, sz: 1.3 });
   } else if (k === "vine") {
     const post = 0x8a6a4a;
-    [-1.1, 1.1].forEach(x => grow(limb(V(x, 0, 0), up, 1.25, .045, .04, post), 0, .12));
-    grow(limb(V(-1.15, 1.2, 0), V(1, 0, 0), 2.3, .025, .025, post), .05, .15);
-    const s1 = grow(limb(V(0, 0, 0), V(.12, 1, .05), .65, .11, .08, spec.trunk), 0, .3);
-    const s2 = grow(limb(s1.userData.tip, V(-.1, 1, 0), .56, .08, .06, spec.trunk), .12, .4, s1);
+    // A vine is planted at a trellis: the stem climbs to the wire, then the arms (cordons) run along it with leaves
+    // opening from the base outwards; grapes come last.
+    [-1.1, 1.1].forEach(x => grow(limb(V(x, 0, 0), up, 1.25, .045, .04, post), -1, 0, null, { raw: true }));
+    grow(limb(V(-1.15, 1.2, 0), V(1, 0, 0), 2.3, .025, .025, post), -1, 0, null, { raw: true });
+    const s1 = grow(limb(V(0, 0, 0), V(.12, 1, .05), .65, .11, .08, spec.trunk), .02, .25, null, { raw: true });
+    const s2 = grow(limb(s1.userData.tip, V(-.1, 1, 0), .56, .08, .06, spec.trunk), .18, .4, s1, { raw: true });
+    [[s1, .5, .05], [s1, .85, .1], [s2, .6, .22]].forEach(([st, f, a], j) => grow(blob(st.userData.at(f).add(V(j % 2 ? -.1 : .1, 0, .04)), .13, spec.leaf, 1.3, .6, 1.1), a, a + .2, st, { raw: true }));
     [-1, 1].forEach((side, j) => {
-      const arm = grow(limb(s2.userData.tip, V(side, .03, 0), 1.05, .05, .03, spec.trunk), .25 + j * .04, .55 + j * .04, s2);
+      const arm = grow(limb(s2.userData.tip, V(side, .03, 0), 1.05, .05, .03, spec.trunk), .36 + j * .03, .7 + j * .03, s2, { raw: true });
       for (let i = 0; i < 5; i++) {
         const b = blob(arm.userData.at(.2 + i * .19).add(V(0, .08, R(-.12, .12))), R(.18, .25), spec.leaf, 1.3, .6, 1.1);
-        grow(b, .35 + i * .05, .65 + i * .05, arm);
+        grow(b, .4 + i * .07, .6 + i * .07, arm, { raw: true });
       }
       for (let b = 0; b < 3; b++) {
         const bunch = new T.Group();
@@ -409,22 +433,31 @@ function buildTree(T, spec, seedKey, lod = 1) {
   root.updateMatrixWorld(true);
   links.forEach(([parent, child]) => parent.attach(child));
   parts.forEach(p => (p.base = p.obj.scale.clone()));
+  root.updateMatrixWorld(true);
+  root.traverse(o => { if (o.userData.tipWorld) o.userData.tipLocal = o.worldToLocal(root.localToWorld(o.userData.tipWorld.clone())); });
   outer.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
 
   return {
     group: outer,
     features,
     update(g) {
-      // The seedling fades only once the young trunk is already taller than it.
-      const sp = 1 - smooth((g - .15) / .1);
+      // Seedling (two seed leaves) first; it hands over to the young tree once that has its own leaves.
+      const sp = 1 - smooth((g - .1) / .12);
       sprout.visible = sp > .01;
-      sprout.scale.setScalar(Math.max(.001, sp));
+      sprout.scale.setScalar(Math.max(.001, sp * .75));
+      // The whole tree gets taller all day; young trees are slimmer (height first, then spread and girth).
+      const h = k === "vine" ? 1 : .14 + .86 * (1 - Math.pow(1 - Math.min(1, g), 1.5));
+      const w = k === "vine" || k === "palm" ? h : h * (.68 + .32 * g);
+      root.scale.set(w, h, w);
       parts.forEach(p => {
         const t = easeOut((g - p.a) / Math.max(.01, p.b - p.a));
-        const k = Math.max(t, .0001);
+        const s = Math.max(t, .0001);
         p.obj.visible = t > .002;
-        p.obj.scale.set(p.base.x * k, p.base.y * k, p.base.z * k);
+        const gx = p.girth ? p.girth(g) : 1;
+        if (p.yOnly) { p.obj.visible = true; p.obj.scale.set(p.base.x, p.base.y * Math.max(.02, s), p.base.z); }
+        else p.obj.scale.set(p.base.x * s * gx, p.base.y * s, p.base.z * s * gx);
       });
+      if (follow.length) { outer.updateMatrixWorld(true); follow.forEach(f => f(g)); }
     }
   };
 }
