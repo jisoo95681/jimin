@@ -1142,9 +1142,114 @@ function makeGardener(T, girl) {
   };
 }
 
+// ---------- Border collie coat ----------
+// The classic "Irish" collie pattern, painted onto the dog in its own space (+z forward, +y up): white blaze down the
+// face and a white muzzle, a full white collar and ruff, white chest and belly, four white feet (higher on the front
+// legs) and a white tail tip; black everywhere else. Edges are broken up with noise so they look like real fur patches.
+// The coat is a double coat: short and smooth on the face, ears and feet; longer feathering on the ruff, chest, belly,
+// backs of the legs and a bushy tail. It is drawn with "shells": copies of each part pushed out along the fur
+// direction, each showing fewer, thinner strands, so strands appear to stand out of the skin.
+function collieNoise(x, y, z) {
+  const h = (i, j, k) => { const n = Math.sin(i * 127.1 + j * 311.7 + k * 74.7) * 43758.5453; return n - Math.floor(n); };
+  const xi = Math.floor(x), yi = Math.floor(y), zi = Math.floor(z), xf = x - xi, yf = y - yi, zf = z - zi;
+  const u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf), w = zf * zf * (3 - 2 * zf);
+  const L = (a, b, t) => a + (b - a) * t;
+  return L(L(L(h(xi, yi, zi), h(xi + 1, yi, zi), u), L(h(xi, yi + 1, zi), h(xi + 1, yi + 1, zi), u), v),
+    L(L(h(xi, yi, zi + 1), h(xi + 1, yi, zi + 1), u), L(h(xi, yi + 1, zi + 1), h(xi + 1, yi + 1, zi + 1), u), v), w);
+}
+function collieMarking(p) {
+  const n = (collieNoise(p.x * 22, p.y * 22, p.z * 22) - .5) * .05 + (collieNoise(p.x * 60, p.y * 60, p.z * 60) - .5) * .015;
+  const x = p.x, y = p.y + n, z = p.z + n;
+  if (z > .3 && y > .48 && Math.abs(x) < .012 + Math.max(0, .64 - y) * .22) return 1; // blaze
+  if (z > .34 && y < .52) return 1;                                                     // muzzle
+  if (z > .055 && z < .13 && y > .34 && y < .52) return 1;                             // collar all round the neck
+  if (z > .1 && y < .42 && z < .33) return 1;                                          // throat, ruff and chest
+  if (y < .225 && Math.abs(z) < .17) return 1;                                         // belly
+  if (z > .05 && y < .24) return 1;                                                    // front legs
+  if (z < -.05 && z > -.22 && y < .15) return 1;                                       // back feet
+  if (z < -.27 && y < .25) return 1;                                                   // tail tip
+  return 0;
+}
+function collieFurLength(p, nrm) {
+  const { x, y, z } = p;
+  if (y < .07) return .004;                                  // feet: short and smooth
+  if (z > .33) return .004;                                  // muzzle
+  if (y > .47 && z > .16) return .008;                       // face and ears
+  if (z < -.19 && y > .1) return .03;                        // bushy tail
+  if (z > .04 && z < .2 && y > .34) return .026;             // ruff
+  if (z > .1 && y < .44) return .024;                        // chest
+  if (y < .27 && Math.abs(z) < .2) return .018;              // feathered underside
+  if (y < .3 && z > 0 && nrm.z < -.2) return .018;          // feathering on the backs of the front legs
+  if (y < .3 && z < 0 && y > .15) return .016;               // breeches on the haunches
+  if (y < .3) return .006;                                   // fronts of the legs
+  return .013;
+}
+const FUR_SHELLS = 10;
+let furMats = null;
+function furShellMats(T) {
+  if (furMats) return furMats;
+  furMats = [];
+  for (let i = 1; i <= FUR_SHELLS; i++) {
+    const k = i / FUR_SHELLS;
+    const m = new T.MeshStandardMaterial({ vertexColors: true, roughness: .85, metalness: 0 });
+    m.onBeforeCompile = sh => {
+      sh.uniforms.uK = { value: k };
+      sh.vertexShader = sh.vertexShader
+        .replace("#include <common>", "#include <common>\nattribute vec3 furOff;\nattribute vec3 furPos;\nvarying vec3 vFurPos;\nuniform float uK;")
+        .replace("#include <begin_vertex>", "#include <begin_vertex>\ntransformed += furOff * uK;\nvFurPos = furPos;");
+      sh.fragmentShader = sh.fragmentShader
+        .replace("#include <common>", "#include <common>\nvarying vec3 vFurPos;\nuniform float uK;\nfloat furHash(vec3 p) { return fract(sin(dot(p, vec3(12.9898, 78.233, 37.719))) * 43758.5453); }")
+        .replace("#include <clipping_planes_fragment>", `#include <clipping_planes_fragment>
+          vec3 cell = floor(vFurPos), f = fract(vFurPos) - 0.5;
+          float h = furHash(cell);
+          if (uK > 0.25 + 0.75 * h) discard;                       // strands have different lengths
+          if (length(f) > 0.62 * (1.0 - uK) + 0.07) discard;        // and get thinner towards the tip`)
+        .replace("#include <color_fragment>", "#include <color_fragment>\ndiffuseColor.rgb *= 0.68 + 0.42 * uK;"); // darker at the roots
+    };
+    furMats.push(m);
+  }
+  return furMats;
+}
+function furCoat(T, dog, coat) {
+  dog.updateMatrixWorld(true);
+  const inv = new T.Matrix4().copy(dog.matrixWorld).invert();
+  const black = new T.Color(0x24201e), white = new T.Color(0xf3efe6), c = new T.Color();
+  const flow = new T.Vector3(0, -.35, -1).normalize(); // fur lies back towards the tail and a little down
+  const shells = furShellMats(T);
+  const meshes = [];
+  dog.traverse(o => { if (o.isMesh && o.material === coat) meshes.push(o); });
+  meshes.forEach(mesh => {
+    const g = mesh.geometry, pos = g.attributes.position, nor = g.attributes.normal;
+    const toDog = new T.Matrix4().multiplyMatrices(inv, mesh.matrixWorld), nMat = new T.Matrix3().getNormalMatrix(toDog);
+    const back = new T.Matrix3().setFromMatrix4(toDog).invert();
+    const cols = [], offs = [], fps = [], p = new T.Vector3(), n = new T.Vector3(), d = new T.Vector3();
+    let maxLen = 0;
+    for (let i = 0; i < pos.count; i++) {
+      p.fromBufferAttribute(pos, i).applyMatrix4(toDog);
+      n.fromBufferAttribute(nor, i).applyMatrix3(nMat).normalize();
+      const wht = collieMarking(p), shade = .92 + collieNoise(p.x * 90, p.y * 90, p.z * 90) * .16;
+      c.copy(wht ? white : black).multiplyScalar(shade);
+      cols.push(c.r, c.g, c.b);
+      const len = collieFurLength(p, n);
+      maxLen = Math.max(maxLen, len);
+      const tail = p.z < -.19 && p.y > .1;
+      d.copy(n).addScaledVector(tail ? new T.Vector3(0, -1, 0) : flow, tail ? .6 : 1.4).normalize().multiplyScalar(len).applyMatrix3(back);
+      offs.push(d.x, d.y, d.z);
+      fps.push(p.x * 280, p.y * 280, p.z * 280);
+    }
+    g.setAttribute("color", new T.Float32BufferAttribute(cols, 3));
+    g.setAttribute("furOff", new T.Float32BufferAttribute(offs, 3));
+    g.setAttribute("furPos", new T.Float32BufferAttribute(fps, 3));
+    if (maxLen < .006) return; // short-haired parts need no shells
+    shells.forEach(m => { const s = new T.Mesh(g, m); s.castShadow = false; s.receiveShadow = true; mesh.add(s); });
+  });
+}
+
 function makeCollie(T) {
-  const black = new T.MeshPhysicalMaterial({ color: 0x1d1b1b, roughness: .7, sheen: new T.Color(0x6a6a6a), metalness: 0 });
-  const white = new T.MeshPhysicalMaterial({ color: 0xf7f4ee, roughness: .8, sheen: new T.Color(0xffffff), metalness: 0 });
+  // One coat material for every furry part: the black-and-white pattern is painted per vertex (see collieMarking),
+  // and this base layer is the dense, darker undercoat under the fur shells.
+  const coat = new T.MeshStandardMaterial({ vertexColors: true, roughness: .95, metalness: 0, color: 0xd2d2d2 });
+  const black = coat, white = coat;
   const dog = new T.Group(), body = new T.Group();
   dog.add(body, blobShadow(T, .36));
   // A round, fluffy body.
@@ -1201,6 +1306,7 @@ function makeCollie(T) {
   tail.add(ell(T, .052, 1, 1.3, 1, white, 0, -.26, -.1, 24), ell(T, .046, 1, 1, 1, black, 0, 0, 0, 20));
   body.add(tail);
   dog.traverse(o => { if (o.isMesh) { o.castShadow = !o.material.transparent; o.receiveShadow = true; } });
+  furCoat(T, dog, coat);
   dog.scale.setScalar(1.15);
   let phase = 0, amt = 0, sit = 0, last = performance.now();
   return {
