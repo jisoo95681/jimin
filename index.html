@@ -357,6 +357,65 @@
   .g-bar { position: relative; height: 10px; border-radius: 5px; background: var(--aqua-pale); margin: 22px 4px 30px; }
   .g-fill { height: 100%; width: 0; border-radius: 5px; background: linear-gradient(90deg, #7cc35a, #3f8f4a); transition: width 1.2s var(--ease); }
   .g-mark { position: absolute; top: -4px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
+  /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
+  .cc.p { background: #f6efe2; color: var(--navy); }
+  .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
+  :root { --pt-study: #b8d8f2; --pt-rev: #f7e7a6; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; }
+  .pt-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: .85rem; color: var(--muted); }
+  .pt-legend i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: -3px; margin-right: 5px; border: 1px solid rgba(41, 38, 69, .08); }
+  .pt-grad { display: inline-flex; gap: 2px; margin-right: 5px; vertical-align: -3px; }
+  .pt-grad i { margin: 0; width: 12px; }
+  .pt-wrap {
+    width: calc(100vw - 32px); max-width: 1500px; margin: 0 0 0 calc(50% - min(50vw - 16px, 750px));
+    overflow: auto; -webkit-overflow-scrolling: touch; max-height: calc(100vh - 230px); max-height: calc(100dvh - 230px);
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 12px 30px rgba(41, 38, 69, .08);
+  }
+  .pt { border-collapse: separate; border-spacing: 0; font-size: .8rem; }
+  .pt th, .pt td { border-bottom: 1px solid #edf3f4; border-right: 1px solid #f1f5f6; padding: 0; height: 30px; }
+  .pt thead th { position: sticky; top: 0; z-index: 3; background: #f7fbfb; font-weight: 600; color: var(--muted); }
+  .pt thead tr:nth-child(2) th { top: 30px; }
+  .pt .c-topic, .pt .c-read { position: sticky; z-index: 2; background: var(--white); text-align: left; }
+  .pt thead .c-topic, .pt thead .c-read { z-index: 4; background: #f7fbfb; }
+  .pt .c-topic { left: 0; width: 112px; min-width: 112px; max-width: 112px; padding: 6px 8px; vertical-align: top; font-weight: 700; color: var(--navy); line-height: 1.2; border-right: 1px solid var(--border); }
+  .pt .c-topic small { display: block; font-weight: 500; color: var(--muted); margin-top: 2px; }
+  .pt .c-read { left: 112px; width: 250px; min-width: 250px; max-width: 250px; padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--navy); border-right: 1px solid var(--border); box-shadow: 4px 0 8px -6px rgba(41, 38, 69, .25); }
+  .pt .c-read b { display: inline-block; width: 22px; color: var(--muted); font-weight: 600; }
+  .pt tr.grp td { border-top: 2px solid var(--border); }
+  .pt tr.mock .c-topic, .pt tr.mock .c-read { background: #fbf8f1; }
+  .pt .d { width: 34px; min-width: 34px; text-align: center; font-size: .72rem; line-height: 1.05; }
+  .pt .d.wk { color: #9aa3b8; }
+  .pt thead th.d.today { background: var(--navy); color: var(--white); }
+  .pt td.cell { width: 34px; min-width: 34px; cursor: pointer; position: relative; transition: background .25s; }
+  .pt td.cell:hover { background: #f5fafa; }
+  .pt td.cell.today { background: rgba(41, 38, 69, .045); }
+  @media (max-width: 600px) {
+    .pt .c-topic { width: 68px; min-width: 68px; max-width: 68px; padding: 6px 4px; font-size: .6rem; overflow-wrap: break-word; }
+    .pt .c-read { left: 68px; width: 128px; min-width: 128px; max-width: 128px; padding: 0 5px; font-size: .72rem; }
+    .pt .c-read b { width: 18px; }
+    .pt-wrap { width: calc(100vw - 16px); margin-left: calc(50% - 50vw + 8px); }
+  }
+  .pt td.cell .mk { position: absolute; inset: 3px; border-radius: 5px; display: flex; flex-direction: column; overflow: hidden; }
+  .pt td.cell .mk span { flex: 1; }
+  .pt td.cell .sc { position: absolute; inset: 0; display: grid; place-items: center; font-size: .62rem; font-weight: 700; color: rgba(41, 38, 69, .65); }
+  /* The picker sheet */
+  .pt-sheet-bg { position: fixed; inset: 0; background: rgba(41, 38, 69, .28); z-index: 50; opacity: 0; transition: opacity .3s; }
+  .pt-sheet-bg.on { opacity: 1; }
+  .pt-sheet {
+    position: fixed; left: 50%; bottom: 0; z-index: 51; width: min(520px, 100vw); transform: translate(-50%, 100%);
+    background: var(--white); border-radius: 22px 22px 0 0; padding: 18px 18px calc(18px + env(safe-area-inset-bottom));
+    box-shadow: 0 -12px 40px rgba(41, 38, 69, .2); transition: transform .4s var(--ease);
+  }
+  .pt-sheet.on { transform: translate(-50%, 0); }
+  .pt-sheet h3 { margin: 0 0 2px; font-size: 1.05rem; }
+  .pt-sheet .sub { margin: 0 0 14px; }
+  .pt-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pt-opt { border: 2px solid transparent; border-radius: 14px; padding: 12px; font: inherit; font-weight: 700; color: var(--navy); cursor: pointer; text-align: left; }
+  .pt-opt.on { border-color: var(--navy); }
+  .pt-scores { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-top: 10px; }
+  .pt-scores button { border: 2px solid transparent; border-radius: 10px; padding: 10px 0; font: inherit; font-weight: 700; font-size: .85rem; color: var(--navy); cursor: pointer; }
+  .pt-scores button.on { border-color: var(--navy); }
+  .pt-sheet .row-btns { display: flex; gap: 10px; margin-top: 16px; }
+  .pt-sheet .row-btns .btn { flex: 1; }
   .g-mark i { width: 2px; height: 18px; background: var(--white); border-radius: 1px; box-shadow: 0 0 0 1px var(--border); }
   .g-mark b { font-size: .72rem; color: var(--muted); margin-top: 4px; font-weight: 700; }
   .g-mark:last-child i { background: transparent; box-shadow: none; }
@@ -445,7 +504,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v45 · 2026-10-02";
+  const APP_VERSION = "v46 · 2026-10-02";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -640,7 +699,7 @@
 
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden (remembered while the app is open)
+  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker (remembered while the app is open)
   function home(dir = "back") {
     screen(dir);
     backTo = () => home("back");
@@ -648,7 +707,8 @@
       { cls: "q", kicker: "Practice", title: "Questions", info: `${plural(VIGNETTES.length, "vignette")} · ${QUESTIONS.length} quick`, open: () => questionsHub() },
       { cls: "t", kicker: "Focus", title: "Timer", id: "home-timer", open: () => studyTimer() },
       { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
-      { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() }
+      { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() },
+      { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() }
     ];
     const N = cards.length;
     const wrap = el("div", { className: "carousel" });
@@ -740,6 +800,160 @@
   }
   let homeKeys = null;
   document.addEventListener("keydown", e => { if (homeKeys && document.querySelector(".carousel") && !document.querySelector(".focus")) homeKeys(e); });
+
+  // ---------- Progression tracker ----------
+  // Every reading of the Level II curriculum (plus mock exams) down the side, every day until the exam across.
+  // Tap a day to mark it: studied (blue), revised (yellow), or questions with a score (green when it went well,
+  // fading and turning red as the score drops). A day can carry several marks. Saved on this device.
+  const PT_TOPICS = [
+    ["Quantitative Methods", "5–10%", ["Multiple Regression", "Time-Series Analysis", "Machine Learning", "Big Data Projects"]],
+    ["Economics", "5–10%", ["Currency Exchange Rates: Understanding Equilibrium Value", "Economic Growth"]],
+    ["Financial Statement Analysis", "10–15%", ["Intercorporate Investments", "Employee Compensation: Post-Employment and Share-Based", "Multinational Operations", "Analysis of Financial Institutions", "Evaluating Quality of Financial Reports", "Integration of Financial Statement Analysis Techniques"]],
+    ["Corporate Issuers", "5–10%", ["Analysis of Dividends and Share Repurchases", "ESG Considerations in Investment Analysis", "Cost of Capital: Advanced Topics", "Corporate Restructuring"]],
+    ["Equity Valuation", "10–15%", ["Equity Valuation: Applications and Processes", "Discounted Dividend Valuation", "Free Cash Flow Valuation", "Market-Based Valuation: Price and Enterprise Value Multiples", "Residual Income Valuation", "Private Company Valuation"]],
+    ["Fixed Income", "10–15%", ["The Term Structure and Interest Rate Dynamics", "The Arbitrage-Free Valuation Framework", "Valuation and Analysis of Bonds with Embedded Options", "Credit Analysis Models", "Credit Default Swaps"]],
+    ["Derivatives", "5–10%", ["Pricing and Valuation of Forward Commitments", "Valuation of Contingent Claims"]],
+    ["Alternative Investments", "5–10%", ["Introduction to Commodities and Commodity Derivatives", "Overview of Types of Real Estate Investment", "Investments in Real Estate Through Publicly Traded Securities", "Hedge Fund Strategies"]],
+    ["Portfolio Management", "10–15%", ["Economics and Investment Markets", "Analysis of Active Portfolio Management", "Exchange-Traded Funds: Mechanics and Applications", "Using Multifactor Models", "Measuring and Managing Market Risk", "Backtesting and Simulation"]],
+    ["Ethical and Professional Standards", "10–15%", ["Code of Ethics and Standards of Professional Conduct", "Guidance for Standards I–VII", "Application of the Code and Standards: Level II"]],
+    ["Mock Exam", "", ["Mock exam"]]
+  ];
+  const PT_SCORES = [[90, "90+", "--pt-q90"], [80, "80s", "--pt-q80"], [70, "70s", "--pt-q70"], [60, "60s", "--pt-q60"], [50, "50s", "--pt-q50"], [40, "≤40", "--pt-q40"]];
+  const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
+  function loadPT() { try { return JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } }
+  function savePT(p) { try { localStorage.setItem("cfa-progress", JSON.stringify(p)); } catch {} }
+  // The days on the chart: from the day the tracker was first opened up to the day before the exam.
+  function ptDays(p) {
+    if (!p.start) { p.start = dkey(new Date()); savePT(p); }
+    const days = [], d = fromKey(p.start), end = new Date(EXAM.getFullYear(), EXAM.getMonth(), EXAM.getDate());
+    for (; d < end; d.setDate(d.getDate() + 1)) days.push(new Date(d));
+    return days;
+  }
+  function ptSummary() {
+    const p = loadPT(), n = Object.keys(p.cells).length;
+    return n ? `${plural(n, "mark")} so far` : "Mark what you study each day";
+  }
+  // Paint one cell: stacked pastel stripes, one per mark, and the score if questions were done.
+  function ptPaint(td, marks) {
+    td.innerHTML = "";
+    if (!marks || !marks.length) return;
+    const mk = el("div", { className: "mk" });
+    const order = { s: 0, r: 1, q: 2 };
+    marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
+      const sp = el("span");
+      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? "--pt-rev" : ptScoreVar(m.s)})`;
+      mk.append(sp);
+    });
+    td.append(mk);
+    const q = marks.find(m => m.t === "q");
+    if (q) td.append(el("span", { className: "sc" }, q.s >= 90 ? "90" : q.s <= 40 ? "40" : String(q.s)));
+  }
+  function tracker(dir = "fwd") {
+    screen(dir);
+    backTo = () => tracker("back");
+    app.append(nav("Menu", () => home("back")));
+    const p = loadPT(), days = ptDays(p), todayKey = dkey(new Date());
+    app.append(el("h1", { className: "title" }, "Progression tracker"),
+      el("p", { className: "sub" }, `${plural(days.filter(d => dkey(d) >= todayKey).length, "day")} until the exam · tap a day to mark it`));
+    const legend = el("div", { className: "pt-legend" });
+    const key = (v, t) => { const s = el("span"); const i = el("i"); i.style.background = `var(${v})`; s.append(i, t); return s; };
+    const grad = el("span"), g = el("span", { className: "pt-grad" });
+    PT_SCORES.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; g.append(i); });
+    grad.append(g, "Questions 90+ → ≤40");
+    legend.append(key("--pt-study", "Studied"), key("--pt-rev", "Revised"), grad);
+    app.append(legend, el("div", { style: "height:12px" }));
+
+    const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
+    const thead = el("thead"), h1 = el("tr"), h2 = el("tr");
+    h1.append(el("th", { className: "c-topic", rowSpan: 2 }, "Topic (weight)"), el("th", { className: "c-read", rowSpan: 2 }, "Reading"));
+    days.forEach(d => {
+      const k = dkey(d), wk = d.getDay() === 0 || d.getDay() === 6;
+      const a = el("th", { className: "d" + (k === todayKey ? " today" : wk ? " wk" : "") });
+      a.innerHTML = `${d.getMonth() + 1}/${d.getDate()}`;
+      const b = el("th", { className: "d" + (k === todayKey ? " today" : wk ? " wk" : "") }, "SMTWTFS"[d.getDay()]);
+      h1.append(a); h2.append(b);
+    });
+    thead.append(h1, h2);
+    const tbody = el("tbody");
+    let num = 0;
+    PT_TOPICS.forEach(([topic, weight, readings], ti) => {
+      readings.forEach((title, ri) => {
+        const mock = topic === "Mock Exam", id = mock ? "mock" : String(++num);
+        const tr = el("tr", { className: (ri === 0 && ti ? "grp" : "") + (mock ? " mock" : "") });
+        if (ri === 0) {
+          const th = el("td", { className: "c-topic", rowSpan: readings.length });
+          th.append(topic); if (weight) th.append(el("small", {}, `(${weight})`));
+          tr.append(th);
+        }
+        const rd = el("td", { className: "c-read", title });
+        rd.innerHTML = mock ? "" : `<b>${id}</b>`;
+        rd.append(title);
+        tr.append(rd);
+        days.forEach(d => {
+          const k = dkey(d), td = el("td", { className: "cell" + (k === todayKey ? " today" : "") });
+          ptPaint(td, p.cells[id + "|" + k]);
+          td.onclick = () => ptPick(id, mock ? "Mock exam" : `${id}. ${title}`, d, td);
+          tr.append(td);
+        });
+        tbody.append(tr);
+      });
+    });
+    table.append(thead, tbody);
+    wrap.append(table);
+    app.append(wrap);
+    // Start scrolled so that today is the first visible day.
+    requestAnimationFrame(() => {
+      const t = thead.querySelector("th.d.today");
+      const frozen = table.querySelector("thead .c-topic").offsetWidth + table.querySelector("thead .c-read").offsetWidth;
+      if (t) wrap.scrollLeft = Math.max(0, t.offsetLeft - frozen - 34);
+    });
+  }
+  // Bottom sheet to set a day's marks.
+  function ptPick(id, label, day, td) {
+    const p = loadPT(), key = id + "|" + dkey(day);
+    let marks = (p.cells[key] || []).map(m => ({ ...m }));
+    const bg = el("div", { className: "pt-sheet-bg" }), sh = el("div", { className: "pt-sheet" });
+    sh.append(el("h3", {}, label), el("p", { className: "sub" }, day.toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" })));
+    const opts = el("div", { className: "pt-opts" }), scores = el("div", { className: "pt-scores" });
+    const has = t => marks.find(m => m.t === t);
+    const toggle = t => { marks = has(t) ? marks.filter(m => m.t !== t) : [...marks, { t }]; draw(); };
+    const bS = el("button", { className: "pt-opt" }, "Studied"), bR = el("button", { className: "pt-opt" }, "Revised");
+    bS.style.background = "var(--pt-study)"; bR.style.background = "var(--pt-rev)";
+    bS.onclick = () => toggle("s"); bR.onclick = () => toggle("r");
+    opts.append(bS, bR);
+    const sb = PT_SCORES.map(([v, t, c]) => {
+      const b = el("button", {}, t);
+      b.style.background = `var(${c})`;
+      b.onclick = () => { const q = has("q"); if (q && q.s === v) marks = marks.filter(m => m.t !== "q"); else if (q) q.s = v; else marks.push({ t: "q", s: v }); draw(); };
+      scores.append(b);
+      return [v, b];
+    });
+    function draw() {
+      bS.classList.toggle("on", !!has("s")); bR.classList.toggle("on", !!has("r"));
+      const q = has("q");
+      sb.forEach(([v, b]) => b.classList.toggle("on", !!q && q.s === v));
+    }
+    draw();
+    const btns = el("div", { className: "row-btns" });
+    const clear = el("button", { className: "btn ghost" }, "Clear"), done = el("button", { className: "btn" }, "Done");
+    const close = save => {
+      if (save) {
+        const cur = loadPT();
+        if (marks.length) cur.cells[key] = marks; else delete cur.cells[key];
+        savePT(cur);
+        ptPaint(td, marks);
+      }
+      bg.classList.remove("on"); sh.classList.remove("on");
+      setTimeout(() => { bg.remove(); sh.remove(); }, 420);
+    };
+    clear.onclick = () => { marks = []; close(true); };
+    done.onclick = () => close(true);
+    bg.onclick = () => close(true);
+    btns.append(clear, done);
+    sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, btns);
+    document.body.append(bg, sh);
+    requestAnimationFrame(() => { bg.classList.add("on"); sh.classList.add("on"); });
+  }
 
   // Questions page: three equal boxes in a row.
   function questionsHub(dir = "fwd") {
