@@ -1074,6 +1074,82 @@ const VIGNETTES = [
         "why": "Neoclassical model: in an open economy, capital flows from capital-rich (high K/L) to capital-poor countries seeking higher returns, so the capital stock of developing countries grows faster than in rich countries even with low saving; faster capital growth raises productivity growth and per capita incomes converge (Justification 3). Justification 1 is wrong: as foreign capital flows in and the country becomes less capital poor, returns fall and global savers slow their investment. Justification 2 describes the selection effect from endogenous growth models: foreign competition forces less efficient domestic firms to exit and others to innovate."
       }
     ]
+  },
+  {
+    "id": "schwalke",
+    "title": "Ulrich Schwalke (Private Equity)",
+    "topic": "Equity Valuation",
+    "reading": "Private Company Valuation",
+    "body": [
+      [
+        "p",
+        "Ulrich Schwalke has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years. Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies."
+      ],
+      [
+        "p",
+        "Before starting his new position, Schwalke meets with a former classmate who works as an associate focused on private company valuations in order to resolve legal disputes. During the meeting, Schwalke’s classmate mentions that private business valuation often requires normalizing certain expense items on a company’s income statement before taking next steps."
+      ],
+      [
+        "p",
+        "On his first assignment, Schwalke is asked to estimate a WACC for a potential private target company. The partner has commented that the private target has a far lower debt ratio than would be considered optimal."
+      ],
+      [
+        "p",
+        "Schwalke’s firm recently announced plans to buy one of the private companies that Schwalke has valued. Schwalke spent considerable time assessing the validity of different control premiums in analyzing a possible offer price."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which valuation feature will Schwalke find different in valuing private companies versus public companies?",
+        "options": [
+          "Using FCFF to value companies",
+          "Using market multiples to value companies",
+          "Assessing discounts to account for illiquidity"
+        ],
+        "answer": 2,
+        "why": "An issue with private versus public company valuations is the need to adjust the valuation downward for a lack of liquidity (marketability). A and B are incorrect: FCFF and market multiples are used in both private and public company valuations."
+      },
+      {
+        "q": "During Schwalke’s meeting with his former classmate, they discuss how their approaches to private company valuation vary given the different uses of their analysis. Which of the following best characterizes how Schwalke’s approach differs from that of his former classmate?",
+        "options": [
+          "Schwalke usually incorporates a DLOM.",
+          "Schwalke usually adjusts the investment value as a minority interest.",
+          "Schwalke’s approach usually considers a synergistic control premium."
+        ],
+        "answer": 2,
+        "why": "Schwalke’s firm buys and restructures private companies to take them public, so as a strategic buyer acquiring control it will consider a control premium. A DLOM and a minority-interest adjustment fit valuing a non-controlling, non-marketable stake (e.g. for litigation or tax), not his firm’s strategy of controlling and restructuring companies over five years."
+      },
+      {
+        "q": "Which of the following statements best describes the meaning of “normalizing earnings” in the context of private business valuation?",
+        "options": [
+          "Adjustments to revenues and/or costs necessary to allow comparison of private company financial results to comparable public companies",
+          "Adjustments to offset the cyclicality of revenues and/or costs for private companies",
+          "Adjustments that allow comparisons due to the lack of marketability for private companies"
+        ],
+        "answer": 0,
+        "why": "Private companies, especially when a controlling owner is also a senior manager, may have non-market transactions (e.g. above- or below-market owner compensation, personal expenses, related-party rent) that distort earnings versus comparable public companies; normalizing removes them. Cyclicality adjustments apply to public companies too, and lack of marketability affects the discount, not earnings."
+      },
+      {
+        "q": "Which statement best describes a possible bias in the WACC of the private target with a suboptimal debt ratio?",
+        "options": [
+          "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt.",
+          "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on equity.",
+          "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt."
+        ],
+        "answer": 1,
+        "why": "WACC = w_d r_d + w_e r_e (with after-tax r_d). Weights sum to one and r_e > r_d, so a lower debt weight (higher equity weight) pushes WACC up towards r_e. A suboptimally low debt ratio therefore gives a higher-than-optimal WACC (and a lower value). A is wrong: less debt does not lower WACC. C is wrong: a higher debt weight would likely lower WACC."
+      },
+      {
+        "q": "Schwalke learns that his firm intends to combine the new target company with an existing portfolio company prior to taking it public. Should Schwalke apply a financial or synergistic control premium, and how does this level of control premium compare to the other?",
+        "options": [
+          "Financial; higher",
+          "Financial; lower",
+          "Synergistic; higher"
+        ],
+        "answer": 2,
+        "why": "Combining the target with an existing portfolio company aims to realize synergies, so the firm acts like a strategic buyer and would consider a synergistic premium, which exceeds the control premium a pure financial buyer would pay."
+      }
+    ]
   }
 ];
 

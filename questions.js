@@ -939,6 +939,54 @@ const QUESTIONS = [
     options: ["Classical (Malthusian) model", "Neoclassical (Solow) model", "Endogenous growth model"],
     answer: 2,
     why: "Endogenous growth models argue that openness raises growth permanently through larger markets, spillovers and the selection effect: competition pushes out inefficient firms and spurs innovation."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Which valuation step is specific to private companies (not used for public ones)?",
+    options: ["Discounting FCFF at the WACC", "Applying a discount for lack of marketability (DLOM)", "Using P/E multiples of comparables"],
+    answer: 1,
+    why: "Private equity interests cannot be sold easily, so their value is adjusted down with a DLOM (and a DLOC for minority stakes). DCF and market multiples are used for both private and public companies."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "A strategic buyer acquiring 100% of a private company would most likely value it:",
+    options: ["As a minority interest with DLOC and DLOM", "Including a control premium (synergistic if synergies are expected)", "At book value"],
+    answer: 1,
+    why: "Control lets the buyer change strategy, financing and costs, so its investment value includes a control premium; with synergies, a strategic buyer pays a higher synergistic premium than a financial buyer. Minority-interest discounts fit non-controlling stakes, e.g. in tax or litigation valuations."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Normalizing earnings in private company valuation mainly means:",
+    options: ["Smoothing the business cycle", "Removing non-market and non-recurring items (e.g. excess owner pay, personal expenses) so results are comparable", "Applying the marketability discount to earnings"],
+    answer: 1,
+    why: "Owner-managers often pay themselves above or below market, run personal costs through the business or use related-party leases. Normalized earnings restate these at market levels, which is what a buyer would actually earn."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "A private firm uses far less debt than optimal. Its WACC is likely:",
+    options: ["Lower than optimal", "Higher than optimal, because equity (the costlier source) has a larger weight", "Unaffected"],
+    answer: 1,
+    why: "WACC = w_d r_d(1 - t) + w_e r_e and r_e > r_d, so a low debt weight raises WACC toward r_e. Analysts often use the optimal or industry capital structure instead of the actual one."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Which buyer typically pays the higher control premium?",
+    options: ["Financial buyer (e.g. a PE fund holding the company stand-alone)", "Strategic buyer expecting synergies", "Both pay the same"],
+    answer: 1,
+    why: "A strategic buyer can capture synergies (cost savings, revenue gains) and so can justify a synergistic premium above the financial premium a stand-alone financial buyer would pay."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Why can a private company's cost of equity be higher than a comparable public company's?",
+    options: ["Private firms always have higher beta", "Extra premiums for size, company-specific risk and lack of liquidity, and less access to cheap debt", "Because CAPM cannot be used"],
+    answer: 1,
+    why: "Analysts often add a size premium and company-specific risk premium (e.g. in the build-up method) and private firms may face higher borrowing costs; this raises the discount rate and lowers value."
   }
 ];
 
