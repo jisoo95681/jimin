@@ -360,7 +360,7 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev: #f7e7a6; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; }
   .pt-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: .85rem; color: var(--muted); }
   .pt-legend i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: -3px; margin-right: 5px; border: 1px solid rgba(41, 38, 69, .08); }
   .pt-grad { display: inline-flex; gap: 2px; margin-right: 5px; vertical-align: -3px; }
@@ -412,6 +412,8 @@
   .pt-opt { border: 2px solid transparent; border-radius: 14px; padding: 12px; font: inherit; font-weight: 700; color: var(--navy); cursor: pointer; text-align: left; }
   .pt-opt.on { border-color: var(--navy); }
   .pt-scores { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-top: 10px; }
+  .pt-scores.rev { grid-template-columns: repeat(3, 1fr); }
+  .pt-opts.one { grid-template-columns: 1fr; }
   .pt-scores button { border: 2px solid transparent; border-radius: 10px; padding: 10px 0; font: inherit; font-weight: 700; font-size: .85rem; color: var(--navy); cursor: pointer; }
   .pt-scores button.on { border-color: var(--navy); }
   .pt-sheet .row-btns { display: flex; gap: 10px; margin-top: 16px; }
@@ -504,7 +506,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v46 · 2026-10-02";
+  const APP_VERSION = "v47 · 2026-10-03";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -819,6 +821,9 @@
     ["Mock Exam", "", ["Mock exam"]]
   ];
   const PT_SCORES = [[90, "90+", "--pt-q90"], [80, "80s", "--pt-q80"], [70, "70s", "--pt-q70"], [60, "60s", "--pt-q60"], [50, "50s", "--pt-q50"], [40, "≤40", "--pt-q40"]];
+  // Revision depth: a quick skim, a normal review, a deep revision (fainter to stronger pastel yellow).
+  const PT_REV = [[1, "Light skim", "--pt-rev1"], [2, "Review", "--pt-rev2"], [3, "Deep revision", "--pt-rev3"]];
+  const ptRevVar = d => PT_REV[Math.min(3, Math.max(1, d || 2)) - 1][2];
   const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
   function loadPT() { try { return JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } }
   function savePT(p) { try { localStorage.setItem("cfa-progress", JSON.stringify(p)); } catch {} }
@@ -841,7 +846,7 @@
     const order = { s: 0, r: 1, q: 2 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? "--pt-rev" : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? ptRevVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
@@ -860,7 +865,10 @@
     const grad = el("span"), g = el("span", { className: "pt-grad" });
     PT_SCORES.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; g.append(i); });
     grad.append(g, "Questions 90+ → ≤40");
-    legend.append(key("--pt-study", "Studied"), key("--pt-rev", "Revised"), grad);
+    const rgrad = el("span"), rg = el("span", { className: "pt-grad" });
+    PT_REV.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; rg.append(i); });
+    rgrad.append(rg, "Revised light → deep");
+    legend.append(key("--pt-study", "Studied"), rgrad, grad);
     app.append(legend, el("div", { style: "height:12px" }));
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
@@ -917,10 +925,19 @@
     const opts = el("div", { className: "pt-opts" }), scores = el("div", { className: "pt-scores" });
     const has = t => marks.find(m => m.t === t);
     const toggle = t => { marks = has(t) ? marks.filter(m => m.t !== t) : [...marks, { t }]; draw(); };
-    const bS = el("button", { className: "pt-opt" }, "Studied"), bR = el("button", { className: "pt-opt" }, "Revised");
-    bS.style.background = "var(--pt-study)"; bR.style.background = "var(--pt-rev)";
-    bS.onclick = () => toggle("s"); bR.onclick = () => toggle("r");
-    opts.append(bS, bR);
+    opts.classList.add("one");
+    const bS = el("button", { className: "pt-opt" }, "Studied");
+    bS.style.background = "var(--pt-study)";
+    bS.onclick = () => toggle("s");
+    opts.append(bS);
+    const revs = el("div", { className: "pt-scores rev" });
+    const rb = PT_REV.map(([v, t, c]) => {
+      const b = el("button", {}, t);
+      b.style.background = `var(${c})`;
+      b.onclick = () => { const r = has("r"); if (r && (r.d || 2) === v) marks = marks.filter(m => m.t !== "r"); else if (r) r.d = v; else marks.push({ t: "r", d: v }); draw(); };
+      revs.append(b);
+      return [v, b];
+    });
     const sb = PT_SCORES.map(([v, t, c]) => {
       const b = el("button", {}, t);
       b.style.background = `var(${c})`;
@@ -929,7 +946,9 @@
       return [v, b];
     });
     function draw() {
-      bS.classList.toggle("on", !!has("s")); bR.classList.toggle("on", !!has("r"));
+      bS.classList.toggle("on", !!has("s"));
+      const r = has("r");
+      rb.forEach(([v, b]) => b.classList.toggle("on", !!r && (r.d || 2) === v));
       const q = has("q");
       sb.forEach(([v, b]) => b.classList.toggle("on", !!q && q.s === v));
     }
@@ -950,7 +969,8 @@
     done.onclick = () => close(true);
     bg.onclick = () => close(true);
     btns.append(clear, done);
-    sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, btns);
+    sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Revision · depth"), revs,
+      el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, btns);
     document.body.append(bg, sh);
     requestAnimationFrame(() => { bg.classList.add("on"); sh.classList.add("on"); });
   }
