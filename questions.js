@@ -1035,6 +1035,62 @@ const QUESTIONS = [
     options: ["12.5%", "12.6%", "11.8%"],
     answer: 1,
     why: "Forward = 29.70 × e^(0.04 × 0.25) = 30.00, so the EUR 30 put is at-the-money forward. DLOM = 3.75 / 29.70 = 12.6%. Divide by the stock price, not the exercise price."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "A company paid C$0.22 per share for three years while EPS rose and fell. Its policy is:",
+    options: ["Stable dividend policy", "Constant payout ratio policy", "Residual dividend policy"],
+    answer: 0,
+    why: "Stable: the dividend stays steady (or grows gradually toward a target payout) regardless of short-term earnings swings. Constant payout: dividend = fixed % of earnings, so it moves with EPS. Residual: pay what is left after funding capital spending, very volatile."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "A cyclical company has an unusually strong but temporary year. It will most likely:",
+    options: ["Raise the regular dividend", "Pay a special (extra) dividend", "Cut the dividend"],
+    answer: 1,
+    why: "Special dividends let firms share temporary windfalls without committing to a higher regular dividend that they might later have to cut, which markets punish."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "Which statement about share repurchases versus cash dividends is FALSE?",
+    options: ["Management is not obliged to complete an announced buyback", "Every shareholder receives cash in a buyback, as with a dividend", "Negotiated repurchases can be made below market price"],
+    answer: 1,
+    why: "Only shareholders who sell receive cash in a buyback; the others see their ownership share rise. Buybacks give flexibility (no obligation), and negotiated deals are often at a discount when large holders need liquidity."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "EPS $1.24, net income $124m, 100m shares. The firm spends $836m surplus cash buying shares at $38 plus a 10% premium. New EPS is closest to:",
+    options: ["$1.36", "$1.55", "$1.59"],
+    answer: 1,
+    why: "Price paid = 38 × 1.1 = $41.80; shares bought = 836 / 41.80 = 20m; EPS = 124 / 80 = $1.55 (+25%). $1.59 forgets the premium."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "A buyback is debt-financed. EPS rises if:",
+    options: ["The after-tax cost of debt is above the earnings yield", "The after-tax cost of debt is below the earnings yield (E/P)", "Always, because shares fall"],
+    answer: 1,
+    why: "Each share bought removes earnings of E/P per dollar spent but adds after-tax interest of r_d(1 − t). If r_d(1 − t) < E/P, EPS rises; if greater, EPS falls; if equal, no change."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "Which repurchase method most typically involves a premium to the market price?",
+    options: ["Open market purchases", "Fixed-price tender offer", "Direct negotiation"],
+    answer: 1,
+    why: "Fixed-price tender offers (and Dutch auctions) offer a premium to attract sellers quickly. Open market buys are at market prices; negotiated deals may be at a premium or a discount."
+  },
+  {
+    topic: "Corporate Issuers",
+    reading: "Analysis of Dividends and Share Repurchases",
+    q: "Book equity C$3,600m, D/E 30%, covenant max 35%. A C$155m buyback financed with new debt gives D/E closest to:",
+    options: ["31.3%", "35.8%", "34.6%"],
+    answer: 1,
+    why: "Debt 1,080 + 155 = 1,235; equity 3,600 − 155 = 3,445; D/E = 35.8% (violates). If paid from surplus cash: 1,080 / 3,445 = 31.3%."
   }
 ];
 

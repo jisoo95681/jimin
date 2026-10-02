@@ -1250,6 +1250,221 @@ const VIGNETTES = [
         "why": "The put option approach uses an at-the-money put based on the forward price. Forward = 29.70 × e^(0.04 × 0.25) = EUR 30.00, so use the EUR 30 put. DLOM = put value / stock price = 3.75 / 29.70 = 12.63% ≈ 12.6%. Trap: 12.5% divides by the EUR 30 exercise price instead of the stock price."
       }
     ]
+  },
+  {
+    "id": "carlyle",
+    "title": "Barbara Carlyle: Avignon & SpeedyPro",
+    "topic": "Corporate Issuers",
+    "reading": "Analysis of Dividends and Share Repurchases",
+    "body": [
+      [
+        "p",
+        "Barbara Carlyle is a financial adviser to high-net-worth individuals. She is currently reviewing the equity portfolio of a client and is considering adding new securities to it, as the client has indicated a preference for more income-producing securities. With this in mind, Carlyle takes a closer look at Avignon Corporation (“Avignon”), a chain of Canadian boutiques that has recently registered unusually high sales, resulting in large increases in the company’s cash balance. Avignon’s current stock price is C$47.33. Exhibit 1 shows earnings and dividends for the preceding four years."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Avignon Corporation Earnings and Dividend History",
+          "head": [
+            "",
+            "2013",
+            "2014",
+            "2015",
+            "2016"
+          ],
+          "rows": [
+            [
+              "EPS",
+              "C$1.38",
+              "C$1.39",
+              "C$1.37",
+              "C$1.44"
+            ],
+            [
+              "DPS",
+              "C$0.20",
+              "C$0.22",
+              "C$0.22",
+              "C$0.22"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Carlyle reviews analysts’ reports. She notes the significant change in cash due to the high sales volume and wonders whether that will prompt a dividend increase. However, most analysts have stated that because the industry is cyclical, the increase in sales is believed to be temporary."
+      ],
+      [
+        "p",
+        "Carlyle asks her assistant, Richard Lee, to investigate whether Avignon might use its surplus cash for a share repurchase rather than for dividends. Lee, a junior analyst, comments that share repurchases can be beneficial for several reasons:"
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "The distribution of cash among shareholders is equivalent to what would have otherwise been distributed to them as dividends."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "Share repurchases provide greater flexibility to management than the payment of cash dividends."
+      ],
+      [
+        "h",
+        "Statement 3"
+      ],
+      [
+        "p",
+        "When directly negotiated, share repurchases can be used to purchase stock for less than the current market price."
+      ],
+      [
+        "p",
+        "Lee believes that looking at other companies that have completed share repurchases could be helpful to his analysis. He looks at the history of SpeedyPro Inc. (“SpeedyPro”), a US-based industrial services company whose business depends heavily on the petroleum exploration and production sector. SpeedyPro made its first share repurchase in early 2017 using surplus cash. SpeedyPro’s selected financial information just prior to the repurchase is shown in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: SpeedyPro, Inc. Selected Financial Information as of Year-End 2016",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Net income",
+              "$124 million"
+            ],
+            [
+              "EPS",
+              "$1.24"
+            ],
+            [
+              "Shares outstanding",
+              "100 million"
+            ],
+            [
+              "Details of share repurchase",
+              ""
+            ],
+            [
+              " Cash available for repurchase",
+              "$836 million"
+            ],
+            [
+              " Share price at the time of repurchase",
+              "$38.00"
+            ],
+            [
+              " Premium over current share price for repurchase",
+              "10.0%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Lee returns to Carlyle to continue the discussion. Carlyle explains to Lee that a complete analysis of the impact of a share repurchase should also include an evaluation of the effects on leverage. She points out that Avignon’s most recent bond issue includes a covenant that limits the company’s debt-to-equity ratio to 35%. She asks Lee to prepare an analysis for Avignon, using the information in Exhibit 3, to see if the debt covenant will be violated if the company repurchases shares."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Avignon Corporation Selected Financial Information as of Year-End 2016",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Book value of equity",
+              "C$3,600 million"
+            ],
+            [
+              "Shares outstanding",
+              "200 million"
+            ],
+            [
+              "Cash available for repurchase",
+              "C$155 million"
+            ],
+            [
+              "Debt-to-equity ratio",
+              "30.0%"
+            ],
+            [
+              "After-tax cost of debt",
+              "5.0%"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibit 1, Avignon’s current dividend policy is best described as a:",
+        "options": [
+          "stable dividend policy.",
+          "residual dividend policy.",
+          "constant dividend payout ratio policy."
+        ],
+        "answer": 0,
+        "why": "Avignon has paid the same C$0.22 for three years while EPS moved up and down, so its policy is stable. A residual policy pays out whatever internally generated funds are left after capital expenditures, which gives volatile dividends and is rarely used. A constant payout ratio policy pays a fixed percentage of earnings, so the dividend would have risen with EPS in 2016 (payout fell from 16.1% to 15.3%)."
+      },
+      {
+        "q": "If the analysts’ beliefs about the increase in sales are correct, the change in dividend policy that Avignon would most likely make would be to:",
+        "options": [
+          "declare a special dividend.",
+          "increase the quarterly dividend amount.",
+          "cut the quarterly dividend in anticipation of next year’s sales forecast."
+        ],
+        "answer": 0,
+        "why": "If the extra sales are temporary, the company would most likely pay a special (extra) dividend: companies, especially in cyclical industries, use special dividends to distribute more in strong years without committing to a higher regular dividend. Firms raise the regular dividend only if they expect to sustain it, and they try hard not to cut dividends, since a consistent record signals profitability."
+      },
+      {
+        "q": "Which of Lee’s statements to Carlyle about share repurchases is least accurate?",
+        "options": [
+          "Statement 1",
+          "Statement 2",
+          "Statement 3"
+        ],
+        "answer": 0,
+        "why": "Statement 1 is least accurate: the total cash distributed may be the same, but only shareholders who sell their shares to the company receive cash, unlike a dividend paid pro rata to everyone. Statement 2 is correct: management is not obliged to complete an announced buyback, whereas a declared dividend must be paid. Statement 3 is correct: research found that about 45% of private (negotiated) repurchases from 1984 to 2001 were at discounts, often because large holders needing liquidity had weak bargaining positions."
+      },
+      {
+        "q": "If SpeedyPro had used all of its surplus cash to repurchase its shares, based on Exhibit 2, the percentage increase in EPS would have been closest to:",
+        "options": [
+          "10%.",
+          "25%.",
+          "28%."
+        ],
+        "answer": 1,
+        "why": "Repurchase price = $38.00 × 1.10 = $41.80. Shares bought = $836m / $41.80 = 20m. Shares after = 100m − 20m = 80m. New EPS = $124m / 80m = $1.55. Increase = ($1.55 − $1.24) / $1.24 = 25%. (Using surplus cash, net income is unchanged.) Traps: 10% applies the premium to EPS; 28% ignores the premium (836/38 = 22m shares, EPS = 124/78 = $1.59)."
+      },
+      {
+        "q": "Based on Exhibit 2, SpeedyPro most likely repurchased shares using:",
+        "options": [
+          "open market purchases.",
+          "a fixed-price tender offer.",
+          "a negotiated purchase agreement."
+        ],
+        "answer": 1,
+        "why": "A fixed-price tender offer normally requires a premium over the market price, consistent with SpeedyPro’s 10% premium. Open market purchases are made at market prices and can be timed to avoid price impact. Negotiated (direct) purchases are almost as likely to occur below the market price as above it, especially when sellers need liquidity."
+      },
+      {
+        "q": "The best answer to Carlyle’s question about the potential violation of the debt covenants is that the covenant:",
+        "options": [
+          "is not violated if Avignon repurchases shares.",
+          "will be violated if Avignon uses debt to finance the repurchase.",
+          "will be violated if Avignon uses the surplus cash to finance the repurchase."
+        ],
+        "answer": 1,
+        "why": "Debt = 30% × C$3,600m = C$1,080m. A repurchase reduces equity by C$155m to C$3,445m. Cash-financed: D/E = 1,080 / 3,445 = 31.3% (below 35%). Debt-financed: D/E = (1,080 + 155) / 3,445 = 35.8%, above the 35% limit, so the covenant is violated only if the buyback is financed with debt."
+      }
+    ]
   }
 ];
 
