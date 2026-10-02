@@ -987,6 +987,54 @@ const QUESTIONS = [
     options: ["Private firms always have higher beta", "Extra premiums for size, company-specific risk and lack of liquidity, and less access to cheap debt", "Because CAPM cannot be used"],
     answer: 1,
     why: "Analysts often add a size premium and company-specific risk premium (e.g. in the build-up method) and private firms may face higher borrowing costs; this raises the discount rate and lowers value."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Why might a public company pay more for a private firm than the private firm's own DCF value?",
+    options: ["Public buyers use higher discount rates", "The offer reflects improvements the buyer will make (cost cuts, cheaper debt, synergies)", "Control premiums do not apply"],
+    answer: 1,
+    why: "Private firms have less access to debt, so their stand-alone discount rates are higher. A public acquirer values the firm after the improvements it will make, so its offer reflects those gains (and usually a control premium)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "The main reason CAPM may be inappropriate for private companies is that it:",
+    options: ["Can only be used for traded stocks", "Assumes investors are well diversified, while private owners bear total risk", "Ignores the risk-free rate"],
+    answer: 1,
+    why: "CAPM rewards only systematic risk. Private owners hold concentrated positions, so analysts use the expanded CAPM or build-up method, adding size and company-specific risk premiums."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Comparable public firms have beta 1.20 and more debt than the private target (same tax rate). The target's relevered beta is:",
+    options: ["Below 1.20", "Exactly 1.20", "Above 1.20"],
+    answer: 0,
+    why: "Unlever: βu = βL / [1 + (1 − t)D/E]; relever at the target's lower D/E: βL = βu[1 + (1 − t)D/E]. Less debt gives a lower levered beta."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "The expanded CAPM for a private firm adds which premiums to the CAPM?",
+    options: ["Liquidity and inflation premiums", "Size premium and company-specific risk premium", "Control premium and DLOM"],
+    answer: 1,
+    why: "Expanded CAPM: r = rf + β(ERP) + size premium + company-specific risk premium. The build-up method (no beta) is rf + ERP + size premium + (industry risk premium) + company-specific risk premium."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Which income method is mainly used to value intangible assets rather than whole businesses?",
+    options: ["Capitalized cash flow method (CCM)", "Excess earnings method (EEM)", "Free cash flow method"],
+    answer: 1,
+    why: "The EEM values intangibles as the capitalized earnings in excess of required returns on working capital and fixed assets, using several discount rates. The CCM (a single-stage, Gordon-type model) and the FCF method value whole businesses."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Private Company Valuation",
+    q: "Stock price 29.70, 3-month risk-free 4%, at-the-money forward put worth 3.75. The DLOM is closest to:",
+    options: ["12.5%", "12.6%", "11.8%"],
+    answer: 1,
+    why: "Forward = 29.70 × e^(0.04 × 0.25) = 30.00, so the EUR 30 put is at-the-money forward. DLOM = 3.75 / 29.70 = 12.6%. Divide by the stock price, not the exercise price."
   }
 ];
 

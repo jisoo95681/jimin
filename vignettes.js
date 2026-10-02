@@ -1150,6 +1150,106 @@ const VIGNETTES = [
         "why": "Combining the target with an existing portfolio company aims to realize synergies, so the firm acts like a strategic buyer and would consider a synergistic premium, which exceeds the control premium a pure financial buyer would pay."
       }
     ]
+  },
+  {
+    "id": "schwalke2",
+    "title": "Ulrich Schwalke: JNK Corporation",
+    "topic": "Equity Valuation",
+    "reading": "Private Company Valuation",
+    "body": [
+      [
+        "p",
+        "Ulrich Schwalke continues his work in valuing private companies, taking specific interest in transactions involving public companies buying private company targets. As he has seen in his work, private company discount rates are often biased because private firms typically have less access to debt capital."
+      ],
+      [
+        "p",
+        "While Schwalke has experience using CAPM for public companies, he has rarely used it for private firms, instead relying on the expanded CAPM or a build-up approach to estimate required return on equity. When using the expanded CAPM for a private company, JNK Corporation, Schwalke gathered beta estimates from publicly traded comparable companies. On a recent engagement, he found the average beta from public comparables of 1.20. The average debt ratio of the public comparables exceeded that of JNK, while tax rates were equal between the public comparables and JNK."
+      ],
+      [
+        "p",
+        "Continuing in his role, Schwalke completed many private company valuations for entire businesses. As a result, certain methods of calculating terminal values seemed to be more useful for his work than other methods."
+      ],
+      [
+        "p",
+        "Schwalke had initially struggled with applying discounts in private company valuation but became more comfortable with different estimation methods. In particular, he finds an option-based approach to quantifying the lack of marketability quite useful. In his recent work on valuing JNK, he estimated the value of three put options with three months until expiration on the most similar public comparable company to JNK. The public comparable was trading at a stock price of EUR 29.70. The three-month risk-free rate is 4%. The put option valuation results are summarized as follows:"
+      ],
+      [
+        "table",
+        {
+          "title": "JNK Put Option Exercise Prices and Values",
+          "head": [
+            "Exercise price",
+            "Put option value"
+          ],
+          "rows": [
+            [
+              "EUR 25",
+              "EUR 1.25"
+            ],
+            [
+              "EUR 30",
+              "EUR 3.75"
+            ],
+            [
+              "EUR 35",
+              "EUR 6.95"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which statement best reflects how discount rate biases may affect offer prices in transactions involving public company buyers and private company targets?",
+        "options": [
+          "Public company buyers pay offer prices for private firms that reflect improvements the buyer will make after a successful acquisition.",
+          "Public company buyers pay offer prices for private firms that reflect the higher discount rates that apply to private companies.",
+          "Public company buyers pay offer prices for private companies that do not reflect any control premium."
+        ],
+        "answer": 0,
+        "why": "A public buyer has better access to debt and can make improvements (e.g. cutting expenses, a better capital structure), so its offer price reflects the value after those improvements, not the private firm's higher stand-alone discount rate. B contradicts this. C is wrong: a buyer gaining control is likely to pay a control premium."
+      },
+      {
+        "q": "Which statement best explains why the CAPM may be inappropriate for estimating required return on equity for private firms?",
+        "options": [
+          "The CAPM was only designed for publicly traded stocks.",
+          "The CAPM does not utilize a company-specific risk premium.",
+          "The CAPM assumes investors are well diversified."
+        ],
+        "answer": 2,
+        "why": "CAPM prices only systematic (market) risk because it assumes investors hold diversified portfolios. Private company owners are rarely well diversified: much of their wealth is tied up in the company, so they bear its total risk. A is wrong: the CAPM can be applied to any asset, traded or not. B: the absence of a separate company-specific premium follows from the diversification assumption; the expanded CAPM adds such premiums (size, company-specific risk) precisely because that assumption fails for private owners."
+      },
+      {
+        "q": "Which statement is most correct regarding Schwalke’s estimation of JNK’s beta?",
+        "options": [
+          "Schwalke estimates JNK’s beta to be less than 1.20.",
+          "Schwalke estimates JNK’s beta to be 1.20.",
+          "Schwalke estimates JNK’s beta to be greater than 1.20."
+        ],
+        "answer": 0,
+        "why": "Betas observed for public comparables are levered. First unlever: βu = βL / [1 + (1 − t)(D/E)] (the higher the comparables' debt ratio, the lower the unlevered beta). Then relever at JNK's capital structure: βL(JNK) = βu [1 + (1 − t)(D/E)JNK]. Tax rates are equal and JNK has less debt than the comparables, so JNK's relevered beta is below 1.20."
+      },
+      {
+        "q": "Which terminal value estimation method is least useful for Schwalke?",
+        "options": [
+          "CCM",
+          "EEM",
+          "Market multiple method"
+        ],
+        "answer": 1,
+        "why": "Schwalke values entire businesses. The excess earnings method (EEM) uses several discount rates for different asset classes and is mainly used to value intangible assets, so it is least useful. The capitalized cash flow method (CCM) and the market multiple method are more useful for valuing whole businesses."
+      },
+      {
+        "q": "Which amount most closely estimates the DLOM for JNK?",
+        "options": [
+          "12.4%",
+          "12.6%",
+          "12.5%"
+        ],
+        "answer": 1,
+        "why": "The put option approach uses an at-the-money put based on the forward price. Forward = 29.70 × e^(0.04 × 0.25) = EUR 30.00, so use the EUR 30 put. DLOM = put value / stock price = 3.75 / 29.70 = 12.63% ≈ 12.6%. Trap: 12.5% divides by the EUR 30 exercise price instead of the stock price."
+      }
+    ]
   }
 ];
 
