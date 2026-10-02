@@ -788,10 +788,10 @@ function buildTree(T, spec, seedKey, lod = 1) {
   };
 }
 
-// ---------- The landscape ----------
-// One continuous meadow instead of a disc per tree: the ground is flat where the trees stand (so the gardener can walk
-// there) and rolls gently into low hills further out, with grass that varies in colour, a patch of bare soil under each
-// tree, thousands of grass blades, clumps of wildflowers, a few half-buried stones, bushes and a soft sky.
+// ---------- The garden ----------
+// A tended garden rather than wild grass: a fenced plot with a gate, a mown lawn with stripes, a mulched bed with stone
+// edging around every tree, stepping-stone paths from the gate to the trees, flower borders along the fence, clipped
+// box balls in the corners and a bench; outside the fence a hedge and soft distant hills close the view.
 function landNoise(x, z) {
   const h = (i, j) => { const n = Math.sin(i * 127.1 + j * 311.7) * 43758.5453; return n - Math.floor(n); };
   const xi = Math.floor(x), zi = Math.floor(z), xf = x - xi, zf = z - zi;
@@ -799,124 +799,258 @@ function landNoise(x, z) {
   return (h(xi, zi) * (1 - u) + h(xi + 1, zi) * u) * (1 - v) + (h(xi, zi + 1) * (1 - u) + h(xi + 1, zi + 1) * u) * v;
 }
 const landFbm = (x, z) => landNoise(x, z) * .55 + landNoise(x * 2.1 + 7, z * 2.1 + 3) * .3 + landNoise(x * 4.3 + 1, z * 4.3 + 9) * .15;
-function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
-  const rnd = seeded("meadow" + spots.length), R = (a, b) => a + (b - a) * rnd();
-  const near = (x, z) => { let d = 1e9; spots.forEach(p => (d = Math.min(d, Math.hypot(x - p.x, z - p.z)))); return d; };
-  const reach = Math.max(...spots.map(p => Math.hypot(p.x, p.z)), 0); // how far out the trees go
-  const flatR = reach + 4.6; // flat enough for the gardener to walk in from the side
-  const height = (x, z) => {
-    const r = Math.hypot(x, z), out = kidSstep(flatR, flatR + 4, r);
-    const hills = (landFbm(x * .16, z * .16) - .35) * 1.6 * out + kidSstep(flatR + 3, flatR + 14, r) * (1.5 + landFbm(x * .08 + 5, z * .08) * 3.5);
-    const bumps = (landFbm(x * 1.3, z * 1.3) - .5) * .05 * kidSstep(.6, 1.6, near(x, z));
-    return Math.max(0, hills) + bumps;
-  };
-  // Ground: vertex-coloured grass (lighter and yellower in places, deeper green in others), soil under each tree.
-  const size = flatR * 2 + 40, segs = lod ? 180 : 120;
-  const geo = new T.PlaneGeometry(size, size, segs, segs);
-  geo.rotateX(-Math.PI / 2);
-  const p = geo.attributes.position, cols = [], c = new T.Color();
-  const light = new T.Color(0x8fbb58), mid = new T.Color(0x6a9f48), deep = new T.Color(0x4d8a3e), soil = new T.Color(0x7d5a3e), dry = new T.Color(0xa3b465);
-  for (let i = 0; i < p.count; i++) {
-    const x = p.getX(i), z = p.getZ(i);
-    p.setY(i, height(x, z));
-    const n = landFbm(x * .45, z * .45), n2 = landNoise(x * 2.5, z * 2.5);
-    c.copy(mid).lerp(n > .5 ? light : deep, Math.abs(n - .5) * 1.6);
-    c.lerp(dry, kidSstep(.62, .85, landNoise(x * .2 + 11, z * .2)) * .5);
-    c.multiplyScalar(.94 + n2 * .1);
-    const d = near(x, z), edge = .42 + (landNoise(x * 6, z * 6) - .5) * .12;
-    c.lerp(soil, 1 - kidSstep(edge - .08, edge + .06, d));
-    cols.push(c.r, c.g, c.b);
-  }
-  geo.setAttribute("color", new T.Float32BufferAttribute(cols, 3));
-  geo.computeVertexNormals();
-  const ground = new T.Mesh(geo, new T.MeshStandardMaterial({ vertexColors: true, roughness: 1, metalness: 0 }));
-  ground.receiveShadow = true;
-  scene.add(ground);
-
-  // Grass blades: a curved, tapering blade, darker at the root.
-  const blade = new T.BufferGeometry();
-  { const v = [], cl = [], s = [[.009, 0], [.007, .45], [.004, .8], [0, 1]], bend = y => y * y * .3;
-    for (let k = 0; k < 3; k++) {
-      const [w0, y0] = s[k], [w1, y1] = s[k + 1];
-      v.push(-w0, y0, bend(y0), w0, y0, bend(y0), -w1, y1, bend(y1), w0, y0, bend(y0), w1, y1, bend(y1), -w1, y1, bend(y1));
-      [y0, y0, y1, y0, y1, y1].forEach(y => { const g = .72 + .38 * y; cl.push(g, g, g); });
+// Seamless canvas textures: mown grass, gravel/stone, wood mulch, painted wood.
+const GARDEN_TEX = {};
+function gardenTexture(T, kind) {
+  if (GARDEN_TEX[kind]) return GARDEN_TEX[kind];
+  const S = 512, cv = document.createElement("canvas");
+  cv.width = cv.height = S;
+  const c = cv.getContext("2d"), rnd = seeded("tex-" + kind), R = (a, b) => a + (b - a) * rnd();
+  const wrap = (x, y, r, draw) => { for (const dx of [-S, 0, S]) for (const dy of [-S, 0, S]) if (x + dx > -r && x + dx < S + r && y + dy > -r && y + dy < S + r) draw(x + dx, y + dy); };
+  const pick = a => a[Math.floor(rnd() * a.length)];
+  if (kind === "lawn") {
+    c.fillStyle = "#4f8a3c"; c.fillRect(0, 0, S, S);
+    const greens = ["#43792f", "#4f8a3c", "#5a9644", "#64a04b", "#6eaa52", "#3f7430", "#78b058"];
+    for (let i = 0; i < 26000; i++) {
+      const x = R(0, S), y = R(0, S), len = R(3, 8), a = -Math.PI / 2 + R(-.5, .5), col = pick(greens), w = R(.8, 1.6);
+      wrap(x, y, 10, (px, py) => { c.strokeStyle = col; c.lineWidth = w; c.beginPath(); c.moveTo(px, py); c.lineTo(px + Math.cos(a) * len, py + Math.sin(a) * len); c.stroke(); });
     }
+  } else if (kind === "stone") {
+    c.fillStyle = "#b9b2a4"; c.fillRect(0, 0, S, S);
+    for (let i = 0; i < 3500; i++) {
+      const x = R(0, S), y = R(0, S), r = R(2, 6), v = Math.floor(R(150, 215)), t = Math.floor(R(-8, 8));
+      wrap(x, y, 8, (px, py) => {
+        c.fillStyle = `rgba(${v + t},${v},${v - t - 6},.9)`; c.beginPath(); c.ellipse(px, py, r, r * R(.6, 1), R(0, 3), 0, 6.3); c.fill();
+        c.fillStyle = "rgba(255,255,255,.25)"; c.beginPath(); c.ellipse(px - r * .3, py - r * .3, r * .4, r * .3, 0, 0, 6.3); c.fill();
+      });
+    }
+  } else if (kind === "mulch") {
+    c.fillStyle = "#3e2a1e"; c.fillRect(0, 0, S, S);
+    const browns = ["#6b4a32", "#4a3123", "#7a5a3e", "#5a3e2b", "#8a6a4a", "#33231a"];
+    for (let i = 0; i < 4200; i++) {
+      const x = R(0, S), y = R(0, S), w = R(4, 14), h = R(1.5, 4), a = R(0, Math.PI), col = pick(browns);
+      wrap(x, y, 16, (px, py) => { c.save(); c.translate(px, py); c.rotate(a); c.fillStyle = col; c.fillRect(-w / 2, -h / 2, w, h); c.restore(); });
+    }
+  } else if (kind === "wood") {
+    c.fillStyle = "#f4f1ea"; c.fillRect(0, 0, S, S);
+    for (let i = 0; i < 160; i++) { const x = R(0, S), w = R(1, 3); c.fillStyle = `rgba(150,140,125,${R(.05, .18)})`; c.fillRect(x, 0, w, S); }
+  }
+  const im = c.getImageData(0, 0, S, S), d = im.data;
+  for (let i = 0; i < d.length; i += 4) { const n = (rnd() - .5) * 14; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+  c.putImageData(im, 0, 0);
+  const tex = new T.CanvasTexture(cv);
+  tex.wrapS = tex.wrapT = T.RepeatWrapping;
+  tex.anisotropy = 4;
+  return (GARDEN_TEX[kind] = tex);
+}
+const texRepeat = (T, kind, rx, ry) => { const t = gardenTexture(T, kind).clone(); t.needsUpdate = true; t.repeat.set(rx, ry); return t; };
+
+function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
+  const rnd = seeded("garden" + spots.length), R = (a, b) => a + (b - a) * rnd();
+  const add = (o, shadow = true) => { o.traverse(m => { if (m.isMesh) { m.castShadow = shadow; m.receiveShadow = true; } }); scene.add(o); return o; };
+  // The plot: big enough for every tree plus room for the gardener to walk in from the side.
+  let mx = 0, mz = 0;
+  spots.forEach(p => { mx = Math.max(mx, Math.abs(p.x)); mz = Math.max(mz, Math.abs(p.z)); });
+  const hx = Math.max(5.4, mx + 3.4), hz = Math.max(5.4, mz + 3.4);
+  const BED = .62; // tree bed radius
+
+  // Lawn inside the fence: textured, with mowing stripes.
+  const lawnGeo = new T.PlaneGeometry(hx * 2, hz * 2, 80, 80);
+  lawnGeo.rotateX(-Math.PI / 2);
+  const lp = lawnGeo.attributes.position, lc = [];
+  for (let i = 0; i < lp.count; i++) {
+    const x = lp.getX(i), z = lp.getZ(i);
+    const stripe = Math.sin((x + hx) / .7 * Math.PI) > 0 ? 1.04 : .96;
+    const k = (stripe * (.95 + landFbm(x * .6, z * .6) * .1));
+    lc.push(k, k, k);
+  }
+  lawnGeo.setAttribute("color", new T.Float32BufferAttribute(lc, 3));
+  add(new T.Mesh(lawnGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "lawn", hx * .9, hz * .9), vertexColors: true, roughness: .95, color: 0xd6e4c4 })), false);
+  // Outside the fence: rougher grass, a little darker, fading into distant hills.
+  const outGeo = new T.PlaneGeometry(140, 140, 120, 120);
+  outGeo.rotateX(-Math.PI / 2);
+  const op = outGeo.attributes.position;
+  for (let i = 0; i < op.count; i++) {
+    const x = op.getX(i), z = op.getZ(i), d = Math.max(Math.abs(x) - hx, Math.abs(z) - hz);
+    op.setY(i, -.01 + kidSstep(6, 30, d) * (1 + landFbm(x * .05, z * .05) * 7));
+  }
+  outGeo.computeVertexNormals();
+  add(new T.Mesh(outGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "lawn", 50, 50), color: 0xc9d9b0, roughness: 1 })), false);
+
+  // Stepping stones: from the gate to the nearest tree, then on from tree to tree.
+  const slabGeo = new T.CylinderGeometry(.17, .18, .035, 9);
+  { const sp = slabGeo.attributes.position; for (let i = 0; i < sp.count; i++) { const x = sp.getX(i), z = sp.getZ(i), a = Math.atan2(z, x), r = 1 + Math.sin(a * 3 + 1) * .08 + Math.sin(a * 5) * .05; sp.setX(i, x * r); sp.setZ(i, z * r); } slabGeo.computeVertexNormals(); }
+  const slabs = [], gate = new T.Vector3(0, 0, hz);
+  const order = [], left = spots.map(p => p.clone());
+  let cur = gate.clone();
+  while (left.length) { let bi = 0; left.forEach((p, i) => { if (p.distanceTo(cur) < left[bi].distanceTo(cur)) bi = i; }); order.push(left[bi]); cur = left[bi]; left.splice(bi, 1); }
+  let from = gate.clone().add(new T.Vector3(0, 0, -.3));
+  order.forEach(p => {
+    const dir = p.clone().sub(from).setY(0), len = dir.length() - BED - .35;
+    dir.normalize();
+    for (let s = .0; s < len; s += .48) slabs.push(from.clone().addScaledVector(dir, s).add(new T.Vector3(R(-.04, .04), 0, R(-.04, .04))));
+    from = p.clone().addScaledVector(dir, BED + .3);
+  });
+  // Short mown grass blades over the lawn for a velvety surface.
+  const blade = new T.BufferGeometry();
+  { const v = [], cl = [];
+    [[.006, 0, .004, .6], [.004, .6, 0, 1]].forEach(([w0, y0, w1, y1]) => {
+      v.push(-w0, y0, 0, w0, y0, 0, -w1, y1, .01 * y1, w0, y0, 0, w1, y1, .01 * y1, -w1, y1, .01 * y1);
+      [y0, y0, y1, y0, y1, y1].forEach(y => { const g = .8 + .3 * y; cl.push(g, g, g); });
+    });
     blade.setAttribute("position", new T.Float32BufferAttribute(v, 3));
     blade.setAttribute("color", new T.Float32BufferAttribute(cl, 3));
     blade.computeVertexNormals(); }
-  const area = Math.PI * (flatR + 5) ** 2, count = Math.min(lod ? 9000 : 6000, Math.round(area * (lod ? 70 : 45)));
-  const grass = new T.InstancedMesh(blade, new T.MeshStandardMaterial({ vertexColors: true, roughness: .9, side: T.DoubleSide }), count);
-  const m = new T.Matrix4(), q = new T.Quaternion(), sc = new T.Vector3(), pos = new T.Vector3(), e = new T.Euler(), gc = new T.Color();
-  let placed = 0;
-  for (let tries = 0; placed < count && tries < count * 3; tries++) {
-    const a = R(0, Math.PI * 2), r = Math.sqrt(rnd()) * (flatR + 5), x = Math.cos(a) * r, z = Math.sin(a) * r;
-    if (near(x, z) < .5) continue; // not on the soil
-    const tall = .05 + landFbm(x * .7, z * .7) * .09;
-    pos.set(x, height(x, z), z);
-    q.setFromEuler(e.set(R(-.15, .15), R(0, 6.28), R(-.15, .15)));
-    sc.set(R(.8, 1.4), tall * R(.6, 1.3), 1);
-    grass.setMatrixAt(placed, m.compose(pos, q, sc));
-    const n = landFbm(x * .45, z * .45);
-    grass.setColorAt(placed, gc.copy(mid).lerp(n > .5 ? light : deep, Math.abs(n - .5) * 1.6).multiplyScalar(R(.9, 1.15)));
-    placed++;
+  const nBlades = Math.min(lod ? 16000 : 9000, Math.round(hx * hz * 4 * (lod ? 140 : 80)));
+  const grass = new T.InstancedMesh(blade, new T.MeshStandardMaterial({ vertexColors: true, roughness: .9, side: T.DoubleSide }), nBlades);
+  const m = new T.Matrix4(), q = new T.Quaternion(), sc = new T.Vector3(), pos = new T.Vector3(), e = new T.Euler(), col = new T.Color();
+  const greens = [0x4f8a3c, 0x5a9644, 0x64a04b, 0x467f35];
+  let nb = 0;
+  const onBed = (x, z) => spots.some(p => Math.hypot(x - p.x, z - p.z) < BED + .12) || slabs.some(p => Math.hypot(x - p.x, z - p.z) < .21);
+  for (let t = 0; t < nBlades * 2 && nb < nBlades; t++) {
+    const x = R(-hx + .85, hx - .85), z = R(-hz + .85, hz - .1);
+    if (onBed(x, z)) continue;
+    const stripe = Math.sin((x + hx) / .7 * Math.PI) > 0 ? 1.06 : .94;
+    grass.setMatrixAt(nb, m.compose(pos.set(x, 0, z), q.setFromEuler(e.set(R(-.25, .25), R(0, 6.28), R(-.25, .25))), sc.set(1, R(.03, .05), 1)));
+    grass.setColorAt(nb, col.setHex(greens[Math.floor(R(0, 4))]).multiplyScalar(stripe));
+    nb++;
   }
-  grass.count = placed;
-  grass.receiveShadow = true;
-  scene.add(grass);
+  grass.count = nb;
+  add(grass, false);
 
-  // Wildflowers in small clumps (white daisies, yellow buttercups, purple and pink).
-  const petals = flowerOne(T); // a single five-petal flower facing +z
-  const flowers = new T.InstancedMesh(petals, new T.MeshStandardMaterial({ vertexColors: true, roughness: .7, side: T.DoubleSide }), 420);
-  const fcols = [0xffffff, 0xfff2a8, 0xffd23f, 0xc8a2ff, 0xff9ec4];
-  let fi = 0;
-  for (let k = 0; k < 28 && fi < 420; k++) {
-    const a = R(0, Math.PI * 2), r = R(1.2, flatR + 4), cx = Math.cos(a) * r, cz = Math.sin(a) * r, col = fcols[Math.floor(R(0, fcols.length))];
-    if (near(cx, cz) < 1.1) continue;
-    for (let j = 0; j < 15 && fi < 420; j++) {
-      const x = cx + R(-.45, .45), z = cz + R(-.45, .45);
-      pos.set(x, height(x, z) + R(.06, .13), z);
-      q.setFromEuler(e.set(-Math.PI / 2 + R(-.4, .4), 0, R(0, 6.28)));
-      sc.setScalar(R(.05, .08));
-      flowers.setMatrixAt(fi, m.compose(pos, q, sc));
-      flowers.setColorAt(fi, gc.setHex(col));
-      fi++;
+  // Tree beds: wood-chip mulch inside a ring of edging stones.
+  const mulchM = new T.MeshStandardMaterial({ map: texRepeat(T, "mulch", 1.2, 1.2), roughness: 1 });
+  const edgeGeo = new T.BoxGeometry(.13, .06, .07, 2, 1, 1);
+  { const ep = edgeGeo.attributes.position; for (let i = 0; i < ep.count; i++) { const y = ep.getY(i); if (y > 0) { ep.setX(i, ep.getX(i) * .85); ep.setZ(i, ep.getZ(i) * .8); } } edgeGeo.computeVertexNormals(); }
+  const perBed = 24, edges = new T.InstancedMesh(edgeGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "stone", .3, .3), color: 0xd8d2c4, roughness: .9 }), spots.length * perBed);
+  let ne = 0;
+  spots.forEach(p => {
+    const bed = new T.Mesh(new T.CylinderGeometry(BED, BED + .02, .03, 48), mulchM);
+    bed.position.set(p.x, .005, p.z);
+    add(bed, false);
+    for (let k = 0; k < perBed; k++) {
+      const a = k / perBed * Math.PI * 2;
+      edges.setMatrixAt(ne++, m.compose(pos.set(p.x + Math.cos(a) * (BED + .03), .02, p.z + Math.sin(a) * (BED + .03)), q.setFromEuler(e.set(0, -a + Math.PI / 2 + R(-.06, .06), 0)), sc.set(1, R(.85, 1.1), 1)));
     }
-  }
-  flowers.count = fi;
-  scene.add(flowers);
+  });
+  edges.count = ne;
+  add(edges);
 
-  // A few half-buried stones and some round bushes further out.
-  const stoneM = new T.MeshStandardMaterial({ color: 0x9a9890, roughness: .95, flatShading: true });
-  for (let k = 0; k < 10; k++) {
-    const a = R(0, Math.PI * 2), r = R(2, flatR + 3), x = Math.cos(a) * r, z = Math.sin(a) * r;
-    if (near(x, z) < 1.4) continue;
-    const st = new T.Mesh(new T.DodecahedronGeometry(R(.08, .22), 1), stoneM);
-    st.position.set(x, height(x, z) - .03, z); st.scale.set(R(1, 1.6), R(.5, .8), R(.9, 1.3)); st.rotation.y = R(0, 6.28);
-    st.castShadow = st.receiveShadow = true;
-    scene.add(st);
-  }
-  const bushM = new T.MeshStandardMaterial({ color: 0x4f8a40, roughness: .95 });
-  for (let k = 0; k < 26; k++) {
-    const a = R(0, Math.PI * 2), r = R(flatR + 3, flatR + 12), x = Math.cos(a) * r, z = Math.sin(a) * r;
-    const b = new T.Group(), s = R(.3, .65);
-    for (let j = 0; j < 4; j++) {
-      const ball = new T.Mesh(new T.IcosahedronGeometry(s * R(.55, .85), 2), bushM);
-      ball.position.set(R(-.5, .5) * s, s * R(.3, .6), R(-.5, .5) * s);
-      ball.castShadow = true;
-      b.add(ball);
+  const stones = new T.InstancedMesh(slabGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "stone", .5, .5), color: 0xe2ddd2, roughness: .9 }), Math.max(1, slabs.length));
+  slabs.forEach((p, i) => stones.setMatrixAt(i, m.compose(pos.set(p.x, .012, p.z), q.setFromEuler(e.set(0, R(0, 6.28), 0)), sc.set(R(.9, 1.1), 1, R(.85, 1.05)))));
+  stones.count = slabs.length;
+  add(stones, false);
+
+  // White picket fence with a gate opening at the front.
+  const woodM = new T.MeshStandardMaterial({ map: texRepeat(T, "wood", 1, 1), roughness: .7 });
+  const picket = new T.BoxGeometry(.06, .62, .022, 2, 1, 1);
+  { const pp = picket.attributes.position; for (let i = 0; i < pp.count; i++) if (pp.getY(i) > .3) pp.setY(i, .31 + (Math.abs(pp.getX(i)) < .01 ? .04 : 0)); picket.translate(0, .31, 0); }
+  const pickets = [], posts = [];
+  const side = (ax, az, bx, bz, gap) => {
+    const L = Math.hypot(bx - ax, bz - az), dx = (bx - ax) / L, dz = (bz - az) / L, ang = Math.atan2(-dz, dx);
+    for (let s = 0; s <= L + .001; s += 1.5) posts.push([ax + dx * s, az + dz * s]);
+    for (let s = .07; s < L; s += .13) {
+      const x = ax + dx * s, z = az + dz * s;
+      if (gap && Math.abs(x) < .55) continue;
+      pickets.push([x, z, ang]);
     }
-    b.position.set(x, height(x, z), z);
-    scene.add(b);
+  };
+  side(-hx, -hz, hx, -hz); side(hx, -hz, hx, hz); side(-hx, hz, -hx, -hz); side(hx, hz, -hx, hz, true);
+  const pk = new T.InstancedMesh(picket, woodM, pickets.length);
+  pickets.forEach(([x, z, a], i) => pk.setMatrixAt(i, m.compose(pos.set(x, 0, z), q.setFromEuler(e.set(0, a, 0)), sc.set(1, 1, 1))));
+  add(pk);
+  const postGeo = new T.BoxGeometry(.09, .78, .09); postGeo.translate(0, .39, 0);
+  const pst = new T.InstancedMesh(postGeo, woodM, posts.length);
+  posts.forEach(([x, z], i) => pst.setMatrixAt(i, m.compose(pos.set(x, 0, z), q.identity(), sc.set(1, 1, 1))));
+  add(pst);
+  [[-hx, -hz, hx, -hz], [hx, -hz, hx, hz], [-hx, hz, -hx, -hz], [hx, hz, .55, hz], [-.55, hz, -hx, hz]].forEach(([ax, az, bx, bz]) => {
+    [.18, .45].forEach(y => {
+      const L = Math.hypot(bx - ax, bz - az), rail = new T.Mesh(new T.BoxGeometry(.035, .05, L), woodM);
+      rail.position.set((ax + bx) / 2, y, (az + bz) / 2); rail.rotation.y = Math.atan2(bx - ax, bz - az);
+      // set slightly inside the pickets
+      add(rail);
+    });
+  });
+
+  // Flower borders along the back and the sides, inside the fence.
+  const bedM = new T.MeshStandardMaterial({ map: texRepeat(T, "mulch", 6, .6), roughness: 1 });
+  const strips = [[0, -hz + .45, hx * 2 - .5, .7, 0], [-hx + .45, 0, hz * 2 - 1.6, .7, Math.PI / 2], [hx - .45, 0, hz * 2 - 1.6, .7, Math.PI / 2]];
+  const plantPts = [];
+  strips.forEach(([x, z, L, W, a]) => {
+    const b = new T.Mesh(new T.BoxGeometry(L, .03, W), bedM);
+    b.position.set(x, .005, z); b.rotation.y = a;
+    add(b, false);
+    const ax = Math.cos(a), az = -Math.sin(a);
+    for (let s = -L / 2 + .25; s < L / 2 - .2; s += R(.28, .38)) plantPts.push([x + ax * s, z + az * s, s]);
+  });
+  // Plants: a leafy mound with flowers on top, planted in drifts of one colour.
+  const moundGeo = new T.IcosahedronGeometry(.16, 2);
+  const mounds = new T.InstancedMesh(moundGeo, new T.MeshStandardMaterial({ color: 0x5b9646, roughness: .9 }), plantPts.length);
+  const flowerCount = plantPts.length * 16;
+  const blooms = new T.InstancedMesh(flowerOne(T), new T.MeshStandardMaterial({ vertexColors: true, roughness: .6, side: T.DoubleSide }), flowerCount);
+  const drift = [0xb48cff, 0xffffff, 0xff7aa8, 0xffd23f, 0xff8a4c, 0x9fc4ff];
+  let nf = 0;
+  plantPts.forEach(([x, z, s], i) => {
+    const sz = R(.8, 1.25);
+    mounds.setMatrixAt(i, m.compose(pos.set(x, .08, z), q.setFromEuler(e.set(0, R(0, 6), 0)), sc.set(sz, sz * 1.1, sz)));
+    mounds.setColorAt(i, col.setHex(0x4f8c3c).multiplyScalar(R(.85, 1.15)));
+    const fc = drift[(Math.floor((s + 50) / 1.1) + i) % drift.length];
+    for (let k = 0; k < 16; k++) {
+      const a = R(0, 6.28), r = R(0, .16) * sz;
+      blooms.setMatrixAt(nf, m.compose(pos.set(x + Math.cos(a) * r, .1 + .17 * sz + R(0, .06), z + Math.sin(a) * r), q.setFromEuler(e.set(-Math.PI / 2 + R(-.5, .5), 0, R(0, 6))), sc.setScalar(R(.08, .11))));
+      blooms.setColorAt(nf++, col.setHex(fc));
+    }
+  });
+  add(mounds); add(blooms, false);
+  // Clipped box balls at the front corners and either side of the gate.
+  const boxM = new T.MeshStandardMaterial({ color: 0x3f7a35, roughness: .95 });
+  [[-hx + .45, hz - .45], [hx - .45, hz - .45], [-.85, hz - .3], [.85, hz - .3]].forEach(([x, z]) => {
+    const b = new T.Mesh(new T.IcosahedronGeometry(.28, 3), boxM);
+    b.position.set(x, .26, z);
+    add(b);
+  });
+  // A wooden bench at the back.
+  const benchM = new T.MeshStandardMaterial({ color: 0x8a5e3c, roughness: .8 });
+  const bench = new T.Group();
+  [0, 1, 2].forEach(k => { const s = new T.Mesh(new T.BoxGeometry(1.1, .03, .1), benchM); s.position.set(0, .4, -.12 + k * .12); bench.add(s); });
+  [0, 1].forEach(k => { const s = new T.Mesh(new T.BoxGeometry(1.1, .1, .03), benchM); s.position.set(0, .55 + k * .14, -.2); bench.add(s); });
+  [[-.48, -.15], [.48, -.15], [-.48, .12], [.48, .12]].forEach(([x, z]) => { const l = new T.Mesh(new T.BoxGeometry(.05, .4, .05), benchM); l.position.set(x, .2, z); bench.add(l); });
+  bench.position.set(hx * .45, 0, -hz + 1.05);
+  add(bench);
+
+  // Outside: a tall clipped hedge behind the garden, and a few rounded trees in the distance.
+  const hedgeM = new T.MeshStandardMaterial({ color: 0x9fc08a, roughness: 1, map: texRepeat(T, "lawn", 10, 2) });
+  [[0, -hz - 1.6, hx * 2 + 6, 0], [-hx - 1.6, 0, hz * 2 + 3, Math.PI / 2], [hx + 1.6, 0, hz * 2 + 3, Math.PI / 2]].forEach(([x, z, L, a]) => {
+    const g = new T.BoxGeometry(L, 1.1, .9, Math.round(L * 6), 10, 6), gp = g.attributes.position;
+    for (let i = 0; i < gp.count; i++) { // a clipped hedge: square but soft, with a leafy uneven surface
+      const x = gp.getX(i), y = gp.getY(i), z = gp.getZ(i), n = (landNoise(x * 3, y * 3 + z * 5) - .5) * .08;
+      gp.setXYZ(i, x, y + n * .5, z * (1 - .2 * Math.max(0, y / .55) ** 2) + n);
+    }
+    g.computeVertexNormals();
+    g.translate(0, .55, 0);
+    const h = new T.Group();
+    h.add(new T.Mesh(g, hedgeM));
+    h.position.set(x, 0, z); h.rotation.y = a;
+    add(h);
+  });
+  const farM = new T.MeshStandardMaterial({ color: 0x55894a, roughness: 1 });
+  for (let k = 0; k < 18; k++) {
+    const a = R(-Math.PI * .9, -Math.PI * .1), r = R(hz + 7, hz + 18), x = Math.cos(a) * r * 1.3, z = Math.sin(a) * r;
+    const t = new T.Group(), s = R(1, 2);
+    const trunk = new T.Mesh(new T.CylinderGeometry(.08 * s, .12 * s, s, 8), new T.MeshStandardMaterial({ color: 0x6b4d36 })); trunk.position.y = s / 2; t.add(trunk);
+    [[0, 1.3, 0, 1], [.35, 1.1, .1, .75], [-.3, 1.15, -.1, .8]].forEach(([bx, by, bz, br]) => { const b = new T.Mesh(new T.IcosahedronGeometry(.7 * s * br, 2), farM); b.position.set(bx * s, by * s, bz * s); t.add(b); });
+    t.position.set(x, 0, z);
+    add(t);
   }
 
-  // Sky: a soft gradient from blue overhead to a pale horizon; the fog matches the horizon.
+  // Sky.
   const cv = document.createElement("canvas"); cv.width = 4; cv.height = 256;
   const g2 = cv.getContext("2d"), grad = g2.createLinearGradient(0, 0, 0, 256);
   grad.addColorStop(0, "#9fd0ee"); grad.addColorStop(.55, "#cfe9f2"); grad.addColorStop(1, "#eef7f2");
   g2.fillStyle = grad; g2.fillRect(0, 0, 4, 256);
   scene.background = new T.CanvasTexture(cv);
-  scene.fog = new T.Fog(0xe4f2ee, radius * 3, radius * 3 + flatR * 2 + 30);
-  return { height };
+  scene.fog = new T.Fog(0xe4f2ee, Math.max(hx, hz) * 2.2, Math.max(hx, hz) * 2.2 + 45);
+  return { height: () => 0 };
 }
 
 // A 3D stage: renderer, lights and a fixed camera (no spinning). Drag to look around; it stays where you leave it.
