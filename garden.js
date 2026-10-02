@@ -1050,7 +1050,7 @@ function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
   g2.fillStyle = grad; g2.fillRect(0, 0, 4, 256);
   scene.background = new T.CanvasTexture(cv);
   scene.fog = new T.Fog(0xe4f2ee, Math.max(hx, hz) * 2.2, Math.max(hx, hz) * 2.2 + 45);
-  return { height: () => 0 };
+  return { height: () => 0, hx, hz, bench: bench.position.clone() };
 }
 
 // A 3D stage: renderer, lights and a fixed camera (no spinning). Drag to look around; it stays where you leave it.
@@ -1061,7 +1061,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   renderer.shadowMap.type = T.PCFSoftShadowMap;
   host.append(renderer.domElement);
   const scene = new T.Scene();
-  makeLandscape(T, scene, { radius, spots: trees.map(t => t.holder.position), lod: trees.length > 6 ? 0 : 1 });
+  const land = makeLandscape(T, scene, { radius, spots: trees.map(t => t.holder.position), lod: trees.length > 6 ? 0 : 1 });
   const camera = new T.PerspectiveCamera(38, 1, .1, 200);
   scene.add(new T.HemisphereLight(0xf4fbff, 0x6f8f7a, .62));
   const sun = new T.DirectionalLight(0xfff6e8, .7);
@@ -1130,6 +1130,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
     get yaw() { return yaw; },
     onFrame(fn) { hooks.push(fn); return () => hooks.splice(hooks.indexOf(fn), 1); },
     focusOn(pos, d) { wantFocus = pos.clone(); wantDist = d; },
+    land,
     reset() { wantFocus = target.clone(); wantDist = radius * 2.7; }
   };
 }
@@ -1671,6 +1672,108 @@ function turnToward(actor, point, dt, rate = 3) {
 }
 const ease = x => (x = Math.max(0, Math.min(1, x)), x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2);
 
+// ---------- Strolling in the garden ----------
+// In the concentration garden the girl, the boy and the border collie wander about on their own: they stroll across
+// the lawn, stop at a tree to look up at it, rest by the bench, and the dog trots after one of the kids or runs
+// little laps. Paths never cut across a tree bed, and they keep out of each other's way.
+function gardenWalkers(T, stage, trees, land) {
+  const rnd = Math.random, R = (a, b) => a + (b - a) * rnd();
+  const spots = trees.map(t => t.holder.position.clone());
+  const BED = .62, hx = land.hx - .6, hz = land.hz - .6;
+  const bench = land.bench.clone().add(new T.Vector3(0, 0, .55));
+  const segDist = (a, b, p) => { // distance from p to segment ab (on the ground)
+    const ab = b.clone().sub(a).setY(0), t = Math.max(0, Math.min(1, p.clone().sub(a).setY(0).dot(ab) / Math.max(1e-6, ab.lengthSq())));
+    return a.clone().addScaledVector(ab, t).setY(0).distanceTo(p.clone().setY(0));
+  };
+  const clearPath = (a, b) => spots.every(s => segDist(a, b, s) > BED + .3);
+  const freeSpot = () => {
+    for (let k = 0; k < 40; k++) {
+      const p = new T.Vector3(R(-hx, hx), 0, R(-hz, hz));
+      if (spots.every(s => s.distanceTo(p) > BED + .5)) return p;
+    }
+    return new T.Vector3(0, 0, hz * .8);
+  };
+  const walkers = [];
+  const addKid = girl => {
+    const k = makeGardener(T, girl);
+    k.can.visible = false;
+    k.fig.scale.setScalar(.95);
+    k.fig.position.copy(freeSpot());
+    k.fig.rotation.y = R(0, 6.28);
+    stage.scene.add(k.fig);
+    walkers.push({ a: k, kid: true, state: "pause", t: R(.5, 2.5), target: null, look: null, speed: R(.5, .6) });
+  };
+  addKid(true); addKid(false);
+  const dog = makeCollie(T);
+  dog.fig.scale.setScalar(1);
+  dog.fig.position.copy(freeSpot());
+  stage.scene.add(dog.fig);
+  const dw = { a: dog, kid: false, state: "pause", t: 1, target: null, look: null, speed: 1, buddy: walkers[0] };
+  walkers.push(dw);
+
+  // Choose what to do next.
+  function plan(w) {
+    const from = w.a.fig.position;
+    const r = rnd();
+    if (!w.kid) {
+      if (r < .45) { w.buddy = walkers[Math.floor(rnd() * 2)]; w.state = "follow"; w.t = R(5, 9); return; }
+      if (r < .7) { w.state = "lap"; w.t = R(3, 5); w.lapA = rnd() * 6.28; w.lapC = freeSpot(); w.lapR = R(.6, 1); return; }
+    }
+    let target = null, look = null;
+    for (let k = 0; k < 30 && !target; k++) {
+      let p;
+      if (w.kid && r < .5 && spots.length) { // visit a tree: stand at its bed edge, then look up at it
+        const s = spots[Math.floor(rnd() * spots.length)], a = rnd() * 6.28;
+        p = s.clone().add(new T.Vector3(Math.cos(a) * (BED + .4), 0, Math.sin(a) * (BED + .4)));
+        look = s.clone().setY(1.4);
+      } else if (w.kid && r < .62) { p = bench.clone().add(new T.Vector3(R(-.4, .4), 0, 0)); look = land.bench.clone(); }
+      else { p = freeSpot(); look = null; }
+      if (Math.abs(p.x) < hx + .1 && Math.abs(p.z) < hz + .1 && clearPath(from, p)) target = p;
+    }
+    if (!target) { w.state = "pause"; w.t = R(1, 2); return; }
+    w.target = target; w.look = look; w.state = "walk"; w.t = 25;
+  }
+
+  const stop = stage.onFrame((now, dt) => {
+    walkers.forEach(w => {
+      w.t -= dt;
+      let moved = 0, running = false, sitting = false;
+      const pos = w.a.fig.position;
+      if (w.state === "walk") {
+        // step aside if someone is right in front
+        let tgt = w.target;
+        walkers.forEach(o => { if (o !== w && o.a.fig.position.distanceTo(pos) < .5) { const away = pos.clone().sub(o.a.fig.position).setY(0).normalize(); tgt = tgt.clone().addScaledVector(away, .5); } });
+        moved = stepToward(w.a, tgt, w.kid ? w.speed : .8, dt, 3);
+        if (pos.distanceTo(w.target) < .06 || w.t < 0) { w.state = w.look ? "look" : "pause"; w.t = w.look ? R(3, 6) : R(1.5, 4); }
+      } else if (w.state === "look") {
+        turnToward(w.a, w.look, dt, 2);
+        if (w.kid) w.a.neck.rotation.x += ((w.look.y > 1 ? -.35 : 0) - w.a.neck.rotation.x) * Math.min(1, dt * 2);
+        if (w.t < 0) { if (w.kid) w.a.neck.rotation.x = 0; plan(w); }
+      } else if (w.state === "follow") {
+        const bp = w.buddy.a.fig.position, side = new T.Vector3(Math.sin(w.buddy.a.fig.rotation.y + 1.9), 0, Math.cos(w.buddy.a.fig.rotation.y + 1.9));
+        const tgt = bp.clone().addScaledVector(side, .55);
+        if (pos.distanceTo(tgt) > .15) { const far = pos.distanceTo(tgt) > 1.2; moved = stepToward(w.a, tgt, far ? 1.6 : .7, dt, 5); running = far; }
+        else { sitting = w.buddy.state !== "walk"; turnToward(w.a, bp, dt, 2); }
+        if (w.t < 0) plan(w);
+      } else if (w.state === "lap") {
+        w.lapA += dt * 1.6;
+        const tgt = w.lapC.clone().add(new T.Vector3(Math.cos(w.lapA) * w.lapR, 0, Math.sin(w.lapA) * w.lapR));
+        if (spots.every(s => s.distanceTo(tgt) > BED + .3)) { moved = stepToward(w.a, tgt, 1.5, dt, 6); running = true; }
+        if (w.t < 0) plan(w);
+      } else { // pause
+        if (!w.kid) sitting = w.t > .5;
+        if (w.t < 0) plan(w);
+      }
+      // keep inside the fence and off the tree beds
+      pos.x = Math.max(-hx - .2, Math.min(hx + .2, pos.x)); pos.z = Math.max(-hz - .2, Math.min(hz + .2, pos.z));
+      spots.forEach(s => { const d = pos.clone().sub(s).setY(0), l = d.length(); if (l < BED + .15) pos.copy(s).addScaledVector(d.normalize(), BED + .15).setY(0); });
+      if (w.kid) w.a.gait(moved, moved > 0 ? 1 : 0, false, false);
+      else w.a.gait(moved, moved > 0 ? 1 : 0, running && moved > 0, sitting, now);
+    });
+  });
+  return stop;
+}
+
 // The watering scene: walk in calmly, water the tree (it grows), maybe touch a fruit or smell the flowers,
 // then turn and stroll away. Sometimes a border collie comes along and does its own thing.
 function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
@@ -1926,6 +2029,7 @@ async function gardenAll() {
     const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], lod));
     const radius = Math.max(3.6, c * Math.sqrt(n) + 1.6);
     stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
+    gardenWalkers(T, stageApi, trees, stageApi.land); // the kids and the dog stroll around the garden
   } catch {
     stage.append(el("p", { className: "g-offline" }, "The 3D garden could not load. Close and reopen the app to try again."));
   }
