@@ -446,7 +446,7 @@ const QUESTIONS = [
     q: "The new portfolio's VARIANCE must be below 90% of the current one. The maximum standard deviation is:",
     options: ["90% × current standard deviation", "√0.90 × current SD (≈ 94.9%)", "0.90² × current SD (≈ 81%)"],
     answer: 1,
-    why: "Variance = SD². Max variance = 0.90 × SD², so max SD = √0.90 × SD. Example: 7.95% → √(0.90 × 63.20) = 7.54%."
+    why: "Variance = SD². Max variance = 0.90 × SD², so max SD = √0.90 × SD. Example: current SD 7.95% (variance 7.95² = 63.20): max SD = √(0.90 × 63.20) = 7.54%."
   },
 
   // ---------- Financial Statement Analysis: Pensions ----------
@@ -464,7 +464,7 @@ const QUESTIONS = [
     q: "A DB plan's funded status equals:",
     options: ["Fair value of plan assets − DBO", "DBO − service cost", "Employer contributions − benefits paid"],
     answer: 0,
-    why: "Funded status = plan assets − obligation. A negative number (e.g. 24,105 − 28,879 = −4,774) is a net pension liability on the balance sheet; a positive number is a net asset."
+    why: "Funded status = plan assets − obligation. A negative number (e.g. plan assets 24,105 − DBO 28,879 = −4,774) is a net pension liability on the balance sheet; a positive number is a net asset."
   },
   {
     topic: "Financial Statement Analysis",
@@ -485,10 +485,10 @@ const QUESTIONS = [
   {
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
-    q: "Interest cost on the DBO is 1,557 but net interest expense in P&L is only 273. The 1,284 difference is:",
+    q: "Under IFRS, a DB plan has beginning plan assets of 23,432 and a discount rate of 5.48%. Interest cost on the DBO is 1,557 but net interest expense in P&L is only 273. The 1,284 difference is:",
     options: ["The actual return on plan assets earned during the year", "Interest income on plan assets at the discount rate", "Benefits paid to retirees during the year"],
     answer: 1,
-    why: "1,284 = 5.48% × 23,432 (beginning plan assets). IFRS nets interest income on plan assets, at the discount rate, against interest cost. The actual return is not used in P&L."
+    why: "1,557 − 273 = 1,284, and 1,284 = 5.48% discount rate × 23,432 beginning plan assets. IFRS nets interest income on plan assets, at the discount rate, against interest cost. The actual return is not used in P&L."
   },
   {
     topic: "Financial Statement Analysis",
@@ -520,7 +520,7 @@ const QUESTIONS = [
     q: "A DB plan's net pension liability decreases over the year when:",
     options: ["Service cost + interest cost exceed the benefits paid to retirees", "Asset returns + contributions exceed service + interest cost", "The discount rate is above the actual return on plan assets"],
     answer: 1,
-    why: "Assets grow by actual return + contributions; the obligation grows by service + interest cost (+ actuarial losses). Benefits paid cancel out. If assets grow by more, the net liability shrinks. Example: 1,302 + 693 = 1,995 > 228 + 1,557 = 1,785."
+    why: "Assets grow by actual return + contributions; the obligation grows by service + interest cost (+ actuarial losses). Benefits paid cancel out. If assets grow by more, the net liability shrinks. Example: actual return 1,302 + employer contributions 693 = 1,995, which exceeds service cost 228 + interest cost 1,557 = 1,785, so the net liability falls."
   },
   {
     topic: "Financial Statement Analysis",
@@ -544,7 +544,7 @@ const QUESTIONS = [
     q: "Plan assets start the year at 23,432 and earn an actual return of 1,302. The actual rate of return is closest to:",
     options: ["5.48%", "5.56%", "5.94%"],
     answer: 1,
-    why: "1,302 / 23,432 = 5.56%. That is 8 bp above a 5.48% discount rate, and the excess (1,302 − 1,284 = 18) is the remeasurement gain in OCI."
+    why: "1,302 / 23,432 = 5.56%. If the discount rate is 5.48%, interest income on assets in P&L is 5.48% × 23,432 = 1,284; the actual return above that (1,302 − 1,284 = 18) is a remeasurement gain in OCI."
   },
   {
     topic: "Financial Statement Analysis",
@@ -552,7 +552,7 @@ const QUESTIONS = [
     q: "Under IFRS, past service cost (from a plan amendment) is recognized:",
     options: ["In OCI, then amortized into P&L over the remaining service period", "Immediately in P&L as part of service cost, an operating expense", "Only in the notes, without affecting the financial statements"],
     answer: 1,
-    why: "IFRS: service cost = current service cost + past service cost, both recognized in P&L straight away as an operating expense. Example: 200 + 120 = 320."
+    why: "IFRS: service cost = current service cost + past service cost, both recognized in P&L straight away as an operating expense. Example: current service cost 200 + past service cost 120 = total service cost of 320 in P&L."
   },
   {
     topic: "Financial Statement Analysis",
@@ -568,7 +568,7 @@ const QUESTIONS = [
     q: "Under US GAAP, periodic pension cost in P&L (before amortization) is:",
     options: ["Service cost + net interest on the net liability at the discount rate", "Service cost + interest cost − EXPECTED return on plan assets", "Employer contributions made to the plan during the year"],
     answer: 1,
-    why: "US GAAP P&L pension cost = current service cost + interest cost (discount rate × beginning DBO) − expected return on plan assets (+ amortization of past service cost and actuarial gains/losses). Example: 200 + 2,940 − 3,120 = 20."
+    why: "US GAAP P&L pension cost = current service cost + interest cost (discount rate × beginning DBO) − expected return on plan assets (+ amortization of past service cost and actuarial gains/losses). Example: service cost 200 + interest cost 2,940 − expected return on assets 3,120 = pension cost of 20."
   },
   {
     topic: "Financial Statement Analysis",
@@ -584,7 +584,7 @@ const QUESTIONS = [
     q: "To forecast next year's IFRS pension cost in P&L, use:",
     options: ["Service cost + discount rate × this year's ENDING net pension liability", "Service cost + discount rate × this year's beginning gross DBO balance", "Employer contributions + the service cost expected for next year combined"],
     answer: 0,
-    why: "Next year's net interest = discount rate × net pension liability at the start of next year (= this year's end). Example: 320 + 7% × (41,720 − 38,700) = 320 + 211 ≈ 531."
+    why: "Next year's net interest = discount rate × net pension liability at the start of next year (= this year's end). Example: service cost 320, discount rate 7%, ending DBO 41,720 and ending plan assets 38,700: 320 + 7% × (41,720 − 38,700) = 320 + 211 ≈ 531."
   },
   {
     topic: "Financial Statement Analysis",
@@ -642,7 +642,7 @@ const QUESTIONS = [
     q: "In a two-stage DDM with an n-year first stage, the Gordon-growth terminal value at time n is:",
     options: ["[[Dn|r − gL]], using the last first-stage dividend", "[[Dn × (1 + gL)|r − gL]]", "[[Dn × (1 + gS)|r − gS]], using the first-stage growth rate"],
     answer: 1,
-    why: "The terminal value at time n uses the NEXT dividend: Vn = [[Dn+1|r − gL]] = [[Dn(1 + gL)|r − gL]]. Example: 0.4992 × 1.07 / (0.0872 − 0.07) = 31.06. It is then discounted back n years."
+    why: "The terminal value at time n uses the NEXT dividend: Vn = [[Dn+1|r − gL]] = [[Dn(1 + gL)|r − gL]]. Example: last first-stage dividend D8 = 0.4992, long-run growth gL = 7%, required return r = 8.72%: V8 = 0.4992 × 1.07 / (0.0872 − 0.07) = 31.06. It is then discounted back n years."
   },
   {
     topic: "Equity Valuation",
@@ -650,7 +650,7 @@ const QUESTIONS = [
     q: "In a two-stage DDM, the present value of the terminal value is typically:",
     options: ["A small part of total value, as it is discounted over many years", "A large share of total value, often around 90% of it", "Exactly half of total value in a typical two-stage model"],
     answer: 1,
-    why: "Most value comes from the stable-growth stage. Example: PV of V8 = 15.9095 out of 17.6528 total, about 0.90. That is why terminal-value assumptions matter so much."
+    why: "Most value comes from the stable-growth stage. Example: in one two-stage valuation the PV of the terminal value was 15.91 out of a total value of 17.65, about 90%. That is why terminal-value assumptions matter so much."
   },
   {
     topic: "Equity Valuation",
@@ -658,7 +658,7 @@ const QUESTIONS = [
     q: "Using a trailing P/E to estimate the terminal value Vn, you first find earnings as:",
     options: ["En = [[Dn|1 − b]], where b is the retention ratio", "En = Dn × b, where b is the retention ratio", "En = [[Dn|b]], where b is the retention ratio"],
     answer: 0,
-    why: "Payout ratio = 1 − b = Dn/En, so En = [[Dn|1 − b]]. Then Vn = trailing P/E × En. Example: E8 = 0.4992 / 0.30 = 1.664; V8 = 17 × 1.664 = 28.29."
+    why: "Payout ratio = 1 − b = Dn/En, so En = [[Dn|1 − b]]. Then Vn = trailing P/E × En. Example: D8 = 0.4992 and retention b = 0.70 (payout 0.30): E8 = 0.4992 / 0.30 = 1.664; with a trailing P/E of 17, V8 = 17 × 1.664 = 28.29."
   },
   {
     topic: "Equity Valuation",
