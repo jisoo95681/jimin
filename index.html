@@ -168,6 +168,20 @@
   .progress { height: 5px; background: var(--aqua); border-radius: 3px; margin-bottom: 16px; overflow: hidden; }
   .progress > div { height: 100%; background: linear-gradient(90deg, var(--blue), var(--navy)); border-radius: 3px; transition: width .5s var(--ease); }
   .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .clocks { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+  .q-timer { font-weight: 500; color: var(--muted); }
+  .q-timer b { color: var(--navy); font-variant-numeric: tabular-nums; }
+  .qnav-row { justify-content: space-between; }
+  .qmap { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 12px; }
+  .qdot { min-width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--white); color: var(--muted); font: inherit; font-size: .85rem; font-weight: 700; cursor: pointer; padding: 0 6px; }
+  .qdot.done { background: var(--aqua); border-color: var(--aqua); color: var(--navy); }
+  .qdot.skip { border-color: #e8b45c; color: #a8742a; background: #fff8ea; }
+  .qdot.cur { outline: 2.5px solid var(--navy); outline-offset: 1px; }
+  .mark-btn { width: 100%; background: var(--navy); }
+  .mark-ask { margin-top: 12px; }
+  .opt.static { cursor: default; }
+  .review-q .meta .ok { color: var(--good); font-weight: 700; }
+  .review-q .meta .bad { color: #c0564b; font-weight: 700; }
   .timer { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.05rem; color: var(--navy); }
   .status { color: var(--muted); margin: 0; }
   .miss { margin: 12px 0 0; padding-left: 18px; }
@@ -510,7 +524,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v50 · 2026-10-04";
+  const APP_VERSION = "v51 · 2026-10-04";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -545,7 +559,9 @@
   }
   setInterval(() => {
     const t = document.getElementById("timer");
-    if (t) t.textContent = `⏱ ${fmt(timeMs())}`;
+    if (t) t.textContent = flow === "single" ? `Total ${fmt(timeMs())}` : `⏱ ${fmt(timeMs())}`;
+    const qt = document.getElementById("qtimer");
+    if (qt) qt.textContent = fmt(qTimeMs());
   }, 250);
 
   function loadPrefs() {
@@ -1620,14 +1636,18 @@
   function answeredCount() {
     if (flow === "vignette")
       return qCount(vdeck.slice(0, vi)) + (checkedCurrent ? vdeck[vi].questions.length : 0);
-    return i + (answeredCurrent ? 1 : 0);
+    return sq.filter(x => x.pick !== null).length;
   }
 
   function topbar() {
     const top = el("div", { className: "topbar" });
     const pauseBtn = el("button", { className: "btn ghost small" }, "❚❚ Pause");
     pauseBtn.onclick = pause;
-    top.append(el("span", { className: "timer", id: "timer" }, `⏱ ${fmt(timeMs())}`), pauseBtn);
+    const clocks = el("div", { className: "clocks" });
+    if (flow === "single") { const qt = el("span", { className: "timer q-timer" }, "This question "); qt.append(el("b", { id: "qtimer" }, fmt(qTimeMs()))); clocks.append(qt); }
+    clocks.append(el("span", { className: "timer", id: "timer" }, `⏱ ${fmt(timeMs())}`));
+    if (flow === "single") clocks.lastChild.textContent = `Total ${fmt(timeMs())}`;
+    top.append(clocks, pauseBtn);
     return top;
   }
 
@@ -1643,23 +1663,25 @@
     if (!inQuiz || paused) return;
     paused = true;
     timerPause();
-    document.getElementById("quiz").hidden = true;
+    const qz = document.getElementById("quiz") || document.querySelector(".mark-ask");
+    if (qz) qz.hidden = true;
     const answered = answeredCount();
     const card = el("div", { className: "card", id: "paused" });
     card.style.animation = "fade-up .35s var(--ease)";
     card.append(el("p", { className: "score" }, "Paused"));
     const where = flow === "vignette" ? `Vignette ${vi + 1} of ${vdeck.length} · ` : "";
-    card.append(el("p", { className: "sub" }, `Time so far ${fmt(timeMs())} · ${where}${answered} of ${deck.length} answered · Score ${score}`));
+    card.append(el("p", { className: "sub" }, flow === "single" ? `Time so far ${fmt(timeMs())} · ${answered} of ${deck.length} answered` : `Time so far ${fmt(timeMs())} · ${where}${answered} of ${deck.length} answered · Score ${score}`));
     const row = el("div", { className: "row" });
     const resume = el("button", { className: "btn" }, "Resume");
     resume.onclick = () => {
       card.remove();
-      document.getElementById("quiz").hidden = false;
+      if (qz) qz.hidden = false;
       paused = false;
       timerResume();
     };
     const quit = el("button", { className: "btn ghost" }, "Quit");
-    quit.onclick = () => (answered ? results(answered) : endQuiz(backTo));
+    quit.onclick = () => (flow === "single" ? (answered ? (card.remove(), paused = false, timerResume(), confirmMark(false)) : endQuiz(backTo)) : answered ? results(answered) : endQuiz(backTo));
+    if (flow === "single" && answered) quit.textContent = "Finish & mark";
     row.append(resume, quit);
     card.append(row);
     app.append(card);
@@ -1675,54 +1697,158 @@
   // Leaving the app (home button, switching apps) pauses the quiz and the timer.
   document.addEventListener("visibilitychange", () => { if (document.hidden) pause(); });
 
-  // Single flow: one question per screen (quick questions, wrong-answer practice, retry missed).
+  // Single flow (quick questions, incorrect-question practice, retry missed): answer in any order, skip and come back,
+  // go back and change an answer. Nothing is revealed until the whole set is marked.
+  let sq = []; // per question: { order, pick (null = not answered), skipped, ms }
+  let qEnter = 0;
   function begin(questions, review = false) {
     flow = "single"; deck = questions; reviewMode = review;
     startRun();
+    sq = deck.map(q => ({ order: q.vignette ? q.options.map((_, k) => k) : shuffle(q.options.map((_, k) => k)), pick: null, skipped: false, ms: 0 }));
+    qEnter = timeMs();
     show("fwd");
+  }
+  const qTimeMs = () => (sq[i] ? sq[i].ms + (inQuiz ? timeMs() - qEnter : 0) : 0);
+  function leaveQuestion() { if (sq[i]) sq[i].ms += timeMs() - qEnter; qEnter = timeMs(); }
+  function goTo(n, dir) { leaveQuestion(); i = n; show(dir); }
+  // The next question still to do after the current one (wrapping round), or -1 when all are answered.
+  function nextOpen(from) {
+    for (let d = 1; d <= deck.length; d++) { const n = (from + d) % deck.length; if (sq[n].pick === null) return n; }
+    return -1;
   }
 
   function show(dir = "fwd") {
-    const q = deck[i];
-    answeredCurrent = false;
+    const q = deck[i], st = sq[i];
+    answeredCurrent = st.pick !== null;
     screen(dir);
     const quiz = el("div", { id: "quiz" });
     const card = el("div", { className: "card" });
+    const done = sq.filter(s => s.pick !== null).length;
     const meta = el("div", { className: "meta" });
-    meta.append(el("span", {}, reviewMode ? `Review · ${qLabel(q)}` : qLabel(q)), el("span", {}, `${i + 1} / ${deck.length} · Score ${score}`));
+    meta.append(el("span", {}, reviewMode ? `Review · ${qLabel(q)}` : qLabel(q)), el("span", {}, `Question ${i + 1} of ${deck.length} · ${done} answered`));
     card.append(meta);
     if (q.vignette) card.append(vignetteDetails(q.vignette));
     card.append(el("p", { className: "q" }, q.q));
-
-    // Shuffle quick-question choices so the letter isn't predictable; exam items keep their A/B/C order.
-    const order = q.vignette ? q.options.map((_, k) => k) : shuffle(q.options.map((_, k) => k));
-    const buttons = order.map((k, pos) => {
-      const b = el("button", { className: "opt" }, `${LETTERS[pos]}. ${q.options[k]}`);
-      b.dataset.k = k;
-      b.onclick = () => answer(k, buttons, card);
+    const buttons = st.order.map((k, pos) => {
+      const b = el("button", { className: "opt" + (st.pick === k ? " sel" : "") }, `${LETTERS[pos]}. ${q.options[k]}`);
+      b.onclick = () => {
+        st.pick = st.pick === k ? null : k; // tap again to clear
+        st.skipped = false;
+        buttons.forEach((x, p) => x.classList.toggle("sel", st.order[p] === st.pick));
+        drawNav();
+      };
       card.append(b);
       return b;
     });
-    quiz.append(topbar(), progress(i / deck.length), card);
+
+    // Previous · Skip / Next
+    const row = el("div", { className: "row qnav-row" });
+    const prev = el("button", { className: "btn ghost" }, "← Previous");
+    prev.disabled = i === 0;
+    prev.onclick = () => goTo(i - 1, "back");
+    const fwd = el("button", { className: "btn" });
+    const setFwd = () => { fwd.textContent = st.pick === null ? "Skip for now →" : "Next →"; fwd.classList.toggle("ghost", st.pick === null); };
+    fwd.onclick = () => {
+      if (st.pick === null) st.skipped = true;
+      const n = i + 1 < deck.length && sq[i + 1].pick === null ? i + 1 : nextOpen(i);
+      if (n === -1) { leaveQuestion(); confirmMark(true); }
+      else goTo(n, n > i ? "fwd" : "back");
+    };
+    row.append(prev, fwd);
+    card.append(row);
+
+    // Question map: tap a number to jump; answered ones are filled, skipped ones outlined in amber.
+    const map = el("div", { className: "qmap" });
+    function drawNav() {
+      setFwd();
+      map.innerHTML = "";
+      sq.forEach((s, n) => {
+        const b = el("button", { className: "qdot" + (s.pick !== null ? " done" : s.skipped ? " skip" : "") + (n === i ? " cur" : "") }, String(n + 1));
+        b.onclick = () => n !== i && goTo(n, n > i ? "fwd" : "back");
+        map.append(b);
+      });
+      const left = sq.filter(s => s.pick === null).length;
+      markBtn.textContent = left ? `Mark the question set (${left} unanswered)` : "Mark the question set";
+    }
+    const markBtn = el("button", { className: "btn mark-btn" });
+    markBtn.onclick = () => { leaveQuestion(); confirmMark(false); };
+    drawNav();
+    quiz.append(topbar(), progress(done / deck.length), card, map, markBtn);
     app.append(quiz);
   }
 
-  function answer(k, buttons, card) {
-    const q = deck[i];
-    answeredCurrent = true;
-    buttons.forEach(b => (b.disabled = true));
-    const byK = k2 => buttons.find(b => +b.dataset.k === k2);
-    byK(q.answer).classList.add("correct");
-    if (k === q.answer) score++;
-    else { byK(k).classList.add("wrong"); missed.push(q); }
-    record(q, k === q.answer);
-    card.append(el("div", { className: "why" }, q.why));
+  // Ask before marking when questions are still open.
+  function confirmMark(auto) {
+    const open = sq.map((s, n) => (s.pick === null ? n : -1)).filter(n => n >= 0);
+    if (!open.length) {
+      if (auto) { // finished the last one: offer a chance to look back first
+        const box = el("div", { className: "card mark-ask" });
+        box.append(el("p", { className: "q" }, "All questions answered."), el("p", { className: "sub" }, "Mark the set now, or go back and check your answers first."));
+        const r = el("div", { className: "row" });
+        const go = el("button", { className: "btn" }, "Mark the question set"), back = el("button", { className: "btn ghost" }, "Review answers");
+        go.onclick = () => markSet();
+        back.onclick = () => { qEnter = timeMs(); show("back"); };
+        r.append(go, back); box.append(r);
+        screen("up"); app.append(topbar(), box);
+        return;
+      }
+      return markSet();
+    }
+    const box = el("div", { className: "card mark-ask" });
+    box.append(el("p", { className: "q" }, `${plural(open.length, "question")} not answered yet`),
+      el("p", { className: "sub" }, `Unanswered: ${open.map(n => n + 1).join(", ")}. If you mark now they count as incorrect.`));
+    const r = el("div", { className: "row" });
+    const back = el("button", { className: "btn" }, `Go to question ${open[0] + 1}`), go = el("button", { className: "btn ghost" }, "Mark anyway");
+    back.onclick = () => { i = open[0]; qEnter = timeMs(); show("back"); };
+    go.onclick = () => markSet();
+    r.append(back, go); box.append(r);
+    screen("up"); app.append(topbar(), box);
+  }
+
+  // Mark everything at once, then show the score and every question with its answer.
+  function markSet() {
+    score = 0; missed = [];
+    deck.forEach((q, n) => {
+      const ok = sq[n].pick === q.answer;
+      if (ok) score++; else missed.push(q);
+      record(q, ok);
+    });
+    endQuiz(() => {});
+    const total = timeMs();
+    screen("up");
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "kicker" }, "Results"), el("p", { className: "score" }, `${score} / ${deck.length}`));
+    const unanswered = sq.filter(s => s.pick === null).length;
+    card.append(el("p", { className: "sub", style: "margin-bottom:6px" }, `${Math.round(score / deck.length * 100)}% correct${unanswered ? ` · ${unanswered} left unanswered` : ""}`));
+    card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / deck.length)} per question on average`));
+    card.append(el("p", { className: "sub", style: "margin-top:12px" }, reviewMode
+      ? `${plural(score, "question")} you got right left your incorrect questions. ${wrongList().length} still there.`
+      : missed.length ? `${missed.length} added to your incorrect questions.` : "Nothing new for your incorrect questions."));
     const row = el("div", { className: "row" });
-    const next = el("button", { className: "btn" }, i + 1 < deck.length ? "Next →" : "See results");
-    next.onclick = () => { i++; i < deck.length ? show("fwd") : results(); };
-    row.append(next);
+    if (missed.length) { const retry = el("button", { className: "btn" }, "Retry missed"); retry.onclick = () => begin(shuffle(missed), reviewMode); row.append(retry); }
+    const nb = el("button", { className: "btn ghost", disabled: !wrongList().length }, "Incorrect questions");
+    nb.onclick = () => notes();
+    const again = el("button", { className: "btn ghost" }, "Start over");
+    again.onclick = () => backTo();
+    const menu = el("button", { className: "btn ghost" }, "Menu");
+    menu.onclick = () => home("back");
+    row.append(nb, again, menu);
     card.append(row);
-    next.focus({ preventScroll: true });
+    app.append(card);
+    // Every question, in order: your answer, the correct one, the explanation and the time you spent.
+    deck.forEach((q, n) => {
+      const s = sq[n], ok = s.pick === q.answer;
+      const c = el("div", { className: "card review-q" });
+      const meta = el("div", { className: "meta" });
+      meta.append(el("span", {}, `${n + 1}. ${qLabel(q)}`), el("span", { className: ok ? "ok" : "bad" }, `${ok ? "✓ Correct" : s.pick === null ? "– Not answered" : "✗ Incorrect"} · ${fmt(s.ms)}`));
+      c.append(meta, el("p", { className: "q" }, q.q));
+      s.order.forEach((k, pos) => {
+        const o = el("div", { className: "opt static" + (k === q.answer ? " correct" : k === s.pick ? " wrong" : "") }, `${LETTERS[pos]}. ${q.options[k]}`);
+        c.append(o);
+      });
+      c.append(el("div", { className: "why" }, q.why));
+      app.append(c);
+    });
   }
 
   // Vignette flow: the case and its exhibits on top, its questions below, Next at the bottom.
