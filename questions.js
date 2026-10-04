@@ -8,7 +8,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "An investor that has CONTROL over an investee (usually >50% of voting shares) accounts for it using:",
-    options: ["The equity method", "The acquisition method (full consolidation)", "Fair value through profit or loss"],
+    options: ["The equity method, recognizing its share of the investee's net income", "The acquisition method, consolidating 100% of the investee's line items", "Fair value through profit or loss, remeasured each period"],
     answer: 1,
     why: "Control → consolidate 100% of the subsidiary's assets, liabilities, revenues and expenses line by line, and show a non-controlling interest for the part not owned."
   },
@@ -40,7 +40,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "Compared with full consolidation, the equity method usually reports:",
-    options: ["Higher total assets and revenue", "Lower total assets and revenue, with a higher net profit margin and ROA", "The same assets and revenue"],
+    options: ["Higher total assets and revenue, because it adds the investee's line items", "Lower total assets and revenue, with a higher net margin and ROA", "The same assets and revenue, since net income is identical either way"],
     answer: 1,
     why: "The equity method shows one investment line and one income line. Net income is the same, but assets and revenue are smaller, so margins and ROA look better."
   },
@@ -48,7 +48,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "Under proportionate consolidation, the investor:",
-    options: ["Adds 100% of the investee's line items and shows a non-controlling interest", "Adds its % share of each asset, liability, revenue and expense, with no non-controlling interest", "Reports a single investment line on the balance sheet"],
+    options: ["Adds 100% of the investee's line items and shows a non-controlling interest", "Adds its % share of each line item, with no non-controlling interest", "Reports one investment line on the balance sheet and its share of profit"],
     answer: 1,
     why: "Only the investor's share of each line item is included, so there is no non-controlling interest. Adding 100% would be full consolidation."
   },
@@ -56,7 +56,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "A held-to-maturity (amortized cost) bond bought at a PREMIUM. Over time, its carrying value:",
-    options: ["Moves to fair value each period", "Falls toward par using the effective interest method", "Stays at the purchase price"],
+    options: ["Is remeasured to fair value each period through profit or loss", "Falls toward par using the effective interest method", "Stays at the purchase price until the bond matures"],
     answer: 1,
     why: "Interest income = market rate × carrying value, which is less than the coupon. The difference amortizes the premium, so the carrying value falls toward par. Fair value is ignored."
   },
@@ -64,7 +64,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "A company consolidates an SPE that borrows money to buy the company's receivables. The consolidated balance sheet looks like:",
-    options: ["The receivables were sold and removed from the books", "The company borrowed directly against its receivables (assets and liabilities both rise)", "Nothing changed"],
+    options: ["The receivables were sold to the SPE, so they leave the balance sheet and cash rises", "Assets and liabilities both rise, as if it borrowed against them", "Nothing changes, because the SPE is a separate legal entity with its own debt"],
     answer: 1,
     why: "After consolidation the receivables stay on the books, cash rises and debt rises by the SPE's borrowing. It looks the same as a secured loan."
   },
@@ -72,7 +72,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "Under the equity method, goodwill is:",
-    options: ["Purchase price minus the investor's share of the investee's BOOK value", "The residual: purchase price minus the investor's share of the FAIR value of identifiable net assets", "Always zero"],
+    options: ["Purchase price minus the investor's share of the investee's BOOK value", "Purchase price minus its share of the FAIR value of identifiable net assets", "Always zero, because goodwill is only recognized on full consolidation"],
     answer: 1,
     why: "First, the excess over book value is assigned to identifiable assets (e.g. PP&E fair value above book). Whatever is left is goodwill. It stays inside the investment account and is not amortized."
   },
@@ -80,7 +80,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "The part of the purchase price assigned to PP&E fair value above book value is:",
-    options: ["Never amortized, like goodwill", "Depreciated over the asset's remaining life, which reduces equity income", "Expensed right away"],
+    options: ["Never amortized, just like goodwill, and only tested for impairment", "Depreciated over the asset's remaining life, reducing equity income", "Expensed right away in the year of acquisition as a one-off charge"],
     answer: 1,
     why: "It is depreciated over the remaining useful life (e.g. 48 / 10 = 4.8 per year). That lowers the investor's share of income and the carrying value."
   },
@@ -88,7 +88,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Intercorporate Investments",
     q: "Under IFRS, the goodwill impairment loss equals:",
-    options: ["Carrying value of the cash-generating unit minus its recoverable amount", "Carrying value of the reporting unit minus its fair value", "All of the goodwill on the books"],
+    options: ["Carrying value of the cash-generating unit minus its recoverable amount", "Carrying value of the reporting unit minus the reporting unit's fair value", "All of the goodwill on the books, written off in a single step"],
     answer: 0,
     why: "IFRS uses one step: CGU carrying value minus recoverable amount (the higher of fair value less costs to sell and value in use), capped at the goodwill. Comparing with fair value is the US GAAP approach."
   },
@@ -106,7 +106,7 @@ const QUESTIONS = [
     topic: "Derivatives",
     reading: "Forward Commitments",
     q: "The market futures price is BELOW the carry-arbitrage model price. The arbitrage is:",
-    options: ["Sell futures and buy the underlying (carry arbitrage)", "Buy futures and short the underlying (reverse carry arbitrage)", "No action; futures prices can differ from the model"],
+    options: ["Sell futures and buy the underlying, financing it at the risk-free rate", "Buy futures and short the underlying, lending the proceeds (reverse carry)", "No action, because futures prices can drift away from the model price"],
     answer: 1,
     why: "The futures is cheap, so buy it. Short-sell the underlying and invest the cash at the risk-free rate. That is reverse carry arbitrage."
   },
@@ -124,23 +124,23 @@ const QUESTIONS = [
     q: "The full (dirty) price of a bond is:",
     options: ["Clean price − accrued interest", "Clean price + accrued interest", "The same as the quoted price"],
     answer: 1,
-    why: "Full price = clean (quoted) price + accrued interest. Accrued interest = (days since last coupon / days in period) × coupon."
+    why: "Full price = clean (quoted) price + accrued interest. Accrued interest = [[days since last coupon|days in period]] × coupon."
   },
   {
     topic: "Derivatives",
     reading: "Forward Commitments",
     q: "In bond futures pricing, the quoted futures price is found by:",
-    options: ["Compounding the clean price at the risk-free rate", "Taking the future value of the full price, subtracting accrued interest at expiration and any FV of coupons, then dividing by the conversion factor", "Multiplying the full price by the conversion factor"],
+    options: ["Compound the clean price at the risk-free rate to expiry, then divide by the conversion factor", "FV of full price − accrued interest at expiry − FV of coupons, ÷ conversion factor", "Multiply today's full price by the conversion factor, then subtract the accrued interest at expiry"],
     answer: 1,
-    why: "Q0 = [FV(full price) − AI at expiration − FV(coupons)] / CF. The conversion factor adjusts for the fact that different bonds can be delivered."
+    why: "Q0 = [[FV(full price) − AI at expiration − FV(coupons)|CF]]. The conversion factor adjusts for the fact that different bonds can be delivered."
   },
   {
     topic: "Derivatives",
     reading: "Forward Commitments",
     q: "The value of a forward contract at initiation and during its life is:",
-    options: ["Zero at initiation; later, the PV of (current forward price − original forward price) for the long", "Always equal to the forward price", "Zero at initiation and at every point after"],
+    options: ["Zero at initiation; later, PV of (current − original forward price) for the long", "Always equal to the forward price agreed when the contract was signed, for both parties", "Zero at initiation and zero at every point after, since no cash changes hands until expiry"],
     answer: 0,
-    why: "At initiation the forward price is set so that value = 0. Later, for the long: Vt = (Ft − F0) / (1+r)^(T−t). Remember to discount."
+    why: "At initiation the forward price is set so that value = 0. Later, for the long: Vt = [[Ft − F0|(1 + r)^(T−t)]]. Remember to discount."
   },
   {
     topic: "Derivatives",
@@ -154,9 +154,9 @@ const QUESTIONS = [
     topic: "Derivatives",
     reading: "Forward Commitments",
     q: "The fixed rate on a plain vanilla interest rate swap is set so that:",
-    options: ["It equals the longest spot rate", "The swap's value is zero at initiation: rate = (1 − last PV factor) / sum of PV factors", "It equals the average of the spot rates"],
+    options: ["Rate = [[1 − first PV factor|last PV factor]], from the first and last spot rates", "Rate = [[1 − last PV factor|sum of all PV factors]]", "The simple average of the spot rates over the swap's life"],
     answer: 1,
-    why: "The fixed rate makes PV(fixed leg) = PV(floating leg). Per period: (1 − B_N) / ΣB_i. Annualize it by the payment frequency (e.g. ÷ 0.25 for quarterly)."
+    why: "The fixed rate makes PV(fixed leg) = PV(floating leg). Per period: [[1 − B_N|ΣB_i]]. Annualize it by the payment frequency (e.g. ÷ 0.25 for quarterly)."
   },
   {
     topic: "Derivatives",
@@ -186,7 +186,7 @@ const QUESTIONS = [
     topic: "Derivatives",
     reading: "Forward Commitments",
     q: "The main difference between valuing futures and forwards during their life:",
-    options: ["Futures are marked to market daily, so their value resets to zero after each settlement", "Forwards are marked to market daily", "There is no difference"],
+    options: ["Futures are marked to market daily, so their value resets to zero each day", "Forwards are marked to market daily, so their value resets to zero each day", "None: both are valued as the PV of the change in the forward price"],
     answer: 0,
     why: "Daily settlement moves gains and losses into the margin account, so a futures contract's value goes back to zero each day. A forward builds up value until expiration."
   },
@@ -220,7 +220,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "The main exception to the low volatility of equity market-neutral strategies is:",
-    options: ["Use of significant leverage, which can force portfolio downsizing", "Holding too many pairs", "Low trading turnover"],
+    options: ["Significant leverage, which can force sudden portfolio downsizing in stress", "Holding too many long/short pairs, which raises transaction costs sharply", "Low trading turnover, which leaves positions exposed to stale prices"],
     answer: 0,
     why: "Their conservative, constrained approach usually gives low volatility. Heavy leverage can force the manager to cut positions at bad prices, which makes returns much more volatile."
   },
@@ -228,7 +228,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Event-driven merger arbitrage strategies are exposed to equity market beta because:",
-    options: ["They hold only long equity positions", "Deals are more likely to fail in market stress, which creates left-tail risk", "They are not exposed to equity beta"],
+    options: ["They hold only long equity positions in the target companies", "Deals are more likely to fail in market stress (left-tail risk)", "They are not exposed to equity beta at all, by design of the trade"],
     answer: 1,
     why: "Broad market stress can disrupt a deal. Because failures cluster in bad markets, merger arbitrage has market sensitivity and left-tail risk. With high hedge fund fees, this is an expensive form of embedded beta."
   },
@@ -236,7 +236,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Opportunistic (global macro) strategies have risk exposure to:",
-    options: ["Market directionality (\"trendiness\")", "Only idiosyncratic company risk", "No market factors"],
+    options: ["Market directionality (\"trendiness\") across asset classes", "Only idiosyncratic company risk from security selection", "No market factors, because positions are fully hedged"],
     answer: 0,
     why: "Global macro is based on macro themes and multi-asset relationships. Its key return source is correctly spotting and riding trends in global markets (e.g. inflation), so market direction matters a lot."
   },
@@ -244,7 +244,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Global macro strategies are typically:",
-    options: ["Bottom-up, based on single-company analysis", "Top-down, using macroeconomic and fundamental models", "Purely statistical pairs trades"],
+    options: ["Bottom-up, built on detailed single-company analysis", "Top-down, using macroeconomic and fundamental models", "Purely statistical pairs trades within one industry"],
     answer: 1,
     why: "They are top-down. Managers use macro and fundamental models to take a view on the direction or relative value of an asset or asset class."
   },
@@ -252,7 +252,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "A long/short equity manager typically aims for:",
-    options: ["About long-only returns with roughly 50% lower standard deviation", "Twice long-only returns with the same volatility", "Negative correlation with equities"],
+    options: ["About long-only returns with roughly 50% lower standard deviation", "About twice long-only returns with roughly the same volatility", "Strongly negative correlation with equities and steady positive returns"],
     answer: 0,
     why: "The goal is returns roughly equal to a long-only approach with about half the standard deviation, which makes it a lower-volatility strategy."
   },
@@ -260,7 +260,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Dedicated short selling and short-biased strategies offer:",
-    options: ["High returns and low volatility", "Negative correlation to equities, but lower return goals and higher volatility", "Zero beta and steady returns"],
+    options: ["High returns with low volatility, plus negative correlation to equities", "Negative correlation to equities, but lower returns and higher volatility", "Zero beta to equities with steady, bond-like returns in all markets"],
     answer: 1,
     why: "Their return goals are lower than most hedge fund strategies, but they have a negative correlation benefit. The short beta exposure makes them more volatile than a typical long/short equity fund."
   },
@@ -268,7 +268,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "An investor ranks LOW VOLATILITY above negative correlation for equity strategies. Which strategy should it most likely avoid?",
-    options: ["Long/short equity", "Equity market neutral", "Dedicated short selling / short biased"],
+    options: ["Long/short equity, which keeps some net long exposure", "Equity market neutral, which targets zero beta", "Dedicated short selling / short biased"],
     answer: 2,
     why: "Short-biased strategies are the high-volatility choice (short beta). Long/short equity and equity market neutral are both lower-volatility strategies."
   },
@@ -276,7 +276,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "In a stock-for-stock merger arbitrage, the manager typically:",
-    options: ["Buys the acquirer and shorts the target", "Buys the target and shorts the acquirer in the offer ratio", "Buys both companies"],
+    options: ["Buys the acquirer and shorts the target in the offer ratio", "Buys the target and shorts the acquirer in the offer ratio", "Buys both companies and hedges with index futures"],
     answer: 1,
     why: "Long the target and short the acquirer, in the same ratio as the share-exchange offer. The manager earns the spread when the deal completes."
   },
@@ -284,7 +284,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "When a merger is announced, prices usually move like this:",
-    options: ["Target rises toward the offer price; acquirer falls", "Target falls; acquirer rises", "Both fall"],
+    options: ["Target rises toward the offer price; acquirer falls", "Target falls toward the offer price; acquirer rises", "Both fall, as the market prices in deal risk"],
     answer: 0,
     why: "The target rises toward the deal price. The acquirer tends to fall because of possible dilution or the use of cash. If the deal fails, both moves typically reverse, hurting the long target / short acquirer position."
   },
@@ -300,7 +300,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "The payoff profile of a merger arbitrage strategy resembles:",
-    options: ["A riskless bond + a short put on the acquirer + a long call on the target", "A long straddle", "A riskless bond + a long put on the target"],
+    options: ["A riskless bond + a short put on the acquirer + a long call on the target", "A long straddle on the target, paying off if the price moves either way", "A riskless bond + a long put on the target + a short call on the acquirer"],
     answer: 0,
     why: "It pays like a riskless bond if the deal closes. The short put on the acquirer reflects needing to cover the short if the acquirer's price rises. The long call on the target pays if a rival bidder makes a higher offer."
   },
@@ -308,7 +308,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "In merger arbitrage, the 'long call on the target' part of the payoff becomes valuable when:",
-    options: ["The deal fails", "Another bidder (a \"white knight\") offers a higher price for the target", "The acquirer's price falls"],
+    options: ["The deal fails and the target falls back to its pre-deal price", "Another bidder (a \"white knight\") offers more for the target", "The acquirer's share price falls while the deal is still pending"],
     answer: 1,
     why: "A higher competing bid lifts the target's price above the original deal terms, giving extra upside."
   },
@@ -332,7 +332,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "A yield curve (calendar spread) trade using bonds of the SAME issuer mainly carries:",
-    options: ["Interest rate risk", "Credit risk", "Currency risk"],
+    options: ["Interest rate risk", "Credit risk of that issuer", "Currency risk"],
     answer: 0,
     why: "Long and short positions at different points on the curve bet on flattening or steepening. With the same issuer, most credit and liquidity risk is hedged, so interest rate risk is the main concern."
   },
@@ -340,7 +340,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "A long/short credit trade profits from:",
-    options: ["Differences in credit quality across issuers (e.g. investment grade vs. high yield)", "On-the-run vs. off-the-run liquidity", "Curve steepening only"],
+    options: ["Credit quality differences across issuers (e.g. IG vs. high yield)", "Liquidity differences between on-the-run and off-the-run bonds of one issuer", "A steepening of the yield curve of a single government issuer over time"],
     answer: 0,
     why: "It trades relative credit risk across issuers. It is naturally more volatile than exploiting small pricing gaps within sovereign debt."
   },
@@ -348,7 +348,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Going long the assets that rose MOST relative to the others and short those that fell the most is:",
-    options: ["Time-series momentum", "Cross-sectional momentum", "Global macro"],
+    options: ["Time-series momentum", "Cross-sectional momentum", "Global macro trend following"],
     answer: 1,
     why: "Cross-sectional momentum ranks assets against each other, usually within one asset class. It generally results in a net zero, market-neutral position."
   },
@@ -356,7 +356,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "In time-series momentum, each position is based on:",
-    options: ["The asset's own past trend, so the fund can be net long or net short", "Its ranking against the other assets", "Macroeconomic forecasts"],
+    options: ["The asset's own past trend, so the fund can be net long or net short", "Its ranking against the other assets, so the book stays market neutral", "Macroeconomic forecasts of growth and inflation for each asset's market"],
     answer: 0,
     why: "Positions are set independently: long if the asset is trending up, short if down. The overall portfolio can be net long or net short."
   },
@@ -364,7 +364,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Which specialist strategy best protects the Sharpe ratio in an equity crisis?",
-    options: ["Selling equity volatility", "Buying longer-dated OTM options on VIX futures (long volatility)", "Cross-asset volatility trading"],
+    options: ["Selling equity volatility to earn the variance risk premium", "Buying longer-dated out-of-the-money options on VIX futures", "Cross-asset volatility trading between two equity markets"],
     answer: 1,
     why: "Equity volatility is about 80% negatively correlated with equity returns. Long volatility spikes in a crash, lowering portfolio standard deviation and raising the Sharpe ratio, at the cost of the option premium."
   },
@@ -372,7 +372,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Why buy LONGER-dated, OUT-of-the-money VIX options for a volatility hedge?",
-    options: ["They are cheaper in every way", "Longer-dated options have more vega exposure; OTM options trade at higher implied volatility", "They have no time decay"],
+    options: ["They are cheaper in every way, so more protection can be bought per dollar", "Longer-dated options have more vega; OTM options trade at higher implied vol", "They have no time decay, so the hedge does not bleed while waiting"],
     answer: 1,
     why: "Longer-dated options have more absolute exposure to volatility levels (vega). OTM options typically trade at higher implied volatilities than ATM options."
   },
@@ -380,7 +380,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "A seller of equity volatility:",
-    options: ["Benefits most in a crisis", "Earns the volatility risk premium for providing crash insurance, with steadier returns in normal markets", "Has no exposure to crises"],
+    options: ["Benefits most in a crisis, because volatility spikes raise its profits", "Earns the volatility risk premium for providing crash insurance", "Has no exposure to crises once positions are delta-hedged each day"],
     answer: 1,
     why: "The volatility seller is the insurance provider, not the insured. It collects premium in calm markets and loses when volatility spikes."
   },
@@ -388,7 +388,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Cross-asset volatility trading (e.g. US vs. Japan) is a poor crisis hedge because:",
-    options: ["It always loses money", "It can carry idiosyncratic, macro-oriented risks that hurt in an equity crisis", "It is illegal in most markets"],
+    options: ["It always loses money in calm markets, so the carry cost is too high", "It can carry idiosyncratic, macro-oriented risks that hurt in a crisis", "It is restricted in most markets, so positions cannot be sized properly"],
     answer: 1,
     why: "It is relative value volatility trading. Its idiosyncratic macro risks can go wrong exactly when equities crash."
   },
@@ -396,7 +396,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Which is TRUE about fees in a fund of funds (FoF)?",
-    options: ["Investors pay one layer of fees", "Investors pay two layers of fees and can't net performance fees across managers", "The general partner absorbs netting risk"],
+    options: ["Investors pay one layer of fees, because the FoF manager waives its own", "Two layers of fees, and performance fees can't be netted across managers", "The general partner absorbs netting risk, so investors pay only on net gains"],
     answer: 1,
     why: "FoF investors pay the underlying funds' fees plus the FoF's fees. They pay incentive fees to winning managers even if the FoF overall is flat or down. This is netting risk."
   },
@@ -412,7 +412,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Under an MSF 'pass-through' fee model, the investor:",
-    options: ["Bears none of the netting risk", "Implicitly pays for part of the netting risk", "Pays no fees at all"],
+    options: ["Bears none of the netting risk, which stays with the fund's GP", "Implicitly pays for part of the netting risk through the fee structure", "Pays no fees at all, since costs are passed to the underlying managers"],
     answer: 1,
     why: "The fund passes through each team's costs (salaries and incentive fees) and then charges a fund-level incentive fee, so the investor implicitly pays part of the netting risk."
   },
@@ -420,7 +420,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Which structure has the tactical allocation advantage?",
-    options: ["Fund of funds (FoF)", "Multi-strategy fund (MSF)", "Neither"],
+    options: ["Fund of funds (FoF)", "Multi-strategy fund (MSF)", "Neither; both are equal in this respect"],
     answer: 1,
     why: "An MSF can move capital between strategies faster and more efficiently, with better strategy transparency. This makes it more resilient in preserving capital."
   },
@@ -428,7 +428,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "Which structure has HIGHER manager-specific operational risk?",
-    options: ["Fund of funds (FoF)", "Multi-strategy fund (MSF)", "They are the same"],
+    options: ["Fund of funds (FoF)", "Multi-strategy fund (MSF)", "They are the same for both structures"],
     answer: 1,
     why: "In an MSF, all teams share operational and risk systems under one roof, so operational risk isn't diversified. In an FoF, each underlying fund runs its own operations."
   },
@@ -444,7 +444,7 @@ const QUESTIONS = [
     topic: "Alternative Investments",
     reading: "Hedge Fund Strategies",
     q: "The new portfolio's VARIANCE must be below 90% of the current one. The maximum standard deviation is:",
-    options: ["90% × current SD", "√0.90 × current SD (≈ 94.9%)", "0.90² × current SD"],
+    options: ["90% × current standard deviation", "√0.90 × current SD (≈ 94.9%)", "0.90² × current SD (≈ 81%)"],
     answer: 1,
     why: "Variance = SD². Max variance = 0.90 × SD², so max SD = √0.90 × SD. Example: 7.95% → √(0.90 × 63.20) = 7.54%."
   },
@@ -454,7 +454,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "The defined benefit obligation (DBO) is:",
-    options: ["Plan assets minus the obligation", "The present value of future benefits earned to date (the gross liability)", "The fair value of plan assets"],
+    options: ["Plan assets minus the obligation, i.e. the plan's funded status", "PV of future benefits earned to date (the gross liability)", "The fair value of plan assets set aside to pay future benefits"],
     answer: 1,
     why: "The DBO is the gross liability: the present value of the benefits employees have earned so far. It is shown before netting plan assets."
   },
@@ -470,7 +470,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "Under IFRS, where does each part of periodic pension cost go?",
-    options: ["All of it goes to operating expense", "Service cost → P&L (operating); net interest → P&L (financing); remeasurements → OCI", "Service cost → OCI; net interest → P&L; remeasurements → P&L"],
+    options: ["All of it goes to operating expense in profit or loss", "Service cost → P&L; net interest → P&L; remeasurements → OCI", "Service cost → OCI; net interest → P&L; remeasurements → P&L"],
     answer: 1,
     why: "Service cost is an operating expense. Net interest expense/income is recognized in profit or loss below operating income. Remeasurements go to OCI and are not reclassified to profit or loss."
   },
@@ -478,7 +478,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "Under IFRS, net interest expense on a DB plan is calculated as:",
-    options: ["Discount rate × beginning net pension liability (funded status)", "Expected return × plan assets", "Discount rate × ending DBO"],
+    options: ["Discount rate × beginning net pension liability (funded status)", "Expected return on plan assets × beginning fair value of plan assets", "Discount rate × ending DBO, after benefits paid during the year"],
     answer: 0,
     why: "Net interest = discount rate × beginning funded status. Equivalently, (discount rate × DBO) − (discount rate × plan assets): interest cost on the obligation minus interest income on the assets, both at the same discount rate."
   },
@@ -486,7 +486,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "Interest cost on the DBO is 1,557 but net interest expense in P&L is only 273. The 1,284 difference is:",
-    options: ["The actual return on plan assets", "Interest income on plan assets at the discount rate", "Benefits paid during the year"],
+    options: ["The actual return on plan assets earned during the year", "Interest income on plan assets at the discount rate", "Benefits paid to retirees during the year"],
     answer: 1,
     why: "1,284 = 5.48% × 23,432 (beginning plan assets). IFRS nets interest income on plan assets, at the discount rate, against interest cost. The actual return is not used in P&L."
   },
@@ -494,7 +494,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "Under IFRS, remeasurements of a DB plan include:",
-    options: ["Service cost and past service cost", "Actuarial gains/losses and the actual return on plan assets minus interest income at the discount rate", "Employer contributions"],
+    options: ["Service cost and past service cost arising from plan amendments", "Actuarial gains/losses; return on assets beyond the discount rate", "Employer contributions paid into the plan during the reporting year"],
     answer: 1,
     why: "Remeasurements = actuarial gains and losses on the obligation, plus the difference between the actual return on plan assets and interest income at the discount rate. They are recognized in OCI and never recycled to profit or loss."
   },
@@ -502,7 +502,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "In the cash flow statement, the sponsor's cash outflow for a DB plan is:",
-    options: ["Service cost", "Benefits paid to retirees", "Employer contributions to the plan (operating activities)"],
+    options: ["Service cost, the benefits earned by employees this year", "Benefits paid to retirees out of the plan assets", "Employer contributions to the plan (operating)"],
     answer: 2,
     why: "The company's cash outflow is what it pays into the plan: employer contributions, in operating activities. Benefits are paid by the plan out of plan assets, not by the company."
   },
@@ -510,7 +510,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "Benefits paid to retirees affect the funded status by:",
-    options: ["Increasing the net liability", "Nothing: they reduce both the DBO and plan assets by the same amount", "Decreasing the net liability"],
+    options: ["Increasing the net liability, since cash leaves the plan", "Nothing: DBO and plan assets fall by the same amount", "Decreasing the net liability, since the DBO falls"],
     answer: 1,
     why: "Benefits paid come out of plan assets and reduce the obligation equally, so the funded status is unchanged."
   },
@@ -518,7 +518,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "A DB plan's net pension liability decreases over the year when:",
-    options: ["Service cost + interest cost > benefits paid", "Actual return on assets + employer contributions > service cost + interest cost (with no actuarial losses)", "The discount rate is above the actual return on assets"],
+    options: ["Service cost + interest cost exceed the benefits paid to retirees", "Asset returns + contributions exceed service + interest cost", "The discount rate is above the actual return on plan assets"],
     answer: 1,
     why: "Assets grow by actual return + contributions; the obligation grows by service + interest cost (+ actuarial losses). Benefits paid cancel out. If assets grow by more, the net liability shrinks. Example: 1,302 + 693 = 1,995 > 228 + 1,557 = 1,785."
   },
@@ -526,7 +526,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "When valuing equity from enterprise value in a DCF, an analyst treats an underfunded DB plan by:",
-    options: ["Deducting the gross DBO", "Deducting the most recent net pension liability, as if it were debt", "Ignoring it; it is non-operating"],
+    options: ["Deducting the gross DBO, ignoring the plan assets set aside", "Deducting the latest net pension liability, as if it were debt", "Ignoring it, because pension items are non-operating"],
     answer: 1,
     why: "Deduct the latest net pension liability (DBO − plan assets) as a debt-like claim. Deducting the gross DBO would ignore plan assets held solely to pay beneficiaries; using last year's figure would be stale."
   },
@@ -534,7 +534,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions (Post-Employment Benefits)",
     q: "If bond yields (and so the discount rate) fall 100 bp, the funded status may worsen by LESS than the rise in the DBO because:",
-    options: ["Remeasurements go to OCI", "Service cost falls", "Plan assets, especially long-duration bonds, may rise in value at the same time"],
+    options: ["Remeasurements go to OCI, so they do not reach the funded status", "Service cost falls when the discount rate is lower", "Plan assets, especially long-duration bonds, may rise too"],
     answer: 2,
     why: "A lower discount rate raises the DBO, but falling yields also lift the value of fixed-income plan assets (more so for longer duration), partly offsetting it. Where remeasurements are recorded doesn't change the funded status."
   },
@@ -550,7 +550,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Under IFRS, past service cost (from a plan amendment) is recognized:",
-    options: ["In OCI, then amortized", "Immediately in P&L as part of service cost (operating expense)", "Only in the notes"],
+    options: ["In OCI, then amortized into P&L over the remaining service period", "Immediately in P&L as part of service cost, an operating expense", "Only in the notes, without affecting the financial statements"],
     answer: 1,
     why: "IFRS: service cost = current service cost + past service cost, both recognized in P&L straight away as an operating expense. Example: 200 + 120 = 320."
   },
@@ -558,7 +558,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Under US GAAP, past service cost is:",
-    options: ["Expensed immediately in P&L", "Recognized in OCI and amortized into P&L over time", "Never recognized"],
+    options: ["Expensed immediately in P&L as part of service cost", "Recognized in OCI and amortized into P&L over time", "Never recognized, only disclosed in the pension notes"],
     answer: 1,
     why: "US GAAP puts past service cost in OCI and amortizes it into pension expense over the remaining service period. IFRS expenses it immediately."
   },
@@ -566,7 +566,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Under US GAAP, periodic pension cost in P&L (before amortization) is:",
-    options: ["Service cost + net interest at the discount rate", "Current service cost + interest cost − EXPECTED return on plan assets", "Employer contributions"],
+    options: ["Service cost + net interest on the net liability at the discount rate", "Service cost + interest cost − EXPECTED return on plan assets", "Employer contributions made to the plan during the year"],
     answer: 1,
     why: "US GAAP P&L pension cost = current service cost + interest cost (discount rate × beginning DBO) − expected return on plan assets (+ amortization of past service cost and actuarial gains/losses). Example: 200 + 2,940 − 3,120 = 20."
   },
@@ -574,7 +574,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "A key IFRS vs US GAAP difference in pension cost is the return on plan assets used in P&L:",
-    options: ["IFRS: the discount rate × plan assets; US GAAP: the expected rate of return × plan assets", "Both use the actual return", "IFRS: the expected return; US GAAP: the discount rate"],
+    options: ["IFRS: discount rate × assets; US GAAP: expected return × assets", "Both use the actual return earned on plan assets during the year", "IFRS: expected return × assets; US GAAP: discount rate × assets"],
     answer: 0,
     why: "IFRS nets interest income on plan assets at the discount rate (as part of net interest). US GAAP subtracts the expected return on plan assets. Under either standard, the difference from the actual return goes to OCI."
   },
@@ -582,7 +582,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "To forecast next year's IFRS pension cost in P&L, use:",
-    options: ["Service cost + discount rate × this year's ENDING net pension liability", "Service cost + discount rate × this year's beginning DBO", "Employer contributions + service cost"],
+    options: ["Service cost + discount rate × this year's ENDING net pension liability", "Service cost + discount rate × this year's beginning gross DBO balance", "Employer contributions + the service cost expected for next year combined"],
     answer: 0,
     why: "Next year's net interest = discount rate × net pension liability at the start of next year (= this year's end). Example: 320 + 7% × (41,720 − 38,700) = 320 + 211 ≈ 531."
   },
@@ -590,7 +590,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Employer contributions to a DB plan are:",
-    options: ["An operating expense in P&L", "A cash outflow; they are not the pension expense", "Recognized in OCI"],
+    options: ["An operating expense in P&L in the year they are paid", "A cash outflow; they are not the pension expense", "Recognized in OCI as part of remeasurements"],
     answer: 1,
     why: "Contributions move cash into the plan (an operating cash outflow) and raise plan assets. The P&L expense is the periodic pension cost, not the contribution."
   },
@@ -598,7 +598,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "A LOWER expected volatility assumption for stock option grants leads to:",
-    options: ["A higher option fair value and higher compensation expense", "A lower option fair value, lower compensation expense and higher net income", "No change to the expense"],
+    options: ["A higher option fair value and a higher compensation expense", "A lower option value, a lower compensation expense and higher net income", "No change to the expense, because volatility only affects disclosure"],
     answer: 1,
     why: "Option value rises with volatility. Lower volatility → lower grant-date fair value → less expense as the award vests → higher net income."
   },
@@ -606,7 +606,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "The grant-date fair value of a restricted stock unit (RSU) is based on:",
-    options: ["An option-pricing model using volatility", "The share price (possibly adjusted for expected dividends)", "The exercise price"],
+    options: ["An option-pricing model using volatility and the exercise price", "The share price (adjusted for expected dividends)", "The exercise price set in the grant agreement"],
     answer: 1,
     why: "An RSU is a promise of shares, with no exercise price, so it is valued at the share price (adjusted for expected dividends if holders don't receive them). Volatility doesn't affect it."
   },
@@ -614,7 +614,7 @@ const QUESTIONS = [
     topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Stock option compensation expense is:",
-    options: ["Measured at grant-date fair value and recognized over the vesting period", "Remeasured at fair value every year", "Recognized only when the options are exercised"],
+    options: ["Measured at grant-date fair value and spread over the vesting period", "Remeasured at fair value every year until the options are exercised", "Recognized only when the options are exercised, at intrinsic value"],
     answer: 0,
     why: "Equity-settled options are measured once at grant-date fair value, and that amount is expensed over the vesting (service) period. Later changes in the share price don't change it."
   },
@@ -632,7 +632,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "A two-stage DDM is most appropriate for a company that expects:",
-    options: ["Constant growth forever", "A period of extraordinary growth followed by stable (normal) growth", "Growth that declines smoothly forever"],
+    options: ["Constant growth forever at a rate below the required return", "Extraordinary growth for a while, then stable growth", "Growth that declines smoothly in a straight line forever"],
     answer: 1,
     why: "A two-stage DDM values an initial high-growth period dividend by dividend, then a terminal value for stable growth after it. Constant growth fits the Gordon growth model; a smooth decline fits the H-model."
   },
@@ -640,15 +640,15 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "In a two-stage DDM with an n-year first stage, the Gordon-growth terminal value at time n is:",
-    options: ["Dn / (r − gL)", "Dn × (1 + gL) / (r − gL) = Dn+1 / (r − gL)", "Dn / r"],
+    options: ["[[Dn|r − gL]], using the last first-stage dividend", "[[Dn × (1 + gL)|r − gL]]", "[[Dn × (1 + gS)|r − gS]], using the first-stage growth rate"],
     answer: 1,
-    why: "The terminal value at time n uses the NEXT dividend: Vn = Dn+1 / (r − gL) = Dn(1 + gL)/(r − gL). Example: 0.4992 × 1.07 / (0.0872 − 0.07) = 31.06. It is then discounted back n years."
+    why: "The terminal value at time n uses the NEXT dividend: Vn = [[Dn+1|r − gL]] = [[Dn(1 + gL)|r − gL]]. Example: 0.4992 × 1.07 / (0.0872 − 0.07) = 31.06. It is then discounted back n years."
   },
   {
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "In a two-stage DDM, the present value of the terminal value is typically:",
-    options: ["A small part of total value", "A large share of total value (e.g. about 90%)", "Exactly half of total value"],
+    options: ["A small part of total value, as it is discounted over many years", "A large share of total value, often around 90% of it", "Exactly half of total value in a typical two-stage model"],
     answer: 1,
     why: "Most value comes from the stable-growth stage. Example: PV of V8 = 15.9095 out of 17.6528 total, about 0.90. That is why terminal-value assumptions matter so much."
   },
@@ -656,23 +656,23 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "Using a trailing P/E to estimate the terminal value Vn, you first find earnings as:",
-    options: ["En = Dn / (1 − b), where b is the retention ratio", "En = Dn × b", "En = Dn / b"],
+    options: ["En = [[Dn|1 − b]], where b is the retention ratio", "En = Dn × b, where b is the retention ratio", "En = [[Dn|b]], where b is the retention ratio"],
     answer: 0,
-    why: "Payout ratio = 1 − b = Dn/En, so En = Dn / (1 − b). Then Vn = trailing P/E × En. Example: E8 = 0.4992 / 0.30 = 1.664; V8 = 17 × 1.664 = 28.29."
+    why: "Payout ratio = 1 − b = Dn/En, so En = [[Dn|1 − b]]. Then Vn = trailing P/E × En. Example: E8 = 0.4992 / 0.30 = 1.664; V8 = 17 × 1.664 = 28.29."
   },
   {
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "The H-model value of a stock is:",
-    options: ["D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL)", "D1/(r − gS)", "D0 × H / (r − gL)"],
+    options: ["[[D0(1 + gL)|r − gL]] + [[D0 × H × (gS − gL)|r − gL]]", "[[D0(1 + gS)|r − gS]] + [[D0 × H × (gS + gL)|r − gS]]", "[[D0 × H × (1 + gL)|r − gL]] + [[D0 × (gS − gL)|r − gS]]"],
     answer: 0,
-    why: "The H-model is a Gordon growth value at the long-run rate gL plus a premium for the extra, linearly declining early growth: D0 × H × (gS − gL)/(r − gL)."
+    why: "The H-model is a Gordon growth value at the long-run rate gL plus a premium for the extra, linearly declining early growth: [[D0 × H × (gS − gL)|r − gL]]."
   },
   {
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "In the H-model, H equals:",
-    options: ["The full length of the high-growth period", "Half the length of the period over which growth declines", "The long-run growth rate"],
+    options: ["The full length of the high-growth period in years", "Half the length of the growth-decline period", "The long-run growth rate the firm settles into"],
     answer: 1,
     why: "H is the half-life of the high-growth period: if growth falls linearly from gS to gL over 8 years, H = 8/2 = 4."
   },
@@ -688,7 +688,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
     q: "If the high-growth first stage is assumed to last LONGER (e.g. 11 years instead of 8), all else equal:",
-    options: ["The stock's value falls and the terminal value's share rises", "The stock's value rises and the terminal value's share of total value falls", "Nothing changes"],
+    options: ["The stock's value falls and the terminal value's share of total value rises", "The stock's value rises and the terminal value's share of total value falls", "Nothing changes, because the terminal value is discounted at the same rate"],
     answer: 1,
     why: "More years of extraordinary growth add value. The terminal value is reached later, so its PV is smaller, while the first stage contributes more, so the second stage's share of total value falls."
   },
@@ -712,7 +712,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "For a cyclical company whose current earnings are depressed by a downturn and restructuring charges, the best P/E approach is:",
-    options: ["P/E on trailing earnings", "P/E on normalized (mid-cycle) earnings", "P/B only"],
+    options: ["P/E on trailing earnings, which reflect the latest four quarters", "P/E on normalized (mid-cycle) earnings the firm could earn today", "P/B only, since book value is never affected by the cycle"],
     answer: 1,
     why: "Normalized earnings estimate the EPS the company could achieve under mid-cyclical conditions, removing the distortion of cyclically depressed or unusual earnings."
   },
@@ -720,7 +720,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Which is a valid reason to prefer the P/E over the P/S?",
-    options: ["Earnings are more stable than sales", "Earnings are harder to manipulate than sales", "Earnings reflect financial leverage, while sales are a pre-financing measure"],
+    options: ["Earnings are more stable than sales over the business cycle", "Earnings are harder for management to manipulate than sales", "Earnings reflect financial leverage; sales are pre-financing"],
     answer: 2,
     why: "Share price reflects the effect of debt; sales does not (it is before financing and ignores cost structure). Earnings reflect operating and financial leverage. Sales are actually MORE stable and LESS easily manipulated than earnings, which is the P/S's advantage."
   },
@@ -736,7 +736,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Stock A: forward P/E 18.71, growth 12.41%. Peer PEGs: 1.74, 1.31; sector PEG 1.52. Stock A is most likely:",
-    options: ["Overvalued", "Undervalued", "Fairly valued"],
+    options: ["Overvalued relative to its peers", "Undervalued relative to its peers", "Fairly valued"],
     answer: 2,
     why: "PEG = 18.71 / 12.41 = 1.51, in the middle of the peer range and very close to the sector's 1.52, so fairly valued. A lower PEG than peers suggests undervalued; a higher one suggests overvalued."
   },
@@ -752,7 +752,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "How is the PEG ratio calculated, and how is it read?",
-    options: ["Growth / P/E; higher is cheaper", "P/E / expected growth rate in percent; lower is relatively more attractive", "P/E × growth; higher is cheaper"],
+    options: ["[[Growth|P/E]]; a higher value means the stock is cheaper", "[[P/E|expected growth (%)]]; lower is more attractive", "P/E × growth; a higher value means the stock is cheaper"],
     answer: 1,
     why: "PEG = P/E ÷ expected earnings growth (in percentage points, e.g. 18.71 / 12.41 = 1.51). A lower PEG than comparables suggests the stock is relatively undervalued. It assumes a linear P/E–growth relation and ignores risk and growth duration."
   },
@@ -762,21 +762,21 @@ const QUESTIONS = [
     q: "Price €50, most recent EPS €5.64, next year's EPS estimate €6.00. The trailing P/E is:",
     options: ["8.3", "8.9", "9.9"],
     answer: 1,
-    why: "Trailing P/E = price / last four quarters' EPS = 50 / 5.64 = 8.9. The forward (leading) P/E would be 50 / 6.00 = 8.3."
+    why: "Trailing P/E = [[price|last four quarters' EPS]] = 50 / 5.64 = 8.9. The forward (leading) P/E would be 50 / 6.00 = 8.3."
   },
   {
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Justified forward P/E from the Gordon growth model is:",
-    options: ["p(1 + g) / (r − g)", "(D1/E1) / (r − g)", "(r − g) / payout"],
+    options: ["[[p(1 + g)|r − g]]", "[[D1/E1|r − g]]", "[[r − g|payout]]"],
     answer: 1,
-    why: "P0/E1 = (D1/E1)/(r − g), the forward payout ratio over (r − g). The justified TRAILING P/E is P0/E0 = p(1 + g)/(r − g). E.g. payout 0.485, r = 15%, g = 6%: 0.485 / 0.09 = 5.4."
+    why: "P0/E1 = [[D1/E1|r − g]], the forward payout ratio over (r − g). The justified TRAILING P/E is P0/E0 = [[p(1 + g)|r − g]]. E.g. payout 0.485, r = 15%, g = 6%: 0.485 / 0.09 = 5.4."
   },
   {
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "When computing book value per share for P/B, what do you do with preferred stock?",
-    options: ["Include it in book value", "Subtract it from total shareholders' equity", "Add its market value"],
+    options: ["Include it in book value, since it is part of total equity", "Subtract it from total shareholders' equity", "Add its market value to common book value"],
     answer: 1,
     why: "P/B uses common shareholders' equity: total shareholders' equity − preferred equity, divided by common shares outstanding. Forgetting to subtract preferred overstates BVPS and understates P/B."
   },
@@ -784,7 +784,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Enterprise value is:",
-    options: ["Market value of common − cash", "Market value of common + preferred + debt − cash and short-term investments", "Book value of equity + debt"],
+    options: ["Market value of common equity − cash and short-term investments", "Market value of common + preferred + debt − cash and investments", "Book value of equity + book value of debt, with no cash adjustment"],
     answer: 1,
     why: "EV = market value of common equity + market value of preferred stock + market value of debt − cash, cash equivalents and short-term investments. Leaving out preferred stock is a common mistake."
   },
@@ -800,7 +800,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Normalized EPS by the average ROE method equals:",
-    options: ["Average EPS over the most recent full cycle", "Average ROE over the most recent full cycle × current book value per share", "Current ROE × average book value per share"],
+    options: ["Average EPS over the most recent full business cycle", "Average ROE over the last full cycle × current BVPS", "Current ROE × average book value per share over the cycle"],
     answer: 1,
     why: "Average ROE method: average ROE over the full business cycle × CURRENT BVPS. It reflects changes in company size, which the historical average EPS method does not."
   },
@@ -808,7 +808,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Why is the average ROE method often preferred to the historical average EPS method for normalizing earnings?",
-    options: ["It ignores the business cycle", "It reflects changes in the company's size (current book value)", "It uses forecast data only"],
+    options: ["It ignores the business cycle and uses only the latest year", "It reflects changes in the company's size through current book value", "It uses forecast data only, so it is forward-looking"],
     answer: 1,
     why: "Average EPS from earlier years does not account for growth in the business. Multiplying average ROE by current BVPS scales normalized earnings to the company's current size."
   },
@@ -818,15 +818,15 @@ const QUESTIONS = [
     q: "Spot INR/GBP = 79.5093, 360-day MRR: GBP 5.43%, INR 7.52%. The 360-day forward premium (in INR) is closest to:",
     options: ["1.546", "1.576", "1.662"],
     answer: 1,
-    why: "F − S = S × (i_f − i_d)τ / (1 + i_d τ), where d is the BASE currency (GBP). = 79.5093 × 0.0209 / 1.0543 = 1.576. Dividing by 1 + i_f (1.0752) gives the wrong 1.546; not discounting at all gives 1.662."
+    why: "F − S = S × [[(i_f − i_d)τ|1 + i_d τ]], where d is the BASE currency (GBP). = 79.5093 × 0.0209 / 1.0543 = 1.576. Dividing by 1 + i_f (1.0752) gives the wrong 1.546; not discounting at all gives 1.662."
   },
   {
     topic: "Economics",
     reading: "Currency Exchange Rates: Understanding Equilibrium Value",
     q: "In an f/d quote, the base currency trades at a forward premium when:",
-    options: ["The base currency has the higher interest rate", "The price currency (f) has the higher interest rate", "Interest rates are equal"],
+    options: ["The base currency (d) has the higher interest rate", "The price currency (f) has the higher interest rate", "Interest rates are equal in both of the countries"],
     answer: 1,
-    why: "F/S = (1 + i_f)/(1 + i_d). If the price currency's rate i_f is higher, F > S: the base currency is at a forward premium (and the high-yield price currency at a forward discount)."
+    why: "[[F|S]] = [[1 + i_f|1 + i_d]]. If the price currency's rate i_f is higher, F > S: the base currency is at a forward premium (and the high-yield price currency at a forward discount)."
   },
   {
     topic: "Economics",
@@ -840,7 +840,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Currency Exchange Rates: Understanding Equilibrium Value",
     q: "A dealer bids 0.2355 CHF per BRL while the interbank implied CHF/BRL is 0.23498/0.23505. The arbitrage is:",
-    options: ["Buy BRL from the dealer, sell interbank", "Buy BRL interbank at 0.23505, sell to the dealer at 0.2355", "No arbitrage exists"],
+    options: ["Buy BRL from the dealer at 0.2358 and sell it interbank", "Buy BRL interbank at 0.23505, sell to the dealer at 0.2355", "No arbitrage exists, because the quotes overlap"],
     answer: 1,
     why: "Arbitrage exists when a dealer's bid is above the interbank offer (or the dealer's offer below the interbank bid). Buy low interbank, sell high to the dealer: profit 0.0045 CHF per BRL."
   },
@@ -856,7 +856,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Currency Exchange Rates: Understanding Equilibrium Value",
     q: "A carry trade (borrow low-yield, invest high-yield) profits when:",
-    options: ["Uncovered interest rate parity holds exactly", "The high-yield currency does not depreciate by more than the interest rate differential", "Covered interest rate parity fails"],
+    options: ["Uncovered interest rate parity holds exactly over the holding period", "The high-yield currency doesn't depreciate by more than the rate gap", "Covered interest rate parity fails, so forward points are mispriced"],
     answer: 1,
     why: "Under UIP the high-yield currency would depreciate by exactly the rate differential, wiping out the gain. Carry trades bet that UIP fails in the short run. They carry crash risk: sharp reversals in risk-off periods (negatively skewed, fat-tailed returns)."
   },
@@ -888,7 +888,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Economic Growth",
     q: "Public infrastructure investment affects growth mainly by:",
-    options: ["Only its direct project benefits", "Raising the productivity of private investment as well (it belongs in the production function)", "Crowding out all private investment"],
+    options: ["Only through the direct benefits of the projects themselves", "Raising the productivity of private investment as well", "Crowding out private investment, which lowers potential growth"],
     answer: 1,
     why: "Like R&D, infrastructure investment is a source of productivity growth whose full impact extends beyond the projects themselves, because better infrastructure boosts the productivity of private capital."
   },
@@ -896,7 +896,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Economic Growth",
     q: "Can real corporate earnings grow faster than potential GDP over the long run?",
-    options: ["Yes, if companies keep becoming more profitable", "No, because the share of profits in GDP cannot rise forever", "Yes, as long as inflation is low"],
+    options: ["Yes, if companies keep becoming more profitable every year", "No, because the share of profits in GDP cannot rise forever", "Yes, as long as inflation stays low and stable over time"],
     answer: 1,
     why: "Earnings growth above GDP growth requires the profit/GDP ratio to trend upward, which cannot continue indefinitely. In the long run, real earnings growth is bounded by potential GDP growth."
   },
@@ -904,7 +904,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Economic Growth",
     q: "Why is extrapolating the past 10 years of GDP growth a poor long-term forecast?",
-    options: ["GDP data are unreliable", "Potential growth rates change over time (e.g. Japan slowed after 1990, Brazil sped up after 1999)", "GDP growth is always mean-reverting to 3%"],
+    options: ["GDP data are unreliable and revised too often to extrapolate", "Potential growth rates change over time (e.g. Japan after 1990)", "GDP growth always mean-reverts to about 3% in the long run"],
     answer: 1,
     why: "A country's growth rate can slow down or accelerate as its factors and policies change. Small changes in potential growth compound into large differences in living standards, so forecasts should be based on the drivers, not past trends."
   },
@@ -920,7 +920,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Economic Growth",
     q: "Conditional convergence requires countries to have the same:",
-    options: ["Institutions and political system", "Saving rate, population growth rate and production function", "Current per capita income"],
+    options: ["Institutions, legal system and political system", "Saving rate, population growth, production function", "Current per capita income and capital stock per worker"],
     answer: 1,
     why: "Under the neoclassical model, countries with the same saving rate, population growth and production function converge to the same steady-state per capita income. Differences in these lead to different steady states."
   },
@@ -928,7 +928,7 @@ const QUESTIONS = [
     topic: "Economics",
     reading: "Economic Growth",
     q: "In the neoclassical model, opening a capital-poor country to foreign investment leads to:",
-    options: ["Capital outflows to rich countries", "Faster capital growth, higher productivity growth and income convergence", "Permanent increase in the steady-state growth rate"],
+    options: ["Capital outflows to rich countries, which offer safer returns", "Faster capital growth, higher productivity and income convergence", "A permanent increase in the steady-state growth rate of output"],
     answer: 1,
     why: "Capital flows from high to low K/L countries seeking higher returns, so the poor country's capital stock grows faster even with low saving, raising productivity and causing convergence. The effect on growth is transitional: long-run steady-state growth depends only on TFP growth."
   },
@@ -944,7 +944,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "Which valuation step is specific to private companies (not used for public ones)?",
-    options: ["Discounting FCFF at the WACC", "Applying a discount for lack of marketability (DLOM)", "Using P/E multiples of comparables"],
+    options: ["Discounting free cash flow to the firm at the WACC", "Applying a discount for lack of marketability (DLOM)", "Using P/E multiples of guideline public comparables"],
     answer: 1,
     why: "Private equity interests cannot be sold easily, so their value is adjusted down with a DLOM (and a DLOC for minority stakes). DCF and market multiples are used for both private and public companies."
   },
@@ -952,7 +952,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "A strategic buyer acquiring 100% of a private company would most likely value it:",
-    options: ["As a minority interest with DLOC and DLOM", "Including a control premium (synergistic if synergies are expected)", "At book value"],
+    options: ["As a minority interest with discounts for lack of control and marketability", "Including a control premium (synergistic if synergies are expected)", "At book value, since there is no market price for the shares"],
     answer: 1,
     why: "Control lets the buyer change strategy, financing and costs, so its investment value includes a control premium; with synergies, a strategic buyer pays a higher synergistic premium than a financial buyer. Minority-interest discounts fit non-controlling stakes, e.g. in tax or litigation valuations."
   },
@@ -960,7 +960,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "Normalizing earnings in private company valuation mainly means:",
-    options: ["Smoothing the business cycle", "Removing non-market and non-recurring items (e.g. excess owner pay, personal expenses) so results are comparable", "Applying the marketability discount to earnings"],
+    options: ["Smoothing revenues and costs over the business cycle", "Removing non-market, non-recurring items (e.g. owner pay)", "Applying the marketability discount directly to the earnings"],
     answer: 1,
     why: "Owner-managers often pay themselves above or below market, run personal costs through the business or use related-party leases. Normalized earnings restate these at market levels, which is what a buyer would actually earn."
   },
@@ -968,7 +968,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "A private firm uses far less debt than optimal. Its WACC is likely:",
-    options: ["Lower than optimal", "Higher than optimal, because equity (the costlier source) has a larger weight", "Unaffected"],
+    options: ["Lower than optimal, because the firm carries less risky debt", "Higher than optimal, because costlier equity has a larger weight", "Unaffected, because WACC does not depend on capital structure"],
     answer: 1,
     why: "WACC = w_d r_d(1 - t) + w_e r_e and r_e > r_d, so a low debt weight raises WACC toward r_e. Analysts often use the optimal or industry capital structure instead of the actual one."
   },
@@ -984,7 +984,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "Why can a private company's cost of equity be higher than a comparable public company's?",
-    options: ["Private firms always have higher beta", "Extra premiums for size, company-specific risk and lack of liquidity, and less access to cheap debt", "Because CAPM cannot be used"],
+    options: ["Private firms always have higher betas than public companies do", "Extra premiums for size and specific risk, and costlier debt", "Because CAPM cannot be applied to a firm without a share price"],
     answer: 1,
     why: "Analysts often add a size premium and company-specific risk premium (e.g. in the build-up method) and private firms may face higher borrowing costs; this raises the discount rate and lowers value."
   },
@@ -992,7 +992,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "Why might a public company pay more for a private firm than the private firm's own DCF value?",
-    options: ["Public buyers use higher discount rates", "The offer reflects improvements the buyer will make (cost cuts, cheaper debt, synergies)", "Control premiums do not apply"],
+    options: ["Public buyers use higher discount rates than private owners do", "The offer reflects improvements the buyer will make (e.g. synergies)", "Control premiums do not apply, so the buyer pays the full DCF value"],
     answer: 1,
     why: "Private firms have less access to debt, so their stand-alone discount rates are higher. A public acquirer values the firm after the improvements it will make, so its offer reflects those gains (and usually a control premium)."
   },
@@ -1000,7 +1000,7 @@ const QUESTIONS = [
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "The main reason CAPM may be inappropriate for private companies is that it:",
-    options: ["Can only be used for traded stocks", "Assumes investors are well diversified, while private owners bear total risk", "Ignores the risk-free rate"],
+    options: ["Can only be applied to stocks that trade on an exchange", "Assumes investors are well diversified, unlike private owners", "Ignores the risk-free rate when estimating the cost of equity"],
     answer: 1,
     why: "CAPM rewards only systematic risk. Private owners hold concentrated positions, so analysts use the expanded CAPM or build-up method, adding size and company-specific risk premiums."
   },
@@ -1010,13 +1010,13 @@ const QUESTIONS = [
     q: "Comparable public firms have beta 1.20 and more debt than the private target (same tax rate). The target's relevered beta is:",
     options: ["Below 1.20", "Exactly 1.20", "Above 1.20"],
     answer: 0,
-    why: "Unlever: βu = βL / [1 + (1 − t)D/E]; relever at the target's lower D/E: βL = βu[1 + (1 − t)D/E]. Less debt gives a lower levered beta."
+    why: "Unlever: βu = [[βL|1 + (1 − t)D/E]]; relever at the target's lower D/E: βL = βu[1 + (1 − t)D/E]. Less debt gives a lower levered beta."
   },
   {
     topic: "Equity Valuation",
     reading: "Private Company Valuation",
     q: "The expanded CAPM for a private firm adds which premiums to the CAPM?",
-    options: ["Liquidity and inflation premiums", "Size premium and company-specific risk premium", "Control premium and DLOM"],
+    options: ["A liquidity premium and an inflation risk premium", "A size premium and a company-specific premium", "A control premium and a marketability discount"],
     answer: 1,
     why: "Expanded CAPM: r = rf + β(ERP) + size premium + company-specific risk premium. The build-up method (no beta) is rf + ERP + size premium + (industry risk premium) + company-specific risk premium."
   },
@@ -1048,7 +1048,7 @@ const QUESTIONS = [
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
     q: "A cyclical company has an unusually strong but temporary year. It will most likely:",
-    options: ["Raise the regular dividend", "Pay a special (extra) dividend", "Cut the dividend"],
+    options: ["Raise its regular quarterly dividend permanently", "Pay a one-off special (extra) dividend at the end of the year", "Cut the dividend to rebuild cash for weaker years"],
     answer: 1,
     why: "Special dividends let firms share temporary windfalls without committing to a higher regular dividend that they might later have to cut, which markets punish."
   },
@@ -1056,7 +1056,7 @@ const QUESTIONS = [
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
     q: "Which statement about share repurchases versus cash dividends is FALSE?",
-    options: ["Management is not obliged to complete an announced buyback", "Every shareholder receives cash in a buyback, as with a dividend", "Negotiated repurchases can be made below market price"],
+    options: ["Management is not obliged to complete an announced buyback", "Every shareholder receives cash in a buyback, just as with a dividend", "Negotiated repurchases can be made below the market price"],
     answer: 1,
     why: "Only shareholders who sell receive cash in a buyback; the others see their ownership share rise. Buybacks give flexibility (no obligation), and negotiated deals are often at a discount when large holders need liquidity."
   },
@@ -1072,7 +1072,7 @@ const QUESTIONS = [
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
     q: "A buyback is debt-financed. EPS rises if:",
-    options: ["The after-tax cost of debt is above the earnings yield", "The after-tax cost of debt is below the earnings yield (E/P)", "Always, because shares fall"],
+    options: ["The after-tax cost of debt is above the earnings yield", "The after-tax cost of debt is below the earnings yield", "Always, because fewer shares remain outstanding"],
     answer: 1,
     why: "Each share bought removes earnings of E/P per dollar spent but adds after-tax interest of r_d(1 − t). If r_d(1 − t) < E/P, EPS rises; if greater, EPS falls; if equal, no change."
   },
@@ -1080,7 +1080,7 @@ const QUESTIONS = [
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
     q: "Which repurchase method most typically involves a premium to the market price?",
-    options: ["Open market purchases", "Fixed-price tender offer", "Direct negotiation"],
+    options: ["Open market purchases", "Fixed-price tender offer", "Direct negotiation with a holder"],
     answer: 1,
     why: "Fixed-price tender offers (and Dutch auctions) offer a premium to attract sellers quickly. Open market buys are at market prices; negotiated deals may be at a premium or a discount."
   },

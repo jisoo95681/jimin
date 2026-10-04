@@ -157,6 +157,10 @@
   .opt.sel { border-color: var(--blue); background: var(--aqua); }
   .opt.correct { border-color: var(--good); background: var(--good-bg); }
   .opt.wrong { border-color: var(--bad); background: var(--bad-bg); }
+  .frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 .2em; line-height: 1.15; font-size: .92em; }
+  .frac > span { padding: 0 .25em; white-space: nowrap; }
+  .frac > span:first-child { border-bottom: 1.5px solid currentColor; padding-bottom: 1px; }
+  .frac > span:last-child { padding-top: 1px; }
   .why {
     margin-top: 6px; padding: 12px 14px; border-left: 3px solid var(--blue); border-radius: 0 10px 10px 0;
     background: var(--aqua-pale); font-size: .95rem; animation: fade-up .5s var(--ease);
@@ -506,7 +510,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v49 · 2026-10-04";
+  const APP_VERSION = "v50 · 2026-10-04";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -583,9 +587,31 @@
   function el(tag, attrs = {}, text) {
     const e = document.createElement(tag);
     Object.assign(e, attrs);
-    if (text !== undefined) e.textContent = text;
+    if (text !== undefined) {
+      if (typeof text === "string" && text.includes("[[")) e.append(richText(text));
+      else e.textContent = text;
+    }
     return e;
   }
+  // Formulas: [[numerator|denominator]] is drawn as a stacked fraction (numerator above a line, denominator below).
+  function richText(text) {
+    const frag = document.createDocumentFragment(), re = /\[\[([^|\]]*)\|([^\]]*)\]\]/g;
+    let last = 0, m;
+    while ((m = re.exec(text))) {
+      if (m.index > last) frag.append(text.slice(last, m.index));
+      const f = document.createElement("span");
+      f.className = "frac";
+      const n = document.createElement("span"), d = document.createElement("span");
+      n.textContent = m[1]; d.textContent = m[2];
+      f.append(n, d);
+      frag.append(f);
+      last = re.lastIndex;
+    }
+    if (last < text.length) frag.append(text.slice(last));
+    return frag;
+  }
+  // The same text on one line, for files and print: (numerator)/(denominator).
+  const plainText = t => String(t).replace(/\[\[([^|\]]*)\|([^\]]*)\]\]/g, (_, n, d) => `${/^[\w.]+$/.test(n) ? n : `(${n})`}/${/^[\w.]+$/.test(d) ? d : `(${d})`}`);
 
   // Clear the screen and animate the new one in: "fwd" slides from the right, "back" from the left, "up" fades up.
   function screen(dir = "fwd") {
@@ -1191,10 +1217,10 @@
     let out = `CFA L2 Incorrect Questions\nSaved ${today()}\n`;
     list.forEach((q, n) => {
       out += `\n${n + 1}. [${qLabel(q)}] missed ${w[q.q].count}x, last ${w[q.q].last}\n`;
-      out += `Q: ${q.q}\n`;
-      q.options.forEach((o, k) => (out += `   ${LETTERS[k]}. ${o}\n`));
-      out += `Answer: ${LETTERS[q.answer]}. ${q.options[q.answer]}\n`;
-      out += `Why: ${q.why}\n`;
+      out += `Q: ${plainText(q.q)}\n`;
+      q.options.forEach((o, k) => (out += `   ${LETTERS[k]}. ${plainText(o)}\n`));
+      out += `Answer: ${LETTERS[q.answer]}. ${plainText(q.options[q.answer])}\n`;
+      out += `Why: ${plainText(q.why)}\n`;
     });
     const vs = [...new Set(list.filter(q => q.vignette).map(q => q.vignette))];
     if (vs.length) out += `\n\nVIGNETTES\n\n` + vs.map(vignetteText).join("\n");

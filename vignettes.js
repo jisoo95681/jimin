@@ -637,7 +637,7 @@ const VIGNETTES = [
         q: "What is the terminal value of the stock based on the first approach?",
         options: ["C$17.65.", "C$31.06.", "C$33.09."],
         answer: 1,
-        why: "D8 = 0.175 × 1.14⁸ = C$0.4992. Terminal value at the end of year 8: V8 = D9 / (r − g) = 0.4992 × 1.07 / (0.0872 − 0.07) = C$31.0550. Dividends D1–D8: 0.1995, 0.2274, 0.2593, 0.2956, 0.3369, 0.3841, 0.4379, 0.4992; their PVs at 8.72% sum to C$1.7433. PV of V8 = 31.0550 / 1.0872⁸ = C$15.9095. Total value V0 = C$17.6528. Trap: C$17.65 is the stock's value today, not the terminal value."
+        why: "D8 = 0.175 × 1.14⁸ = C$0.4992. Terminal value at the end of year 8: V8 = [[D9|r − g]] = 0.4992 × 1.07 / (0.0872 − 0.07) = C$31.0550. Dividends D1–D8: 0.1995, 0.2274, 0.2593, 0.2956, 0.3369, 0.3841, 0.4379, 0.4992; their PVs at 8.72% sum to C$1.7433. PV of V8 = 31.0550 / 1.0872⁸ = C$15.9095. Total value V0 = C$17.6528. Trap: C$17.65 is the stock's value today, not the terminal value."
       },
       {
         q: "In the first approach, what proportion of the stock's total value is represented by the value of second stage?",
@@ -661,7 +661,7 @@ const VIGNETTES = [
         q: "Based on the third approach (the H-model), the stock is:",
         options: ["undervalued.", "fairly valued.", "overvalued."],
         answer: 2,
-        why: "H-model: V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), with D0 = 0.175, r = 0.0872, gS = 0.14, gL = 0.07 and H = 8/2 = 4 (half the 8-year period of declining growth). V0 = 0.175 × 1.07 / 0.0172 + 0.175 × 4 × 0.07 / 0.0172 = 10.8866 + 2.8488 = C$13.7355. The market price of C$17 is above C$13.74, so the stock is overvalued."
+        why: "H-model: V0 = [[D0(1 + gL)|r − gL]] + [[D0 × H × (gS − gL)|r − gL]], with D0 = 0.175, r = 0.0872, gS = 0.14, gL = 0.07 and H = 8/2 = 4 (half the 8-year period of declining growth). V0 = 0.175 × 1.07 / 0.0172 + 0.175 × 4 × 0.07 / 0.0172 = 10.8866 + 2.8488 = C$13.7355. The market price of C$17 is above C$13.74, so the stock is overvalued."
       },
       {
         q: "Dobson is wondering what the consequences would be if the duration of the first stage was assumed to be 11 years instead of 8, with all the other assumptions and estimates remaining the same. Considering this change, which of the following is true?",
@@ -735,7 +735,7 @@ const VIGNETTES = [
         q: "Based on the information in Exhibit 1, the price-to-sales ratio for You Fix It is closest to:",
         options: ["0.28.", "0.55.", "0.90."],
         answer: 2,
-        why: "P/S = price per share / annual net sales per share. Sales per share = $67.44 billion / 1.638821 billion shares = $41.15. P/S = $37.23 / $41.15 = 0.90."
+        why: "P/S = [[price per share|annual net sales per share]]. Sales per share = $67.44 billion / 1.638821 billion shares = $41.15. P/S = $37.23 / $41.15 = 0.90."
       },
       {
         q: "Which valuation approach would be most appropriate in valuing shares of You Fix It?",
@@ -759,7 +759,7 @@ const VIGNETTES = [
         q: "Based on the information in Exhibits 1 and 2, Cannan would most likely conclude that Delite's shares are:",
         options: ["overvalued.", "undervalued.", "fairly valued."],
         answer: 2,
-        why: "PEG = P/E / expected growth (in percent). Delite forward P/E = $65.50 / $3.50 = 18.71 (forward earnings because of the acquisition); PEG = 18.71 / 12.41 = 1.51. Fresh Iced Tea 16.59 / 9.52 = 1.74; Nonutter Soda 15.64 / 11.94 = 1.31; sector average 16.40 / 10.80 = 1.52. Delite's PEG is in the middle of the range and very close to the sector average, so the shares appear fairly valued."
+        why: "PEG = [[P/E|expected growth (in percent)]]. Delite forward P/E = $65.50 / $3.50 = 18.71 (forward earnings because of the acquisition); PEG = 18.71 / 12.41 = 1.51. Fresh Iced Tea 16.59 / 9.52 = 1.74; Nonutter Soda 15.64 / 11.94 = 1.31; sector average 16.40 / 10.80 = 1.52. Delite's PEG is in the middle of the range and very close to the sector average, so the shares appear fairly valued."
       },
       {
         q: "The measure of central tendency that Ritter will most likely recommend is the:",
@@ -815,13 +815,13 @@ const VIGNETTES = [
         q: "Based on Exhibit 1, the trailing P/E for Centralino as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
         options: ["8.3.", "8.9.", "9.9."],
         answer: 1,
-        why: "Trailing P/E = current price / most recent four quarters' EPS = €50 / €5.64 = 8.9. Traps: 8.3 is the forward P/E (€50 / €6.00); 9.9 uses the 2016–19 average EPS of €5.07."
+        why: "Trailing P/E = [[current price|most recent four quarters' EPS]] = €50 / €5.64 = 8.9. Traps: 8.3 is the forward P/E (€50 / €6.00); 9.9 uses the 2016–19 average EPS of €5.07."
       },
       {
         q: "Based on Exhibit 1 and Risso's estimates of return and dividend growth, Centralino's justified forward P/E based on the Gordon growth dividend discount model is closest to:",
         options: ["5.4.", "5.7.", "8.3."],
         answer: 0,
-        why: "Justified forward P/E = (D1/E1) / (r − g). Payout = €2.91 / €6.00 = 0.485. P0/E1 = 0.485 / (0.15 − 0.06) = 5.39 ≈ 5.4. Trap: 5.7 is the justified TRAILING P/E, p(1 + g)/(r − g) = (2.75/5.64)(1.06)/0.09 = 5.74. 8.3 is the actual forward P/E."
+        why: "Justified forward P/E = [[D1/E1|r − g]]. Payout = €2.91 / €6.00 = 0.485. P0/E1 = 0.485 / (0.15 − 0.06) = 5.39 ≈ 5.4. Trap: 5.7 is the justified TRAILING P/E, [[p(1 + g)|r − g]] = (2.75/5.64)(1.06)/0.09 = 5.74. 8.3 is the actual forward P/E."
       },
       {
         q: "Based on Exhibit 2, the price-to-book multiple for Centralino is closest to:",
@@ -839,7 +839,7 @@ const VIGNETTES = [
         q: "Based on Exhibit 1 and using the harmonic mean of the peer group forward P/Es shown in Exhibit 3 as a valuation indicator, the common shares of Centralino are:",
         options: ["undervalued.", "fairly valued.", "overvalued."],
         answer: 2,
-        why: "Harmonic mean = n / Σ(1/P/E) = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5 / (0.1695 + 0.1205 + 0.3333 + 0.0667 + 0.2174) = 5 / 0.9074 = 5.51. Centralino's forward P/E = €50 / €6.00 = 8.3, which is above 5.51, so the shares appear relatively overvalued."
+        why: "Harmonic mean = [[n|Σ(1 / P/E)]] = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5 / (0.1695 + 0.1205 + 0.3333 + 0.0667 + 0.2174) = 5 / 0.9074 = 5.51. Centralino's forward P/E = €50 / €6.00 = 8.3, which is above 5.51, so the shares appear relatively overvalued."
       },
       {
         q: "Based on Exhibits 1 and 2, the normalized earnings per share for Centralino as calculated by Risso should be closest to:",
@@ -889,7 +889,7 @@ const VIGNETTES = [
         q: "Based on Exhibit 1, the forward premium (discount) for a 360-day INR/GBP forward contract is closest to:",
         options: ["–1.546.", "1.546.", "1.576."],
         answer: 2,
-        why: "F − S = S(f/d) × [(i_f − i_d) × (Actual/360)] / [1 + i_d × (Actual/360)]. In INR/GBP, GBP is the base (d) and INR the price currency (f). = 79.5093 × (0.0752 − 0.0543) / (1 + 0.0543) = 79.5093 × 0.0209 / 1.0543 = 1.6617 / 1.0543 = 1.576. The premium is positive because the price currency (INR) has the higher interest rate. Trap: 1.546 divides by 1 + i_f (1.0752) instead of 1 + i_d."
+        why: "F − S = S(f/d) × [[(i_f − i_d) × (Actual/360)|1 + i_d × (Actual/360)]]. In INR/GBP, GBP is the base (d) and INR the price currency (f). = 79.5093 × (0.0752 − 0.0543) / (1 + 0.0543) = 79.5093 × 0.0209 / 1.0543 = 1.6617 / 1.0543 = 1.576. The premium is positive because the price currency (INR) has the higher interest rate. Trap: 1.546 divides by 1 + i_f (1.0752) instead of 1 + i_d."
       },
       {
         q: "Based on Exhibit 2, the most appropriate recommendation regarding the triangular arbitrage trade is to:",
@@ -1227,7 +1227,7 @@ const VIGNETTES = [
           "Schwalke estimates JNK’s beta to be greater than 1.20."
         ],
         "answer": 0,
-        "why": "Betas observed for public comparables are levered. First unlever: βu = βL / [1 + (1 − t)(D/E)] (the higher the comparables' debt ratio, the lower the unlevered beta). Then relever at JNK's capital structure: βL(JNK) = βu [1 + (1 − t)(D/E)JNK]. Tax rates are equal and JNK has less debt than the comparables, so JNK's relevered beta is below 1.20."
+        "why": "Betas observed for public comparables are levered. First unlever: βu = [[βL|1 + (1 − t)(D/E)]] (the higher the comparables' debt ratio, the lower the unlevered beta). Then relever at JNK's capital structure: βL(JNK) = βu [1 + (1 − t)(D/E)JNK]. Tax rates are equal and JNK has less debt than the comparables, so JNK's relevered beta is below 1.20."
       },
       {
         "q": "Which terminal value estimation method is least useful for Schwalke?",
@@ -1247,7 +1247,7 @@ const VIGNETTES = [
           "12.5%"
         ],
         "answer": 1,
-        "why": "The put option approach uses an at-the-money put based on the forward price. Forward = 29.70 × e^(0.04 × 0.25) = EUR 30.00, so use the EUR 30 put. DLOM = put value / stock price = 3.75 / 29.70 = 12.63% ≈ 12.6%. Trap: 12.5% divides by the EUR 30 exercise price instead of the stock price."
+        "why": "The put option approach uses an at-the-money put based on the forward price. Forward = 29.70 × e^(0.04 × 0.25) = EUR 30.00, so use the EUR 30 put. DLOM = [[put value|stock price]] = 3.75 / 29.70 = 12.63% ≈ 12.6%. Trap: 12.5% divides by the EUR 30 exercise price instead of the stock price."
       }
     ]
   },
