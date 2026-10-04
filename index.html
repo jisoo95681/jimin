@@ -524,7 +524,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v51 · 2026-10-04";
+  const APP_VERSION = "v52 · 2026-10-04";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -860,6 +860,7 @@
     ["Alternative Investments", "5–10%", ["Introduction to Commodities and Commodity Derivatives", "Overview of Types of Real Estate Investment", "Investments in Real Estate Through Publicly Traded Securities", "Hedge Fund Strategies"]],
     ["Portfolio Management", "10–15%", ["Economics and Investment Markets", "Analysis of Active Portfolio Management", "Exchange-Traded Funds: Mechanics and Applications", "Using Multifactor Models", "Measuring and Managing Market Risk", "Backtesting and Simulation"]],
     ["Ethical and Professional Standards", "10–15%", ["Code of Ethics and Standards of Professional Conduct", "Guidance for Standards I–VII", "Application of the Code and Standards: Level II"]],
+    ["Daily Quick Questions", "", ["Daily quick questions"]],
     ["Mock Exam", "", ["Mock exam"]]
   ];
   const PT_SCORES = [[90, "90+", "--pt-q90"], [80, "80s", "--pt-q80"], [70, "70s", "--pt-q70"], [60, "60s", "--pt-q60"], [50, "50s", "--pt-q50"], [40, "≤40", "--pt-q40"]];
@@ -875,6 +876,18 @@
     const days = [], d = fromKey(p.start), end = new Date(EXAM.getFullYear(), EXAM.getMonth(), EXAM.getDate());
     for (; d < end; d.setDate(d.getDate() + 1)) days.push(new Date(d));
     return days;
+  }
+  // A finished quick-question set adds to today's "Daily quick questions" cell: the score is the running percentage
+  // over all of today's sets.
+  function ptLogQuick(right, n) {
+    const p = loadPT(); ptDays(p);
+    const key = "quick|" + dkey(new Date()), marks = p.cells[key] || [];
+    let q = marks.find(m => m.t === "q");
+    if (!q || !q.n) { if (q) marks.splice(marks.indexOf(q), 1); q = { t: "q", right: 0, n: 0, sets: 0 }; marks.push(q); }
+    q.right += right; q.n += n; q.sets += 1;
+    q.s = Math.round(q.right / q.n * 100);
+    p.cells[key] = marks;
+    savePT(p);
   }
   function ptSummary() {
     const p = loadPT(), n = Object.keys(p.cells).length;
@@ -893,7 +906,8 @@
     });
     td.append(mk);
     const q = marks.find(m => m.t === "q");
-    if (q) td.append(el("span", { className: "sc" }, q.s >= 90 ? "90" : q.s <= 40 ? "40" : String(q.s)));
+    if (q) td.append(el("span", { className: "sc" }, String(Math.round(q.s))));
+    if (q && q.n) td.title = `${q.right} / ${q.n} correct (${plural(q.sets, "set")})`;
   }
   function tracker(dir = "fwd") {
     screen(dir);
@@ -928,7 +942,8 @@
     let num = 0;
     PT_TOPICS.forEach(([topic, weight, readings], ti) => {
       readings.forEach((title, ri) => {
-        const mock = topic === "Mock Exam", id = mock ? "mock" : String(++num);
+        const extra = topic === "Mock Exam" ? "mock" : topic === "Daily Quick Questions" ? "quick" : null;
+        const mock = !!extra, id = extra || String(++num);
         const tr = el("tr", { className: (ri === 0 && ti ? "grp" : "") + (mock ? " mock" : "") });
         if (ri === 0) {
           const th = el("td", { className: "c-topic", rowSpan: readings.length });
@@ -942,7 +957,7 @@
         days.forEach(d => {
           const k = dkey(d), td = el("td", { className: "cell" + (k === todayKey ? " today" : "") });
           ptPaint(td, p.cells[id + "|" + k]);
-          td.onclick = () => ptPick(id, mock ? "Mock exam" : `${id}. ${title}`, d, td);
+          td.onclick = () => ptPick(id, mock ? title : `${id}. ${title}`, d, td);
           tr.append(td);
         });
         tbody.append(tr);
@@ -983,7 +998,7 @@
     const sb = PT_SCORES.map(([v, t, c]) => {
       const b = el("button", {}, t);
       b.style.background = `var(${c})`;
-      b.onclick = () => { const q = has("q"); if (q && q.s === v) marks = marks.filter(m => m.t !== "q"); else if (q) q.s = v; else marks.push({ t: "q", s: v }); draw(); };
+      b.onclick = () => { const q = has("q"); if (q && q.s === v) marks = marks.filter(m => m.t !== "q"); else if (q) { q.s = v; delete q.n; } else marks.push({ t: "q", s: v }); draw(); };
       scores.append(b);
       return [v, b];
     });
@@ -1110,7 +1125,7 @@
       savePrefs({ counts: { ...(prefs.counts || {}), [key]: picker.value }, shuffle: { ...(prefs.shuffle || {}), [mode]: cb.checked } });
       let picked = cb.checked ? shuffle(items) : items;
       if (picker.value !== "all") picked = picked.slice(0, picker.value);
-      mode === "quick" ? begin(picked) : beginExam(picked);
+      mode === "quick" ? begin(picked, false, true) : beginExam(picked);
     };
     row.append(go, shuf);
     card.append(row);
@@ -1181,7 +1196,7 @@
       // A random selection of the requested number from each topic, kept in topic order unless mixed.
       let picked = TOPICS.flatMap(t => shuffle(m.items(t)).slice(0, counts[t]));
       if (cb.checked) picked = shuffle(picked);
-      mode === "quick" ? begin(picked) : beginExam(picked);
+      mode === "quick" ? begin(picked, false, true) : beginExam(picked);
     };
     app.append(list, footer);
   }
@@ -1701,8 +1716,9 @@
   // go back and change an answer. Nothing is revealed until the whole set is marked.
   let sq = []; // per question: { order, pick (null = not answered), skipped, ms }
   let qEnter = 0;
-  function begin(questions, review = false) {
-    flow = "single"; deck = questions; reviewMode = review;
+  let trackSet = false; // a quick-question set started from the setup screens goes on the progression tracker
+  function begin(questions, review = false, track = false) {
+    flow = "single"; deck = questions; reviewMode = review; trackSet = track;
     startRun();
     sq = deck.map(q => ({ order: q.vignette ? q.options.map((_, k) => k) : shuffle(q.options.map((_, k) => k)), pick: null, skipped: false, ms: 0 }));
     qEnter = timeMs();
@@ -1815,9 +1831,11 @@
     });
     endQuiz(() => {});
     const total = timeMs();
+    if (trackSet) { ptLogQuick(score, deck.length); trackSet = false; }
     screen("up");
     const card = el("div", { className: "card" });
     card.append(el("p", { className: "kicker" }, "Results"), el("p", { className: "score" }, `${score} / ${deck.length}`));
+    if (!reviewMode && deck.length) card.append(el("p", { className: "sub", style: "margin:0 0 6px" }, "Added to today's \u201cDaily quick questions\u201d on the progression tracker."));
     const unanswered = sq.filter(s => s.pick === null).length;
     card.append(el("p", { className: "sub", style: "margin-bottom:6px" }, `${Math.round(score / deck.length * 100)}% correct${unanswered ? ` · ${unanswered} left unanswered` : ""}`));
     card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / deck.length)} per question on average`));
