@@ -729,6 +729,7 @@ function buildTree(T, spec, seedKey, lod = 1) {
     list.forEach((it, i) => {
       const n = it.n, s = n.s > .002 ? scaleOf(it) : 0;
       if (it.feat) it.feat.visible = s > .5;
+      if (colorOf) mesh.setColorAt(i, colorOf(it)); // colour every instance, even hidden ones (they appear later as the tree grows)
       if (s < .003) { mesh.setMatrixAt(i, ZERO); return; }
       any = true;
       P.copy(it.off).applyQuaternion(n.cur).multiplyScalar(n.yOnly ? 1 : Math.max(n.s, .05) * thick).add(n.pos).addScaledVector(n.curDir, it.f * n.len * n.s);
@@ -739,7 +740,6 @@ function buildTree(T, spec, seedKey, lod = 1) {
       M.compose(P, Qt, S);
       mesh.setMatrixAt(i, M);
       if (it.feat) it.feat.position.copy(P);
-      if (colorOf) mesh.setColorAt(i, colorOf(it));
     });
     mesh.visible = any; // nothing to draw (e.g. blossoms before they open or after they fall)
     mesh.instanceMatrix.needsUpdate = true;
