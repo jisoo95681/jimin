@@ -1307,6 +1307,78 @@ const QUESTIONS = [
     options: ["I(D) Misconduct", "III(E) Preservation of Confidentiality", "IV(C) Responsibilities of Supervisors"],
     answer: 0,
     why: "The statement is untrue and unknowable, reflecting adversely on his professional integrity and competence (I(D))."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A portfolio's 5% monthly VaR is $5.37 million. This means:",
+    options: ["A loss of at least $5.37 million is expected in about 5% of months", "The largest monthly loss possible is $5.37 million", "The average loss in the worst 5% of months is $5.37 million"],
+    answer: 0,
+    why: "VaR is a minimum loss at a given probability over a period. It is not a maximum; the average loss beyond VaR is conditional VaR (expected shortfall)."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A portfolio had zero daily VaR breaches last year but a large cumulative loss. The most likely reason is:",
+    options: ["The VaR used a 95% rather than 99% confidence level", "Last year's volatility was lower than in the VaR lookback period", "The VaR was computed by historical simulation"],
+    answer: 1,
+    why: "VaR depends on the volatility regime of its data; in calm periods daily losses can stay just under a VaR estimated on more volatile history yet still add up. A 99% level would give a larger VaR and still no breaches."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "To replay a past crisis on today's bond holdings, the analyst should reprice the bonds using:",
+    options: ["The bonds' own historical prices", "Historical yields for similar maturities", "Their durations at the time of the crisis"],
+    answer: 1,
+    why: "Yields drive bond prices and apply to today's maturities; old prices may not exist or reflect other maturities, and durations change with time."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "How much a pension fund's assets could underperform its liabilities over a year at 95% confidence is called:",
+    options: ["Maximum drawdown", "Surplus at risk", "Relative VaR"],
+    answer: 1,
+    why: "Surplus at risk is VaR applied to the surplus (assets − liabilities). Relative VaR is risk against a benchmark (ex ante tracking error)."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "The change in portfolio VaR from adding a new bond position is measured by:",
+    options: ["Incremental VaR", "Marginal VaR", "Conditional VaR"],
+    answer: 0,
+    why: "Incremental VaR = VaR(with position) − VaR(without). Marginal VaR is the change for a very small change in the position; CVaR is the average loss beyond VaR."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "For an extreme spread shock on bonds with embedded options, the most accurate stress-test method is:",
+    options: ["Duration and convexity approximations", "Full revaluation of each security", "Marginal VaR"],
+    answer: 1,
+    why: "Sensitivity measures are local approximations and miss non-linear option payoffs in large moves; full revaluation reprices each instrument under the scenario."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "An index fund (delta 1) wants a portfolio delta of 0.90 using index options. It should:",
+    options: ["Buy calls", "Sell calls", "Sell puts"],
+    answer: 1,
+    why: "Short calls have delta between 0 and −1, lowering portfolio delta. Long calls and short puts both add positive delta. (Buying puts would also lower delta.)"
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "Which is NOT a limitation of VaR?",
+    options: ["It does not capture liquidity risk", "It is easy to understand and widely accepted by regulators", "It can underestimate the frequency of extreme events"],
+    answer: 1,
+    why: "Simplicity, comparability and regulatory acceptance are advantages. Limitations: ignores liquidity, sensitive to correlation and volatility regimes, underestimates tail events, says nothing about losses beyond VaR, and ignores right-tail outcomes."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A bank focused on tail risk and forward-looking assessment should add:",
+    options: ["Parametric VaR and marginal VaR", "Conditional VaR, stress tests and scenario analysis", "Monte Carlo VaR and incremental VaR"],
+    answer: 1,
+    why: "CVaR measures the size of tail losses; stress tests and scenarios apply extreme historical or hypothetical events to current holdings."
   }
 ];
 

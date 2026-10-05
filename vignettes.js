@@ -2194,6 +2194,274 @@ const VIGNETTES = [
         "why": "Tao violated I(D) Misconduct. Downplaying the prior incidents alone might not be a violation (we don’t know the facts), but claiming such conduct “happens in most investment firms” is untrue and not something he could know; it reflects adversely on his integrity and competence. Johnson did nothing wrong: telling him to answer truthfully without giving details supports confidentiality (III(E)) and her supervisory duty."
       }
     ]
+  },
+  {
+    "id": "flusk",
+    "title": "Tina Ming: Flusk Pension Fund",
+    "topic": "Portfolio Management",
+    "reading": "Measuring and Managing Market Risk",
+    "body": [
+      [
+        "p",
+        "Tina Ming is a senior portfolio manager at Flusk Pension Fund (Flusk). Flusk’s portfolio is composed of fixed-income instruments structured to match Flusk’s liabilities. Ming works with Shrikant McKee, Flusk’s risk analyst."
+      ],
+      [
+        "p",
+        "Ming and McKee discuss the latest risk report. McKee calculated value at risk (VaR) for the entire portfolio using the historical method and assuming a lookback period of five years and 250 trading days per year. McKee presents VaR measures in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Flusk Portfolio VaR (in $ millions)",
+          "head": [
+            "Confidence Interval",
+            "Daily VaR",
+            "Monthly VaR"
+          ],
+          "rows": [
+            [
+              "95%",
+              "1.10",
+              "5.37"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "After reading McKee’s report, Ming asks why the number of daily VaR breaches over the last year is zero even though the portfolio has accumulated a substantial loss."
+      ],
+      [
+        "p",
+        "Next, Ming requests that McKee perform the following two risk analyses on Flusk’s portfolio:"
+      ],
+      [
+        "h",
+        "Analysis 1"
+      ],
+      [
+        "p",
+        "Use scenario analysis to evaluate the impact on risk and return of a repeat of the last financial crisis."
+      ],
+      [
+        "h",
+        "Analysis 2"
+      ],
+      [
+        "p",
+        "Estimate over one year, with a 95% level of confidence, how much Flusk’s assets could underperform its liabilities."
+      ],
+      [
+        "p",
+        "Ming recommends purchasing newly issued emerging market corporate bonds that have embedded options. Prior to buying the bonds, Ming wants McKee to estimate the effect of the purchase on Flusk’s VaR. McKee suggests running a stress test using a historical period specific to emerging markets that encompassed an extreme change in credit spreads."
+      ],
+      [
+        "p",
+        "At the conclusion of their conversation, Ming asks the following question about risk management tools: “What are the advantages of VaR compared with other risk measures?”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibit 1, Flusk’s portfolio is expected to experience:",
+        "options": [
+          "a minimum daily loss of $1.10 million over the next year.",
+          "a loss over one month equal to or exceeding $5.37 million 5% of the time.",
+          "an average daily loss of $1.10 million 5% of the time during the next 250 trading days."
+        ],
+        "answer": 1,
+        "why": "VaR is the MINIMUM loss expected a given percentage of the time over a given period. A 5% VaR (95% confidence) of $5.37 million monthly means a loss of at least $5.37 million is expected in 5% of months; 95% of the time the loss should not exceed it. A drops the probability (it isn’t a loss every day). C is wrong because VaR is a minimum loss in the tail, not an average loss (that would be conditional VaR)."
+      },
+      {
+        "q": "The number of Flusk’s VaR breaches most likely resulted from:",
+        "options": [
+          "using a standard normal distribution in the VaR model.",
+          "using a 95% confidence interval instead of a 99% confidence interval.",
+          "lower market volatility during the last year compared with the lookback period."
+        ],
+        "answer": 2,
+        "why": "VaR is vulnerable to changes in volatility regime. If last year was calmer than the five-year lookback, VaR (built on the more volatile history) stays high, so daily losses can stay below it every day while still adding up to a large total loss. A: historical simulation uses actual past changes in risk factors, not a normal distribution (that’s the parametric method). B: a 99% level gives a LARGER VaR, so with zero breaches at 95% there would still be zero breaches."
+      },
+      {
+        "q": "To perform Analysis 1, McKee should use historical bond:",
+        "options": [
+          "prices.",
+          "yields.",
+          "durations."
+        ],
+        "answer": 1,
+        "why": "To replay a past crisis on today’s holdings, reprice the current bonds using historical yields of bonds with similar maturities; yields drive bond prices. Historical prices of today’s bonds may not exist, or may not reflect their current characteristics (e.g. maturity). Durations change with the passage of time, so past durations don’t describe the current bonds."
+      },
+      {
+        "q": "The limitation of the approach requested for Analysis 1 is that it:",
+        "options": [
+          "omits asset correlations.",
+          "precludes incorporating portfolio manager actions.",
+          "assumes no deviation from historical market events."
+        ],
+        "answer": 2,
+        "why": "A historical scenario replays one past period exactly; history will not repeat in exactly the same way. It is complementary to VaR but needs other measures (e.g. hypothetical scenarios, reverse stress tests). It does capture the correlations of that period (A is wrong)."
+      },
+      {
+        "q": "The estimate requested in Analysis 2 is best described as:",
+        "options": [
+          "liquidity gap.",
+          "surplus at risk.",
+          "maximum drawdown."
+        ],
+        "answer": 1,
+        "why": "Surplus at risk applies VaR to assets minus liabilities: how much the assets might underperform the liabilities at a given confidence level, usually over one year, which is exactly Analysis 2. Maximum drawdown is the largest peak-to-trough fall in value; a liquidity gap compares the timing of asset and liability cash flows."
+      },
+      {
+        "q": "Which measure should McKee use to estimate the effect on Flusk’s VaR from Ming’s portfolio recommendation?",
+        "options": [
+          "Relative VaR",
+          "Incremental VaR",
+          "Conditional VaR"
+        ],
+        "answer": 1,
+        "why": "Incremental VaR = VaR with the position − VaR without it: the change in portfolio VaR from adding, removing or resizing a position. Relative VaR (ex ante tracking error) measures risk versus a benchmark; conditional VaR is the average loss beyond the VaR level."
+      },
+      {
+        "q": "When measuring the portfolio impact of the stress test suggested by McKee, which of the following is most likely to produce an accurate result?",
+        "options": [
+          "Marginal VaR",
+          "Full revaluation of securities",
+          "The use of sensitivity risk measures"
+        ],
+        "answer": 1,
+        "why": "For an extreme credit-spread shock on option-embedded bonds, fully revaluing each security under the scenario’s rate and spread changes is most accurate, since it captures the non-linear option payoffs. Marginal VaR is the change in VaR for a tiny change in a position, not a scenario result. Sensitivity measures (duration/convexity, delta/gamma) are local approximations that break down for large moves and embedded options."
+      },
+      {
+        "q": "The risk management tool referenced in Ming’s question:",
+        "options": [
+          "is widely accepted by regulators.",
+          "takes into account asset liquidity.",
+          "usually incorporates right-tail events."
+        ],
+        "answer": 0,
+        "why": "VaR’s advantages: simple single number, comparable across portfolios and units, widely used in annual reports, and required or encouraged by global banking regulators. It does NOT capture liquidity risk, and it focuses on the left tail (losses), not right-tail (gain) events."
+      }
+    ]
+  },
+  {
+    "id": "eastern",
+    "title": "Randy Gorver: Eastern Regional Bank",
+    "topic": "Portfolio Management",
+    "reading": "Measuring and Managing Market Risk",
+    "body": [
+      [
+        "p",
+        "Randy Gorver, chief risk officer at Eastern Regional Bank, and John Abell, assistant risk officer, are currently conducting a risk assessment of several of the bank’s independent investment functions. These reviews include the bank’s fixed-income investment portfolio and an equity fund managed by the bank’s trust department. Gorver and Abell are also assessing Eastern Regional’s overall risk exposure."
+      ],
+      [
+        "h",
+        "Eastern Regional Bank Fixed-Income Investment Portfolio"
+      ],
+      [
+        "p",
+        "The bank’s proprietary fixed-income portfolio is structured as a barbell portfolio: About half of the portfolio is invested in zero-coupon Treasuries with maturities in the 3- to 5-year range (Portfolio P1), and the remainder is invested in zero-coupon Treasuries with maturities in the 10- to 15-year range (Portfolio P2). Georges Montes, the portfolio manager, has discretion to allocate between 40% and 60% of the assets to each maturity “bucket.” He must remain fully invested at all times. Exhibit 1 shows details of this portfolio."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: US Treasury Barbell Portfolio",
+          "head": [
+            "",
+            "P1 (3–5 Years)",
+            "P2 (10–15 Years)"
+          ],
+          "rows": [
+            [
+              "Average duration",
+              "3.30",
+              "11.07"
+            ],
+            [
+              "Average yield to maturity",
+              "1.45%",
+              "2.23%"
+            ],
+            [
+              "Market value",
+              "$50.3 million",
+              "$58.7 million"
+            ]
+          ]
+        }
+      ],
+      [
+        "h",
+        "Trust Department’s Equity Fund"
+      ],
+      [
+        "p",
+        "Use of Options: The trust department of Eastern Regional Bank manages an equity fund called the Index Plus Fund, with $325 million in assets. This fund’s objective is to track the S&P 500 Index price return while producing an income return 1.5 times that of the S&P 500. The bank’s chief investment officer (CIO) uses put and call options on S&P 500 stock index futures to adjust the risk exposure of certain client accounts that have an investment in this fund. The portfolio of a 60-year-old widow with a below-average risk tolerance has an investment in this fund, and the CIO has asked his assistant, Janet Ferrell, to propose an options strategy to bring the portfolio’s delta to 0.90."
+      ],
+      [
+        "p",
+        "Value at Risk: The Index Plus Fund has a value at risk (VaR) of $6.5 million at 5% for one day. Gorver asks Abell to write a brief summary of the portfolio VaR for the report he is preparing on the fund’s risk position."
+      ],
+      [
+        "h",
+        "Combined Bank Risk Exposures"
+      ],
+      [
+        "p",
+        "The bank has adopted a new risk policy, which requires forward-looking risk assessments in addition to the measures that look at historical risk characteristics. Management has also become very focused on tail risk since the subprime crisis and is evaluating the bank’s capital allocation to certain higher-risk lines of business. Gorver must determine what additional risk metrics to include in his risk reporting to address the new policy. He asks Abell to draft a section of the risk report that will address the risk measures’ adequacy for capital allocation decisions."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "If Montes is expecting a 50 bp increase in yields at all points along the yield curve, which of the following trades is he most likely to execute to minimize his risk?",
+        "options": [
+          "Sell $35 million of P2 and reinvest the proceeds in three-year bonds",
+          "Sell $15 million of P2 and reinvest the proceeds in three-year bonds",
+          "Reduce the duration of P2 to 10 years and reduce the duration of P1 to 3 years"
+        ],
+        "answer": 1,
+        "why": "To cut interest rate risk before yields rise, shorten duration, within the 40%–60% limit per bucket. Total = 50.3 + 58.7 = $109.0m. Selling $15m of P2 leaves 43.7 / 109.0 = 40.1% in P2 (the minimum allowed), with the proceeds at the shortest permitted maturity (3 years). Selling $35m would leave P2 at 23.7 / 109.0 = 21.7%, below the 40% floor. C cuts duration far less."
+      },
+      {
+        "q": "Which of the following options strategies is Ferrell most likely to recommend for the client’s portfolio?",
+        "options": [
+          "Long calls",
+          "Short calls",
+          "Short puts"
+        ],
+        "answer": 1,
+        "why": "An index-tracking portfolio has delta 1. To reach 0.90 the options must add negative delta. Long calls have delta 0 to +1, so short calls have delta 0 to −1: they lower the portfolio delta. Short puts have POSITIVE delta (long puts are 0 to −1), so they would raise it."
+      },
+      {
+        "q": "Which of the following statements regarding the VaR of the Index Plus Fund is correct?",
+        "options": [
+          "The expected maximum loss for the portfolio is $6.5 million.",
+          "Five percent of the time, the portfolio can be expected to experience a loss of at least $6.5 million.",
+          "Ninety-five percent of the time, the portfolio can be expected to experience a one-day loss of no more than $6.5 million."
+        ],
+        "answer": 1,
+        "why": "VaR is a minimum loss in the tail: on 5% of days the loss will be at least $6.5 million. It is not a maximum loss (A); losses can be far larger. C implies the fund has a LOSS on 95% of days; correctly, returns will be ≥ −$6.5 million on 95% of days, and those returns include gains."
+      },
+      {
+        "q": "To comply with the new bank policy on risk assessment, which of the following is the best set of risk measures to add to the chief risk officer’s risk reporting?",
+        "options": [
+          "Conditional VaR, stress test, and scenario analysis",
+          "Monte Carlo VaR, incremental VaR, and stress test",
+          "Parametric VaR, marginal VaR, and scenario analysis"
+        ],
+        "answer": 0,
+        "why": "The policy wants forward-looking measures and a focus on tail risk. Conditional VaR (expected loss beyond VaR) measures the tail; stress tests and scenario analysis apply historical or hypothetical extreme events to current holdings. The other sets mix in VaR variants and position-change measures (incremental, marginal VaR) that don’t address the tail or forward-looking requirement."
+      },
+      {
+        "q": "Which of the following statements should not be included in Abell’s report to management regarding the use of risk measures in capital allocation decisions?",
+        "options": [
+          "VaR measures capture the increased liquidity risk during stress periods.",
+          "Stress tests and scenario analysis can be used to evaluate the effect of outlier events on each line of business.",
+          "VaR approaches that can accommodate a non-normal distribution are critical to understand relative risk across lines of business."
+        ],
+        "answer": 0,
+        "why": "Statement A is false: VaR does not capture liquidity risk. With illiquid assets VaR can be understated even in normal markets, and liquidity squeezes often come with tail events, making it worse. B and C are valid points to include."
+      }
+    ]
   }
 ];
 
