@@ -1147,6 +1147,14 @@ const QUESTIONS = [
     options: ["A B3-rated high-yield bond with the widest spread", "An Aaa-rated bond with a narrow spread", "A Baa1-rated bond with a medium spread"],
     answer: 1,
     why: "Credit spreads widen in recessions, most for low-quality issuers (flight to quality), so high-rated bonds outperform low-rated ones. In early recovery the reverse tends to happen."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "Default-free real interest rates tend to be relatively high in countries with high expected economic growth because investors:",
+    options: ["increase current borrowing.", "have high inter-temporal rates of substitution.", "have high uncertainty about levels of future consumption."],
+    answer: 0,
+    why: "Average default-free real rates rise with expected economic growth (and with its volatility). When strong growth is expected, investors worry less about future consumption: their inter-temporal rate of substitution (MU of future consumption ÷ MU of current consumption) is LOW, so they borrow more today and save less. Real rates are related to the reciprocal of the rate of substitution, so they end up higher in high-growth economies and lower in lower, more stable-growth ones. B has it backwards (high growth means a LOW rate of substitution). C describes volatility of growth, not the reason growth itself raises rates."
   }
 ];
 
