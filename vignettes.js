@@ -1638,6 +1638,264 @@ const VIGNETTES = [
         "why": "In a recession credit spreads widen, and they widen most for low-quality issuers as investors sell high default-risk debt and trade up to quality. So higher-rated bonds outperform lower-rated ones: Aaa Bond A should outperform B3 Bond C. B and C have the ranking the wrong way round (lower quality outperforming)."
       }
     ]
+  },
+  {
+    "id": "frazee",
+    "title": "James Frazee: H&F Capital",
+    "topic": "Portfolio Management",
+    "reading": "Analysis of Active Portfolio Management",
+    "body": [
+      [
+        "p",
+        "James Frazee is chief investment officer at H&F Capital Investors. Frazee hires a third-party adviser to develop a custom benchmark for three actively managed balanced funds he oversees: Fund X, Fund Y, and Fund Z. (Balanced funds are funds invested in equities and bonds.) The benchmark needs to be composed of 60% global equities and 40% global bonds. The third-party adviser submits the proposed benchmark to Frazee, who rejects the benchmark based on the following concerns:"
+      ],
+      [
+        "h",
+        "Concern 1"
+      ],
+      [
+        "p",
+        "Many securities he wants to purchase are not included in the benchmark portfolio."
+      ],
+      [
+        "h",
+        "Concern 2"
+      ],
+      [
+        "p",
+        "One position in the benchmark portfolio will be somewhat costly to replicate."
+      ],
+      [
+        "h",
+        "Concern 3"
+      ],
+      [
+        "p",
+        "The benchmark portfolio is a float-adjusted, capitalization-weighted portfolio."
+      ],
+      [
+        "p",
+        "After the third-party adviser makes adjustments to the benchmark to alleviate Frazee’s concerns, Frazee accepts the benchmark portfolio. He then asks his research staff to develop risk and expected return forecasts for Funds X, Y, and Z as well as for the benchmark. The forecasts are presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Forecasted Portfolio Statistics for Funds X, Y, and Z and the Benchmark",
+          "head": [
+            "",
+            "Fund X",
+            "Fund Y",
+            "Fund Z",
+            "Benchmark"
+          ],
+          "rows": [
+            [
+              "Portfolio weights:",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              " Global equities (%)",
+              "60.0",
+              "65.0",
+              "68.0",
+              "60.0"
+            ],
+            [
+              " Global bonds (%)",
+              "40.0",
+              "35.0",
+              "32.0",
+              "40.0"
+            ],
+            [
+              "Expected return (%)",
+              "10.0",
+              "11.6",
+              "13.2",
+              "9.4"
+            ],
+            [
+              "Expected volatility (%)",
+              "17.1",
+              "18.7",
+              "22.2",
+              "16.3"
+            ],
+            [
+              "Active risk (%)",
+              "5.2",
+              "9.2",
+              "15.1",
+              "N/A"
+            ],
+            [
+              "Sharpe ratio (SR)",
+              "0.45",
+              "0.50",
+              "0.49",
+              "0.44"
+            ]
+          ],
+          "note": "Data are based on a risk-free rate of 2.3%."
+        }
+      ],
+      [
+        "p",
+        "Frazee decides to add a fourth offering to his group of funds, Fund W, which will use the same benchmark as in Exhibit 1. Frazee estimates Fund W’s information ratio to be 0.35. He is considering adding the following constraint to his portfolio construction model: Fund W would now have maximum over- and underweight constraints of 7% on single-country positions."
+      ],
+      [
+        "p",
+        "Frazee conducts a search to hire a manager for the global equity portion of Fund W and identifies three candidates. He asks the candidates to prepare risk and return forecasts relative to Fund W’s benchmark based on their investment strategy, with the only constraint being no short selling. Each candidate develops independent annual forecasts with active return projections that are uncorrelated and constructs a portfolio made up of stocks that are diverse both geographically and across economic sectors. Selected data for the three candidates’ portfolios are presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Forecasted Portfolio Data for Equity Portion of Fund W",
+          "head": [
+            "",
+            "Candidate A",
+            "Candidate B",
+            "Candidate C"
+          ],
+          "rows": [
+            [
+              "Rebalancing",
+              "Annually",
+              "Annually",
+              "Annually"
+            ],
+            [
+              "Number of securities",
+              "100",
+              "64",
+              "36"
+            ],
+            [
+              "Information ratio (IR)",
+              "0.582",
+              "0.746",
+              "0.723"
+            ],
+            [
+              "Transfer coefficient (TC)",
+              "0.832",
+              "0.777",
+              "0.548"
+            ],
+            [
+              "Information coefficient*",
+              "0.07",
+              "0.12",
+              "0.22"
+            ]
+          ],
+          "note": "*Information coefficient based on previously managed funds."
+        }
+      ],
+      [
+        "p",
+        "Frazee asks Candidate C to re-evaluate portfolio data given the following changes:"
+      ],
+      [
+        "h",
+        "Change 1"
+      ],
+      [
+        "p",
+        "Fix the number of securities to 50."
+      ],
+      [
+        "h",
+        "Change 2"
+      ],
+      [
+        "p",
+        "Rebalance on a semi-annual basis."
+      ],
+      [
+        "h",
+        "Change 3"
+      ],
+      [
+        "p",
+        "Add maximum over- or underweight constraints on sector weightings."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Frazee’s concerns best justifies his decision to reject the proposed benchmark?",
+        "options": [
+          "Concern 1",
+          "Concern 2",
+          "Concern 3"
+        ],
+        "answer": 0,
+        "why": "A valid benchmark should be representative of the manager’s investment approach. If many securities Frazee wants to buy are not in it, it isn’t representative. Concern 2 is weaker: “somewhat costly” to replicate one position doesn’t make the benchmark unusable. Concern 3 describes a generally POSITIVE feature (float-adjusted cap weighting is investable and reflects the market)."
+      },
+      {
+        "q": "Based on Exhibit 1, the expected active return from asset allocation for Fund X is:",
+        "options": [
+          "negative.",
+          "zero.",
+          "positive."
+        ],
+        "answer": 1,
+        "why": "Active return from asset allocation = Σ Δwⱼ × R_B,j, where Δwⱼ is the portfolio weight minus the benchmark weight in asset class j and R_B,j is the benchmark return of that class: here Δw_equities × R_B,e + Δw_bonds × R_B,b. Fund X holds exactly the benchmark weights (60% equities, 40% bonds), so both Δw are zero and the return from asset allocation is zero. Its active return must come from security selection."
+      },
+      {
+        "q": "Based on Exhibit 1, which fund is expected to produce the greatest consistency of active return?",
+        "options": [
+          "Fund X",
+          "Fund Y",
+          "Fund Z"
+        ],
+        "answer": 2,
+        "why": "The information ratio measures the consistency of active return: IR = [[R_P − R_B|σ(R_A)]]. Fund X: (10.0 − 9.4) / 5.2 = 0.12. Fund Y: (11.6 − 9.4) / 9.2 = 0.24. Fund Z: (13.2 − 9.4) / 15.1 = 0.25. Fund Z has the highest IR. Don’t confuse with the Sharpe ratio (Fund Y is highest on SR) or with lowest active risk (Fund X)."
+      },
+      {
+        "q": "Based on Exhibit 1, combining Fund W with a fund that replicates the benchmark would produce a Sharpe ratio closest to:",
+        "options": [
+          "0.44.",
+          "0.56.",
+          "0.89."
+        ],
+        "answer": 1,
+        "why": "With the optimal amount of active risk, SR_P² = SR_B² + IR². So SR_P = √(0.44² + 0.35²) = √(0.1936 + 0.1225) = √0.3161 = 0.56. Trap: 0.79 / 0.89 come from adding the ratios instead of their squares; 0.44 is just the benchmark."
+      },
+      {
+        "q": "If Frazee added the assumption he is considering in Fund W’s portfolio construction, it would most likely result in:",
+        "options": [
+          "a decrease in the optimal aggressiveness of the active strategy.",
+          "the information ratio becoming invariant to the level of active risk.",
+          "an increase in the transfer of active return forecasts into active weights."
+        ],
+        "answer": 0,
+        "why": "Country over/underweight limits are constraints, and constraints REDUCE the transfer coefficient (TC). Optimal active risk is σ_A* = TC × [[IR*|SR_B]] × σ_B, so a lower TC lowers the optimal active risk: the strategy should be less aggressive. B is wrong: the IR is invariant to the level of active risk only for an UNCONSTRAINED portfolio; for a constrained one, the IR generally falls as aggressiveness rises. C is the opposite effect."
+      },
+      {
+        "q": "Based on the data presented in Exhibit 2, the candidate with the greatest skill at achieving active returns appears to be:",
+        "options": [
+          "Candidate A.",
+          "Candidate B.",
+          "Candidate C."
+        ],
+        "answer": 1,
+        "why": "The IR measures the consistency of active return generation on a risk-adjusted basis; a higher IR generally indicates more skill. Candidate B has the highest IR (0.746) vs. Candidate C (0.723) and Candidate A (0.582). Trap: Candidate C has the highest IC (0.22), but its low TC (0.548) and small breadth (36 stocks) mean less of that forecasting skill turns into active return."
+      },
+      {
+        "q": "Which proposed change to Fund W would most likely decrease Candidate C’s information ratio?",
+        "options": [
+          "Change 1",
+          "Change 2",
+          "Change 3"
+        ],
+        "answer": 2,
+        "why": "Fundamental law: IR = TC × IC × √BR, where BR is breadth (the number of independent active bets per year). Change 3 adds sector over/underweight caps, a constraint that reduces the correlation between optimal and actual active weights, i.e. lowers TC, so the IR falls. Change 1 (36 → 50 securities) and Change 2 (annual → semi-annual rebalancing) both increase breadth, which RAISES the IR."
+      }
+    ]
   }
 ];
 

@@ -1155,6 +1155,70 @@ const QUESTIONS = [
     options: ["increase current borrowing.", "have high inter-temporal rates of substitution.", "have high uncertainty about levels of future consumption."],
     answer: 0,
     why: "Average default-free real rates rise with expected economic growth (and with its volatility). When strong growth is expected, investors worry less about future consumption: their inter-temporal rate of substitution (MU of future consumption ÷ MU of current consumption) is LOW, so they borrow more today and save less. Real rates are related to the reciprocal of the rate of substitution, so they end up higher in high-growth economies and lower in lower, more stable-growth ones. B has it backwards (high growth means a LOW rate of substitution). C describes volatility of growth, not the reason growth itself raises rates."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "A benchmark is LEAST valid when:",
+    options: ["It is float-adjusted and capitalization weighted", "Many securities the manager buys are not in it", "One position is slightly costly to replicate"],
+    answer: 1,
+    why: "A valid benchmark should be representative of the manager's approach (and also unambiguous, investable, measurable, specified in advance). If it misses much of what the manager buys, it isn't representative. Cap weighting is a positive feature."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "A balanced fund holds exactly the benchmark's asset-class weights. Its active return from asset allocation is:",
+    options: ["Positive if equities beat bonds", "Zero", "Equal to its total active return"],
+    answer: 1,
+    why: "Asset allocation return = Σ Δwⱼ × R_B,j. With Δw = 0 for every class it is zero; any active return comes from security selection."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "Expected returns: Fund 10.0%, benchmark 9.4%, active risk 5.2%. The fund's information ratio is closest to:",
+    options: ["0.12", "0.45", "0.58"],
+    answer: 0,
+    why: "IR = [[R_P − R_B|σ(R_A)]] = [[10.0 − 9.4|5.2]] = 0.12. The IR measures consistency of active return; the Sharpe ratio uses total return over the risk-free rate and total volatility."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "Benchmark SR = 0.44; an active fund has IR = 0.35. Combining it optimally with the benchmark gives a Sharpe ratio of:",
+    options: ["0.79", "0.56", "0.44"],
+    answer: 1,
+    why: "SR_P² = SR_B² + IR², so SR_P = √(0.44² + 0.35²) = 0.56. Add the squares, not the ratios."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "The optimal level of active risk for an unconstrained portfolio is:",
+    options: ["[[IR|SR_B]] × σ_B", "[[SR_B|IR]] × σ_B", "IR × SR_B × σ_B"],
+    answer: 0,
+    why: "σ_A* = [[IR|SR_B]] × σ_B. With constraints, multiply by the transfer coefficient: σ_A* = TC × [[IR*|SR_B]] × σ_B, so constraints lower optimal aggressiveness."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "Adding over/underweight limits (constraints) to a portfolio most likely:",
+    options: ["Raises the transfer coefficient", "Lowers the transfer coefficient and optimal active risk", "Leaves the IR unchanged at every level of active risk"],
+    answer: 1,
+    why: "Constraints stop forecasts from being fully reflected in active weights, so TC falls; optimal active risk (TC × IR*/SR_B × σ_B) falls too, and the IR of a constrained portfolio declines as aggressiveness rises."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "By the fundamental law of active management, which change would most likely RAISE a manager's IR?",
+    options: ["Adding sector weight caps", "Rebalancing more often (more independent bets)", "Holding fewer securities"],
+    answer: 1,
+    why: "IR = TC × IC × √BR. More frequent independent decisions or more securities raise breadth (BR); caps lower TC; fewer securities lower BR."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Analysis of Active Portfolio Management",
+    q: "Manager C has the highest information coefficient (IC) but a low transfer coefficient (TC) and few securities. Compared with peers, its realized IR is:",
+    options: ["Necessarily the highest, because IC measures skill", "Not necessarily the highest, since IR = TC × IC × √BR", "Unrelated to IC"],
+    answer: 1,
+    why: "IC is forecasting skill, but the IR also depends on how well forecasts become weights (TC) and on breadth. A high IC with low TC and small BR can give a lower IR than a peer with a lower IC."
   }
 ];
 
