@@ -1379,6 +1379,54 @@ const QUESTIONS = [
     options: ["Parametric VaR and marginal VaR", "Conditional VaR, stress tests and scenario analysis", "Monte Carlo VaR and incremental VaR"],
     answer: 1,
     why: "CVaR measures the size of tail losses; stress tests and scenarios apply extreme historical or hypothetical events to current holdings."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A VaR model that estimates expected returns, volatilities and correlations assuming normal distributions is the:",
+    options: ["Historical simulation method", "Parametric (variance–covariance) method", "Monte Carlo simulation method"],
+    answer: 1,
+    why: "Parametric VaR relies on normality and the mean–variance inputs. Historical simulation re-uses past risk-factor changes; Monte Carlo draws random scenarios from chosen distributions."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A $6 million account has a daily 5% VaR of 1.5%. This implies:",
+    options: ["A loss of $90,000 or more on about 1 day in 20", "A maximum one-day loss of $90,000", "A loss of $90,000 every day 5% of the year"],
+    answer: 0,
+    why: "$6m × 1.5% = $90,000, a minimum loss expected on 5% of days ≈ once every 20 trading days."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "Annual expected return 14.1%, SD 26.3%, 250 trading days. The daily 5% parametric VaR is closest to:",
+    options: ["2.69%", "1.66%", "4.34%"],
+    answer: 0,
+    why: "Daily mean = 0.141 / 250 = 0.000564; daily σ = 0.263 / √250 = 0.016634; VaR = 0.000564 − 1.65 × 0.016634 = 2.69%. 4.34% is the annual SD × 1.65 ÷ 10 mistake; 1.66% is just daily σ."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "Rates fall 20 bps. Bonds have durations 1.3, 3.7 and 10.2. The best performer is the bond with duration:",
+    options: ["1.3", "3.7", "10.2"],
+    answer: 2,
+    why: "%ΔP ≈ −D × Δy / (1 + y): with Δy negative, the highest duration gains most. When rates rise, the lowest duration loses least."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "A fund monitors the historical standard deviation of its returns minus benchmark returns. This is:",
+    options: ["Active share", "Ex post tracking error", "Beta"],
+    answer: 1,
+    why: "Ex post tracking error is backward looking (realized active returns); ex ante tracking error (relative VaR) is forward looking. Active share compares holdings, not returns."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Measuring and Managing Market Risk",
+    q: "Capping any single security at 1.75% of the portfolio is an example of a:",
+    options: ["Risk budget", "Position limit", "Stop-loss limit"],
+    answer: 1,
+    why: "Position limits restrict the size of individual holdings to prevent overconcentration. Stop-loss limits trigger action after losses; risk budgets allocate total risk."
   }
 ];
 

@@ -2462,6 +2462,223 @@ const VIGNETTES = [
         "why": "Statement A is false: VaR does not capture liquidity risk. With illiquid assets VaR can be understated even in normal markets, and liquidity squeezes often come with tail events, making it worse. B and C are valid points to include."
       }
     ]
+  },
+  {
+    "id": "ima",
+    "title": "Carol Kynnersley: Investment Management Advisers",
+    "topic": "Portfolio Management",
+    "reading": "Measuring and Managing Market Risk",
+    "body": [
+      [
+        "p",
+        "Carol Kynnersley is the chief risk officer at Investment Management Advisers (IMA). Kynnersley meets with IMA’s portfolio management team and investment advisers to discuss the methods used to measure and manage market risk and how risk metrics are presented in client reports."
+      ],
+      [
+        "p",
+        "The three most popular investment funds offered by IMA are the Equity Opportunities, the Diversified Fixed Income, and the Alpha Core Equity. The Equity Opportunities Fund is composed of two exchange-traded funds: a broadly diversified large-cap equity product and one devoted to energy stocks. Kynnersley makes the following statements regarding the risk management policies established for the Equity Opportunities portfolio:"
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "IMA’s preferred approach to model value at risk (VaR) is to estimate expected returns, volatilities, and correlations under the assumption of a normal distribution."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "In last year’s annual client performance report, IMA stated that a hypothetical $6 million Equity Opportunities Fund account had a daily 5% VaR of approximately 1.5% of portfolio value."
+      ],
+      [
+        "p",
+        "Kynnersley informs the investment advisers that the risk management department recently updated the model for estimating the Equity Opportunities Fund VaR based on the information presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Equity Opportunities Fund—VaR Model Input Assumptions",
+          "head": [
+            "",
+            "Large-Cap ETF",
+            "Energy ETF",
+            "Total Portfolio"
+          ],
+          "rows": [
+            [
+              "Portfolio weight",
+              "65.0%",
+              "35.0%",
+              "100.0%"
+            ],
+            [
+              "Expected annual return",
+              "12.0%",
+              "18.0%",
+              "14.1%"
+            ],
+            [
+              "Standard deviation",
+              "20.0%",
+              "40.0%",
+              "26.3%"
+            ]
+          ],
+          "note": "Correlation between ETFs: 0.90. Number of trading days/year: 250."
+        }
+      ],
+      [
+        "p",
+        "For clients interested in fixed-income products, IMA offers the Diversified Fixed-Income Fund. Kynnersley explains that the portfolio’s bonds are all subject to interest rate risk. To demonstrate how fixed-income exposure measures can be used to identify and manage interest rate risk, Kynnersley distributes two exhibits featuring three hypothetical Treasury coupon bonds (Exhibit 2) under three interest rate scenarios (Exhibit 3)."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Fixed-Income Risk Measure",
+          "head": [
+            "Hypothetical Bond",
+            "Duration"
+          ],
+          "rows": [
+            [
+              "Bond 1",
+              "1.3"
+            ],
+            [
+              "Bond 2",
+              "3.7"
+            ],
+            [
+              "Bond 3",
+              "10.2"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Interest Rate Scenarios",
+          "head": [
+            "Scenario",
+            "Interest Rate Environment"
+          ],
+          "rows": [
+            [
+              "Scenario 1",
+              "Rates increase 25 bps"
+            ],
+            [
+              "Scenario 2",
+              "Rates increase 10 bps"
+            ],
+            [
+              "Scenario 3",
+              "Rates decrease 20 bps"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "One of the investment advisers comments that a client recently asked about the performance of the Diversified Fixed-Income Fund relative to its benchmark, a broad fixed-income index. Kynnersley informs the adviser as follows:"
+      ],
+      [
+        "h",
+        "Statement 3"
+      ],
+      [
+        "p",
+        "The Diversified Fixed-Income Fund manager monitors the historical deviation between portfolio returns and benchmark returns. The fund prospectus stipulates a target deviation from the benchmark of no more than 5 bps."
+      ],
+      [
+        "p",
+        "Kynnersley concludes the meeting by reviewing the constraints IMA imposes on securities included in the Alpha Core Equity Fund. The compliance department conducts daily oversight using numerous risk screens and, when indicated, notifies portfolio managers to make adjustments. Kynnersley makes the following statement:"
+      ],
+      [
+        "h",
+        "Statement 4"
+      ],
+      [
+        "p",
+        "It is important that all clients investing in the fund be made aware of IMA’s compliance measures. The Alpha Core Equity Fund restricts the exposure of individual securities to 1.75% of the total portfolio."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Statement 1, IMA’s VaR estimation approach is best described as the:",
+        "options": [
+          "parametric method.",
+          "historical simulation method.",
+          "Monte Carlo simulation method."
+        ],
+        "answer": 0,
+        "why": "The parametric (variance–covariance) method assumes normally distributed risk-factor returns and estimates VaR from expected returns, standard deviations and correlations. Historical simulation uses actual past changes in risk factors; Monte Carlo draws random outcomes from specified distributions (which need not be normal)."
+      },
+      {
+        "q": "In Statement 2, Kynnersley implies that the portfolio:",
+        "options": [
+          "is at risk of losing $4,500 each trading day.",
+          "value is expected to decline by $90,000 or more once in 20 trading days.",
+          "has a 5% chance of falling in value by a maximum of $90,000 on a single trading day."
+        ],
+        "answer": 1,
+        "why": "VaR = $6,000,000 × 1.5% = $90,000 is the MINIMUM loss expected on 5% of days. 5% of days ≈ 1 day in 20 (about once a month). A is wrong ($4,500 = 5% of $90,000, a meaningless figure); C wrongly calls VaR a maximum loss."
+      },
+      {
+        "q": "Based only on Statement 2, the risk measurement approach:",
+        "options": [
+          "ignores right-tail events in the return distribution.",
+          "is similar to the Sharpe ratio because it is backward looking.",
+          "provides a relatively accurate risk estimate in both trending and volatile regimes."
+        ],
+        "answer": 0,
+        "why": "VaR focuses on the left tail (losses), so right-tail events (potential gains) are ignored. B: VaR is forward looking (current holdings, potential loss), unlike the backward-looking, return-based Sharpe ratio. C: VaR is unreliable across regimes; a portfolio can lose close to VaR every day without a breach, and in low-volatility periods VaR looks low and understates losses when volatility returns."
+      },
+      {
+        "q": "Based on Exhibit 1, the daily 5% VaR estimate is closest to:",
+        "options": [
+          "1.61%.",
+          "2.42%.",
+          "2.69%."
+        ],
+        "answer": 2,
+        "why": "Convert annual to daily: mean = [[0.141|250]] = 0.000564; σ = [[0.263|√250]] = 0.016634. 5% VaR = E(R) − 1.65σ = 0.000564 − 1.65 × 0.016634 = −0.026882, a minimum loss of 2.69% on 5% of days. (The 26.3% total SD already reflects the 0.90 correlation: √(0.65²×0.20² + 0.35²×0.40² + 2×0.65×0.35×0.90×0.20×0.40) = 26.3%.)"
+      },
+      {
+        "q": "Based only on Exhibits 2 and 3, it is most likely that under:",
+        "options": [
+          "Scenario 1, Bond 2 outperforms Bond 1.",
+          "Scenario 2, Bond 1 underperforms Bond 3.",
+          "Scenario 3, Bond 3 is the best performing security."
+        ],
+        "answer": 2,
+        "why": "Percentage price change ≈ −D × [[Δy|1 + y]]. When rates fall 20 bps (Scenario 3), the highest-duration bond, Bond 3 (10.2), gains the most. When rates rise (Scenarios 1 and 2), the LOWEST-duration bond does best, so Bond 2 underperforms Bond 1 (A wrong) and Bond 1 outperforms Bond 3 (B wrong)."
+      },
+      {
+        "q": "The risk measure referred to in Statement 3 is:",
+        "options": [
+          "active share.",
+          "beta sensitivity",
+          "ex post tracking error."
+        ],
+        "answer": 2,
+        "why": "Ex post tracking error is the standard deviation of the HISTORICAL differences between portfolio and benchmark returns, used by traditional managers to monitor deviation from the benchmark (here a 5 bp target). Active share measures how much holdings differ from the benchmark (not returns); beta measures sensitivity to market moves."
+      },
+      {
+        "q": "In Statement 4, Kynnersley describes a constraint associated with a:",
+        "options": [
+          "risk budget.",
+          "position limit.",
+          "stop-loss limit."
+        ],
+        "answer": 1,
+        "why": "Position limits cap the market value of any one investment (in currency or % of net assets), controlling overconcentration: here 1.75% per security. A risk budget allocates total risk across activities or managers; a stop-loss limit forces action when losses reach a set level."
+      }
+    ]
   }
 ];
 
