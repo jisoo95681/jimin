@@ -1219,6 +1219,94 @@ const QUESTIONS = [
     options: ["Necessarily the highest, because IC measures skill", "Not necessarily the highest, since IR = TC × IC × √BR", "Unrelated to IC"],
     answer: 1,
     why: "IC is forecasting skill, but the IR also depends on how well forecasts become weights (TC) and on breadth. A high IC with low TC and small BR can give a lower IR than a peer with a lower IC."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A job candidate's profile cites a team's long top-quartile record but omits that recent 12-month performance fell to the fourth quartile. This most likely violates:",
+    options: ["Standard VI(A) Disclosure of Conflicts", "Standard III(D) Performance Presentation and I(C) Misrepresentation", "Standard V(B) Communication with Clients"],
+    answer: 1,
+    why: "Performance information must be fair, accurate and complete (III(D)); selectively citing only good periods is also a misrepresentation (I(C))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member discloses on her profile that a charity board seat takes much of her evenings and weekends. This is most consistent with:",
+    options: ["Standard VI(A) Disclosure of Conflicts", "Standard I(B) Independence and Objectivity", "Standard IV(A) Loyalty to Employer"],
+    answer: 0,
+    why: "VI(A) requires full and fair disclosure of matters that could reasonably interfere with duties to clients, prospective clients and the employer; time-consuming outside roles qualify."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Two job-seeking former colleagues agree to write favorable recommendation letters for each other. Under Standard I(B), this is:",
+    options: ["Acceptable if both had worked together for years", "Likely a violation: each has something to gain, so neither letter is objective", "Acceptable if the letters are disclosed as reciprocal"],
+    answer: 1,
+    why: "Offering or accepting a benefit (a favorable letter in exchange) that could compromise independence and objectivity is prohibited."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A manager, in a hurry, routes trades through brokers not yet on the firm's approved list. The main concern is Standard:",
+    options: ["V(A) Diligence and Reasonable Basis", "II(B) Market Manipulation", "VII(A) Conduct as Participants in CFA Programs"],
+    answer: 0,
+    why: "Skipping the firm's broker due-diligence process and risking poor execution shows a lack of diligence in taking investment action (and raises best-execution concerns under III(A))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Clients sign a waiver accepting first-come, first-served allocation of illiquid shares. Under Standard III(B) Fair Dealing:",
+    options: ["The waiver satisfies the Standard because it is disclosed", "The waiver does not remove the duty to treat all clients fairly", "It is acceptable only for institutional clients"],
+    answer: 1,
+    why: "Client consent can never override the duty of fairness and loyalty when allocation procedures are patently unfair. Use pro-rata allocation of partially filled block trades."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst receives a company's unannounced earnings warning from the CFO, who says he has told several visiting analysts. Trading on it is:",
+    options: ["Allowed, since it was freely given and shared with others", "A violation of II(A), because the information is material and not yet public", "Allowed if insider trading is legal locally"],
+    answer: 1,
+    why: "Selective disclosure to a few analysts does not make information public. Even where local law permits, the Standards (stricter) prohibit acting on MNPI (I(A) also applies)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member under investigation sends confidential client trade details to the CFA Institute Professional Conduct Program. This:",
+    options: ["Violates III(E) Preservation of Confidentiality", "Does not violate III(E), since the PCP keeps such information confidential", "Is allowed only with written client consent"],
+    answer: 1,
+    why: "Providing information to the PCP for an investigation is an explicit exception: the PCP keeps it in the strictest confidence."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which research source carries the greatest risk of obtaining material nonpublic information?",
+    options: ["Personal observation of store shelf restocking", "Expert-network calls with former consultants of competitors", "Posts on an open specialty social media site"],
+    answer: 1,
+    why: "Experts may pass on confidential, material information from current or former engagements; members are responsible for not soliciting or acting on it. The other two are public mosaic inputs."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm announces that its new CEO, \"as a CFA charterholder, has superior qualities to manage clients' investments.\" Under VII(B) this is:",
+    options: ["Acceptable, since the charter shows competence", "An improper reference: it exaggerates what the designation means", "Acceptable if the CEO passed all levels on the first attempt"],
+    answer: 1,
+    why: "Claims of superior performance or ability because of the designation are exaggerations. Referring to the rigor of the program or the skills it cultivates is acceptable."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which policy best addresses Standard II(B) Market Manipulation?",
+    options: ["Allocating block trades pro rata among accounts", "Prohibiting agreements to promote a stock and communications meant to move its price", "Requiring pre-clearance of personal trades"],
+    answer: 1,
+    why: "II(B) prohibits information-based manipulation (spreading false or misleading information, promotion agreements to mislead) and transaction-based manipulation (artificial prices or volume). The others relate to III(B) and VI(B)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A compliance officer tells a reporter that unethical incidents \"happen in most investment firms.\" This most likely violates:",
+    options: ["I(D) Misconduct", "III(E) Preservation of Confidentiality", "IV(C) Responsibilities of Supervisors"],
+    answer: 0,
+    why: "The statement is untrue and unknowable, reflecting adversely on his professional integrity and competence (I(D))."
   }
 ];
 

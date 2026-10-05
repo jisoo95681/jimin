@@ -1896,6 +1896,304 @@ const VIGNETTES = [
         "why": "Fundamental law: IR = TC × IC × √BR, where BR is breadth (the number of independent active bets per year). Change 3 adds sector over/underweight caps, a constraint that reduces the correlation between optimal and actual active weights, i.e. lowers TC, so the IR falls. Change 1 (36 → 50 securities) and Change 2 (annual → semi-annual rebalancing) both increase breadth, which RAISES the IR."
       }
     ]
+  },
+  {
+    "id": "cadler",
+    "title": "Maria Cadler: Voeltz Asset Management",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Over the last 15 years, Maria Cadler, CFA, was the Director of Research at Voeltz Asset Management, supervising more than 10 research analysts. Her team was responsible for making investment recommendations to the portfolio managers who determined which investment recommendations to implement. Voeltz’s annual investment performance was always in the top quartile when compared to other investment firms managing similar portfolios. However, over the last 6 months, their rolling 12-month performance had dropped to the fourth quartile. Voeltz’s clients were losing money despite the market rising. As a result, she and several others were terminated. To prepare for her employment search, she updates her LinkedIn profile by adding the following statement, “I was part of a team of investment professionals with a successful investment performance track record, with investment returns consistently ranking in the top quartile when compared to similar investment managers. As a result of our success, I was offered and subsequently accepted a board seat for a local charitable organization. Working with them has been so rewarding, despite taking a considerable amount of my time during evenings and weekends.”"
+      ],
+      [
+        "p",
+        "In preparation for job interviews, Cadler reaches out to Voeltz’s clients, former colleagues, and vendors to ask if they would write her a letter of recommendation. She makes the following requests to:"
+      ],
+      [
+        "h",
+        "Abby"
+      ],
+      [
+        "p",
+        "“Each year, you have given my team lots of kudos for our investment research and investment recommendations. I’m wondering if you wouldn’t mind writing a letter of recommendation for me. I can give you the details of my role as team leader so you can include them.”"
+      ],
+      [
+        "h",
+        "Robert"
+      ],
+      [
+        "p",
+        "“Since we both find ourselves looking for a job, how about we provide letters of recommendation for each other? I can provide some key points I would like for you to highlight, and you’re welcome to provide points for me to include in my recommendation of you.”"
+      ],
+      [
+        "h",
+        "Fredrica"
+      ],
+      [
+        "p",
+        "“When I get a new position, I’d love to recommend your services, as I appreciate the independent economic research reports you provided to my team. In the meantime, could you please write me a recommendation that mentions what great equity research reports my team provided to our clients?”"
+      ],
+      [
+        "p",
+        "During an interview with a potential employer, Cadler describes a time when quick thinking was rewarded with big returns for her clients: “We did our own extensive research and also received broker-sponsored company research. One time, we had just completed a research report on a large-cap company offering a competing product to one of the small-cap companies in which we had heavily invested. We determined it was time to sell the small-cap company, as it would likely lose considerable market share on its most popular product. In order to execute as quickly as we could before the market made the same determination, we sold 100% of the holdings in the small-cap company and bought the large-cap company for all of our discretionary clients. To expedite the small-cap trades, we utilized a few stockbrokers not yet on our approved broker list because our existing brokers told us they were unable to complete all of the trades requested in a timely manner. We found that it is critical to act fast when trading in small-cap shares. As a result, we were able to obtain incredible returns for most of our clients.”"
+      ],
+      [
+        "p",
+        "The potential employer stated, “From your description of the large-cap trade, it sounds as if you may not have treated your non-discretionary clients equitably. If you were to work for us, how would you ensure all clients are treated fairly?” Cadler responded, “While I could make multiple recommendations, here are three:"
+      ],
+      [
+        "h",
+        "Recommendation 1"
+      ],
+      [
+        "p",
+        "Make sure any changes to investment recommendations are communicated equitably to all clients, making sure those clients who acted on any prior recommendations are notified."
+      ],
+      [
+        "h",
+        "Recommendation 2"
+      ],
+      [
+        "p",
+        "Ask all clients to sign a waiver stating they acknowledge that when trading illiquid shares, fair dealing will not be possible as allocation will be on a first-come, first-served basis. We want to ensure clients have full disclosure of our trade allocation process."
+      ],
+      [
+        "h",
+        "Recommendation 3"
+      ],
+      [
+        "p",
+        "Prorate trades, both when buying and selling, in those times when 100% of the orders can’t be executed so all clients are able to benefit. To facilitate this, block trading should be utilized when available and company policies should reflect best execution procedures.”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "In the initial update of her LinkedIn profile, Cadler most likely complied with which of the Standards?",
+        "options": [
+          "Misrepresentation",
+          "Disclosure of Conflicts",
+          "Performance Presentation"
+        ],
+        "answer": 1,
+        "why": "Standard VI(A) Disclosure of Conflicts: she disclosed the charity board seat and that it takes considerable evening and weekend time. That could reasonably interfere with duties to a future employer, and disclosing it lets the employer discuss it with her. She VIOLATED I(C) Misrepresentation and III(D) Performance Presentation by citing only the top-quartile record and omitting the recent fourth-quartile performance: performance information must be fair, accurate and complete."
+      },
+      {
+        "q": "Which of Cadler’s recommendation requests most likely complies with Standard I(B): Independence and Objectivity now and/or in the future? Her request to:",
+        "options": [
+          "Abby",
+          "Robert",
+          "Fredrica"
+        ],
+        "answer": 0,
+        "why": "Abby is a Voeltz client with first-hand experience of the team’s work and no conflict that would compromise her objectivity. Robert: an exchange of favorable letters gives both something to gain, so neither is independent or objective. Fredrica: Cadler implies she will recommend Fredrica’s services to her next employer in return for a favorable letter, a benefit that could compromise Cadler’s future independence in selecting research providers; Fredrica also likely has no first-hand knowledge of the equity research reports she’d be praising."
+      },
+      {
+        "q": "Cadler’s quick-thinking action most likely violated Standard V(A): Diligence and Reasonable Basis because:",
+        "options": [
+          "outside parties influenced their investment action.",
+          "of the timing and execution of the small-cap share trades.",
+          "of an inappropriate swap of small-cap to large-cap shares."
+        ],
+        "answer": 1,
+        "why": "Using brokers not on the approved list skipped the firm’s due-diligence process for brokers and exposed clients to the risk of poor or untimely execution: a lack of diligence in taking investment action. The decision itself had a reasonable basis (their own extensive research on the competing product), so the swap (C) wasn’t inappropriate, and there is no sign they relied solely on outside (broker-sponsored) research (A)."
+      },
+      {
+        "q": "Which of Cadler’s responses to the question regarding non-discretionary clients would most likely violate the Standards of Professional Conduct?",
+        "options": [
+          "Recommendation 1",
+          "Recommendation 2",
+          "Recommendation 3"
+        ],
+        "answer": 1,
+        "why": "Standard III(B) Fair Dealing: a waiver accepting first-come, first-served allocation does not remove the duty to treat clients fairly; client consent can never override the duty of fairness and loyalty to patently unfair allocation procedures. Recommendation 1 (communicate changed recommendations to all clients, especially those who acted on the earlier advice) and Recommendation 3 (pro-rate partially filled orders, use block trades, best execution) are recommended procedures under III(B)."
+      }
+    ]
+  },
+  {
+    "id": "thorpe",
+    "title": "Lucas Thorpe: Savanna Honey",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "One month ago, Lucas Thorpe, a portfolio manager for an investment management firm and a CFA Program Level II candidate, received a letter from Keiko Okada, CFA, the designated officer for the CFA Institute Professional Conduct Program (PCP). The letter explained that the PCP had received a complaint, accusing him of violating the CFA Institute Code of Ethics and Standards of Professional Conduct. Okada requested Thorpe’s cooperation, asking him to explain why he sold publicly traded Savanna Honey Products (Savanna) shares for both his personal and client accounts. Okada noted the anonymous complaint she received indicated that sales were executed one day after his research visit to Savanna and the day before Savanna released an earnings warning due to an expected significant drop in profit margins."
+      ],
+      [
+        "p",
+        "In his defense, Thorpe responded in a letter to Okada as follows: “I arranged the research visit to Savanna as part of my routine review of the company. We’re a small firm, so the portfolio managers do their own analysis. The earnings warning information I received from the chief financial officer (CFO) of Savanna was freely given; I didn’t ask for it. The CFO even stated he had been giving the same information to any analyst who had visited in the last two days. My clients would have been harmed if I had not sold, because other managers would be selling before me. Besides, what I did is not illegal in my market. I treated my clients fairly; I sold Savanna shares for all my clients before I sold my own.”"
+      ],
+      [
+        "p",
+        "Concerned about the strength of his defense and to avoid any additional violations, Thorpe consulted with the firm’s compliance officer. Consequently, to support his claim that he did not violate Standard III(B), Fair Dealing, and without violating his firm’s policies or any applicable local laws, Thorpe provided Okada copies of documents for all the trades executed for his clients, including contact details and the percentage of assets under management (AUM) the trades represented."
+      ],
+      [
+        "p",
+        "Thorpe further stated in his letter to Okada that he received from the CFO six very large gift baskets full of high-end honey products worth USD100 per basket. He explained his firm has a very strict policy about accepting gifts valued at more than USD100 per gift. Thorpe accepted and distributed the gift baskets on behalf of himself and his five colleagues. However, he noted that the gifts in no way influenced his investment decision."
+      ],
+      [
+        "p",
+        "Following Thorpe’s submission to the CFA Institute Professional Conduct Program, Okada informs him he has been found in violation of the CFA Institute Standards of Professional Conduct and will be publicly sanctioned and prohibited from future participation in the CFA Program exams. Thorpe contests the sanction and asks to present his case to a Disciplinary Review Committee Hearing Panel. While presenting his case, Thorpe mentions he regularly collects information he finds in the public domain when determining investment recommendations for his clients’ portfolios. He states that for “fast-moving consumer goods” (FMCG), he collects data by talking to industry experts who are former consultants of competing firms, making his own observations of the number of times grocery store shelves are restocked as well as gathering information from open specialty social media sites."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "As a result of Thorpe’s admission he traded in Savanna shares, which Standard will Okada least likely investigate for a possible violation?",
+        "options": [
+          "Knowledge of the Law",
+          "Loyalty, Prudence, and Care",
+          "Material Nonpublic Information"
+        ],
+        "answer": 1,
+        "why": "III(A) Loyalty, Prudence, and Care is least likely at issue: he put clients’ interests ahead of his own by selling for all clients before himself. II(A) Material Nonpublic Information is the obvious issue: the earnings warning was material (would move the price) and not yet public, and being “freely given” or shared with a few visiting analysts doesn’t make it public. I(A) Knowledge of the Law is also at issue: even though insider trading is legal in his market, he must follow the stricter CFA Standards."
+      },
+      {
+        "q": "Should Thorpe revise how he submitted his defense of the Standard relating to fair dealing to avoid violating the Standard relating to preservation of confidentiality?",
+        "options": [
+          "No",
+          "Yes, he must delete the contact details",
+          "Yes, he must remove the AUM percentage details"
+        ],
+        "answer": 0,
+        "why": "Information provided to the Professional Conduct Program as evidence in an investigation is kept in the strictest confidence, so a member or candidate who gives confidential client information to the PCP does not violate III(E) Preservation of Confidentiality. No need to remove contact or AUM details."
+      },
+      {
+        "q": "Did Thorpe most likely violate the Standards by accepting the CFO’s six gift packages?",
+        "options": [
+          "No",
+          "Yes, he violated the Standard relating to misconduct",
+          "Yes, he violated the Standard relating to independence and objectivity"
+        ],
+        "answer": 0,
+        "why": "No violation. I(D) Misconduct: he complied with his firm’s policy (no gifts over USD100 per gift); the six USD100 baskets were shared among six people, one each. I(B) Independence and Objectivity: the gifts were unlikely to compromise his objectivity; his decision was driven by protecting clients ahead of the expected price drop."
+      },
+      {
+        "q": "Which of Thorpe’s information sources described to the Hearing Panel is most susceptible to resulting in Thorpe violating the Standard relating to material nonpublic information?",
+        "options": [
+          "Social media",
+          "Industry experts",
+          "Grocery turnover observations"
+        ],
+        "answer": 1,
+        "why": "Expert networks are the risk: former consultants to competitors may still hold confidential, material nonpublic information, and members and candidates are responsible for not requesting or acting on such information from experts. Open specialty social media sites are public. His own observations of shelf restocking are public, non-material pieces of a mosaic, which is allowed under the mosaic theory."
+      }
+    ]
+  },
+  {
+    "id": "sedgwick",
+    "title": "Kyra Johnson: Sedgwick Investment Management",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Kyra Johnson, CFA, was recently hired by Sedgwick Investment Management (Sedgwick) as its new chief executive officer. Sedgwick’s parent company owns several subsidiaries in the financial services industry. Although there are currently no outstanding compliance issues, Sedgwick’s employees have a history of unethical behavior and always seem to be on the brink of additional violations. Sedgwick’s board of directors has tasked Johnson with bringing the firm’s policies and procedures into compliance with the CFA Institute Code of Ethics and Standards of Professional Conduct."
+      ],
+      [
+        "p",
+        "Shortly after Johnson was hired, the following announcement appeared in a major financial newspaper:"
+      ],
+      [
+        "p",
+        "“The board of directors of Sedgwick Investment Management is pleased to announce the hiring of Ms. Kyra Johnson, CFA, as the company’s new chief executive officer. She has demonstrated the ability to successfully complete a rigorous and comprehensive study program demanded by the CFA designation. The credibility of her CFA charter and the skills the CFA Program cultivates are key assets Ms. Johnson brings to Sedgwick. As a CFA charterholder, Ms. Johnson has superior qualities to manage our clients’ investments and guide the investment process. We are thrilled to have Ms. Kyra Johnson, CFA, as a member of the Sedgwick Investment Management team.”"
+      ],
+      [
+        "p",
+        "One of the first things Johnson did after arriving at the firm was to meet with Corey Tao, CFA, the firm’s chief compliance officer. Tao had been with the firm only a few months. He told Johnson the previous violations had primarily related to equity research, equity trading, and client confidentiality. After reviewing the summary of violations and the firm’s existing handbook, Johnson and Tao decided to submit the following recommendations regarding the firm’s trade allocation procedures for block trades to the board of directors for approval:"
+      ],
+      [
+        "h",
+        "Recommendation 1"
+      ],
+      [
+        "p",
+        "All accounts participating in a block trade should receive the same execution price and pay the same commission rate."
+      ],
+      [
+        "h",
+        "Recommendation 2"
+      ],
+      [
+        "p",
+        "Orders will be executed on a first-in, first-out basis, with consideration given to bundling orders for efficiency."
+      ],
+      [
+        "p",
+        "During the meeting Tao also mentioned to Johnson that the company handbook fails to address an area where he has some concerns and suggested the following policy addition, breaking it down into three points:"
+      ],
+      [
+        "h",
+        "Point 1"
+      ],
+      [
+        "p",
+        "Traders are prohibited from engaging in communication with brokers or dealers that would artificially cause a stock’s price to rise or fall."
+      ],
+      [
+        "h",
+        "Point 2"
+      ],
+      [
+        "p",
+        "Research analysts are not allowed to communicate unrealistic expectations regarding a company’s results that may affect the market price of a stock."
+      ],
+      [
+        "h",
+        "Point 3"
+      ],
+      [
+        "p",
+        "Portfolio managers are not allowed to enter into an agreement to promote the stock of any publicly listed company."
+      ],
+      [
+        "p",
+        "Tao later received a call from a news reporter who requested an interview. Tao is one of several people at the firm authorized to speak with the press. The reporter was interested in writing a piece about Johnson and the circumstances behind her joining the firm. They scheduled a time for the call and Tao forwarded to the reporter a copy of the board’s press release. Prior to the interview, Johnson told Tao to address the reporter’s questions truthfully but not to provide any details. When asked during the interview about the firm’s history of unethical behavior, Tao responded, “One of Ms. Johnson’s first acts was to strengthen the firm’s Code of Ethics, and although there had been a few prior incidences of questionable conduct, they were exaggerated in the press and happen in most investment firms.”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which statement in Sedgwick’s hiring announcement is most likely an incorrect reference to the CFA Program or the CFA designation? The statement referencing:",
+        "options": [
+          "the skills the program cultivates.",
+          "her ability to manage investments and guide the process.",
+          "the demands of the study program for the CFA designation."
+        ],
+        "answer": 1,
+        "why": "Standard VII(B): the designation must not be used in a way that misrepresents or exaggerates its meaning. Claiming that, as a charterholder, she “has superior qualities to manage our clients’ investments” is a claim of superiority, an exaggeration. Describing the rigorous study program and the credibility and skills the program cultivates are acceptable references."
+      },
+      {
+        "q": "Are the recommendations submitted to the board of directors most likely consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing?",
+        "options": [
+          "Yes",
+          "No with regard to Recommendation 1",
+          "No with regard to Recommendation 2"
+        ],
+        "answer": 0,
+        "why": "Both are recommended procedures for fair trade allocation under III(B): all accounts in a block trade get the same execution price and commission (Recommendation 1), and orders are executed first-in, first-out with bundling for efficiency (Recommendation 2). Other recommended procedures: pro-rata allocation of partial fills, written allocation policies, disclosure of the procedures."
+      },
+      {
+        "q": "When considering the three points of Tao’s new policy as a whole, which CFA Institute Standard of Professional Conduct is he most likely addressing?",
+        "options": [
+          "Standard VI: Conflict of Interest",
+          "Standard II: Integrity of Capital Markets",
+          "Standard V: Investment Analysis, Recommendations, and Actions"
+        ],
+        "answer": 1,
+        "why": "All three points target market manipulation, Standard II(B) (under Standard II, Integrity of Capital Markets): no communications that artificially move a stock’s price (Point 1), no misleading or unrealistic information that distorts prices (Point 2), and no agreements to promote a stock with intent to mislead (Point 3). Standard II(B) covers both information-based and transaction-based manipulation."
+      },
+      {
+        "q": "Who has most likely violated the CFA Institute Standards of Professional Conduct regarding the newspaper interview?",
+        "options": [
+          "Tao",
+          "Johnson",
+          "Both Tao and Johnson"
+        ],
+        "answer": 0,
+        "why": "Tao violated I(D) Misconduct. Downplaying the prior incidents alone might not be a violation (we don’t know the facts), but claiming such conduct “happens in most investment firms” is untrue and not something he could know; it reflects adversely on his integrity and competence. Johnson did nothing wrong: telling him to answer truthfully without giving details supports confidentiality (III(E)) and her supervisory duty."
+      }
+    ]
   }
 ];
 
