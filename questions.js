@@ -1427,6 +1427,62 @@ const QUESTIONS = [
     options: ["Risk budget", "Position limit", "Stop-loss limit"],
     answer: 1,
     why: "Position limits restrict the size of individual holdings to prevent overconcentration. Stop-loss limits trigger action after losses; risk budgets allocate total risk."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Which statement about backtesting is FALSE?",
+    options: ["It approximates a real-life investment process using historical data", "It is used almost only by quantitative managers, rarely by fundamental ones", "It implicitly assumes the past is a guide to the future"],
+    answer: 1,
+    why: "Backtesting fits quant/systematic styles most naturally, but fundamental managers use it heavily too."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "A client restricts holdings to domestic stocks. Which backtest parameter must change?",
+    options: ["The start and end dates", "The investment universe", "The treatment of transaction costs"],
+    answer: 1,
+    why: "The investment universe defines which securities the strategy may hold; a domestic-only mandate needs a domestic universe."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "\"What if the future is different from the past?\" is the key weakness of:",
+    options: ["Backtesting", "Monte Carlo simulation", "Sensitivity analysis"],
+    answer: 0,
+    why: "Backtesting relies on history repeating. Monte Carlo draws from assumed distributions, and sensitivity analysis varies those assumptions."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Factor 2: VaR 0.77%, CVaR 4.21%. Factor 3: VaR 2.40%, CVaR 3.24%. Which has the smaller expected loss beyond the threshold?",
+    options: ["Factor 2, because its VaR is lower", "Factor 3, because its CVaR is lower", "They are equal"],
+    answer: 1,
+    why: "CVaR (expected shortfall) is the average of losses beyond VaR. Lower VaR does not mean lower tail losses."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Factor returns show negative skewness, excess kurtosis and tail dependence. In Monte Carlo simulation, best practice is to:",
+    options: ["Assume normal distributions for simplicity", "Run sensitivity analysis with fatter-tailed, non-normal distributions", "Bootstrap a single historical path"],
+    answer: 1,
+    why: "Sensitivity analysis tests how results change under distributions that capture fat tails and skew, revealing downside risk the normal model would miss."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "A manager runs thousands of backtests and shows clients only the best strategies. This is:",
+    options: ["Cross-validation", "Data snooping (selection bias)", "Risk parity"],
+    answer: 1,
+    why: "Data snooping overstates expected performance; remedies include out-of-sample tests, cross-validation and a higher t-stat hurdle (e.g. above 3.0)."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Strategy I Sharpe ratios: low-vol 0.64, recession 0.20. Strategy II: low-vol 1.60, recession 1.76. Strategy II's edge is largest in:",
+    options: ["Recessions (by 1.56)", "Low volatility (by 0.96)", "Both equally"],
+    answer: 0,
+    why: "1.76 − 0.20 = 1.56 in recessions vs 1.60 − 0.64 = 0.96 in low volatility. Scenario analysis compares strategies across structural regimes."
   }
 ];
 

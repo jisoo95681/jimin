@@ -2679,6 +2679,213 @@ const VIGNETTES = [
         "why": "Position limits cap the market value of any one investment (in currency or % of net assets), controlling overconcentration: here 1.75% per security. A risk budget allocates total risk across activities or managers; a stop-loss limit forces action when losses reach a set level."
       }
     ]
+  },
+  {
+    "id": "gwp",
+    "title": "Kata Rom: Gimingham Wealth Partners",
+    "topic": "Portfolio Management",
+    "reading": "Backtesting and Simulation",
+    "body": [
+      [
+        "p",
+        "Kata Rom is an equity analyst working for Gimingham Wealth Partners (GWP), a large investment advisory company. Rom meets with Goran Galic, a Canadian private wealth client, to explain investment strategies used by GWP to generate portfolio alpha for its clients."
+      ],
+      [
+        "p",
+        "Rom states that GWP is recognized in the Canadian investment industry as a leading factor-based value portfolio manager and describes how GWP creates relevant investment strategies and explains GWP’s backtesting process. Rom notes the following:"
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "Using historical data, backtesting approximates a real-life investment process to illustrate the risk–return tradeoff of a particular proposed investment strategy."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "Backtesting is used almost exclusively by quantitative investment managers and rarely by fundamental investment managers, who are more concerned with information such as forward estimates of company earnings, macroeconomic factors, and intrinsic values."
+      ],
+      [
+        "p",
+        "Galic, who is 62 years old, decides to allocate C$2 million (representing 10% of his net worth) to an account with GWP and stipulates that portfolio assets be restricted exclusively to domestic securities. Although GWP has not backtested its strategies with such a restriction, it has backtested its strategies using a global index that includes domestic securities. Rom shows the following risk measures to Galic for three factor portfolios."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Downside Risk Measures for Model Factors",
+          "head": [
+            "Risk Measure",
+            "Factor 1",
+            "Factor 2",
+            "Factor 3"
+          ],
+          "rows": [
+            [
+              "Value at risk (VaR) (95%)",
+              "(6.49%)",
+              "(0.77%)",
+              "(2.40%)"
+            ],
+            [
+              "Conditional VaR (CVaR) (95%)",
+              "(15.73%)",
+              "(4.21%)",
+              "(3.24%)"
+            ],
+            [
+              "Maximum drawdown",
+              "35.10%",
+              "38.83%",
+              "45.98%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Galic asks Rom, “What happens if the future is different from the past?” Rom gives the following replies:"
+      ],
+      [
+        "h",
+        "Statement 3"
+      ],
+      [
+        "p",
+        "Although backtesting can offer some comfort, you are correct that it does have a weakness: Backtesting generally does not capture the dynamic nature of financial markets and in particular may not capture extreme downside risk."
+      ],
+      [
+        "h",
+        "Statement 4"
+      ],
+      [
+        "p",
+        "As a result, we have captured extreme downside risk and the dynamic nature of financial markets by using the Value-at-Risk and Conditional Value-at-Risk measures."
+      ],
+      [
+        "p",
+        "In an effort to make Galic fully aware of the risks inherent in GWP’s strategies, Rom describes a recent study that investigated the return distributions of value and momentum factors that GWP uses to construct portfolios. The study found that these distributions were non-normal based on their negative skewness, excess kurtosis, and tail dependence. Rom indicated that investment strategies based on this type of data are prone to significantly higher downside risk. Rom informs Galic that GWP also uses a technique commonly referred to as scenario analysis to examine how strategies perform in different structural regimes. Exhibit 2 compares the performance of two of GWP’s factor allocation strategies in different regimes:"
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Scenario Analysis Using the Sharpe Ratio",
+          "head": [
+            "Strategy/Regime",
+            "High Volatility",
+            "Low Volatility",
+            "Recession",
+            "Non-recession"
+          ],
+          "rows": [
+            [
+              "Strategy I",
+              "0.88",
+              "0.64",
+              "0.20",
+              "1.00"
+            ],
+            [
+              "Strategy II",
+              "1.56",
+              "1.60",
+              "1.76",
+              "1.52"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Galic is surprised to see that some of the backtest results are unfavorable. He asks, “Why has GWP not considered strategies that perform better in backtesting?” Galic recently met with Fastlane Wealth Managers, who showed much better performance results. The portfolio manager at Fastlane told Galic that the company selects the top-performing strategies after performing thousands of backtests."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Rom’s statements concerning backtesting is correct?",
+        "options": [
+          "Only Statement 1",
+          "Only Statement 2",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 0,
+        "why": "Statement 1 is correct: backtesting approximates the real-life investment process with historical data to show a strategy’s risk–return trade-off. Statement 2 is wrong: backtesting fits quantitative and systematic styles most naturally, but fundamental managers also use it heavily."
+      },
+      {
+        "q": "Which key parameter needs to be changed for a new backtest that includes Galic’s restrictions?",
+        "options": [
+          "Start and end dates",
+          "Consideration of transaction costs",
+          "Investment universe"
+        ],
+        "answer": 2,
+        "why": "The investment universe is the set of securities the strategy may hold. Galic allows domestic securities only, so the backtest must use a domestic rather than global universe. His restriction doesn’t affect the start and end dates or whether transaction costs are included."
+      },
+      {
+        "q": "Galic’s concern embedded in the question “What happens if the future is different from the past?” is a problem most relevant for which investment strategy evaluation technique?",
+        "options": [
+          "Sensitivity analysis",
+          "Backtesting",
+          "Monte Carlo simulation"
+        ],
+        "answer": 1,
+        "why": "Backtesting implicitly assumes past returns are a guide to future returns, so a future unlike the past is its key weakness. Monte Carlo simulation does not rely on historical data (it draws from specified distributions), and sensitivity analysis varies those assumptions (e.g. the distributions) to test robustness."
+      },
+      {
+        "q": "Which of the following conclusions of Exhibit 1 is least likely to be true?",
+        "options": [
+          "5% of the time, losses from Factor 1 would be at least 6.49%.",
+          "When the VaR is exceeded in Factor 1, we should expect an average loss of 15.73%.",
+          "5% of the time, losses from Factor 2 are likely to be worse than losses from Factor 1."
+        ],
+        "answer": 2,
+        "why": "A correctly reads VaR (at least 6.49% loss 5% of the time). B correctly reads CVaR (average of losses beyond VaR = 15.73%). C is untrue: Factor 2’s VaR (0.77%) and CVaR (4.21%) are both SMALLER than Factor 1’s (6.49% and 15.73%), so its tail losses are less severe."
+      },
+      {
+        "q": "Based on the statistical study performed by GWP, which of the following represents a suggested course of action if GWP were to conduct Monte Carlo simulation analyses on the factor strategies?",
+        "options": [
+          "Inverse transformation",
+          "Bootstrapping",
+          "Sensitivity analysis"
+        ],
+        "answer": 2,
+        "why": "Factor returns are non-normal (negative skew, excess kurtosis, tail dependence), so best practice is sensitivity analysis: rerun the simulation with distributions that relax normality (e.g. fat-tailed, multivariate skewed t) to see how results change. Inverse transformation is just a way of generating random draws; bootstrapping (sampling with replacement) belongs to historical simulation."
+      },
+      {
+        "q": "Based on Exhibit 1, which factor has the smallest downside risk as measured by the weighted average of all losses that exceed a threshold?",
+        "options": [
+          "Factor 1",
+          "Factor 2",
+          "Factor 3"
+        ],
+        "answer": 2,
+        "why": "“Weighted average of all losses beyond a threshold” is the definition of CVaR (expected shortfall). Lowest CVaR: Factor 3 at 3.24% (vs 4.21% and 15.73%). Trap: Factor 2 has the smallest VaR (0.77%), but VaR is the threshold, not the average loss beyond it."
+      },
+      {
+        "q": "The approach used by Fastlane Wealth Managers most likely incorporates:",
+        "options": [
+          "risk parity.",
+          "data snooping.",
+          "cross-validation."
+        ],
+        "answer": 1,
+        "why": "Running thousands of backtests and presenting only the best performers is data snooping, a form of selection bias: some strategies look good by chance and are unlikely to repeat. Risk parity is a portfolio construction method (equal risk contributions using volatilities and correlations); cross-validation partitions data into training and test sets and actually helps guard against overfitting."
+      },
+      {
+        "q": "Comparing the two strategies in Exhibit 2, the best risk-adjusted performance is demonstrated by:",
+        "options": [
+          "Strategy II in periods of low volatility and recession.",
+          "Strategy I in periods of high volatility and non-recession.",
+          "Strategy II in periods of high volatility and non-recession."
+        ],
+        "answer": 0,
+        "why": "Strategy II has the higher Sharpe ratio in every regime. Its edge is largest in low volatility (1.60 − 0.64 = 0.96) and recession (1.76 − 0.20 = 1.56), vs only 0.68 in high volatility and 0.52 in non-recession. Strategy I never beats Strategy II."
+      }
+    ]
   }
 ];
 
