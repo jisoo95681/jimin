@@ -1091,6 +1091,62 @@ const QUESTIONS = [
     options: ["31.3%", "35.8%", "34.6%"],
     answer: 1,
     why: "Debt 1,080 + 155 = 1,235; equity 3,600 − 155 = 3,445; D/E = 35.8% (violates). If paid from surplus cash: 1,080 / 3,445 = 31.3%."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "An investor's wealth rises substantially (e.g. a new annuity). Holding all else equal, his required risk premium for risky assets:",
+    options: ["Rises, because he now has more to lose in a downturn", "Falls, because extra consumption gives him less marginal utility", "Is unchanged, because risk premiums depend only on the asset"],
+    answer: 1,
+    why: "Diminishing marginal utility: the richer you are, the less an extra dollar is worth to you, so losing some in a bad state hurts less. Lower marginal utility of consumption means a lower required risk premium and more willingness to hold risky assets."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "A one-year default-free zero has face 100 and price 96.37; real rate 1.15%, expected inflation 2.25%. The premium for inflation uncertainty is closest to:",
+    options: ["0.37%", "1.10%", "0.23%"],
+    answer: 0,
+    why: "1 + l + θ + π = [[100|96.37]] = 1.0377, and 1 + l + θ = 1.0340, so π = 0.37%."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "Real short-term interest rates tend to be highest in an economy with:",
+    options: ["Low real GDP growth and low growth volatility", "High real GDP growth and high growth volatility", "High inflation and a flat yield curve"],
+    answer: 1,
+    why: "Real short rates are positively related to both trend real GDP growth (higher expected future consumption) and the volatility of real growth. Inflation affects nominal, not real, rates."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "The spread between nominal and real (inflation-linked) default-free yields of the same maturity is 2.0%. Expected inflation is most likely:",
+    options: ["Above 2.0%, because inflation risk premiums are negative", "Exactly 2.0%, since the spread is pure expected inflation", "Below 2.0%, since the spread also holds an inflation-risk premium"],
+    answer: 2,
+    why: "Break-even inflation (BEI) = expected inflation + premium for inflation uncertainty. With a positive premium, expected inflation < BEI. For longer maturities the BEI is a cleaner but still upward-biased measure."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "Which change would justify a HIGHER equilibrium P/E for an equity market?",
+    options: ["A rise in the equity risk premium demanded by investors", "Lower uncertainty about future inflation, cutting discount rates", "Weaker expected growth in future real earnings"],
+    answer: 1,
+    why: "P/E rises when discount rates fall or growth expectations rise. Lower inflation uncertainty reduces the discount rate; a higher ERP or weaker growth would reduce the P/E."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "A short recession begins and the central bank cuts its policy rate. The yield curve most likely:",
+    options: ["Flattens or inverts, as long yields fall the most", "Steepens (becomes more upward sloping), as short yields fall the most", "Shifts in parallel, since all maturities fall equally"],
+    answer: 1,
+    why: "Policy cuts push short-term yields down sharply; long yields fall less because markets expect rates to normalize after the recession. The curve steepens."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Economics and Investment Markets",
+    q: "Heading into a recession, which corporate bond is expected to perform best over the next year?",
+    options: ["A B3-rated high-yield bond with the widest spread", "An Aaa-rated bond with a narrow spread", "A Baa1-rated bond with a medium spread"],
+    answer: 1,
+    why: "Credit spreads widen in recessions, most for low-quality issuers (flight to quality), so high-rated bonds outperform low-rated ones. In early recovery the reverse tends to happen."
   }
 ];
 

@@ -1465,6 +1465,179 @@ const VIGNETTES = [
         "why": "Debt = 30% × C$3,600m = C$1,080m. A repurchase reduces equity by C$155m to C$3,445m. Cash-financed: D/E = 1,080 / 3,445 = 31.3% (below 35%). Debt-financed: D/E = (1,080 + 155) / 3,445 = 35.8%, above the 35% limit, so the covenant is violated only if the buyback is financed with debt."
       }
     ]
+  },
+  {
+    "id": "carlisle",
+    "title": "Julie Carlisle: Esteban Blake",
+    "topic": "Portfolio Management",
+    "reading": "Economics and Investment Markets",
+    "body": [
+      [
+        "p",
+        "Julie Carlisle is a financial planner at a large wealth management firm. One of her clients, Esteban Blake, just received a sizable inheritance. He invests a portion of the inheritance in an annuity that will immediately increase his income by a substantial amount. He enlists Carlisle’s help to invest the remaining amount of the inheritance."
+      ],
+      [
+        "p",
+        "Blake informs Carlisle that he would like some short-term bonds in his portfolio. Carlisle proposes purchasing a one-year domestic government zero-coupon bond. It has a face value of $100 and is currently priced at $96.37. Carlisle estimates the one-year real risk-free rate at 1.15% and expects inflation over the next year to be 2.25%."
+      ],
+      [
+        "p",
+        "In an effort to provide Blake with some exposure to international markets, Carlisle proposes three countries to look for investment opportunities. Selected data on the three countries are presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Selected Macroeconomic Data",
+          "head": [
+            "",
+            "Nominal GDP Growth",
+            "Inflation Rate",
+            "Volatility of Real GDP Growth",
+            "Yield Curve Shape",
+            "Trailing 12-Month Equity Index P/E"
+          ],
+          "rows": [
+            [
+              "Country #1",
+              "6.5%",
+              "4.0%",
+              "Low",
+              "Flat",
+              "16.5"
+            ],
+            [
+              "Country #2",
+              "5.0%",
+              "2.5%",
+              "High",
+              "Upward slope",
+              "17.3"
+            ],
+            [
+              "Country #3",
+              "3.5%",
+              "2.0%",
+              "Low",
+              "Flat",
+              "18.2"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "In her analysis, Carlisle observes that the spread between the three-year default-free nominal bond and the default-free real zero-coupon bond in Country #3 is 2.0%."
+      ],
+      [
+        "p",
+        "Blake expresses concern that stocks may be currently overvalued in Country 3 given its 20-year historical equity index P/E of 16.0. Carlisle comments, “I think the equilibrium P/E in Country #3 has increased because of changes in market conditions.”"
+      ],
+      [
+        "p",
+        "Carlisle predicts that Country #3 will slip into a recession next quarter. She thinks it will be short-lived, lasting only 12 months or so, and considers the impact of such a recession on the performance of the country’s stocks and bonds."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Three-Year Corporate Bonds from Country #3",
+          "head": [
+            "Corporate Bond",
+            "Moody’s Investors Service Rating",
+            "Spread*"
+          ],
+          "rows": [
+            [
+              "Bond A",
+              "Aaa",
+              "1.4%"
+            ],
+            [
+              "Bond B",
+              "Baa1",
+              "3.2%"
+            ],
+            [
+              "Bond C",
+              "B3",
+              "5.3%"
+            ]
+          ],
+          "note": "*Spread versus three-year sovereign bond"
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Holding all else constant, the change in Blake’s income will most likely result in:",
+        "options": [
+          "an increase in his marginal utility of consumption.",
+          "an increase in his inter-temporal rate of substitution.",
+          "a decrease in his required risk premium for investing in risky assets."
+        ],
+        "answer": 2,
+        "why": "The annuity substantially raises Blake’s income and wealth, which DECREASES his marginal utility of consumption (diminishing marginal utility: each extra dollar adds less satisfaction when you already have more). So the average loss of marginal utility from taking risk is smaller as wealth rises; he requires a lower risk premium and is willing to buy more risky assets. A is the opposite. B is wrong: with more current income, an extra unit of consumption today is worth less relative to the future, but the higher income also applies to future periods; the clear, testable effect is on the risk premium."
+      },
+      {
+        "q": "The implied premium for inflation uncertainty for the one-year government zero-coupon bond proposed by Carlisle is closest to:",
+        "options": [
+          "0.23%.",
+          "0.37%.",
+          "1.10%."
+        ],
+        "answer": 1,
+        "why": "Pricing a default-free nominal zero: P = [[Face|1 + l + θ + π]], where l = real risk-free rate, θ = expected inflation and π = premium for inflation uncertainty. So 1 + l + θ + π = [[100|96.37]] = 1.0377. With l = 1.15% and θ = 2.25%: π = 1.0377 − 1.0340 = 0.0037 = 0.37%."
+      },
+      {
+        "q": "Based on the data in Exhibit 1, current real short-term interest rates would most likely be highest in:",
+        "options": [
+          "Country #1.",
+          "Country #2.",
+          "Country #3."
+        ],
+        "answer": 1,
+        "why": "Real short-term rates rise with real GDP growth and with the volatility of real GDP growth. Real growth ≈ nominal growth − inflation: Country 1 = 6.5% − 4.0% = 2.5%, Country 2 = 5.0% − 2.5% = 2.5%, Country 3 = 3.5% − 2.0% = 1.5%. Countries 1 and 2 tie on growth, but Country 2 has HIGH growth volatility, so its real short-term rate is most likely the highest."
+      },
+      {
+        "q": "The recent change in Country #3’s break-even inflation rate suggests that the expected rate of inflation over the next three years is:",
+        "options": [
+          "less than 2.0%.",
+          "equal to 2.0%.",
+          "greater than 2.0%."
+        ],
+        "answer": 0,
+        "why": "The 2.0% spread between the nominal and real default-free yields is the break-even inflation rate (BEI) = expected inflation + a premium for uncertainty about future inflation. That premium is most likely positive (investors can’t predict inflation with confidence), so expected inflation must be below 2.0%."
+      },
+      {
+        "q": "Which of the following changes in market conditions best supports Carlisle’s comment regarding the equilibrium P/E for Country #3?",
+        "options": [
+          "An increase in the equity risk premium",
+          "A decrease in uncertainty about future inflation",
+          "A decrease in expectation of future real earnings growth"
+        ],
+        "answer": 1,
+        "why": "Stock prices are expected cash flows discounted at rates that include expected inflation, a premium for inflation uncertainty and the equity risk premium. Less uncertainty about future inflation lowers the discount rate, raising valuations and the equilibrium P/E, which would justify the current 18.2 P/E above the 16.0 historical average. A higher equity risk premium (A) or lower expected real earnings growth (C) would both LOWER the P/E."
+      },
+      {
+        "q": "If Carlisle’s prediction about the economy of Country #3 is realized, the yield curve in Country #3 will most likely:",
+        "options": [
+          "remain flat.",
+          "become upward sloping.",
+          "become downward sloping."
+        ],
+        "answer": 1,
+        "why": "The curve is flat now. In a recession central banks cut policy rates, pulling short-term yields down; long-term yields fall less because the central bank is expected to bring short rates back to normal as the recession ends. Short rates falling more than long rates makes the curve upward sloping."
+      },
+      {
+        "q": "Based on Exhibit 2, if Carlisle’s prediction for Country #3 is realized, then over the next 12 months:",
+        "options": [
+          "Bond A would be expected to outperform Bond C.",
+          "Bond B would be expected to outperform Bond A.",
+          "Bond C would be expected to outperform Bond B."
+        ],
+        "answer": 0,
+        "why": "In a recession credit spreads widen, and they widen most for low-quality issuers as investors sell high default-risk debt and trade up to quality. So higher-rated bonds outperform lower-rated ones: Aaa Bond A should outperform B3 Bond C. B and C have the ranking the wrong way round (lower quality outperforming)."
+      }
+    ]
   }
 ];
 
