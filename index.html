@@ -609,7 +609,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v61 · 2026-10-05";
+  const APP_VERSION = "v62 · 2026-10-05";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1164,6 +1164,14 @@
     custom.append(el("span", { className: "num plus" }, "+"), text, el("span", { className: "chev" }, "›"));
     custom.onclick = () => customSetup(mode);
     list.append(custom);
+    if (mode === "quick") {
+      const daily = el("button", { className: "topic-row" }), dt = el("div");
+      dt.append(el("div", { className: "name" }, "Daily questions"),
+        el("div", { className: "cnt" }, "Build a custom set without yesterday's daily questions"));
+      daily.append(el("span", { className: "num plus" }, "☀"), dt, el("span", { className: "chev" }, "›"));
+      daily.onclick = () => customSetup(mode, "fwd", true);
+      list.append(daily);
+    }
     app.append(list);
   }
 
@@ -1219,15 +1227,37 @@
   }
 
   // Create custom: choose how many questions (quick) or vignettes (exam) from each of the 10 topics.
-  function customSetup(mode, dir = "fwd") {
+  // Daily questions: quick questions shown in yesterday's daily sets (and in today's earlier ones) are left out.
+  // Stored on this device: { "YYYY-MM-DD": [question text, …] }
+  const DAILY_KEY = "cfa-daily";
+  function loadDaily() { try { return JSON.parse(localStorage.getItem(DAILY_KEY)) || {}; } catch { return {}; } }
+  function logDaily(qs) {
+    const d = loadDaily(), k = today(), y = new Date(); y.setDate(y.getDate() - 1);
+    d[k] = [...new Set([...(d[k] || []), ...qs.map(q => q.q)])];
+    Object.keys(d).forEach(x => { if (x < dkey(y)) delete d[x]; }); // only yesterday and today are needed
+    try { localStorage.setItem(DAILY_KEY, JSON.stringify(d)); } catch {}
+  }
+
+  function customSetup(mode, dir = "fwd", daily = false) {
     screen(dir);
-    backTo = () => customSetup(mode, "back");
-    const m = MODES[mode], prefs = loadPrefs(), saved = (prefs.custom || {})[mode] || {};
+    backTo = () => customSetup(mode, "back", daily);
+    const prefKey = daily ? "daily" : mode;
+    const y = new Date(); y.setDate(y.getDate() - 1);
+    const dl = loadDaily(), seenY = dl[dkey(y)] || [], seenT = dl[today()] || [];
+    const skip = new Set(daily ? [...seenY, ...seenT] : []);
+    const m = { ...MODES[mode], items: t => MODES[mode].items(t).filter(q => !skip.has(q.q)) };
+    const prefs = loadPrefs(), saved = (prefs.custom || {})[prefKey] || {};
     const counts = {};
     TOPICS.forEach(t => (counts[t] = Math.min(saved[t] || 0, m.items(t).length)));
 
     app.append(nav(m.name, () => topics(mode, "back")));
-    app.append(el("h1", { className: "title" }, "Create custom"),
+    if (daily) {
+      const parts = [];
+      if (seenY.length) parts.push(`${plural(seenY.length, "question")} from yesterday's daily questions`);
+      if (seenT.length) parts.push(`${seenT.length} already done today`);
+      app.append(el("h1", { className: "title" }, "Daily questions"),
+        el("p", { className: "sub" }, parts.length ? `Build today's set. Left out: ${parts.join(" and ")}.` : "Build today's set. No daily questions yesterday, so every question is available."));
+    } else app.append(el("h1", { className: "title" }, "Create custom"),
       el("p", { className: "sub" }, `Choose how many ${m.unit}s to take from each topic. Use one topic or mix all ten.`));
 
     const footer = el("div", { className: "card sticky" });
@@ -1255,7 +1285,8 @@
       const avail = m.items(t).length;
       const row = el("div", { className: "topic-row custom-row" + (avail ? "" : " off") });
       const text = el("div");
-      text.append(el("div", { className: "name" }, t), el("div", { className: "cnt" }, avail ? `${plural(avail, m.unit)} available` : "No questions yet"));
+      const hidden = MODES[mode].items(t).length - avail;
+      text.append(el("div", { className: "name" }, t), el("div", { className: "cnt" }, avail ? `${plural(avail, m.unit)} available${hidden ? ` · ${hidden} left out` : ""}` : hidden ? "All of them came up recently" : "No questions yet"));
       const stepper = el("div", { className: "stepper" });
       const minus = el("button", { className: "step", ariaLabel: `Fewer from ${t}` }, "−");
       const val = el("span", { className: "val" });
@@ -1278,10 +1309,11 @@
     });
 
     go.onclick = () => {
-      savePrefs({ custom: { ...(prefs.custom || {}), [mode]: counts }, customMix: { ...(prefs.customMix || {}), [mode]: cb.checked } });
+      savePrefs({ custom: { ...(prefs.custom || {}), [prefKey]: counts }, customMix: { ...(prefs.customMix || {}), [mode]: cb.checked } });
       // A random selection of the requested number from each topic, kept in topic order unless mixed.
       let picked = TOPICS.flatMap(t => shuffle(m.items(t)).slice(0, counts[t]));
       if (cb.checked) picked = shuffle(picked);
+      if (daily) logDaily(picked);
       mode === "quick" ? begin(picked, false, true) : beginExam(picked);
     };
     app.append(list, footer);
