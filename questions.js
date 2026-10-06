@@ -1443,6 +1443,296 @@ const QUESTIONS = [
     options: ["The full mispricing, undiscounted", "The present value of the mispricing", "The mispricing compounded at the risk-free rate"],
     answer: 1,
     why: "The gain is locked in today but received at expiration, so discount it back at the risk-free rate."
+  },
+
+  // ---------- Quantitative Methods (concepts, no calculator) ----------
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Adding a new variable to a regression raises adjusted R² only if:",
+    options: ["The new variable's |t-statistic| is greater than 1", "The new variable's p-value is below 0.05", "The regression's F-statistic also rises"],
+    answer: 0,
+    why: "Adjusted R² rises only when the new variable's |t| exceeds 1. Plain R² never falls when a variable is added, which is why adjusted R² is the better comparison."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "When choosing between regression models, AIC and BIC are used as follows:",
+    options: ["Higher AIC for prediction; higher BIC for best fit", "Lower AIC for best fit; lower BIC for prediction", "Lower AIC for prediction; lower BIC for best fit"],
+    answer: 2,
+    why: "AIC → prediction (forecasting), BIC → goodness of fit. For both, lower is better. BIC penalizes extra variables more heavily than AIC."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "In a joint F-test of whether two added variables matter, the restricted model is the one that:",
+    options: ["Includes every variable, the two being tested too", "Leaves out the two variables being tested", "Has the higher R² of the two models compared"],
+    answer: 1,
+    why: "The restricted model sets the tested coefficients to zero, i.e. drops them. F = [[(SSE restricted − SSE unrestricted) ÷ q|SSE unrestricted ÷ (n − k − 1)]], where q is the number of variables tested. The test is one-tailed (right side)."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "A slope coefficient in a multiple regression measures the change in Y for a one-unit change in that X:",
+    options: ["Holding all the other independent variables constant", "Plus the intercept, which is added to every change in that X", "Averaged across all the independent variables"],
+    answer: 0,
+    why: "A partial slope coefficient is a ceteris paribus effect. The intercept is the predicted Y when every X is zero; it never enters a change in Y."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Which is NOT an assumption of multiple linear regression?",
+    options: ["The residuals are normally distributed", "The variance of the residuals is the same for all observations", "The residuals are correlated across observations"],
+    answer: 2,
+    why: "The residuals must be UNcorrelated across observations (independence of errors). The other assumptions: linearity, homoskedasticity, normality, and no exact linear relation among the independent variables."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "To check visually for heteroskedasticity, the most useful chart is:",
+    options: ["The dependent variable against one independent variable", "The residuals against the predicted values", "One independent variable against another"],
+    answer: 1,
+    why: "Homoskedasticity means the residual variance is constant. Plotting residuals against predicted values shows whether the spread stays even or fans out/clusters."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "A scatterplot of one independent variable against another is mainly used to check:",
+    options: ["Linearity between the dependent variable and that X", "Homoskedasticity of the regression residuals across observations", "Multicollinearity between the independent variables"],
+    answer: 2,
+    why: "A visible relationship between two X's suggests multicollinearity. Linearity is checked by plotting Y against each X; homoskedasticity by plotting residuals against predicted values."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "A plot of Y against one X shows a clear curve rather than a straight line. Which assumption may be violated?",
+    options: ["Linearity", "Homoskedasticity", "Normality of the residuals"],
+    answer: 0,
+    why: "A curved (e.g. quadratic) relationship breaks the assumption that Y is linearly related to the independent variables. A transformation or squared term may be needed."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "An analyst expects a POSITIVE relationship and wants to test it. The correct hypotheses are:",
+    options: ["H0: b > 0 versus Ha: b ≤ 0", "H0: b ≤ 0 versus Ha: b > 0", "H0: b = 0 versus Ha: b ≠ 0"],
+    answer: 1,
+    why: "What you hope to show goes in the alternative hypothesis, and the null always contains the equality. So for a positive effect: H0: b ≤ 0, Ha: b > 0 (one-tailed). H0: b > 0 is wrongly specified."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "The standard error of a forecast is larger than the standard error of the regression because of:",
+    options: ["Model error and sampling error", "Multicollinearity among the independent variables in the model", "Too few independent variables in the model used"],
+    answer: 0,
+    why: "A forecast carries the regression's own error (model error) plus the uncertainty from estimating the coefficients from a sample (sampling error)."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The five steps of a TEXT-based ML project, in order, are:",
+    options: ["Curation, formulation, wrangling, exploration, model training", "Formulation, wrangling, curation, exploration, training", "Formulation, curation, wrangling, exploration, training"],
+    answer: 2,
+    why: "Text: 1) problem formulation, 2) data (text) curation, 3) text preparation and wrangling, 4) text exploration, 5) model training. Structured data: conceptualization, collection, preparation and wrangling, exploration, training."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Concern that some social media posts come from fake accounts relates to which V of big data?",
+    options: ["Volume", "Veracity", "Velocity"],
+    answer: 1,
+    why: "Veracity is the credibility and reliability of the data. Volume is the quantity, velocity the speed of creation, variety the range of data types and sources."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A date column holds valid dates written as 4/6/17, 26-Jun-74 and November 15, 2004. This is a:",
+    options: ["Non-uniformity error", "Invalidity error", "Inconsistency error"],
+    answer: 0,
+    why: "Non-uniformity: data not presented in one identical format. Invalidity is a value outside a meaningful range; inconsistency is a value that conflicts with other data or reality."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A firm shows interest expense of 1.5 but total debt of 0.0. This is most likely a(n):",
+    options: ["Incompleteness error", "Non-uniformity error", "Inconsistency error"],
+    answer: 2,
+    why: "The two values conflict (interest implies debt), so one is wrong: an inconsistency error. Incompleteness is missing data; non-uniformity is mixed formats."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Creating an 'Age' variable from a firm's IPO date is which data transformation?",
+    options: ["Aggregation", "Extraction", "Conversion"],
+    answer: 1,
+    why: "Extraction creates a new variable from an existing one (age from a date, a ratio from two items). Aggregation combines variables into one; conversion changes the data type; selection deletes unneeded columns."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Normalization and standardization differ in that:",
+    options: ["Normalization uses the min and max; standardization uses the mean and SD", "Normalization uses the mean and SD; standardization uses the min and max", "Both rescale every variable to the same range, from 0 to 1, using the mean"],
+    answer: 0,
+    why: "Normalization: [[X − Xmin|Xmax − Xmin]], giving values in [0, 1]. Standardization: [[X − mean|SD]], centring on 0. Normalization is more sensitive to outliers."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "When cleansing raw text, useful symbols such as % and $ should be:",
+    options: ["Removed along with all other punctuation", "Kept exactly as they are, since all punctuation is useful to the model", "Replaced with annotations such as /percentSign/"],
+    answer: 2,
+    why: "Most punctuation is removed, but meaningful symbols are replaced with annotations (/percentSign/, /dollarSign/, /questionMark/) to keep their meaning."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Splitting cleansed text into separate words is called:",
+    options: ["Lemmatization", "Tokenization", "Stemming"],
+    answer: 1,
+    why: "Tokenization splits text into tokens. Lemmatization and stemming are normalization steps that reduce words to a base form."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The distinct set of normalized tokens from all the texts in a dataset is the:",
+    options: ["Bag-of-words (BOW)", "Document term matrix", "Set of n-grams"],
+    answer: 0,
+    why: "The BOW is the collection of distinct tokens. The document term matrix is built from it (documents × tokens); n-grams are sequences of n adjacent words."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "To show the most informative words by term frequency, the best visualization is a:",
+    options: ["Scatter plot of the token counts", "Word cloud", "Document term matrix"],
+    answer: 1,
+    why: "A word cloud sizes (and colours) words by frequency. A document term matrix is a data structure, not a chart."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Noise features to prune from a text dataset are tokens with:",
+    options: ["Very high and very low term frequency", "The highest chi-square statistics", "The highest mutual information values"],
+    answer: 0,
+    why: "Very frequent tokens (stop words) are in every text and cause underfitting; very rare tokens cause overfitting. Both are removed by vocabulary pruning."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Feature selection and feature engineering mainly help to prevent, respectively:",
+    options: ["Underfitting, then overfitting", "Overfitting, then underfitting", "Overfitting in both of the two cases"],
+    answer: 1,
+    why: "Too many features cause overfitting, so good selection limits it. Engineering better features captures relationships the data miss, preventing underfitting."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Precision and recall in a confusion matrix are:",
+    options: ["Precision = TP ÷ (TP + FP); recall = TP ÷ (TP + FN)", "Precision = TP ÷ (TP + FN); recall = TP ÷ (TP + FP)", "Precision = (TP + TN) ÷ all predictions; recall = TP ÷ all predictions"],
+    answer: 0,
+    why: "Precision = [[TP|TP + FP]]: of the predicted positives, how many were right. Recall = [[TP|TP + FN]]: of the actual positives, how many were found. Accuracy = [[TP + TN|all]]; F1 = harmonic mean of precision and recall."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A model that wrongly flags good loans as bad is costly. Which metric matters most?",
+    options: ["Recall, since false negatives are the costly errors", "Accuracy, since it covers every outcome in the confusion matrix", "Precision, since false positives are the costly errors"],
+    answer: 2,
+    why: "Precision focuses on false positives (FP). Recall focuses on false negatives (FN). Use precision when FP are costly, recall when FN are costly."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Training a model on data labeled with the correct output (e.g. the right portfolio) is:",
+    options: ["Supervised learning", "Unsupervised learning", "Reinforcement learning"],
+    answer: 0,
+    why: "Supervised learning learns from labeled inputs and outputs. Unsupervised learning has no labels and finds structure (e.g. clustering, PCA)."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "In k-means clustering, k is:",
+    options: ["The number of observations in the sample", "The number of features for each observation", "A hyperparameter: the number of clusters"],
+    answer: 2,
+    why: "k is set by the researcher before learning: how many non-overlapping clusters to form. It is not the sample size or the number of features."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Many features in a dataset are highly correlated. The best tool to reduce them is:",
+    options: ["Bagging (bootstrap aggregating)", "Principal components analysis", "Ensemble learning"],
+    answer: 1,
+    why: "PCA turns correlated features into a few uncorrelated composite variables. Bagging resamples observations; ensembles combine model predictions. Neither reduces features."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "LASSO with λ = 0 is equivalent to:",
+    options: ["Ordinary least squares regression", "A model with every coefficient set to zero", "A pruned regression tree"],
+    answer: 0,
+    why: "λ sets the penalty on extra features. With λ = 0 there is no penalty, hence no regularization: plain OLS. A larger λ forces features to earn their place."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Predicting next quarter's stock return (a continuous number) calls for:",
+    options: ["Classification into return categories", "Clustering", "Supervised regression"],
+    answer: 2,
+    why: "A continuous target needs regression. Classification predicts categories; clustering is unsupervised and has no target."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Grouping 10,000 unlabeled stocks into similar groups calls for:",
+    options: ["CART", "K-means clustering", "Penalized regression"],
+    answer: 1,
+    why: "Unlabeled data and a grouping goal mean unsupervised clustering. CART and penalized regression are supervised and need a target."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "A model with LOW bias error and HIGH variance error is:",
+    options: ["Overfit", "Underfit", "A good fit"],
+    answer: 0,
+    why: "It fits the training data closely but generalizes badly. Underfit models have high bias. Cross-validation and regularization reduce overfitting."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Compared with KNN, CART does NOT require:",
+    options: ["A labeled training dataset to learn from", "Choosing K or a distance measure in advance", "Any features to split the data on"],
+    answer: 1,
+    why: "KNN needs K and a distance measure. CART needs neither, and its tree shows visually why it made each prediction. Both are supervised, so both need labeled data."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Combining the predictions of several different models (e.g. CART, SVM, KNN) usually:",
+    options: ["Gives more accurate and stable predictions", "Is no better than the best single model", "Only reduces bias error, while adding much more variance error"],
+    answer: 0,
+    why: "That is ensemble learning: individual errors partly cancel, so the average beats the best single model on accuracy and stability."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Deep learning nets are neural networks with:",
+    options: ["At least 10 hidden layers, by definition", "Many hidden layers: at least 2, often more than 20", "A single hidden layer with many nodes"],
+    answer: 1,
+    why: "Deep learning nets have many hidden layers, at least 2 and often 20+. There is no 10-layer rule."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "In a neural network node, the activation function:",
+    options: ["Multiplies each input by a weight and sums them", "Sets the number of hidden layers in the network", "Scales the total net input up or down, like a dimmer switch"],
+    answer: 2,
+    why: "The summation operator weights and sums the inputs; the activation function then scales that total net input, like a light dimmer switch."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "For complex, non-linear relationships among many features, the best-suited model is a:",
+    options: ["Neural network", "LASSO regression", "Simple linear regression"],
+    answer: 0,
+    why: "Neural networks and deep learning handle non-linearities and complex interactions (image, speech, language). LASSO and linear regression assume linear relationships."
   }
 ];
 

@@ -3185,6 +3185,1481 @@ const VIGNETTES = [
         "why": "Six months remain on the contract, and the $1.50 dividend comes in three months.\n1) New no-arbitrage forward price: F0.25 = [$245 − [[$1.50|(1.00325)^0.25]]] × (1.00325)^0.5 = ($245 − $1.4988) × 1.001623 = $243.8966.\n2) Value to the LONG = [[F0.25 − F0|(1.00325)^0.5]] = [[$243.8966 − $250.562289|1.001623]] = −$6.6549.\n3) Troubadour is SHORT, so his position is worth +$6.6549 (the forward price fell from $250.56 to $243.90).\nB ($5.1561) ignores the dividend, which lowers the forward price. A ($1.6549) does not match the correct forward price of $243.8966 (it is off by exactly $5)."
       }
     ]
+  },
+  {
+    "id": "factor-models",
+    "title": "Portfolio Return Drivers: Models 1–3",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "You are a junior analyst at an asset management firm. Your supervisor asks you to analyze the return drivers for one of the firm’s portfolios. She asks you to construct a regression model of the portfolio’s monthly excess returns (RET) against three factors: the market excess return (MRKT), a value factor (HML), and the monthly percentage change in a volatility index (VIX). You collect the data and run the regression. After completing the first regression (Model 1), you review the ANOVA results with your supervisor."
+      ],
+      [
+        "p",
+        "Then, she asks you to create two more models by adding two more explanatory variables: a size factor (SMB) and a momentum factor (MOM). Your three models are as follows:"
+      ],
+      [
+        "p",
+        "Model 1: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + εi."
+      ],
+      [
+        "p",
+        "Model 2: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + bSMB SMBi + εi."
+      ],
+      [
+        "p",
+        "Model 3: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + bSMB SMBi + bMOM MOMi + εi."
+      ],
+      [
+        "p",
+        "The regression statistics and ANOVA results for the three models are shown in Exhibit 1, Exhibit 2, and Exhibit 3."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: ANOVA Table for Model 1 — Regression Statistics",
+          "head": [
+            "",
+            "Model 1"
+          ],
+          "rows": [
+            [
+              "Multiple R",
+              "0.907"
+            ],
+            [
+              "R-Squared",
+              "0.823"
+            ],
+            [
+              "Adjusted R-Sq.",
+              "0.817"
+            ],
+            [
+              "Standard Error",
+              "3.438"
+            ],
+            [
+              "Observations",
+              "96.000"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): Model 1 Coefficients",
+          "head": [
+            "",
+            "Coefficient",
+            "Std. Error",
+            "t-Stat.",
+            "P-Value"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "–0.999",
+              "0.414",
+              "–2.411",
+              "0.018"
+            ],
+            [
+              "MRKT",
+              "1.817",
+              "0.124",
+              "14.683",
+              "0.000"
+            ],
+            [
+              "HML",
+              "0.489",
+              "0.118",
+              "4.133",
+              "0.000"
+            ],
+            [
+              "VIX",
+              "0.037",
+              "0.018",
+              "2.122",
+              "0.037"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): Model 1 ANOVA",
+          "head": [
+            "",
+            "Df",
+            "SS",
+            "MS",
+            "F",
+            "Significance F"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "3",
+              "5058.430",
+              "1686.143",
+              "142.628",
+              "0.000"
+            ],
+            [
+              "Residual",
+              "92",
+              "1087.618",
+              "11.822",
+              "",
+              ""
+            ],
+            [
+              "Total",
+              "95",
+              "6146.048",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: ANOVA Table for Model 2 — Regression Statistics",
+          "head": [
+            "",
+            "Model 2"
+          ],
+          "rows": [
+            [
+              "Multiple R",
+              "0.923"
+            ],
+            [
+              "R-Squared",
+              "0.852"
+            ],
+            [
+              "Adjusted R-Sq.",
+              "0.846"
+            ],
+            [
+              "Standard Error",
+              "3.161"
+            ],
+            [
+              "Observations",
+              "96.000"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2 (continued): Model 2 Coefficients",
+          "head": [
+            "",
+            "Coefficient",
+            "Std. Error",
+            "t-Stat.",
+            "P-Value"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "–0.820",
+              "0.383",
+              "–2.139",
+              "0.035"
+            ],
+            [
+              "MRKT",
+              "1.649",
+              "0.121",
+              "13.683",
+              "0.000"
+            ],
+            [
+              "HML",
+              "0.434",
+              "0.109",
+              "3.970",
+              "0.000"
+            ],
+            [
+              "VIX",
+              "0.025",
+              "0.016",
+              "1.516",
+              "0.133"
+            ],
+            [
+              "SMB",
+              "0.563",
+              "0.133",
+              "4.223",
+              "0.000"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2 (continued): Model 2 ANOVA",
+          "head": [
+            "",
+            "Df",
+            "SS",
+            "MS",
+            "F",
+            "Significance F"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "4",
+              "5236.635",
+              "1309.159",
+              "131.000",
+              "0.000"
+            ],
+            [
+              "Residual",
+              "91",
+              "909.413",
+              "9.994",
+              "",
+              ""
+            ],
+            [
+              "Total",
+              "95",
+              "6146.048",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: ANOVA Table for Model 3 — Regression Statistics",
+          "head": [
+            "",
+            "Model 3"
+          ],
+          "rows": [
+            [
+              "Multiple R",
+              "0.923"
+            ],
+            [
+              "R-Squared",
+              "0.852"
+            ],
+            [
+              "Adjusted R-Sq.",
+              "0.844"
+            ],
+            [
+              "Standard Error",
+              "3.177"
+            ],
+            [
+              "Observations",
+              "96.000"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3 (continued): Model 3 Coefficients",
+          "head": [
+            "",
+            "Coefficient",
+            "Std. Error",
+            "t-Stat.",
+            "P-Value"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "–0.823",
+              "0.385",
+              "−2.136",
+              "0.035"
+            ],
+            [
+              "MRKT",
+              "1.719",
+              "0.280",
+              "6.130",
+              "0.000"
+            ],
+            [
+              "HML",
+              "0.412",
+              "0.138",
+              "2.989",
+              "0.004"
+            ],
+            [
+              "VIX",
+              "0.026",
+              "0.017",
+              "1.532",
+              "0.129"
+            ],
+            [
+              "SMB",
+              "0.553",
+              "0.139",
+              "3.987",
+              "0.000"
+            ],
+            [
+              "MOM",
+              "–0.067",
+              "0.242",
+              "–0.276",
+              "0.783"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3 (continued): Model 3 ANOVA",
+          "head": [
+            "",
+            "Df",
+            "SS",
+            "MS",
+            "F",
+            "Significance F"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "5",
+              "5237.402",
+              "1047.480",
+              "103.751",
+              "0.000"
+            ],
+            [
+              "Residual",
+              "90",
+              "908.647",
+              "10.096",
+              "",
+              ""
+            ],
+            [
+              "Total",
+              "95",
+              "6146.048",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Your supervisor asks for your assessment of the model that provides the best fit as well as the model that is best for predicting values of the monthly portfolio return. So, you calculate Akaike’s information criterion (AIC) and Schwarz’s Bayesian information criterion (BIC) for all three models, as shown in Exhibit 4."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 4: Goodness-of-Fit Measures",
+          "head": [
+            "",
+            "AIC",
+            "BIC"
+          ],
+          "rows": [
+            [
+              "Model 1",
+              "241.03",
+              "251.29"
+            ],
+            [
+              "Model 2",
+              "225.85",
+              "238.67"
+            ],
+            [
+              "Model 3",
+              "227.77",
+              "243.16"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Determine which one of the following reasons for the change in adjusted R2 from Model 2 to Model 3 is most likely to be correct.",
+        "options": [
+          "Adjusted R2 decreases since adding MOM does not improve the overall explanatory power of Model 3.",
+          "Adjusted R2 increases since adding SMB improves the overall explanatory power of Model 2.",
+          "Adjusted R2 decreases since adding MOM improves the overall explanatory power of Model 3."
+        ],
+        "answer": 0,
+        "why": "Model 3 is Model 2 plus MOM. Adjusted R² falls from 0.846 (Model 2) to 0.844 (Model 3), while R² stays at 0.852. Adding a variable never lowers R², but adjusted R² only rises if the new variable's |t-statistic| is above 1. MOM's t-statistic is −0.276, so it adds nothing and the penalty for the extra variable lowers adjusted R². B is wrong: the question is about the move from Model 2 to Model 3, and adjusted R² did not increase. C is wrong: a fall in adjusted R² means MOM did not improve explanatory power."
+      },
+      {
+        "q": "Identify the model that provides the best fit.",
+        "options": [
+          "Model 1",
+          "Model 2",
+          "Model 3"
+        ],
+        "answer": 1,
+        "why": "BIC is the preferred measure of goodness of fit, and lower is better. Model 2 has the lowest BIC (238.67, vs 251.29 for Model 1 and 243.16 for Model 3). BIC penalizes extra variables more heavily than AIC, so Model 3's useless MOM variable costs it here."
+      },
+      {
+        "q": "Identify the model that should be used for prediction purposes.",
+        "options": [
+          "Model 1",
+          "Model 2",
+          "Model 3"
+        ],
+        "answer": 1,
+        "why": "AIC is the preferred measure for choosing a model for prediction (forecasting), and lower is better. Model 2 has the lowest AIC (225.85, vs 241.03 for Model 1 and 227.77 for Model 3). Remember: AIC → prediction, BIC → best fit; with both, lower wins."
+      },
+      {
+        "q": "Calculate the predicted RET for Model 3 given the assumed factor values: MRKT = 3, HML = –2, VIX = –5, SMB = 1, MOM = 3.",
+        "options": [
+          "3.732",
+          "3.992",
+          "4.555"
+        ],
+        "answer": 0,
+        "why": "Model 3: RET = −0.823 + 1.719 MRKT + 0.412 HML + 0.026 VIX + 0.553 SMB − 0.067 MOM.\n= −0.823 + (1.719)(3) + (0.412)(−2) + (0.026)(−5) + (0.553)(1) − (0.067)(3)\n= −0.823 + 5.157 − 0.824 − 0.130 + 0.553 − 0.201 = 3.732.\nB (3.992) adds the VIX term (+0.130) instead of subtracting it. C (4.555) leaves out the intercept (−0.823). Use every coefficient in the model, even insignificant ones such as MOM."
+      },
+      {
+        "q": "Calculate the joint F-statistic and determine whether SMB and MOM together contribute to explaining RET in Model 3 at a 1% significance level (use a critical value of 4.849).",
+        "options": [
+          "2.216, so SMB and MOM together do not contribute to explaining RET",
+          "8.863, so SMB and MOM together do contribute to explaining RET",
+          "9.454, so SMB and MOM together do contribute to explaining RET"
+        ],
+        "answer": 1,
+        "why": "H0: bSMB = bMOM = 0; Ha: at least one is not zero. Model 1 (without SMB and MOM) is the restricted model; Model 3 is the unrestricted model.\nF = [[(SSE restricted − SSE unrestricted) ÷ q|SSE unrestricted ÷ (n − k − 1)]], with q = 2 restrictions and n − k − 1 = 96 − 5 − 1 = 90.\nF = [[(1,087.618 − 908.647) ÷ 2|908.647 ÷ 90]] = [[89.486|10.096]] = 8.863.\nThe test is one-tailed (right side). 8.863 > 4.849, so reject H0: SMB and MOM together help explain RET (driven by SMB, since MOM alone is insignificant). A and C don't follow from the correct formula."
+      }
+    ]
+  },
+  {
+    "id": "aries-bigdata",
+    "title": "Aaliyah Schultz: Aries Investments",
+    "topic": "Quantitative Methods",
+    "reading": "Big Data Projects",
+    "body": [
+      [
+        "p",
+        "Aaliyah Schultz is a fixed-income portfolio manager at Aries Investments. Schultz supervises Ameris Steele, a junior analyst."
+      ],
+      [
+        "p",
+        "A few years ago, Schultz developed a proprietary machine learning (ML) model that aims to predict downgrades of publicly-traded firms by bond rating agencies. The model currently relies only on structured financial data collected from different sources. Schultz thinks the model’s predictive power may be improved by incorporating sentiment data derived from textual analysis of news articles and Twitter content relating to the subject companies."
+      ],
+      [
+        "p",
+        "Schultz and Steele meet to discuss plans for incorporating the sentiment data into the model. They discuss the differences in the steps between building ML models that use traditional structured data and building ML models that use textual big data. Steele tells Schultz:"
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "The second step in building text-based ML models is text preparation and wrangling, whereas the second step in building ML models using structured data is data collection."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "The fourth step in building both types of models encompasses data/text exploration."
+      ],
+      [
+        "p",
+        "Steele expresses concern about using Twitter content in the model, noting that research suggests that as much as 10%–15% of social media content is from fake accounts. Schultz tells Steele that she understands her concern but thinks the potential for model improvement outweighs the concern."
+      ],
+      [
+        "p",
+        "Steele begins building a model that combines the structured financial data and the sentiment data. She starts with cleansing and wrangling the raw structured financial data. Exhibit 1 presents a small sample of the raw dataset before cleansing: Each row represents data for a particular firm."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Sample of Raw Structured Data Before Cleansing",
+          "head": [
+            "ID",
+            "Ticker",
+            "IPO Date",
+            "Industry (NAICS)",
+            "EBIT",
+            "Interest Expense",
+            "Total Debt"
+          ],
+          "rows": [
+            [
+              "1",
+              "ABC",
+              "4/6/17",
+              "44",
+              "9.4",
+              "0.6",
+              "10.1"
+            ],
+            [
+              "2",
+              "BCD",
+              "November 15, 2004",
+              "52",
+              "5.5",
+              "0.4",
+              "6.2"
+            ],
+            [
+              "3",
+              "HIJ",
+              "26-Jun-74",
+              "54",
+              "8.9",
+              "1.2",
+              "15.8"
+            ],
+            [
+              "4",
+              "KLM",
+              "14-Mar-15",
+              "72",
+              "5.7",
+              "1.5",
+              "0.0"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "After cleansing the data, Steele then preprocesses the dataset. She creates two new variables: an “Age” variable based on the firm’s IPO date and an “Interest Coverage Ratio” variable equal to EBIT divided by interest expense. She also deletes the “IPO Date” variable from the dataset. After applying these transformations, Steele scales the financial data using normalization. She notes that over the full sample dataset, the “Interest Expense” variable ranges from a minimum of 0.2 and a maximum of 12.2, with a mean of 1.1 and a standard deviation of 0.4."
+      ],
+      [
+        "p",
+        "Steele and Schultz then discuss how to preprocess the raw text data. Steele tells Schultz that the process can be completed in the following three steps:"
+      ],
+      [
+        "h",
+        "Step 1"
+      ],
+      [
+        "p",
+        "Cleanse the raw text data."
+      ],
+      [
+        "h",
+        "Step 2"
+      ],
+      [
+        "p",
+        "Split the cleansed data into a collection of words for them to be normalized."
+      ],
+      [
+        "h",
+        "Step 3"
+      ],
+      [
+        "p",
+        "Normalize the collection of words from Step 2 and create a distinct set of tokens from the normalized words."
+      ],
+      [
+        "p",
+        "With respect to Step 1, Steele tells Schultz:"
+      ],
+      [
+        "p",
+        "“I believe I should remove all html tags, punctuations, numbers, and extra white spaces from the data before normalizing them.”"
+      ],
+      [
+        "p",
+        "After properly cleansing the raw text data, Steele completes Steps 2 and 3. She then performs exploratory data analysis. To assist in feature selection, she wants to create a visualization that shows the most informative words in the dataset based on their term frequency (TF) values. After creating and analyzing the visualization, Steele is concerned that some tokens are likely to be noise features for ML model training; therefore, she wants to remove them."
+      ],
+      [
+        "p",
+        "Steele and Schultz discuss the importance of feature selection and feature engineering in ML model training. Steele tells Schultz:"
+      ],
+      [
+        "p",
+        "“Appropriate feature selection is a key factor in minimizing model overfitting, whereas feature engineering tends to prevent model underfitting.”"
+      ],
+      [
+        "p",
+        "Once satisfied with the final set of features, Steele selects and runs a model on the training set that classifies the text as having positive sentiment (Class “1” or negative sentiment (Class “0”). She then evaluates its performance using error analysis. The resulting confusion matrix is presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Confusion Matrix",
+          "head": [
+            "Predicted ↓ / Actual →",
+            "Actual Class 1",
+            "Actual Class 0"
+          ],
+          "rows": [
+            [
+              "Predicted Class 1",
+              "TP = 182",
+              "FP = 52"
+            ],
+            [
+              "Predicted Class 0",
+              "FN = 31",
+              "TN = 96"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Steele’s statements relating to the steps in building structured data-based and text-based ML models is correct?",
+        "options": [
+          "Only Statement 1 is correct.",
+          "Only Statement 2 is correct.",
+          "Statement 1 and Statement 2 are correct."
+        ],
+        "answer": 1,
+        "why": "Structured data: 1) conceptualization of the modeling task, 2) data collection, 3) data preparation and wrangling, 4) data exploration, 5) model training.\nText data: 1) text problem formulation, 2) data (text) curation, 3) text preparation and wrangling, 4) text exploration, 5) model training.\nStatement 1 is wrong: text preparation and wrangling is the THIRD step for text models; the second is text curation (it is right that data collection is second for structured data). Statement 2 is right: step 4 is exploration for both."
+      },
+      {
+        "q": "Steele’s concern about using Twitter data in the model best relates to:",
+        "options": [
+          "volume.",
+          "velocity.",
+          "veracity."
+        ],
+        "answer": 2,
+        "why": "Veracity is about the credibility and reliability of a data source. Fake accounts (10%–15% of social media content) make Twitter data less reliable. Volume is the quantity of data and velocity is the speed at which it is created; neither is Steele's concern. (The fourth V, variety, is the range of data types and sources.)"
+      },
+      {
+        "q": "What type of error appears to be present in the IPO Date column of Exhibit 1?",
+        "options": [
+          "invalidity error.",
+          "inconsistency error.",
+          "non-uniformity error."
+        ],
+        "answer": 2,
+        "why": "Non-uniformity: the data are not in one identical format. Every IPO date is a valid date, but they are written differently (4/6/17, November 15, 2004, 26-Jun-74, 14-Mar-15). A is wrong: an invalidity error is a value outside a meaningful range (e.g. an impossible date). B is wrong: an inconsistency error is a value that conflicts with other data or with reality."
+      },
+      {
+        "q": "What type of error is most likely present in the last row of data (ID #4) in Exhibit 1?",
+        "options": [
+          "Inconsistency error",
+          "Incompleteness error",
+          "Non-uniformity error"
+        ],
+        "answer": 0,
+        "why": "Firm KLM (ID #4) shows interest expense of 1.5 but total debt of 0.0. A firm paying interest should have debt, so the two values conflict: an inconsistency error. One of them is wrong and should be checked against another data source. B is wrong: nothing is missing (0.0 is a value, not a blank). C is wrong: the row's formats match the other rows."
+      },
+      {
+        "q": "During the preprocessing of the data in Exhibit 1, what type of data transformation did Steele perform during the data preprocessing step?",
+        "options": [
+          "Extraction",
+          "Conversion",
+          "Aggregation"
+        ],
+        "answer": 0,
+        "why": "Extraction creates a new variable from existing ones: Age from the IPO date, and the interest coverage ratio from EBIT ÷ interest expense. (Deleting the IPO Date column is a separate transformation called selection.) B is wrong: conversion changes a variable's data type (e.g. text to numbers). C is wrong: aggregation combines two or more variables into one, which she did not do."
+      },
+      {
+        "q": "Based on Exhibit 1, for the firm with ID #3, Steele should compute the scaled value for the “Interest Expense” variable as:",
+        "options": [
+          "0.008.",
+          "0.083.",
+          "0.250."
+        ],
+        "answer": 1,
+        "why": "Normalization rescales a variable to [0, 1]: [[Xi − Xmin|Xmax − Xmin]]. Firm HIJ (ID #3) has interest expense of 1.2, and over the full sample the minimum is 0.2 and the maximum 12.2:\n[[1.2 − 0.2|12.2 − 0.2]] = [[1.0|12.0]] = 0.083.\nC (0.250) is standardization, [[Xi − mean|SD]] = [[1.2 − 1.1|0.4]], which she did not use. A (0.008) wrongly subtracts the mean (1.1) instead of the minimum."
+      },
+      {
+        "q": "Is Steele’s statement regarding Step 1 of the preprocessing of raw text data correct?",
+        "options": [
+          "Yes.",
+          "No, because her suggested treatment of punctuation is incorrect.",
+          "No, because her suggested treatment of extra white spaces is incorrect."
+        ],
+        "answer": 1,
+        "why": "Most punctuation can be removed, but some carries meaning (percentage signs, currency symbols, question marks). These should be replaced with annotations such as /percentSign/, /dollarSign/ and /questionMark/, not deleted. Removing html tags, numbers (or replacing them with /number/) and extra white spaces is correct, so C is wrong."
+      },
+      {
+        "q": "Steele’s Step 2 can be best described as:",
+        "options": [
+          "tokenization.",
+          "lemmatization.",
+          "standardization."
+        ],
+        "answer": 0,
+        "why": "Tokenization splits cleansed text into separate tokens (words). B is wrong: lemmatization is a normalization step that reduces words to their base form (lemma), part of Step 3. C is wrong: standardization is a scaling method for numeric data."
+      },
+      {
+        "q": "The output created in Steele’s Step 3 can be best described as a:",
+        "options": [
+          "bag-of-words.",
+          "set of n-grams.",
+          "document term matrix."
+        ],
+        "answer": 0,
+        "why": "After normalizing the tokens, the distinct set of tokens across all the texts is the bag-of-words (BOW). B is wrong: n-grams are sequences of n adjacent words, used to keep word order. C is wrong: a document term matrix is built later from the BOW (rows = documents, columns = tokens)."
+      },
+      {
+        "q": "Given her objective, the visualization that Steele should create in the exploratory data analysis step is a:",
+        "options": [
+          "scatter plot.",
+          "word cloud.",
+          "document term matrix."
+        ],
+        "answer": 1,
+        "why": "A word cloud shows the most informative words, with font size (and colour) reflecting term frequency. A is wrong: a scatter plot shows the relationship between two numeric variables. C is wrong: a document term matrix is a data structure, not a visualization."
+      },
+      {
+        "q": "To address her concern in her exploratory data analysis, Steele should focus on those tokens that have:",
+        "options": [
+          "low chi-square statistics.",
+          "low mutual information (ML) values.",
+          "very low and very high term frequency (TF) values."
+        ],
+        "answer": 2,
+        "why": "Noise features are the most frequent tokens (e.g. stop words present in every text, which cause underfitting) and the rarest tokens (present in very few texts, which cause overfitting). Vocabulary pruning removes tokens with very high and very low TF. A and B are feature-selection measures of how strongly a token is linked to a class; they don't target the frequent and rare noise tokens."
+      },
+      {
+        "q": "Is Steele’s statement regarding the relationship between feature selection/feature engineering and model fit correct?",
+        "options": [
+          "Yes.",
+          "No, because she is incorrect with respect to feature selection.",
+          "No, because she is incorrect with respect to feature engineering."
+        ],
+        "answer": 0,
+        "why": "Too many features complicate the model and lower degrees of freedom, causing overfitting, so good feature selection limits overfitting. Feature engineering creates new, better features that capture relationships the raw data miss, which helps prevent underfitting. Both halves of her statement are correct."
+      },
+      {
+        "q": "Based on Exhibit 2, the model’s precision metric is closest to:",
+        "options": [
+          "78%.",
+          "81%.",
+          "85%."
+        ],
+        "answer": 0,
+        "why": "Precision = correctly predicted positives ÷ all predicted positives = [[TP|TP + FP]] = [[182|182 + 52]] = 0.778 (78%). C (85%) is recall, [[TP|TP + FN]] = [[182|213]]. B (81%) is the F1 score."
+      },
+      {
+        "q": "Based on Exhibit 2, the model’s F1 score is closest to:",
+        "options": [
+          "77%.",
+          "81%.",
+          "85%."
+        ],
+        "answer": 1,
+        "why": "F1 is the harmonic mean of precision (P) and recall (R).\nP = [[182|182 + 52]] = 0.7778; R = [[182|182 + 31]] = 0.8545.\nF1 = [[2 × P × R|P + R]] = [[2 × 0.7778 × 0.8545|0.7778 + 0.8545]] = 0.814 (81%).\nA (77%) is accuracy and C (85%) is recall."
+      },
+      {
+        "q": "Based on Exhibit 2, the model’s accuracy metric is closest to:",
+        "options": [
+          "77%.",
+          "81%.",
+          "85%."
+        ],
+        "answer": 0,
+        "why": "Accuracy = correct predictions ÷ all predictions = [[TP + TN|TP + FP + TN + FN]] = [[182 + 96|182 + 52 + 96 + 31]] = [[278|361]] = 0.770 (77%). B (81%) is the F1 score and C (85%) is recall."
+      }
+    ]
+  },
+  {
+    "id": "jubilacion",
+    "title": "Carlos Martin: Jubilación S.L.",
+    "topic": "Quantitative Methods",
+    "reading": "Machine Learning",
+    "body": [
+      [
+        "p",
+        "Carlos Martin, a recent graduate of the financial engineering program at a well-known university, has just been hired by Jubilación S.L., a Madrid-based firm that specializes in retirement planning. He has been asked to develop a machine learning (ML) tool to help assign each client to one of the firm’s five strategic investment portfolios."
+      ],
+      [
+        "p",
+        "To build the training set with 50 defined features, 300 randomly selected working-age clients will be asked a set of open-ended questions by Lucia Fernandez, a market researcher. The resulting answers will include demographic data, information about risk preferences, and other retirement details. A Jubilación analyst will assign each individual in the sample to one of the five portfolios. Martin initially plans to perform machine learning analysis and use the model to assign new clients to the appropriate portfolio based on their responses to the questions."
+      ],
+      [
+        "p",
+        "Fernandez brings a sample set of responses back to Martin for further discussion. She tells him that in the interview sessions, many of the responses she has obtained are complex and subjective. For example, most individuals she interviews are not clear about the concept of risk tolerance and provide comparisons or abstract concepts rather than specific numbers or levels. In some cases, their fear of loss seems to increase at an increasing rate when some scenarios are presented. Martin decides he will have to review these risk tolerance responses and use a model that groups them into risk categories."
+      ],
+      [
+        "p",
+        "Fernandez delivers the completed set of interview data to Martin. After some preliminary analysis, Martin decides that he is ready to develop the algorithm the chatbot will use to advise clients as to which of its five strategic investment portfolios is best for meeting their retirement goals. Martin notes that the final dataset has 50 features, and he is concerned that some of them are likely to be correlated, which may lead to model misstatement. He considers three methods to address this issue:"
+      ],
+      [
+        "p",
+        "Method 1: Combine variables using the ensemble model."
+      ],
+      [
+        "p",
+        "Method 2: Use the bootstrap aggregating (bagging) method."
+      ],
+      [
+        "p",
+        "Method 3: Employ principal components analysis."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Martin’s initial planned machine learning analysis is best described as a form of:",
+        "options": [
+          "categorical learning.",
+          "supervised learning.",
+          "unsupervised learning."
+        ],
+        "answer": 1,
+        "why": "An analyst labels each of the 300 training clients with the right portfolio, and the model learns to map the inputs (interview answers) to that known output for new clients. Learning from labeled data with a target is supervised learning. A is wrong: 'categorical learning' is not an ML method. C is wrong: unsupervised learning has no labels or target; it only finds structure in the data."
+      },
+      {
+        "q": "If Martin were to use a k–means neighbor model to analyze the client responses, the value for k would be closest to:",
+        "options": [
+          "5.",
+          "50.",
+          "300."
+        ],
+        "answer": 0,
+        "why": "k is the number of groups the clients are sorted into: the firm's five strategic portfolios, so k = 5. B (50) is the number of features per client and C (300) is the number of clients interviewed (observations), not the number of groups."
+      },
+      {
+        "q": "The most appropriate model for Martin to use in analyzing the responses to the risk tolerance questions is a:",
+        "options": [
+          "neural network (NN) model.",
+          "penalized regression model.",
+          "least absolute shrinkage and selection operator (LASSO) model."
+        ],
+        "answer": 0,
+        "why": "The risk-tolerance answers are complex and non-linear (fear of loss rising at an increasing rate). Neural networks are built for non-linear relationships and complex interactions. B and C are wrong: penalized regression and LASSO (a type of penalized regression) assume linear relationships and are mainly used for regression, not for grouping clients into categories."
+      },
+      {
+        "q": "Which of the methods Martin considers to address potential feature correlation is the most suitable?",
+        "options": [
+          "Method 1",
+          "Method 2",
+          "Method 3"
+        ],
+        "answer": 2,
+        "why": "Principal components analysis (Method 3) turns many correlated features into a few uncorrelated composite variables, reducing dimensions. Method 1 is wrong: ensemble learning combines the predictions of several models, not features. Method 2 is wrong: bagging creates many new training sets by sampling with replacement; the number of features doesn't change."
+      }
+    ]
+  },
+  {
+    "id": "alef",
+    "title": "Alef Associates",
+    "topic": "Quantitative Methods",
+    "reading": "Machine Learning",
+    "body": [
+      [
+        "p",
+        "Alef Associates manages a long-only fund specializing in global smallcap equities. Since its founding a decade ago, Alef maintains a portfolio of 100 stocks (out of an eligible universe of about 10,000 stocks). Some of these holdings are the result of screening the universe for attractive stocks based on several ratios that use readily available market and accounting data; others are the result of investment ideas generated by Alef’s professional staff of five securities analysts and two portfolio managers."
+      ],
+      [
+        "p",
+        "Although Alef’s investment performance has been good, its Chief Investment Officer, Paul Moresanu, is contemplating a change in the investment process aimed at achieving even better returns. After attending multiple workshops and being approached by data vendors, Moresanu feels that data science should play a role in the way Alef selects its investments. He has also noticed that much of Alef’s past outperformance is due to stocks that became takeover targets. After some research and reflection, Moresanu writes the following email to the Alef’s CEO."
+      ],
+      [
+        "h",
+        "Exhibit 1"
+      ],
+      [
+        "p",
+        "Subject: Investment Process Reorganization"
+      ],
+      [
+        "p",
+        "I have been thinking about modernizing the way we select stock investments. Given that our past success has put Alef Associates in an excellent financial position, now seems to be a good time to invest in our future. What I propose is that we continue managing a portfolio of 100 global small-cap stocks but restructure our process to benefit from machine learning (ML). Importantly, the new process will still allow a role for human insight, for example, in providing domain knowledge. In addition, I think we should make a special effort to identify companies that are likely to be acquired. Specifically, I suggest following the four steps which would be repeated every quarter."
+      ],
+      [
+        "p",
+        "Step 1: We apply ML techniques to a model including fundamental and technical variables (features) to predict next quarter’s return for each of the 100 stocks currently in our portfolio. Then, the 20 stocks with the lowest estimated return are identified for replacement."
+      ],
+      [
+        "p",
+        "Step 2: We utilize ML techniques to divide our investable universe of about 10,000 stocks into 20 different groups, based on a wide variety of the most relevant financial and non-financial characteristics. The idea is to prevent unintended portfolio concentration by selecting stocks from each of these distinct groups."
+      ],
+      [
+        "p",
+        "Step 3: For each of the 20 different groups, we use labeled data to train a model that will predict the five stocks (in any given group) that are most likely to become acquisition targets in the next one year."
+      ],
+      [
+        "p",
+        "Step 4: Our five experienced securities analysts are each assigned four of the groups, and then each analyst selects their one best stock pick from each of their assigned groups. These 20 “high-conviction” stocks will be added to our portfolio (in replacement of the 20 relatively underperforming stocks to be sold in Step 1)."
+      ],
+      [
+        "p",
+        "A couple of additional comments related to the above:"
+      ],
+      [
+        "p",
+        "Comment 1: The ML algorithms will require large amounts of data. We would first need to explore using free or inexpensive historical datasets and then evaluate their usefulness for the ML-based stock selection processes before deciding on using data that requires subscription."
+      ],
+      [
+        "p",
+        "Comment 2: As time passes, we expect to find additional ways to apply ML techniques to refine Alef’s investment processes."
+      ],
+      [
+        "p",
+        "What do you think?"
+      ],
+      [
+        "p",
+        "Paul Moresanu"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "The machine learning techniques appropriate for executing Step 1 are most likely to be based on:",
+        "options": [
+          "regression",
+          "classification",
+          "clustering"
+        ],
+        "answer": 0,
+        "why": "Step 1 predicts next quarter's return, a continuous target, so it needs supervised learning with a regression model. B is wrong: classification predicts categorical or ordinal targets. C is wrong: clustering is unsupervised and has no target variable at all."
+      },
+      {
+        "q": "Assuming regularization is utilized in the machine learning technique used for executing Step 1, which of the following ML models would be least appropriate:",
+        "options": [
+          "Regression tree with pruning.",
+          "LASSO with lambda (λ) equal to 0.",
+          "LASSO with lambda (λ) between 0.5 and 1."
+        ],
+        "answer": 1,
+        "why": "In LASSO, λ sets the size of the penalty for each extra feature. With λ = 0 the penalty disappears, so there is no regularization at all and LASSO becomes plain OLS. A is wrong: pruning is a form of regularization for regression trees (it removes branches that add little). C is wrong: a λ between 0.5 and 1 is a meaningful penalty, so features must earn their place."
+      },
+      {
+        "q": "Which of the following machine learning techniques is most appropriate for executing Step 2:",
+        "options": [
+          "K-Means Clustering",
+          "Principal Components Analysis (PCA)",
+          "Classification and Regression Trees (CART)"
+        ],
+        "answer": 0,
+        "why": "Step 2 splits 10,000 unlabeled stocks into 20 groups by similarity: unsupervised clustering, and k-means partitions data into a fixed number k of non-overlapping clusters. B is wrong: PCA reduces many correlated features to a few uncorrelated ones; it does not group observations. C is wrong: CART is supervised and needs labeled data."
+      },
+      {
+        "q": "The hyperparameter in the ML model to be used for accomplishing Step 2 is:",
+        "options": [
+          "100, the number of small-cap stocks in Alef’s portfolio.",
+          "10,000, the eligible universe of small-cap stocks in which Alef can potentially invest.",
+          "20, the number of different groups (i.e. clusters) into which the eligible universe of small-cap stocks will be divided."
+        ],
+        "answer": 2,
+        "why": "A hyperparameter is set by the researcher before learning starts. In k-means it is k, the number of clusters: 20. A (100 stocks in the portfolio) and B (10,000 stocks in the universe) are just sizes of datasets, not settings of the model."
+      },
+      {
+        "q": "The target variable for the labelled training data to be used in Step 3 is most likely which one of the following?",
+        "options": [
+          "A continuous target variable.",
+          "A categorical target variable.",
+          "An ordinal target variable."
+        ],
+        "answer": 1,
+        "why": "Each stock is labeled as either an acquisition target (1) or not (0): two categories, so the target is categorical. A is wrong: it is not a continuous number like a return. C is wrong: ordinal targets are ranked categories (1st, 2nd, 3rd); 'target / not target' has no ranking."
+      },
+      {
+        "q": "Comparing two ML models that could be used to accomplish Step 3, which statement(s) best describe(s) the advantages of using Classification and Regression Trees (CART) instead of K-Nearest Neighbor (KNN)?\nStatement 1: For CART there is no requirement to specify an initial hyperparameter (like K).\nStatement 2: For CART there is no requirement to specify a similarity (or distance) measure.\nStatement 3: For CART the output provides a visual explanation for the prediction.",
+        "options": [
+          "Statement 1 only.",
+          "Statement 3 only.",
+          "Statements 1, 2, and 3."
+        ],
+        "answer": 2,
+        "why": "All three are advantages of CART over KNN. KNN needs K chosen in advance and a distance measure to define 'nearest'; CART needs neither. CART's tree also shows visually which features and cut-off values led to each prediction, which KNN does not."
+      },
+      {
+        "q": "Assuming a Classification and Regression Tree (CART) model is used to accomplish Step 3, which of the following is most likely to result in model overfitting?",
+        "options": [
+          "Using the k-fold cross validation method.",
+          "Including an overfitting penalty (i.e., regularization term).",
+          "Using a fitting curve to select a model with low bias error and high variance error."
+        ],
+        "answer": 2,
+        "why": "Low bias error with high variance error is the definition of an overfit model: it fits the training data closely but does badly out of sample. A and B are the two standard ways to REDUCE overfitting: k-fold cross-validation estimates out-of-sample error directly, and a regularization penalty stops the model becoming too complex."
+      },
+      {
+        "q": "Assuming a Classification and Regression Tree (CART) model is initially used to accomplish Step 3, as a further step which of the following techniques is most likely to result in more accurate predictions?",
+        "options": [
+          "Discarding CART and using the predictions of a Support Vector Machine (SVM) model instead.",
+          "Discarding CART and using the predictions of a K-Nearest Neighbor (KNN) model instead.",
+          "Combining the predictions of the CART model with the predictions of other models – such as logistic regression, SVM, and KNN – via ensemble learning."
+        ],
+        "answer": 2,
+        "why": "Ensemble learning combines the predictions of several models. Their individual errors partly cancel, so the combined prediction is usually more accurate and more stable than the best single model. A and B just swap one single model for another, which still has its own error rate and noisy predictions."
+      },
+      {
+        "q": "Regarding Comment #2, Moresanu has been thinking about the applications of neural networks (NNs) and deep learning (DL) to investment management. Which statement(s) best describe(s) the tasks for which NNs and DL are well-suited?\nStatement 1: NNs and DL are well-suited for image and speech recognition, and natural language processing.\nStatement 2: NNs and DL are well-suited for developing single variable ordinary least squares regression models.\nStatement 3: NNs and DL are well-suited for modelling non-linearities and complex interactions among many features.",
+        "options": [
+          "Statement 2 only.",
+          "Statements 1 and 3.",
+          "Statements 1, 2 and 3."
+        ],
+        "answer": 1,
+        "why": "NNs and deep learning suit highly complex tasks with non-linearities and many interacting features: image, face and speech recognition and natural language processing (Statements 1 and 3). Statement 2 is wrong: a single-variable OLS regression is a simple linear model and needs no neural network, which rules out A and C."
+      },
+      {
+        "q": "Regarding neural networks (NNs) that Alef might potentially implement, which of the following statements is least accurate?",
+        "options": [
+          "NNs must have at least 10 hidden layers to be considered deep learning nets.",
+          "The activation function in a node operates like a light dimmer switch since it decreases or increases the strength of the total net input.",
+          "The summation operator receives input values, multiplies each by a weight, sums up the weighted values into the total net input, and passes it to the activation function."
+        ],
+        "answer": 0,
+        "why": "Deep learning nets have many hidden layers: at least 2, and often more than 20. There is no 10-layer rule, so A is inaccurate. B and C are accurate: the summation operator weights and adds the inputs into the total net input, and the activation function then scales its strength up or down like a dimmer switch."
+      }
+    ]
+  },
+  {
+    "id": "reg-diagnostics",
+    "title": "Portfolio Return Drivers: Regression Diagnostics",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "You are a junior analyst at an asset management firm. Your supervisor asks you to analyze the return drivers for one of the firm’s portfolios. She asks you to construct a regression model of the portfolio’s monthly excess returns (RET) against three factors: the market excess return (MRKT), a value factor (HML), and the monthly percentage change in a volatility index (VIX)."
+      ],
+      [
+        "p",
+        "You collect the data and run the regression, and the resulting model is"
+      ],
+      [
+        "p",
+        "YRET = –0.999 + 1.817XMRKT + 0.489XHML + 0.037XVIX."
+      ],
+      [
+        "p",
+        "You then create some diagnostic charts to help determine the model fit."
+      ],
+      [
+        "h",
+        "Chart 1: RET vs. VIX"
+      ],
+      [
+        "p",
+        "Percent change in volatility factor (VIX) from negative 60 to 160 on x-axis and portfolio excess returns (RET) from negative 40 to 30 on y-axis. A line falls from (negative 40, 10), (40, negative 5), to (120, negative 15). Dots surround the origin."
+      ],
+      [
+        "h",
+        "Chart 2: RET vs. MRKT"
+      ],
+      [
+        "p",
+        "A scatterplot for market excess returns (MRKT) versus portfolio excess returns (RET). A rising line intersects points (negative 11, negative 20), (0,0) and (10, 15). Dots are scattered on and around the line between 0 to 5 for market excess returns."
+      ],
+      [
+        "h",
+        "Chart 3: HML vs. MRKT"
+      ],
+      [
+        "p",
+        "A scatterplot for market excess returns (MRKT) versus HML values. A flatter line intersects points (negative 5, negative 3), (0,0) and (10, 1). Dots are scattered on and around the line between 0 to 5 for HML values."
+      ],
+      [
+        "h",
+        "Chart 4: RET residuals vs. RET predicted values"
+      ],
+      [
+        "p",
+        "A scatterplot for RET predicted values on x-axis versus RET residuals on y-axis. A horizontal dotted line overlaps x-axis at (-30, 0), (0, 0), (10, 0) and (20, 0). Dots are scattered on and around the line between -5 and 10 for predicted values."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Determine the type of regression model you should use.",
+        "options": [
+          "Logistic regression",
+          "Simple linear regression",
+          "Multiple linear regression"
+        ],
+        "answer": 2,
+        "why": "The dependent variable (monthly excess return) is continuous and there are three explanatory variables, so it is a multiple linear regression. A is wrong: logistic regression is for a discrete (e.g. yes/no) dependent variable. B is wrong: simple linear regression has only one explanatory variable."
+      },
+      {
+        "q": "Determine which one of the following statements about the coefficient of the volatility factor (VIX) is true.",
+        "options": [
+          "A 1.0% increase in XVIX would result in a –0.962% decrease in YRET.",
+          "A 0.037% increase in XVIX would result in a 1.0% increase in YRET.",
+          "A 1.0% increase in XVIX, holding all the other independent variables constant, would result in a 0.037% increase in YRET."
+        ],
+        "answer": 2,
+        "why": "A slope coefficient in a multiple regression is a partial effect: a one-unit (1%) change in VIX, holding MRKT and HML constant, changes RET by the coefficient, 0.037%. A is wrong: −0.962 adds the intercept (−0.999 + 0.037), and the intercept is not part of the slope. B is wrong: it reverses the direction of the relationship."
+      },
+      {
+        "q": "Identify the regression assumption that may be violated based on Chart 1, RET vs. VIX.",
+        "options": [
+          "Independence of errors",
+          "Independence of independent variables",
+          "Linearity between dependent variable and explanatory variables"
+        ],
+        "answer": 2,
+        "why": "Chart 1 plots RET against VIX, and the points follow a curve (quadratic) more than the straight fitted line. Linear regression assumes a linear relationship between the dependent and independent variables. A is wrong: independence of errors is checked with residuals over time, not a plot of RET vs one X. B is wrong: that compares two independent variables with each other, like Chart 3."
+      },
+      {
+        "q": "Identify which chart, among Charts 2, 3, and 4, is most likely to be used to assess homoskedasticity.",
+        "options": [
+          "Chart 2",
+          "Chart 3",
+          "Chart 4"
+        ],
+        "answer": 2,
+        "why": "Homoskedasticity means the residuals have the same variance for every observation. Chart 4 plots the residuals against the predicted values, so you can see whether the spread of residuals stays constant or forms clusters (a sign of heteroskedasticity). Chart 2 (RET vs MRKT) checks linearity with one variable; Chart 3 (HML vs MRKT) checks whether two independent variables are related."
+      },
+      {
+        "q": "Identify which chart, among Charts 2, 3, and 4, is most likely to be used to assess independence of independent variables.",
+        "options": [
+          "Chart 2",
+          "Chart 3",
+          "Chart 4"
+        ],
+        "answer": 1,
+        "why": "Chart 3 plots two independent variables against each other (HML vs MRKT). A clear relationship between them would point to multicollinearity, breaking the 'independent variables are independent' assumption. Chart 2 plots the dependent variable against MRKT; Chart 4 plots residuals for homoskedasticity."
+      }
+    ]
+  },
+  {
+    "id": "cpsr",
+    "title": "Andrew Omandi: CPSR Partners",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "Andrew Omandi works as a senior analyst at investment firm CPSR Partners. He and junior analysts, Emmanuel Katangole, Takasongo Kasongo and Peter Mensah, have been tasked with investigating the use of multi factor models to help explain portfolio returns. After conducting some research, they identify a three-factor model described below, and are meeting to finalize their presentation to the firm's investment committee."
+      ],
+      [
+        "p",
+        "Rit − Rft = interceptit + BM(RMt − Rft) + BSMB(SMBt) + BHML(HMLt) + eit"
+      ],
+      [
+        "p",
+        "Where:"
+      ],
+      [
+        "p",
+        "Rit = portfolio return\nRft = risk free rate, one-month T-bill return\nBM = market regression coefficient\nRMt = return on market portfolio\nRMt − Rft = market risk premium\nBSMB = SMB regression coefficient\nSMBt = return difference between small cap stocks and large cap stocks (size premium)\nBHML = HML regression coefficient\nHMLt = return difference between high book to market stocks and low book to market stocks (value premium)\neit = error term"
+      ],
+      [
+        "p",
+        "Omandi states: \"This model indicates that the main factors driving expected portfolio excess returns are premiums for market risk (RMt − Rft), size (SMBt) and value (HMLt). I also believe that there is a positive relationship between portfolio excess return and each of the independent variables, market risk, size and value premiums. Based on this we can formulate the following hypotheses:"
+      ],
+      [
+        "p",
+        "Hypothesis 1: Ho: BM = 0; Ha: BM ≠ 0"
+      ],
+      [
+        "p",
+        "Hypothesis 2: Ho: BSMB ≤ 0; Ha: BSMB > 0"
+      ],
+      [
+        "p",
+        "Hypothesis 3: Ho: BHML > 0; Ha: BHML ≤ 0\""
+      ],
+      [
+        "p",
+        "The analysts test the model and the regression results of excess portfolio returns on Mkt-Rf, SMB and HML are presented below in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Regression Statistics",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Multiple R2",
+              "0.6235"
+            ],
+            [
+              "Standard error",
+              "0.0774"
+            ],
+            [
+              "Observations",
+              "60"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): ANOVA",
+          "head": [
+            "",
+            "Degrees of Freedom (df)",
+            "Sum of Squares (SS)",
+            "Mean Squares (MSS)",
+            "F",
+            "Significance F"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "3",
+              "0.2138",
+              "0.0713",
+              "11.871",
+              "0"
+            ],
+            [
+              "Residual",
+              "56",
+              "0.3362",
+              "0.0060",
+              "---",
+              "---"
+            ],
+            [
+              "Total",
+              "59",
+              "0.55",
+              "---",
+              "---",
+              "---"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): Coefficients",
+          "head": [
+            "",
+            "Coefficient",
+            "Standard Error",
+            "t-Statistic",
+            "p-value"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "0.09219",
+              "0.0109",
+              "8.4577",
+              "<0.00001"
+            ],
+            [
+              "Mkt-Rf",
+              "0.01348",
+              "0.00248",
+              "5.4354",
+              "<0.00001"
+            ],
+            [
+              "SMB",
+              "0.0077",
+              "0.004534",
+              "1.6982",
+              "0.04829"
+            ],
+            [
+              "HML",
+              "0.0043",
+              "0.00323",
+              "1.3312",
+              "0.09445"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Kasango states that it is important to emphasize that the multiple linear regression model makes a number of assumptions, three of which are:"
+      ],
+      [
+        "p",
+        "Assumption 1: The regression residuals are normally distributed"
+      ],
+      [
+        "p",
+        "Assumption 2: The variance of the regression residuals is the same for all observations."
+      ],
+      [
+        "p",
+        "Assumption 3: The regression residuals are correlated across observations."
+      ],
+      [
+        "p",
+        "Katangole asks how one can assess the goodness of fit of the estimated regression to the data. Mensah responds, \"One measure, the R2 can be defined as the ratio of the variation in the dependent variable explained by the independent variables to the total variation of the dependent variable. However, e R2 stays the same or increases when independent variables are added to the regression. A better measure is the adjusted R2 which does not automatically increase when independent variables are added to the regression.\""
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Kasango is least likely correct with regard to which assumption?",
+        "options": [
+          "Assumption 1",
+          "Assumption 2",
+          "Assumption 3"
+        ],
+        "answer": 2,
+        "why": "Multiple regression assumes the residuals are UNcorrelated across observations (independence of errors), so Assumption 3 is wrong. Assumption 1 (residuals normally distributed) and Assumption 2 (constant variance of residuals, i.e. homoskedasticity) are both correct. The other assumptions are linearity, independence of the independent variables (no exact linear relation among them), and a zero expected error term."
+      }
+    ]
+  },
+  {
+    "id": "markham",
+    "title": "Matthew Markham: Regression Training",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "Matthew Markham is a recently hired analyst at an equity research firm. Markham joins several other new employees for a training session hosted by Alexandra Garcia, a senior analyst, on the firm's approach to utilizing multiple regression in their portfolio and investment analysis."
+      ],
+      [
+        "p",
+        "To open the training session, Garcia explains the relationship between the dependent and independent variables in a regression model. She explains the multiple linear regression model and asks the analysts to demonstrate their understanding by confirming the assumptions for the classical model. The analysts provide the following responses about the assumptions:"
+      ],
+      [
+        "p",
+        "Assumption 1: The regression residuals are normally distributed."
+      ],
+      [
+        "p",
+        "Assumption 2: The independent variables are not random."
+      ],
+      [
+        "p",
+        "Assumption 3: The regression residuals are correlated across observations."
+      ],
+      [
+        "p",
+        "Garcia shares an example of a regression model completed at the company, which was based on 650 observations and 11 independent variables, and advises that a specific variable with a coefficient of 1.25 has a t-statistic of 2.39. She shares that the critical values for a two-sided t-test is 1.96 at the 0.05 significance level. Based on this information, she asks Markham to confirm if they should reject or fail to reject the null hypothesis."
+      ],
+      [
+        "p",
+        "In completing their review of the previous model, Garcia cautions the analysts to be aware of the various types of uncertainty that can arise when predicting the dependent variable using a linear regression model. She identifies two errors that result in the forecast of the dependent variable having a standard error larger than the standard error of the regression:"
+      ],
+      [
+        "p",
+        "Error 1: Model error"
+      ],
+      [
+        "p",
+        "Error 2: Sampling error"
+      ],
+      [
+        "p",
+        "Garcia advises that the firm prefers to use the F-test to evaluate the overall significance of a multiple regression model and asks Markham to calculate the F-statistic for a recent model that is summarized in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1",
+          "head": [
+            "ANOVA",
+            "Degrees of freedom",
+            "Sum of Squares",
+            "Mean squares"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "2",
+              "1,924.01",
+              "962.01"
+            ],
+            [
+              "Residual",
+              "122",
+              "1,683.87",
+              "13.80"
+            ],
+            [
+              "Total",
+              "124",
+              "3,607.88",
+              "--"
+            ],
+            [
+              "Residual standard error",
+              "--",
+              "--",
+              "0.798"
+            ],
+            [
+              "Multiple R2",
+              "--",
+              "--",
+              "0.815"
+            ],
+            [
+              "Observations",
+              "--",
+              "--",
+              "125"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Regarding the classical normal multiple linear regression model, which of the following assumptions provided by the analysts is incorrect?",
+        "options": [
+          "Assumption 1",
+          "Assumption 2",
+          "Assumption 3"
+        ],
+        "answer": 2,
+        "why": "The classical model assumes the error term is UNcorrelated across observations, so Assumption 3 is wrong. Assumption 1 is correct: the residuals are normally distributed. Assumption 2 is correct in the classical model: the independent variables are not random (they are fixed and known)."
+      },
+      {
+        "q": "In the multiple regression equation Yi = 2.710 + 0.828 X1i + 0.182 X2i + εi (i = 1, ..., n), for a one-unit change in X1, the change in Y is closest to:",
+        "options": [
+          "0.828.",
+          "3.538.",
+          "3.720."
+        ],
+        "answer": 0,
+        "why": "A partial slope coefficient is the change in Y for a one-unit change in that X, holding the other X's constant: b1 = 0.828. B (3.538) wrongly adds the intercept (2.710 + 0.828). C (3.720) adds the intercept and both slopes (2.710 + 0.828 + 0.182). The intercept never enters a change in Y."
+      },
+      {
+        "q": "Which of the following is an assumption of multiple linear regression?",
+        "options": [
+          "The regression residuals are normally distributed",
+          "The variance of the independent variables is the same for all observations",
+          "There is a linear relationship between two or more of the independent variables"
+        ],
+        "answer": 0,
+        "why": "Normality: the residuals are normally distributed. B is wrong: homoskedasticity is about the variance of the RESIDUALS being constant, not the independent variables. C is wrong: linearity is between the dependent variable and the independent variables; the independent variables should have NO exact linear relationship with each other (otherwise multicollinearity)."
+      }
+    ]
   }
 ];
 
