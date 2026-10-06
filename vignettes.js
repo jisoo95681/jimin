@@ -4880,6 +4880,354 @@ const VIGNETTES = [
         "why": "The final output is a Probability of Default from 0% to 100%, a continuous value, and there is a known target (Default_Status), so a supervised model that can handle regression is needed. Random forests, built from many decision trees, can do this. A is wrong: the k-NN model here classifies loans into categories. C is wrong: a support vector machine is a classifier for categorical targets, giving a class, not a probability."
       }
     ]
+  },
+  {
+    "id": "misspec",
+    "title": "Portfolio Return Drivers: Model Diagnostics",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "You are a junior analyst at an asset management firm. Your supervisor asks you to analyze the return drivers for one of the firm’s portfolios. She asks you to construct three regression models of the portfolio’s monthly excess returns (RET), starting with the following factors: the market excess return (MRKT), a value factor (HML), and the monthly percentage change in a volatility index (VIX). Next you add a size factor (SMB), and finally you add a momentum factor (MOM). Your three models are as follows:"
+      ],
+      [
+        "p",
+        "Model 1: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + εi."
+      ],
+      [
+        "p",
+        "Model 2: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + bSMB SMBi + εi."
+      ],
+      [
+        "p",
+        "Model 3: RETi = b0 + bMRKT MRKTi + bHML HMLi + bVIX VIXi + bSMB SMBi + bMOM MOMi + εi."
+      ],
+      [
+        "p",
+        "Your supervisor is concerned about conditional heteroskedasticity in Model 3 and asks you to perform the Breusch–Pagan (BP) test. At a 5% confidence level, the BP critical value is 11.07. You run the regression for the BP test; the results are shown in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Testing for Conditional Heteroskedasticity — Regression Statistics",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Multiple R",
+              "0.25517"
+            ],
+            [
+              "R-Squared",
+              "0.06511"
+            ],
+            [
+              "Adjusted R-Squared",
+              "0.01317"
+            ],
+            [
+              "Standard Error",
+              "18.22568"
+            ],
+            [
+              "Observations",
+              "96"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Now the chief investment officer (CIO) joins the meeting and asks you to analyze two regression models (A and B) for the portfolio he manages. He gives you the test results for each of the models, shown in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Breusch–Godfrey and Durbin-Watson Test Results",
+          "head": [
+            "",
+            "Test Type",
+            "Test Statistic",
+            "Critical Value",
+            "Independent Variable Is Lagged Value of Dependent Variable"
+          ],
+          "rows": [
+            [
+              "Model A",
+              "Breusch–Godfrey",
+              "12.124",
+              "3.927",
+              "Yes"
+            ],
+            [
+              "Model B",
+              "Durbin–Watson",
+              "3.088",
+              "2.387",
+              "No"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The CIO also asks you to test a factor model for multicollinearity among its four explanatory variables. You calculate the variance inflation factor (VIF) for each of the four factors; the results are shown in Exhibit 3."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Multicollinearity Test Results",
+          "head": [
+            "Variable",
+            "R2",
+            "VIF"
+          ],
+          "rows": [
+            [
+              "X1",
+              "0.748",
+              "3.968"
+            ],
+            [
+              "X2",
+              "0.451",
+              "1.820"
+            ],
+            [
+              "X3",
+              "0.942",
+              "17.257"
+            ],
+            [
+              "X4",
+              "0.926",
+              "13.434"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Calculate the BP test statistic using the data in Exhibit 1 and determine whether there is evidence of heteroskedasticity.",
+        "options": [
+          "1.264, so there is no evidence of heteroskedasticity",
+          "6.251, so there is no evidence of heteroskedasticity",
+          "81.792, so there is evidence of heteroskedasticity"
+        ],
+        "answer": 1,
+        "why": "The BP test regresses the squared residuals of Model 3 on its independent variables. Test statistic = n × R² of that BP regression = 96 × 0.06511 = 6.251 (chi-square, one-tailed). 6.251 < 11.07, so we cannot reject the null of no conditional heteroskedasticity.\nA (1.264) wrongly uses the adjusted R² (96 × 0.01317). C (81.792) uses Model 3's own R² (96 × 0.852) instead of the R² from the BP regression."
+      },
+      {
+        "q": "Identify the type of error and its impacts on regression Model A indicated by the data in Exhibit 2.",
+        "options": [
+          "Serial correlation, invalid coefficient estimates, and deflated standard errors.",
+          "Heteroskedasticity, valid coefficient estimates, and deflated standard errors.",
+          "Serial correlation, valid coefficient estimates, and inflated standard errors."
+        ],
+        "answer": 0,
+        "why": "The Breusch–Godfrey test checks for serial correlation. For Model A the BG statistic (12.124) is above the critical value (3.927), so serial correlation is present. Because Model A uses a lagged value of the dependent variable as an independent variable, the coefficient estimates are INVALID (inconsistent), and the standard errors are deflated, so t-statistics are inflated.\nB is wrong: BG tests serial correlation, not heteroskedasticity. C is wrong: with a lagged dependent variable the coefficients are not valid, and the standard errors are understated, not inflated. (Without a lagged dependent variable, positive serial correlation leaves the coefficients consistent but still deflates the standard errors.)"
+      },
+      {
+        "q": "Determine using Exhibit 3 which one of the following statements is most likely to be correct. Multicollinearity issues exist for variables:",
+        "options": [
+          "X1 and X2.",
+          "X2 and X3.",
+          "X3 and X4."
+        ],
+        "answer": 2,
+        "why": "VIF = [[1|1 − R²]], where R² comes from regressing that variable on the other independent variables. A VIF above 5 calls for investigation and above 10 signals serious multicollinearity. X3 (17.257) and X4 (13.434) are both above 10. X1 (3.968) and X2 (1.820) are below 5, so A and B are wrong."
+      },
+      {
+        "q": "Identify the correct answer related to the following statement.\nPossible solutions for addressing the multicollinearity issues identified in Exhibit 3 include:\n1. excluding one or more of the regression variables.\n2. using a different proxy for one of the variables.\n3. increasing the sample size.",
+        "options": [
+          "Only Solution 1 is correct.",
+          "Only Solution 2 is correct.",
+          "Solutions 1, 2, and 3 are each correct."
+        ],
+        "answer": 2,
+        "why": "All three are standard fixes for multicollinearity: drop one or more of the correlated variables, replace one with a different proxy that is less correlated with the others, or use a larger sample (more data lowers the standard errors that multicollinearity inflates)."
+      }
+    ]
+  },
+  {
+    "id": "elite-rivera",
+    "title": "Alwyn Rivera: Elite Investments",
+    "topic": "Quantitative Methods",
+    "reading": "Multiple Regression",
+    "body": [
+      [
+        "p",
+        "Alwyn Rivera is a portfolio manager at Elite Investments (EI) based in the US. Rivera has a shortlist of 50 US public firms and wants to better understand the factors that may explain the cross-sectional variation in these stocks' returns. Based on the finance literature, Rivera believes that firm size and book-to-market ratio are important factors that need to be included in his model. He also thinks that being included in the Dow Jones Industrial Average Index (DJIA) can help a firm get more media attention and potentially attract more investors, which in turn may affect a stock's return."
+      ],
+      [
+        "p",
+        "To test his theory, Rivera collects the annual returns (r) of these 50 stocks in the year that just ended, as well as their market capitalizations (Size, in billions of dollars) and book-to-market ratios (BMRatio) at the end of the previous year. He also creates a dummy variable (Dow) that is coded 1 if a stock is included in the DJIA and 0 otherwise, and then runs the following regression:"
+      ],
+      [
+        "p",
+        "ri = b0 + b1 lnSizei + b2 BMRatioi + b3 Dowi + εi"
+      ],
+      [
+        "p",
+        "where lnSizei is the natural log of the market capitalization of company i in billions of dollars and Dowi is the dummy variable. The output from the regression model is shown in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1",
+          "head": [
+            "",
+            "Coefficient",
+            "t-statistic",
+            "p-value"
+          ],
+          "rows": [
+            [
+              "Intercept",
+              "-0.6483",
+              "-3.8773",
+              "0.0003"
+            ],
+            [
+              "Size",
+              "0.1777",
+              "5.1125",
+              "<0.0001"
+            ],
+            [
+              "BMRatio",
+              "0.0433",
+              "2.9346",
+              "0.0052"
+            ],
+            [
+              "InDow",
+              "-0.1641",
+              "-1.8362",
+              "0.0728"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued)",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "R2",
+              "0.3700"
+            ],
+            [
+              "Adjusted R2",
+              "0.3289"
+            ],
+            [
+              "Standard Error",
+              "0.2827"
+            ],
+            [
+              "Observations",
+              "50"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): ANOVA",
+          "head": [
+            "",
+            "Degrees of freedom",
+            "Sum of squares",
+            "Mean squares",
+            "F-statistic",
+            "Significance F"
+          ],
+          "rows": [
+            [
+              "Regression",
+              "3",
+              "2.1593",
+              "0.7198",
+              "9.006",
+              "<0.0001"
+            ],
+            [
+              "Residual",
+              "46",
+              "3.6766",
+              "0.0799",
+              "",
+              ""
+            ],
+            [
+              "Total",
+              "49",
+              "5.8359",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Rivera shows his model and results to a summer intern, and asks whether he should use the reported R2 or adjusted R2 to measure the goodness of fit of his model. The intern replies, \"Adjusted R2 would be more appropriate in this case because the model has more than one independent variable. Adjusted R2 is adjusted for degrees of freedom and nondecreasing in the number of independent variables.\""
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on the results in Exhibit 1, which of the following interpretations regarding the coefficient of the variable BMRatio is most accurate?",
+        "options": [
+          "A stock's annual return is expected to increase by 1% for each 0.043% increase in its book-to-market ratio.",
+          "Holding MCap and InDow variables constant, a stock's annual return is expected to increase by 0.043% for each 1% increase in its book-to-market ratio.",
+          "Assuming MCap and InDow variables are both zero, a stock's annual return is expected to increase by 0.043% for each 1% increase in its book-to-market ratio."
+        ],
+        "answer": 1,
+        "why": "A slope coefficient in multiple regression is a partial effect: the change in the dependent variable for a one-unit change in that variable, holding all the other independent variables constant. So 0.043 is the expected rise in return per unit rise in BMRatio, with size and DJIA membership held constant. A reverses the relationship. C is wrong: the coefficient means 'holding the others constant', not 'when the others are zero'; setting them to zero would be a different (simple) regression with a different coefficient."
+      },
+      {
+        "q": "Using two-tailed t-tests to determine if the coefficients of the independent variables are equal to zero at the 0.05 significance level, the null hypotheses are most likely rejected for the coefficients of:",
+        "options": [
+          "Size and InDow only.",
+          "Size and BMRatio only.",
+          "InDow and BMRatio only."
+        ],
+        "answer": 1,
+        "why": "Reject H0 (coefficient = 0) when the p-value is below 0.05. Size (p < 0.0001) and BMRatio (p = 0.0052) qualify. InDow (p = 0.0728) does not, so it is not significant at 5% (it would be at 10%). That rules out A and C, which both include InDow."
+      },
+      {
+        "q": "The predicted annual return for a stock that is included in the DJIA, has a market capitalization of $52 billion and a book-to-market ratio of 0.45 is closest to:",
+        "options": [
+          "−9.08%.",
+          "3.59%.",
+          "7.33%."
+        ],
+        "answer": 0,
+        "why": "r = −0.6483 + 0.1777 × ln(Size in $ billions) + 0.0433 × BMRatio − 0.1641 × Dow, with Size = 52, BMRatio = 0.45 and Dow = 1 (in the DJIA):\n= −0.6483 + 0.1777 × ln(52) + 0.0433 × 0.45 − 0.1641 × 1\n= −0.6483 + 0.1777 × 3.9512 + 0.0195 − 0.1641 = −0.0908 = −9.08%.\nB (3.59%) plugs in ln(52,000,000,000) instead of ln(52), and then mislabels 3.59 as a percentage. C (7.33%) sets Dow = 0, which is the prediction for a stock NOT in the DJIA."
+      },
+      {
+        "q": "The intern’s response to Rivera's question regarding the adjusted R2 measure is:",
+        "options": [
+          "correct.",
+          "incorrect with regard to the nondecreasing feature.",
+          "incorrect with regard to its appropriateness for Rivera's model."
+        ],
+        "answer": 1,
+        "why": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and C is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t| < 1), and it can even be negative. It is plain R² that never decreases when variables are added."
+      }
+    ]
   }
 ];
 

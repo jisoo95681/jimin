@@ -1805,6 +1805,70 @@ const QUESTIONS = [
     options: ["A support vector machine, which assigns each borrower to a class", "A k-NN classifier, which assigns a class from its neighbours", "A random forest, a supervised model that can output a continuous value"],
     answer: 2,
     why: "A continuous output with a known target calls for a supervised model that can do regression, such as a random forest. SVM and k-NN classifiers output a category."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "The Breusch–Pagan test statistic is calculated as:",
+    options: ["n × R² from regressing the squared residuals on the independent variables", "The model's own R² × the number of independent variables", "n × adjusted R² from the original regression model"],
+    answer: 0,
+    why: "BP = n × R² of the regression of squared residuals on the X's. It is chi-square with k degrees of freedom, one-tailed. A large value means conditional heteroskedasticity."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Conditional heteroskedasticity in a regression mainly causes:",
+    options: ["Biased coefficients, but correct standard errors", "Unreliable standard errors, so t-tests can mislead", "No problems as long as the sample size is large"],
+    answer: 1,
+    why: "The coefficients stay consistent, but standard errors are usually understated, so t-statistics are inflated and you may find false significance. Fix with robust (White-corrected) standard errors."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "The Breusch–Godfrey test is used to detect:",
+    options: ["Heteroskedasticity", "Multicollinearity", "Serial correlation"],
+    answer: 2,
+    why: "BG tests for serial correlation of the residuals (at several lags). BP tests heteroskedasticity; VIF checks multicollinearity."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Serial correlation in a model whose independent variable is a LAGGED value of the dependent variable makes the coefficient estimates:",
+    options: ["Invalid (inconsistent)", "Valid, with only the standard errors affected", "Valid, and the standard errors unaffected"],
+    answer: 0,
+    why: "With a lagged dependent variable as a regressor, serial correlation makes the coefficients inconsistent. Without one, coefficients remain consistent but (positive) serial correlation deflates the standard errors."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "A variable's VIF is 17. This indicates:",
+    options: ["No multicollinearity issue at all", "Serious multicollinearity (VIF above 10)", "Mild multicollinearity worth ignoring"],
+    answer: 1,
+    why: "VIF = [[1|1 − R²]]. A VIF above 5 warrants investigation; above 10 means serious multicollinearity. A VIF of 1 means no correlation with the other X's."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Which is NOT a remedy for multicollinearity?",
+    options: ["Dropping one of the correlated variables", "Using robust (White-corrected) standard errors", "Increasing the sample size"],
+    answer: 1,
+    why: "Remedies: drop a variable, use a different proxy, or get more data. Robust standard errors fix heteroskedasticity, not multicollinearity."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "A dummy variable (1 if a stock is in an index, 0 otherwise) with a coefficient of −0.16 means that, all else equal, index members' predicted returns are:",
+    options: ["16 percentage points lower than non-members'", "16% higher, since the dummy equals 1 for members", "The same, because dummies only shift the slope"],
+    answer: 0,
+    why: "An intercept dummy shifts the predicted value for the group coded 1 by its coefficient, holding the other variables constant."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Multiple Regression",
+    q: "Which statement about adjusted R² is correct?",
+    options: ["It never falls when variables are added", "It can fall, and it can even be negative", "It is always higher than the plain R²"],
+    answer: 1,
+    why: "Adjusted R² falls when a new variable adds too little (|t| < 1) and can be negative. Plain R² never falls when variables are added, and adjusted R² is always ≤ R²."
   }
 ];
 
