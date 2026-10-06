@@ -540,14 +540,6 @@ const QUESTIONS = [
   },
   {
     topic: "Financial Statement Analysis",
-    reading: "Pensions (Post-Employment Benefits)",
-    q: "Plan assets start the year at 23,432 and earn an actual return of 1,302. The actual rate of return is closest to:",
-    options: ["5.48%", "5.56%", "5.94%"],
-    answer: 1,
-    why: "1,302 / 23,432 = 5.56%. If the discount rate is 5.48%, interest income on assets in P&L is 5.48% × 23,432 = 1,284; the actual return above that (1,302 − 1,284 = 18) is a remeasurement gain in OCI."
-  },
-  {
-    topic: "Financial Statement Analysis",
     reading: "Pensions and Share-Based Compensation",
     q: "Under IFRS, past service cost (from a plan amendment) is recognized:",
     options: ["In OCI, then amortized into P&L over the remaining service period", "Immediately in P&L as part of service cost, an operating expense", "Only in the notes, without affecting the financial statements"],
@@ -623,14 +615,6 @@ const QUESTIONS = [
   {
     topic: "Equity Valuation",
     reading: "Discounted Dividend Valuation",
-    q: "Using the CAPM, the required return for a stock with beta 0.84, a risk-free rate of 4.1% and an equity risk premium of 5.5% is:",
-    options: ["8.72%", "9.60%", "4.62%"],
-    answer: 0,
-    why: "r = rf + β × ERP = 4.1% + 0.84 × 5.5% = 4.1% + 4.62% = 8.72%."
-  },
-  {
-    topic: "Equity Valuation",
-    reading: "Discounted Dividend Valuation",
     q: "A two-stage DDM is most appropriate for a company that expects:",
     options: ["Constant growth forever at a rate below the required return", "Extraordinary growth for a while, then stable growth", "Growth that declines smoothly in a straight line forever"],
     answer: 1,
@@ -703,14 +687,6 @@ const QUESTIONS = [
   {
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
-    q: "Price $37.23, sales $67.44 billion, 1.638821 billion shares. The P/S is closest to:",
-    options: ["0.55", "0.90", "1.81"],
-    answer: 1,
-    why: "Sales per share = 67.44 / 1.638821 = $41.15. P/S = 37.23 / 41.15 = 0.90."
-  },
-  {
-    topic: "Equity Valuation",
-    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "For a cyclical company whose current earnings are depressed by a downturn and restructuring charges, the best P/E approach is:",
     options: ["P/E on trailing earnings, which reflect the latest four quarters", "P/E on normalized (mid-cycle) earnings the firm could earn today", "P/B only, since book value is never affected by the cycle"],
     answer: 1,
@@ -735,14 +711,6 @@ const QUESTIONS = [
   {
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
-    q: "Stock A: forward P/E 18.71, growth 12.41%. Peer PEGs: 1.74, 1.31; sector PEG 1.52. Stock A is most likely:",
-    options: ["Overvalued relative to its peers", "Undervalued relative to its peers", "Fairly valued"],
-    answer: 2,
-    why: "PEG = 18.71 / 12.41 = 1.51, in the middle of the peer range and very close to the sector's 1.52, so fairly valued. A lower PEG than peers suggests undervalued; a higher one suggests overvalued."
-  },
-  {
-    topic: "Equity Valuation",
-    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "To reduce the impact of LARGE outliers but not small outliers (near zero) in a peer P/E, use the:",
     options: ["Median", "Harmonic mean", "Arithmetic mean"],
     answer: 1,
@@ -755,14 +723,6 @@ const QUESTIONS = [
     options: ["[[Growth|P/E]]; a higher value means the stock is cheaper", "[[P/E|expected growth (%)]]; lower is more attractive", "P/E × growth; a higher value means the stock is cheaper"],
     answer: 1,
     why: "PEG = P/E ÷ expected earnings growth (in percentage points, e.g. 18.71 / 12.41 = 1.51). A lower PEG than comparables suggests the stock is relatively undervalued. It assumes a linear P/E–growth relation and ignores risk and growth duration."
-  },
-  {
-    topic: "Equity Valuation",
-    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
-    q: "Price €50, most recent EPS €5.64, next year's EPS estimate €6.00. The trailing P/E is:",
-    options: ["8.3", "8.9", "9.9"],
-    answer: 1,
-    why: "Trailing P/E = [[price|last four quarters' EPS]] = 50 / 5.64 = 8.9. The forward (leading) P/E would be 50 / 6.00 = 8.3."
   },
   {
     topic: "Equity Valuation",
@@ -791,14 +751,6 @@ const QUESTIONS = [
   {
     topic: "Equity Valuation",
     reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
-    q: "Peer forward P/Es: 5.9, 8.3, 3.0, 15.0, 4.6. The harmonic mean is closest to:",
-    options: ["5.5", "7.4", "5.9"],
-    answer: 0,
-    why: "Harmonic mean = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5 / 0.9074 = 5.51. The arithmetic mean is 7.36 and the median is 5.9. The harmonic mean is always ≤ the arithmetic mean and dampens large outliers like 15.0."
-  },
-  {
-    topic: "Equity Valuation",
-    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
     q: "Normalized EPS by the average ROE method equals:",
     options: ["Average EPS over the most recent full business cycle", "Average ROE over the last full cycle × current BVPS", "Current ROE × average book value per share over the cycle"],
     answer: 1,
@@ -815,26 +767,10 @@ const QUESTIONS = [
   {
     topic: "Economics",
     reading: "Currency Exchange Rates: Understanding Equilibrium Value",
-    q: "Spot INR/GBP = 79.5093, 360-day MRR: GBP 5.43%, INR 7.52%. The 360-day forward premium (in INR) is closest to:",
-    options: ["1.546", "1.576", "1.662"],
-    answer: 1,
-    why: "F − S = S × [[(i_f − i_d)τ|1 + i_d τ]], where d is the BASE currency (GBP). = 79.5093 × 0.0209 / 1.0543 = 1.576. Dividing by 1 + i_f (1.0752) gives the wrong 1.546; not discounting at all gives 1.662."
-  },
-  {
-    topic: "Economics",
-    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
     q: "In an f/d quote, the base currency trades at a forward premium when:",
     options: ["The base currency (d) has the higher interest rate", "The price currency (f) has the higher interest rate", "Interest rates are equal in both of the countries"],
     answer: 1,
     why: "[[F|S]] = [[1 + i_f|1 + i_d]]. If the price currency's rate i_f is higher, F > S: the base currency is at a forward premium (and the high-yield price currency at a forward discount)."
-  },
-  {
-    topic: "Economics",
-    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
-    q: "CHF/USD 0.9799/0.9801, BRL/USD 4.1698/4.1702. The implied CHF/BRL bid is closest to:",
-    options: ["0.23498", "0.23505", "0.2355"],
-    answer: 0,
-    why: "CHF/BRL = CHF/USD × USD/BRL. The USD/BRL bid is 1 / (BRL/USD OFFER) = 1/4.1702 = 0.23980. Bid = 0.9799 × 0.23980 = 0.23498. Offer = 0.9801 × (1/4.1698) = 0.23505. When inverting a quote, bid and offer swap."
   },
   {
     topic: "Economics",
@@ -1029,14 +965,6 @@ const QUESTIONS = [
     why: "The EEM values intangibles as the capitalized earnings in excess of required returns on working capital and fixed assets, using several discount rates. The CCM (a single-stage, Gordon-type model) and the FCF method value whole businesses."
   },
   {
-    topic: "Equity Valuation",
-    reading: "Private Company Valuation",
-    q: "Stock price 29.70, 3-month risk-free 4%, at-the-money forward put worth 3.75. The DLOM is closest to:",
-    options: ["12.5%", "12.6%", "11.8%"],
-    answer: 1,
-    why: "Forward = 29.70 × e^(0.04 × 0.25) = 30.00, so the EUR 30 put is at-the-money forward. DLOM = 3.75 / 29.70 = 12.6%. Divide by the stock price, not the exercise price."
-  },
-  {
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
     q: "A company paid C$0.22 per share for three years while EPS rose and fell. Its policy is:",
@@ -1063,14 +991,6 @@ const QUESTIONS = [
   {
     topic: "Corporate Issuers",
     reading: "Analysis of Dividends and Share Repurchases",
-    q: "EPS $1.24, net income $124m, 100m shares. The firm spends $836m surplus cash buying shares at $38 plus a 10% premium. New EPS is closest to:",
-    options: ["$1.36", "$1.55", "$1.59"],
-    answer: 1,
-    why: "Price paid = 38 × 1.1 = $41.80; shares bought = 836 / 41.80 = 20m; EPS = 124 / 80 = $1.55 (+25%). $1.59 forgets the premium."
-  },
-  {
-    topic: "Corporate Issuers",
-    reading: "Analysis of Dividends and Share Repurchases",
     q: "A buyback is debt-financed. EPS rises if:",
     options: ["The after-tax cost of debt is above the earnings yield", "The after-tax cost of debt is below the earnings yield", "Always, because fewer shares remain outstanding"],
     answer: 1,
@@ -1085,28 +1005,12 @@ const QUESTIONS = [
     why: "Fixed-price tender offers (and Dutch auctions) offer a premium to attract sellers quickly. Open market buys are at market prices; negotiated deals may be at a premium or a discount."
   },
   {
-    topic: "Corporate Issuers",
-    reading: "Analysis of Dividends and Share Repurchases",
-    q: "Book equity C$3,600m, D/E 30%, covenant max 35%. A C$155m buyback financed with new debt gives D/E closest to:",
-    options: ["31.3%", "35.8%", "34.6%"],
-    answer: 1,
-    why: "Debt 1,080 + 155 = 1,235; equity 3,600 − 155 = 3,445; D/E = 35.8% (violates). If paid from surplus cash: 1,080 / 3,445 = 31.3%."
-  },
-  {
     topic: "Portfolio Management",
     reading: "Economics and Investment Markets",
     q: "An investor's wealth rises substantially (e.g. a new annuity). Holding all else equal, his required risk premium for risky assets:",
     options: ["Rises, because he now has more to lose in a downturn", "Falls, because extra consumption gives him less marginal utility", "Is unchanged, because risk premiums depend only on the asset"],
     answer: 1,
     why: "Diminishing marginal utility: the richer you are, the less an extra dollar is worth to you, so losing some in a bad state hurts less. Lower marginal utility of consumption means a lower required risk premium and more willingness to hold risky assets."
-  },
-  {
-    topic: "Portfolio Management",
-    reading: "Economics and Investment Markets",
-    q: "A one-year default-free zero has face 100 and price 96.37; real rate 1.15%, expected inflation 2.25%. The premium for inflation uncertainty is closest to:",
-    options: ["0.37%", "1.10%", "0.23%"],
-    answer: 0,
-    why: "1 + l + θ + π = [[100|96.37]] = 1.0377, and 1 + l + θ = 1.0340, so π = 0.37%."
   },
   {
     topic: "Portfolio Management",
@@ -1171,22 +1075,6 @@ const QUESTIONS = [
     options: ["Positive if equities beat bonds", "Zero", "Equal to its total active return"],
     answer: 1,
     why: "Asset allocation return = Σ Δwⱼ × R_B,j. With Δw = 0 for every class it is zero; any active return comes from security selection."
-  },
-  {
-    topic: "Portfolio Management",
-    reading: "Analysis of Active Portfolio Management",
-    q: "Expected returns: Fund 10.0%, benchmark 9.4%, active risk 5.2%. The fund's information ratio is closest to:",
-    options: ["0.12", "0.45", "0.58"],
-    answer: 0,
-    why: "IR = [[R_P − R_B|σ(R_A)]] = [[10.0 − 9.4|5.2]] = 0.12. The IR measures consistency of active return; the Sharpe ratio uses total return over the risk-free rate and total volatility."
-  },
-  {
-    topic: "Portfolio Management",
-    reading: "Analysis of Active Portfolio Management",
-    q: "Benchmark SR = 0.44; an active fund has IR = 0.35. Combining it optimally with the benchmark gives a Sharpe ratio of:",
-    options: ["0.79", "0.56", "0.44"],
-    answer: 1,
-    why: "SR_P² = SR_B² + IR², so SR_P = √(0.44² + 0.35²) = 0.56. Add the squares, not the ratios."
   },
   {
     topic: "Portfolio Management",
@@ -1399,14 +1287,6 @@ const QUESTIONS = [
   {
     topic: "Portfolio Management",
     reading: "Measuring and Managing Market Risk",
-    q: "Annual expected return 14.1%, SD 26.3%, 250 trading days. The daily 5% parametric VaR is closest to:",
-    options: ["2.69%", "1.66%", "4.34%"],
-    answer: 0,
-    why: "Daily mean = 0.141 / 250 = 0.000564; daily σ = 0.263 / √250 = 0.016634; VaR = 0.000564 − 1.65 × 0.016634 = 2.69%. 4.34% is the annual SD × 1.65 ÷ 10 mistake; 1.66% is just daily σ."
-  },
-  {
-    topic: "Portfolio Management",
-    reading: "Measuring and Managing Market Risk",
     q: "Rates fall 20 bps. Bonds have durations 1.3, 3.7 and 10.2. The best performer is the bond with duration:",
     options: ["1.3", "3.7", "10.2"],
     answer: 2,
@@ -1483,6 +1363,86 @@ const QUESTIONS = [
     options: ["Recessions (by 1.56)", "Low volatility (by 0.96)", "Both equally"],
     answer: 0,
     why: "1.76 − 0.20 = 1.56 in recessions vs 1.60 − 0.64 = 0.96 in low volatility. Scenario analysis compares strategies across structural regimes."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "The carry arbitrage model assumes the proceeds from a short sale are:",
+    options: ["Available only when the short position is covered", "Immediately available to invest in other securities", "Held as collateral and earning no return at all"],
+    answer: 1,
+    why: "The model assumes no frictions: you can borrow and lend at the risk-free rate, there are no transaction costs, and short-sale proceeds can be used straight away."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "Bond futures prices are generally quoted:",
+    options: ["The same way as the spot bond market, clean or dirty", "Always dirty, even where spot bonds are quoted clean", "Always clean, whatever the spot market convention is"],
+    answer: 0,
+    why: "Futures follow the spot market's convention, so there is no clean/dirty disconnect between them. Accrued interest is handled in the pricing formula instead."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "Bond futures use a conversion factor because:",
+    options: ["Futures are quoted dirty while spot bonds are quoted clean", "It converts a futures yield quote into a price quote", "Several bonds are deliverable, so their prices must be put on an equal footing"],
+    answer: 2,
+    why: "Many bonds can be delivered into one contract. The conversion factor adjusts each bond's price so they are roughly comparable; the short then delivers the cheapest-to-deliver bond."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "In a bond futures contract, who chooses which bond to deliver, and which one?",
+    options: ["The long; the bond with the highest coupon", "The short; the cheapest-to-deliver bond", "The exchange; the most recently issued bond"],
+    answer: 1,
+    why: "The short (seller) has the delivery option and picks the bond that is cheapest to deliver after the conversion factor."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "A firm will borrow at a floating rate in six months and fears rates will rise. To lock in its rate it should:",
+    options: ["Take the long (pay-fixed) side of an FRA", "Take the short (receive-fixed) side of an FRA", "Buy bond futures, which gain when rates rise"],
+    answer: 0,
+    why: "The long FRA pays fixed and receives the floating rate, so it gains if rates rise, offsetting the higher loan cost. Bond futures prices FALL when rates rise, so buying them would add to the loss."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "In a 6 × 24 FRA, the underlying interest rate covers:",
+    options: ["A 24-month period starting in 6 months", "A 6-month period starting in 24 months", "An 18-month period starting in 6 months"],
+    answer: 2,
+    why: "The FRA settles in 6 months and the period ends at month 24, so it covers months 6 to 24: an 18-month rate. Treating it as ending at month 30 (6 + 24) is a classic mistake."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "The fixed rate on a 5-year interest rate swap is:",
+    options: ["The 5-year spot rate, the rate for the swap's maturity", "A par rate from all the PV factors, below the 5-year spot in a rising curve", "The simple average of the spot rates for each payment date"],
+    answer: 1,
+    why: "Swap rate = [[1 − last PV factor|sum of all PV factors]] per period. It weights every payment date, so with an upward-sloping curve it sits below the longest spot rate. It is not a simple average either."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "A SHORT equity forward position loses value, all else equal, when:",
+    options: ["The share price falls", "The company announces a larger dividend", "The risk-free rate rises"],
+    answer: 2,
+    why: "A higher risk-free rate raises the new forward price, which helps the long and hurts the short. A lower share price or a bigger dividend both lower the forward price, which helps the short."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "A borrower with a floating-rate MRR loan enters a pay-fixed swap on the same terms. Its net position is:",
+    options: ["Effectively a fixed-rate loan", "A floating-rate loan with twice the rate exposure", "A floating-rate asset that gains if rates fall"],
+    answer: 0,
+    why: "It pays MRR on the loan, receives MRR on the swap and pays the swap's fixed rate. The floating legs cancel, leaving a fixed-rate loan."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Forward Commitments",
+    q: "A futures contract is mispriced at expiration by some amount. The arbitrage profit measured TODAY is:",
+    options: ["The full mispricing, undiscounted", "The present value of the mispricing", "The mispricing compounded at the risk-free rate"],
+    answer: 1,
+    why: "The gain is locked in today but received at expiration, so discount it back at the risk-free rate."
   }
 ];
 

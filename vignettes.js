@@ -2886,6 +2886,305 @@ const VIGNETTES = [
         "why": "Strategy II has the higher Sharpe ratio in every regime. Its edge is largest in low volatility (1.60 − 0.64 = 0.96) and recession (1.76 − 0.20 = 1.56), vs only 0.68 in high volatility and 0.52 in non-recession. Strategy I never beats Strategy II."
       }
     ]
+  },
+  {
+    "id": "fabc",
+    "title": "Gabriela Torres: Fabricantes Conchos",
+    "topic": "Derivatives",
+    "reading": "Forward Commitments",
+    "body": [
+      [
+        "p",
+        "Gabriela Torres is the CFO of Fabricantes Conchos (FabC), an automobile parts manufacturer located in Chihuahua, Mexico. She is currently evaluating the firm’s debt structure and anticipated financing needs."
+      ],
+      [
+        "p",
+        "FabC sells most of its product to US auto companies and their suppliers through long-term contracts priced in US dollars. FabC’s debt is denominated in US dollars. Torres actively manages the firm’s interest rate risk profile using interest rate and fixed-income derivatives, specifically OTC forwards, futures, and swap contracts."
+      ],
+      [
+        "p",
+        "Torres explains to her deputy, Alejandro Gutiérrez, “The derivatives contracts we enter into are typically priced using a carry arbitrage model to have zero cost to us at origination. In addition to requiring current interest rates and coupon payments of the underlying bonds, the model makes three assumptions: (1) There are no transaction costs for buying and selling securities; (2) short-selling proceeds become available when the short is covered; and (3) we can borrow and lend at the same risk-free rate of interest.”"
+      ],
+      [
+        "p",
+        "Gutiérrez mentions a major new contract requiring FabC to increase its working capital by borrowing USD35 million in six months. Torres states she is concerned interest rates will rise substantially in the near future and is considering entering a long position (pay fixed) in a 6 × 24 forward rate agreement to lock in the price of the new loan. She asks Gutiérrez what the fixed rate would be using a 30/360 convention and the spot interest rates found in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: USD Interest Rates",
+          "head": [
+            "Months",
+            "Spot Interest Rate",
+            "PV Factor"
+          ],
+          "rows": [
+            [
+              "6",
+              "2.10%",
+              "0.9896"
+            ],
+            [
+              "12",
+              "2.64%",
+              "0.9743"
+            ],
+            [
+              "18",
+              "3.07%",
+              "0.9560"
+            ],
+            [
+              "24",
+              "3.35%",
+              "0.9372"
+            ],
+            [
+              "30",
+              "3.56%",
+              "0.9183"
+            ],
+            [
+              "36",
+              "3.81%",
+              "0.8974"
+            ],
+            [
+              "42",
+              "3.92%",
+              "0.8794"
+            ],
+            [
+              "48",
+              "3.98%",
+              "0.8627"
+            ],
+            [
+              "54",
+              "4.02%",
+              "0.8468"
+            ],
+            [
+              "60",
+              "4.03%",
+              "0.8323"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Torres tells Gutiérrez, “If we issue a long-term bond, it makes more sense to enter a bond futures contract in order to hedge interest rate changes. Typically, bond futures are quoted with pricing that reflects interest accrued since the last coupon payment. Therefore, in markets where spot prices are quoted “clean” rather than “dirty,” there can be some disconnect between spot and futures prices. In addition, a conversion factor must be applied to quoted bond prices because more than one bond can be delivered to fulfill the terms of the contract. The short (selling) counterparty to the contract will always want to deliver the cheapest bond when the forward contract matures. The conversion factor attempts to adjust for differences in pricing between the bonds that can be delivered to fulfill a particular contract.”"
+      ],
+      [
+        "p",
+        "Torres continues, “We are about to enter into a five-year loan with semi-annual interest payments based on prevailing six-month MRR. I think it might make sense to simultaneously enter into a pay-fixed five-year interest rate swap with semi-annual payments to effectively convert that to a fixed-rate loan. Based on the interest rates shown in Exhibit 1, what would the fixed rate be?”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "When discussing the assumptions of the carry arbitrage model, Torres is least likely correct regarding:",
+        "options": [
+          "borrowing costs.",
+          "transaction costs.",
+          "short-sale proceeds."
+        ],
+        "answer": 2,
+        "why": "The carry arbitrage model assumes short-sale proceeds are available immediately to buy other securities, not only when the short is covered. A is wrong: borrowing and lending at the same risk-free rate is a real assumption of the model. B is wrong: no transaction costs (no market frictions) is also a real assumption."
+      },
+      {
+        "q": "Gutiérrez’s fixed-rate calculation for the forward rate agreement should be closest to:",
+        "options": [
+          "3.73%.",
+          "3.88%.",
+          "5.59%."
+        ],
+        "answer": 0,
+        "why": "A 6 × 24 FRA covers the 18-month period that starts in 6 months. With the 6-month spot rate (2.10%) and the 24-month spot rate (3.35%), 30/360:\nFRA = ([[1 + 0.0335 × (720/360)|1 + 0.0210 × (180/360)]] − 1) ÷ (540/360)\n= ([[1.0670|1.0105]] − 1) ÷ 1.5 = 0.05591 ÷ 1.5 = 3.73%.\nB (3.88%) wrongly treats the FRA as ending at month 30 (6 + 24), using the 30-month rate (3.56%) over a 24-month period; compounding geometrically instead of using MRR's simple-interest convention gives a similar wrong answer. C (5.59%) forgets to divide by the 1.5-year length of the period."
+      },
+      {
+        "q": "Is Torres most likely correct in her description of bond forward pricing issues?",
+        "options": [
+          "Yes.",
+          "No, she is incorrect with respect to accrued interest.",
+          "No, she is incorrect with respect to the conversion factor."
+        ],
+        "answer": 1,
+        "why": "Bond futures are generally quoted the same way as the spot bond market: clean (without accrued interest) where spot is clean, dirty where spot is dirty. So her claim that futures prices reflect accrued interest, creating a disconnect with clean spot prices, is wrong. C is wrong: she describes the conversion factor correctly. Several bonds can be delivered, and the factor puts their prices on an equal footing; the short will deliver the cheapest-to-deliver bond."
+      },
+      {
+        "q": "Gutiérrez’s calculation of the annual fixed rate for the five-year swap should be closest to:",
+        "options": [
+          "3.45%.",
+          "3.69%.",
+          "4.03%."
+        ],
+        "answer": 1,
+        "why": "The periodic swap rate = [[1 − last PV factor|sum of all PV factors]] = [[1 − 0.8323|9.0940]] = [[0.1677|9.0940]] = 1.844% per half-year. The sum adds the 10 semi-annual PV factors in Exhibit 1 (0.9896 + 0.9743 + … + 0.8323 = 9.0940). Annualize it with 2 payments a year: 1.844% × 2 = 3.69%. A (3.45%) is just the simple average of the 10 spot rates. C (4.03%) wrongly sets the swap rate equal to the 60-month spot rate; the swap rate is a par rate that weights every payment date, so it sits below the 5-year spot rate when the curve slopes upward."
+      }
+    ]
+  },
+  {
+    "id": "troubadour",
+    "title": "Donald Troubadour: Southern Shores Investments",
+    "topic": "Derivatives",
+    "reading": "Forward Commitments",
+    "body": [
+      [
+        "p",
+        "Donald Troubadour is a derivatives trader for Southern Shores Investments. The firm seeks arbitrage opportunities in the forward and futures markets using the carry arbitrage model."
+      ],
+      [
+        "p",
+        "Troubadour identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond. Current data on the futures contract and underlying bond are presented in Exhibit 1. The current annual compounded risk-free rate is 0.30%."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Current Data for Futures and Underlying Bond",
+          "head": [
+            "Futures Contract",
+            "",
+            "Underlying Bond",
+            ""
+          ],
+          "rows": [
+            [
+              "Quoted futures price",
+              "125.00",
+              "Quoted bond price",
+              "112.00"
+            ],
+            [
+              "Conversion factor",
+              "0.90",
+              "Accrued interest since last coupon payment",
+              "0.08"
+            ],
+            [
+              "Time remaining to contract expiration",
+              "Three months",
+              "Accrued interest at futures contract expiration",
+              "0.20"
+            ],
+            [
+              "Accrued interest over life of futures contract",
+              "0.00",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Troubadour next gathers information on a Japanese equity index futures contract, the Nikkei 225 Futures Contract:"
+      ],
+      [
+        "p",
+        "Troubadour holds a long position in a Nikkei 225 futures contract that has a remaining maturity of three months. The continuously compounded dividend yield on the Nikkei 225 Stock Index is 1.1%, and the current stock index level is 16,080. The continuously compounded annual interest rate is 0.2996%."
+      ],
+      [
+        "p",
+        "Troubadour next considers an equity forward contract for Texas Steel, Inc. (TSI). Information regarding TSI common shares and a TSI equity forward contract is presented in Exhibit 2."
+      ],
+      [
+        "h",
+        "Exhibit 2: Selected Information for TSI"
+      ],
+      [
+        "p",
+        "The price per share of TSI’s common shares is $250."
+      ],
+      [
+        "p",
+        "The forward price per share for a nine-month TSI equity forward contract is $250.562289."
+      ],
+      [
+        "p",
+        "Assume annual compounding."
+      ],
+      [
+        "p",
+        "Troubadour takes a short position in the TSI equity forward contract. His supervisor asks, “Under which scenario would our position experience a loss?”"
+      ],
+      [
+        "p",
+        "Three months after contract initiation, Troubadour gathers information on TSI and the risk-free rate, which is presented in Exhibit 3."
+      ],
+      [
+        "h",
+        "Exhibit 3: Selected Data on TSI and the Risk-Free Rate (Three Months Later)"
+      ],
+      [
+        "p",
+        "The price per share of TSI’s common shares is $245."
+      ],
+      [
+        "p",
+        "The risk-free rate is 0.325% (quoted on an annual compounding basis)."
+      ],
+      [
+        "p",
+        "TSI recently announced its regular semiannual dividend of $1.50 per share that will be paid exactly three months before contract expiration."
+      ],
+      [
+        "p",
+        "The market price of the TSI equity forward contract is equal to the no-arbitrage forward price."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibit 1 and assuming annual compounding, the arbitrage profit on the bond futures contract is closest to:",
+        "options": [
+          "0.4158.",
+          "0.5356.",
+          "0.6195."
+        ],
+        "answer": 1,
+        "why": "1) No-arbitrage futures price = FV of (bond price + accrued interest today − PV of coupons) = (1.003)^0.25 × (112.00 + 0.08 − 0) = 112.1640.\n2) What the futures actually delivers = conversion factor × quoted futures price + accrued interest at expiration = 0.90 × 125 + 0.20 = 112.50 + 0.20 = 112.70.\n3) The futures is overpriced by 112.70 − 112.1640 = 0.5360 at expiration, so sell the futures and buy the bond (carry arbitrage). Profit today = PV = [[0.5360|(1.003)^0.25]] = 0.5356.\nA (0.4158) adds today's accrued interest (0.08) instead of the 0.20 accrued at expiration. C (0.6195) forgets to carry the bond's price forward at the risk-free rate (it uses 112.08 instead of 112.1640)."
+      },
+      {
+        "q": "The current no-arbitrage futures price of the Nikkei 225 futures contract is closest to:",
+        "options": [
+          "15,951.81.",
+          "16,047.86.",
+          "16,112.21."
+        ],
+        "answer": 1,
+        "why": "With continuous compounding, F0 = S0 × e^((r − δ) × T) = 16,080 × e^((0.002996 − 0.011) × 3/12) = 16,080 × e^(−0.002001) = 16,047.86. The dividend yield (1.1%) is above the interest rate (0.2996%), so the futures price is below the index level. A (15,951.81) uses a full year (T = 1) instead of three months. C (16,112.21) gets the sign wrong, adding the dividend yield's effect instead of subtracting it."
+      },
+      {
+        "q": "Based on Exhibit 2, Troubadour should find that an arbitrage opportunity relating to TSI shares is",
+        "options": [
+          "not available.",
+          "available based on carry arbitrage.",
+          "available based on reverse carry arbitrage."
+        ],
+        "answer": 0,
+        "why": "Carry arbitrage model price = S0 × (1 + r)^T = $250 × (1.003)^0.75 = $250.562289, using the 0.30% annual rate from the vignette. The market forward price is exactly $250.562289, so there is no mispricing. Carry arbitrage (B) would need the forward to be above the model price (sell forward, buy shares); reverse carry (C) would need it below (buy forward, short shares)."
+      },
+      {
+        "q": "The most appropriate response to Troubadour’s supervisor’s question regarding the TSI forward contract is:",
+        "options": [
+          "a decrease in TSI’s share price, all else equal.",
+          "an increase in the risk-free rate, all else equal",
+          "a decrease in the market price of the forward contract, all else equal."
+        ],
+        "answer": 1,
+        "why": "For the long, value = PV of (Ft − F0), where the new forward price Ft = FV(St + carry costs − carry benefits). A higher risk-free rate raises Ft, so the long gains and the short (Troubadour) loses. A is wrong: a lower share price lowers Ft, which is a gain for the short. C is wrong: a lower forward price is also a gain for the short."
+      },
+      {
+        "q": "Based on Exhibits 2 and 3, and assuming annual compounding, the per share value of Troubadour’s short position in the TSI forward contract three months after contract initiation is closest to:",
+        "options": [
+          "$1.6549.",
+          "$5.1561.",
+          "$6.6549."
+        ],
+        "answer": 2,
+        "why": "Six months remain on the contract, and the $1.50 dividend comes in three months.\n1) New no-arbitrage forward price: F0.25 = [$245 − [[$1.50|(1.00325)^0.25]]] × (1.00325)^0.5 = ($245 − $1.4988) × 1.001623 = $243.8966.\n2) Value to the LONG = [[F0.25 − F0|(1.00325)^0.5]] = [[$243.8966 − $250.562289|1.001623]] = −$6.6549.\n3) Troubadour is SHORT, so his position is worth +$6.6549 (the forward price fell from $250.56 to $243.90).\nB ($5.1561) ignores the dividend, which lowers the forward price. A ($1.6549) does not match the correct forward price of $243.8966 (it is off by exactly $5)."
+      }
+    ]
   }
 ];
 
