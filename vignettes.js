@@ -4722,6 +4722,92 @@ const VIGNETTES = [
         "why": "In k-fold cross-validation the data (excluding the test sample) are shuffled and split into k equal parts (k is typically 5 or 10). Each round trains on k − 1 parts and validates on the remaining one, repeated k times, so every data point is validated once and trained on k − 1 times. The validation sample changes every round. A is wrong: it is used in supervised learning, which needs a specified target. C is wrong: the training sample itself changes each round, not just its order."
       }
     ]
+  },
+  {
+    "id": "safegrowth",
+    "title": "Avery White: SafeGrowth Investments",
+    "topic": "Quantitative Methods",
+    "reading": "Machine Learning",
+    "body": [
+      [
+        "p",
+        "Avery White is a financial analyst at SafeGrowth Investments (SGI), an asset management firm based in the US. The portfolio management team at SGI gives White a list of public firms that experienced financial distress and asks her to help with two tasks. The first task is to develop machine-learning based models to predict bankruptcy by grouping these firms into two categories: \"bankrupt\" or \"not bankrupt\". White first collects 25 fundamental and technical features of 800 firms that experienced financial distress, of which 100 filed bankruptcy in the last ten years. She then splits the 800 observations into three non-overlapping, homogeneous datasets with different purposes in mind:"
+      ],
+      [
+        "p",
+        "Dataset 1: Used to infer the pattern (or model) between the target and features."
+      ],
+      [
+        "p",
+        "Dataset 2: Used to assess the fit of the model from Dataset 1 and tune the model hyperparameters if necessary."
+      ],
+      [
+        "p",
+        "Dataset 3: Used to evaluate the accuracy of the final model."
+      ],
+      [
+        "p",
+        "After training her first model, White discovers that the model can identify \"bankrupt\" and \"not bankrupt\" firms with low error in the training dataset, but does not perform well on the validation and test datasets."
+      ],
+      [
+        "p",
+        "White then considers other machine learning algorithms and wants to choose one that meets the following requirements:"
+      ],
+      [
+        "p",
+        "Requirement 1: There is no need to specify an initial hyperparameter. However, regularization parameters can be added to avoid a potential overfitting problem;"
+      ],
+      [
+        "p",
+        "Requirement 2: The algorithm can provide a visual explanation and rationale for the prediction."
+      ],
+      [
+        "p",
+        "After the \"not bankrupt\" firms are identified, the second task that the portfolio management team asks White to perform is to divide those firms into six distinct groups based on 25 fundamental and technical features, with the intention to select a stock from each group to add to a portfolio to diversify risk."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "White's initial task requested by the management team is best described as a:",
+        "options": [
+          "clustering problem.",
+          "regression problem.",
+          "classification problem."
+        ],
+        "answer": 2,
+        "why": "Sorting firms into \"bankrupt\" or \"not bankrupt\" means predicting a binary (categorical) target, which is a classification problem. A is wrong: clustering is unsupervised and has no target variable (that fits her SECOND task, splitting firms into six groups). B is wrong: regression is for a continuous target."
+      },
+      {
+        "q": "In the split of the 800 observations, Dataset 2 is best described as a:",
+        "options": [
+          "test dataset.",
+          "training dataset.",
+          "validation dataset."
+        ],
+        "answer": 2,
+        "why": "The three non-overlapping samples are: training (Dataset 1, to fit the model), validation (Dataset 2, to check the fit and tune hyperparameters) and test (Dataset 3, to measure the final model on new data). A is wrong: the test set evaluates the final model, which is Dataset 3. B is wrong: the training set is Dataset 1."
+      },
+      {
+        "q": "White's first model is most likely subject to:",
+        "options": [
+          "overfitting and bias error.",
+          "underfitting and bias error.",
+          "overfitting and variance error."
+        ],
+        "answer": 2,
+        "why": "Low error on the training data but poor results on validation and test data is overfitting: the model learned noise. That shows up as high variance error (results change a lot on new data). Bias error is how badly the model fits the training data, and here that fit is good, so bias is LOW, ruling out A. B is wrong: underfitting would mean poor results even on the training data."
+      },
+      {
+        "q": "Which of the following machine learning algorithms meets both of White's requirements?",
+        "options": [
+          "K-nearest neighbor",
+          "Support vector machine",
+          "Classification and regression tree"
+        ],
+        "answer": 2,
+        "why": "CART needs no initial hyperparameter, regularization (e.g. limits on tree depth, or pruning) can be added to stop overfitting, and the tree itself is a visual explanation of each prediction. A is wrong: KNN needs k chosen in advance and gives no visual rationale. B is wrong: an SVM needs no initial hyperparameter (a cost penalty can be added), but it gives no visual explanation, failing Requirement 2."
+      }
+    ]
   }
 ];
 

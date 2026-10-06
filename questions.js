@@ -1757,6 +1757,30 @@ const QUESTIONS = [
     options: ["Once for validation and k − 1 times for training", "Only for training, since validation uses fresh data", "k times for validation and once for training"],
     answer: 0,
     why: "The data are shuffled and split into k parts (usually 5 or 10). Each round validates on one part and trains on the other k − 1, so the validation sample changes every round and each point is validated exactly once."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "The dataset used to check a model's fit and tune its hyperparameters is the:",
+    options: ["Training set", "Validation set", "Test set, used once the model is final"],
+    answer: 1,
+    why: "Training set → fit the model; validation set → check the fit and tune hyperparameters; test set → evaluate the final model on new data. The three must not overlap."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "A model has low error on training data but high error on validation and test data. It has:",
+    options: ["Overfitting with high variance error", "Underfitting with high bias error", "Overfitting with high bias error"],
+    answer: 0,
+    why: "Fitting the training data well means low bias; doing badly on new data means high variance. That combination is overfitting."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "Which algorithm needs no initial hyperparameter AND gives a visual explanation of its predictions?",
+    options: ["K-nearest neighbor (KNN)", "Support vector machine (SVM)", "Classification and regression tree (CART)"],
+    answer: 2,
+    why: "CART's tree shows why each prediction was made, and regularization can be added against overfitting. KNN needs k set in advance; an SVM gives no visual rationale."
   }
 ];
 
