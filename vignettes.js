@@ -4808,6 +4808,78 @@ const VIGNETTES = [
         "why": "CART needs no initial hyperparameter, regularization (e.g. limits on tree depth, or pruning) can be added to stop overfitting, and the tree itself is a visual explanation of each prediction. A is wrong: KNN needs k chosen in advance and gives no visual rationale. B is wrong: an SVM needs no initial hyperparameter (a cost penalty can be added), but it gives no visual explanation, failing Requirement 2."
       }
     ]
+  },
+  {
+    "id": "ebdc",
+    "title": "Amandeep Jain: EBDC Default Model",
+    "topic": "Quantitative Methods",
+    "reading": "Machine Learning",
+    "body": [
+      [
+        "p",
+        "Amandeep Jain is a credit analyst at the Entrepreneurship Business Development Corporation (EBDC), a government-backed entity that specializes in providing loans and consulting services to growing small and medium-sized enterprises."
+      ],
+      [
+        "p",
+        "Jain sits down with her colleague, Peiran Zhang, a recently hired data scientist. They have been asked to work together to develop a machine learning model to improve EBDC’s predictive ability of identifying potential defaults. The current model is a k-nearest neighbor (k-NN) model, which is used to identify similarities in default companies and was originally created when the entire portfolio of EBDC loans was about 60% of its current level."
+      ],
+      [
+        "p",
+        "Jain suggests to Zhang that the following small changes to the current model could increase its overall predictive ability:"
+      ],
+      [
+        "p",
+        "• automating feature selection to improve model performance,\n• adjusting hyperparameter k on the basis of the increased portfolio size, and\n• adding additional non-financial metrics to identify new relationships."
+      ],
+      [
+        "p",
+        "Jain tells Zhang that the “goal” has been and continues to be predicting what is stored in the system in a field called Default_Status, which records whether a loan is either <In Default> or <Not In Default>. Jain indicates that eventually the model should generate a “Probability of Default” between 0% and 100% as the final output for each client in the firm’s portfolio."
+      ],
+      [
+        "p",
+        "Zhang develops an initial prototype and shares with Jian the results based on a subset of the portfolio that was segmented for the purpose of training the model. Exhibit 1 compares predicted and actual defaults from the model."
+      ],
+      [
+        "h",
+        "Exhibit 1: Predicted vs. Actual Default"
+      ],
+      [
+        "p",
+        "A graph showing data on Not in default and In default. The X axis runs from zero to 30 in increments of 5. The Y axis runs from zero to 25 in increments of 5."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "For the current model, which of Jain’s suggested changes will most likely improve the model’s accuracy?",
+        "options": [
+          "Adjust the hyperparameter.",
+          "Automate feature selection.",
+          "Add additional non-financial metrics."
+        ],
+        "answer": 0,
+        "why": "The portfolio is now much larger (the model was built at about 60% of today's size), so k, the number of neighbours, should be reviewed. Resetting k (e.g. lowering it) reduces dilution of the results and can raise accuracy. B and C are wrong: k-NN is sensitive to irrelevant or correlated features and works best with a small number of features, so automatically adding features or extra non-financial metrics would more likely hurt performance."
+      },
+      {
+        "q": "The Default_Status field is best described as:",
+        "options": [
+          "a feature.",
+          "the target.",
+          "the labeled data."
+        ],
+        "answer": 1,
+        "why": "Default_Status is the 'goal' the model predicts (In Default / Not In Default), so it is the target (dependent) variable. A is wrong: features are the independent variables used to predict the target. C is wrong: labeled data is the whole training dataset, where each observation's features come with its known target value."
+      },
+      {
+        "q": "Given the eventual predictive goal of the model, the best model is:",
+        "options": [
+          "the current model.",
+          "a random forest model.",
+          "a support vector model."
+        ],
+        "answer": 1,
+        "why": "The final output is a Probability of Default from 0% to 100%, a continuous value, and there is a known target (Default_Status), so a supervised model that can handle regression is needed. Random forests, built from many decision trees, can do this. A is wrong: the k-NN model here classifies loans into categories. C is wrong: a support vector machine is a classifier for categorical targets, giving a class, not a probability."
+      }
+    ]
   }
 ];
 

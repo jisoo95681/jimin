@@ -1781,6 +1781,30 @@ const QUESTIONS = [
     options: ["K-nearest neighbor (KNN)", "Support vector machine (SVM)", "Classification and regression tree (CART)"],
     answer: 2,
     why: "CART's tree shows why each prediction was made, and regularization can be added against overfitting. KNN needs k set in advance; an SVM gives no visual rationale."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "k-NN models tend to work best with:",
+    options: ["A small number of relevant features", "As many features as can be collected", "Features that are highly correlated"],
+    answer: 0,
+    why: "k-NN is sensitive to irrelevant and correlated features, which distort the distance measure. Adding features automatically usually hurts it."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "In a default-prediction model, the field recording 'In Default / Not In Default' is the:",
+    options: ["Feature", "Target", "Hyperparameter"],
+    answer: 1,
+    why: "The target (dependent) variable is what the model predicts. Features are the inputs; labeled data is the training set with known targets; a hyperparameter (like k) is set before training."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "A model must output a probability between 0% and 100% for each borrower. Which fits best?",
+    options: ["A support vector machine, which assigns each borrower to a class", "A k-NN classifier, which assigns a class from its neighbours", "A random forest, a supervised model that can output a continuous value"],
+    answer: 2,
+    why: "A continuous output with a known target calls for a supervised model that can do regression, such as a random forest. SVM and k-NN classifiers output a category."
   }
 ];
 
