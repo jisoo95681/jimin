@@ -4660,6 +4660,68 @@ const VIGNETTES = [
         "why": "Normality: the residuals are normally distributed. B is wrong: homoskedasticity is about the variance of the RESIDUALS being constant, not the independent variables. C is wrong: linearity is between the dependent variable and the independent variables; the independent variables should have NO exact linear relationship with each other (otherwise multicollinearity)."
       }
     ]
+  },
+  {
+    "id": "stigwood",
+    "title": "Roger Stigwood: Private Equity Valuation Model",
+    "topic": "Quantitative Methods",
+    "reading": "Machine Learning",
+    "body": [
+      [
+        "p",
+        "Roger Stigwood is a partner at a private equity advisory firm. He is meeting with a data analysis consultant, Cindy Emerson. Upon meeting Emerson, Stigwood states that his firm has structured data from private equity transactions that had been conducted over the past year. He desires to merge that data with related publicly traded firm data to find factors that can be used to predict future firm valuations."
+      ],
+      [
+        "p",
+        "Stigwood suggests a support vector machine algorithm because the target variable is continuous and the algorithm does not require a user defined hyperparameter. Instead, Emerson suggests using an algorithm with a least absolute shrinkage and selection operator."
+      ],
+      [
+        "p",
+        "Stigwood then expresses concerns about the model overfitting problem. Emerson responds that managing overfitting is a tradeoff between cost and complexity. She suggests using k-fold cross-validation to mitigate overfitting."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Stigwood's suggested algorithm is most likely:",
+        "options": [
+          "correct.",
+          "incorrect in regard to the continuous target variable.",
+          "incorrect in regard to the user define hyperparameter."
+        ],
+        "answer": 1,
+        "why": "A support vector machine (SVM) is a linear classifier: it finds the hyperplane that best separates the observations into two groups, so it needs a binary (categorical) target. Firm valuation is continuous, so the SVM is the wrong tool. A is wrong for that reason. C is wrong: Stigwood is right that the SVM does not need a user-defined hyperparameter, so that part of his reasoning is not the problem."
+      },
+      {
+        "q": "The algorithm suggested by Emerson is a:",
+        "options": [
+          "k-nearest neighbor algorithm.",
+          "penalized regression algorithm.",
+          "classification and regression tree algorithm."
+        ],
+        "answer": 1,
+        "why": "LASSO (least absolute shrinkage and selection operator) is the best-known penalized regression: it adds a penalty for each included feature, shrinking weak coefficients to zero. It also suits a continuous target like firm valuation. A (KNN) and C (CART) are different algorithms that don't use a LASSO penalty."
+      },
+      {
+        "q": "What is most likely the cost referenced by Emerson in regard to managing overfitting?",
+        "options": [
+          "The variance error less the base error",
+          "Computational time and resource expenses",
+          "The difference between the in- and out-of-sample error rates"
+        ],
+        "answer": 2,
+        "why": "Data scientists frame overfitting as a trade-off between cost and complexity, where cost is the gap between in-sample and out-of-sample error rates. A more complex model fits the training data better but generalizes worse, so the gap widens. A is wrong: variance error and base error are components of out-of-sample error, not the 'cost'. B is wrong: computing time and resources are not the cost meant here."
+      },
+      {
+        "q": "The overfitting mitigation technique suggested by Emerson most likely requires:",
+        "options": [
+          "the target variable not being specified.",
+          "having different validation samples applied within the execution of the technique.",
+          "having the same training sample, but in a random sequence within the execution of the technique."
+        ],
+        "answer": 1,
+        "why": "In k-fold cross-validation the data (excluding the test sample) are shuffled and split into k equal parts (k is typically 5 or 10). Each round trains on k − 1 parts and validates on the remaining one, repeated k times, so every data point is validated once and trained on k − 1 times. The validation sample changes every round. A is wrong: it is used in supervised learning, which needs a specified target. C is wrong: the training sample itself changes each round, not just its order."
+      }
+    ]
   }
 ];
 

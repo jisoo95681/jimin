@@ -1733,6 +1733,30 @@ const QUESTIONS = [
     options: ["Neural network", "LASSO regression", "Simple linear regression"],
     answer: 0,
     why: "Neural networks and deep learning handle non-linearities and complex interactions (image, speech, language). LASSO and linear regression assume linear relationships."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "A support vector machine (SVM) is best suited to a target variable that is:",
+    options: ["Continuous, such as a firm's valuation", "Binary: one of two categories", "Unlabeled, as in clustering problems"],
+    answer: 1,
+    why: "An SVM is a linear classifier that finds the hyperplane best separating observations into two groups. It needs a labeled, binary target, so it suits classification, not continuous prediction."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "In the cost–complexity trade-off for overfitting, 'cost' means:",
+    options: ["The computing time needed to train the model", "The gap between in-sample and out-of-sample error rates", "The bias error of the model on its training data"],
+    answer: 1,
+    why: "As complexity rises, in-sample error falls but out-of-sample error rises, so the gap (the cost) widens. Data scientists use this trade-off to find the point between under- and overfitting."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Machine Learning",
+    q: "In k-fold cross-validation, each data point is used:",
+    options: ["Once for validation and k − 1 times for training", "Only for training, since validation uses fresh data", "k times for validation and once for training"],
+    answer: 0,
+    why: "The data are shuffled and split into k parts (usually 5 or 10). Each round validates on one part and trains on the other k − 1, so the validation sample changes every round and each point is validated exactly once."
   }
 ];
 
