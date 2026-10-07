@@ -378,7 +378,10 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; }
+  .pt-scores.frm { grid-template-columns: repeat(4, 1fr); }
+  .pt-exact { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; color: var(--muted); }
+  .pt-exact .field { width: 76px; padding: 7px 10px; }
   .pt-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: .85rem; color: var(--muted); }
   .pt-legend i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; vertical-align: -3px; margin-right: 5px; border: 1px solid rgba(41, 38, 69, .08); }
   .pt-grad { display: inline-flex; gap: 2px; margin-right: 5px; vertical-align: -3px; }
@@ -609,7 +612,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v68 · 2026-10-06";
+  const APP_VERSION = "v69 · 2026-10-07";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -953,6 +956,9 @@
   // Revision depth: a quick skim, a normal review, a deep revision (fainter to stronger pastel yellow).
   const PT_REV = [[1, "Light skim", "--pt-rev1"], [2, "Review", "--pt-rev2"], [3, "Deep revision", "--pt-rev3"]];
   const ptRevVar = d => PT_REV[Math.min(3, Math.max(1, d || 2)) - 1][2];
+  // Formulae: how well the formulas for that reading are memorised (fainter to stronger pastel lavender).
+  const PT_FRM = [[1, "Shaky", "--pt-f1"], [2, "Partly", "--pt-f2"], [3, "Mostly", "--pt-f3"], [4, "Solid", "--pt-f4"]];
+  const ptFrmVar = d => PT_FRM[Math.min(4, Math.max(1, d || 2)) - 1][2];
   const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
   function loadPT() { try { return JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } }
   function savePT(p) { try { localStorage.setItem("cfa-progress", JSON.stringify(p)); } catch {} }
@@ -984,10 +990,10 @@
     td.innerHTML = "";
     if (!marks || !marks.length) return;
     const mk = el("div", { className: "mk" });
-    const order = { s: 0, r: 1, q: 2 };
+    const order = { s: 0, r: 1, f: 2, q: 3 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? ptRevVar(m.d) : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
@@ -1010,7 +1016,10 @@
     const rgrad = el("span"), rg = el("span", { className: "pt-grad" });
     PT_REV.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; rg.append(i); });
     rgrad.append(rg, "Revised light → deep");
-    legend.append(key("--pt-study", "Studied"), rgrad, grad);
+    const fgrad = el("span"), fg = el("span", { className: "pt-grad" });
+    PT_FRM.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; fg.append(i); });
+    fgrad.append(fg, "Formulae shaky → solid");
+    legend.append(key("--pt-study", "Studied"), rgrad, fgrad, grad);
     app.append(legend, el("div", { style: "height:12px" }));
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
@@ -1081,6 +1090,20 @@
       revs.append(b);
       return [v, b];
     });
+    const frms = el("div", { className: "pt-scores frm" });
+    const fb = PT_FRM.map(([v, t, c]) => {
+      const b = el("button", {}, t);
+      b.style.background = `var(${c})`;
+      b.onclick = () => { const f = has("f"); if (f && f.d === v) marks = marks.filter(m => m.t !== "f"); else if (f) f.d = v; else marks.push({ t: "f", d: v }); draw(); };
+      frms.append(b);
+      return [v, b];
+    });
+    // Exact score for days logged from question sets (e.g. 34 of 50): editable, in case a set was marked wrongly.
+    const exact = el("div", { className: "pt-exact" });
+    const fr = el("input", { className: "field", type: "number", inputMode: "numeric", min: 0 }), fn = el("input", { className: "field", type: "number", inputMode: "numeric", min: 1 });
+    exact.append("Correct", fr, "out of", fn);
+    const upd = () => { const q = has("q"), a = parseInt(fr.value, 10), n = parseInt(fn.value, 10); if (!q || !(n > 0) || !(a >= 0)) return; q.right = Math.min(a, n); q.n = n; q.s = Math.round(q.right / n * 100); sb.forEach(([v, b]) => b.classList.toggle("on", false)); };
+    fr.oninput = fn.oninput = upd;
     const sb = PT_SCORES.map(([v, t, c]) => {
       const b = el("button", {}, t);
       b.style.background = `var(${c})`;
@@ -1094,6 +1117,10 @@
       rb.forEach(([v, b]) => b.classList.toggle("on", !!r && (r.d || 2) === v));
       const q = has("q");
       sb.forEach(([v, b]) => b.classList.toggle("on", !!q && q.s === v));
+      const f = has("f");
+      fb.forEach(([v, b]) => b.classList.toggle("on", !!f && f.d === v));
+      exact.hidden = !(q && q.n);
+      if (q && q.n) { fr.value = q.right; fn.value = q.n; }
     }
     draw();
     const btns = el("div", { className: "row-btns" });
@@ -1113,7 +1140,8 @@
     bg.onclick = () => close(true);
     btns.append(clear, done);
     sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Revision · depth"), revs,
-      el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, btns);
+      el("p", { className: "kicker", style: "margin:14px 0 0" }, "Formulae · how well memorised"), frms,
+      el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, exact, btns);
     document.body.append(bg, sh);
     requestAnimationFrame(() => { bg.classList.add("on"); sh.classList.add("on"); });
   }
@@ -1911,9 +1939,30 @@
     app.append(quiz);
   }
 
+  // How far through the set you got: up to the furthest question you answered or skipped. Marking early scores you
+  // out of that many; the questions after it are left out (including one you only opened before stopping).
+  function reachedCount() {
+    let r = 0;
+    sq.forEach((s, n) => { if (s.pick !== null || s.skipped) r = n + 1; });
+    return Math.max(1, r);
+  }
+
   // Ask before marking when questions are still open.
   function confirmMark(auto) {
-    const open = sq.map((s, n) => (s.pick === null ? n : -1)).filter(n => n >= 0);
+    const reach = reachedCount(), notReached = deck.length - reach;
+    const open = sq.slice(0, reach).map((s, n) => (s.pick === null ? n : -1)).filter(n => n >= 0);
+    if (!open.length && notReached && !auto) {
+      const box = el("div", { className: "card mark-ask" });
+      box.append(el("p", { className: "q" }, `You got up to question ${reach} of ${deck.length}`),
+        el("p", { className: "sub" }, `Marking now scores you out of ${reach}. The ${plural(notReached, "question")} after it that you haven't reached won't count.`));
+      const r = el("div", { className: "row" });
+      const go = el("button", { className: "btn" }, `Mark out of ${reach}`), back = el("button", { className: "btn ghost" }, `Keep going (question ${reach + 1})`);
+      go.onclick = () => markSet();
+      back.onclick = () => { i = reach; qEnter = timeMs(); show("fwd"); };
+      r.append(go, back); box.append(r);
+      screen("up"); app.append(topbar(), box);
+      return;
+    }
     if (!open.length) {
       if (auto) { // finished the last one: offer a chance to look back first
         const box = el("div", { className: "card mark-ask" });
@@ -1930,7 +1979,8 @@
     }
     const box = el("div", { className: "card mark-ask" });
     box.append(el("p", { className: "q" }, `${plural(open.length, "question")} not answered yet`),
-      el("p", { className: "sub" }, `Unanswered: ${open.map(n => n + 1).join(", ")}. If you mark now they count as incorrect.`));
+      el("p", { className: "sub" }, `Unanswered: ${open.map(n => n + 1).join(", ")}. If you mark now they count as incorrect.` +
+        (notReached ? ` You got up to question ${reach}, so you'll be marked out of ${reach}; the ${plural(notReached, "question")} after it won't count.` : "")));
     const r = el("div", { className: "row" });
     const back = el("button", { className: "btn" }, `Go to question ${open[0] + 1}`), go = el("button", { className: "btn ghost" }, "Mark anyway");
     back.onclick = () => { i = open[0]; qEnter = timeMs(); show("back"); };
@@ -1942,21 +1992,22 @@
   // Mark everything at once, then show the score and every question with its answer.
   function markSet() {
     score = 0; missed = [];
-    deck.forEach((q, n) => {
+    const reach = reachedCount(), counted = deck.slice(0, reach), notReached = deck.length - reach;
+    counted.forEach((q, n) => {
       const ok = sq[n].pick === q.answer;
       if (ok) score++; else missed.push(q);
       record(q, ok);
     });
     endQuiz(() => {});
     const total = timeMs();
-    if (trackSet) { ptLogQuick(score, deck.length); trackSet = false; }
+    if (trackSet) { ptLogQuick(score, reach); trackSet = false; }
     screen("up");
     const card = el("div", { className: "card" });
-    card.append(el("p", { className: "kicker" }, "Results"), el("p", { className: "score" }, `${score} / ${deck.length}`));
+    card.append(el("p", { className: "kicker" }, notReached ? `Marked early · got up to question ${reach} of ${deck.length}` : "Results"), el("p", { className: "score" }, `${score} / ${reach}`));
     if (!reviewMode && deck.length) card.append(el("p", { className: "sub", style: "margin:0 0 6px" }, "Added to today's \u201cDaily quick questions\u201d on the progression tracker."));
-    const unanswered = sq.filter(s => s.pick === null).length;
-    card.append(el("p", { className: "sub", style: "margin-bottom:6px" }, `${Math.round(score / deck.length * 100)}% correct${unanswered ? ` · ${unanswered} left unanswered` : ""}`));
-    card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / deck.length)} per question on average`));
+    const unanswered = sq.slice(0, reach).filter(s => s.pick === null).length;
+    card.append(el("p", { className: "sub", style: "margin-bottom:6px" }, `${Math.round(score / reach * 100)}% correct${unanswered ? ` · ${unanswered} left unanswered` : ""}${notReached ? ` · ${notReached} not reached (not counted)` : ""}`));
+    card.append(el("p", { className: "sub" }, `⏱ ${fmt(total)} total · ${fmt(total / reach)} per question on average`));
     card.append(el("p", { className: "sub", style: "margin-top:12px" }, reviewMode
       ? `${plural(score, "question")} you got right left your incorrect questions. ${wrongList().length} still there.`
       : missed.length ? `${missed.length} added to your incorrect questions.` : "Nothing new for your incorrect questions."));
@@ -1971,8 +2022,8 @@
     row.append(nb, again, menu);
     card.append(row);
     app.append(card);
-    // Every question, in order: your answer, the correct one, the explanation and the time you spent.
-    deck.forEach((q, n) => {
+    // Every question you reached, in order: your answer, the correct one, the explanation and the time you spent.
+    counted.forEach((q, n) => {
       const s = sq[n], ok = s.pick === q.answer;
       const c = el("div", { className: "card review-q" });
       const meta = el("div", { className: "meta" });
@@ -2108,6 +2159,18 @@
 
   document.getElementById("ver").textContent = APP_VERSION;
   gardenSync(); // lock the trees of days that have ended
+  // One-off fix: an 80-question custom set marked after reaching question 50 was scored out of 80 (the 30 questions
+  // not reached counted as wrong). Re-score that day's "Daily quick questions" cell out of 50.
+  (function fixEarlyMark() {
+    const pr = loadPrefs();
+    if (pr.fixedEarlyMark) return;
+    const p = loadPT();
+    for (const k of ["quick|2026-10-06", "quick|2026-10-07", "quick|2026-10-05"]) {
+      const q = (p.cells[k] || []).find(m => m.t === "q" && m.n >= 80);
+      if (q && q.n - 30 >= q.right) { q.n -= 30; q.s = Math.round(q.right / q.n * 100); savePT(p); break; }
+    }
+    savePrefs({ fixedEarlyMark: true });
+  })();
   document.getElementById("brand").onclick = () => { if (!inQuiz) home("back"); };
   home("up");
 
