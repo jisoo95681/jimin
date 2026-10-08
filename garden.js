@@ -1101,19 +1101,63 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45, dist: di
   trees.forEach(t => scene.add(t.holder));
 
   let pitch = .3, dist = dist0 || radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
+  // One finger (or the mouse) turns the view; two fingers pinch to zoom and move together to slide around the garden;
+  // the mouse wheel and the + / − buttons zoom too.
   let dragging = false, lastX = 0, lastY = 0;
   const el3 = renderer.domElement;
-  el3.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; lastY = e.clientY; try { el3.setPointerCapture(e.pointerId); } catch {} });
+  const minDist = Math.max(1.6, radius * .22), maxDist = radius * 3.6;
+  const zoomTo = d => { wantDist = Math.max(minDist, Math.min(maxDist, d)); };
+  const pts = new Map();
+  let pinch = null; // { d, mx, my } at the last two-finger move
+  const two = () => { const [a, b] = [...pts.values()]; return { d: Math.hypot(a.x - b.x, a.y - b.y), mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 }; };
+  el3.addEventListener("pointerdown", e => {
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try { el3.setPointerCapture(e.pointerId); } catch {}
+    if (pts.size === 2) { dragging = false; pinch = two(); }
+    else if (pts.size === 1) { dragging = true; lastX = e.clientX; lastY = e.clientY; }
+  });
   el3.addEventListener("pointermove", e => {
+    if (!pts.has(e.pointerId)) return;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pts.size >= 2 && pinch) {
+      const now = two();
+      if (now.d > 10 && pinch.d > 10) { zoomTo(wantDist * pinch.d / now.d); dist = wantDist; }
+      // Slide the view: move the focus across the ground, relative to where the camera faces.
+      const k = dist * .0022, dx = (now.mx - pinch.mx) * k, dz = (now.my - pinch.my) * k;
+      const right = new T.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)), fwd = new T.Vector3(-Math.sin(yaw), 0, -Math.cos(yaw));
+      wantFocus.addScaledVector(right, -dx).addScaledVector(fwd, dz);
+      const lim = radius * 1.3;
+      wantFocus.x = Math.max(-lim, Math.min(lim, wantFocus.x)); wantFocus.z = Math.max(-lim, Math.min(lim, wantFocus.z));
+      focus.copy(wantFocus);
+      pinch = now;
+      dirty = true;
+      return;
+    }
     if (!dragging) return;
     yaw -= (e.clientX - lastX) * .006;
-    pitch = Math.max(.08, Math.min(.9, pitch + (e.clientY - lastY) * .004));
+    pitch = Math.max(.05, Math.min(1.2, pitch + (e.clientY - lastY) * .004));
     lastX = e.clientX; lastY = e.clientY;
   });
-  const stop = () => (dragging = false);
+  const stop = e => {
+    pts.delete(e.pointerId);
+    if (pts.size < 2) pinch = null;
+    if (pts.size === 1) { const p = [...pts.values()][0]; dragging = true; lastX = p.x; lastY = p.y; } // carry on turning with the finger left
+    else dragging = false;
+  };
   el3.addEventListener("pointerup", stop);
   el3.addEventListener("pointercancel", stop);
-  el3.addEventListener("wheel", e => { e.preventDefault(); wantDist = Math.max(radius * .5, Math.min(radius * 3.4, wantDist * (1 + e.deltaY * .001))); }, { passive: false });
+  el3.addEventListener("wheel", e => { e.preventDefault(); zoomTo(wantDist * (1 + e.deltaY * .001)); }, { passive: false });
+  // Zoom buttons, for when pinching is awkward.
+  const ctl = document.createElement("div");
+  ctl.className = "g-zoom";
+  [["+", () => zoomTo(wantDist / 1.35)], ["−", () => zoomTo(wantDist * 1.35)], ["⟲", () => api.reset()]].forEach(([t, fn]) => {
+    const b = document.createElement("button");
+    b.textContent = t; b.type = "button"; b.setAttribute("aria-label", t === "+" ? "Zoom in" : t === "−" ? "Zoom out" : "Reset view");
+    b.addEventListener("pointerdown", e => e.stopPropagation());
+    b.onclick = e => { e.stopPropagation(); fn(); };
+    ctl.append(b);
+  });
+  host.append(ctl);
 
   function resize() {
     const w = host.clientWidth, h = host.clientHeight;
@@ -1145,14 +1189,15 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45, dist: di
     if (running) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
-  return {
+  const api = {
     scene,
     get yaw() { return yaw; },
     onFrame(fn) { hooks.push(fn); return () => hooks.splice(hooks.indexOf(fn), 1); },
     focusOn(pos, d) { wantFocus = pos.clone(); wantDist = d; },
     land,
-    reset() { wantFocus = target.clone(); wantDist = dist0 || radius * 2.7; }
+    reset() { wantFocus = target.clone(); wantDist = dist0 || radius * 2.7; pitch = .3; dirty = true; }
   };
+  return api;
 }
 
 // A tree planted in the meadow (the stage draws the ground). It shows `growth` straight away; grow(to) animates it.

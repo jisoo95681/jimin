@@ -6119,6 +6119,72 @@ const VIGNETTES = [
         "why": "Standard I(A), Knowledge of the Law: the firm has already dissociated from LaRue by firing him. The Code doesn't require reporting to regulators unless the law does, but it can be prudent, so consulting legal and compliance advisers is the right next step. B is wrong: once a complaint is filed, the matter is between LaRue and CFA Institute; the PCP won't report back to her. C is wrong: telling the local CFA society could breach the confidentiality of the PCP process."
       }
     ]
+  },
+  {
+    "id": "mercer",
+    "title": "Suzy Mercer: Shangri-la Development Associates",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Suzy Mercer, CFA, is currently working as a capital market adviser in a developing country. While attending a regional securities exchange conference, she introduces herself to Terrence Ong, CFA. Ong is one of several partners at Shangri-la Development Associates, a consulting firm specializing in capital market expansion in developing countries. When making her introduction, Mercer states, “I’m an independent adviser working with the government of a developing country to improve its capital market sector. I’ve heard a lot about the work you’ve done. Could we talk about my consulting assignment and a possible role for you?”"
+      ],
+      [
+        "p",
+        "Mercer continues, “I’m looking for someone with your background and stellar reputation to help create a strategic plan to develop the asset management industry. The client’s goal is to get the Securities Exchange to be a part of a regional exchange. This will help the locally listed companies gain more exposure. However, given the budget I’ve been given, I can afford to hire only an individual. Ong, would this be of interest to you?”"
+      ],
+      [
+        "p",
+        "Mercer continues the conversation by informing Ong that she will also be approaching other industry participants, particularly in the fund management industry, who are attending the conference. Ong responds, “I sure hope you are not talking to Daniel Ngyue, who manages several startup funds. I think he has a drinking problem. There is a rumor his last startup fund was not well received by the investors, likely due to his drinking. As one charterholder to another, please do your due diligence first before you hire anyone. As you have already pointed out, my reputation is stellar. Why don’t we meet tonight for dinner at my ‘members only’ club to discuss your project further? I can introduce you to other influential people who are currently looking for experienced advisers in your field for upcoming assignments. I’m sure if they knew we were working together, it would really go a long way in obtaining future assignments from these industry leaders.”"
+      ],
+      [
+        "p",
+        "Mercer informs Ong that she is unfortunately not able to meet him for dinner because of a previous engagement. She subsequently says to Ong, “I’m wondering how you would respond to a situation whereby a regulator chooses not to implement extensive policies and regulations regarding the integrity of capital markets I recommended. They say my suggested policies and regulations related to market manipulation, material nonpublic information, and protecting client interests are too complicated, and they do not have the judicial competency to back them up. Consequently, they have requested I recommend just one primary rule.” Thereafter, Mercer seeks out Daniel Ngyue, a CFA candidate, to ask for his version of what happened with his investors. Ngyue responds, “What actually happened was I got sick in a restaurant after having an adverse reaction to some medication. People uploaded photos to social media and stated I was falling over drunk. Subsequently, I wrote a letter to the investors explaining the situation and assuring them I had found another highly qualified fund manager after several weeks to take over until such time I had fully recovered. When I could, I looked at the fund when I was in the hospital for a week, but the fund needs close supervision, so that’s why I wanted to find another manager. One investor commented, ‘Key-person risk was not identified in the fund’s prospectus.’ Within one week we sent out a revision to the prospectus identifying key-person risk.”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "To avoid violating any CFA Institute Standards of Professional Conduct, which of the following is Ong’s most appropriate response to Mercer’s question?",
+        "options": [
+          "“I will need to touch base with my partners.”",
+          "“I’m not able to take on projects as an individual.”",
+          "“I can refer you to another independent adviser.”"
+        ],
+        "answer": 0,
+        "why": "Standard IV, Duties to Employers: the work is a business opportunity for Ong's firm. Taking it as an individual would compete with his firm and deprive it of his skills and revenue (IV(A) Loyalty) and mean extra pay from a competing activity (IV(B) Additional Compensation Arrangements). He should first take it to his partners, who might, for example, cut their fees to win it. B shuts the firm out without asking. C hands the opportunity to someone else, again without giving his firm the chance."
+      },
+      {
+        "q": "In the continued conversation between Mercer and Ong, which sub-standard of Standard I: Professionalism did Ong least likely violate?",
+        "options": [
+          "Misconduct",
+          "Misrepresentation",
+          "Independence and Objectivity"
+        ],
+        "answer": 1,
+        "why": "I(C) Misrepresentation is least likely violated: Mercer herself called his reputation stellar, so repeating it is not a misrepresentation. A is violated: I(D) Misconduct (labelled I(A) in your source): spreading a rumour that Ngyue drinks damages another's reputation and reflects badly on Ong's integrity. C is violated: I(B), hinting that influential contacts would give Mercer future work if she hires him is a benefit meant to sway her choice of adviser."
+      },
+      {
+        "q": "Which of the following should Ong most likely advise with regard to the regulator’s request?",
+        "options": [
+          "Ban the “pumping up” of investment prices",
+          "Require material information be made public within 24 hours",
+          "When trading, insist service providers give preference to investors"
+        ],
+        "answer": 2,
+        "why": "One broad rule that puts investors' interests first covers the most ground: it supports loyalty to clients and also makes trading on material nonpublic information and market manipulation unacceptable, since both put others ahead of investors. A is too narrow: it targets only information-based manipulation, not transaction-based manipulation or insider trading. B could harm investors: not all material information should be public (e.g. competitive secrets)."
+      },
+      {
+        "q": "During the conversation between Ngyue and Mercer, Ngyue revealed he had most likely violated which CFA Institute Standards of Professional Conduct?",
+        "options": [
+          "Standard I: Professionalism",
+          "Standard V: Investment Analysis, Recommendations, and Actions",
+          "Both Standard I: Professionalism and Standard V: Investment Analysis, Recommendations, and Actions"
+        ],
+        "answer": 2,
+        "why": "Ngyue was effectively the fund's only manager, yet key-person risk was missing from the prospectus. That omission is a misrepresentation under I(C) (Standard I), and failing to disclose a significant risk of the investment process breaches V(B) Communication with Clients and Prospective Clients (Standard V). So both Standards were violated, even though he later corrected the prospectus."
+      }
+    ]
   }
 ];
 

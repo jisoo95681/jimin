@@ -2253,6 +2253,46 @@ const QUESTIONS = [
     options: ["Only when the law requires it, though it may be prudent", "Always, as soon as a violation is discovered", "Never, since all reporting goes through CFA Institute"],
     answer: 0,
     why: "I(A) requires dissociating from violations. Reporting to regulators isn't required by the Standards unless the law requires it, but can be prudent."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A partner at a consulting firm is offered a project as an individual. To comply with Standard IV, he should first:",
+    options: ["Accept it, as long as he works on it in his own time", "Take the opportunity to his firm and partners", "Refer the client to another independent adviser"],
+    answer: 1,
+    why: "IV(A) Loyalty and IV(B) Additional Compensation: work that competes with the employer must go to the employer first. Referring it elsewhere also deprives the firm."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Spreading an unverified rumour that a fellow professional has a drinking problem most likely violates:",
+    options: ["Standard I(D), Misconduct", "Standard I(C), Misrepresentation", "Standard III(E), Confidentiality"],
+    answer: 0,
+    why: "Misconduct covers conduct reflecting adversely on professional reputation, integrity or competence, such as maligning others on rumours."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Offering introductions to influential people to win a consulting assignment most likely violates:",
+    options: ["Standard I(B), Independence and Objectivity", "Standard VI(A), Disclosure of Conflicts", "Standard I(C), Misrepresentation"],
+    answer: 0,
+    why: "Offering benefits that could reasonably compromise someone's independence in choosing an adviser breaches I(B)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A regulator can adopt only ONE broad capital-market rule. The best choice is to:",
+    options: ["Ban only information-based price manipulation", "Require that all material information be published within 24 hours", "Require that investors' interests be given priority"],
+    answer: 2,
+    why: "Putting investors first covers loyalty and makes insider trading and manipulation unacceptable. Banning one kind of manipulation is too narrow; forcing all material information public could harm investors."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A sole fund manager's prospectus omits key-person risk. This most likely violates:",
+    options: ["Only V(B), Communication with Clients", "Only I(C), Misrepresentation", "Both I(C) and V(B)"],
+    answer: 2,
+    why: "Omitting a significant risk is a misrepresentation by omission (I(C)) and a failure to disclose significant risks of the investment process (V(B))."
   }
 ];
 
