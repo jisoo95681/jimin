@@ -407,6 +407,7 @@
   .pt .c-read b { display: inline-block; width: 22px; color: var(--muted); font-weight: 600; }
   .pt tr.grp td { border-top: 2px solid var(--border); }
   .pt tr.mock .c-topic, .pt tr.mock .c-read { background: #fbf8f1; }
+  .pt tr.review .c-read { color: var(--muted); font-style: italic; padding-left: 30px; }
   .pt .d { width: 34px; min-width: 34px; text-align: center; font-size: .72rem; line-height: 1.05; }
   .pt .d.wk { color: #9aa3b8; }
   .pt thead th.d.today { background: var(--navy); color: var(--white); }
@@ -414,6 +415,7 @@
   .pt td.cell:hover { background: #f5fafa; }
   .pt td.cell.today { background: rgba(41, 38, 69, .045); }
   @media (max-width: 600px) {
+    .pt tr.review .c-read { padding-left: 23px; }
     .pt .c-topic { width: 68px; min-width: 68px; max-width: 68px; padding: 6px 4px; font-size: .6rem; overflow-wrap: break-word; }
     .pt .c-read { left: 68px; width: 128px; min-width: 128px; max-width: 128px; padding: 0 5px; font-size: .72rem; }
     .pt .c-read b { width: 18px; }
@@ -616,7 +618,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v78 · 2026-10-08";
+  const APP_VERSION = "v79 · 2026-10-08";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1040,23 +1042,25 @@
     const tbody = el("tbody");
     let num = 0;
     PT_TOPICS.forEach(([topic, weight, readings], ti) => {
-      readings.forEach((title, ri) => {
-        const extra = topic === "Mock Exam" ? "mock" : topic === "Daily Quick Questions" ? "quick" : null;
-        const mock = !!extra, id = extra || String(++num);
-        const tr = el("tr", { className: (ri === 0 && ti ? "grp" : "") + (mock ? " mock" : "") });
+      const extra = topic === "Mock Exam" ? "mock" : topic === "Daily Quick Questions" ? "quick" : null;
+      // Each topic ends with an un-numbered "Incorrect questions review" row (ids rev0, rev1, … so reading numbers stay put).
+      const rows = readings.map(title => ({ title, id: extra || String(++num), plain: !!extra }));
+      if (!extra) rows.push({ title: "Incorrect questions review", id: "rev" + ti, plain: true, review: true });
+      rows.forEach(({ title, id, plain, review }, ri) => {
+        const tr = el("tr", { className: (ri === 0 && ti ? "grp" : "") + (extra ? " mock" : "") + (review ? " review" : "") });
         if (ri === 0) {
-          const th = el("td", { className: "c-topic", rowSpan: readings.length });
+          const th = el("td", { className: "c-topic", rowSpan: rows.length });
           th.append(topic); if (weight) th.append(el("small", {}, `(${weight})`));
           tr.append(th);
         }
         const rd = el("td", { className: "c-read", title });
-        rd.innerHTML = mock ? "" : `<b>${id}</b>`;
+        rd.innerHTML = plain ? "" : `<b>${id}</b>`;
         rd.append(title);
         tr.append(rd);
         days.forEach(d => {
           const k = dkey(d), td = el("td", { className: "cell" + (k === todayKey ? " today" : "") });
           ptPaint(td, p.cells[id + "|" + k]);
-          td.onclick = () => ptPick(id, mock ? title : `${id}. ${title}`, d, td);
+          td.onclick = () => ptPick(id, plain ? (review ? `${topic} · ${title}` : title) : `${id}. ${title}`, d, td);
           tr.append(td);
         });
         tbody.append(tr);
