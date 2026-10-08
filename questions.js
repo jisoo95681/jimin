@@ -2077,6 +2077,70 @@ const QUESTIONS = [
     options: ["Positive for calls, negative for puts", "Negative for calls, positive for puts", "Positive for both calls and puts, like vega"],
     answer: 0,
     why: "A higher rate lowers the PV of the exercise price, which helps calls (the price paid) and hurts puts (the price received)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In BSM, the amount e^(−rT) X N(−d2) represents:",
+    options: ["The amount borrowed to replicate a call", "The amount lent to replicate a put", "The value of the call's exercise right"],
+    answer: 1,
+    why: "Put = lend e^(−rT) X N(−d2) and short N(−d1) shares. A call borrows e^(−rT) X N(d2) to buy N(d1) shares."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A call option can be viewed as:",
+    options: ["A leveraged long position in the stock", "A short stock position plus lending", "A risk-free bond with no stock exposure"],
+    answer: 0,
+    why: "Buying N(d1) shares partly financed by borrowing makes a call a leveraged long stock position. A put is short stock plus lending."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Vega is typically highest for options that are:",
+    options: ["Deep in the money, with high intrinsic value", "At or near the money", "Far out of the money"],
+    answer: 1,
+    why: "Volatility matters most when the option could easily finish either in or out of the money, i.e. near the money. Deep in- or out-of-the-money options have low vega."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "As an option approaches expiration, theta typically:",
+    options: ["Stays constant every day until expiry", "Shrinks steadily to zero at a slowing rate", "Grows in size, so time decay speeds up"],
+    answer: 2,
+    why: "Time decay accelerates near expiry, especially for at-the-money options."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Implied volatility is:",
+    options: ["The volatility backed out from market option prices", "The standard deviation of the stock's past daily returns", "The volatility set by the exchange for each option"],
+    answer: 0,
+    why: "Implied volatility is the input that makes the model price equal the market price. It reflects the market's expected FUTURE volatility, unlike historical volatility."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A volatility surface shows implied volatility across:",
+    options: ["Exercise prices only", "Both exercise prices and times to maturity", "Times to maturity only, for one fixed strike price"],
+    answer: 1,
+    why: "The smile/skew shows implied volatility across exercise prices; the term structure shows it across maturities; the surface combines both in 3D."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "When demand for downside hedging rises, the volatility skew typically:",
+    options: ["Flattens into a symmetric smile", "Disappears, since all implied vols equal", "Steepens: low-strike puts get pricier"],
+    answer: 2,
+    why: "Investors pay up for protective out-of-the-money puts, raising their implied volatility and steepening the skew."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Gamma measures:",
+    options: ["The change in delta for a small change in the stock price", "The change in option value as time passes", "The change in option value for a change in volatility"],
+    answer: 0,
+    why: "Gamma is the rate of change of delta. Theta is time decay; vega is volatility sensitivity."
   }
 ];
 

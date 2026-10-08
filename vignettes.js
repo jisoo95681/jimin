@@ -5797,6 +5797,128 @@ const VIGNETTES = [
         "why": "Shares have gamma 0 (their delta is always +1). Long options always have positive gamma, and a put's gamma equals the call's gamma (put–call parity). So adding LONG puts makes the portfolio gamma positive. A delta hedge built by selling calls would instead give negative gamma."
       }
     ]
+  },
+  {
+    "id": "princeton",
+    "title": "Arnie Burr: Princeton Capital",
+    "topic": "Derivatives",
+    "reading": "Valuation of Contingent Claims",
+    "body": [
+      [
+        "p",
+        "Arnie Burr is CEO and chief investment officer of Princeton Capital, a registered investment advisory firm. He is working with Tom Jeffinsin, head trader, and Jim Madisox, a new analyst. They meet to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios."
+      ],
+      [
+        "p",
+        "Burr begins the discussion by stating that the Black–Scholes–Merton (BSM) model is a relatively straightforward tool for valuing options despite its rigorous computational components. Burr writes the BSM model on the firm’s whiteboard, presented as Exhibit 1."
+      ],
+      [
+        "h",
+        "Exhibit 1: BSM Model for Options on Non-Dividend Paying Stocks"
+      ],
+      [
+        "p",
+        "c = SN(d1) – e^(–rT)XN(d2),\nand\np = e^(–rT)XN(–d2) – SN(–d1),\nwhere\nd1 = [[ln(S/X) + (r + σ²/2)T|σ√T]] and d2 = d1 − σ√T."
+      ],
+      [
+        "p",
+        "(The definitions of d1 and d2 were missing from the copied text; the standard BSM definitions are shown.)"
+      ],
+      [
+        "p",
+        "Burr wants to assess Madisox’s comprehension of the components of the BSM. Madisox states that a call option can be viewed as a leveraged position in the underlying stock. To replicate a call option, the appropriate strategy is to purchase N(d1) shares and simultaneously borrow an amount e^(–rT)XN(–d2)."
+      ],
+      [
+        "p",
+        "Jeffinsin introduces option Greeks into the conversation, stating, “The BSM model contains six inputs: the stock price, the option’s exercise price, dividends, the risk-free interest rate, time to maturity, and implied volatility. The effect of the BSM model inputs on the price of an option can be measured by the option Greeks. Delta and gamma are measures of the relationship between a change in the stock price and the option price. Theta is a measure that typically approaches zero at an increasing rate as the option approaches maturity. Holding all other factors constant, Vega is a measure that typically is higher whenever an option is “out of the money.”"
+      ],
+      [
+        "p",
+        "Burr states that a client would like to sell calls on 1,000 shares of Weehawkin stock. Stock and option information on Weehawkin stock is presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Option Information on Weehawkin Corporation Stock",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Stock Price",
+              "$100"
+            ],
+            [
+              "Call Option Exercise Price",
+              "$100"
+            ],
+            [
+              "Call Option Value",
+              "$9.23"
+            ],
+            [
+              "Call Option Delta",
+              "0.587"
+            ],
+            [
+              "Call Option Gamma",
+              "0.019"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Burr asks Madisox to outline an appropriate hedging strategy. Madisox replies that to be fully hedged, an option trader will need to consider how changes in the stock price relative to the option exercise price affect the value of the call options. To be fully hedged against a small change in the stock price, Madisox suggests that the proper strategy to construct the hedge is to use call option delta and add the call option gamma to arrive at the number of shares required."
+      ],
+      [
+        "p",
+        "Madisox notes that the implied volatility for the Weehawkin call option outlined in Exhibit 2 is 30%. With respect to other call options on Weehawkin stock, Madisox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Burr adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Jeffinsin concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Madisox’s statement about the BSM model is least likely correct with respect to:",
+        "options": [
+          "purchasing (d1) shares.",
+          "the leveraged position in a stock.",
+          "borrowing an amount e–rTXN(–d2)."
+        ],
+        "answer": 2,
+        "why": "A call is a leveraged stock position: buy N(d1) shares and BORROW e^(−rT) X N(d2), which is exactly the second term of c = S N(d1) − e^(−rT) X N(d2). The amount e^(−rT) X N(−d2) is what is LENT when replicating a put (p = e^(−rT) X N(−d2) − S N(−d1)). A and B are correct parts of his statement."
+      },
+      {
+        "q": "Jeffinsin’s statement about option Greeks is least likely correct with respect to:",
+        "options": [
+          "vega.",
+          "theta.",
+          "delta and gamma."
+        ],
+        "answer": 0,
+        "why": "Vega (sensitivity to volatility) is HIGHEST for options at or near the money and lower when they are deep in or out of the money, so his vega claim is wrong. B is wrong: theta (time decay) does behave as he describes, changing at an increasing rate as expiry nears. C is wrong: delta and gamma do both measure how the option responds to changes in the stock price."
+      },
+      {
+        "q": "Is Madisox’s suggested hedging strategy for Weehawkin options most likely correct?",
+        "options": [
+          "Yes",
+          "No, he should only use delta",
+          "No, he should subtract gamma"
+        ],
+        "answer": 0,
+        "why": "Per the source answer: delta (0.587) shows how many shares hedge one call now, and gamma (0.019) shows how much delta changes for a $1 move in the stock. Adding them, 0.587 + 0.019 = 0.606 shares per call, anticipates the new delta after a small rise in the stock. C is wrong: gamma is added, not subtracted.\nNote: in the standard curriculum a plain delta hedge uses delta alone, and gamma risk is neutralized with other options, not shares. Treat this answer as specific to this question."
+      },
+      {
+        "q": "Whose comment regarding implied volatility is most likely correct?",
+        "options": [
+          "Burr’s",
+          "Madisox’s",
+          "Jeffinsin’s"
+        ],
+        "answer": 1,
+        "why": "Madisox is right: the volatility surface shows implied volatility across both exercise prices and maturities. A is wrong: implied volatility is backed out from MARKET option prices and reflects expected FUTURE volatility; it is not calculated from historical volatility. C is wrong: when demand for hedging rises, the skew steepens, so its shape differs from the smile; they don't become identical."
+      }
+    ]
   }
 ];
 
