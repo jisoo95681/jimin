@@ -2141,6 +2141,62 @@ const QUESTIONS = [
     options: ["The change in delta for a small change in the stock price", "The change in option value as time passes", "The change in option value for a change in volatility"],
     answer: 0,
     why: "Gamma is the rate of change of delta. Theta is time decay; vega is volatility sensitivity."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under Standard IV(C), supervisors' compliance procedures should be reviewed:",
+    options: ["Once, when the compliance program is first adopted", "Periodically, and whenever laws or regulations change", "Only after a violation has been discovered and reported"],
+    answer: 1,
+    why: "Supervisors must keep procedures adequate over time: periodic reviews and updates, plus revisions when new laws or regulations arrive."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under Standard V(A), setting measurable criteria for the quality and accuracy of analysts' research falls under:",
+    options: ["Compensation", "Distribution", "Reasonable basis"],
+    answer: 0,
+    why: "V(A) recommended procedures: compensation (criteria for research quality and accuracy), distribution (a supervisory analyst approves material before release), reasonable basis (written due diligence procedures)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Having a supervisory analyst approve research before it is sent to clients is the V(A) procedure for:",
+    options: ["Reasonable basis", "Distribution", "Compensation"],
+    answer: 1,
+    why: "Distribution: review and approval before external circulation, to check the firm's criteria are met."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A high-risk turnaround stock is bought in one block trade for all accounts, including conservative retirement mandates. The main violation is:",
+    options: ["Fair Dealing, since every account received the trade", "Misrepresentation, since the risk was not mentioned", "Suitability, since it conflicts with the conservative mandates"],
+    answer: 2,
+    why: "III(C) requires actions consistent with each portfolio's mandate. A block trade itself is fair; the problem is buying it for accounts it doesn't suit."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst includes management's earnings guidance in her report alongside her own estimates, clearly attributed. This is:",
+    options: ["Acceptable: attributed sources are not misrepresentation", "A violation of Misrepresentation (plagiarism)", "A violation of Material Nonpublic Information"],
+    answer: 0,
+    why: "Citing others' views with attribution is fine under I(C). Plagiarism means presenting others' work as your own."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under Standard VI(B), a firm's personal trading policies should be:",
+    options: ["Kept confidential to protect employees' privacy", "Disclosed to investors when they ask for them", "Approved by clients before employees may trade"],
+    answer: 1,
+    why: "Members should fully disclose the firm's personal-investing policies to investors on request. Recommended procedures also include IPO restrictions and blackout periods."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which is a recommended procedure under Standard VI(B), Priority of Transactions?",
+    options: ["Allowing employees first access to IPOs", "Letting staff trade on buy-list stocks just before clients", "Blackout periods around client trades"],
+    answer: 2,
+    why: "Blackout periods stop front-running. Recommended procedures also restrict IPO participation, require pre-clearance and reporting of holdings, and disclose policies on request."
   }
 ];
 

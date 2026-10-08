@@ -5919,6 +5919,100 @@ const VIGNETTES = [
         "why": "Madisox is right: the volatility surface shows implied volatility across both exercise prices and maturities. A is wrong: implied volatility is backed out from MARKET option prices and reflects expected FUTURE volatility; it is not calculated from historical volatility. C is wrong: when demand for hedging rises, the skew steepens, so its shape differs from the smile; they don't become identical."
       }
     ]
+  },
+  {
+    "id": "northside",
+    "title": "Brian Patrick: Northside Capital Advisers",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Brian Patrick, CFA, has recently joined Northside Capital Advisers (Northside) as the firm’s assistant compliance officer. Northside manages individual accounts with conservative mandates for a variety of retirements funds, as well as individual accounts for high-net-worth investors with long investment horizons. Kyle Sang, CFA, is Northside’s chief compliance officer and Patrick’s supervisor. Sang has been with the firm since its inception and wrote the firm’s original Code of Ethics and Compliance Manual. Sang provides Patrick with a copy of both documents and asks Patrick to review them. He instructs Patrick to highlight any areas he feels should be revised or enhanced. Patrick lists the items that need to be addressed."
+      ],
+      [
+        "p",
+        "The first item Patrick adds to his list concerns the responsibilities of supervisors. Although the information contained in the Compliance Manual is accurate, he believes it needs to be augmented so the firm’s supervisors have a clear understanding of their responsibilities. He advises adding the following items to the firm’s Compliance Manual, recommending Supervisors should do the following:"
+      ],
+      [
+        "p",
+        "Recommendation 1: Conduct an initial review of the firm’s Policies and Procedures, and review as necessary to ensure they are consistent with applicable laws and regulations."
+      ],
+      [
+        "p",
+        "Recommendation 2: Incorporate a professional conduct evaluation as part of the employee’s performance review."
+      ],
+      [
+        "p",
+        "Recommendation 3: Review the actions of all the firm’s employees, and identify violators."
+      ],
+      [
+        "p",
+        "Patrick believes he needs a better understanding of the investment process before he makes any investment-policy-related recommendations. He meets with Staci Canton, the firm’s chief investment officer. Following his meeting with Canton, Patrick suggests the following enhancements to the firm’s Compliance Manual related to investment research:"
+      ],
+      [
+        "p",
+        "Proposal 1: Develop criteria for assessing analysts’ research quality and contribution, including the accuracy and timing of their recommendations."
+      ],
+      [
+        "p",
+        "Proposal 2: Appoint a supervisor to review and approve communication material."
+      ],
+      [
+        "p",
+        "Proposal 3: Develop detailed, written guidance that establishes the due diligence procedures."
+      ],
+      [
+        "p",
+        "Patrick asks Canton to provide him with a copy of a recent research report that would have been distributed to the firm’s clients. Patrick is provided a copy of the PT Matias (PT) report, written by Amanda Burt, CFA. PT is involved in the manufacture of aluminum cans supplied to the soft drink industry. She mentions that PT has recently gone through a reorganization and is in a turnaround situation, so the potential returns are quite large. The shares were recently purchased for all client portfolios in a block trade. After reviewing the report, Patrick meets with Burt to discuss her approach to researching companies, meeting with company management, and determining earnings estimates. Burt explains to Patrick how carefully she documents her meetings with management and shares her notes with him. He compares the meeting notes with Burt’s recent report and notices she has included management’s guidance for earnings and margins along with her own estimates."
+      ],
+      [
+        "p",
+        "Patrick’s review of the firm’s Code and Compliance Policies and Procedures is almost complete. The final item to review is how the firm handles employees’ trading. He notices the current Policies and Procedures are lacking. He notes that the firm currently restricts employee participation in IPOs, has a very narrow blackout period for employees trading securities on their buy list, and ensures personal trading policies are kept confidential. Sang tells Patrick of the difficulty he experienced in trying to get more robust personal trading policies and procedures approved. The board has historically been reluctant to put restrictions in place that limit the staff’s ability to invest their personal funds."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Patrick’s recommendations is most likely insufficient to comply with the Standard relating to responsibilities of supervisors?",
+        "options": [
+          "Recommendation 1",
+          "Recommendation 2",
+          "Recommendation 3"
+        ],
+        "answer": 0,
+        "why": "Standard IV(C), Responsibilities of Supervisors: once a compliance program exists, supervisors must review and update it PERIODICALLY (and whenever laws change) so it stays adequate. An initial review plus reviews 'as necessary' does not commit to periodic reviews, so Recommendation 1 falls short. Recommendations 2 (including professional conduct in performance reviews) and 3 (reviewing employees' actions and identifying violators) are appropriate supervisory procedures."
+      },
+      {
+        "q": "To indicate the area of the investment research process he wants to address, Patrick should most likely label the proposals as follows:",
+        "options": [
+          "Proposal 1 = Compensation, Proposal 2 = Reasonable Basis, Proposal 3 = Distribution.",
+          "Proposal 1 = Reasonable Basis, Proposal 2 = Distribution, Proposal 3 = Compensation.",
+          "Proposal 1 = Compensation, Proposal 2 = Distribution, Proposal 3 = Reasonable Basis."
+        ],
+        "answer": 2,
+        "why": "These are Standard V(A), Diligence and Reasonable Basis, recommended procedures:\n• Compensation (Proposal 1): measurable criteria for the quality, contribution and accuracy of analysts' research, used in evaluating and paying them.\n• Distribution (Proposal 2): a supervisory analyst reviews and approves material before it goes out.\n• Reasonable Basis (Proposal 3): written due diligence procedures for judging whether a recommendation has a reasonable and adequate basis.\nA swaps Distribution and Reasonable Basis; B swaps Compensation and Reasonable Basis."
+      },
+      {
+        "q": "Which of the following Standards has most likely been violated in relation to the research report and purchase of PT Matias?",
+        "options": [
+          "Suitability",
+          "Fair Dealing",
+          "Misrepresentation"
+        ],
+        "answer": 0,
+        "why": "Standard III(C), Suitability: a high-risk turnaround stock was bought for ALL client portfolios, including the retirement accounts with conservative mandates, so it was not consistent with those portfolios' objectives and constraints. B is wrong: buying for everyone in one block trade treats clients fairly (no one was favoured). C is wrong: Burt cited management's guidance alongside her own estimates, so she did not present others' work as her own."
+      },
+      {
+        "q": "Which of Northside’s current personal trading policies is least consistent with the recommended procedures for the Standard relating to priority of transactions?",
+        "options": [
+          "IPO restriction",
+          "Policy confidentiality",
+          "Blackout trading window"
+        ],
+        "answer": 1,
+        "why": "Standard VI(B), Priority of Transactions, recommends that firms disclose their personal-investing policies to investors on request; keeping them confidential goes against this. A is wrong: restricting employees from IPOs is a recommended procedure (it avoids taking opportunities from clients or appearing to receive favours). C is wrong: a blackout period, even a narrow one, is recommended to stop front-running client trades."
+      }
+    ]
   }
 ];
 
