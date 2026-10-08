@@ -27,6 +27,24 @@ const SPECIES = [
   { name: "Birch", kind: "birch", bark: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 }
 ];
 
+// Real-world size: each species' typical full-grown height in a garden (metres), and the height and crown width of its
+// model at full growth (scene units). Trees are scaled so their heights compare as in real life (1 m ≈ 0.34 units):
+// a baobab ends up about five times as tall as a lemon tree.
+const TREE_REAL_H = { "Baobab": 25, "Lemon Tree": 4.5, "Apple Tree": 7, "Korean Red Pine": 20, "Ginkgo": 22, "Grape Vine": 2.5,
+  "Cherry Blossom": 9, "Orange Tree": 7, "Weeping Willow": 13, "Maple": 14, "Fir": 25, "Palm": 18, "Oak": 18, "Olive Tree": 7,
+  "Jacaranda": 13, "Birch": 16 };
+const TREE_MODEL = { "Baobab": [3.03, 2.23], "Lemon Tree": [1.53, 2.3], "Apple Tree": [1.91, 2.91], "Korean Red Pine": [3.17, 2.58],
+  "Ginkgo": [2.75, 1.27], "Grape Vine": [1.86, 2.47], "Cherry Blossom": [2.17, 2.7], "Orange Tree": [1.63, 2.3], "Weeping Willow": [2.13, 2.75],
+  "Maple": [2.19, 2.85], "Fir": [3.13, 2.75], "Palm": [2.93, 2.83], "Oak": [1.98, 3.92], "Olive Tree": [1.69, 2.14], "Jacaranda": [2.35, 3.25],
+  "Birch": [2.82, 1.37] };
+const UNITS_PER_M = .34;
+const treeScale = spec => UNITS_PER_M * (TREE_REAL_H[spec.name] || 7) / (TREE_MODEL[spec.name] || [2])[0];
+// How tall the tree stands at growth g, as a share of its full height (a vine is trained to full height from the start).
+const heightFrac = (spec, g) => spec.kind === "vine" ? 1 : .14 + .86 * (1 - Math.pow(1 - Math.min(1, g), 1.5));
+const treeHeight = (spec, g) => treeScale(spec) * (TREE_MODEL[spec.name] || [2])[0] * heightFrac(spec, g);
+const crownRadius = (spec, g) => treeScale(spec) * (TREE_MODEL[spec.name] || [2, 2.6])[1] / 2 * heightFrac(spec, g);
+const bedRadius = spec => .62 * Math.max(1, treeScale(spec) * .75); // a bigger trunk needs a bigger bed
+
 // ---------- Data ----------
 const gMod = (n, m) => ((n % m) + m) % m;
 const dayDiff = (a, b) => Math.round((midnight(b) - midnight(a)) / 86400000);
@@ -845,14 +863,14 @@ function gardenTexture(T, kind) {
 }
 const texRepeat = (T, kind, rx, ry) => { const t = gardenTexture(T, kind).clone(); t.needsUpdate = true; t.repeat.set(rx, ry); return t; };
 
-function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
+function makeLandscape(T, scene, { radius, spots, beds = [], lod = 1 }) {
   const rnd = seeded("garden" + spots.length), R = (a, b) => a + (b - a) * rnd();
   const add = (o, shadow = true) => { o.traverse(m => { if (m.isMesh) { m.castShadow = shadow; m.receiveShadow = true; } }); scene.add(o); return o; };
   // The plot: big enough for every tree plus room for the gardener to walk in from the side.
   let mx = 0, mz = 0;
-  spots.forEach(p => { mx = Math.max(mx, Math.abs(p.x)); mz = Math.max(mz, Math.abs(p.z)); });
+  const bedOf = i => beds[i] || .62; // tree bed radius (bigger for big trees)
+  spots.forEach((p, i) => { mx = Math.max(mx, Math.abs(p.x) + bedOf(i) - .62); mz = Math.max(mz, Math.abs(p.z) + bedOf(i) - .62); });
   const hx = Math.max(5.4, mx + 3.4), hz = Math.max(5.4, mz + 3.4);
-  const BED = .62; // tree bed radius
 
   // Lawn inside the fence: textured, with mowing stripes.
   const lawnGeo = new T.PlaneGeometry(hx * 2, hz * 2, 80, 80);
@@ -881,15 +899,15 @@ function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
   const slabGeo = new T.CylinderGeometry(.17, .18, .035, 9);
   { const sp = slabGeo.attributes.position; for (let i = 0; i < sp.count; i++) { const x = sp.getX(i), z = sp.getZ(i), a = Math.atan2(z, x), r = 1 + Math.sin(a * 3 + 1) * .08 + Math.sin(a * 5) * .05; sp.setX(i, x * r); sp.setZ(i, z * r); } slabGeo.computeVertexNormals(); }
   const slabs = [], gate = new T.Vector3(0, 0, hz);
-  const order = [], left = spots.map(p => p.clone());
+  const order = [], left = spots.map((p, i) => Object.assign(p.clone(), { bed: bedOf(i) }));
   let cur = gate.clone();
   while (left.length) { let bi = 0; left.forEach((p, i) => { if (p.distanceTo(cur) < left[bi].distanceTo(cur)) bi = i; }); order.push(left[bi]); cur = left[bi]; left.splice(bi, 1); }
   let from = gate.clone().add(new T.Vector3(0, 0, -.3));
   order.forEach(p => {
-    const dir = p.clone().sub(from).setY(0), len = dir.length() - BED - .35;
+    const dir = p.clone().sub(from).setY(0), len = dir.length() - p.bed - .35;
     dir.normalize();
     for (let s = .0; s < len; s += .48) slabs.push(from.clone().addScaledVector(dir, s).add(new T.Vector3(R(-.04, .04), 0, R(-.04, .04))));
-    from = p.clone().addScaledVector(dir, BED + .3);
+    from = p.clone().addScaledVector(dir, p.bed + .3);
   });
   // Short mown grass blades over the lawn for a velvety surface.
   const blade = new T.BufferGeometry();
@@ -906,7 +924,7 @@ function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
   const m = new T.Matrix4(), q = new T.Quaternion(), sc = new T.Vector3(), pos = new T.Vector3(), e = new T.Euler(), col = new T.Color();
   const greens = [0x4f8a3c, 0x5a9644, 0x64a04b, 0x467f35];
   let nb = 0;
-  const onBed = (x, z) => spots.some(p => Math.hypot(x - p.x, z - p.z) < BED + .12) || slabs.some(p => Math.hypot(x - p.x, z - p.z) < .21);
+  const onBed = (x, z) => spots.some((p, i) => Math.hypot(x - p.x, z - p.z) < bedOf(i) + .12) || slabs.some(p => Math.hypot(x - p.x, z - p.z) < .21);
   for (let t = 0; t < nBlades * 2 && nb < nBlades; t++) {
     const x = R(-hx + .85, hx - .85), z = R(-hz + .85, hz - .1);
     if (onBed(x, z)) continue;
@@ -922,9 +940,11 @@ function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
   const mulchM = new T.MeshStandardMaterial({ map: texRepeat(T, "mulch", 1.2, 1.2), roughness: 1 });
   const edgeGeo = new T.BoxGeometry(.13, .06, .07, 2, 1, 1);
   { const ep = edgeGeo.attributes.position; for (let i = 0; i < ep.count; i++) { const y = ep.getY(i); if (y > 0) { ep.setX(i, ep.getX(i) * .85); ep.setZ(i, ep.getZ(i) * .8); } } edgeGeo.computeVertexNormals(); }
-  const perBed = 24, edges = new T.InstancedMesh(edgeGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "stone", .3, .3), color: 0xd8d2c4, roughness: .9 }), spots.length * perBed);
+  const perBedOf = i => Math.round(24 * bedOf(i) / .62);
+  const edges = new T.InstancedMesh(edgeGeo, new T.MeshStandardMaterial({ map: texRepeat(T, "stone", .3, .3), color: 0xd8d2c4, roughness: .9 }), spots.reduce((n, p, i) => n + perBedOf(i), 0));
   let ne = 0;
-  spots.forEach(p => {
+  spots.forEach((p, i) => {
+    const BED = bedOf(i), perBed = perBedOf(i);
     const bed = new T.Mesh(new T.CylinderGeometry(BED, BED + .02, .03, 48), mulchM);
     bed.position.set(p.x, .005, p.z);
     add(bed, false);
@@ -1054,14 +1074,14 @@ function makeLandscape(T, scene, { radius, spots, lod = 1 }) {
 }
 
 // A 3D stage: renderer, lights and a fixed camera (no spinning). Drag to look around; it stays where you leave it.
-function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
+function makeStage(T, host, { trees, radius, target, height, yaw = .45, dist: dist0 }) {
   const renderer = new T.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = T.PCFSoftShadowMap;
   host.append(renderer.domElement);
   const scene = new T.Scene();
-  const land = makeLandscape(T, scene, { radius, spots: trees.map(t => t.holder.position), lod: trees.length > 6 ? 0 : 1 });
+  const land = makeLandscape(T, scene, { radius, spots: trees.map(t => t.holder.position), beds: trees.map(t => t.bed), lod: trees.length > 6 ? 0 : 1 });
   const camera = new T.PerspectiveCamera(38, 1, .1, 200);
   scene.add(new T.HemisphereLight(0xf4fbff, 0x6f8f7a, .62));
   const sun = new T.DirectionalLight(0xfff6e8, .7);
@@ -1080,7 +1100,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   scene.add(fill, rim);
   trees.forEach(t => scene.add(t.holder));
 
-  let pitch = .3, dist = radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
+  let pitch = .3, dist = dist0 || radius * 2.7, focus = target.clone(), wantFocus = target.clone(), wantDist = dist;
   let dragging = false, lastX = 0, lastY = 0;
   const el3 = renderer.domElement;
   el3.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; lastY = e.clientY; try { el3.setPointerCapture(e.pointerId); } catch {} });
@@ -1093,7 +1113,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
   const stop = () => (dragging = false);
   el3.addEventListener("pointerup", stop);
   el3.addEventListener("pointercancel", stop);
-  el3.addEventListener("wheel", e => { e.preventDefault(); wantDist = Math.max(radius * .7, Math.min(radius * 3.4, wantDist * (1 + e.deltaY * .001))); }, { passive: false });
+  el3.addEventListener("wheel", e => { e.preventDefault(); wantDist = Math.max(radius * .5, Math.min(radius * 3.4, wantDist * (1 + e.deltaY * .001))); }, { passive: false });
 
   function resize() {
     const w = host.clientWidth, h = host.clientHeight;
@@ -1131,7 +1151,7 @@ function makeStage(T, host, { trees, radius, target, height, yaw = .45 }) {
     onFrame(fn) { hooks.push(fn); return () => hooks.splice(hooks.indexOf(fn), 1); },
     focusOn(pos, d) { wantFocus = pos.clone(); wantDist = d; },
     land,
-    reset() { wantFocus = target.clone(); wantDist = radius * 2.7; }
+    reset() { wantFocus = target.clone(); wantDist = dist0 || radius * 2.7; }
   };
 }
 
@@ -1140,11 +1160,15 @@ function plantedTree(T, spec, key, growth, pos, lod = 1) {
   const holder = new T.Group();
   holder.position.copy(pos);
   const tree = buildTree(T, spec, key, lod);
+  tree.group.scale.setScalar(treeScale(spec)); // real relative size
   holder.add(tree.group);
   let shown = growth, goal = growth, speed = 0;
   tree.update(shown);
   return {
     holder,
+    spec,
+    bed: bedRadius(spec),
+    heightAt: g => treeHeight(spec, g),
     features: () => tree.features.filter(f => f.visible),
     get growth() { return shown; },
     grow(to, seconds = 3) { goal = to; speed = Math.abs(to - shown) / seconds; },
@@ -1678,18 +1702,18 @@ const ease = x => (x = Math.max(0, Math.min(1, x)), x < .5 ? 2 * x * x : 1 - Mat
 // little laps. Paths never cut across a tree bed, and they keep out of each other's way.
 function gardenWalkers(T, stage, trees, land) {
   const rnd = Math.random, R = (a, b) => a + (b - a) * rnd();
-  const spots = trees.map(t => t.holder.position.clone());
-  const BED = .62, hx = land.hx - .6, hz = land.hz - .6;
+  const spots = trees.map(t => Object.assign(t.holder.position.clone(), { bed: t.bed || .62 }));
+  const hx = land.hx - .6, hz = land.hz - .6;
   const bench = land.bench.clone().add(new T.Vector3(0, 0, .55));
   const segDist = (a, b, p) => { // distance from p to segment ab (on the ground)
     const ab = b.clone().sub(a).setY(0), t = Math.max(0, Math.min(1, p.clone().sub(a).setY(0).dot(ab) / Math.max(1e-6, ab.lengthSq())));
     return a.clone().addScaledVector(ab, t).setY(0).distanceTo(p.clone().setY(0));
   };
-  const clearPath = (a, b) => spots.every(s => segDist(a, b, s) > BED + .3);
+  const clearPath = (a, b) => spots.every(s => segDist(a, b, s) > s.bed + .3);
   const freeSpot = () => {
     for (let k = 0; k < 40; k++) {
       const p = new T.Vector3(R(-hx, hx), 0, R(-hz, hz));
-      if (spots.every(s => s.distanceTo(p) > BED + .5)) return p;
+      if (spots.every(s => s.distanceTo(p) > s.bed + .5)) return p;
     }
     return new T.Vector3(0, 0, hz * .8);
   };
@@ -1724,7 +1748,7 @@ function gardenWalkers(T, stage, trees, land) {
       let p;
       if (w.kid && r < .5 && spots.length) { // visit a tree: stand at its bed edge, then look up at it
         const s = spots[Math.floor(rnd() * spots.length)], a = rnd() * 6.28;
-        p = s.clone().add(new T.Vector3(Math.cos(a) * (BED + .4), 0, Math.sin(a) * (BED + .4)));
+        p = s.clone().add(new T.Vector3(Math.cos(a) * (s.bed + .4), 0, Math.sin(a) * (s.bed + .4)));
         look = s.clone().setY(1.4);
       } else if (w.kid && r < .62) { p = bench.clone().add(new T.Vector3(R(-.4, .4), 0, 0)); look = land.bench.clone(); }
       else { p = freeSpot(); look = null; }
@@ -1758,7 +1782,7 @@ function gardenWalkers(T, stage, trees, land) {
       } else if (w.state === "lap") {
         w.lapA += dt * 1.6;
         const tgt = w.lapC.clone().add(new T.Vector3(Math.cos(w.lapA) * w.lapR, 0, Math.sin(w.lapA) * w.lapR));
-        if (spots.every(s => s.distanceTo(tgt) > BED + .3)) { moved = stepToward(w.a, tgt, 1.5, dt, 6); running = true; }
+        if (spots.every(s => s.distanceTo(tgt) > s.bed + .3)) { moved = stepToward(w.a, tgt, 1.5, dt, 6); running = true; }
         if (w.t < 0) plan(w);
       } else { // pause
         if (!w.kid) sitting = w.t > .5;
@@ -1766,7 +1790,7 @@ function gardenWalkers(T, stage, trees, land) {
       }
       // keep inside the fence and off the tree beds
       pos.x = Math.max(-hx - .2, Math.min(hx + .2, pos.x)); pos.z = Math.max(-hz - .2, Math.min(hz + .2, pos.z));
-      spots.forEach(s => { const d = pos.clone().sub(s).setY(0), l = d.length(); if (l < BED + .15) pos.copy(s).addScaledVector(d.normalize(), BED + .15).setY(0); });
+      spots.forEach(s => { const d = pos.clone().sub(s).setY(0), l = d.length(); if (l < s.bed + .15) pos.copy(s).addScaledVector(d.normalize(), s.bed + .15).setY(0); });
       if (w.kid) w.a.gait(moved, moved > 0 ? 1 : 0, false, false);
       else w.a.gait(moved, moved > 0 ? 1 : 0, running && moved > 0, sitting, now);
     });
@@ -1782,8 +1806,9 @@ function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
   const kid = makeGardener(T, girl);
   const side = new T.Vector3(Math.cos(stage.yaw), 0, -Math.sin(stage.yaw)).multiplyScalar(fromLeft ? -1 : 1);
   const toCam = new T.Vector3(Math.sin(stage.yaw), 0, Math.cos(stage.yaw));
-  const start = side.clone().multiplyScalar(4.2).addScaledVector(toCam, .5);
-  const stand = side.clone().multiplyScalar(1.02).addScaledVector(toCam, .3);
+  const bed = planted.bed || .62;
+  const start = side.clone().multiplyScalar(Math.max(4.2, bed + 3.6)).addScaledVector(toCam, .5);
+  const stand = side.clone().multiplyScalar(bed + .4).addScaledVector(toCam, .3);
   const trunk = new T.Vector3(0, .1, 0);
   kid.fig.position.copy(start);
   kid.fig.rotation.y = Math.atan2(stand.x - start.x, stand.z - start.z);
@@ -1805,7 +1830,7 @@ function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
     stage.scene.add(dog.fig);
   }
   const dogSit = stand.clone().addScaledVector(toCam, .55).addScaledVector(side, .25);
-  const dogAheadSit = side.clone().multiplyScalar(.6).addScaledVector(toCam, .85);
+  const dogAheadSit = side.clone().multiplyScalar(.6 * bed / .62).addScaledVector(toCam, bed + .25);
 
   const drops = [], dropGeo = new T.SphereGeometry(.024, 8, 6);
   const dropMat = new T.MeshStandardMaterial({ color: 0x7cc4f2, emissive: 0x3b8fd0, emissiveIntensity: .25, transparent: true, opacity: .85, roughness: .15 });
@@ -1848,7 +1873,7 @@ function waterTree(T, stage, planted, toGrowth, spec, force = {}) {
       if (t > 5.1) nextPhase(extra ? "approach" : "turn");
     } else if (phase === "approach") {
       // Step a little closer and reach up to a fruit, or lean in to smell the flowers.
-      const close = stand.clone().multiplyScalar(.78);
+      const close = stand.clone().multiplyScalar((bed + .18) / (bed + .4));
       kidMoved = stepToward(kid, close, WALK * .7, dt, 3);
       if (kid.fig.position.distanceTo(close) < .02) { reach = pickFeature(); nextPhase(extra); }
     } else if (phase === "touch") {
@@ -1974,7 +1999,13 @@ async function gardenScreen(dir = "fwd") {
     const before = seenGrowth(t.key);
     const from = before === undefined ? 0 : Math.min(before, t.growth);
     const tree = plantedTree(T, spec, t.key, from, new T.Vector3(0, 0, 0));
-    const st = makeStage(T, stage, { trees: [tree], radius: 2.2, target: new T.Vector3(0, 1.2, 0), height: 2.6 });
+    // Frame the tree by its real size: a young or small tree up close, a tall baobab or fir from further back.
+    const frame = g => { const h = tree.heightAt(g); return { y: Math.max(1.2, h * .47), d: Math.max(5.9, h * 1.65) }; };
+    const f0 = frame(from), fullH = tree.heightAt(1);
+    const st = makeStage(T, stage, { trees: [tree], radius: Math.max(2.2, fullH * .62), target: new T.Vector3(0, f0.y, 0), height: 2.6, dist: f0.d });
+    const refit = g => { const f = frame(g); st.focusOn(new T.Vector3(0, f.y, 0), f.d); };
+    const grow0 = tree.grow.bind(tree);
+    tree.grow = (to, sec) => { grow0(to, sec); refit(to); }; // the camera eases back as the tree grows
     // Grown since the last visit? A gardener comes to water the tree, and it grows to today's size.
     if (t.growth - from > .002) setTimeout(() => stage.isConnected && waterTree(T, st, tree, t.growth, spec), 700);
     markSeen(t.key, t.growth);
@@ -2011,7 +2042,7 @@ async function gardenAll() {
     f.style.width = pctText(d.growth);
     mini.append(f);
     tile.append(mini, el("span", { className: "g-pct" }, d.today ? `${pctText(d.growth)} · growing` : pctText(d.growth)));
-    tile.onclick = () => stageApi && positions[i] && stageApi.focusOn(positions[i].clone().add(new THREE.Vector3(0, 1.2, 0)), 5.2);
+    tile.onclick = () => { if (!stageApi || !positions[i]) return; const h = treeHeight(SPECIES[d.species], d.growth); stageApi.focusOn(positions[i].clone().add(new THREE.Vector3(0, Math.max(1.2, h * .47), 0)), Math.max(5.2, h * 1.65)); };
     tiles.append(tile);
   });
   card.append(tiles);
@@ -2019,16 +2050,27 @@ async function gardenAll() {
   try {
     const T = await loadThree();
     if (!stage.isConnected) return;
-    // Planted like a natural grove rather than a grid: a sunflower spiral with a little jitter, about 2.6 apart.
-    const n = Math.max(1, list.length), c = 1.5;
-    positions = list.map((d, i) => {
-      const jr = seeded("spot" + d.key), a = i * 2.39996 + (jr() - .5) * .5, r = c * Math.sqrt(i + (i ? .3 : 0)) + (i ? (jr() - .5) * .35 : 0);
-      return new T.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r);
+    // Planted like a natural grove rather than a grid: along a sunflower spiral, each tree moved out until its crown
+    // has room (crowns may overlap a little, as in a real garden). Big trees such as a baobab need much more space.
+    positions = [];
+    const placed = [];
+    list.forEach((d, i) => {
+      const sp = SPECIES[d.species], cr = Math.max(.7, crownRadius(sp, d.growth)), bed = bedRadius(sp);
+      const jr = seeded("spot" + d.key), a = i * 2.39996 + (jr() - .5) * .5;
+      let r = i ? .8 : 0, p;
+      for (let k = 0; k < 2000; k++, r += .12) {
+        p = new T.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r);
+        if (placed.every(o => p.distanceTo(o.p) >= Math.max(.85 * (cr + o.cr), bed + o.bed + .6))) break;
+      }
+      placed.push({ p, cr, bed });
+      positions.push(p);
     });
     const lod = list.length > 6 ? 0 : 1; // lighter trees when the garden gets big
     const trees = list.map((d, i) => plantedTree(T, SPECIES[d.species], d.key, d.growth, positions[i], lod));
-    const radius = Math.max(3.6, c * Math.sqrt(n) + 1.6);
-    stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, .9, 0), height: 2 });
+    const extent = placed.reduce((m, o) => Math.max(m, o.p.length() + o.cr * .6), 0);
+    const tallest = list.reduce((m, d) => Math.max(m, treeHeight(SPECIES[d.species], d.growth)), 0);
+    const radius = Math.max(3.6, extent + 1.6, tallest * .55);
+    stageApi = makeStage(T, stage, { trees, radius, target: new T.Vector3(0, Math.max(.9, tallest * .22), 0), height: 2 });
     gardenWalkers(T, stageApi, trees, stageApi.land); // the kids and the dog stroll around the garden
   } catch {
     stage.append(el("p", { className: "g-offline" }, "The 3D garden could not load. Close and reopen the app to try again."));
