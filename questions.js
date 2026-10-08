@@ -1973,6 +1973,110 @@ const QUESTIONS = [
     options: ["d < 1 + r < u", "1 + r < d < u", "d < u < 1 + r"],
     answer: 0,
     why: "If 1 + r were outside the range from d to u, one asset would dominate the other. That also keeps π between 0 and 1."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In BSM, a call option is replicated by:",
+    options: ["Long N(d1) shares and short N(d2) bonds worth PV(X)", "Long N(d2) shares and short N(d1) bonds worth PV(X)", "Long d1 shares and short d2 bonds worth the exercise price"],
+    answer: 0,
+    why: "c = S N(d1) − e^(−rT) X N(d2): long N(d1) shares (the call's delta) financed by borrowing N(d2) × PV(X)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In BSM, a put option is replicated by:",
+    options: ["Long N(d1) shares and long N(d2) bonds", "Short N(−d1) shares and long N(−d2) bonds", "Short N(d1) shares and short N(d2) zero-coupon bonds"],
+    answer: 1,
+    why: "p = e^(−rT) X N(−d2) − S N(−d1): lend N(−d2) × PV(X) and short N(−d1) shares, where N(−d) = 1 − N(d)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The delta of a European call in BSM (no dividends) is:",
+    options: ["N(d2)", "N(−d1)", "N(d1)"],
+    answer: 2,
+    why: "Call delta = N(d1), between 0 and 1. Put delta = N(d1) − 1 = −N(−d1), between −1 and 0."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The Black model for options on futures uses:",
+    options: ["The spot price, discounted at the dividend yield", "The futures price, discounted at the risk-free rate", "The futures price, discounted at the index's dividend yield"],
+    answer: 1,
+    why: "c = e^(−rT)[F0 N(d1) − X N(d2)]. The futures price replaces the spot, and any dividend yield is already in the futures price."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Which Greek measures how an option's value changes as time to expiration passes?",
+    options: ["Theta", "Vega", "Rho"],
+    answer: 0,
+    why: "Theta is time decay and is usually negative for long options. Vega = sensitivity to volatility; rho = sensitivity to the risk-free rate."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The model price (using historical volatility) is ABOVE the market price. The implied volatility is:",
+    options: ["Above the historical volatility", "Equal to the historical volatility", "Below the historical volatility"],
+    answer: 2,
+    why: "Option values rise with volatility. A market price below the model price means the market is using a lower volatility."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "An interest rate option on 3-month MRR in 6 months is valued (Black model) using:",
+    options: ["Today's spot 3-month MRR, with 6 months to expiry", "The 6-month FRA rate, with 6 months to expiry", "The FRA rate, with 9 months to expiry"],
+    answer: 1,
+    why: "The underlying is the forward (FRA) rate for the period starting when the option expires; time to expiry is when the option expires, not when the loan ends."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "An investor owns shares and wants a delta-neutral hedge using calls. He should:",
+    options: ["Buy calls; number of calls = share delta × call delta", "Sell calls; number = [[portfolio delta|call delta]]", "Sell puts; number = [[portfolio delta|put delta]]"],
+    answer: 1,
+    why: "Each short call has negative delta, offsetting the shares' positive delta. Buying calls or selling puts adds positive delta."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The gamma of a stock position is:",
+    options: ["Zero, because its delta is always +1", "Positive, like a long call's gamma", "Equal to the stock's beta against the market index"],
+    answer: 0,
+    why: "Gamma is the change in delta. A share's delta is always 1, so its gamma is 0. Only options add gamma."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Compared with the gamma of a call, the gamma of a put with the same terms is:",
+    options: ["Always negative, the opposite sign of the call's gamma", "The same, and positive for a long position", "Equal to the call's delta minus 1"],
+    answer: 1,
+    why: "Put–call parity: the put and call deltas differ by a constant (1), so their gammas are equal. Long options always have positive gamma."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Hedging long shares with LONG puts gives a portfolio gamma that is:",
+    options: ["Positive", "Negative", "Zero (gamma-neutral)"],
+    answer: 0,
+    why: "Shares add no gamma; long puts add positive gamma. Hedging by SELLING calls instead gives negative gamma, which hurts when the market moves sharply."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Vega (sensitivity to volatility) for a long call and a long put is:",
+    options: ["Positive for the call, negative for the put", "Negative for both, since volatility hurts long options", "Positive for both, and equal for the same terms"],
+    answer: 2,
+    why: "Higher volatility raises both call and put values, and call and put vegas are equal (put–call parity)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Rho (sensitivity to the risk-free rate) is usually:",
+    options: ["Positive for calls, negative for puts", "Negative for calls, positive for puts", "Positive for both calls and puts, like vega"],
+    answer: 0,
+    why: "A higher rate lowers the PV of the exercise price, which helps calls (the price paid) and hurts puts (the price received)."
   }
 ];
 

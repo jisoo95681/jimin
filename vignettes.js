@@ -5541,6 +5541,262 @@ const VIGNETTES = [
         "why": "Reason 1 is correct: a higher exercise rate lowers the call's payoff, Max(0, rate − exercise rate), at expiry. Reason 2 is wrong: risk-neutral probabilities come from the market's interest rate paths (the tree), not from the terms of one particular option, so they don't change."
       }
     ]
+  },
+  {
+    "id": "trident",
+    "title": "Alice Lee: Trident Advisory Group",
+    "topic": "Derivatives",
+    "reading": "Valuation of Contingent Claims",
+    "body": [
+      [
+        "p",
+        "Trident Advisory Group manages assets for high-net-worth individuals and family trusts."
+      ],
+      [
+        "p",
+        "Alice Lee, chief investment officer, is meeting with a client, Noah Solomon, to discuss risk management strategies for his portfolio. Solomon is concerned about recent volatility and has asked Lee to explain options valuation and the use of options in risk management."
+      ],
+      [
+        "h",
+        "Options on Stock"
+      ],
+      [
+        "p",
+        "Lee uses the BSM model to price TCB, which is one of Solomon’s holdings. Exhibit 1 provides the current stock price (S), exercise price (X), risk-free interest rate (r), volatility (σ), and time to expiration (T) in years as well as selected outputs from the BSM model. TCB does not pay a dividend."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: BSM Model for European Options on TCB — BSM Inputs",
+          "head": [
+            "S",
+            "X",
+            "r",
+            "σ",
+            "T"
+          ],
+          "rows": [
+            [
+              "$57.03",
+              "55",
+              "0.22%",
+              "32%",
+              "0.25"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1 (continued): BSM Outputs",
+          "head": [
+            "d1",
+            "N(d1)",
+            "d2",
+            "N(d2)",
+            "BSM Call Price",
+            "BSM Put Price"
+          ],
+          "rows": [
+            [
+              "0.3100",
+              "0.6217",
+              "0.1500",
+              "0.5596",
+              "$4.695",
+              "$2.634"
+            ]
+          ]
+        }
+      ],
+      [
+        "h",
+        "Options on Futures"
+      ],
+      [
+        "p",
+        "The Black model valuation and selected outputs for options on another of Solomon’s holdings, the GPX 500 Index (GPX), are shown in Exhibit 2. The spot index level for the GPX is 187.95, and the index is assumed to pay a continuous dividend at a rate of 2.2% (δ) over the life of the options being valued, which expire in 0.36 years. A futures contract on the GPX also expiring in 0.36 years is currently priced at 186.73."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Black Model for European Options on the GPX Index — Black Model Inputs",
+          "head": [
+            "GPX Index",
+            "X",
+            "r",
+            "σ",
+            "T",
+            "δ Yield"
+          ],
+          "rows": [
+            [
+              "187.95",
+              "180",
+              "0.39%",
+              "24%",
+              "0.36",
+              "2.2%"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2 (continued): Values and Prices",
+          "head": [
+            "Black Model Call Value",
+            "Black Model Put Value",
+            "Market Call Price",
+            "Market Put Price"
+          ],
+          "rows": [
+            [
+              "$14.2089",
+              "$7.4890",
+              "$14.26",
+              "$7.20"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2 (continued): Option Greeks",
+          "head": [
+            "Delta (call)",
+            "Delta (put)",
+            "Gamma (call or put)",
+            "Theta (call) daily",
+            "Rho (call) per %",
+            "Vega per % (call or put)"
+          ],
+          "rows": [
+            [
+              "0.6232",
+              "–0.3689",
+              "0.0139",
+              "–0.0327",
+              "0.3705",
+              "0.4231"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "After reviewing Exhibit 2, Solomon asks Lee which option Greek letter best describes the changes in an option’s value as time to expiration declines."
+      ],
+      [
+        "p",
+        "Solomon observes that the market price of the put option in Exhibit 2 is $7.20. Lee responds that she used the historical volatility of the GPX of 24% as an input to the BSM model, and she explains the implications for the implied volatility for the GPX."
+      ],
+      [
+        "h",
+        "Options on Interest Rates"
+      ],
+      [
+        "p",
+        "Solomon forecasts the three-month MRR will exceed 0.85% in six months and is considering using options to reduce the risk of rising rates. He asks Lee to value an interest rate call with a strike price of 0.85%. The current three-month MRR is 0.60%, and an FRA for a three-month MRR loan beginning in six months is currently 0.75%."
+      ],
+      [
+        "h",
+        "Hedging Strategy for the Equity Index"
+      ],
+      [
+        "p",
+        "Solomon’s portfolio currently holds 10,000 shares of an exchange-traded fund (ETF) that tracks the GPX. He is worried the index will decline. He remarks to Lee, “You have told me how the BSM model can provide useful information for reducing the risk of my GPX position.” Lee suggests a delta hedge as a strategy to protect against small moves in the GPX Index."
+      ],
+      [
+        "p",
+        "Lee also indicates that a long position in puts could be used to hedge larger moves in the GPX. She notes that although hedging with either puts or calls can result in a delta-neutral position, they would need to consider the resulting gamma."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibit 1 and the BSM valuation approach, the initial portfolio required to replicate the long call option payoff is:",
+        "options": [
+          "long 0.3100 shares of TCB stock and short 0.5596 shares of a zero-coupon bond.",
+          "long 0.6217 shares of TCB stock and short 0.1500 shares of a zero-coupon bond.",
+          "long 0.6217 shares of TCB stock and short 0.5596 shares of a zero-coupon bond."
+        ],
+        "answer": 2,
+        "why": "A BSM call = long N(d1) shares + short N(d2) zero-coupon bonds, each bond worth the PV of the exercise price, e^(−rT)X = e^(−0.0022 × 0.25) × 55 = $54.97.\nSo: long N(d1) = 0.6217 shares, short N(d2) = 0.5596 bonds. Check: 0.6217 × 57.03 − 0.5596 × 54.97 ≈ $4.694, the call price.\nA and B use d1 or d2 themselves (0.3100, 0.1500) instead of the probabilities N(d1) and N(d2)."
+      },
+      {
+        "q": "To determine the long put option value on TCB stock in Exhibit 1, the correct BSM valuation approach is to compute:",
+        "options": [
+          "0.4404 times the present value of the exercise price minus 0.6217 times the price of TCB stock.",
+          "0.4404 times the present value of the exercise price minus 0.3783 times the price of TCB stock.",
+          "0.5596 times the present value of the exercise price minus 0.6217 times the price of TCB stock."
+        ],
+        "answer": 1,
+        "why": "BSM put: p = e^(−rT) X × N(−d2) − S × N(−d1).\nN(−d2) = 1 − N(d2) = 1 − 0.5596 = 0.4404; N(−d1) = 1 − N(d1) = 1 − 0.6217 = 0.3783.\nSo the put = long 0.4404 bonds (PV of X = $54.97) and short 0.3783 shares: 0.4404 × 54.97 − 0.3783 × 57.03 ≈ $2.634.\nA and C wrongly use the call's N(d1) = 0.6217 for the shares (and C also the call's N(d2))."
+      },
+      {
+        "q": "What are the correct spot value (S) and the risk-free rate (r) that Lee should use as inputs for the Black model?",
+        "options": [
+          "186.73 and 0.39%, respectively",
+          "186.73 and 2.20%, respectively",
+          "187.95 and 2.20%, respectively"
+        ],
+        "answer": 0,
+        "why": "The Black model values options on FUTURES: c = e^(−rT) [F0(T) N(d1) − X N(d2)]. The underlying is the futures price, 186.73 (not the spot index of 187.95), and the discount rate is the risk-free rate, 0.39%. The 2.2% dividend yield is already reflected in the futures price, so it is not the discount rate."
+      },
+      {
+        "q": "Which of the following is the correct answer to Solomon’s question regarding the option Greek letter?",
+        "options": [
+          "Vega",
+          "Theta",
+          "Gamma"
+        ],
+        "answer": 1,
+        "why": "Theta measures how an option's value changes as time to expiration passes (time decay); Exhibit 2's call theta is −0.0327 a day. Vega is sensitivity to volatility; gamma is how much delta changes when the underlying moves."
+      },
+      {
+        "q": "Based on Solomon’s observation about the model price and market price for the put option in Exhibit 2, the implied volatility for the GPX is most likely:",
+        "options": [
+          "less than the historical volatility.",
+          "equal to the historical volatility.",
+          "greater than the historical volatility."
+        ],
+        "answer": 0,
+        "why": "Option values rise with volatility (positive vega). Using 24% historical volatility, the model values the put at $7.4890, above the market price of $7.20. For the model to match the lower market price, the volatility input must be lower, so the implied volatility is below 24%."
+      },
+      {
+        "q": "The valuation inputs used by Lee to price a call reflecting Solomon’s interest rate views should include an underlying FRA rate of:",
+        "options": [
+          "0.60% with six months to expiration.",
+          "0.75% with nine months to expiration.",
+          "0.75% with six months to expiration."
+        ],
+        "answer": 2,
+        "why": "An interest rate option is valued with the Black model using the FRA (forward) rate for the period that starts when the option expires. Solomon's view is about three-month MRR in six months, so the underlying is the 6-month FRA rate of 0.75%, with six months to expiration. A uses today's spot MRR (0.60%), not the forward rate. B uses nine months, the END of the loan period, rather than when the option expires."
+      },
+      {
+        "q": "The strategy suggested by Lee for hedging small moves in Solomon’s ETF position would most likely involve:",
+        "options": [
+          "selling put options.",
+          "selling call options.",
+          "buying call options."
+        ],
+        "answer": 1,
+        "why": "Solomon's 10,000 ETF shares have a delta of +10,000 (each share has delta +1). To make the position delta-neutral he needs negative delta: SELL calls (each short call has delta −0.6232). Number of calls = [[portfolio delta|call delta]] = [[10,000|0.6232]] ≈ 16,046 calls.\nA (selling puts) and C (buying calls) both ADD positive delta, increasing his exposure to a fall. (Buying puts would also work.)"
+      },
+      {
+        "q": "Lee’s put-based hedge strategy for Solomon’s ETF position would most likely result in a portfolio gamma that is:",
+        "options": [
+          "negative.",
+          "neutral.",
+          "positive."
+        ],
+        "answer": 2,
+        "why": "Shares have gamma 0 (their delta is always +1). Long options always have positive gamma, and a put's gamma equals the call's gamma (put–call parity). So adding LONG puts makes the portfolio gamma positive. A delta hedge built by selling calls would instead give negative gamma."
+      }
+    ]
   }
 ];
 
