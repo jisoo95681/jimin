@@ -1869,6 +1869,110 @@ const QUESTIONS = [
     options: ["It never falls when variables are added", "It can fall, and it can even be negative", "It is always higher than the plain R²"],
     answer: 1,
     why: "Adjusted R² falls when a new variable adds too little (|t| < 1) and can be negative. Plain R² never falls when variables are added, and adjusted R² is always ≤ R²."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In a one-period binomial model, the hedge ratio for a call is:",
+    options: ["[[S+ − S−|c+ − c−]], the stock move per unit change in the call's value", "The risk-neutral probability of an up move in the stock price", "[[c+ − c−|S+ − S−]], call change per stock change"],
+    answer: 2,
+    why: "h = [[c+ − c−|S+ − S−]]. For a call it lies between 0 and 1; for a put it is negative (between −1 and 0)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The risk-neutral probability of an up move is:",
+    options: ["[[u − (1 + r)|u − d]]", "[[(1 + r) − d|u − d]]", "[[1 + r|u + d]]"],
+    answer: 1,
+    why: "π = [[1 + r − d|u − d]]. It uses only the risk-free rate and the up/down factors, never investors' risk preferences or true probabilities."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A call option is OVERPRICED relative to the binomial model. The arbitrage is to write the call and:",
+    options: ["Short h shares and lend the proceeds", "Buy h shares and borrow", "Buy the call back and short the shares"],
+    answer: 1,
+    why: "Sell the expensive call and buy its replicating portfolio: long h shares financed partly by borrowing. The profit is locked in today."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A call option is UNDERPRICED relative to the binomial model. The arbitrage is to buy the call and:",
+    options: ["Short h shares and lend the proceeds", "Buy h shares and borrow the rest", "Write a put and buy the stock outright"],
+    answer: 0,
+    why: "Buy the cheap call and sell its replicating portfolio: short h shares and lend (invest) the proceeds at the risk-free rate."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The expectations approach to valuing a European option:",
+    options: ["Uses true probabilities, discounted at a risk-adjusted rate", "Uses risk-neutral probabilities and the stock's expected return", "Uses risk-neutral probabilities and the risk-free rate"],
+    answer: 2,
+    why: "Expected payoff under risk-neutral probabilities, discounted at the risk-free rate. It gives the same value as the no-arbitrage (replication) approach."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "When can early exercise of an American option be worthwhile?",
+    options: ["A call on a non-dividend-paying stock, and any put at all", "Never, because American and European options are always worth the same", "A call on a dividend-paying stock, and a put"],
+    answer: 2,
+    why: "A call on a non-dividend stock should never be exercised early. A call may be exercised just before a dividend, and a deep in-the-money put may be exercised early."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "To value an American put in a binomial tree, at each node you use:",
+    options: ["The European value at that node, ignoring early exercise", "The higher of exercising now or holding", "The lower of the exercise value and the value of holding on"],
+    answer: 1,
+    why: "At every node take Max(exercise value, hold value) and roll back. An American put is therefore worth at least as much as the European put."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In a two-period binomial model, the middle terminal payoff (up then down, or down then up) is weighted by:",
+    options: ["π(1 − π), because there is only one path that leads to it", "π², exactly the same weight as the up-up node", "2π(1 − π), as two paths lead to it"],
+    answer: 2,
+    why: "Two paths (up-down and down-up) reach the middle node, so its weight is 2π(1 − π). The ends get π² and (1 − π)²."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The hedge ratio for a put option in a binomial model is:",
+    options: ["Negative, between −1 and 0", "Positive, between 0 and 1", "Always exactly −1"],
+    answer: 0,
+    why: "Put values fall as the stock rises, so h = [[p+ − p−|S+ − S−]] is negative. The put's replicating portfolio is short shares plus lending."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "For an interest rate call option, the payoff at expiry per 1 of notional is:",
+    options: ["Max(0, exercise rate − underlying rate)", "The underlying rate multiplied by the exercise rate", "Max(0, underlying rate − exercise rate)"],
+    answer: 2,
+    why: "An interest rate call pays when rates rise above the exercise rate. (An interest rate put pays Max(0, exercise rate − underlying rate).)"
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "When valuing an option on an interest rate tree, each node's expected value is discounted at:",
+    options: ["The same flat rate for every node in the tree", "That node's own one-year rate", "The option's exercise rate"],
+    answer: 1,
+    why: "Backward induction discounts at the rate prevailing at each node, which is why the tree shows a zero-coupon value for every node."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Raising the exercise rate of an interest rate call lowers its value because:",
+    options: ["The risk-neutral probabilities of up moves in rates fall", "The payoff falls; π is unchanged", "Every interest rate in the tree shifts lower as well"],
+    answer: 1,
+    why: "A higher exercise rate cuts Max(0, rate − exercise rate). The tree and its risk-neutral probabilities come from the market, not from one option's terms."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "For the binomial model to be arbitrage-free, the up factor u, down factor d and risk-free rate r must satisfy:",
+    options: ["d < 1 + r < u", "1 + r < d < u", "d < u < 1 + r"],
+    answer: 0,
+    why: "If 1 + r were outside the range from d to u, one asset would dominate the other. That also keeps π between 0 and 1."
   }
 ];
 

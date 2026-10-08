@@ -5228,6 +5228,319 @@ const VIGNETTES = [
         "why": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and C is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t| < 1), and it can even be negative. It is plain R² that never decreases when variables are added."
       }
     ]
+  },
+  {
+    "id": "sousa",
+    "title": "Bruno Sousa: Binomial Option Valuation",
+    "topic": "Derivatives",
+    "reading": "Valuation of Contingent Claims",
+    "body": [
+      [
+        "p",
+        "Bruno Sousa has been hired recently to work with senior analyst Camila Rocha. Rocha gives him three option valuation tasks."
+      ],
+      [
+        "h",
+        "Alpha Company"
+      ],
+      [
+        "p",
+        "Sousa’s first task is to illustrate how to value a call option on Alpha Company with a one-period binomial option pricing model. It is a non-dividend-paying stock, and the inputs are as follows."
+      ],
+      [
+        "p",
+        "The current stock price is 50, and the call option exercise price is 50."
+      ],
+      [
+        "p",
+        "In one period, the stock price will either rise to 56 or decline to 46."
+      ],
+      [
+        "p",
+        "The risk-free rate of return is 5% per period."
+      ],
+      [
+        "p",
+        "Based on the model, Rocha asks Sousa to estimate the hedge ratio, the risk-neutral probability of an up move, and the price of the call option. In the illustration, Sousa is also asked to describe related arbitrage positions to use if the call option is overpriced relative to the model."
+      ],
+      [
+        "h",
+        "Beta Company"
+      ],
+      [
+        "p",
+        "Next, Sousa uses the two-period binomial model to estimate the value of a European-style call option on Beta Company’s common shares. The inputs are as follows."
+      ],
+      [
+        "p",
+        "The current stock price is 38, and the call option exercise price is 40."
+      ],
+      [
+        "p",
+        "The up factor (u) is 1.300, and the down factor (d) is 0.800."
+      ],
+      [
+        "p",
+        "The risk-free rate of return is 3% per period."
+      ],
+      [
+        "p",
+        "Sousa then analyzes a put option on the same stock. All of the inputs, including the exercise price, are the same as for the call option. He estimates that the value of a European-style put option is 4.53. Exhibit 1 summarizes his analysis. Sousa next must determine whether an American-style put option would have the same value."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Two-Period Binomial European-Style Put Option on Beta Company",
+          "head": [
+            "Time",
+            "Node",
+            "Underlying",
+            "Put",
+            "Hedge ratio"
+          ],
+          "rows": [
+            [
+              "0",
+              "—",
+              "38",
+              "4.5346",
+              "−0.4307"
+            ],
+            [
+              "1",
+              "Up",
+              "49.40",
+              "0.2517",
+              ""
+            ],
+            [
+              "1",
+              "Down",
+              "30.40",
+              "8.4350",
+              ""
+            ],
+            [
+              "2",
+              "Up-up",
+              "64.22",
+              "0",
+              ""
+            ],
+            [
+              "2",
+              "Up-down",
+              "39.52",
+              "0.48",
+              ""
+            ],
+            [
+              "2",
+              "Down-down",
+              "24.32",
+              "15.68",
+              ""
+            ]
+          ],
+          "note": "Your copy shows only the Time 0 node (38; put 4.5346; hedge ratio −0.4307). The Time 1 and Time 2 values are taken from the solution."
+        }
+      ],
+      [
+        "p",
+        "Sousa makes two statements with regard to the valuation of a European-style option under the expectations approach."
+      ],
+      [
+        "h",
+        "Statement 1"
+      ],
+      [
+        "p",
+        "The calculation involves discounting at the risk-free rate."
+      ],
+      [
+        "h",
+        "Statement 2"
+      ],
+      [
+        "p",
+        "The calculation uses risk-neutral probabilities instead of true probabilities."
+      ],
+      [
+        "p",
+        "Rocha asks Sousa whether it is ever profitable to exercise American options prior to maturity. Sousa answers, “I can think of two possible cases. The first case is the early exercise of an American call option on a dividend-paying stock. The second case is the early exercise of an American put option.”"
+      ],
+      [
+        "h",
+        "Interest Rate Option"
+      ],
+      [
+        "p",
+        "The final option valuation task involves an interest rate option. Sousa must value a two-year, European-style call option on a one-year spot rate. The notional value of the option is 1 million, and the exercise rate is 2.75%. The risk-neutral probability of an up move is 0.50. The current and expected one-year interest rates are shown in Exhibit 2, along with the values of a one-year zero-coupon bond of 1 notional value for each interest rate."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Two-Year Interest Rate Lattice for an Interest Rate Option",
+          "head": [
+            "Time",
+            "Node",
+            "One-year rate",
+            "Value of 1-year zero (1 notional)"
+          ],
+          "rows": [
+            [
+              "0",
+              "—",
+              "3%",
+              "0.970874"
+            ],
+            [
+              "1",
+              "Up",
+              "4%",
+              "0.961538"
+            ],
+            [
+              "1",
+              "Down",
+              "2%",
+              "0.980392"
+            ],
+            [
+              "2",
+              "Up-up",
+              "5%",
+              "0.952381"
+            ],
+            [
+              "2",
+              "Up-down",
+              "3%",
+              "0.970874"
+            ],
+            [
+              "2",
+              "Down-down",
+              "1%",
+              "0.990099"
+            ]
+          ],
+          "note": "Your copy shows only the Time 0 node (3%, 0.970874). The Time 1 and Time 2 rates are taken from the solution."
+        }
+      ],
+      [
+        "p",
+        "Rocha asks Sousa why the value of a similar in-the-money interest rate call option decreases if the exercise price is higher. Sousa provides two reasons."
+      ],
+      [
+        "h",
+        "Reason 1"
+      ],
+      [
+        "p",
+        "The exercise value of the call option is lower."
+      ],
+      [
+        "h",
+        "Reason 2"
+      ],
+      [
+        "p",
+        "The risk-neutral probabilities are changed."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "The optimal hedge ratio for the Alpha Company call option using the one-period binomial model is closest to:",
+        "options": [
+          "0.60.",
+          "0.67.",
+          "1.67."
+        ],
+        "answer": 0,
+        "why": "Payoffs: up, c+ = Max(0, 56 − 50) = 6; down, c− = Max(0, 46 − 50) = 0.\nh = [[c+ − c−|S+ − S−]] = [[6 − 0|56 − 46]] = 0.60 shares per call.\nC (1.67) flips the ratio (10 ÷ 6). A call's hedge ratio always lies between 0 and 1."
+      },
+      {
+        "q": "The risk-neutral probability of the up move for the Alpha Company stock is closest to:",
+        "options": [
+          "0.06.",
+          "0.40.",
+          "0.65."
+        ],
+        "answer": 2,
+        "why": "u = 56 ÷ 50 = 1.12 and d = 46 ÷ 50 = 0.92.\nπ = [[1 + r − d|u − d]] = [[1.05 − 0.92|1.12 − 0.92]] = [[0.13|0.20]] = 0.65.\nIt depends only on r, u and d, not on the option or anyone's risk preferences."
+      },
+      {
+        "q": "The value of the Alpha Company call option is closest to:",
+        "options": [
+          "3.71.",
+          "5.71.",
+          "6.19."
+        ],
+        "answer": 0,
+        "why": "Expectations approach: c = [[π × c+ + (1 − π) × c−|1 + r]] = [[0.65 × 6 + 0.35 × 0|1.05]] = [[3.9|1.05]] = 3.714.\nNo-arbitrage approach: c = hS − PV(hS− − c−) = 0.60 × 50 − [[0.60 × 46|1.05]] = 30 − 26.286 = 3.714. Both approaches give the same value.\nB (5.71) is 6 ÷ 1.05: it wrongly assumes the up move is certain."
+      },
+      {
+        "q": "For the Alpha Company option, the positions to take advantage of the arbitrage opportunity are to write the call and:",
+        "options": [
+          "short shares of Alpha stock and lend.",
+          "buy shares of Alpha stock and borrow.",
+          "short shares of Alpha stock and borrow."
+        ],
+        "answer": 1,
+        "why": "If the call is overpriced, sell it and buy the replicating portfolio: buy h = 0.60 shares (cost 30) and borrow the PV of hS− − c− = [[0.60 × 46|1.05]] = 26.287. The replicating portfolio costs 30 − 26.287 = 3.713. Selling the call at, say, 4.50 locks in 4.50 − 3.713 = 0.787 today, with zero net cash flow in both the up and down states.\nA is the hedge for an UNDERpriced call (buy the call, short shares, lend). C mixes the two."
+      },
+      {
+        "q": "The value of the European-style call option on Beta Company shares is closest to:",
+        "options": [
+          "4.83.",
+          "5.12.",
+          "7.61."
+        ],
+        "answer": 0,
+        "why": "π = [[1.03 − 0.80|1.30 − 0.80]] = 0.46.\nTerminal payoffs: c++ = Max(0, 1.30² × 38 − 40) = 24.22; c+− = Max(0, 1.30 × 0.80 × 38 − 40) = Max(0, 39.52 − 40) = 0; c−− = 0.\nc = [[π² × c++ + 2π(1 − π) × c+− + (1 − π)² × c−−|1.03²]] = [[0.46² × 24.22|1.03²]] = [[5.1250|1.0609]] = 4.8308.\nB (5.12) forgets to discount the expected payoff back two periods."
+      },
+      {
+        "q": "The value of the American-style put option on Beta Company shares is closest to:",
+        "options": [
+          "4.53.",
+          "5.15.",
+          "9.32."
+        ],
+        "answer": 1,
+        "why": "An American put can be exercised early, so at each Time 1 node compare holding (from Exhibit 1) with exercising now:\n• Up node (S = 49.40): exercise value 40 − 49.40 < 0, so hold: 0.2517.\n• Down node (S = 30.40): exercise value 40 − 30.40 = 9.60 > holding value 8.4350, so exercise early: use 9.60.\np = [[0.46 × 0.2517 + 0.54 × 9.60|1.03]] = 5.145.\nA (4.53) is the European value, which ignores early exercise. C (9.32) is just 9.60 ÷ 1.03, the down-node value alone."
+      },
+      {
+        "q": "Which of Sousa’s statements about binomial models is correct?",
+        "options": [
+          "Statement 1 only",
+          "Statement 2 only",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 2,
+        "why": "Under the expectations approach, the expected payoff is computed with risk-neutral probabilities (not true probabilities) and then discounted at the risk-free rate. Both statements are correct."
+      },
+      {
+        "q": "Based on Exhibit 2 and the parameters used by Sousa, the value of the interest rate option is closest to:",
+        "options": [
+          "5,251.",
+          "6,236.",
+          "6,429."
+        ],
+        "answer": 2,
+        "why": "Payoff per 1 of notional at Time 2 = Max(0, rate − 2.75%): up-up 5% → 0.0225; up-down 3% → 0.0025; down-down 1% → 0.\nWork backwards, discounting each node at that node's OWN one-year rate (its zero value), with π = 0.50:\n• Time 1 up (4%): 0.961538 × (0.5 × 0.0225 + 0.5 × 0.0025) = 0.012019.\n• Time 1 down (2%): 0.980392 × (0.5 × 0.0025 + 0.5 × 0) = 0.001225.\n• Time 0 (3%): 0.970874 × (0.5 × 0.012019 + 0.5 × 0.001225) = 0.006429.\n× 1,000,000 notional = 6,429."
+      },
+      {
+        "q": "Which of Sousa’s reasons for the decrease in the value of the interest rate option is correct?",
+        "options": [
+          "Reason 1 only",
+          "Reason 2 only",
+          "Both Reason 1 and Reason 2"
+        ],
+        "answer": 0,
+        "why": "Reason 1 is correct: a higher exercise rate lowers the call's payoff, Max(0, rate − exercise rate), at expiry. Reason 2 is wrong: risk-neutral probabilities come from the market's interest rate paths (the tree), not from the terms of one particular option, so they don't change."
+      }
+    ]
   }
 ];
 
