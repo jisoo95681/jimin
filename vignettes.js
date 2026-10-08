@@ -6013,6 +6013,112 @@ const VIGNETTES = [
         "why": "Standard VI(B), Priority of Transactions, recommends that firms disclose their personal-investing policies to investors on request; keeping them confidential goes against this. A is wrong: restricting employees from IPOs is a recommended procedure (it avoids taking opportunities from clients or appearing to receive favours). C is wrong: a blackout period, even a narrow one, is recommended to stop front-running client trades."
       }
     ]
+  },
+  {
+    "id": "amc",
+    "title": "Rebecca Matheson: AM&C Partners",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Rebecca Matheson, CFA, is the chief compliance officer for AM&C Partners (AM&C), a midsize investment management firm managing equities. AM&C recently terminated Thorsten LaRue, CFA, for multiple violations of firm policies that included violations of the Standards. Matheson composed an email to file a complaint against LaRue with the Professional Conduct Program (PCP) of CFA Institute. Her email outlines LaRue’s actions with three points:"
+      ],
+      [
+        "h",
+        "Point 1"
+      ],
+      [
+        "p",
+        "LaRue was an assistant trader and worked closely with the firm’s head trader. Together, they executed trades for the firm’s equity portfolios that ranged across the market capitalization spectrum. LaRue specialized in executing trades for the firm’s small-cap products and was instrumental in implementing several technology-based trading platforms. He was excited about his position and often talked with his cousin Brooke Montgomery about his job as well as the companies being researched and trades being executed. AM&C has a company policy to prohibit their employees from discussing trades they are executing."
+      ],
+      [
+        "h",
+        "Point 2"
+      ],
+      [
+        "p",
+        "LaRue was often involved in new client presentations to explain the different trading technologies utilized by the trading department. During such a meeting, a potential client talked about using a directed brokerage arrangement. They explained they had not yet decided on a broker and asked if the traders had any recommendation. LaRue talked about the advantages and disadvantages of such an arrangement and mentioned how several of AM&C’s clients used Robinson & Robinson (R&R). He also talked about how R&R was committed to professional development, and they had sponsored his full attendance at a three-day conference held at an exclusive winter resort."
+      ],
+      [
+        "h",
+        "Point 3"
+      ],
+      [
+        "p",
+        "Another incident was discovered by one of our portfolio managers who is a member of a large online investment club. The manager noticed a new member of the group continually talked about the small-cap stocks AM&C was actively trading and his arguments went against the firm’s recommendations. The manager notified me, and after several weeks of investigation, we determined that LaRue was the individual discussing the companies the firm was trading. After outlining this last item, Matheson drafted the following polices to prevent and detect this type of violation going forward:"
+      ],
+      [
+        "p",
+        "Policy 1: Membership in online investment clubs is permissible but must be reported to the Compliance Department before joining."
+      ],
+      [
+        "p",
+        "Policy 2: When it is discovered that a membership has not been reported, increase supervision on the employee who failed to report."
+      ],
+      [
+        "p",
+        "Policy 3: Send periodic reminders regarding investment club membership to those employees who failed to report and outline permissible conduct."
+      ],
+      [
+        "p",
+        "Matheson completed the email and sent it as well as the evidence she had gathered to the appropriate email address at the CFA Institute. She then met with AM&C’s CEO to update him about the complaint and discuss what she should do next. He made the following recommendations:"
+      ],
+      [
+        "p",
+        "Recommendation 1: Consult with the firm’s securities attorney."
+      ],
+      [
+        "p",
+        "Recommendation 2: Wait for the PCP to provide her with additional information."
+      ],
+      [
+        "p",
+        "Recommendation 3: Inform the local CFA Society about the complaint."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "As described in point 1 of the email, which Standard has LaRue least likely violated?",
+        "options": [
+          "Loyalty",
+          "Priority of Transactions",
+          "Preservation of Confidentiality"
+        ],
+        "answer": 1,
+        "why": "Standard VI(B), Priority of Transactions, is about trades in accounts where the member is a beneficial owner coming after client trades. LaRue only talked to his cousin; there is no evidence he traded or had a beneficial interest in any account, so VI(B) is not engaged. A is violated: IV(A) Loyalty forbids divulging the employer's confidential information (and AM&C prohibits discussing trades). C is violated: III(E) requires keeping information about clients' trades confidential."
+      },
+      {
+        "q": "As described in point 2 of the email, are LaRue's actions in the presentation for a new client consistent with the Standards?",
+        "options": [
+          "Yes",
+          "No, his actions are inconsistent with the Standard relating to disclosure of conflicts",
+          "No, his actions are inconsistent with the Standard relating to independence and objectivity"
+        ],
+        "answer": 2,
+        "why": "Standard I(B), Independence and Objectivity: accepting a broker's sponsorship of a full three-day conference at an exclusive resort is a lavish benefit that could reasonably compromise his objectivity, and he then pointed a prospective client toward that broker. Modest gifts are fine; this is not. B is wrong: he openly mentioned R&R's sponsorship, so he did not hide the conflict (VI(A)). Disclosure does not cure accepting a benefit that compromises independence."
+      },
+      {
+        "q": "In point 3 of the email, which of the policies Matheson drafted is most likely insufficient to prevent a violation of the Standards?",
+        "options": [
+          "Policy 1",
+          "Policy 2",
+          "Policy 3"
+        ],
+        "answer": 2,
+        "why": "Standard IV(C), Responsibilities of Supervisors: periodic reminders of compliance procedures and of permissible conduct should go to ALL relevant employees, not only those who already failed to report. Policy 3 is too narrow. Policy 1 (report club membership before joining) helps prevent and detect problems, and Policy 2 (increase supervision of someone who broke the rule) matches the guidance to tighten supervision once a violation is found."
+      },
+      {
+        "q": "Which of the CEO’s recommendations regarding what Matheson should do next is her best course of action to be consistent with the Standards?",
+        "options": [
+          "Recommendation 1",
+          "Recommendation 2",
+          "Recommendation 3"
+        ],
+        "answer": 0,
+        "why": "Standard I(A), Knowledge of the Law: the firm has already dissociated from LaRue by firing him. The Code doesn't require reporting to regulators unless the law does, but it can be prudent, so consulting legal and compliance advisers is the right next step. B is wrong: once a complaint is filed, the matter is between LaRue and CFA Institute; the PCP won't report back to her. C is wrong: telling the local CFA society could breach the confidentiality of the PCP process."
+      }
+    ]
   }
 ];
 

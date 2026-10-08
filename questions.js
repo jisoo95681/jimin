@@ -2197,6 +2197,62 @@ const QUESTIONS = [
     options: ["Allowing employees first access to IPOs", "Letting staff trade on buy-list stocks just before clients", "Blackout periods around client trades"],
     answer: 2,
     why: "Blackout periods stop front-running. Recommended procedures also restrict IPO participation, require pre-clearance and reporting of holdings, and disclose policies on request."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Standard VI(B), Priority of Transactions, is engaged when a member:",
+    options: ["Tells a relative about trades the firm is executing", "Trades in an account in which they have a beneficial interest", "Recommends a broker to a prospective client during a presentation"],
+    answer: 1,
+    why: "VI(B) puts client and employer trades ahead of trades where the member is a beneficial owner. Just talking about trades is a loyalty/confidentiality issue instead."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Telling a relative which stocks your firm is researching and trading most likely violates:",
+    options: ["Loyalty and Preservation of Confidentiality", "Priority of Transactions and Fair Dealing", "Independence and Objectivity only, as the relative may trade"],
+    answer: 0,
+    why: "Divulging the employer's confidential information breaks IV(A) Loyalty; revealing client trades breaks III(E) Preservation of Confidentiality."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A broker pays for a trader's full three-day conference at an exclusive resort, and the trader discloses it to clients. This is:",
+    options: ["Acceptable, because the benefit was disclosed", "A breach of Independence and Objectivity", "Fine if the conference is educational in any way"],
+    answer: 1,
+    why: "I(B): lavish benefits that could compromise objectivity should be refused. Disclosure doesn't cure it; only modest gifts and entertainment are acceptable."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under Standard IV(C), periodic reminders of compliance procedures should be sent to:",
+    options: ["Only employees who have broken the rules before", "All employees to whom the procedures apply", "Only supervisors, who then decide which of their staff to tell"],
+    answer: 1,
+    why: "Reminders go to all relevant staff. When a violation is found, supervision of that person is also increased."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Once a supervisor learns of a possible violation, IV(C) suggests:",
+    options: ["Waiting for the employee's next annual performance review to raise it", "Increasing supervision or restricting the person pending investigation", "Reporting it to the local CFA society straight away"],
+    answer: 1,
+    why: "Respond promptly: investigate, and increase supervision or place limits on the person while it is resolved."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "After filing a complaint with CFA Institute's Professional Conduct Program, the firm should:",
+    options: ["Inform the local CFA society about the complaint", "Wait for the PCP to report back on the outcome", "Consult its legal and compliance advisers"],
+    answer: 2,
+    why: "The PCP process is confidential and between the member and CFA Institute; it won't update the complainant. Telling the local society risks breaching confidentiality."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under the Code and Standards, members must report violations to regulators:",
+    options: ["Only when the law requires it, though it may be prudent", "Always, as soon as a violation is discovered", "Never, since all reporting goes through CFA Institute"],
+    answer: 0,
+    why: "I(A) requires dissociating from violations. Reporting to regulators isn't required by the Standards unless the law requires it, but can be prudent."
   }
 ];
 
