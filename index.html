@@ -618,7 +618,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v79 · 2026-10-08";
+  const APP_VERSION = "v80 · 2026-10-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -837,7 +837,10 @@
 
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  let homePos = 1; // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Study plan (remembered while the app is open)
+  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Study plan.
+  // The menu comes back to the card you last opened, even after the app is closed and reopened.
+  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 6 ? v : 1; } catch { return 1; } })();
+  const saveHomePos = i => { homePos = i; try { localStorage.setItem("cfa-home-pos", String(i)); } catch {} };
   function home(dir = "back") {
     screen(dir);
     backTo = () => home("back");
@@ -856,7 +859,7 @@
       b.append(el("p", { className: "kicker" }, c.kicker), el("h2", {}, c.title), el("div", { className: "info", id: c.id || "" }, c.info || ""));
       b.onclick = () => {
         if (moved) return;
-        if (idx === mod(Math.round(pos), N)) c.open();
+        if (idx === mod(Math.round(pos), N)) { saveHomePos(idx); c.open(); }
         else animateTo(nearest(idx));
       };
       wrap.append(b);
@@ -897,7 +900,7 @@
         pos = from + (target - from) * ease(t);
         render();
         if (t < 1) anim = requestAnimationFrame(step);
-        else { pos = target; homePos = mod(target, N); render(); }
+        else { pos = target; saveHomePos(mod(target, N)); render(); }
       };
       anim = requestAnimationFrame(step);
     }
