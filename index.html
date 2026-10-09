@@ -551,11 +551,8 @@
   .screen-ghost.out-back { animation: out-back .6s var(--ease) forwards; }
   .screen-ghost.out-up { animation: out-up .6s var(--ease) forwards; }
   #quiz { position: relative; }
-  .card-ghost { position: absolute; margin: 0; pointer-events: none; z-index: 1; }
-  .card-ghost.out-fwd { animation: out-fwd .45s var(--ease) forwards; }
-  .card-ghost.out-back { animation: out-back .45s var(--ease) forwards; }
-  .card.card-in-fwd { animation: in-fwd .55s var(--ease) .08s both; }
-  .card.card-in-back { animation: in-back .55s var(--ease) .08s both; }
+  #quiz > .card { overflow: hidden; box-sizing: border-box; }
+  .card-inner { will-change: transform, opacity; }
   #app.enter-fwd { animation: in-fwd .9s var(--ease) .12s both; }
   #app.enter-back { animation: in-back .9s var(--ease) .12s both; }
   #app.enter-up { animation: fade-up .9s var(--ease) .12s both; }
@@ -624,7 +621,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v83 · 2026-10-10";
+  const APP_VERSION = "v84 · 2026-10-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1955,19 +1952,35 @@
     markBtn.onclick = () => { leaveQuestion(); confirmMark(false); };
     drawNav();
     if (old) {
-      // Swap in the new card, progress, map and button under the same timer bar. The old card fades out in place.
+      // Same card, new content: the old question slides out, the card eases to its new height, the new one slides in.
       const oldCard = old.querySelector(":scope > .card");
-      old.querySelectorAll(".card-ghost").forEach(g => g.remove());
-      const ghost = oldCard.cloneNode(true);
-      ghost.classList.add("card-ghost", `out-${dir}`);
-      Object.assign(ghost.style, { top: `${oldCard.offsetTop}px`, left: `${oldCard.offsetLeft}px`, width: `${oldCard.offsetWidth}px` });
-      [...old.children].forEach((c, n) => n && c.remove()); // keep the timer bar (first child)
-      card.classList.add(`card-in-${dir}`);
-      old.append(progress(done / deck.length), card, map, markBtn, ghost);
-      setTimeout(() => ghost.remove(), 500);
-      if (card.getBoundingClientRect().top < 0) window.scrollTo(0, 0);
+      const fill = old.querySelector(":scope > .progress > div");
+      if (fill) fill.style.width = `${(done / deck.length) * 100}%`;
+      old.querySelector(":scope > .qmap").replaceWith(map);
+      old.querySelector(":scope > .mark-btn").replaceWith(markBtn);
+      const inner = el("div", { className: "card-inner" });
+      inner.append(...card.childNodes);
+      const shift = dir === "back" ? 18 : -18, ease = "cubic-bezier(.22, .8, .24, 1)";
+      const swap = () => {
+        oldCard._out = null;
+        const h0 = oldCard.offsetHeight;
+        oldCard.replaceChildren(inner);
+        const h1 = oldCard.offsetHeight;
+        if (oldCard._grow) oldCard._grow.cancel();
+        if (h0 !== h1) oldCard._grow = oldCard.animate([{ height: `${h0}px` }, { height: `${h1}px` }], { duration: 260, easing: ease });
+        inner.animate([{ opacity: 0, transform: `translateX(${-shift}px)` }, { opacity: 1, transform: "none" }], { duration: 260, easing: ease });
+        if (oldCard.getBoundingClientRect().top < 0) window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      if (oldCard._out) { oldCard._out.cancel(); swap(); return; } // tapped again mid-slide: jump straight to the newest question
+      const cur = oldCard.firstElementChild;
+      if (!cur || !cur.classList.contains("card-inner")) { swap(); return; }
+      oldCard._out = cur.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: `translateX(${shift}px)` }], { duration: 130, easing: "ease-in", fill: "forwards" });
+      oldCard._out.onfinish = swap;
       return;
     }
+    const inner0 = el("div", { className: "card-inner" });
+    inner0.append(...card.childNodes);
+    card.append(inner0);
     quiz.append(topbar(), progress(done / deck.length), card, map, markBtn);
     app.append(quiz);
   }
