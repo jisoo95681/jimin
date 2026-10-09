@@ -6275,6 +6275,96 @@ const VIGNETTES = [
         "why": "Standard VI(B), Priority of Transactions: client accounts in which staff are beneficiaries (e.g. family accounts) are still CLIENT accounts. They must be treated like every other client account, neither favoured nor disadvantaged, so always trading them last (Policy 2) is unfair to those clients. B is wrong: strict limits on staff private placements are recommended, and a full ban (Policy 1) is allowed."
       }
     ]
+  },
+  {
+    "id": "victory",
+    "title": "Victoria Duffy: Victory Investment Management",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Victoria Duffy, CFA, recently left her position as a portfolio manager at DalTex Investment Advisors (DalTex). Her departure was not restricted by a noncompete agreement, and before leaving, she returned the company-owned electronic devices she had been issued. Duffy has started her own investment management firm, Victory Investment Management (Victory). She has talked with several individuals about joining the firm as part of the management team and potentially being an equity owner. Duffy has lunch with Linda Kercheval, CFA, the chief compliance officer at DalTex, as she is interested in offering Kercheval a position at Victory. During their meeting, Duffy shares with Kercheval a presentation that includes the proposed management structure, the investment products to be offered, and a list of potential clients. Kercheval noted several of the names on the list were clients Duffy had frequent contact with while at DalTex."
+      ],
+      [
+        "p",
+        "Although Kercheval is excited about the opportunity to join Duffy, she feels the timing is not quite right so she delays submitting her resignation. A short time later, she sees one of the clients Duffy had noted in her presentation in the DalTex office. She stops to talk with the client who mentioned how much he missed working with Duffy. Kercheval tells the client she had recently seen Duffy and shares her plans to open her own firm. The client gives Kercheval his business card and asks her to have Duffy contact him or to give him the name of her new firm. Kercheval considers what she should do and comes up with the following options:"
+      ],
+      [
+        "p",
+        "Option 1: Call Duffy and recount the conversation."
+      ],
+      [
+        "p",
+        "Option 2: Do nothing until she joins Victory and then pass on the card to Duffy."
+      ],
+      [
+        "p",
+        "Option 3: Give the client the name of Duffy’s new firm."
+      ],
+      [
+        "p",
+        "While in her home office Duffy prepares for a video call with Lucy Tilton, CFA. Duffy met Tilton while attending a CFA-sponsored conference. Tilton is a portfolio manager specializing in alternative investments, specifically the use of futures and options to mitigate risk for accounts that allow the use of alternative investments. Duffy is particularly interested in adding someone with this expertise as it is not her strength. Tilton is very interest in working with Duffy, but she feels Victory has not reached an asset management level to support the compensation she requires. They decide on a mutually beneficial arrangement in which Tilton will create a report for Duffy’s use with daily commentary about how she is navigating the market for her firm and their clients. Tilton relishes the idea of working for a smaller firm and hopes to join Duffy in the near future."
+      ],
+      [
+        "p",
+        "Several months later, Victory has gained enough clients to support adding Tilton as an employee. Tilton submits her resignation to her current employer, and although they are disappointed, they are excited for her and her new opportunity. Because they really like her work they ask if she could provide them with a daily commentary about her views regarding the market. Additionally, they are willing to pay her a monthly fee for providing the service. Because it is basically the same report she is currently providing Duffy, she agrees, and they negotiate a contract between the two of them with a quarterly fee paid direct to her. Tilton informs Duffy about the agreement, and Duffy agrees but is only willing to do this for a period of one year. Duffy makes the following recommendations regarding the arrangement:"
+      ],
+      [
+        "p",
+        "Recommendation 1: You need to draft an agreement outlining what you are doing and how much they are paying you over the next year."
+      ],
+      [
+        "p",
+        "Recommendation 2: You and your former employer need to sign the agreement."
+      ],
+      [
+        "p",
+        "Recommendation 3: We also need to send a disclosure to all of our clients and potential clients."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on the information provided, did Duffy most likely violate any CFA Institute Code of Ethics and Standards of Professional Conduct during her lunch meeting with Kercheval?",
+        "options": [
+          "No",
+          "Yes, with regards to Standard III, Duties to Clients",
+          "Yes, with regards to Standard IV, Duties to Employers"
+        ],
+        "answer": 0,
+        "why": "No violation. Once she has left DalTex, the skills and experience she gained there are not confidential, and simply knowing former clients' names generally isn't either (unless a confidentiality agreement or the law says so). She had no noncompete, returned the firm's devices, and there's no sign she contacted clients before leaving or used a DalTex client list.\nB is wrong: III(E) Preservation of Confidentiality protects client information, and she has nothing beyond their names.\nC is wrong: IV(A) Loyalty doesn't stop former employees contacting old clients, as long as the contact details don't come from the former employer's records and no noncompete is breached."
+      },
+      {
+        "q": "Regarding her conversation with DalTex’s client, which option should Kercheval most likely choose to prevent violating CFA Institute Code of Ethics and Standards of Professional Conduct?",
+        "options": [
+          "Option 1",
+          "Option 2",
+          "Option 3"
+        ],
+        "answer": 2,
+        "why": "Kercheval still works for DalTex, so she owes loyalty to her employer, but her first duty is to the client. Giving the client the name of Duffy's firm (Option 3) does what the client asked and leaves it to the client to make contact.\nA (Option 1, call Duffy) is wrong: actively passing the client to a competitor could harm her current employer if the client moves his assets: IV(A) Loyalty.\nB (Option 2, wait until she joins Victory) is wrong: sitting on the card ignores the client's request, putting her own interests ahead of the client's: III(A) Loyalty, Prudence, and Care."
+      },
+      {
+        "q": "Which CFA Institute Code of Ethics and Standards of Professional Conduct has Tilton most likely violated?",
+        "options": [
+          "Standard IV(A), Loyalty",
+          "Standard I(B), Independence and Objectivity",
+          "Both Standard IV(A), Loyalty, and Standard I(B), Independence and Objectivity"
+        ],
+        "answer": 2,
+        "why": "Both.\nIV(A) Loyalty: while still employed, she gives another firm her daily commentary on how she is navigating the market for her employer and its clients. That harms her employer, and she is not acting solely for its benefit.\nI(B) Independence and Objectivity: she offers that commentary in return for the prospect of a job and a possible equity stake at Victory, a benefit that could compromise her objectivity. (The source explanation says 'join DalTex'; it means Victory.)\nSo A and B on their own are incomplete."
+      },
+      {
+        "q": "Which recommendation with regards to Tilton’s agreement is most likely insufficient to prevent a violation of CFA Institute Code of Ethics and Standards of Professional Conduct?",
+        "options": [
+          "Recommendation 1",
+          "Recommendation 2",
+          "Recommendation 3"
+        ],
+        "answer": 1,
+        "why": "IV(B) Additional Compensation Arrangements: pay that could conflict with the employer's interest needs written consent from ALL parties involved. Tilton's employer is now Victory, so Duffy must sign too, not just Tilton and her former employer. Recommendation 2 is therefore incomplete.\nA is wrong: a written agreement stating the nature, approximate amount and duration of the pay is exactly what IV(B) recommends.\nC is wrong: disclosing the arrangement to clients and prospective clients is what VI(A) Disclosure of Conflicts requires."
+      }
+    ]
   }
 ];
 

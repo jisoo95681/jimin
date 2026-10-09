@@ -2333,6 +2333,286 @@ const QUESTIONS = [
     options: ["Consistent with VI(B), which recommends strict limits", "A violation, because staff have a right to invest", "Required by law under the Standards for every firm"],
     answer: 0,
     why: "VI(B) recommends strict limits on private placements and IPOs; a full ban goes further but is allowed."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "After leaving a firm with no noncompete, simply knowing the names of its clients is:",
+    options: ["Generally not confidential information", "Confidential, so using them breaches III(E)", "Usable only after a cooling-off period"],
+    answer: 0,
+    why: "Knowing that former clients exist is generally not confidential under IV(A) or III(E), unless a confidentiality agreement or the law says otherwise."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A former employee may contact clients of their previous firm as long as:",
+    options: ["The previous firm gives its written consent to each contact first", "They wait until those clients reach out to them on their own", "Contact details don't come from the old firm's records"],
+    answer: 2,
+    why: "IV(A) allows it if the contact information isn't taken from the former employer's records and no noncompete agreement is breached."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Skills and experience gained at a former employer are:",
+    options: ["Confidential property of the former employer", "Not confidential once the employee has left", "Usable only with the former employer's consent"],
+    answer: 1,
+    why: "Under IV(A), general skills and experience belong to the employee after leaving; only confidential information (e.g. client lists, records) stays with the firm."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Still employed, you meet a client of your firm who asks how to reach a former colleague's new firm. Best action:",
+    options: ["Give the client the name of the new firm", "Phone the former colleague with the details", "Keep the card until you join the new firm"],
+    answer: 0,
+    why: "Giving the name serves the client (III(A)) and leaves contact in the client's hands, without you actively diverting business from your employer (IV(A))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "While still employed, personally passing your firm's client to a former colleague's competing firm mainly conflicts with:",
+    options: ["III(E) Preservation of Confidentiality", "IV(A) Loyalty to the employer", "VI(A) Disclosure of Conflicts"],
+    answer: 1,
+    why: "Actively steering a client to a competitor could cause the client to move assets, harming your current employer: IV(A) Loyalty."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Ignoring a client's request until it suits your own job move mainly conflicts with:",
+    options: ["IV(A) Loyalty to the employer", "I(B) Independence and Objectivity", "III(A) Loyalty, Prudence, and Care"],
+    answer: 2,
+    why: "III(A) requires putting the client's interests before your employer's and your own. Delaying the client's request for personal timing fails that."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under III(A), when interests compete, a member's order of priority is:",
+    options: ["Clients, then employer, then self", "Employer, then clients, then self", "Clients and employer equally, then self"],
+    answer: 0,
+    why: "III(A): act for the benefit of clients and place their interests before the employer's or your own."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "While still employed, giving your employer's daily market commentary to another firm most likely violates:",
+    options: ["III(B) Fair Dealing", "IV(A) Loyalty", "V(B) Communication with Clients"],
+    answer: 1,
+    why: "The commentary reflects how you manage money for your employer and its clients; handing it to another firm harms the employer: IV(A) Loyalty."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Offering your employer's research to another firm in hope of a future job and equity stake there also breaches:",
+    options: ["I(B) Independence and Objectivity", "VII(B) Reference to CFA Institute", "III(C) Suitability and client objectives"],
+    answer: 0,
+    why: "The hoped-for job and equity are a benefit that could compromise objectivity: I(B) forbids offering or accepting such consideration."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under IV(B), written consent for an outside paid arrangement must come from:",
+    options: ["The member's former employer only", "All parties involved, incl. the employer", "The member's clients and prospects"],
+    answer: 1,
+    why: "IV(B) Additional Compensation Arrangements requires written consent from all parties involved, which always includes the member's current employer."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A written IV(B) agreement for outside compensation should state:",
+    options: ["Only the total fee and the schedule of payments", "Which of the firm's client accounts might be affected", "Nature, approximate amount and duration of pay"],
+    answer: 2,
+    why: "Recommended procedure: describe the nature of the compensation, its approximate amount and how long the arrangement lasts."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "If an employee's outside paid arrangement could affect clients, the firm should also:",
+    options: ["Disclose it to clients and prospects (VI(A))", "Ask the CFA Institute to approve it first", "Only keep the signed contract on file"],
+    answer: 0,
+    why: "VI(A) Disclosure of Conflicts: matters that could impair independence or interfere with duties to clients must be fully and fairly disclosed."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Asking a current client with first-hand experience of your work for a reference letter is:",
+    options: ["A violation, since clients can't be asked", "Generally consistent with I(B)", "Allowed only after you leave the firm"],
+    answer: 1,
+    why: "A client who knows your work and has nothing to gain can give an objective reference, so I(B) isn't compromised."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Hinting you will recommend a research provider to your next employer in return for a reference most likely violates:",
+    options: ["I(B) Independence and Objectivity", "III(B) Fair Dealing among all clients", "IV(B) Additional Compensation"],
+    answer: 0,
+    why: "The promised business is a benefit that could compromise your future independence in choosing research providers: I(B)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under III(B) Fair Dealing, when a recommendation changes, the firm should notify:",
+    options: ["Only clients who still hold the security", "Only clients who later ask about the change", "All clients, especially those who acted on it"],
+    answer: 2,
+    why: "Changed recommendations should go to all clients, with priority to those who acted on the earlier advice."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under III(B), a partially filled block order should be allocated:",
+    options: ["First-come, first-served", "Pro rata across the accounts", "To the largest accounts first"],
+    answer: 1,
+    why: "Pro-rata allocation of partial fills is a recommended fair-dealing procedure; it treats every participating client equally."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Insider trading is legal where a member works. Under I(A), the member must:",
+    options: ["Follow the stricter rule: the CFA Standards", "Follow local law, since it applies there", "Follow whichever rule the employer picks"],
+    answer: 0,
+    why: "I(A) Knowledge of the Law: when local law and the Standards differ, follow the stricter one."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Combining public data with your own non-material observations (e.g. how fast shelves are restocked) is:",
+    options: ["A II(A) violation if the conclusion is material", "Allowed under the mosaic theory", "Allowed only with management's consent"],
+    answer: 1,
+    why: "The mosaic theory lets analysts combine public and non-material nonpublic pieces, even if the conclusion is material."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm caps gifts at USD100 each. A CFO sends six USD100 baskets, shared one per team member. This is:",
+    options: ["A breach of firm policy and I(D)", "Acceptable only if reported to clients", "Consistent with policy: no violation"],
+    answer: 2,
+    why: "Each person receives one gift within the limit, so firm policy is followed and objectivity is unlikely to be compromised."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Selling a stock for all clients before selling your own holding is consistent with:",
+    options: ["III(A) and putting clients first", "II(A) Material Nonpublic Information", "III(D) Performance Presentation"],
+    answer: 0,
+    why: "Putting client trades before your own shows loyalty to clients (III(A)) and respects priority of transactions (VI(B))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which is an acceptable reference to the CFA Program?",
+    options: ["Charterholders have superior management skills", "Describing the program's rigorous study demands", "Charterholders achieve better client returns"],
+    answer: 1,
+    why: "VII(B) allows factual statements about the program's rigour and the skills it develops, but not claims of superiority or better performance."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under III(B), all accounts in the same block trade should receive:",
+    options: ["The same price and commission", "The price in the order they were entered", "Prices that reflect each account's size"],
+    answer: 0,
+    why: "Fair allocation: every account in a block trade gets the same execution price and is charged the same commission."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Standard II(B) Market Manipulation covers:",
+    options: ["Only spreading false information", "Only trades that create false prices", "Both information- and transaction-based"],
+    answer: 2,
+    why: "II(B) covers distorting prices with misleading information AND trades that create false liquidity or price levels."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Telling a colleague to answer a reporter truthfully, without giving details of past incidents, supports:",
+    options: ["III(E) Preservation of Confidentiality", "I(C) Misrepresentation of the firm's record", "V(B) Communication with Clients"],
+    answer: 0,
+    why: "Answering truthfully avoids misrepresentation, and withholding details protects confidential information."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Written due-diligence procedures for judging whether a recommendation has adequate support relate to:",
+    options: ["Distribution", "Reasonable Basis", "Compensation"],
+    answer: 1,
+    why: "V(A) recommended procedures: Reasonable Basis = written due-diligence standards; Distribution = supervisory approval; Compensation = measurable quality criteria."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Buying a stock for every client in one block trade, favouring no one, satisfies Fair Dealing but may still breach:",
+    options: ["III(C) Suitability", "II(B) Market Manipulation", "VI(B) Priority of Transactions"],
+    answer: 0,
+    why: "Treating everyone the same is fair, but the stock must still fit each account's objectives and constraints."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Restricting employees from buying IPOs is recommended mainly because it:",
+    options: ["Lowers the firm's trading costs", "Stops staff missing good deals", "Avoids taking deals from clients"],
+    answer: 2,
+    why: "VI(B): staff buying IPOs could take opportunities from clients or look like favours from the issuer or broker."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under I(B), accepting gifts or entertainment from a broker is generally acceptable when they are:",
+    options: ["Modest and of nominal value", "Disclosed to clients afterwards", "Approved by the broker's compliance"],
+    answer: 0,
+    why: "Modest gifts are fine. Lavish ones (e.g. a resort conference) compromise objectivity even if disclosed."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "After a firm files a complaint about a former employee with the CFA Institute PCP:",
+    options: ["The PCP will report its final outcome back to the firm", "The firm must also inform its local CFA society", "The matter is between the member and CFA Institute"],
+    answer: 2,
+    why: "The PCP process is confidential; the firm shouldn't expect updates, and telling others could breach that confidentiality."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Requiring staff to report membership of an investment club before joining is:",
+    options: ["A breach of staff privacy", "A reasonable IV(C) preventive step", "Only needed if the club trades IPOs"],
+    answer: 1,
+    why: "Supervisors should have procedures that help prevent and detect violations; advance reporting does both."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "By firing an employee who violated the Standards, a firm has:",
+    options: ["Dissociated itself from the violation", "Fully met any legal reporting duty", "Removed the need to consult counsel"],
+    answer: 0,
+    why: "Firing achieves dissociation (I(A)). Whether to report to regulators is a separate legal question, so consult legal and compliance advisers."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Repeating a client's own description of your reputation as 'stellar' is:",
+    options: ["I(C) Misrepresentation", "VII(B) misuse of the designation", "Not a misrepresentation"],
+    answer: 2,
+    why: "You're only repeating what the client said, not making a false or exaggerated claim."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A rule banning the 'pumping up' of prices only targets:",
+    options: ["Transaction-based manipulation", "Information-based manipulation", "Trading on nonpublic information"],
+    answer: 1,
+    why: "Pumping up prices with misleading information is information-based manipulation; trade-based manipulation and insider trading stay uncovered."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Requiring ALL material information to be made public within 24 hours could:",
+    options: ["Harm investors, e.g. by revealing trade secrets", "Fully prevent insider trading in all markets", "Replace the need for a duty of loyalty to clients"],
+    answer: 0,
+    why: "Some material information, like competitive secrets, shouldn't be public; forcing disclosure could hurt the company's investors."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Training only client-service staff on new anti-money-laundering laws is:",
+    options: ["Sufficient, since they deal with clients", "Too narrow: train all relevant staff", "Required only for the compliance team"],
+    answer: 1,
+    why: "Compliance training should reach all employees the procedures apply to, and the firm also needs a process to learn of legal changes promptly."
   }
 ];
 
