@@ -2293,6 +2293,46 @@ const QUESTIONS = [
     options: ["Only V(B), Communication with Clients", "Only I(C), Misrepresentation", "Both I(C) and V(B)"],
     answer: 2,
     why: "Omitting a significant risk is a misrepresentation by omission (I(C)) and a failure to disclose significant risks of the investment process (V(B))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A fraud stays hidden despite a thorough audit and a clean regulatory inspection. The diligent auditor has most likely:",
+    options: ["Not violated the Standards", "Violated IV(C), Responsibilities of Supervisors", "Violated V(A), Diligence and Reasonable Basis"],
+    answer: 0,
+    why: "The Standards require reasonable efforts, not perfect detection. Missing a well-concealed fraud after diligent work isn't a violation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Before anyone is charged, a firm's press release about alleged wrongdoing should:",
+    options: ["Name the suspects so investors can judge the risk", "State that illegal activity caused the problem", "Avoid naming anyone or implying guilt"],
+    answer: 2,
+    why: "Naming people or implying guilt before charges harms the employer and its client (IV(A), III(A)) and risks defamation. Refer to 'alleged' activity pending investigation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "New laws took effect before the firm's policies were updated. The best fix is to:",
+    options: ["Review all compliance policies once a year", "Set up a process to learn about legal changes promptly", "Train client service staff on the new laws"],
+    answer: 1,
+    why: "Procedures must be updated before laws take effect, so the firm needs timely information on legal changes. An annual review can miss mid-year laws."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Client accounts in which staff are beneficiaries (e.g. family accounts) should be:",
+    options: ["Traded after all other client accounts", "Treated like any other client account", "Traded first, since staff know the clients best"],
+    answer: 1,
+    why: "Under VI(B), family accounts that are client accounts are neither favoured nor disadvantaged. Trading them last is unfair to those clients."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A complete ban on staff investing in private placements is:",
+    options: ["Consistent with VI(B), which recommends strict limits", "A violation, because staff have a right to invest", "Required by law under the Standards for every firm"],
+    answer: 0,
+    why: "VI(B) recommends strict limits on private placements and IPOs; a full ban goes further but is allowed."
   }
 ];
 

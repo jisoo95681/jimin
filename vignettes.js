@@ -6185,6 +6185,96 @@ const VIGNETTES = [
         "why": "Ngyue was effectively the fund's only manager, yet key-person risk was missing from the prospectus. That omission is a misrepresentation under I(C) (Standard I), and failing to disclose a significant risk of the investment process breaches V(B) Communication with Clients and Prospective Clients (Standard V). So both Standards were violated, even though he later corrected the prospectus."
       }
     ]
+  },
+  {
+    "id": "regal",
+    "title": "Trevor Blevin: Regal Bank and Spalding",
+    "topic": "Ethical and Professional Standards",
+    "reading": "Guidance for Standards I–VII",
+    "body": [
+      [
+        "p",
+        "Trevor Blevin, a CFA candidate and a former employee of Regal Bank (Regal), recently joined Spalding Asset Management as the head of compliance. He is shocked by today’s front-page business news headline: “Regal Depositors Left in the Cold: Central Bank Regulator Places Bank under Statutory Management”. The article mentions the reason for Regal’s closure was the CEO’s illegal behavior, including fraud, as well as money laundering associated with a major client. The discovery occurred one month after the death of Regal’s CEO, Mr. James Antonio. Up until three weeks ago, Blevin headed Regal’s internal audit department and knew nothing of any fraud or client money laundering, despite having recently supervised a major internal audit exercise."
+      ],
+      [
+        "p",
+        "Wanting to get more information, Blevin calls his former colleague, Mira Chaudry, CFA. Chaudry, who works in Regal’s business development department, acts as the investor relations officer and headed the team for Regal’s recent corporate bond issue. The bond issue, approved by the central bank and the capital markets regulator, was hugely successful and oversubscribed. Chaudry tells Blevin she too was shocked by the central bank’s actions. Nothing seemed out of line or suspicious regarding Regal’s financial well-being when the team diligently prepared the bond offering documents. She reminds Blevin, that he, along with Regal’s compliance officer, signed off on all of the public marketing materials used for the bond issue, which included reviewing all of the extensive financial analysis undertaken. Chaudry adds, “In the latest regulatory inspection, all of the anti-money-laundering and lending procedures were reviewed with no queries raised.”"
+      ],
+      [
+        "p",
+        "Regal’s board of directors is concerned that the newspaper’s headline will create panic among depositors and cause a run on Regal if it is allowed to reopen. In an attempt at damage control, the board instructs Chaudry to draft a public press release regarding the central bank’s investigations of fraud by the deceased CEO and the money laundering charges made against one of the bank’s major clients. Chaudry presents the following three draft statements to the board."
+      ],
+      [
+        "p",
+        "Statement 1: “Regal Bank has been placed under statutory management by the central bank as a result of illegal activity by Mr. Antonio, the deceased CEO, and Wesley Mining Corp, a major client.”"
+      ],
+      [
+        "p",
+        "Statement 2: “The central bank has placed Regal Bank under statutory management pending further investigation into alleged illegal activity by a former senior manager and a bank client.”"
+      ],
+      [
+        "p",
+        "Statement 3: “Regal Bank has been placed under statutory management by the central bank as a result of illegal activity.”"
+      ],
+      [
+        "p",
+        "Meanwhile, Blevin, still reeling from the Regal Bank saga, decides to take another look at Spalding’s compliance policies and procedures to ensure they are fully in line with the CFA Institute Standards of Professional Conduct. While reviewing the firm’s anti-money-laundering policies, he notices lapses with respect to recently implemented laws, and he is afraid the firm may already be in violation. He plans to update the existing policies as soon as possible."
+      ],
+      [
+        "p",
+        "After concluding his review, Blevin recommends to Spalding’s board of directors changes to the firm’s conflicts of interest policies. Blevin is concerned the staff may not be putting clients’ interests ahead of their own when trading for their personal accounts. He asks for the board’s endorsement of revisions in the following two policies:"
+      ],
+      [
+        "p",
+        "Policy 1: Staff are not allowed to participate in any private placements."
+      ],
+      [
+        "p",
+        "Policy 2: Any client accounts that include staff as beneficiaries must trade after all other client accounts."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on the information given, are Blevin and/or Chaudry most likely in violation of the Standards regarding their role in Regal’s corporate bond issuance and the subsequent statutory management of Regal Bank?",
+        "options": [
+          "No.",
+          "Yes, Blevin is likely in violation with regard to Standard IV(C), Responsibilities of Supervisors.",
+          "Yes, both Blevin and Chaudry are likely to be in violation with regard to Standard V(A), Diligence and Reasonable Basis."
+        ],
+        "answer": 0,
+        "why": "Both worked diligently: Blevin ran a major internal audit, Chaudry's team prepared the offering carefully, the bond was approved by two regulators, and a recent regulatory inspection raised no queries. A fraud that was well hidden and undetected despite reasonable efforts is not, by itself, a violation. B is wrong: nothing suggests Blevin failed to make reasonable efforts to detect violations as a supervisor. C is wrong: there is no sign either lacked diligence or a reasonable basis for their work."
+      },
+      {
+        "q": "To prevent violating any of the Standards, which statement should Chaudry most likely recommend that the board of directors use for Regal’s press release?",
+        "options": [
+          "Statement 1",
+          "Statement 2",
+          "Statement 3"
+        ],
+        "answer": 1,
+        "why": "Statement 2 says only what is known: the bank is under statutory management pending investigation into ALLEGED illegal activity, without naming anyone. Nobody has been charged or found guilty, so naming the deceased CEO and the client (Statement 1) or stating as fact that illegal activity caused it (Statement 3) would imply guilt, damage reputations and could expose the bank to defamation. That breaches her duty of loyalty to her employer (IV(A)) and to its client (III(A))."
+      },
+      {
+        "q": "What action should Blevin most likely take regarding his discovery about Spalding’s anti-money-laundering policies so as to comply with the Standards?",
+        "options": [
+          "Arrange an annual review of all the firm’s compliance policies",
+          "Set up procedures to obtain timely information regarding any changes in legislation",
+          "Require all client service employees to undergo training regarding the new legislation"
+        ],
+        "answer": 1,
+        "why": "The problem is that new laws took effect before the firm's policies were updated. The fix is a process to learn about legal changes in time, so policies are updated before each law takes effect (Knowledge of the Law, plus supervisors' duty to keep procedures adequate). A is wrong: an annual review can still miss a law that takes effect between reviews. C is too narrow: training should cover all employees, and training alone doesn't stop the firm falling behind new laws."
+      },
+      {
+        "q": "Would Blevin’s suggested revisions in Spalding’s conflict of interest policies most likely violate the CFA Institute Standards of Professional Conduct?",
+        "options": [
+          "No",
+          "Yes, in regard to Policy 1",
+          "Yes, in regard to Policy 2"
+        ],
+        "answer": 2,
+        "why": "Standard VI(B), Priority of Transactions: client accounts in which staff are beneficiaries (e.g. family accounts) are still CLIENT accounts. They must be treated like every other client account, neither favoured nor disadvantaged, so always trading them last (Policy 2) is unfair to those clients. B is wrong: strict limits on staff private placements are recommended, and a full ban (Policy 1) is allowed."
+      }
+    ]
   }
 ];
 
