@@ -550,6 +550,12 @@
   .screen-ghost.out-fwd { animation: out-fwd .6s var(--ease) forwards; }
   .screen-ghost.out-back { animation: out-back .6s var(--ease) forwards; }
   .screen-ghost.out-up { animation: out-up .6s var(--ease) forwards; }
+  #quiz { position: relative; }
+  .card-ghost { position: absolute; margin: 0; pointer-events: none; z-index: 1; }
+  .card-ghost.out-fwd { animation: out-fwd .45s var(--ease) forwards; }
+  .card-ghost.out-back { animation: out-back .45s var(--ease) forwards; }
+  .card.card-in-fwd { animation: in-fwd .55s var(--ease) .08s both; }
+  .card.card-in-back { animation: in-back .55s var(--ease) .08s both; }
   #app.enter-fwd { animation: in-fwd .9s var(--ease) .12s both; }
   #app.enter-back { animation: in-back .9s var(--ease) .12s both; }
   #app.enter-up { animation: fade-up .9s var(--ease) .12s both; }
@@ -618,7 +624,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v82 · 2026-10-09";
+  const APP_VERSION = "v83 · 2026-10-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1883,17 +1889,19 @@
   }
   const qTimeMs = () => (sq[i] ? sq[i].ms + (inQuiz ? timeMs() - qEnter : 0) : 0);
   function leaveQuestion() { if (sq[i]) sq[i].ms += timeMs() - qEnter; qEnter = timeMs(); }
-  function goTo(n, dir) { leaveQuestion(); i = n; show(dir); }
+  function goTo(n, dir) { leaveQuestion(); i = n; show(dir, true); }
   // The next question still to do after the current one (wrapping round), or -1 when all are answered.
   function nextOpen(from) {
     for (let d = 1; d <= deck.length; d++) { const n = (from + d) % deck.length; if (sq[n].pick === null) return n; }
     return -1;
   }
 
-  function show(dir = "fwd") {
+  // inPlace (moving between questions): the timer bar, number map and mark button stay put; only the question card slides.
+  function show(dir = "fwd", inPlace = false) {
     const q = deck[i], st = sq[i];
     answeredCurrent = st.pick !== null;
-    screen(dir);
+    const old = inPlace && document.getElementById("quiz");
+    if (!old) screen(dir);
     const quiz = el("div", { id: "quiz" });
     const card = el("div", { className: "card" });
     const done = sq.filter(s => s.pick !== null).length;
@@ -1946,6 +1954,20 @@
     const markBtn = el("button", { className: "btn mark-btn" });
     markBtn.onclick = () => { leaveQuestion(); confirmMark(false); };
     drawNav();
+    if (old) {
+      // Swap in the new card, progress, map and button under the same timer bar. The old card fades out in place.
+      const oldCard = old.querySelector(":scope > .card");
+      old.querySelectorAll(".card-ghost").forEach(g => g.remove());
+      const ghost = oldCard.cloneNode(true);
+      ghost.classList.add("card-ghost", `out-${dir}`);
+      Object.assign(ghost.style, { top: `${oldCard.offsetTop}px`, left: `${oldCard.offsetLeft}px`, width: `${oldCard.offsetWidth}px` });
+      [...old.children].forEach((c, n) => n && c.remove()); // keep the timer bar (first child)
+      card.classList.add(`card-in-${dir}`);
+      old.append(progress(done / deck.length), card, map, markBtn, ghost);
+      setTimeout(() => ghost.remove(), 500);
+      if (card.getBoundingClientRect().top < 0) window.scrollTo(0, 0);
+      return;
+    }
     quiz.append(topbar(), progress(done / deck.length), card, map, markBtn);
     app.append(quiz);
   }
