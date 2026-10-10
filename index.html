@@ -382,7 +382,7 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-due: #3f7fbf; --pt-old: #e3e7ea; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-due: #3f7fbf; --pt-old: #e3e7ea; --pt-plan: #5f656d; }
   .pt-scores.frm { grid-template-columns: repeat(4, 1fr); }
   .pt-exact { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; color: var(--muted); }
   .pt-exact .field { width: 76px; padding: 7px 10px; }
@@ -426,11 +426,19 @@
   /* Spaced-revision reminder: a dashed blue ring with the gap (1d, 7d, 30d); solid and faint once done, stronger when overdue. */
   .pt td.cell .due { position: absolute; inset: 2px; border: 2px dashed var(--pt-due); border-radius: 6px; pointer-events: none; }
   .pt td.cell .due b { position: absolute; right: 1px; bottom: 0; font-size: .5rem; line-height: 1; font-weight: 800; color: var(--pt-due); background: rgba(255, 255, 255, .85); border-radius: 3px; padding: 1px 2px; }
+  .pt td.cell .due.plan { border-style: dotted; border-color: var(--pt-plan); }
+  .pt td.cell .due.plan b { color: var(--pt-plan); }
   .pt td.cell .due.done { border-style: solid; opacity: .35; }
   .pt td.cell .due.late { border-style: solid; box-shadow: 0 0 0 2px rgba(63, 127, 191, .2); }
   .pt-due-list { margin: 10px 0 0; padding: 10px 12px; border-radius: 12px; background: rgba(184, 216, 242, .35); border: 1px solid rgba(63, 127, 191, .25); font-size: .88rem; }
   .pt-due-list b { color: var(--pt-due); }
   .pt-due-list ul { margin: 6px 0 0; padding-left: 18px; }
+  .pt-due-list .wk { margin-top: 10px; }
+  .pt-due-list .wk b { color: #3e434a; }
+  .pt-due-list .pt-day { margin: 6px 0 0; font-weight: 700; color: var(--navy); font-size: .84rem; }
+  .pt-due-list .tag { display: inline-block; font-size: .7rem; font-weight: 700; padding: 1px 6px; border-radius: 6px; margin-right: 6px; vertical-align: 1px; }
+  .pt-due-list .tag.p { background: var(--pt-plan); color: #fff; }
+  .pt-due-list .tag.v { background: var(--pt-sp); color: var(--navy); }
   .pt td.cell .sc { position: absolute; inset: 0; display: grid; place-items: center; font-size: .62rem; font-weight: 700; color: rgba(41, 38, 69, .65); }
   /* The picker sheet */
   .pt-sheet-bg { position: fixed; inset: 0; background: rgba(41, 38, 69, .28); z-index: 50; opacity: 0; transition: opacity .3s; }
@@ -446,6 +454,7 @@
   .pt-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .pt-opt { border: 2px solid transparent; border-radius: 14px; padding: 12px; font: inherit; font-weight: 700; color: var(--navy); cursor: pointer; text-align: left; }
   .pt-opt.on { border-color: var(--navy); }
+  .pt-opt.on::after { content: " ✓"; }
   .pt-scores { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-top: 10px; }
   .pt-scores.rev { grid-template-columns: repeat(3, 1fr); }
   .pt-opts.one { grid-template-columns: 1fr; }
@@ -629,7 +638,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v88 · 2026-10-10";
+  const APP_VERSION = "v89 · 2026-10-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -984,19 +993,20 @@
   // reminders are still pending doesn't start a new chain, and one after the chain is finished starts a new one.
   const PT_GAPS = [1, 7, 30];
   const ptAddDays = (k, n) => { const d = fromKey(k); d.setDate(d.getDate() + n); return dkey(d); };
+  // A "Plan" mark on today or a future day (not yet revised) also projects its 1/7/30-day reminders, drawn dotted grey.
   function ptDue(p) {
-    const byId = {}, out = {};
+    const byId = {}, out = {}, today = dkey(new Date());
     Object.entries(p.cells).forEach(([k, marks]) => {
-      if (!marks.some(m => m.t === "v")) return;
       const [id, d] = k.split("|");
-      (byId[id] = byId[id] || []).push(d);
+      const kind = marks.some(m => m.t === "v") ? "v" : marks.some(m => m.t === "p") && d >= today ? "p" : null;
+      if (kind) (byId[id] = byId[id] || []).push([d, kind]);
     });
     Object.entries(byId).forEach(([id, dates]) => {
       const items = [];
-      dates.sort().forEach(d => {
+      dates.sort((a, b) => (a[0] < b[0] ? -1 : 1)).forEach(([d, kind]) => {
         let hit = false;
-        items.forEach(x => { if (!x.done && x.due <= d) { x.done = d; hit = true; } });
-        if (!hit && !items.some(x => !x.done)) PT_GAPS.forEach(g => items.push({ id, gap: g, from: d, due: ptAddDays(d, g), done: null }));
+        if (kind === "v") items.forEach(x => { if (!x.done && x.due <= d) { x.done = d; hit = true; } });
+        if (!hit && !items.some(x => !x.done)) PT_GAPS.forEach(g => items.push({ id, gap: g, from: d, due: ptAddDays(d, g), done: null, plan: kind === "p" }));
       });
       items.forEach(x => (out[x.id + "|" + x.due] = out[x.id + "|" + x.due] || []).push(x));
     });
@@ -1034,17 +1044,17 @@
     td.title = "";
     if (dues && dues.length) {
       const today = dkey(new Date()), open = dues.filter(x => !x.done), x = open[0] || dues[0];
-      const ring = el("div", { className: "due" + (open.length ? (x.due < today ? " late" : "") : " done") });
+      const ring = el("div", { className: "due" + (open.length ? (x.plan ? " plan" : x.due < today ? " late" : "") : " done") });
       ring.append(el("b", {}, open.length ? `${x.gap}d` : "✓"));
       td.append(ring);
-      td.title = dues.map(y => `${y.gap}-day revision of ${fromKey(y.from).toLocaleDateString([], { month: "short", day: "numeric" })}${y.done ? " · done" : ""}`).join("\n");
+      td.title = dues.map(y => `${y.gap}-day revision of ${fromKey(y.from).toLocaleDateString([], { month: "short", day: "numeric" })}${y.plan ? " (planned)" : ""}${y.done ? " · done" : ""}`).join("\n");
     }
     if (!marks || !marks.length) return;
     const mk = el("div", { className: "mk" });
-    const order = { s: 0, v: 1, r: 2, f: 3, q: 4 };
+    const order = { p: 0, s: 1, v: 2, r: 3, f: 4, q: 5 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "s" ? "--pt-old" : m.t === "v" ? "--pt-sp" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "p" ? "--pt-plan" : m.t === "s" ? "--pt-old" : m.t === "v" ? "--pt-sp" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
@@ -1075,7 +1085,7 @@
     const dueKey = el("span"); dueKey.append(ring, "Revise again (1d · 7d · 30d)");
     // "Studied" is retired: old studied marks stay as faint grey stripes, keyed only if there are any.
     const oldS = Object.values(p.cells).some(m => m.some(x => x.t === "s"));
-    legend.append(...(oldS ? [key("--pt-old", "Studied (earlier)")] : []), spKey, dueKey, rgrad, fgrad, grad);
+    legend.append(key("--pt-plan", "Plan"), ...(oldS ? [key("--pt-old", "Studied (earlier)")] : []), spKey, dueKey, rgrad, fgrad, grad);
     const dueBox = el("div");
     app.append(legend, dueBox, el("div", { style: "height:12px" }));
     const cellTds = {}, titles = {};
@@ -1083,17 +1093,37 @@
     const refresh = () => {
       const cur = loadPT(), dues = ptDue(cur);
       Object.entries(cellTds).forEach(([k, td]) => ptPaint(td, cur.cells[k], dues[k]));
-      const open = Object.values(dues).flat().filter(x => !x.done && x.due <= todayKey).sort((a, b) => (a.due < b.due ? -1 : 1));
+      const all = Object.values(dues).flat().filter(x => !x.done);
+      const open = all.filter(x => x.due <= todayKey).sort((a, b) => (a.due < b.due ? -1 : 1));
+      // Plans and reminders for today and the next 7 days.
+      const planned = k => Object.keys(cur.cells).filter(c => c.endsWith("|" + k) && cur.cells[c].some(m => m.t === "p") && !cur.cells[c].some(m => m.t === "v")).map(c => c.split("|")[0]);
+      const todayPlan = planned(todayKey);
       dueBox.innerHTML = "";
-      if (!open.length) return;
-      const box = el("div", { className: "pt-due-list" }), ul = el("ul");
-      box.append(el("b", {}, `To revise today · ${open.length}`));
-      open.forEach(x => {
-        const late = Math.round((fromKey(todayKey) - fromKey(x.due)) / 864e5);
-        ul.append(el("li", {}, `${titles[x.id] || x.id} — ${x.gap}-day revision${late > 0 ? ` (${plural(late, "day")} overdue)` : ""}`));
-      });
-      box.append(ul);
-      dueBox.append(box);
+      const box = el("div", { className: "pt-due-list" });
+      const li = (tag, text) => { const l = el("li"); l.append(el("span", { className: "tag " + tag }, tag === "p" ? "Plan" : "Revise"), text); return l; };
+      if (open.length || todayPlan.length) {
+        const ul = el("ul");
+        box.append(el("b", {}, `Today · ${open.length + todayPlan.length}`));
+        todayPlan.forEach(id => ul.append(li("p", titles[id] || id)));
+        open.forEach(x => {
+          const late = Math.round((fromKey(todayKey) - fromKey(x.due)) / 864e5);
+          ul.append(li("v", `${titles[x.id] || x.id} — ${x.gap}-day revision${late > 0 ? ` (${plural(late, "day")} overdue)` : ""}`));
+        });
+        box.append(ul);
+      }
+      const wk = el("div", { className: "wk" });
+      let any = false;
+      for (let n = 1; n <= 7; n++) {
+        const k = ptAddDays(todayKey, n), ps = planned(k), ds = all.filter(x => x.due === k);
+        if (!ps.length && !ds.length) continue;
+        any = true;
+        const ul = el("ul");
+        ps.forEach(id => ul.append(li("p", titles[id] || id)));
+        ds.forEach(x => ul.append(li("v", `${titles[x.id] || x.id} — ${x.gap}-day revision${x.plan ? " (if plan kept)" : ""}`)));
+        wk.append(el("p", { className: "pt-day" }, fromKey(k).toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" })), ul);
+      }
+      if (any) { wk.prepend(el("b", {}, "Next 7 days")); box.append(wk); }
+      if (box.childNodes.length) dueBox.append(box);
     };
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
@@ -1159,9 +1189,11 @@
     const bV = el("button", { className: "pt-opt" }, "Revised");
     bV.style.background = "var(--pt-sp)";
     bV.onclick = () => toggle("v");
-    opts.classList.add("one");
-    opts.append(bV);
-    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Revised sets reminders on this reading 1, 7 and 30 days later. Mark Revised again on a reminder day to tick it off.");
+    const bP = el("button", { className: "pt-opt" }, "Plan");
+    bP.style.cssText = "background:var(--pt-plan);color:#fff";
+    bP.onclick = () => toggle("p");
+    opts.append(bP, bV);
+    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Plan: put this reading on this day; its 1, 7 and 30-day reminders show dotted. Revised sets the real reminders; mark Revised again on a reminder day to tick it off.");
     const revs = el("div", { className: "pt-scores rev" });
     const rb = PT_REV.map(([v, t, c]) => {
       const b = el("button", {}, t);
@@ -1193,6 +1225,7 @@
     });
     function draw() {
       bV.classList.toggle("on", !!has("v"));
+      bP.classList.toggle("on", !!has("p"));
       const r = has("r");
       rb.forEach(([v, b]) => b.classList.toggle("on", !!r && (r.d || 2) === v));
       const q = has("q");
