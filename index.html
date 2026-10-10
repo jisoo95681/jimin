@@ -430,12 +430,6 @@
   .pt td.cell .due.plan b { color: var(--pt-plan); }
   .pt td.cell .due.done { border-style: solid; opacity: .35; }
   .pt td.cell .due.late { border-style: solid; box-shadow: 0 0 0 2px rgba(63, 127, 191, .2); }
-  .pt-due-list { margin: 10px 0 0; padding: 10px 12px; border-radius: 12px; background: rgba(184, 216, 242, .35); border: 1px solid rgba(63, 127, 191, .25); font-size: .88rem; }
-  .pt-due-list b { color: var(--pt-due); }
-  .pt-due-list ul { margin: 6px 0 0; padding-left: 18px; }
-  .pt-due-list .tag { display: inline-block; font-size: .7rem; font-weight: 700; padding: 1px 6px; border-radius: 6px; margin-right: 6px; vertical-align: 1px; }
-  .pt-due-list .tag.p { background: var(--pt-plan); color: #fff; }
-  .pt-due-list .tag.v { background: var(--pt-sp); color: var(--navy); }
   .pt td.cell .sc { position: absolute; inset: 0; display: grid; place-items: center; font-size: .62rem; font-weight: 700; color: rgba(41, 38, 69, .65); }
   /* The picker sheet */
   .pt-sheet-bg { position: fixed; inset: 0; background: rgba(41, 38, 69, .28); z-index: 50; opacity: 0; transition: opacity .3s; }
@@ -554,7 +548,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v92 · 2026-10-10";
+  const APP_VERSION = "v93 · 2026-10-11";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1001,32 +995,12 @@
     // "Studied" is retired: old studied marks stay as faint grey stripes, keyed only if there are any.
     const oldS = Object.values(p.cells).some(m => m.some(x => x.t === "s"));
     legend.append(key("--pt-plan", "Plan"), ...(oldS ? [key("--pt-old", "Studied (earlier)")] : []), spKey, dueKey, rgrad, fgrad, grad);
-    const dueBox = el("div");
-    app.append(legend, dueBox, el("div", { style: "height:12px" }));
+    app.append(legend, el("div", { style: "height:12px" }));
     const cellTds = {}, titles = {};
-    // Repaint every cell and the "to revise today" list (reminders move whenever a Revised mark changes).
+    // Repaint every cell (reminders move whenever a Revised or Plan mark changes).
     const refresh = () => {
       const cur = loadPT(), dues = ptDue(cur);
       Object.entries(cellTds).forEach(([k, td]) => ptPaint(td, cur.cells[k], dues[k]));
-      const all = Object.values(dues).flat().filter(x => !x.done);
-      const open = all.filter(x => x.due <= todayKey).sort((a, b) => (a.due < b.due ? -1 : 1));
-      // Today's plans and the reminders due today (or overdue).
-      const planned = k => Object.keys(cur.cells).filter(c => c.endsWith("|" + k) && cur.cells[c].some(m => m.t === "p") && !cur.cells[c].some(m => m.t === "v")).map(c => c.split("|")[0]);
-      const todayPlan = planned(todayKey);
-      dueBox.innerHTML = "";
-      const box = el("div", { className: "pt-due-list" });
-      const li = (tag, text) => { const l = el("li"); l.append(el("span", { className: "tag " + tag }, tag === "p" ? "Plan" : "Revise"), text); return l; };
-      if (open.length || todayPlan.length) {
-        const ul = el("ul");
-        box.append(el("b", {}, `Today · ${open.length + todayPlan.length}`));
-        todayPlan.forEach(id => ul.append(li("p", titles[id] || id)));
-        open.forEach(x => {
-          const late = Math.round((fromKey(todayKey) - fromKey(x.due)) / 864e5);
-          ul.append(li("v", `${titles[x.id] || x.id} — ${x.gap}-day revision${late > 0 ? ` (${plural(late, "day")} overdue)` : ""}`));
-        });
-        box.append(ul);
-      }
-      if (box.childNodes.length) dueBox.append(box);
     };
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
