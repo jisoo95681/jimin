@@ -382,7 +382,7 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #f5c6df; --pt-due: #d9539a; }
   .pt-scores.frm { grid-template-columns: repeat(4, 1fr); }
   .pt-exact { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; color: var(--muted); }
   .pt-exact .field { width: 76px; padding: 7px 10px; }
@@ -423,6 +423,14 @@
   }
   .pt td.cell .mk { position: absolute; inset: 3px; border-radius: 5px; display: flex; flex-direction: column; overflow: hidden; }
   .pt td.cell .mk span { flex: 1; }
+  /* Spaced-revision reminder: a dashed rose ring with the gap (1d, 7d, 30d); solid and faint once done, stronger when overdue. */
+  .pt td.cell .due { position: absolute; inset: 2px; border: 2px dashed var(--pt-due); border-radius: 6px; pointer-events: none; }
+  .pt td.cell .due b { position: absolute; right: 1px; bottom: 0; font-size: .5rem; line-height: 1; font-weight: 800; color: var(--pt-due); background: rgba(255, 255, 255, .85); border-radius: 3px; padding: 1px 2px; }
+  .pt td.cell .due.done { border-style: solid; opacity: .35; }
+  .pt td.cell .due.late { border-style: solid; box-shadow: 0 0 0 2px rgba(217, 83, 154, .18); }
+  .pt-due-list { margin: 10px 0 0; padding: 10px 12px; border-radius: 12px; background: rgba(245, 198, 223, .35); border: 1px solid rgba(217, 83, 154, .25); font-size: .88rem; }
+  .pt-due-list b { color: var(--pt-due); }
+  .pt-due-list ul { margin: 6px 0 0; padding-left: 18px; }
   .pt td.cell .sc { position: absolute; inset: 0; display: grid; place-items: center; font-size: .62rem; font-weight: 700; color: rgba(41, 38, 69, .65); }
   /* The picker sheet */
   .pt-sheet-bg { position: fixed; inset: 0; background: rgba(41, 38, 69, .28); z-index: 50; opacity: 0; transition: opacity .3s; }
@@ -621,7 +629,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v85 · 2026-10-10";
+  const APP_VERSION = "v86 · 2026-10-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -971,6 +979,29 @@
   // Formulae: how well the formulas for that reading are memorised (fainter to stronger pastel lavender).
   const PT_FRM = [[1, "Shaky", "--pt-f1"], [2, "Partly", "--pt-f2"], [3, "Mostly", "--pt-f3"], [4, "Solid", "--pt-f4"]];
   const ptFrmVar = d => PT_FRM[Math.min(4, Math.max(1, d || 2)) - 1][2];
+  // Spaced revision (Ebbinghaus): mark "Revised" right after learning a reading and the tracker puts a reminder on that
+  // reading 1, 7 and 30 days later. Marking "Revised" again on or after a reminder day ticks it off; a "Revised" mark while
+  // reminders are still pending doesn't start a new chain, and one after the chain is finished starts a new one.
+  const PT_GAPS = [1, 7, 30];
+  const ptAddDays = (k, n) => { const d = fromKey(k); d.setDate(d.getDate() + n); return dkey(d); };
+  function ptDue(p) {
+    const byId = {}, out = {};
+    Object.entries(p.cells).forEach(([k, marks]) => {
+      if (!marks.some(m => m.t === "v")) return;
+      const [id, d] = k.split("|");
+      (byId[id] = byId[id] || []).push(d);
+    });
+    Object.entries(byId).forEach(([id, dates]) => {
+      const items = [];
+      dates.sort().forEach(d => {
+        let hit = false;
+        items.forEach(x => { if (!x.done && x.due <= d) { x.done = d; hit = true; } });
+        if (!hit && !items.some(x => !x.done)) PT_GAPS.forEach(g => items.push({ id, gap: g, from: d, due: ptAddDays(d, g), done: null }));
+      });
+      items.forEach(x => (out[x.id + "|" + x.due] = out[x.id + "|" + x.due] || []).push(x));
+    });
+    return out;
+  }
   const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
   function loadPT() { try { return JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } }
   function savePT(p) { try { localStorage.setItem("cfa-progress", JSON.stringify(p)); } catch {} }
@@ -998,20 +1029,28 @@
     return n ? `${plural(n, "mark")} so far` : "Mark what you study each day";
   }
   // Paint one cell: stacked pastel stripes, one per mark, and the score if questions were done.
-  function ptPaint(td, marks) {
+  function ptPaint(td, marks, dues) {
     td.innerHTML = "";
+    td.title = "";
+    if (dues && dues.length) {
+      const today = dkey(new Date()), open = dues.filter(x => !x.done), x = open[0] || dues[0];
+      const ring = el("div", { className: "due" + (open.length ? (x.due < today ? " late" : "") : " done") });
+      ring.append(el("b", {}, open.length ? `${x.gap}d` : "✓"));
+      td.append(ring);
+      td.title = dues.map(y => `${y.gap}-day revision of ${fromKey(y.from).toLocaleDateString([], { month: "short", day: "numeric" })}${y.done ? " · done" : ""}`).join("\n");
+    }
     if (!marks || !marks.length) return;
     const mk = el("div", { className: "mk" });
-    const order = { s: 0, r: 1, f: 2, q: 3 };
+    const order = { s: 0, v: 1, r: 2, f: 3, q: 4 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "s" ? "--pt-study" : m.t === "v" ? "--pt-sp" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
     const q = marks.find(m => m.t === "q");
     if (q) td.append(el("span", { className: "sc" }, String(Math.round(q.s))));
-    if (q && q.n) td.title = `${q.right} / ${q.n} correct (${plural(q.sets, "set")})`;
+    if (q && q.n) td.title = (td.title ? td.title + "\n" : "") + `${q.right} / ${q.n} correct (${plural(q.sets, "set")})`;
   }
   function tracker(dir = "fwd") {
     screen(dir);
@@ -1027,12 +1066,33 @@
     grad.append(g, "Questions 90+ → ≤40");
     const rgrad = el("span"), rg = el("span", { className: "pt-grad" });
     PT_REV.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; rg.append(i); });
-    rgrad.append(rg, "Revised light → deep");
+    rgrad.append(rg, "Review light → deep");
     const fgrad = el("span"), fg = el("span", { className: "pt-grad" });
     PT_FRM.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; fg.append(i); });
     fgrad.append(fg, "Formulae shaky → solid");
-    legend.append(key("--pt-study", "Studied"), rgrad, fgrad, grad);
-    app.append(legend, el("div", { style: "height:12px" }));
+    const spKey = key("--pt-sp", "Revised"), ring = el("i");
+    ring.style.cssText = "background:none;border:2px dashed var(--pt-due)";
+    const dueKey = el("span"); dueKey.append(ring, "Revise again (1d · 7d · 30d)");
+    legend.append(key("--pt-study", "Studied"), spKey, dueKey, rgrad, fgrad, grad);
+    const dueBox = el("div");
+    app.append(legend, dueBox, el("div", { style: "height:12px" }));
+    const cellTds = {}, titles = {};
+    // Repaint every cell and the "to revise today" list (reminders move whenever a Revised mark changes).
+    const refresh = () => {
+      const cur = loadPT(), dues = ptDue(cur);
+      Object.entries(cellTds).forEach(([k, td]) => ptPaint(td, cur.cells[k], dues[k]));
+      const open = Object.values(dues).flat().filter(x => !x.done && x.due <= todayKey).sort((a, b) => (a.due < b.due ? -1 : 1));
+      dueBox.innerHTML = "";
+      if (!open.length) return;
+      const box = el("div", { className: "pt-due-list" }), ul = el("ul");
+      box.append(el("b", {}, `To revise today · ${open.length}`));
+      open.forEach(x => {
+        const late = Math.round((fromKey(todayKey) - fromKey(x.due)) / 864e5);
+        ul.append(el("li", {}, `${titles[x.id] || x.id} — ${x.gap}-day revision${late > 0 ? ` (${plural(late, "day")} overdue)` : ""}`));
+      });
+      box.append(ul);
+      dueBox.append(box);
+    };
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
     const thead = el("thead"), h1 = el("tr"), h2 = el("tr");
@@ -1065,8 +1125,10 @@
         tr.append(rd);
         days.forEach(d => {
           const k = dkey(d), td = el("td", { className: "cell" + (k === todayKey ? " today" : "") });
-          ptPaint(td, p.cells[id + "|" + k]);
-          td.onclick = () => ptPick(id, plain ? (review ? `${topic} · ${title}` : title) : `${id}. ${title}`, d, td);
+          const label = plain ? (review ? `${topic} · ${title}` : title) : `${id}. ${title}`;
+          titles[id] = label;
+          cellTds[id + "|" + k] = td;
+          td.onclick = () => ptPick(id, label, d, td, refresh);
           tr.append(td);
         });
         tbody.append(tr);
@@ -1075,6 +1137,7 @@
     table.append(thead, tbody);
     wrap.append(table);
     app.append(wrap);
+    refresh();
     // Start scrolled so that today is the first visible day.
     requestAnimationFrame(() => {
       const t = thead.querySelector("th.d.today");
@@ -1083,7 +1146,7 @@
     });
   }
   // Bottom sheet to set a day's marks.
-  function ptPick(id, label, day, td) {
+  function ptPick(id, label, day, td, refresh) {
     const p = loadPT(), key = id + "|" + dkey(day);
     let marks = (p.cells[key] || []).map(m => ({ ...m }));
     const bg = el("div", { className: "pt-sheet-bg" }), sh = el("div", { className: "pt-sheet" });
@@ -1091,11 +1154,14 @@
     const opts = el("div", { className: "pt-opts" }), scores = el("div", { className: "pt-scores" });
     const has = t => marks.find(m => m.t === t);
     const toggle = t => { marks = has(t) ? marks.filter(m => m.t !== t) : [...marks, { t }]; draw(); };
-    opts.classList.add("one");
     const bS = el("button", { className: "pt-opt" }, "Studied");
     bS.style.background = "var(--pt-study)";
     bS.onclick = () => toggle("s");
-    opts.append(bS);
+    const bV = el("button", { className: "pt-opt" }, "Revised");
+    bV.style.background = "var(--pt-sp)";
+    bV.onclick = () => toggle("v");
+    opts.append(bS, bV);
+    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Revised sets reminders on this reading 1, 7 and 30 days later. Mark Revised again on a reminder day to tick it off.");
     const revs = el("div", { className: "pt-scores rev" });
     const rb = PT_REV.map(([v, t, c]) => {
       const b = el("button", {}, t);
@@ -1127,6 +1193,7 @@
     });
     function draw() {
       bS.classList.toggle("on", !!has("s"));
+      bV.classList.toggle("on", !!has("v"));
       const r = has("r");
       rb.forEach(([v, b]) => b.classList.toggle("on", !!r && (r.d || 2) === v));
       const q = has("q");
@@ -1144,7 +1211,7 @@
         const cur = loadPT();
         if (marks.length) cur.cells[key] = marks; else delete cur.cells[key];
         savePT(cur);
-        ptPaint(td, marks);
+        if (refresh) refresh(); else ptPaint(td, marks);
       }
       bg.classList.remove("on"); sh.classList.remove("on");
       setTimeout(() => { bg.remove(); sh.remove(); }, 420);
@@ -1153,7 +1220,7 @@
     done.onclick = () => close(true);
     bg.onclick = () => close(true);
     btns.append(clear, done);
-    sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Revision · depth"), revs,
+    sh.append(opts, spNote, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Review · depth"), revs,
       el("p", { className: "kicker", style: "margin:14px 0 0" }, "Formulae · how well memorised"), frms,
       el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, exact, btns);
     document.body.append(bg, sh);
