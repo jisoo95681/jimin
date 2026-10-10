@@ -202,7 +202,7 @@
   .exhibit { margin: 16px 0; }
   .ex-title { font-weight: 600; font-size: .9rem; margin: 0 0 6px !important; }
   .ex-note { font-size: .8rem; color: var(--muted); margin: 6px 0 0 !important; }
-  .scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+  .scroll { overflow-x: auto; overscroll-behavior: none; }
   table { border-collapse: collapse; width: 100%; font-size: .9rem; }
   th, td { padding: 7px 8px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
   thead th { color: var(--white); background: var(--navy); font-weight: 600; }
@@ -392,7 +392,7 @@
   .pt-grad i { margin: 0; width: 12px; }
   .pt-wrap {
     width: calc(100vw - 32px); max-width: 1500px; margin: 0 0 0 calc(50% - min(50vw - 16px, 750px));
-    overflow: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; max-height: calc(100vh - 230px); max-height: calc(100dvh - 230px);
+    overflow: auto; overscroll-behavior: none; /* no rubber-band pull past the table edges */ max-height: calc(100vh - 230px); max-height: calc(100dvh - 230px);
     background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 12px 30px rgba(41, 38, 69, .08);
   }
   .pt { border-collapse: separate; border-spacing: 0; font-size: .8rem; }
@@ -477,7 +477,7 @@
   /* Study plan (6th card): today's blocks, all days, formulas, mistakes, mocks. */
   .cc.s { background: #cfe6d4; color: var(--navy); }
   .cc.s h2 { font-size: clamp(1.9rem, 6.2vw, 2.9rem); }
-  .pl-tabs { display: flex; gap: 6px; overflow-x: auto; overscroll-behavior-x: contain; margin: 0 0 16px; padding-bottom: 2px; scrollbar-width: none; }
+  .pl-tabs { display: flex; gap: 6px; overflow-x: auto; overscroll-behavior: none; margin: 0 0 16px; padding-bottom: 2px; scrollbar-width: none; }
   .pl-tabs::-webkit-scrollbar { display: none; }
   .pl-tab { flex: none; border: 1px solid var(--border); background: var(--white); color: var(--navy); font: inherit; font-size: .9rem; font-weight: 600; padding: 7px 14px; border-radius: 20px; cursor: pointer; transition: background .25s, color .25s; }
   .pl-tab.on { background: var(--navy); color: var(--white); border-color: var(--navy); }
@@ -635,7 +635,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v90 · 2026-10-10";
+  const APP_VERSION = "v91 · 2026-10-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
