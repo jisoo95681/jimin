@@ -2613,6 +2613,102 @@ const QUESTIONS = [
     options: ["Sufficient, since they deal with clients", "Too narrow: train all relevant staff", "Required only for the compliance team"],
     answer: 1,
     why: "Compliance training should reach all employees the procedures apply to, and the firm also needs a process to learn of legal changes promptly."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In the Gordon growth model, the numerator of [[D1|r − g]] should be:",
+    options: ["D0, the dividend that was just paid", "D0 × (1 + g), next year's dividend", "Current EPS times the latest payout ratio"],
+    answer: 1,
+    why: "Gordon values the NEXT dividend: D1 = D0(1 + g). Using D0 understates value, a classic distractor."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "If a stock is fairly priced under the Gordon growth model, its expected capital gains yield equals:",
+    options: ["The dividend growth rate g", "The required return r", "The dividend yield D1/P0"],
+    answer: 0,
+    why: "Price grows at the same rate as dividends, so price appreciation = g. Total return r = dividend yield + g."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In the Gordon growth model, the required return r splits into:",
+    options: ["Dividend yield + capital gains yield", "Risk-free rate + capital gains yield", "Payout ratio + growth rate"],
+    answer: 0,
+    why: "r = D1/P0 + g: the dividend yield plus the capital gains yield (g)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "The justified trailing P/E is:",
+    options: ["Market price ÷ next year's EPS", "Intrinsic value ÷ latest EPS", "Market price ÷ latest EPS"],
+    answer: 1,
+    why: "'Justified' means based on fundamentals: V0/E0. Price/E0 is the actual trailing P/E; dividing by E1 gives a leading P/E."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "In terms of fundamentals, the justified trailing P/E is:",
+    options: ["[[1 − b|r − g]]", "[[(1 − b)(1 + g)|r − g]]", "[[b × (1 + g)|r − g]]"],
+    answer: 1,
+    why: "P0/E0 = [[D0(1 + g)/E0|r − g]] = [[(1 − b)(1 + g)|r − g]], with 1 − b the payout ratio. The leading P/E drops the (1 + g)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "Using a higher beta in the CAPM, all else equal, makes the Gordon growth value:",
+    options: ["Higher, since riskier stocks tend to grow faster", "Unchanged, since the dividends stay the same", "Lower, because the required return rises"],
+    answer: 2,
+    why: "Higher beta → higher r → larger denominator r − g → lower value."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "Solving the Gordon growth model for g using the current market price gives:",
+    options: ["The implied (market) dividend growth rate", "The sustainable growth rate, b × ROE, of the firm", "The historical average dividend growth rate"],
+    answer: 0,
+    why: "Setting P0 = D1/(r − g) and solving for g shows the growth the market price implies; compare it with your own forecast."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "If the implied growth rate in the market price is BELOW your growth forecast, the stock is likely:",
+    options: ["Overvalued", "Fairly valued", "Undervalued"],
+    answer: 2,
+    why: "The market prices in less growth than you expect, so your value exceeds the price: undervalued."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "A dividend discount model is most appropriate when the company:",
+    options: ["Pays no dividends but has strong free cash flow", "Pays dividends linked clearly to earnings", "Is being valued by a buyer seeking control of it"],
+    answer: 1,
+    why: "DDM fits when there is a dividend record and the policy bears an understandable relationship to earnings, and for minority (non-control) investors."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "The Gordon growth model is best suited to a company whose growth is:",
+    options: ["Stable and moderate, below r", "Very high for several years", "Negative and highly volatile"],
+    answer: 0,
+    why: "Gordon assumes constant growth forever, and g must be below r. Mature, steady companies fit; high growth needs multistage models."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "Betas estimated with daily returns over 5 years and monthly returns over 10 years:",
+    options: ["Must be identical if data are correct", "Can differ, changing r and the value", "Differ only for non-US stocks"],
+    answer: 1,
+    why: "Beta depends on return frequency and sample period. A different beta changes the CAPM r, and so the DDM value."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Discounted Dividend Valuation",
+    q: "A stock trades below the lower end of a ±10% band around its intrinsic value. It is:",
+    options: ["Undervalued", "Fairly valued", "Overvalued"],
+    answer: 0,
+    why: "Below the band = price well under value = undervalued. Inside the band = fairly valued; above it = overvalued."
   }
 ];
 

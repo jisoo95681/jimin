@@ -6365,6 +6365,152 @@ const VIGNETTES = [
         "why": "IV(B) Additional Compensation Arrangements: pay that could conflict with the employer's interest needs written consent from ALL parties involved. Tilton's employer is now Victory, so Duffy must sign too, not just Tilton and her former employer. Recommendation 2 is therefore incomplete.\nA is wrong: a written agreement stating the nature, approximate amount and duration of the pay is exactly what IV(B) recommends.\nC is wrong: disclosing the arrangement to clients and prospective clients is what VI(A) Disclosure of Conflicts requires."
       }
     ]
+  },
+  {
+    "id": "tasty",
+    "title": "Tasty Foods Company",
+    "topic": "Equity Valuation",
+    "reading": "Discounted Dividend Valuation",
+    "body": [
+      [
+        "p",
+        "Jacob Daniel is the chief investment officer at a US pension fund sponsor, and Steven Rae is an analyst for the pension fund who follows consumer/non-cyclical stocks. At the beginning of 20X9, Daniel asks Rae to value the equity of Tasty Foods Company for its possible inclusion in the list of approved investments. Tasty Foods Company is involved in the production of frozen foods that are sold under its own brand name to retailers."
+      ],
+      [
+        "p",
+        "Rae is considering whether a dividend discount model would be appropriate for valuing Tasty Foods. He has compiled the information in the following table for the company’s EPS and DPS during the last five years. The quarterly dividends paid by the company have been added to arrive at the annual dividends. Rae has also computed the dividend payout ratio for each year as DPS/EPS and the growth rates in EPS and DPS."
+      ],
+      [
+        "table",
+        {
+          "title": "Tasty Foods Company: EPS and DPS, 20X4–20X8",
+          "head": [
+            "Year",
+            "EPS ($)",
+            "DPS ($)",
+            "Payout Ratio",
+            "Growth in EPS (%)",
+            "Growth in DPS (%)"
+          ],
+          "rows": [
+            [
+              "20X8",
+              "2.12",
+              "0.59",
+              "0.278",
+              "2.9",
+              "3.5"
+            ],
+            [
+              "20X7",
+              "2.06",
+              "0.57",
+              "0.277",
+              "2.5",
+              "5.6"
+            ],
+            [
+              "20X6",
+              "2.01",
+              "0.54",
+              "0.269",
+              "6.3",
+              "5.9"
+            ],
+            [
+              "20X5",
+              "1.89",
+              "0.51",
+              "0.270",
+              "6.2",
+              "6.3"
+            ],
+            [
+              "20X4",
+              "1.78",
+              "0.48",
+              "0.270",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Rae notes that the company’s EPS has been increasing at an average rate of 4.48% per year. The dividend payout ratio has remained fairly stable, and dividends have increased at an average rate of 5.30%. In view of a history of dividend payments by the company and the understandable relationship dividend policy bears to the company’s earnings, Rae concludes that the DDM is appropriate to value the equity of Tasty Foods. Further, he expects the company’s moderate growth rate to persist and decides to use the Gordon growth model."
+      ],
+      [
+        "p",
+        "Rae uses the CAPM to compute the return on equity. He uses the annual yield of 4% on the 10-year Treasury bond as the risk-free return. He estimates the expected US equity risk premium, with the S&P 500 Index used as a proxy for the market, to be 6.5% per year. The estimated beta of Tasty Foods against the S&P 500 Index is 1.10. Accordingly, Rae’s estimate for the required return on equity for Tasty Foods is 0.04 + 1.10(0.065) = 0.1115, or 11.15%."
+      ],
+      [
+        "p",
+        "Using the past growth rate in dividends of 5.30% as his estimate of the future growth rate in dividends, Rae computes the value of Tasty Foods stock. He shows his analysis to Alex Renteria, his colleague at the pension fund who specializes in the frozen foods industry. Renteria concurs with the valuation approach used by Rae but disagrees with the future growth rate he used. Renteria believes that the stock’s current price of $8.42 is the fair value of the stock."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of the following is closest to Rae’s estimate of the stock’s value?",
+        "options": [
+          "$10.08.",
+          "$10.54.",
+          "$10.62."
+        ],
+        "answer": 2,
+        "why": "Gordon growth model, using next year's dividend:\nD1 = D0 × (1 + g) = 0.59 × 1.053 = 0.6213\nV0 = [[D1|r − g]] = [[0.6213|0.1115 − 0.053]] = [[0.6213|0.0585]] = $10.62\n(D0 = 20X8 DPS $0.59; r = 11.15% from CAPM; g = 5.30% past dividend growth.)\nA ($10.08) divides D0 instead of D1: 0.59 / 0.0585.\nB ($10.54) grows D0 at the EPS growth rate (4.48%) but keeps 5.30% in the denominator, mixing two growth rates."
+      },
+      {
+        "q": "What is the stock’s justified trailing P/E based on the stock’s value estimated by Rae?",
+        "options": [
+          "5.01.",
+          "5.24.",
+          "5.27."
+        ],
+        "answer": 0,
+        "why": "Justified trailing P/E = [[V0|E0]], where V0 is the fundamental (intrinsic) value and E0 is the latest (trailing) EPS:\n[[10.62|2.12]] = 5.01\n(V0 = Rae's Gordon value $10.62; E0 = 20X8 EPS $2.12.)\nB and C don't divide the fundamental value by the latest EPS; C, for example, is 10.62 / 2.01, which uses the 20X6 EPS."
+      },
+      {
+        "q": "Rae considers a security trading within a band of ±10% of his estimate of intrinsic value to be within a “fair value range.” By that criterion, the stock of Tasty Foods is:",
+        "options": [
+          "undervalued.",
+          "fairly valued.",
+          "overvalued."
+        ],
+        "answer": 0,
+        "why": "Fair value band = intrinsic value ± 10%:\nUpper: 10.62 + 1.06 = $11.68\nLower: 10.62 − 1.06 = $9.56\nThe market price $8.42 is BELOW the lower end, so the stock is undervalued (B and C are wrong). Price below value = undervalued; price above value = overvalued."
+      },
+      {
+        "q": "The beta of Tasty Foods stock of 1.10 that Rae used in computing the required return on equity was based on monthly returns for the last 10 years. If Rae uses daily returns for the last five years, the beta estimate is 1.25. If a beta of 1.25 is used, what would be Rae’s estimate of the value of Tasty Foods stock?",
+        "options": [
+          "$8.64.",
+          "$9.10.",
+          "$20.13."
+        ],
+        "answer": 1,
+        "why": "New required return (CAPM): r = 0.04 + 1.25 × 0.065 = 0.1213 (12.13%)\nV0 = [[D1|r − g]] = [[0.59 × 1.053|0.1213 − 0.053]] = [[0.6213|0.0683]] = $9.10\nA higher beta raises r, which lowers the value (from $10.62 to $9.10).\nA ($8.64) uses D0 (0.59) instead of D1.\nC ($20.13) is far too high: it comes from a much smaller r − g, i.e. a wrong required return; a higher beta can't raise the value."
+      },
+      {
+        "q": "Renteria has suggested that the market price of Tasty Foods stock is its fair value. What is the implied growth rate of dividends given the stock’s market price? Use the required return on equity based on a beta of 1.10.",
+        "options": [
+          "3.87%.",
+          "5.30%.",
+          "12.1%."
+        ],
+        "answer": 0,
+        "why": "Set the Gordon value equal to the market price and solve for g:\n8.42 = [[0.59 × (1 + g)|0.1115 − g]]\n0.9388 − 8.42g = 0.59 + 0.59g\n9.01g = 0.3488 → g = 3.87%\n(Price $8.42; D0 $0.59; r = 11.15% with beta 1.10.)\nB (5.30%) is Rae's historical growth rate, which gives $10.62, not $8.42.\nC (12.1%) is about the required return with beta 1.25, not a growth rate."
+      },
+      {
+        "q": "If Renteria is correct that the current price of Tasty Foods stock is its fair value, what is the expected capital gains yield on the stock?",
+        "options": [
+          "3.87%.",
+          "4.25%.",
+          "5.30%."
+        ],
+        "answer": 0,
+        "why": "In the Gordon growth model the price grows at the same rate as dividends, so capital gains yield = g. If the $8.42 price is fair, the implied g is 3.87% (previous question), so the capital gains yield is 3.87%.\n(Total return r = dividend yield + g: 11.15% = 7.28% + 3.87%.)\nC (5.30%) is Rae's historical growth rate, not the growth implied by the market price. B (4.25%) doesn't correspond to g."
+      }
+    ]
   }
 ];
 
