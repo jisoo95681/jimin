@@ -24,19 +24,25 @@ const SPECIES = [
   { name: "Oak", kind: "round", bark: "fissured", form: "oak", trunk: 0x6b4d33, leaf: 0x4d7a34, shape: "oak", leafSize: .22 },
   { name: "Olive Tree", kind: "round", bark: "fissured", form: "olive", trunk: 0x7d6a55, leaf: 0x8aa27a, shape: "lance", leafSize: .17, fruit: 0x3d2440, small: true, bloom: [0xf6f2d6] },
   { name: "Jacaranda", kind: "round", bark: "scaly", form: "jacaranda", trunk: 0x5e4a3a, leaf: 0x5e9a45, shape: "leaflet", leafSize: .15, flower: [0xb79cf0, 0x8a62dc, 0x9d7ae6] },
-  { name: "Birch", kind: "birch", bark: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 }
+  { name: "Birch", kind: "birch", bark: "birch", trunk: 0xeeeae2, leaf: 0x9cc04a, shape: "tri", leafSize: .16 },
+  // Common fig: smooth grey bark, big deeply lobed leaves, no visible blossom (the flowers are inside the fruit),
+  // pear-shaped figs that ripen from green to purple.
+  { name: "Fig Tree", kind: "round", bark: "smooth", form: "fig", trunk: 0x8e877c, leaf: 0x4b7d33, shape: "fig", leafSize: .25, fruit: 0x5e2f52, oval: true, noBloom: true }
 ];
+// The fig joined the garden on 11 Oct 2026 (that day's tree is a fig). Earlier days keep picking from the first 16
+// species, so trees already shown never change.
+const FIG_DAY = "2026-10-11";
 
 // Real-world size: each species' typical full-grown height in a garden (metres), and the height and crown width of its
 // model at full growth (scene units). Trees are scaled so their heights compare as in real life (1 m ≈ 0.34 units):
 // a baobab ends up about five times as tall as a lemon tree.
 const TREE_REAL_H = { "Baobab": 25, "Lemon Tree": 4.5, "Apple Tree": 7, "Korean Red Pine": 20, "Ginkgo": 22, "Grape Vine": 2.5,
   "Cherry Blossom": 9, "Orange Tree": 7, "Weeping Willow": 13, "Maple": 14, "Fir": 25, "Palm": 18, "Oak": 18, "Olive Tree": 7,
-  "Jacaranda": 13, "Birch": 16 };
+  "Jacaranda": 13, "Birch": 16, "Fig Tree": 6 };
 const TREE_MODEL = { "Baobab": [3.03, 2.23], "Lemon Tree": [1.53, 2.3], "Apple Tree": [1.91, 2.91], "Korean Red Pine": [3.17, 2.58],
   "Ginkgo": [2.75, 1.27], "Grape Vine": [1.86, 2.47], "Cherry Blossom": [2.17, 2.7], "Orange Tree": [1.63, 2.3], "Weeping Willow": [2.13, 2.75],
   "Maple": [2.19, 2.85], "Fir": [3.13, 2.75], "Palm": [2.93, 2.83], "Oak": [1.98, 3.92], "Olive Tree": [1.69, 2.14], "Jacaranda": [2.35, 3.25],
-  "Birch": [2.82, 1.37] };
+  "Birch": [2.82, 1.37], "Fig Tree": [2.03, 2.88] };
 const UNITS_PER_M = .34;
 const treeScale = spec => UNITS_PER_M * (TREE_REAL_H[spec.name] || 7) / (TREE_MODEL[spec.name] || [2])[0];
 // How tall the tree stands at growth g, as a share of its full height (a vine is trained to full height from the start).
@@ -52,16 +58,17 @@ const dayDiff = (a, b) => Math.round((midnight(b) - midnight(a)) / 86400000);
 const speciesMemo = {};
 function speciesFor(key) {
   if (key in speciesMemo) return speciesMemo[key];
-  const n = dayDiff(GARDEN_EPOCH, fromKey(key));
+  const n = dayDiff(GARDEN_EPOCH, fromKey(key)), count = key < FIG_DAY ? 16 : SPECIES.length;
   let idx;
   if (n === 0) idx = 0;
+  else if (key === FIG_DAY) idx = SPECIES.length - 1;
   else {
     const rnd = seeded("species:" + key);
-    if (n < 0) idx = Math.floor(rnd() * SPECIES.length);
+    if (n < 0) idx = Math.floor(rnd() * count);
     else {
       const prev = new Date(fromKey(key)); prev.setDate(prev.getDate() - 1);
       const avoid = speciesFor(dkey(prev));
-      idx = Math.floor(rnd() * (SPECIES.length - 1));
+      idx = Math.floor(rnd() * (count - 1));
       if (idx >= avoid) idx++;
     }
   }
@@ -187,9 +194,10 @@ function leafOutline(kind) {
   else if (kind === "digit1") side(t => .21 * S(t, .7, .75));
   else if (kind === "tri") side(t => .4 * S(t, .5, 1.1) * (1 + .05 * Math.sin(t * 40)));
   else if (kind === "oak") side(t => .27 * S(t, .9, .7) * (.78 + .26 * Math.sin(t * Math.PI * 8 + 1)));
-  else if (kind === "maple" || kind === "grape") {
-    // Palmate: five lobes around the centre of the blade (deep and pointed for maple, shallow for grape).
-    const deep = kind === "maple" ? .55 : .2, sharp = kind === "maple" ? 3 : 1.5, cy = .46, M = 50;
+  else if (kind === "maple" || kind === "grape" || kind === "fig") {
+    // Palmate: five lobes around the centre of the blade (deep and pointed for maple, shallow for grape,
+    // deep and rounded for fig).
+    const deep = kind === "maple" ? .55 : kind === "fig" ? .5 : .2, sharp = kind === "maple" ? 3 : kind === "fig" ? 1.2 : 1.5, cy = .46, M = 50;
     pts.push([0, 0]);
     for (let i = 0; i <= M; i++) {
       const a = -Math.PI / 2 + .3 + i / M * (2 * Math.PI - .6);
@@ -477,9 +485,9 @@ function buildTree(T, spec, seedKey, lod = 1) {
       const face = around.clone().multiplyScalar(.7).add(UP.clone().multiplyScalar(.6)).add(n.dir.clone().multiplyScalar(.3));
       const flowering = !!spec.flower;
       const a = flowering ? R(.62, .76) : R(.56, .64);
-      if (i >= nf && rnd() > dense) continue; // lighter when many trees are on screen
+      if (i >= nf && (spec.noBloom || rnd() > dense)) continue; // lighter when many trees are on screen; figs have no blossom
       const size = (flowering ? R(.2, .25) : R(.19, .24)) * (k === "vine" || spec.small || k === "palm" ? .55 : 1);
-      const item = attach("bloom", n, f, n.dir, face, size, a, a + .06, {
+      const item = spec.noBloom ? { fall: R(.7, .78) } : attach("bloom", n, f, n.dir, face, size, a, a + .06, {
         off: around.clone().multiplyScalar(n.r + .04), fall: flowering ? 0 : R(.77, .83), color: spec.flower ? spec.flower[i % spec.flower.length] : spec.bloom[i % spec.bloom.length]
       });
       if (i < nf && spec.fruit) {
@@ -541,6 +549,8 @@ function buildTree(T, spec, seedKey, lod = 1) {
     oak: { H: .95, r: .18, n: 4, th: 1.25, L: 1.3, droop: 0, up: .12, tw: 3, lpt: 8, twist: .12, wiggle: .25, low: 2 },
     maple: { H: 1, r: .13, n: 5, th: .8, L: 1.15, droop: .05, up: .3, tw: 3, lpt: 7, low: 1 },
     olive: { H: .6, r: .15, n: 3, th: .9, L: 1, droop: .1, up: .2, tw: 3, lpt: 10, twist: .3, wiggle: .22, fruitChance: .32, low: 2 },
+    // fig: a short trunk dividing low into several spreading limbs, a crown wider than it is tall.
+    fig: { H: .75, r: .13, n: 4, th: 1, L: 1.1, droop: .04, up: .22, tw: 3, lpt: 4, fruitChance: .55, low: 1, wiggle: .2 },
     jacaranda: { H: 1.1, r: .13, n: 5, th: 1.2, L: 1.25, droop: -.06, up: .05, tw: 3, lpt: 9, fpt: 5 }
   };
 
