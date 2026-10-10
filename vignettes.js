@@ -6511,6 +6511,238 @@ const VIGNETTES = [
         "why": "In the Gordon growth model the price grows at the same rate as dividends, so capital gains yield = g. If the $8.42 price is fair, the implied g is 3.87% (previous question), so the capital gains yield is 3.87%.\n(Total return r = dividend yield + g: 11.15% = 7.28% + 3.87%.)\nC (5.30%) is Rae's historical growth rate, not the growth implied by the market price. B (4.25%) doesn't correspond to g."
       }
     ]
+  },
+  {
+    "id": "sam",
+    "title": "Betty Tatton: Sailboat Asset Management",
+    "topic": "Fixed Income",
+    "reading": "The Arbitrage-Free Valuation Framework",
+    "body": [
+      [
+        "p",
+        "Betty Tatton is a fixed-income analyst with the hedge fund Sailboat Asset Management (SAM). SAM invests in a variety of global fixed-income strategies, including fixed-income arbitrage. Tatton is responsible for pricing individual investments and analyzing market data to assess the opportunity for arbitrage. She uses two methods to value bonds:"
+      ],
+      [
+        "p",
+        "Method 1: Discount each year’s cash flow separately using the appropriate interest rate curve."
+      ],
+      [
+        "p",
+        "Method 2: Build and use a binomial interest rate tree."
+      ],
+      [
+        "p",
+        "Tatton compiles pricing data for a list of annual pay bonds (Exhibit 1). Each of the bonds will mature in two years, and Tatton considers the bonds risk-free; both the one-year and two-year benchmark spot rates are 2%. Tatton calculates the arbitrage-free prices and identifies an arbitrage opportunity to recommend to her team."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Market Data for Selected Bonds",
+          "head": [
+            "Asset",
+            "Coupon",
+            "Market Price"
+          ],
+          "rows": [
+            [
+              "Bond A",
+              "1%",
+              "98.0584"
+            ],
+            [
+              "Bond B",
+              "3%",
+              "100.9641"
+            ],
+            [
+              "Bond C",
+              "5%",
+              "105.8247"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Next, Tatton uses the benchmark yield curve provided in Exhibit 2 to consider arbitrage opportunities of both option-free corporate bonds and corporate bonds with embedded options. The benchmark bonds in Exhibit 2 pay coupons annually, and the bonds are priced at par."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Benchmark Par Curve",
+          "head": [
+            "Maturity (years)",
+            "Yield-to-Maturity (YTM)"
+          ],
+          "rows": [
+            [
+              "1",
+              "3.0%"
+            ],
+            [
+              "2",
+              "4.0%"
+            ],
+            [
+              "3",
+              "5.0%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Tatton then identifies three mispriced three-year annual coupon bonds and compiles data on the bonds (see Exhibit 3)."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Market Data of Annual Pay Corporate Bonds",
+          "head": [
+            "Company",
+            "Coupon",
+            "Market Price",
+            "Yield",
+            "Embedded Option?"
+          ],
+          "rows": [
+            [
+              "Hutto-Barkley Inc.",
+              "3%",
+              "94.9984",
+              "5.6%",
+              "No"
+            ],
+            [
+              "Luna y Estrellas Intl.",
+              "0%",
+              "88.8996",
+              "4.0%",
+              "Yes"
+            ],
+            [
+              "Peaton Scorpio Motors",
+              "0%",
+              "83.9619",
+              "6.0%",
+              "No"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Lastly, Tatton identifies two mispriced Swiss bonds, Bond X, a three-year bond, and Bond Y, a five-year bond. Both are 6% annual coupon bonds. To calculate the bonds’ values, Tatton devises the first three years of the interest rate lognormal tree presented in Exhibit 4 using historical interest rate volatility data. Tatton considers how these data would change if implied volatility, which is higher than historical volatility, were used instead."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 4: Interest Rate Tree—Forward Rates Based on Swiss Market",
+          "head": [
+            "Node",
+            "Time 0",
+            "Time 1",
+            "Time 2"
+          ],
+          "rows": [
+            [
+              "Upper",
+              "",
+              "4%",
+              "6%"
+            ],
+            [
+              "Middle",
+              "1%",
+              "",
+              "5%"
+            ],
+            [
+              "Lower",
+              "",
+              "2%",
+              "3%"
+            ]
+          ],
+          "note": "An interest rate tree at time 0, 1 and 2. Time 0, 1% followed by 4% and 2% in time 1. 4% is followed by 6% and 5% in time 2. 2% is followed by 5% and 3% in time 2."
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 5 (reconstructed): Valuing Bond X, 6% Three-Year Bond",
+          "head": [
+            "Node",
+            "Time 0",
+            "Time 1",
+            "Time 2"
+          ],
+          "rows": [
+            [
+              "Upper",
+              "",
+              "4% → 102.3810",
+              "6% → 100.0000"
+            ],
+            [
+              "Middle",
+              "1% → 109.0085",
+              "",
+              "5% → 100.9524"
+            ],
+            [
+              "Lower",
+              "",
+              "2% → 105.8162",
+              "3% → 102.9126"
+            ]
+          ],
+          "note": "Not in the original paste: rebuilt from the solution. Time 3 cash flow = 106 at every node; values shown exclude the coupon paid at that node."
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibit 1, which of the following bonds most likely includes an arbitrage opportunity?",
+        "options": [
+          "Bond A",
+          "Bond B",
+          "Bond C"
+        ],
+        "answer": 1,
+        "why": "Arbitrage-free value = each cash flow discounted at its own spot rate (here 2% for both years):\nBond B (3%): [[3|1.02]] + [[103|1.02²]] = 2.9412 + 99.0004 = 101.9416\nMarket price 100.9641 is BELOW that, so buy Bond B and sell the individual cash flows (strip it into zeros), pocketing about 0.98 per 100 par.\nA is wrong: Bond A (1%): [[1|1.02]] + [[101|1.02²]] = 98.0584 = its market price.\nC is wrong: Bond C (5%): [[5|1.02]] + [[105|1.02²]] = 105.8247 = its market price.\nOnly B's price differs from its arbitrage-free value."
+      },
+      {
+        "q": "Based on Exhibits 2 and 3 and using Method 1, the amount (in absolute terms) by which the Hutto-Barkley Inc. corporate bond is mispriced is closest to:",
+        "options": [
+          "0.3368 per 100 of par value.",
+          "0.4682 per 100 of par value.",
+          "0.5156 per 100 of par value."
+        ],
+        "answer": 2,
+        "why": "Step 1 – bootstrap spot rates from the par curve (each par bond's coupon = its YTM, price 100):\nz1 = 3% (one cash flow, so YTM = spot rate)\nz2: 100 = [[4|1.03]] + [[104|(1 + z2)²]] → z2 = 4.0202%\nz3: 100 = [[5|1.03]] + [[5|1.040202²]] + [[105|(1 + z3)³]] → z3 ≈ 5.07%\nStep 2 – value Hutto-Barkley (3% coupon, 3 years) at those spot rates:\n[[3|1.03]] + [[3|1.040202²]] + [[103|1.0507³]] = 94.4828\nMispricing = market 94.9984 − value 94.4828 = 0.5156 (the bond is overpriced).\nA (0.3368) discounts each cash flow at the par YTMs (3%, 4%, 5%) instead of spot rates: value 94.6616.\nB (0.4682) bootstraps with the 3-year bond's coupon for every year instead of each par bond's own coupon: value 94.5302."
+      },
+      {
+        "q": "Method 1 would most likely not be an appropriate valuation technique for the bond issued by:",
+        "options": [
+          "Hutto-Barkley Inc.",
+          "Luna y Estrellas Intl.",
+          "Peaton Scorpio Motors."
+        ],
+        "answer": 1,
+        "why": "Luna y Estrellas has an embedded option. Its future cash flows depend on whether the option is exercised, which depends on where interest rates go. Method 1 (fixed cash flows discounted at spot rates) can't capture that; you need a tree in which rates can take different future values given a volatility assumption (Method 2).\nA and C are wrong: Hutto-Barkley and Peaton Scorpio are option-free, so both methods give the same arbitrage-free value."
+      },
+      {
+        "q": "Based on Exhibit 4 and using Method 2, the correct price for Bond X is closest to:",
+        "options": [
+          "97.2998.",
+          "109.0085.",
+          "115.0085."
+        ],
+        "answer": 1,
+        "why": "Bond X: 6% annual coupon, 3 years. Work backward through the tree (each branch has probability ½).\nTime 2 (final cash flow 106):\n6%: [[106|1.06]] = 100.0000; 5%: [[106|1.05]] = 100.9524; 3%: [[106|1.03]] = 102.9126\nTime 1 (average of the next two values + 6 coupon, discounted at the node rate):\n4%: [[½(100.0000 + 6) + ½(100.9524 + 6)|1.04]] = 102.3810\n2%: [[½(100.9524 + 6) + ½(102.9126 + 6)|1.02]] = 105.8162\nTime 0 (1%):\n[[½(102.3810 + 6) + ½(105.8162 + 6)|1.01]] = 109.0085\nA (97.2998) subtracts the coupon at each node instead of adding it.\nC (115.0085) adds a 6 coupon at Time 0; no coupon is paid today."
+      }
+    ]
   }
 ];
 

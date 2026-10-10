@@ -2709,6 +2709,118 @@ const QUESTIONS = [
     options: ["Undervalued", "Fairly valued", "Overvalued"],
     answer: 0,
     why: "Below the band = price well under value = undervalued. Inside the band = fairly valued; above it = overvalued."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "The arbitrage-free value of an option-free bond is found by:",
+    options: ["Discounting all cash flows at the bond's YTM", "Discounting each cash flow at its own spot rate", "Discounting all cash flows at the 1-year rate"],
+    answer: 1,
+    why: "Each cash flow is a zero-coupon bond; value it at the spot rate for its date and add them up (Method 1)."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "A bond trades BELOW the sum of its cash flows valued at spot rates. The arbitrage is to:",
+    options: ["Buy the bond and sell its stripped cash flows", "Sell the bond and buy the stripped cash flows", "Buy the bond and hold it to maturity"],
+    answer: 0,
+    why: "Buy the cheap whole (the bond), sell the expensive parts (zeros). This is stripping."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "A bond trades ABOVE the value of its cash flows at spot rates. The arbitrage is to:",
+    options: ["Buy the bond and sell zero-coupon bonds", "Buy both the bond and the zero-coupon bonds", "Sell the bond and buy the matching zeros"],
+    answer: 2,
+    why: "Short the overpriced bond and buy the zeros that replicate it (reconstitution), locking in the difference."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "For a bond priced at par, the coupon rate equals:",
+    options: ["Its yield to maturity", "Its 1-year spot rate", "Its 1-year forward rate"],
+    answer: 0,
+    why: "Price = par only when the coupon rate equals the YTM. For a 1-year par bond, that YTM is also the 1-year spot rate."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "Bootstrapping spot rates from a par curve means:",
+    options: ["Averaging the par yields across all maturities", "Solving each maturity in turn, using earlier spot rates", "Using the longest bond's coupon for every year"],
+    answer: 1,
+    why: "Start with z1 = 1-year par yield, then solve for z2 using z1, then z3 using z1 and z2, each time using that par bond's own coupon."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "Discounting a coupon bond's cash flows at the par YTMs for each maturity (instead of spot rates) is wrong because:",
+    options: ["Par yields ignore the bond's credit risk", "Par yields are already forward rates", "A par yield blends several spot rates"],
+    answer: 2,
+    why: "A par YTM is a single average rate for all of a coupon bond's cash flows; a cash flow at year t needs the year-t spot rate."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "When the par curve slopes upward, the longer-maturity spot rates are:",
+    options: ["Slightly above the par yields", "Slightly below the par yields", "Exactly equal to the par yields"],
+    answer: 0,
+    why: "Par yields average in the lower early spot rates, so the long spot rate must be higher than the long par yield."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "Discounting fixed cash flows at spot rates (no tree) is unsuitable for a bond with an embedded option because:",
+    options: ["Spot rates can't be bootstrapped for it", "Its cash flows depend on future rates", "Its credit risk is always higher"],
+    answer: 1,
+    why: "Whether a call or put is exercised depends on future interest rates, so cash flows aren't fixed; a binomial tree lets rates vary with volatility."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "For an option-free bond, a calibrated binomial tree and spot-rate discounting give:",
+    options: ["A higher value from the tree", "A lower value from the tree", "The same value"],
+    answer: 2,
+    why: "A tree calibrated to the benchmark curve is arbitrage-free, so it reproduces spot-rate values for option-free bonds."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "In a binomial tree, the value at a node equals:",
+    options: ["Average of the next two values plus the coupon, discounted at the node's rate", "Average of the next two values, discounted at the 1-year spot rate", "The higher of the next two values plus the coupon, discounted at the node's rate"],
+    answer: 0,
+    why: "Backward induction with ½ probability on each branch: [[½(V_up + C) + ½(V_down + C)|1 + node rate]]."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "Two common errors when valuing a bond with a binomial tree are:",
+    options: ["Using equal branch probabilities", "Discounting at each node's own rate", "Subtracting coupons, or adding one at Time 0"],
+    answer: 2,
+    why: "Coupons are ADDED at each future node; none is paid at Time 0. Equal ½ probabilities and node-specific rates are correct."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "In a lognormal interest rate tree, the higher rate at a node date relates to the lower one by:",
+    options: ["Higher = lower × e^(2σ)", "Higher = lower + 2σ", "Higher = lower × (1 + σ)"],
+    answer: 0,
+    why: "Adjacent rates at a date differ by the factor e^(2σ). Lognormal rates also can't turn negative, and their spread grows with the rate level."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "If Tatton uses implied volatility (higher than historical) to build the tree, the value of an option-free bond:",
+    options: ["Rises, as wider rates add value", "Is unchanged", "Falls, as wider rates add risk"],
+    answer: 1,
+    why: "Option-free values don't depend on volatility: the recalibrated tree still matches the benchmark curve. Volatility matters only for bonds with embedded options."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "The Arbitrage-Free Valuation Framework",
+    q: "Higher interest rate volatility in the tree makes a CALLABLE bond's value:",
+    options: ["Lower, since the issuer's call is worth more", "Higher, since the investor's option gains", "Unchanged, since the coupon is fixed"],
+    answer: 0,
+    why: "Callable = straight bond − call. More volatility raises the call's value, so the callable bond is worth less. (A putable bond is worth more.)"
   }
 ];
 
