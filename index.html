@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v96 · 2026-10-11";
+  const APP_VERSION = "v97 · 2026-10-11";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -970,7 +970,7 @@
     const order = { p: 0, s: 1, v: 2, r: 3, f: 4, q: 5 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "p" ? "--pt-plan" : m.t === "s" ? "--pt-old" : m.t === "v" ? PT_SP[stage || 0] : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "p" ? "--pt-plan" : m.t === "s" ? "--pt-old" : m.t === "v" ? PT_SP[m.d ?? stage ?? 0] : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
@@ -1074,14 +1074,24 @@
     const opts = el("div", { className: "pt-opts" }), scores = el("div", { className: "pt-scores" });
     const has = t => marks.find(m => m.t === t);
     const toggle = t => { marks = has(t) ? marks.filter(m => m.t !== t) : [...marks, { t }]; draw(); };
-    const bV = el("button", { className: "pt-opt" }, "Revised");
-    bV.style.background = "var(--pt-sp)";
-    bV.onclick = () => toggle("v");
+    // Revised: pick the step (first revision, then the 1-, 7- and 30-day revisions); each is a deeper blue.
+    // A Revised mark without a picked step takes the step from the reminder it completes.
+    const autoStage = ptDue(p).stages[key] || 0;
+    const vStage = m => (m.d ?? autoStage);
+    const revSteps = el("div", { className: "pt-scores frm" });
+    const vb = ["First", "1 day", "7 days", "30 days"].map((t, v) => {
+      const b = el("button", {}, t);
+      b.style.background = `var(${PT_SP[v]})`;
+      b.onclick = () => { const m = has("v"); if (m && vStage(m) === v) marks = marks.filter(x => x.t !== "v"); else if (m) m.d = v; else marks.push({ t: "v", d: v }); draw(); };
+      revSteps.append(b);
+      return [v, b];
+    });
     const bP = el("button", { className: "pt-opt" }, "Plan");
     bP.style.cssText = "background:var(--pt-plan);color:#fff";
     bP.onclick = () => toggle("p");
-    opts.append(bP, bV);
-    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Plan: put this reading on this day; its 1, 7 and 30-day reminders show dotted. Revised sets the real reminders; mark Revised again on a reminder day to tick it off.");
+    opts.classList.add("one");
+    opts.append(bP);
+    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Plan: put this reading on this day; its 1, 7 and 30-day reminders show dotted. Revised sets the real reminders; mark Revised again on a reminder day to tick it off, choosing which step it was.");
     const revs = el("div", { className: "pt-scores rev" });
     const rb = PT_REV.map(([v, t, c]) => {
       const b = el("button", {}, t);
@@ -1112,7 +1122,8 @@
       return [v, b];
     });
     function draw() {
-      bV.classList.toggle("on", !!has("v"));
+      const v = has("v");
+      vb.forEach(([n, b]) => b.classList.toggle("on", !!v && vStage(v) === n));
       bP.classList.toggle("on", !!has("p"));
       const r = has("r");
       rb.forEach(([v, b]) => b.classList.toggle("on", !!r && (r.d || 2) === v));
@@ -1140,7 +1151,8 @@
     done.onclick = () => close(true);
     bg.onclick = () => close(true);
     btns.append(clear, done);
-    sh.append(opts, spNote, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Review · depth"), revs,
+    sh.append(opts, el("p", { className: "kicker", style: "margin:14px 0 0" }, "Revised · step"), revSteps, spNote,
+      el("p", { className: "kicker", style: "margin:14px 0 0" }, "Review · depth"), revs,
       el("p", { className: "kicker", style: "margin:14px 0 0" }, "Formulae · how well memorised"), frms,
       el("p", { className: "kicker", style: "margin:14px 0 0" }, "Questions · score"), scores, exact, btns);
     document.body.append(bg, sh);
