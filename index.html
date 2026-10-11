@@ -382,7 +382,7 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-due: #3f7fbf; --pt-old: #e3e7ea; --pt-plan: #5f656d; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-sp0: #d6e8f8; --pt-sp1: #b3d3f1; --pt-sp2: #8ab9e6; --pt-sp3: #5d9ad6; --pt-due: #3f7fbf; --pt-old: #e3e7ea; --pt-plan: #5f656d; }
   .pt-scores.frm { grid-template-columns: repeat(4, 1fr); }
   .pt-exact { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; color: var(--muted); }
   .pt-exact .field { width: 76px; padding: 7px 10px; }
@@ -428,7 +428,9 @@
   .pt td.cell .due b { position: absolute; right: 1px; bottom: 0; font-size: .5rem; line-height: 1; font-weight: 800; color: var(--pt-due); background: rgba(255, 255, 255, .85); border-radius: 3px; padding: 1px 2px; }
   .pt td.cell .due.plan { border-style: dotted; border-color: var(--pt-plan); }
   .pt td.cell .due.plan b { color: var(--pt-plan); }
-  .pt td.cell .due.done { border-style: solid; opacity: .35; }
+  .pt td.cell .due { z-index: 1; }
+  .pt td.cell .due.done { border: 1.5px solid rgba(63, 127, 191, .55); }
+  .pt td.cell .due.done b { background: #fff; color: #2f6aa6; }
   .pt td.cell .due.late { border-style: solid; box-shadow: 0 0 0 2px rgba(63, 127, 191, .2); }
   .pt td.cell .sc { position: absolute; inset: 0; display: grid; place-items: center; font-size: .62rem; font-weight: 700; color: rgba(41, 38, 69, .65); }
   /* The picker sheet */
@@ -548,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v94 · 2026-10-11";
+  const APP_VERSION = "v95 · 2026-10-11";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -904,7 +906,7 @@
   const ptAddDays = (k, n) => { const d = fromKey(k); d.setDate(d.getDate() + n); return dkey(d); };
   // A "Plan" mark on today or a future day (not yet revised) also projects its 1/7/30-day reminders, drawn dotted grey.
   function ptDue(p) {
-    const byId = {}, out = {}, today = dkey(new Date());
+    const byId = {}, out = {}, stages = {}, today = dkey(new Date());
     Object.entries(p.cells).forEach(([k, marks]) => {
       const [id, d] = k.split("|");
       const kind = marks.some(m => m.t === "v") ? "v" : marks.some(m => m.t === "p") && d >= today ? "p" : null;
@@ -913,12 +915,14 @@
     Object.entries(byId).forEach(([id, dates]) => {
       const items = [];
       dates.sort((a, b) => (a[0] < b[0] ? -1 : 1)).forEach(([d, kind]) => {
-        let hit = false;
-        if (kind === "v") items.forEach(x => { if (!x.done && x.due <= d) { x.done = d; hit = true; } });
+        let hit = false, stage = 0;
+        if (kind === "v") items.forEach(x => { if (!x.done && x.due <= d) { x.done = d; hit = true; stage = Math.max(stage, PT_GAPS.indexOf(x.gap) + 1); } });
+        if (kind === "v") stages[id + "|" + d] = stage;
         if (!hit && !items.some(x => !x.done)) PT_GAPS.forEach(g => items.push({ id, gap: g, from: d, due: ptAddDays(d, g), done: null, plan: kind === "p" }));
       });
       items.forEach(x => (out[x.id + "|" + x.due] = out[x.id + "|" + x.due] || []).push(x));
     });
+    out.stages = stages; // per Revised cell: 0 = first revision, 1/2/3 = the 1-, 7- or 30-day revision it completed
     return out;
   }
   const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
@@ -948,13 +952,16 @@
     return n ? `${plural(n, "mark")} so far` : "Mark what you study each day";
   }
   // Paint one cell: stacked pastel stripes, one per mark, and the score if questions were done.
-  function ptPaint(td, marks, dues) {
+  // Revised gets deeper blue at each step: first revision, then the 1-, 7- and 30-day revisions.
+  const PT_SP = ["--pt-sp0", "--pt-sp1", "--pt-sp2", "--pt-sp3"];
+  function ptPaint(td, marks, dues, stage) {
     td.innerHTML = "";
     td.title = "";
+    let ring = null;
     if (dues && dues.length) {
       const today = dkey(new Date()), open = dues.filter(x => !x.done), x = open[0] || dues[0];
-      const ring = el("div", { className: "due" + (open.length ? (x.plan ? " plan" : x.due < today ? " late" : "") : " done") });
-      ring.append(el("b", {}, open.length ? `${x.gap}d` : "✓"));
+      ring = el("div", { className: "due" + (open.length ? (x.plan ? " plan" : x.due < today ? " late" : "") : " done") });
+      ring.append(el("b", {}, `${x.gap}d`)); // the 1d / 7d / 30d label stays once done
       td.append(ring);
       td.title = dues.map(y => `${y.gap}-day revision of ${fromKey(y.from).toLocaleDateString([], { month: "short", day: "numeric" })}${y.plan ? " (planned)" : ""}${y.done ? " · done" : ""}`).join("\n");
     }
@@ -963,10 +970,11 @@
     const order = { p: 0, s: 1, v: 2, r: 3, f: 4, q: 5 };
     marks.slice().sort((a, b) => order[a.t] - order[b.t]).forEach(m => {
       const sp = el("span");
-      sp.style.background = `var(${m.t === "p" ? "--pt-plan" : m.t === "s" ? "--pt-old" : m.t === "v" ? "--pt-sp" : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
+      sp.style.background = `var(${m.t === "p" ? "--pt-plan" : m.t === "s" ? "--pt-old" : m.t === "v" ? PT_SP[stage || 0] : m.t === "r" ? ptRevVar(m.d) : m.t === "f" ? ptFrmVar(m.d) : ptScoreVar(m.s)})`;
       mk.append(sp);
     });
     td.append(mk);
+    if (ring) td.append(ring); // keep the reminder ring and its label on top of the colour
     const q = marks.find(m => m.t === "q");
     if (q) td.append(el("span", { className: "sc" }, String(Math.round(q.s))));
     if (q && q.n) td.title = (td.title ? td.title + "\n" : "") + `${q.right} / ${q.n} correct (${plural(q.sets, "set")})`;
@@ -989,7 +997,10 @@
     const fgrad = el("span"), fg = el("span", { className: "pt-grad" });
     PT_FRM.forEach(([, , v]) => { const i = el("i"); i.style.background = `var(${v})`; fg.append(i); });
     fgrad.append(fg, "Formulae shaky → solid");
-    const spKey = key("--pt-sp", "Revised"), ring = el("i");
+    const spKey = el("span"), sg = el("span", { className: "pt-grad" });
+    PT_SP.forEach(v => { const i = el("i"); i.style.background = `var(${v})`; sg.append(i); });
+    spKey.append(sg, "Revised first → 1d → 7d → 30d");
+    const ring = el("i");
     ring.style.cssText = "background:none;border:2px dashed var(--pt-due)";
     const dueKey = el("span"); dueKey.append(ring, "Revise again (1d · 7d · 30d)");
     // "Studied" is retired: old studied marks stay as faint grey stripes, keyed only if there are any.
@@ -1000,7 +1011,7 @@
     // Repaint every cell (reminders move whenever a Revised or Plan mark changes).
     const refresh = () => {
       const cur = loadPT(), dues = ptDue(cur);
-      Object.entries(cellTds).forEach(([k, td]) => ptPaint(td, cur.cells[k], dues[k]));
+      Object.entries(cellTds).forEach(([k, td]) => ptPaint(td, cur.cells[k], dues[k], dues.stages[k]));
     };
 
     const wrap = el("div", { className: "pt-wrap" }), table = el("table", { className: "pt" });
