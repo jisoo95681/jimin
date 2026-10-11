@@ -2821,6 +2821,126 @@ const QUESTIONS = [
     options: ["Lower, since the issuer's call is worth more", "Higher, since the investor's option gains", "Unchanged, since the coupon is fixed"],
     answer: 0,
     why: "Callable = straight bond − call. More volatility raises the call's value, so the callable bond is worth less. (A putable bond is worth more.)"
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "A client converting yen into pounds with a JPY/GBP quote pays:",
+    options: ["The dealer's bid", "The dealer's offer", "The bid–offer midpoint"],
+    answer: 1,
+    why: "GBP is the base currency. Buying the base currency means paying the dealer's offer, the higher price."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "In a price/base quote, the dealer's BID is the price at which the dealer:",
+    options: ["Buys the base currency", "Sells the base currency", "Buys the price currency"],
+    answer: 0,
+    why: "Bid = dealer buys the base (client sells it); offer = dealer sells the base (client buys it)."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Which is most likely to WIDEN a dealer's bid–offer spread?",
+    options: ["Both major centres being open", "Lower market volatility", "A much larger trade size"],
+    answer: 2,
+    why: "Large trades are harder to offset in the interbank market. Overlapping trading hours and calm markets narrow spreads."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "A dealer's posted FX quote typically applies to about:",
+    options: ["1 million units of the base currency", "10 million units of the price currency", "Any size the client wants"],
+    answer: 0,
+    why: "Posted quotes are for standard-size trades (around 1 million base units); bigger trades get wider quotes."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "To build a cross rate A/C from A/B and B/C quotes, the cross bid equals:",
+    options: ["Bid(A/B) × Offer(B/C)", "Bid(A/B) × Bid(B/C)", "Offer(A/B) × Bid(B/C)"],
+    answer: 1,
+    why: "When the middle currency cancels (A/B × B/C), multiply bids for the bid and offers for the offer."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Inverting a quote from A/B to B/A, the new bid is:",
+    options: ["1 / the old bid", "The old offer, unchanged", "1 / the old offer"],
+    answer: 2,
+    why: "The bid and offer swap sides: B/A bid = 1/(A/B offer); B/A offer = 1/(A/B bid)."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Triangular arbitrage exists only if:",
+    options: ["One dealer's bid exceeds another's offer", "The two dealers' midpoints differ at all", "Both bid–offer spreads are wider than 4 pips"],
+    answer: 0,
+    why: "You need to buy at one quote's offer and sell at a HIGHER bid elsewhere. Different midpoints alone aren't enough."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Positive forward points in a price/base quote mean the base currency trades at:",
+    options: ["A forward discount", "A forward premium", "Neither, it is at par"],
+    answer: 1,
+    why: "Forward = spot + points; F > S means the base currency is worth more forward: a premium."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "With covered interest parity, the base currency trades at a forward premium when:",
+    options: ["The base currency's rate is higher", "Both rates are exactly equal", "The price currency's rate is higher"],
+    answer: 2,
+    why: "F/S = (1 + i_price τ)/(1 + i_base τ). A higher price-currency rate makes F > S."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "To mark a short-EUR forward (EUR sold forward) to market, you price an offsetting trade that:",
+    options: ["Sells EUR forward at the bid side", "Buys EUR forward at the offer side", "Buys EUR in the spot market at the midpoint"],
+    answer: 1,
+    why: "Closing a short means buying EUR for the same settlement date, so use the offer: spot offer + offer points."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "The mark-to-market gain on a forward is discounted at:",
+    options: ["The price currency's rate, for the time left", "The base currency's rate, for the full term", "No rate at all, since it only settles later"],
+    answer: 0,
+    why: "The gain is in the price currency and is received at settlement, so discount it at that currency's rate for the remaining period."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Forward points are usually quoted:",
+    options: ["As a percentage of the spot rate", "Scaled to the 4th decimal (÷ 10,000)", "In whole units of the base currency"],
+    answer: 1,
+    why: "For most pairs, 15 points = 0.0015. (For JPY pairs it's usually ÷ 100.)"
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Which parity condition is enforced by arbitrage?",
+    options: ["Uncovered interest rate parity", "Relative purchasing power parity", "Covered interest rate parity"],
+    answer: 2,
+    why: "CIP ties spot, forward and the two rates through a riskless trade. UIP and PPP are expectations that often fail in the short run."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Uncovered interest rate parity says a currency with a HIGHER interest rate is expected to:",
+    options: ["Depreciate by about the rate gap", "Appreciate by about the rate gap", "Stay at today's spot rate on average"],
+    answer: 0,
+    why: "Expected returns are equalised: the high-yield currency's extra interest is offset by its expected depreciation."
+  },
+  {
+    topic: "Economics",
+    reading: "Currency Exchange Rates: Understanding Equilibrium Value",
+    q: "Relative PPP is a poor choice for a 90-day exchange rate forecast because it:",
+    options: ["Only holds when exchange rates are fixed", "Needs inflation data and works long-run", "Requires a forward rate to be quoted"],
+    answer: 1,
+    why: "Relative PPP links exchange rate changes to inflation differentials and tends to hold only over long horizons."
   }
 ];
 

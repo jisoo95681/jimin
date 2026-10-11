@@ -6743,6 +6743,220 @@ const VIGNETTES = [
         "why": "Bond X: 6% annual coupon, 3 years. Work backward through the tree (each branch has probability ½).\nTime 2 (final cash flow 106):\n6%: [[106|1.06]] = 100.0000; 5%: [[106|1.05]] = 100.9524; 3%: [[106|1.03]] = 102.9126\nTime 1 (average of the next two values + 6 coupon, discounted at the node rate):\n4%: [[½(100.0000 + 6) + ½(100.9524 + 6)|1.04]] = 102.3810\n2%: [[½(100.9524 + 6) + ½(102.9126 + 6)|1.02]] = 105.8162\nTime 0 (1%):\n[[½(102.3810 + 6) + ½(105.8162 + 6)|1.01]] = 109.0085\nA (97.2998) subtracts the coupon at each node instead of adding it.\nC (115.0085) adds a 6 coupon at Time 0; no coupon is paid today."
       }
     ]
+  },
+  {
+    "id": "goldsworthy",
+    "title": "Anna Goldsworthy: UK Manufacturer FX",
+    "topic": "Economics",
+    "reading": "Currency Exchange Rates: Understanding Equilibrium Value",
+    "body": [
+      [
+        "p",
+        "Anna Goldsworthy is the chief financial officer of a manufacturing firm headquartered in the United Kingdom. She is responsible for overseeing exposure to price risk in both the commodity and currency markets. Goldsworthy is settling her end-of-quarter transactions and creating reports. Her intern, Scott Underwood, assists her in this process."
+      ],
+      [
+        "p",
+        "The firm hedges input costs using forward contracts that are priced in US dollars (USD) and Mexican pesos (MXN). Processed goods are packaged for sale under licensing agreements with firms in foreign markets. Goldsworthy is expecting to receive a customer payment of JPY 225,000,000 (Japanese yen) that she wants to convert to pounds sterling (GBP). Underwood gathers the exchange rates from Dealer A in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Dealer A’s Spot Exchange Rates",
+          "head": [
+            "Currency Pair (Price/Base)",
+            "Bid",
+            "Offer",
+            "Midpoint"
+          ],
+          "rows": [
+            [
+              "JPY/GBP",
+              "129.65",
+              "129.69",
+              "129.67"
+            ],
+            [
+              "MXN/USD",
+              "20.140",
+              "20.160",
+              "20.150"
+            ],
+            [
+              "GBP/EUR",
+              "0.9467",
+              "0.9471",
+              "0.9469"
+            ],
+            [
+              "USD/EUR",
+              "1.1648",
+              "1.1652",
+              "1.1650"
+            ],
+            [
+              "USD/GBP",
+              "1.2301",
+              "1.2305",
+              "1.2303"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The firm must also buy USD to pay a major supplier. Goldsworthy calls Dealer A with specific details of the transaction and asks to verify the USD/GBP quote. Dealer A calls her back later with a revised USD/GBP bid–offer quote of 1.2299/1.2307."
+      ],
+      [
+        "p",
+        "Goldsworthy must purchase MXN 27,000,000 to pay an invoice at the end of the quarter. In addition to the quotes from Dealer A, Underwood contacts Dealer B, who provides a bid–offer price of GBP/MXN 0.0403/0.0406. To check whether the dealer quotes are reflective of an efficient market, Underwood examines whether the prices allow for an arbitrage profit."
+      ],
+      [
+        "p",
+        "In three months, the firm will receive EUR 5,000,000 from another customer. Six months ago, the firm sold EUR 5,000,000 against the GBP using a nine-month forward contract at an all-in price of GBP/EUR 0.9526. To mark the position to market, Underwood collects the GBP/EUR forward rates in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: GBP/EUR Forward Rates",
+          "head": [
+            "Maturity",
+            "Forward Points"
+          ],
+          "rows": [
+            [
+              "One month",
+              "4.40/4.55"
+            ],
+            [
+              "Three months",
+              "14.0/15.0"
+            ],
+            [
+              "Six months",
+              "29.0/30.0"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Goldsworthy also asks for the current 90-day MRRs for the major currencies. Selected three-month MRRs (annualized) are shown in Exhibit 3. Goldsworthy studies Exhibit 3 and says, “We have the spot rate and the 90-day forward rate for GBP/EUR. As long as we have the GBP 90-day MRR, we will be able to calculate the implied EUR 90-day MRR.”"
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: 90-Day MRR",
+          "head": [
+            "Currency",
+            "Annualized Rate"
+          ],
+          "rows": [
+            [
+              "GBP",
+              "0.5800%"
+            ],
+            [
+              "JPY",
+              "0.0893%"
+            ],
+            [
+              "USD",
+              "0.3300%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "After reading a draft report, Underwood notes, “We do not hedge the incoming Japanese yen cash flow. Your report asks for a forecast of the JPY/GBP exchange rate in 90 days. We know the JPY/GBP spot exchange rate.” He asks, “Does the information we have collected tell us what the JPY/GBP exchange rate will be in 90 days?”"
+      ],
+      [
+        "p",
+        "Goldsworthy replies, “The JPY/GBP exchange rate in 90 days would be a valuable piece of information to know. An international parity condition can be used to provide an estimate of the future spot rate.”"
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Using the quotes in Exhibit 1, the amount received by Goldsworthy from converting JPY 225,000,000 will be closest to:",
+        "options": [
+          "GBP 1,734,906.",
+          "GBP 1,735,174.",
+          "GBP 1,735,442."
+        ],
+        "answer": 0,
+        "why": "JPY/GBP: GBP is the base currency. Goldsworthy sells JPY and BUYS GBP, so she pays the dealer's OFFER (JPY 129.69 per GBP):\n[[225,000,000|129.69]] = GBP 1,734,906\nB uses the midpoint (129.67): no dealer trades at the mid.\nC uses the bid (129.65): that's the rate at which the dealer BUYS GBP from you. The client always gets the worse side."
+      },
+      {
+        "q": "Using Exhibit 1, which of the following would be the best reason for the revised USD/GBP dealer quote of 1.2299/1.2307?",
+        "options": [
+          "A request for a much larger transaction",
+          "A drop in volatility in the USD/GBP market",
+          "A request to trade when both New York and London trading centers are open"
+        ],
+        "answer": 0,
+        "why": "The spread widened from 1.2301/1.2305 (4 pips) to 1.2299/1.2307 (8 pips). Posted quotes are typically for about 1 million units of the base currency; a much larger trade is harder for the dealer to lay off in the interbank market, so the spread widens.\nB is wrong: lower volatility NARROWS spreads.\nC is wrong: trading when both centres are open means more liquidity, which also NARROWS spreads."
+      },
+      {
+        "q": "Using the quotes from Dealer A and B, the triangular arbitrage profit on a transaction of MXN 27,000,000 would be closest to:",
+        "options": [
+          "GBP 0.",
+          "GBP 5,400.",
+          "GBP 10,800."
+        ],
+        "answer": 0,
+        "why": "Step 1 – Dealer A's implied MXN/GBP cross (multiply bids, multiply offers):\nBid: MXN/USD 20.140 × USD/GBP 1.2301 = 24.7742\nOffer: 20.160 × 1.2305 = 24.8069\nStep 2 – invert to GBP/MXN (bid = 1/offer, offer = 1/bid):\nBid [[1|24.8069]] = 0.0403; Offer [[1|24.7742]] = 0.0404\nDealer A implied GBP/MXN 0.0403/0.0404 vs Dealer B 0.0403/0.0406.\nBuy MXN cheapest (A at 0.0404) → sell at best bid (0.0403): a loss. Buy from B at 0.0406 → sell to A at 0.0403: also a loss. Neither dealer's bid exceeds the other's offer, so no arbitrage: GBP 0.\nB and C assume a 0.0002 or 0.0004 profit per MXN that isn't there."
+      },
+      {
+        "q": "Based on Exhibits 1, 2, and 3, the mark-to-market gain for Goldsworthy’s forward position is closest to:",
+        "options": [
+          "GBP 19,971.",
+          "GBP 20,500.",
+          "GBP 21,968."
+        ],
+        "answer": 0,
+        "why": "She is SHORT EUR forward (sold EUR 5m at 0.9526) with 3 months left. To close it she BUYS EUR 3 months forward, so use the OFFER side: spot offer + offer points:\nF = 0.9471 + [[15|10,000]] = 0.9486\nGain at settlement = EUR 5,000,000 × (0.9526 − 0.9486) = GBP 20,000\nDiscount 3 months at the GBP MRR (0.58%, the price currency's rate):\n[[20,000|1 + 0.0058 × (90/360)]] = GBP 19,971\nB (20,500) uses a mismatched rate (offer spot + bid points = 0.9485) and doesn't discount.\nC (21,968) uses the bid side (0.9482), the side for SELLING EUR."
+      },
+      {
+        "q": "Based on Exhibit 2, Underwood should conclude that three-month EUR MRR is:",
+        "options": [
+          "below three-month GBP MRR.",
+          "equal to three-month GBP MRR.",
+          "above three-month GBP MRR."
+        ],
+        "answer": 0,
+        "why": "GBP/EUR: GBP is the price currency, EUR the base. Covered interest rate parity:\n[[F|S]] = [[1 + i_GBP × τ|1 + i_EUR × τ]]\nForward points are positive, so F > S: the EUR (base) trades at a forward premium. That requires i_GBP > i_EUR, i.e. the EUR MRR is BELOW the GBP MRR.\nB would give zero forward points; C would give negative points (EUR at a forward discount)."
+      },
+      {
+        "q": "Based on the exchange rate midpoint in Exhibit 1 and the rates in Exhibit 3, the 90-day forward premium (discount) for the USD/GBP would be closest to:",
+        "options": [
+          "–0.0040.",
+          "–0.0010.",
+          "+0.0010."
+        ],
+        "answer": 1,
+        "why": "USD/GBP: USD is the price currency, GBP the base. Covered interest rate parity with the midpoint 1.2303:\nF = 1.2303 × [[1 + 0.0033 × (90/360)|1 + 0.0058 × (90/360)]] = 1.2295\nF − S = 1.2295 − 1.2303 ≈ −0.0008, closest to −0.0010.\nThe base currency (GBP) has the HIGHER rate (0.58% vs USD 0.33%), so GBP trades at a forward DISCOUNT (C has the wrong sign).\nA (−0.0040) is far too large for a 0.25% annual gap over 90 days (it's roughly the annual, not quarterly, difference)."
+      },
+      {
+        "q": "Using Exhibits 1, 2, and 3, which international parity condition would Goldsworthy most likely use to calculate the EUR MRR?",
+        "options": [
+          "Real interest rate parity",
+          "Covered interest rate parity",
+          "Uncovered interest rate parity"
+        ],
+        "answer": 1,
+        "why": "Covered interest rate parity links four observable numbers: spot rate, forward rate, and the two countries' risk-free rates. It holds by arbitrage. With spot, forward and the GBP MRR known, the EUR MRR can be solved for.\nA is wrong: real interest rate parity concerns real (inflation-adjusted) rates, which need inflation expectations not given here.\nC is wrong: uncovered parity uses the EXPECTED future spot rate, not the forward rate, so it can't pin down a rate from market quotes."
+      },
+      {
+        "q": "The international parity condition Goldsworthy will use to provide the estimate of the future JPY/GBP spot rate is most likely:",
+        "options": [
+          "covered interest rate parity.",
+          "uncovered interest rate parity.",
+          "relative purchasing power parity."
+        ],
+        "answer": 1,
+        "why": "Uncovered interest rate parity: the expected % change in the spot rate equals the interest rate differential:\n%ΔS^e(JPY/GBP) ≈ i_JPY − i_GBP\nShe has the spot rate (Exhibit 1) and both 90-day MRRs (Exhibit 3), so she can estimate the expected spot rate in 90 days (the yen-per-pound rate is expected to fall, since the GBP rate is higher).\nA is wrong: covered parity gives the FORWARD rate (no-arbitrage), not a forecast of the future spot rate.\nC is wrong: relative PPP needs expected inflation rates, which she doesn't have, and works over long horizons, not 90 days."
+      }
+    ]
   }
 ];
 
