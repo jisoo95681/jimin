@@ -6957,6 +6957,251 @@ const VIGNETTES = [
         "why": "Uncovered interest rate parity: the expected % change in the spot rate equals the interest rate differential:\n%ΔS^e(JPY/GBP) ≈ i_JPY − i_GBP\nShe has the spot rate (Exhibit 1) and both 90-day MRRs (Exhibit 3), so she can estimate the expected spot rate in 90 days (the yen-per-pound rate is expected to fall, since the GBP rate is higher).\nA is wrong: covered parity gives the FORWARD rate (no-arbitrage), not a forecast of the future spot rate.\nC is wrong: relative PPP needs expected inflation rates, which she doesn't have, and works over long horizons, not 90 days."
       }
     ]
+  },
+  {
+    "id": "voxkor",
+    "title": "Bernadette Rivera: Voxkor",
+    "topic": "Quantitative Methods",
+    "reading": "Big Data Projects",
+    "body": [
+      [
+        "p",
+        "Bernadette Rivera is a portfolio manager at Voxkor, a private equity company that provides financing to early-stage start-up businesses. Rivera is working with a data analyst, Tim Achler, on a text-based machine-learning (ML) model to enhance Voxkor’s predictive ability to identify successful start-ups."
+      ],
+      [
+        "p",
+        "Voxkor currently uses ML models based only on traditional, structured financial data but would like to develop a new ML model that analyzes textual big data gathered from the internet. The model will classify text information into positive or negative sentiment classes for each respective start-up. Rivera wants to confirm her understanding of any differences in the ML model building steps between data analysis projects that use traditional structured data and projects that involve unstructured, text-based data. Rivera makes the following statements:"
+      ],
+      [
+        "p",
+        "Statement 1: Some of the methods used in the exploration step are different for structured and unstructured data, but for both types of data, the step involves feature selection and feature engineering."
+      ],
+      [
+        "p",
+        "Statement 2: A major difference when developing a text-based ML model is the curation step, which involves cleansing, preprocessing, and converting the data into a structured format usable for model training."
+      ],
+      [
+        "p",
+        "Achler uses a web spidering program to obtain the data for the text-based model. The program extracts raw content from social media webpages, which contains English language sentences and special characters. After curating the text, Achler removes unnecessary elements from the raw text using regular expression software and completes additional text cleansing and preprocessing tasks."
+      ],
+      [
+        "p",
+        "Next, Achler and Rivera discuss remaining text wrangling tasks—specifically, which tokens to include in the document term matrix (DTM). Achler divides unique tokens into three groups; a sample of each group is shown in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Summary of Sample Tokens",
+          "head": [
+            "Token Group 1",
+            "Token Group 2",
+            "Token Group 3"
+          ],
+          "rows": [
+            [
+              "\"not_increas_market\"",
+              "\"not_increased_market\"",
+              "\"not,\" \"increased,\" \"market\""
+            ],
+            [
+              "\"currencysign\"",
+              "\"currencysign\"",
+              "\"EUR\""
+            ],
+            [
+              "\"sale_decreas\"",
+              "\"sale_decreased\"",
+              "\"Sales,\" \"decreased\""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The dataset is now ready for the text exploration step. At this point in the process, Rivera wants to better comprehend the collection of unique words. Achler recommends an exploratory data analysis technique that visualizes words by varying their font size proportionately to the number of occurrences of each word in the corpus."
+      ],
+      [
+        "p",
+        "As an additional part of the text exploration step, Achler conducts a term frequency analysis to identify outliers. Achler summarizes the analysis in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Words with Highest and Lowest Frequency Value",
+          "head": [
+            "Group 1 word",
+            "Frequency",
+            "Group 2 word",
+            "Frequency"
+          ],
+          "rows": [
+            [
+              "the",
+              "0.04935",
+              "naval",
+              "1.0123e-05"
+            ],
+            [
+              "and",
+              "0.04661",
+              "stereotype",
+              "1.5185e-05"
+            ],
+            [
+              "to",
+              "0.04179",
+              "till",
+              "1.5185e-05"
+            ],
+            [
+              "that",
+              "0.03577",
+              "ribbon",
+              "2.0247e-05"
+            ],
+            [
+              "in",
+              "0.03368",
+              "deposit",
+              "2.5308e-05"
+            ]
+          ],
+          "note": "Note: “e-05” represents 10⁻⁵."
+        }
+      ],
+      [
+        "p",
+        "Achler has the data ready for the model training process. Rivera asks Achler to include start-up failure rates as a feature. Achler notices that the number of start-ups that fail (majority class) is significantly larger than the number of the start-ups that are successful (minority class). Achler is concerned that because of class imbalance, the model will not be able to discriminate between start-ups that fail and start-ups that are successful."
+      ],
+      [
+        "p",
+        "Achler splits the DTM into training, cross-validation, and test datasets. Achler uses a supervised learning approach to train the logistic regression model in predicting sentiment. Applying the receiver operating characteristics (ROC) technique and area under the curve (AUC) metrics, Achler evaluates model performance on both the training and the cross-validation datasets. The trained model performance for three different logistic regressions’ threshold p-values is presented in Exhibit 3."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: AUC for Different Threshold p-values",
+          "head": [
+            "Threshold p-Value",
+            "Training Set",
+            "Cross-Validation Set"
+          ],
+          "rows": [
+            [
+              "p = 0.57",
+              "56.7%",
+              "57.3%"
+            ],
+            [
+              "p = 0.79",
+              "91.3%",
+              "89.7%"
+            ],
+            [
+              "p = 0.84",
+              "98.4%",
+              "87.1%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Rivera suggests adjusting the model’s hyperparameters to improve performance. Achler runs a grid search that compares the difference between the prediction error on both the training and the cross-validation datasets for various combinations of hyperparameter values. For the current values of hyperparameters, Achler observes that the prediction error on the training dataset is small, whereas the prediction error on the cross-validation dataset is significantly larger."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Rivera’s statements about differences in ML model building steps is correct?",
+        "options": [
+          "Only Statement 1",
+          "Only Statement 2",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 0,
+        "why": "Statement 1 is correct: the exploration step (step 4) uses some different methods for text vs structured data, but for both it includes feature selection and feature engineering.\nStatement 2 is wrong: cleansing, preprocessing and converting text into a structured format (a DTM) is the text PREPARATION AND WRANGLING step. The CURATION step is gathering the raw data, e.g. via web spidering programs or APIs.\nSo B and C are wrong because Statement 2 mislabels the step."
+      },
+      {
+        "q": "Based on the source of the data, as part of the data cleansing and wrangling process, Achler most likely needs to remove:",
+        "options": [
+          "html tags and perform scaling.",
+          "numbers and perform lemmatization.",
+          "white spaces and perform winsorization."
+        ],
+        "answer": 1,
+        "why": "Both parts must be TEXT tasks. Removing numbers (or replacing them with /number/) is a text cleansing task, and lemmatization (converting inflected words to their dictionary root, the lemma) is a text wrangling task; it cuts repeated word forms and so reduces model complexity.\nA is wrong: removing html tags is a text task, but SCALING applies to numeric (structured) features.\nC is wrong: removing white space is a text task, but WINSORIZATION (capping outliers) applies to numeric data."
+      },
+      {
+        "q": "Based on Exhibit 1, which token group has most likely undergone the text preparation and wrangling process?",
+        "options": [
+          "Token Group 1",
+          "Token Group 2",
+          "Token Group 3"
+        ],
+        "answer": 0,
+        "why": "Group 1 shows every wrangling step: lowercasing, the currency symbol replaced by a 'currencysign' token, STEMMING (increased → 'increas', decreased → 'decreas'), and N-GRAMS ('not_increas_market') that keep negations attached, which matters for sentiment.\nB is wrong: words are still inflected ('increased', 'decreased'), so no stemming yet.\nC is wrong: no stemming, 'EUR' not replaced, 'Sales' not lowercased, and single tokens split the negation 'not' from its word."
+      },
+      {
+        "q": "The visual text representation technique that Achler recommends to Rivera is a:",
+        "options": [
+          "word cloud.",
+          "bag of words.",
+          "collection frequency."
+        ],
+        "answer": 0,
+        "why": "A word cloud shows the most common words with font size proportional to frequency (colour can add another dimension); it's a text exploration visual.\nB is wrong: a bag of words is just the set of distinct tokens (a table/list), built during wrangling, not a visual.\nC is wrong: collection (term) frequency is a number (occurrences of a token ÷ all tokens), used to find outlier words, not a visual."
+      },
+      {
+        "q": "Based on Exhibit 2, Achler should exclude from further analysis words in:",
+        "options": [
+          "only Group 1.",
+          "only Group 2.",
+          "both Group 1 and Group 2."
+        ],
+        "answer": 2,
+        "why": "Both extremes are noise features.\nGroup 1 (very HIGH frequency: 'the', 'and', 'to') are stop words found in almost every text. They don't help separate the classes and push the model towards UNDERFITTING.\nGroup 2 (very LOW frequency: 'naval', 'ribbon') are rare words. The model may link them to one class by chance, leading to OVERFITTING.\nSo A and B each remove only one kind of noise."
+      },
+      {
+        "q": "Achler’s model training concern related to the model’s ability to discriminate could be addressed by randomly:",
+        "options": [
+          "oversampling the failed start-up data.",
+          "oversampling the successful start-up data.",
+          "undersampling the successful start-up data."
+        ],
+        "answer": 1,
+        "why": "Class imbalance: failed start-ups are the MAJORITY class and successful ones the MINORITY. Balance the training data by randomly oversampling the minority (successful) class, or undersampling the majority (failed) class.\nA is wrong: oversampling the majority makes the imbalance worse.\nC is wrong: undersampling the minority also makes it worse."
+      },
+      {
+        "q": "Based on Exhibit 3, which threshold p-value indicates the best fitting model?",
+        "options": [
+          "0.57",
+          "0.79",
+          "0.84"
+        ],
+        "answer": 1,
+        "why": "Look for a high AUC that is similar on training and cross-validation data.\np = 0.79: 91.3% training vs 89.7% CV, which is high and close, so a good fit.\nA is wrong: about 57% on both is close to 50%, i.e. random guessing.\nC is wrong: 98.4% training vs 87.1% CV is a big gap, so the model is overfitted."
+      },
+      {
+        "q": "Based on Exhibit 3, if Achler wants to improve model performance at the threshold p-value of 0.84, he should:",
+        "options": [
+          "tune the model to lower the AUC.",
+          "adjust model parameters to decrease ROC convexity.",
+          "apply LASSO regularization to the logistic regression."
+        ],
+        "answer": 2,
+        "why": "At p = 0.84 the model is overfitted (98.4% training vs 87.1% CV AUC). LASSO regularization penalises the number and size of coefficients, simplifying the logistic regression and reducing overfitting.\nA is wrong: a HIGHER AUC means better performance; lowering it isn't the goal.\nB is wrong: a MORE convex ROC curve (higher AUC) is better, so reducing convexity worsens the model."
+      },
+      {
+        "q": "Based on Achler’s grid search analysis, the current model can be characterized as:",
+        "options": [
+          "underfitted.",
+          "having low variance.",
+          "exhibiting slight regularization."
+        ],
+        "answer": 2,
+        "why": "Small training error but much larger cross-validation error = high VARIANCE error, i.e. overfitting. In grid search terms this is 'slight regularization': the penalty is too weak, so the model is too complex. The fix is more regularization (or fewer features).\nA is wrong: an underfitted model has HIGH error on both training and CV data (heavy regularization / high bias).\nB is wrong: the gap between training and CV error IS variance, and here it is large."
+      }
+    ]
   }
 ];
 

@@ -2941,6 +2941,142 @@ const QUESTIONS = [
     options: ["Only holds when exchange rates are fixed", "Needs inflation data and works long-run", "Requires a forward rate to be quoted"],
     answer: 1,
     why: "Relative PPP links exchange rate changes to inflation differentials and tends to hold only over long horizons."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "In a text ML project, the curation step is:",
+    options: ["Cleansing text into a structured format", "Gathering raw text, e.g. by web spidering", "Choosing and engineering the features"],
+    answer: 1,
+    why: "Curation = obtaining the data (web spiders, APIs). Cleansing and converting to a DTM is preparation and wrangling."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Converting cleansed text into a document term matrix happens in the:",
+    options: ["Text preparation and wrangling step", "Text curation step, via web spidering", "Model training and evaluation step"],
+    answer: 0,
+    why: "Preparation and wrangling cleans the text, tokenizes it and builds the structured DTM used for training."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "For both structured and text data, feature selection and engineering happen in the:",
+    options: ["Curation step", "Wrangling step", "Exploration"],
+    answer: 2,
+    why: "Step 4 (data/text exploration) covers exploratory analysis, feature selection and feature engineering for both."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Which task applies to numeric (structured) data but NOT to raw text?",
+    options: ["Removing html tags", "Winsorization", "Lowercasing"],
+    answer: 1,
+    why: "Winsorization (and scaling) work on numeric values. Tags, lowercasing and punctuation are text tasks."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "In text cleansing, numbers in the text are usually:",
+    options: ["Kept as separate tokens in the DTM", "Converted into words such as 'ten'", "Removed or replaced with /number/"],
+    answer: 2,
+    why: "Digits rarely help sentiment, so they are dropped or annotated as /number/."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Stemming differs from lemmatization in that stemming:",
+    options: ["Uses a dictionary to find the root word", "Cuts words to a base form that may not be a word", "Is used only for numeric, structured data"],
+    answer: 1,
+    why: "Stemming applies rules ('increased' → 'increas'); lemmatization finds the dictionary root ('increased' → 'increase') and is more costly."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Stemming and lemmatization mainly help by:",
+    options: ["Reducing data sparseness", "Increasing the vocabulary size", "Keeping every word form distinct"],
+    answer: 0,
+    why: "Merging inflected forms into one token makes the DTM less sparse and the model simpler."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Tokens like 'not_increas_market' (n-grams) are useful in sentiment analysis because they:",
+    options: ["Remove all of the stop words in the text", "Keep negations with their words", "Replace numbers with an /number/ annotation"],
+    answer: 1,
+    why: "'not' + 'increase' as one token keeps the negative meaning that separate tokens would lose."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Very high-frequency words such as 'the' and 'and' should usually be removed because they:",
+    options: ["Make the model overfit to rare cases", "Carry strong positive or negative sentiment", "Push the model towards underfitting"],
+    answer: 2,
+    why: "They appear in nearly every text, so they don't help separate classes and blur the decision boundary."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Very rare words in a corpus should usually be removed because they:",
+    options: ["Push the model towards underfitting", "Can make the model overfit", "Are always spelling mistakes"],
+    answer: 1,
+    why: "A rare word may happen to appear in one class only, so the model learns a spurious rule."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Collection (term) frequency of a token is:",
+    options: ["Its count in all texts ÷ total tokens", "The number of documents that contain it", "Its font size in a word cloud"],
+    answer: 0,
+    why: "Collection frequency = occurrences of the token across the corpus ÷ total tokens in the corpus."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "To fix class imbalance in training data, you can randomly:",
+    options: ["Oversample the majority class", "Undersample the minority class", "Oversample the minority class"],
+    answer: 2,
+    why: "Either oversample the minority or undersample the majority, so both classes are better represented."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "An AUC of about 50% on both training and cross-validation data means the model is:",
+    options: ["Overfitting the training data", "Little better than random guessing", "Performing well and fitting nicely"],
+    answer: 1,
+    why: "AUC 0.5 = random classifier. AUC near 1 = excellent."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A much higher AUC on training data than on cross-validation data indicates:",
+    options: ["Overfitting", "Underfitting", "Class imbalance"],
+    answer: 0,
+    why: "The model learned noise in the training set and generalises worse to new data."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "In a grid search, small training error but large cross-validation error suggests:",
+    options: ["Heavy regularization and high bias error", "Slight regularization, high variance", "A well-fitted model with low total error"],
+    answer: 1,
+    why: "Too little regularization leaves the model too complex: high variance (overfitting). Increase regularization."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "In a grid search, LARGE errors on both training and cross-validation data suggest:",
+    options: ["Slight regularization and overfitting", "A model with high variance", "Heavy regularization and underfitting"],
+    answer: 2,
+    why: "Too much regularization oversimplifies the model: high bias error on both datasets."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The cross-validation set (as opposed to the test set) is used to:",
+    options: ["Tune hyperparameters and compare models", "Train the model's coefficients", "Give the final, unbiased performance check"],
+    answer: 0,
+    why: "Training set fits the model, CV set tunes it, test set gives the final out-of-sample evaluation."
   }
 ];
 
