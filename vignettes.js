@@ -7657,6 +7657,148 @@ const VIGNETTES = [
         "why": "Equity method: [[950|2,140]] = 0.444\nConsolidation: sales 950 + 510 = 1,460; assets = 2,140 − 320 (remove investment) + 1,070 (Boswell's assets) + 60 (licenses) = 2,950\n[[1,460|2,950]] = 0.495\nBoswell turns its assets over faster than NinMount's investment line does, so the equity method shows a LOWER turnover here. (This isn't a general rule; it depends on the subsidiary's sales relative to its assets.)"
       }
     ]
+  },
+  {
+    "id": "adore",
+    "title": "Albert Strong: AdOre Ventures",
+    "topic": "Financial Statement Analysis",
+    "reading": "Intercorporate Investments",
+    "body": [
+      [
+        "p",
+        "Albert Strong, a junior metals analyst at Goodson Funds, was reviewing the history of AdOre Ventures, a Peruvian gold mining company. Cupernico, Inc., Strawberry Mines Corp., and Glace, S.A., were global gold mining companies. Cupernico and Strawberry were both headquartered in the United States and complied with US GAAP. Glace was a French company that followed International Financial Reporting Standards (IFRS). All companies’ fiscal years ended on 31 December."
+      ],
+      [
+        "p",
+        "On 1 January of the prior year, the three companies combined their Peruvian operations into a separate company, AdOre Ventures. The fair value of assets contributed by each company was in proportion to its ownership interest as shown in Exhibit 1. Cupernico was considered to have control over AdOre because of its ownership interest and representation on AdOre’s board of directors. Both Strawberry Mines and Glace were considered to have significant influence. At the time the operations were combined, the fair value of each company’s assets was equal to their respective reported (book) values."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: AdOre Ownership Structure",
+          "head": [
+            "Company",
+            "Ownership"
+          ],
+          "rows": [
+            [
+              "Cupernico",
+              "50%"
+            ],
+            [
+              "Strawberry Mines Corp.",
+              "32%"
+            ],
+            [
+              "Glace",
+              "18%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "On 1 January of the current year, Glace acquired Strawberry Mines. Given AdOre’s relatively brief operating history, Glace determined that the fair value of assets remained equal to the value at which they were carried on AdOre’s books. Because the merger left Glace and Cupernico with equal economic interests in AdOre, the two companies negotiated a joint control agreement."
+      ],
+      [
+        "p",
+        "Selected financial data related to AdOre are presented in Exhibit 2. Because gold prices are set globally in US dollars, AdOre’s functional currency is the US dollar."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Selected Financial Results for AdOre ($ thousands)",
+          "head": [
+            "",
+            "Current Year",
+            "Prior Year"
+          ],
+          "rows": [
+            [
+              "Revenue",
+              "103,448",
+              "63,546"
+            ],
+            [
+              "Net income",
+              "30,000",
+              "18,182"
+            ],
+            [
+              "Annual dividend (paid on 31 December)",
+              "16,000",
+              "10,000"
+            ],
+            [
+              "Cash flow from operations",
+              "35,466",
+              "21,818"
+            ],
+            [
+              "Long-term debt (31 December)",
+              "40,000",
+              "40,000"
+            ],
+            [
+              "Beginning equity (1 January)",
+              "47,378",
+              "39,196"
+            ],
+            [
+              "Ending equity (31 December)",
+              "61,378",
+              "47,378"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Strong wondered how the current year merger might have affected Cupernico’s financial statements and ratios. He compared its actual ratios with what they would have been had the merger not taken place."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "For the prior year, the most appropriate method for Glace to use to account for its investment in AdOre was:",
+        "options": [
+          "the equity method.",
+          "fair value through profit and loss.",
+          "fair value through other comprehensive income."
+        ],
+        "answer": 0,
+        "why": "Glace owned only 18% (below the usual 20% guide), but it was considered to have SIGNIFICANT INFLUENCE (e.g. via board representation and a strategic role). Influence, not the percentage, decides: significant influence requires the equity method under both IFRS and US GAAP.\nB and C are for passive investments without significant influence."
+      },
+      {
+        "q": "On its prior year income statement, the amount of AdOre’s net income that Strawberry Mines reported was closest to (in thousands):",
+        "options": [
+          "$2,618.",
+          "$3,200.",
+          "$5,818."
+        ],
+        "answer": 2,
+        "why": "Strawberry owned 32% with significant influence → equity method. It reports its share of AdOre's NET INCOME:\n32% × $18,182 = $5,818\nA ($2,618) wrongly deducts dividends from income: 32% × (18,182 − 10,000). Under the equity method, dividends reduce the investment ACCOUNT on the balance sheet, not income.\nB ($3,200) is the share of dividends (32% × 10,000), which would be income only for a passive (non-strategic) investment."
+      },
+      {
+        "q": "Which of the following amounts (in thousands) from AdOre would most likely be included on the prior year financial statements of Cupernico?",
+        "options": [
+          "$23,689 of equity",
+          "$31,773 of revenue",
+          "$40,000 of long-term debt"
+        ],
+        "answer": 2,
+        "why": "Cupernico had CONTROL → consolidation: 100% of AdOre's assets, liabilities, revenue and expenses are combined with its own. So all $40,000 of AdOre's long-term debt appears.\nA is wrong: the subsidiary's equity is eliminated on consolidation (only the outside owners' share shows, as non-controlling interest). $23,689 = 50% × 47,378.\nB is wrong: consolidation includes 100% of revenue, not 50% ($31,773 = 50% × 63,546)."
+      },
+      {
+        "q": "The best conclusion Strong can make about the effect of AdOre’s current year ownership change is that Cupernico would have reported a:",
+        "options": [
+          "lower net profit margin.",
+          "lower return on assets (ROA).",
+          "higher return on equity (ROE)."
+        ],
+        "answer": 2,
+        "why": "After the merger Cupernico and Glace have JOINT CONTROL, so Cupernico switches from consolidation to the EQUITY METHOD (as under US GAAP for a joint venture). Compare with staying consolidated:\n• Net income to Cupernico: the same (its 50% share either way).\n• Revenue: lower (AdOre's revenue no longer added) → net margin HIGHER (A wrong).\n• Assets: lower (one investment line instead of 100% of AdOre's assets) → ROA HIGHER (B wrong).\n• Equity: lower (no non-controlling interest) → ROE HIGHER (C correct)."
+      }
+    ]
   }
 ];
 

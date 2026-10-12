@@ -3333,6 +3333,102 @@ const QUESTIONS = [
     options: ["The equity method, as for any 50% stake", "Fair value through profit or loss", "Consolidation"],
     answer: 2,
     why: "Control, not just the percentage held, decides consolidation. Significant influence without control → equity method."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "An investor owns 18% but has board representation and significant influence. It should use:",
+    options: ["Fair value through OCI", "The equity method", "Fair value through profit or loss"],
+    answer: 1,
+    why: "Significant influence, not the 20% guide, decides. Below 20% with influence → equity method."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, the investor's income from the investee is:",
+    options: ["Its % share of the investee's net income", "The cash dividends it receives in the year", "Investee net income minus dividends received"],
+    answer: 0,
+    why: "Equity income = ownership % × investee net income. Dividends don't count as income here."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Dividends are recognised as INCOME from an investee only when the investment is:",
+    options: ["Accounted for by the equity method", "A passive (fair value) investment", "A consolidated subsidiary"],
+    answer: 1,
+    why: "For passive financial assets, dividends hit income. Under the equity method they reduce the carrying value."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "The year-end carrying value of an equity-method investment equals:",
+    options: ["Cost plus all the dividends received to date", "Fair value at the reporting date, always", "Start + share of NI − share of dividends"],
+    answer: 2,
+    why: "Income increases the investment; dividends (a return of part of it) decrease it."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Two companies with a joint control agreement over a venture account for it using:",
+    options: ["Consolidation by both", "Proportionate consolidation", "The equity method"],
+    answer: 2,
+    why: "A joint venture is accounted for with the equity method under both IFRS and US GAAP."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "On consolidation, the subsidiary's own shareholders' equity is:",
+    options: ["Eliminated, except the NCI's share", "Added in full to the parent's equity", "Added at the parent's ownership %"],
+    answer: 0,
+    why: "The parent's investment is eliminated against the subsidiary's equity; outside owners' share appears as non-controlling interest."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "A consolidated subsidiary's long-term debt appears on the parent's balance sheet at:",
+    options: ["The parent's ownership % of it", "100% of the subsidiary's debt", "Zero, as it's the subsidiary's"],
+    answer: 1,
+    why: "Consolidation adds 100% of every asset and liability, even when the parent owns less than 100%."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Moving from consolidation to the equity method (control → joint control), the parent's net income:",
+    options: ["Falls, as revenue is removed", "Is unchanged", "Rises, as NCI is removed"],
+    answer: 1,
+    why: "Its share of the investee's profit is the same; only the presentation changes."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Moving from consolidation to the equity method, net profit margin, ROA and ROE all tend to:",
+    options: ["Rise", "Fall", "Stay the same"],
+    answer: 0,
+    why: "Same parent net income over smaller revenue, assets and equity."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "A subsidiary's functional currency is set by:",
+    options: ["The parent company's reporting currency", "The country in which it is located", "Its primary economic environment"],
+    answer: 2,
+    why: "E.g. a Peruvian gold miner whose output is priced globally in USD has the US dollar as its functional currency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "If assets contributed to a new venture have fair value equal to book value, the investors record:",
+    options: ["Large goodwill on the investment", "No excess purchase price to amortize", "A gain equal to the fair value"],
+    answer: 1,
+    why: "No fair-value uplift means no extra depreciation or amortization adjustments under the equity method."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Control of an investee is generally indicated by:",
+    options: ["Owning 20%–50% of the voting shares", "Any seat on its board of directors", "The power to direct its activities"],
+    answer: 2,
+    why: "Control = power over the investee's relevant activities, usually but not always >50% of voting rights."
   }
 ];
 
