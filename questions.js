@@ -3077,6 +3077,142 @@ const QUESTIONS = [
     options: ["Tune hyperparameters and compare models", "Train the model's coefficients", "Give the final, unbiased performance check"],
     answer: 0,
     why: "Training set fits the model, CV set tunes it, test set gives the final out-of-sample evaluation."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "In a collection frequency analysis, tokens most useful for telling sentiment apart have TF values that are:",
+    options: ["The highest", "The lowest", "Intermediate"],
+    answer: 2,
+    why: "Highest = stop words; lowest = rare or proper nouns. The middle carries the signal."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Inverse document frequency (IDF) is calculated as:",
+    options: ["log(1 ÷ document frequency)", "1 ÷ document frequency", "Collection TF × document frequency"],
+    answer: 0,
+    why: "IDF = log(1/DF), where DF = documents containing the word ÷ total documents. The log damps extreme values."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "TF–IDF is calculated as:",
+    options: ["Collection-level TF × IDF", "Sentence-level TF × IDF", "Document frequency × IDF"],
+    answer: 1,
+    why: "TF at the sentence (document) level, multiplied by IDF. It's high for words frequent in one document but rare across the corpus."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A word that appears in almost every document has an IDF that is:",
+    options: ["Close to zero", "Very large", "Exactly one"],
+    answer: 0,
+    why: "DF ≈ 1, so log(1/1) ≈ 0. Common words get little weight in TF–IDF."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "TF–IDF values can be unreliable when the dataset has:",
+    options: ["Very many documents", "Only a few documents", "Balanced sentiment classes"],
+    answer: 1,
+    why: "IDF depends on the number of documents, so with few documents the values (and model performance) are unstable."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A dataset with no ground truth (no labels) calls for:",
+    options: ["Supervised learning with a 60/20/20 split", "Unsupervised learning, with no data split", "Reinforcement learning on the test set"],
+    answer: 1,
+    why: "With no target variable there is nothing to train or validate against, so the data isn't split."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "For supervised ML, a typical master-dataset split is:",
+    options: ["60% training, 20% CV, 20% test", "20% training, 40% CV, 40% test", "100% training, no CV or test set"],
+    answer: 0,
+    why: "Most data goes to training; the rest is kept for tuning (CV) and the final check (test)."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "When classes are unequal and false positives and false negatives matter equally, the best metric is:",
+    options: ["Accuracy", "Precision", "F1 score"],
+    answer: 2,
+    why: "F1 balances precision and recall and copes with class imbalance. Accuracy suits balanced data."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "If the cost of Type I errors (false positives) is high, focus on:",
+    options: ["Recall", "Precision", "Accuracy"],
+    answer: 1,
+    why: "Precision = TP ÷ (TP + FP): of everything predicted positive, how much really was."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "If the cost of Type II errors (false negatives) is high, focus on:",
+    options: ["Recall", "Precision", "Specificity of the test set"],
+    answer: 0,
+    why: "Recall = TP ÷ (TP + FN): of all actual positives, how many were caught."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The F1 score is the:",
+    options: ["Arithmetic mean of precision and recall", "Ratio of correct predictions to all predictions", "Harmonic mean of precision and recall"],
+    answer: 2,
+    why: "F1 = 2PR ÷ (P + R). It is pulled toward the lower of the two."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "With a threshold p-value of 0.65, a sentence with target p = 0.64 is predicted as:",
+    options: ["Class 1 (positive)", "Class 0 (negative)", "Unclassified, so dropped"],
+    answer: 1,
+    why: "Only p above the threshold is classed positive. If it's actually positive, that's a false negative."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Raising the classification threshold p-value, all else equal, tends to:",
+    options: ["Raise precision and lower recall", "Raise recall and lower precision", "Leave precision and recall unchanged"],
+    answer: 0,
+    why: "Fewer positives are predicted, so fewer false positives (higher precision) but more misses (lower recall)."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The three tasks of ML model training, in order, are:",
+    options: ["Tuning, method selection, evaluation", "Method selection, evaluation, tuning", "Evaluation, tuning, method selection"],
+    answer: 1,
+    why: "Pick the method, evaluate its fit, then tune it."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Bias and variance errors are mainly used in which model-training task?",
+    options: ["Method selection", "Performance evaluation", "Tuning"],
+    answer: 2,
+    why: "Tuning balances bias and variance (e.g. via grid search). Evaluation uses error analysis, ROC and RMSE."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Which is NOT a performance evaluation technique?",
+    options: ["Error analysis with a confusion matrix", "Comparing bias and variance errors", "ROC curves and RMSE"],
+    answer: 1,
+    why: "Comparing bias and variance error belongs to tuning, not performance evaluation."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Random sampling within each class label when splitting data is used to:",
+    options: ["Keep class proportions similar in each split", "Remove stop words from every one of the splits", "Make the test set larger than the training set"],
+    answer: 0,
+    why: "This is stratified random sampling; it keeps imbalanced classes represented consistently across training, CV and test sets."
   }
 ];
 

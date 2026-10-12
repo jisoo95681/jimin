@@ -7202,6 +7202,237 @@ const VIGNETTES = [
         "why": "Small training error but much larger cross-validation error = high VARIANCE error, i.e. overfitting. In grid search terms this is 'slight regularization': the penalty is too weak, so the model is too complex. The fix is more regularization (or fewer features).\nA is wrong: an underfitted model has HIGH error on both training and CV data (heavy regularization / high bias).\nB is wrong: the gap between training and CV error IS variance, and here it is large."
       }
     ]
+  },
+  {
+    "id": "ganymede",
+    "title": "Iesha Azarov: Ganymede Moon Partners",
+    "topic": "Quantitative Methods",
+    "reading": "Big Data Projects",
+    "body": [
+      [
+        "p",
+        "Iesha Azarov is a senior analyst at Ganymede Moon Partners (Ganymede), where he works with junior analyst Pàola Bector. Azarov would like to incorporate machine learning (ML) models into the company’s analytical process. Azarov asks Bector to develop ML models for two unstructured stock sentiment datasets, Dataset ABC and Dataset XYZ. Both datasets have been cleaned and preprocessed in preparation for text exploration and model training."
+      ],
+      [
+        "p",
+        "Following an exploratory data analysis that revealed Dataset ABC’s most frequent tokens, Bector conducts a collection frequency analysis. Bector then computes TF–IDF (term frequency–inverse document frequency) for several words in the collection and tells Azarov the following:"
+      ],
+      [
+        "p",
+        "Statement 1: IDF is equal to the inverse of the document frequency measure."
+      ],
+      [
+        "p",
+        "Statement 2: TF at the collection level is multiplied by IDF to calculate TF–IDF."
+      ],
+      [
+        "p",
+        "Statement 3: TF–IDF values vary by the number of documents in the dataset, and therefore, model performance can vary when applied to a dataset with just a few documents."
+      ],
+      [
+        "p",
+        "Bector notes that Dataset ABC is characterized by the absence of ground truth."
+      ],
+      [
+        "p",
+        "Bector turns his attention to Dataset XYZ, containing 84,000 tokens and 10,000 sentences. Bector chooses an appropriate feature selection method to identify and remove unnecessary tokens from the dataset and then focuses on model training. For performance evaluation purposes, Dataset XYZ is split into a training set, cross-validation (CV) set, and test set. Each of the sentences has already been labeled as either a positive sentiment (Class “1”) or a negative sentiment (Class “0”) sentence. There is an unequal class distribution between the positive sentiment and negative sentiment sentences in Dataset XYZ. Simple random sampling is applied within levels of the sentiment class labels to balance the class distributions within the splits. Bector’s view is that the false positive and false negative evaluation metrics should be given equal weight. Select performance data from the cross-validation set confusion matrices is presented in Exhibit 1:"
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Performance Metrics for Dataset XYZ",
+          "head": [
+            "Confusion Matrix",
+            "CV Data (threshold p-value)",
+            "Precision",
+            "Recall",
+            "F1 Score",
+            "Accuracy"
+          ],
+          "rows": [
+            [
+              "A",
+              "0.50",
+              "0.95",
+              "0.87",
+              "0.91",
+              "0.91"
+            ],
+            [
+              "B",
+              "0.35",
+              "0.93",
+              "0.90",
+              "0.91",
+              "0.92"
+            ],
+            [
+              "C",
+              "0.65",
+              "0.86",
+              "0.97",
+              "0.92",
+              "0.91"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Azarov and Bector evaluate the Dataset XYZ performance metrics for Confusion Matrices A, B, and C in Exhibit 1. Azarov says, “For Ganymede’s purposes, we should be most concerned with the cost of Type I errors.”"
+      ],
+      [
+        "p",
+        "Azarov requests that Bector apply the ML model to the test dataset for Dataset XYZ, assuming a threshold p-value of 0.65. Exhibit 2 contains a sample of results from the test dataset corpus."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: 10 Sample Results of Test Data for Dataset XYZ",
+          "head": [
+            "Sentence #",
+            "Actual Sentiment",
+            "Target p-Value"
+          ],
+          "rows": [
+            [
+              "1",
+              "1",
+              "0.75"
+            ],
+            [
+              "2",
+              "0",
+              "0.45"
+            ],
+            [
+              "3",
+              "1",
+              "0.64"
+            ],
+            [
+              "4",
+              "1",
+              "0.81"
+            ],
+            [
+              "5",
+              "0",
+              "0.43"
+            ],
+            [
+              "6",
+              "1",
+              "0.78"
+            ],
+            [
+              "7",
+              "0",
+              "0.59"
+            ],
+            [
+              "8",
+              "1",
+              "0.60"
+            ],
+            [
+              "9",
+              "0",
+              "0.67"
+            ],
+            [
+              "10",
+              "0",
+              "0.54"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Bector makes the following remarks regarding model training:"
+      ],
+      [
+        "p",
+        "Remark 1: Method selection is governed by such factors as the type of data and the size of data."
+      ],
+      [
+        "p",
+        "Remark 2: In the performance evaluation stage, model fitting errors, such as bias error and variance error, are used to measure goodness of fit."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on the text exploration method used for Dataset ABC, tokens that potentially carry important information useful for differentiating the sentiment embedded in the text are most likely to have values that are:",
+        "options": [
+          "low.",
+          "intermediate.",
+          "high."
+        ],
+        "answer": 1,
+        "why": "In a collection (corpus-level) term frequency analysis, the useful tokens sit in the MIDDLE.\nA is wrong: the lowest-TF tokens are mostly proper nouns and sparse, rare terms, which are noise.\nC is wrong: the highest-TF tokens are mostly stop words ('the', 'and'), which appear everywhere and don't separate sentiment."
+      },
+      {
+        "q": "Which of Bector’s statements regarding TF, IDF, and TF–IDF is correct?",
+        "options": [
+          "Statement 1",
+          "Statement 2",
+          "Statement 3"
+        ],
+        "answer": 2,
+        "why": "Statement 3 is correct: IDF depends on the number of documents, so TF–IDF values (and model performance) can be unstable for a dataset with only a few documents.\nStatement 1 is wrong: IDF = log([[1|DF]]), the LOG of the inverse of document frequency, not just the inverse.\nStatement 2 is wrong: TF–IDF = TF at the SENTENCE (document) level × IDF, not collection-level TF."
+      },
+      {
+        "q": "What percentage of Dataset ABC should be allocated to a training subset?",
+        "options": [
+          "0%",
+          "20%",
+          "60%"
+        ],
+        "answer": 0,
+        "why": "No ground truth = no labels = UNSUPERVISED learning. With no target to learn from or check against, the master dataset isn't split at all: 0% goes to a training subset.\nB and C are the usual SUPERVISED splits: about 60% training, 20% cross-validation, 20% test. They don't apply here."
+      },
+      {
+        "q": "Based only on Dataset XYZ’s composition and Bector’s view regarding false positive and false negative evaluation metrics, which performance measure is most appropriate?",
+        "options": [
+          "Recall",
+          "F1 score",
+          "Precision"
+        ],
+        "answer": 1,
+        "why": "Bector weights false positives and false negatives EQUALLY, so use an overall measure: accuracy or F1. Dataset XYZ has UNEQUAL classes, and F1 (the harmonic mean of precision and recall) handles imbalance better than accuracy.\nA is wrong: recall focuses on false negatives (Type II errors).\nC is wrong: precision focuses on false positives (Type I errors)."
+      },
+      {
+        "q": "Based on Exhibit 1, which confusion matrix demonstrates the most favorable value of the performance metric that best addresses Azarov’s concern?",
+        "options": [
+          "Confusion Matrix A",
+          "Confusion Matrix B",
+          "Confusion Matrix C"
+        ],
+        "answer": 0,
+        "why": "Azarov worries about Type I errors (false positives), so the metric is PRECISION = [[TP|TP + FP]]. The highest precision is Matrix A: 0.95 (vs B 0.93, C 0.86).\nB is wrong: B has the best ACCURACY (0.92), which weights both error types equally.\nC is wrong: C has the best RECALL (0.97) and F1 (0.92); recall is about Type II errors (false negatives)."
+      },
+      {
+        "q": "Based on Exhibit 2, the accuracy metric for Dataset XYZ’s test set sample is closest to:",
+        "options": [
+          "0.67.",
+          "0.70.",
+          "0.75."
+        ],
+        "answer": 1,
+        "why": "Predict Class 1 if p > 0.65, else Class 0. Then compare with the actual class:\n#1 0.75→1, actual 1: TP · #2 0.45→0, actual 0: TN · #3 0.64→0, actual 1: FN\n#4 0.81→1: TP · #5 0.43→0: TN · #6 0.78→1: TP\n#7 0.59→0, actual 0: TN · #8 0.60→0, actual 1: FN · #9 0.67→1, actual 0: FP · #10 0.54→0: TN\nTP = 3, TN = 4, FP = 1, FN = 2\nAccuracy = [[TP + TN|all]] = [[3 + 4|10]] = 0.70\nA (0.67) is the F1 score: precision [[3|4]] = 0.75, recall [[3|5]] = 0.60, F1 = [[2 × 0.75 × 0.60|0.75 + 0.60]] = 0.67.\nC (0.75) is the precision."
+      },
+      {
+        "q": "Which of Bector’s remarks related to model training is correct?",
+        "options": [
+          "Only Remark 1",
+          "Only Remark 2",
+          "Both Remark 1 and Remark 2"
+        ],
+        "answer": 0,
+        "why": "Model training has three tasks: method selection → performance evaluation → tuning.\nRemark 1 is correct: method selection depends on supervised vs unsupervised learning, the type of data and the size of data.\nRemark 2 is wrong: bias and variance errors are used in TUNING. Performance evaluation uses error analysis (confusion matrix), ROC plots and RMSE.\nSo B and C are wrong."
+      }
+    ]
   }
 ];
 
