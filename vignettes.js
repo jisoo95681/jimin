@@ -7433,6 +7433,230 @@ const VIGNETTES = [
         "why": "Model training has three tasks: method selection → performance evaluation → tuning.\nRemark 1 is correct: method selection depends on supervised vs unsupervised learning, the type of data and the size of data.\nRemark 2 is wrong: bias and variance errors are used in TUNING. Performance evaluation uses error analysis (confusion matrix), ROC plots and RMSE.\nSo B and C are wrong."
       }
     ]
+  },
+  {
+    "id": "ninmount",
+    "title": "Percy Byron: NinMount PLC and Boswell",
+    "topic": "Financial Statement Analysis",
+    "reading": "Intercorporate Investments",
+    "body": [
+      [
+        "p",
+        "Percy Byron, CFA, is an equity analyst with a UK-based investment firm. One firm Byron follows is NinMount PLC, a UK-based company. On 31 December 2018, NinMount paid £320 million to purchase a 50 percent stake in Boswell Company. The excess of the purchase price over the fair value of Boswell’s net assets was attributable to previously unrecorded licenses. These licenses were estimated to have an economic life of six years. The fair value of Boswell’s assets and liabilities other than licenses was equal to their recorded book values. NinMount and Boswell both use the pound sterling as their reporting currency and prepare their financial statements in accordance with IFRS."
+      ],
+      [
+        "p",
+        "Byron is concerned whether the investment should affect his “buy” rating on NinMount common stock. He knows NinMount could choose one of several accounting methods to report the results of its investment, but NinMount has not announced which method it will use. Byron forecasts that both companies’ 2019 financial results (excluding any merger accounting adjustments) will be identical to those of 2018."
+      ],
+      [
+        "p",
+        "NinMount’s and Boswell’s condensed income statements for the year ended 31 December 2018, and condensed balance sheets at 31 December 2018, are presented in Exhibits 1 and 2, respectively."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: NinMount PLC and Boswell Company Income Statements for the Year Ended 31 December 2018 (£ millions)",
+          "head": [
+            "",
+            "NinMount",
+            "Boswell"
+          ],
+          "rows": [
+            [
+              "Net sales",
+              "950",
+              "510"
+            ],
+            [
+              "Cost of goods sold",
+              "(495)",
+              "(305)"
+            ],
+            [
+              "Selling expenses",
+              "(50)",
+              "(15)"
+            ],
+            [
+              "Administrative expenses",
+              "(136)",
+              "(49)"
+            ],
+            [
+              "Depreciation & amortization expense",
+              "(102)",
+              "(92)"
+            ],
+            [
+              "Interest expense",
+              "(42)",
+              "(32)"
+            ],
+            [
+              "Income before taxes",
+              "125",
+              "17"
+            ],
+            [
+              "Income tax expense",
+              "(50)",
+              "(7)"
+            ],
+            [
+              "Net income",
+              "75",
+              "10"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: NinMount PLC and Boswell Company Balance Sheets at 31 December 2018 (£ millions)",
+          "head": [
+            "",
+            "NinMount",
+            "Boswell"
+          ],
+          "rows": [
+            [
+              "Cash",
+              "50",
+              "20"
+            ],
+            [
+              "Receivables—net",
+              "70",
+              "45"
+            ],
+            [
+              "Inventory",
+              "130",
+              "75"
+            ],
+            [
+              "Total current assets",
+              "250",
+              "140"
+            ],
+            [
+              "Property, plant, & equipment—net",
+              "1,570",
+              "930"
+            ],
+            [
+              "Investment in Boswell",
+              "320",
+              "—"
+            ],
+            [
+              "Total assets",
+              "2,140",
+              "1,070"
+            ],
+            [
+              "Current liabilities",
+              "110",
+              "90"
+            ],
+            [
+              "Long-term debt",
+              "600",
+              "400"
+            ],
+            [
+              "Total liabilities",
+              "710",
+              "490"
+            ],
+            [
+              "Common stock",
+              "850",
+              "535"
+            ],
+            [
+              "Retained earnings",
+              "580",
+              "45"
+            ],
+            [
+              "Total equity",
+              "1,430",
+              "580"
+            ],
+            [
+              "Total liabilities and equity",
+              "2,140",
+              "1,070"
+            ]
+          ],
+          "note": "Note: Balance sheets reflect the purchase price paid by NinMount, but do not yet consider the impact of the accounting method choice."
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "NinMount’s current ratio on 31 December 2018 most likely will be highest if the results of the acquisition are reported using:",
+        "options": [
+          "the equity method.",
+          "consolidation with full goodwill.",
+          "consolidation with partial goodwill."
+        ],
+        "answer": 0,
+        "why": "Equity method: the investment is one non-current line, so only NinMount's own current items count:\n[[250|110]] = 2.27\nConsolidation (full OR partial goodwill) adds 100% of Boswell's current assets and liabilities:\n[[250 + 140|110 + 90]] = [[390|200]] = 1.95\nBoswell's own current ratio (140/90 = 1.56) is lower than NinMount's, so adding it drags the ratio down. B and C give the same 1.95; goodwill doesn't touch current items."
+      },
+      {
+        "q": "NinMount’s long-term debt to equity ratio on 31 December 2018 most likely will be lowest if the results of the acquisition are reported using:",
+        "options": [
+          "the equity method.",
+          "consolidation with full goodwill.",
+          "consolidation with partial goodwill."
+        ],
+        "answer": 0,
+        "why": "Equity method: [[600|1,430]] = 0.42 (Boswell's debt stays off NinMount's balance sheet).\nConsolidation: debt = 600 + 400 = 1,000; equity = 1,430 + 320 non-controlling interest (NCI) = 1,750\n[[1,000|1,750]] = 0.57\nFull vs partial goodwill doesn't matter here: the whole excess went to licenses, so goodwill is zero and NCI is £320m either way (50% × £640m fair value of net assets)."
+      },
+      {
+        "q": "Based on Byron’s forecast, if NinMount deems it has acquired control of Boswell, NinMount’s consolidated 2019 depreciation and amortization expense (in £ millions) will be closest to:",
+        "options": [
+          "102.",
+          "148.",
+          "204."
+        ],
+        "answer": 2,
+        "why": "Step 1 – value the licenses:\nImplied fair value of 100% of Boswell = [[320|0.50]] = £640m\nBook (= fair) value of recorded net assets = £580m → licenses = 640 − 580 = £60m\nStep 2 – amortize over 6 years: [[60|6]] = £10m a year\nStep 3 – consolidate 100% of both companies: 102 (NinMount) + 92 (Boswell) + 10 (licenses) = £204m\nA (102) is NinMount alone (equity method view).\nB (148) adds only 50% of Boswell's D&A, like proportionate consolidation; full consolidation includes 100%."
+      },
+      {
+        "q": "Based on Byron’s forecast, NinMount’s net profit margin for 2019 most likely will be highest if the results of the acquisition are reported using:",
+        "options": [
+          "the equity method.",
+          "consolidation with full goodwill.",
+          "consolidation with partial goodwill."
+        ],
+        "answer": 0,
+        "why": "Net income to NinMount's shareholders is the SAME under every method: 75 + 50% × (10 − 10 license amortization) = £75m.\nBut sales differ: equity method shows only NinMount's £950m; consolidation shows 950 + 510 = £1,460m.\nSame profit ÷ smaller sales = higher margin under the equity method (75/950 ≈ 7.9% vs 75/1,460 ≈ 5.1%)."
+      },
+      {
+        "q": "Based on Byron’s forecast, NinMount’s 2019 return on beginning equity most likely will be the same under:",
+        "options": [
+          "either of the consolidations, but different under the equity method.",
+          "the equity method, consolidation with full goodwill, and consolidation with partial goodwill.",
+          "none of the equity method, consolidation with full goodwill, or consolidation with partial goodwill."
+        ],
+        "answer": 0,
+        "why": "Net income to the parent is the same (£75m) under all methods, so ROE depends on equity:\nEquity method: beginning equity £1,430m\nEither consolidation: 1,430 + 320 NCI = £1,750m (no goodwill, so full and partial give the same NCI)\nSo both consolidations give the same ROE, and the equity method differs (higher: 75/1,430 vs 75/1,750).\nB is wrong because equity differs; C is wrong because the two consolidations match."
+      },
+      {
+        "q": "Based on Byron’s forecast, NinMount’s 2019 total asset turnover ratio on beginning assets under the equity method is most likely:",
+        "options": [
+          "lower than if the results are reported using consolidation.",
+          "the same as if the results are reported using consolidation.",
+          "higher than if the results are reported using consolidation."
+        ],
+        "answer": 0,
+        "why": "Equity method: [[950|2,140]] = 0.444\nConsolidation: sales 950 + 510 = 1,460; assets = 2,140 − 320 (remove investment) + 1,070 (Boswell's assets) + 60 (licenses) = 2,950\n[[1,460|2,950]] = 0.495\nBoswell turns its assets over faster than NinMount's investment line does, so the equity method shows a LOWER turnover here. (This isn't a general rule; it depends on the subsidiary's sales relative to its assets.)"
+      }
+    ]
   }
 ];
 

@@ -3213,6 +3213,126 @@ const QUESTIONS = [
     options: ["Keep class proportions similar in each split", "Remove stop words from every one of the splits", "Make the test set larger than the training set"],
     answer: 0,
     why: "This is stratified random sampling; it keeps imbalanced classes represented consistently across training, CV and test sets."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, the investee's assets and liabilities appear on the investor's balance sheet as:",
+    options: ["Each line item, at 100% of its amount", "Each line item at the % owned by it", "One line: 'Investment in associate'"],
+    answer: 2,
+    why: "The equity method nets everything into a single investment account; no individual assets or liabilities are added."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "A parent with control over a 50%-owned subsidiary consolidates:",
+    options: ["50% of each of the assets and liabilities", "100% of every line item, plus NCI", "Only the subsidiary's net income for the year"],
+    answer: 1,
+    why: "Consolidation adds 100% of every line item; the outside owners' share shows as non-controlling interest in equity."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under consolidation, non-controlling interest is reported:",
+    options: ["Within shareholders' equity", "As a long-term liability", "As a deduction from total assets"],
+    answer: 0,
+    why: "Under IFRS (and US GAAP), NCI is part of equity, so consolidated equity is larger than the parent's own."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "When the purchase price exceeds the book value of the investee's net assets, the excess is first assigned to:",
+    options: ["Goodwill, before anything else is done", "Identifiable assets, up to fair value", "An expense in the year of the purchase"],
+    answer: 1,
+    why: "First identifiable assets (e.g. licenses, PP&E) are written up to fair value; only what's left is goodwill."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "An excess purchase price assigned to licenses with a finite life is:",
+    options: ["Amortized over the licenses' life", "Never amortized, only tested for impairment", "Added to goodwill and kept indefinitely"],
+    answer: 0,
+    why: "Finite-life intangibles are amortized, reducing income. Goodwill isn't amortized; it's tested for impairment."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "If the whole excess purchase price is assigned to identifiable assets, goodwill is:",
+    options: ["Higher under full goodwill", "Lower under partial goodwill", "Zero under both methods"],
+    answer: 2,
+    why: "With no goodwill, full vs partial goodwill make no difference to assets, NCI or ratios."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the FULL goodwill method, the non-controlling interest is measured at:",
+    options: ["Its share of the identifiable net assets", "Fair value, including its share of goodwill", "The book value of the subsidiary's equity"],
+    answer: 1,
+    why: "Full goodwill grosses up goodwill to 100%, so NCI is at fair value. Partial goodwill uses its share of identifiable net assets."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Net income attributable to the parent's shareholders under the equity method vs consolidation is:",
+    options: ["Higher under consolidation", "Higher under the equity method", "Usually the same under both"],
+    answer: 2,
+    why: "The parent's share of the investee's profit is included either way; consolidation also shows the NCI's share, which is then deducted."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Compared with consolidation, the equity method usually shows a net profit margin that is:",
+    options: ["Higher, as sales are smaller", "Lower, as costs are higher", "The same, since profit is equal"],
+    answer: 0,
+    why: "Same parent profit but the investee's sales aren't added, so the margin is higher."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Compared with consolidation, the equity method usually shows leverage (debt/equity) that is:",
+    options: ["Higher, since the equity figure is smaller", "Lower, as investee debt is excluded", "The same, as the debt figure is unchanged"],
+    answer: 1,
+    why: "The investee's debt stays off the balance sheet, so the equity method looks less leveraged (often more than smaller equity offsets)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Compared with consolidation, return on equity under the equity method is usually:",
+    options: ["Lower, since profit is smaller", "The same, since profit is equal", "Higher, as equity excludes NCI"],
+    answer: 2,
+    why: "Same parent profit ÷ smaller equity (no non-controlling interest) gives a higher ROE."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Total asset turnover under the equity method vs consolidation:",
+    options: ["Is always higher under the equity method", "Depends on the investee's own turnover", "Is always the same under both methods"],
+    answer: 1,
+    why: "Consolidation adds the investee's sales AND assets; whichever ratio is bigger decides the direction."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "The implied fair value of 100% of a company bought in a 50% stake for £320m (no control premium) is:",
+    options: ["Twice the price paid", "Equal to the price paid", "Half of the price paid"],
+    answer: 0,
+    why: "Price ÷ ownership %: the paid price represents half the whole."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Proportionate consolidation (share of each line item, no NCI) is closest to which reporting for joint ventures under IFRS?",
+    options: ["It is required for all joint ventures", "Not allowed: use the equity method", "It is required for all associates instead"],
+    answer: 1,
+    why: "IFRS 11 requires the equity method for joint ventures; proportionate consolidation is generally not permitted."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Owning 50% of the voting shares and having CONTROL leads to:",
+    options: ["The equity method, as for any 50% stake", "Fair value through profit or loss", "Consolidation"],
+    answer: 2,
+    why: "Control, not just the percentage held, decides consolidation. Significant influence without control → equity method."
   }
 ];
 
