@@ -3557,6 +3557,134 @@ const QUESTIONS = [
     options: ["Subtract the market value of debt from firm value", "Divide firm value by the debt ratio", "Add the value of debt to firm value"],
     answer: 0,
     why: "Firm value − debt = equity. With a target debt ratio, debt = ratio × firm value."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "When some companies have negative EPS, the better multiple for ranking is:",
+    options: ["P/E, ranked from lowest to highest", "E/P, with earnings in the numerator", "P/B, since book value is never negative"],
+    answer: 1,
+    why: "A negative P/E is meaningless; E/P puts negative EPS in the numerator, so the ranking still works (higher E/P = cheaper)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Underlying (persistent) EPS for a trailing P/E starts from:",
+    options: ["Diluted EPS, removing nonrecurring items", "Basic EPS, removing all depreciation", "Diluted EPS, removing recurring costs"],
+    answer: 0,
+    why: "Diluted EPS is the standard base; take out one-off gains and add back one-off costs."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "A nonrecurring gain from a lawsuit is treated in underlying EPS by:",
+    options: ["Adding it to reported EPS", "Leaving it in, since it was received", "Subtracting it from reported EPS"],
+    answer: 2,
+    why: "One-off gains inflate reported EPS, so they are removed to get underlying earnings."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "A recurring increase in depreciation from a factory integration should be:",
+    options: ["Added back, as it is noncash", "Left in underlying EPS", "Removed, as it relates to a merger"],
+    answer: 1,
+    why: "Recurring costs are part of persistent earnings, so no adjustment is made."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Forward P/E is based on:",
+    options: ["Expected EPS for the next four quarters", "Diluted EPS for the last four quarters", "Average EPS over the business cycle"],
+    answer: 0,
+    why: "Forward (leading) P/E = price / next year's forecast EPS; trailing P/E uses the last four quarters."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "On the PEG ratio, the more attractively priced stock has:",
+    options: ["The highest expected growth rate", "The highest forward P/E", "The lowest PEG ratio"],
+    answer: 2,
+    why: "PEG = P/E ÷ growth (in % points). A lower PEG means paying less per unit of growth."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "A key drawback of the PEG ratio is that it:",
+    options: ["Can't be computed with forward P/E", "Assumes a linear P/E–growth link", "Always ranks high-growth stocks cheapest"],
+    answer: 1,
+    why: "PEG treats P/E and growth as linearly related and ignores differences in risk and the length of the growth period."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "An advantage of P/S over P/E is that sales are:",
+    options: ["Less distorted by expense accounting", "Unaffected by revenue recognition", "Always positive and adjusted for leverage"],
+    answer: 0,
+    why: "Sales are the top line, so depreciation and other expense choices don't distort them."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "A weakness of P/S is that sales can be distorted by:",
+    options: ["Depreciation policy choices", "Aggressive revenue recognition", "Changes in the dividend payout"],
+    answer: 1,
+    why: "Practices that speed up revenue recognition inflate sales; P/S also ignores cost structure."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Under the Fed model, equities are undervalued when:",
+    options: ["The 10-year Treasury yield exceeds the earnings yield", "The P/E is above its long-run average", "The earnings yield exceeds the 10-year Treasury yield"],
+    answer: 2,
+    why: "Fed model: compare forward E/P of the S&P 500 with the 10-year T-bond yield."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "The Yardeni model adds which variable missing from the Fed model?",
+    options: ["Consensus five-year earnings growth forecast", "The dividend payout ratio of the index", "The market's historical average P/E"],
+    answer: 0,
+    why: "Yardeni uses the A-rated corporate bond yield and the consensus long-term earnings growth forecast."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Enterprise value is calculated as:",
+    options: ["Equity value plus cash and short-term investments", "Debt + common + preferred − cash and investments", "Market value of common equity minus debt"],
+    answer: 1,
+    why: "EV is the value of the whole firm net of cash; preferred equity is included, cash and short-term investments are deducted."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Short-term investments are treated in EV by:",
+    options: ["Adding them, like cash", "Ignoring them, as they are not cash", "Deducting them, like cash"],
+    answer: 2,
+    why: "Short-term investments are cash equivalents, so they are subtracted along with cash."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "EV/EBITDA is preferred over P/E for comparing companies with:",
+    options: ["Different financial leverage", "The same capital structure", "Identical tax rates and depreciation"],
+    answer: 0,
+    why: "EBITDA is before interest, so EV/EBITDA compares firms regardless of how they are financed."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Relative strength indicators compare a stock's performance with:",
+    options: ["Its analysts' consensus forecast", "A group of stocks or its own past performance", "The yield on government bonds"],
+    answer: 1,
+    why: "Relative strength is a price momentum indicator."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Market-Based Valuation: Price and Enterprise Value Multiples",
+    q: "Standardized unexpected earnings (SUE) scales unexpected earnings by:",
+    options: ["The σ of past unexpected earnings", "The σ of analysts' EPS forecasts", "The current share price"],
+    answer: 0,
+    why: "Scaling by the dispersion of analysts' forecasts gives the scaled earnings surprise, a different indicator."
   }
 ];
 

@@ -8139,6 +8139,218 @@ const VIGNETTES = [
         "why": "(Missing formulas rebuilt.)\nCost of equity (CAPM): r = 3% + 1.10 × 7% = 10.7%\nWACC = 0.40 × 6% × (1 − 0.30) + 0.60 × 10.7% = 1.68% + 6.42% = 8.10%\nFCFF₀:\nNet income: 15,409.00\n+ Depreciation: +3,746.00\n− WCInv (AR −536, inventory −803, AP −3, other CL +350 = −992): −992.00\n− Fixed capital investment: −3,463.00\n+ After-tax interest (552 × (1 − 0.30)): +386.40\nFCFF₀ = $15,086.40 million\nFirm value = [[FCFF₀ × (1 + g)|WACC − g]] = [[15,086.40 × 1.05|0.081 − 0.05]] = [[15,840.72|0.031]] = $510,990.97 million\nDebt = target debt ratio × firm value = 0.40 × 510,990.97 = 204,396.39\nEquity = 510,990.97 − 204,396.39 = $306,595 million\nA ($277,907m) discounts FCFF at the cost of equity (10.7%) and calls the result equity value. FCFF goes to ALL capital providers, so it must be discounted at the WACC, and debt is then subtracted.\nB ($295,876m) comes from mis-built inputs (for example, leaving out the after-tax interest add-back or using the wrong tax rate in the WACC)."
       }
     ]
+  },
+  {
+    "id": "pinho",
+    "title": "Cátia Pinho: Adesivo, Enviado and Gesticular",
+    "topic": "Equity Valuation",
+    "reading": "Market-Based Valuation: Price and Enterprise Value Multiples",
+    "body": [
+      [
+        "p",
+        "Cátia Pinho is a supervisor in the equity research division of Suite Securities. Pinho asks Flávia Silveira, a junior analyst, to complete an analysis of Adesivo S.A., Enviado S.A., and Gesticular S.A."
+      ],
+      [
+        "p",
+        "Pinho directs Silveira to use a valuation metric that would allow for a meaningful ranking of relative value of the three companies’ shares. Exhibit 1 provides selected financial information for the three companies."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Selected Financial Information for Adesivo, Enviado, and Gesticular (Brazilian Real, BRL)",
+          "head": [
+            "",
+            "Adesivo",
+            "Enviado",
+            "Gesticular"
+          ],
+          "rows": [
+            [
+              "Stock’s current price",
+              "14.72",
+              "72.20",
+              "132.16"
+            ],
+            [
+              "Diluted EPS (last four quarters)",
+              "0.81",
+              "2.92",
+              "–0.05"
+            ],
+            [
+              "Diluted EPS (next four quarters)",
+              "0.91",
+              "3.10",
+              "2.85"
+            ],
+            [
+              "Dividend rate (annualized most recent dividend)",
+              "0.44",
+              "1.24",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Silveira reviews underlying trailing EPS for Adesivo. Adesivo has basic trailing EPS of BRL0.84. Silveira finds the following note in Adesivo’s financial statements:"
+      ],
+      [
+        "p",
+        "“On a per share basis, Adesivo incurred in the last four quarters\ni. from a lawsuit, a nonrecurring gain of BRL0.04; and\nii. from factory integration, a nonrecurring cost of BRL0.03 and a recurring cost of BRL0.01 in increased depreciation.”"
+      ],
+      [
+        "p",
+        "Silveira notes that Adesivo is forecasted to pay semiannual dividends of BRL0.24 next year. Silveira estimates five-year earnings growth rates for the three companies, which are presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Earnings Growth Rate Estimates over Five Years",
+          "head": [
+            "Company",
+            "Earnings Growth Rate Estimate (%)"
+          ],
+          "rows": [
+            [
+              "Adesivo",
+              "16.67"
+            ],
+            [
+              "Enviado",
+              "21.91"
+            ],
+            [
+              "Gesticular",
+              "32.33"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Pinho asks Silveira about the possible use of the price-to-sales ratio (P/S) in assessing the relative value of the three companies. Silveira tells Pinho:"
+      ],
+      [
+        "p",
+        "Statement 1: The P/S is not affected by revenue recognition practices.\nStatement 2: The P/S is less subject to distortion from expense accounting than is the P/E."
+      ],
+      [
+        "p",
+        "Pinho asks Silveira about using the Fed and Yardeni models to assess the value of the equity market. Silveira states:"
+      ],
+      [
+        "p",
+        "Statement 3: The Fed model concludes that the market is undervalued when the market’s current earnings yield is greater than the 10-year Treasury bond yield.\nStatement 4: The Yardeni model includes the consensus five-year earnings growth rate forecast for the market index."
+      ],
+      [
+        "p",
+        "Silveira also analyzes the three companies using the enterprising value (EV)-to-EBITDA multiple. Silveira notes that the EBITDA for Gesticular for the most recent year is BRL560 million and gathers other selected information on Gesticular, which is presented in Exhibit 3."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Selected Information on Gesticular at Year End (BRL Millions)",
+          "head": [
+            "Market Value of Debt",
+            "Market Value of Common Equity",
+            "Market Value of Preferred Equity",
+            "Cash",
+            "Short-Term Investments"
+          ],
+          "rows": [
+            [
+              "1,733",
+              "6,766",
+              "275",
+              "581",
+              "495"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Pinho asks Silveira about the use of momentum indicators in assessing the shares of the three companies. Silveira states:"
+      ],
+      [
+        "p",
+        "Statement 5: Relative-strength indicators compare an equity’s performance during a period with the performance of some group of equities or its own past performance.\nStatement 6: In the calculation of standardized unexpected earnings (SUE), the magnitude of unexpected earnings is typically scaled by the standard deviation of analysts’ earnings forecasts."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Pinho’s directive and the data from the last four quarters presented in Exhibit 1, the valuation metric that Silveira should use is the:",
+        "options": [
+          "price-to-earnings ratio (P/E).",
+          "production-to-demand ratio (P/D).",
+          "earnings-to-price ratio (E/P)."
+        ],
+        "answer": 2,
+        "why": "Gesticular's trailing EPS is negative (–0.05), so its trailing P/E (132.16 / –0.05) is negative and meaningless; it can't be ranked alongside the others (A is wrong).\nE/P puts the negative EPS in the NUMERATOR, giving a small negative earnings yield that still ranks sensibly:\nAdesivo [[0.81|14.72]] = 5.5% · Enviado [[2.92|72.20]] = 4.0% · Gesticular [[–0.05|132.16]] = –0.04%\nHigher E/P = cheaper, so the ranking is meaningful.\nB (\"production-to-demand\") isn't a valuation multiple at all."
+      },
+      {
+        "q": "Based on Exhibit 1 and the note to Adesivo’s financial statements, the trailing P/E for Adesivo using underlying EPS is closest to:",
+        "options": [
+          "17.7.",
+          "18.2.",
+          "18.4."
+        ],
+        "answer": 2,
+        "why": "Start from DILUTED trailing EPS (BRL0.81) and strip out nonrecurring items:\n− nonrecurring lawsuit gain: −0.04\n+ nonrecurring factory integration cost: +0.03\n(The BRL0.01 extra depreciation is RECURRING, so it stays in.)\nUnderlying EPS = 0.81 − 0.04 + 0.03 = BRL0.80\nTrailing P/E = [[14.72|0.80]] = 18.4\nA (17.7) makes the same adjustments to BASIC EPS: 14.72 / (0.84 − 0.04 + 0.03 = 0.83). Diluted EPS is the standard base.\nB (18.2) uses unadjusted diluted EPS: 14.72 / 0.81."
+      },
+      {
+        "q": "Based on Exhibit 1 and Exhibit 2, which company’s shares are the most attractively priced based on the five-year forward P/E-to-growth (PEG) ratio?",
+        "options": [
+          "Adesivo",
+          "Enviado",
+          "Gesticular"
+        ],
+        "answer": 0,
+        "why": "Forward P/E = [[price|next four quarters' EPS]]; PEG = [[forward P/E|growth rate in % points]]\nAdesivo: [[14.72|0.91]] = 16.18 → [[16.18|16.67]] = 0.97\nEnviado: [[72.20|3.10]] = 23.29 → [[23.29|21.91]] = 1.06\nGesticular: [[132.16|2.85]] = 46.37 → [[46.37|32.33]] = 1.43\nLower PEG = more attractive, so Adesivo (0.97) wins.\nGesticular (C) has the highest growth, but its P/E is so high that it's the most expensive per unit of growth."
+      },
+      {
+        "q": "Which of Silveira’s statements concerning the use of the P/S is correct?",
+        "options": [
+          "Statement 1 only",
+          "Statement 2 only",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 1,
+        "why": "Statement 2 is correct: sales are the top line, so they aren't distorted by expense accounting (depreciation, write-offs etc.) the way earnings are.\nStatement 1 is wrong: sales CAN be distorted by revenue recognition practices, especially ones that speed up recognition. That rules out A and C."
+      },
+      {
+        "q": "Which of Silveira’s statements concerning the Fed and Yardeni models is correct?",
+        "options": [
+          "Statement 3 only",
+          "Statement 4 only",
+          "Both Statement 3 and Statement 4"
+        ],
+        "answer": 2,
+        "why": "Statement 3 is correct: the Fed model compares the market's earnings yield (E/P) with the 10-year Treasury yield. Earnings yield > Treasury yield → equities undervalued.\nStatement 4 is correct: the Yardeni model adds the consensus five-year earnings growth forecast for the index (plus the A-rated corporate bond yield), a variable the Fed model leaves out.\nSince both are correct, A and B are wrong."
+      },
+      {
+        "q": "Based on Exhibit 3, Gesticular’s EV/EBITDA multiple is closest to:",
+        "options": [
+          "11.4.",
+          "13.7.",
+          "14.6."
+        ],
+        "answer": 1,
+        "why": "EV = debt + common equity + preferred equity − cash − short-term investments (all at market value)\nEV = 1,733 + 6,766 + 275 − 581 − 495 = BRL7,698 million\nEV/EBITDA = [[7,698|560]] = 13.7\nA (11.4) reverses signs: it subtracts debt and adds cash and investments (6,766 + 275 − 1,733 + 581 + 495 = 6,384).\nC (14.6) subtracts only the cash (8,774 − 581 = 8,193). Short-term investments are cash equivalents and are deducted too."
+      },
+      {
+        "q": "Which of Silveira’s statements concerning momentum indicators is correct?",
+        "options": [
+          "Statement 5 only",
+          "Statement 6 only",
+          "Both Statement 5 and Statement 6"
+        ],
+        "answer": 0,
+        "why": "Statement 5 is correct: relative strength compares a stock's performance with a group of stocks (or an index) or with its own past performance.\nStatement 6 is wrong: SUE = [[actual EPS − expected EPS|σ of past unexpected earnings]]. Scaling by the standard deviation of ANALYSTS' FORECASTS is the scaled earnings SURPRISE, a different indicator. That rules out B and C."
+      }
+    ]
   }
 ];
 
