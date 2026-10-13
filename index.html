@@ -382,7 +382,7 @@
   /* Progression tracker: readings down the side, days to the exam across. Pastel marks so it is easy on the eyes. */
   .cc.p { background: #f6efe2; color: var(--navy); }
   .cc.p h2 { font-size: clamp(1.7rem, 5.6vw, 2.6rem); }
-  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-sp0: #d6e8f8; --pt-sp1: #b3d3f1; --pt-sp2: #8ab9e6; --pt-sp3: #5d9ad6; --pt-due: #3f7fbf; --pt-old: #e3e7ea; --pt-plan: #5f656d; }
+  :root { --pt-study: #b8d8f2; --pt-rev1: #faefc2; --pt-rev2: #f8e9b0; --pt-rev3: #f3db86; --pt-q90: #a7dcb2; --pt-q80: #c4e8cb; --pt-q70: #ddf1e0; --pt-q60: #f7e0cf; --pt-q50: #f3c9c1; --pt-q40: #eeb0ab; --pt-f1: #efe9f8; --pt-f2: #ddd1f1; --pt-f3: #c8b6e8; --pt-f4: #ae96db; --pt-sp: #b8d8f2; --pt-sp0: #dfedf9; --pt-sp1: #c7dff4; --pt-sp2: #aecfee; --pt-sp3: #93bde6; --pt-sp4: #77aadd; --pt-sp5: #5a95d2; --pt-due: #3f7fbf; --pt-old: #e3e7ea; --pt-plan: #5f656d; }
   .pt-scores.frm { grid-template-columns: repeat(4, 1fr); }
   .pt-exact { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; color: var(--muted); }
   .pt-exact .field { width: 76px; padding: 7px 10px; }
@@ -423,7 +423,7 @@
   }
   .pt td.cell .mk { position: absolute; inset: 3px; border-radius: 5px; display: flex; flex-direction: column; overflow: hidden; }
   .pt td.cell .mk span { flex: 1; }
-  /* Spaced-revision reminder: a dashed blue ring with the gap (1d, 7d, 30d); solid and faint once done, stronger when overdue. */
+  /* Spaced-revision reminder: a dashed blue ring with the gap (1d, 4d, 7d, 14d, 30d); solid and faint once done, stronger when overdue. */
   .pt td.cell .due { position: absolute; inset: 2px; border: 2px dashed var(--pt-due); border-radius: 6px; pointer-events: none; }
   .pt td.cell .due b { position: absolute; right: 1px; bottom: 0; font-size: .5rem; line-height: 1; font-weight: 800; color: var(--pt-due); background: rgba(255, 255, 255, .85); border-radius: 3px; padding: 1px 2px; }
   .pt td.cell .due.plan { border-style: dotted; border-color: var(--pt-plan); }
@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v102 · 2026-10-13";
+  const APP_VERSION = "v103 · 2026-10-13";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -900,11 +900,11 @@
   const PT_FRM = [[1, "Shaky", "--pt-f1"], [2, "Partly", "--pt-f2"], [3, "Mostly", "--pt-f3"], [4, "Solid", "--pt-f4"]];
   const ptFrmVar = d => PT_FRM[Math.min(4, Math.max(1, d || 2)) - 1][2];
   // Spaced revision (Ebbinghaus): mark "Revised" right after learning a reading and the tracker puts a reminder on that
-  // reading 1, 7 and 30 days later. Marking "Revised" again on or after a reminder day ticks it off; a "Revised" mark while
+  // reading 1, 4, 7, 14 and 30 days later. Marking "Revised" again on or after a reminder day ticks it off; a "Revised" mark while
   // reminders are still pending doesn't start a new chain, and one after the chain is finished starts a new one.
-  const PT_GAPS = [1, 7, 30];
+  const PT_GAPS = [1, 4, 7, 14, 30];
   const ptAddDays = (k, n) => { const d = fromKey(k); d.setDate(d.getDate() + n); return dkey(d); };
-  // A "Plan" mark on today or a future day (not yet revised) also projects its 1/7/30-day reminders, drawn dotted grey.
+  // A "Plan" mark on today or a future day (not yet revised) also projects its 1/4/7/14/30-day reminders, drawn dotted grey.
   function ptDue(p) {
     const byId = {}, out = {}, stages = {}, today = dkey(new Date());
     Object.entries(p.cells).forEach(([k, marks]) => {
@@ -922,11 +922,21 @@
       });
       items.forEach(x => (out[x.id + "|" + x.due] = out[x.id + "|" + x.due] || []).push(x));
     });
-    out.stages = stages; // per Revised cell: 0 = first revision, 1/2/3 = the 1-, 7- or 30-day revision it completed
+    out.stages = stages; // per Revised cell: 0 = first revision, 1–5 = the 1-, 4-, 7-, 14- or 30-day revision it completed
     return out;
   }
   const ptScoreVar = s => (PT_SCORES.find(([v]) => s >= v) || PT_SCORES[PT_SCORES.length - 1])[2];
-  function loadPT() { try { return JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } }
+  function loadPT() { let p; try { p = JSON.parse(localStorage.getItem("cfa-progress")) || { cells: {} }; } catch { return { cells: {} }; } return ptMigrate(p); }
+  // Reminders went from 1/7/30 to 1/4/7/14/30 days: manually picked Revised steps move to the matching new step
+  // (old 1 = 1d stays 1, old 2 = 7d becomes 3, old 3 = 30d becomes 5). Unpicked steps are recomputed anyway.
+  function ptMigrate(p) {
+    if ((p.sv || 1) < 2) {
+      Object.values(p.cells).forEach(ms => ms.forEach(m => { if (m.t === "v" && m.d != null) m.d = [0, 1, 3, 5][m.d] ?? m.d; }));
+      p.sv = 2;
+      savePT(p);
+    }
+    return p;
+  }
   function savePT(p) { try { localStorage.setItem("cfa-progress", JSON.stringify(p)); } catch {} }
   // The days on the chart: from the day the tracker was first opened up to the day before the exam.
   function ptDays(p) {
@@ -952,8 +962,8 @@
     return n ? `${plural(n, "mark")} so far` : "Mark what you study each day";
   }
   // Paint one cell: stacked pastel stripes, one per mark, and the score if questions were done.
-  // Revised gets deeper blue at each step: first revision, then the 1-, 7- and 30-day revisions.
-  const PT_SP = ["--pt-sp0", "--pt-sp1", "--pt-sp2", "--pt-sp3"];
+  // Revised gets deeper blue at each step: first revision, then the 1-, 4-, 7-, 14- and 30-day revisions.
+  const PT_SP = ["--pt-sp0", "--pt-sp1", "--pt-sp2", "--pt-sp3", "--pt-sp4", "--pt-sp5"];
   function ptPaint(td, marks, dues, stage) {
     td.innerHTML = "";
     td.title = "";
@@ -961,7 +971,7 @@
     if (dues && dues.length) {
       const today = dkey(new Date()), open = dues.filter(x => !x.done), x = open[0] || dues[0];
       ring = el("div", { className: "due" + (open.length ? (x.plan ? " plan" : x.due < today ? " late" : "") : " done") });
-      ring.append(el("b", {}, `${x.gap}d`)); // the 1d / 7d / 30d label stays once done
+      ring.append(el("b", {}, `${x.gap}d`)); // the 1d / 4d / 7d / 14d / 30d label stays once done
       td.append(ring);
       td.title = dues.map(y => `${y.gap}-day revision of ${fromKey(y.from).toLocaleDateString([], { month: "short", day: "numeric" })}${y.plan ? " (planned)" : ""}${y.done ? " · done" : ""}`).join("\n");
     }
@@ -999,10 +1009,10 @@
     fgrad.append(fg, "Formulae shaky → solid");
     const spKey = el("span"), sg = el("span", { className: "pt-grad" });
     PT_SP.forEach(v => { const i = el("i"); i.style.background = `var(${v})`; sg.append(i); });
-    spKey.append(sg, "Revised first → 1d → 7d → 30d");
+    spKey.append(sg, "Revised first → 1d → 4d → 7d → 14d → 30d");
     const ring = el("i");
     ring.style.cssText = "background:none;border:2px dashed var(--pt-due)";
-    const dueKey = el("span"); dueKey.append(ring, "Revise again (1d · 7d · 30d)");
+    const dueKey = el("span"); dueKey.append(ring, "Revise again (1d · 4d · 7d · 14d · 30d)");
     // "Studied" is retired: old studied marks stay as faint grey stripes, keyed only if there are any.
     const oldS = Object.values(p.cells).some(m => m.some(x => x.t === "s"));
     legend.append(key("--pt-plan", "Plan"), ...(oldS ? [key("--pt-old", "Studied (earlier)")] : []), spKey, dueKey, rgrad, fgrad, grad);
@@ -1074,12 +1084,12 @@
     const opts = el("div", { className: "pt-opts" }), scores = el("div", { className: "pt-scores" });
     const has = t => marks.find(m => m.t === t);
     const toggle = t => { marks = has(t) ? marks.filter(m => m.t !== t) : [...marks, { t }]; draw(); };
-    // Revised: pick the step (first revision, then the 1-, 7- and 30-day revisions); each is a deeper blue.
+    // Revised: pick the step (first revision, then the 1-, 4-, 7-, 14- and 30-day revisions); each is a deeper blue.
     // A Revised mark without a picked step takes the step from the reminder it completes.
     const autoStage = ptDue(p).stages[key] || 0;
     const vStage = m => (m.d ?? autoStage);
-    const revSteps = el("div", { className: "pt-scores frm" });
-    const vb = ["First", "1 day", "7 days", "30 days"].map((t, v) => {
+    const revSteps = el("div", { className: "pt-scores rev" });
+    const vb = ["First", "1 day", "4 days", "7 days", "14 days", "30 days"].map((t, v) => {
       const b = el("button", {}, t);
       b.style.background = `var(${PT_SP[v]})`;
       b.onclick = () => { const m = has("v"); if (m && vStage(m) === v) marks = marks.filter(x => x.t !== "v"); else if (m) m.d = v; else marks.push({ t: "v", d: v }); draw(); };
@@ -1091,7 +1101,7 @@
     bP.onclick = () => toggle("p");
     opts.classList.add("one");
     opts.append(bP);
-    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Plan: put this reading on this day; its 1, 7 and 30-day reminders show dotted. Revised sets the real reminders; mark Revised again on a reminder day to tick it off, choosing which step it was.");
+    const spNote = el("p", { className: "sub", style: "margin:8px 0 0;font-size:.82rem" }, "Plan: put this reading on this day; its 1, 4, 7, 14 and 30-day reminders show dotted. Revised sets the real reminders; mark Revised again on a reminder day to tick it off, choosing which step it was.");
     const revs = el("div", { className: "pt-scores rev" });
     const rb = PT_REV.map(([v, t, c]) => {
       const b = el("button", {}, t);
