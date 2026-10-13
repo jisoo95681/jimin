@@ -7799,6 +7799,346 @@ const VIGNETTES = [
         "why": "After the merger Cupernico and Glace have JOINT CONTROL, so Cupernico switches from consolidation to the EQUITY METHOD (as under US GAAP for a joint venture). Compare with staying consolidated:\n• Net income to Cupernico: the same (its 50% share either way).\n• Revenue: lower (AdOre's revenue no longer added) → net margin HIGHER (A wrong).\n• Assets: lower (one investment line instead of 100% of AdOre's assets) → ROA HIGHER (B wrong).\n• Equity: lower (no non-controlling interest) → ROE HIGHER (C correct)."
       }
     ]
+  },
+  {
+    "id": "izzo",
+    "title": "Yandie Izzo: Companies A, B and C",
+    "topic": "Equity Valuation",
+    "reading": "Free Cash Flow Valuation",
+    "body": [
+      [
+        "p",
+        "Yandie Izzo manages a dividend growth strategy for a large asset management firm. Izzo meets with her investment team to discuss potential investments in three companies: Company A, Company B, and Company C. Statements of cash flow for the three companies are presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Statements of Cash Flow, Most Recent Fiscal Year End (Amounts in Millions of Dollars)",
+          "head": [
+            "",
+            "Company A",
+            "Company B",
+            "Company C"
+          ],
+          "rows": [
+            [
+              "Cash Flow from Operating Activities",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Net Income",
+              "4,844",
+              "1,212",
+              "15,409"
+            ],
+            [
+              "Adjustments",
+              "",
+              "",
+              ""
+            ],
+            [
+              "  Depreciation",
+              "500",
+              "288",
+              "3,746"
+            ],
+            [
+              "  Other noncash expenses",
+              "1,000",
+              "—",
+              "—"
+            ],
+            [
+              "  Changes in working capital",
+              "",
+              "",
+              ""
+            ],
+            [
+              "    (Increase) Decrease accounts receivable",
+              "(452)",
+              "(150)",
+              "(536)"
+            ],
+            [
+              "    (Increase) Decrease inventories",
+              "—",
+              "(200)",
+              "(803)"
+            ],
+            [
+              "    Increase (Decrease) accounts payable",
+              "(210)",
+              "100",
+              "(3)"
+            ],
+            [
+              "    Increase (Decrease) other current liabilities",
+              "540",
+              "14",
+              "350"
+            ],
+            [
+              "      Net cash from operating activities",
+              "6,222",
+              "1,264",
+              "18,163"
+            ],
+            [
+              "Cash Flow from Investing Activities",
+              "",
+              "",
+              ""
+            ],
+            [
+              "(Purchase) Sale of fixed assets",
+              "2,379",
+              "(1,000)",
+              "(3,463)"
+            ],
+            [
+              "      Net cash from investing activities",
+              "2,379",
+              "(1,000)",
+              "(3,463)"
+            ],
+            [
+              "Cash Flow from Financing Activities",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Increase (Decrease) notes payable",
+              "25",
+              "3000",
+              "1,238"
+            ],
+            [
+              "Increase (Decrease) long-term debt",
+              "(1,500)",
+              "(1,000)",
+              "(1,379)"
+            ],
+            [
+              "Payment of common stock dividends",
+              "(1,000)",
+              "(237)",
+              "(15,000)"
+            ],
+            [
+              "      Net cash from financing activities",
+              "(2,475)",
+              "1,763",
+              "(15,141)"
+            ],
+            [
+              "Net change in cash and cash equivalents",
+              "6,126",
+              "2,027",
+              "(441)"
+            ],
+            [
+              "Cash and equivalents at beginning of year",
+              "50",
+              "100",
+              "3,000"
+            ],
+            [
+              "Cash and equivalents at end of year",
+              "6,176",
+              "2,127",
+              "2,559"
+            ],
+            [
+              "Supplemental Cash Flow Disclosures",
+              "",
+              "",
+              ""
+            ],
+            [
+              "Interest",
+              "(353)",
+              "(50)",
+              "(552)"
+            ],
+            [
+              "Income taxes",
+              "(1,605)",
+              "(648)",
+              "(3,787)"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Izzo’s team first discusses key characteristics of Company A. The company has a history of paying modest dividends relative to FCFE, has a stable capital structure, and is owned by a controlling investor."
+      ],
+      [
+        "p",
+        "The team also considers the impact of Company A’s three noncash transactions in the most recent year on its FCFE, including the following:"
+      ],
+      [
+        "p",
+        "Transaction 1: A $900 million loss on a sale of equipment\nTransaction 2: An impairment of intangibles of $400 million\nTransaction 3: A $300 million reversal of a previously recorded restructuring charge"
+      ],
+      [
+        "p",
+        "In addition, Company A’s annual report indicates that the firm expects to incur additional noncash charges related to restructuring over the next few years."
+      ],
+      [
+        "p",
+        "To value the three companies’ shares, one team member suggests valuing the companies’ shares using net income as a proxy for FCFE. Another team member proposes forecasting FCFE using a sales-based methodology based on the following equation:"
+      ],
+      [
+        "p",
+        "FCFE = NI – (1 – DR)(FCInv – Dep) – (1 – DR)(WCInv)."
+      ],
+      [
+        "p",
+        "Izzo’s team ultimately decides to use actual free cash flow to value the three companies’ shares. Selected data and assumptions are provided in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Supplemental Data and Valuation Assumptions",
+          "head": [
+            "",
+            "Company A",
+            "Company B",
+            "Company C"
+          ],
+          "rows": [
+            [
+              "Tax rate",
+              "35%",
+              "35%",
+              "30%"
+            ],
+            [
+              "Beta",
+              "1.00",
+              "0.90",
+              "1.10"
+            ],
+            [
+              "Before-tax cost of debt",
+              "6%",
+              "7%",
+              "6%"
+            ],
+            [
+              "Target debt ratio",
+              "50%",
+              "30%",
+              "40%"
+            ],
+            [
+              "Market data:",
+              "",
+              "",
+              ""
+            ],
+            [
+              "  Risk-free rate: 3%",
+              "",
+              "",
+              ""
+            ],
+            [
+              "  Market risk premium: 7%",
+              "",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The team calculates the intrinsic value of Company B using a two-stage FCFE model. FCFE growth rates for the first four years are estimated at 10%, 9%, 8%, and 7%, respectively, before declining to a constant 6% starting in the fifth year."
+      ],
+      [
+        "p",
+        "To calculate the intrinsic value of Company C’s equity, the team uses the FCFF approach assuming a single-stage model where FCFF is expected to grow at 5% indefinitely."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Company A’s key characteristics, which discounted cash flow model would most likely be used by the investment team to value Company A’s shares?",
+        "options": [
+          "DDM",
+          "FCFE",
+          "FCFF"
+        ],
+        "answer": 1,
+        "why": "Three clues point to FCFE:\n1. Modest dividends relative to FCFE: dividends differ a lot from the capacity to pay, so a DDM would understate value (A is wrong).\n2. A controlling investor: control gives discretion over how free cash flow is used, so the owner could change the dividend policy at any time. Free cash flow models value that capacity directly.\n3. A stable capital structure: FCFE values equity directly and more simply. FCFF (C) is preferred when leverage is changing or FCFE is negative, so it's needlessly indirect here."
+      },
+      {
+        "q": "Which noncash transaction should be subtracted from net income in arriving at Company A’s FCFE?",
+        "options": [
+          "Transaction 1",
+          "Transaction 2",
+          "Transaction 3"
+        ],
+        "answer": 2,
+        "why": "Noncash items are reversed out of net income:\n• Transaction 1, loss on sale of equipment: reduced NI with no cash outflow → ADD back +900\n• Transaction 2, impairment of intangibles: reduced NI, noncash → ADD back +400\n• Transaction 3, reversal of a restructuring charge: INCREASED NI with no cash inflow → SUBTRACT −300\nNoncash losses/charges are added back (A and B); noncash gains are subtracted."
+      },
+      {
+        "q": "Based on Exhibit 1, Company A’s FCFE for the most recent year is closest to:",
+        "options": [
+          "$5,318 million.",
+          "$6,126 million.",
+          "$7,126 million."
+        ],
+        "answer": 2,
+        "why": "FCFE = NI + noncash charges − WCInv − FCInv + net borrowing\nNet income: 4,844\n+ Noncash charges (depreciation 500 + other noncash 1,000): +1,500\n− Working capital investment (AR −452, AP −210, other CL +540 = −122): −122\n+ Proceeds from sale of fixed assets: +2,379\n+ Net borrowing (notes +25, LT debt −1,500 = −1,475): −1,475\nFCFE = $7,126 million\n(Shortcut: CFO 6,222 + CFI 2,379 + net borrowing −1,475 = 7,126.)\nA ($5,318) flips two signs: it subtracts the asset sale proceeds and adds back the debt repayment.\nB ($6,126) is the net change in cash, which also deducts the $1,000 dividend. Dividends are a USE of FCFE, not a deduction from it."
+      },
+      {
+        "q": "Based on Exhibit 1, using net income as a proxy for Company B’s FCFE would result in an intrinsic value that is:",
+        "options": [
+          "lower than the intrinsic value if actual FCFE were used.",
+          "equal to the intrinsic value if actual FCFE were used.",
+          "higher than the intrinsic value if actual FCFE were used."
+        ],
+        "answer": 0,
+        "why": "Company B's actual FCFE:\nNet income: 1,212\n+ Depreciation: +288\n− WCInv (AR −150, inventory −200, AP +100, other CL +14 = −236): −236\n− Fixed capital investment: −1,000\n+ Net borrowing (notes +3,000, LT debt −1,000): +2,000\nFCFE = $2,264 million\nNI ($1,212m) is far BELOW FCFE ($2,264m), mainly because of the $2,000m of net borrowing, so a value built on NI is lower (B and C are wrong).\nNI is only a fair proxy when depreciation ≈ capex, working capital is steady and there is no net borrowing."
+      },
+      {
+        "q": "Based on Exhibit 1, using the proposed sales-based methodology to forecast FCFE would produce an inaccurate FCFE projection for which company?",
+        "options": [
+          "Company A",
+          "Company B",
+          "Company C"
+        ],
+        "answer": 0,
+        "why": "The equation FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv) assumes depreciation is the ONLY noncash charge.\nCompany A had $1,000m of other noncash expenses this year and expects more noncash restructuring charges in coming years, so the formula would misstate its FCFE. For such a company, forecast each FCFE component separately.\nCompanies B and C show no noncash charges other than depreciation in Exhibit 1, so the shortcut fits them (B and C are wrong)."
+      },
+      {
+        "q": "Based on Exhibit 1 and Exhibit 2 and the proposed two-stage FCFE model, the intrinsic value of Company B’s equity is closest to:",
+        "options": [
+          "$70,602 million.",
+          "$73,588 million.",
+          "$79,596 million."
+        ],
+        "answer": 2,
+        "why": "(Missing formulas rebuilt.)\nFCFE₀ = $2,264 million (see the previous FCFE question).\nRequired return (CAPM): r = 3% + 0.90 × 7% = 9.3%\nForecast FCFE:\nYear 1 (10%): 2,264.00 × 1.10 = 2,490.40\nYear 2 (9%): 2,490.40 × 1.09 = 2,714.54\nYear 3 (8%): 2,714.54 × 1.08 = 2,931.70\nYear 4 (7%): 2,931.70 × 1.07 = 3,136.92\nYear 5 (6%): 3,136.92 × 1.06 = 3,325.13\nPV of years 1–4 = [[2,490.40|1.093]] + [[2,714.54|1.093²]] + [[2,931.70|1.093³]] + [[3,136.92|1.093⁴]]\n= 2,278.50 + 2,272.25 + 2,245.22 + 2,197.97 = 8,993.94\nTerminal value at end of year 4: TV₄ = [[FCFE₅|r − g]] = [[3,325.13|0.093 − 0.06]] = 100,761.60\nPV of TV₄ = [[100,761.60|1.093⁴]] = 70,601.58\nEquity value = 8,993.94 + 70,601.58 = $79,596 million\nA ($70,602m) is the PV of the terminal value alone; it leaves out the first four years.\nB ($73,588m) discounts the terminal value over 5 years instead of 4. TV₄ is a value at the END of year 4, so it's discounted 4 periods."
+      },
+      {
+        "q": "Based on Exhibit 1 and Exhibit 2 and the proposed single-stage FCFF model, the intrinsic value of Company C’s equity is closest to:",
+        "options": [
+          "$277,907 million.",
+          "$295,876 million.",
+          "$306,595 million."
+        ],
+        "answer": 2,
+        "why": "(Missing formulas rebuilt.)\nCost of equity (CAPM): r = 3% + 1.10 × 7% = 10.7%\nWACC = 0.40 × 6% × (1 − 0.30) + 0.60 × 10.7% = 1.68% + 6.42% = 8.10%\nFCFF₀:\nNet income: 15,409.00\n+ Depreciation: +3,746.00\n− WCInv (AR −536, inventory −803, AP −3, other CL +350 = −992): −992.00\n− Fixed capital investment: −3,463.00\n+ After-tax interest (552 × (1 − 0.30)): +386.40\nFCFF₀ = $15,086.40 million\nFirm value = [[FCFF₀ × (1 + g)|WACC − g]] = [[15,086.40 × 1.05|0.081 − 0.05]] = [[15,840.72|0.031]] = $510,990.97 million\nDebt = target debt ratio × firm value = 0.40 × 510,990.97 = 204,396.39\nEquity = 510,990.97 − 204,396.39 = $306,595 million\nA ($277,907m) discounts FCFF at the cost of equity (10.7%) and calls the result equity value. FCFF goes to ALL capital providers, so it must be discounted at the WACC, and debt is then subtracted.\nB ($295,876m) comes from mis-built inputs (for example, leaving out the after-tax interest add-back or using the wrong tax rate in the WACC)."
+      }
+    ]
   }
 ];
 

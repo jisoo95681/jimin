@@ -3429,6 +3429,134 @@ const QUESTIONS = [
     options: ["Owning 20%–50% of the voting shares", "Any seat on its board of directors", "The power to direct its activities"],
     answer: 2,
     why: "Control = power over the investee's relevant activities, usually but not always >50% of voting rights."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "A DDM is LEAST appropriate when a company:",
+    options: ["Pays dividends that differ a lot from its capacity to pay", "Has paid steady dividends that track its free cash flow", "Is valued by a minority investor with no control"],
+    answer: 0,
+    why: "When dividends ≠ capacity to pay (FCFE), free cash flow models give a better value than a DDM."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "Why does a controlling investor favour a free cash flow model over a DDM?",
+    options: ["Control removes the need for any discount rate", "Control means dividends must equal net income", "Control gives discretion over how free cash flow is used"],
+    answer: 2,
+    why: "A controlling owner can change the dividend policy, so value rests on the capacity to pay (free cash flow), not current dividends."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "With a stable capital structure, the more direct way to value equity is:",
+    options: ["FCFF discounted at the WACC, minus debt", "FCFE discounted at the cost of equity", "Net income discounted at the WACC"],
+    answer: 1,
+    why: "FCFE values equity directly. FCFF is preferred when leverage is changing or FCFE is negative."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "A loss on the sale of equipment is treated in FCFE by:",
+    options: ["Adding it back to net income", "Subtracting it from net income", "Ignoring it, as it is already cash"],
+    answer: 0,
+    why: "The loss reduced net income without any cash outflow, so it is added back (the cash proceeds are counted in investing)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "An impairment of intangibles is treated in FCFE by:",
+    options: ["Subtracting it as an investment", "Adding it back to net income", "Treating it as a working capital use"],
+    answer: 1,
+    why: "An impairment is a noncash charge that reduced net income, so it is added back."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "A reversal of a previously recorded restructuring charge is treated in FCFE by:",
+    options: ["Adding it back as a noncash charge", "Treating it as new borrowing", "Subtracting it from net income"],
+    answer: 2,
+    why: "The reversal RAISED net income with no cash inflow, so it is subtracted. Noncash gains are subtracted; noncash losses are added back."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "Proceeds from selling fixed assets affect FCFE by:",
+    options: ["Reducing it, like capital spending", "Increasing it, as negative FCInv", "Leaving it unchanged as noncash"],
+    answer: 1,
+    why: "FCInv = capex − proceeds from asset sales, so a net sale is a cash inflow that raises FCFE."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "A repayment of long-term debt affects FCFE by:",
+    options: ["Reducing it, as negative net borrowing", "Increasing it, as a financing inflow", "Leaving it unchanged, as FCFF only"],
+    answer: 0,
+    why: "FCFE = FCFF − Int(1 − t) + net borrowing; a repayment is negative net borrowing."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "Common stock dividends paid are, in FCFE terms:",
+    options: ["A deduction in arriving at FCFE", "A use of FCFE, not a deduction", "An addition, as cash to shareholders"],
+    answer: 1,
+    why: "FCFE is the cash AVAILABLE to shareholders; dividends are how some of it is used. That's why the net change in cash is not FCFE."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "Net income is a poor proxy for FCFE when a company has:",
+    options: ["Depreciation roughly equal to capex", "No net borrowing in the year", "Large net borrowing in the year"],
+    answer: 2,
+    why: "Net borrowing adds to FCFE but not to net income (e.g. $2,000m of net borrowing pushed FCFE well above NI)."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "The sales-based formula FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv) assumes:",
+    options: ["Depreciation is the only noncash charge", "There is no target debt ratio at all", "Working capital never changes"],
+    answer: 0,
+    why: "Companies with large other noncash charges (e.g. restructuring) need each FCFE component forecast separately."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "In the formula FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv), DR is:",
+    options: ["The dividend payout ratio", "The target debt ratio", "The depreciation rate"],
+    answer: 1,
+    why: "DR = the share of new investment financed with debt, so equity funds only (1 − DR) of net investment."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "In a two-stage model, the terminal value at the end of year 4 is discounted back:",
+    options: ["4 periods, as it's a year-4 value", "5 periods, using the year-5 cash flow", "Not at all, as it's a present value"],
+    answer: 0,
+    why: "TV₄ = FCFE₅ / (r − g) is already a value at the end of year 4, so it's discounted 4 periods."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "FCFF must be discounted at:",
+    options: ["The cost of equity", "The before-tax cost of debt", "The WACC"],
+    answer: 2,
+    why: "FCFF goes to all capital providers, so it is discounted at the WACC. Discounting it at the cost of equity mixes the cash flow and the rate."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "Interest expense is added back to get FCFF from net income at:",
+    options: ["Its full pre-tax amount", "Its amount × (1 − tax rate)", "Zero, as interest is noncash"],
+    answer: 1,
+    why: "FCFF = NI + NCC + Int(1 − t) − FCInv − WCInv. Only the after-tax cost of interest is added back."
+  },
+  {
+    topic: "Equity Valuation",
+    reading: "Free Cash Flow Valuation",
+    q: "To get equity value from an FCFF model, you:",
+    options: ["Subtract the market value of debt from firm value", "Divide firm value by the debt ratio", "Add the value of debt to firm value"],
+    answer: 0,
+    why: "Firm value − debt = equity. With a target debt ratio, debt = ratio × firm value."
   }
 ];
 
