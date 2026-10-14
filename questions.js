@@ -3685,6 +3685,134 @@ const QUESTIONS = [
     options: ["The σ of past unexpected earnings", "The σ of analysts' EPS forecasts", "The current share price"],
     answer: 0,
     why: "Scaling by the dispersion of analysts' forecasts gives the scaled earnings surprise, a different indicator."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In the binomial model, the risk-neutral probability of an up move is:",
+    options: ["(U − D) / (1 + r − D)", "(1 + r − D) / (U − D)", "(U − 1 − r) / (U − D)"],
+    answer: 1,
+    why: "π = (1 + r − D)/(U − D). The third option is the down probability, 1 − π."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The no-arbitrage and expectations approaches to the binomial model give:",
+    options: ["Identical option values", "Values that differ by the risk premium", "Values that depend on investor views"],
+    answer: 0,
+    why: "The expectations approach is a variation of the no-arbitrage approach; both use risk-neutral probabilities."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Which valuation approach depends on the investor's own expectations of the stock's future price?",
+    options: ["The no-arbitrage approach", "The expectations approach", "The discounted cash flow approach"],
+    answer: 2,
+    why: "DCF uses expected cash flows and a risk-adjusted rate; the binomial approaches use risk-neutral probabilities."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In the binomial model, the actual (real-world) probability of an up move:",
+    options: ["Determines the discount rate used", "Is not needed to value the option", "Must equal the risk-neutral probability"],
+    answer: 1,
+    why: "Option value comes from the no-arbitrage hedge, so the real-world probability never enters."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A two-period binomial lattice can be viewed as:",
+    options: ["Two separate one-period lattices", "Four independent one-period lattices", "Three one-period binomial lattices"],
+    answer: 2,
+    why: "One lattice at time 0 and one at each of the two year-1 nodes."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In a two-period lattice with constant U and D, the up-down and down-up paths:",
+    options: ["End at the same stock price", "Give different stock prices", "Have different probabilities each"],
+    answer: 0,
+    why: "S+− = S × U × D = S−+; the middle node is reached two ways, so its probability is 2π(1 − π)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The probability of reaching the middle node of a two-period lattice is:",
+    options: ["π(1 − π)", "2π(1 − π)", "π² + (1 − π)²"],
+    answer: 1,
+    why: "Two paths (up-down and down-up) each have probability π(1 − π)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In the no-arbitrage approach, the hedge ratio for a call is:",
+    options: ["(c+ − c−) / (S+ − S−)", "(S+ − S−) / (c+ − c−)", "c / S, the call price over the stock price"],
+    answer: 0,
+    why: "h = (c+ − c−)/(S+ − S−): shares of stock per call that make the portfolio riskless."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The hedge ratio for a put is:",
+    options: ["Positive, between 0 and 1", "Negative, between −1 and 0", "Always exactly −1"],
+    answer: 1,
+    why: "Put payoffs fall as the stock rises, so (p+ − p−)/(S+ − S−) is negative."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A call is replicated by:",
+    options: ["Short stock and lending", "Buying bonds only", "Long stock and borrowing"],
+    answer: 2,
+    why: "A call behaves like a levered long stock position: buy h shares, partly financed by borrowing."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "If a call trades ABOVE its binomial value, the arbitrage is to:",
+    options: ["Sell the call, buy h shares, borrow", "Buy the call, sell h shares, lend", "Buy the call, buy h shares, borrow"],
+    answer: 0,
+    why: "Sell the overpriced call and buy the cheaper replicating portfolio (long stock financed by borrowing)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "If a call trades BELOW its binomial value, the arbitrage is to:",
+    options: ["Sell the call, buy h shares, borrow", "Buy the call, short h shares, lend", "Buy the call, buy h shares, lend"],
+    answer: 1,
+    why: "Buy the cheap call and sell the replicating portfolio: short the shares and lend the proceeds."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "At each node, an American put is worth:",
+    options: ["Only its exercise value", "Only its discounted hold value", "The higher of hold and exercise values"],
+    answer: 2,
+    why: "Early exercise is checked at every node: max(intrinsic value, value of holding)."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Early exercise of an American put is most likely worthwhile when:",
+    options: ["The put is deep in the money", "The stock pays a large dividend", "Interest rates are close to zero"],
+    answer: 0,
+    why: "Exercising a deep in-the-money put early earns interest on the strike sooner; dividends make early exercise LESS attractive for puts."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Without dividends, an American call on a stock is worth:",
+    options: ["More than the European call", "The same as the European call", "Less than the European call"],
+    answer: 1,
+    why: "Early exercise of a call on a non-dividend-paying stock is never optimal, so there's no early exercise premium."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The early exercise premium of an American put equals:",
+    options: ["American put value − European put value", "Intrinsic value − European put value", "Strike − American put value"],
+    answer: 0,
+    why: "E.g. a two-period put worth $13.48 American vs $12.72 European has a $0.76 premium."
   }
 ];
 

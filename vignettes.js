@@ -8351,6 +8351,144 @@ const VIGNETTES = [
         "why": "Statement 5 is correct: relative strength compares a stock's performance with a group of stocks (or an index) or with its own past performance.\nStatement 6 is wrong: SUE = [[actual EPS − expected EPS|σ of past unexpected earnings]]. Scaling by the standard deviation of ANALYSTS' FORECASTS is the scaled earnings SURPRISE, a different indicator. That rules out B and C."
       }
     ]
+  },
+  {
+    "id": "highstreet",
+    "title": "High Street: Binomial Option Valuation",
+    "topic": "Derivatives",
+    "reading": "Valuation of Contingent Claims",
+    "body": [
+      [
+        "p",
+        "High Street Investment Management is an investment subadvisory firm partnering with Registered Investment Advisors to provide counsel for options trading strategies. Scott Cummins is High Street’s CEO and chief investment officer. Phyllis Schwartz leads the client relationship team. David Spelding is a recent college graduate, who just joined the firm as an analyst. Cummings and Schwartz are conducting an introductory training session on options pricing, focusing on the binomial option valuation model (i.e., the binomial model)."
+      ],
+      [
+        "p",
+        "Cummins begins the session by listing, in Exhibit 1, variables and values for a binomial model to illustrate an outcome."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Binomial Model Variables and Values",
+          "head": [
+            "Variable",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Stock price (S)",
+              "US$100"
+            ],
+            [
+              "Exercise price (X)",
+              "US$100"
+            ],
+            [
+              "Up factor (U)",
+              "1.35"
+            ],
+            [
+              "Down factor (D)",
+              ".75"
+            ],
+            [
+              "Risk-free rate (r)",
+              "2.00%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Schwartz states, “The one-period binomial model is based on the no-arbitrage approach in which an investor does not take any risk or use his own money. Based on the information in Exhibit 1, the probability of an up move is 45%. For an investor, the no-arbitrage approach is similar to both the expectations approach and the discounted cash flow approach. Each approach is based on the investor’s expectation regarding the future course of the underlying stock price.”"
+      ],
+      [
+        "p",
+        "Schwartz then introduces the two-period binomial model. He states that the two-period binomial lattice can be viewed as three one-period binomial lattices and that each lattice may be used to value a call option. Schwartz instructs Spelding to use the two-period binomial model and the information in Exhibit 1 to calculate the value of a two-year European-style call option."
+      ],
+      [
+        "p",
+        "Cummins states that long-/short-hedge fund managers seek to identify and exploit any mispricing that may exist between the price of an option and the price of its underlying stock, utilizing a replicating strategy. Cummins asks Spelding to assess the three scenarios outlined in Exhibit 2, based on the information in Exhibit 1 and assuming that the price of a one-year European-style call option is $19.25."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Scenarios and Replicating Strategies",
+          "head": [
+            "Replicating Strategy",
+            "Options Trade",
+            "Stock Trade",
+            "Financing"
+          ],
+          "rows": [
+            [
+              "Scenario 1",
+              "Sell",
+              "Buy",
+              "Lend"
+            ],
+            [
+              "Scenario 2",
+              "Sell",
+              "Buy",
+              "Borrow"
+            ],
+            [
+              "Scenario 3",
+              "Buy",
+              "Sell",
+              "Lend"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Schwartz then asks Spelding to use the information in Exhibit 1 to calculate the no-arbitrage value of a two-year US-style put option, assuming that the option may be exercised in one year."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Is Schwartz’s statement about the one-period binomial model most likely correct?",
+        "options": [
+          "Yes",
+          "No, she is incorrect about the probability of an up move",
+          "No, she is incorrect about expectations of future stock prices"
+        ],
+        "answer": 2,
+        "why": "The 45% is right (formula rebuilt):\nRisk-neutral probability of an up move: π = [[1 + r − D|U − D]] = [[1.02 − 0.75|1.35 − 0.75]] = [[0.27|0.60]] = 0.45\nThe error is the last part. The no-arbitrage and expectations approaches give IDENTICAL values and both use the risk-neutral probability, so the investor's own view of where the stock is heading plays no part. That's why A is wrong.\nOnly the discounted cash flow approach depends on the investor's expectations (expected cash flows at a risk-adjusted rate), so it is NOT similar in that respect."
+      },
+      {
+        "q": "According to Schwartz’s instructions to Spelding, the value of a two-year European-style call option is closest to:",
+        "options": [
+          "$16.60.",
+          "$29.04.",
+          "$32.66."
+        ],
+        "answer": 0,
+        "why": "(Missing formulas rebuilt.)\nRisk-neutral probability of an up move: π = [[1 + r − D|U − D]] = [[1.02 − 0.75|1.35 − 0.75]] = [[0.27|0.60]] = 0.45\nStock prices at year 2:\nS++ = 100 × 1.35² = 182.25 → c++ = 182.25 − 100 = 82.25\nS+− = 100 × 1.35 × 0.75 = 101.25 → c+− = 1.25\nS−− = 100 × 0.75² = 56.25 → c−− = 0\nc = [[π² c++ + 2π(1 − π) c+− + (1 − π)² c−−|(1 + r)²]]\n= [[0.2025 × 82.25 + 0.495 × 1.25 + 0.3025 × 0|1.02²]] = [[17.274|1.0404]] = $16.60\nB ($29.04) uses π = 0.60 (U − D) instead of 0.45: [[0.36 × 82.25 + 0.48 × 1.25|1.0404]].\nC ($32.66) uses 35 (the one-period up payoff, 135 − 100) for the up-down node instead of 1.25: [[0.2025 × 82.25 + 0.495 × 35|1.0404]].\n(Put–call parity would give the put: p = c + PV(X) − S.)"
+      },
+      {
+        "q": "With respect to the replicating strategies, which scenario is most likely correct?",
+        "options": [
+          "Scenario 1",
+          "Scenario 2",
+          "Scenario 3"
+        ],
+        "answer": 1,
+        "why": "(Missing formulas rebuilt.)\nOne-year call: c+ = 135 − 100 = 35; c− = 0 (75 < 100)\nExpectations approach: c = [[π c+ + (1 − π) c−|1 + r]] = [[0.45 × 35|1.02]] = $15.44\nNo-arbitrage approach:\nHedge ratio h = [[c+ − c−|S+ − S−]] = [[35 − 0|135 − 75]] = 0.5833 shares per call\nBorrow PV(h·S− − c−) = [[0.5833 × 75|1.02]] = 42.89\nc = h·S − borrowing = 58.33 − 42.89 = $15.44\nThe market price $19.25 > value $15.44, so the call is OVERPRICED: sell the call, buy h shares, and BORROW to fund part of the stock (Scenario 2).\nScenario 1 lends instead of borrowing; the replicating portfolio for a call is a levered stock position.\nScenario 3 buys the overpriced call, which is the wrong side."
+      },
+      {
+        "q": "The no-arbitrage value of a two-year American-style put option is most likely closest to:",
+        "options": [
+          "$12.72.",
+          "$13.48.",
+          "$13.75."
+        ],
+        "answer": 1,
+        "why": "(Exhibit rebuilt as a summary.) π = 0.45, 1 − π = 0.55\nYear-2 put payoffs: p++ = 0 (S 182.25), p+− = 0 (S 101.25), p−− = 100 − 56.25 = 43.75\nYear 1, up node (S 135): p+ = 0\nYear 1, down node (S 75):\nHold: [[0.55 × 43.75|1.02]] = 23.591\nExercise now: 100 − 75 = 25.00\nAmerican → take the higher: p− = 25.00 (early exercise pays)\nToday: p = [[0.45 × 0 + 0.55 × 25.00|1.02]] = $13.48\nHedge ratio today = [[0 − 25|135 − 75]] = −0.4167 (European: −0.3932)\nA ($12.72) is the EUROPEAN put, which keeps 23.591 at the down node: [[0.55 × 23.591|1.02]]. Early exercise premium = 13.48 − 12.72 = $0.76.\nC ($13.75) = 0.55 × 25 with no discounting."
+      }
+    ]
   }
 ];
 
