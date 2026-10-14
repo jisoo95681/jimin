@@ -8866,6 +8866,249 @@ const VIGNETTES = [
         "why": "Conversion value = conversion ratio × stock price = 31 × 37.50 = $1,162.50\nThis is above the straight value ($1,060), so the convertible trades mostly like the stock (it's in the money: 37.50 > conversion price 32.26).\nIt falls when the stock falls, but by LESS, because the straight-bond value ($1,060) acts as a floor. That rules out A.\nC is wrong: the price responds right away; the stock doesn't need to reach the conversion price first."
       }
     ]
+  },
+  {
+    "id": "liecken",
+    "title": "Lena Liecken: Taurus Credit Analysis",
+    "topic": "Fixed Income",
+    "reading": "Credit Analysis Models",
+    "body": [
+      [
+        "p",
+        "Lena Liecken is a senior bond analyst at Taurus Investment Management. Kristel Kreming, a junior analyst, works for Liecken in helping conduct fixed-income research for the firm’s portfolio managers. Liecken and Kreming meet to discuss several bond positions held in the firm’s portfolios."
+      ],
+      [
+        "p",
+        "Bonds I and II both have a maturity of one year, an annual coupon rate of 5%, and a market price equal to par value. The risk-free rate is 3%. Historical default experiences of bonds comparable to Bonds I and II are presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Credit Risk Information for Comparable Bonds",
+          "head": [
+            "Bond",
+            "Recovery Rate",
+            "Percentage of Bonds That Survive and Make Full Payment"
+          ],
+          "rows": [
+            [
+              "I",
+              "40%",
+              "98%"
+            ],
+            [
+              "II",
+              "35%",
+              "99%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Bond III is a zero-coupon bond with three years to maturity. Liecken evaluates similar bonds and estimates a recovery rate of 38% and a risk-neutral default probability of 2%, assuming conditional probabilities of default. Kreming creates Exhibit 2 to compute Bond III’s credit valuation adjustment. She assumes a flat yield curve at 3%, with exposure, recovery, and loss given default values expressed per 100 of par value."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Analysis of Bond III",
+          "head": [
+            "Date",
+            "Exposure",
+            "Recovery",
+            "Loss Given Default",
+            "Probability of Default",
+            "Probability of Survival",
+            "Expected Loss",
+            "Present Value of Expected Loss"
+          ],
+          "rows": [
+            [
+              "0",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "1",
+              "94.2596",
+              "35.8186",
+              "58.4410",
+              "2.0000%",
+              "98.0000%",
+              "1.1688",
+              "1.1348"
+            ],
+            [
+              "2",
+              "97.0874",
+              "36.8932",
+              "60.1942",
+              "1.9600%",
+              "96.0400%",
+              "1.1798",
+              "1.1121"
+            ],
+            [
+              "3",
+              "100.0000",
+              "38.0000",
+              "62.0000",
+              "1.9208%",
+              "94.1192%",
+              "1.1909",
+              "1.0898"
+            ],
+            [
+              "Sum",
+              "",
+              "",
+              "",
+              "5.8808%",
+              "",
+              "3.5395",
+              "3.3367"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Bond IV is an AA rated bond that matures in five years, has a coupon rate of 6%, and a modified duration of 4.2. Liecken is concerned about whether this bond will be downgraded to an A rating, but she does not expect the bond to default during the next year. Kreming constructs a partial transition matrix, which is presented in Exhibit 3, and suggests using a model to predict the rating change of Bond IV using leverage ratios, return on assets, and macroeconomic variables."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Partial One-Year Corporate Transition Matrix (entries in %)",
+          "head": [
+            "From/To",
+            "AAA",
+            "AA",
+            "A"
+          ],
+          "rows": [
+            [
+              "AAA",
+              "92.00",
+              "6.00",
+              "1.00"
+            ],
+            [
+              "AA",
+              "2.00",
+              "89.00",
+              "8.00"
+            ],
+            [
+              "A",
+              "0.05",
+              "1.00",
+              "85.00"
+            ],
+            [
+              "Credit Spread (%)",
+              "0.50",
+              "1.00",
+              "1.75"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Kreming calculates the risk-neutral probabilities, compares them with the actual default probabilities of bonds evaluated over the past 10 years, and observes that the actual and risk-neutral probabilities differ. She makes two observations regarding the comparison of these probabilities:"
+      ],
+      [
+        "p",
+        "Observation 1: Actual default probabilities include the default risk premium associated with the uncertainty in the timing of the possible default loss.\nObservation 2: The observed spread over the yield on a risk-free bond in practice includes liquidity and tax considerations, in addition to credit risk."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "The expected exposure to default loss for Bond I is:",
+        "options": [
+          "less than the expected exposure for Bond II.",
+          "the same as the expected exposure for Bond II.",
+          "greater than the expected exposure for Bond II."
+        ],
+        "answer": 1,
+        "why": "Exposure = what could be lost if default occurs, BEFORE recovery.\nBoth bonds pay par + coupon at maturity: 100 + 5 = 105, so the exposures are equal.\nRecovery rates and default probabilities differ, but they affect loss given default and expected loss, not exposure (A and C are wrong)."
+      },
+      {
+        "q": "Based on Exhibit 1, the loss given default for Bond II is:",
+        "options": [
+          "less than that for Bond I.",
+          "the same as that for Bond I.",
+          "greater than that for Bond I."
+        ],
+        "answer": 2,
+        "why": "LGD = exposure × (1 − recovery rate)\nBond I: 105 × (1 − 0.40) = 63.00\nBond II: 105 × (1 − 0.35) = 68.25\nSame exposure but a LOWER recovery rate means a HIGHER LGD for Bond II (A and B are wrong).\n(Bond II's higher survival rate, 99%, lowers its expected loss, but not its LGD.)"
+      },
+      {
+        "q": "Based on Exhibit 1, the expected future value of Bond I at maturity is closest to:",
+        "options": [
+          "98.80.",
+          "103.74.",
+          "105.00."
+        ],
+        "answer": 1,
+        "why": "No default (98%): receive 105\nDefault (2%): receive recovery = 105 × 0.40 = 42\nExpected value = 0.98 × 105 + 0.02 × 42 = 102.90 + 0.84 = 103.74\nA (98.80) leaves out the coupon: 0.98 × 100 + 0.02 × 40.\nC (105.00) is the payoff only if there is no default; it ignores default risk."
+      },
+      {
+        "q": "Based on Exhibit 1, the risk-neutral default probability for Bond I is closest to:",
+        "options": [
+          "2.000%.",
+          "3.175%.",
+          "4.762%."
+        ],
+        "answer": 1,
+        "why": "(Missing formula rebuilt.) Set the price equal to the expected payoff under risk-neutral probability P*, discounted at the risk-free rate:\n100 = [[105 × (1 − P*) + 42 × P*|1.03]]\n103 = 105 − 63P*\nP* = [[2|63]] = 0.031746 = 3.175%\nA (2.000%) is the ACTUAL historical default rate (1 − 98%), not the risk-neutral one.\nC (4.762%) = 3 / 63, which puts the 3% interest (103 − 100) in the numerator instead of 105 − 103."
+      },
+      {
+        "q": "Based on Exhibit 2, the credit valuation adjustment for Bond III is closest to:",
+        "options": [
+          "3.3367.",
+          "3.5395.",
+          "5.8808."
+        ],
+        "answer": 0,
+        "why": "CVA = sum of the PRESENT VALUES of expected losses = 1.1348 + 1.1121 + 1.0898 = 3.3367 (per 100 of par).\nHow each row is built (year 1 example):\nExposure = [[100|1.03²]] = 94.2596 (value of the zero at year 1)\nLGD = 94.2596 × (1 − 0.38) = 58.4410\nPD = 2% (later years: 2% × prior survival, e.g. 2% × 98% = 1.96%)\nExpected loss = 58.4410 × 2% = 1.1688 → PV = [[1.1688|1.03]] = 1.1348\nB (3.5395) adds up the UNDISCOUNTED expected losses.\nC (5.8808) is the cumulative probability of default (in %), not a loss amount."
+      },
+      {
+        "q": "Based on Exhibit 3, if Bond IV’s credit rating changes during the next year to an A rating, its expected price change would be closest to:",
+        "options": [
+          "–8.00%.",
+          "–7.35%.",
+          "–3.15%."
+        ],
+        "answer": 2,
+        "why": "%ΔP ≈ −ModDur × Δspread\nSpread change AA → A = 1.75% − 1.00% = 0.75%\n%ΔP = −4.2 × 0.0075 = −3.15%\nA (−8.00%) is the PROBABILITY of an AA → A migration from the matrix, not a price change.\nB (−7.35%) uses the whole A spread (−4.2 × 1.75%) instead of the CHANGE in spread."
+      },
+      {
+        "q": "Kreming’s suggested model for Bond IV is a:",
+        "options": [
+          "structural model.",
+          "reduced-form model.",
+          "term structure model."
+        ],
+        "answer": 1,
+        "why": "Reduced-form models estimate default intensity from observable variables: financial ratios (leverage, ROA) and macroeconomic variables. That's exactly Kreming's proposal.\nA: structural models use option pricing on the firm's asset value (equity = call on assets) and need a traded market for the issuer's equity.\nC: term structure models describe how interest rates evolve, not credit ratings."
+      },
+      {
+        "q": "Which of Kreming’s observations regarding actual and risk-neutral default probabilities is correct?",
+        "options": [
+          "Only Observation 1",
+          "Only Observation 2",
+          "Both Observation 1 and Observation 2"
+        ],
+        "answer": 1,
+        "why": "Observation 1 is wrong: ACTUAL default probabilities don't include a default risk premium. The RISK-NEUTRAL probabilities (implied from prices) carry the premium for uncertainty about the timing of default losses, which is why they're higher.\nObservation 2 is correct: observed spreads also reflect liquidity and tax differences, not just credit risk, so risk-neutral probabilities implied from spreads overstate pure default risk.\nThat rules out A and C."
+      }
+    ]
   }
 ];
 

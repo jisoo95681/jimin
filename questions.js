@@ -4093,6 +4093,134 @@ const QUESTIONS = [
     options: ["A straight bond", "The underlying stock", "A money market fund"],
     answer: 1,
     why: "It moves with the stock, but by less on the way down because the straight value acts as a floor."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "Expected exposure to default loss is measured:",
+    options: ["After deducting expected recovery", "Before factoring in any recovery", "Net of the probability of default"],
+    answer: 1,
+    why: "Exposure = what's owed at the time of default (e.g. par + coupon), before recovery."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "Loss given default (LGD) equals:",
+    options: ["Exposure × (1 − recovery rate)", "Exposure × probability of default", "Exposure − probability of survival"],
+    answer: 0,
+    why: "Two bonds with the same exposure: the one with the lower recovery rate has the higher LGD."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "Expected loss equals:",
+    options: ["LGD × probability of survival", "Exposure × recovery rate", "LGD × probability of default"],
+    answer: 2,
+    why: "Expected loss = PD × LGD."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "A bond's credit valuation adjustment (CVA) is:",
+    options: ["The sum of undiscounted expected losses", "The sum of the PVs of expected losses", "The cumulative probability of default"],
+    answer: 1,
+    why: "CVA = Σ PV(expected loss); value of a risky bond = value if risk-free − CVA."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "The value of a risky bond equals:",
+    options: ["Risk-free value − CVA", "Risk-free value + CVA", "CVA × probability of survival"],
+    answer: 0,
+    why: "CVA is the discount for credit risk."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "With conditional default probabilities, the probability of default in year 2 is:",
+    options: ["The hazard rate alone", "Hazard rate × probability of default in year 1", "Hazard rate × probability of survival to year 1"],
+    answer: 2,
+    why: "E.g. 2% × 98% = 1.96%: you can only default in year 2 if you survived year 1."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "Risk-neutral default probabilities are typically:",
+    options: ["Lower than actual default rates", "Higher than actual default rates", "Equal to actual default rates"],
+    answer: 1,
+    why: "They're implied from prices, so they include a risk premium for default timing uncertainty, plus liquidity and tax effects."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "The default risk premium for uncertainty about the timing of default is included in:",
+    options: ["Risk-neutral default probabilities", "Actual historical default rates", "Recovery rate estimates"],
+    answer: 0,
+    why: "Actual (historical) default rates don't include any premium."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "Besides credit risk, the observed spread over a risk-free bond also reflects:",
+    options: ["Only the bond's coupon rate level", "The bond's duration and convexity", "Liquidity and tax considerations"],
+    answer: 2,
+    why: "So risk-neutral PDs implied from spreads overstate pure default risk."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "A risk-neutral default probability is found by:",
+    options: ["Taking the average historical default rate of similar bonds", "Setting price = PV of risk-neutral expected payoff", "Dividing the credit spread by the bond's coupon rate"],
+    answer: 1,
+    why: "Discount the probability-weighted payoffs at the risk-free rate and solve for P*."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "The expected percentage price change from a credit rating migration is approximately:",
+    options: ["−ModDur × change in credit spread", "−ModDur × new credit spread", "−Migration probability × ModDur"],
+    answer: 0,
+    why: "Only the CHANGE in spread matters, e.g. 1.00% → 1.75% = 0.75%."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "In a transition matrix, the AA → A entry represents:",
+    options: ["The price change on a downgrade", "The spread on A-rated bonds", "The probability of a downgrade"],
+    answer: 2,
+    why: "The bottom row gives spreads; matrix entries are migration probabilities."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "A credit model that uses option pricing and treats equity as a call on the firm's assets is a:",
+    options: ["Reduced-form model", "Structural model", "Term structure model"],
+    answer: 1,
+    why: "Structural models need a traded market for the issuer's equity and information about the firm's assets."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "A credit model that estimates default intensity from financial ratios and macro variables is a:",
+    options: ["Reduced-form model", "Structural model", "Binomial pricing model"],
+    answer: 0,
+    why: "Reduced-form models use observable company and economic variables; they don't need asset values."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "A key advantage of reduced-form models over structural models is that they:",
+    options: ["Explain WHY a firm defaults", "Use the firm's unobservable asset value", "Need only observable variables"],
+    answer: 2,
+    why: "Structural models explain why default happens but depend on unobservable asset values."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Credit Analysis Models",
+    q: "For a zero-coupon bond in a CVA table, exposure at each earlier date is:",
+    options: ["Always the full face value", "The bond's value at that date", "Face value × (1 − recovery rate)"],
+    answer: 1,
+    why: "E.g. 100 / 1.03² = 94.26 one year in, for a three-year zero at a flat 3%."
   }
 ];
 
