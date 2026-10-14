@@ -3813,6 +3813,134 @@ const QUESTIONS = [
     options: ["American put value − European put value", "Intrinsic value − European put value", "Strike − American put value"],
     answer: 0,
     why: "E.g. a two-period put worth $13.48 American vs $12.72 European has a $0.76 premium."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The BSM model can be viewed as a continuous-time version of:",
+    options: ["The binomial option pricing model", "The constant-growth dividend discount model", "Put–call–forward parity only"],
+    answer: 0,
+    why: "BSM replicates the option with continuously rebalanced positions in the stock and a zero-coupon bond."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A long call is replicated in BSM by:",
+    options: ["Short N(d1) shares, buy N(d2) bonds", "Buy N(d1) shares, short N(d2) bonds", "Buy N(d2) shares, short N(d1) bonds"],
+    answer: 1,
+    why: "c = S·N(d1) − Xe^(−rT)·N(d2): a leveraged long stock position."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A long put is replicated in BSM by:",
+    options: ["Buy N(−d1) shares, short N(−d2) bonds", "Buy N(d1) shares, short N(d2) bonds", "Short N(−d1) shares, buy N(−d2) bonds"],
+    answer: 2,
+    why: "p = Xe^(−rT)·N(−d2) − S·N(−d1): short stock, invest in bonds."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "In BSM, N(d2) is the risk-neutral probability that:",
+    options: ["A call expires in the money", "A put expires in the money", "The stock price will fall"],
+    answer: 0,
+    why: "N(d2) = Prob(S_T > X). For a put, N(−d2) = Prob(S_T < X), the chance it finishes in the money."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "N(−d2) represents the risk-neutral probability that a put expires:",
+    options: ["Out of the money", "In the money", "Exactly at the money"],
+    answer: 1,
+    why: "So 1 − N(−d2) = N(d2) is the probability the put expires out of the money."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The delta of a call option in BSM (no dividends) is:",
+    options: ["N(d2)", "N(d1) − 1", "N(d1)"],
+    answer: 2,
+    why: "Call delta = N(d1), between 0 and 1. Put delta = N(d1) − 1, between −1 and 0."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "The delta of a put option in BSM (no dividends) is:",
+    options: ["N(d1) − 1", "N(−d2)", "1 − N(d2)"],
+    answer: 0,
+    why: "Put delta = N(d1) − 1 = −N(−d1), always negative."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "To delta-hedge a WRITTEN put, the writer:",
+    options: ["Buys shares equal to the put delta", "Short sells |delta| × shares", "Buys more puts on the same stock"],
+    answer: 1,
+    why: "A short put has positive delta, so it is offset by shorting stock."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "To delta-hedge a WRITTEN call, the writer:",
+    options: ["Buys N(d1) × number of shares", "Short sells N(d1) shares", "Short sells N(d2) zero-coupon bonds"],
+    answer: 0,
+    why: "A short call has negative delta, so it is offset by buying stock."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A delta-neutral portfolio must be rebalanced because:",
+    options: ["The option's strike price resets over time", "Delta changes as S and time change", "Interest rates are fixed in BSM"],
+    answer: 1,
+    why: "Delta changes with the stock price (that's gamma) and with time, so the hedge only holds for small moves."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Rho measures an option's sensitivity to:",
+    options: ["Volatility", "Time to expiration", "The risk-free rate"],
+    answer: 2,
+    why: "Higher r → call value up, put value down."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "A higher risk-free rate makes a put option:",
+    options: ["Less valuable", "More valuable", "Unchanged in value"],
+    answer: 0,
+    why: "The put's replication invests the short-sale proceeds in bonds; a higher r lowers the PV of the strike received."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Vega measures an option's sensitivity to volatility. Higher volatility:",
+    options: ["Raises calls, lowers puts", "Raises both calls and puts", "Lowers both calls and puts"],
+    answer: 1,
+    why: "Options have limited downside, so more volatility means more upside for both calls and puts."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Which BSM input is NOT directly observable?",
+    options: ["The risk-free interest rate", "The exercise price", "Volatility of the underlying"],
+    answer: 2,
+    why: "Volatility must be estimated, either historically or implied from option prices."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Theta measures:",
+    options: ["The change in option value as time passes", "The change in delta for a change in S", "The change in value for a change in r"],
+    answer: 0,
+    why: "Theta is time decay. More time to expiration generally means higher call AND put values."
+  },
+  {
+    topic: "Derivatives",
+    reading: "Valuation of Contingent Claims",
+    q: "Gamma measures:",
+    options: ["The change in option value per unit of time", "The change in delta for a small change in S", "The change in value for a change in σ"],
+    answer: 1,
+    why: "Gamma is highest for at-the-money options close to expiration; it shows how quickly a delta hedge drifts."
   }
 ];
 

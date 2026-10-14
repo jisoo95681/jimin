@@ -8489,6 +8489,164 @@ const VIGNETTES = [
         "why": "(Exhibit rebuilt as a summary.) π = 0.45, 1 − π = 0.55\nYear-2 put payoffs: p++ = 0 (S 182.25), p+− = 0 (S 101.25), p−− = 100 − 56.25 = 43.75\nYear 1, up node (S 135): p+ = 0\nYear 1, down node (S 75):\nHold: [[0.55 × 43.75|1.02]] = 23.591\nExercise now: 100 − 75 = 25.00\nAmerican → take the higher: p− = 25.00 (early exercise pays)\nToday: p = [[0.45 × 0 + 0.55 × 25.00|1.02]] = $13.48\nHedge ratio today = [[0 − 25|135 − 75]] = −0.4167 (European: −0.3932)\nA ($12.72) is the EUROPEAN put, which keeps 23.591 at the down node: [[0.55 × 23.591|1.02]]. Early exercise premium = 13.48 − 12.72 = $0.76.\nC ($13.75) = 0.55 × 25 with no discounting."
       }
     ]
+  },
+  {
+    "id": "eagle",
+    "title": "Eagle: Black-Scholes-Merton and the Greeks",
+    "topic": "Derivatives",
+    "reading": "Valuation of Contingent Claims",
+    "body": [
+      [
+        "p",
+        "Eagle Investment Management is a subadvisory investment firm partnering with Registered Investment Advisors to provide investment counsel for options trading strategies. Howard Fish is Eagle’s CEO. Keegan Shannon is Eagle’s chief investment officer and strategist. Douglas Lane is a prospective client who is considering using derivatives for his portfolio. Fish, Shannon, and Lane are meeting to discuss options valuations models."
+      ],
+      [
+        "p",
+        "Fish begins the discussion by stating that the Black-Scholes-Merton (BSM) model is a relatively straightforward tool for valuing options, despite its mathematical rigor. Fish displays the BSM model parameters (inputs) and components for ABC stock, which are presented as Exhibit 1 and Exhibit 2, respectively."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: BSM Model Parameters for ABC Stock",
+          "head": [
+            "Stock Price (S)",
+            "Exercise Price (X)",
+            "Interest Rate (r)",
+            "Time to Expiration (T)",
+            "Volatility (σ)",
+            "Dividend (γ)"
+          ],
+          "rows": [
+            [
+              "105",
+              "100",
+              "1.0%",
+              "1 year",
+              ".30",
+              "0"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: BSM Model Components for ABC Stock",
+          "head": [
+            "d1",
+            "d2",
+            "N (d1)",
+            "N (d2)",
+            "N (–d1)",
+            "N (–d2)"
+          ],
+          "rows": [
+            [
+              ".346",
+              ".046",
+              ".637",
+              ".520",
+              ".363",
+              ".480"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Shannon explains that the BSM model is a continuous time version of the binomial option pricing model in which the value of an option is equal to the value of two components: a stock component and a zero-coupon bond component. Traders use a replicating strategy to continuously rebalance the stock and zero-coupon bond components such that that no arbitrage opportunities are available. Shannon outlines a no-arbitrage trading strategy for call options."
+      ],
+      [
+        "p",
+        "Fish then responds with three comments regarding put options:"
+      ],
+      [
+        "p",
+        "Comment 1: The value of the put option is 9.42.\nComment 2: The probability of the put option expiring out of the money is 48%.\nComment 3: A component of the replicating strategy is to buy .363 xero-coupon bonds."
+      ],
+      [
+        "p",
+        "Fish asks Shannon to describe an options delta hedge. Shannon replies that the delta hedge ratio is used to maintain a “delta-neutral portfolio,” which, in theory, does not change in value following small changes in the underlying stock. Shannon uses the information from Exhibits 1 and 2 to calculate the appropriate delta hedge for a one-year put option written on 1,000 shares of ABC stock."
+      ],
+      [
+        "p",
+        "Fish states that delta is just one of several measures referred to as “option Greeks.” Option Greeks address how the movement of BSM model parameters affects the value of options. Other option Greeks are Rho, Vega, and Theta. Fish explains that option Greeks are static risk measures that capture the impact of small changes in BSM model parameters on the value of options, holding all other BSM model parameters constant. Fish displays a chart, shown as Exhibit 3, which illustrates the relationship among option Greeks, the parameters they measure, and the directional change in value of call options and put options."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Relationship among Options Greeks, Measured Parameters, Call Options, and Put Options",
+          "head": [
+            "Option Greeks",
+            "Measured Parameter Is:",
+            "Call Value Is:",
+            "Put Value"
+          ],
+          "rows": [
+            [
+              "Rho",
+              "Higher | Lower",
+              "Higher | Lower",
+              "Lower | Higher"
+            ],
+            [
+              "Vega",
+              "Higher | Lower",
+              "Higher | Lower",
+              "Higher | Lower"
+            ],
+            [
+              "Theta",
+              "More | Less",
+              "Higher | Lower",
+              "Lower | Higher"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on the information in Exhibits 1 and 2, the initial no-arbitrage trading strategy to replicate buying a call option on ABC stock is most likely to:",
+        "options": [
+          "buy .346 ABC shares; short sell .046 zero-coupon bonds.",
+          "buy .637 ABC shares; short sell .520 zero-coupon bonds.",
+          "buy .363 ABC shares; short sell .480 zero-coupon bonds."
+        ],
+        "answer": 1,
+        "why": "(Missing formulas rebuilt.)\nBSM call: c = S·N(d1) − Xe^(−rT)·N(d2)\nSo a long call = a leveraged stock position:\n• buy N(d1) = 0.637 shares (the call's delta)\n• financed by short selling N(d2) = 0.520 zero-coupon bonds (each paying X at T)\nc = 105 × 0.637 − 100e^(−0.01) × 0.520 = 66.89 − 51.48 = 15.40\nWhere d1 and d2 come from:\nd1 = [[ln(S/X) + (r + σ²/2)T|σ√T]] = [[ln(1.05) + (0.01 + 0.045)|0.30]] = [[0.0488 + 0.055|0.30]] = 0.346\nd2 = d1 − σ√T = 0.346 − 0.30 = 0.046\nA uses d1 and d2 themselves, not the probabilities N(d1) and N(d2).\nC uses N(−d1) and N(−d2), the PUT components."
+      },
+      {
+        "q": "Based on the information in Exhibits 1 and 2, which comment by Fish regarding put options is most likely correct?",
+        "options": [
+          "Comment 1",
+          "Comment 2",
+          "Comment 3"
+        ],
+        "answer": 0,
+        "why": "(Missing formula rebuilt.)\nBSM put: p = Xe^(−rT)·N(−d2) − S·N(−d1)\np = 100 × e^(−0.01) × 0.480 − 105 × 0.363 = 0.990 × 48.0 − 38.12 ≈ 9.42 (Comment 1 is correct.)\nComment 2 is wrong: N(−d2) = 48% is the risk-neutral probability the put expires IN the money (S_T < X), not out of the money.\nComment 3 is wrong: the put's replicating strategy is to SHORT N(−d1) = 0.363 shares and BUY N(−d2) = 0.480 zero-coupon bonds. The 0.363 is the share amount, not the bond amount."
+      },
+      {
+        "q": "What transaction in shares of ABC is most likely appropriate for Shannon’s delta hedge calculation?",
+        "options": [
+          "Short sell 363 shares",
+          "Purchase 480 shares",
+          "Short sell 637 shares"
+        ],
+        "answer": 0,
+        "why": "Put delta = N(d1) − 1 = −N(−d1) = −0.363\nA LONG put on 1,000 shares has delta −363; a WRITTEN (short) put has delta +363, so it gains when ABC rises.\nTo be delta-neutral, offset +363 with −363: short sell 363 shares.\n(Check: −1 × −0.363 × 1,000 = +363 from the short put; −363 from the shares → net 0.)\nB uses N(−d2) = 0.480, a probability, not delta, and buying shares adds to the long exposure.\nC uses N(d1) = 0.637, the CALL delta."
+      },
+      {
+        "q": "In Exhibit 3, with respect to measured parameter, call value, and put value, Fish is least likely correct about:",
+        "options": [
+          "rho.",
+          "vega.",
+          "theta."
+        ],
+        "answer": 2,
+        "why": "Theta is wrong: with MORE time to expiration, both calls and puts are generally worth MORE (as time passes, value decays). Exhibit 3 shows the put value falling with more time.\nRho is shown correctly (A is wrong): higher rates → call up (borrowing to buy stock in the replicating portfolio is cheaper in PV terms), put down (the forgone interest on proceeds from shorting stock matters more).\nVega is shown correctly (B is wrong): higher volatility → both calls and puts are worth more. Volatility is the only BSM input that isn't directly observed; it's often implied from option prices."
+      }
+    ]
   }
 ];
 
