@@ -8647,6 +8647,225 @@ const VIGNETTES = [
         "why": "Theta is wrong: with MORE time to expiration, both calls and puts are generally worth MORE (as time passes, value decays). Exhibit 3 shows the put value falling with more time.\nRho is shown correctly (A is wrong): higher rates → call up (borrowing to buy stock in the replicating portfolio is cheaper in PV terms), put down (the forgone interest on proceeds from shorting stock matters more).\nVega is shown correctly (B is wrong): higher volatility → both calls and puts are worth more. Volatility is the only BSM input that isn't directly observed; it's often implied from option prices."
       }
     ]
+  },
+  {
+    "id": "prostar",
+    "title": "Steele Ferguson: Pro Star Bonds",
+    "topic": "Fixed Income",
+    "reading": "Valuation and Analysis of Bonds with Embedded Options",
+    "body": [
+      [
+        "p",
+        "Samuel & Sons is a fixed-income specialty firm that offers advisory services to investment management companies. On 1 October 20X0, Steele Ferguson, a senior analyst at Samuel, is reviewing three fixed-rate bonds issued by a local firm, Pro Star, Inc. The three bonds, whose characteristics are given in Exhibit 1, carry the highest credit rating."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Fixed-Rate Bonds Issued by Pro Star, Inc.",
+          "head": [
+            "Bond",
+            "Maturity",
+            "Coupon",
+            "Type of Bond"
+          ],
+          "rows": [
+            [
+              "Bond #1",
+              "1 October 20X3",
+              "4.40% annual",
+              "Option-free"
+            ],
+            [
+              "Bond #2",
+              "1 October 20X3",
+              "4.40% annual",
+              "Callable at par on 1 October 20X1 and on 1 October 20X2"
+            ],
+            [
+              "Bond #3",
+              "1 October 20X3",
+              "4.40% annual",
+              "Putable at par on 1 October 20X1 and on 1 October 20X2"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The one-year, two-year, and three-year par rates are 2.250%, 2.750%, and 3.100%, respectively. Based on an estimated interest rate volatility of 10%, Ferguson constructs the binomial interest rate tree shown in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Binomial Interest Rate Tree",
+          "head": [
+            "",
+            "Year 0",
+            "Year 1",
+            "Year 2"
+          ],
+          "rows": [
+            [
+              "Upper",
+              "2.25%",
+              "3.5930%",
+              "4.6470%"
+            ],
+            [
+              "Middle",
+              "",
+              "",
+              "3.8046%"
+            ],
+            [
+              "Lower",
+              "",
+              "2.9417%",
+              "3.1150%"
+            ]
+          ],
+          "note": "Laid out as a table from the original tree chart: year 1 rates from top to bottom are 3.5930% and 2.9417%; year 2 rates are 4.6470%, 3.8046% and 3.1150%."
+        }
+      ],
+      [
+        "p",
+        "On 19 October 20X0, Ferguson analyzes the convertible bond issued by Pro Star given in Exhibit 3. That day, the option-free value of Pro Star’s convertible bond is $1,060 and its stock price $37.50."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Convertible Bond Issued by Pro Star, Inc.",
+          "head": [
+            "",
+            ""
+          ],
+          "rows": [
+            [
+              "Issue Date:",
+              "6 December 20X0"
+            ],
+            [
+              "Maturity Date:",
+              "6 December 20X4"
+            ],
+            [
+              "Coupon Rate:",
+              "2%"
+            ],
+            [
+              "Issue Price:",
+              "$1,000"
+            ],
+            [
+              "Conversion Ratio:",
+              "31"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "The call feature of Bond #2 is best described as:",
+        "options": [
+          "European style.",
+          "American style.",
+          "Bermudan style."
+        ],
+        "answer": 2,
+        "why": "The call can be exercised only on set dates (1 October 20X1 and 1 October 20X2), so it's Bermudan style.\nA (European) allows exercise on ONE date only.\nB (American) allows exercise at ANY time after the first call date."
+      },
+      {
+        "q": "The bond that would most likely protect investors against a significant increase in interest rates is:",
+        "options": [
+          "Bond #1.",
+          "Bond #2.",
+          "Bond #3."
+        ],
+        "answer": 2,
+        "why": "The putable bond (Bond #3) lets holders sell the bond back at par when rates rise, then reinvest at the new higher yields. Its price falls less than the straight bond's.\nBond #1 (option-free) has no protection; its price just falls as rates rise.\nBond #2 (callable) gives the option to the ISSUER, which helps the issuer when rates FALL, not the investor when rates rise."
+      },
+      {
+        "q": "A fall in interest rates would most likely result in:",
+        "options": [
+          "a decrease in the effective duration of Bond #3.",
+          "Bond #3 having more upside potential than Bond #2.",
+          "a change in the effective convexity of Bond #3 from positive to negative."
+        ],
+        "answer": 1,
+        "why": "When rates fall, bond prices rise. A callable bond's (#2) upside is capped because the issuer is more likely to call it at par; a putable bond's (#3) upside isn't capped.\nA is wrong: as rates fall, the put is less likely to be exercised, so Bond #3 behaves more like a straight bond and its effective duration RISES.\nC is wrong: a putable bond's effective convexity is always positive. Negative convexity is a CALLABLE bond feature when rates fall and the call is near the money."
+      },
+      {
+        "q": "The value of Bond #2 is closest to:",
+        "options": [
+          "102.103% of par.",
+          "103.121% of par.",
+          "103.744% of par."
+        ],
+        "answer": 0,
+        "why": "(Missing tree rebuilt.) Work backwards from year 3 (cash flow 104.40). At each call date, value = min(value, 100), since the issuer calls when the bond is worth more than par.\nYear 2 (value of 104.40 one year later):\nUpper: [[104.40|1.046470]] = 99.764 → 99.764 (not called)\nMiddle: [[104.40|1.038046]] = 100.573 → called at 100\nLower: [[104.40|1.031150]] = 101.246 → called at 100\nYear 1:\nUpper: [[0.5(99.764 + 100) + 4.40|1.035930]] = 100.668 → called at 100\nLower: [[0.5(100 + 100) + 4.40|1.029417]] = 101.417 → called at 100\nYear 0: [[0.5(100 + 100) + 4.40|1.0225]] = 102.103\nB (103.121) only applies the call at year 2 and ignores the year-1 call date.\nC (103.744) is the PUTABLE bond (#3). The straight bond is 103.688; a call can only push value below it."
+      },
+      {
+        "q": "The value of Bond #3 is closest to:",
+        "options": [
+          "102.103% of par.",
+          "103.688% of par.",
+          "103.744% of par."
+        ],
+        "answer": 2,
+        "why": "(Missing tree rebuilt.) At each put date, value = max(value, 100), since holders put the bond when it's worth less than par.\nYear 2:\nUpper: [[104.40|1.046470]] = 99.764 → put at 100\nMiddle: [[104.40|1.038046]] = 100.573\nLower: [[104.40|1.031150]] = 101.246\nYear 1:\nUpper: [[0.5(100 + 100.573) + 4.40|1.035930]] = 101.057 (above par, not put)\nLower: [[0.5(100.573 + 101.246) + 4.40|1.029417]] = 102.300\nYear 0: [[0.5(101.057 + 102.300) + 4.40|1.0225]] = 103.744\nB (103.688) is the straight (option-free) bond, Bond #1. Value of the put = 103.744 − 103.688 = 0.056.\nA (102.103) is the CALLABLE bond (#2)."
+      },
+      {
+        "q": "All else being equal, a rise in interest rates will most likely result in the value of the option embedded in Bond #3:",
+        "options": [
+          "decreasing.",
+          "remaining unchanged.",
+          "increasing."
+        ],
+        "answer": 2,
+        "why": "Higher rates push the straight bond's value below par, so the put (sell at par) is more likely to be exercised and is worth more.\nPutable bond = straight bond + put: the fall in the straight bond is partly offset by the rise in the put, so A and B are wrong."
+      },
+      {
+        "q": "All else being equal, if Ferguson assumes an interest rate volatility of 15% instead of 10%, the bond that would most likely increase in value is:",
+        "options": [
+          "Bond #1.",
+          "Bond #2.",
+          "Bond #3."
+        ],
+        "answer": 2,
+        "why": "Higher volatility raises the value of ANY option.\nPutable (#3) = straight + put → the investor owns the option, so value RISES.\nCallable (#2) = straight − call → the investor is short the option, so value FALLS.\nOption-free (#1): the tree is calibrated to the same par curve, so its value is unchanged by volatility."
+      },
+      {
+        "q": "All else being equal, if the shape of the yield curve changes from upward sloping to flattening, the value of the option embedded in Bond #2 will most likely:",
+        "options": [
+          "decrease.",
+          "remain unchanged.",
+          "increase."
+        ],
+        "answer": 2,
+        "why": "With an upward-sloping curve, forward rates on the tree are high, so there are fewer nodes where calling pays.\nAs the curve flattens (or inverts), forward rates are lower at more nodes, so there are more chances to call at par. The call is worth MORE (A and B are wrong).\n(The reverse holds for a put: it's worth more when the curve is upward sloping, since higher future rates make putting more attractive.)"
+      },
+      {
+        "q": "The conversion price of the bond in Exhibit 3 is closest to:",
+        "options": [
+          "$26.67.",
+          "$32.26.",
+          "$34.19."
+        ],
+        "answer": 1,
+        "why": "Conversion price = [[par value (issue price)|conversion ratio]] = [[1,000|31]] = $32.26 per share\nA ($26.67) = 1,000 / 37.50: par divided by the STOCK PRICE.\nC ($34.19) = 1,060 / 31: uses the option-free (straight) value instead of par."
+      },
+      {
+        "q": "If the market price of Pro Star’s common stock falls from its level on 19 October 20X0, the price of the convertible bond will most likely:",
+        "options": [
+          "fall at the same rate as Pro Star’s stock price.",
+          "fall but at a slightly lower rate than Pro Star’s stock price.",
+          "be unaffected until Pro Star’s stock price reaches the conversion price."
+        ],
+        "answer": 1,
+        "why": "Conversion value = conversion ratio × stock price = 31 × 37.50 = $1,162.50\nThis is above the straight value ($1,060), so the convertible trades mostly like the stock (it's in the money: 37.50 > conversion price 32.26).\nIt falls when the stock falls, but by LESS, because the straight-bond value ($1,060) acts as a floor. That rules out A.\nC is wrong: the price responds right away; the stock doesn't need to reach the conversion price first."
+      }
+    ]
   }
 ];
 

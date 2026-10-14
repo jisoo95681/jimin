@@ -3941,6 +3941,158 @@ const QUESTIONS = [
     options: ["The change in option value per unit of time", "The change in delta for a small change in S", "The change in value for a change in σ"],
     answer: 1,
     why: "Gamma is highest for at-the-money options close to expiration; it shows how quickly a delta hedge drifts."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "An embedded option that can be exercised only on a set of specified dates is:",
+    options: ["Bermudan style", "American style", "European style"],
+    answer: 0,
+    why: "European = one date; American = any time after the first call date; Bermudan = several set dates."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "An American-style call can be exercised:",
+    options: ["Only on the single expiration date", "Any time after the first call date", "Only on a few predetermined dates"],
+    answer: 1,
+    why: "The first option describes European style; the third describes Bermudan style."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Value of a callable bond equals:",
+    options: ["Straight bond + value of call", "Value of call − straight bond", "Straight bond − value of call"],
+    answer: 2,
+    why: "The investor is short the call (the issuer owns it)."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Value of a putable bond equals:",
+    options: ["Straight bond + value of put", "Straight bond − value of put", "Value of put − straight bond"],
+    answer: 0,
+    why: "The investor owns the put, so it adds to value."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Which bond best protects an investor against rising interest rates?",
+    options: ["A callable bond", "A putable bond", "An option-free bond"],
+    answer: 1,
+    why: "The holder can sell it back at par and reinvest at the higher rates."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "In a binomial tree, at a CALL date the node value is:",
+    options: ["max(computed value, call price)", "The computed value only", "min(computed value, call price)"],
+    answer: 2,
+    why: "The issuer calls when the bond is worth more than the call price, capping value."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "In a binomial tree, at a PUT date the node value is:",
+    options: ["max(computed value, put price)", "min(computed value, put price)", "The put price at every node"],
+    answer: 0,
+    why: "Holders put when the bond is worth less than the put price, so value never goes below it."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Higher interest rate volatility makes a callable bond's value:",
+    options: ["Rise", "Fall", "Stay unchanged"],
+    answer: 1,
+    why: "The embedded call is worth more, and the investor is short it."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Higher interest rate volatility makes a putable bond's value:",
+    options: ["Rise", "Fall", "Stay unchanged"],
+    answer: 0,
+    why: "The embedded put is worth more, and the investor owns it."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Higher interest rate volatility makes an option-free bond's value:",
+    options: ["Rise, as the option-free bond gains", "Fall, as the call is worth more", "Stay unchanged"],
+    answer: 2,
+    why: "A tree calibrated to the same par curve prices an option-free bond the same at any volatility."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "As the yield curve flattens from upward sloping, an embedded call option's value:",
+    options: ["Increases", "Decreases", "Is unaffected"],
+    answer: 0,
+    why: "Lower forward rates at more nodes mean more chances to call."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "An embedded put option is worth more when the yield curve is:",
+    options: ["Flat or inverted", "Upward sloping", "Humped in the middle"],
+    answer: 1,
+    why: "Higher forward rates mean more nodes where the bond falls below par and is put."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "As interest rates fall, a putable bond's effective duration:",
+    options: ["Falls as the put gets more valuable", "Stays the same, as the put caps it", "Rises toward a straight bond's"],
+    answer: 2,
+    why: "The put is less likely to be used, so the bond behaves like an option-free bond."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Which bond can show NEGATIVE effective convexity?",
+    options: ["A callable bond when rates are low", "A putable bond when rates are high", "An option-free bond at any rate"],
+    answer: 0,
+    why: "Price gains are capped near the call price. Putable bonds always have positive convexity."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Which bond has more upside when rates fall?",
+    options: ["A callable bond", "A putable bond", "Both have equal upside"],
+    answer: 1,
+    why: "The call caps a callable bond's price gains; the putable bond's upside is not capped."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Conversion price of a convertible bond equals:",
+    options: ["Par value ÷ conversion ratio", "Stock price × conversion ratio", "Straight value ÷ conversion ratio"],
+    answer: 0,
+    why: "Stock price × conversion ratio is the conversion value, not the conversion price."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "Conversion value of a convertible bond equals:",
+    options: ["Par value ÷ conversion ratio", "Conversion ratio × stock price", "Straight value + call option"],
+    answer: 1,
+    why: "E.g. 31 shares × $37.50 = $1,162.50."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "The minimum value of a convertible bond is:",
+    options: ["Its par value, repaid at maturity", "Its conversion price times the conversion ratio", "The higher of conversion value and straight value"],
+    answer: 2,
+    why: "A convertible is worth at least what it's worth as a bond or as shares, whichever is higher."
+  },
+  {
+    topic: "Fixed Income",
+    reading: "Valuation and Analysis of Bonds with Embedded Options",
+    q: "When conversion value is well above straight value, a convertible bond behaves mostly like:",
+    options: ["A straight bond", "The underlying stock", "A money market fund"],
+    answer: 1,
+    why: "It moves with the stock, but by less on the way down because the straight value acts as a floor."
   }
 ];
 
