@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v108 · 2026-10-14";
+  const APP_VERSION = "v109 · 2026-10-15";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1450,8 +1450,36 @@
   const MIN_SESSION_SEC = 5; // ignore accidental start/pause taps
 
   function loadStudy() {
-    try { const s = JSON.parse(localStorage.getItem(STUDY_KEY)); if (s && s.days) return { timer: {}, ...s }; } catch {}
-    return { days: {}, timer: {} };
+    let s = { days: {}, timer: {} };
+    try { const t = JSON.parse(localStorage.getItem(STUDY_KEY)); if (t && t.days) s = { timer: {}, ...t }; } catch {}
+    return seedPlan(s);
+  }
+  // The final-weeks plan (D-28 to D-1): question-bank rounds (two topics a day, ~110 questions), mocks and their reviews.
+  // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
+  const QB = [["Equity 1/3 · 49 Qs", "Port 1/2 · 69 Qs", 118], ["FSA 1/3 · 47 Qs", "FI 1/2 · 68 Qs", 115], ["Econ 1/2 · 50 Qs", "Deriv 1/2 · 49 Qs", 99],
+    ["Equity 2/3 · 49 Qs", "Quant 1/2 · 67 Qs", 116], ["FSA 2/3 · 47 Qs", "Port 2/2 · 69 Qs", 116], ["Alt 1/2 · 50 Qs", "Econ 2/2 · 50 Qs", 100],
+    ["Equity 3/3 · 49 Qs", "FI 2/2 · 67 Qs", 116], ["FSA 3/3 · 47 Qs", "Quant 2/2 · 67 Qs", 114], ["Alt 2/2 · 49 Qs", "Deriv 2/2 · 49 Qs", 98]];
+  function finalPlan() {
+    const plan = { 28: ["Mock 1"], 9: ["Mock 2"], 8: ["Review Mock 2 mistakes"], 7: ["Mock 3"], 6: ["Review Mock 3 mistakes"],
+      5: ["Weak areas & formulas", "Ethics revision"], 4: ["Weak areas & formulas", "Ethics revision"], 3: ["Mock 4 (exam conditions)"],
+      2: ["Review Mock 4 mistakes", "Formula sheet & Ethics skim"], 1: ["Rest · light skim only"] };
+    QB.forEach(([a, b, n], i) => [27 - i, 18 - i].forEach((d, r) => {
+      const m = n * 3;
+      plan[d] = [a, b, `Q bank round ${r + 1} · ${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`];
+    }));
+    return plan;
+  }
+  function seedPlan(s) {
+    s.seeded = s.seeded || [];
+    if (s.seeded.includes("final-weeks-1")) return s;
+    Object.entries(finalPlan()).forEach(([n, texts]) => {
+      const d = midnight(EXAM); d.setDate(d.getDate() - Number(n));
+      const day = dayOf(s, dkey(d));
+      texts.forEach(text => { if (!day.tasks.some(t => t.text === text)) day.tasks.push({ text, done: false }); });
+    });
+    s.seeded.push("final-weeks-1");
+    saveStudy(s);
+    return s;
   }
   function saveStudy(s) {
     try { localStorage.setItem(STUDY_KEY, JSON.stringify(s)); } catch {}
