@@ -4445,6 +4445,110 @@ const QUESTIONS = [
     options: ["Material transactions with the investee", "Owning more than 50% of the votes only", "Holding non-voting preferred shares too"],
     answer: 0,
     why: "Other signs: taking part in policy-making, exchange of managers, technological dependency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under FVPL, income from an equity investment includes:",
+    options: ["Dividends only, with gains going to OCI", "Dividends plus realized and unrealized gains", "The investor's share of investee net income"],
+    answer: 1,
+    why: "All fair value changes go through profit or loss."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under FVOCI (equity securities), unrealized gains are reported in:",
+    options: ["Profit or loss", "Other comprehensive income", "Retained earnings directly at once"],
+    answer: 1,
+    why: "Only dividends hit profit or loss; fair value changes go to OCI."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Taking a share of the investee's net income into the investor's income is the:",
+    options: ["Equity method", "FVPL method", "FVOCI method"],
+    answer: 0,
+    why: "The equity method needs significant influence (typically 20%–50%)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, dividends received from the associate:",
+    options: ["Are reported as dividend income", "Increase the investment account", "Reduce the investment account"],
+    answer: 2,
+    why: "They're treated as a return of the investment, not as income."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, the share of a fair-value uplift on depreciable equipment:",
+    options: ["Reduces equity income through extra depreciation", "Increases equity income each year it is held", "Is added to goodwill and is never amortized"],
+    answer: 0,
+    why: "E.g. 25% × €40m / 5 years = €2m a year."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "When an acquired subsidiary's inventory is undervalued, under FIFO the uplift:",
+    options: ["Is depreciated over the inventory's useful life", "Goes to cost of sales as that inventory is sold", "Is added to goodwill on acquisition"],
+    answer: 1,
+    why: "Under FIFO the old inventory is usually sold in the first year, so the uplift is expensed then."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under US GAAP, goodwill on acquiring a subsidiary must use the:",
+    options: ["Partial goodwill method", "Full goodwill method", "Either partial or full, by choice"],
+    answer: 1,
+    why: "IFRS allows either; US GAAP requires full goodwill."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the partial goodwill method, NCI is measured at its share of the subsidiary's:",
+    options: ["Total fair value, including goodwill", "Book value of net assets", "Fair value of identifiable net assets"],
+    answer: 2,
+    why: "So NCI has no claim on goodwill under partial goodwill."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the full goodwill method, NCI is measured at its share of the subsidiary's:",
+    options: ["Total fair value, including goodwill", "Fair value of identifiable net assets only", "Book value at the acquisition date"],
+    answer: 0,
+    why: "So NCI and goodwill are both higher than under partial goodwill."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Compared with partial goodwill, the full goodwill method gives:",
+    options: ["Lower total assets and lower equity", "Higher total assets and higher equity", "The same assets but higher net income"],
+    answer: 1,
+    why: "Higher goodwill (asset) and higher NCI (equity)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Compared with partial goodwill, full goodwill makes ROA and asset turnover:",
+    options: ["Higher, as more goodwill is recorded", "Unchanged, as goodwill is not amortized", "Lower, as total assets are higher"],
+    answer: 2,
+    why: "Net income and revenue are the same; only the asset base is bigger."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Paying for an acquisition by issuing shares, before consolidation, makes debt-to-assets:",
+    options: ["Fall, as assets rise and debt stays the same", "Stay the same, as one asset swaps for another", "Rise, as the new investment adds more risk"],
+    answer: 0,
+    why: "Paying cash would swap one asset for another and leave the ratio unchanged."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Paying for an acquisition with cash, before consolidation, makes debt-to-assets:",
+    options: ["Fall, as the new investment is recorded", "Stay the same, as one asset replaces another", "Rise, as the cash leaves the balance sheet"],
+    answer: 1,
+    why: "+ investment, − cash: total assets don't change."
   }
 ];
 

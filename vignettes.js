@@ -9382,6 +9382,72 @@ const VIGNETTES = [
         "why": "Comment 1 is correct: the SPE is bankruptcy-remote from Bardem, and its lenders have a direct claim on the receivables, so the SPE can borrow at a LOWER rate than Bardem could.\nComment 2 is wrong: on Bardem's own books, receivables fall by €75m and cash rises by €70m (75 received − 5 invested), so current assets don't increase.\nComment 3 is wrong: Bardem controls the SPE, so it must CONSOLIDATE it. The receivables (75) and the SPE's debt (70) come back onto Bardem's balance sheet, which then looks the same as if it had simply borrowed €70m against the receivables. The ratios don't change."
       }
     ]
+  },
+  {
+    "id": "ernst",
+    "title": "Robert Krey: Ernst AG's Three Investments",
+    "topic": "Financial Statement Analysis",
+    "reading": "Intercorporate Investments",
+    "body": [
+      [
+        "p",
+        "Robert Krey is a financial analyst who is evaluating the financial statements of Ernst AG, a German manufacturing company that reports under IFRS. During the current year, Ernst invested in three different companies (Astrid, Balto, and Cordeau) that are based in the eurozone. All three investments were acquired on 1 January of the current year. Krey wants to determine the effect of these investments on Ernst's current year financial statements and ratios."
+      ],
+      [
+        "p",
+        "Ernst purchased a 10% ownership interest in Astrid for €90 million. During the current year, Astrid reported €80 million in pre-tax income and paid €40 million in dividends. The fair value of Astrid shares at 31 December of the current year was €970 million. Ernst accounts for Astrid by using the fair value through profit or loss (FVPL) method."
+      ],
+      [
+        "p",
+        "A 25% ownership interest in Balto was purchased for €500 million. The fair values of all Balto's assets and liabilities were equal to their book values except for equipment which was undervalued by €40 million. The undervalued equipment has a remaining useful life of 5 years and will be fully depreciated by using the straight-line method. Ernst has significant influence over Balto but it does not have control. During the current year, Balto reported €140 million in income and paid €40 million in dividends."
+      ],
+      [
+        "p",
+        "For Cordeau, Ernst exchanged €1,800 million in shares to acquire a 75% controlling interest in Cordeau. The book value of Cordeau on 1 January was €2,000 million. On that date, Cordeau's inventory was undervalued by €60 million. All other recorded assets and liabilities were equal to their fair values. Cordeau applies the FIFO inventory valuation method and Ernst uses the partial goodwill method when it consolidates Cordeau. Cordeau's primary competitor is a US company that reports under US GAAP. For the current year, Cordeau reported net income of €240 million and paid €40 million in dividends."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "For the current year, Ernst reported pre-tax income from Astrid in the amount of:",
+        "options": [
+          "€4 million.",
+          "€8 million.",
+          "€11 million."
+        ],
+        "answer": 2,
+        "why": "Under FVPL, income = dividends + ALL fair value changes (realized or unrealized):\nDividend income: 10% × €40m = €4m\nUnrealized gain: 10% × €970m = €97m year-end value − €90m cost = €7m\nTotal = €4m + €7m = €11m\nA (€4m) is dividends only. That's what FVOCI would show in profit, because there the €7m gain goes to other comprehensive income.\nB (€8m) is 10% × Astrid's €80m pre-tax income, which is equity-method accounting and needs significant influence."
+      },
+      {
+        "q": "At the end of the current year, Ernst's investment in Balto has a recorded balance of:",
+        "options": [
+          "€523 million.",
+          "€525 million.",
+          "€533 million."
+        ],
+        "answer": 0,
+        "why": "Equity method: ending balance = cost + share of income − excess depreciation − share of dividends\nShare of income: 25% × €140m = €35m\nExtra depreciation on the equipment uplift: 25% × [[€40m|5 years]] = €2m → equity income = €33m\nDividends received: 25% × €40m = €10m (reduces the investment)\nEnding balance = 500 + 33 − 10 = €523m\nB (€525m) leaves out the €2m extra depreciation.\nC (€533m) doesn't deduct the dividends; under the equity method they're a return of investment, not income."
+      },
+      {
+        "q": "If Ernst had presented its consolidated statements for Cordeau in the same manner as its primary competitor, it would have a higher:",
+        "options": [
+          "return on assets for the current year.",
+          "total equity balance for the current year.",
+          "total asset turnover ratio for the current year."
+        ],
+        "answer": 1,
+        "why": "US GAAP requires the FULL goodwill method; Ernst uses PARTIAL goodwill (allowed under IFRS).\nWorked numbers:\nFair value of identifiable net assets = 2,000 + 60 = €2,060m\nPartial: goodwill = 1,800 − 75% × 2,060 = €255m; NCI = 25% × 2,060 = €515m\nFull: implied value of Cordeau = [[1,800|0.75]] = €2,400m; goodwill = 2,400 − 2,060 = €340m; NCI = 25% × 2,400 = €600m\nFull goodwill → higher goodwill (assets) AND higher NCI, which is part of equity → higher total equity.\nA is wrong: net income is the same (goodwill isn't amortized), but assets are higher, so ROA is LOWER.\nC is wrong: revenue is the same and assets are higher, so asset turnover is LOWER."
+      },
+      {
+        "q": "Upon acquiring a controlling ownership interest in Cordeau on 1 January, Ernst's pre-consolidation debt-to-assets ratio:",
+        "options": [
+          "decreased.",
+          "remained unchanged.",
+          "increased."
+        ],
+        "answer": 0,
+        "why": "Ernst paid in SHARES, not cash:\nAssets: + €1,800m investment in Cordeau\nEquity: + €1,800m new shares issued\nDebt: unchanged\nDebt / assets: same numerator, bigger denominator → ratio DECREASES.\nB would be right only if Ernst paid cash: +1,800 investment and −1,800 cash leave total assets unchanged.\nC would need assets to fall or debt to rise, and neither happened."
+      }
+    ]
   }
 ];
 
