@@ -4341,6 +4341,110 @@ const QUESTIONS = [
     options: ["A probability between 0 and 1 for Class 1", "A count of each token in the bag of words", "The document term matrix for the corpus"],
     answer: 0,
     why: "The probability is compared with the threshold to assign a class."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, goodwill on the investment is:",
+    options: ["Shown as a separate intangible asset on the balance sheet", "Included in the investment's carrying amount", "Written off immediately to income"],
+    answer: 1,
+    why: "Goodwill is part of the single-line investment account, not shown separately."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Goodwill on an equity-method investment is calculated as:",
+    options: ["Price − share of FAIR value of net assets", "Price − share of BOOK value of net assets", "Share of fair value − share of book value"],
+    answer: 0,
+    why: "Price − share of book value lumps the fair-value uplift and goodwill together."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, the investor's share of a fair-value uplift on the investee's PLANT is:",
+    options: ["Ignored after acquisition, as it is a one-off", "Added to goodwill and tested for impairment", "Depreciated, reducing equity income"],
+    answer: 2,
+    why: "The excess over book value on depreciable assets is amortized over their useful lives."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Under the equity method, the investor's share of a fair-value uplift on the investee's LAND is:",
+    options: ["Not depreciated", "Depreciated over 20 years", "Expensed in the first year"],
+    answer: 0,
+    why: "Land isn't depreciated, so the uplift stays in the investment account until the land is sold or impaired."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "An equity-method investment is tested for impairment:",
+    options: ["By testing its goodwill separately", "As a single asset, in its entirety", "Only if the investee pays no dividends"],
+    answer: 1,
+    why: "Recoverable amount vs carrying amount for the whole investment."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "An impairment loss on an equity-method investment is recognized:",
+    options: ["Directly in other comprehensive income", "Only in the notes, never in the accounts", "On the income statement"],
+    answer: 2,
+    why: "The same under IFRS and US GAAP; the carrying amount is written down."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Allocating impairment losses beyond goodwill pro rata to other assets applies to:",
+    options: ["A consolidated subsidiary's cash-generating unit", "An equity-method investment in an associate company", "A financial asset measured at fair value through profit"],
+    answer: 0,
+    why: "The equity-method investment is impaired as one asset, so there is no such allocation."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "When an investor sells goods to its associate (downstream), unrealized profit is:",
+    options: ["Eliminated in full, as with a subsidiary", "Eliminated to the extent of the investor's ownership", "Not eliminated at all, as it is an arm's-length sale"],
+    answer: 1,
+    why: "E.g. with a 25% stake, 25% of the unsold profit is deferred until the goods are sold to third parties."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "A special purpose entity (SPE) is often able to borrow at lower rates because it is:",
+    options: ["Bankruptcy-remote from the sponsor", "Exempt from consolidation rules", "Backed by the sponsor's whole balance sheet"],
+    answer: 0,
+    why: "Lenders have a direct claim on the SPE's assets (e.g. receivables)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "If a sponsor CONTROLS its SPE, the SPE must be:",
+    options: ["Accounted for at cost, less any impairment", "Accounted for by the equity method as an associate", "Consolidated into the sponsor's statements"],
+    answer: 2,
+    why: "Its assets and debt come back onto the sponsor's balance sheet."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Securitizing receivables through a controlled, consolidated SPE affects the sponsor's balance sheet ratios:",
+    options: ["Improves them, as debt moves off-balance-sheet", "Leaves them the same as direct borrowing", "Worsens them, as assets are removed"],
+    answer: 1,
+    why: "After consolidation the result matches borrowing against the receivables."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "Selling €75m of receivables to an SPE for cash (after investing €5m in it) leaves the sponsor's own current assets:",
+    options: ["Higher by €75m, as the cash comes in from the SPE", "Higher by €5m, from the investment in the SPE", "Lower, as receivables fall more than cash rises"],
+    answer: 2,
+    why: "Receivables −75, cash +75 −5 = net −5 on the sponsor's own books."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Intercorporate Investments",
+    q: "An investor with 25% of the votes but no board seat can still have significant influence through:",
+    options: ["Material transactions with the investee", "Owning more than 50% of the votes only", "Holding non-voting preferred shares too"],
+    answer: 0,
+    why: "Other signs: taking part in policy-making, exchange of managers, technological dependency."
   }
 ];
 

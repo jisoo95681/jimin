@@ -9257,6 +9257,131 @@ const VIGNETTES = [
         "why": "With unequal class sizes (few defaults), F1, the harmonic mean of precision and recall, is the better measure.\nPrecision P = [[TP|TP + FP]] = [[118|118 + 32]] = 0.79\nRecall R = [[TP|TP + FN]] = [[118|118 + 8]] = 0.94\nF1 = [[2 × P × R|P + R]] = [[2 × 0.79 × 0.94|0.79 + 0.94]] = 0.86\nA (0.79) is precision alone.\nC (0.92) is accuracy = [[TP + TN|all]] = [[118 + 320|478]], which is flattered by the large number of true negatives when classes are imbalanced."
       }
     ]
+  },
+  {
+    "id": "bardem",
+    "title": "Javier Casado: Bardem and Ariana Shipping",
+    "topic": "Financial Statement Analysis",
+    "reading": "Intercorporate Investments",
+    "body": [
+      [
+        "p",
+        "Javier Casado, an analyst who manages funds for high-net-worth investors, is evaluating Bardem S.A. (Bardem) as a possible addition to a large investment portfolio. Bardem, based in Madrid, Spain, is a manufacturing firm that specializes in packaging materials. The company reports using IFRS, and its reporting currency is the Euro."
+      ],
+      [
+        "p",
+        "Casado learns that Bardem acquired a 25% stake in Ariana Shipping S.A. (Ariana) on 1 January 2020. Ariana, which is based in Greece, has bought packaging supplies from Bardem in the past based on catalog prices. Casado believes that the purchase will change the relationship between the two companies and will also affect Bardem’s financial reporting. He mentions to a coworker, Ana Domingues, that the price paid by Bardem for the Ariana shares was €80 million."
+      ],
+      [
+        "p",
+        "Domingues tells Casado that Bardem’s purchase of Ariana’s equity will likely allow Bardem to influence Ariana’s financial and operating performance. As a result, she states, Bardem will be required to use the equity method of accounting for this investment. Casado replies that the equity method of accounting is only required under IFRS for joint ventures or when the investee holds a seat on the associate’s board of directors."
+      ],
+      [
+        "p",
+        "Bardem prepares the following table to examine the purchase more closely."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Book Values and Fair Values of Ariana Shipping Assets and Liabilities as of 31 December 2019 (€ millions)",
+          "head": [
+            "",
+            "Book Value",
+            "Fair Value"
+          ],
+          "rows": [
+            [
+              "Current assets",
+              "15",
+              "15"
+            ],
+            [
+              "Plant and equipment",
+              "230",
+              "275"
+            ],
+            [
+              "Land",
+              "100",
+              "115"
+            ],
+            [
+              "",
+              "345",
+              "405"
+            ],
+            [
+              "Liabilities",
+              "110",
+              "110"
+            ],
+            [
+              "Net assets",
+              "235",
+              "295"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Domingues says that she is concerned that Bardem didn’t sufficiently investigate Ariana before the purchase, given economic uncertainty surrounding Greek companies. She asks Casado what will happen to Bardem’s financial statements if the value of Ariana is permanently impaired due to business losses or other demonstrable events. Casado replies that if the equity method is not required, then there will be no impact. However, if the equity method is used, he states:"
+      ],
+      [
+        "p",
+        "1. Goodwill must be separately tested for impairment.\n2. Impairment losses should be recognized on the income statement.\n3. Impairment losses exceeding the goodwill value are allocated pro-rata to the unit’s non-cash assets."
+      ],
+      [
+        "p",
+        "Domingues informs Casado of a final piece of information relevant to his evaluation. To increase liquidity, Bardem is considering borrowing €70M against accounts receivable. As an alternative to borrowing, they could securitize the receivables by creating a special purpose entity (SPE) over which they would exercise control. To do so, they would invest €5M in the SPE. The SPE would then borrow €70M, and would buy €75M in receivables from Bardem. Domingues comments that securitization using an SPE would impact Bardem’s reported financial condition in three ways. It would:"
+      ],
+      [
+        "p",
+        "1. reduce the cost of borrowing.\n2. increase the level of current assets.\n3. improve balance sheet ratios."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "In the discussion about using the equity method to account for Bardem’s purchase of Ariana, which statement is most accurate? The statement by:",
+        "options": [
+          "Domingues.",
+          "Casado concerning joint ventures.",
+          "Casado concerning board of directors’ positions."
+        ],
+        "answer": 0,
+        "why": "Domingues is right. A 25% stake (within 20%–50% of voting rights) is presumed to give significant influence, so Ariana is an ASSOCIATE and the equity method is required, unless it's clearly shown that Bardem has no influence.\nB is wrong: the equity method applies to associates as well as joint ventures, not only joint ventures.\nC is wrong: a board seat is one sign of influence, but it isn't required. Others include taking part in policy-making, material transactions between the two companies (Ariana already buys from Bardem), exchange of managers and reliance on technology."
+      },
+      {
+        "q": "If Bardem does use the equity method of accounting for its purchase of Ariana, using Exhibit 1, the value of goodwill, in millions, arising from the purchase is closest to:",
+        "options": [
+          "€6.25.",
+          "€15.00.",
+          "€21.25."
+        ],
+        "answer": 0,
+        "why": "Goodwill = purchase price − investor's share of the FAIR value of net identifiable assets\n= 80 − 25% × 295 = 80 − 73.75 = €6.25m\n(Under the equity method the goodwill isn't shown separately; it's included in the investment's carrying amount.)\nHow the €80m breaks down:\nShare of book value: 25% × 235 = 58.75\nShare of fair value uplift: 25% × (295 − 235) = 15.00 (plant 11.25, land 3.75)\nGoodwill: 6.25\nB (€15.00) is the share of the fair-value uplift, not goodwill.\nC (€21.25) uses BOOK value: 80 − 25% × 235. That lumps the uplift and goodwill together."
+      },
+      {
+        "q": "Which of Casado’s three statements regarding the potential impairment of the investment in Ariana is most accurate? Statement:",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": 1,
+        "why": "Statement 2 is correct: under both IFRS and US GAAP, an impairment of an equity-method investment is recognized as a loss on the income statement (and the carrying amount is written down).\nStatement 1 is wrong: the goodwill is part of the investment's carrying amount, so it is NOT tested separately. The whole investment is tested as a single asset, recoverable amount vs carrying amount.\nStatement 3 is wrong: allocating losses beyond goodwill pro rata to a unit's other assets is the rule for goodwill impairment in a CONSOLIDATED subsidiary's cash-generating unit, not for an equity-method investment."
+      },
+      {
+        "q": "If Bardem creates a special purpose entity rather than borrowing against its receivables, which of Domingues’ comments is most accurate? Comment:",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": 0,
+        "why": "Comment 1 is correct: the SPE is bankruptcy-remote from Bardem, and its lenders have a direct claim on the receivables, so the SPE can borrow at a LOWER rate than Bardem could.\nComment 2 is wrong: on Bardem's own books, receivables fall by €75m and cash rises by €70m (75 received − 5 invested), so current assets don't increase.\nComment 3 is wrong: Bardem controls the SPE, so it must CONSOLIDATE it. The receivables (75) and the SPE's debt (70) come back onto Bardem's balance sheet, which then looks the same as if it had simply borrowed €70m against the receivables. The ratios don't change."
+      }
+    ]
   }
 ];
 
