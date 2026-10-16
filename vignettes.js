@@ -9448,6 +9448,172 @@ const VIGNETTES = [
         "why": "Ernst paid in SHARES, not cash:\nAssets: + €1,800m investment in Cordeau\nEquity: + €1,800m new shares issued\nDebt: unchanged\nDebt / assets: same numerator, bigger denominator → ratio DECREASES.\nB would be right only if Ernst paid cash: +1,800 investment and −1,800 cash leave total assets unchanged.\nC would need assets to fall or debt to rise, and neither happened."
       }
     ]
+  },
+  {
+    "id": "yuen",
+    "title": "Emily Yuen: Growth Factor Backtests and Simulations",
+    "topic": "Portfolio Management",
+    "reading": "Backtesting and Simulation",
+    "body": [
+      [
+        "p",
+        "Emily Yuen is a senior analyst for a consulting firm that specializes in assessing equity strategies using backtesting and simulation techniques. She is working with an assistant, Cameron Ruckey, to develop multifactor portfolio strategies based on nine factors common to the growth style of investing. To do so, Yuen and Ruckey plan to construct nine separate factor portfolios and then use them to create factor-weighted allocation portfolios."
+      ],
+      [
+        "p",
+        "Yuen tasks Ruckey with specifying the investment universe and determining the availability of appropriate reporting data in vendor databases. Ruckey selects a vendor database that does not provide point-in-time data, so he adjusts the database to include point-in-time constituent stocks and a reporting lag of four months."
+      ],
+      [
+        "p",
+        "Next, Yuen and Ruckey run initial backtests on the nine factor portfolios, calculating performance statistics and key metrics for each. For backtesting purposes, the portfolios are rebalanced monthly over a 30-year time horizon using a rolling-window procedure."
+      ],
+      [
+        "p",
+        "Yuen and Ruckey consider a variety of metrics to assess the results of the factor portfolio backtests. Yuen asks Ruckey what can be concluded from the data for three of the factor strategies in Exhibit 1:"
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Backtest Metrics for Factor Strategies",
+          "head": [
+            "",
+            "Factor 1",
+            "Factor 2",
+            "Factor 3"
+          ],
+          "rows": [
+            [
+              "VaR (95%)",
+              "(3.9%)",
+              "(1.3%)",
+              "(8.4%)"
+            ],
+            [
+              "Standard deviation of returns",
+              "2.1%",
+              "1.2%",
+              "4.6%"
+            ],
+            [
+              "Maximum drawdown",
+              "27.2%",
+              "8.3%",
+              "59.7%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Ruckey tells Yuen the following:"
+      ],
+      [
+        "p",
+        "Statement 1: We do not need to consider maximum drawdown, because standard deviation sufficiently characterizes risk.\nStatement 2: Factor 2 has the highest downside risk."
+      ],
+      [
+        "p",
+        "From her professional experience Yuen knows that benchmark and risk parity factor portfolios, in which factors are equally weighted and equally risk weighted, respectively, are popular with institutional and high-net-worth clients. To gain a more complete picture of these investment strategies’ performance, Yuen and Ruckey design a Benchmark Portfolio (A) and a Risk Parity Portfolio (B), and then run two simulation methods to generate investment performance data based on the underlying factor portfolios, assuming 1,000 simulation trials for each approach:"
+      ],
+      [
+        "p",
+        "Approach 1: Historical simulation\nApproach 2: Monte Carlo simulation"
+      ],
+      [
+        "p",
+        "Yuen and Ruckey discuss the differences between the two approaches and then design the simulations, making key decisions at various steps. During the process, Yuen expresses a number of concerns:"
+      ],
+      [
+        "p",
+        "Concern 1: Returns from six of the nine factors are correlated.\nConcern 2: The distribution of Factor 1 returns exhibits excess kurtosis and negative skewness.\nConcern 3: The number of simulations needed for Approach 1 is larger than the size of the historical dataset."
+      ],
+      [
+        "p",
+        "For each approach, Yuen and Ruckey run 1,000 trials to obtain 1,000 returns for Portfolios A and B. To help understand the effect of the skewness and excess kurtosis observed in the Factor 1 returns on the performance of Portfolios A and B, Ruckey suggests simulating an additional 1,000 factor returns using a multivariate skewed Student’s t-distribution, then repeating the Approach 2 simulation."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Following Ruckey’s adjustments to the initial vendor database, backtested returns will most likely be subject to:",
+        "options": [
+          "stale data.",
+          "data snooping.",
+          "p-hacking."
+        ],
+        "answer": 0,
+        "why": "A four-month (≈120-day) reporting lag removes look-ahead bias, but it's longer than needed: many large companies report within 30–50 days of quarter end. So the backtest often uses figures that are older than what investors actually had, which is STALE data.\nB and C are wrong: data snooping and p-hacking are the same problem, a flawed process of searching the data until something looks significant. They're about how the researcher behaves, not a feature that adjusting a database can add."
+      },
+      {
+        "q": "Based on Exhibit 1, Ruckey should conclude that:",
+        "options": [
+          "Factor Strategy 3 has the highest portfolio turnover.",
+          "Factor Strategy 2 has less downside risk than Strategy 3.",
+          "Factor Strategy 2 has the highest returns."
+        ],
+        "answer": 1,
+        "why": "VaR and maximum drawdown are both DOWNSIDE risk measures:\nFactor 2: VaR 1.3%, max drawdown 8.3%\nFactor 3: VaR 8.4%, max drawdown 59.7%\nFactor 2 is lower on both, so it has less downside risk than Factor 3.\nA is wrong: Exhibit 1 says nothing about turnover.\nC is wrong: Exhibit 1 shows only risk measures, not returns."
+      },
+      {
+        "q": "Which of Ruckey’s statements about Exhibit 1 is incorrect?",
+        "options": [
+          "Only Statement 1",
+          "Only Statement 2",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 2,
+        "why": "Statement 1 is incorrect: standard deviation measures VOLATILITY (both directions); maximum drawdown measures DOWNSIDE risk (the worst cumulative loss from peak to trough). They may be correlated, but one doesn't replace the other, especially with fat-tailed, skewed returns.\nStatement 2 is incorrect: Factor 2 has the LOWEST VaR (1.3%) and lowest max drawdown (8.3%), so it has the LEAST downside risk, not the highest.\nSince both are wrong, A and B are wrong."
+      },
+      {
+        "q": "Simulation Approach 1 (historical simulation) differs from Approach 2 (Monte Carlo simulation) in that:",
+        "options": [
+          "it is deterministic.",
+          "a functional form of the statistical distribution for each decision variable needs to be specified.",
+          "it assumes that sampling the returns from the actual data provides sufficient guidance about future asset returns."
+        ],
+        "answer": 2,
+        "why": "Historical simulation draws returns at random from the ACTUAL past data, so it assumes the past is a good guide to future returns.\nA is wrong: both approaches are random (non-deterministic).\nB describes MONTE CARLO (Approach 2), which needs a specified distribution (e.g. multivariate normal) and its parameters. Historical simulation samples from the data itself."
+      },
+      {
+        "q": "To address Concern 1 when designing Approach 2, Yuen should:",
+        "options": [
+          "model each factor or asset on a standalone basis.",
+          "calculate the 15 covariance matrix elements needed to calibrate the model.",
+          "specify a multivariate distribution rather than modeling each factor or asset on a standalone basis."
+        ],
+        "answer": 2,
+        "why": "Correlated factors need a MULTIVARIATE distribution, so the simulated returns keep their co-movement. Modelling each factor on its own (A) throws away the correlations.\nCalibrating it for all 9 factors (missing formula rebuilt):\n9 means + 9 standard deviations + [[n(n − 1)|2]] = [[9 × 8|2]] = 36 covariance elements\nB is wrong: 15 = [[6 × 5|2]] covers only the 6 correlated factors. The covariance matrix must include ALL nine factors."
+      },
+      {
+        "q": "Based on Concern 2, the Factor 1 strategy is most likely to:",
+        "options": [
+          "be favored by risk-averse investors.",
+          "generate surprises in the form of negative returns.",
+          "have return data that line up tightly around a trend line."
+        ],
+        "answer": 1,
+        "why": "Excess kurtosis = fat tails → more EXTREME returns (surprises) than a normal distribution.\nNegative skewness → those extremes are more likely to be on the DOWNSIDE.\nTogether: more surprises in the form of large negative returns.\nA is wrong: risk-averse investors prefer POSITIVE skew and low or moderate kurtosis.\nC is wrong: fat tails and outliers mean the data do NOT line up tightly; means, variances and correlations aren't enough to describe the distribution."
+      },
+      {
+        "q": "To address Concern 3 when designing Approach 1, Yuen should:",
+        "options": [
+          "add monthly return observations to the dataset using interpolation.",
+          "randomly sample from the historical returns with replacement.",
+          "choose the multivariate normal distribution as the initial functional form."
+        ],
+        "answer": 1,
+        "why": "When more trials are needed than there are historical observations, sample WITH replacement (bootstrapping). Each draw comes from the same full dataset, with equal probability (uniform draw), so 1,000 trials can come from fewer data points.\nA is wrong: interpolation invents returns that never happened, which goes against the point of historical simulation.\nC is wrong: choosing a distribution is a Monte Carlo step, and it doesn't fix the shortage of historical data."
+      },
+      {
+        "q": "The process Ruckey suggests to better understand how the performance of Portfolios A and B using Approach 2 is affected by the distribution of Factor 1 returns is best described as:",
+        "options": [
+          "data snooping.",
+          "sensitivity analysis.",
+          "inverse transformation."
+        ],
+        "answer": 1,
+        "why": "Re-running the Monte Carlo with a different input distribution (multivariate skewed Student's t instead of normal) to see how results change is SENSITIVITY ANALYSIS. It tests whether conclusions depend on the normal assumption, given Factor 1's skew and fat tails.\nA is wrong: data snooping is manipulating data or tests to get a statistically significant result.\nC is wrong: inverse transformation turns a random uniform number into a simulated value of a random variable. It's a step inside Monte Carlo, not an analysis of inputs."
+      }
+    ]
   }
 ];
 

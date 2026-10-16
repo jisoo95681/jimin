@@ -4549,6 +4549,142 @@ const QUESTIONS = [
     options: ["Fall, as the new investment is recorded", "Stay the same, as one asset replaces another", "Rise, as the cash leaves the balance sheet"],
     answer: 1,
     why: "+ investment, − cash: total assets don't change."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Using point-in-time data in a backtest mainly reduces:",
+    options: ["Look-ahead bias", "Transaction costs", "Data snooping by the analyst"],
+    answer: 0,
+    why: "It ensures only data that was actually available at each date is used."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Assuming a reporting lag much longer than companies actually take introduces:",
+    options: ["Survivorship bias", "Stale data", "Look-ahead bias"],
+    answer: 1,
+    why: "E.g. a 4-month lag when most large firms report within 30–50 days."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Including only companies that still exist today in a backtest causes:",
+    options: ["Survivorship bias", "Stale data", "A rolling-window error"],
+    answer: 0,
+    why: "Use point-in-time constituents, including delisted firms."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Data snooping (p-hacking) is best described as:",
+    options: ["A feature added to a dataset by adjusting it", "Using a rolling window to rebalance monthly", "Searching data until a result looks significant"],
+    answer: 2,
+    why: "It's a flaw in the research process, not a property of the data."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Maximum drawdown measures:",
+    options: ["The volatility of returns in both directions", "The worst cumulative loss from peak to trough", "The average loss beyond the VaR threshold"],
+    answer: 1,
+    why: "Standard deviation is volatility; CVaR is the average loss beyond VaR."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Standard deviation and maximum drawdown are:",
+    options: ["Different measures that complement each other", "Perfect substitutes, so only one is needed", "Both measures of portfolio turnover and cost"],
+    answer: 0,
+    why: "Volatility vs downside risk; especially different when returns are skewed or fat-tailed."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "A rolling-window backtest:",
+    options: ["Uses the whole sample once to fit and test the model", "Rebalances only once, at the very end of the sample", "Re-fits on a moving window, then tests on the next period"],
+    answer: 2,
+    why: "It mimics how the strategy would actually have been run over time."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Historical simulation draws random variables from:",
+    options: ["A specified statistical distribution and its parameters", "Past data, with equal probability per draw", "Analysts' consensus forecasts of future returns"],
+    answer: 1,
+    why: "It assumes the past is a sufficient guide to the future."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "A Monte Carlo simulation, unlike historical simulation, requires:",
+    options: ["A functional form for each variable's distribution", "At least 30 years of past monthly return data", "No assumptions at all about future returns"],
+    answer: 0,
+    why: "E.g. multivariate normal or skewed Student's t, plus its parameters."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "When the number of simulation trials exceeds the historical dataset, use:",
+    options: ["Interpolation to create new monthly returns", "A shorter rolling window to add more periods", "Bootstrapping (sampling with replacement)"],
+    answer: 2,
+    why: "Interpolation would create observations that never happened."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "For correlated assets in a Monte Carlo simulation, you should:",
+    options: ["Model each asset on its own, then combine", "Specify a multivariate distribution", "Drop the correlated assets from the model"],
+    answer: 1,
+    why: "Calibrate means, standard deviations and the full covariance matrix."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "The number of distinct covariance terms for n assets is:",
+    options: ["n(n − 1) / 2", "n(n + 1)", "2n − 1"],
+    answer: 0,
+    why: "E.g. 9 assets → 36; 6 assets → 15."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Negative skewness plus excess kurtosis implies:",
+    options: ["Returns cluster tightly around the mean", "More frequent large positive surprises", "More frequent large negative surprises"],
+    answer: 2,
+    why: "Fat tails = more extremes; negative skew = extremes skew to the downside."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Risk-averse investors generally prefer return distributions with:",
+    options: ["Negative skew and high (excess) kurtosis", "Positive skew and low to moderate kurtosis", "Negative skew and very low kurtosis overall"],
+    answer: 1,
+    why: "They want upside surprises and few extreme losses."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "Re-running a simulation with a different input distribution to see how results change is:",
+    options: ["Inverse transformation", "Data snooping", "Sensitivity analysis"],
+    answer: 2,
+    why: "E.g. swapping the normal for a skewed Student's t-distribution."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "The inverse transformation method:",
+    options: ["Turns a random uniform number into a simulated value", "Removes look-ahead bias from vendor databases by lagging", "Converts a strategy's VaR into its maximum drawdown"],
+    answer: 0,
+    why: "A step inside Monte Carlo simulation."
+  },
+  {
+    topic: "Portfolio Management",
+    reading: "Backtesting and Simulation",
+    q: "In a benchmark (equal-weighted) factor portfolio, each factor gets equal:",
+    options: ["Risk contribution", "Weight", "Expected return"],
+    answer: 1,
+    why: "Risk parity gives each factor an equal RISK contribution instead."
   }
 ];
 
