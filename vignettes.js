@@ -9109,6 +9109,154 @@ const VIGNETTES = [
         "why": "Observation 1 is wrong: ACTUAL default probabilities don't include a default risk premium. The RISK-NEUTRAL probabilities (implied from prices) carry the premium for uncertainty about the timing of default losses, which is why they're higher.\nObservation 2 is correct: observed spreads also reflect liquidity and tax differences, not just credit risk, so risk-neutral probabilities implied from spreads overstate pure default risk.\nThat rules out A and C."
       }
     ]
+  },
+  {
+    "id": "quinn",
+    "title": "James Quinn: GoogolMining Text-Based Credit Scoring",
+    "topic": "Quantitative Methods",
+    "reading": "Big Data Projects",
+    "body": [
+      [
+        "p",
+        "James Quinn is the founder and CEO of GoogolMining Inc. (GMI). The company applies data science and machine learning to assist lenders in predicting the credit risk of their customers."
+      ],
+      [
+        "p",
+        "Today, Quinn is meeting with Judy Wu, the chief lending officer at onLineLoans.com. Wu’s company already uses some of Quinn’s machine learning (ML) methods to better screen loan applicants whose credit files are usually thin—that is, having limited or no past credit history and low incomes, making traditional credit evaluation difficult. Quinn is introducing Wu to the benefits of using text-based data that can be found in the loan applications to further aid the screening process."
+      ],
+      [
+        "p",
+        "Quinn states that the choice and pattern of words used by applicants in describing the loan request and its purpose and the use of pleading terms, excessive uppercase words, and spelling mistakes can all be very informative. He provides the following excerpts from two loan applications (Exhibit 1)."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Selected Text-Based Data from a Few Credit Applications",
+          "head": [
+            "ID",
+            "Excerpts from Applicant’s Statements in Loan Request"
+          ],
+          "rows": [
+            [
+              "1",
+              "While the past year has been wonderful living in our new house, the furnace has been acting up recently and I need to borrow $4,000 to replace it. I make a point of paying all my bills on time."
+            ],
+            [
+              "2",
+              "Humbly stated, I’m in sheer need of your kind aid. I am really needing $2,000 riteaway to fix the roof which has started to leak into the bedroom of my oldest daughtter. PLEASE HELP!"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Wu tells Quinn that she has heard a little about text mining for clues about an individual’s behavior and recalls that text preparation must be carried out by removing such items as HTML tags, punctuation, numbers, and stop words and eliminating the distinction between uppercase and lowercase words by lowercasing them all."
+      ],
+      [
+        "p",
+        "Quinn subdivides the word clouds generated from the document term matrix (DTM) into defaulting and non-defaulting loans and selectively illustrates how the words, n-grams, and more common themes differ between the two groups:"
+      ],
+      [
+        "p",
+        "• The wording in non-defaulting loans often has indications of a brighter future—for example, “graduate” and “wedding”—and reasons why the loan is needed, such as “student_loan” or “car_insur.”\n• The wording in defaulting loans often contains statements of desperation and pleading terms—for example, “and_need” and “your_help”—as well as detailed explanations as to why these circumstances have arisen, such as “loan_explain” and “loan_because.”"
+      ],
+      [
+        "p",
+        "Quinn uses logistic regression to train the model: Defaulting loans are classified as Class 1, and non-defaulting loans are classified as Class 0. After tuning, the threshold p-value of 0.60 (for Class 1) is used to predict the outcome for each loan application in the test data. Exhibit 2 indicates the result for one of those applications."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Result for a Selected Credit Applicant in Test Data",
+          "head": [
+            "Applicant’s Cleansed and Preprocessed Text",
+            "Actual Outcome",
+            "p"
+          ],
+          "rows": [
+            [
+              "honest person face unusu cash_flow issu earli graduat wed present trip Nevada hous truli winner promot prosper sure futur after term like borrow tuition final",
+              "Defaulted (Class 1)",
+              "0.41"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "The original statement by the credit applicant was “I am an honest person who now faces unusual cash flow issues from my early graduation and wedding present which was a trip to Nevada—the house was truly a winner. Promotion and prosperity are surely in my future after this term but I would like to borrow $10,000 for the tuition in my final term.”"
+      ],
+      [
+        "p",
+        "After running his model on the test set, Quinn produces a confusion matrix for evaluating the performance of the model (Exhibit 3). He reminds Wu that since the number of defaults in the dataset is likely much smaller than the number of non-defaults, this needs to be considered in evaluating model performance."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Confusion Matrix of Model Results for Test Data of Loan Default Classifications with Threshold p-Value = 0.60",
+          "head": [
+            "",
+            "Actual Training Results: Class 1",
+            "Actual Training Results: Class 0"
+          ],
+          "rows": [
+            [
+              "Predicted Results: Class 1",
+              "TP = 118",
+              "FP = 32"
+            ],
+            [
+              "Predicted Results: Class 0",
+              "FN = 8",
+              "TN = 320"
+            ]
+          ],
+          "note": "TP: True positive; TN: True negative; FP: False positive; FN: False negative"
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Wu’s recollection about the preparation of the textual data is most accurate with respect to:",
+        "options": [
+          "numbers.",
+          "stop words.",
+          "lowercasing."
+        ],
+        "answer": 0,
+        "why": "Text PREPARATION (cleansing) removes HTML tags, punctuation, numbers and white space. Numbers are usually replaced with an annotation such as /number/, so the text records that a number was there without its value.\nStop words (B) and lowercasing (C) are part of text WRANGLING (preprocessing/normalization), the next stage, so Wu has put them in the wrong step."
+      },
+      {
+        "q": "After the cleansed textual data are normalized, the tokens added to the bag of words (BOW) arising from Applicant 2 (Exhibit 1) are most likely to include:",
+        "options": [
+          "bedroom and kind.",
+          "really and needing.",
+          "HELP and daughtter."
+        ],
+        "answer": 0,
+        "why": "“bedroom” and “kind” aren't stop words and aren't changed by lowercasing, stemming or lemmatization, so they go into the BOW as they are.\nB: “needing” is stemmed to “need” (already in the BOW from earlier in the statement), and “really” would be stemmed too (Porter stemmer: “realli”).\nC: here ALL-CAPS words and misspellings are red flags, so preprocessing must preserve them with an annotation (e.g. /AllCaps/_HELP, /spellError/_daughtter) rather than as the raw word. Even without that, “HELP” would be lowercased to “help”."
+      },
+      {
+        "q": "Based on Exhibit 2, the most appropriate statement about the model’s performance for the selected credit applicant is that it results in:",
+        "options": [
+          "a Type I error.",
+          "a Type II error.",
+          "the correct classification."
+        ],
+        "answer": 1,
+        "why": "p = 0.41 is below the 0.60 threshold for Class 1, so the model predicts Class 0 (non-default).\nThe loan actually DEFAULTED (Class 1), so this is a false negative = Type II error.\nA (Type I) would be a false positive: predicting default for a loan that didn't default.\nC is wrong because predicted (0) ≠ actual (1).\n(Note how the “brighter future” words like graduat, wed, promot and prosper pulled the model toward non-default.)"
+      },
+      {
+        "q": "Using Exhibit 3 and Quinn’s reminder, the most appropriate measure of the accuracy of the model is:",
+        "options": [
+          "0.79.",
+          "0.86.",
+          "0.92."
+        ],
+        "answer": 1,
+        "why": "With unequal class sizes (few defaults), F1, the harmonic mean of precision and recall, is the better measure.\nPrecision P = [[TP|TP + FP]] = [[118|118 + 32]] = 0.79\nRecall R = [[TP|TP + FN]] = [[118|118 + 8]] = 0.94\nF1 = [[2 × P × R|P + R]] = [[2 × 0.79 × 0.94|0.79 + 0.94]] = 0.86\nA (0.79) is precision alone.\nC (0.92) is accuracy = [[TP + TN|all]] = [[118 + 320|478]], which is flattered by the large number of true negatives when classes are imbalanced."
+      }
+    ]
   }
 ];
 

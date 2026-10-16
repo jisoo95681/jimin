@@ -4221,6 +4221,126 @@ const QUESTIONS = [
     options: ["Always the full face value", "The bond's value at that date", "Face value × (1 − recovery rate)"],
     answer: 1,
     why: "E.g. 100 / 1.03² = 94.26 one year in, for a three-year zero at a flat 3%."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Removing HTML tags, punctuation, numbers and white space happens in:",
+    options: ["Text preparation (cleansing)", "Text wrangling (preprocessing)", "Feature engineering only"],
+    answer: 0,
+    why: "Cleansing comes first; normalization steps like lowercasing and stop-word removal come after, in wrangling."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Lowercasing and removing stop words happen in:",
+    options: ["Text preparation (cleansing)", "Text wrangling (preprocessing)", "Model training and tuning"],
+    answer: 1,
+    why: "These are normalization steps, applied after the raw text has been cleansed."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "If ALL-CAPS words and spelling mistakes are useful signals, preprocessing should:",
+    options: ["Lowercase and correct them like any other words", "Remove them as noise in the cleansing step", "Keep them with an annotation such as /AllCaps/"],
+    answer: 2,
+    why: "Same idea as replacing numbers with /number/: keep the information the model needs."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The Porter stemmer would most likely reduce “needing” to:",
+    options: ["need", "needing", "needi"],
+    answer: 0,
+    why: "Stemming removes suffixes; repeated stems such as “need” appear only once in the BOW."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A bag of words (BOW) contains:",
+    options: ["Every token, kept in its original order", "The distinct tokens, without word order", "Only the n-grams of two or more words"],
+    answer: 1,
+    why: "BOW loses sequence; n-grams are used to keep some word order."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Tokens such as “your_help” and “loan_because” are examples of:",
+    options: ["Stop words removed in wrangling", "Lemmas from lemmatization", "Bigrams (n-grams)"],
+    answer: 2,
+    why: "N-grams join adjacent words so phrases with meaning are kept together."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Splitting word clouds by class (default vs non-default) helps to:",
+    options: ["Show which words separate the two classes", "Reduce the number of training examples", "Replace the need for a test set"],
+    answer: 0,
+    why: "E.g. pleading words in defaulters vs future-oriented words in non-defaulters."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A loan predicted NOT to default that actually defaults is a:",
+    options: ["Type I error (false positive)", "Type II error (false negative)", "True negative"],
+    answer: 1,
+    why: "Class 1 = default. Predicted 0, actual 1 → false negative."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "A loan predicted to default that actually does NOT default is a:",
+    options: ["Type II error (false negative)", "True positive", "Type I error (false positive)"],
+    answer: 2,
+    why: "Predicted 1, actual 0 → false positive."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "With a Class 1 threshold of 0.60, an applicant with p = 0.41 is classified as:",
+    options: ["Class 0", "Class 1", "Unclassified"],
+    answer: 0,
+    why: "p must reach the threshold to be Class 1."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Precision is calculated as:",
+    options: ["TP / (TP + FP)", "TP / (TP + FN)", "(TP + TN) / all"],
+    answer: 0,
+    why: "Of everything predicted positive, how much was right."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Recall (sensitivity) is calculated as:",
+    options: ["TP / (TP + FP)", "TP / (TP + FN)", "TN / (TN + FP)"],
+    answer: 1,
+    why: "Of all actual positives, how many the model caught."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Accuracy can be misleading when:",
+    options: ["Precision and recall are exactly equal", "The test set is far larger than usual", "One class is much smaller than the other"],
+    answer: 2,
+    why: "Many true negatives in the big class inflate accuracy; use F1 instead."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "The F1 score is preferred over accuracy when:",
+    options: ["Classes are balanced and errors cost the same", "Classes are unequal in size", "Only true negatives matter to the lender"],
+    answer: 1,
+    why: "F1 = 2PR / (P + R) balances precision and recall."
+  },
+  {
+    topic: "Quantitative Methods",
+    reading: "Big Data Projects",
+    q: "Logistic regression in a text classifier outputs:",
+    options: ["A probability between 0 and 1 for Class 1", "A count of each token in the bag of words", "The document term matrix for the corpus"],
+    answer: 0,
+    why: "The probability is compared with the threshold to assign a class."
   }
 ];
 
