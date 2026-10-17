@@ -4821,6 +4821,102 @@ const QUESTIONS = [
     options: ["Higher than organic growth", "Lower than organic growth", "Equal to organic growth"],
     answer: 0,
     why: "A stronger foreign currency adds a positive FX contribution."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the current rate method, a subsidiary's translated gross margin:",
+    options: ["Equals its margin in local currency", "Is always lower than in local currency", "Depends on historical inventory rates"],
+    answer: 0,
+    why: "Sales and COGS are both translated at the same average rate."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, COGS is translated at:",
+    options: ["The current rate at the balance sheet date", "Historical rates when inventory was bought", "The average rate for the period, like sales"],
+    answer: 1,
+    why: "Sales use the average rate, so the margin can differ from local currency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "When the foreign currency is weakening, the temporal method (vs current rate) gives a gross margin that is:",
+    options: ["Higher", "The same", "Lower"],
+    answer: 2,
+    why: "COGS is translated at older, stronger rates while sales use the weaker average rate."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "In an inflationary environment, FIFO (vs weighted-average cost) gives:",
+    options: ["Higher COGS and lower gross profit", "Lower COGS and higher gross profit", "The same gross profit"],
+    answer: 1,
+    why: "FIFO charges the older, cheaper costs to COGS."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, depreciation expense is translated at:",
+    options: ["The historical rate of the related asset", "The average rate for the reporting period", "The current rate at the period-end date"],
+    answer: 0,
+    why: "Same rate as the fixed asset itself."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the current rate method, common stock is translated at:",
+    options: ["The current rate", "The average rate", "The historical rate"],
+    answer: 2,
+    why: "Equity stays at historical rates; the CTA keeps the balance sheet in balance."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the current rate method, the balance sheet exposure is:",
+    options: ["Net monetary assets", "Net assets", "Total liabilities"],
+    answer: 1,
+    why: "Under the temporal method it's net monetary assets (or liabilities)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, the balance sheet exposure is:",
+    options: ["Net monetary assets or liabilities", "Net assets (total equity) of the subsidiary", "Total fixed assets and inventory held"],
+    answer: 0,
+    why: "Only items translated at the current rate are exposed."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Accounts receivable are translated at the current rate under:",
+    options: ["The temporal method only", "The current rate method only", "Both methods"],
+    answer: 2,
+    why: "Monetary items always use the current rate."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "When a foreign subsidiary is sold, its cumulative translation adjustment is:",
+    options: ["Left in equity permanently", "Reclassified to net income", "Written off directly to retained earnings"],
+    answer: 1,
+    why: "The accumulated OCI amount is recycled into profit on disposal."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "A positive net asset exposure plus a weakening foreign currency, under the current rate method, gives:",
+    options: ["A translation gain in net income", "A negative translation adjustment", "No effect on equity or net income"],
+    answer: 1,
+    why: "Net assets are worth less in the parent's currency; the loss goes to the CTA."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "If the parent's currency is the subsidiary's functional currency, the method used is the:",
+    options: ["Current rate method", "Temporal method", "Inflation restatement method"],
+    answer: 1,
+    why: "Remeasurement; gains and losses go to net income."
   }
 ];
 

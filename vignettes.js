@@ -9872,6 +9872,88 @@ const VIGNETTES = [
         "why": "Sustainable (organic) growth = volume + price, EXCLUDING currency effects, which management can't control.\nAbuelio: 7 + 6 = 13%\nBorliand: 4 + 5 = 9% (its 13% headline includes +4% from FX)\nNorvolt: 7 + 3 = 10%\nC is wrong: Borliand has the highest REPORTED growth, but only because of currency.\nA is wrong: 10% < 13%."
       }
     ]
+  },
+  {
+    "id": "eurexim",
+    "title": "Pedro Ruiz: Eurexim’s Ukraine Subsidiary",
+    "topic": "Financial Statement Analysis",
+    "reading": "Multinational Operations",
+    "body": [
+      [
+        "p",
+        "Pedro Ruiz is an analyst for a credit rating agency. One of the companies he follows, Eurexim SA, is based in France and complies with International Financial Reporting Standards (IFRS). Ruiz has learned that Eurexim used EUR220 million of its own cash and borrowed an equal amount to open a subsidiary in Ukraine. The funds were converted into hryvnia (UAH) on 31 December 20X1 at an exchange rate of EUR1.00 = UAH6.70 and used to purchase UAH1,500 million in fixed assets and UAH300 million of inventories."
+      ],
+      [
+        "p",
+        "Ruiz is concerned about the effect that the subsidiary’s results might have on Eurexim’s consolidated financial statements. He calls Eurexim’s Chief Financial Officer, but learns little. Eurexim is not willing to share sales forecasts and has not even made a determination as to the subsidiary’s functional currency."
+      ],
+      [
+        "p",
+        "Absent more useful information, Ruiz decides to explore various scenarios to determine the potential impact on Eurexim’s consolidated financial statements. Ukraine is not currently in a hyperinflationary environment, but Ruiz is concerned that this situation could change. Ruiz also believes the euro will appreciate against the hryvnia for the foreseeable future."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "If Ukraine’s economy becomes highly inflationary, Eurexim will most likely translate inventory by:",
+        "options": [
+          "restating for inflation and using the temporal method.",
+          "restating for inflation and using the current exchange rate.",
+          "using the temporal method with no restatement for inflation."
+        ],
+        "answer": 1,
+        "why": "Eurexim reports under IFRS. IAS 21 with IAS 29: first RESTATE the subsidiary's statements for local inflation, then translate ALL items at the CURRENT exchange rate.\nC is the US GAAP approach: temporal method, parent's currency treated as functional, no inflation restatement.\nA mixes the two; restated amounts are not then translated with the temporal method."
+      },
+      {
+        "q": "Given Ruiz’s belief about the direction of exchange rates, Eurexim’s gross profit margin would be highest if it accounts for the Ukraine subsidiary’s inventory using:",
+        "options": [
+          "FIFO and the temporal method.",
+          "FIFO and the current rate method.",
+          "weighted-average cost and the temporal method."
+        ],
+        "answer": 1,
+        "why": "Two choices, each judged separately:\n1. Inventory method: with (some) inflation, FIFO charges the OLDEST, cheapest costs to COGS → higher gross profit than weighted-average cost.\n2. Translation method, with the UAH weakening:\nCurrent rate: sales and COGS both at the average rate → the margin is the same as in UAH.\nTemporal: sales at the (weaker) average rate, but COGS at OLDER historical rates when the UAH was stronger → COGS look bigger in euros → LOWER margin.\nBest combination: FIFO + current rate method (B).\nA uses the temporal method, which lowers the margin; C has both the lower-margin cost method and the temporal method."
+      },
+      {
+        "q": "If the euro is chosen as the Ukraine subsidiary’s functional currency, Eurexim will translate its fixed assets using the:",
+        "options": [
+          "average rate for the reporting period.",
+          "rate in effect when the assets were purchased.",
+          "rate in effect at the end of the reporting period."
+        ],
+        "answer": 1,
+        "why": "Parent's currency as functional currency → TEMPORAL method.\nFixed assets are non-monetary items carried at historical cost → HISTORICAL rate (when bought).\nHere: [[UAH1,500m|6.70]] = EUR223.9m, fixed at that amount (depreciation uses the same historical rate).\nA (average rate) is used for most income statement items such as sales.\nC (current rate) is for monetary items under the temporal method, or everything under the current rate method."
+      },
+      {
+        "q": "If the euro is chosen as the Ukraine subsidiary’s functional currency, Eurexim will translate its accounts receivable using the:",
+        "options": [
+          "rate in effect at the transaction date.",
+          "average rate for the reporting period.",
+          "rate in effect at the end of the reporting period."
+        ],
+        "answer": 2,
+        "why": "Accounts receivable are MONETARY (a fixed number of UAH to be received). Monetary assets and liabilities are translated at the CURRENT (end-of-period) rate under BOTH the temporal and current rate methods.\nA (transaction-date rate) is the historical rate for non-monetary items under the temporal method.\nB (average rate) is for income statement items."
+      },
+      {
+        "q": "If the hryvnia is chosen as the Ukraine subsidiary’s functional currency, Eurexim will translate its inventory using the:",
+        "options": [
+          "average rate for the reporting period.",
+          "rate in effect at the end of the reporting period.",
+          "rate in effect at the time the inventory was purchased."
+        ],
+        "answer": 1,
+        "why": "Local currency as functional currency → CURRENT RATE method: ALL assets and liabilities, inventory included, are translated at the end-of-period (current) rate. Only equity (common stock) stays at historical rates.\nC (purchase-date rate) is the TEMPORAL method's treatment of inventory at cost.\nA (average rate) is for income statement items, e.g. COGS under the current rate method."
+      },
+      {
+        "q": "Based on the information available and Ruiz’s expectations regarding exchange rates, if the hryvnia is chosen as the Ukraine subsidiary’s functional currency, Eurexim will most likely report:",
+        "options": [
+          "an addition to the cumulative translation adjustment.",
+          "a translation gain or loss as a component of net income.",
+          "a subtraction from the cumulative translation adjustment."
+        ],
+        "answer": 2,
+        "why": "Current rate method → translation adjustments go to equity through OCI (the cumulative translation adjustment, CTA), not net income. That rules out B, which describes the temporal method.\nExposure under the current rate method = NET ASSETS (positive, since the subsidiary owns assets financed partly by equity).\nThe euro appreciates, so the UAH WEAKENS and the net assets are worth fewer euros → a NEGATIVE adjustment (subtraction from CTA). That rules out A."
+      }
+    ]
   }
 ];
 
