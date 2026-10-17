@@ -10159,6 +10159,384 @@ const VIGNETTES = [
         "why": "Market risk: both VaR measures FELL (trading VaR $15m → $11m; trading and credit VaR $21m → $15m) → less market-risk exposure, so it has improved.\nA is wrong: the liquidity coverage ratio (119.1% → 123.6%) and the net stable funding ratio (112.7% → 114.9%) both ROSE, so liquidity IMPROVED.\nB is wrong: CET1 (12.1% → 10.7%) and Tier 1 (13.4% → 11.5%) FELL while the total capital ratio stayed flat (~14.9%). The bank swapped higher-quality Tier 1 for Tier 2 capital, so capital adequacy DECLINED."
       }
     ]
+  },
+  {
+    "id": "xyzbank",
+    "title": "Judith Yoo: Company XYZ Bank Analysis",
+    "topic": "Financial Statement Analysis",
+    "reading": "Analysis of Financial Institutions",
+    "body": [
+      [
+        "p",
+        "Judith Yoo is a financial sector analyst writing an industry report. In the report, Yoo discusses the relative global systemic risk across industries, referencing Industry A (international property and casualty insurance), Industry B (credit unions), and Industry C (global commercial banks)."
+      ],
+      [
+        "p",
+        "Part of Yoo’s analysis focuses on Company XYZ, a global commercial bank, and its CAMELS rating, risk management practices, and performance. First, Yoo considers the firm’s capital adequacy as measured by the key capital ratios (common equity Tier 1 capital, total Tier 1 capital, and total capital) in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Company XYZ: Excerpt from Annual Report Disclosure",
+          "head": [
+            "At 31 December",
+            "2017 $m",
+            "2016 $m",
+            "2015 $m"
+          ],
+          "rows": [
+            [
+              "Regulatory capital",
+              "",
+              "",
+              ""
+            ],
+            [
+              "   Common equity Tier 1 capital",
+              "146,424",
+              "142,367",
+              "137,100"
+            ],
+            [
+              "   Additional Tier 1 capital",
+              "22,639",
+              "20,443",
+              "17,600"
+            ],
+            [
+              "   Tier 2 capital",
+              "22,456",
+              "27,564",
+              "38,200"
+            ],
+            [
+              "   Total regulatory capital",
+              "191,519",
+              "190,374",
+              "192,900"
+            ],
+            [
+              "Risk-weighted assets (RWAs) by risk type",
+              "",
+              "",
+              ""
+            ],
+            [
+              "   Credit risk",
+              "960,763",
+              "989,639",
+              "968,600"
+            ],
+            [
+              "   Market risk",
+              "44,100",
+              "36,910",
+              "49,600"
+            ],
+            [
+              "   Operational risk",
+              "293,825",
+              "256,300",
+              "224,300"
+            ],
+            [
+              "Total RWAs",
+              "1,298,688",
+              "1,282,849",
+              "1,242,500"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Yoo turns her attention to Company XYZ’s asset quality using the information in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Company XYZ: Asset Composition",
+          "head": [
+            "At 31 December",
+            "2017 $m",
+            "2016 $m",
+            "2015 $m"
+          ],
+          "rows": [
+            [
+              "Total liquid assets",
+              "361,164",
+              "354,056",
+              "356,255"
+            ],
+            [
+              "Investments",
+              "434,256",
+              "367,158",
+              "332,461"
+            ],
+            [
+              "Consumer loans",
+              "456,957",
+              "450,576",
+              "447,493"
+            ],
+            [
+              "Commercial loans",
+              "499,647",
+              "452,983",
+              "403,058"
+            ],
+            [
+              "Goodwill",
+              "26,693",
+              "26,529",
+              "25,705"
+            ],
+            [
+              "Other assets",
+              "151,737",
+              "144,210",
+              "121,780"
+            ],
+            [
+              "Total assets",
+              "1,930,454",
+              "1,795,512",
+              "1,686,752"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "To assess Company XYZ’s risk management practices, Yoo reviews the consumer loan credit quality profile in Exhibit 3 and the loan loss analysis in Exhibit 4."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Company XYZ: Consumer Loan Profile by Credit Quality",
+          "head": [
+            "At 31 December",
+            "2017 $m",
+            "2016 $m",
+            "2015 $m"
+          ],
+          "rows": [
+            [
+              "   Strong credit quality",
+              "338,948",
+              "327,345",
+              "320,340"
+            ],
+            [
+              "   Good credit quality",
+              "52,649",
+              "54,515",
+              "54,050"
+            ],
+            [
+              "   Satisfactory credit quality",
+              "51,124",
+              "55,311",
+              "56,409"
+            ],
+            [
+              "   Substandard credit quality",
+              "23,696",
+              "24,893",
+              "27,525"
+            ],
+            [
+              "   Past due but not impaired",
+              "2,823",
+              "2,314",
+              "2,058"
+            ],
+            [
+              "   Impaired",
+              "8,804",
+              "9,345",
+              "10,235"
+            ],
+            [
+              "Total gross amount",
+              "478,044",
+              "473,723",
+              "470,617"
+            ],
+            [
+              "   Impairment allowances",
+              "−5,500",
+              "−4,500",
+              "−4,000"
+            ],
+            [
+              "Total",
+              "472,544",
+              "469,223",
+              "466,617"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 4: Company XYZ: Loan Loss Analysis Data",
+          "head": [
+            "At 31 December",
+            "2017 $m",
+            "2016 $m",
+            "2015 $m"
+          ],
+          "rows": [
+            [
+              "Consumer loans",
+              "",
+              "",
+              ""
+            ],
+            [
+              "   Allowance for loan losses",
+              "11,000",
+              "11,500",
+              "13,000"
+            ],
+            [
+              "   Provision for loan losses",
+              "3,000",
+              "2,000",
+              "1,300"
+            ],
+            [
+              "   Charge-offs",
+              "3,759",
+              "3,643",
+              "4,007"
+            ],
+            [
+              "   Recoveries",
+              "1,299",
+              "1,138",
+              "1,106"
+            ],
+            [
+              "   Net charge-offs",
+              "2,460",
+              "2,505",
+              "2,901"
+            ],
+            [
+              "Commercial loans",
+              "",
+              "",
+              ""
+            ],
+            [
+              "   Allowance for loan losses",
+              "1,540",
+              "1,012",
+              "169"
+            ],
+            [
+              "   Provision for loan losses",
+              "1,100",
+              "442",
+              "95"
+            ],
+            [
+              "   Charge-offs",
+              "1,488",
+              "811",
+              "717"
+            ],
+            [
+              "   Recoveries",
+              "428",
+              "424",
+              "673"
+            ],
+            [
+              "   Net charge-offs",
+              "1,060",
+              "387",
+              "44"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Finally, Yoo notes the following supplementary information from Company XYZ’s annual report:"
+      ],
+      [
+        "p",
+        "• Competition in the commercial loan space has become increasingly fierce, leading XYZ managers to pursue higher-risk strategies to increase market share.\n• The net benefit plan obligation has steadily decreased during the last three years.\n• Company XYZ awards above-average equity-based compensation to its top managers."
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of the following industries most likely has the highest level of global systemic risk?",
+        "options": [
+          "Industry A",
+          "Industry B",
+          "Industry C"
+        ],
+        "answer": 2,
+        "why": "Global commercial banks (C) have the largest share of CROSS-BORDER business and the widest network of links to other institutions, so a failure spreads furthest.\nA (international P&C insurers): less cross-border business; foreign branches usually must hold local assets to cover local policy liabilities, and many insured events (autos, homes) have only local impact.\nB (credit unions): member-owned, local depository institutions, with the LOWEST global systemic risk."
+      },
+      {
+        "q": "Based on Exhibit 1, Company XYZ’s capital adequacy over the last three years, as measured by the three key capital ratios, signals conditions that are:",
+        "options": [
+          "mixed.",
+          "declining.",
+          "improving."
+        ],
+        "answer": 0,
+        "why": "(Missing calculations rebuilt.) Each ratio = [[capital|total RWAs]]\nCET1 ratio = [[CET1|RWAs]]: 2015 [[137,100|1,242,500]] = 11.0% → 2016 11.1% → 2017 [[146,424|1,298,688]] = 11.3% (up)\nTier 1 ratio = [[CET1 + AT1|RWAs]]: 2015 [[154,700|1,242,500]] = 12.5% → 2016 12.7% → 2017 [[169,063|1,298,688]] = 13.0% (up)\nTotal capital ratio = [[Tier 1 + Tier 2|RWAs]]: 2015 [[192,900|1,242,500]] = 15.5% → 2016 14.8% → 2017 [[191,519|1,298,688]] = 14.7% (down)\nTwo ratios improved and one weakened → MIXED, so B and C are wrong.\n(The higher-quality capital ratios improved; the fall comes from Tier 2 dropping from 38,200 to 22,456.)"
+      },
+      {
+        "q": "Based only on Exhibit 2, asset composition from 2015 to 2017 indicates:",
+        "options": [
+          "declining liquidity.",
+          "increasing risk based on the proportion of total loans to total assets.",
+          "decreasing risk based on the proportion of investments to total assets."
+        ],
+        "answer": 0,
+        "why": "As a % of total assets (2015 → 2016 → 2017):\nLiquid assets: 21.1% → 19.7% → 18.7% (falling every year) → declining liquidity.\nTotal loans (consumer + commercial): 50.4% → 50.3% → 49.6%, slightly FALLING, so they don't show increasing risk (B is wrong).\nInvestments: 19.7% → 20.4% → 22.5%, RISING. A growing share of investments (vs liquid assets) means more exposure to market risk, not less, so C is wrong."
+      },
+      {
+        "q": "Based on Exhibit 3, the trend in impairment allowances is reflective of the changes in:",
+        "options": [
+          "impaired assets.",
+          "strong credit quality assets.",
+          "past due but not impaired assets."
+        ],
+        "answer": 2,
+        "why": "Year-over-year changes (2016, then 2017):\nImpairment allowances: +12.5% (4,000 → 4,500), then +22.2% (→ 5,500)\nPast due but not impaired: +12.4% (2,058 → 2,314), then +22.0% (→ 2,823): almost the SAME pattern\nImpaired assets: −8.7%, then −5.8% (falling)\nStrong credit quality: +2.2%, then +3.5% (credit quality improving)\nAllowances rose in step with past-due loans, likely in anticipation that some will become impaired.\nA and B both point to IMPROVING credit, which would suggest lower allowances, the opposite of what happened."
+      },
+      {
+        "q": "Based on Exhibit 4, a loan loss analysis for the last three years indicates that:",
+        "options": [
+          "Company XYZ has become less conservative in its provisioning for consumer loans.",
+          "the provision for commercial loan losses has trailed the actual net charge-off experience.",
+          "the cushion between the allowance and the net commercial loan charge-offs has declined."
+        ],
+        "answer": 2,
+        "why": "(Missing calculations rebuilt.) Figures for 2015 → 2016 → 2017.\nAllowance ÷ net charge-offs, commercial: [[169|44]] = 3.84 → [[1,012|387]] = 2.61 → [[1,540|1,060]] = 1.45. The cushion has FALLEN sharply → C.\nAllowance ÷ net charge-offs, consumer: 4.48 → 4.59 → 4.47 (stable).\nProvision ÷ net charge-offs, consumer: [[1,300|2,901]] = 0.45 → 0.80 → [[3,000|2,460]] = 1.22. Rising, so provisioning became MORE conservative (A is wrong).\nProvision ÷ net charge-offs, commercial: 2.16 → 1.14 → 1.04. Always above 1, so provisions have NOT trailed charge-offs (B is wrong)."
+      },
+      {
+        "q": "Which of the following supplemental factors is consistent with a favorable assessment of Company XYZ’s financial outlook?",
+        "options": [
+          "Competitive environment",
+          "Net benefit plan obligation",
+          "Equity-based compensation policy"
+        ],
+        "answer": 1,
+        "why": "A steadily DECREASING net benefit plan obligation means less risk from the pension plan → favorable.\nA is unfavorable: fierce competition is pushing managers into higher-risk strategies to win market share.\nC is unfavorable: above-average equity-based pay can encourage managers to take excessive risk to lift the share price."
+      }
+    ]
   }
 ];
 

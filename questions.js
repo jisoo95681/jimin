@@ -5045,6 +5045,118 @@ const QUESTIONS = [
     options: ["Long-term, often lasting several decades", "Short-term, with costs known within about a year", "Priced mainly from actuarial mortality tables"],
     answer: 1,
     why: "L&H policies are long-term."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Which type of institution generally has the HIGHEST global systemic risk?",
+    options: ["Global commercial banks", "International P&C insurers", "Credit unions"],
+    answer: 0,
+    why: "The most cross-border business and links to other institutions."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Credit unions differ from banks mainly in that they are:",
+    options: ["Publicly traded on exchanges", "Owned by their members", "Unable to take deposits"],
+    answer: 1,
+    why: "They function like banks but are member-owned, with low global systemic risk."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "International insurers have lower systemic risk than global banks partly because foreign branches must:",
+    options: ["Hold no capital at all in the local market", "Avoid all cross-border business by regulation", "Hold local assets to cover local liabilities"],
+    answer: 2,
+    why: "Many insured events also have only local impact."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The CET1 capital ratio equals:",
+    options: ["CET1 capital ÷ risk-weighted assets", "CET1 capital ÷ total balance sheet assets", "CET1 capital ÷ total customer deposits"],
+    answer: 0,
+    why: "Tier 1 ratio adds additional Tier 1; total capital ratio adds Tier 2."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The total capital ratio includes:",
+    options: ["CET1 capital only, as the highest quality", "Tier 1 plus Tier 2 capital", "Tier 2 capital only, net of deductions"],
+    answer: 1,
+    why: "Total capital = CET1 + additional Tier 1 + Tier 2."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Risk-weighted assets cover which three risk types?",
+    options: ["Liquidity, funding and reputational", "Equity, currency and commodity", "Credit, market and operational"],
+    answer: 2,
+    why: "Credit risk usually makes up the largest share."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A falling share of liquid assets in a bank's total assets indicates:",
+    options: ["Declining liquidity", "Improving capital adequacy", "Lower credit risk"],
+    answer: 0,
+    why: "Liquid assets ÷ total assets is a simple liquidity check."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Rising impairment allowances that track past-due-but-not-impaired loans suggest the bank:",
+    options: ["Is releasing loan loss reserves far too early", "Expects some past-due loans to become impaired", "Has improving credit quality across all loans"],
+    answer: 1,
+    why: "Prudent provisioning ahead of likely losses."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Net charge-offs equal:",
+    options: ["Charge-offs − recoveries", "Provision − charge-offs", "Allowance − recoveries"],
+    answer: 0,
+    why: "Loans written off, less amounts later recovered."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A declining ratio of allowance for loan losses to net charge-offs indicates:",
+    options: ["A growing cushion against losses", "More conservative provisioning", "A shrinking cushion against losses"],
+    answer: 2,
+    why: "Fewer years of current charge-offs are covered by the allowance."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A rising ratio of provision for loan losses to net charge-offs indicates provisioning that is:",
+    options: ["Less conservative", "More conservative", "Unchanged in approach"],
+    answer: 1,
+    why: "Provisions are growing faster than actual losses."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A provision-to-net-charge-off ratio above 1 means provisions are:",
+    options: ["Below actual losses", "Exactly equal to losses", "Above actual losses"],
+    answer: 2,
+    why: "Provisions are not trailing charge-offs."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Which supplementary factor is favorable for a bank's outlook?",
+    options: ["A steadily decreasing net benefit plan obligation", "Fierce competition prompting riskier commercial lending", "Above-average equity-based pay for its top managers"],
+    answer: 0,
+    why: "Less pension risk; the other two encourage risk-taking."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Above-average equity-based compensation for bank managers is a concern because it can:",
+    options: ["Reduce the bank's capital ratios directly", "Encourage excessive risk-taking", "Lower the bank's liquidity coverage ratio"],
+    answer: 1,
+    why: "Managers may chase the share price through riskier strategies."
   }
 ];
 
