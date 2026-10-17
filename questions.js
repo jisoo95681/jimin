@@ -4917,6 +4917,134 @@ const QUESTIONS = [
     options: ["Current rate method", "Temporal method", "Inflation restatement method"],
     answer: 1,
     why: "Remeasurement; gains and losses go to net income."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Banks are more likely than non-financial companies to be systemically important because they:",
+    options: ["Create financial linkages across the whole economy", "Hold mostly tangible fixed assets such as branches", "Are not subject to any capital or liquidity rules"],
+    answer: 0,
+    why: "One failure can spread to others: financial contagion."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Most of a bank's ASSETS are:",
+    options: ["Customer deposits and other borrowings", "Loans and securities (financial assets)", "Property, plant and equipment like branches"],
+    answer: 1,
+    why: "Deposits are mainly liabilities."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Basel III's minimum share of risk-weighted assets funded with equity is a:",
+    options: ["Liquidity requirement", "Stable funding requirement", "Capital requirement"],
+    answer: 2,
+    why: "It limits leverage so losses can be absorbed."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The liquidity coverage ratio (LCR) compares high-quality liquid assets with:",
+    options: ["Expected cash outflows over 30 days of stress", "Total risk-weighted assets on the balance sheet", "Required stable funding over a one-year horizon"],
+    answer: 0,
+    why: "LCR ≥ 100% is the minimum."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The net stable funding ratio (NSFR) compares available stable funding with:",
+    options: ["Cash outflows over 30 days of stress", "Required stable funding over one year", "Common equity Tier 1 capital held"],
+    answer: 1,
+    why: "Long-term assets should be funded by stable sources."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "CAMELS stands for Capital, Asset quality, Management, Earnings, Liquidity and:",
+    options: ["Solvency of the holding company", "Size of the bank's loan book", "Sensitivity to market risk"],
+    answer: 2,
+    why: "Six components in total."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Which is NOT covered by the CAMELS approach?",
+    options: ["The bank's competitive environment", "The bank's capital adequacy", "The bank's liquidity position"],
+    answer: 0,
+    why: "Also missing: government support, culture, off-balance-sheet items, ESG."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Common equity Tier 1 capital mainly consists of:",
+    options: ["Subordinated debt with long maturities", "Common stock and retained earnings", "Loan loss reserves and preferred shares"],
+    answer: 1,
+    why: "The highest-quality capital that absorbs losses first."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "CET1 and Tier 1 ratios falling while the total capital ratio is flat suggests:",
+    options: ["Improving capital adequacy over time", "More reliance on Tier 2 capital", "Better liquidity from stable deposits"],
+    answer: 1,
+    why: "Lower-quality capital is replacing Tier 1."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A falling VaR trend for a bank indicates:",
+    options: ["Lower sensitivity to market risk", "Worsening liquidity coverage over time", "Higher capital adequacy from retained profits"],
+    answer: 0,
+    why: "VaR measures potential loss from market moves."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The P&C underwriting expense ratio measures:",
+    options: ["The quality of underwriting (risk pricing)", "Efficiency of spending to obtain new premiums", "Overall underwriting profitability"],
+    answer: 1,
+    why: "The loss ratio measures underwriting quality; the combined ratio measures overall profitability."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "The P&C loss and loss adjustment expense ratio measures:",
+    options: ["Efficiency of spending to obtain new premiums", "Investment returns earned on the insurance float", "Quality of underwriting: how well risks were estimated"],
+    answer: 2,
+    why: "Losses + LAE ÷ net premiums earned."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "A P&C combined ratio above 100% indicates:",
+    options: ["An underwriting profit", "An underwriting loss", "A strong investment return"],
+    answer: 1,
+    why: "Combined ratio = loss ratio + expense ratio."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Compared with P&C insurers, L&H insurers' claims are:",
+    options: ["More predictable, based on mortality", "More variable and lumpy over time", "Usually settled within about a year"],
+    answer: 0,
+    why: "P&C claims arise from accidents and catastrophes."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "Compared with L&H insurers, P&C insurers usually have:",
+    options: ["Lower capital needs and riskier investments for higher returns", "Longer-term policies lasting several decades", "Higher capital needs and more conservative investments"],
+    answer: 2,
+    why: "Their claims are less predictable."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Analysis of Financial Institutions",
+    q: "P&C insurance policies are usually:",
+    options: ["Long-term, often lasting several decades", "Short-term, with costs known within about a year", "Priced mainly from actuarial mortality tables"],
+    answer: 1,
+    why: "L&H policies are long-term."
   }
 ];
 

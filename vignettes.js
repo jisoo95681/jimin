@@ -9954,6 +9954,211 @@ const VIGNETTES = [
         "why": "Current rate method → translation adjustments go to equity through OCI (the cumulative translation adjustment, CTA), not net income. That rules out B, which describes the temporal method.\nExposure under the current rate method = NET ASSETS (positive, since the subsidiary owns assets financed partly by equity).\nThe euro appreciates, so the UAH WEAKENS and the net assets are worth fewer euros → a NEGATIVE adjustment (subtraction from CTA). That rules out A."
       }
     ]
+  },
+  {
+    "id": "aries",
+    "title": "Viktoria Smith: Aries Banks and Insurers",
+    "topic": "Financial Statement Analysis",
+    "reading": "Analysis of Financial Institutions",
+    "body": [
+      [
+        "p",
+        "Viktoria Smith is a recently hired junior analyst at Aries Investments. Smith and her supervisor, Ingrid Johansson, meet to discuss some of the firm’s investments in banks and insurance companies."
+      ],
+      [
+        "p",
+        "Johansson asks Smith to explain why the evaluation of banks is different from the evaluation of non-financial companies. Smith tells Johansson the following:"
+      ],
+      [
+        "p",
+        "Statement 1: As intermediaries, banks are more likely to be systemically important than non-financial companies.\nStatement 2: The assets of banks mostly consist of deposits, which are exposed to different risks than the tangible assets of non-financial companies."
+      ],
+      [
+        "p",
+        "Smith and Johansson also discuss key aspects of financial regulations, particularly the framework of Basel III. Johansson tells Smith:"
+      ],
+      [
+        "p",
+        "“Basel III specifies the minimum percentage of its risk-weighted assets that a bank must fund with equity. This requirement of Basel III prevents a bank from assuming so much financial leverage that it is unable to withstand loan losses or asset write-downs.”"
+      ],
+      [
+        "p",
+        "Johansson tells Smith that she uses the CAMELS approach to evaluate banks, even though it has some limitations. To evaluate P&C insurance companies, Johansson tells Smith that she places emphasis on the efficiency of spending on obtaining new premiums. Johansson and Smith discuss differences between P&C and L&H insurance companies. Smith notes the following differences:"
+      ],
+      [
+        "p",
+        "Difference 1: L&H insurers’ claims are more predictable than P&C insurers’ claims.\nDifference 2: P&C insurers’ policies are usually short term, whereas L&H insurers’ policies are usually longer term.\nDifference 3: Relative to L&H insurers, P&C insurers often have lower capital requirements and can also seek higher returns offered by riskier investments."
+      ],
+      [
+        "p",
+        "Johansson asks Smith to review key performance ratios for three P&C insurers in which Aries is invested. The ratios are presented in Exhibit 1."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Key Performance Ratios for Selected P&C Insurers",
+          "head": [
+            "",
+            "Insurer A",
+            "Insurer B",
+            "Insurer C"
+          ],
+          "rows": [
+            [
+              "Loss and loss adjustment expense ratio",
+              "68.8%",
+              "65.9%",
+              "64.1%"
+            ],
+            [
+              "Underwriting expense ratio",
+              "33.7%",
+              "37.8%",
+              "32.9%"
+            ],
+            [
+              "Combined ratio",
+              "102.5%",
+              "103.7%",
+              "97.0%"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Johansson also asks Smith to review key performance ratios for ABC Bank, a bank in which Aries is invested. The ratios are presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Key Performance Ratios for ABC Bank*",
+          "head": [
+            "",
+            "2017",
+            "2016",
+            "2015"
+          ],
+          "rows": [
+            [
+              "Common equity Tier 1 capital ratio",
+              "10.7%",
+              "11.5%",
+              "12.1%"
+            ],
+            [
+              "Tier 1 capital ratio",
+              "11.5%",
+              "12.6%",
+              "13.4%"
+            ],
+            [
+              "Total capital ratio",
+              "14.9%",
+              "14.8%",
+              "14.9%"
+            ],
+            [
+              "Liquidity coverage ratio",
+              "123.6%",
+              "121.4%",
+              "119.1%"
+            ],
+            [
+              "Net stable funding ratio",
+              "114.9%",
+              "113.2%",
+              "112.7%"
+            ],
+            [
+              "Total trading VaR (all market risk factors)",
+              "$11",
+              "$13",
+              "$15"
+            ],
+            [
+              "Total trading and credit portfolio VaR",
+              "$15",
+              "$18",
+              "$21"
+            ]
+          ],
+          "note": "* VaR amounts are in millions and are based on a 99% confidence interval and a single-day holding period."
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Which of Smith’s statements regarding banks is correct?",
+        "options": [
+          "Only Statement 1",
+          "Only Statement 2",
+          "Both Statement 1 and Statement 2"
+        ],
+        "answer": 0,
+        "why": "Statement 1 is correct: as intermediaries, banks link households, companies, governments and other banks. If one fails, the loss spreads (financial contagion), so banks are more likely to be systemically important.\nStatement 2 is wrong: deposits are a bank's LIABILITIES (mostly), not its assets. A bank's assets are mainly FINANCIAL assets (loans and securities), exposed to credit, liquidity, market and interest rate risk.\nThat rules out B and C."
+      },
+      {
+        "q": "The aspect of the Basel III framework that Johansson describes to Smith relates to minimum:",
+        "options": [
+          "capital requirements.",
+          "liquidity requirements.",
+          "amounts of stable funding requirements."
+        ],
+        "answer": 0,
+        "why": "A minimum percentage of RISK-WEIGHTED ASSETS funded with EQUITY is a CAPITAL requirement. It limits leverage so the bank can absorb loan losses and write-downs.\nB: the liquidity requirement (liquidity coverage ratio) is about holding enough high-quality liquid assets to cover 30 days of cash outflows under stress.\nC: the stable funding requirement (net stable funding ratio) is about funding long-term assets with stable sources, matched to the bank's liquidity needs over one year."
+      },
+      {
+        "q": "One limitation of the approach used by Johansson to evaluate banks is that it fails to address a bank’s:",
+        "options": [
+          "sensitivity to market risk.",
+          "management capabilities.",
+          "competitive environment."
+        ],
+        "answer": 2,
+        "why": "CAMELS = Capital adequacy, Asset quality, Management capabilities, Earnings sufficiency, Liquidity position, Sensitivity to market risk.\nA (S) and B (M) are both IN CAMELS.\nNot covered: competitive environment, government support, the bank's mission, corporate culture, off-balance-sheet items, segment and currency exposures, and risk factors such as ESG."
+      },
+      {
+        "q": "The best indicator of the operations of a P&C insurance company emphasized by Johansson when evaluating P&C insurance companies is the:",
+        "options": [
+          "combined ratio.",
+          "underwriting loss ratio.",
+          "underwriting expense ratio."
+        ],
+        "answer": 2,
+        "why": "Johansson looks at the efficiency of spending on OBTAINING NEW PREMIUMS → underwriting expense ratio = [[underwriting expenses|net premiums written]].\nB (loss ratio) = [[losses + loss adjustment expenses|net premiums earned]] measures underwriting QUALITY: how well risks were priced.\nA (combined ratio) = loss ratio + expense ratio, measuring OVERALL underwriting profitability and efficiency."
+      },
+      {
+        "q": "Which of the differences between P&C insurers and L&H insurers noted by Smith is incorrect?",
+        "options": [
+          "Difference 1",
+          "Difference 2",
+          "Difference 3"
+        ],
+        "answer": 2,
+        "why": "Difference 3 has it backwards: L&H claims are more predictable (actuarial mortality rates over large populations), so it is L&H insurers that can have LOWER capital requirements and seek HIGHER returns. P&C claims are lumpy (accidents, catastrophes), so P&C insurers keep more capital and more liquid, conservative investments.\nDifference 1 is correct: L&H claims are more predictable.\nDifference 2 is correct: P&C policies are short-term (cost known within about a year); L&H policies are long-term."
+      },
+      {
+        "q": "Based on Exhibit 1, Smith should conclude that the insurer with the most efficient underwriting operation is:",
+        "options": [
+          "Insurer A.",
+          "Insurer B.",
+          "Insurer C."
+        ],
+        "answer": 2,
+        "why": "Combined ratio = loss & LAE ratio + underwriting expense ratio; below 100% = underwriting PROFIT, above 100% = underwriting LOSS.\nA: 68.8 + 33.7 = 102.5% (loss)\nB: 65.9 + 37.8 = 103.7% (loss)\nC: 64.1 + 32.9 = 97.0% (profit), the only one under 100% and the lowest of the three."
+      },
+      {
+        "q": "Based on Exhibit 2, Smith and Johansson should conclude that over the past three years, ABC Bank’s:",
+        "options": [
+          "liquidity position has declined.",
+          "capital adequacy has improved.",
+          "sensitivity to market risk has improved."
+        ],
+        "answer": 2,
+        "why": "Market risk: both VaR measures FELL (trading VaR $15m → $11m; trading and credit VaR $21m → $15m) → less market-risk exposure, so it has improved.\nA is wrong: the liquidity coverage ratio (119.1% → 123.6%) and the net stable funding ratio (112.7% → 114.9%) both ROSE, so liquidity IMPROVED.\nB is wrong: CET1 (12.1% → 10.7%) and Tier 1 (13.4% → 11.5%) FELL while the total capital ratio stayed flat (~14.9%). The bank swapped higher-quality Tier 1 for Tier 2 capital, so capital adequacy DECLINED."
+      }
+    ]
   }
 ];
 
