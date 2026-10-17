@@ -4685,6 +4685,142 @@ const QUESTIONS = [
     options: ["Risk contribution", "Weight", "Expected return"],
     answer: 1,
     why: "Risk parity gives each factor an equal RISK contribution instead."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "A subsidiary's functional currency is the currency of:",
+    options: ["Its primary economic environment", "The parent's financial statements", "Its largest single customer"],
+    answer: 0,
+    why: "Key sign: the currency that mainly influences its sales prices."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "The currency in which a parent presents its consolidated statements is its:",
+    options: ["Functional currency", "Local currency", "Presentation currency"],
+    answer: 2,
+    why: "Subsidiaries' statements are translated into it."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "The temporal method is used when the subsidiary's functional currency is:",
+    options: ["Its own local currency", "The parent's presentation currency", "Any currency except the parent's"],
+    answer: 1,
+    why: "Remeasurement: the subsidiary is treated as an extension of the parent."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "The current rate method is used when the subsidiary's functional currency is:",
+    options: ["Its own local currency", "The parent's presentation currency", "The US dollar in all cases"],
+    answer: 0,
+    why: "Translation: the subsidiary is a self-contained foreign entity."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, monetary assets and liabilities are translated at the:",
+    options: ["Historical rate", "Average rate for the period", "Current rate"],
+    answer: 2,
+    why: "E.g. cash, receivables, notes payable."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, inventory carried at cost is translated at the:",
+    options: ["Historical rate when it was acquired", "Current rate at the balance sheet date", "Rate on the day the parent was formed"],
+    answer: 0,
+    why: "Non-monetary items at cost use historical rates."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the current rate method, all assets and liabilities are translated at the:",
+    options: ["Historical rate", "Current rate", "Weighted-average rate"],
+    answer: 1,
+    why: "Common stock stays at the historical rate; income items use the average rate."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the temporal method, translation (remeasurement) gains and losses go to:",
+    options: ["Other comprehensive income", "Net income", "Retained earnings at year-end only"],
+    answer: 1,
+    why: "Under the current rate method they go to OCI (the cumulative translation adjustment)."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under the current rate method, translation adjustments are reported in:",
+    options: ["Net income, as a remeasurement gain", "Cost of sales, as a currency cost", "Other comprehensive income"],
+    answer: 2,
+    why: "They build up in the cumulative translation adjustment in equity."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "If the foreign currency weakens, a net monetary LIABILITY position under the temporal method gives a:",
+    options: ["Translation gain", "Translation loss", "No translation effect"],
+    answer: 0,
+    why: "The liabilities are worth less in the parent's currency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "If the foreign currency weakens, a net ASSET exposure under the current rate method gives a:",
+    options: ["Positive adjustment", "Negative adjustment", "No adjustment"],
+    answer: 1,
+    why: "Net assets are worth less in the parent's currency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "An economy is generally considered highly inflationary when cumulative 3-year inflation exceeds about:",
+    options: ["50%", "25%", "100%"],
+    answer: 2,
+    why: "This triggers special translation rules."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under IFRS, a subsidiary in a highly inflationary economy is handled by:",
+    options: ["Restating for inflation, then translating at the current rate", "Using the temporal method with the parent's currency as functional", "Translating at historical rates with no inflation restatement"],
+    answer: 0,
+    why: "US GAAP instead uses the temporal method, as if the parent's currency were functional."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Under US GAAP, a subsidiary in a highly inflationary economy uses:",
+    options: ["Inflation restatement and the current rate", "The temporal method", "The current rate method only"],
+    answer: 1,
+    why: "The parent's currency is treated as the functional currency."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "A multinational's effective tax rate is LOWER than its domestic rate when foreign profits are taxed at:",
+    options: ["Higher rates than at home", "Lower rates than at home", "The same rate as at home"],
+    answer: 1,
+    why: "E.g. a large share of income taxed at 0% abroad."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Sustainable (organic) sales growth excludes:",
+    options: ["Growth in sales volume", "Growth in selling prices", "Foreign currency effects"],
+    answer: 2,
+    why: "Currency moves are outside management's control."
+  },
+  {
+    topic: "Financial Statement Analysis",
+    reading: "Multinational Operations",
+    q: "Translating a foreign subsidiary's revenue when its currency strengthens against the parent's makes reported growth:",
+    options: ["Higher than organic growth", "Lower than organic growth", "Equal to organic growth"],
+    answer: 0,
+    why: "A stronger foreign currency adds a positive FX contribution."
   }
 ];
 

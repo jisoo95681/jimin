@@ -9614,6 +9614,264 @@ const VIGNETTES = [
         "why": "Re-running the Monte Carlo with a different input distribution (multivariate skewed Student's t instead of normal) to see how results change is SENSITIVITY ANALYSIS. It tests whether conclusions depend on the normal assumption, given Factor 1's skew and fat tails.\nA is wrong: data snooping is manipulating data or tests to get a statistically significant result.\nC is wrong: inverse transformation turns a random uniform number into a simulated value of a random variable. It's a step inside Monte Carlo, not an analysis of inputs."
       }
     ]
+  },
+  {
+    "id": "triofind",
+    "title": "Marie Janssen: Triofind Foreign Subsidiaries",
+    "topic": "Financial Statement Analysis",
+    "reading": "Multinational Operations",
+    "body": [
+      [
+        "p",
+        "Triofind, Inc. (Triofind), based in the country of Norvolt, provides wireless services to various countries, including Norvolt, Borliand, Abuelio, and Certait. The company’s presentation currency is the Norvolt euro (NER), and Triofind complies with IFRS. Triofind has two wholly owned subsidiaries, located in Borliand and Abuelio. The Borliand subsidiary (Triofind-B) was established on 30 June 2016, by Triofind both investing NER1,000,000, which was converted into Borliand dollars (BRD), and borrowing an additional BRD500,000."
+      ],
+      [
+        "p",
+        "Marie Janssen, a financial analyst in Triofind’s Norvolt headquarters office, translates Triofind-B’s financial statements using the temporal method. Non-monetary assets are measured at cost under the lower of cost or market rule. Spot BRD/NER exchange rates are presented in Exhibit 1, and the balance sheet for Triofind-B is presented in Exhibit 2."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 1: Spot BRD/NER Exchange Rates",
+          "head": [
+            "Date",
+            "BRD per NER"
+          ],
+          "rows": [
+            [
+              "30 June 2016",
+              "1.15"
+            ],
+            [
+              "Weighted-average rate when inventory was acquired (2016)",
+              "1.19"
+            ],
+            [
+              "31 December 2016",
+              "1.20"
+            ],
+            [
+              "Weighted-average rate when inventory was acquired (2017)",
+              "1.18"
+            ],
+            [
+              "30 June 2017",
+              "1.17"
+            ]
+          ]
+        }
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 2: Triofind-B Balance Sheet for 2016 and 2017 (BRD)",
+          "head": [
+            "",
+            "31 December 2016",
+            "30 June 2017"
+          ],
+          "rows": [
+            [
+              "Assets",
+              "",
+              ""
+            ],
+            [
+              "Cash",
+              "900,000",
+              "1,350,000"
+            ],
+            [
+              "Inventory",
+              "750,000",
+              "500,000"
+            ],
+            [
+              "Total",
+              "1,650,000",
+              "1,850,000"
+            ],
+            [
+              "Liabilities and Stockholders’ Equity",
+              "",
+              ""
+            ],
+            [
+              "Notes payable",
+              "500,000",
+              "500,000"
+            ],
+            [
+              "Common stock",
+              "1,150,000",
+              "1,150,000"
+            ],
+            [
+              "Retained earnings",
+              "",
+              "200,000"
+            ],
+            [
+              "Total",
+              "1,650,000",
+              "1,850,000"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Janssen next analyzes Triofind’s Abuelio subsidiary (Triofind-A), which uses the current rate method to translate its results into Norvolt euros. Triofind-A, which prices its goods in Abuelio pesos (ABP), sells mobile phones to a customer in Certait on 31 May 2017 and receives payment of 1 million Certait rand (CRD) on 31 July 2017."
+      ],
+      [
+        "p",
+        "On 31 May 2017, Triofind-A also received NER50,000 from Triofind and used the funds to purchase a new warehouse in Abuelio. Janssen translates the financial statements of Triofind-A as of 31 July 2017 and must determine the appropriate value for the warehouse in Triofind’s presentation currency. She observes that the cumulative Abuelio inflation rate exceeded 100% from 2015 to 2017. Spot exchange rates and inflation data are presented in Exhibit 3."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 3: Spot Exchange Rates and Inflation Data for Triofind-A",
+          "head": [
+            "Date",
+            "NER per CRD",
+            "NER per ABP",
+            "Abuelio Monthly Inflation Rate (%)"
+          ],
+          "rows": [
+            [
+              "31 May 2017",
+              "0.2667",
+              "0.0496",
+              "—"
+            ],
+            [
+              "30 June 2017",
+              "0.2703",
+              "0.0388",
+              "25"
+            ],
+            [
+              "31 July 2017",
+              "0.2632",
+              "0.0312",
+              "22"
+            ]
+          ]
+        }
+      ],
+      [
+        "p",
+        "Janssen gathers corporate tax rate data and company disclosure information to include in Triofind’s annual report. She determines that the corporate tax rates for Abuelio, Norvolt, and Borliand are 35%, 34%, and 0%, respectively, and that Norvolt exempts the non-domestic income of multinationals from taxation. Triofind-B constitutes 25% of Triofind’s net income, and Triofind-A constitutes 15%. Janssen also gathers data on components of net sales growth in different countries, presented in Exhibit 4."
+      ],
+      [
+        "table",
+        {
+          "title": "Exhibit 4: Components of Net Sales Growth (%) Fiscal Year 2017",
+          "head": [
+            "Country",
+            "Contribution from Volume Growth",
+            "Contribution from Price Growth",
+            "Foreign Currency Exchange",
+            "Net Sales Growth"
+          ],
+          "rows": [
+            [
+              "Abuelio",
+              "7",
+              "6",
+              "−2",
+              "11"
+            ],
+            [
+              "Borliand",
+              "4",
+              "5",
+              "4",
+              "13"
+            ],
+            [
+              "Norvolt",
+              "7",
+              "3",
+              "—",
+              "10"
+            ]
+          ]
+        }
+      ]
+    ],
+    "questions": [
+      {
+        "q": "Based on Exhibits 1 and 2 and Janssen’s translation method, total assets for Triofind-B translated into Triofind’s presentation currency as of 31 December 2016 are closest to:",
+        "options": [
+          "NER1,375,000.",
+          "NER1,380,252.",
+          "NER1,434,783."
+        ],
+        "answer": 1,
+        "why": "Temporal method: MONETARY items at the current rate, NON-MONETARY items at historical rates.\nCash (monetary) at the 31 Dec 2016 rate: [[900,000|1.20]] = NER750,000\nInventory (non-monetary, at cost) at the 2016 average rate when acquired: [[750,000|1.19]] = NER630,252\nTotal = NER1,380,252\nA (1,375,000) translates everything at the current rate, [[1,650,000|1.20]]. That's the current rate method.\nC (1,434,783) translates everything at the 30 June 2016 rate, [[1,650,000|1.15]]."
+      },
+      {
+        "q": "Based on Exhibits 1 and 2, the translation adjustment for Triofind-B’s liabilities into Triofind’s presentation currency for the six months ended 31 December 2016 is:",
+        "options": [
+          "negative.",
+          "zero.",
+          "positive."
+        ],
+        "answer": 2,
+        "why": "Notes payable (BRD500,000) is MONETARY, so it's translated at the current rate:\n30 June 2016: [[500,000|1.15]] = NER434,783\n31 Dec 2016: [[500,000|1.20]] = NER416,667\nThe BRD weakened (more BRD per NER), so the liability is worth NER18,116 LESS. Owing less is a gain → positive adjustment.\nB is wrong: monetary liabilities are re-translated at each new current rate, so a rate change does affect them.\nA would apply if the BRD had STRENGTHENED, making the liability larger in NER."
+      },
+      {
+        "q": "Based on Exhibits 1 and 2 and Janssen’s translation method, retained earnings for Triofind-B translated into Triofind’s presentation currency as of 30 June 2017 are closest to:",
+        "options": [
+          "NER150,225.",
+          "NER170,940.",
+          "NER172,414."
+        ],
+        "answer": 0,
+        "why": "Under the temporal method, retained earnings is the PLUG that balances the translated balance sheet.\nAssets:\nCash (current): [[1,350,000|1.17]] = 1,153,846\nInventory (2017 average when acquired): [[500,000|1.18]] = 423,729\nTotal assets = NER1,577,575\nLiabilities and equity:\nNotes payable (current): [[500,000|1.17]] = 427,350\nCommon stock (historical, 30 June 2016): [[1,150,000|1.15]] = 1,000,000\nRetained earnings = 1,577,575 − 427,350 − 1,000,000 = NER150,225\nB (170,940) and C (172,414) translate the BRD200,000 at a single rate ([[200,000|1.17]] and [[200,000|1.16]]) instead of finding it as the balancing figure."
+      },
+      {
+        "q": "The functional currency for Triofind-A’s sale of mobile phones to a customer in Certait is the:",
+        "options": [
+          "Certait real.",
+          "Norvolt euro.",
+          "Abuelio peso."
+        ],
+        "answer": 2,
+        "why": "Functional currency = the currency of the PRIMARY economic environment the entity operates in. Triofind-A operates in Abuelio and PRICES its goods in Abuelio pesos, the currency that mainly drives its sales prices.\nA: the Certait currency is just the INVOICE (transaction) currency for this one sale, a foreign currency for Triofind-A.\nB: the Norvolt euro is the parent's PRESENTATION currency, not the subsidiary's functional currency."
+      },
+      {
+        "q": "Based on Exhibit 3, the value of the new warehouse in Abuelio on Triofind’s balance sheet as of 31 July 2017 is closest to:",
+        "options": [
+          "NER31,452.",
+          "NER47,964.",
+          "NER50,000."
+        ],
+        "answer": 1,
+        "why": "Cumulative inflation > 100% over 3 years → Abuelio is HIGHLY INFLATIONARY. Under IFRS: first restate for local inflation, then translate everything at the CURRENT rate.\nCost in ABP: [[50,000|0.0496]] = ABP1,008,065\nRestate for inflation: 1,008,065 × 1.25 × 1.22 = ABP1,537,298\nTranslate at the current rate: 1,537,298 × 0.0312 = NER47,964\nA (31,452) translates the UNRESTATED cost at the current rate (1,008,065 × 0.0312). That's the current rate method without inflation restatement, which hugely understates the asset.\nC (50,000) keeps the historical NER cost, like the temporal method (which US GAAP uses for highly inflationary economies, not IFRS)."
+      },
+      {
+        "q": "Relative to its domestic tax rate, Triofind’s effective tax rate is most likely:",
+        "options": [
+          "lower.",
+          "the same.",
+          "higher."
+        ],
+        "answer": 0,
+        "why": "Norvolt (34%) doesn't tax foreign income, so each subsidiary is taxed only at its local rate:\nBorliand: 0% on 25% of net income, which pulls the rate DOWN a lot\nAbuelio: 35% on 15% of net income, which barely raises it (35% vs 34%)\nNet effect: effective rate well below 34% → lower.\nC would need foreign income taxed at materially higher rates; B would need all rates equal."
+      },
+      {
+        "q": "Based on Exhibit 4, the country with the highest sustainable sales growth is:",
+        "options": [
+          "Norvolt.",
+          "Abuelio.",
+          "Borliand."
+        ],
+        "answer": 1,
+        "why": "Sustainable (organic) growth = volume + price, EXCLUDING currency effects, which management can't control.\nAbuelio: 7 + 6 = 13%\nBorliand: 4 + 5 = 9% (its 13% headline includes +4% from FX)\nNorvolt: 7 + 3 = 10%\nC is wrong: Borliand has the highest REPORTED growth, but only because of currency.\nA is wrong: 10% < 13%."
+      }
+    ]
   }
 ];
 
