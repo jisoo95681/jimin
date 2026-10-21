@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v117 · 2026-10-17";
+  const APP_VERSION = "v118 · 2026-10-22";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1454,12 +1454,11 @@
     try { const t = JSON.parse(localStorage.getItem(STUDY_KEY)); if (t && t.days) s = { timer: {}, ...t }; } catch {}
     return seedPlan(s);
   }
-  // The final-weeks plan (D-28 to D-1): question-bank rounds (two topics a day, ~110 questions), mocks and their reviews.
-  // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
+  // The first final-weeks plan (two full question-bank rounds), kept only so its tasks can be taken off the calendar.
   const QB = [["Equity 1/3 · 49 Qs", "Port 1/2 · 69 Qs", 118], ["FSA 1/3 · 47 Qs", "FI 1/2 · 68 Qs", 115], ["Econ 1/2 · 50 Qs", "Deriv 1/2 · 49 Qs", 99],
     ["Equity 2/3 · 49 Qs", "Quant 1/2 · 67 Qs", 116], ["FSA 2/3 · 47 Qs", "Port 2/2 · 69 Qs", 116], ["Alt 1/2 · 50 Qs", "Econ 2/2 · 50 Qs", 100],
     ["Equity 3/3 · 49 Qs", "FI 2/2 · 67 Qs", 116], ["FSA 3/3 · 47 Qs", "Quant 2/2 · 67 Qs", 114], ["Alt 2/2 · 49 Qs", "Deriv 2/2 · 49 Qs", 98]];
-  function finalPlan() {
+  function oldPlan() {
     const plan = { 28: ["Mock 1"], 9: ["Mock 2"], 8: ["Review Mock 2 mistakes"], 7: ["Mock 3"], 6: ["Review Mock 3 mistakes"],
       5: ["Weak areas & formulas", "Ethics revision"], 4: ["Weak areas & formulas", "Ethics revision"], 3: ["Mock 4 (exam conditions)"],
       2: ["Review Mock 4 mistakes", "Formula sheet & Ethics skim"], 1: ["Rest · light skim only"] };
@@ -1467,17 +1466,56 @@
       const m = n * 3;
       plan[d] = [a, b, `Q bank round ${r + 1} · ${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`];
     }));
+    const out = {};
+    Object.entries(plan).forEach(([n, texts]) => { const d = midnight(EXAM); d.setDate(d.getDate() - Number(n)); out[dkey(d)] = texts; });
+    return out;
+  }
+  // The final-weeks plan: one pass of the question bank (1,091 Qs, 22 Oct – 3 Nov; FSA+FI and Port+Equity in thirds,
+  // the smaller topics a whole topic a day), then redoing wrong/unsure questions, then mocks. Each question day starts
+  // by skimming that day's notes and ends with spaced review of wrong questions (today's, and from 1, 4 and 7 days ago).
+  function newPlan() {
+    const qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
+    const spaced = "Wrong Qs: today's (10 min) + 1/4/7 days ago (20 min)";
+    const day = (topics, notes, n, first) => [...topics, `Skim notes first (15–20 min): ${notes}`, first ? "Wrong Qs: recall today's at day end (10 min)" : spaced, qs(n)];
+    const pair1 = i => [`FSA ${i}/3 · 47 Qs`, `FI ${i}/3 · 45 Qs`], pair2 = i => [`Port ${i}/3 · 46 Qs`, `Equity ${i}/3 · 49 Qs`];
+    const one = (t, n) => day([`${t} · all ${n} Qs`], t, n);
+    const plan = {
+      "2026-10-22": day(pair1(1), "FSA & FI", 92, true),
+      "2026-10-23": day(pair2(1), "Port & Equity", 95),
+      "2026-10-24": ["Morning: skim notes (formulas, Ethics, topics not yet done)", "Afternoon: practice exam (2 × 2h 12m)", "Night: skim notes on topics that felt shaky"],
+      "2026-10-25": ["Review practice exam mistakes", "Add mistake points to notes", "Skim all notes", spaced],
+      "2026-10-26": day(pair1(2), "FSA & FI", 92),
+      "2026-10-27": one("Quant", 134),
+      "2026-10-28": day(pair2(2), "Port & Equity", 95),
+      "2026-10-29": one("Economics", 100),
+      "2026-10-30": day(pair1(3), "FSA & FI", 92),
+      "2026-10-31": one("Derivatives", 98),
+      "2026-11-01": day(pair2(3), "Port & Equity", 95),
+      "2026-11-02": one("Corporate Issuers", 99),
+      "2026-11-03": one("Alternatives", 99),
+      "2026-11-11": ["Mock 2"], "2026-11-12": ["Review Mock 2 mistakes", spaced],
+      "2026-11-13": ["Mock 3"], "2026-11-14": ["Review Mock 3 mistakes", spaced],
+      "2026-11-15": ["Weak areas & formulas", "Ethics revision"], "2026-11-16": ["Weak areas & formulas", "Ethics revision"],
+      "2026-11-17": ["Mock 4 (exam conditions)"], "2026-11-18": ["Review Mock 4 mistakes", "Formula sheet & Ethics skim"],
+      "2026-11-19": ["Rest · light skim only"],
+    };
+    for (let d = 4; d <= 10; d++) plan[`2026-11-${String(d).padStart(2, "0")}`] = ["Redo ✗/△/★ questions", "Weak areas & notes", spaced];
     return plan;
   }
+  // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
+  // Switching plans takes the first plan's unticked tasks off and adds the new plan's.
   function seedPlan(s) {
     s.seeded = s.seeded || [];
-    if (s.seeded.includes("final-weeks-1")) return s;
-    Object.entries(finalPlan()).forEach(([n, texts]) => {
-      const d = midnight(EXAM); d.setDate(d.getDate() - Number(n));
-      const day = dayOf(s, dkey(d));
+    if (s.seeded.includes("final-weeks-2")) return s;
+    if (s.seeded.includes("final-weeks-1")) Object.entries(oldPlan()).forEach(([k, texts]) => {
+      const day = s.days[k];
+      if (day) day.tasks = day.tasks.filter(t => t.done || !texts.includes(t.text));
+    });
+    Object.entries(newPlan()).forEach(([k, texts]) => {
+      const day = dayOf(s, k);
       texts.forEach(text => { if (!day.tasks.some(t => t.text === text)) day.tasks.push({ text, done: false }); });
     });
-    s.seeded.push("final-weeks-1");
+    s.seeded.push("final-weeks-2");
     saveStudy(s);
     return s;
   }
