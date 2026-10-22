@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v119 · 2026-10-22";
+  const APP_VERSION = "v120 · 2026-10-22";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1509,10 +1509,10 @@
     const spaced = "Wrong Qs: today's (10 min) + 1/4/7 days ago (20 min)";
     const day = (topics, notes, n) => [...topics, `Skim notes first (15–20 min): ${notes}`, spaced, qs(n)];
     const plan = {
-      "2026-10-22": ["FSA 1–47 · 47 Qs", "FI 1–45 · 45 Qs", "Skim notes first (15–20 min): FSA & FI", "Wrong Qs: recall today's at day end (10 min)", qs(92)],
+      "2026-10-22": ["FSA 1–39 · 39 Qs", "FI 1–39 · 39 Qs", "Skim notes first (15–20 min): FSA & FI", "Wrong Qs: recall today's at day end (10 min)", qs(78)],
       "2026-10-23": day(["Port 1–60 · 60 Qs", "Equity 1–60 · 60 Qs"], "Port & Equity", 120),
       "2026-10-24": ["Morning: skim notes (formulas, Ethics, topics not yet done)", "Afternoon: practice exam (2 × 2h 12m)", "Night: skim notes on topics that felt shaky"],
-      "2026-10-25": ["Morning: review practice exam mistakes", "FSA 48–77 · 30 Qs", "FI 46–75 · 30 Qs", "Add mistake points to notes", spaced, qs(60)],
+      "2026-10-25": ["Morning: review practice exam mistakes", "FSA 40–77 · 38 Qs", "FI 40–75 · 36 Qs", "Add mistake points to notes", spaced, qs(74)],
       "2026-10-26": day(["FSA 78–141 · 64 Qs", "FI 76–135 · 60 Qs"], "FSA & FI", 124),
       "2026-10-27": day(["Quant · all 134 Qs"], "Quant", 134),
       "2026-10-28": day(["Port 61–120 · 60 Qs", "Equity 61–120 · 60 Qs"], "Port & Equity", 120),
@@ -1531,15 +1531,22 @@
     for (let d = 4; d <= 10; d++) plan[`2026-11-${String(d).padStart(2, "0")}`] = ["Redo ✗/△/★ questions", "Weak areas & notes", spaced];
     return plan;
   }
+  // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
+  function plan3v1() {
+    const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
+    p["2026-10-22"] = ["FSA 1–47 · 47 Qs", "FI 1–45 · 45 Qs", qs(92)];
+    p["2026-10-25"] = ["FSA 48–77 · 30 Qs", "FI 46–75 · 30 Qs", qs(60)];
+    return p;
+  }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
     if (s.seeded.includes(curId)) return s;
-    // Today's (22 Oct) questions keep their ticks under the new labels.
-    const renamed = { "FSA 1/3 · 47 Qs": "FSA 1–47 · 47 Qs", "FI 1/3 · 45 Qs": "FI 1–45 · 45 Qs" };
+    // 22 Oct's questions keep their ticks under the new labels (78 were done; the other 14 moved to 25 Oct).
+    const renamed = { "FSA 1/3 · 47 Qs": "FSA 1–39 · 39 Qs", "FI 1/3 · 45 Qs": "FI 1–39 · 39 Qs", "FSA 1–47 · 47 Qs": "FSA 1–39 · 39 Qs", "FI 1–45 · 45 Qs": "FI 1–39 · 39 Qs" };
     ((s.days["2026-10-22"] || {}).tasks || []).forEach(t => { if (renamed[t.text]) t.text = renamed[t.text]; });
     PLANS.slice(0, -1).forEach(([id, fn]) => {
       if (!s.seeded.includes(id)) return;
