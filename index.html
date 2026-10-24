@@ -550,7 +550,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v120 · 2026-10-22";
+  const APP_VERSION = "v121 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1531,6 +1531,27 @@
     for (let d = 4; d <= 10; d++) plan[`2026-11-${String(d).padStart(2, "0")}`] = ["Redo ✗/△/★ questions", "Weak areas & notes", spaced];
     return plan;
   }
+  // The 25 Oct plan: the same question-bank numbers as plan3, plus Equity 31–60 (left over from 23 Oct) on 25 Oct, a mock
+  // on 2 Nov, and 3–10 Nov for CFA Institute / Schweser questions mixed with wrong-question review by subject.
+  function plan4() {
+    const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
+    const spaced = "Wrong Qs: today's (10 min) + 1/4/7 days ago (20 min)";
+    const cfai = "CFAI / Schweser Qs: split the rest evenly over 3–10 Nov";
+    p["2026-10-24"] = ["Morning: skim notes (formulas, topics not yet done)", "Afternoon: practice exam (2 × 2h 12m)", "Night: skim notes on topics that felt shaky"];
+    p["2026-10-25"] = ["Morning: review practice exam mistakes", "FSA 40–77 · 38 Qs", "FI 40–75 · 36 Qs", "Equity 31–60 · 30 Qs", "Add mistake points to notes", spaced, qs(104)];
+    p["2026-11-02"] = ["Mock (exam conditions, 2 × 2h 12m)"];
+    p["2026-11-03"] = ["Morning: review mock mistakes", cfai, spaced];
+    p["2026-11-04"] = [cfai, "Q bank wrong Qs review: FSA & FI", spaced];
+    p["2026-11-05"] = [cfai, "Q bank wrong Qs review: Port & Equity", spaced];
+    p["2026-11-06"] = [cfai, "Q bank wrong Qs review: Quant & Econ", spaced];
+    p["2026-11-07"] = [cfai, "Q bank wrong Qs review: Deriv, CI & Alt", spaced];
+    p["2026-11-08"] = ["Redo repeat-wrong (★) questions", spaced];
+    p["2026-11-09"] = ["Build the formula sheet", spaced];
+    p["2026-11-10"] = ["Weak top-3 readings: notes + questions", spaced];
+    p["2026-11-15"] = ["Weak areas & formulas"]; p["2026-11-16"] = ["Weak areas & formulas"];
+    p["2026-11-18"] = ["Review Mock 4 mistakes", "Formula sheet skim"];
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1540,7 +1561,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
@@ -1548,6 +1569,9 @@
     // 22 Oct's questions keep their ticks under the new labels (78 were done; the other 14 moved to 25 Oct).
     const renamed = { "FSA 1/3 · 47 Qs": "FSA 1–39 · 39 Qs", "FI 1/3 · 45 Qs": "FI 1–39 · 39 Qs", "FSA 1–47 · 47 Qs": "FSA 1–39 · 39 Qs", "FI 1–45 · 45 Qs": "FI 1–39 · 39 Qs" };
     ((s.days["2026-10-22"] || {}).tasks || []).forEach(t => { if (renamed[t.text]) t.text = renamed[t.text]; });
+    // 24 Oct's note-skim task loses its Ethics mention, and 25 Oct's total grows with Equity 31–60.
+    ((s.days["2026-10-24"] || {}).tasks || []).forEach(t => { if (t.text.includes("Ethics, ")) t.text = t.text.replace("Ethics, ", ""); });
+    ((s.days["2026-10-25"] || {}).tasks || []).forEach(t => { if (t.text.startsWith("74 Qs")) t.text = "104 Qs · ~5h 12m + review"; });
     PLANS.slice(0, -1).forEach(([id, fn]) => {
       if (!s.seeded.includes(id)) return;
       Object.entries(fn()).forEach(([k, texts]) => { const day = s.days[k]; if (day) day.tasks = day.tasks.filter(t => t.done || !texts.includes(t.text)); });
