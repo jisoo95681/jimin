@@ -595,7 +595,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v125 · 2026-10-25";
+  const APP_VERSION = "v126 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1818,6 +1818,17 @@
       "Evening (20:00–00:30): today's wrong-answer notes in the app + formulas + shrink own notes"];
     return p;
   }
+  // 26 Oct, final shape: Session 1 redoes 13 readings x 4 Qs (52 Qs); Session 2 is heavy readings that do not overlap with it.
+  function plan7() {
+    const p = plan6();
+    p["2026-10-26"] = [
+      "Morning: a few test-bank Qs + study wrong-answer notes (tick what is fully yours)",
+      "Session 1 (14:30–16:30) · 52 Qs, redo what was missed: readings 2, 6, 11, 15, 16, 20, 21, 26, 27, 28, 33, 39, 41 · 4 Qs each",
+      "Session 2 (16:45–18:45) · 44 Qs, heavy readings not in Session 1: 23 (16 Qs), 25 (16 Qs), 24 (4 Qs), 19 (8 Qs)",
+      "Send both sessions' results to Claude → wrong-answer notes in the app",
+      "Evening (20:00–00:30): today's wrong-answer notes in the app + formulas + shrink own notes"];
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1827,7 +1838,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
