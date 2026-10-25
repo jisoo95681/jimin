@@ -514,6 +514,50 @@
   main { transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
   body.loading main { opacity: 0; transform: translateY(18px); }
 
+
+  /* Wrong-answer notes */
+  .cc.n { background: #e6e2f3; color: var(--navy); }
+  .cc.n h2 { font-size: clamp(1.6rem, 5.4vw, 2.5rem); }
+  .nt-tabs { display: flex; gap: 8px; margin: 0 0 14px; }
+  .nt-tabs button { flex: 1; padding: 10px 0; border-radius: 11px; border: 1px solid var(--border); background: var(--white); color: var(--muted); font: inherit; font-weight: 650; cursor: pointer; }
+  .nt-tabs button.on { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .nt-item { display: block; width: 100%; text-align: left; margin: 0 0 10px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border); background: var(--white); color: var(--navy); font: inherit; cursor: pointer; transition: opacity .3s, border-color .3s; }
+  .nt-item:hover { border-color: var(--blue); }
+  .nt-item b { display: block; font-size: 1.02rem; }
+  .nt-item span { color: var(--muted); font-size: .85rem; }
+  .nt-item.absorbed, .nt-row.absorbed { opacity: .42; }
+  .nt-bar { height: 5px; border-radius: 3px; background: var(--aqua-pale); overflow: hidden; margin-top: 8px; }
+  .nt-bar div { height: 100%; background: var(--good); }
+  .nt-row { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; margin: 0 0 8px; padding: 11px 13px; border-radius: 12px; border: 1px solid var(--border); background: var(--white); color: var(--navy); font: inherit; cursor: pointer; transition: opacity .3s; }
+  .nt-row .tag { flex: none; font-size: .72rem; font-weight: 700; color: var(--white); background: var(--blue); border-radius: 6px; padding: 2px 7px; white-space: nowrap; }
+  .nt-row .mid { flex: 1; min-width: 0; }
+  .nt-row .mid b { display: block; font-size: .95rem; line-height: 1.3; }
+  .nt-row .mid span { color: var(--muted); font-size: .8rem; }
+  .nt-dots { flex: none; display: flex; gap: 4px; }
+  .nt-dots i { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--blue); }
+  .nt-dots i.on { background: var(--good); border-color: var(--good); }
+  .nt-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 4px 0 16px; }
+  .nt-stem { margin: 0 0 12px; padding-left: 18px; }
+  .nt-stem li { margin: 3px 0; }
+  .nt-why-opt { margin: -4px 0 10px; padding: 8px 12px; font-size: .88rem; color: var(--muted); border-left: 3px solid var(--border); }
+  .nt-why-opt.good { border-color: var(--good); color: var(--text); }
+  .nt-badge { display: inline-block; margin: 0 0 12px; padding: 5px 11px; border-radius: 999px; font-weight: 700; font-size: .85rem; }
+  .nt-badge.good { background: var(--good-bg); color: var(--good); }
+  .nt-badge.bad { background: var(--bad-bg); color: var(--bad); }
+  .nt-badge.soft { background: var(--accent-soft); color: var(--blue); margin-left: 6px; }
+  .nt h4 { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 16px 0 6px; }
+  .nt .nt-formula { background: var(--aqua-pale); border-left: 3px solid var(--blue); border-radius: 0 10px 10px 0; padding: 8px 12px; }
+  .nt .nt-formula div + div { margin-top: 3px; }
+  .nt ol { margin: 4px 0; padding-left: 20px; }
+  .nt ol li, .nt .nt-gen li { margin: 3px 0; }
+  .nt .nt-gen { border: 1px dashed #9db3c4; border-radius: 10px; padding: 8px 12px 8px 12px; margin-top: 14px; }
+  .nt .nt-gen h4 { margin-top: 0; color: var(--navy); }
+  .nt .nt-gen ul { margin: 2px 0; padding-left: 18px; }
+  .nt table.mini { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: .85rem; }
+  .nt table.mini th, .nt table.mini td { text-align: left; padding: 4px 7px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .nt table.mini th { background: var(--aqua-pale); }
+  .nt sub, .nt sup { font-size: 70%; line-height: 0; }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01s !important; animation-delay: 0s !important; transition-duration: .15s !important; }
     body.loading main { transform: none; }
@@ -544,13 +588,14 @@
 </main>
 <script src="questions.js"></script>
 <script src="vignettes.js"></script>
+<script src="notes.js"></script>
 <script src="garden.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v121 · 2026-10-25";
+  const APP_VERSION = "v122 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -767,11 +812,196 @@
     return out;
   }
 
+
+  // ---------- Wrong-answer notes ----------
+  // Condensed notes on questions missed in practice papers (data in notes.js). A note counts as absorbed after two
+  // correct answers in a row, and then fades; a wrong answer starts the count again.
+  const NOTES_KEY = "cfa-notes";
+  const loadNotes = () => { try { return JSON.parse(localStorage.getItem(NOTES_KEY)) || {}; } catch { return {}; } };
+  const saveNotes = d => { try { localStorage.setItem(NOTES_KEY, JSON.stringify(d)); } catch {} };
+  const noteSt = (d, n) => d[n.id] || { streak: 0, tries: 0 };
+  const noteDone = (d, n) => noteSt(d, n).streak >= 2;
+  function notesSummary() {
+    const d = loadNotes(), a = NOTES.filter(n => noteDone(d, n)).length;
+    return `${plural(NOTES.length, "note")} · ${a} absorbed`;
+  }
+  const dateLabel = iso => fromKey(iso).toLocaleDateString([], { day: "numeric", month: "short" });
+  const noteTag = n => `Mock ${n.mock} · Q${n.num}`;
+  function noteBar(items, d) {
+    const a = items.filter(n => noteDone(d, n)).length;
+    const bar = el("div", { className: "nt-bar" });
+    const f = el("div"); f.style.width = `${items.length ? Math.round(a / items.length * 100) : 0}%`;
+    bar.append(f);
+    return [a, bar];
+  }
+
+  function notesHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => notesHub("back");
+    app.append(nav("Menu", () => home("back")));
+    const d = loadNotes(), tab = loadPrefs().notesTab || "session";
+    app.append(el("h1", { className: "title" }, "Wrong-answer notes"),
+      el("p", { className: "sub" }, "Two correct answers in a row and a note fades: it is absorbed."));
+    const tabs = el("div", { className: "nt-tabs" });
+    [["session", "By session"], ["topic", "By topic"]].forEach(([k, label]) => {
+      const b = el("button", { className: tab === k ? "on" : "" }, label);
+      b.onclick = () => { savePrefs({ notesTab: k }); notesHub("back"); };
+      tabs.append(b);
+    });
+    app.append(tabs);
+    const addItem = (title, sub, items, spec) => {
+      const [a, bar] = noteBar(items, d);
+      const b = el("button", { className: "nt-item" + (a === items.length ? " absorbed" : "") });
+      b.append(el("b", {}, title), el("span", {}, `${sub} · ${a} of ${items.length} absorbed`), bar);
+      b.onclick = () => noteList(spec);
+      app.append(b);
+    };
+    if (tab === "session") {
+      NOTE_SESSIONS.slice().sort((x, y) => y.date.localeCompare(x.date) || y.session - x.session).forEach(s => {
+        const items = NOTES.filter(n => n.mock === s.mock);
+        addItem(`${dateLabel(s.date)} · Session ${s.session}`, `${s.label} · ${plural(items.length, "note")}`, items, { title: `${dateLabel(s.date)} · Session ${s.session}`, sub: s.label, items });
+      });
+    } else {
+      [...new Set(NOTES.map(n => n.reading))].sort((x, y) => x - y).forEach(r => {
+        const items = NOTES.filter(n => n.reading === r);
+        addItem(`${r} · ${NOTE_READINGS[r]}`, `${items[0].subject} · ${plural(items.length, "note")}`, items, { title: `${r} · ${NOTE_READINGS[r]}`, sub: items[0].subject, items });
+      });
+    }
+  }
+
+  function noteList(spec, dir = "fwd") {
+    screen(dir);
+    backTo = () => noteList(spec, "back");
+    app.append(nav("Notes", () => notesHub("back")));
+    const d = loadNotes(), items = spec.items;
+    const open = items.filter(n => !noteDone(d, n));
+    app.append(el("h1", { className: "title" }, spec.title), el("p", { className: "sub" }, `${spec.sub} · ${items.length - open.length} of ${items.length} absorbed`));
+    const prefs = loadPrefs();
+    const tools = el("div", { className: "nt-tools" });
+    const all = el("button", { className: "btn" }, `Practise all (${items.length})`);
+    all.onclick = () => noteQuiz(noteDeck(items), 0, spec, { right: 0, got: [], fresh: [] });
+    const rest = el("button", { className: "btn ghost" }, `Not yet absorbed (${open.length})`);
+    rest.disabled = !open.length;
+    rest.onclick = () => noteQuiz(noteDeck(open), 0, spec, { right: 0, got: [], fresh: [] });
+    tools.append(all, rest);
+    app.append(tools);
+    const shuf = el("label", { className: "sub" });
+    const cb = el("input", { type: "checkbox", checked: prefs.notesShuffle !== false });
+    cb.onchange = () => savePrefs({ notesShuffle: cb.checked });
+    shuf.append(cb, " Shuffle order of notes and answers");
+    app.append(shuf);
+    items.forEach(n => {
+      const st = noteSt(d, n);
+      const row = el("button", { className: "nt-row" + (noteDone(d, n) ? " absorbed" : "") });
+      const mid = el("div", { className: "mid" });
+      mid.append(el("b", {}, n.title), el("span", {}, `${n.subject} · ${n.reading} ${NOTE_READINGS[n.reading]}`));
+      const dots = el("div", { className: "nt-dots" });
+      [0, 1].forEach(k => dots.append(el("i", { className: st.streak > k ? "on" : "" })));
+      row.append(el("span", { className: "tag" }, noteTag(n)), mid, dots);
+      row.onclick = () => noteQuiz([n], 0, spec, { right: 0, got: [], fresh: [] });
+      app.append(row);
+    });
+    const reset = el("button", { className: "link-btn" }, "Reset progress for this list");
+    reset.onclick = () => {
+      if (!confirm("Reset the absorbed progress for this list?")) return;
+      const dd = loadNotes(); items.forEach(n => delete dd[n.id]); saveNotes(dd); noteList(spec, "back");
+    };
+    app.append(el("div", { className: "row" }, ""), reset);
+  }
+  function noteDeck(items) { return loadPrefs().notesShuffle !== false ? shuffle(items) : items.slice(); }
+
+  function noteQuiz(deck, k, spec, run) {
+    screen("fwd");
+    backTo = () => noteList(spec, "back");
+    app.append(nav(spec.title, () => noteList(spec, "back")));
+    const n = deck[k], card = el("div", { className: "card nt" });
+    const meta = el("div", { className: "meta" });
+    meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
+    card.append(meta, el("h3", { className: "title" }, n.title));
+    const ul = el("ul", { className: "nt-stem" });
+    n.stem.forEach(t => { const li = el("li"); li.innerHTML = t; ul.append(li); });
+    const ask = el("p", { className: "q" }); ask.innerHTML = n.ask;
+    card.append(ul, ask);
+    const order = loadPrefs().notesShuffle !== false ? shuffle(n.options.map((_, i) => i)) : n.options.map((_, i) => i);
+    const holder = el("div"), after = el("div");
+    const btns = order.map((oi, pos) => {
+      const b = el("button", { className: "opt" });
+      b.innerHTML = `${LETTERS[pos]}. ${n.options[oi].t}`;
+      b.onclick = () => reveal(oi);
+      holder.append(b);
+      return b;
+    });
+    card.append(holder, after);
+    app.append(card);
+
+    function reveal(pick) {
+      const ok = pick === n.answer;
+      btns.forEach((b, pos) => {
+        const oi = order[pos];
+        b.disabled = true;
+        if (oi === n.answer) b.classList.add("correct"); else if (oi === pick) b.classList.add("wrong");
+        const why = el("div", { className: "nt-why-opt" + (oi === n.answer ? " good" : "") });
+        why.innerHTML = n.options[oi].n;
+        b.after(why);
+      });
+      const d = loadNotes(), st = { ...noteSt(d, n) }, was = st.streak >= 2;
+      st.tries += 1; st.streak = ok ? st.streak + 1 : 0; st.last = today();
+      d[n.id] = st; saveNotes(d);
+      if (ok) run.right += 1;
+      run.got.push(n.id);
+      const fresh = ok && !was && st.streak >= 2;
+      if (fresh) run.fresh.push(n.title);
+      const badge = el("div");
+      badge.append(el("span", { className: `nt-badge ${ok ? "good" : "bad"}` }, ok ? "✓ Correct" : "✗ Not quite"));
+      if (fresh) badge.append(el("span", { className: "nt-badge soft" }, "Absorbed: it will show lighter now"));
+      else if (ok) badge.append(el("span", { className: "nt-badge soft" }, `${st.streak} of 2 in a row`));
+      if (!ok) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
+      after.append(badge);
+      const sec = (title, html) => { after.append(el("h4", {}, title)); const box = el("div"); box.innerHTML = html; after.append(box); return box; };
+      sec("Formula", `<div class="nt-formula">${n.formula.map(f => `<div>${f}</div>`).join("")}</div>`);
+      sec("Why", `<ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`);
+      if (n.x) { const t = el("div"); t.innerHTML = n.x; after.append(t); }
+      const gen = el("div", { className: "nt-gen" });
+      gen.innerHTML = `<h4>Apply to other questions</h4><ul>${n.general.map(g => `<li>${g}</li>`).join("")}</ul>`;
+      after.append(gen);
+      const last = k + 1 >= deck.length;
+      const row = el("div", { className: "row" });
+      const next = el("button", { className: "btn" }, last ? "Finish" : "Next →");
+      next.onclick = () => last ? noteResult(deck, spec, run) : noteQuiz(deck, k + 1, spec, run);
+      row.append(next);
+      after.append(row);
+      next.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }
+
+  function noteResult(deck, spec, run) {
+    screen("fwd");
+    backTo = () => noteList(spec, "back");
+    app.append(nav(spec.title, () => noteList(spec, "back")));
+    const card = el("div", { className: "card" });
+    card.append(el("p", { className: "kicker" }, "Done"), el("p", { className: "score" }, `${run.right} / ${deck.length}`),
+      el("p", { className: "sub" }, run.right === deck.length ? "All correct." : "Wrong ones start their two-in-a-row count again."));
+    if (run.fresh.length) {
+      card.append(el("p", { className: "label" }, "Newly absorbed"));
+      const ul = el("ul", { className: "miss" });
+      run.fresh.forEach(t => ul.append(el("li", {}, t)));
+      card.append(ul);
+    }
+    const row = el("div", { className: "row" });
+    const again = el("button", { className: "btn ghost" }, "Back to list");
+    again.onclick = () => noteList(spec, "back");
+    const menu = el("button", { className: "btn" }, "All notes");
+    menu.onclick = () => notesHub("back");
+    row.append(again, menu);
+    card.append(row);
+    app.append(card);
+  }
+
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker.
+  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Wrong-answer notes.
   // The menu comes back to the card you last opened, even after the app is closed and reopened.
-  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 5 ? v : 1; } catch { return 1; } })();
+  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 6 ? v : 1; } catch { return 1; } })();
   const saveHomePos = i => { homePos = i; try { localStorage.setItem("cfa-home-pos", String(i)); } catch {} };
   function home(dir = "back") {
     screen(dir);
@@ -781,7 +1011,8 @@
       { cls: "t", kicker: "Focus", title: "Timer", id: "home-timer", open: () => studyTimer() },
       { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
       { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() },
-      { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() }
+      { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() },
+      { cls: "n", kicker: "Review", title: "Wrong-answer notes", info: notesSummary(), open: () => notesHub() }
     ];
     const N = cards.length;
     const wrap = el("div", { className: "carousel" });
@@ -1552,6 +1783,28 @@
     p["2026-11-18"] = ["Review Mock 4 mistakes", "Formula sheet skim"];
     return p;
   }
+  // The 25 Oct plan: each question day is two exam-style sessions (44 Qs each, 14:30 and 16:45) mixed from CFA Institute
+  // questions, with the wrong-answer notes studied in the evening. Weak topics come first; every topic is touched by 1 Nov.
+  function plan5() {
+    const p = plan4();
+    const mix = extra => `Session 2 (16:45–18:45) · 44 Qs: exam-weight mix, 1 vignette each of Quant, Econ, FSA, CI, Equity, FI, Deriv, Alt, Port, Ethics + 1 extra ${extra}`;
+    const day = (s1, extra) => [
+      "Morning: a few test-bank Qs + study wrong-answer notes (tick what is fully yours)",
+      `Session 1 (14:30–16:30) · 44 Qs: ${s1}`,
+      mix(extra),
+      "Send both sessions' results to Claude → wrong-answer notes in the app",
+      "Evening (20:00–00:30): today's wrong-answer notes in the app + formulas + shrink own notes"];
+    p["2026-10-25"] = ["CFAI 27 Credit Default Swaps · 34 Qs", "Read own wrong-answer notes: FI, FSA, Equity, CI, Econ (tick what is fully yours)", "Review everything done so far", "Send CDS results to Claude → wrong-answer notes in the app"];
+    p["2026-10-26"] = day("Fixed Income heavy: FI 7 vignettes (23 Term Structure, 25 Embedded Options, 24) + CI 2 + Equity 2", "FI");
+    p["2026-10-27"] = day("Equity heavy: Equity 7 vignettes (start with 20 Market-Based) + CI 2 + Alt 33 Hedge Funds 2", "Equity");
+    p["2026-10-28"] = day("Equity + CI: Equity 6 (19 FCF, 18 DDM) + CI 4 (13–16) + FI 1 (23)", "CI");
+    p["2026-10-29"] = day("Derivatives + Economics: Deriv 5 (28, 29) + Econ 4 (5, 6) + FI 2 (24)", "Deriv");
+    p["2026-10-30"] = day("FSA + Quant: FSA 5 (7–12) + Quant 4 (1, 2) + Equity 2 (21, 22)", "FSA");
+    p["2026-10-31"] = day("Portfolio + Alt: Port 5 (34–39) + Alt 3 (30–33) + FI 3 (26, 25)", "Port");
+    p["2026-11-01"] = day("Weak-topic mix: FI 3 · Equity 3 · Deriv 2 · CI 1 · Econ 1 · Quant 1", "Econ");
+    p["2026-11-02"] = ["Mock: treat it as exam day (Session 1 from 14:30, 15-min break, then Session 2)"];
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1561,7 +1814,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
