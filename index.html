@@ -607,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v131 · 2026-10-25";
+  const APP_VERSION = "v132 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -988,14 +988,9 @@
       after.append(badge);
       const sec = (title, html) => { after.append(el("h4", {}, title)); const box = el("div"); box.innerHTML = html; after.append(box); return box; };
       sec(dirMode ? "Rule" : "Formula", `<div class="nt-formula">${n.formula.map(f => `<div>${f}</div>`).join("")}</div>`);
-      if (dirMode) {
-        const dt = el("details", { className: "nt-det" });
-        dt.innerHTML = `<summary>Why (steps)</summary><ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`;
-        after.append(dt);
-      } else {
-        sec("Why", `<ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`);
-        if (n.x) { const t = el("div"); t.innerHTML = n.x; after.append(t); }
-      }
+      // Bed mode shows the full working too, so the calculation can be recalled without solving it.
+      sec(dirMode ? "How to calculate it" : "Why", `<ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`);
+      if (n.x) { const t = el("div"); t.innerHTML = n.x; after.append(t); }
       const gen = el("div", { className: "nt-gen" });
       gen.innerHTML = `<h4>Apply to other questions</h4><ul>${n.general.map(g => `<li>${g}</li>`).join("")}</ul>`;
       after.append(gen);
