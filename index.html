@@ -597,7 +597,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v127 · 2026-10-25";
+  const APP_VERSION = "v128 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -922,6 +922,7 @@
   }
   function noteDeck(items) { return loadPrefs().notesShuffle !== false ? shuffle(items) : items.slice(); }
 
+  const noBold = h => h.replace(/<\/?(b|strong)>/g, ""); // bold in a question is a hint, so questions are shown plain
   function noteQuiz(deck, k, spec, run) {
     screen("fwd");
     backTo = () => noteList(spec, "back");
@@ -932,8 +933,8 @@
     meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
     card.append(meta, el("h3", { className: "title" }, n.title));
     const ul = el("ul", { className: "nt-stem" });
-    n.stem.forEach(t => { const li = el("li"); li.innerHTML = t; ul.append(li); });
-    const ask = el("p", { className: "q" }); ask.innerHTML = n.ask;
+    n.stem.forEach(t => { const li = el("li"); li.innerHTML = noBold(t); ul.append(li); });
+    const ask = el("p", { className: "q" }); ask.innerHTML = noBold(n.ask);
     card.append(ul, ask);
     if (dirMode) card.append(el("p", { className: "label" }, "Which direction solves it?"));
     const opts = dirMode ? NOTE_DIR[n.id].map(t => ({ t, n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
@@ -941,7 +942,7 @@
     const holder = el("div"), after = el("div");
     const btns = order.map((oi, pos) => {
       const b = el("button", { className: "opt" });
-      b.innerHTML = `${LETTERS[pos]}. ${opts[oi].t}`;
+      b.innerHTML = `${LETTERS[pos]}. ${noBold(opts[oi].t)}`;
       b.onclick = () => reveal(oi);
       holder.append(b);
       return b;
