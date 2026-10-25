@@ -597,7 +597,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v128 · 2026-10-25";
+  const APP_VERSION = "v129 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1853,6 +1853,12 @@
       "Evening (20:00–00:30): today's wrong-answer notes in the app + formulas + shrink own notes"];
     return p;
   }
+  // 26 Oct Session 2: 12 Qs each of FI, Equity, FSA and Ethics, in whole vignettes (4 Qs): 8 + 4 from two readings.
+  function plan8() {
+    const p = plan7();
+    p["2026-10-26"] = p["2026-10-26"].map(t => t.startsWith("Session 2") ? "Session 2 (16:45–18:45) · 48 Qs, 12 vignettes: FI 23 (8) + 25 (4) · Equity 19 (8) + 18 (4) · FSA 9 (8) + 8 (4) · Ethics 41 (12)" : t);
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1862,7 +1868,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7], ["final-weeks-9", plan8]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
