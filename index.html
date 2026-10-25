@@ -557,6 +557,8 @@
   .nt table.mini th, .nt table.mini td { text-align: left; padding: 4px 7px; border-bottom: 1px solid var(--border); vertical-align: top; }
   .nt table.mini th { background: var(--aqua-pale); }
   .nt sub, .nt sup { font-size: 70%; line-height: 0; }
+  .nt-big .opt { padding: 16px 16px; font-size: 1.04rem; line-height: 1.45; }
+  .nt-det { margin-top: 12px; } .nt-det summary { cursor: pointer; color: var(--blue); font-weight: 650; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01s !important; animation-delay: 0s !important; transition-duration: .15s !important; }
@@ -595,7 +597,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v126 · 2026-10-25";
+  const APP_VERSION = "v127 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -817,8 +819,11 @@
   // Condensed notes on questions missed in practice papers (data in notes.js). A note counts as absorbed after two
   // correct answers in a row, and then fades; a wrong answer starts the count again.
   const NOTES_KEY = "cfa-notes";
-  const loadNotes = () => { try { return JSON.parse(localStorage.getItem(NOTES_KEY)) || {}; } catch { return {}; } };
-  const saveNotes = d => { try { localStorage.setItem(NOTES_KEY, JSON.stringify(d)); } catch {} };
+  // Two modes keep separate progress: "full" (solve it) and "dir" (bed mode: only pick the right direction).
+  const noteMode = () => (loadPrefs().notesMode === "dir" ? "dir" : "full");
+  const notesKey = () => (noteMode() === "dir" ? NOTES_KEY + "-dir" : NOTES_KEY);
+  const loadNotes = () => { try { return JSON.parse(localStorage.getItem(notesKey())) || {}; } catch { return {}; } };
+  const saveNotes = d => { try { localStorage.setItem(notesKey(), JSON.stringify(d)); } catch {} };
   const noteSt = (d, n) => d[n.id] || { streak: 0, tries: 0 };
   const noteDone = (d, n) => noteSt(d, n).streak >= 2;
   function notesSummary() {
@@ -841,7 +846,14 @@
     app.append(nav("Menu", () => home("back")));
     const d = loadNotes(), tab = loadPrefs().notesTab || "session";
     app.append(el("h1", { className: "title" }, "Wrong-answer notes"),
-      el("p", { className: "sub" }, "Two correct answers in a row and a note fades: it is absorbed."));
+      el("p", { className: "sub" }, noteMode() === "dir" ? "Bed mode: just pick the right direction, no calculating. Two in a row and it fades." : "Two correct answers in a row and a note fades: it is absorbed."));
+    const modes = el("div", { className: "nt-tabs" });
+    [["full", "Solve it"], ["dir", "Direction (bed mode)"]].forEach(([k, label]) => {
+      const b = el("button", { className: noteMode() === k ? "on" : "" }, label);
+      b.onclick = () => { savePrefs({ notesMode: k }); notesHub("back"); };
+      modes.append(b);
+    });
+    app.append(modes);
     const tabs = el("div", { className: "nt-tabs" });
     [["session", "By session"], ["topic", "By topic"]].forEach(([k, label]) => {
       const b = el("button", { className: tab === k ? "on" : "" }, label);
@@ -914,7 +926,8 @@
     screen("fwd");
     backTo = () => noteList(spec, "back");
     app.append(nav(spec.title, () => noteList(spec, "back")));
-    const n = deck[k], card = el("div", { className: "card nt" });
+    const n = deck[k], dirMode = noteMode() === "dir" && !!NOTE_DIR[n.id];
+    const card = el("div", { className: "card nt" + (dirMode ? " nt-big" : "") });
     const meta = el("div", { className: "meta" });
     meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
     card.append(meta, el("h3", { className: "title" }, n.title));
@@ -922,11 +935,13 @@
     n.stem.forEach(t => { const li = el("li"); li.innerHTML = t; ul.append(li); });
     const ask = el("p", { className: "q" }); ask.innerHTML = n.ask;
     card.append(ul, ask);
-    const order = loadPrefs().notesShuffle !== false ? shuffle(n.options.map((_, i) => i)) : n.options.map((_, i) => i);
+    if (dirMode) card.append(el("p", { className: "label" }, "Which direction solves it?"));
+    const opts = dirMode ? NOTE_DIR[n.id].map(t => ({ t, n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
+    const order = loadPrefs().notesShuffle !== false ? shuffle(opts.map((_, i) => i)) : opts.map((_, i) => i);
     const holder = el("div"), after = el("div");
     const btns = order.map((oi, pos) => {
       const b = el("button", { className: "opt" });
-      b.innerHTML = `${LETTERS[pos]}. ${n.options[oi].t}`;
+      b.innerHTML = `${LETTERS[pos]}. ${opts[oi].t}`;
       b.onclick = () => reveal(oi);
       holder.append(b);
       return b;
@@ -935,14 +950,16 @@
     app.append(card);
 
     function reveal(pick) {
-      const ok = pick === n.answer;
+      const ok = pick === ansIdx;
       btns.forEach((b, pos) => {
         const oi = order[pos];
         b.disabled = true;
-        if (oi === n.answer) b.classList.add("correct"); else if (oi === pick) b.classList.add("wrong");
-        const why = el("div", { className: "nt-why-opt" + (oi === n.answer ? " good" : "") });
-        why.innerHTML = n.options[oi].n;
-        b.after(why);
+        if (oi === ansIdx) b.classList.add("correct"); else if (oi === pick) b.classList.add("wrong");
+        if (opts[oi].n) {
+          const why = el("div", { className: "nt-why-opt" + (oi === ansIdx ? " good" : "") });
+          why.innerHTML = opts[oi].n;
+          b.after(why);
+        }
       });
       const d = loadNotes(), st = { ...noteSt(d, n) }, was = st.streak >= 2;
       st.tries += 1; st.streak = ok ? st.streak + 1 : 0; st.last = today();
@@ -955,13 +972,19 @@
       badge.append(el("span", { className: `nt-badge ${ok ? "good" : "bad"}` }, ok ? "✓ Correct" : "✗ Not quite"));
       if (fresh) badge.append(el("span", { className: "nt-badge soft" }, "Absorbed: it will show lighter now"));
       else if (ok) badge.append(el("span", { className: "nt-badge soft" }, `${st.streak} of 2 in a row`));
-      if (!ok && !n.guess) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
-      if (n.guess) badge.append(el("span", { className: "sub" }, " You guessed this one right in the set: make sure it is really yours."));
+      if (!ok && !n.guess && !dirMode) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
+      if (n.guess && !dirMode) badge.append(el("span", { className: "sub" }, " You guessed this one right in the set: make sure it is really yours."));
       after.append(badge);
       const sec = (title, html) => { after.append(el("h4", {}, title)); const box = el("div"); box.innerHTML = html; after.append(box); return box; };
-      sec("Formula", `<div class="nt-formula">${n.formula.map(f => `<div>${f}</div>`).join("")}</div>`);
-      sec("Why", `<ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`);
-      if (n.x) { const t = el("div"); t.innerHTML = n.x; after.append(t); }
+      sec(dirMode ? "Rule" : "Formula", `<div class="nt-formula">${n.formula.map(f => `<div>${f}</div>`).join("")}</div>`);
+      if (dirMode) {
+        const dt = el("details", { className: "nt-det" });
+        dt.innerHTML = `<summary>Why (steps)</summary><ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`;
+        after.append(dt);
+      } else {
+        sec("Why", `<ol>${n.why.map(w => `<li>${w}</li>`).join("")}</ol>`);
+        if (n.x) { const t = el("div"); t.innerHTML = n.x; after.append(t); }
+      }
       const gen = el("div", { className: "nt-gen" });
       gen.innerHTML = `<h4>Apply to other questions</h4><ul>${n.general.map(g => `<li>${g}</li>`).join("")}</ul>`;
       after.append(gen);

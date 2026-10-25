@@ -443,3 +443,292 @@ const NOTES = (() => {
       ["The trade is largely credit-neutral: the profit comes from convergence.", "Same as Q6, Q27, Q34."])
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
+
+// "Direction" mode (bed mode): pick the right way to solve, no calculation. First option is the right one; the app shuffles.
+const NOTE_DIR = {
+ "m1q3": [
+  "Find the cheapest bond: pay the CDS on its price, value your own bond at its own price",
+  "Pay the CDS on the bond you own",
+  "Value both legs at the cheapest bond's price"
+ ],
+ "m1q4": [
+  "Buy short-dated protection, sell long-dated protection",
+  "Sell short-dated, buy long-dated protection",
+  "Buy protection at both maturities"
+ ],
+ "m1q6": [
+  "Translate every income-statement line at the average rate",
+  "Translate cost of sales at the inventory-purchase rate",
+  "Translate everything at the year-end rate"
+ ],
+ "m1q11": [
+  "Work out each factor's (active exposure × factor return), then compare with security selection",
+  "Compare only the two factor tilts",
+  "Add the factor returns together"
+ ],
+ "m1q13": [
+  "Divide TFP growth by the labor share, then add labor-force growth",
+  "Divide TFP growth by the labor share and stop",
+  "Divide TFP growth by (1 – labor share)"
+ ],
+ "m1q18": [
+  "Short options give negative gamma and stock adds none → negative",
+  "A delta hedge makes gamma zero",
+  "Gamma follows the long stock position → positive"
+ ],
+ "m1q19": [
+  "Add the (already negative) daily theta to the option value",
+  "Subtract theta from the value",
+  "Subtract gamma from the value"
+ ],
+ "m1q27": [
+  "Low persistence ← high accruals and extreme ROE (earnings fade fast)",
+  "Low persistence ← low dividend payout",
+  "Low persistence ← low accounting returns"
+ ],
+ "m1q29": [
+  "Real growth = nominal – inflation; it is negative → recession → defensive staples",
+  "Nominal growth is positive, so cyclicals hold up",
+  "Inflation is high, so discretionary spending rises"
+ ],
+ "m1q31": [
+  "σ_A is in the numerator, IC in the denominator: raise IC and cut target risk",
+  "Lower IC and lower target risk",
+  "Raise the target risk"
+ ],
+ "m1q33": [
+  "Price with the spot curve, then solve for YTM: close to the 3-year spot rate",
+  "YTM equals the coupon rate",
+  "YTM equals the 1-year forward rate in 3 years"
+ ],
+ "m1q34": [
+  "Curve unchanged → the bond earns the forward rate for its last year, f(2,1)",
+  "It earns the 1-year spot rate",
+  "It earns the 3-year spot rate"
+ ],
+ "m1q35": [
+  "Will not leave its maturity segment even for more return → segmented markets",
+  "Moves for enough extra return → preferred habitat",
+  "Wants a premium for longer maturity → liquidity preference"
+ ],
+ "m1q36": [
+  "Key rate durations sum to effective duration: subtract the other two",
+  "Add up the other key rate durations",
+  "Extend a straight line through the other two"
+ ],
+ "m1q37": [
+  "Both series have unit roots and the residual does not (reject only H3)",
+  "Reject all three tests",
+  "Fail to reject all three tests"
+ ],
+ "m1q40": [
+  "Keep the tokens that tell the classes apart (highest mutual information)",
+  "Keep the rarest tokens (lowest TF)",
+  "Keep the most common tokens (highest DF)"
+ ],
+ "m1q42": [
+  "The tickets paid to the referrer are a benefit → disclose; the declined offer needs none",
+  "Nothing was accepted, so no disclosure",
+  "Disclose the declined offer"
+ ],
+ "m1q43": [
+  "Disclose your own committee seat; never disclose that Hunter is a client",
+  "Disclose that Hunter is a client",
+  "No disclosure: the seat is unpaid"
+ ],
+ "m1q44": [
+  "No client trade was pending and the client chose the timing → no violation",
+  "Trading before the client is always front-running",
+  "A temporary price move is market manipulation"
+ ],
+ "m2q1": [
+  "Take the greater of conversion value and straight bond value",
+  "Use the par value",
+  "Use the conversion value only"
+ ],
+ "m2q2": [
+  "Work back the tree: add the coupon, apply max(value, put price) at each node",
+  "Skip the coupon and average the put prices",
+  "Ignore the put and discount at 2%"
+ ],
+ "m2q6": [
+  "Average the yearly ROEs, then multiply by current book value per share",
+  "Average the EPS figures",
+  "Multiply by average book value per share"
+ ],
+ "m2q8": [
+  "A ratio of price ratios (stock ÷ index), prices only",
+  "1 + stock return – index return",
+  "Include dividends in both returns"
+ ],
+ "m2q10": [
+  "Chain the years: Year 1 dividend first, then Year 2's increase from it",
+  "Use the Year 1 increase",
+  "Use a 100% target payout"
+ ],
+ "m2q13": [
+  "z × daily σ minus daily mean, times portfolio value",
+  "z × daily σ plus daily mean",
+  "1 × daily σ"
+ ],
+ "m2q17": [
+  "Buy EUR at the cheapest (dealer offer), sell where the bid is highest (interbank)",
+  "Buy EUR interbank and sell to the dealer",
+  "No arbitrage: the quotes are too close"
+ ],
+ "m2q19": [
+  "Convert BRL back at the new rate, then subtract the USD loan with interest",
+  "Subtract only the loan principal",
+  "Use the interest differential"
+ ],
+ "m2q20": [
+  "Pick the indicator moving in the crisis direction: FX reserves falling",
+  "M2 / bank reserves falling",
+  "A slight fall in foreign equity investment"
+ ],
+ "m2q22": [
+  "Settlement above grant price → deduction exceeds expense → tax expense falls",
+  "Tax expense rises",
+  "No effect under US GAAP"
+ ],
+ "m2q25": [
+  "Value both legs as bonds including notional: equity leg minus fixed leg",
+  "Equity gain minus the PV of the coupons only",
+  "Equity return minus a new par swap rate"
+ ],
+ "m2q28": [
+  "Spot minus the PV of F₀ over the time remaining",
+  "Discount the whole (spot – F₀)",
+  "Discount over the time already passed"
+ ],
+ "m2q33": [
+  "Including terminated accounts is fine if the termination dates are shown",
+  "Including terminated accounts is a violation",
+  "Nothing is missing"
+ ],
+ "m2q35": [
+  "Disclosed directed brokerage is fine; soft dollars must benefit this client",
+  "Best execution was breached",
+  "Both were breached"
+ ],
+ "m2q39": [
+  "Compliance education must be continual, not only at hiring",
+  "Periodic reminders are not allowed",
+  "Updating procedures is not allowed"
+ ],
+ "m2q42": [
+  "Price + roll + collateral, with the collateral cut to 3 months",
+  "Use the full annual collateral rate",
+  "Flip the sign of the roll return"
+ ],
+ "c1": [
+  "Cash settle on the CTD price and sell your own bond; compare with par",
+  "Physical settlement is always better",
+  "The two routes always pay the same"
+ ],
+ "c2": [
+  "Near-term stress → higher default risk early → downward-sloping",
+  "Upward-sloping",
+  "Flat"
+ ],
+ "c3": [
+  "A missed payment on any obligation after the grace period is a credit event",
+  "It needs a bankruptcy filing",
+  "Only senior debt counts"
+ ],
+ "c5": [
+  "Protection buyer is short credit: wider spread → profit (close by selling protection)",
+  "Wider spread → loss",
+  "No change in value"
+ ],
+ "c6": [
+  "Bond spread = yield – MRR; the profit is its gap to the CDS spread",
+  "Bond yield minus CDS spread",
+  "CDS spread minus MRR"
+ ],
+ "c7": [
+  "The compliance step is signing the ISDA master agreement",
+  "Setting the notional amount",
+  "Posting an upfront payment"
+ ],
+ "c8": [
+  "Many exposures and a full hedge → CDS index",
+  "Tranche CDS",
+  "Single-name CDS"
+ ],
+ "c12": [
+  "Weaker economy: buy high-yield index protection, sell investment-grade",
+  "Sell high-yield, buy investment-grade",
+  "Buy protection on the stronger economy"
+ ],
+ "c13": [
+  "Steepening → buy long-dated protection, sell short-dated",
+  "Sell long-dated, buy short-dated",
+  "Buy both maturities"
+ ],
+ "c14": [
+  "Target's shares rise, acquirer's debt widens its spread → long target + buy acquirer protection",
+  "Short the target's shares",
+  "Long the acquirer's shares"
+ ],
+ "c16": [
+  "Spread change × duration × notional",
+  "Add the spread change to the spread",
+  "Use the maturity instead of the duration"
+ ],
+ "c18": [
+  "Stock rises and spread widens → buy the stock and buy protection",
+  "Sell protection, buy the stock",
+  "Buy protection, sell the stock"
+ ],
+ "c19": [
+  "Bought short-dated and sold long-dated → flattener",
+  "Steepener",
+  "No view on the curve"
+ ],
+ "c22": [
+  "Bond spread above CDS spread → buy the bond and buy protection",
+  "Buy the bond and sell protection",
+  "Sell the bond and buy protection"
+ ],
+ "c25": [
+  "Seller gains when credit improves; no mispricing, so it is a credit view",
+  "Buyer gains when credit improves",
+  "The profit comes from a bond–CDS mispricing"
+ ],
+ "c27": [
+  "Bond yield – MRR vs the CDS spread: bond spread below CDS = too low",
+  "Compare the bond yield with the CDS spread",
+  "Bond spread above CDS = too low"
+ ],
+ "c29": [
+  "A single-name CDS covers obligations ranking equal to the reference obligation",
+  "It covers any obligation of the entity",
+  "It covers only the reference bond itself"
+ ],
+ "c30": [
+  "In the US restructuring is not a credit event; bankruptcy and failure to pay are",
+  "Failure to pay is not a credit event",
+  "Bankruptcy is not a credit event"
+ ],
+ "c31": [
+  "(Spread – coupon) × duration is the upfront premium; price = 100 – premium",
+  "Spread – coupon only",
+  "Price = 100 + premium"
+ ],
+ "c32": [
+  "Stronger economy: sell high-yield protection, buy investment-grade",
+  "Sell investment-grade, buy high-yield",
+  "Buy both"
+ ],
+ "c33": [
+  "Flattener: sell long, buy short; steepener: buy long, sell short; check each leg",
+  "Flattener: buy long, sell short",
+  "Both legs are wrong"
+ ],
+ "c34": [
+  "Compare bond and CDS spreads per company: A's bond below its CDS → short bond, sell protection",
+  "Go long the bond where its spread is below the CDS",
+  "Always buy protection"
+ ]
+};
