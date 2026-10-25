@@ -607,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v130 · 2026-10-25";
+  const APP_VERSION = "v131 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1915,6 +1915,52 @@
     p["2026-11-02"] = ["[PM1 14:30–16:42] Mock · Session 1 (exam conditions)", "[PM2 16:57–19:09] Mock · Session 2 (15-min break first)"];
     return p;
   }
+  // From 26 Oct: one small topic per day (24 test-bank Qs in the morning + 12 at night, CFAI vignettes in PM1),
+  // FI weak spots on 31 Oct, a lighter 1 Nov, then two rounds of two topics a day around the mocks.
+  function plan10() {
+    const p = plan9(), AM = "[AM 08:30–11:00] ", P1 = "[PM1 14:30–16:30] ", P2 = "[PM2 16:40–18:40] ", P3 = "[PM3 20:00–00:00] ";
+    const M1 = "[PM1 14:30–16:42] ", M2 = "[PM2 16:57–19:09] ";
+    const pm2 = k => p[k].filter(t => t.startsWith("[PM2"));
+    const night = (topic, tb) => [P3 + "Block 1 (50 min): today's PM1 wrong answers", P3 + "Block 2 (50 min): today's PM2 wrong answers",
+      P3 + `${topic} test bank · 12 Qs (${tb})`, P3 + "Block 3 (50 min): older notes due (1/4/7 days)"];
+    const focus = (k, topic, tbAm, tbPm, notes, pm1) => [
+      AM + `${topic} formulae (your sheet)`, AM + `${topic} wrong-answer notes: pick what you already know`,
+      AM + `${topic} test bank · 24 Qs (${tbAm})`, AM + `Skim notes: ${notes}`,
+      ...pm1.map(t => P1 + t), P1 + "Send Session 1 results to Claude",
+      ...(pm2(k).length ? pm2(k) : [P2 + "44 Qs: exam-weight mix, 1 vignette per topic + 1 extra"]), ...(pm2(k).some(t => t.includes("Send")) ? [] : [P2 + "Send Session 2 results to Claude"]),
+      ...night(topic, tbPm)];
+    // 26 Oct: Corp day (PM1 and PM2 as already planned).
+    p["2026-10-26"] = [
+      AM + "Corp formulae (your sheet)", AM + "Corp wrong-answer notes: pick what you already know (3 sets, tick what is fully yours)",
+      AM + "Corp test bank · 24 Qs (1–24)", AM + "Skim notes: Corporate Issuers 13–16, Equity 18, 19, 20, 21",
+      ...p["2026-10-26"].filter(t => t.startsWith("[PM1") || t.startsWith("[PM2")), ...night("Corp", "25–36")];
+    p["2026-10-27"] = focus("2026-10-27", "Alt", "1–24", "25–36", "Alternatives 30–33 (hedge fund strategies)", ["Alt 31 · Types of Real Estate · 16 Qs", "Alt 32 · Publicly Traded Real Estate · 20 Qs", "Alt 33 · Hedge Fund Strategies · 8 Qs"]);
+    p["2026-10-28"] = focus("2026-10-28", "Derivatives", "1–24", "25–36", "Derivatives 28–29", ["Derivatives 28 · Forward Commitments · 20 Qs", "Derivatives 29 · Contingent Claims · 24 Qs"]);
+    p["2026-10-29"] = focus("2026-10-29", "Quant", "1–24", "25–36", "Quant 1–4", ["Quant 2 · Time-Series Analysis · 32 Qs", "Quant 1 · Multiple Regression · 12 Qs"]);
+    p["2026-10-30"] = focus("2026-10-30", "Econ", "1–24", "25–36", "Economics 5–6", ["Econ 5 · Currency Exchange Rates · 36 Qs", "Econ 6 · Economic Growth · 8 Qs"]);
+    p["2026-10-31"] = focus("2026-10-31", "FI", "40–63", "64–75", "Fixed Income 23–27", ["FI 23 · Term Structure · 16 Qs", "FI 25 · Embedded Options · 16 Qs", "FI 24 · Arbitrage-Free Valuation · 12 Qs"]);
+    p["2026-11-01"] = [AM + "All topics: formula sheet + key notes", P1 + "44 Qs: exam-weight mix, 1 vignette per topic + 1 extra", P1 + "Send results to Claude",
+      P2 + "Review PM1 wrong answers", P3 + "Block 1 (50 min): wrong answers due", P3 + "Sleep early: mock tomorrow"];
+    p["2026-11-02"] = [M1 + "Mock 1 · Session 1 (exam conditions)", M2 + "Mock 1 · Session 2 (15-min break first)", P3 + "Send mock results to Claude"];
+    // Rounds 1 and 2: topic 1 in AM + PM1, topic 2 in PM2 + PM3, Ethics revision every night.
+    const round = (t1, t2, first) => [...(first ? [AM + first] : []),
+      AM + `${t1}: formulae + key notes`, AM + `${t1}: wrong-answer notes`, P1 + `${t1}: remaining test-bank / CFAI Qs`, P1 + "Send results to Claude",
+      P2 + `${t2}: formulae + key notes + wrong-answer notes`, P2 + `${t2}: remaining test-bank / CFAI Qs`,
+      P3 + `${t2}: finish questions, send results to Claude`, P3 + "Ethics revision · 1 hour"];
+    const pairs = [["Fixed Income", "Derivatives"], ["Equity", "Alternatives"], ["FSA", "Corporate Issuers"], ["Portfolio", "Quant"], ["Economics", "Weakest topic (spare slot)"]];
+    pairs.forEach(([a, b], i) => {
+      p[`2026-11-0${3 + i}`] = round(a, b, i === 0 ? "Review Mock 1 mistakes (Claude's notes)" : "");
+      p[`2026-11-${String(9 + i).padStart(2, "0")}`] = round(a, b, i === 0 ? "Review Mock 2 mistakes; reorder Round 2 topics by Mock 2 results" : "");
+    });
+    p["2026-11-08"] = [M1 + "Mock 2 · Session 1 (exam conditions)", M2 + "Mock 2 · Session 2 (15-min break first)", P3 + "Send mock results to Claude"];
+    p["2026-11-14"] = [M1 + "Redo Mock 2 · Session 1 (or a Claude-made mock instead)", M2 + "Redo Mock 2 · Session 2", P3 + "Review the redo"];
+    p["2026-11-15"] = [AM + "Revision: wrong answers (all sets)", P1 + "Revision: wrong answers (all sets)", P2 + "Formula sheet", P3 + "Ethics revision · 1 hour"];
+    p["2026-11-16"] = [M1 + "Mock 3 (made by Claude) · Session 1", M2 + "Mock 3 · Session 2", P3 + "Send mock results to Claude"];
+    p["2026-11-17"] = [AM + "Review Mock 3 mistakes", P1 + "All topics: formulae", P2 + "Weakest-area check", P3 + "Ethics revision · 1 hour"];
+    p["2026-11-18"] = [M1 + "Mock 4 (made by Claude) · Session 1", M2 + "Mock 4 · Session 2", P3 + "Light review of Mock 4"];
+    p["2026-11-19"] = [AM + "Relax · read key notes", P1 + "Write out all formulae from memory", P3 + "Eat well, sleep early"];
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1924,7 +1970,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7], ["final-weeks-9", plan8], ["final-weeks-10", plan9]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7], ["final-weeks-9", plan8], ["final-weeks-10", plan9], ["final-weeks-11", plan10]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
