@@ -515,6 +515,16 @@
   body.loading main { opacity: 0; transform: translateY(18px); }
 
 
+  /* Calendar day view, session by session */
+  .sg { border-left: 7px solid var(--sc, var(--blue)); margin-top: 14px; }
+  .sg-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+  .sg-name { font-size: 1.35rem; font-weight: 800; color: var(--sc, var(--blue)); letter-spacing: -.01em; }
+  .sg-time { flex: 1; color: var(--muted); font-weight: 650; }
+  .sg-count { font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .sg.all-done { opacity: .6; }
+  .sg.all-done .sg-count::after { content: " ✓"; color: var(--good); }
+  .sg .task-row:first-of-type { border-top: 0; }
+
   /* Wrong-answer notes */
   .cc.n { background: #e6e2f3; color: var(--navy); }
   .cc.n h2 { font-size: clamp(1.6rem, 5.4vw, 2.5rem); }
@@ -597,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v129 · 2026-10-25";
+  const APP_VERSION = "v130 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1859,6 +1869,52 @@
     p["2026-10-26"] = p["2026-10-26"].map(t => t.startsWith("Session 2") ? "Session 2 (16:45–18:45) · 48 Qs, 12 vignettes: FI 23 (8) + 25 (4) · Equity 19 (8) + 18 (4) · FSA 9 (8) + 8 (4) · Ethics 41 (12)" : t);
     return p;
   }
+  // 26 Oct as four sessions (AM, PM1, PM2, PM3 left empty), and every later day written the same session-by-session way.
+  function plan9() {
+    const p = plan8(), AM = "[AM 08:30–11:00] ", P1 = "[PM1 14:30–16:30] ", P2 = "[PM2 16:40–18:40] ", P3 = "[PM3 20:00–00:00] ";
+    p["2026-10-26"] = [
+      AM + "Corp formulae (your sheet)",
+      AM + "Corp wrong-answer notes: pick what you already know (3 sets, tick what is fully yours)",
+      AM + "Corp test bank · 12 Qs (from Q1)",
+      AM + "Equity test bank · 12 Qs (31–42)",
+      AM + "Skim notes: Corporate Issuers 13–16, Equity 18, 19, 20, 21",
+      P1 + "Quant 2 · Time-Series Analysis · 4 Qs",
+      P1 + "Economics 6 · Economic Growth · 4 Qs",
+      P1 + "FSA 11 · Quality of Financial Reports · 4 Qs",
+      P1 + "Corp 15 · Cost of Capital: Advanced Topics · 4 Qs (1 left on CFAI: retake or test bank)",
+      P1 + "Corp 16 · Corporate Restructuring · 4 Qs (retake)",
+      P1 + "Equity 20 · Market-Based Valuation · 4 Qs",
+      P1 + "Equity 21 · Residual Income · 4 Qs",
+      P1 + "Fixed Income 26 · Credit Analysis Models · 4 Qs",
+      P1 + "Fixed Income 27 · Credit Default Swaps · 4 Qs (retake)",
+      P1 + "Derivatives 28 · Forward Commitments · 4 Qs",
+      P1 + "Alternatives 33 · Hedge Fund Strategies · 4 Qs",
+      P1 + "Portfolio 39 · Backtesting and Simulation · 4 Qs",
+      P1 + "Ethics 41 · Guidance for Standards I–VII · 4 Qs",
+      P1 + "Send Session 1 results to Claude",
+      P2 + "Fixed Income 23 · Term Structure · 8 Qs",
+      P2 + "Fixed Income 25 · Embedded Options · 4 Qs",
+      P2 + "Equity 19 · Free Cash Flow · 8 Qs",
+      P2 + "Equity 18 · Dividend Discount · 4 Qs",
+      P2 + "FSA 9 · Multinational Operations · 8 Qs",
+      P2 + "FSA 8 · Employee Compensation · 4 Qs",
+      P2 + "Ethics 41 · Guidance for Standards I–VII · 12 Qs (from item 13)",
+      P2 + "Send Session 2 results to Claude",
+      P3 + "—"];
+    ["2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01"].forEach(k => {
+      p[k] = p[k].map(t => {
+        let m;
+        if (t.startsWith("Morning: ")) return AM + t.slice(9);
+        if ((m = /^Session 1 \(14:30–16:30\) · (.*)$/.exec(t))) return P1 + m[1];
+        if ((m = /^Session 2 \(16:45–18:45\) · (.*)$/.exec(t))) return P2 + m[1];
+        if (t.startsWith("Send both")) return P3 + t;
+        if ((m = /^Evening \(20:00–00:30\): (.*)$/.exec(t))) return P3 + m[1][0].toUpperCase() + m[1].slice(1);
+        return t;
+      });
+    });
+    p["2026-11-02"] = ["[PM1 14:30–16:42] Mock · Session 1 (exam conditions)", "[PM2 16:57–19:09] Mock · Session 2 (15-min break first)"];
+    return p;
+  }
   // The previous version of plan3 (before 14 of 22 Oct's questions moved to 25 Oct), kept to take its tasks off.
   function plan3v1() {
     const p = plan3(), qs = n => { const m = n * 3; return `${n} Qs · ~${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m + review`; };
@@ -1868,7 +1924,7 @@
   }
   // Added once to the calendar's day plans; tasks already there are kept, and edits or deletions afterwards stick.
   // Switching plans takes the earlier plans' unticked tasks off and adds the current plan's.
-  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7], ["final-weeks-9", plan8]];
+  const PLANS = [["final-weeks-1", oldPlan], ["final-weeks-2", newPlan], ["final-weeks-3", plan3v1], ["final-weeks-4", plan3], ["final-weeks-5", plan4], ["final-weeks-6", plan5], ["final-weeks-7", plan6], ["final-weeks-8", plan7], ["final-weeks-9", plan8], ["final-weeks-10", plan9]];
   function seedPlan(s) {
     s.seeded = s.seeded || [];
     const [curId, cur] = PLANS[PLANS.length - 1];
@@ -1894,6 +1950,9 @@
   function saveStudy(s) {
     try { localStorage.setItem(STUDY_KEY, JSON.stringify(s)); } catch {}
   }
+  // A task written as "[AM 08:30–11:00] text" belongs to the session "AM 08:30–11:00".
+  const splitGroup = text => { const m = /^\[([^\]]+)\]\s*/.exec(text); return m ? { g: m[1], t: text.slice(m[0].length) } : { g: "", t: text }; };
+  const GROUP_COLORS = { AM: "#4fb3b3", PM1: "#2f678e", PM2: "#292645", PM3: "#8f86c4" };
   const dkey = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   const fromKey = k => { const [y, m, d] = k.split("-").map(Number); return new Date(y, m - 1, d); };
   const midnight = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
@@ -2155,8 +2214,9 @@
       topRow.append(el("span", { className: "d" }, String(d)));
       if (data.tasks.length) topRow.append(el("span", { className: "dot" }));
       cell.append(topRow);
-      data.tasks.slice(0, 2).forEach(t => cell.append(el("span", { className: "task" + (t.done ? " done" : "") }, t.text)));
-      if (data.tasks.length > 2) cell.append(el("span", { className: "task" }, `+${data.tasks.length - 2} more`));
+      data.tasks.filter(t => splitGroup(t.text).t !== "—").slice(0, 2).forEach(t => { const x = splitGroup(t.text); cell.append(el("span", { className: "task" + (t.done ? " done" : "") }, x.g ? `${x.g.split(" ")[0]} · ${x.t}` : x.t)); });
+      const shown = data.tasks.filter(t => splitGroup(t.text).t !== "—").length;
+      if (shown > 2) cell.append(el("span", { className: "task" }, `+${shown - 2} more`));
       if (key === examKey) cell.append(el("span", { className: "tag" }, "EXAM 14:30"));
       else if (sec > 0) cell.append(el("span", { className: "hrs" }, fmtShort(sec)));
       // Tint days by how much was studied (darker aqua = more hours).
@@ -2175,34 +2235,72 @@
     app.append(el("h1", { className: "title" }, date.toLocaleDateString([], { weekday: "long", day: "numeric", month: "long", year: "numeric" })),
       el("p", { className: "sub" }, `${dday(date)} · ${key === dkey(EXAM) ? "Exam day, 14:30" : "until the exam"}`));
 
-    // Plan: what you will work on that day.
-    const plan = el("div", { className: "card" });
+    // Plan: what you will work on that day. Tasks written as "[AM 08:30–11:00] text" are shown session by session.
+    const plan = el("div");
     function drawPlan() {
       const s = loadStudy(), tasks = (s.days[key] || {}).tasks || [];
       plan.innerHTML = "";
-      plan.append(el("p", { className: "kicker" }, "Plan"));
-      if (!tasks.length) plan.append(el("p", { className: "sub", style: "margin:0 0 6px" }, "Nothing planned yet."));
-      tasks.forEach((t, idx) => {
-        const row = el("div", { className: "task-row" + (t.done ? " done" : "") });
-        const cb = el("input", { type: "checkbox", checked: t.done });
-        cb.onchange = () => { const st = loadStudy(); dayOf(st, key).tasks[idx].done = cb.checked; saveStudy(st); drawPlan(); };
-        const del = el("button", { className: "x", ariaLabel: "Delete task" }, "×");
-        del.onclick = () => { const st = loadStudy(); dayOf(st, key).tasks.splice(idx, 1); saveStudy(st); drawPlan(); };
-        row.append(cb, el("span", {}, t.text), del);
-        plan.append(row);
-      });
-      const add = el("form", { className: "row", style: "margin-top:12px;flex-wrap:nowrap" });
-      const input = el("input", { className: "field grow", placeholder: "Add a task, e.g. FSA reading 13 + practice" });
-      add.append(input, el("button", { className: "btn", type: "submit" }, "Add"));
-      add.onsubmit = e => {
-        e.preventDefault();
-        const text = input.value.trim();
-        if (!text) return;
-        const st = loadStudy(); dayOf(st, key).tasks.push({ text, done: false }); saveStudy(st);
-        drawPlan();
-        plan.querySelector(".field").focus();
+      const rows = tasks.map((t, idx) => ({ ...splitGroup(t.text), done: t.done, idx }));
+      const grouped = rows.some(r => r.g);
+      const addTask = (text, remove) => {
+        const st = loadStudy(), day = dayOf(st, key);
+        if (remove) day.tasks = day.tasks.filter(t => t.text !== remove);
+        day.tasks.push({ text, done: false }); saveStudy(st); drawPlan();
       };
-      plan.append(add);
+      const taskRow = r => {
+        const row = el("div", { className: "task-row" + (r.done ? " done" : "") });
+        const cb = el("input", { type: "checkbox", checked: r.done });
+        cb.onchange = () => { const st = loadStudy(); dayOf(st, key).tasks[r.idx].done = cb.checked; saveStudy(st); drawPlan(); };
+        const del = el("button", { className: "x", ariaLabel: "Delete task" }, "×");
+        del.onclick = () => { const st = loadStudy(); dayOf(st, key).tasks.splice(r.idx, 1); saveStudy(st); drawPlan(); };
+        row.append(cb, el("span", {}, r.t), del);
+        return row;
+      };
+      const addForm = (placeholder, onAdd) => {
+        const add = el("form", { className: "row", style: "margin-top:12px;flex-wrap:nowrap" });
+        const input = el("input", { className: "field grow", placeholder });
+        add.append(input, el("button", { className: "btn", type: "submit" }, "Add"));
+        add.onsubmit = e => { e.preventDefault(); const text = input.value.trim(); if (text) onAdd(text); };
+        return add;
+      };
+      if (!grouped) {
+        const card = el("div", { className: "card" });
+        card.append(el("p", { className: "kicker" }, "Plan"));
+        if (!tasks.length) card.append(el("p", { className: "sub", style: "margin:0 0 6px" }, "Nothing planned yet."));
+        rows.forEach(r => card.append(taskRow(r)));
+        card.append(addForm("Add a task, e.g. FSA reading 13 + practice", text => addTask(text)));
+        plan.append(card);
+        return;
+      }
+      // Session by session: one coloured card per session, with its time, a progress bar and its own add button.
+      const groups = [];
+      rows.forEach(r => { let g = groups.find(x => x.g === r.g); if (!g) groups.push(g = { g: r.g, rows: [] }); g.rows.push(r); });
+      groups.forEach(g => {
+        const name = g.g ? g.g.split(" ")[0] : "Anytime", time = g.g ? g.g.slice(name.length).trim() : "";
+        const real = g.rows.filter(r => r.t !== "—"), done = real.filter(r => r.done).length;
+        const card = el("div", { className: "card sg" + (real.length && done === real.length ? " all-done" : "") });
+        card.style.setProperty("--sc", GROUP_COLORS[name] || "#2f678e");
+        const head = el("div", { className: "sg-head" });
+        head.append(el("span", { className: "sg-name" }, name), el("span", { className: "sg-time" }, time), el("span", { className: "sg-count" }, real.length ? `${done}/${real.length}` : "empty"));
+        card.append(head);
+        const bar = el("div", { className: "nt-bar" }), fill = el("div"); fill.style.width = `${real.length ? Math.round(done / real.length * 100) : 0}%`;
+        bar.append(fill); card.append(bar);
+        if (!real.length) card.append(el("p", { className: "sub", style: "margin:10px 0 0;font-style:italic" }, "Empty for now"));
+        real.forEach(r => card.append(taskRow(r)));
+        const placeholder = g.rows.find(r => r.t === "—");
+        const more = el("button", { className: "link-btn" }, "+ Add to this session");
+        const holder = el("div");
+        more.onclick = () => {
+          more.remove();
+          const f = addForm("Add a task", text => addTask(g.g ? `[${g.g}] ${text}` : text, placeholder ? `[${g.g}] —` : null));
+          holder.append(f); f.querySelector(".field").focus();
+        };
+        card.append(more, holder);
+        plan.append(card);
+      });
+      const extra = el("div", { className: "card" });
+      extra.append(el("p", { className: "kicker" }, "Add a task"), addForm("Add a task", text => addTask(text)));
+      plan.append(extra);
     }
 
     // Study time: timer sessions plus any time added by hand; everything adds up.
