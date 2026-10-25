@@ -595,7 +595,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v122 · 2026-10-25";
+  const APP_VERSION = "v123 · 2026-10-25";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -826,7 +826,7 @@
     return `${plural(NOTES.length, "note")} · ${a} absorbed`;
   }
   const dateLabel = iso => fromKey(iso).toLocaleDateString([], { day: "numeric", month: "short" });
-  const noteTag = n => `Mock ${n.mock} · Q${n.num}`;
+  const noteTag = n => n.tag;
   function noteBar(items, d) {
     const a = items.filter(n => noteDone(d, n)).length;
     const bar = el("div", { className: "nt-bar" });
@@ -857,9 +857,9 @@
       app.append(b);
     };
     if (tab === "session") {
-      NOTE_SESSIONS.slice().sort((x, y) => y.date.localeCompare(x.date) || y.session - x.session).forEach(s => {
-        const items = NOTES.filter(n => n.mock === s.mock);
-        addItem(`${dateLabel(s.date)} · Session ${s.session}`, `${s.label} · ${plural(items.length, "note")}`, items, { title: `${dateLabel(s.date)} · Session ${s.session}`, sub: s.label, items });
+      NOTE_SESSIONS.slice().sort((x, y) => y.date.localeCompare(x.date) || y.id.localeCompare(x.id)).forEach(s => {
+        const items = NOTES.filter(n => n.set === s.id);
+        addItem(`${dateLabel(s.date)} · ${s.name}`, `${s.label} · ${plural(items.length, "note")}`, items, { title: `${dateLabel(s.date)} · ${s.name}`, sub: s.label, items });
       });
     } else {
       [...new Set(NOTES.map(n => n.reading))].sort((x, y) => x - y).forEach(r => {
