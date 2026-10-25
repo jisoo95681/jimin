@@ -24,7 +24,8 @@ const NOTE_SESSIONS = [
 const NOTES = (() => {
   const N = (mock, num, reading, subject, title, stem, ask, opts, answer, mine, formula, why, general, x) =>
     ({ id: `m${mock}q${num}`, set: `2026-10-24-s${mock}`, tag: `Mock ${mock} · Q${num}`, session: mock, mock, num, reading, subject, title, stem, ask, options: opts.map(([t, n]) => ({ t, n })), answer, mine, formula, why, general, x: x || "" });
-  // CFA Institute 27 Credit Default Swaps, 25 Oct.
+  // CFA Institute 27 Credit Default Swaps, 25 Oct. G = answered correctly but by guessing (or closely related): same fields, flagged.
+  const G = (num, title, ...r) => ({ ...C(num, title, ...r), guess: true });
   const C = (num, title, ...r) => ({ ...N(0, num, 27, "Fixed Income", title, ...r), id: `c${num}`, set: "2026-10-25-cds", tag: `CDS · Q${num}`, session: 3, mock: 0 });
   return [
     // ---------------- Paper 1 ----------------
@@ -389,5 +390,56 @@ const NOTES = (() => {
       ["Bond spread &gt; CDS spread (negative basis): buy the bond, buy protection", "Bond spread &lt; CDS spread (positive basis): short the bond, sell protection"],
       ["Company A: 85.40 &lt; 193.45 → short the A bond and go long the A CDS (sell protection).", "Company B: 205.60 &gt; 165.29 → buy the B bond and buy protection."],
       ["'Go long a CDS' = <b>sell</b> protection; 'go short a CDS' = <b>buy</b> protection. Watch the wording.", "Same comparison as Q27 (bond spread vs CDS spread)."])
+    ,
+    // ---- answered correctly, but guessed or closely related ----
+    G(1, "Cash vs physical settlement",
+      ["Deem owns a $10m senior unsecured UNAB bond (Bond 2) and bought $10m of protection on it. A credit event occurs.", "Bond 1: 2y senior unsecured, <b>40%</b> of par · Bond 2: 5y senior unsecured, <b>50%</b> (Deem's bond) · Bond 3: 5y subordinated, 20%."],
+      "Which settlement should Watt recommend?",
+      [["Cash settlement", "Cash: (1 – 40%) × $10m = $6m, plus selling Bond 2 at 50% = $5m → <b>$11m</b>."], ["Physical settlement", "Deliver Bond 2 and receive only par: $10m."], ["Indifferent", "Cash is $1m better."]], 0, 0,
+      ["Cash payout = notional × (1 – recovery rate of the cheapest-to-deliver bond)", "Physical settlement: deliver a bond, receive par"],
+      ["CTD = Bond 1 (40%, senior unsecured). Bond 3 is subordinated, so it is not eligible.", "Cash: $6m + sale of Bond 2 at $5m = <b>$11m</b>. Physical: <b>$10m</b>."],
+      ["Own bond trades <b>above</b> the CTD → cash settlement is better. Own bond is the CTD → indifferent.", "Compare total proceeds under each route."]),
+    G(3, "Is it a credit event?",
+      ["On 1 July UNAB fails to pay scheduled interest on its <b>subordinated</b> unsecured obligation after the grace period. It has <b>not</b> filed for bankruptcy."],
+      "Did UNAB experience a credit event?",
+      [["Yes", "Failure to pay is a credit event, with or without a bankruptcy filing."], ["No: it did not file for bankruptcy", "Any one of the credit events is enough."], ["No: it was a subordinated bond", "Failure to pay on <b>any</b> outstanding obligation counts after the grace period."]], 0, 0,
+      ["Credit events: bankruptcy · failure to pay · restructuring"],
+      ["A missed payment after the grace period = failure to pay → credit event."],
+      ["Failure to pay needs no bankruptcy filing.", "The recovery rate for a senior CDS is still set by the cheapest-to-deliver <b>senior</b> bond (CDS Q1)."]),
+    G(5, "Closing out a protection purchase",
+      ["Deem bought 10-year protection on Kand (spread 700 bps, coupon 5%). Two months later the spread has <b>increased by 200 bps</b>; Deem closes out with an offsetting contract."],
+      "The offsetting contract will most likely result in:",
+      [["A loss on the CDS", "A loss would need the spread to tighten."], ["A profit on the CDS", "Protection buyer = short credit; the spread widened → gain."], ["Neither a loss nor a profit", "The spread moved, so there is a gain."]], 1, 1,
+      ["Protection buyer gains when spreads widen, loses when they tighten", "Close out = enter the opposite trade (sell protection) and lock in the gain"],
+      ["Bought protection at 700 bps; now sells it at 900 bps → receives more premium than it pays.", "Profit ≈ Δ spread × duration × notional = 2% × 7 = about 14% of notional."],
+      ["Same profit formula as CDS Q16.", "Closing a position means doing the opposite trade."]),
+    G(6, "Basis trade profit on convergence",
+      ["Tollunt 5-year bond yields <b>7%</b>; a comparable CDS has a spread of <b>4.25%</b>; MRR = <b>2.5%</b>.", "The basis trade buys both the bond and the protection."],
+      "If the bond and CDS markets converge, the profit is closest to:",
+      [["0.25%", "Bond spread 4.50% – CDS spread 4.25%."], ["1.75%", "Subtracted MRR from the CDS spread (4.25 – 2.50)."], ["2.75%", "Subtracted the CDS spread from the bond <b>yield</b> (7.00 – 4.25)."]], 0, 0,
+      ["Bond credit spread = bond yield – MRR", "Profit on convergence = |bond spread – CDS spread|"],
+      ["7.00% – 2.50% = 4.50% bond spread.", "4.50% – 4.25% = <b>0.25%</b>."],
+      ["Never compare a bond yield with a CDS spread: subtract MRR first.", "Bond spread &gt; CDS spread (negative basis): buy the bond and buy protection (Q22, Q27, Q34)."]),
+    G(7, "Compliance requirement for trading CDS",
+      ["The Fund wants to trade CDS with SGS, which follows ISDA protocols. The Fund must first satisfy compliance requirements."],
+      "The Fund is most likely required to:",
+      [["Set a notional amount", "A term of each trade, not a compliance requirement."], ["Post an upfront payment", "Depends on the spread and coupon of each trade."], ["Sign an ISDA master agreement", "Signed once, before any CDS transaction."]], 2, 2,
+      ["ISDA master agreement: signed before the first trade; every CDS then follows ISDA specifications"],
+      ["The compliance requirement is the legal agreement that governs all trades."],
+      ["Standardized CDS have a standard fixed coupon (usually 100 or 500 bps); the gap to the market spread is settled with an upfront payment.", "Notional and upfront premium are per-trade terms."]),
+    G(8, "Which type of CDS hedges many exposures",
+      ["Smith wants to <b>fully hedge multiple fixed-income exposures at the same time</b> across a large, diversified fund."],
+      "Which CDS should Chan recommend?",
+      [["CDS index", "Covers many names: a full hedge (CDX, iTraxx)."], ["Tranche CDS", "Covers many names, but only up to a loss level: a partial hedge."], ["Single-name CDS", "One reference entity only."]], 0, 0,
+      ["Single-name: one entity · Index: many entities, full cover · Tranche: many entities, losses between set levels only"],
+      ["Many exposures + full hedge → index."],
+      ["CDX = North America, iTraxx = Europe/Asia.", "A single-name CDS covers only obligations ranking equal to the reference obligation (Q29)."]),
+    G(22, "Basis trade: bond spread above CDS spread",
+      ["A local company is expected to do an LBO (debt-funded buyback of its shares). Its 5y senior unsecured bond spread has risen to <b>450 bps</b>; a comparable 5y CDS trades at <b>400 bps</b>.", "Pereira expects the two spreads to <b>converge</b>."],
+      "Which trade is consistent with his belief?",
+      [["Buy bonds and sell protection", "Long credit on both legs: not a basis trade; the profit would not come from convergence."], ["Buy bonds and buy protection", "Buy the cheap bond, buy the cheap protection; capture the 50 bps gap."], ["Sell bonds and buy protection", "Reversed: shorts the cheap bond."]], 1, 1,
+      ["Bond spread &gt; CDS spread (negative basis): buy the bond and buy protection"],
+      ["Bond spread 450 bps → bond price too low → buy.", "CDS spread 400 bps → protection too cheap → buy.", "If the spreads converge, the trade captures the difference."],
+      ["The trade is largely credit-neutral: the profit comes from convergence.", "Same as Q6, Q27, Q34."])
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
