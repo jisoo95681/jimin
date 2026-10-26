@@ -19,7 +19,8 @@ const NOTE_READINGS = {
 const NOTE_SESSIONS = [
   { id: "2026-10-24-s1", date: "2026-10-24", name: "Session 1", label: "Practice exam · Paper 1" },
   { id: "2026-10-24-s2", date: "2026-10-24", name: "Session 2", label: "Practice exam · Paper 2" },
-  { id: "2026-10-25-cds", date: "2026-10-25", name: "CFAI 27 CDS", label: "CFA Institute · 27 Credit Default Swaps (34 Qs, 19 correct)" }
+  { id: "2026-10-25-cds", date: "2026-10-25", name: "CFAI 27 CDS", label: "CFA Institute · 27 Credit Default Swaps (34 Qs, 19 correct)" },
+  { id: "2026-10-26-corp1", date: "2026-10-26", name: "Corp TB 1–21", label: "Test bank · Corporate Issuers topic 2 (21 Qs, 14 correct)" }
 ];
 const NOTES = (() => {
   const N = (mock, num, reading, subject, title, stem, ask, opts, answer, mine, formula, why, general, x) =>
@@ -27,6 +28,8 @@ const NOTES = (() => {
   // CFA Institute 27 Credit Default Swaps, 25 Oct. G = answered correctly but by guessing (or closely related): same fields, flagged.
   const G = (num, title, ...r) => ({ ...C(num, title, ...r), guess: true });
   const C = (num, title, ...r) => ({ ...N(0, num, 27, "Fixed Income", title, ...r), id: `c${num}`, set: "2026-10-25-cds", tag: `CDS · Q${num}`, session: 3, mock: 0 });
+  // Test bank, Corporate Issuers topic 2 (26 Oct, session 1). reading = CFA reading the question belongs to.
+  const T = (num, reading, title, ...r) => ({ ...N(0, num, reading, "Corporate Issuers", title, ...r), id: `tbc${num}`, set: "2026-10-26-corp1", tag: `Corp TB · Q${num}`, session: 4, mock: 0 });
   return [
     // ---------------- Paper 1 ----------------
     N(1, 3, 27, "Fixed Income", "CDS settlement & cheapest-to-deliver",
@@ -441,6 +444,57 @@ const NOTES = (() => {
       ["Bond spread &gt; CDS spread (negative basis): buy the bond and buy protection"],
       ["Bond spread 450 bps → bond price too low → buy.", "CDS spread 400 bps → protection too cheap → buy.", "If the spreads converge, the trade captures the difference."],
       ["The trade is largely credit-neutral: the profit comes from convergence.", "Same as Q6, Q27, Q34."])
+    ,
+    // ---------------- Test bank: Corporate Issuers 1–21 ----------------
+    T(2, 14, "Ownership and voting: which conflict arises",
+      ["SunnyWay Energy: 1 million shares, 80% owned by dispersed investors (none above 5%). Ruling family owns 20% of the shares.", "Class A shares (ruling family) carry <b>5 votes</b> each, Class B shares 1 vote: the family holds 55% of the votes. The CEO is a shareholder (an insider)."],
+      "Which conflict is most likely to arise?",
+      [["Principal-principal: the CEO position is held by a shareholder", "A shareholder-CEO (insider) has an incentive to improve long-term performance, so interests are aligned."], ["Principal-agent: shareholders cannot exercise enough control over managers", "Controlling shareholders have strong, concentrated voting power, so they do control managers."], ["Principal-principal: controlling shareholders' interests may differ from other shareholders'", "Dispersed ownership but concentrated voting power."]], 2, 0,
+      ["Dispersed ownership + dispersed voting → principal-agent conflict (managers vs shareholders)", "Concentrated voting power (e.g. dual-class shares) → principal-principal conflict (controlling vs minority shareholders)"],
+      ["Votes: 200,000 Class A shares × 5 = 1,000,000 of 1,800,000 votes = 55%.", "Ownership is dispersed (20% owned by the family) but voting power is concentrated.", "Control over managers is strong → principal-agent conflict is small; the issue is controlling vs other shareholders."],
+      ["Share ownership % does not show who has control: dual-class structures give a minority class the votes.", "An insider-shareholder CEO is usually aligned with other shareholders, not a source of conflict."]),
+    T(3, 14, "Which committee composition undermines governance",
+      ["SunnyWay's board: 7 members, 5 nonexecutive, chaired by an independent director (no CEO duality). CEO and CFO sit on the board.", "Remuneration committee: 2 nonexecutive directors + the <b>CEO</b>. Governance committee: 2 nonexecutive directors + the <b>CFO</b>."],
+      "Which most likely undermines SunnyWay's governance practices?",
+      [["The composition of the remuneration committee", "The CEO sits on the committee that sets pay: its independence is (or appears) compromised."], ["The composition of the remuneration and governance committees", "The governance committee's work does not require full independence, so the CFO there does not undermine it."], ["The presence of executive directors on the board and the composition of both committees", "A board needs a minimum number of independent directors, not all; executive directors add insight, and the board is well balanced."]], 0, 2,
+      ["Remuneration, audit and nomination committees should be independent: they decide on matters where management has a conflict of interest", "Board: a minimum number of independent directors, not necessarily all"],
+      ["CEO on the remuneration committee → the CEO helps decide executive pay: independence compromised.", "CFO on the governance committee: its focus does not require full independence.", "5 of 7 nonexecutive and an independent chair: no CEO duality, balanced board."],
+      ["CEO duality = the CEO also chairs the board: a red flag, but not present here.", "Executive directors on a board are normal and useful."]),
+    T(5, 14, "What an activist shareholder tries to do",
+      ["FoodShop has dispersed ownership and equal voting shares. Star Fund, a large mutual fund and activist shareholder, has aggressively built a <b>5%</b> stake."],
+      "Which is most accurate about shareholder activism?",
+      [["Star Fund will try to influence the company to adopt better governance practices", "The objective of an activist is to influence the company to act in a desired way."], ["Star Fund will try to accumulate majority ownership to control board decisions", "It owns only 5% with no sign of seeking a majority; activists do not need a majority to influence decisions."], ["Star Fund will try to get a board representative and push for decisions that maximize the fund's value", "An activist wants to influence the company, not to maximize the fund's value at the company's expense."]], 0, 2,
+      ["Activist shareholder: uses a minority stake and engagement to influence the company (governance, strategy, value drivers)"],
+      ["Activists need resources and experience to form an informed judgment when using shareholder rights.", "They do not need majority ownership; their aim is to change how the company acts."],
+      ["Institutional investors (mutual funds, pension funds, insurers, hedge funds) promote good governance by monitoring the board and management."]),
+    T(6, 14, "Steps in integrating ESG factors",
+      ["Grand tells Johansberg to look at quantitative and qualitative factors, analyze historical and forecasted trends, consider industry-specific factors, and undertake a peer analysis."],
+      "Which is most accurate about Grand's statement on ESG analysis factors?",
+      [["The statement is correct", "Each element is part of ESG integration."], ["Incorrect: peer analysis is not relevant", "Peer analysis positions the company against competitors and the industry and shows risks."], ["Incorrect: qualitative factors and historical trends are not relevant", "Qualitative factors and historical analysis are important parts of the integration."]], 0, 1,
+      ["ESG integration: identify material quantitative and qualitative factors → analyze them historically, going forward and relative to peers → adjust the financial statements and valuation"],
+      ["Step 1: material quantitative and qualitative ESG factors for the company and its industry.", "Step 2: analyze on a historical and future basis and relative to industry peers.", "Step 3: make the necessary adjustments to financials and valuation."],
+      ["Peer analysis is part of the integration, not an optional extra.", "In equity analysis the factors help find opportunities and avoid downside risk; in debt analysis they are used to avoid downside risk."]),
+    T(7, 14, "ESG disclosure vs governance disclosure",
+      ["Johansberg: 'This would be a challenging task because, <b>just like governance information</b>, it might prove difficult to find any ESG information. There are no specific standards for disclosures.'"],
+      "Which is most accurate regarding his statement on ESG information?",
+      [["The statement is correct", "The ESG half is right, but the comparison with governance information is wrong."], ["Incorrect: listed companies must follow specific ESG disclosure rules set by regulators", "ESG disclosure is voluntary; regulators do not set specific ESG disclosures."], ["Incorrect: governance information is more widely and consistently available than ESG information", "Regulators often require specific governance disclosures, so governance data are widely and consistently available."]], 2, 0,
+      ["Governance information: widely available, consistent, regulator-required", "ESG information: voluntary, inconsistent between companies, no specific standards"],
+      ["'No specific standards' for ESG disclosure is correct.", "Equating it with governance information is wrong: governance disclosure is required and consistent."],
+      ["Companies may choose not to disclose ESG information that could hurt their financial position or valuation."]),
+    T(9, 15, "Required return from the dividend growth model",
+      ["Freedom: expected payout ratio 40%; EPS next year <b>$3.00</b>; earnings growth <b>6%</b> a year.", "Market capitalization <b>$15 billion</b>, 375 million shares. Market value = intrinsic value."],
+      "Freedom's required rate of return on equity is closest to:",
+      [["3%", "Only the dividend yield."], ["6%", "Only the growth rate: forgot the dividend yield."], ["9%", "D<sub>1</sub> / P<sub>0</sub> + g = 3% + 6%."]], 2, 1,
+      ["r = D<sub>1</sub> / P<sub>0</sub> + g", "D<sub>1</sub> = next-year EPS × payout ratio · P<sub>0</sub> = market cap ÷ shares"],
+      ["D<sub>1</sub> = $3.00 × 0.40 = $1.20.", "P<sub>0</sub> = $15,000m ÷ 375m = $40.", "r = 1.20 ÷ 40 + 0.06 = 0.03 + 0.06 = <b>9%</b>."],
+      ["Use next year's dividend (D<sub>1</sub>), not today's.", "A constant payout ratio means dividend growth = earnings growth.", "Priced fairly (market value = intrinsic value) → the required return can be backed out of the price."]),
+    T(11, 15, "Shadow banking and legal systems",
+      ["Statement 1: In less-developed countries that lack corporate debt markets, businesses rely on bank lending known as the <b>shadow banking system</b>.", "Statement 2: Countries with common law-based legal systems offer lower risk premiums than civil law-based countries."],
+      "Are Miller's statements correct?",
+      [["Only Statement 1 is correct", "Statement 1 is wrong, Statement 2 is right."], ["Only Statement 2 is correct", "Shadow banking relies on unregulated, non-bank sources; common law gives stronger investor protection → lower risk premium."], ["Both are correct", "Statement 1 is wrong: shadow banking is not bank lending."]], 1, 2,
+      ["Shadow banking = lending from unregulated, <b>non-bank</b> sources", "Common law → stronger investor protection → lower risk premium than civil law"],
+      ["Statement 1: wrong: the shadow banking system is non-bank.", "Statement 2: correct: stronger investor protection under common law lowers the country risk premium."],
+      ["Where corporate debt markets are weak, firms rely on banks, and the shadow banking system fills gaps.", "Weaker investor protection → higher risk premium → higher cost of capital."])
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
 
@@ -730,5 +784,12 @@ const NOTE_DIR = {
   "Compare bond and CDS spreads per company: A's bond below its CDS → short bond, sell protection",
   "Go long the bond where its spread is below the CDS",
   "Always buy protection"
- ]
+ ],
+ "tbc2": ["Dispersed ownership + concentrated voting power → principal-principal conflict", "A shareholder-CEO creates the conflict", "Principal-agent: shareholders cannot control managers"],
+ "tbc3": ["Independent committees matter most: the CEO on the remuneration committee undermines it", "The CFO on the governance committee undermines it", "Executive directors on the board undermine it"],
+ "tbc5": ["An activist uses a minority stake to influence the company's governance", "An activist accumulates majority ownership to control the board", "An activist maximizes the fund's value at the company's expense"],
+ "tbc6": ["Identify material factors, analyze history, forecasts and peers, then adjust valuation: the statement is correct", "Peer analysis is not relevant to ESG", "Qualitative factors and historical trends are not relevant"],
+ "tbc7": ["Governance information is regulated and consistent; ESG disclosure is voluntary: the comparison is wrong", "The statement is correct", "Regulators set specific ESG disclosure requirements"],
+ "tbc9": ["r = D1/P0 + g: next-year dividend over price, plus growth", "Use the growth rate alone", "Use the dividend yield alone"],
+ "tbc11": ["Shadow banking is unregulated non-bank lending; common law means lower risk premiums", "Shadow banking is bank lending", "Both statements are correct"]
 };
