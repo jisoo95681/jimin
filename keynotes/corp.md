@@ -13,6 +13,7 @@
 - Governance information is regulated and consistent; ESG disclosure is voluntary and uneven.
 
 ## Cost of equity
+- Historical ERP biases: survivorship (index backfilled with surviving firms) → up; a bad period that won't recur → down; ERP over a short-term rate on an upward curve → up. Grinold–Kroner: E(R) = dividend yield + ΔP/E + inflation + real growth; ERP = E(R) – **long-term** rf.
 - r = D1 / P0 + g (D1 = next-year EPS × payout; payout constant → dividend growth = earnings growth). Build-up: risk-free + equity risk premium + size + specific-company premium.
 - Shadow banking = unregulated non-bank lending. Common law → stronger investor protection → lower risk premium than civil law.
 

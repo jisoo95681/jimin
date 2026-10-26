@@ -1,6 +1,7 @@
 # Quantitative Methods: key notes
 
 ## Time series
+- Covariance stationary = constant finite mean, variance and covariance with own lags. A trending price series usually isn't. Durbin–Watson below the critical value → positive serial correlation in the errors; it does not test stationarity.
 - Dickey–Fuller null = **unit root** (non-stationary). Reject → stationary.
 - Regressing two series is valid only if both are stationary, or both have unit roots **and** are cointegrated (Engle–Granger rejects a unit root in the residuals).
 - One unit root only → invalid. Both unit roots, residual also unit root → spurious.

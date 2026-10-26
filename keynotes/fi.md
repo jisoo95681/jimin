@@ -20,6 +20,7 @@
 - Weak economy: buy HY, sell IG index protection (reverse when strong).
 - Basis: bond spread = yield – MRR. Bond > CDS → buy bond + buy protection; bond < CDS → short bond + sell protection.
 - LBO of itself: buy stock + buy protection. Debt-funded acquisition: long target shares + buy acquirer protection.
+- ABS: assets in an SPE lower financing cost compared with the originator's own debt; granular, homogeneous pools are analysed with portfolio statistics.
 - Index = full hedge of many names; tranche = partial. ISDA master agreement before trading.
 
 ## Your traps
