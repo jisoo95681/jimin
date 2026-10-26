@@ -741,7 +741,7 @@ const NOTE_QUICK = {
  "m1q6": ["Current rate method: at which rate is each income statement line translated?", "Every line at the average rate", "Every line at the year-end rate", "Cost of sales at the historical rate, revenue at the average rate"],
  "m1q11": ["Active return from factors is:", "Σ (portfolio β – benchmark β) × factor return, plus security selection", "Σ portfolio β × factor return, with no benchmark", "Σ (benchmark β – portfolio β) × factor return, minus security selection"],
  "m1q13": ["Neoclassical growth per worker in the steady state (θ = TFP growth, α = capital share):", "θ ÷ (1 – α)", "θ ÷ α", "θ + labor-force growth"],
- "m1q18": ["Gamma of short options plus shares, delta-hedged:", "Negative: short options are negative, shares add zero", "Positive: shares add gamma", "Zero: delta-hedged means gamma-neutral"],
+ "m1q18": ["Gamma of a delta-hedged position that is short options and long shares:", "Negative", "Positive", "Zero"],
  "m1q19": ["New option value after a day, using theta:", "Old value + theta × days (theta is already negative)", "Old value – theta × days", "Old value, ignoring theta"],
  "m1q27": ["Which earnings are least persistent for residual income?", "High accruals and extreme ROE: persistence is low", "Low accruals and stable ROE: persistence is low", "High accruals and extreme ROE: persistence is high"],
  "m1q29": ["Real GDP growth is negative. Which sector holds up best?", "Recession: staples (defensives)", "Recession: cyclicals", "Expansion: staples"],

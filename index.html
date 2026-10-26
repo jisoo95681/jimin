@@ -607,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v136 · 2026-10-26";
+  const APP_VERSION = "v137 · 2026-10-26";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -941,7 +941,8 @@
     const card = el("div", { className: "card nt" + (dirMode ? " nt-big" : "") });
     const meta = el("div", { className: "meta" });
     meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
-    card.append(meta, el("h3", { className: "title" }, n.title));
+    card.append(meta);
+    if (!dirMode) card.append(el("h3", { className: "title" }, n.title)); // bed mode: the title would give the answer away
     if (dirMode) card.append(el("p", { className: "q" }, NOTE_QUICK[n.id][0]));
     else {
       const ul = el("ul", { className: "nt-stem" });
@@ -988,6 +989,7 @@
       if (!ok && !n.guess && !dirMode) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
       if (n.guess && !dirMode) badge.append(el("span", { className: "sub" }, " You guessed this one right in the set: make sure it is really yours."));
       after.append(badge);
+      if (dirMode) after.append(el("h3", { className: "title" }, n.title));
       const sec = (title, html) => { after.append(el("h4", {}, title)); const box = el("div"); box.innerHTML = html; after.append(box); return box; };
       sec(dirMode ? "Rule" : "Formula", `<div class="nt-formula">${n.formula.map(f => `<div>${f}</div>`).join("")}</div>`);
       // Bed mode shows the full working too, so the calculation can be recalled without solving it.
