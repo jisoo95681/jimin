@@ -607,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v138 · 2026-10-26";
+  const APP_VERSION = "v139 · 2026-10-26";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -986,7 +986,7 @@
       badge.append(el("span", { className: `nt-badge ${ok ? "good" : "bad"}` }, ok ? "✓ Correct" : "✗ Not quite"));
       if (fresh) badge.append(el("span", { className: "nt-badge soft" }, "Absorbed: it will show lighter now"));
       else if (ok) badge.append(el("span", { className: "nt-badge soft" }, `${st.streak} of 2 in a row`));
-      if (!ok && !n.guess && !dirMode) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
+      if (!ok && !n.guess && !n.drill && !dirMode) badge.append(el("span", { className: "sub" }, ` In the mock you chose: ${n.options[n.mine].t.replace(/<[^>]+>/g, "")}`));
       if (n.guess && !dirMode) badge.append(el("span", { className: "sub" }, " You guessed this one right in the set: make sure it is really yours."));
       after.append(badge);
       if (dirMode) after.append(el("h3", { className: "title" }, n.title));
