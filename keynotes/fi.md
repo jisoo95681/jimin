@@ -4,6 +4,8 @@
 - A coupon bond's YTM ≈ the maturity spot rate (slightly below if the curve slopes up). Not the coupon.
 - Curve unchanged → 1-year return on an N-year zero = f(N – 1, 1) (rolling down). Forwards realized → every bond earns the 1-year spot.
 - Theories: segmented (won't move whatever the return) · preferred habitat (moves if paid enough) · liquidity preference (premium rises with maturity) · pure/local expectations.
+- Riding the curve with swap spreads: buy at spot + spread of the long maturity, sell at spot + spread of the shorter one (today's curve). Z-spread price: add Z to every spot rate, discount each cash flow at its own rate.
+- MRR–OIS = risk and liquidity of money markets; TED = MRR – T-bill (credit risk in the economy).
 - Σ key rate durations = effective duration; %ΔP ≈ –Σ KRD × Δr. KRD for non-parallel shifts.
 
 ## Embedded options and convertibles

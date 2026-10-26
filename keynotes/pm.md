@@ -12,12 +12,16 @@
 
 ## Economics and markets
 - Real GDP ≈ nominal – inflation. Recession → staples/defensives hold up, spreads widen.
+- High equity risk premium ← equity returns positively correlated with consumption (poor hedge). Best hedge for bad consumption = short-dated default-free bonds.
+- P/E up ← lower ERP, lower GDP volatility, less inflation uncertainty; expected inflation up → P/E down. Cyclical earnings lead the economy and rebound fastest.
+- Commercial real estate: rent bond-like, value equity-like; discount rate = equity rate + liquidity premium; numerator = net rental income.
 - Potential GDP up → long-term equity returns up; actual below potential → inflation down.
 
 ## Risk
 - VaR = (z × σ – μ) × value; daily: μ / 250, σ / √250. z 5% = 1.65, 1% = 2.33.
 - Historical simulation can weight recent data more. Incremental VaR = effect of changing a position; conditional VaR = average loss beyond VaR.
 - ETF holding cost = round-trip trading + spread + annual fee × months / 12.
+- Backtesting: survivorship bias from using today's index members (use point-in-time data). Sensitivity analysis = effect of changing the input distribution; bootstrapping = resampling. A flatter return density = higher SD, fatter tails.
 - Backtest choice for downside control: positive skew, low kurtosis.
 
 ## Your traps
