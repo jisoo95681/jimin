@@ -1160,5 +1160,984 @@ const NOTE_QUICK = {
  "s2e19": ["Notice to clients of a finder's fee policy:", "At least quarterly", "Semiannually", "Annually"]
 };
 
+// Extra definition checks split from existing notes (max 25 notes a set). Placed right after the parent note.
+(function () {
+  const EXTRAS = [
+ {
+  "parent": "m1q3",
+  "key": "cd",
+  "reading": 27,
+  "subject": "Fixed Income",
+  "title": "Who holds the cheapest-to-deliver option",
+  "ask": "In a CDS, who chooses which deliverable bond is delivered?",
+  "options": [
+   {
+    "t": "The protection buyer",
+    "n": "The buyer receives par for whichever bond it delivers, so it delivers the cheapest."
+   },
+   {
+    "t": "The protection seller",
+    "n": "The seller pays against what is delivered."
+   },
+   {
+    "t": "The reference entity",
+    "n": "It plays no role in settlement."
+   }
+  ],
+  "formula": [
+   "Protection buyer delivers; the cheapest deliverable bond sets the payout"
+  ],
+  "why": [
+   "The buyer is paid par for the bond it hands over.",
+   "So it hands over the lowest-priced deliverable bond."
+  ],
+  "general": [
+   "Payout = notional × (1 – CTD price)."
+  ]
+ },
+ {
+  "parent": "m1q4",
+  "key": "pr",
+  "reading": 27,
+  "subject": "Fixed Income",
+  "title": "What buying protection means",
+  "ask": "Buying CDS protection makes you economically:",
+  "options": [
+   {
+    "t": "Short the credit: you gain when the spread widens",
+    "n": "Protection is worth more as credit risk rises."
+   },
+   {
+    "t": "Long the credit: you gain when the spread tightens",
+    "n": "That is the protection seller."
+   },
+   {
+    "t": "Neutral to credit spreads",
+    "n": "A CDS position moves with the spread."
+   }
+  ],
+  "formula": [
+   "Buy protection = short credit risk · sell protection = long credit risk"
+  ],
+  "why": [
+   "Spread widens → the protection you hold gains value.",
+   "Spread tightens → the seller gains."
+  ],
+  "general": [
+   "Negative view on a name → buy protection."
+  ]
+ },
+ {
+  "parent": "m1q6",
+  "key": "ct",
+  "reading": 9,
+  "subject": "FSA",
+  "title": "Where the translation adjustment goes",
+  "ask": "Under the current rate method, where is the translation gain or loss reported?",
+  "options": [
+   {
+    "t": "In equity (cumulative translation adjustment)",
+    "n": "It stays out of net income."
+   },
+   {
+    "t": "In net income",
+    "n": "That is the temporal method."
+   },
+   {
+    "t": "In operating income",
+    "n": "Neither method puts it there."
+   }
+  ],
+  "formula": [
+   "Current rate: translation adjustment in equity · temporal: gain or loss in net income"
+  ],
+  "why": [
+   "The current rate method translates the whole balance sheet at one rate, so the exposure sits in equity."
+  ],
+  "general": [
+   "Remeasurement under temporal hits net income."
+  ]
+ },
+ {
+  "parent": "m1q35",
+  "key": "ph",
+  "reading": 23,
+  "subject": "Fixed Income",
+  "title": "Preferred habitat vs segmented markets",
+  "ask": "Which theory says investors will leave their preferred maturity if paid enough extra return?",
+  "options": [
+   {
+    "t": "Preferred habitat",
+    "n": "Investors have a preferred maturity but will move for compensation."
+   },
+   {
+    "t": "Segmented markets",
+    "n": "Investors never leave their segment, whatever the return."
+   },
+   {
+    "t": "Pure expectations",
+    "n": "No maturity preference: forward rates equal expected spot rates."
+   }
+  ],
+  "formula": [
+   "Move if paid → preferred habitat · never move → segmented markets"
+  ],
+  "why": [
+   "The key phrase is 'if paid enough'."
+  ],
+  "general": [
+   "Segmented = rigid, preferred habitat = flexible."
+  ]
+ },
+ {
+  "parent": "m1q13",
+  "key": "tp",
+  "reading": 6,
+  "subject": "Economics",
+  "title": "What drives per-worker growth in the neoclassical model",
+  "ask": "In the neoclassical growth model, what drives long-run growth in output per worker?",
+  "options": [
+   {
+    "t": "Technological progress (TFP)",
+    "n": "The only source of permanent per-capita growth."
+   },
+   {
+    "t": "Capital accumulation",
+    "n": "Diminishing returns stop it from being permanent."
+   },
+   {
+    "t": "Labor force growth",
+    "n": "It raises total output, not output per worker."
+   }
+  ],
+  "formula": [
+   "Neoclassical: permanent per-capita growth comes only from TFP"
+  ],
+  "why": [
+   "Capital deepening hits diminishing returns.",
+   "Per-worker growth = θ ÷ (1 – α)."
+  ],
+  "general": [
+   "Endogenous growth adds R&D and human capital."
+  ]
+ },
+ {
+  "parent": "m2q1",
+  "key": "cv",
+  "reading": 25,
+  "subject": "Fixed Income",
+  "title": "Conversion value",
+  "ask": "Conversion value of a convertible bond is:",
+  "options": [
+   {
+    "t": "Share price × conversion ratio",
+    "n": "What you would get by converting now."
+   },
+   {
+    "t": "Bond price ÷ conversion ratio",
+    "n": "That is the conversion price idea, not the value."
+   },
+   {
+    "t": "Par value × coupon rate",
+    "n": "That is the annual coupon."
+   }
+  ],
+  "formula": [
+   "Conversion value = share price × conversion ratio"
+  ],
+  "why": [
+   "Minimum value = max(conversion value, straight bond value)."
+  ],
+  "general": [
+   "Check which is larger before choosing."
+  ]
+ },
+ {
+  "parent": "m2q2",
+  "key": "pv",
+  "reading": 25,
+  "subject": "Fixed Income",
+  "title": "Putable vs straight bond",
+  "ask": "Compared with an otherwise identical straight bond, a putable bond is worth:",
+  "options": [
+   {
+    "t": "More: the investor also holds a put option",
+    "n": "Putable = straight + put."
+   },
+   {
+    "t": "Less",
+    "n": "That is a callable bond."
+   },
+   {
+    "t": "The same",
+    "n": "The option has value."
+   }
+  ],
+  "formula": [
+   "Putable = straight + put · callable = straight – call"
+  ],
+  "why": [
+   "The put protects the investor, so it adds value."
+  ],
+  "general": [
+   "Callable bond value is capped near the call price."
+  ]
+ },
+ {
+  "parent": "m2q13",
+  "key": "z",
+  "reading": 38,
+  "subject": "Portfolio",
+  "title": "VaR z-scores",
+  "ask": "Which z-score goes with a 5% one-tailed VaR?",
+  "options": [
+   {
+    "t": "1.65",
+    "n": "One-tailed 5%."
+   },
+   {
+    "t": "1.96",
+    "n": "Two-tailed 5%."
+   },
+   {
+    "t": "2.33",
+    "n": "One-tailed 1%."
+   }
+  ],
+  "formula": [
+   "z: 5% one-tailed = 1.65 · 1% one-tailed = 2.33"
+  ],
+  "why": [
+   "VaR looks at one tail only."
+  ],
+  "general": [
+   "Two-tailed 5% would be 1.96."
+  ]
+ },
+ {
+  "parent": "m2q22",
+  "key": "ib",
+  "reading": 8,
+  "subject": "FSA",
+  "title": "Excess tax benefit under IFRS",
+  "ask": "Under IFRS, where does the excess tax benefit from share-based pay go?",
+  "options": [
+   {
+    "t": "Equity",
+    "n": "IFRS books the excess to equity."
+   },
+   {
+    "t": "Tax expense",
+    "n": "That is US GAAP."
+   },
+   {
+    "t": "Revenue",
+    "n": "It is not revenue."
+   }
+  ],
+  "formula": [
+   "Settlement value above grant value: US GAAP → lower tax expense · IFRS → equity"
+  ],
+  "why": [
+   "The tax deduction is based on the settlement value."
+  ],
+  "general": [
+   "Book expense stays at the grant-date value."
+  ]
+ },
+ {
+  "parent": "m2q42",
+  "key": "bw",
+  "reading": 30,
+  "subject": "Alternatives",
+  "title": "Backwardation",
+  "ask": "Backwardation means the futures price is:",
+  "options": [
+   {
+    "t": "Below the spot price (positive roll for a long)",
+    "n": "The curve slopes down."
+   },
+   {
+    "t": "Above the spot price",
+    "n": "That is contango."
+   },
+   {
+    "t": "Equal to the spot price",
+    "n": "That is a flat curve."
+   }
+  ],
+  "formula": [
+   "Backwardation: spot above futures · positive roll return for a long"
+  ],
+  "why": [
+   "Roll = (near – far) ÷ near is positive when far < near."
+  ],
+  "general": [
+   "Contango gives a negative roll."
+  ]
+ },
+ {
+  "parent": "m2q35",
+  "key": "sd",
+  "reading": 41,
+  "subject": "Ethics",
+  "title": "Who soft dollars must benefit",
+  "ask": "Soft dollar commissions must benefit:",
+  "options": [
+   {
+    "t": "The client who generated them",
+    "n": "Brokerage belongs to the client (III(A))."
+   },
+   {
+    "t": "The firm's own research budget",
+    "n": "The firm may not keep the benefit."
+   },
+   {
+    "t": "Any client of the firm",
+    "n": "Only the client who generated them."
+   }
+  ],
+  "formula": [
+   "III(A): soft dollars benefit the client who generated the commissions"
+  ],
+  "why": [
+   "Brokerage is the client's asset."
+  ],
+  "general": [
+   "Directed brokerage needs disclosure of the best-execution risk."
+  ]
+ },
+ {
+  "parent": "c2",
+  "key": "up",
+  "reading": 27,
+  "subject": "Fixed Income",
+  "title": "Upward-sloping credit curve",
+  "ask": "An upward-sloping credit curve means default risk is higher in:",
+  "options": [
+   {
+    "t": "The later years",
+    "n": "The normal shape."
+   },
+   {
+    "t": "The earlier years",
+    "n": "That is a downward-sloping curve (near-term stress)."
+   },
+   {
+    "t": "All years equally",
+    "n": "That is a flat curve (constant hazard rate)."
+   }
+  ],
+  "formula": [
+   "Upward: later risk · downward: near-term stress · flat: constant hazard"
+  ],
+  "why": [
+   "Longer maturities carry more cumulative default risk."
+  ],
+  "general": [
+   "Downward-sloping curves are unusual."
+  ]
+ },
+ {
+  "parent": "c3",
+  "key": "ev",
+  "reading": 27,
+  "subject": "Fixed Income",
+  "title": "The three credit events",
+  "ask": "Which are the three most common credit events?",
+  "options": [
+   {
+    "t": "Bankruptcy, failure to pay, restructuring",
+    "n": "The standard list."
+   },
+   {
+    "t": "Bankruptcy, downgrade, restructuring",
+    "n": "A downgrade is not a credit event."
+   },
+   {
+    "t": "Failure to pay, spread widening, merger",
+    "n": "Neither a spread move nor a merger is a credit event."
+   }
+  ],
+  "formula": [
+   "Credit events: bankruptcy · failure to pay · restructuring"
+  ],
+  "why": [
+   "Restructuring is not a credit event in the US."
+  ],
+  "general": [
+   "Missed payment after the grace period counts, even on one bond."
+  ]
+ },
+ {
+  "parent": "c31",
+  "key": "up2",
+  "reading": 27,
+  "subject": "Fixed Income",
+  "title": "Who pays the upfront premium",
+  "ask": "When the CDS spread is above the standard coupon, who pays the upfront premium?",
+  "options": [
+   {
+    "t": "The protection buyer",
+    "n": "The buyer pays upfront for the extra spread."
+   },
+   {
+    "t": "The protection seller",
+    "n": "The seller receives it."
+   },
+   {
+    "t": "Nobody",
+    "n": "The upfront compensates for the gap."
+   }
+  ],
+  "formula": [
+   "Spread > coupon: buyer pays upfront · spread < coupon: seller pays upfront"
+  ],
+  "why": [
+   "Upfront ≈ (spread – coupon) × duration."
+  ],
+  "general": [
+   "Price = 100 – upfront."
+  ]
+ },
+ {
+  "parent": "tbc2",
+  "key": "pa",
+  "reading": 14,
+  "subject": "Corporate Issuers",
+  "title": "Principal-agent conflict",
+  "ask": "A principal-agent conflict is between:",
+  "options": [
+   {
+    "t": "Shareholders (principals) and managers (agents)",
+    "n": "Dispersed ownership and voting."
+   },
+   {
+    "t": "Controlling and minority shareholders",
+    "n": "That is principal-principal."
+   },
+   {
+    "t": "Shareholders and bondholders",
+    "n": "That is a different conflict."
+   }
+  ],
+  "formula": [
+   "Principal-agent: shareholders vs managers · principal-principal: controlling vs minority"
+  ],
+  "why": [
+   "Dispersed ownership with dispersed voting gives principal-agent."
+  ],
+  "general": [
+   "Concentrated voting power points to principal-principal."
+  ]
+ },
+ {
+  "parent": "tbc3",
+  "key": "ic",
+  "reading": 14,
+  "subject": "Corporate Issuers",
+  "title": "Independent committees",
+  "ask": "Which board committees should have independent members?",
+  "options": [
+   {
+    "t": "Audit, remuneration and nomination",
+    "n": "Each needs independence."
+   },
+   {
+    "t": "Only the audit committee",
+    "n": "Remuneration and nomination matter too."
+   },
+   {
+    "t": "None: management sets them",
+    "n": "Independence is the point."
+   }
+  ],
+  "formula": [
+   "Audit, remuneration and nomination committees should be independent"
+  ],
+  "why": [
+   "A CEO on the remuneration committee sets their own pay."
+  ],
+  "general": [
+   "An executive director on the board is acceptable."
+  ]
+ },
+ {
+  "parent": "tbc5",
+  "key": "ac",
+  "reading": 14,
+  "subject": "Corporate Issuers",
+  "title": "What an activist holds",
+  "ask": "An activist shareholder usually holds:",
+  "options": [
+   {
+    "t": "A minority stake and tries to influence the company",
+    "n": "Influence without control."
+   },
+   {
+    "t": "A controlling stake",
+    "n": "That would be an acquirer."
+   },
+   {
+    "t": "Only bonds",
+    "n": "Activists buy equity."
+   }
+  ],
+  "formula": [
+   "Activist: minority stake, aims to influence governance"
+  ],
+  "why": [
+   "Activists push for changes in strategy, governance or capital allocation."
+  ],
+  "general": [
+   "Do not confuse with a controlling shareholder."
+  ]
+ },
+ {
+  "parent": "tbc7",
+  "key": "dv",
+  "reading": 14,
+  "subject": "Corporate Issuers",
+  "title": "ESG disclosure",
+  "ask": "Compared with governance information, ESG disclosure is mostly:",
+  "options": [
+   {
+    "t": "Voluntary and less consistent",
+    "n": "Few rules force it."
+   },
+   {
+    "t": "Regulated and consistent",
+    "n": "That is governance information."
+   },
+   {
+    "t": "Audited and mandatory",
+    "n": "Not generally."
+   }
+  ],
+  "formula": [
+   "Governance info: regulated, consistent · ESG disclosure: voluntary"
+  ],
+  "why": [
+   "Quality of ESG data varies by company."
+  ],
+  "general": [
+   "Material ESG factors still feed into valuation."
+  ]
+ },
+ {
+  "parent": "tbc11",
+  "key": "sb",
+  "reading": 15,
+  "subject": "Corporate Issuers",
+  "title": "Shadow banking",
+  "ask": "Shadow banking is:",
+  "options": [
+   {
+    "t": "Lending outside the regulated banking system",
+    "n": "Non-bank lenders."
+   },
+   {
+    "t": "Illegal lending",
+    "n": "It is not necessarily illegal."
+   },
+   {
+    "t": "Central bank lending to banks",
+    "n": "That is regulated."
+   }
+  ],
+  "formula": [
+   "Shadow banking = unregulated non-bank lending"
+  ],
+  "why": [
+   "It fills gaps where corporate bond markets are weak."
+  ],
+  "general": [
+   "It is more common where debt markets are thin."
+  ]
+ },
+ {
+  "parent": "tbc11",
+  "key": "cl",
+  "reading": 15,
+  "subject": "Corporate Issuers",
+  "title": "Legal system and risk premium",
+  "ask": "Which legal system tends to give a lower country risk premium?",
+  "options": [
+   {
+    "t": "Common law",
+    "n": "Stronger investor protection."
+   },
+   {
+    "t": "Civil law",
+    "n": "Weaker protection tends to mean a higher premium."
+   },
+   {
+    "t": "Neither: it makes no difference",
+    "n": "It does matter."
+   }
+  ],
+  "formula": [
+   "Stronger investor protection → lower risk premium (common law)"
+  ],
+  "why": [
+   "Weaker protection raises the cost of capital."
+  ],
+  "general": [
+   "Applies to the country risk premium in the cost of equity."
+  ]
+ },
+ {
+  "parent": "s1q2",
+  "key": "cs",
+  "reading": 2,
+  "subject": "Quant",
+  "title": "Covariance stationarity",
+  "ask": "Covariance stationarity requires a constant, finite:",
+  "options": [
+   {
+    "t": "Mean, variance and covariance with its own lags",
+    "n": "All three."
+   },
+   {
+    "t": "Mean only",
+    "n": "Variance and covariances must be constant too."
+   },
+   {
+    "t": "Trend and seasonality",
+    "n": "Those would violate stationarity."
+   }
+  ],
+  "formula": [
+   "Covariance stationary: constant finite mean, variance and covariance with lags"
+  ],
+  "why": [
+   "A trending price series usually fails."
+  ],
+  "general": [
+   "Durbin–Watson is not a stationarity test."
+  ]
+ },
+ {
+  "parent": "s1c4",
+  "key": "rf",
+  "reading": 15,
+  "subject": "Corporate Issuers",
+  "title": "Risk-free rate for the ERP",
+  "ask": "In the Grinold–Kroner ERP, which risk-free rate do you subtract?",
+  "options": [
+   {
+    "t": "The long-term government yield",
+    "n": "Matches the long horizon of equities."
+   },
+   {
+    "t": "The short-term bill rate",
+    "n": "Not the long-run comparison."
+   },
+   {
+    "t": "The inflation rate",
+    "n": "Inflation is a separate input."
+   }
+  ],
+  "formula": [
+   "ERP = expected equity return – long-term risk-free rate"
+  ],
+  "why": [
+   "Use the 10-year yield, even when the curve is inverted."
+  ],
+  "general": [
+   "Short rates can mislead the premium."
+  ]
+ },
+ {
+  "parent": "s1e56",
+  "key": "hm",
+  "reading": 20,
+  "subject": "Equity",
+  "title": "What a harmonic mean P/E averages",
+  "ask": "A harmonic mean P/E is the reciprocal of the weighted average of:",
+  "options": [
+   {
+    "t": "Earnings yields (E/P)",
+    "n": "Average the yields, then flip."
+   },
+   {
+    "t": "P/E ratios",
+    "n": "That is the arithmetic mean."
+   },
+   {
+    "t": "Prices",
+    "n": "Prices are not averaged."
+   }
+  ],
+  "formula": [
+   "Harmonic mean P/E = 1 ÷ Σ (w × E/P)"
+  ],
+  "why": [
+   "Reduces large outliers; can aggravate small ones."
+  ],
+  "general": [
+   "Use it for portfolio or index P/E."
+  ]
+ },
+ {
+  "parent": "s1r63",
+  "key": "cs",
+  "reading": 21,
+  "subject": "Equity",
+  "title": "Clean surplus",
+  "ask": "Clean surplus accounting means:",
+  "options": [
+   {
+    "t": "All changes in book value other than owner transactions pass through net income",
+    "n": "Ending book = beginning + NI – dividends."
+   },
+   {
+    "t": "Net income is excluded from book value",
+    "n": "The opposite."
+   },
+   {
+    "t": "Dividends pass through net income",
+    "n": "Dividends are paid from equity."
+   }
+  ],
+  "formula": [
+   "Clean surplus: ΔBV = NI – dividends"
+  ],
+  "why": [
+   "OCI items such as AFS gains bypass income and break it."
+  ],
+  "general": [
+   "Residual income models assume it."
+  ]
+ },
+ {
+  "parent": "s1f39",
+  "key": "sp",
+  "reading": 26,
+  "subject": "Fixed Income",
+  "title": "What the SPE does",
+  "ask": "In an ABS, the special purpose entity (SPE):",
+  "options": [
+   {
+    "t": "Holds the assets legally apart from the originator",
+    "n": "Protects investors from the originator's creditors."
+   },
+   {
+    "t": "Is the originator's bank",
+    "n": "It is a separate legal vehicle."
+   },
+   {
+    "t": "Guarantees the securities",
+    "n": "It issues the securities; it does not guarantee them."
+   }
+  ],
+  "formula": [
+   "SPE: legally separate owner of the pooled assets → lower financing cost"
+  ],
+  "why": [
+   "Assets sit outside the originator's bankruptcy."
+  ],
+  "general": [
+   "Granular, homogeneous pools are analysed with portfolio statistics."
+  ]
+ },
+ {
+  "parent": "s1e59",
+  "key": "bs",
+  "reading": 20,
+  "subject": "Equity",
+  "title": "Reading justified vs actual P/E",
+  "ask": "If the justified P/E is above the actual P/E (same type), the signal is:",
+  "options": [
+   {
+    "t": "Buy: the stock looks undervalued",
+    "n": "The market pays less than the fundamentals justify."
+   },
+   {
+    "t": "Sell",
+    "n": "That is the reverse."
+   },
+   {
+    "t": "Hold",
+    "n": "There is a clear gap."
+   }
+  ],
+  "formula": [
+   "Justified P/E > actual P/E (same type) → buy"
+  ],
+  "why": [
+   "Compare a trailing justified P/E with the trailing P/E."
+  ],
+  "general": [
+   "Like with like."
+  ]
+ },
+ {
+  "parent": "s2f29",
+  "key": "td",
+  "reading": 23,
+  "subject": "Fixed Income",
+  "title": "TED spread",
+  "ask": "The TED spread is the difference between:",
+  "options": [
+   {
+    "t": "3-month MRR and the T-bill rate",
+    "n": "Credit risk in the general economy."
+   },
+   {
+    "t": "MRR and OIS",
+    "n": "That is the MRR–OIS spread."
+   },
+   {
+    "t": "A bond's yield and its swap rate",
+    "n": "That is a swap spread idea."
+   }
+  ],
+  "formula": [
+   "TED = 3-month MRR – T-bill rate"
+  ],
+  "why": [
+   "MRR–OIS is the money-market risk and liquidity indicator."
+  ],
+  "general": [
+   "Z-spread is a spread over the whole spot curve."
+  ]
+ },
+ {
+  "parent": "s2a2",
+  "key": "ed",
+  "reading": 33,
+  "subject": "Alternatives",
+  "title": "An event-driven strategy",
+  "ask": "Which is an event-driven strategy?",
+  "options": [
+   {
+    "t": "Merger arbitrage",
+    "n": "Trades around corporate events."
+   },
+   {
+    "t": "Global macro",
+    "n": "An opportunistic strategy."
+   },
+   {
+    "t": "Equity market neutral",
+    "n": "A relative value strategy."
+   }
+  ],
+  "formula": [
+   "Event-driven: merger arbitrage, distressed, activist"
+  ],
+  "why": [
+   "It carries some equity beta and left-tail risk."
+  ],
+  "general": [
+   "Deals fail more often in market stress."
+  ]
+ },
+ {
+  "parent": "s2p24",
+  "key": "av",
+  "reading": 34,
+  "subject": "Portfolio",
+  "title": "What risk-averse means",
+  "ask": "A risk-averse investor:",
+  "options": [
+   {
+    "t": "Dislikes risk and needs a premium to bear it",
+    "n": "Averse means dislikes."
+   },
+   {
+    "t": "Seeks risk",
+    "n": "That is risk-seeking."
+   },
+   {
+    "t": "Is indifferent to risk",
+    "n": "That is risk-neutral."
+   }
+  ],
+  "formula": [
+   "Risk-averse: dislikes risk, demands a premium"
+  ],
+  "why": [
+   "Not to be confused with adverse (harmful)."
+  ],
+  "general": [
+   "High premium ↔ poor hedge in bad times."
+  ]
+ },
+ {
+  "parent": "s2b18",
+  "key": "sv",
+  "reading": 39,
+  "subject": "Portfolio",
+  "title": "Avoiding survivorship bias",
+  "ask": "To avoid survivorship bias, a backtest should use:",
+  "options": [
+   {
+    "t": "Point-in-time data including firms that failed",
+    "n": "Realistic view of the past."
+   },
+   {
+    "t": "Only today's index members",
+    "n": "That builds in the bias."
+   },
+   {
+    "t": "Only the most recent five years",
+    "n": "Does not address it."
+   }
+  ],
+  "formula": [
+   "Survivorship bias: using only the firms that survived to today"
+  ],
+  "why": [
+   "Include the casualties as well as the survivors."
+  ],
+  "general": [
+   "Other biases: look-ahead, data snooping."
+  ]
+ },
+ {
+  "parent": "s2a9",
+  "key": "so",
+  "reading": 33,
+  "subject": "Alternatives",
+  "title": "Sortino denominator",
+  "ask": "The Sortino ratio divides excess return by:",
+  "options": [
+   {
+    "t": "Downside deviation",
+    "n": "Only returns below the target."
+   },
+   {
+    "t": "Total standard deviation",
+    "n": "That is the Sharpe ratio."
+   },
+   {
+    "t": "Maximum drawdown",
+    "n": "That is a different ratio."
+   }
+  ],
+  "formula": [
+   "Sortino = excess return ÷ downside deviation"
+  ],
+  "why": [
+   "Use it when negative events matter."
+  ],
+  "general": [
+   "Sharpe counts upside swings as risk too."
+  ]
+ }
+];
+  const seen = {};
+  EXTRAS.forEach(e => {
+    const p = NOTES.find(n => n.id === e.parent);
+    seen[e.parent] = (seen[e.parent] || 0) + 1;
+    NOTES.push({ id: `x_${e.parent}_${e.key}`, set: p.set, tag: `${p.tag} · definition`, session: p.session, mock: p.mock, num: p.num + 0.1 * seen[e.parent],
+      reading: e.reading, subject: e.subject, title: e.title, stem: [], ask: e.ask, options: e.options, answer: 0, mine: 0,
+      formula: e.formula, why: e.why, general: e.general, drill: true });
+  });
+  NOTES.sort((a, b) => a.session - b.session || a.num - b.num);
+})();
+
 // Drills: the question carries the full numbers, the options are the candidate formulas. First option is the right one.
-NOTES.filter(n => n.drill).forEach(n => { NOTE_QUICK[n.id] = [n.stem.join(" ") + " " + n.ask, ...n.options.map(o => o.t)]; });
+NOTES.filter(n => n.drill).forEach(n => { NOTE_QUICK[n.id] = [(n.stem.join(" ") + " " + n.ask).trim(), ...n.options.map(o => o.t)]; });
