@@ -734,330 +734,102 @@ const NOTES = (() => {
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
 
-// "Direction" mode (bed mode): pick the right way to solve, no calculation. First option is the right one; the app shuffles.
-const NOTE_DIR = {
- "m1q3": [
-  "Find the cheapest bond: pay the CDS on its price, value your own bond at its own price",
-  "Pay the CDS on the bond you own",
-  "Value both legs at the cheapest bond's price"
- ],
- "m1q4": [
-  "Buy short-dated protection, sell long-dated protection",
-  "Sell short-dated, buy long-dated protection",
-  "Buy protection at both maturities"
- ],
- "m1q6": [
-  "Translate every income-statement line at the average rate",
-  "Translate cost of sales at the inventory-purchase rate",
-  "Translate everything at the year-end rate"
- ],
- "m1q11": [
-  "Work out each factor's (active exposure × factor return), then compare with security selection",
-  "Compare only the two factor tilts",
-  "Add the factor returns together"
- ],
- "m1q13": [
-  "Divide TFP growth by the labor share, then add labor-force growth",
-  "Divide TFP growth by the labor share and stop",
-  "Divide TFP growth by (1 – labor share)"
- ],
- "m1q18": [
-  "Short options give negative gamma and stock adds none → negative",
-  "A delta hedge makes gamma zero",
-  "Gamma follows the long stock position → positive"
- ],
- "m1q19": [
-  "Add the (already negative) daily theta to the option value",
-  "Subtract theta from the value",
-  "Subtract gamma from the value"
- ],
- "m1q27": [
-  "Low persistence ← high accruals and extreme ROE (earnings fade fast)",
-  "Low persistence ← low dividend payout",
-  "Low persistence ← low accounting returns"
- ],
- "m1q29": [
-  "Real growth = nominal – inflation; it is negative → recession → defensive staples",
-  "Nominal growth is positive, so cyclicals hold up",
-  "Inflation is high, so discretionary spending rises"
- ],
- "m1q31": [
-  "σ_A is in the numerator, IC in the denominator: raise IC and cut target risk",
-  "Lower IC and lower target risk",
-  "Raise the target risk"
- ],
- "m1q33": [
-  "Price with the spot curve, then solve for YTM: close to the 3-year spot rate",
-  "YTM equals the coupon rate",
-  "YTM equals the 1-year forward rate in 3 years"
- ],
- "m1q34": [
-  "Curve unchanged → the bond earns the forward rate for its last year, f(2,1)",
-  "It earns the 1-year spot rate",
-  "It earns the 3-year spot rate"
- ],
- "m1q35": [
-  "Will not leave its maturity segment even for more return → segmented markets",
-  "Moves for enough extra return → preferred habitat",
-  "Wants a premium for longer maturity → liquidity preference"
- ],
- "m1q36": [
-  "Key rate durations sum to effective duration: subtract the other two",
-  "Add up the other key rate durations",
-  "Extend a straight line through the other two"
- ],
- "m1q37": [
-  "Both series have unit roots and the residual does not (reject only H3)",
-  "Reject all three tests",
-  "Fail to reject all three tests"
- ],
- "m1q40": [
-  "Keep the tokens that tell the classes apart (highest mutual information)",
-  "Keep the rarest tokens (lowest TF)",
-  "Keep the most common tokens (highest DF)"
- ],
- "m1q42": [
-  "The tickets paid to the referrer are a benefit → disclose; the declined offer needs none",
-  "Nothing was accepted, so no disclosure",
-  "Disclose the declined offer"
- ],
- "m1q43": [
-  "Disclose your own committee seat; never disclose that Hunter is a client",
-  "Disclose that Hunter is a client",
-  "No disclosure: the seat is unpaid"
- ],
- "m1q44": [
-  "No client trade was pending and the client chose the timing → no violation",
-  "Trading before the client is always front-running",
-  "A temporary price move is market manipulation"
- ],
- "m2q1": [
-  "Take the greater of conversion value and straight bond value",
-  "Use the par value",
-  "Use the conversion value only"
- ],
- "m2q2": [
-  "Work back the tree: add the coupon, apply max(value, put price) at each node",
-  "Skip the coupon and average the put prices",
-  "Ignore the put and discount at 2%"
- ],
- "m2q6": [
-  "Average the yearly ROEs, then multiply by current book value per share",
-  "Average the EPS figures",
-  "Multiply by average book value per share"
- ],
- "m2q8": [
-  "A ratio of price ratios (stock ÷ index), prices only",
-  "1 + stock return – index return",
-  "Include dividends in both returns"
- ],
- "m2q10": [
-  "Chain the years: Year 1 dividend first, then Year 2's increase from it",
-  "Use the Year 1 increase",
-  "Use a 100% target payout"
- ],
- "m2q13": [
-  "z × daily σ minus daily mean, times portfolio value",
-  "z × daily σ plus daily mean",
-  "1 × daily σ"
- ],
- "m2q17": [
-  "Buy EUR at the cheapest (dealer offer), sell where the bid is highest (interbank)",
-  "Buy EUR interbank and sell to the dealer",
-  "No arbitrage: the quotes are too close"
- ],
- "m2q19": [
-  "Convert BRL back at the new rate, then subtract the USD loan with interest",
-  "Subtract only the loan principal",
-  "Use the interest differential"
- ],
- "m2q20": [
-  "Pick the indicator moving in the crisis direction: FX reserves falling",
-  "M2 / bank reserves falling",
-  "A slight fall in foreign equity investment"
- ],
- "m2q22": [
-  "Settlement above grant price → deduction exceeds expense → tax expense falls",
-  "Tax expense rises",
-  "No effect under US GAAP"
- ],
- "m2q25": [
-  "Value both legs as bonds including notional: equity leg minus fixed leg",
-  "Equity gain minus the PV of the coupons only",
-  "Equity return minus a new par swap rate"
- ],
- "m2q28": [
-  "Spot minus the PV of F₀ over the time remaining",
-  "Discount the whole (spot – F₀)",
-  "Discount over the time already passed"
- ],
- "m2q33": [
-  "Including terminated accounts is fine if the termination dates are shown",
-  "Including terminated accounts is a violation",
-  "Nothing is missing"
- ],
- "m2q35": [
-  "Disclosed directed brokerage is fine; soft dollars must benefit this client",
-  "Best execution was breached",
-  "Both were breached"
- ],
- "m2q39": [
-  "Compliance education must be continual, not only at hiring",
-  "Periodic reminders are not allowed",
-  "Updating procedures is not allowed"
- ],
- "m2q42": [
-  "Price + roll + collateral, with the collateral cut to 3 months",
-  "Use the full annual collateral rate",
-  "Flip the sign of the roll return"
- ],
- "c1": [
-  "Cash settle on the CTD price and sell your own bond; compare with par",
-  "Physical settlement is always better",
-  "The two routes always pay the same"
- ],
- "c2": [
-  "Near-term stress → higher default risk early → downward-sloping",
-  "Upward-sloping",
-  "Flat"
- ],
- "c3": [
-  "A missed payment on any obligation after the grace period is a credit event",
-  "It needs a bankruptcy filing",
-  "Only senior debt counts"
- ],
- "c5": [
-  "Protection buyer is short credit: wider spread → profit (close by selling protection)",
-  "Wider spread → loss",
-  "No change in value"
- ],
- "c6": [
-  "Bond spread = yield – MRR; the profit is its gap to the CDS spread",
-  "Bond yield minus CDS spread",
-  "CDS spread minus MRR"
- ],
- "c7": [
-  "The compliance step is signing the ISDA master agreement",
-  "Setting the notional amount",
-  "Posting an upfront payment"
- ],
- "c8": [
-  "Many exposures and a full hedge → CDS index",
-  "Tranche CDS",
-  "Single-name CDS"
- ],
- "c12": [
-  "Weaker economy: buy high-yield index protection, sell investment-grade",
-  "Sell high-yield, buy investment-grade",
-  "Buy protection on the stronger economy"
- ],
- "c13": [
-  "Steepening → buy long-dated protection, sell short-dated",
-  "Sell long-dated, buy short-dated",
-  "Buy both maturities"
- ],
- "c14": [
-  "Target's shares rise, acquirer's debt widens its spread → long target + buy acquirer protection",
-  "Short the target's shares",
-  "Long the acquirer's shares"
- ],
- "c16": [
-  "Spread change × duration × notional",
-  "Add the spread change to the spread",
-  "Use the maturity instead of the duration"
- ],
- "c18": [
-  "Stock rises and spread widens → buy the stock and buy protection",
-  "Sell protection, buy the stock",
-  "Buy protection, sell the stock"
- ],
- "c19": [
-  "Bought short-dated and sold long-dated → flattener",
-  "Steepener",
-  "No view on the curve"
- ],
- "c22": [
-  "Bond spread above CDS spread → buy the bond and buy protection",
-  "Buy the bond and sell protection",
-  "Sell the bond and buy protection"
- ],
- "c25": [
-  "Seller gains when credit improves; no mispricing, so it is a credit view",
-  "Buyer gains when credit improves",
-  "The profit comes from a bond–CDS mispricing"
- ],
- "c27": [
-  "Bond yield – MRR vs the CDS spread: bond spread below CDS = too low",
-  "Compare the bond yield with the CDS spread",
-  "Bond spread above CDS = too low"
- ],
- "c29": [
-  "A single-name CDS covers obligations ranking equal to the reference obligation",
-  "It covers any obligation of the entity",
-  "It covers only the reference bond itself"
- ],
- "c30": [
-  "In the US restructuring is not a credit event; bankruptcy and failure to pay are",
-  "Failure to pay is not a credit event",
-  "Bankruptcy is not a credit event"
- ],
- "c31": [
-  "(Spread – coupon) × duration is the upfront premium; price = 100 – premium",
-  "Spread – coupon only",
-  "Price = 100 + premium"
- ],
- "c32": [
-  "Stronger economy: sell high-yield protection, buy investment-grade",
-  "Sell investment-grade, buy high-yield",
-  "Buy both"
- ],
- "c33": [
-  "Flattener: sell long, buy short; steepener: buy long, sell short; check each leg",
-  "Flattener: buy long, sell short",
-  "Both legs are wrong"
- ],
- "c34": [
-  "Compare bond and CDS spreads per company: A's bond below its CDS → short bond, sell protection",
-  "Go long the bond where its spread is below the CDS",
-  "Always buy protection"
- ],
- "tbc2": ["Dispersed ownership + concentrated voting power → principal-principal conflict", "A shareholder-CEO creates the conflict", "Principal-agent: shareholders cannot control managers"],
- "tbc3": ["Independent committees matter most: the CEO on the remuneration committee undermines it", "The CFO on the governance committee undermines it", "Executive directors on the board undermine it"],
- "tbc5": ["An activist uses a minority stake to influence the company's governance", "An activist accumulates majority ownership to control the board", "An activist maximizes the fund's value at the company's expense"],
- "tbc6": ["Identify material factors, analyze history, forecasts and peers, then adjust valuation: the statement is correct", "Peer analysis is not relevant to ESG", "Qualitative factors and historical trends are not relevant"],
- "tbc7": ["Governance information is regulated and consistent; ESG disclosure is voluntary: the comparison is wrong", "The statement is correct", "Regulators set specific ESG disclosure requirements"],
- "tbc9": ["r = D1/P0 + g: next-year dividend over price, plus growth", "Use the growth rate alone", "Use the dividend yield alone"],
- "tbc11": ["Shadow banking is unregulated non-bank lending; common law means lower risk premiums", "Shadow banking is bank lending", "Both statements are correct"],
- "s1q2": ["Covariance stationary needs a constant mean and variance: they are not → not stationary", "The series is covariance stationary", "A Durbin–Watson above 1.75 decides stationarity"],
- "s1c1": ["Backfilling with survivors builds in survivorship bias → ERP biased upward", "Backfilled returns bias the ERP downward", "Backfilled returns have no effect on the ERP"],
- "s1c4": ["Dividend yield + P/E growth + inflation + real growth, minus the long-term risk-free rate", "Minus the 9% short-term rate", "Use the 5% earnings forecast in place of inflation + real growth"],
- "s1e54": ["Add back only the one-off lawsuit cost; keep the recurring acquisition costs", "Use the company's core EPS", "Use reported EPS as it stands"],
- "s1e55": ["Higher growth raises the P/E but higher risk lowers it: the risk part is wrong", "Higher growth and higher risk both raise the P/E", "Higher growth lowers the P/E"],
- "s1e56": ["Weight by market cap, average the earnings yields (1/PE), then take the reciprocal", "Weight equally, then take the reciprocal", "Weight by market cap and average the P/Es directly"],
- "s1e57": ["The harmonic mean reduces large outliers but can aggravate small ones", "It mitigates both large and small outliers", "It aggravates large outliers"],
- "s1e59": ["Compare the justified trailing P/E with the trailing P/E: like with like", "Compare it with the index P/E", "Compare it with the forward P/E"],
- "s1r61": ["RI = net income minus 12% of beginning-of-year equity", "RI = net income minus 12% of end-of-year equity", "RI = net income minus dividends"],
- "s1r62": ["Justified P/B = (forecast ROE – g) ÷ (r – g)", "Use the historical 2013 ROE", "Use the current market P/B"],
- "s1r63": ["Gains that bypass income (OCI) break clean surplus; ordinary FX transactions do not", "Translation adjustments do not break clean surplus", "AFS unrealized gains and losses do not break it"],
- "s1r65": ["Adjust income (not book value) for non-recurring items; interest expense may misstate the cost of debt", "RI needs no adjustment for off-balance-sheet items", "Interest expense in RI captures the true cost of debt"],
- "s1f39": ["An SPE lowers financing cost; investors like diversification and stable cash flows", "An SPE raises financing costs", "Investors dislike ABS because of the diversification"],
- "s1e13": ["No breach: he only sent his model for comments, with no preferential treatment", "A breach of Fair Dealing", "A breach of Diligence and Reasonable Basis"],
- "s2f27": ["Buy at the 4-year yield (4.75%), sell at the 2-year yield (3.00%), annualise over 2 years", "Use the 4-year yield for both ends", "Use the government spots without the swap spread"],
- "s2f28": ["Add 65 bps to every spot rate and discount each cash flow at its own rate", "Discount everything at the 2-year spot plus 65 bps", "Discount at the coupon rate, so the price is par"],
- "s2f29": ["MRR–OIS: the risk and liquidity of money market securities", "TED spread: it covers the money market's risk and liquidity", "Z-spread: it measures the money market"],
- "s2d26": ["Roll the forward price with r – δ, then discount the gain over T – t", "Ignore the dividend yield and use r only", "Skip the discounting over T – t"],
- "s2d28": ["Notional × (new fixed – old fixed) × sum of all remaining PV factors; pay-fixed gains when rates rose", "Use a single PV factor", "Pay-fixed loses when the market rate is above the contract rate"],
- "s2a2": ["Event-driven strategies still carry equity beta: the 'no beta' statement is the false one", "Opportunistic strategies have no market directionality", "Equity market neutral is not a relative value approach"],
- "s2a4": ["Buy OTM calls on the short leg (AA) and OTM puts on the long leg (TT)", "Buy puts on the short leg and calls on the long leg", "Hold bonds and sell puts on AA, as in the payoff profile"],
- "s2a6": ["Ranking inside one asset class that nets to market neutral: cross-sectional momentum", "Each asset on its own trend: time-series momentum", "A top-down view of global trends: global macro"],
- "s2a9": ["Max SD = 7.95 × √0.90 ≈ 7.54%: all pass, so pick the highest Sortino", "Pick the highest Sharpe ratio", "Pick the lowest maximum drawdown"],
- "s2p24": ["Equities pay off in good times, so returns and consumption are positively correlated", "Negative correlation makes equities a hedge and the premium large", "No correlation is needed for a large premium"],
- "s2p25": ["A hedge needs a near-certain real payoff: short-dated default-free bonds", "Long-dated default-free bonds have the most certain payoff", "Equities hedge bad consumption outcomes"],
- "s2p28": ["Real estate discount rate = equity rate + a liquidity premium", "Commercial real estate is a good hedge against bad consumption outcomes", "Rental income is unstable across the cycle"],
- "s2p29": ["Cyclical earnings are a leading indicator for the economy", "Profit growth late in a recession makes the risk premium negative", "Equities hedge bad consumption outcomes in recessions"],
- "s2p30": ["Lower GDP volatility raises P/E multiples", "A higher equity risk premium raises P/E", "More inflation uncertainty raises P/E"],
- "s2p32": ["The numerator is net rental income (rent less expenses), not the sum of rents", "The commercial-lease discount rate is described wrongly", "The government-lease discount rate is described wrongly"],
- "s2b18": ["Flatter means wider: a higher standard deviation and fatter tails", "Flatter means fewer extreme outcomes", "Flatter means negative skewness"],
- "s2b19": ["Both statements are correct", "Only statement 1 is correct", "Only statement 2 is correct"],
- "s2e19": ["Quarterly notice is recommended, so semiannual is the action to avoid", "Monitoring the agents is the action to avoid", "Disclosing the fee in the prospectus is the action to avoid"]
+// Bed mode: one short concept check per note. [question, right option, wrong option, wrong option]; the app shuffles the options.
+const NOTE_QUICK = {
+ "m1q3": ["A CDS payout uses the recovery rate of which bond?", "The cheapest-to-deliver bond (lowest price)", "The bond you own", "The most expensive deliverable bond"],
+ "m1q4": ["The CDS curve is upward sloping and expected to flatten. Which trade?", "Buy short-dated protection, sell long-dated protection", "Buy long-dated protection, sell short-dated protection", "Sell both short- and long-dated protection"],
+ "m1q6": ["Current rate method: at which rate is each income statement line translated?", "Every line at the average rate", "Every line at the year-end rate", "Cost of sales at the historical rate, revenue at the average rate"],
+ "m1q11": ["Active return from factors is:", "Σ (portfolio β – benchmark β) × factor return, plus security selection", "Σ portfolio β × factor return, with no benchmark", "Σ (benchmark β – portfolio β) × factor return, minus security selection"],
+ "m1q13": ["Neoclassical growth per worker in the steady state (θ = TFP growth, α = capital share):", "θ ÷ (1 – α)", "θ ÷ α", "θ + labor-force growth"],
+ "m1q18": ["Gamma of short options plus shares, delta-hedged:", "Negative: short options are negative, shares add zero", "Positive: shares add gamma", "Zero: delta-hedged means gamma-neutral"],
+ "m1q19": ["New option value after a day, using theta:", "Old value + theta × days (theta is already negative)", "Old value – theta × days", "Old value, ignoring theta"],
+ "m1q27": ["Which earnings are least persistent for residual income?", "High accruals and extreme ROE: persistence is low", "Low accruals and stable ROE: persistence is low", "High accruals and extreme ROE: persistence is high"],
+ "m1q29": ["Real GDP growth is negative. Which sector holds up best?", "Recession: staples (defensives)", "Recession: cyclicals", "Expansion: staples"],
+ "m1q31": ["In Δw* = (μ ÷ σ²) × σA ÷ (IC × √BR), what raises the active weights?", "A higher target active risk σA", "A higher IC", "A higher breadth"],
+ "m1q33": ["A coupon bond's YTM is closest to:", "The spot rate of its maturity", "Its coupon rate", "The 1-year spot rate"],
+ "m1q34": ["Curve unchanged: the 1-year return on an N-year zero is:", "The forward rate f(N – 1, 1): rolling down", "The 1-year spot rate", "The N-year spot rate"],
+ "m1q35": ["Investors will not leave their maturity segment, even for extra return:", "Segmented markets", "Preferred habitat", "Liquidity preference"],
+ "m1q36": ["Key rate durations add up to:", "Effective duration", "Macaulay duration", "Convexity"],
+ "m1q37": ["Regressing two unit-root series is valid when:", "They are cointegrated: the residual is stationary", "They both drift upward", "The residual has a unit root"],
+ "m1q40": ["Which tokens does mutual information keep for classifying text?", "Those that appear mostly in one class", "Those that appear most often overall", "Those that appear equally across classes"],
+ "m1q42": ["Referral fees (VI(C)): what must be disclosed?", "Any benefit paid or received for a referral, travel and tickets included", "Only cash fees received", "Only offers you accepted and were paid for"],
+ "m1q43": ["VI(A) and III(E): what do you disclose?", "Your own committee seat; never the client's identity", "Both the seat and the client", "Neither"],
+ "m1q44": ["Priority of transactions (VI(B)) is violated when:", "A personal trade goes ahead of a pending client trade and disadvantages the client", "Any personal trade in the same stock", "A personal trade is made when no client trade is pending"],
+ "m2q1": ["Minimum value of a convertible bond:", "The greater of conversion value and straight bond value", "The lesser of conversion value and straight bond value", "Conversion value only"],
+ "m2q2": ["Putable bond on a binomial tree, at each node:", "Add the coupon, then take the max of value and put price", "Add the coupon, then take the min of value and put price", "Take the max of value and call price"],
+ "m2q6": ["Normalized EPS, average ROE method:", "Average ROE × current book value per share", "Average ROE × current EPS", "Current ROE × average book value per share"],
+ "m2q8": ["Relative strength is:", "A ratio of stock to index prices, prices only", "A ratio of total returns including dividends", "The stock return minus the index return"],
+ "m2q10": ["Target payout model: the dividend increase is:", "(EPS × target payout – previous dividend) ÷ years to adjust", "(EPS × target payout) ÷ years to adjust", "(previous dividend – EPS × target payout) ÷ years to adjust"],
+ "m2q13": ["Parametric VaR for one day:", "(z × daily σ – daily mean) × value", "(z × daily σ + daily mean) × value", "(z × annual σ – annual mean) × value"],
+ "m2q17": ["Triangular arbitrage with a dealer and an interbank market:", "Buy at the low offer, sell at the high bid", "Buy at the high bid, sell at the low offer", "Trade both legs at the mid rate"],
+ "m2q19": ["Carry trade all-in return:", "Convert back at the new spot rate, then repay the loan with interest", "Add up the interest rate differential only", "Convert back at the starting spot rate"],
+ "m2q20": ["A currency crisis warning sign:", "FX reserves falling", "FX reserves rising", "An undervalued currency"],
+ "m2q22": ["Share-based pay: the value at settlement is above the value at grant:", "Excess tax benefit: tax expense falls (US GAAP)", "Tax expense rises", "The excess benefit goes to equity under US GAAP"],
+ "m2q25": ["Equity swap value after initiation:", "Equity leg minus fixed leg, both valued as bonds including notional", "Equity leg minus fixed leg, leaving out the notional", "The fixed leg only"],
+ "m2q28": ["Value of a long forward after initiation:", "S_t – PV(dividends) – F0 ÷ (1 + r)^(T – t)", "S_t – F0, undiscounted", "S_t ÷ (1 + r)^(T – t) – F0"],
+ "m2q33": ["Performance presentation with terminated accounts:", "Fine if the accounts and their termination dates are shown", "Terminated accounts must be dropped", "Fine without showing the dates"],
+ "m2q35": ["Directed brokerage and soft dollars (III(A)):", "Directed brokerage is fine if disclosed; soft dollars must benefit the client who generated them", "Both always breach III(A)", "Soft dollars may benefit any client"],
+ "m2q39": ["Supervisor's compliance education (IV(C)):", "Continual, not only at hiring", "Only at hiring", "Only after a violation"],
+ "m2q42": ["Commodity futures total return:", "Price + roll + collateral (rate × months ÷ 12)", "Price + roll + a full year of collateral", "Price + collateral, no roll"],
+ "c1": ["You own a bond worth more than the cheapest-to-deliver. Which settlement?", "Prefer cash settlement", "Prefer physical settlement", "Indifferent"],
+ "c2": ["Severe near-term stress gives a credit curve that is:", "Downward-sloping", "Upward-sloping", "Flat"],
+ "c3": ["Missed interest on a subordinated bond after the grace period, no bankruptcy:", "A credit event (failure to pay)", "Not a credit event: bankruptcy is needed", "Not a credit event: only senior debt counts"],
+ "c5": ["Protection buyer, spreads have widened:", "Profit: close out by selling protection", "Loss: close out by selling protection", "Profit: close out by buying more protection"],
+ "c6": ["Basis trade profit on convergence:", "Bond spread (yield – MRR) minus CDS spread", "Bond yield minus CDS spread", "CDS spread minus MRR"],
+ "c7": ["Compliance step before trading CDS:", "Sign an ISDA master agreement", "Sign a new agreement for every trade", "Post the full notional"],
+ "c8": ["A full hedge of many exposures:", "CDS index", "Single-name CDS", "Tranche CDS"],
+ "c12": ["Economy weakening: which index trade?", "Buy high-yield protection, sell investment-grade protection", "Sell high-yield protection, buy investment-grade protection", "Buy protection on both"],
+ "c13": ["A steepening view on the credit curve:", "Buy long-dated protection, sell short-dated protection", "Buy short-dated protection, sell long-dated protection", "Sell protection on both"],
+ "c14": ["Debt-funded takeover: equity versus credit trade:", "Long the target's shares, buy protection on the acquirer", "Long the acquirer's shares, buy protection on the target", "Short the target's shares, sell protection on the acquirer"],
+ "c16": ["CDS profit is about:", "Spread change × duration × notional", "Spread change × notional", "Spread change ÷ duration × notional"],
+ "c18": ["A company becomes an LBO target. Which trade?", "Buy the stock and buy protection", "Buy the stock and sell protection", "Short the stock and buy protection"],
+ "c19": ["Bought 1-year protection and sold 5-year protection:", "A flattener", "A steepener", "A parallel shift trade"],
+ "c22": ["Bond spread above CDS spread:", "Buy the bond and buy protection", "Sell the bond and sell protection", "Buy the bond and sell protection"],
+ "c25": ["A naked CDS seller profits when credit improves. That profit is:", "A credit view, not an arbitrage", "An arbitrage, locked in", "A loss: spreads widen"],
+ "c27": ["Bond spread below CDS spread:", "The bond's credit compensation is too low", "The bond's credit compensation is too high", "The two are fairly priced"],
+ "c29": ["A single-name CDS covers obligations that rank:", "Equal to the reference obligation", "Any obligation of the company", "Only the reference bond itself"],
+ "c30": ["Credit events in the United States:", "Bankruptcy and failure to pay (not restructuring)", "Bankruptcy, failure to pay and restructuring", "Restructuring only"],
+ "c31": ["CDS price per 100 par:", "100 – upfront premium, with upfront ≈ (spread – coupon) × duration", "100 + upfront premium", "100 – (spread – coupon), ignoring duration"],
+ "c32": ["Stronger economy: which index trade?", "Sell high-yield protection, buy investment-grade protection", "Buy high-yield protection, sell investment-grade protection", "Sell protection on both"],
+ "c33": ["Flattener legs:", "Sell long-dated protection, buy short-dated protection", "Buy long-dated protection, sell short-dated protection", "Buy protection on both"],
+ "c34": ["Bond spread below CDS spread: which trade?", "Short the bond and sell protection", "Buy the bond and buy protection", "Short the bond and buy protection"],
+ "tbc2": ["Dispersed ownership with concentrated voting power:", "Principal-principal conflict", "Principal-agent conflict", "No conflict"],
+ "tbc3": ["Which committee composition is a governance red flag?", "The CEO on the remuneration committee", "An executive director on the board", "Independent members on the audit committee"],
+ "tbc5": ["An activist shareholder:", "Takes a minority stake to influence governance", "Takes a controlling stake to run the company", "Stays passive and votes with management"],
+ "tbc6": ["Integrating ESG factors:", "Identify material factors, analyse history, forecasts and peers, then adjust the valuation", "Adjust the valuation first, then identify factors", "Use only qualitative factors"],
+ "tbc7": ["ESG versus governance disclosure:", "Governance is regulated and consistent; ESG is voluntary", "ESG is regulated and consistent; governance is voluntary", "Both are equally consistent"],
+ "tbc9": ["Required return, dividend growth model:", "D1 ÷ P0 + g", "D0 ÷ P0 + g", "D1 ÷ P0 – g"],
+ "tbc11": ["Shadow banking and legal systems:", "Non-bank lending; common law lowers the risk premium", "Bank lending; common law lowers the risk premium", "Non-bank lending; common law raises the risk premium"],
+ "s1c1": ["An index backfilled with Year-1 constituents: the ERP bias is:", "Upward (survivorship bias)", "Downward", "None"],
+ "s1q2": ["Mean and variance are not constant:", "Not covariance stationary", "Still covariance stationary", "Durbin–Watson decides"],
+ "s1c4": ["Grinold–Kroner ERP:", "dy + ΔP/E + inflation + real growth – ΔS – long-term Rf", "dy + ΔP/E + inflation + real growth – ΔS – short-term Rf", "dy + ΔP/E + inflation + real growth + ΔS – long-term Rf"],
+ "s1e13": ["An analyst sends his model, not his recommendation, to a company's CFO for comments:", "No breach", "A breach of Fair Dealing", "A breach of Diligence and Reasonable Basis"],
+ "s1f39": ["Securitization via an SPE:", "Lower financing cost; investors gain diversification and stable cash flows", "Higher financing cost; investors gain diversification and stable cash flows", "Lower financing cost; investors lose diversification"],
+ "s1e54": ["Trailing P/E: which items do you adjust in EPS?", "Non-recurring items only", "Every cost the company excludes from core EPS", "None"],
+ "s1e55": ["A high P/E implies:", "Higher growth, lower risk", "Higher growth, higher risk", "Lower growth, lower risk"],
+ "s1e56": ["Weighted harmonic mean P/E:", "The reciprocal of the weighted average earnings yield", "The weighted average of the P/Es", "The reciprocal of the weighted average P/E"],
+ "s1e57": ["The harmonic mean and outliers:", "Reduces large outliers, can aggravate small ones", "Reduces small outliers, can aggravate large ones", "Mitigates both"],
+ "s1e59": ["A buy signal compares:", "The justified trailing P/E with the trailing P/E", "The justified trailing P/E with the forward P/E", "The justified P/E with the index P/E"],
+ "s1r61": ["Residual income = net income – r ×", "Beginning-of-year equity", "End-of-year equity", "Dividends"],
+ "s1r62": ["Justified P/B from residual income:", "(forecast ROE – g) ÷ (r – g)", "(historical ROE – g) ÷ (r – g)", "(forecast ROE – r) ÷ (r – g)"],
+ "s1r63": ["Clean surplus is violated by:", "Gains that bypass income, such as AFS gains and translation of self-sustaining subsidiaries", "Ordinary FX transactions", "Dividends"],
+ "s1r65": ["Residual income adjustments:", "Adjust income, not book value, for non-recurring items", "Adjust book value, not income, for non-recurring items", "Make no adjustments"],
+ "s2f27": ["Riding the curve with swap spreads, curve unchanged:", "Buy at the long maturity's spot + spread, sell at the shorter maturity's spot + spread", "Buy and sell at the long maturity's spot + spread", "Use the government spots and ignore spreads"],
+ "s2f28": ["Pricing with a Z-spread:", "Add Z to every spot rate and discount each cash flow at its own rate", "Add Z to the last spot rate only", "Discount every cash flow at the coupon rate"],
+ "s2f29": ["Which spread shows risk and liquidity in the money market?", "MRR–OIS spread", "TED spread", "Z-spread"],
+ "s2d26": ["Value of a long forward after initiation (continuous):", "(F_t – F_0) discounted over T – t, with F_t = S × e^((r – δ)(T – t))", "(F_t – F_0) discounted, but with the dividend yield left out of F_t", "(F_t – F_0) left undiscounted"],
+ "s2d28": ["Pay-fixed swap when the market rate is above the contract rate:", "Gain: notional × rate difference × sum of all PV factors", "Loss: notional × rate difference × sum of all PV factors", "Gain: notional × rate difference × last PV factor only"],
+ "s2a2": ["Event-driven strategies:", "Carry some equity beta and left-tail risk", "Have no equity beta", "Are market neutral"],
+ "s2a4": ["Protecting a stock-for-stock merger arbitrage against deal failure:", "Buy calls on the short acquirer, puts on the long target", "Buy puts on the short acquirer, calls on the long target", "Sell puts on the acquirer, buy calls on the target"],
+ "s2a6": ["Rank bonds within one asset class, long the best and short the worst:", "Cross-sectional momentum", "Time-series momentum", "Global macro"],
+ "s2a9": ["Large negative events are expected: rank portfolios by:", "Sortino ratio", "Sharpe ratio", "Maximum drawdown"],
+ "s2p24": ["A large equity risk premium means equity returns and consumption are:", "Positively correlated: equities are a poor hedge", "Negatively correlated: equities are a hedge", "Uncorrelated"],
+ "s2p25": ["Best hedge against bad consumption outcomes:", "Short-dated, default-free government bonds", "Long-dated, default-free government bonds", "Equities"],
+ "s2p28": ["Commercial real estate discount rate versus equities:", "Equity rate + a liquidity premium", "Equity rate – a liquidity premium", "The same rate"],
+ "s2p29": ["Cyclical earnings and the risk premium:", "Cyclical earnings lead the economy; the risk premium stays positive", "Cyclical earnings lag the economy", "Cyclical earnings lead; the risk premium turns negative late in recessions"],
+ "s2p30": ["Which change raises market P/E multiples?", "Lower volatility of real GDP growth", "A higher equity risk premium", "More uncertainty about inflation"],
+ "s2p32": ["Numerator of the real estate present value formula:", "Net rental income (rent less expenses)", "Gross rent payments", "Net income after tax"],
+ "s2b18": ["A flatter return distribution has:", "A higher standard deviation and fatter tails", "A lower standard deviation and fewer extreme outcomes", "A higher standard deviation and fewer extreme outcomes"],
+ "s2b19": ["Backtesting:", "Can accept or reject a strategy, and assumes the future resembles the past", "Can accept or reject a strategy, with no assumption about the future", "Assumes the future resembles the past, but never rejects a strategy"],
+ "s2e19": ["Notice to clients of a finder's fee policy:", "At least quarterly", "Semiannually", "Annually"]
 };

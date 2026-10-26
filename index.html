@@ -607,7 +607,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v135 · 2026-10-26";
+  const APP_VERSION = "v136 · 2026-10-26";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -856,9 +856,9 @@
     app.append(nav("Menu", () => home("back")));
     const d = loadNotes(), tab = loadPrefs().notesTab || "session";
     app.append(el("h1", { className: "title" }, "Wrong-answer notes"),
-      el("p", { className: "sub" }, noteMode() === "dir" ? "Bed mode: just pick the right direction, no calculating. Two in a row and it fades." : "Two correct answers in a row and a note fades: it is absorbed."));
+      el("p", { className: "sub" }, noteMode() === "dir" ? "Bed mode: one short concept check per note, no calculating. Two in a row and it fades." : "Two correct answers in a row and a note fades: it is absorbed."));
     const modes = el("div", { className: "nt-tabs" });
-    [["full", "Solve it"], ["dir", "Direction (bed mode)"]].forEach(([k, label]) => {
+    [["full", "Solve it"], ["dir", "Quick check (bed mode)"]].forEach(([k, label]) => {
       const b = el("button", { className: noteMode() === k ? "on" : "" }, label);
       b.onclick = () => { savePrefs({ notesMode: k }); notesHub("back"); };
       modes.append(b);
@@ -937,17 +937,19 @@
     screen("fwd");
     backTo = () => noteList(spec, "back");
     app.append(nav(spec.title, () => noteList(spec, "back")));
-    const n = deck[k], dirMode = noteMode() === "dir" && !!NOTE_DIR[n.id];
+    const n = deck[k], dirMode = noteMode() === "dir" && !!NOTE_QUICK[n.id];
     const card = el("div", { className: "card nt" + (dirMode ? " nt-big" : "") });
     const meta = el("div", { className: "meta" });
     meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
     card.append(meta, el("h3", { className: "title" }, n.title));
-    const ul = el("ul", { className: "nt-stem" });
-    n.stem.forEach(t => { const li = el("li"); li.innerHTML = noBold(t); ul.append(li); });
-    const ask = el("p", { className: "q" }); ask.innerHTML = noBold(n.ask);
-    card.append(ul, ask);
-    if (dirMode) card.append(el("p", { className: "label" }, "Which direction solves it?"));
-    const opts = dirMode ? NOTE_DIR[n.id].map(t => ({ t, n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
+    if (dirMode) card.append(el("p", { className: "q" }, NOTE_QUICK[n.id][0]));
+    else {
+      const ul = el("ul", { className: "nt-stem" });
+      n.stem.forEach(t => { const li = el("li"); li.innerHTML = noBold(t); ul.append(li); });
+      const ask = el("p", { className: "q" }); ask.innerHTML = noBold(n.ask);
+      card.append(ul, ask);
+    }
+    const opts = dirMode ? NOTE_QUICK[n.id].slice(1).map(t => ({ t, n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
     const order = loadPrefs().notesShuffle !== false ? shuffle(opts.map((_, i) => i)) : opts.map((_, i) => i);
     const holder = el("div"), after = el("div");
     const btns = order.map((oi, pos) => {
