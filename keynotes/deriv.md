@@ -12,7 +12,7 @@
 - Forward value: V_t = S_t – PV(remaining dividends) – F0 / (1 + r)^(T – t). Discount only F0, over the time remaining.
 - Continuous: F_t = S_t × e^((r – δ)(T – t)); V = (F_t – F_0) × e^(–r(T – t)). Dividend yield lowers F.
 - Swap after initiation: both legs as bonds including the notional. Contract fixed rate never changes.
-- FRA after initiation: new forward rate from the two MRRs for the time left, V = (F_new – F_old) × NA × days/360, discounted at the MRR of the END date.
+- FRA after initiation: new forward rate from the two MRRs for the time left, V = (F_new – F_old) × NA × days/360, discounted at the MRR of the END date. Pay-fixed = long (gains when the forward rises); pay-floating = short (loses: negative). Check the sign on the options.
 - Equity swap: V = NA × S_t/S_reset – [coupon × ΣPV + NA × PV_last]; coupon = fixed ÷ payments a year × NA. Cash flow at a reset ≠ value; a negative equity return is paid by the equity receiver.
 - Treasury futures: invoice = futures price × conversion factor + accrued interest; the factor aligns coupons (6% basis), not accrued interest.
 - Swap fixed rate = (1 – last PV factor) / Σ PV factors, annualized.
