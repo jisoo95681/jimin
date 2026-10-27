@@ -613,7 +613,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v147 · 2026-10-27";
+  const APP_VERSION = "v148 · 2026-10-27";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -939,6 +939,15 @@
   function noteDeck(items) { return loadPrefs().notesShuffle !== false ? shuffle(items) : items.slice(); }
 
   const noBold = h => h.replace(/<\/?(b|strong)>/g, ""); // bold in a question is a hint, so questions are shown plain
+  // Plain-text maths in the quick questions becomes real powers and subscripts: e^(x) → e with x raised, F_t / F0 → F with a small t / 0.
+  function fmtMath(s) {
+    return s
+      .replace(/\^\(((?:[^()]|\([^()]*\))*)\)/g, "<sup>$1</sup>")
+      .replace(/\^([A-Za-z0-9.–-]+)/g, "<sup>$1</sup>")
+      .replace(/([A-Za-z]+)_([A-Za-z0-9]+)/g, "$1<sub>$2</sub>")
+      .replace(/\b([DPFSBV])([01])\b/g, "$1<sub>$2</sub>");
+  }
+
   function noteQuiz(deck, k, spec, run) {
     // Moving to the next question only animates the white card: the header and back link stay where they are.
     const oldCard = k > 0 ? app.querySelector(".card.nt") : null;
@@ -961,14 +970,14 @@
     meta.append(el("span", {}, `${noteTag(n)} · ${n.reading} ${NOTE_READINGS[n.reading]}`), el("span", {}, `${k + 1} of ${deck.length}`));
     card.append(meta);
     if (!dirMode) card.append(el("h3", { className: "title" }, n.title)); // bed mode: the title would give the answer away
-    if (dirMode) card.append(el("p", { className: "q" }, NOTE_QUICK[n.id][0]));
+    if (dirMode) { const qp = el("p", { className: "q" }); qp.innerHTML = fmtMath(NOTE_QUICK[n.id][0]); card.append(qp); }
     else {
       const ul = el("ul", { className: "nt-stem" });
       n.stem.forEach(t => { const li = el("li"); li.innerHTML = noBold(t); ul.append(li); });
       const ask = el("p", { className: "q" }); ask.innerHTML = noBold(n.ask);
       card.append(ul, ask);
     }
-    const opts = dirMode ? NOTE_QUICK[n.id].slice(1).map(t => ({ t, n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
+    const opts = dirMode ? NOTE_QUICK[n.id].slice(1).map(t => ({ t: fmtMath(t), n: "" })) : n.options, ansIdx = dirMode ? 0 : n.answer;
     const order = loadPrefs().notesShuffle !== false ? shuffle(opts.map((_, i) => i)) : opts.map((_, i) => i);
     const holder = el("div"), after = el("div");
     const btns = order.map((oi, pos) => {
