@@ -23,7 +23,8 @@ const NOTE_SESSIONS = [
   { id: "2026-10-26-corp1", date: "2026-10-26", name: "Corp TB 1–21", label: "Test bank · Corporate Issuers topic 2 (21 Qs, 14 correct)" },
   { id: "2026-10-26-s1", date: "2026-10-26", name: "PM1 Session 1", label: "Mixed readings · 38 graded Qs, 25 correct" },
   { id: "2026-10-26-s2", date: "2026-10-26", name: "PM1 Session 2", label: "Mixed readings · 44 Qs, 27 correct" },
-  { id: "2026-10-26-drill", date: "2026-10-26", name: "Formula drills", label: "Pick the formula with full numbers · 30 formula (symbol options) + 11 concept + 5 frequency checks" }
+  { id: "2026-10-26-drill", date: "2026-10-26", name: "Formula drills", label: "Pick the formula with full numbers · 30 formula (symbol options) + 11 concept + 5 frequency checks" },
+  { id: "2026-10-27-d28", date: "2026-10-27", name: "Deriv 28 vignettes", label: "CFA Institute · 3 vignettes on Forward Commitments (12 Qs, 6 correct)" }
 ];
 const NOTES = (() => {
   const N = (mock, num, reading, subject, title, stem, ask, opts, answer, mine, formula, why, general, x) =>
@@ -41,6 +42,10 @@ const NOTES = (() => {
   const VG = (...a) => ({ ...V(...a), guess: true });
   // Formula drills with full numbers (options are formulas) + concept checks from our chats. Not from a mock: no 'mine'.
   const Y = (key, num, tag, reading, subject, title, ...r) => ({ ...N(0, num, reading, subject, title, ...r), id: `dr${key}`, set: "2026-10-26-drill", tag, session: 7, mock: 0, drill: true });
+  // 27 Oct, CFAI vignettes on Deriv 28 (Forward Commitments). WG = right but needed an explanation; WT = theory check (no mock pick).
+  const W = (key, num, tag, title, ...r) => ({ ...N(0, num, 28, "Derivatives", title, ...r), id: `d${key}`, set: "2026-10-27-d28", tag, session: 8, mock: 0 });
+  const WG = (...a) => ({ ...W(...a), guess: true });
+  const WT = (...a) => ({ ...W(...a), drill: true });
   return [
     // ---------------- Paper 1 ----------------
     N(1, 3, 27, "Fixed Income", "CDS settlement & cheapest-to-deliver",
@@ -1056,7 +1061,129 @@ const NOTES = (() => {
       [["Cash settlement", "You collect the CDS payout on the CTD price and sell your own bond at its higher price."], ["Physical settlement", "You would deliver your bond at par and lose its extra value."], ["Indifferent", "The two give different proceeds."]], 0, 0,
       ["Own bond above CTD → prefer cash settlement"],
       ["Cash: CDS payout (1 – CTD price) plus your bond's own price."],
-      ["Own bond below CTD → physical."])
+      ["Own bond below CTD → physical."]),
+    // ---------------- 27 Oct · Deriv 28 vignettes ----------------
+    WG("q30", 30, "Deriv 28 · Q30", "The two fundamental rules of arbitrage",
+      ["Fourie: 'Rule 1: the arbitrageur never uses her own money to buy the underlying and always invests short-sale proceeds at the risk-free rate. Rule 2: she takes no market price risk on the total trade, but individual components may involve price risk.'"],
+      "Are Fourie's two rules most likely correct?",
+      [["Yes", "Both match the two fundamental rules of arbitrage."], ["No, Rule 1 is incorrect", "Rule 1 is right: you borrow to buy, and you invest short-sale proceeds at the risk-free rate instead of spending them."], ["No, Rule 2 is incorrect", "Rule 2 is right: the legs are done at the same time, so their price risks offset, even though each leg alone has price risk."]], 0, 0,
+      ["Rule 1: use none of your own money (borrow to buy; invest short-sale proceeds at the risk-free rate)", "Rule 2: take no price risk on the total trade (the legs offset each other)"],
+      ["Carry arbitrage: borrow at the risk-free rate, buy the underlying, sell the forward. Nothing comes from your pocket.", "Reverse carry: short the underlying, invest the proceeds at the risk-free rate, buy the forward.", "One leg alone has price risk (the spot can move). Together the trade is locked in, because all legs are done at once."],
+      ["'Arbitrage' here means a locked-in profit with no own money and no price risk.", "Rule 1 is not 'use your money carefully': it is 'use none'.", "Your view of where the price will end up plays no part in an arbitrage (see Q38)."]),
+    W("q32", 32, "Deriv 28 · Q32", "Cash flow to the dealer at the first swap reset",
+      ["Ndlovu is the dealer on a one-year equity swap. The client receives the equity return and pays fixed 3.2% a year. Quarterly reset, 30/360, notional ZAR5,000,000.", "The stock returned –3.6% in the first quarter. So Ndlovu pays the equity return and receives the fixed payment."],
+      "The cash flow to Ndlovu after the first quarter is closest to:",
+      [["–ZAR140,471", "Subtracts the 180,000: treats Ndlovu as paying the equity return. A negative return means the equity payer receives it."], ["ZAR219,529", "Fixed 39,529 plus the equity 180,000, both coming to Ndlovu."], ["ZAR340,000", "Uses the annual 3.2% for one quarter (160,000) instead of the quarterly rate, then adds the 180,000."]], 1, 0,
+      ["Net cash flow at a reset = that period's fixed payment and equity payment, netted", "Equity return negative → the equity payer RECEIVES |return| × notional", "Quarterly fixed rate: the key uses (1 + 3.2%)<sup>1/4</sup> – 1 = 0.7906% (simple 3.2% ÷ 4 = 0.80% gives 40,000: option B is still closest)"],
+      ["The question asks for the cash flow at the first settlement, not the value of the swap.", "Fixed leg: the client pays Ndlovu 5,000,000 × 0.7906% = 39,529.", "Equity leg: the return is –3.6%, so Ndlovu does not pay; he receives 5,000,000 × 3.6% = 180,000.", "Net to Ndlovu = 39,529 + 180,000 = <b>219,529</b>."],
+      ["First decide which side you are on (dealer or client), then who pays what.", "A negative equity return reverses the direction of the equity payment.", "'Cash flow' = this quarter's settlement. 'Value' = present value of everything still to come."],
+      "<table class='mini'><tr><th>The question says</th><th>It means</th><th>You do</th></tr><tr><td>Value / market value of the swap</td><td>Mark-to-market after initiation</td><td>Equity leg – fixed leg, with PV factors</td></tr><tr><td>Cash flow at the first (or next) reset</td><td>The actual net payment on that date</td><td>Fixed payment and equity payment for that period, no PV factors</td></tr></table>"),
+    W("q34", 34, "Deriv 28 · Q34", "Value of an FRA after initiation",
+      ["Cline entered a pay-floating 3 × 6 FRA 30 days ago at 2.31%, notional US$5,000,000.", "Now, 30 days later: 2-month MRR 1.5%, 5-month MRR 2.5%."],
+      "The current value of Cline's FRA is closest to:",
+      [["US$10,625", "The gain before discounting, with the forward rate rounded to 3.16%."], ["US$10,515", "The gain discounted back from the end of the FRA period."], ["US$10,612", "Still about the undiscounted gain (10,610 to 10,625): the last discounting step was missed."]], 1, 2,
+      ["New forward rate: F<sub>new</sub> = [(1 + MRR<sub>150</sub> × 150/360) ÷ (1 + MRR<sub>60</sub> × 60/360) – 1] × 360/90", "Value = [(F<sub>new</sub> – F<sub>old</sub>) × NA × 90/360] ÷ (1 + MRR<sub>150</sub> × 150/360)"],
+      ["30 days have passed, so the FRA now starts in 90 – 30 = 60 days and ends in 150 days. The loan period is still 90 days.", "F<sub>new</sub> = [(1 + 0.025 × 150/360) ÷ (1 + 0.015 × 60/360) – 1] × 360/90 = (1.010417 ÷ 1.002500 – 1) × 4 = 3.16%.", "Gain = (3.16% – 2.31%) × 5,000,000 × 90/360 = 10,625.", "Discount from the end of the period: 10,625 ÷ (1 + 0.025 × 150/360) = 10,625 ÷ 1.010417 = <b>10,515</b>."],
+      ["Discount with the MRR for the END date (5-month), not the start date.", "The 2.31% was the forward rate when the FRA was entered (check: from the 3- and 6-month MRRs).", "Sign: all three options are positive, so choose on size. By the usual convention the fixed payer gains when the forward rises above the contract rate."]),
+    W("q36", 36, "Deriv 28 · Q36", "Value of an equity swap after initiation (quarterly)",
+      ["Mensah receives the return on an equity index and pays fixed 4.8% a year. Notional AUD75,000,000, quarterly payments. Entered 30 days ago when the index was 3,250; today 3,738.", "PV factors for the four remaining payments (60, 150, 240, 330 days): 0.9976 · 0.9924 · 0.9861 · 0.9696."],
+      "The market value of the swap is closest to:",
+      [["AUD7,665,000", "(Index return – fixed rate) × notional: no PV factors, no quarterly payments."], ["AUD7,713,870", "Equity leg minus the coupons PV, minus the notional at the full 75,000,000: the notional in the fixed leg must be discounted (× 0.9696 = 72,720,000)."], ["AUD9,993,870", "Equity leg minus the fixed leg valued as a bond."]], 2, 1,
+      ["V = NA × (S<sub>t</sub> ÷ S<sub>reset</sub>) – [coupon × ΣPV + NA × PV<sub>last</sub>]", "Coupon = fixed rate ÷ payments per year × NA", "Pay fixed, receive equity = long the equity leg, short a fixed-rate bond"],
+      ["Idea: you receive the equity leg and pay a fixed bond (coupons plus the notional at the end). Value = equity leg – fixed bond.", "Equity leg: no reset yet, so 75,000,000 × 3,738 ÷ 3,250 = 75,000,000 × 1.1502 = 86,265,000 (the key rounds the ratio; exact is 86,261,538).", "Quarterly coupon = 4.8% ÷ 4 × 75,000,000 = 900,000.", "ΣPV = 0.9976 + 0.9924 + 0.9861 + 0.9696 = 3.9457 → coupons PV = 900,000 × 3.9457 = 3,551,130.", "Notional PV = 75,000,000 × 0.9696 = 72,720,000.", "Fixed leg = 3,551,130 + 72,720,000 = 76,271,130.", "Value = 86,265,000 – 76,271,130 = <b>9,993,870</b> (the exact ratio gives 9,990,408: same option)."],
+      ["Same formula as Mock 2 Q25. Only the number of payments, the coupon size and the PV factors change.", "The notional is paid at the end, so discount it with the LAST PV factor.", "The fixed rate in the contract never changes; today's rates enter only through the PV factors."],
+      "<table class='mini'><tr><th></th><th>Mock 2 Q25</th><th>This Q36</th></tr><tr><td>Payments</td><td>annual, 3 left</td><td>quarterly, 4 left</td></tr><tr><td>Coupon</td><td>2.3% × 1,000,000 = 23,000</td><td>4.8% ÷ 4 × 75,000,000 = 900,000</td></tr><tr><td>PV factors</td><td>0.5y, 1.5y, 2.5y</td><td>60, 150, 240, 330 days</td></tr><tr><td>Equity leg</td><td>1,000,000 × 104.8 ÷ 100</td><td>75,000,000 × 3,738 ÷ 3,250</td></tr><tr><td>Fixed leg</td><td>coupons × PV + notional × last PV</td><td>coupons × PV + notional × last PV</td></tr></table>"),
+    W("q38", 38, "Deriv 28 · Q38", "Carry or reverse carry arbitrage?",
+      ["S&P 500 index 1,900. The one-year forward is priced at 1,863. Continuously compounded dividend yield 2.50%, one-year rate 0.75%.", "Kozorez believes the index will be 1,903 at expiration."],
+      "Does the evaluation most likely identify an arbitrage opportunity?",
+      [["No, the forward is fairly priced", "The fair forward price is 1,867.04, not 1,863."], ["Yes, there is a carry arbitrage opportunity", "A carry arbitrage needs the market forward ABOVE fair value (sell forward, buy index)."], ["Yes, there is a reverse carry arbitrage opportunity", "The forward (1,863) is below fair value (1,867.04): buy the forward, short the index."]], 2, 1,
+      ["F<sub>fair</sub> = S × e<sup>(r – δ)T</sup>", "F<sub>market</sub> > F<sub>fair</sub> → carry: sell the forward, borrow, buy the index", "F<sub>market</sub> < F<sub>fair</sub> → reverse carry: buy the forward, short the index, invest the proceeds"],
+      ["F<sub>fair</sub> = 1,900 × e<sup>(0.0075 – 0.0250) × 1</sup> = 1,900 × 0.98265 = 1,867.04.", "Market 1,863 < 1,867.04: the forward is cheap.", "Buy the forward, short the index, invest at 0.75% and pay the 2.5% dividends: a locked-in profit of about 4.04 at expiry.", "The 1,903 forecast plays no part: an arbitrage does not depend on where the index ends."],
+      ["Cheap forward → buy forward, short the underlying (reverse carry).", "Rich forward → sell forward, buy the underlying (carry).", "Ignore views on the future price."]),
+    W("q39", 39, "Deriv 28 · Q39", "FRA counterparties and what the long does",
+      ["Kozorez: 'An FRA has two counterparties, a fixed-rate receiver that is short Euribor and a floating-rate receiver that is long Euribor. The party that is long a 3 × 9 FRA must make a Euribor deposit in three months and earns the Euribor rate for the subsequent six months.'"],
+      "His comments are most likely:",
+      [["Correct regarding counterparties and correct regarding their transactions", "The deposit is not required: an FRA settles in cash."], ["Correct regarding counterparties and incorrect regarding their transactions", "The roles are right. The long is not required to make a deposit (one can be done alongside the FRA, but it is not part of it)."], ["Incorrect regarding counterparties and incorrect regarding their transactions", "The role description is right: floating-rate receiver = long Euribor, fixed-rate receiver = short Euribor."]], 1, 0,
+      ["FRA long = pays fixed, receives floating (long Euribor) · FRA short = receives fixed, pays floating", "3 × 9: starts in 3 months and covers a 6-month period · settled in cash on the rate difference"],
+      ["The counterparty roles are correct.", "An FRA only exchanges the difference between the floating rate and the FRA rate on the notional.", "A deposit or loan can be arranged separately to lock in the rate, but it is not part of the FRA."],
+      ["The word 'must' makes a statement too strong: check it.", "The long gains when the floating rate rises."]),
+    W("q40", 40, "Deriv 28 · Q40", "Treasury futures: the conversion factor",
+      ["Characteristic 1: the deliverable is a basket of bonds, and the short can deliver the cheapest.", "Characteristic 2: the bonds have various maturities and coupons, and the seller receives the futures price adjusted by a conversion factor to account for any accrued interest.", "Characteristic 3: positions are marked to market daily, so the market value is zero at the end of each day."],
+      "Which characteristic is least likely correct?",
+      [["Characteristic 1", "Correct: the short chooses the cheapest-to-deliver bond."], ["Characteristic 2", "Wrong: the conversion factor does not account for accrued interest. It puts every deliverable bond on a common coupon basis (about a 6% bond)."], ["Characteristic 3", "Correct: daily marking to market resets the value to zero."]], 1, 0,
+      ["Invoice price = futures price × conversion factor + accrued interest", "Conversion factor: converts each deliverable bond to an equivalent 6% coupon bond. It is not for accrued interest."],
+      ["Accrued interest is added separately to the invoice.", "The conversion factor makes bonds with different maturities and coupons comparable.", "After the adjustment, one bond emerges as the cheapest to deliver."],
+      ["Futures settle daily, so the value is zero at the end of each day.", "The short holds the choice of which bond to deliver."]),
+    WT("t1", 101, "Deriv 28 · theory", "Forward vs futures after a price rise",
+      [],
+      "You are long both a forward and a futures contract and the underlying price has risen. Which has the higher value?",
+      [["The forward", "The forward value accumulates. The futures gain was paid out daily and its value reset to zero."], ["The futures contract", "Its value is reset to zero each day."], ["They are equal", "Daily marking to market makes them differ."]], 0, 0,
+      ["Futures: marked to market daily (value reset to zero). Forward: not marked daily (value accumulates). Both are worth zero at initiation."],
+      ["Futures profit is paid out each day, so the futures value stays at zero.", "A forward keeps its accumulated gain until settlement."],
+      ["Comment 2 in Q29 was wrong because it swapped the two."]),
+    WT("t3", 102, "Deriv 28 · theory", "Pricing vs valuation",
+      [],
+      "Pricing a forward commitment means:",
+      [["Setting the forward price or rate at initiation, so the value is zero", "Pricing happens when the contract is created."], ["Finding its value after it has been initiated", "That is valuation."], ["Finding the spot price of the underlying", "Neither."]], 0, 0,
+      ["Pricing = the forward price at initiation · valuation = the value after initiation"],
+      ["At initiation the forward price makes the value zero.", "Afterwards the forward price is fixed but the value moves."],
+      ["Q37 reversed the two definitions."]),
+    WT("t4", 103, "Deriv 28 · theory", "When to sell the forward (carry)",
+      [],
+      "The market forward price is ABOVE the no-arbitrage price. Which trade?",
+      [["Sell the forward, buy the underlying, borrow to fund it", "Carry arbitrage."], ["Buy the forward, short the underlying", "Reverse carry: for a forward that is too cheap."], ["Do nothing: the market is efficient", "A mispriced forward is an arbitrage."]], 0, 0,
+      ["F above fair → carry: sell forward, buy spot · F below fair → reverse carry: buy forward, short spot"],
+      ["The rich leg is sold and the cheap leg is bought.", "Financing: borrow at the risk-free rate, or invest the short-sale proceeds."],
+      ["Used in Q38."]),
+    WT("t6", 104, "Deriv 28 · theory", "Long position in an FRA",
+      [],
+      "The long position in an FRA:",
+      [["Pays fixed and receives floating, so it gains when the rate rises", "Long Euribor."], ["Receives fixed and pays floating", "That is the short."], ["Makes a deposit at initiation", "FRAs are cash-settled."]], 0, 0,
+      ["FRA long = pay fixed, receive floating, gains when rates rise"],
+      ["The floating-rate receiver is long Euribor."],
+      ["Used in Q39."]),
+    WT("t7", 105, "Deriv 28 · theory", "Reading '3 × 9'",
+      [],
+      "A 3 × 9 FRA covers:",
+      [["A 6-month period that starts in 3 months", "3 = months until the start, 9 = months until the end."], ["A 9-month period that starts in 3 months", "9 is the end, not the length."], ["A 3-month period that starts in 9 months", "The numbers are not reversed."]], 0, 0,
+      ["h × m FRA: starts in h months, ends in m months, covers (m – h) months"],
+      ["3 × 9 = 9 – 3 = 6 months starting in 3 months."],
+      ["In Q34 the FRA was 3 × 6 (90 days)."]),
+    WT("t8", 106, "Deriv 28 · theory", "What the conversion factor adjusts",
+      [],
+      "In Treasury futures, the conversion factor adjusts for:",
+      [["Different coupons and maturities of the deliverable bonds (about a 6% bond)", "It makes the bonds comparable."], ["Accrued interest", "Accrued interest is added separately."], ["The margin requirement", "Unrelated."]], 0, 0,
+      ["Invoice price = futures price × conversion factor + accrued interest"],
+      ["The cheapest-to-deliver bond is chosen after the conversion factor."],
+      ["Used in Q40."]),
+    WT("t9", 107, "Deriv 28 · theory", "Forward below spot: which rate is lower",
+      [],
+      "F(ZAR/NZD) is below S(ZAR/NZD). Which interest rate is lower?",
+      [["The ZAR rate (the price currency)", "F = S × (1 + i<sub>ZAR</sub>) ÷ (1 + i<sub>NZD</sub>) is below S only if i<sub>ZAR</sub> is below i<sub>NZD</sub>."], ["The NZD rate (the base currency)", "That would make F above S."], ["They are equal", "Then F = S."]], 0, 0,
+      ["F = S × (1 + i<sub>price</sub>) ÷ (1 + i<sub>base</sub>)", "F below S → the price currency's interest rate is lower"],
+      ["Higher interest rate currency trades at a forward discount."],
+      ["Covered interest rate parity."]),
+    WT("t10", 108, "Deriv 28 · theory", "Negative equity return in a swap",
+      [],
+      "In a receive-equity, pay-fixed swap the equity return for the period is negative. At the reset the equity receiver:",
+      [["Pays the fixed amount and also pays the equity loss", "The direction of the equity payment flips."], ["Pays the fixed amount and receives the equity loss", "A loss is not received."], ["Pays nothing", "The fixed payment is still due."]], 0, 0,
+      ["Negative equity return → the equity receiver pays |return| × notional on top of the fixed payment"],
+      ["Seen from the dealer: both payments come in."],
+      ["Q32."]),
+    WT("t11", 109, "Deriv 28 · theory", "Swap value at initiation",
+      [],
+      "At initiation, the value of an interest rate swap is:",
+      [["Zero: the fixed rate is set to make it so", "Fixed rate = (1 – last PV factor) ÷ ΣPV."], ["Equal to the notional", "The notional is never exchanged."], ["The PV of the fixed coupons", "That is only one leg."]], 0, 0,
+      ["Initiation: value = 0 · afterwards the fixed rate stays and the PV factors change the value"],
+      ["Value after initiation = notional × (new fixed rate – old fixed rate) × ΣPV (pay-fixed)."],
+      ["Q31 and Q35."]),
+    WT("t12", 110, "Deriv 28 · theory", "Forward price on a coupon bond",
+      [],
+      "A forward on a bond that pays coupons before expiry is priced at:",
+      [["(spot with accrued interest – PV of coupons) × (1 + r)<sup>T</sup>", "Remove the coupons before compounding."], ["Spot × (1 + r)<sup>T</sup>", "Ignores the coupons."], ["(spot + PV of coupons) × (1 + r)<sup>T</sup>", "Adds the coupons instead of removing them."]], 0, 0,
+      ["F<sub>0</sub> = (S<sub>0</sub> – PV(coupons)) × (1 + r)<sup>T</sup>"],
+      ["The holder of the forward does not receive the coupons."],
+      ["Q33."])
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
 
@@ -2138,6 +2265,8 @@ const NOTE_QUICK = {
   });
   NOTES.sort((a, b) => a.session - b.session || a.num - b.num);
 })();
+
+Object.assign(NOTE_QUICK, {"dq32": ["Dealer receives fixed and pays the equity return. Notional ZAR5,000,000, fixed 3.2%, quarterly. The quarterly equity return is –3.6%. What is the dealer's cash flow at the first reset?", "Fixed received + equity return received (a negative return is paid to the dealer)", "Fixed received – equity loss paid by the dealer", "Fixed received only: the equity loss is ignored"], "dq34": ["FRA entered 30 days ago: pay-floating 3 × 6 at 2.31%, notional US$5,000,000; now 2-month MRR 1.5%, 5-month MRR 2.5%. Which formula gives the value?", "[(F_new – F_old) × NA × 90/360] ÷ (1 + MRR_150 × 150/360)", "(F_new – F_old) × NA × 90/360, undiscounted", "[(F_new – F_old) × NA × 90/360] ÷ (1 + MRR_60 × 60/360)"], "dq36": ["Receive-equity, pay-fixed swap, notional 75,000,000, fixed 4.8% quarterly, index 3,250 → 3,738, four payments left (PV factors 0.9976, 0.9924, 0.9861, 0.9696). Which formula gives the value?", "75,000,000 × 3,738/3,250 – [900,000 × ΣPV + 75,000,000 × 0.9696]", "75,000,000 × 3,738/3,250 – [900,000 × ΣPV + 75,000,000]", "(3,738/3,250 – 4.8%) × 75,000,000"], "dq38": ["Index 1,900; one-year forward priced at 1,863; r = 0.75%, dividend yield 2.50% (continuous). The fair forward price is 1,867.04. Which trade?", "Buy the forward, short the index (reverse carry)", "Sell the forward, buy the index (carry)", "No trade: the forward is fairly priced"], "dq39": ["An FRA is cash-settled. Does the long in a 3 × 9 FRA have to make a Euribor deposit?", "No: the FRA settles in cash on the rate difference", "Yes: it deposits in 3 months and earns Euribor for 6 months", "Yes, but only at initiation"], "dq40": ["In Treasury futures, the conversion factor accounts for:", "Different coupons and maturities among deliverable bonds (about a 6% bond)", "Accrued interest", "The daily margin"], "dq30": ["The arbitrageur's two fundamental rules:", "No own money (invest short-sale proceeds at the risk-free rate) and no price risk on the total trade", "Use own money sparingly and accept small price risk", "No own money, but price risk on every leg"]});
 
 // Drills: the question carries the full numbers, the options are the candidate formulas. First option is the right one.
 NOTES.filter(n => n.drill).forEach(n => { NOTE_QUICK[n.id] = [(n.stem.join(" ") + " " + n.ask).trim(), ...n.options.map(o => o.t)]; });
