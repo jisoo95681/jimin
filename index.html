@@ -486,6 +486,8 @@
   #app.enter-fwd { animation: in-fwd .9s var(--ease) .12s both; }
   #app.enter-back { animation: in-back .9s var(--ease) .12s both; }
   #app.enter-up { animation: fade-up .9s var(--ease) .12s both; }
+  .card-ghost { position: fixed; z-index: 3; pointer-events: none; margin: 0; animation: out-fwd .4s var(--ease) forwards; }
+  .card.nt.card-in { animation: in-fwd .5s var(--ease) both; }
   @keyframes in-fwd { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
   @keyframes in-back { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
   @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -611,7 +613,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v146 · 2026-10-27";
+  const APP_VERSION = "v147 · 2026-10-27";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -938,9 +940,21 @@
 
   const noBold = h => h.replace(/<\/?(b|strong)>/g, ""); // bold in a question is a hint, so questions are shown plain
   function noteQuiz(deck, k, spec, run) {
-    screen("fwd");
-    backTo = () => noteList(spec, "back");
-    app.append(nav(spec.title, () => noteList(spec, "back")));
+    // Moving to the next question only animates the white card: the header and back link stay where they are.
+    const oldCard = k > 0 ? app.querySelector(".card.nt") : null;
+    let ghost = null;
+    if (oldCard) {
+      const rect = oldCard.getBoundingClientRect();
+      ghost = oldCard.cloneNode(true);
+      ghost.classList.add("card-ghost");
+      ghost.style.cssText = `top:${rect.top}px;left:${rect.left}px;width:${rect.width}px;`;
+      oldCard.remove();
+      backTo = () => noteList(spec, "back");
+    } else {
+      screen("fwd");
+      backTo = () => noteList(spec, "back");
+      app.append(nav(spec.title, () => noteList(spec, "back")));
+    }
     const n = deck[k], dirMode = noteMode() === "dir" && !!NOTE_QUICK[n.id];
     const card = el("div", { className: "card nt" + (dirMode ? " nt-big" : "") });
     const meta = el("div", { className: "meta" });
@@ -966,6 +980,12 @@
     });
     card.append(holder, after);
     app.append(card);
+    if (ghost) {
+      card.classList.add("card-in");
+      document.body.append(ghost);
+      setTimeout(() => ghost.remove(), 500);
+      window.scrollTo(0, 0);
+    }
 
     function reveal(pick) {
       const ok = pick === ansIdx;
