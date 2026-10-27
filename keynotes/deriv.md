@@ -14,9 +14,11 @@
 - Swap after initiation: both legs as bonds including the notional. Contract fixed rate never changes.
 - FRA after initiation: new forward rate from the two MRRs for the time left, V = (F_new – F_old) × NA × days/360, discounted at the MRR of the END date. Pay-fixed = long (gains when the forward rises); pay-floating = short (loses: negative). Check the sign on the options.
 - Equity swap: V = NA × S_t/S_reset – [coupon × ΣPV + NA × PV_last]; coupon = fixed ÷ payments a year × NA. Cash flow at a reset ≠ value; a negative equity return is paid by the equity receiver.
+- Equity swap cash flow at a reset = NA × (equity return – floating rate × days/360); the floating rate is the one set at the START of the period. Quarterly swaps: use per-period rates (annual ÷ 4) with the quarterly PV factors.
+- Currency swap: fixed rate for each currency from its own curve; value = foreign-currency bond ÷ spot today – home-currency bond, each with its own PV factors and the original coupons.
 - Treasury futures: invoice = futures price × conversion factor + accrued interest; the factor aligns coupons (6% basis), not accrued interest.
 - Swap fixed rate = (1 – last PV factor) / Σ PV factors, annualized.
 - Swap value = notional × (new fixed – old fixed) × Σ PV factors (all remaining). Pay-fixed gains when the market rate is higher; receive-fixed is the negative. Answer for the side the question names.
 
 ## Your traps
-- Discounting S_t; subtracting a negative theta; not discounting the notional (swap leg or equity swap); one PV factor instead of the sum; value vs cash flow.
+- Discounting S_t; subtracting a negative theta; not discounting the notional (swap leg or equity swap); one PV factor instead of the sum; value vs cash flow; annual rates with quarterly PV factors; the wrong curve or exhibit.

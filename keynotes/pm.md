@@ -20,6 +20,7 @@
 ## Risk
 - VaR = (z × σ – μ) × value; daily: μ / 250, σ / √250. z 5% = 1.65, 1% = 2.33.
 - Historical simulation can weight recent data more. Incremental VaR = effect of changing a position; conditional VaR = average loss beyond VaR.
+- ETFs: tactical trading → the most liquid ETF (highest volume). Roles: market maker (secondary), authorized participant (creation/redemption), sponsor. ETN = unsecured issuer debt (credit risk); synthetic ETF = swaps (counterparty + settlement); leveraged/inverse = daily reset. Transition management = changing managers or allocations.
 - ETF holding cost = round-trip trading + spread + annual fee × months / 12.
 - Backtesting: survivorship bias from using today's index members (use point-in-time data). Sensitivity analysis = effect of changing the input distribution; bootstrapping = resampling. A flatter return density = higher SD, fatter tails.
 - Backtest choice for downside control: positive skew, low kurtosis.

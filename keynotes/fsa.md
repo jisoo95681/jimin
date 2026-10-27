@@ -18,7 +18,11 @@
 
 ## Intercorporate / quality
 - Control → acquisition method. Full goodwill (US GAAP) = FV of whole entity – FV identifiable net assets. Partial = price paid – share × FV net assets.
-- Cash-flow accruals ratio = [NI – (CFO + CFI)] / average NOA.
+- Equity method: income = % × investee NI – amortization of the excess FV (the % share); dividends reduce the investment (cash received = opening + income – closing); goodwill stays inside the carrying amount.
+- Acquisition method: every identifiable asset, recorded or not (brands), at fair value.
+- IFRS 9 debt: hold to collect → amortized cost · collect and sell → FVOCI · other → FVTPL. Reclassify only if the business model changes significantly, no restatement of prior periods.
+- DuPont: the 3-step is enough for an ROE trend; use 5 steps for tax, interest or EBIT margin. Without operational changes → leverage.
+- Cash-flow accruals ratio = [NI – (CFO + CFI)] / average NOA; lower = better; compare the ends of the window. OCF before interest and taxes: add back only what is inside CFO (interest is often in financing under IFRS).
 
 ## Your traps
 - Cost of sales at the historical rate under the current rate method.

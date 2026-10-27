@@ -1,5 +1,9 @@
 # Quantitative Methods: key notes
 
+## Multiple regression and ML
+- Residual assumptions: mean zero · constant variance (else heteroskedasticity) · **uncorrelated** across observations (else serial correlation) · normal. Also linearity and no multicollinearity among the X's.
+- ML: continuous target → supervised regression · categorical target → classification · no target → clustering / PCA. LASSO with λ = 0 is plain OLS (no regularization); trees are regularized by pruning. Deep learning = at least 2 hidden layers.
+
 ## Time series
 - Covariance stationary = constant finite mean, variance and covariance with own lags. A trending price series usually isn't. Durbin–Watson below the critical value → positive serial correlation in the errors; it does not test stationarity.
 - Dickey–Fuller null = **unit root** (non-stationary). Reject → stationary.

@@ -18,6 +18,8 @@
 - Persistence ω: low ← extreme ROE, big special items, high accruals; high ← low payout, high industry persistence. TV = RI_T / (1 + r – ω).
 
 ## Free cash flow
+- Model choice: non-dividend payer with changing leverage or a control view → FCFF; stable leverage → FCFE; RI when cash flows are negative or unreliable and the accounting is clean (OCI items distort income).
+- Sustainable g = retention × ROE, ROE = ROA × equity multiplier. Overvalued → price grows slower than dividends.
 - FCFF = NI + Dep + Int(1 – t) – FCInv – WCInv = CFO + Int(1 – t) – FCInv.
 - Dividends and buybacks don't change FCFF/FCFE; new debt changes FCFE.
 - Two-stage: terminal value at the end of the high-growth period is discounted N years (not N + 1). FCFE at cost of equity, FCFF at WACC.
