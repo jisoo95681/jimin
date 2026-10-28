@@ -22,6 +22,7 @@
 - Sustainable g = retention × ROE, ROE = ROA × equity multiplier. Overvalued → price grows slower than dividends.
 - FCFF = NI + Dep + Int(1 – t) – FCInv – WCInv = CFO + Int(1 – t) – FCInv.
 - Dividends and buybacks don't change FCFF/FCFE; new debt changes FCFE.
+- FCFE = FCFF – Int(1 – t) + net borrowing (include notes payable). Equity value from FCFF = firm value + non-operating assets – debt – preferred; compare it with the market value of **equity**. Inventory run-downs are not long-term growth.
 - Two-stage: terminal value at the end of the high-growth period is discounted N years (not N + 1). FCFE at cost of equity, FCFF at WACC.
 
 ## Your traps

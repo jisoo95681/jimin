@@ -5,6 +5,7 @@
 - New value ≈ old + θ × days (theta already negative).
 - Delta hedge: buy N(d1) shares per short call; put delta = N(d1) – 1.
 - American put on a tree: at each node take max(exercise value, hold value).
+- Binomial no-arbitrage: discount at the **risk-free** rate (a company bond yield is a distractor). Call priced above the model → sell the call, buy Δ shares with borrowing. No dividend → American call = European call.
 
 ## Forwards and swaps
 - Futures: marked to market daily (value reset to zero). Forward: value accumulates. Both zero at initiation. Pricing = price at initiation; valuation = value after.

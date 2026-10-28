@@ -4,6 +4,7 @@
 - Total return = price + roll + collateral (collateral rate × months / 12).
 - Roll = (near – new far) / near. Backwardation → positive roll for a long; contango → negative.
 - Basis = spot – futures; calendar spread = near – far; backwardation = spot above futures.
+- Curve theories: storage (ample stocks, storage costs → contango) · insurance / hedging pressure (producers net short → backwardation, consumers net long → contango). Balanced hedgers rule out hedging pressure.
 
 ## Hedge funds
 - Stock-for-stock merger arbitrage: long target, short acquirer at the exchange ratio.

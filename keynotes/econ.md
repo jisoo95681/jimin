@@ -4,6 +4,7 @@
 - Neoclassical steady state: ΔY/Y = θ / (1 – α) + n. Per capita = θ / (1 – α). Labor share = 1 – α.
 - Potential GDP growth (labor productivity method) = labor force growth + labor productivity growth.
 - Permanent per-capita growth: classical none · neoclassical only TFP · endogenous: trade, R&D, capital can raise it permanently.
+- Convergence and club convergence → neoclassical. Higher saving raises the level of output per worker, not long-run growth (neoclassical).
 
 ## Currencies
 - Cross rates: bid × bid, offer × offer. Inverting a quote: new bid = 1 / old offer.
