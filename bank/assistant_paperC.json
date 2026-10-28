@@ -1,7 +1,7 @@
 [
  {
   "id": "pc-1",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    1
   ],
@@ -56,7 +56,7 @@
  },
  {
   "id": "pc-2",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    1
   ],
@@ -111,7 +111,7 @@
  },
  {
   "id": "pc-3",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    19
   ],
@@ -166,23 +166,23 @@
  },
  {
   "id": "pc-4",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    22
   ],
   "title": "Paper C · Private company valuation",
-  "body": "Anders Lindqvist values Brenmar Components, a privately held manufacturer, for a client who plans to buy a 30% minority stake. Brenmar has no publicly traded peers of similar size.\n\nExhibit 1: Inputs for Brenmar\tValue\nRisk-free rate\t3.8%\nEquity risk premium\t5.5%\nBeta of similar listed firms\t1.20\nSize premium\t2.4%\nCompany-specific risk premium\t3.0%\nExpected FCFE next year\t€2.36 million\nLong-term FCFE growth\t4.0%\nControl premium in the industry\t25%\nDiscount for lack of marketability (DLOM)\t15%\n\nLindqvist calculates a cost of equity with the build-up approach and values 100% of Brenmar by capitalizing FCFE. He regards the result as a marketable, controlling-interest value. He also considers a market approach using multiples from publicly traded companies.",
+  "body": "Anders Lindqvist values Brenmar Components, a privately held manufacturer, for a client who plans to buy a 30% minority stake. Brenmar has no publicly traded peers of similar size.\n\nExhibit 1: Inputs for Brenmar\tValue\nRisk-free rate\t3.8%\nEquity risk premium\t5.5%\nSize premium\t2.4%\nCompany-specific risk premium\t3.0%\nExpected FCFE next year\t€2.14 million\nLong-term FCFE growth\t4.0%\nControl premium in the industry\t25%\nDiscount for lack of marketability (DLOM)\t15%\n\nLindqvist calculates a cost of equity with the build-up approach and values 100% of Brenmar by capitalizing FCFE. He regards the result as a marketable, controlling-interest value. He also considers a market approach using multiples from publicly traded companies.",
   "questions": [
    {
     "n": 13,
     "q": "Brenmar's cost of equity using the build-up approach is closest to:",
     "options": [
+     "14.7%.",
      "15.8%.",
-     "12.8%.",
-     "10.4%."
+     "11.7%."
     ],
     "answer": "A",
-    "why": "3.8 + 1.20 × 5.5 + 2.4 + 3.0 = 15.8%. 12.8% leaves out the company-specific premium; 10.4% leaves out both premiums."
+    "why": "Build-up: risk-free rate + equity risk premium + size premium + company-specific risk premium = 3.8 + 5.5 + 2.4 + 3.0 = 14.7%. The build-up approach has no beta (that is the CAPM approach). 15.8% multiplies the premium by a beta of 1.20; 11.7% leaves out the company-specific premium."
    },
    {
     "n": 14,
@@ -190,10 +190,10 @@
     "options": [
      "20.0.",
      "20.8.",
-     "14.9."
+     "14.6."
     ],
     "answer": "A",
-    "why": "Value = FCFE₁ ÷ (r – g) = 2.36 ÷ (0.158 – 0.040) = 20.0. 20.8 grows FCFE a second time; 14.9 ignores growth."
+    "why": "Value = FCFE₁ ÷ (r – g) = 2.14 ÷ (0.147 – 0.040) = 20.0. 20.8 grows FCFE a second time; 14.6 ignores growth."
    },
    {
     "n": 15,
@@ -221,7 +221,7 @@
  },
  {
   "id": "pc-5",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    31,
    32
@@ -277,7 +277,7 @@
  },
  {
   "id": "pc-6",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    16
   ],
@@ -332,12 +332,12 @@
  },
  {
   "id": "pc-7",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    24
   ],
   "title": "Paper C · Arbitrage-free valuation",
-  "body": "Camille Roux is a fixed-income trader. She uses the following annual-pay par yields on government bonds to value a corporate bond.\n\nExhibit 1: Par yields\t1-year\t2-year\t3-year\nPar yield\t2.00%\t2.50%\t3.00%\n\nRoux considers a 3-year corporate bond with a 4% annual coupon that has no embedded options. The bond trades at 104.05 per 100 of par. She also values a 2-year, 3% option-free government bond with the following binomial tree of one-year rates (annual coupons): current rate 2.00%; in one year the rate is 3.00% in the up state and 2.20% in the down state, each with equal probability.",
+  "body": "Camille Roux is a fixed-income trader. She uses the following annual-pay par yields on government bonds to value a corporate bond.\n\nExhibit 1: Par yields\t1-year\t2-year\t3-year\nPar yield\t2.00%\t2.50%\t3.00%\n\nRoux considers a 3-year corporate bond with a 4% annual coupon that has no embedded options. The bond trades at 104.05 per 100 of par. She also values a 2-year, 3% option-free bond issued in a different market using the following binomial tree of one-year rates (annual coupons): current rate 2.00%; in one year the rate is 3.00% in the up state and 2.20% in the down state, each with equal probability.",
   "questions": [
    {
     "n": 25,
@@ -387,7 +387,7 @@
  },
  {
   "id": "pc-8",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    17
   ],
@@ -442,7 +442,7 @@
  },
  {
   "id": "pc-9",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    8
   ],
@@ -497,7 +497,7 @@
  },
  {
   "id": "pc-10",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    37
   ],
@@ -552,7 +552,7 @@
  },
  {
   "id": "pc-11",
-  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "source": "Assistant-written practice (Paper C, 28 Oct; build-up fixed)",
   "readings": [
    41
   ],
