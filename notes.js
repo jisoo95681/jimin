@@ -26,7 +26,8 @@ const NOTE_SESSIONS = [
   { id: "2026-10-26-drill", date: "2026-10-26", name: "Formula drills", label: "Pick the formula with full numbers · 30 formula (symbol options) + 11 concept + 5 frequency checks" },
   { id: "2026-10-27-d28", date: "2026-10-27", name: "Deriv 28 vignettes", label: "CFA Institute · 3 vignettes on Forward Commitments (12 Qs, 6 correct)" },
   { id: "2026-10-27-s1", date: "2026-10-27", name: "PM1 Session 1", label: "Mixed readings · 44 graded Qs, 25 correct" },
-  { id: "2026-10-27-sheets", date: "2026-10-27", name: "Practice sheet + Paper A", label: "Two 44Q papers made from your wrong answers · 22 wrong answers (33/44 on each)" }
+  { id: "2026-10-27-sheets", date: "2026-10-27", name: "Practice sheet + Paper A", label: "Two 44Q papers made from your wrong answers · 22 wrong answers (33/44 on each)" },
+  { id: "2026-10-28-qtb", date: "2026-10-28", name: "Quant TB 1", label: "Test bank book 1 · Quantitative Methods (31 Qs, 19 correct)" }
 ];
 const NOTES = (() => {
   const N = (mock, num, reading, subject, title, stem, ask, opts, answer, mine, formula, why, general, x) =>
@@ -53,6 +54,8 @@ const NOTES = (() => {
   const PG = (...a) => ({ ...P(...a), guess: true });
   const PS = (...a) => ({ ...P(...a), solved: true });
   // 27 Oct: the 44Q practice sheet and Paper A. tag says which paper; reading = CFA reading number.
+  // 28 Oct: Quant test bank book 1 (topic 1).
+  const K = (key, num, tag, reading, subject, title, ...r) => ({ ...N(0, num, reading, subject, title, ...r), id: `k${key}`, set: "2026-10-28-qtb", tag, session: 11, mock: 0 });
   const Z = (key, num, tag, reading, subject, title, ...r) => ({ ...N(0, num, reading, subject, title, ...r), id: `z${key}`, set: "2026-10-27-sheets", tag, session: 10, mock: 0 });
   return [
     // ---------------- Paper 1 ----------------
@@ -1557,7 +1560,106 @@ const NOTES = (() => {
       0, 2,
       ["Basis = spot − near futures · Calendar spread = near futures − farther futures", "Contango: futures > spot (curve upward) · Backwardation: futures < spot (curve downward)"],
       ["Spot 62.40 > 3m futures 61.90 > 6m futures 61.40 → downward-sloping → backwardation", "Basis = 62.40 − 61.90 = +0.50 → positive ✓", "Calendar spread = 61.90 − 61.40 = +0.50 → positive, not negative"],
-      ["Spot above futures = <b>backwardation</b>; futures above spot = <b>contango</b>", "Basis uses spot minus futures; calendar spread uses near minus far — check the definition given in the question", "Backwardation → positive roll return; contango → negative roll return"])
+      ["Spot above futures = <b>backwardation</b>; futures above spot = <b>contango</b>", "Basis uses spot minus futures; calendar spread uses near minus far — check the definition given in the question", "Backwardation → positive roll return; contango → negative roll return"]),
+    // ---------------- 28 Oct Quant test bank 1 ----------------
+    K("q3", 1, "Quant TB · Q3", 3, "Quant", "Model for forecasting a number from many features",
+      ["Li forecasts next month's return (a number) for 100 stocks using many fundamental and technical variables."],
+      "Which model would be most appropriate for Li to use in predicting returns?",
+      [["Penalized regression model", "Correct: continuous target; the penalty keeps only the most important features."], ["Clustering model", "Unsupervised grouping: there is no target to predict."], ["KNN model", "A classification tool; the task is a continuous forecast."]],
+      0, 2,
+      ["Y is a number → regression (penalized if there are many features) · Y is a category → classification (KNN, SVM) · no Y → clustering / PCA"],
+      ["The target (monthly return) is continuous, so this is not a classification problem.", "Clustering and KNN are therefore out; penalized regression picks the few features that matter."],
+      ["First ask what Y is: a number, a category or nothing."]),
+    K("q9", 2, "Quant TB · Q9", 4, "Quant", "Which tokens carry sentiment (collection frequency)",
+      ["Dataset ABC: text exploration by collection frequency (term frequency at the corpus level)."],
+      "Tokens that potentially carry important information for differentiating sentiment are most likely to have TF values that are:",
+      [["low", "Lowest TF = proper nouns and sparse terms: noise."], ["intermediate", "Correct: the useful tokens sit in the middle."], ["high", "Highest TF = stop words (the, and, of): noise."]],
+      1, 2,
+      ["Collection TF: highest = stop words (noise) · lowest = rare / proper nouns (noise) · intermediate = informative"],
+      ["Very frequent tokens appear everywhere, so they cannot separate positive from negative.", "Very rare tokens are too sparse to matter.", "The informative tokens therefore have intermediate TF."],
+      ["Feature selection prunes both extremes of the frequency distribution."]),
+    K("q10", 3, "Quant TB · Q10", 4, "Quant", "TF, IDF and TF-IDF statements",
+      ["Statement 1: IDF is equal to the inverse of the document frequency measure.", "Statement 2: TF at the collection level is multiplied by IDF to calculate TF-IDF.", "Statement 3: TF-IDF values vary by the number of documents in the dataset, so model performance can vary when applied to a dataset with just a few documents."],
+      "Which of Bector's statements regarding TF, IDF, and TF-IDF is correct?",
+      [["Statement 1", "Wrong: IDF is the LOG of the inverse of DF, not just the inverse."], ["Statement 2", "Wrong: it is TF at the sentence (document) level, not the collection level."], ["Statement 3", "Correct."]],
+      2, 0,
+      ["TF-IDF = TF (sentence / document level) × IDF", "IDF = log(1 ÷ DF) = log(N ÷ documents containing the term)"],
+      ["Statement 1 leaves out the log.", "Statement 2 uses the wrong level of TF.", "Statement 3 is correct: IDF depends on N, so a tiny corpus gives unstable values."],
+      ["Check each statement for a missing word (log, sentence level) before picking."]),
+    K("q16", 4, "Quant TB · Q16", 1, "Quant", "Slope and intercept: which variable moves",
+      ["Expected Sales = 12.6 + 1.6 (Marketing Expenditures) + 1.2 (# of Salespeople), in $ millions.", "Brent: a $1 million increase in marketing expenditures will increase the independent variable by $1.6 million.", "Johnson: sales will equal $12.6 million if all independent variables are zero."],
+      "In regard to their conversation about the regression equation:",
+      [["Brent's statement is correct; Johnson's statement is correct.", "Brent's slip: sales is the DEPENDENT variable, not independent."], ["Brent's statement is correct; Johnson's statement is incorrect.", "Reversed: Johnson is the correct one."], ["Brent's statement is incorrect; Johnson's statement is correct.", "Correct."]],
+      2, 0,
+      ["Slope = change in the DEPENDENT variable for a 1-unit change in that independent variable (others held constant)", "Intercept = dependent variable when all independent variables are zero"],
+      ["Marketing expenditures is an independent variable; what rises by $1.6 million is expected sales (dependent).", "Johnson: the intercept 12.6 is the expected sales when both independent variables are zero."],
+      ["Check which variable a statement says moves: the slope acts on Y."]),
+    K("q18", 5, "Quant TB · Q18", 1, "Quant", "Standard error of estimate: which points hold",
+      ["Point 1: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable.", "Point 2: Any violation of the basic assumptions of a multiple regression model is going to affect the SEE.", "Point 3: If there is a strong relationship between the variables and the SSE is small, the individual estimation errors will also be small."],
+      "How many of Brent's points are most accurate?",
+      [["2 of Brent's points are correct.", "Correct: Points 2 and 3."], ["All 3 of Brent's points are correct.", "Point 1 is wrong: the SEE is about the DEPENDENT variable, not the independent ones."], ["1 of Brent's points is correct.", "Points 2 and 3 are both right."]],
+      0, 1,
+      ["SEE = √[SSE ÷ (n – k – 1)] = standard deviation of the residuals (actual – estimated Y)", "Low SEE ↔ high R²"],
+      ["Point 1 mixes up independent and dependent: residuals are on Y.", "Point 2 and Point 3 are accurate statements."],
+      ["Same trap as Q16: residuals and slopes are about the dependent variable."]),
+    K("q21", 6, "Quant TB · Q21", 1, "Quant", "Forecast with a negative input",
+      ["Intercept 5.00 · heating oil 2.00 · low temperature 3.00 · snowfall 10.00 · housing starts 5.00 (sales in $ millions).", "Projections: heating oil $0.10 above average, temperature 5 degrees BELOW normal, snowfall 3 inches above average, housing starts 3% BELOW average.", "Variable definitions: temperature = degrees below normal; housing starts = % above average."],
+      "According to the model and the data for Chicago, the forecast of generator sales is:",
+      [["$55 million above average.", "Not what the equation gives: check each term."], ["$35.2 million above the average.", "Correct."], ["$65 million above the average.", "Housing starts entered as +3 instead of –3: adds 15 instead of subtracting it."]],
+      1, 2,
+      ["Forecast = b₀ + Σ bᵢ × (value of variable i), each value in the variable's own definition and sign"],
+      ["5 + 2 × 0.10 + 3 × 5 + 10 × 3 + 5 × (–3)", "= 5 + 0.2 + 15 + 30 – 15 = 35.2", "Temperature is defined as degrees BELOW normal, so 5 below = +5. Housing starts are defined as % ABOVE average, so 3% below = –3."],
+      ["Write each variable's definition next to its value before multiplying; keep the sign."],
+      "<table class='mini'><tr><th>Term</th><th>Input</th><th>Value</th></tr><tr><td>Intercept</td><td>1</td><td>5.0</td></tr><tr><td>Heating oil</td><td>+0.10</td><td>0.2</td></tr><tr><td>Low temperature</td><td>+5 (below normal)</td><td>15.0</td></tr><tr><td>Snowfall</td><td>+3</td><td>30.0</td></tr><tr><td>Housing starts</td><td>–3 (below average)</td><td>–15.0</td></tr><tr><td><b>Total</b></td><td></td><td><b>35.2</b></td></tr></table>"),
+    K("q24", 7, "Quant TB · Q24", 1, "Quant", "Adjusted versus unadjusted R²",
+      ["ANOVA: regression SS 335.20 · error SS 606.40 · total SS 941.60; n = 26, k = 4.", "Reported R² = 0.233."],
+      "The computer said the R² is 0.233. She concludes that this is the:",
+      [["adjusted R² value.", "Correct: it matches the adjusted formula."], ["unadjusted R² value.", "The unadjusted R² is 335.2 ÷ 941.6 = 0.356."], ["neither the unadjusted nor adjusted R² value, nor the coefficient of correlation.", "It does match the adjusted R²."]],
+      0, 2,
+      ["R² = RSS ÷ SST", "Adjusted R² = 1 – [(n – 1) ÷ (n – k – 1)] × (1 – R²)", "With k > 1, adjusted R² is always below R²"],
+      ["Unadjusted R² = 335.2 ÷ 941.6 = 0.356.", "Adjusted = 1 – (25 ÷ 21) × (1 – 0.356) = 0.233: the reported number."],
+      ["Compute the unadjusted R² first; a smaller printed figure is the adjusted one."]),
+    K("q26", 8, "Quant TB · Q26", 1, "Quant", "R² versus multiple-R",
+      ["ANOVA (Exhibit 3): regression SS 15 · error SS 5 · total SS 20; df 3 / 16 / 19.", "Three independent variables: ΔINT, STIM, CRISIS."],
+      "The most appropriate interpretation from the foreclosure share regression equation model is:",
+      [["Multiple-R of the model is 0.87.", "Correct: multiple-R = √0.75."], ["Multiple-R of the model is 0.75.", "0.75 is R², not multiple-R."], ["Variable STIM explains 37.5% of the variation in foreclosure share.", "R² belongs to the whole model, not to one variable."]],
+      0, 1,
+      ["R² = RSS ÷ SST = 15 ÷ 20 = 0.75", "Multiple-R = √R² = 0.87"],
+      ["R² = 0.75 is the share of variation explained by all three variables together.", "Multiple-R is the square root: 0.87."],
+      ["Multiple-R is the correlation; R² is the explained share."]),
+    K("q27", 9, "Quant TB · Q27", 1, "Quant", "t-test against the critical value",
+      ["Exhibit 2 t-statistics: STIM = –2.10; CRISIS = 2.35.", "Critical t at 5% two-tailed, 16 degrees of freedom = 2.12 (20 observations, 3 slopes)."],
+      "Based on her regression results at a 5% level of significance, Smith should conclude that:",
+      [["both stimulus packages and housing crises have significant effects on foreclosure percentages.", "|–2.10| is below 2.12: STIM is not significant."], ["stimulus packages have significant effects, but housing crises do not.", "Reversed."], ["stimulus packages do not have significant effects, but housing crises do.", "Correct."]],
+      2, 0,
+      ["Reject H₀ (coefficient = 0) when |t| > critical t", "df = n – k – 1 = 20 – 3 – 1 = 16"],
+      ["STIM: |–2.10| < 2.12 → not significant.", "CRISIS: 2.35 > 2.12 → significant."],
+      ["Compare the absolute t-value; a negative t does not mean 'smaller than the critical value'."]),
+    K("q28", 10, "Quant TB · Q28", 1, "Quant", "Standard error of estimate from the ANOVA",
+      ["Error SS = 5; n = 20, k = 3 (error df = 16); MSE = 0.3125."],
+      "The standard error of estimate for Smith's regression is closest to:",
+      [["0.16.", "Not from the table; the SEE is √MSE."], ["0.56.", "Correct: √(5 ÷ 16) = √0.3125."], ["0.53.", "Uses the wrong degrees of freedom."]],
+      1, 0,
+      ["SEE = √MSE = √[SSE ÷ (n – k – 1)]"],
+      ["n – k – 1 = 20 – 3 – 1 = 16.", "SEE = √(5 ÷ 16) = √0.3125 = 0.56."],
+      ["SEE is the square root of the MSE: take the root, then compare."]),
+    K("q29", 11, "Quant TB · Q29", 1, "Quant", "Heteroskedasticity and multicollinearity effects",
+      ["Concern 1: If my regression errors exhibit conditional heteroskedasticity, my t-statistics will be underestimated.", "Concern 2: If my independent variables are correlated with each other, my F-statistic will be overestimated."],
+      "Is Smith correct or incorrect regarding Concerns 1 and 2?",
+      [["Incorrect on both Concerns.", "Correct."], ["Correct on both Concerns.", "Both effects are the other way round."], ["Only correct on one concern and incorrect on the other.", "Neither concern is correct."]],
+      0, 2,
+      ["Conditional heteroskedasticity: standard errors too LOW → t-statistics too HIGH (overestimated)", "Multicollinearity: standard errors too HIGH → t-statistics too LOW; the F-statistic is not affected"],
+      ["Concern 1: t-statistics are overestimated, not underestimated.", "Concern 2: multicollinearity pushes t-statistics down and leaves the F-statistic unaffected."],
+      ["Standard errors up → t down; standard errors down → t up."],
+      "<table class='mini'><tr><th>Problem</th><th>Std errors</th><th>t-stats</th><th>F-stat</th></tr><tr><td>Conditional heteroskedasticity</td><td>too low</td><td>too high</td><td>unreliable</td></tr><tr><td>Serial correlation (positive)</td><td>too low</td><td>too high</td><td>too high</td></tr><tr><td>Multicollinearity</td><td>too high</td><td>too low</td><td>not affected</td></tr></table>"),
+    K("q31", 12, "Quant TB · Q31", 2, "Quant", "Regressing a unit-root series",
+      ["Smith finds the foreclosure share series has a unit root."],
+      "She can most reliably regress foreclosure share against the change in interest rates (ΔINT) if:",
+      [["ΔINT has unit root and is cointegrated with foreclosure share.", "Correct: the error term is then covariance stationary."], ["ΔINT does not have unit root.", "A stationary variable against a unit-root series: the error term is nonstationary."], ["ΔINT has unit root and is not cointegrated with foreclosure share.", "Spurious regression: unreliable results."]],
+      0, 2,
+      ["Both series have unit roots: the regression is reliable only if they are cointegrated", "One unit root only, or no cointegration → nonstationary errors → unreliable"],
+      ["If the error term is nonstationary, regression assumptions are violated.", "Cointegration makes the error term covariance stationary, so the results are reliable."],
+      ["Same rule as in the key notes: both unit roots AND cointegrated."])
   ].sort((a, b) => a.session - b.session || a.num - b.num);
 })();
 
@@ -2645,6 +2747,8 @@ Object.assign(NOTE_QUICK, {"pq23": ["For a tactical ETF trade, which ETF is gene
 Object.assign(NOTE_QUICK, {"dq32": ["Dealer receives fixed and pays the equity return. Notional ZAR5,000,000, fixed 3.2%, quarterly. The quarterly equity return is –3.6%. What is the dealer's cash flow at the first reset?", "Fixed received + equity return received (a negative return is paid to the dealer)", "Fixed received – equity loss paid by the dealer", "Fixed received only: the equity loss is ignored"], "dq34": ["Cline is pay-floating (receives fixed 2.31%) on a 3 × 6 FRA, notional US$5,000,000. The forward rate for the remaining period has risen to 3.16% (2-month MRR 1.5%, 5-month MRR 2.5%). Which formula gives the value?", "–[(F_new – F_old) × NA × 90/360] ÷ (1 + MRR_150 × 150/360)", "+[(F_new – F_old) × NA × 90/360] ÷ (1 + MRR_150 × 150/360)", "–(F_new – F_old) × NA × 90/360, undiscounted"], "dq36": ["Receive-equity, pay-fixed swap, notional 75,000,000, fixed 4.8% quarterly, index 3,250 → 3,738, four payments left (PV factors 0.9976, 0.9924, 0.9861, 0.9696). Which formula gives the value?", "75,000,000 × 3,738/3,250 – [900,000 × ΣPV + 75,000,000 × 0.9696]", "75,000,000 × 3,738/3,250 – [900,000 × ΣPV + 75,000,000]", "(3,738/3,250 – 4.8%) × 75,000,000"], "dq38": ["Index 1,900; one-year forward priced at 1,863; r = 0.75%, dividend yield 2.50% (continuous). The fair forward price is 1,867.04. Which trade?", "Buy the forward, short the index (reverse carry)", "Sell the forward, buy the index (carry)", "No trade: the forward is fairly priced"], "dq39": ["An FRA is cash-settled. Does the long in a 3 × 9 FRA have to make a Euribor deposit?", "No: the FRA settles in cash on the rate difference", "Yes: it deposits in 3 months and earns Euribor for 6 months", "Yes, but only at initiation"], "dq40": ["In Treasury futures, the conversion factor accounts for:", "Different coupons and maturities among deliverable bonds (about a 6% bond)", "Accrued interest", "The daily margin"], "dq30": ["The arbitrageur's two fundamental rules:", "No own money (invest short-sale proceeds at the risk-free rate) and no price risk on the total trade", "Use own money sparingly and accept small price risk", "No own money, but price risk on every leg"]});
 
 Object.assign(NOTE_QUICK, {"zs2": ["An institution that creates and redeems ETF shares in exchange for a basket of securities is the:", "Authorized participant", "Market maker", "ETF sponsor (issuer)"], "zs3": ["An ETF holds foreign stocks whose markets close hours before the ETF's market. Premium or discount to NAV from stale pricing is:", "Potentially significant", "Negligible", "Impossible because of in-kind creation"], "zs7": ["IFRS 9: a bond that passes the cash flow test is held to collect but may be sold if liquidity is needed. Which classification is ruled out?", "Amortized cost", "Fair value through OCI", "Fair value through profit or loss"], "zs9": ["Equity method: the investment rose from 27,900 to 29,730 and income from the associate was 2,730. Dividends received?", "900", "1,830", "2,730"], "zs10": ["IFRS 9: reclassifying a bond from amortized cost to fair value through profit or loss is allowed:", "Only if the business model changes significantly, applied prospectively", "Whenever market value exceeds carrying value, with prior periods restated", "Whenever the firm wants to recognize a gain, applied prospectively"], "zs16": ["Which is NOT an assumption of the multiple regression model?", "Residuals are correlated across observations", "Residuals have constant variance", "Residuals are normally distributed"], "zs27": ["A swap receives fixed at 0.8361% per quarter (set at initiation). Market rates have since risen. The value to the fixed receiver is:", "Negative", "Positive", "Zero"], "zs29": ["A firm pays euros and receives yen on a currency swap. The yen then strengthens (fewer yen per euro). The swap value to the firm is:", "Positive, because the yen leg is worth more in euros", "Negative, because the euro leg is worth less", "Unchanged, because the notionals are fixed"], "zs36": ["The long in a 2 × 5 FRA must borrow for three months starting in two months. This is:", "Wrong: the FRA settles in cash on the rate difference", "Correct", "Correct only if rates rise"], "zs38": ["Treasury futures positions are marked to market:", "Daily", "Monthly", "Only at expiry"], "zs44": ["Which item breaks the clean surplus relation?", "A fair value gain on FVOCI equity investments that goes straight to OCI", "A foreign currency transaction gain in net income", "Dividends paid to shareholders"], "za1": ["Annual spot rates: 3-year 2.60%, 4-year 3.00%. Price today of a 1-year zero (par 1) issued in 3 years?", "(1.026)^3 ÷ (1.030)^4 = 0.9596", "1 ÷ 1.030 = 0.9709", "1 ÷ 1.026 = 0.9747"], "za5": ["A fund holds $15m of Bond A (trades at 55%) and has a $15m CDS. The cheapest deliverable bond trades at 48%. Cash-settled proceeds from the CDS plus selling Bond A?", "$16.05m", "$15.00m", "$15.45m"], "za6": ["A CDS has a credit spread of 4.50%, a coupon of 1.00% and duration 4.4. Price per 100 of par?", "84.6", "96.5", "115.4"], "za8": ["An inverted CDS curve is expected to normalize: short-dated spreads tighten, long-dated spreads stay put. Best trade?", "Sell short-dated protection, buy long-dated protection", "Buy short-dated protection, sell long-dated protection", "Buy protection at both ends"], "za11": ["Compared with the weighted arithmetic mean of P/Es, the weighted harmonic mean is:", "Never larger, and it reduces the effect of outliers", "Always at least as large", "Larger only when all P/Es are positive"], "za16": ["Book value 20.00, residual income 2.40 (Year 1) and 2.00 (Year 2), book value 24.00 and price 28.00 at the end of Year 2, cost of equity 10%. Value per share?", "€27.14", "€27.47", "€27.83"], "za23": ["Pay-fixed 2.40% swap on €25m. The current par fixed rate is 1.7677% and the PV factors sum to 1.9517. Value?", "–€308,500", "+€308,500", "–€158,100"], "za25": ["A euro reporter sells for USD 3.0m when EUR per USD is 0.9200. At year-end the rate is 0.9500 (average 0.9400). Transaction gain in income?", "EUR 0.09m", "EUR 0.06m", "None until the cash is collected"], "za39": ["A Dickey–Fuller statistic of –1.85 against a 5% critical value of –2.86 means:", "Cannot reject the unit root: first-difference the series", "Reject the unit root: the series is stationary", "Reject the unit root: add a trend term"], "za41": ["A long futures position was bought at 80.00. At the roll the expiring contract is 78.40 and the new contract 77.20. Collateral earns 4% a year for 3 months. Total return?", "0.53%", "–2.53%", "3.53%"], "za42": ["Gold: spot 62.40, 3-month futures 61.90, 6-month futures 61.40. Which statement is true?", "The basis (spot – near futures) is positive", "The calendar spread (near – far) is negative", "The market is in contango"]});
+
+Object.assign(NOTE_QUICK, {"kq3": ["Forecasting next month's return (a number) for 100 stocks from many fundamental and technical variables. Best model?", "Penalized regression", "KNN", "Clustering"], "kq9": ["In collection-frequency (corpus-level TF) text analysis, which tokens best differentiate sentiment?", "Tokens with intermediate TF", "Tokens with the highest TF (stop words)", "Tokens with the lowest TF"], "kq10": ["TF-IDF =", "TF at the sentence level × IDF, where IDF = log(1 ÷ document frequency)", "TF at the collection level × IDF, where IDF = 1 ÷ document frequency", "TF at the collection level × log(document frequency)"], "kq16": ["Expected Sales = 12.6 + 1.6 × Marketing + 1.2 × Salespeople ($ m). A $1m rise in marketing raises which variable by $1.6m?", "Expected sales, the dependent variable", "The number of salespeople", "Marketing expenditures themselves, an independent variable"], "kq18": ["The standard error of estimate is the standard deviation of the differences between actual and estimated values of the:", "Dependent variable", "Independent variables", "Slope coefficients"], "kq21": ["Forecast = 5 + 2×(oil +0.10) + 3×(degrees below normal) + 10×(snow +3) + 5×(housing starts, % above average). Temperature is 5 below normal; housing starts 3% below average. Result in $ m?", "35.2", "65.2", "55.2"], "kq24": ["ANOVA: RSS 335.2, total 941.6, n = 26, k = 4. A reported R² of 0.233 is the:", "Adjusted R² (the unadjusted is 0.356)", "Unadjusted R²", "Coefficient of correlation"], "kq26": ["Regression SS = 15, error SS = 5. What is the multiple-R of the model?", "0.87", "0.75", "0.50"], "kq27": ["STIM t = –2.10, CRISIS t = 2.35, critical t = 2.12 (5%, 16 df). Conclusion?", "STIM not significant, CRISIS significant", "Both significant", "STIM significant, CRISIS not"], "kq28": ["Error SS = 5, n = 20, k = 3. Standard error of estimate?", "0.56", "0.31", "0.50"], "kq29": ["Conditional heteroskedasticity makes t-statistics ___; multicollinearity makes the F-statistic ___.", "Overestimated; unaffected", "Underestimated; overestimated", "Overestimated; overestimated"], "kq31": ["A time series has a unit root. It can be reliably regressed on another series only if that series has a unit root and is:", "Cointegrated with it", "Stationary", "Not cointegrated with it"]});
 
 // Drills: the question carries the full numbers, the options are the candidate formulas. First option is the right one.
 NOTES.filter(n => n.drill).forEach(n => { NOTE_QUICK[n.id] = [(n.stem.join(" ") + " " + n.ask).trim(), ...n.options.map(o => o.t)]; });
