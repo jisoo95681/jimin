@@ -1,0 +1,608 @@
+[
+ {
+  "id": "pc-1",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   1
+  ],
+  "title": "Paper C · Multiple regression: reading the output",
+  "body": "Priya Rao is a quantitative analyst at Alder Fund Partners. She regresses the monthly excess return of a small-cap fund (RET, in percent) on the market excess return (MKT), a size factor (SMB), a value factor (HML) and a momentum factor (MOM), using 64 monthly observations. All variables are in percent.\n\nExhibit 1: Regression results\tCoefficient\tStandard error\tt-statistic\nIntercept\t0.40\t0.25\t1.60\nMKT\t0.95\t0.08\t11.88\nSMB\t0.30\t0.14\t2.14\nHML\t–0.20\t0.12\t–1.67\nMOM\t0.12\t0.10\t1.20\n\nExhibit 2: ANOVA\tDegrees of freedom\tSum of squares\nRegression\t4\t1,125.0\nError\t59\t375.0\nTotal\t63\t1,500.0\n\nRao uses a 5% significance level. The critical t-value for 59 degrees of freedom is 2.00 (two-tailed) and the critical F-value for 4 and 59 degrees of freedom is 2.54.\n\nRao forecasts the following values for next month (in percent): MKT +2.0, SMB –1.5, HML +1.0, MOM –2.0.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which independent variables are statistically significant at the 5% level?",
+    "options": [
+     "MKT only.",
+     "MKT and SMB only.",
+     "MKT, SMB and HML."
+    ],
+    "answer": "B",
+    "why": "|t| exceeds 2.00 for MKT (11.88) and SMB (2.14). HML (|–1.67|) and MOM (1.20) do not."
+   },
+   {
+    "n": 2,
+    "q": "The adjusted R² of the regression is closest to:",
+    "options": [
+     "0.750.",
+     "0.733.",
+     "0.738."
+    ],
+    "answer": "B",
+    "why": "R² = 1,125 ÷ 1,500 = 0.750. Adjusted R² = 1 – [(64 – 1) ÷ (64 – 4 – 1)] × (1 – 0.750) = 0.733. 0.738 uses n – k in the denominator."
+   },
+   {
+    "n": 3,
+    "q": "Using the joint F-test, Rao should conclude that:",
+    "options": [
+     "no slope coefficient differs from zero.",
+     "every slope coefficient differs from zero.",
+     "at least one slope coefficient differs from zero."
+    ],
+    "answer": "C",
+    "why": "F = (1,125 ÷ 4) ÷ (375 ÷ 59) = 44.25, which exceeds 2.54: reject the null that all slopes are zero. It says nothing about every slope being significant."
+   },
+   {
+    "n": 4,
+    "q": "The predicted excess return for next month is closest to:",
+    "options": [
+     "1.65%.",
+     "1.41%.",
+     "2.79%."
+    ],
+    "answer": "B",
+    "why": "0.40 + 0.95 × 2.0 + 0.30 × (–1.5) + (–0.20) × 1.0 + 0.12 × (–2.0) = 1.41%. 1.65% leaves out MOM; 2.79% drops the signs of SMB and MOM."
+   }
+  ]
+ },
+ {
+  "id": "pc-2",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   1
+  ],
+  "title": "Paper C · Regression problems and logistic models",
+  "body": "Marcus Obi is a credit analyst at Fenwick Bank. He estimates a regression of quarterly loan loss rates on three macroeconomic variables using 120 observations, and then runs diagnostic tests.\n\nExhibit 1: Diagnostic results\tResult\nBreusch–Pagan: R² of the regression of squared residuals on the three variables\t0.09\nChi-square critical value (3 df, 5%)\t7.81\nDurbin–Watson statistic\t1.12\nDurbin–Watson critical values (5%): lower / upper\t1.65 / 1.69\nVariance inflation factor (VIF) of unemployment rate\t14.2\n\nObi also estimates a logistic regression to predict whether a corporate borrower defaults within one year: ln[p ÷ (1 – p)] = –3.2 + 0.8 × Leverage, where Leverage is debt to EBITDA. A borrower has debt to EBITDA of 3.0.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "Based on the Breusch–Pagan test, Obi should conclude:",
+    "options": [
+     "a test statistic of 10.80; fail to reject the null of no conditional heteroskedasticity.",
+     "a test statistic of 10.80; reject the null of no conditional heteroskedasticity.",
+     "a test statistic of 1.08; reject the null of no conditional heteroskedasticity."
+    ],
+    "answer": "B",
+    "why": "The statistic is n × R² = 120 × 0.09 = 10.80, above 7.81: reject. Conditional heteroskedasticity understates standard errors and overstates t-statistics."
+   },
+   {
+    "n": 6,
+    "q": "The Durbin–Watson result most likely indicates:",
+    "options": [
+     "no serial correlation.",
+     "positive serial correlation, which biases standard errors downward.",
+     "negative serial correlation, which biases standard errors upward."
+    ],
+    "answer": "B",
+    "why": "1.12 is below the lower critical value of 1.65: reject the null of no positive serial correlation. Standard errors are too small and t-statistics too large."
+   },
+   {
+    "n": 7,
+    "q": "Which statement about the VIF of 14.2 is most accurate?",
+    "options": [
+     "Multicollinearity is serious; the standard errors of the coefficients are inflated.",
+     "Multicollinearity is not a problem because VIF is above 1.",
+     "Multicollinearity is serious; it biases the coefficients and makes the F-statistic unreliable."
+    ],
+    "answer": "A",
+    "why": "A VIF above 10 signals serious multicollinearity. It inflates coefficient standard errors (t-statistics too low); the F-statistic is not affected and coefficients stay unbiased."
+   },
+   {
+    "n": 8,
+    "q": "The probability of default for the borrower is closest to:",
+    "options": [
+     "0.45.",
+     "0.69.",
+     "0.31."
+    ],
+    "answer": "C",
+    "why": "ln(odds) = –3.2 + 0.8 × 3.0 = –0.80. Odds = e^(–0.80) = 0.449; p = 0.449 ÷ 1.449 = 0.31. 0.45 is the odds; 0.69 is 1 – p."
+   }
+  ]
+ },
+ {
+  "id": "pc-3",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   19
+  ],
+  "title": "Paper C · Free cash flow valuation",
+  "body": "Elena Voss is a buy-side analyst valuing Kelvar Industries. Kelvar's 2024 income statement shows EBIT of 640, interest expense of 90, depreciation of 150 and net income of 385 (tax rate 30%; amounts in € millions). There were no disposals of fixed assets in 2024.\n\nExhibit 1: Selected balance sheet items (€ millions)\t2023\t2024\nCash\t120\t150\nAccounts receivable\t410\t455\nInventory\t300\t280\nGross fixed assets\t3,000\t3,240\nAccounts payable\t260\t290\nAccrued expenses\t110\t104\nNotes payable\t80\t120\nLong-term debt\t1,100\t1,090\n\nVoss values Kelvar's firm using FCFF growing at 3.0% a year and a WACC of 8.0%. Kelvar has 200 million shares and no preferred stock; Voss assumes the market value of debt equals its book value.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Kelvar's investment in working capital in 2024 (€ millions) is closest to:",
+    "options": [
+     "–39.",
+     "1.",
+     "31."
+    ],
+    "answer": "B",
+    "why": "WCInv = ΔReceivables + ΔInventory – ΔPayables – ΔAccrued = 45 – 20 – 30 + 6 = 1. Notes payable are financing, not working capital; cash is excluded."
+   },
+   {
+    "n": 10,
+    "q": "Kelvar's FCFF for 2024 (€ millions) is closest to:",
+    "options": [
+     "384.",
+     "357.",
+     "309."
+    ],
+    "answer": "B",
+    "why": "FCFF = 385 + 150 + 90 × 0.70 – 240 – 1 = 357. 384 uses the full interest expense; 309 adds the liability changes to working capital instead of subtracting them."
+   },
+   {
+    "n": 11,
+    "q": "Kelvar's FCFE for 2024 (€ millions) is closest to:",
+    "options": [
+     "324.",
+     "294.",
+     "354."
+    ],
+    "answer": "A",
+    "why": "Net borrowing = (120 – 80) + (1,090 – 1,100) = +30. FCFE = 357 – 63 + 30 = 324. 294 leaves out net borrowing; 354 adds it twice."
+   },
+   {
+    "n": 12,
+    "q": "Using the FCFF model, the equity value per share (€) is closest to:",
+    "options": [
+     "30.72.",
+     "36.77.",
+     "31.32."
+    ],
+    "answer": "A",
+    "why": "Firm value = 357 × 1.03 ÷ (0.08 – 0.03) = 7,354.2. Subtract total debt (120 + 1,090 = 1,210): 6,144.2 ÷ 200 = 30.72. 36.77 forgets debt; 31.32 subtracts only long-term debt."
+   }
+  ]
+ },
+ {
+  "id": "pc-4",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   22
+  ],
+  "title": "Paper C · Private company valuation",
+  "body": "Anders Lindqvist values Brenmar Components, a privately held manufacturer, for a client who plans to buy a 30% minority stake. Brenmar has no publicly traded peers of similar size.\n\nExhibit 1: Inputs for Brenmar\tValue\nRisk-free rate\t3.8%\nEquity risk premium\t5.5%\nBeta of similar listed firms\t1.20\nSize premium\t2.4%\nCompany-specific risk premium\t3.0%\nExpected FCFE next year\t€2.36 million\nLong-term FCFE growth\t4.0%\nControl premium in the industry\t25%\nDiscount for lack of marketability (DLOM)\t15%\n\nLindqvist calculates a cost of equity with the build-up approach and values 100% of Brenmar by capitalizing FCFE. He regards the result as a marketable, controlling-interest value. He also considers a market approach using multiples from publicly traded companies.",
+  "questions": [
+   {
+    "n": 13,
+    "q": "Brenmar's cost of equity using the build-up approach is closest to:",
+    "options": [
+     "15.8%.",
+     "12.8%.",
+     "10.4%."
+    ],
+    "answer": "A",
+    "why": "3.8 + 1.20 × 5.5 + 2.4 + 3.0 = 15.8%. 12.8% leaves out the company-specific premium; 10.4% leaves out both premiums."
+   },
+   {
+    "n": 14,
+    "q": "The value of 100% of Brenmar (€ millions) is closest to:",
+    "options": [
+     "20.0.",
+     "20.8.",
+     "14.9."
+    ],
+    "answer": "A",
+    "why": "Value = FCFE₁ ÷ (r – g) = 2.36 ÷ (0.158 – 0.040) = 20.0. 20.8 grows FCFE a second time; 14.9 ignores growth."
+   },
+   {
+    "n": 15,
+    "q": "The value of the 30% minority stake (€ millions) is closest to:",
+    "options": [
+     "3.90.",
+     "5.10.",
+     "4.08."
+    ],
+    "answer": "C",
+    "why": "30% × 20.0 = 6.00. DLOC = 1 – 1 ÷ 1.25 = 20%. Value = 6.00 × (1 – 0.20) × (1 – 0.15) = 4.08. 3.90 adds the discounts (35%); 5.10 applies only the DLOM."
+   },
+   {
+    "n": 16,
+    "q": "Multiples taken from publicly traded companies most likely give a value on a:",
+    "options": [
+     "marketable, controlling basis.",
+     "non-marketable, controlling basis.",
+     "marketable, minority basis."
+    ],
+    "answer": "C",
+    "why": "Public-company prices reflect marketable minority interests. Guideline transactions (acquisitions) reflect controlling interests."
+   }
+  ]
+ },
+ {
+  "id": "pc-5",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   31,
+   32
+  ],
+  "title": "Paper C · Real estate valuation",
+  "body": "Sofia Marlow is a real estate analyst. She appraises an office building and also reviews a listed real estate company (REIT).\n\nThe building has potential gross income of $1,200,000. Vacancy and collection losses are 6% of potential gross income. Operating expenses (property taxes, insurance, maintenance and management) are $408,000; depreciation for the year is $90,000, and expected capital expenditure is $60,000. Marlow values the building by direct capitalization at a 6.0% cap rate.\n\nExhibit 1: REIT (amounts in $ millions, 40 million shares)\tValue\nNet income\t48.0\nDepreciation\t22.0\nGain on sale of a property\t6.5\nNon-cash straight-line rent included in revenue\t3.0\nRecurring maintenance capital expenditure\t9.0\nForward-year NOI\t140.0\nCap rate used for the REIT's properties\t7.0%\nCash\t40.0\nDebt\t800.0\nOther liabilities\t60.0",
+  "questions": [
+   {
+    "n": 17,
+    "q": "The building's net operating income is closest to:",
+    "options": [
+     "$792,000.",
+     "$720,000.",
+     "$630,000."
+    ],
+    "answer": "B",
+    "why": "EGI = 1,200,000 × 0.94 = 1,128,000. NOI = 1,128,000 – 408,000 = 720,000. 792,000 ignores vacancy; 630,000 subtracts depreciation, which is not deducted in NOI."
+   },
+   {
+    "n": 18,
+    "q": "If the market cap rate rises to 6.5% and NOI is unchanged, the value of the building is closest to:",
+    "options": [
+     "$11.08 million.",
+     "$12.00 million.",
+     "$13.00 million."
+    ],
+    "answer": "A",
+    "why": "Value = NOI ÷ cap rate = 720,000 ÷ 0.065 = $11.08 million. At 6.0% the value was $12.00 million; value moves inversely with the cap rate."
+   },
+   {
+    "n": 19,
+    "q": "The REIT's adjusted funds from operations (AFFO) per share is closest to:",
+    "options": [
+     "$1.29.",
+     "$1.59.",
+     "$1.36."
+    ],
+    "answer": "A",
+    "why": "FFO = 48.0 + 22.0 – 6.5 = 63.5. AFFO = 63.5 – 3.0 – 9.0 = 51.5; per share 51.5 ÷ 40 = $1.29. $1.59 is FFO per share; $1.36 leaves out the straight-line rent adjustment."
+   },
+   {
+    "n": 20,
+    "q": "The REIT's net asset value per share is closest to:",
+    "options": [
+     "$28.50.",
+     "$31.00.",
+     "$29.50."
+    ],
+    "answer": "C",
+    "why": "Property value = 140.0 ÷ 0.07 = 2,000. NAV = 2,000 + 40 – 800 – 60 = 1,180; per share $29.50. $28.50 leaves out cash; $31.00 leaves out the other liabilities."
+   }
+  ]
+ },
+ {
+  "id": "pc-6",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   16
+  ],
+  "title": "Paper C · Corporate restructuring",
+  "body": "Pelmar Holdings is a diversified manufacturer. Analyst Jonas Weir believes the market undervalues the group and compares it with specialized peers.\n\nExhibit 1: Segment data (€ millions)\tEBITDA\tPeer median EV/EBITDA\nSegment A\t600\t9.0×\nSegment B\t400\t7.0×\nSegment C\t200\t12.0×\nPelmar's current enterprise value\t9,200\n\nManagement is considering a spin-off of Segment C. Weir notes that the spin-off would give Segment C its own management and capital structure.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "Pelmar's enterprise value using a sum-of-the-parts approach (€ millions) is closest to:",
+    "options": [
+     "10,600.",
+     "11,200.",
+     "9,200."
+    ],
+    "answer": "A",
+    "why": "600 × 9 + 400 × 7 + 200 × 12 = 5,400 + 2,800 + 2,400 = 10,600. 11,200 uses the average peer multiple (9.33×) on total EBITDA of 1,200; 9,200 is the current EV."
+   },
+   {
+    "n": 22,
+    "q": "The implied conglomerate discount (market EV relative to the sum-of-the-parts EV) is closest to:",
+    "options": [
+     "15.2%.",
+     "13.2%.",
+     "7.0%."
+    ],
+    "answer": "B",
+    "why": "(10,600 – 9,200) ÷ 10,600 = 13.2%. 15.2% divides by the market EV instead."
+   },
+   {
+    "n": 23,
+    "q": "Compared with a sale of Segment C for cash, a spin-off most likely:",
+    "options": [
+     "is a taxable event for Pelmar's shareholders.",
+     "requires Pelmar to repurchase shares.",
+     "generates no cash proceeds for Pelmar."
+    ],
+    "answer": "C",
+    "why": "In a spin-off, shareholders receive shares of the new company pro rata; the parent receives no cash and the transaction is generally tax-free to shareholders."
+   },
+   {
+    "n": 24,
+    "q": "Compared with a spin-off, an equity carve-out most likely:",
+    "options": [
+     "distributes the subsidiary's shares to existing shareholders.",
+     "separates the subsidiary completely from the parent.",
+     "raises cash for the parent by selling a minority stake of the subsidiary to the public."
+    ],
+    "answer": "C",
+    "why": "An equity carve-out is an IPO of a minority stake: the parent typically keeps control and the proceeds are cash. A spin-off distributes shares pro rata and fully separates the company."
+   }
+  ]
+ },
+ {
+  "id": "pc-7",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   24
+  ],
+  "title": "Paper C · Arbitrage-free valuation",
+  "body": "Camille Roux is a fixed-income trader. She uses the following annual-pay par yields on government bonds to value a corporate bond.\n\nExhibit 1: Par yields\t1-year\t2-year\t3-year\nPar yield\t2.00%\t2.50%\t3.00%\n\nRoux considers a 3-year corporate bond with a 4% annual coupon that has no embedded options. The bond trades at 104.05 per 100 of par. She also values a 2-year, 3% option-free government bond with the following binomial tree of one-year rates (annual coupons): current rate 2.00%; in one year the rate is 3.00% in the up state and 2.20% in the down state, each with equal probability.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "The 2-year spot rate is closest to:",
+    "options": [
+     "2.51%.",
+     "2.50%.",
+     "2.25%."
+    ],
+    "answer": "A",
+    "why": "Bootstrapping: 1 = 0.025 ÷ 1.02 + 1.025 ÷ (1 + z₂)² gives (1 + z₂)² = 1.025 ÷ 0.97549, so z₂ = 2.51%. 2.50% is the par yield; 2.25% averages the 1-year and 2-year par yields."
+   },
+   {
+    "n": 26,
+    "q": "Using spot rates, the arbitrage-free price of the 3-year 4% bond per 100 of par is closest to:",
+    "options": [
+     "102.85.",
+     "104.05.",
+     "100.00."
+    ],
+    "answer": "A",
+    "why": "The 3-year spot rate is 3.02% and the 2-year spot rate 2.51%. Price = 4 ÷ 1.02 + 4 ÷ (1 + z₂)² + 104 ÷ (1 + z₃)³ = 3.92 + 3.81 + 95.12 = 102.85. 104.05 is the market price; 100.00 would be a par bond."
+   },
+   {
+    "n": 27,
+    "q": "Given the market price of the corporate bond, Roux should:",
+    "options": [
+     "buy the bond because it is undervalued.",
+     "do nothing because the bond is fairly priced.",
+     "sell the bond and buy its cash flows as strips (arbitrage)."
+    ],
+    "answer": "C",
+    "why": "The market price is above the arbitrage-free value, so the bond is overvalued: sell it and replicate its cash flows with strips to lock in the difference."
+   },
+   {
+    "n": 28,
+    "q": "The value of the 2-year 3% government bond using the tree is closest to:",
+    "options": [
+     "100.00.",
+     "101.36.",
+     "102.46."
+    ],
+    "answer": "B",
+    "why": "At year 1: 103 ÷ 1.03 = 100.00 (up) and 103 ÷ 1.022 = 100.78 (down); add the 3 coupon: 103.00 and 103.78. Average 103.39 ÷ 1.02 = 101.36."
+   }
+  ]
+ },
+ {
+  "id": "pc-8",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   17
+  ],
+  "title": "Paper C · Equity valuation: applications",
+  "body": "Naomi Calder is an equity analyst. She follows Sunra Ltd, which trades at €40.00 and has a required return of 11.0% (CAPM). Her estimates for the next year are a dividend of €1.50, a year-end price of €44.80 and EPS of €2.60. The market consensus forecast for the year-end price is €42.00.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Based on Calder's estimates, Sunra's expected holding-period return is closest to:",
+    "options": [
+     "12.00%.",
+     "11.00%.",
+     "15.75%."
+    ],
+    "answer": "C",
+    "why": "(1.50 + 44.80 – 40.00) ÷ 40.00 = 15.75%. 12.00% uses only the price change; 11.00% is the required return."
+   },
+   {
+    "n": 30,
+    "q": "Based on Calder's estimates, Sunra's intrinsic value today (€) is closest to:",
+    "options": [
+     "41.71.",
+     "44.80.",
+     "46.30."
+    ],
+    "answer": "A",
+    "why": "V₀ = (1.50 + 44.80) ÷ 1.11 = 41.71. 44.80 is the year-end price; 46.30 is the undiscounted sum."
+   },
+   {
+    "n": 31,
+    "q": "Her expected excess return of 4.75% is most likely an opportunity only if:",
+    "options": [
+     "the market is semi-strong form efficient.",
+     "her estimates are better than the market consensus.",
+     "her required return is below the risk-free rate."
+    ],
+    "answer": "B",
+    "why": "In an efficient market, prices reflect consensus expectations. An expected excess return exists only if the analyst's forecasts differ from, and are better than, the consensus."
+   },
+   {
+    "n": 32,
+    "q": "Sunra's justified forward P/E using Calder's intrinsic value is closest to:",
+    "options": [
+     "16.04.",
+     "15.38.",
+     "17.23."
+    ],
+    "answer": "A",
+    "why": "Justified P/E = V₀ ÷ E₁ = 41.71 ÷ 2.60 = 16.04. 15.38 uses the market price; 17.23 divides the year-end price by EPS."
+   }
+  ]
+ },
+ {
+  "id": "pc-9",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   8
+  ],
+  "title": "Paper C · Share-based compensation and pensions",
+  "body": "Henning Aas is an analyst reviewing Aronsen SA, which reports under IFRS. In 2024 Aronsen granted 1,000,000 stock options to its executives with a grant-date fair value of €4.20 per option, vesting at the end of four years, and 200,000 restricted stock units (RSUs) with a grant-date share price of €18.00, vesting at the end of three years. Aronsen assumes no forfeitures. In 2025 it lowered the expected volatility used to value new option grants.\n\nExhibit 1: Aronsen's defined benefit plan (€ millions)\tValue\nPlan obligation at the beginning of the year\t2,200\nPlan assets at the beginning of the year\t1,600\nDiscount rate\t5.0%\nService cost for the year\t120\nActual return on plan assets\t140",
+  "questions": [
+   {
+    "n": 33,
+    "q": "The annual expense for the 2024 stock option grant (€ million) is closest to:",
+    "options": [
+     "4.20.",
+     "0.42.",
+     "1.05."
+    ],
+    "answer": "C",
+    "why": "Total fair value 1,000,000 × 4.20 = €4.2 million, expensed over four years: €1.05 million a year."
+   },
+   {
+    "n": 34,
+    "q": "The decrease in the expected volatility assumption in 2025 will most likely cause the expense on new option grants to:",
+    "options": [
+     "fall.",
+     "rise.",
+     "stay the same."
+    ],
+    "answer": "A",
+    "why": "Lower volatility lowers option fair value, and therefore the expense recognized over the vesting period."
+   },
+   {
+    "n": 35,
+    "q": "The annual expense for the RSU grant (€ million) is closest to:",
+    "options": [
+     "3.60.",
+     "0.90.",
+     "1.20."
+    ],
+    "answer": "C",
+    "why": "RSU fair value = grant-date share price: 200,000 × 18.00 = €3.6 million over three years = €1.20 million a year. Volatility is not used for RSUs."
+   },
+   {
+    "n": 36,
+    "q": "Under IFRS, the amount recognized in profit or loss for the pension plan for the year (€ million) is closest to:",
+    "options": [
+     "120.",
+     "90.",
+     "150."
+    ],
+    "answer": "C",
+    "why": "IFRS recognizes service cost plus net interest on the net liability: 120 + 5% × (2,200 – 1,600) = 150. 120 omits net interest; 90 subtracts the actual return from interest on the obligation (120 + 110 – 140). Remeasurements go to OCI."
+   }
+  ]
+ },
+ {
+  "id": "pc-10",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   37
+  ],
+  "title": "Paper C · Using multifactor models",
+  "body": "Delia Okoye evaluates an equity portfolio against its benchmark using a three-factor model. The portfolio returned 12.80% and the benchmark 10.45%.\n\nExhibit 1: Factor data\tPortfolio exposure\tBenchmark exposure\tFactor return\nValue\t0.55\t0.30\t2.0%\nSize\t0.10\t0.20\t–1.0%\nMomentum\t0.25\t0.10\t3.0%\n\nOkoye also reviews three models. Model 1 uses surprises in inflation and GDP growth as factors. Model 2 uses company attributes such as book-to-price and market capitalization. Model 3 extracts factors from the covariance of returns with no economic interpretation.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "The portion of the portfolio's active return explained by its active factor exposures is closest to:",
+    "options": [
+     "1.40%.",
+     "0.35%.",
+     "1.05%."
+    ],
+    "answer": "C",
+    "why": "Active exposures: value +0.25, size –0.10, momentum +0.15. 0.25 × 2.0 + (–0.10) × (–1.0) + 0.15 × 3.0 = 0.50 + 0.10 + 0.45 = 1.05%."
+   },
+   {
+    "n": 38,
+    "q": "The active return from security selection (not explained by factors) is closest to:",
+    "options": [
+     "2.35%.",
+     "1.30%.",
+     "1.05%."
+    ],
+    "answer": "B",
+    "why": "Active return = 12.80 – 10.45 = 2.35%. Active specific return = 2.35 – 1.05 = 1.30%."
+   },
+   {
+    "n": 39,
+    "q": "Model 3 is best described as a:",
+    "options": [
+     "statistical factor model.",
+     "macroeconomic factor model.",
+     "fundamental factor model."
+    ],
+    "answer": "A",
+    "why": "Factors extracted from the data (for example by principal components) with no economic interpretation define a statistical factor model."
+   },
+   {
+    "n": 40,
+    "q": "A factor portfolio in a multifactor model is best described as a portfolio with:",
+    "options": [
+     "equal sensitivities to every factor.",
+     "zero active risk relative to the benchmark.",
+     "a sensitivity of 1 to one factor and zero to all other factors."
+    ],
+    "answer": "C",
+    "why": "A factor portfolio is constructed to have unit exposure to the target factor and zero exposure to the others, so it isolates that factor's return."
+   }
+  ]
+ },
+ {
+  "id": "pc-11",
+  "source": "Assistant-written practice (Paper C, 28 Oct)",
+  "readings": [
+   41
+  ],
+  "title": "Paper C · Ethics: Standards of Professional Conduct",
+  "body": "Henrik Vass, CFA, is a research analyst at Brightwell Securities covering Kestrel Stores. Vass attends a private breakfast hosted by Kestrel's CFO for four analysts. The CFO says that next quarter's same-store sales will fall about 5%, against consensus expectations of growth of 2%. This has not been publicly announced. After the breakfast, Vass changes his recommendation to sell and first calls Brightwell's institutional clients, then emails the retail clients two hours later. The same afternoon he sells Kestrel shares in his personal retirement account.\n\nVass's brochure for new clients contains the statements listed in Question 4.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Vass's actions after the breakfast most likely violated Standard:",
+    "options": [
+     "II(B): Market Manipulation.",
+     "II(A): Material Nonpublic Information.",
+     "V(A): Diligence and Reasonable Basis."
+    ],
+    "answer": "B",
+    "why": "The CFO's statement was material and nonpublic, and Vass acted on it by changing his recommendation and trading. Standard II(A) prohibits acting on MNPI."
+   },
+   {
+    "n": 42,
+    "q": "Calling institutional clients before emailing retail clients most likely violated Standard:",
+    "options": [
+     "III(B): Fair Dealing.",
+     "III(A): Loyalty, Prudence and Care.",
+     "I(B): Independence and Objectivity."
+    ],
+    "answer": "A",
+    "why": "Standard III(B) requires fair and equitable dissemination of recommendations to all clients, giving no group an advantage."
+   },
+   {
+    "n": 43,
+    "q": "After the breakfast, Vass should most appropriately have:",
+    "options": [
+     "issued the recommendation without mentioning the source.",
+     "encouraged the CFO to make the information public and refrained from acting on it.",
+     "traded only in his clients' accounts."
+    ],
+    "answer": "B",
+    "why": "When a member receives MNPI he should encourage the issuer to disclose it publicly and not act on it or cause others to act."
+   },
+   {
+    "n": 44,
+    "q": "Which statement in Vass's brochure complies with Standard VII(B): Reference to CFA Institute, the CFA Designation and the CFA Program?",
+    "options": [
+     "\"Henrik Vass passed all three CFA exams on his first attempt, which makes him a better analyst.\"",
+     "\"Henrik Vass is a CFA charterholder.\"",
+     "\"As a CFA charterholder, Henrik Vass will earn you higher returns.\""
+    ],
+    "answer": "B",
+    "why": "Stating that one holds the designation is acceptable. Implying superior skill or promising better performance because of the designation is not."
+   }
+  ]
+ }
+]
