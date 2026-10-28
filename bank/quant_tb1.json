@@ -1,0 +1,268 @@
+[
+ {
+  "id": "tb1-hu",
+  "source": "Quant test bank book 1 (photos, 28 Oct)",
+  "readings": [
+   1,
+   3
+  ],
+  "title": "Hu and Li: log-linear trend and ML model choice",
+  "body": "Song Hu is the quantitative analyst for Guangho Equity Partners. Hu has been busy over the past week modeling the macroeconomic data of an emerging market.\nThe data for the past 24 months is shown in Exhibit 1.\nExhibit 1 (line graph, described): macroeconomic data against month (1 to 24). Exponential growth: about 25 at month 1, about 100 at month 12, accelerating to just over 500 (about 535) by month 24.\nHu ponders how she can run a regression that will model the data for this country in the most appropriate way. She decides to regress the macroeconomic values against a time variable. The resulting plot of the residuals is shown in Exhibit 2.\nExhibit 2 (scatter plot, described): residuals against month over a 28-month period. Residuals begin near +100, decline steadily to a low of about -100 at month 14, then rise symmetrically to above +100 by month 26. The points form a clear U-shaped curve, indicating a systematic pattern in the residuals over time.\nHu set up a meeting with Qianfan Li, senior analyst, to discuss the progress on a model that Li was developing. The model is supposed to forecast return over the next month for a group of 100 midsize companies. A portfolio with a long position in 10 stocks with the highest forecasted return and a corresponding short position in 10 stocks with the lowest return is envisioned. Li mentions that he is collecting the relevant fundamental and technical variable data for the 100 companies.\nLi states that he would rather take the broad sample of 1,000 stocks with the highest trading volume and divide the sample into 10 groups of diverse characteristics. The intent is to select one stock from each group to long/short so as to diversify the portfolio composition and reduce risk.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "To best model the emerging markets data using linear regression, Hu should use:",
+    "options": [
+     "an adjustment for multicollinearity.",
+     "the natural log of the dependent variable.",
+     "White's correction for the standard errors."
+    ],
+    "answer": "B",
+    "why": "The data follow a log-linear (exponential) trend. Taking the natural log of the dependent variable makes the data linear so it can be modeled with linear regression."
+   },
+   {
+    "n": 2,
+    "q": "The most likely problem in Hu's regression of the emerging market data and the most appropriate test for it in the regression is:",
+    "options": [
+     "Serial correlation / Durbin-Watson",
+     "Serial correlation / Dickey-Fuller",
+     "Cointegrated variables / Engle-Granger"
+    ],
+    "answer": "A",
+    "why": "The residuals in Exhibit 2 are positively correlated (positive, then negative, then positive): serial correlation, common in trend models. In a linear trend model the Durbin-Watson statistic detects it. (Options are Problem / Test pairs.)"
+   },
+   {
+    "n": 3,
+    "q": "Which model would be most appropriate for Li to use in predicting returns?",
+    "options": [
+     "Penalized regression model.",
+     "Clustering model.",
+     "KNN model."
+    ],
+    "answer": "A",
+    "why": "The objective is to forecast monthly returns from fundamental and technical variables: not a classification problem, so clustering and KNN are inappropriate. Penalized regression uses a limited number of the most important features."
+   },
+   {
+    "n": 4,
+    "q": "Li's suggested diversification problem could be best addressed using the:",
+    "options": [
+     "principal component analysis (PCA).",
+     "K-means clustering.",
+     "LASSO."
+    ],
+    "answer": "B",
+    "why": "K-means partitions observations into k (here 10) non-overlapping clusters, so one stock can be drawn from each group. PCA is for dimension reduction; LASSO is for regression, not clustering."
+   }
+  ]
+ },
+ {
+  "id": "tb1-brent",
+  "source": "Quant test bank book 1 (photos, 28 Oct)",
+  "readings": [
+   1
+  ],
+  "title": "Brent and Johnson: Mega Flowers regression",
+  "body": "William Brent, CFA, is the chief financial officer for Mega Flowers, one of the largest producers of flowers and bedding plants in the Western United States. Mega Flowers grows its plants in three large nursery facilities located in California. Its products are sold in its company-owned retail nurseries as well as in large, home and garden \"super centers\". For its retail stores, Mega Flowers has designed and implemented marketing plans each season that are aimed at its consumers in order to generate additional sales for certain high-margin products. To fully implement the marketing plan, additional contract salespeople are seasonally employed.\nFor the past several years, these marketing plans seemed to be successful, providing a significant boost in sales to those specific products highlighted by the marketing efforts. However, for the past year, revenues have been flat, even though marketing expenditures increased slightly. Brent is concerned that the expensive seasonal marketing campaigns are simply no longer generating the desired returns, and should either be significantly modified or eliminated altogether. He proposes that the company hire additional, permanent salespeople to focus on selling Mega Flowers' high-margin products all year long. The chief operating officer, David Johnson, disagrees with Brent. He believes that although last year's results were disappointing, the marketing campaign has demonstrated impressive results for the past five years, and should be continued. His belief is that the prior years' performance can be used as a gauge for future results, and that a simple increase in the sales force will not bring about the desired results.\nBrent gathers information regarding quarterly sales revenue and marketing expenditures for the past five years. Based upon historical data, Brent derives the following regression equation for Mega Flowers (stated in millions of dollars):\nExpected Sales = 12.6 + 1.6 (Marketing Expenditures) + 1.2 (# of Salespeople)\nBrent shows the equation to Johnson and tells him, \"This equation shows that a $1 million increase in marketing expenditures will increase the independent variable by $1.6 million, all other factors being equal.\" Johnson replies, \"It also appears that sales will equal $12.6 million if all independent variables are equal to zero.\"",
+  "questions": [
+   {
+    "n": 16,
+    "q": "In regard to their conversation about the regression equation:",
+    "options": [
+     "Brent's statement is correct; Johnson's statement is correct.",
+     "Brent's statement is correct; Johnson's statement is incorrect.",
+     "Brent's statement is incorrect; Johnson's statement is correct."
+    ],
+    "answer": "C",
+    "why": "Expected sales is the dependent variable, so a $1 million rise in marketing raises the dependent variable by $1.6 million: Brent is incorrect (he said independent). 12.6 is the intercept: expected sales if all independent variables are zero, so Johnson is correct."
+   },
+   {
+    "n": 17,
+    "q": "Brent calculated that the sum of squared errors (SSE) for the variables is 267. The mean squared error (MSE) would be:",
+    "options": [
+     "14.055.",
+     "15.706.",
+     "14.831."
+    ],
+    "answer": "B",
+    "why": "MSE = SSE / (n - k - 1) = 267 / (20 - 2 - 1) = 15.706 (twenty observations, two independent variables)."
+   },
+   {
+    "n": 18,
+    "q": "Brent is trying to explain the concept of the standard error of estimate (SEE) to Johnson. In his explanation, Brent makes three points about the SEE: Point 1: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable. Point 2: Any violation of the basic assumptions of a multiple regression model is going to affect the SEE. Point 3: If there is a strong relationship between the variables and the SSE is small, the individual estimation errors will also be small. How many of Brent's points are most accurate?",
+    "options": [
+     "2 of Brent's points are correct.",
+     "All 3 of Brent's points are correct.",
+     "1 of Brent's points are correct."
+    ],
+    "answer": "A",
+    "why": "The SEE is the standard deviation of the differences between the estimated values for the dependent variable (not independent) and the actual observations for the dependent variable, so Point 1 is incorrect. Points 2 and 3 are correct: 2 points are correct."
+   },
+   {
+    "n": 19,
+    "q": "Assuming that next year's marketing expenditures are $3,500,000 and there are five salespeople, predicted sales for Mega Flowers should be:",
+    "options": [
+     "$24,200,000.",
+     "$11,600,000.",
+     "$24,000,000."
+    ],
+    "answer": "A",
+    "why": "12.6 + (1.6 x 3.5) + (1.2 x 5) = $24.2 million. The equation is denominated in millions of dollars."
+   },
+   {
+    "n": 20,
+    "q": "Brent would like to further investigate whether at least one of the independent variables can explain a significant portion of the variation of the dependent variable. Which of the following methods would be best for Brent to use?",
+    "options": [
+     "An ANOVA table.",
+     "The F-statistic.",
+     "The multiple coefficient of determination."
+    ],
+    "answer": "B",
+    "why": "To determine whether at least one coefficient is statistically significant, compare the calculated F-statistic with the critical F-value at the appropriate level of significance."
+   }
+  ]
+ },
+ {
+  "id": "tb1-williams",
+  "source": "Quant test bank book 1 (photos, 28 Oct)",
+  "readings": [
+   1
+  ],
+  "title": "Williams: Self-Start generator sales regression",
+  "body": "Toni Williams, CFA, has determined that commercial electric generator sales in the Midwest U.S. for Self-Start Company is a function of several factors in each area: the cost of heating oil, the temperature, snowfall, and housing starts. Using data for the most currently available year, she runs a cross-sectional regression where she regresses the deviation of sales from the historical average in each area on the deviation of each explanatory variable from the historical average of that variable for that location. She feels this is the most appropriate method since each geographic area will have different average values for the inputs, and the model can explain how current conditions explain how generator sales are higher or lower from the historical average in each area. In summary, she regresses current sales for each area minus its respective historical average on the following variables for each area:\n- The difference between the retail price of heating oil and its historical average.\n- The mean number of degrees the temperature is below normal in Chicago.\n- The amount of snowfall above the average.\n- The percentage of housing starts above the average.\nWilliams used a sample of 26 observations obtained from 26 metropolitan areas in the Midwest U.S. The results are in the tables below. The dependent variable is in sales of generators in millions of dollars.\nCoefficient Estimates Table\nVariable\tEstimated Coefficient\tStandard Error of the Coefficient\nIntercept\t5.00\t1.850\n$ Heating Oil\t2.00\t0.827\nLow Temperature\t3.00\t1.200\nSnowfall\t10.00\t4.833\nHousing Starts\t5.00\t2.333\nAnalysis of Variance Table (ANOVA)\nSource\tDegrees of Freedom\tSum of Squares\tMean Square\nRegression\t4\t335.20\t83.80\nError\t21\t606.40\t28.88\nTotal\t25\t941.60\nTable of the F-Distribution. Critical values for right-hand tail area equal to 0.05. Numerator: df1 and Denominator: df2\ndf2 \\ df1\t1\t2\t4\t10\t20\n1\t161.45\t199.50\t224.58\t241.88\t248.01\n2\t18.513\t19.000\t19.247\t19.396\t19.446\n4\t7.7086\t6.9443\t6.3882\t5.9644\t5.8025\n10\t4.9646\t4.1028\t3.4780\t2.9782\t2.7740\n20\t4.3512\t3.4928\t2.8661\t2.3479\t2.1242\nOne of her goals is to forecast the sales of the Chicago metropolitan area next year. For that area and for the upcoming year, Williams obtains the following projections: heating oil prices will be $0.10 above average, the temperature in Chicago will be 5 degrees below normal, snowfall will be 3 inches above average, and housing starts will be 3% below average.\nIn addition to making forecasts and testing the significance of the estimated coefficients, she plans to perform diagnostic tests to verify the validity of the model's results.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "According to the model and the data for the Chicago metropolitan area, the forecast of generator sales is:",
+    "options": [
+     "$55 million above average.",
+     "$35.2 million above the average.",
+     "$65 million above the average."
+    ],
+    "answer": "B",
+    "why": "[5 + (2 x 0.10) + (3 x 5) + (10 x 3) + (5 x (-3))] x $1,000,000 = $35.2 million. Housing starts 3% below average enter as -3; temperature 5 below normal enters as +5."
+   },
+   {
+    "n": 22,
+    "q": "Williams proceeds to test the hypothesis that none of the independent variables has significant explanatory power. Using the joint F-test for the significance of all slope coefficients, at a 5% level of significance:",
+    "options": [
+     "all of the independent variables have explanatory power.",
+     "at least one of the independent variables has explanatory power.",
+     "none of the independent variables has explanatory power."
+    ],
+    "answer": "B",
+    "why": "F = mean square regression / mean square error = 83.80 / 28.88 = 2.9017. Critical F (4 df numerator, 21 df denominator) is 2.84. 2.9017 > 2.84, so reject the null: at least one variable has explanatory power."
+   },
+   {
+    "n": 23,
+    "q": "With respect to testing the validity of the model's results, Williams may wish to perform:",
+    "options": [
+     "both a Breusch-Godfrey test and a Breusch-Pagan test.",
+     "a Breusch-Pagan test, but not Breusch-Godfrey.",
+     "a Breusch-Godfrey test, but not Breusch-Pagan."
+    ],
+    "answer": "A",
+    "why": "Since the model is not an autoregressive time series, a test for serial correlation is appropriate, so the Breusch-Godfrey test would be used. The Breusch-Pagan test for heteroskedasticity would also be a good idea."
+   },
+   {
+    "n": 24,
+    "q": "When Williams ran the model, the computer said the R-squared is 0.233. She examines the other output and concludes that this is the:",
+    "options": [
+     "adjusted R-squared value.",
+     "unadjusted R-squared value.",
+     "neither the unadjusted nor adjusted R-squared value, nor the coefficient of correlation."
+    ],
+    "answer": "A",
+    "why": "Unadjusted R-squared = 335.2 / 941.6 = 0.356, so the reported value must be the adjusted R-squared: 1 - ((26 - 1) / (26 - 4 - 1)) x (1 - 0.356) = 0.233. With more than one independent variable, adjusted R-squared is always less than R-squared."
+   },
+   {
+    "n": 25,
+    "q": "In preparing and using this model, Williams has least likely relied on which of the following assumptions?",
+    "options": [
+     "The disturbance or error term is normally distributed.",
+     "The residuals are homoscedastic.",
+     "There is a linear relationship between the independent variables."
+    ],
+    "answer": "C",
+    "why": "Multiple regression models assume there is no linear relationship between two or more of the independent variables. The other choices are both assumptions of multiple regression."
+   }
+  ]
+ },
+ {
+  "id": "tb1-smith",
+  "source": "Quant test bank book 1 (photos, 28 Oct)",
+  "readings": [
+   1,
+   2
+  ],
+  "title": "Smith: foreclosure share regression and AR(1)",
+  "body": "Housing industry analyst Elaine Smith has been assigned the task of forecasting housing foreclosures. Specifically, Smith is asked to forecast the percentage of outstanding mortgages that will be foreclosed upon in the coming quarter. Smith decides to employ multiple linear regression and time series analysis.\nBesides constructing a forecast for the foreclosure percentage, Smith wants to address the following two questions:\nResearch Question 1: Is the foreclosure percentage significantly affected by short-term interest rates?\nResearch Question 2: Is the foreclosure percentage significantly affected by government intervention policies?\nSmith contends that adjustable rate mortgages often are used by higher risk borrowers and that their homes are at higher risk of foreclosure. Therefore, Smith decides to use short-term interest rates as one of the independent variables to test Research Question 1.\nTo measure the effects of government intervention in Research Question 2, Smith uses a dummy variable that equals 1 whenever the Federal government intervened with a fiscal policy stimulus package that exceeded 2% of the annual Gross Domestic Product. Smith sets the dummy variable equal to 1 for four quarters starting with the quarter in which the policy is enacted and extending through the following 3 quarters. Otherwise, the dummy variable equals zero.\nSmith uses quarterly data over the past 5 years to derive her regression. Smith's regression equation is provided in Exhibit 1:\nExhibit 1: Foreclosure Share Regression Equation\nforeclosure share = b0 + b1(dINT) + b2(STIM) + b3(CRISIS) + e\nwhere: Foreclosure share = the percentage of all outstanding mortgages foreclosed upon during the quarter; dINT = the quarterly change in the 1-year Treasury bill rate (e.g., dINT = 2 for a two percentage point increase in interest rates); STIM = 1 for quarters in which a Federal fiscal stimulus package was in place; CRISIS = 1 for quarters in which the median house price is one standard deviation below its 5-year moving average.\nThe results of Smith's regression are provided in Exhibit 2:\nExhibit 2: Foreclosure Share Regression Results\nVariable\tCoefficient\tt-statistic\nIntercept\t3.00\t2.40\ndINT\t1.00\t2.22\nSTIM\t-2.50\t-2.10\nCRISIS\t4.00\t2.35\nThe ANOVA results from Smith's regression are provided in Exhibit 3:\nExhibit 3: Foreclosure Share Regression Equation ANOVA Table\nSource\tDegrees of Freedom\tSum of Squares\tMean Sum of Squares\nRegression\t3\t15\t5.0000\nError\t16\t5\t0.3125\nTotal\t19\t20\nSmith expresses the following concerns about the test statistics derived in her regression:\nConcern 1: If my regression errors exhibit conditional heteroskedasticity, my t-statistics will be underestimated.\nConcern 2: If my independent variables are correlated with each other, my F-statistic will be overestimated.\nBefore completing her analysis, Smith runs a regression of the changes in foreclosure share on its lagged value. The following regression results and autocorrelations were derived using quarterly data over the past 5 years (Exhibit 4 and Exhibit 5, respectively):\nExhibit 4: Lagged Regression Results\nd foreclosure share_t = 0.05 + 0.25 (d foreclosure share_t-1)\nExhibit 5: Autocorrelation Analysis\nLag\tAutocorrelation\tt-statistic\n1\t0.05\t0.22\n2\t-0.35\t-1.53\n3\t0.25\t1.09\n4\t0.10\t0.44\nExhibit 6 provides critical values for the Student's t-Distribution\nExhibit 6: Critical Values for Student's t-Distribution. Area in Both Tails Combined\nDegrees of Freedom\t20%\t10%\t5%\t1%\n16\t1.337\t1.746\t2.120\t2.921\n17\t1.333\t1.740\t2.110\t2.898\n18\t1.330\t1.734\t2.101\t2.878\n19\t1.328\t1.729\t2.093\t2.861\n20\t1.325\t1.725\t2.086\t2.845",
+  "questions": [
+   {
+    "n": 26,
+    "q": "The most appropriate interpretation from the foreclosure share regression equation model is:",
+    "options": [
+     "Multiple-R of the model is 0.87.",
+     "Multiple-R of the model is 0.75.",
+     "Variable STIM explains 37.5% of the variation in foreclosure share."
+    ],
+    "answer": "A",
+    "why": "R-squared = RSS/SST = 15/20 = 0.75. Multiple-R = (0.75)^0.5 = 0.87. R-squared: all the independent variables (dINT, STIM, CRISIS) collectively explain 75% of the variation in foreclosure share."
+   },
+   {
+    "n": 27,
+    "q": "Based on her regression results in Exhibit 2, using a 5% level of significance, Smith should conclude that:",
+    "options": [
+     "both stimulus packages and housing crises have significant effects on foreclosure percentages.",
+     "stimulus packages have significant effects on foreclosure percentages, but housing crises do not have significant effects on foreclosure percentages.",
+     "stimulus packages do not have significant effects on foreclosure percentages, but housing crises do have significant effects on foreclosure percentages."
+    ],
+    "answer": "C",
+    "why": "The t-statistic is -2.10 for STIM and 2.35 for CRISIS. The critical t at the 5% level (16 degrees of freedom) is 2.12. STIM is not significant (|-2.10| < 2.12); CRISIS is significant (2.35 > 2.12)."
+   },
+   {
+    "n": 28,
+    "q": "The standard error of estimate for Smith's regression is closest to:",
+    "options": [
+     "0.16.",
+     "0.56.",
+     "0.53."
+    ],
+    "answer": "B",
+    "why": "SEE = sqrt(SSE/(n - k - 1)) = sqrt(5/16) = 0.56. The SEE equals the standard deviation of the regression residuals; a low SEE implies a high R-squared."
+   },
+   {
+    "n": 29,
+    "q": "Is Smith correct or incorrect regarding Concerns 1 and 2?",
+    "options": [
+     "Incorrect on both Concerns.",
+     "Correct on both Concerns.",
+     "Only correct on one concern and incorrect on the other."
+    ],
+    "answer": "A",
+    "why": "Concern 1 is incorrect: conditional heteroskedasticity makes standard errors too low, so t-statistics are too high. Concern 2 is incorrect: multicollinearity makes coefficient standard errors too high, so t-statistics are too low; it has no effect on the F-statistic."
+   },
+   {
+    "n": 30,
+    "q": "The most recent change in foreclosure share was +1 percent. Smith decides to base her analysis on the data and methods provided in Exhibit 4 and Exhibit 5, and determines that the two-step ahead forecast for the change in foreclosure share (in percent) is 0.125, and that the mean reverting value for the change in foreclosure share (in percent) is 0.071. Is Smith correct?",
+    "options": [
+     "Smith is correct on both the forecast and the mean reverting level.",
+     "Smith is correct on the two-step ahead forecast for change in foreclosure share only.",
+     "Smith is correct on the mean-reverting level for forecast of change in foreclosure share only."
+    ],
+    "answer": "B",
+    "why": "One-step: 0.05 + 0.25(1) = 0.30. Two-step: 0.05 + 0.25(0.30) = 0.125. Mean-reverting level = b0/(1 - b1) = 0.05/(1 - 0.25) = 0.067, not 0.071."
+   },
+   {
+    "n": 31,
+    "q": "Assume for this question that Smith finds that the foreclosure share series has a unit root. Under these conditions, she can most reliably regress foreclosure share against the change in interest rates (dINT) if:",
+    "options": [
+     "dINT has unit root and is cointegrated with foreclosure share.",
+     "dINT does not have unit root.",
+     "dINT has unit root and is not cointegrated with foreclosure share."
+    ],
+    "answer": "A",
+    "why": "In the other choices the error terms will be nonstationary, so some regression assumptions are violated and the results are unreliable. If both series are nonstationary (each has a unit root) but cointegrated, the error term is covariance stationary and the regression results are reliable."
+   }
+  ]
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "source": "26 Oct session 2",
+  "readings": [
+   34
+  ],
+  "n": 24,
+  "q": "Risk-averse investors demanding a large equity risk premium are most likely expecting their future consumption outcomes and equity returns to be:",
+  "options": [
+   "uncorrelated.",
+   "positively correlated.",
+   "negatively correlated."
+  ],
+  "answer": "B",
+  "why": "B is correct. If investors demand high equity risk premiums, they are likely expecting their future consumption and equity returns to be positively correlated. The positive correlation indicates that equities will exhibit poor hedging properties, because equity returns will be high (i.e., pay off) during “good times” and will be low (i.e., not pay off) during “bad times.” In other words, the covariance between risk-averse investors’ inter-temporal rates of substitution and the expected future prices of equities is highly negative, resulting in a positive and large equity risk premium. This is the case because in good times, when equity returns are high, the marginal value of consumption is low. Similarly, in bad times, when equity returns are low, the marginal value of consumption is high. Holding all else constant, the larger the magnitude of the negative covariance term, the larger the risk premium\n\nWhich of the following financial assets is likely to offer the most effective hedge against bad consumption outcomes?\n\n\nA. Equities.\nNot Selected\n\nCorrect answer: \n\n\nB. Short-dated, default-free government bonds.\n\n\nC. Long-dated, default-free government bonds.\nNot Selected\nFeedback\nB is correct. The relative certainty about the real payoff from short-dated, default-free government bonds and, therefore, the relative certainty about the amount of consumption that the investor will be able to undertake with the payoff indicate that an investment in such bonds would be a good hedge against bad consumption outcomes\n\n- still provide an explanation for this one \n\nWhen assessing investment opportunities in equities, investors should:\n\n\nA. assign higher equity risk premiums to non-cyclical companies, relative to cyclical companies.\nNot Selected\n\n\nB. forecast lower volatility in the growth rate of earnings for cyclical companies, relative to non-cyclical companies.\nNot Selected\n\nCorrect answer: \n\n\nC. forecast higher growth rates in earnings for cyclical companies coming out of a recession, relative to non-cyclical companies.\nFeedback\nC is correct. During recessions, cyclical companies are likely to experience sharp declines in earnings, more so than non-cyclical companies. In contrast, while coming out of a recession, cyclical companies are likely to generate higher earnings growth relative to non-cyclical companies."
+ },
+ {
+  "source": "26 Oct session 2",
+  "readings": [
+   34
+  ],
+  "n": 27,
+  "q": "Other things equal, equilibrium price-to-earnings ratios (P/Es) will most likely decrease if:",
+  "options": [
+   "real interest rates decrease.",
+   "inflation is expected to increase.",
+   "there is less uncertainty about future inflation."
+  ],
+  "answer": "B",
+  "why": "B is correct. Other things being equal, an increase in inflation expectations would result in lower equity prices relative to current earnings. This would result in lower equilibrium P/Es."
+ },
+ {
+  "source": "26 Oct session 2",
+  "readings": [
+   34
+  ],
+  "n": 28,
+  "q": "Which of the following statements relating to commercial real estate is correct?",
+  "options": [
+   "Rental income from commercial real estate is generally unstable across business cycles.",
+   "Commercial real estate investments generally offer a good hedge against bad consumption outcomes.",
+   "The key difference in the discount rates applied to the cash flows of equity investments and commercial real estate investments relates to liquidity."
+  ],
+  "answer": "C",
+  "why": "C is correct. To arrive at an appropriate discount rate to be used to discount the cash flows from a commercial real estate investment, a liquidity premium is added to the discount rate applicable to equity investments. The added liquidity premium provides additional compensation for the risk that the real estate investment may be very illiquid in bad economic times"
+ },
+ {
+  "source": "27 Oct session 1",
+  "readings": [
+   36
+  ],
+  "n": 23,
+  "q": "Which of the following statements regarding applications of ETFs in portfolio management is correct?",
+  "options": [
+   "Equity ETFs tend to be more active than fixed-income ETFs.",
+   "The range of risk exposures available in the futures market is more diverse than that available in the ETF space.",
+   "ETFs that have the highest trading volumes in their asset class category are generally preferred for tactical trading applications."
+  ],
+  "answer": "C",
+  "why": "C is correct. ETFs that have the highest trading volumes in their asset class category are generally preferred for tactical trading applications."
+ }
+]

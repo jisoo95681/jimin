@@ -17,11 +17,13 @@ def num_of(reading):
 rows={}  # reading -> list of (src,id,title,nq)
 for v in app: rows.setdefault(num_of(v['reading']),[]).append(('app',v['id'],v['title'],v['nq']))
 bank=[]
+stand=len(json.load(open(os.path.join(ROOT,'bank','standalone_questions.json')))) if os.path.exists(os.path.join(ROOT,'bank','standalone_questions.json')) else 0
 for f in sorted(glob.glob(os.path.join(ROOT,'bank','*.json'))):
+    if os.path.basename(f).startswith('standalone'): continue
     for v in json.load(open(f)):
         bank.append(v)
         for r in v['readings']: rows.setdefault(r,[]).append(('bank',v['id'],v['title'],len(v['questions'])))
-out=["# Vignette and answer bank","","Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.","",f"Totals: app {len(app)} vignettes · bank {len(bank)} vignettes · {len(app)+len(bank)} in all.","","| # | Reading | App | Bank | Total |","|---|---|---|---|---|"]
+out=["# Vignette and answer bank","","Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.","",f"Totals: app {len(app)} vignettes · bank {len(bank)} vignettes · {len(app)+len(bank)} in all. Plus {stand} standalone questions (no vignette text) in `bank/standalone_questions.json`.","","| # | Reading | App | Bank | Total |","|---|---|---|---|---|"]
 for n in range(1,43):
     a=[x for x in rows.get(n,[]) if x[0]=='app'];b=[x for x in rows.get(n,[]) if x[0]=='bank']
     out.append(f"| {n} | {nr.get(str(n),'')} | {len(a)} | {len(b)} | {len(a)+len(b)} |")
