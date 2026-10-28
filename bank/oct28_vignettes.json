@@ -1,0 +1,492 @@
+[
+ {
+  "id": "leigh-holt",
+  "source": "28 Oct paste",
+  "readings": [
+   19
+  ],
+  "title": "Leigh: Emerald and Holt, FCFE, FCFF and DDM",
+  "body": "Ryan Leigh is preparing a presentation that analyzes the valuation of the common stock of two companies under consideration as additions to his firm’s recommended list, Emerald Corporation and Holt Corporation. Leigh has prepared preliminary valuations of both companies using an FCFE model and is also preparing a value estimate for Emerald using a dividend discount model. Holt’s 2019 and 2020 financial statements, contained in Exhibit 1 and Exhibit 2, are prepared in accordance with US GAAP.\nExhibit 1\nHolt Corporation Consolidated Balance Sheets (US$ Millions)\n\t\t\tAs of 31 December\t\t\t\t\n\t\t\t2020\t\t\t\t2019\nAssets\t\t\t\t\t\t\t\nCurrent assets\t\t\t\t\t\t\t\nCash and cash equivalents\t\t\t$ 372\t\t\t\t$ 315\nAccounts receivable\t\t\t770\t\t\t\t711\nInventories\t\t\t846\t\t\t\t780\nTotal current assets\t\t\t1,988\t\t\t\t1,806\nGross fixed assets\t4,275\t\t\t\t3,752\t\t\nLess: Accumulated depreciation\t1,176\t\t3,099\t\t906\t\t2,846\nTotal assets\t\t\t$5,087\t\t\t\t$4,652\nLiabilities and shareholders’ equity\t\t\t\t\t\t\t\nCurrent liabilities\t\t\t\t\t\t\t\nAccounts payable\t\t\t$ 476\t\t\t\t$ 443\nAccrued taxes and expenses\t\t\t149\t\t\t\t114\nNotes payable\t\t\t465\t\t\t\t450\nTotal current liabilities\t\t\t1,090\t\t\t\t1,007\nLong-term debt\t\t\t1,575\t\t\t\t1,515\nCommon stock\t\t\t525\t\t\t\t525\nRetained earnings\t\t\t1,897\t\t\t\t1,605\nTotal liabilities and shareholders’ equity\t\t\t$5,087\t\t\t\t$4,652\nExhibit 2\nHolt Corporation Consolidated Income Statement for the Year Ended 31 December 2020 (US$ Millions)\nTotal revenues\t$3,323\nCost of goods sold\t1,287\nSelling, general, and administrative expenses\t858\nEarnings before interest, taxes, depreciation, and amortization (EBITDA)\t1,178\nDepreciation expense\t270\nOperating income\t908\nInterest expense\t195\nPretax income\t713\nIncome tax (at 32%)\t228\nNet income\t$ 485\nLeigh presents his valuations of the common stock of Emerald and Holt to his supervisor, Alice Smith. Smith has the following questions and comments:\n1. “I estimate that Emerald’s long-term expected dividend payout rate is 20% and its return on equity is 10% over the long term.”\n2. “Why did you use an FCFE model to value Holt’s common stock? Can you use a DDM instead?”\n3. “How did Holt’s FCFE for 2008 compare with its FCFF for the same year? I recommend you use an FCFF model to value Holt’s common stock instead of using an FCFE model because Holt has had a history of leverage changes in the past.”\n4. “In the last three years, about 5% of Holt’s growth in FCFE has come from decreases in inventory.”\nLeigh responds to each of Smith’s points as follows:\n1. “I will use your estimates and calculate Emerald’s long-term, sustainable dividend growth rate.”\n2. “There are two reasons why I used the FCFE model to value Holt’s common stock instead of using a DDM. The first reason is that Holt’s dividends have differed significantly from its capacity to pay dividends. The second reason is that Holt is a takeover target and once the company is taken over, the new owners will have discretion over the uses of free cash flow.”\n3. “I will calculate Holt’s FCFF for 2020 and estimate the value of Holt’s common stock using an FCFF model.”\n4. “Holt is a growing company. In forecasting either Holt’s FCFE or FCFF growth rates, I will not consider decreases in inventory to be a long-term source of growth.”",
+  "questions": [
+   {
+    "n": 23,
+    "q": "Which of the following long-term FCFE growth rates is most consistent with the facts and stated policies of Emerald?",
+    "options": [
+     "5% or lower",
+     "2% or higher",
+     "8% or higher"
+    ],
+    "answer": "C",
+    "why": "C is correct. The sustainable growth rate is return on equity (ROE) multiplied by the retention ratio. ROE is 10%, and the retention ratio is 1 – Payout ratio, or 1.0 – 0.2 = 0.8. The sustainable growth rate is 0.8 × 10% = 8%. FCFE growth should be at least 8% per year in the long term."
+   },
+   {
+    "n": 24,
+    "q": "Do the reasons provided by Leigh support his use of the FCFE model to value Holt’s common stock instead of using a DDM?",
+    "options": [
+     "Yes",
+     "No, because Holt’s dividend situation argues in favor of using the DDM",
+     "No, because FCFE is not appropriate for investors taking a control perspective"
+    ],
+    "answer": "A",
+    "why": "A is correct. Justifications for choosing the FCFE model over the DDM include the following:\n* The company pays dividends, but its dividends differ significantly from the company’s capacity to pay dividends (the first reason given by Leigh).\n* The investor takes a control perspective (the second reason given by Leigh)."
+   },
+   {
+    "n": 25,
+    "q": "Holt’s FCFF (in millions) for 2020 is closest to:",
+    "options": [
+     "$308.",
+     "$370.",
+     "$422."
+    ],
+    "answer": "A",
+    "why": "A is correct. FCFF = NI + NCC + Interest expense(1 – Tax rate) – FCInv – WCInv. In this case:\nNI\t=\t$485 million\nNCC\t=\tDepreciation expense = $270 million\nInterest expense(1 – Tax rate) = 195(1 – 0.32) = $132.6 million\t\t\nFCInv\t=\tNet purchase of fixed assets = Increase in gross fixed assets\n\t=\t4,275 – 3,752 = $523 million\nWCInv\t=\tIncrease in accounts receivable + Increase in inventory – Increase in accounts payable – Increase in accrued liabilities\n\t=\t(770 – 711) + (846 – 780) – (476 – 443) – (149 – 114)\n\t=\t$57 million\nFCFF\t=\t485 + 270 + 132.6 – 523 – 57 = 307.6, or $308 million"
+   },
+   {
+    "n": 26,
+    "q": "Holt’s FCFE (in millions) for 2020 is closest to:",
+    "options": [
+     "$175.",
+     "$250.",
+     "$364."
+    ],
+    "answer": "B",
+    "why": "B is correct. FCFE = NI + NCC – FCInv – WCInv + Net borrowing. In this case:\n\nAn alternative calculation is\nFCFE = FCFF – Int(1 – Tax rate) + Net borrowing.\nFCFE = 307.6 – 195(1 – 0.32) + (15 +60) = $250 million."
+   },
+   {
+    "n": 27,
+    "q": "Leigh’s comment about not considering decreases in inventory to be a source of long-term growth in free cash flow for Holt is:",
+    "options": [
+     "inconsistent with a forecasting perspective.",
+     "mistaken because decreases in inventory are a use rather than a source of cash.",
+     "consistent with a forecasting perspective because inventory reduction has a limit, particularly for a growing firm."
+    ],
+    "answer": "C",
+    "why": "C is correct. Inventory cannot be reduced below zero. Furthermore, sales growth tends to increase inventory."
+   },
+   {
+    "n": 28,
+    "q": "Smith’s recommendation to use an FCFF model to value Holt is:",
+    "options": [
+     "logical, given the prospect of Holt changing capital structure.",
+     "not logical because an FCFF model is used only to value the total firm.",
+     "not logical because FCFE represents a more direct approach to free cash flow valuation."
+    ],
+    "answer": "A",
+    "why": "A is correct. The FCFF model is often selected when the capital structure is expected to change because FCFF estimation may be easier than FCFE estimation in the presence of changing financial leverage.\n\n- got 25 right but still explain it \n- As well as 27"
+   }
+  ]
+ },
+ {
+  "id": "singh-fcff",
+  "source": "28 Oct paste",
+  "readings": [
+   19
+  ],
+  "title": "Singh: Sienna, Colanari and Bern free cash flow",
+  "body": "Gurmeet Singh, an equity portfolio manager at a wealth management company, meets with junior research analyst Cindy Ho to discuss potential investments in three companies: Sienna Limited, Colanari Manufacturing, and Bern Pharmaceutical.\nSingh and Ho review key financial data from Sienna’s most recent annual report, which are presented in Exhibit 1 and Exhibit 2, to assess the company’s ability to generate free cash flow.\nExhibit 1\nSelected Data from Sienna Limited’s Statement of Income for the Year Ended 31 December 2019 (Amounts in Millions of Euros)\nEBITDA\t4,000\nDepreciation expense\t800\nOperating income (EBIT)\t3,200\nInterest expense\t440\nTax rate\t35%\nExhibit 2\nSienna Limited’s Statement of Cash Flows for the Year Ended 31 December 2019 (Amounts in Millions of Euros)\nCash flow from operations\t\nNet income\t1,794\nPlus: Depreciation\t800\nIncrease in accounts receivable\t(2,000)\nIncrease in inventory\t(200)\nIncrease in accounts payable\t1,000\nCash flow from operations\t1,394\nCash flow from investing activities\t\nPurchases of PP&E\t(1,000)\nCash flow from financing activities\t\nBorrowing (repayment)\t500\nTotal cash flow\t894\nSingh and Ho also discuss the impact of dividends, share repurchases, and leverage on Sienna’s free cash flow. Ho tells Singh the following:\n* Statement 1:Changes in leverage do not impact free cash flow to equity.\n* Statement 2:Transactions between the company and its shareholders, such as the payment of dividends or share repurchases, do affect free cash flow.\nSingh and Ho next analyze Colanari. Last year, Colanari had FCFF of €140 million. Singh instructs Ho to perform an FCFF sensitivity analysis of Colanari’s firm value using the three sets of estimates presented in Exhibit 3. In her analysis, Ho assumes a tax rate of 35% and a stable capital structure of 30% debt and 70% equity.\nExhibit 3\nSensitivity Analysis for Colanari Valuation\nVariable\tBase-Case Estimate\tLow Estimate\tHigh Estimate\nFCFF growth rate\t4.6%\t4.2%\t5.0%\nBefore-tax cost of debt\t4.9%\t3.9%\t5.9%\nCost of equity\t11.0%\t10.0%\t12.0%\nFinally, Singh and Ho analyze Bern. Selected financial information on Bern is presented in Exhibit 4.\nExhibit 4\nSelected Financial Data on Bern Pharmaceutical\n\tMarket Value\tRequired Return\nDebt\t€15,400 million\t6.0%\nPreferred stock\t€4,000 million\t5.5%\nCommon stock\t€18,100 million\t11.0%\n\t\t\nFCFF, most recent year\t€3,226 million\t\nCorporate tax rate\t26.9%\t\nSingh notes that Bern has two new drugs that are currently in clinical trials awaiting regulatory approval. In addition to its operating assets, Bern owns a parcel of land from a decommissioned manufacturing facility with a current market value of €50 million that is being held for investment. Singh and Ho elect to value Bern under two scenarios:\n* Scenario 1:Value Bern assuming the two new drugs receive regulatory approval. In this scenario, FCFF is forecast to grow at 4.5% into perpetuity.\n* Scenario 2:Value Bern assuming the two new drugs do not receive regulatory approval. In this scenario, FCFF is forecast using a stable growth in FCFF of 1.5% for the next three years and then 0.75% thereafter into perpetuity.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Based on Exhibit 1 and Exhibit 2, Sienna’s FCFF in 2019 is:",
+    "options": [
+     "€680 million.",
+     "€1,200 million.",
+     "€3,080 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. Sienna’s FCFF in 2019 is calculated as\nFCFF = EBIT(1 – Tax rate) + Dep – FCInv – WCInv.\nFCInv = Purchases of PP&E = 1,000 (outflow).\nWCInv = Increase in accounts receivable (outflow) + Increase in inventory (outflow) + Increase in accounts payable (inflow).\nWCInv = –2,000 (outflow) + –200 (outflow) + 1,000 (inflow) = –1,200 (outflow).\nFCFF = 3,200(1 – 0.35) + 800 – 1,000 –1,200.\nFCFF = €680 million.\nFCFF can also be computed from CFO:\nFCFF = CFO + Int(1 – Tax rate) – FCInv.\nFCFF = 1,394 + 440(1 – 0.35) – 1,000.\nFCFF = €680 million."
+   },
+   {
+    "n": 34,
+    "q": "Based on Exhibit 1 and Exhibit 2, Sienna’s FCFE in 2019 is:",
+    "options": [
+     "€894 million.",
+     "€1,466 million.",
+     "€2,894 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. Sienna’s FCFE in 2019 is calculated as\nFCFE = CFO – FCInv + Net borrowing\n= 1,394 – 1,000 + 500\n= €894 million.\nAlternatively, FCFE may be calculated as\nFCFE = FCFF – Int(1 – Tax rate) + Net borrowing.\n= 680 – 440(1 – 0.35) + 500\n= €894 million."
+   },
+   {
+    "n": 35,
+    "q": "Which of Ho’s statements regarding free cash flow is (are) correct?",
+    "options": [
+     "Statement 1 only",
+     "Statement 2 only",
+     "Neither Statement 1 nor Statement 2"
+    ],
+    "answer": "C",
+    "why": "C is correct. Transactions between the company and its shareholders (through cash dividends, share repurchases, and share issuances) do not affect free cash flow. However, leverage changes, such as the use of more debt financing, have some impact on free cash flow because they increase the interest tax shield (reduce corporate taxes because of the tax deductibility of interest) and reduce the cash flow available to equity."
+   },
+   {
+    "n": 36,
+    "q": "Based on Exhibit 3, Ho’s FCFF sensitivity analysis should conclude that Colanari’s value is mostsensitive to the:",
+    "options": [
+     "FCFF growth rate.",
+     "before-tax cost of debt.",
+     "required rate of return for equity."
+    ],
+    "answer": "C",
+    "why": "C is correct. Colanari’s valuation is most sensitive to the cost of equity (re) because the range of estimated values is larger than the valuation ranges estimated from the sensitivity analysis of both the FCFF growth rate (GFCFF) and the before-tax cost of debt (rd).\nVariable\tBase Case\tLow Estimate\tHigh Estimate\tValuation with Low Estimate (€ millions)\tValuation with High Estimate (€ millions)\tRange (€ millions)\nGFCFF\t4.6%\t4.2%\t5.0%\t3,274.16\t4,021.34\t747.18\nrd\t4.9%\t3.9%\t5.9%\t3,793.29\t3,445.24\t348.05\nre\t11.0%\t10.0%\t12.0%\t4,364.18\t3,079.38\t1,284.80\nWACC = [wd × rd(1 – Tax rate)] + (we × re).\nFirm value = FCFF0(1 + g)/(WACC – g).\nCost of equity sensitivity\nUsing the base case estimates for the FCFF growth rate and the before-tax cost of debt and using the low estimate for the cost of equity (re) of 10.0%, the valuation estimate is\nWACC = [(0.30)(0.049)(1 – 0.35)] + (0.70)(0.10) = 7.96%.\nFirm value = 140 million(1 + 0.046)/(0.0796 – 0.046) = €4,364.18 million.\nUsing the base case estimates for the FCFF growth rate and the before-tax cost of debt and using the high estimate for the cost of equity (re) of 12.0%, the valuation estimate is\nWACC = [(0.30)(0.049)(1 – 0.35)] + (0.70)(0.120) = 9.36%.\nFirm value = 140 million(1 + 0.046)/(0.0936 – 0.046) = €3,079.38 million.\nTherefore, the range in valuation estimates from using the highest and lowest estimates of the cost of equity is €1,284.80 million.\nFCFF growth rate sensitivity\nUsing the base case estimates for the cost of equity and the before-tax cost of debt and using the low estimate for the FCFF growth rate (GFCFF) of 4.2%, the valuation estimate is\nWACC = [(0.30)(0.049)(1 – 0.35)] + (0.70)(0.11) = 8.66%.\nFirm value = 140 million(1 + 0.042)/(0.0866 – 0.042) = €3,274.16 million.\nUsing the base case estimates for the cost of equity and the before-tax cost of debt and using the high estimate for the FCFF growth rate (GFCFF) of 5.0%, the valuation estimate is\nWACC = [(0.30)(0.049)(1 – 0.35)] + (0.70)(0.11) = 8.66%.\nFirm value = 140 million(1 + 0.05)/(0.0866 – 0.05) = €4,021.34 million.\nTherefore, the range in valuation estimates from using the highest and lowest estimates of the FCFF growth rate is €747.18 million.\nBefore-tax cost of debt sensitivity\nUsing the base case estimates for the FCFF growth rate and the cost of equity and using the low estimate for the before-tax cost of debt (rd) of 3.9%, the valuation estimate is\nWACC = [(0.30)(0.039)(1 – 0.35)] + (0.70)(0.11) = 8.46%.\nFirm value = 140 million(1 + 0.046)/(0.0846 – 0.046) = €3,793.29 million.\nUsing the base case estimates for the FCFF growth rate and the cost of equity and using the high estimate for the before-tax cost of debt (rd) of 5.9%, the valuation estimate is\nWACC = [(0.30)(0.059)(1 – 0.35)] + (0.70)(0.11) = 8.85%.\nFirm value = 140 million(1 + 0.046)/(0.0885 – 0.046) = €3,445.24 million.\nTherefore, the range in valuation estimates from using the highest and lowest estimates of the before-tax cost of debt is €348.05 million."
+   },
+   {
+    "n": 37,
+    "q": "Based on Exhibit 4, Bern’s firm value under Scenario 1 is closest to:",
+    "options": [
+     "€100,951.3 million.",
+     "€105,349.1 million.",
+     "€105,399.1 million."
+    ],
+    "answer": "C",
+    "why": "C is correct. Based on Scenario 1, where Bern receives regulatory approval for its new drugs, the growth rate in FCFF for Bern will be constant at 4.5%. Therefore, a constant-growth valuation model can be used to calculate firm value.\nBern’s weighted average cost of capital is calculated as\nWACC = [wd × rd(1 – Tax rate)] + (wp × rp) + (we × re).\nThe total market value of the firm is the sum of the debt, preferred stock, and common stock market values: 15,400 + 4,000 + 18,100 = 37,500.\nWACC = [(15,400/37,500)(0.060)(1 – 0.269] + (4,000/37,500)(0.055) + (18,100/37,500)(0.11) = 7.70%.\nValue of operating assets = FCFF0(1 + g)/(WACC – g).\nValue of operating assets = 3,226 million(1 + 0.045)/(0.0770 – 0.045) = €105,349.06 million.\nTotal value of the company = Value of operating assets + Value of non-operating assets.\nTotal value of the company = 105,349.06 million + 50 million = €105,399.06 million."
+   },
+   {
+    "n": 38,
+    "q": "Based on Exhibit 4, Singh and Ho should conclude that under Scenario 2, shares of Bern are:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "A",
+    "why": "A is correct.\nThe total market value of the firm is the sum of the debt, preferred stock, and common stock market values: 15,400 + 4,000 + 18,100 = 37,500 million.\nWACC = [wd × rd(1 – Tax rate)] + (wp × rp) + (we × re)\n= [(15,400/37,500)(0.060)(1 – 0.269] + (4,000/37,500)(0.055) + (18,100/37,500)(0.11)\n= 7.70%.\nUnder the assumption that Bern has a low growth rate because it did not receive regulatory approval for its new drugs, the value of Bern can be analyzed using a two-stage valuation model.\nCompany value = \n \nYear\t0\t1\t2\t3\t4\ng\t\t1.50%\t1.50%\t1.50%\t0.75%\nFCFFn\n(€ millions)\t3,226\t3,274.39\t3,323.51\t3,373.36\t3,398.66\nPresent Value Factor\t\t0.928529\t0.862167\t0.800547\t\nPresent Value\n(€ millions)\t\t3,040.37\t2,865.42\t2,700.53\t\n \nThe terminal value at the end of Year 3 is TV3 = FCFF4/(WACC – g4).\nTV3 = 3,398.66/(0.0770 – 0.0075) = €48,901.58 million.\nThe total value of operating assets = (3,040.37 + 2,865.42 + 2,700.53) + 48,901.58/(1 + 0.0770)3\n= 8,606.32 + 39,144.95\n= €47,751.27 million.\nValue of Bern’s common stock = Value of operating assets + Value of non-operating assets – Market value of debt – Preferred stock\n= 47,751.27 + 50.00 – 15,400 – 4,000\n= €28,401.27 million.\nSince the current market value of Bern’s common stock (€18,100 million) is less than the estimated value (€28,401.27 million), the shares are undervalued.\n\n - still provide me the explanation for the last 3 got them right. \n\nCorp Module 2: Environmental, Social, and Governance (ESG) Considerations in Investment Analysis\n\n12:17\nTime Elapsed"
+   }
+  ]
+ },
+ {
+  "id": "marker-esg",
+  "source": "28 Oct paste",
+  "readings": [
+   14
+  ],
+  "title": "Marker: BR Hotels ESG and governance",
+  "body": "Emily Marker, CFA, is a fixed-income analyst for the Namsan Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of BR Hotels, a publicly traded boutique hotel company. Marker notes that BR Hotels is a “green hotel” company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. The founding family owns 55% of the outstanding shares. Each ownership share has equivalent voting rights.The board of directors of BR Hotels consists of 15 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry.\nBR Hotels has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Marker and her supervisor discuss how BR Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Marker integrates ESG factors in the investment valuation of BR Hotels’ corporate bonds.",
+  "questions": [
+   {
+    "n": 7,
+    "q": "The potential conflict between or among shareholders and managers of BR Hotels can best be described as:",
+    "options": [
+     "voting caps.",
+     "a principal-agent problem.",
+     "a principal-principal problem."
+    ],
+    "answer": "C",
+    "why": "C is correct. BR Hotels has concentrated ownership, given that the family owns 55% of the shares. It also has concentrated voting power, since each ownership share has equal voting rights. In this ownership structure, the controlling shareholders have power over both management and minority shareholders. The controlling shareholders are referred to as strong shareholders and the managers as weak managers. The conflict in this structure exists between the controlling shareholders and the minority shareholders. The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. This conflict is referred to as a principal-principal problem.\nA is incorrect since the conflict for BR Hotels is a principal-principal problem. Voting caps are legal restrictions on the voting rights of large share positions. They result from an ownership structure of concentrated ownership and dispersed voting rights.\nB is incorrect since the conflict for BR Hotels is a principal-principal problem. The principal-agent problem occurs when the ownership structure has dispersed ownership and dispersed voting rights. In this case, the structure has weak shareholders and strong management, with a potentially significant conflict between the shareholders and the management."
+   },
+   {
+    "n": 8,
+    "q": "BR Hotels’ corporate governance risk is increased by:",
+    "options": [
+     "CEO duality.",
+     "family control.",
+     "the low percentage of independent board members."
+    ],
+    "answer": "C",
+    "why": "C is correct. The corporate governance risk for BR Hotels is high due to a low percentage of independent board members. Of the 15 members on the board, only one is independent. Many OECD countries have introduced a recommendation for the minimum ratio of independent directors serving on the board. They typically set the minimum ratio of independent directors in a range of 20%–50% or greater. BR Hotels falls below this range.\nA is incorrect since CEO duality is not a governance problem for BR Hotels. BR Hotels’ CEO and chairperson are separate, so there is no CEO duality. This is typically a sign of effective corporate governance. The independent chairperson and CEO roles help protect investor interests.\nB is incorrect because family control is not likely to increase governance risk for BR Hotels. Family control lowers the risks associated with principal-agent problems. This is the result of the family’s having concentrated ownership and management responsibility. The lower risk associated with the principal-agent problem is somewhat offset by the drawbacks of family control, which include poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent."
+   },
+   {
+    "n": 9,
+    "q": "The security analysis of BR Hotels is most likely focused on:",
+    "options": [
+     "mitigating downside risk.",
+     "adjusting the discount rate.",
+     "identifying potential opportunities."
+    ],
+    "answer": "A",
+    "why": "A is correct. The implementation of ESG factors in security analysis differs for equity analysis and fixed-income analysis. For BK Hotels’ corporate bonds, the focus of ESG integration is on mitigating downside risk. In contrast, in equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk.\nB is incorrect since adjusting the discount rate is typically used in equity analysis and not in fixed-income analysis. In valuing a stock, an analyst may choose to adjust the discount factor to account for the ESG risk. In fixed-income analysis, the credit spread or CDS is adjusted to reflect the ESG risk.\nC is incorrect since identifying potential opportunities is used in equity analysis and not in fixed-income analysis. In fixed-income analysis, the focus of ESG integration is on mitigating downside risk. In equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk."
+   },
+   {
+    "n": 10,
+    "q": "After integrating the ESG factors, the credit spread on BR Hotels’ bonds is most likely to:",
+    "options": [
+     "decrease.",
+     "remain unchanged.",
+     "increase."
+    ],
+    "answer": "C",
+    "why": "C is correct. BR Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 women out of 15 members), and low percentage of board members with hotel industry experience (20%). These factors are likely to increase investors’ perception of the corporation’s risk. The social risk for BR Hotels is also high. BR Hotels has a high labor turnover rate, pays most of its workforce at or near the minimum wage, and offers no health benefits. Legislation raising the minimum wage and the growing pressure on BR Hotels to offer benefits would increase operating costs. This could have a negative impact on future cash flows, which would be detrimental to the bond holders. The valuation of BR Hotels’ bonds could be adversely affected by the higher ESG risk. To account for the higher ESG risk, the credit spread on BR Hotels’ bonds is likely to increase.\nA is incorrect since the credit spread on BR Hotels’ bonds is likely to increase and not decrease.\nB is incorrect since the credit spread on BR Hotels’ bonds is likely to increase and not remain unchanged."
+   }
+  ]
+ },
+ {
+  "id": "hamilton-nevis",
+  "source": "28 Oct paste",
+  "readings": [
+   29
+  ],
+  "title": "Hamilton: Nevis binomial and BSM options (keys worked out by assistant)",
+  "body": "Alfred Hamilton is CEO and CIO of Nevis Capital, a Registered Investment Advisory firm. He is meeting with Phil Burr, head trader, and Jon Laurens, a recently hired analyst, to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.\nHamilton begins by stating that the binomial option valuation (binomial) model and the Black-Scholes-Merton (BSM) model are each useful in understanding option valuation approaches. Hamilton compares the binomial model to the BSM model, stating that “both the binomial model and the BSM model are dependent on the path of the underlying security price during the term of the option. In addition, both models assume the investor is not taking price risk and the risk-free interest rate is used to discount future outcomes that are probabilistic.”\nBurr describes the two-period binomial model to Laurens and provides information related to Lafayette Corporation’s common stock and options on that stock (presented in Exhibit 1). Lafayette stock does not pay a dividend.\nExhibit 1 Information on Lafayette Corporation Stock and Options\nStock price\t$100\nCall strike\t$100\nLafayette bond rate\t7.00%\nRisk-free interest rate\t5.00%\nUp factor\t1.25\nDown factor\t0.85\nThe price of a one-year call option on Lafayette Corporation common stock is $15.28. Based on this price and on information provided in Exhibit 1, Hamilton, Laurens, and Burr believe that an arbitrage opportunity may exist, which arbitrageurs could exploit based on the binomial model no-arbitrage approach. Hamilton states the arbitrageurs should buy call options using borrowed funds. Laurens disagrees, stating that arbitrageurs should short-sell shares and lend the proceeds. Burr also disagrees, stating that arbitrageurs should buy shares using borrowed funds.\nLaurens discusses European-style and American-style call options in the context of the multiperiod binomial model. Laurens states that “by dividing the time steps of the two-period binomial model into a larger number of shorter and equal length time steps, the expectations approach can be applied to a European-style call option to calculate its value based on the present value of expected future cash flows. For a non-dividend-paying stock, an American-style call option’s value can be calculated based on the present value of expected future cash flows because American-style call options and European-style call options can be described and interpreted similarly and because the no-arbitrage approach applies to each.”",
+  "questions": [
+   {
+    "n": 30,
+    "q": "Hamilton’s comparison of the binomial model and the BSM model is least likely correct with respect to:\n\n\nprice risk.\n\n\nfuture outcomes.\n\n\npath-dependency.",
+    "options": [
+     "price risk.",
+     "future outcomes.",
+     "path-dependency."
+    ],
+    "answer": "C",
+    "why": "Both models hedge price risk and discount at the risk-free rate; both are path-independent for European options, so path-dependency is the incorrect part.",
+    "key_worked_out_by_assistant": true
+   },
+   {
+    "n": 31,
+    "q": "The value of a two-year European call option on Lafayette Corporation shares is likely closestto:\n\n\n$14.17.\n\n\n$15.59.\n\n\n$17.56.",
+    "options": [
+     "$14.17.",
+     "$15.59.",
+     "$17.56."
+    ],
+    "answer": "B",
+    "why": "pi = (1.05-0.85)/(1.25-0.85) = 0.50; uu 156.25, ud 106.25, dd 72.25; C = (0.25 x 56.25 + 0.50 x 6.25)/1.05^2 = 15.59.",
+    "key_worked_out_by_assistant": true
+   },
+   {
+    "n": 32,
+    "q": "With respect to the one-year call option on Lafayette stock, whose strategy is most likelycorrect?\n\n\nBurr’s\n\n\nLaurens’s\n\n\nHamilton’s",
+    "options": [
+     "Burr's",
+     "Laurens's",
+     "Hamilton's"
+    ],
+    "answer": "A",
+    "why": "Model value of the one-year call = 0.5 x 25/1.05 = 11.90 < market price 15.28 (overpriced): sell the call and buy the replicating portfolio (shares financed by borrowing). The 7% Lafayette bond rate is a distractor: use the 5% risk-free rate.",
+    "key_worked_out_by_assistant": true
+   },
+   {
+    "n": 33,
+    "q": "Is Laurens’s statement about European-style and American-style call options most likelycorrect?\n\n\nYes\n\n\nNo, regarding European-style call options\n\n\nNo, regarding American-style call options\n\n-with this vignette i thought the lafayette bond rate is the dividend rate so that messed up my head. What is a “company bond rate”.",
+    "options": [
+     "Yes",
+     "No, regarding European-style call options",
+     "No, regarding American-style call options"
+    ],
+    "answer": "A",
+    "why": "No dividend: early exercise of an American call is never optimal, so it equals the European call; the expectations approach applies to both.",
+    "key_worked_out_by_assistant": true
+   }
+  ]
+ },
+ {
+  "id": "musicale-apex",
+  "source": "28 Oct paste",
+  "readings": [
+   30
+  ],
+  "title": "Musicale: Apex commodity fund",
+  "body": "Raffi Musicale is the portfolio manager for a defined benefit pension plan. He meets with Jenny Brown, market strategist with Menlo Bank, to discuss possible investment opportunities. The investment committee for the pension plan has recently approved expanding the plan’s permitted asset mix to include alternative asset classes.\nBrown proposes the Apex Commodity Fund (Apex Fund) offered by Menlo Bank as a potentially suitable investment for the pension plan. The Apex Fund attempts to produce trading profits by capitalizing on the mispricing between the spot and futures prices of commodities. The fund has access to storage facilities, allowing it to take delivery of commodities when necessary. The Apex Fund’s current asset allocation is presented in Exhibit 1.\nExhibit 1\nApex Fund’s Asset Allocation\nCommodity Sector\tAllocation (%)\nEnergy\t31.9\nLivestock\t12.6\nSofts\t21.7\nPrecious metals\t33.8\nBrown explains that the Apex Fund has had historically low correlations with stocks and bonds, resulting in diversification benefits. Musicale asks Brown, “Can you identify a factor that affects the valuation of financial assets like stocks and bonds but does not affect the valuation of commodities?”\nBrown shares selected futures contract data for three markets in which the Apex Fund invests. The futures data are presented in Exhibit 2.\nExhibit 2\nSelected Commodity Futures Data*\nMonth\tGold Price\tCoffee Price\tGasoline Price\nJuly\t1,301.2\t0.9600\t2.2701\nSeptember\t1,301.2\t0.9795\t2.2076\nDecember\t1,301.2\t1.0055\t2.0307\n* Gold: US$/troy ounce; coffee: US$/pound; gasoline: US$/gallon.\nMenlo Bank recently released a report on the coffee market. Brown shares the key conclusion from the report with Musicale: “The coffee market had a global harvest that was greater than expected. Despite the large harvest, coffee futures trading activity is balanced between producers and consumers. This balanced condition is not expected to change over the next year.”\nBrown shows Musicale the total return of a recent trade executed by the Apex Fund. Brown explains that the Apex Fund took a fully collateralized long futures position in nearby soybean futures contracts at the quoted futures price of 865.0 (US cents/bushel). Three months later, the entire futures position was rolled when the near-term futures price was 877.0 and the farther-term futures price was 883.0. During the three-month period between the time that the initial long position was taken and the rolling of the contract, the collateral earned an annualized rate of 0.60%.\nBrown tells Musicale that the pension fund could alternatively gain long exposure to commodities using the swap market. Brown and Musicale analyze the performance of a long position in an S&P GSCI total return swap having monthly resets and a notional amount of $25 million. Selected data on the S&P GSCI are presented in Exhibit 3.\nExhibit 3\nSelected S&P GSCI Data\nReference Date\tIndex Level\nApril (swap initiation)\t2,542.35\nMay\t2,582.23\nJune\t2,525.21",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The Apex Fund is most likely to be characterized as:",
+    "options": [
+     "a hedger.",
+     "a speculator.",
+     "an arbitrageur."
+    ],
+    "answer": "C",
+    "why": "C is correct. Commodity arbitrage involves an ability to inventory physical commodities and the attempt to capitalize on mispricing between the commodity (along with related storage and financing costs) and the futures price. The Apex Fund has access to storage facilities and uses these facilities in the attempt to capitalize on mispricing opportunities."
+   },
+   {
+    "n": 2,
+    "q": "Which factor would most likely affect the supply or demand of all four sectors of the Apex Fund?",
+    "options": [
+     "Weather",
+     "Spoilage",
+     "Government actions"
+    ],
+    "answer": "C",
+    "why": "C is correct. Government actions can affect the supply or demand of all four sectors of the Apex Fund. With respect to energy, environmental mandates imposed by governments have tightened pollution standards, which have led to increasing processing costs that negatively affect demand. The supply of livestock, such as hogs and cattle, is affected by government-permitted use of drugs and growth hormones. Softs, or cash crops, can be affected by government actions, such as the attempt to maintain strategic stockpiles to control domestic prices. The level of demand and relative value of a precious metal, such as gold, is directly linked to government actions associated with managing to inflation targets."
+   },
+   {
+    "n": 3,
+    "q": "The most appropriate response to Musicale’s question regarding the valuation factor is:",
+    "options": [
+     "storage costs.",
+     "transportation costs.",
+     "expected future cash flows."
+    ],
+    "answer": "C",
+    "why": "C is correct. Expected future cash flows affect the valuation of financial assets, such as stocks and bonds, but do not affect the valuation of commodities. Financial assets (stocks and bonds) are valued based on expected future cash flows. In contrast, the valuation of a commodity is based on a discounted forecast of a future commodity price, which incorporates storage and transportation costs."
+   },
+   {
+    "n": 4,
+    "q": "Which futures market in Exhibit 2 is in backwardation?",
+    "options": [
+     "Gold",
+     "Coffee",
+     "Gasoline"
+    ],
+    "answer": "C",
+    "why": "C is correct. When the near-term (i.e., closer to expiration) futures contract price is higher than the longer-term futures contract price, the futures market for the commodity is in backwardation. Because gasoline is the only one of the three futures markets in Exhibit 2 in which the near-term futures contract price ($2.2701) is higher than the longer-term contract price ($2.0307), the gasoline futures market is the only one in backwardation."
+   },
+   {
+    "n": 5,
+    "q": "Based on the key conclusion from the Menlo Bank coffee market report, the shape of the coffee futures curve in Exhibit 2 is most consistent with the:",
+    "options": [
+     "insurance theory.",
+     "theory of storage.",
+     "hedging pressure hypothesis."
+    ],
+    "answer": "B",
+    "why": "B is correct. The theory of storage focuses on the level of commodity inventories and the state of supply and demand. A commodity that is regularly stored should have a higher price in the future (contango) to account for those storage costs. Because coffee is a commodity that requires storage, its higher future price is consistent with the theory of storage."
+   },
+   {
+    "n": 6,
+    "q": "Based on Exhibit 2, which commodity’s roll returns will most likely be positive?",
+    "options": [
+     "Gold",
+     "Coffee",
+     "Gasoline"
+    ],
+    "answer": "C",
+    "why": "C is correct. Roll returns are generally positive (negative) when the futures market is in backwardation (contango) and zero when the futures market is flat. Because the gasoline market is in backwardation, its roll returns will most likely be positive."
+   },
+   {
+    "n": 7,
+    "q": "The Apex Fund’s three-month total return on the soybean futures trade is closest to:",
+    "options": [
+     "0.85%.",
+     "1.30%.",
+     "2.22%."
+    ],
+    "answer": "A",
+    "why": "A is correct. The total return on the trade represents the sum of three components: price return, roll return, and collateral return.\nPrice return = (Current price − Previous price)/Previous price = (877.0 − 865.0)/865.0\n= 1.387%.\nRoll return\n= [(Near-term futures contract closing price − Farther-term futures contract closing price)/Near-term futures contract closing price] × Percentage of the position in the futures contract being rolled.\nBecause the entire position is being rolled, the percentage of the position in the futures contract being rolled is equal to 100%. So:\nRoll return = [(877.0 − 883.0)/877.0] × 100% = −0.684%.\nCollateral return = [3 months/12 months] × 0.60% = 0.15%.\nTotal return = 1.387% − 0.684% + 0.15% = 0.853%."
+   },
+   {
+    "n": 8,
+    "q": "Based on Exhibit 3, on the June settlement date, the party that is long the S&P GSCI total return swap will:",
+    "options": [
+     "owe a payment of $552,042.23.",
+     "receive a payment of $1,502,621.33.",
+     "receive a payment of $1,971,173.60."
+    ],
+    "answer": "A",
+    "why": "A is correct. The total return swap involves a monthly cash settlement (reset) based on the performance of the underlying reference asset (S&P GSCI) given a notional amount of $25 million. If the level of the index increases between the two valuation dates (in this case, May and June), the long position (the swap buyer) receives payment. If the level of the index decreases between the two valuation dates, the swap seller receives payment.\nThe return on the reference index for the month of June is [(2,525.21 − 2,582.23)/2,582.23], which is equivalent to −2.2082%. Therefore, the swap buyer (long position) must pay the swap seller a cash settlement for the month of June. The June payment calculation is equal to $25,000,000 × −2.2082%, or −$552,042.23.\n- treat 4 as correct. \n\n\n\nPort"
+   }
+  ]
+ },
+ {
+  "id": "newman-var",
+  "source": "28 Oct paste",
+  "readings": [
+   38
+  ],
+  "title": "Newman: ARC Advisors VaR and risk limits",
+  "body": "Mikhail Newman has recently joined ARC Advisors, a multi-asset management firm, as its Chief Risk Officer. He is conducting a risk assessment of the firm's portfolios.\nFund A has $500 million in assets. The fund's expected annual return is 11.3% and its annual standard deviation is 11.9%. Considering 250 days in a year, Newman calculates the daily 5% VaR for Fund A using the parametric method. The z-statistics for a 5% and a 10% one-tailed test are 1.65 and 1.28, respectively.\nNewman then analyzes Fund B, which is an actively managed bond fund. The manager for Fund B is considering adding mortgage-backed securities (MBS) to the portfolio. Newman calculates the fund's VaR based on historical data before adding MBS, and the fund's expected VaR after the addition of MBS. He also estimates the average loss before and after adding MBS to the portfolio when the VaR threshold is exceeded. These figures (in $ millions) are shown in Exhibit 1. Newman then calculates the incremental VaR for Fund B from adding the MBS position.\nExhibit 1\nMeasure\t5% VaR\nVaR before adding MBS\t3.63\nExpected VaR after adding MBS\t3.00\nAverage loss if VaR is exceeded, before adding MBS\t4.36\nExpected average loss if VaR is exceeded, after adding MBS\t3.45\nNewman proposes the introduction of shortfall limits on managed portfolios to ARC's risk management framework. Under his proposal, a portfolio that suffers cumulative monthly losses greater than 130% of the daily VaR limit will have to be liquidated.\nIn response, ARC's management asks Newman what metric can best estimate the degree to which the firm's portfolios could underperform their respective benchmarks in the future.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "The daily 5% VaR for Fund A is closest to:",
+    "options": [
+     "$2.64 million.",
+     "$4.59 million.",
+     "$5.98 million."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the candidate uses the annual return and standard deviation numbers instead of deriving the daily ones, and then divides by  to calculate daily VaR. Doing it this way, the annual VaR is calculated as: {[E(Rp) − 1.65σp](−1)}(Value of portfolio) = (0.113 − 1.65 x 0.119)(−1) x $500 million = (0.113 − 0.19635)(−1) x $500 million = 0.08335 x $500 million = $41.675 million Then the candidate divides this result by  to get to a daily VaR: $41.675 million / 15.8114 = $2.6358 million ~ $2.64 million. | B. Incorrect because the candidate uses the wrong z-statistic of 1.28 for 10% VaR instead of 1.65 for 5% VaR, believing that they need to use a two-tailed test rather than the one-tailed value provided. After correctly calculating the daily return and standard deviation, the candidate computes VaR as: {[E(Rp) − 1.28σp](−1)}(Value of portfolio) = (0.000452 − 1.28 x 0.007526)(−1) x $500 million = (0.000452 − 0.009634)(−1) x $500 million = 0.009182 x $500 million = $4.591 million ~ $4.59 million. | C. Correct because the daily 5% VaR calculated for Fund A is $5.98 million. To estimate this VaR, we need the expected daily return and volatility of the portfolio. To get the daily return and standard deviation from annual figures: Daily return = Annual return / 250 = 0.113/250 = 0.000452 Daily standard deviation = Annual standard deviation / = 0.119/15.8114 = 0.007526 To get the parametric VaR at 5%, the correct z-statistic to use is 1.65 as we need the area under the curve to the left of the point to get the VaR. We use the following formula for parametric VaR: {[E(Rp) − 1.65σp](−1)}(Value of portfolio) = (0.000452 – 1.65 x 0.007526)(–1) x $500 million = (0.000452 – 0.012418)(–1) x $500 million = 0.011966 x $500 million = $5.983 million ~ $5.98 million."
+   },
+   {
+    "n": 34,
+    "q": "The incremental VaR for Fund B is closest to:",
+    "options": [
+     "–$0.91 million.",
+     "–$0.63 million.",
+     "–$0.28 million."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the candidate calculates the incremental VaR as the difference between the average loss if VaR is exceeded after adding MBS to the portfolio and the average loss if VaR is exceeded before adding MBS. The VaR the candidate may calculate is therefore ($3.45 – $4.36) = –$0.91 million. | B. Correct because the incremental VaR is the difference between the VaR after adding the asset and the VaR before that. Beyond assessing tail loss, a risk manager often wants to know how the portfolio VaR will change if a position size is changed relative to the remaining positions. This effect can be captured by a concept called incremental VaR (IVaR). Or, the portfolio manager might wish to add a new asset, thereby reducing the exposure to the existing assets. The risk manager would calculate the VaR under the assumption that the change is made, and then the difference between the new VaR and the old VaR is the IVaR. The VaR after adding MBS to the portfolio is $3 million and the VaR before adding MBS to the portfolio is $3.63 million. Therefore, adding MBS actually reduces the VaR by $0.63 million. Hence, the incremental VaR is ($3.00 – $3.63) = –$0.63 million. | C. Incorrect because the candidate calculates the incremental VaR as the difference between the average loss if VaR is exceeded and the VaR itself, before and after adding the new asset. Before adding MBS, the candidate calculates the difference between the average loss if VaR is exceeded and the VaR as ($4.36 – $3.63), which equals $0.73 million. After adding MBS, the candidate again calculates the difference between the average loss if VaR is exceeded and the VaR as ($3.45 – $3.00), which equals $0.45 million. The candidate then calculates the incremental VaR (incorrectly measured) as the decline in these differences: $0.45 – $0.73 = –$0.28 million. The VaR the candidate may calculate is therefore –$0.28 million."
+   },
+   {
+    "n": 35,
+    "q": "The framework suggested by Newman for risk management relies on:",
+    "options": [
+     "position limits.",
+     "risk budgeting.",
+     "stop-loss limits."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because position limits are constraints put on the market value of any given investment, but the framework Newman uses does not impose position limits on the investments. Position limits are exposure caps on issuer, currency, country, category, asset ownership, etc., which offer excellent control on over-concentration. However, they do not take into account duration, volatility, and correlation, as VaR does. In Newman's framework, he allocates a risk tolerance level for each portfolio and does not impose a limit on the type/value of investment the portfolio can have. His framework therefore does not indicate position limits. | B. Incorrect because the framework proposed by Newman is not an example of risk budgeting. In risk budgeting, the total risk appetite of the firm or portfolio is agreed on at the highest level of the entity and then allocated to sub-activities. Risk budgeting is more of a top-down approach where the organization allocates a risk budget to sub-divisions (based on the opportunity's attractiveness, risk capacity, skill of the business, etc.). This is implemented by using ex-ante tracking error budgets and the sub-units that generate the best rewards at minimum tracking error generally get allocated a higher risk capital. Instead, in Newman's framework, the managers have a stop-loss limit where a certain action will be taken if the monthly losses exceed a pre-defined level. This is a bottom-up way of managing risk and not the same as risk budgeting. | C. Correct because the framework proposed by Newman uses stop-loss limits and a correcting action if a certain loss level is hit. A stop-loss limit requires a reduction in the size of a portfolio, or its complete liquidation, when a loss of a particular size occurs in a specified period. In one form of a stop-loss limit, the portfolio’s positions are unwound if its losses over a pre-specified period exceed a pre-specified level. (Those levels are typically defined to align with the overall risk tolerance.) As an example, a portfolio might have a 10-day, 1% VaR limit of $5 million, but it will be liquidated if its cumulative monthly loss ever exceeds $8 million. In the stop-loss limit constraint, a corrective action is executed if the losses from an investment breach a pre-decided level. In this case, Newman proposes to liquidate any portfolio where monthly losses exceed the daily VaR limit by 130%."
+   },
+   {
+    "n": 36,
+    "q": "Which metric best addresses management's concern about estimating portfolio underperformance?",
+    "options": [
+     "Relative VaR",
+     "Surplus at risk",
+     "Maximum drawdown"
+    ],
+    "answer": "A",
+    "why": "A. Correct because ex-ante tracking error, also known as relative VaR, tracks the deviation of performance from the benchmark. As Newman's metric needs to track the future performance of the portfolios against benchmarks, the suitable metric needs to be forward looking and also based on the portfolios' current holdings. Ex-ante tracking error or relative VaR is a measure of that percentage of the portfolio that differs from the benchmark (i.e., a deviation from the benchmark). It is often monitored to help limit tracking error of the portfolio. Ex ante tracking error or relative VaR is a measure of the degree to which the performance of a given investment portfolio might deviate from its benchmark. Ex ante tracking error takes today’s benchmark-relative position and exposes it to the variability of past markets to estimate what kind of benchmark-relative performance could arise from the current portfolio. | B. Incorrect because surplus at risk is a risk measure that is used by pensions and estimates how much their assets might underperform the liabilities, but not usually used for tracking returns versus benchmarks. This measure is an application of VaR. It is computed by entering the assets in the portfolio into a VaR model as long positions and the pension liabilities as short fixed-income positions. It estimates how much the assets might underperform the liabilities, usually over one year, and pension plan sponsors may vary with respect to how high a level of confidence they choose to use (e.g., 84%, 95%, 99%). The more volatile the investments in the pension fund and the less well correlated these assets are with the liabilities, the higher the surplus at risk. | C. Incorrect because drawdown is a measure based on historical data used to identify the worst returning month or quarter and will not help tracking the underperformance relative to a benchmark for the future. Drawdown is often helpful in replacing standard deviation and historical beta measures where return distributions are non-normal. It can be helpful in assessing what the worst peak-to-trough decline in a portfolio’s historical returns is for hedge fund strategies like equity market neutral, long–short credit, or investments in illiquid asset classes with asymmetric return profiles. It is not useful for tracking the expected underperformance of a portfolio compared to its benchmark, which is Newman's requirement. - got all right but still add 35 and 36 in the app - you can make questions on the other definitions as well for 35 and 36 to keep my memories fresh Econ"
+   }
+  ]
+ },
+ {
+  "id": "golden-island",
+  "source": "28 Oct paste",
+  "readings": [
+   6,
+   5
+  ],
+  "title": "Golden Island: growth conditions, tariffs and FX",
+  "body": "Golden Island is a flourishing country because of tourism. The island is governed by a Governor General, a parliamentary body of elected legislators, and a couple of agencies to regulate the island’s economic and social environment. Recently, prospectors in the mountain range bordering the southern coast of the island discovered large deposits of gold, silver, and platinum. The government is concerned that development of these deposits will harm the tourist trade. Elena Trippi has been asked to participate in a series of fact-finding sessions conducted jointly by the island’s ministries of finance and tourism. This blue-ribbon fact-finding committee has been meeting weekly for the past two months.\nTrippi began a recent meeting of the committee by presenting a summary of Golden Island’s current financial and economic conditions. Comparing Golden Island with other developing nations, she presents these conditions in Exhibit 1.\nExhibit 1 Current Financial and Economic Conditions\nRelative to other developing nations, Golden Island\n1. has a relatively low level of capital per worker.\n2. does not have competitive financial markets. The island’s single commercial bank also acts as the central bank of Golden Island.\n3. has a relatively low rate of savings and investment.\n4. has a low level of literacy (about half the population is illiterate).\n5. has well-established property rights.\n6. tightly regulates capital flows into and out of the economy.\nTrippi states that these conditions do not necessarily cause great harm to the tourist industry. But the mining and processing of gold, silver, and platinum will require re-examination of economic policies and circumstances. In particular, Trippi is concerned about the issue of tariffs because Golden Island has relatively high tariffs on capital goods.\nTrippi states:\n\"Golden Island will benefit from continuing to protect domestic capital goods by maintaining its relatively high tariff on non-domestic capital goods. High tariffs have little impact on foreign direct investment (FDI), and they generate revenue for the government.\"\nRishi Chatterjee is Golden Island’s Interim Deputy Minister for Tourism. He states that he is not very knowledgeable about the gold business but believes that developing the island’s gold deposits will affect the relative value of its currency, the sona (Sn). The current exchange rate of the sona against the US dollar is Sn8.50/USD. Chatterjee states that increased FDI will cause the sona to strengthen against world currencies. Tourism will be harmed because goods and services priced in sonas will appear more expensive to the non-domestic visitors who make up the bulk of the tourist trade.\nTrippi shows the committee Exhibit 2, which contains data from the currency exchange markets relative to the sona. On the basis of this data, Trippi states that markets currently anticipate that the sona will weaken, not strengthen, against both the dollar and the British pound.\nExhibit 2 Exchange Rates, Interest Rates, and Inflation Rates\n\tCurrent Spot Rates\tOne-Year Interest Rate (%)\tOne-Year Inflation Rate (%)\nGolden Island\tSn8.50/USD\t6.5\t3\nUnited Kingdom\tGBP0.62/USD\t4.05\t1.6\nUnited States\t---\t3.5\t1.3\nGolden Island’s Minister of Finance and president of the Central Bank, Rajiv Sengupta, addresses the issues of potential inflation as the island transitions to greater growth. He assures the committee that Golden Island’s central bank stands ready to use monetary tools to prevent such inflation",
+  "questions": [
+   {
+    "n": 30,
+    "q": "How many of the current financial and economic conditions listed in Exhibit 1 at least partially explain why Golden Island faces limited economic growth?",
+    "options": [
+     "All six are limitations on growth.",
+     "Exactly five of the six are limitations on growth.",
+     "Exactly three of the six are limitations on growth."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. All of the factors except 'well-established property rights' represent limitations to growth hence, exactly 5 factors are limitations. | B. Correct. All of the factors except 'well-established property rights' represent limitations to growth. Hence, exactly five factors are limitations. | C. Incorrect. All of the factors except 'well-established property rights' represent limitations to growth hence, exactly 5 factors are limitations."
+   },
+   {
+    "n": 31,
+    "q": "Trippi’s statement regarding tariffs is best described as:",
+    "options": [
+     "correct.",
+     "incorrect, because high tariffs support increases in FDI.",
+     "incorrect, because eliminating high tariffs on manufactured goods will increase Golden Island’s physical capital and contribute to higher productivity."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity. | B. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity. | C. Correct. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity."
+   }
+  ]
+ },
+ {
+  "id": "tremblay-growth",
+  "source": "28 Oct paste",
+  "readings": [
+   6,
+   5
+  ],
+  "title": "Tremblay: growth models and international asset pricing",
+  "body": "Louise Tremblay is a portfolio manager for a global equity fund domiciled in the United States. She wants to add positions in foreign stocks from Canada and also stocks from either Brazil or Ecuador. Tremblay calls Hal Baroque, the firm’s economist, to arrange a meeting to discuss his outlook for these economies and issues related to foreign exchange relations and international asset pricing. During the meeting, Baroque presents the information he gathered in preparation for their discussion, as shown in Exhibit 1. \nExhibit 1 Selected Currency Exchanges and Market Rates\nCountry\tCurrency\tSpot Exchangea\tOne-Year Risk-Free Rate\tExpected Annual Inflation Return\nUnited States\tUS$\tNA\t4.80%\t2.30%\nCanada\tC$\t1.2138-1.2259\t4.10%\t1.90%\nBrazil\tReal (BRL)\t2.3844-2.4082\t8.80%\t6.30%\nEcuador\tUS$b\tNA\t6.40%\t4.50%\na Number of foreign currency units per one US dollar.\t\t\t\t\nb Ecuador uses the US dollar as its official currency.\t\t\t\t\nBaroque begins his discussion by reviewing some basic relations that are useful in understanding the interplay between exchange rates, interest rates, and inflation.\nHe remarks: “Theoretically, the nominal yield spread between two countries should be equal to the expected inflation rate differential over the term of the interest rates.”\nTremblay provides two justifications for adding Brazilian stocks rather than Ecuadoran stocks to her portfolio. She believes:\nBrazil is sufficiently developed to be considered part of the group of developed nations, but Ecuador is not. Investing in countries with lower per capita incomes that are members of the developed nations group should, over long periods of time, provide a higher rate of return than investing in countries with higher per capita income.\nBrazil is more open than Ecuador is to importing technology from advanced countries.\nBaroque agrees that Brazil is more open. In particular, he notes that Brazil is more open to foreign direct investment (FDI) than Ecuador is. Technological progress is more likely with greater FDI.\nBaroque states: “More rapid capital accumulation by itself cannot result in a permanently higher rate of per capita growth. Permanently higher growth in per capita output requires progress in total factor productivity (TFP), which requires new, innovative products and processes.",
+  "questions": [
+   {
+    "n": 32,
+    "q": "Tremblay’s justifications for preferring Brazilian stocks to Ecuadoran stocks are mostconsistent with which economic growth model?",
+    "options": [
+     "Classical",
+     "Endogenous",
+     "Neoclassical"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Convergence is not part of classical growth theory. | B. Incorrect. Convergence is not part of endogenous growth theory. | C. Correct. Tremblay’s first justification describes 'club convergence.' Her second justification describes a second source of convergence—imitating or adopting technology already widely used in the advanced countries. Convergence is consistent with the neoclassical growth model."
+   },
+   {
+    "n": 33,
+    "q": "Baroque’s comment regarding foreign direct investment (FDI) is most consistent with which economic growth model?",
+    "options": [
+     "Classical",
+     "Neoclassical",
+     "Endogenous"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Permanently higher growth is not possible in the classical growth model. | B. Incorrect. Permanently higher growth is not possible in the neoclassical growth model. | C. Correct. The possibility for permanent higher growth in per capita output exists within endogenous growth theories, but not in neoclassical growth theory or classical growth theory. - can you give me a table for these economical models? Classical, neoclassical and endogenous. So i have have a picture in my head. In the pdf and you can make some basic quesitons on this in the app And dont forget to add these to your vignette bank"
+   }
+  ]
+ }
+]
