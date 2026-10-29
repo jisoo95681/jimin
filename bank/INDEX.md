@@ -34,7 +34,7 @@ Totals: app 68 vignettes · bank 97 vignettes · 165 in all. Plus 13 standalone 
 | 26 | Credit Analysis Models | 1 | 3 | 4 |
 | 27 | Credit Default Swaps | 0 | 7 | 7 |
 | 28 | Pricing and Valuation of Forward Commitments | 4 | 11 | 15 |
-| 29 | Valuation of Contingent Claims | 5 | 3 | 8 |
+| 29 | Valuation of Contingent Claims | 5 | 2 | 7 |
 | 30 | Commodities and Commodity Derivatives | 0 | 2 | 2 |
 | 31 | Types of Real Estate Investment | 0 | 2 | 2 |
 | 32 | Real Estate through Publicly Traded Securities | 0 | 1 | 1 |
@@ -79,7 +79,7 @@ Totals: app 68 vignettes · bank 97 vignettes · 165 in all. Plus 13 standalone 
 **26 Credit Analysis Models**: liecken (app, 8Q); m1-1 (bank, 4Q); cds-5 (bank, 6Q); s1a-suess (bank, 4Q)
 **27 Credit Default Swaps**: m1-1 (bank, 4Q); cds-1 (bank, 6Q); cds-2 (bank, 8Q); cds-3 (bank, 4Q); cds-4 (bank, 4Q); cds-5 (bank, 6Q); cds-6 (bank, 6Q)
 **28 Pricing and Valuation of Forward Commitments**: crestpoint (app, 6Q); meridian (app, 5Q); fabc (app, 4Q); troubadour (app, 5Q); d28-doyle (bank, 6Q); d28-troubadour (bank, 5Q); d28-johnson (bank, 9Q); d28-torres (bank, 4Q); d28-pak (bank, 4Q); m2-7 (bank, 4Q); s2a-talbot (bank, 4Q); s1b-whitney (bank, 6Q); d28-mafadi (bank, 4Q); d28-stoneridge (bank, 4Q); d28-megaarb (bank, 4Q)
-**29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); hamilton-nevis (bank, 4Q); d28-pak (bank, 4Q); m1-5 (bank, 4Q)
+**29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); hamilton-nevis (bank, 4Q); m1-5 (bank, 4Q)
 **30 Commodities and Commodity Derivatives**: musicale-apex (bank, 8Q); m2-11 (bank, 4Q)
 **31 Types of Real Estate Investment**: pc-5 (bank, 4Q); s2a-ferguson (bank, 4Q)
 **32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q)

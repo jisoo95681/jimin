@@ -20,6 +20,9 @@
 - Treasury futures: invoice = futures price × conversion factor + accrued interest; the factor aligns coupons (6% basis), not accrued interest.
 - Swap fixed rate = (1 – last PV factor) / Σ PV factors, annualized.
 - Swap value = notional × (new fixed – old fixed) × Σ PV factors (all remaining). Pay-fixed gains when the market rate is higher; receive-fixed is the negative. Answer for the side the question names.
+- "No-arbitrage / equilibrium / fair price" = the model price. MP (quoted) > FP → overvalued → carry; MP < FP → reverse carry. Treasury futures: compare quoted Q with Q0 = (1/CF) × [FV(B0 + AI0) – AI_T – FV(coupons)]; AI0 counts days SINCE the last coupon, AI_T = days since the last coupon at expiry.
+- Interest on borrowed funds is in the FV factor, never a carry cost. Dividends and coupons (benefits) are subtracted; a short forward loses when r or the spot rises.
+- Swap value: periodic rates × ΣZ × NA; annualized rates need × days/360 as well. Currency swap quote A/B = A per 1 B (multiply B amounts by it).
 
 ## Your traps
 - Discounting S_t; subtracting a negative theta; not discounting the notional (swap leg or equity swap); one PV factor instead of the sum; value vs cash flow; annual rates with quarterly PV factors; the wrong curve or exhibit.
