@@ -5157,6 +5157,479 @@ const QUESTIONS = [
     options: ["Reduce the bank's capital ratios directly", "Encourage excessive risk-taking", "Lower the bank's liquidity coverage ratio"],
     answer: 1,
     why: "Managers may chase the share price through riskier strategies."
+  },
+  // ---------- Ethics: handwritten extra notes (29 Oct) ----------
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Pension fund trustees ask a CFA member to direct soft dollars to research that benefits the trustees. Soft dollars must be used to:",
+    options: ["Benefit the clients (the fund's beneficiaries); the trustees do not control them", "Pay for whatever services the trustees choose, since they control the fund", "Cut the member's own firm's research costs"],
+    answer: 0,
+    why: "Soft dollars are client brokerage (III(A) Loyalty, Prudence and Care). Trustees don't control them; the member should spend them so that clients benefit."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm offers a hot IPO to all clients first and then to its internal portfolio managers. This is:",
+    options: ["A violation of VI(B): staff may never take part in an IPO", "Not a violation: clients were offered shares first (managers can even be offered shares before the issue is fully subscribed, if clients were asked first)", "A violation of III(B): managers must wait until the issue is fully subscribed"],
+    answer: 1,
+    why: "Clients come first. Once the IPO has been offered to all clients, offering shares to internal managers is not a violation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "From the firm's point of view, an oversubscribed IPO should be allocated:",
+    options: ["First to the portfolio managers who cover the issuer", "To the clients who asked first", "Pro rata to clients, not to portfolio managers first"],
+    answer: 2,
+    why: "III(B) Fair Dealing: allocate oversubscribed shares pro rata to clients; managers are not served ahead of clients."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A client tells her adviser confidential information about the client's own company, and the adviser passes it on. This breaches:",
+    options: ["Both III(E) Preservation of Confidentiality and II(A) Material Nonpublic Information", "Only III(E)", "Only II(A)"],
+    answer: 0,
+    why: "Confidential information shared by a client cannot be shared further (III(E)), and if it is material and nonpublic it also engages II(A)."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member under investigation by CFA Institute's Professional Conduct Program (PCP) faces possible sanctions. Must the member tell clients about the possible sanctions?",
+    options: ["Yes, immediately, under VI(A)", "No: the sanctions are not yet official", "Yes, but only the key clients"],
+    answer: 1,
+    why: "Possible sanctions are not officialised until the process ends, so there is nothing to disclose yet."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "When a firm holds material nonpublic information (MNPI) about an issuer, a required control is:",
+    options: ["Suspending all trading in every security the firm covers", "Relying on a ban on discussing the issuer, with no extra monitoring", "Heightened review of all trading, which helps restrict the flow of confidential information"],
+    answer: 2,
+    why: "II(A): the firm should closely review trading while it holds MNPI so that the information cannot leak into trades. It does not need to halt all trading."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member accepts company-paid hotel and transport to visit a remotely located (hard-to-reach) site. Under I(B) this is:",
+    options: ["Generally acceptable: reasonable hotel and transport are unlikely to compromise independence and objectivity", "A violation: any paid travel compromises objectivity", "Acceptable only if clients give written approval"],
+    answer: 0,
+    why: "Reasonable travel needed to reach a remote location is not likely to compromise objectivity. Lavish extras would."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under V(C), a member should keep records (electronic or hard copy) of:",
+    options: ["Only the final reports sent to clients", "Conversations and the research reports used to produce client communication material", "Only recommendations that were implemented"],
+    answer: 1,
+    why: "V(C) Record Retention: keep records that support the investment analysis and recommendations, including the research behind client communications."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A supervisor spots suspicious activity by a team member. Which response is most appropriate?",
+    options: ["Report it to the upper supervisor immediately, before any other step", "Meet the member in person to warn them", "Limit the member's trading and increase monitoring while looking into it"],
+    answer: 2,
+    why: "IV(C): act to prevent further violation by limiting trading and monitoring more closely while the facts are investigated."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst tells someone outside the company only that \"primary research suggests the stock will rise in the short term.\" This most likely:",
+    options: ["Breaches the duty to the employer (sharing sensitive business information), but is not misuse of MNPI", "Violates II(A) because primary research is material nonpublic information", "Is fine because no numbers were given"],
+    answer: 0,
+    why: "Sharing the employer's research externally harms the employer (IV(A)). A general conclusion from primary research is not MNPI."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member passes on material nonpublic information and says, if challenged, that \"it was based on publicly known fundamentals.\" This is:",
+    options: ["Not a violation if public fundamentals support the idea", "A violation: causing others to trade on MNPI is prohibited whatever the justification", "A violation only if the member trades personally"],
+    answer: 1,
+    why: "II(A) prohibits acting on MNPI or causing others to act on it. Claiming a public basis afterwards does not change that."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which procedures does VI(B), Priority of Transactions, recommend for personal trades?",
+    options: ["Annual holdings reports only", "No pre-clearance, but a quarterly review of all trades", "Pre-clearance of trades (compliance approval) and duplicate trade confirmations or statements sent by the broker to the employer"],
+    answer: 2,
+    why: "VI(B) recommends pre-clearance and having the broker send copies of personal trade confirmations or account statements to the employer."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A full-time analyst also works 30 hours a week as a waitress. The most likely issue is:",
+    options: ["IV(A) Loyalty: the workload could lower the quality of her work for the employer, although the second job itself is not a violation", "None: non-competing outside work never raises an issue", "IV(B) Additional Compensation: she must disclose the job to clients"],
+    answer: 0,
+    why: "A non-competing job is not prohibited, but a heavy workload can deprive the employer of her best work (IV(A))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An applicant for an investment role was convicted of an unrelated offence as a teenager, before working as an investment professional. Under the Code and Standards this is:",
+    options: ["A violation of I(D) Misconduct", "Not a violation: it occurred before they were an investment professional", "A violation unless it is disclosed to every client"],
+    answer: 1,
+    why: "The Standards govern conduct of members and candidates. Conduct from before entering the profession is not a violation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member accepts a paid position that does not compete with the employer. Under the Standards:",
+    options: ["Written consent from the employer is always required", "It must be disclosed to clients under VI(A)", "There is no need to disclose the position"],
+    answer: 2,
+    why: "IV(B) concerns compensation that competes with, or creates a conflict with, the employer. A paid role that does not compete needs no disclosure."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member does a small side job for a few hours a week that does not compete with the firm. This:",
+    options: ["Is fine: no need to disclose and no violation", "Violates IV(A) Loyalty because any side job harms the employer", "Requires the member to disclose it in all client reports"],
+    answer: 0,
+    why: "Few hours and no competition mean no conflict with the employer's interests."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A prospective client asks for more performance data than the firm has chosen to disclose, including individual client results. The firm should:",
+    options: ["Provide any client performance data requested, to be transparent", "Decline the individual client data and present fair, accurate and complete firm performance", "Provide it only if the prospect signs a confidentiality agreement"],
+    answer: 1,
+    why: "Individual client data is confidential (III(E)). The firm decides what it presents, but it must be fair, accurate and complete (III(D))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member suspects illegal activity by a client. Disclosing it to the authorities is:",
+    options: ["Prohibited, because client information is confidential", "Permitted only if the client is a key client of the firm", "Permitted as an exception to confidentiality, whether the client is ordinary or a key client"],
+    answer: 2,
+    why: "III(E) exceptions include illegal activity. The size or importance of the client does not matter."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Firm A and a brokerage B agree to exchange client referrals. The arrangement complies with the Standards if it is:",
+    options: ["Disclosed to clients and prospective clients", "Never allowed under VI(C)", "Disclosed to the employer only"],
+    answer: 0,
+    why: "VI(C) Referral Fees: compensation or benefit for referrals must be disclosed so clients can evaluate the recommendation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An asset that is risky on its own is recommended to a risk-averse client. Under III(C) Suitability, this can be acceptable if:",
+    options: ["The asset is judged on its own, and its risk is within the client's tolerance", "It is judged in the context of the client's total portfolio, and total portfolio risk stays low", "The client's total portfolio is ignored"],
+    answer: 1,
+    why: "Suitability is assessed against the whole portfolio. A risky position can be fine if the overall portfolio risk is low."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which fee arrangement for issuer-paid research best supports independence?",
+    options: ["A fee that is higher if the report is favourable", "Payment partly in the issuer's shares", "Full disclosure of the arrangement and a flat fee, with no bonus, regardless of the conclusion or recommendation"],
+    answer: 2,
+    why: "Compensation must not depend on the conclusion (I(B), VI(A)). Disclose the arrangement and use a flat fee without bonus."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member writes a report on a stock that the member owns (or benefits from). The member must:",
+    options: ["Disclose the ownership or beneficial interest to the employer and in the report", "Do nothing: personal holdings are private", "Disclose it to the employer only"],
+    answer: 0,
+    why: "VI(A) Disclosure of Conflicts: make conflicts known to the employer and in reports so clients can evaluate the report knowing the conflict."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm claims to comply with GIPS when it does not. This violates:",
+    options: ["Nothing, because GIPS compliance is voluntary", "III(D) Performance Presentation", "Only V(B) Communication with Clients"],
+    answer: 1,
+    why: "Claiming GIPS compliance when not compliant is a misrepresentation in performance presentation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under IV(A), members who leave a firm may take records, files or models only with:",
+    options: ["The written consent of the person who developed the model", "No permission, if they built the model themselves", "The employer's written permission, even if the person who developed the model agrees"],
+    answer: 2,
+    why: "Records and models created at work belong to the employer. The developer's own consent is not enough."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "To stop employees trading ahead of clients, a firm only time-stamps transactions. This is:",
+    options: ["Inadequate: it does not prevent personal trades being executed before clients' trades", "Adequate, since it records the order of trades", "Adequate if reviewed monthly"],
+    answer: 0,
+    why: "Time stamps only record what happened. Pre-clearance or blackout periods are needed to prevent front-running (VI(B))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A stock is unsuitable for a client, and the member buys it in their own account. This is:",
+    options: ["A violation of III(C) Suitability", "Not a violation: suitability applies to recommendations and actions for clients", "A violation of VI(B) Priority of Transactions"],
+    answer: 1,
+    why: "The member is not recommending the stock or buying it for the client. VI(B) only requires that clients' trades come first."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "To use the CFA designation, a charterholder must:",
+    options: ["Submit a personal development record every year", "Pay dues only in the years they trade", "Pay membership dues and complete the professional conduct statement every year; not submitting a personal development record is not a violation (it is voluntary)"],
+    answer: 2,
+    why: "VII(B) / CFA Institute rules: annual dues and the annual professional conduct statement. The personal development record is voluntary."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "In a research report, an analysis that is not a critical component of the analysis or the resulting recommendation:",
+    options: ["Does not need to be retained under V(C)", "Must be kept for seven years", "Must be sent to clients with the report"],
+    answer: 0,
+    why: "V(C): keep records that support the key analysis and recommendation. Non-critical items need not be kept."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Research conclusions or recommendations under V(A) may represent:",
+    options: ["Only a unanimous view", "The consensus of a group, not necessarily each individual's opinion", "Only the lead analyst's view"],
+    answer: 1,
+    why: "V(A) Diligence and Reasonable Basis: a report can reflect a group consensus rather than every member's opinion."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Analysts promoting the success or accuracy of their recommendations must:",
+    options: ["Show only recommendations that worked", "Avoid any reference to past recommendations", "Make reasonable efforts to ensure the information is fair, accurate and complete"],
+    answer: 2,
+    why: "III(D) Performance Presentation: promotion is allowed, but the performance information must be fair, accurate and complete."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst is a guest of a company with hotel and transport paid for a plant visit. Independence and objectivity are:",
+    options: ["Not likely to be compromised if the hotel and transport are reasonable", "Always compromised by company-paid travel", "Compromised unless clients are told"],
+    answer: 0,
+    why: "I(B) targets benefits that could compromise objectivity. Reasonable hotel and transport do not."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under I(A) Knowledge of the Law, a member violates the standard by:",
+    options: ["Failing to report a violation to governmental authorities", "Knowingly participating or assisting in violations of laws, rules or regulations", "Failing to report a violation the member did not know about"],
+    answer: 1,
+    why: "I(A) prohibits knowingly participating in or assisting a violation. It does not require members to report violations to authorities."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A company is rearranging its factory layout, which raises efficiency but needs no new machinery or personnel. An analyst learns of it. The information is:",
+    options: ["Material, because it affects efficiency", "Nonpublic, so it cannot be used", "Probably not material nonpublic information"],
+    answer: 2,
+    why: "Information is material if it would affect the price or an investor's decision. A layout change with no new machinery or staff is unlikely to."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A 2012 'buy' recommendation relies on 2008–2010 data and a CAGR. This most likely violates:",
+    options: ["V(B) Communication with Clients: it relies on dated information", "III(B) Fair Dealing", "VI(C) Referral Fees"],
+    answer: 0,
+    why: "Recommendations must rest on current information. Citing old data without making that clear misleads clients."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "While employed by A and planning to move to B, a worker uses a personal laptop after hours to list what they did for A. This is:",
+    options: ["A violation of IV(A) because the work belongs to A", "Not a violation, as long as the list contains no confidential employer information", "A violation unless A consents in writing"],
+    answer: 1,
+    why: "A record of one's own work history is not confidential information, and it is made outside working hours."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "In a thinly traded frontier market, a member wants to trade personal shares at the same time as clients. Under VI(B):",
+    options: ["Allowed if the member discloses the trade", "Allowed because the volume is small", "Not allowed: low liquidity means the price may rise before all clients get their shares"],
+    answer: 2,
+    why: "Client trades must come first. In an illiquid market the member's order could move the price against clients."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A senior professional leaves the firm, changing its organisational structure. Standard I(C) requires the member to:",
+    options: ["Update the RFP (request for proposal) to reflect the departure and the new structure", "Wait until the next scheduled annual update", "Leave the RFP as submitted unless someone asks"],
+    answer: 0,
+    why: "I(C) Misrepresentation: keeping an RFP that describes staff or structure that no longer exist would mislead prospects."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member overhears people discussing a valid newsletter article, without adding their own views. The information overheard is:",
+    options: ["Material nonpublic information", "Not material: it is only the newsletter's content", "Material, but usable if the source is not named"],
+    answer: 1,
+    why: "Overhearing only the newsletter's content gives no inside perspective, so it is not material nonpublic information."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm that is a market maker comes into possession of MNPI. It should:",
+    options: ["Stop trading in the security", "Tell clients so that they can decide", "Keep making the market for liquidity and confidentiality, but remain passive"],
+    answer: 2,
+    why: "A trading prohibition may harm confidentiality and liquidity (stopping would itself signal something to others). Continue market making, passively."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Client information is confidential for:",
+    options: ["Former, current and prospective clients", "Current clients only", "Current and prospective clients, not former ones"],
+    answer: 0,
+    why: "III(E) covers all client information, whatever the status of the relationship."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A composite includes terminated accounts to avoid survivorship bias but does not state their termination dates. This is:",
+    options: ["Fine: including terminated accounts is enough", "A violation: including terminated accounts is fine, but their termination dates must be stated", "A violation only because the accounts were terminated"],
+    answer: 1,
+    why: "III(D): including terminated accounts avoids survivorship bias, but it must be done transparently, with termination dates."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm shows only its best accounts and does not state whether returns are gross or net of fees. This is:",
+    options: ["Acceptable if the accounts are real", "A violation only if returns are gross", "A violation of III(D) Performance Presentation (both points)"],
+    answer: 2,
+    why: "Cherry-picking accounts and not saying whether fees are deducted make the presentation unfair and incomplete."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A client says their broker does not give best execution, yet tells the analyst to keep using that broker, and the analyst does. This is:",
+    options: ["Not a violation: the client directs the brokerage", "A violation of III(A) because best execution is required", "A violation of VI(A) Disclosure of Conflicts"],
+    answer: 0,
+    why: "When the client directs the broker, the member is following the client's instruction, so there is no violation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member recommends A's stock to clients, and A's CEO is also the member's client. The member joins an A committee (unpaid). What must be disclosed?",
+    options: ["The CEO relationship only", "The committee appointment; the CEO's status as a client need not be disclosed", "Both the appointment and the CEO relationship"],
+    answer: 1,
+    why: "VI(A): the committee seat could affect objectivity and must be disclosed. Client identity is confidential."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A friend refers clients to a member. With no payment, the member says, \"I'll at least pay for our holiday.\" The member must:",
+    options: ["Disclose nothing: no cash fee was paid", "Disclose only to the employer", "Disclose the travel expenses to both clients and the employer"],
+    answer: 2,
+    why: "VI(C): any compensation, consideration or benefit received or paid to others for recommending products or services must be disclosed to clients and the employer."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst shares a model with a company to check facts and get comments. This is acceptable if:",
+    options: ["The estimates (actual values) and the recommendation stay with the analyst and nobody gets preferential access", "She adopts the company's estimates", "She gives the company the recommendation first"],
+    answer: 0,
+    why: "Fact-checking with a company is fine as long as nobody receives preferential access to the analyst's conclusions."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Naming a charterholder who is under CFA Institute investigation for unethical behaviour is:",
+    options: ["Acceptable, since PCP cases are always public", "A violation if the case has not been announced publicly", "Acceptable if the person is a colleague"],
+    answer: 1,
+    why: "PCP matters are confidential until announced. Naming someone before that breaches confidentiality."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "By mistake an analyst put a client's money into a bank, and the account was frozen because of the bank's own problems. The analyst should:",
+    options: ["Do nothing, since the bank is at fault", "Keep charging fees but tell the client", "Reimburse past fees charged on that amount and stop charging management fees on it"],
+    answer: 2,
+    why: "The client should not pay fees on assets that were wrongly placed and are inaccessible (III(A))."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Using third-party research is:",
+    options: ["Not a violation, but the member must make reasonable efforts to determine whether the research is sound", "A violation unless the third party is a charterholder", "Fine without checks if the source is well known"],
+    answer: 0,
+    why: "V(A): third-party information may be used, but the member needs diligence and a reasonable basis."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst's outstanding record is published, but it came from strategies that do not match the firm's stated investment strategy. This violates:",
+    options: ["II(B) Market Manipulation", "III(D) Performance Presentation", "Nothing, since the record is real"],
+    answer: 1,
+    why: "The performance shown must be fair and relate to the firm's actual strategy; otherwise it misleads clients."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Specifying a price target in a report is acceptable if:",
+    options: ["The target is stated without any risks", "VaR is presented as an exact figure", "The risk is appropriately disclosed; if VaR is used, the report makes clear that the VaR estimate's quality depends on the quality of the model inputs"],
+    answer: 2,
+    why: "V(A)/V(B): a price target needs a reasonable basis and disclosure of risk, including model limitations."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "An analyst intends to move the price: they exaggerate the analysis of a firm's fundamentals and then issue a buy recommendation. This is:",
+    options: ["Market manipulation under II(B)", "Acceptable analysis, as all analysts are optimistic", "Only a V(B) communication issue"],
+    answer: 0,
+    why: "II(B) prohibits practices that distort prices or mislead market participants, including a recommendation built on exaggerated analysis."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A firm changes its investment process. Under V(B), the firm must:",
+    options: ["Provide previous investment details so clients can compare", "Disclose changes that materially affect the investment process, but need not provide previous investment details to compare with the new strategy", "Tell new clients only"],
+    answer: 1,
+    why: "V(B): disclose material changes in the process. It does not require supplying old details for comparison."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A member used a standard dividend model at their former employer (firm policy) and keeps using it, unattributed, in their own business. This is:",
+    options: ["A violation of IV(A) because the employer's policy required it", "A violation of VII(B)", "Not a violation: it is a standard, generally known method"],
+    answer: 2,
+    why: "A widely used standard model is not the employer's proprietary property, so continuing to use it is not a violation."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under IV(C), supervisory responsibility covers employees who:",
+    options: ["Are subject to the supervisor's control or influence, not only direct reports", "Report directly to the supervisor", "Hold the CFA charter"],
+    answer: 0,
+    why: "IV(C): a supervisor is responsible for everyone subject to their control or influence."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "A gift that creates no conflict and does not compete with the employer's interests is:",
+    options: ["A violation of I(B) in all cases", "Fine", "Acceptable only after a written ruling from the CFA Institute"],
+    answer: 1,
+    why: "The standards target gifts that could compromise objectivity or conflict with the employer. Other gifts are fine."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Giving trading recommendations on securities that the firm specifically says not to trade is a violation of:",
+    options: ["III(B) Fair Dealing", "V(A) Diligence and Reasonable Basis", "IV(A) Loyalty to the employer"],
+    answer: 2,
+    why: "Ignoring the employer's explicit trading restriction breaches loyalty to the employer."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Under VII(A) Conduct as Participants in CFA Institute Programs, members:",
+    options: ["Must self-disclose; reporting others' wrongdoing is encouraged but not required (a supervisor should at least tell the wrongdoer to self-report)", "Must report others' wrongdoing to the PCP", "Need not self-disclose anything"],
+    answer: 0,
+    why: "Self-disclosure is required. Reporting others is encouraged, not mandatory."
+  },
+  {
+    topic: "Ethical and Professional Standards",
+    reading: "Guidance for Standards I–VII",
+    q: "Which is NOT an exception to III(E) Preservation of Confidentiality?",
+    options: ["Disclosure required by law", "Disclosing a well-known client to win new business", "The client permits the disclosure"],
+    answer: 1,
+    why: "Exceptions: PCP claim defence, illegal activity by the client, disclosure required by law, and client permission."
   }
 ];
 
