@@ -2027,7 +2027,7 @@ const NOTES = (() => {
       0, 2,
       ["All-in return (funding currency) = (1 + i<sub>inv</sub>) × (S<sub>1</sub> ÷ S<sub>0</sub>) – (1 + i<sub>fund</sub>), S = funding per investment currency", "Buying the investment currency → pay the <b>offer</b> at each step of the cross"],
       ["S₀ = 117.66 × 1.0873 = 127.93 JPY/EUR (offers); S₁ = 118.32 × 1.0984 = 129.96.", "1.014 × (129.96 ÷ 127.93) – 1.0015 = 1.0301 – 1.0015 = 2.86%."],
-      ["You are buying EUR, so you pay offers; your projected rate has no bid/offer."]),
+      ["At each step: buying the base of the quote → offer, selling the base → bid. Here both steps buy the base (USD, then EUR), so offers; your projected rate has no bid/offer."]),
     F("26", 8, "Beauregard (Econ) \u00b7 Q26", 5, "Economics", "Forward discount: day count in the denominator",
       ["KRW/CAD bid/offer 869.813 / 871.598 (midpoint 870.706); 270-day rates: KRW 1.50% (price), CAD 1.75% (base)."],
       "The mid-market forward premium (discount) for a 270-day KRW/CAD forward is closest to:",
