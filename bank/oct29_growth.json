@@ -1,0 +1,365 @@
+[
+ {
+  "id": "eg29-klymchuk",
+  "source": "29 Oct paste (Econ growth)",
+  "readings": [
+   6
+  ],
+  "title": "Klymchuk: ECONO growth accounting, convergence and stock markets",
+  "body": "Victor Klymchuk, the chief economist at ECONO Consulting (EC), is reviewing the long-term GDP growth of three countries. Klymchuk is interested in forecasting the long-term change in stock market value for each country. Exhibit 1 presents current country characteristics and historical information on select economic variables for the three countries.\n\nExhibit 1\nSelect Country Factors and Historical Economic Data\n2009–2019\nCountry Factors\tGrowth in Hours Worked (%)\tGrowth in Labor Productivity (%)\tGrowth in TFP (%)\tGrowth in GDP (%)\nCountry A\t\nHigh level of savings and investment\n\nHighly educated workforce\n\nLow tariffs on foreign imports\n\nLimited natural resources\n\n0.9\t2.4\t0.6\t3.3\nCountry B\t\nDeveloped financial markets\n\nModerate levels of disposable income\n\nSignificant foreign direct and indirect investments\n\nSignificant natural resources\n\n−0.3\t1.6\t0.8\t1.3\nCountry C\t\nPolitically unstable\n\nLimited property rights\n\nPoor public education and health\n\nSignificant natural resources\n\n1.8\t0.8\t−0.3\t2.6\nKlymchuk instructs an associate economist at EC to assist him in forecasting the change in stock market value for each country. Klymchuk reminds the associate of the following:\n\nStatement 1: “Over short time horizons, percentage changes in GDP, the ratio of earnings to GDP, and the price-to-earnings ratio are important factors for describing the relationship between economic growth and stock prices. However, I am interested in a long-term stock market forecast.”\n\nA client is considering investing in the sovereign debt of Country A and Country B and asks Klymchuk his opinion of each country’s credit risk. Klymchuk tells the client the following:\n\nStatement 2: “Over the next 10 years, I forecast higher potential GDP growth for Country A and lower potential GDP growth for Country B. The capital per worker is similar and very high for both countries, but per capita output is greater for Country A.”\n\nThe client tells Klymchuk that Country A will offer 50-year bonds and that he believes the bonds could be a good long-term investment given the higher potential GDP growth. Klymchuk responds to the client as follows:\n\nStatement 3: “After the next 10 years, I think the sustainable rate of economic growth for Country A will be affected by a growing share of its population over the age of 65, a declining percentage under age 16, and minimal immigration.”\n\nThe client is surprised to learn that Country C, a wealthy, oil-rich country with significant reserves, is experiencing sluggish economic growth and asks Klymchuk for an explanation. Klymchuk responds by stating:\n\nStatement 4: “Although countries with greater access to natural resources are often wealthier, the relationship between resource abundance and economic growth is not clear. My analysis shows that the presence of a dominant natural resource (oil) in Country C is constraining growth. Interestingly, Country A has few natural resources but is experiencing a strong rate of increase in per capita GDP growth.”\n\nKlymchuk knows that growth in per capita income cannot be sustained by pure capital deepening. He asks the associate economist to determine how important capital deepening is as a source of economic growth for each country. Klymchuk instructs the associate to use the data provided in Exhibit 1.\n\nKlymchuk and his associate debate the concept of convergence. The associate economist believes that developing countries, irrespective of their particular characteristics, will eventually equal developed countries in per capita output. Klymchuk responds as follows:\n\nStatement 5: “Poor countries will only converge to the income levels of the richest countries if they make appropriate institutional changes.”",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on the country factors provided in Exhibit 1, the country most likely to be considered a developing country is:",
+    "options": [
+     "Country A.",
+     "Country B.",
+     "Country C."
+    ],
+    "answer": "C",
+    "why": "C is correct. Country C is the most likely to be a developing economy. Political instability, limited property rights, and poor public education and health are all factors that limit economic growth and thereby contribute to a relatively low standard of living."
+   },
+   {
+    "n": 2,
+    "q": "Based on Exhibit 1, capital deepening as a source of growth was most important for:",
+    "options": [
+     "Country A.",
+     "Country B.",
+     "Country C."
+    ],
+    "answer": "A",
+    "why": "A is correct. The associate economist can measure the effect of pure capital deepening by measuring the difference of the growth rates of labor productivity and total factor productivity. The larger the difference, the more important capital deepening is as a source of economic growth. From 2000–2010, Country A’s labor productivity grew by 2.4% per year, of which 0.6% came from TFP growth and 1.8% from capital deepening (2.4% − 0.6% = 1.8%)."
+   },
+   {
+    "n": 3,
+    "q": "Based on Statement 1, over the requested forecast horizon, the factor that will most likely drive stock market performance is the percentage change in:",
+    "options": [
+     "GDP.",
+     "the earnings to GDP ratio.",
+     "the price-to-earnings ratio."
+    ],
+    "answer": "A",
+    "why": "A is correct. In the long run, the GDP growth rate is the most important driver of stock market performance. Therefore, the associate economist should focus on the drivers of long-run potential GDP growth. The ratio of earnings to GDP cannot increase indefinitely because that would imply that profit would eventually absorb all of GDP. This ratio cannot shrink forever, either, because unprofitable companies will go out of business. Thus, the annualized growth rate of the earnings to GDP ratio must be approximately zero over long time horizons, and this ratio should not be a dominant factor in forecasting long-term stock market performance. Similarly, the price-to-earnings ratio cannot grow or contract at a finite rate forever because investors will not pay an excessive price for each dollar of earnings, nor will they give away earnings for free. Therefore the rate of change in the price-to-earnings ratio must be approximately zero over long time horizons and should not be a dominant factor in the forecast of long-term stock market performance."
+   },
+   {
+    "n": 4,
+    "q": "Based solely on the predictions in Statement 2, over the next decade Country B’s sovereign credit risk will most likely:",
+    "options": [
+     "increase.",
+     "decrease.",
+     "not change."
+    ],
+    "answer": "A",
+    "why": "A is correct. Credit rating agencies consider the growth rate of potential GDP when evaluating the credit risk of sovereign debt. The chief economist’s expectation for lower potential GDP growth for Country B over the next decade increases the perceived credit risk of its sovereign bonds."
+   },
+   {
+    "n": 5,
+    "q": "Based on Statement 2, the difference in per capita output between Country A and Country B most likely results from differences in:",
+    "options": [
+     "capital deepening.",
+     "capital per worker.",
+     "total factor productivity."
+    ],
+    "answer": "C",
+    "why": "C is correct. The higher per capita output for Country A is most likely the result of differences in the cumulative impact of technological progress embodied in total factor productivity. Technological progress raises a country’s productive capacity and causes an upward shift in the entire production function, resulting in higher output per worker for a given level of capital per worker."
+   },
+   {
+    "n": 6,
+    "q": "Based on Statement 3, after the next 10 years, the growth rate of potential GDP for Country A will most likely be:",
+    "options": [
+     "lower.",
+     "higher.",
+     "unchanged."
+    ],
+    "answer": "A",
+    "why": "A is correct. Demographic factors can positively or negatively contribute to a country’s sustainable rate of economic growth. After the next 10 years, Country A is expected to experience a growing share of the population over the age of 65 and a declining percentage of the population under the age of 16. All else the same, this implies slower growth of the labor force and hence slower growth of potential GDP. Immigration could offset these demographic challenges. However, Statement 3 indicates that Country A is expected to experience minimal immigration."
+   },
+   {
+    "n": 7,
+    "q": "Based on Statement 4 and Exhibit 1, the sluggish economic growth in Country C is least likely to be explained by:",
+    "options": [
+     "limited labor force growth.",
+     "export driven currency appreciation.",
+     "poorly developed economic institutions."
+    ],
+    "answer": "A",
+    "why": "A is correct. Country C is an example of a country endowed with an abundant natural resource yet experiencing slow economic growth. Although labor force growth is an important source of economic growth, it is the least likely explanation of the sluggish economic growth in Country C. As shown in Exhibit 1, growth in total hours worked has accounted for most of Country C’s growth. Furthermore, export driven currency appreciation and poorly developed economic institutions are both likely causes of sluggish growth in countries with abundant natural resources."
+   },
+   {
+    "n": 8,
+    "q": "Based on Statement 4, the higher rate of per capita income growth in Country A is least likely explained by the:",
+    "options": [
+     "rate of investment.",
+     "growth of its population.",
+     "application of information technology."
+    ],
+    "answer": "B",
+    "why": "B is correct. Population growth can increase the growth rate of the overall economy but does not affect the rate of increase in per capita GDP. Therefore, population growth does not explain Country A’s higher rate of per capita income growth. An increase in labor force participation could, however, raise the growth rate of per capita GDP."
+   },
+   {
+    "n": 9,
+    "q": "The type of convergence described by Klymchuk in Statement 5 is best described as:",
+    "options": [
+     "club convergence.",
+     "absolute convergence.",
+     "conditional convergence."
+    ],
+    "answer": "A",
+    "why": "A is correct. Klymchuk is referring to the concept of club convergence. The basic premise is that lower-income members of the club are converging to the income levels of the richest countries. This implies that the countries with the lowest per capita income in the club grow at the fastest rate. Countries outside the club, however, continue to fall behind."
+   }
+  ]
+ },
+ {
+  "id": "eg29-amaral",
+  "source": "29 Oct paste (Econ growth)",
+  "readings": [
+   6
+  ],
+  "title": "Amaral and Mantri: institutions, capital deepening and Mali strategies",
+  "body": "At an international finance and economics conference in Bamako, Mali, Jose Amaral of Brazil and Lucinda Mantri of India are discussing how to spur their countries’ economic growth. Amaral believes that growth can be bolstered by removing institutional impediments and suggests several possibilities for Brazil: launching a rural literacy program, clarifying property rights laws, and implementing a new dividend tax on foreign investors.\n\nMantri responds that for India, capital deepening will be more effective, and she has proposed the following ideas: building a group of auto and textile factories in the southern states, developing a north–south and east–west highway network, and sponsoring a patent initiative.\n\nIn response, Amaral says to Mantri:\n\n“Based on endogenous growth theory, one of those proposals is more likely to raise total factor productivity than result in pure capital deepening.”\n\nAlthough Mantri recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:\n\nChannel 1\tDeepening the capital base\nChannel 2\tMaking investments in technology\nChannel 3\tMaintaining a low rupee exchange rate\nEach country’s basic economic statistics were presented at the conference. Selected data for Brazil and India are presented in Exhibit 1. Adama Kanté, a fund manager based in Mali, is planning to increase the fund’s allocation to international equities and, after some preliminary analysis, has determined the new allocation will be to Brazilian or Indian equities. After reviewing the data in Exhibit 1, Kanté decides that the allocation will be to Indian equities.\n\nExhibit 1\nEconomic Statistics for Brazil and India\nEconomic Statistic\tBrazil\tIndia\nGDP per capita, 2018\t$14,360\t$6,999\nGDP per capita growth, 2000–2018\t1.3%\t5.8%\nGDP growth, 2005–2018\t2.0%\t7.2%\n- Growth resulting from labor productivity component\t1.3%\t6.3%\n- Growth resulting from capital deepening component\t1.9%\t4.5%\nKanté is concerned about the low standard of living in Mali and its large informal sector. To improve per capita GDP, Kanté is considering five specific strategies:\n\nStrategy 1\n\nLower the country’s tax rate.\n\nStrategy 2\n\nIntroduce policies that encourage the return of highly educated Malian emigrants.\n\nStrategy 3\n\nBuild daycare centers to increase women’s participation in the workforce.\n\nStrategy 4\n\nImpose high tariffs on imports to protect the country’s nascent industries.\n\nStrategy 5\n\nUse economic development bank loans to improve the country’s transport and manufacturing infrastructure.",
+  "questions": [
+   {
+    "n": 10,
+    "q": "Which of Amaral’s initiatives is least likely to achieve his stated growth objective?",
+    "options": [
+     "Dividend tax",
+     "Rural literacy",
+     "Property rights"
+    ],
+    "answer": "A",
+    "why": "A is correct. Amaral’s initiative to implement a new dividend tax is likely to impede inflows of equity capital by making equity investment in Brazil less attractive for foreign investors. Capital flows, or lack thereof, have a major impact on economic growth because, in an open economy, world savings can finance domestic investment. As a potential source of funds, foreign investment breaks the vicious cycle of low income, low domestic savings, and low investment."
+   },
+   {
+    "n": 11,
+    "q": "Which proposal for India is Amaral most likely referring to in his response to Mantri?",
+    "options": [
+     "Patent initiative",
+     "Highway network",
+     "Auto and textile factories"
+    ],
+    "answer": "A",
+    "why": "A is correct. Mantri’s proposal to sponsor a patent initiative, which is likely to result in technology investment and improvement, is likely to cause a proportional upward shift in the entire production function, allowing the economy to produce higher output per worker for a given level of capital per worker. Technological progress also increases the marginal product of capital relative to its marginal cost."
+   },
+   {
+    "n": 12,
+    "q": "The channel that is least likely to help India overcome its challenge of lacking significant natural resources is:",
+    "options": [
+     "Channel 1.",
+     "Channel 2.",
+     "Channel 3."
+    ],
+    "answer": "C",
+    "why": "C is correct. Maintaining a low currency exchange rate is a policy aimed at maintaining demand for the country’s exports. It would have little direct impact on the potential growth rate of aggregate supply. It might boost long-term capacity growth indirectly, however, by encouraging adoption of leading edge technology. Nonetheless, it would not be expected to be as powerful as capital deepening and/or investment in technology."
+   },
+   {
+    "n": 13,
+    "q": "Based on Exhibit 1, which Indian economic statistic least likely supports Kanté’s international equity allocation preference?",
+    "options": [
+     "GDP per capita",
+     "Growth resulting from labor productivity",
+     "Growth resulting from capital deepening"
+    ],
+    "answer": "A",
+    "why": "A is correct. Kanté’s decision to invest in equities in India is supported by the country’s strong economic growth. For global investors, economic growth is important because equity composite valuations depend to a great extent on both the level of economic output (GDP per capita and GDP overall) and the rate of economic growth. Relative to Brazil, India’s growth rate in per capita GDP has been much higher, and furthermore, the growth rate in GDP has also been much higher than that of Brazil. In contrast to the growth rate, the relatively low level of GDP per capita in India is less likely to indicate attractive equity investment opportunities. Low per capita GDP suggests that India may lack sufficient industrial and financial infrastructure to support some types of industries. It also indicates that domestic purchasing power is relatively limited, decreasing the potential for higher-margin, domestically oriented businesses."
+   },
+   {
+    "n": 14,
+    "q": "The strategy that is least likely to improve per capita GDP in Mali is:",
+    "options": [
+     "Strategy 1.",
+     "Strategy 2.",
+     "Strategy 3."
+    ],
+    "answer": "A",
+    "why": "A is correct. With Mali’s low standard of living (i.e., GDP per capita and large informal workforce), the tax rate is unlikely to be an impediment to growth, so lowering the tax rate is not likely to be a major contributor to growth."
+   },
+   {
+    "n": 15,
+    "q": "Which of the following strategies being considered by Kanté is most likely to undermine or delay convergence with developed economies?",
+    "options": [
+     "Strategy 2",
+     "Strategy 4",
+     "Strategy 5"
+    ],
+    "answer": "B",
+    "why": "B is correct. The strategy for Mali to impose high tariffs (trade restrictions) on imports is likely to undermine rather than enhance growth and therefore is not supportive of convergence with developed economies. Freer trade (fewer trade restrictions) tends to enhance growth by, for example, inducing a shift of resources into industries in which the country has a comparative thereby increasing overall productivity; forcing less efficient domestic companies to exit and more efficient ones to innovate; allowing domestic producers to more fully exploit economies of scale by selling to a larger market; and enabling less advanced sectors of an economy to catch up with more-advanced countries or sectors through knowledge spillovers."
+   }
+  ]
+ },
+ {
+  "id": "eg29-schmidt",
+  "source": "29 Oct paste (Econ growth)",
+  "readings": [
+   6
+  ],
+  "title": "Schmidt: sovereign growth estimates, convergence and Dutch disease",
+  "body": "Hans Schmidt, CFA, is a portfolio manager with a boutique investment firm that specializes in sovereign credit analysis. Schmidt’s supervisor asks him to develop estimates for GDP growth for three countries. Information on the three countries is provided in Exhibit 1.\n\nExhibit 1\nSelect Economic Data for Countries A, B, and C\nCountry\tEconomy\tCapital per Worker\nA\tDeveloped\tHigh\nB\tDeveloped\tHigh\nC\tDeveloping\tLow\nAfter gathering additional data on the three countries, Schmidt shares his findings with colleague, Sean O’Leary. After reviewing the data, O’Leary notes the following observations:\n\nObservation 1: The stock market of Country A has appreciated considerably over the past several years. Also, the ratio of corporate profits to GDP for Country A has been trending upward over the past several years and is now well above its historical average.\n\nObservation 2: The government of Country C is working hard to bridge the gap between its standard of living and that of developed countries. Currently, the rate of potential GDP growth in Country C is high.\n\nSchmidt knows that a large part of the analysis of sovereign credit is to develop a thorough understanding of the potential GDP growth rate for a particular country and the region in which the country is located. Schmidt is also doing research on Country D for a client of the firm. Selected economic facts on Country D are provided in Exhibit 2.\n\nExhibit 2\nSelect Economic Facts for Country D\nSlow GDP Growth\n\nAbundant Natural Resources\n\nDeveloped Economic Institutions\n\nPrior to wrapping up his research, Schmidt schedules a final meeting with O’Leary to see if he can provide any other pertinent information. O’Leary makes the following statements to Schmidt:\n\nStatement 1: Many countries that have the same population growth rate, savings rate, and production function will have growth rates that converge over time.\n\nStatement 2: Convergence between countries can occur more quickly if economies are open and there is free trade and international borrowing and lending; however, there is no permanent increase in the rate of growth in an economy from a more open trade policy.",
+  "questions": [
+   {
+    "n": 16,
+    "q": "Based on Exhibit 1, the factor that would most likely have the greatest positive impact on the per capita GDP growth of Country A is:",
+    "options": [
+     "free trade.",
+     "technology.",
+     "saving and investment."
+    ],
+    "answer": "B",
+    "why": "B is correct. Country A is a developed country with a high level of capital per worker. Technological progress and/or more intensive use of existing technology can help developed countries increase productivity and thereby increase per capita GDP. Most developed countries have reasonably low trade barriers; thus, somewhat freer trade is likely to have only an incremental, and probably transitory, impact on per capita GDP growth. Also, because the country already has a high capital-to-labor ratio, increased saving/investment is unlikely to increase the growth rate substantially unless it embodies improved technology."
+   },
+   {
+    "n": 17,
+    "q": "Based on Observation 1, in the long run the ratio of profits to GDP in Country A is most likely to:",
+    "options": [
+     "remain near its current level.",
+     "increase from its current level.",
+     "decrease from its current level."
+    ],
+    "answer": "C",
+    "why": "C is correct. The ratio of profits to GDP for Country A has been trending upward over the past several years and is now well above its historical average. The ratio of profits to GDP cannot rise forever. At some point, stagnant labor income would make workers unwilling to work without an increase in wages and would also undermine demand, making further expansion of profit margins unsustainable. Thus, the ratio of profits to GDP will likely decline in the long run toward its historical average."
+   },
+   {
+    "n": 18,
+    "q": "Based on Observation 2, Country C is most likely to have:",
+    "options": [
+     "relatively low real asset returns.",
+     "a relatively low real interest rate.",
+     "a relatively high real interest rate."
+    ],
+    "answer": "C",
+    "why": "C is correct. A high growth rate of potential GDP would cause real incomes to rise more rapidly and also translate into higher real interest rates and higher expected/required real asset returns. The real interest rate is essentially the real return that consumers/savers demand in exchange for postponing consumption. Faster growth in potential GDP means that consumers expect their real income to rise more rapidly. This implies that an extra unit of future income/consumption is less valuable than it would be if income were expected to grow more slowly. All else the same, the real interest rate will have to be relatively high in order to induce the savings required to fund required/desired capital accumulation."
+   },
+   {
+    "n": 19,
+    "q": "Based on Exhibit 2, the least likely reason for the current pace of GDP growth in Country D is:",
+    "options": [
+     "a persistently strong currency.",
+     "strong manufacturing exports.",
+     "strong natural resource exports."
+    ],
+    "answer": "B",
+    "why": "B is correct. Country D is a country with abundant resources and has developed the economic institutions necessary for growth, yet the country is experiencing slow economic growth. It is likely that Country D is experiencing the Dutch Disease, whereby currency appreciation driven by strong export demand for natural resources makes other segments of the economy, in particular manufacturing, globally uncompetitive. Strong manufacturing exports indicate that Country D is globally competitive and likely to have adopted leading edge technology. Thus, it is unlikely that the slow growth reflects inability to maintain productivity growth. Similarly, strong exports suggest adequate demand for its products. Thus, strong exports are unlikely to be the cause of slow growth."
+   },
+   {
+    "n": 20,
+    "q": "The type of convergence described by O’Leary in Statement 1 is best described as:",
+    "options": [
+     "club convergence.",
+     "absolute convergence.",
+     "conditional convergence."
+    ],
+    "answer": "C",
+    "why": "C is correct. Conditional convergence means that convergence is conditional on the countries having the same savings rate, population growth rate, and production function. If these conditions hold, the neoclassical model implies convergence to the same level of per capita output as well as the same steady-state growth rate."
+   },
+   {
+    "n": 21,
+    "q": "Which of the following growth models is most consistent with O’Leary’s Statement 2?",
+    "options": [
+     "Classical",
+     "Endogenous",
+     "Neoclassical"
+    ],
+    "answer": "C",
+    "why": "C is correct. According to the neoclassical model, convergence should occur more quickly if economies are open and there is free trade and international borrowing and lending. Opening up the economy should increase the rate at which the capital-to-labor ratio converges among countries. In the neoclassical Solow model, however, after the reallocation of world savings, there is no permanent increase in the rate of growth in an economy. Both the developed and developing countries eventually grow at the same steady-state rate."
+   }
+  ]
+ },
+ {
+  "id": "eg29-sagara",
+  "source": "29 Oct paste (Econ growth)",
+  "readings": [
+   6
+  ],
+  "title": "Sagara: N'Diarra, Cobb-Douglas and growth theories",
+  "body": "Sagara, a resource-abundant West African country, has a developing economy with low capital per worker available. Although the majority of its population is impoverished, Sagara has a long history of advanced education and is committed to technological progress. President Benjamin Banantoumou recently appointed Fatima N’Diarra, PhD, as Economic Development Secretary. He asks her to help him develop economic policies to promote growth.\n\nLast year, Banantoumou attended a summit of international leaders, where he learned that developing countries typically face several factors that affect their growth prospects, such as enforcement of substantive laws, restrictions on imports, and low rates of saving.\n\nN’Diarra, who has studied the Cobb–Douglas production function, believes that Sagara’s primary goal should be to raise the growth rate of per capita GDP. Her two recommendations, therefore, are to increase capital, and invest in technology to raise total factor productivity (TFP).\n\nN’Diarra adds this conclusion: “Because the Cobb–Douglas function exhibits constant returns to scale, as we approach the steady state rate of growth we should place greater emphasis on continuing to grow TFP in order to avoid diminishing marginal returns on capital.”\n\nBanantoumou believes that the Sagara economy relies too heavily on the export of natural rubber. He is convinced that significant industrial capital investment will persuade foreign direct investors that he is serious about economic development. He announces that the Sagara government will construct a large tire factory to take advantage of the country’s rubber resources. Banantoumou expects that as a result of this investment, per capita productivity will rise rapidly driving rapid growth in GDP.\n\nN'Diarra is not as optimistic. She warns Banantoumou that Sagara could fall prey to a resource curse known as the Dutch disease. As demand from the tire factory drives up the price of rubber, capital flows out of the country and the local currency could depreciate rapidly. This situation can be prevented if foreign investors are allowed to own rubber plantations directly rather than just having access through international markets.\n\nN’Diarra believes that according to the classical growth theory, gains in per capita GDP are temporary because the resulting population explosion will lower per capita GDP to subsistence real wage levels. She considers endogenous growth theory to be more realistic, believing that (1) investments, such as the new tire factory, will increase the rate of per capita output growth until the steady state rate of growth is achieved; and (2) investment in research and development will boost growth even further, thus extending the abnormal growth period before diminishing marginal returns eventually set in.",
+  "questions": [
+   {
+    "n": 34,
+    "q": "Of the factors cited by Banantoumou after the international leaders summit, which is least likely to limit sustainable growth?",
+    "options": [
+     "Factor 1",
+     "Factor 2",
+     "Factor 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Substantive law focuses on the rights and responsibilities of entities and relationships among entities. A well-developed legal system of substantive and procedural laws and respect for property rights are likely to encourage growth, not limit it. Factors that limit growth include restrictions on imports and low rates of saving. | B. Incorrect. This is a typical factor that limits growth in a developing country. | C. Incorrect. This is a typical factor that limits growth in a developing country."
+   },
+   {
+    "n": 35,
+    "q": "In reference to the Cobb–Douglas function, N’Diarra’s conclusion is best described as:",
+    "options": [
+     "correct.",
+     "incorrect because increased TFP is not subject to the law of diminishing returns.",
+     "incorrect because the Cobb–Douglas function does not exhibit constant returns to scale."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The stated conclusion is accurate in its entirety. The Cobb–Douglas function exhibits constant returns to scale, which means that if all inputs are increased at the same percentage, then output rises at that percentage. Diminishing marginal productivity exists with respect to each individual input (if the other input is held constant). Continued growth in per capita output is possible even in the steady state as long as there is ongoing technological progress (increases in TFP). | B. Incorrect. Sustained growth in per capita output requires progress in TFP. | C. Incorrect. The premise of the Cobb–Douglas production function is constant returns to scale."
+   },
+   {
+    "n": 36,
+    "q": "N’Diarra’s warning regarding the resource curse and its prevention is most likely incorrect with respect to:",
+    "options": [
+     "her comment about currency depreciation.",
+     "her comment about owning rubber plantations directly.",
+     "her comments about both currency depreciation and direct ownership of rubber plantations."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect as both of her comments are incorrect. | B. Incorrect as both of her comments are incorrect. | C. Correct. Both her comments are incorrect. In the Dutch disease scenario, currency appreciation driven by strong export demand for resources makes other segments of the economy, in particular manufacturing, globally uncompetitive. She is also incorrect regarding direct ownership of the rubber plantations by foreigners; access to natural resources is essential but ownership is not."
+   },
+   {
+    "n": 37,
+    "q": "N’Diarra’s understanding of the two growth theories is most accurate with regard to:",
+    "options": [
+     "classical growth theory.",
+     "endogenous growth theory.",
+     "both classical growth theory and endogenous growth theory."
+    ],
+    "answer": "A",
+    "why": "A. Correct. N’Diarra’s understanding of classical growth theory is correct, as is her understanding of its implications. Classical growth theory holds the view that the growth rate of real GDP per person is temporary because of population explosion. Her description of endogenous growth theory is not accurate. She references a steady state rate of growth and diminishing marginal returns, which are tenets of neoclassical growth theory. | B. Incorrect because her understanding of the endogenous growth theory is incorrect. | C. Incorrect because her understanding of classical growth theory is correct, but her understanding of endogenous growth theory is incorrect."
+   },
+   {
+    "n": 38,
+    "q": "Which of the following factors favors economic growth?",
+    "options": [
+     "Low rates of saving",
+     "Limited foreign capital and trade flows",
+     "Limited regulations in order to encourage entrepreneurial activity"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because factors limiting growth include low rates of saving and investment. | B. Incorrect because foreign investment will potentially increase the developing economy’s physical capital stock, leading to higher productivity, employment, and wages, and perhaps even increased domestic savings. | C. Correct because there is a strong posi­tive correlation between the entry of new companies and average productivity levels. Analysis suggests that limited regulations encourage entrepreneurial activity and the entry of new companies."
+   },
+   {
+    "n": 39,
+    "q": "According to the neoclassical growth model, when trade barriers are removed, convergence of per capita income levels between developed and developing countries should:",
+    "options": [
+     "occur more slowly.",
+     "remain unaffected.",
+     "occur more quickly."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because, according to the neoclassical growth model, when economies' trade barriers are removed, convergence of per capita income levels between developed and developing countries should occur more quickly. | B. Incorrect because, according to the neoclassical growth model, when economies' trade barriers are removed, convergence of per capita income levels between developed and developing countries should occur more quickly. | C. Correct because opening up the economy to trade can significantly affect the rate of growth in an economy. According to the neoclassical model, convergence should occur more quickly if economies are open and there is free trade and international borrowing and lending. Opening up the economy should increase the rate at which countries’ capital-to-labor ratios converge. Because of the capital inflows, the physical capital stock in the developing countries should grow more rapidly than in rich countries even if the saving rate is low in the poorer countries. Faster capital growth will result in higher productivity growth, causing per capita incomes to converge."
+   },
+   {
+    "n": 40,
+    "q": "Which of the following statements regarding natural resources and economic growth is most accurate?",
+    "options": [
+     "An abundance of natural resources may restrain economic growth",
+     "A depleting stock of natural resources will result in weaker economic growth",
+     "Countries rich in natural resources exhibit higher rates of economic growth than those with few natural resources"
+    ],
+    "answer": "A",
+    "why": "A. Correct because for some countries, the presence of natural resources may even restrain growth, resulting in a resource curse. Venezuela and Nigeria are two examples of countries blessed with resources yet with sluggish economic growth. There are two main reasons why this may occur. First, countries rich in natural resources may fail to develop the economic institutions necessary for growth. Second, countries rich in resources may suffer the Dutch disease, where currency appreciation driven by strong export demand for resources makes other segments of the economy, in particular manufacturing, globally uncompetitive. | B. Incorrect because there is a longstanding concern that non-renewable natural resources will eventually limit growth. The idea is that a combination of rapid economic growth and a fixed stock of resources will cause resource depletion as the available pool of resources is used up. These concerns are probably overstated. Technological progress (TFP from all sources) enables the economy to use fewer resources per unit of output and to develop substitutes. The growing scarcity of specific resources will increase their price and encourage a shift toward more plentiful substitutes. Finally, the share of national income going to land and resources has been declining for most countries, especially as the composition of output in the global economy shifts toward the use of more services. | C. Incorrect because even though access to natural resources (e.g., via trade) is important, ownership and production of natural resources is not necessary for a country to achieve a high level of income. Countries in East Asia, such as South Korea, have experienced rapid economic growth but have few natural resources. In contrast, both Venezuela and Saudi Arabia have large oil reserves and are major producers of oil, yet both countries have experienced subpar growth compared with the natural-resource-poor countries of Singapore and South Korea. As was examined earlier, economic growth in Venezuela over the last 60 years was well below that of Singapore, Japan, and South Korea."
+   },
+   {
+    "n": 41,
+    "q": "Opening an economy to trade and financial flows will most likely:",
+    "options": [
+     "discourage domestic spending on research and development.",
+     "not impact domestic spending on research and development.",
+     "encourage domestic spending on research and development."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because open trade also affects the innovation process by encouraging, not discouraging, higher levels of spending on R&D and on human capital as companies invest to take advantage of access to larger markets and the greater flow of ideas and knowledge among countries. The rate of return to new investment increases, as does the rate of economic growth. | B. Incorrect because open trade also affects the innovation process by encouraging higher levels of spending on R&D and on human capital as companies invest to take advantage of access to larger markets and the greater flow of ideas and knowledge among countries rather than having no impact. The rate of return to new investment increases, as does the rate of economic growth. | C. Correct because open trade also affects the innovation process by encouraging higher levels of spending on R&D and on human capital as companies invest to take advantage of access to larger markets and the greater flow of ideas and knowledge among countries. The rate of return to new investment increases, as does the rate of economic growth. In general, most countries gain from open trade, with the scale effect benefiting smaller countries and the backwardness effect benefiting the poorer, less developed countries. But trade can also retard growth in some cases, especially in small countries that lag behind the technology leaders. Opening these countries to trade may discourage domestic innovation because companies will recognize that, even if they innovate, they may lose out to more efficient foreign companies."
+   }
+  ]
+ }
+]
