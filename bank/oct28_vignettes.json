@@ -452,6 +452,39 @@
     ],
     "answer": "C",
     "why": "A. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity. | B. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity. | C. Correct. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity."
+   },
+   {
+    "n": 45,
+    "q": "Chatterjee’s statement about tourism and the currency exchange rate of the sona is best described as:",
+    "options": [
+     "correct.",
+     "incorrect, because increased FDI will likely lead to a weakening of the sona.",
+     "incorrect, because a stronger sona will make Golden Island appear to be a less expensive tourist destination for non-domestic visitors."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Holding all other factors constant, increased FDI will strengthen a currency. The stronger currency will affect tourism by making goods and services priced in that currency appear more expensive, at least in the short run. | B. Incorrect. Holding all other factors constant, increased FDI will strengthen a currency. The stronger currency will affect tourism by making goods and services priced in that currency appear more expensive, at least in the short run. | C. Incorrect. Holding all other factors constant, increased FDI will strengthen a currency. The stronger currency will affect tourism by making goods and services priced in that currency appear more expensive, at least in the short run."
+   },
+   {
+    "n": 46,
+    "q": "Based on Exhibit 2, the one-year forward exchange rate of the Sn/GBP is closest to:",
+    "options": [
+     "Sn8.75/GBP.",
+     "Sn13.45/GBP.",
+     "Sn14.03/GBP."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it uses the Sn/USD spot rate and the sona over US interest rates: 1.065/1.035 × 8.50 = 8.7464. | B. Incorrect because it uses the incorrect ratio of rates. It uses the Sn/USD spot rate and the sona over US interest rates: 1.0405/1.065 × 13.70968 = 13.4522. | C. Correct. First, find the current Sn/GBP exchange rate. Then, find the one-year forward Sn/GBP rate. Sn/GBP = Sn/USD × USD/GBP = 8.50 × 1.6129 = Sn 13.70968/GBP. Note that 1.6129 is the inverse of 0.62, which is the GBP/USD exchange rate given in Exhibit 2. The forward rate equals the spot rate multiplied by the ratio of one plus the sona one-year rate divided by one plus the pound one-year rate. In this case, the forward rate = 13.70968 × 1.065/1.0405 = 14.03249. An alternative approach is to convert USD1 into SN and GBP and determine what an investment in each of those currencies would be worth in one year at the Golden Island and UK interest rates, respectively. The one-year forward rate will then be the number of Sn required to purchase GBP 1 at that time. MAX17024-IS-Fb"
+   },
+   {
+    "n": 47,
+    "q": "Which of the following will Sengupta most likely use to address the monetary issues relating to greater growth of the island’s economy? The central bank will:",
+    "options": [
+     "sell domestic securities to the private sector.",
+     "buy domestic securities from the private sector.",
+     "reduce the interest rate on loans to the private sector."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The threat is inflation. To counter such a threat, the central bank will want to reduce the money supply. The central bank will sell domestic securities to the private sector. | B. Incorrect. The central bank will sell domestic securities to the private sector. | C. Incorrect. To reduce the money supply, the central bank would raise rates on loans to the private sector."
    }
   ]
  },
@@ -486,6 +519,50 @@
     ],
     "answer": "C",
     "why": "A. Incorrect. Permanently higher growth is not possible in the classical growth model. | B. Incorrect. Permanently higher growth is not possible in the neoclassical growth model. | C. Correct. The possibility for permanent higher growth in per capita output exists within endogenous growth theories, but not in neoclassical growth theory or classical growth theory. - can you give me a table for these economical models? Classical, neoclassical and endogenous. So i have have a picture in my head. In the pdf and you can make some basic quesitons on this in the app And dont forget to add these to your vignette bank"
+   },
+   {
+    "n": 48,
+    "q": "Using Exhibit 1, the mid-market forward premium (discount) for a 90-day contract for CAD/USD is closest to:",
+    "options": [
+     "–0.0085389.",
+     "–0.0021094.",
+     "+0.0021236."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. It ignores the middle term : 1.21985 × (–0.007) = –0.0085389. | B. Correct. The mid-market for CAD/USD is (1.2138 + 1.2259)/2 = 1.21985. The mid-market forward premium (discount) is calculated as: In this problem, we have: | C. Incorrect. It incorrectly reverses (iB – iP) and uses the ask side."
+   },
+   {
+    "n": 49,
+    "q": "According to the relative version of purchasing power parity (PPP) and based on the spot rate bid quote in Exhibit 1, the one-year forward exchange rate for the Canadian dollar per US dollar is closest to:",
+    "options": [
+     "C$1.2053.",
+     "C$1.2089.",
+     "C$1.2187."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. It incorrectly uses the difference in interest rates: 1.2138 + (−0.007 × 1.2138) = 1.2053. | B. Correct. The relative version of PPP states that the percentage change in the spot exchange rate will be completely determined by the difference between the foreign and domestic inflation rates. In this case, the difference in the inflation rates is 1.90% – 2.30% = –0.4%. Subtracting 0.4% from the current bid gives the answer 1.2089: 1.2138 – (0.004 × 1.2138) = 1.2089. | C. Incorrect. It reverses the inflation rate factor: 1.2138 + (0.004 × 1.2138) = 1.2187."
+   },
+   {
+    "n": 50,
+    "q": "If a dealer’s bid-side quote for the CAD/BRL is C$0.5250, Tremblay’s profit on a US$1,000,000 initial investment in the triangular arbitrage opportunity is closest to:",
+    "options": [
+     "US$21,135.",
+     "US$31,328.",
+     "US$31,315."
+    ],
+    "answer": "A",
+    "why": "A. Correct. It is cheaper to buy Canadian dollars indirectly through Brazilian reals than directly with US dollars. This creates a triangular arbitrage opportunity: US$1,000,000 × 2.3844 = BRL2,384,400 2,384,400 × 0.5250 = C$1,251,810 C$1,251,810/1.2259 = US$1,021,135 US$1,021,135 – US$1,000,000 = US$21,135 profit | B. Incorrect. It uses the ask side for the Real (2.4082 instead of the correct 2.3844). | C. Incorrect. It uses the bid side for the CAD$ (i.e., in the last step divides by 1.2138 rather than the correct 1.2259)."
+   },
+   {
+    "n": 51,
+    "q": "The specific relationship referred to in Baroque’s remarks at the beginning of his discussion with Tremblay most accurately describes:",
+    "options": [
+     "interest rate parity.",
+     "purchasing power parity.",
+     "the international Fisher effect."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Interest rate parity describes the relationship among the spot exchange rate, the forward exchange rate, and interest rates. | B. Incorrect. Purchasing power parity is the “law of one price” applied to currencies. | C. Correct. Baroque’s comments describe the international Fisher effect. The international Fisher effect states that the foreign-domestic nominal yield spread will be solely determined by the foreign-domestic expected inflation differential."
    }
   ]
  }

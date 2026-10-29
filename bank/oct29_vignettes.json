@@ -1,0 +1,431 @@
+[
+ {
+  "id": "fx29-wagener",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Wagener: forward rates, MTM and parity",
+  "body": "Connor Wagener, a student at the University of Canterbury in New Zealand, has been asked to prepare a presentation on foreign exchange rates for his international business course. Wagener has a basic understanding of exchange rates but would like a practitioner’s perspective, and he has arranged an interview with currency trader Hannah McFadden. During the interview, Wagener asks McFadden,\n\nCould you explain what drives exchange rates? I’m curious as to why our New Zealand dollar was affected by the European debt crisis in 2011 and what other factors impact it.\n\nIn response, McFadden begins with a general discussion of exchange rates. She notes that international parity conditions illustrate how exchange rates are linked to expected inflation, interest rate differences, and forward exchange rates as well as current and expected future spot rates. McFadden makes the following statement:\n\nStatement 1: “Fortunately, the international parity condition most relevant for FX carry trades does not always hold.”\n\nMcFadden continues her discussion:\n\nFX carry traders go long (i.e., buy) high-yield currencies and fund their position by shorting—that is, borrowing in—low-yield currencies. Unfortunately, crashes in currency values can occur which create financial crises as traders unwind their positions. For example, in 2008, the New Zealand dollar was negatively impacted when highly leveraged carry trades were unwound. In addition to investors, consumers and business owners can also affect currency exchange rates through their impact on their country’s balance of payments. For example, if New Zealand consumers purchase more goods from China than New Zealand businesses sell to China, New Zealand will run a trade account deficit with China.\n\nMcFadden further explains,\n\nStatement 2: “A trade surplus will tend to cause the currency of the country in surplus to appreciate, while a deficit will cause currency depreciation. Exchange rate changes will result in immediate adjustments in the prices of traded goods as well as in the demand for imports and exports. These changes will immediately correct the trade imbalance.”\n\nMcFadden next addresses the influence of monetary and fiscal policy on exchange rates:\n\nCountries also exert significant influence on exchange rates both through the initial mix of their fiscal and monetary policies and by subsequent adjustments to those policies. Various models have been developed to identify how these policies affect exchange rates. The Mundell–Fleming model addresses how changes in both fiscal and monetary policies affect interest rates and ultimately exchange rates in the short term.\n\nMcFadden describes monetary models by stating,\n\nStatement 3: “Monetary models of exchange rate determination focus on the effects of inflation, price level changes, and risk premium adjustments.”\n\nMcFadden continues her discussion:\n\nSo far, we’ve touched on balance of payments and monetary policy. The portfolio balance model addresses the impacts of sustained fiscal policy on exchange rates. I must take a client call but will return shortly. In the meantime, here is some relevant literature on the models I mentioned along with a couple of questions for you to consider:\n\nQuestion 1: Assume an emerging market (EM) country has restrictive monetary and fiscal policies under low capital mobility conditions. Are these policies likely to lead to currency appreciation or currency depreciation or to have no impact?\n\nQuestion 2: Assume a developed market (DM) country has an expansive fiscal policy under high capital mobility conditions. Why is its currency most likely to depreciate in the long run under an integrated Mundell–Fleming and portfolio balance approach?\n\nUpon her return, Wagener and McFadden review the questions. McFadden notes that capital flows can have a significant impact on exchange rates and have contributed to currency crises in both EM and DM countries. She explains that central banks, such as the Reserve Bank of New Zealand, use FX market intervention as a tool to manage exchange rates. McFadden states,\n\nStatement 4: “Some studies have found that EM central banks tend to be more effective in using exchange rate intervention than DM central banks, primarily because of one important factor.”\n\nMcFadden continues her discussion:\n\nStatement 5: “I mentioned that capital inflows could cause a currency crisis, leaving fund managers with significant losses. In the period leading up to a currency crisis, I would predict that an affected country’s:\n\nPrediction 1: foreign exchange reserves will increase.\n\nPrediction 2: broad money growth will increase.\n\nPrediction 3: exchange rate will be substantially higher than its mean level during tranquil periods.”\n\nAfter the interview, McFadden agrees to meet the following week to discuss more recent events on the New Zealand dollar.",
+  "questions": [
+   {
+    "n": 14,
+    "q": "The international parity condition McFadden is referring to in Statement 1 is:",
+    "options": [
+     "purchasing power parity.",
+     "covered interest rate parity.",
+     "uncovered interest rate parity."
+    ],
+    "answer": "C",
+    "why": "C is correct. The carry trade strategy is dependent on the fact that uncovered interest rate parity does not hold in the short or medium term. If uncovered interest rate parity held, it would mean that investors would receive identical returns from either an unhedged foreign currency investment or a domestic currency investment because the appreciation/depreciation of the exchange rate would offset the yield differential. However, during periods of low volatility, evidence shows that high-yield currencies do not depreciate enough and low-yield currencies do not appreciate enough to offset the yield differential."
+   },
+   {
+    "n": 15,
+    "q": "In Statement 2, McFadden is most likely failing to consider the:",
+    "options": [
+     "initial gap between the country’s imports and exports.",
+     "effect of an initial trade deficit on a country’s exchange rates.",
+     "lag in the response of import and export demand to price changes."
+    ],
+    "answer": "C",
+    "why": "C is correct. McFadden states that exchange rates will immediately correct the trade imbalance. She is describing the flow supply/demand channel, which assumes that trade imbalances will be corrected as the deficit country’s currency depreciates, causing its exports to become more competitive and its imports to become more expensive. Studies indicate that there can be long lags between exchange rate changes, changes in the prices of traded goods, and changes in the trade balance. In the short run, exchange rates tend to be more responsive to investment and financing decisions."
+   },
+   {
+    "n": 16,
+    "q": "The least appropriate factor used to describe the type of models mentioned in Statement 3 is:",
+    "options": [
+     "inflation.",
+     "price level changes.",
+     "risk premium adjustments."
+    ],
+    "answer": "C",
+    "why": "C is correct. Risk premiums are more closely associated with the portfolio balance approach. The portfolio balance approach addresses the impact of a country’s net foreign asset/liability position. Under the portfolio balance approach, investors are assumed to hold a diversified portfolio of assets including foreign and domestic bonds. Investors will hold a country’s bonds as long as they are compensated appropriately. Compensation may come in the form of higher interest rates and/or higher risk premiums."
+   },
+   {
+    "n": 17,
+    "q": "The best response to Question 1 is that the policies will:",
+    "options": [
+     "have no impact.",
+     "lead to currency appreciation.",
+     "lead to currency depreciation."
+    ],
+    "answer": "B",
+    "why": "B is correct. The currency is likely to appreciate. The emerging market country has both a restrictive monetary policy and a restrictive fiscal policy under conditions of low capital mobility. Low capital mobility indicates that interest rate changes induced by monetary and fiscal policy will not cause large changes in capital flows. Implementation of restrictive policies should result in an improvement in the trade balance, which will result in currency appreciation."
+   },
+   {
+    "n": 18,
+    "q": "The most likely response to Question 2 is a(n):",
+    "options": [
+     "increase in the price level.",
+     "decrease in risk premiums.",
+     "increase in government debt."
+    ],
+    "answer": "C",
+    "why": "C is correct. Expansionary fiscal policies result in currency depreciation in the long run. Under a portfolio balance approach, the assumption is that investors hold a mix of domestic and foreign assets including bonds. Fiscal stimulus policies result in budget deficits, which are often financed by debt. As the debt level rises, investors become concerned as to how the ongoing deficit will be financed. The country’s central bank may need to create more money in order to purchase the debt, which would cause the currency to depreciate. Or the government could adopt a more restrictive fiscal policy, which would also depreciate the currency."
+   },
+   {
+    "n": 19,
+    "q": "The factor that McFadden is most likely referring to in Statement 4 is:",
+    "options": [
+     "FX reserve levels.",
+     "domestic demand.",
+     "the level of capital flows."
+    ],
+    "answer": "A",
+    "why": "A is correct. EM countries are better able to influence their exchange rates because their reserve levels as a ratio of average daily FX turnover are generally much greater than those of DM countries. This means that EM central banks are in a better position to affect currency supply and demand than DM countries, where the ratio is negligible. EM policymakers use their foreign exchange reserves as a kind of insurance to defend their currencies, as needed."
+   },
+   {
+    "n": 20,
+    "q": "Which of McFadden’s predictions in Statement 5 is least likely to be correct?",
+    "options": [
+     "Prediction 1",
+     "Prediction 2",
+     "Prediction 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. Prediction 1 is least likely to be correct. Foreign exchange reserves tend to decline precipitously, not increase, as a currency crisis approaches. Broad money growth tends to rise in the period leading up to a currency crisis, and the exchange rate is substantially higher than its mean level during tranquil periods."
+   }
+  ]
+ },
+ {
+  "id": "fx29-beauregard",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Beauregard: CapFX bid/offer, cross rates and forwards",
+  "body": "Alexandra Beauregard was recently hired as an analyst at CapFX Partners, a US-based currency trading firm that maintains offices in major financial centers around the world. Beauregard assists CapFX foreign currency strategist Robert Thibodeaux. The firm executes trades for clients and manages a foreign currency investment fund. Beauregard is meeting with Thibodeaux to discuss the characteristics of the foreign exchange markets.\n\nThibodeaux explains that knowing what establishes a currency’s real long-term equilibrium value helps investors manage risk exposure: \n\n“To better serve our clients and maximize the performance of our investment fund, we need to be able to filter out the short-term noise in exchange rates so that we can better understand their likely direction over the long term.”\n\nHe notes that current account trends influence the path of exchange rates over time through several mechanisms \n\n“Of the three mechanisms that economists identify, I have the most confidence in the one that assumes there are long-run limits on current account deficits.”\n\nBeauregard has concerns about the firm’s experiences during currency crises. She recalls reading a study produced by the IMF that an impending currency crisis is signaled by numerous economic variables. She makes the following statements with regard to some of these variables:\n\nTrade balances exhibit substantial decline prior to the crisis.\nA country has distinctive economic growth patterns ahead of the crisis.\nInflation is significantly higher in the pre-crisis period.\nThibodeaux and Beauregard discuss some of CapFX’s recent trades using the currency quotes and rates provided in Exhibits 1 and 2. (For all currency pairs provided, the notation used is, for example, USD/AUD: US dollars per Australian dollar.)\n\nBased on the data in Exhibit 1, a European client recently entered into a one-year JPY/EUR carry trade based on the projected outlook for the two currencies.\nA South Korean-based client producing electronic components signed a long-term contract to deliver components to a Canadian aircraft parts manufacturer. The client wanted to estimate the hedging cost for a sale scheduled to close in nine months. Based on the data presented in Exhibit 2, the client entered into a nine-month (270-day) KRW/CAD forward contract.\nExhibit 1 Interbank Currency Quotes and Libor Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\tProjected Spot in One Year\tOne-Year Libor Rates\nUSD/AUD\t0.7050\t0.7083\t0.7148\tJPY 0.15%\nUSD/EUR\t1.0851\t1.0873\t1.0984\tUSD 0.80%\nUSD/NZD\t0.6740\t0.6770\t---\tEUR 1.40%\nJPY/USD\t117.62\t117.66\t118.32\tNZD 2.00%\n \nExhibit 2 Interbank Currency Quotes and Libor Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\t270-Day Libor (annualized)\nKRW/CAD\t869.813\t871.598\tKRW 1.50%\n---\t---\t---\tCAD 1.75%",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The mechanism about which Thibodeaux is most confident as an explanation for the long-run equilibrium value of exchange rates is best described as the:",
+    "options": [
+     "portfolio balance channel.",
+     "debt sustainability channel.",
+     "flow supply/demand channel."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The portfolio balance channel assumes that current account imbalances shift financial wealth from deficit nations to surplus nations. Countries with trade deficits will finance their trade with increased borrowing. This behavior may lead to shifts in global asset preferences, which in turn could influence the path of exchange rates. | B. Correct. Thibodeaux prefers the debt sustainability channel as a means to assess the long-run equilibrium value of exchange rates. According to this mechanism, there should be some upper limit on the ability of countries to run persistently large current account deficits. If a country runs a large and persistent current account deficit over time, eventually it will experience an untenable rise in debt owed to foreign investors. If such investors believe that the deficit country’s external debt is rising to unsustainable levels, they are likely to reason that a major depreciation of the deficit country’s currency will be required at some point to ensure that the current account deficit narrows significantly and that the external debt stabilizes at a level deemed sustainable. | C. Incorrect. The flow supply/demand channel mechanism focuses on the fact that purchases and sales of internationally traded goods and services require the exchange of domestic and foreign currencies in order to arrange payment for those goods and services. Such shifts in currency demand should exert upward pressure on the value of the surplus nation’s currency and downward pressure on the value of the deficit nation’s currency."
+   },
+   {
+    "n": 22,
+    "q": "Which of Beauregard’s statements regarding a currency crisis is the most accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Statement 1 is inaccurate. The trade balance displays no significant difference between its behavior in pre-crisis periods and in tranquil periods. | B. Incorrect. Statement 2 is inaccurate. Real economic activity does not display a distinctive pattern ahead of a crisis but falls sharply in the aftermath of a crisis. | C. Correct. Statement 3 is the most accurate. Inflation tends to be significantly higher in pre-crisis periods compared with tranquil periods."
+   },
+   {
+    "n": 23,
+    "q": "Using the bid–offer quote midpoint in Exhibit 1 as the current spot rate and assuming that uncovered interest rate parity holds, the projected one-year spot rate for the USD/NZD currency pair is closest to:",
+    "options": [
+     "0.6676.",
+     "0.6835.",
+     "0.6890."
+    ],
+    "answer": "A",
+    "why": "A. Correct. If uncovered interest rate parity holds, the expected spot rate one-year forward is equal to the one-year forward exchange rate. The forward exchange rate is calculated using the formula: where Se = expected spot rate one-year forward F = one-year forward exchange rate Sf/d = spot rate today for the pair trade (mid-market of the USD/NZD spot bid–offer = 0.6755) 1 + if = today’s one-year MRR for the foreign (price) currency 1 + id = today’s one-year MRR for the domestic (base) currency The USD is the foreign (price) currency and the NZD is the domestic (base) currency | B. Incorrect. The candidate incorrectly reversed the MRR rates in the numerator and denominator in the calculation. | C. Incorrect. The candidate incorrectly multiplied the mid-point of the spot rate by one plus the NZD one-year MRR rate, failing to include the USD MRR rate in the equation: Se = F = 0.6755(1 + 0.02) = 0.68901 = 0.6890."
+   },
+   {
+    "n": 24,
+    "q": "Based on the data in Exhibit 1, the bid EUR/AUD cross-rate implied by the interbank market is closest to:",
+    "options": [
+     "0.6484.",
+     "0.6497.",
+     "0.7650."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The bid EUR/AUD is calculated as follows: Sell EUR/Buy AUD = Sell EUR/Buy USD × Sell USD/Buy AUD, which will require the inversion of USD/EUR to EUR/USD. Given the USD/EUR quotes of 1.0851/1.0873, take the inverse of each and interchange the bid and offer, such that the USD/EUR quotes are (1/1.0873)/(1/1.0851) = 0.91971/0.92157 = 0.9197/0.9216. Then multiply the EUR/USD and USD/AUD bid quotes: Bid: 0.9197 × 0.7050 = 0.64839 = 0.6484 Thus, the USD/EUR bid cross-rate implied by the interbank market is 0.6484. | B. Incorrect. The candidate inverts the USD/EUR quotes but does not interchange the bid and offer and thus incorrectly calculates the interbank market bid cross-rate using the offer cross-rate. Bid: 0.9216 × 0.7050 = 0.64973 = 0.6497 Thus, the EUR/AUD bid cross-rate implied by the interbank market is 0.6497. | C. Incorrect. The candidate incorrectly multiplies the two bid rates to calculate the interbank market cross-rate. Bid: 0.7050 × 1.0851 = 0.76500 = 0.7650 Thus, the EUR/AUD bid cross-rate implied by the interbank market is 0.7650."
+   },
+   {
+    "n": 25,
+    "q": "Based on the data in Exhibit 1, the expected net investment return on a one-year carry trade based on the JPY/EUR currency pair, measured in JPY terms, is closest to:",
+    "options": [
+     "2.86%.",
+     "3.01%.",
+     "3.10%."
+    ],
+    "answer": "A",
+    "why": "A. Correct. In a carry trade, an investor will borrow in the low interest rate currency, the JPY, at 0.15% and invest in the high interest rate currency, the EUR, at 1.40%. Calculate the current and one-year-later JPY/EUR cross-rates. Borrow JPY and buy USD for JPY117.66 (offer); then use USD to buy EUR for USD1.0873 (offer). This generates a cross-rate of 117.66 × 1.0873 = 127.932 = 127.93JPY/EUR. The one-year-later cross-rate for the JPY/EUR is calculated as 118.32 × 1.0984 = 129.963 = 129.96. The net investment return for the unhedged EUR deposit, measured in JPY, is calculated as | B. Incorrect. It neglects to deduct the interest on the JPY loan. | C. Incorrect. It incorrectly uses the bid cross-rate in the first step. 117.62 × 1.0851 = 127.629 = 127.63"
+   },
+   {
+    "n": 26,
+    "q": "Using Exhibit 2, the mid-market forward premium (discount) for a 270-day forward contract for KRW/CAD is closest to:",
+    "options": [
+     "–2.139.",
+     "–1.615.",
+     "–1.612."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. It uses the wrong base currency rate in the middle component of the equation. | B. Incorrect. It ignores the 270/360 component of the equation. | C. Correct. The mid-market KRW/CAD is (869.813 + 871.598)/2 = 870.706. The mid-market forward premium (discount) is calculated as: where FP/B = forward rate SP/B = spot rate iP = price currency risk-free rate iB = base currency risk-free rate The following is an alternative method to calculate the forward discount. Consider the alternatives of currently investing in Canada and South Korea: Current 1 CAD × [1 + (0.0175 × 270/360)] 1.013125 CAD 870.706 KRW × [1 + (0.0150 × 270/360)] 880.501 KRW One Year In one year: 880.501 KRW/1.013125 CAD = 869.094 KRW/CAD. Thus, the forward discount = 869.094 – 870.706 = –1.612."
+   }
+  ]
+ },
+ {
+  "id": "fx29-lopez",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Lopez: balance of payments and Mundell-Fleming",
+  "body": "Jocelyn Lopez is a director in a firm that specializes in providing foreign currency advisory services. Lopez is meeting with analyst Jan Carrasco to discuss and identify foreign currency strategies and trades to recommend to clients.\n\nLopez begins the meeting by asking Carrasco for his views on factors that affect the bid-offer spread on a currency quotation in the interbank market.\n\nCarrasco responds, \"Currency pairings are an important factor and quotes for well known currency pairs have tighter spreads in interbank markets than quotes for lesser known currency parings . A client's credit risk is the most important factor impacting the spread. Clients with higher credit risk are quoted wider spreads for spot currency rates. The size of the transaction also impacts the spread. The larger the size of the transaction the smaller the spread in the interbank markets .\"\n\nLopez presents information on spot exchange rates and 360 day market reference rate (MRR) in Exhibit 1 and Exhibit 2 below and states, \"one of our Canada-based clients has asked for recommendations on currency trades. A dealer has quoted a bid-offer rate of 1.8091/1.8165 in AUD/GBP, can you determine if there is a profitable currency trade? This client also wants to hedge exposure to the Australian dollar and wants to know the cost of the hedge, specifically, the forward premium or discount for a 360-day AUD/CAD forward contract .\"\n\n\nExhibit 1\n \tInterbank Spot Exchange Rates\nCurrency Pair\n(Price/Base)\nBid\tOffer\tMidpoint\nAUD/CAD\t1.0713\t1.0751\t1.0732\nGBP/CAD\t0.5854\t0.5857\t0.5855\n \nExhibit 2\nCountry\t\n360-day MRR\nAustralia\t0.26%\nCanada\t0.84%\nThe discussion then moves to the determination of the equilibrium value of exchange rates and Lopez states, \"there are a number of international parity conditions that jointly determine long-run movements in exchange rates. One of the parity conditions, purchasing power parity (PPP), can be used to assess the long run equilibrium value of nominal exchange rates. In particular, one version of PPP states that the percentage change in the spot exchange rate is determined entirely by differences between foreign and domestic inflation rates.\"",
+  "questions": [
+   {
+    "n": 27,
+    "q": "Carraco's response on factors affecting interbank bid-offer spreads is most likely correct with respect to:",
+    "options": [
+     "credit risk.",
+     "currency pair.",
+     "transaction size."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Given the short settlement cycle for spot foreign currency transactions (typically two business days), however, credit risk is not the most important factor in determining a clients bid-offer spread on spot exchange rates. | B. Correct. Spreads are tighter for major currency pairs and wider for less well known currency pairs. Market participation is greater for some currency pairs than for others. Liquidity in the major currency pairs - for example, USD/EUR, JPY/USD, and USD/GBP - can be quite high. These markets are almost always deep, with multiple bids and offers from market participants around the world. In other currency pairs, particularly some of the more obscure currency cross rates (e.g., MXN/CHF), market participation is much thinner and consequently the bid offer spreads in the interbank market will be wider. | C. Incorrect. Larger transaction size results in a wider spread in the interbank market because of the difficulty the dealer faces in offsetting the foreign exchange risk of the position in the interbank FX market."
+   },
+   {
+    "n": 28,
+    "q": "Based on the dealer quote and the information in Exhibit 1, is it possible to generate a profit with a triangular arbitrage trade?",
+    "options": [
+     "No",
+     "Yes, for a profit of 0.0126 AUD per GBP",
+     "Yes, for a profit of 0.0135 AUD per GBP"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it is possible to generate a triangular arbitrage profit by buying GBP at 1.8165 from the dealer and selling it in the interbank market at 1.8291 for a profit of 0.0126 AUD per GBP. | B. Correct because it is possible to generate a triangular arbitrage profit by buying GBP at 1.8165 from the dealer and selling it in the interbank market at 1.8291 for a profit of 0.0126 AUD per GBP. To identify the proper trade and profit we need to calculate the interbank cross rate for AUD/GBP. AUD/GBP = AUD/CAD x CAD/GBP But we do not have an interbank quote for CAD/GBP, only GBP/CAD GBP/CAD bid is 0.5854, the price in GBP to sell CAD (and buy GBP) GBP/CAD offer is 0.5857, the price in GBP to buy CAD (and sell GBP) CAD/GBP bid is the price in CAD to sell GBP (and buy CAD) We have the price in GBP to buy CAD (and sell GBP), the offer rate 0.5857 So the price in CAD to sell GBP (and buy CAD) = CAD/GBP bid = 1/0.5857 = 1.70736 CAD/GBP offer is the price in CAD to buy GBP (and sell CAD) We have the price in GBP to sell CAD (and buy GBP), the bid rate 0.5854 So the price in CAD to buy GBP (and sell CAD) = CAD/GBP offer = 1/0.5854 = 1.70823 The implied interbank cross rate for AUD/GBP is 1.8291/1.8365. Calculated as: AUD/GBP bid = 1.8291 = AUD/CAD x CAD/GBP = 1.0713 x 1.70736 AUD/GBP offer = 1.8365 = AUD/CAD x CAD/GBP = 1.0751 x 1.70823 So the triangular arbitrage trade would be to buy GBP at 1.8165 from the dealer and sell it in the interbank market at 1.8291 for a profit of 0.0126 AUD per GBP. | C. Incorrect because it is possible to generate a triangular arbitrage profit by buying GBP at 1.8165 from the dealer and selling it in the interbank market at 1.8291 for a profit of 0.0126 AUD per GBP. Here the interbank AUD/GBP bid price is incorrectly calculated at 1.83. That is CAD/GBP bid price is incorrectly calculated as the inverse of the GBP/CAD  bid price, 1/0.5854 = 1.7082. This is then used in the following equation to obtain the AUD/GBP bid price AUD/GBP = AUD/CAD x CAD/GBP = 1.0713 x 1.7082 = 1.83 The profit is incorrectly calculated as 1.83 - 1.8165 = 0.0135 AUD per GBP"
+   },
+   {
+    "n": 29,
+    "q": "Based on Exhibit 1 and Exhibit 2, the forward premium (discount) for a 360-day AUD/CAD forward contract is closest to:",
+    "options": [
+     "–0.00617.",
+     "–0.00580.",
+     "0.00277."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The equation to calculate the forward premium (discount) is: CAD is the base currency and AUD is the price currency. SP/B = 1.0732 the midpoint quote for AUD/CAD = -0.00617 | B. Incorrect and is incorrectly calculated as follows: | C. Incorrect and is incorrectly calculated as follows:"
+   },
+   {
+    "n": 30,
+    "q": "In her statement about PPP, Lopez is most likely referring to the:",
+    "options": [
+     "absolute version of PPP.",
+     "relative version of PPP.",
+     "ex ante version of PPP."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The correct answer is the relative version of PPP. The absolute version pf PPP asserts that the equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels. According to the relative version of PPP, the percentage change in the spot exchange rate (%ΔSf/d) will be completely determined by the difference between foreign and domestic  inflation rates (Πf -Πd). | B. Correct.  According to the relative version of PPP, the percentage change in the spot exchange rate (%ΔSf/d) will be completely determined by the difference between foreign and domestic  inflation rates (Πf -Πd). | C. Incorrect. The ex ante version of PPP asserts that the expected changes in the spot exchange rate are entirely driven by expected differences in national inflation rates. Ex ante PPP tells us that countries that are expected to run persistently high inflation rates should expect to see their currencies depreciate over time, while countries that are expected to run relatively low inflation rates on a sustainable basis should expect to see their currencies appreciate over time. The relative version of PPP is correct.  According to the relative version of PPP, the percentage change in the spot exchange rate (%ΔSf/d) will be completely determined by the difference between foreign and domestic inflation rates (Πf -Πd)."
+   }
+  ]
+ },
+ {
+  "id": "fx29-kaur",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Kaur: carry trade and parity",
+  "body": "Sharandeep Kaur is an analyst who works in the finance department of Timeless Media Group (TMG), a global entertainment company based in London, United Kingdom. TMG creates digital and film media content as well as maintaining a number of theme parks around the world. As part of their year-end budget and forecasting process, Kaur needs to evaluate their currency exposures that result from the theme parks generating local currency that needs to be regularly converted to GBP.\n\nKaur pulls the current spot rate quotes from the interbank market and summarizes the results in Exhibit 1.\n\nExhibit 1\nTheme Park Location\t Local Currency\t\n180-Day *MRR (annualized)\nQuoted Spot Rate\tCurrency Pair\nLondon, England\tGBP\t0.97%\t0.8593/0.8594\tGBP/EUR\nSan Diego, USA\tUSD\t0.45%\t1.3852/1.3855\tUSD/GBP\nTokyo, Japan\tJPY\t1.41%\t110.53/110.62\tJPY/USD\nAuckland, New Zealand\tNZD\t2.64%\t1.7014/1.7018\tNZD/EUR\n* Market reference rate\nIn reviewing their USA operations, Kaur notes that in the prior year, TMG hedged a long exposure to the USD by selling USD 5 million forward against the GBP.  The all-in forward price was 1.3759 USD/GBP is currently six months away from the settlement date. The six-months forward points are currently -35.9/-35.3. As part of her evaluation, Kaur begins to mark-to-market the value of this hedge. \n\nIn a team meeting, Kaur's boss provides an update that TMG is in the final stages of building a new park in Country A, an emerging market country that starts a discussion amongst the team about the economic and financial situation within the country. As each analyst shares their perspective, the following statements are made:\n\nStatement 1: \tThe equilibrium exchange rate between two countries is determined entirely by their interest rate differential.\nStatement 2:\tThe equilibrium exchange rate between two countries is determined entirely by their inflation rate differential.\nStatement 3: \tThe equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels.\nKaur notes that Country A is currently experiencing positive economic growth, low unemployment, a high level of debt relative to GDP, and consistently maintains a current account surplus due to the demand for its commodities. Based on these factors and according to the flow supply/demand channel, Kaur asserts in her analysis that Country A's currency should appreciate over time and that TMG should consider a longer-term hedging strategy.\n\nLastly, in researching Country A's low capital mobility environment, Kaur learns that for an upcoming national election, the primary opposition party is campaigning on an expansionary fiscal policy and spending initiatives, which would conflict with the current restrictive monetary policy managed by their central bank.",
+  "questions": [
+   {
+    "n": 31,
+    "q": "The bid-offer on the NZD/GBP cross-rate implied by Exhibit 1 is closest to:",
+    "options": [
+     "1.4620/1.4625.",
+     "1.9798/1.9804.",
+     "1.9800/1.9802."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because this response neglects to interchange the inverted GBP/EUR quoted rate to determine EUR/GBP in order to solve for NZD/GBP. Calculated response: NZD/GBP [Bid] = NZD/EUR [Bid] × GBP/EUR [Bid] = 1.7014 × 0.8593 = 1.4620 NZD/GBP [Offer] = NZD/EUR [Bid] × GBP/EUR [Offer] = 1.7018 × 0.8594 = 1.4625 | B. Correct because to calculate the cross-rate bid of NZD/GBP requires inverting the quoted GBP/EUR rate to EUR/GBP and interchanging the bid-offer rates. NZD/GBP [Bid] = NZD/EUR [Bid] × EUR/GBP [Bid], where EUR/GBP [Bid] becomes 1 / (GBP/EUR [Offer]) = 1.7014 × [1/0.8594] = 1.9798 NZD/GBP [Offer] = NZD/EUR [Bid] × EUR/GBP [Offer], where EUR/GBP [Offer] becomes 1 / (GBP/EUR [Bid]) = 1.7018 × [1/0.8593] = 1.9804 | C. Incorrect because this response neglects to interchange the bid-offer spreads when taking the inverse of the quoted GBP/EUR rate to determine EUR/GBP. Calculated response: NZD/GBP [Bid] = NZD/EUR [Bid] × EUR/GBP [Bid] = 1.7014 × [1/0.8593] = 1.9800 NZD/GBP [Offer] = NZD/EUR [Bid] × EUR/GBP [Offer] = 1.7018 × [1/0.8594] = 1.9802"
+   },
+   {
+    "n": 32,
+    "q": "Based on Exhibit 1, the forward premium or discount for a 180-day forward contract and using the mid-market JPY/USD rate would be closest to:",
+    "options": [
+     "–0.5296.",
+     "0.5296.",
+     "1.0568."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because this response is calculated by inverting (if - id) and calculating as (id  - if). Forward Premium (Discount) = Sf/d ( [Actual/360] / 1 + id [Actual/360]) × (if - id) Ff/d - Sf/d = (110.53+110.62)/2) * ( [180/360] /  1 + 0.0045 [180/360]) × (0.004 - 0.00141) Ff/d - Sf/d = -0.5296 | B. Correct because the correct formula for Forward Premium or Discount was applied. Forward Premium (Discount) = Sf/d ( [Actual/360] / 1 + id [Actual/360]) × (if - id) Ff/d - Sf/d = (110.53+110.62)/2) × ( [180/360] /  1 + 0.0045 [180/360]) × (0.0141 - 0.0045) Ff/d - Sf/d = 0.5296 | C. Incorrect because this response makes a calculation error in calculating the denominator and does not annualize the id correctly. Forward Premium (Discount) = Sf/d ( [Actual/360] / 1 + id [Actual/360]) × (if - id) Ff/d - Sf/d = (110.53+110.62)/2) × ( [180/360] /  (1 + 0.0045) × [180/360]) × (0.0141 - 0.0045) Ff/d - Sf/d = 1.0568."
+   },
+   {
+    "n": 33,
+    "q": "In the discussion with Kaur's colleagues about Country A, the statement that best reflects the absolute version of PPP is:",
+    "options": [
+     "Statement 1.",
+     "Statement 2.",
+     "Statement 3."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the relationship between risk-free interest rates and spot/forward exchange is related to covered (and uncovered) interest rate parity.  The domestic currency will trade at a forward premium (discount), if, and only if, the foreign risk-free interest rate exceeds (subceeds) the domestic risk-free interest rate. | B. Incorrect because this statement refers to the relative version of PPP, which is the percentage change in the spot exchange rate will be completely determined by the difference between the foreign and domestic inflation rates. | C. Correct because the absolute version of PPP simply extends the law of one price to the broad range of goods and services that are consumed in different countries and asserts that the equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels."
+   },
+   {
+    "n": 34,
+    "q": "Kaur's assertion about the change in the value of Country A's currency is most likely:",
+    "options": [
+     "correct because countries with trade surplus will finance their trade with increased borrowing.",
+     "incorrect because countries have an upper limit on the ability to borrow during trade surpluses.",
+     "correct because countries with persistent current account surpluses tend to appreciate over time."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it is based on the portfolio balance channel but misrepresents the impact of trade surpluses on borrowing. The portfolio balance channel asserts that countries with trade deficits will finance their trade with increased borrowing, which may lead to shifts in global asset preferences and influence exchange rates. | B. Incorrect because it is based on the debt sustainability channel but misrepresents the impact of upper limits of borrowing being associated with trade surpluses instead of trade deficits. The debt sustainability channel asserts that there should be some upper limit on the ability of countries to run persistently large current account deficits. | C. Correct because the flow supply/demand channel asserts that countries with persistent current account surpluses should see their currencies appreciate over time, and countries with persistent current account deficits should see their currencies depreciate over time."
+   }
+  ]
+ },
+ {
+  "id": "fx29-gupta",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Gupta: FX trading desk, forward premium and arbitrage",
+  "body": "Fariq Gupta is an analyst at an investment bank’s foreign exchange trading desk. He meets with two of his clients to discuss their currency-related transactions.\n\nBendigo Technologies\n\nBendigo Technologies is an Australia-based multinational company with subsidiaries in Tokyo and London. Bendigo will receive a cash inflow denominated in JPY from the Tokyo subsidiary and wants to convert this JPY receipt into Australian dollars (AUD). Gupta collects the spot rate bid/offer quotes for JPY/AUD (number of JPY per AUD) in Exhibit 1. Gupta investigates whether a triangular arbitrage opportunity exists between the Interbank and dealer quotes in the JPY/AUD. \n\nExhibit 1 Spot Exchange Rate Bid/Offer Quotes\nInterbank quote JPY/USD\t102.44/102.45\nInterbank quote USD/AUD\t0.7633/0.7636\nDealer quote JPY/AUD\t78.18/78.22\nThe Australian office expects a GBP cash inflow in six months from the London subsidiary. Gupta collects the AUD/GBP exchange rate and interest rate information in Exhibit 2 and assumes that covered interest rate parity holds. \n\nExhibit 2 AUD/GBP Spot Exchange Rate and Interest Rates\nCurrent spot rate (AUD/GBP)\t1.7185\n6-month reference rate (AUD)\t2.0%\n6-month reference rate (GBP)\t0.6%\nThe Mandurah Fund\n\nThe Mandurah Fund is an investment fund based in Australia. One year ago, Mandurah entered a carry trade involving currency positions in Country D and Country E. Gupta calculates the all‑in return from the carry trade using the information in Exhibit 3. \n\nExhibit 3 Data for Calculating Return on Carry Trade\nSpot rate for currency E per currency D one year ago\t6.6710\nCurrent spot rate for currency E per currency D\t6.7500\nAnnual yield on currency D one year ago\t0.65%\nAnnual yield on currency E one year ago\t4.00%\nMandurah wants to expand its investments into emerging markets and Gupta conducts further analysis. Country A is an emerging market, has a floating-rate currency regime and highly mobile foreign capital flows. The government is rapidly increasing its fiscal stimulus to boost economic growth. Gupta believes that this will lead to a prolonged buildup in public debt, which foreign creditors eventually will not accept. To ease concerns regarding the buildup in public debt, the central bank is implementing a restrictive monetary policy. He assesses the potential effect on the country’s currency based on the Mundell-Fleming and portfolio balance approaches.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Based on Exhibit 1, does a triangular arbitrage opportunity exist in JPY/AUD?",
+    "options": [
+     "No.",
+     "Yes, by buying AUD in the interbank market and selling it to the dealer.",
+     "Yes, by buying AUD from the dealer and selling it in the interbank market."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The implied cross-rate in the interbank market for AUD/JPY is 78.19/78.23. It is calculated as below. The dealer’s JPY/AUD bid-offer rate is 78.18/78.22. The dealer’s bid rate is lower than the market implied bid rate and the offer rate is lower than the market implied offer rate, however the dealer’s offer rate is still within the implied spread. You can buy AUD from the dealer at cost of 78.22 JPY and sell the AUD to the interbank at 78.192 and have a loss. Similarly, you can buy AUD in the intermarket at cost of 78.23 and sell them to the dealer at 78.18 and have a loss. Also, if you sold AUD to the dealer you would receive JPY 78.18 which isn’t enough to pay the 78.23 in the interbank for AUD. If you sold AUD in the interbank you would receive JPY 78.192 and not have enough to buy AUD at 78.23. Hence there is no triangular arbitrage opportunity. | B. Incorrect because the dealer’s JPY/AUD bid-offer rate is 78.18/78.22 which means the dealer is selling JPY at a price of  AUD or 0.012791 AUD/JPY. So if you bought JPY at a cost of 0.012791 AUD you would have to sell them at the interbank rate of AUD or 0.012789 AUD/JPY. So to buy JPY from the dealer, and sell it at the interbank market would result in a loss. | C. Incorrect. There is no arbitrage opportunity because of the difference between the interbank implied cross-rate of 78.19/78.23 in JPY/AUD and the dealer quote of 78.18/78.22. Gupta could not make profit from buying AUD from the dealer at a cheaper rate and sell it at the interbank market for a higher rate. Gupta would need to buy JPY from the interbank market at 1/78.19 and only able to sell it to the dealer for a lower price of 1/78.22. The dealer’s offer rate is still within the market implied spread."
+   },
+   {
+    "n": 42,
+    "q": "Based on Exhibit 2, the 6-month forward rate for AUD/GBP should trade closest to a:",
+    "options": [
+     "discount of 0.0120 to the spot rate.",
+     "premium of 0.0120 to the spot rate.",
+     "premium of 0.0140 to the spot rate."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it incorrectly uses AUD as the base currency. The equation to calculate the forward premium (discount) is: Because AUD is incorrectly used as the base currency in the AUD/GBP quote, putting in the information from the Exhibit leads to: | B. Correct. The equation to calculate the forward premium (discount) is: Because GBP is the base currency in the /AUD/GBP quote, putting in the information from the Exhibit leads to: The domestic currency will trade at a forward premium at 0.01199~=0.0120. Note: the premium is .01183 if the 365 day convention is used. | C. Incorrect. The incorrect equation is derived as: Putting in the information from the Exhibit leads to:"
+   },
+   {
+    "n": 43,
+    "q": "Based on Exhibit 3, the all-in return (in currency D terms) on Mandurah’s carry trade is closest to:",
+    "options": [
+     "2.13%.",
+     "2.78%.",
+     "3.35%."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The return on a carry trade is based on (a) the money market yield on the currency that the carry trade is legging into; (b) the appreciation of the currency that the carry trade is legging into, measured against the funding currency; and (c) the borrowing costs in the funding currency, which are charged against the gains from (b) and (c). In a carry trade the investor borrows in the funding currency and invests in the high yielding currency. In this case, Currency D is the funding currency and currency E is the investment currency, and all-in returns are measured in currency D. (See especially Q5 of Example 8, page 542.) An increase in this rate indicates an appreciation of currency D. Adding the information provided by the analyst leads to an expected all-in one year return of: (1 + 0.04)(6.6710 / 6.7500) – (1 + 0.0065) = 0.0213 = 2.13% | B. Incorrect because it incorrectly omits the borrowing cost in the funding currency (annual yield on currency D at inception) in the equation: (1 + 0.04)(6.6710 / 6.7500) – 1= 0.0278 = 2.78% | C. Incorrect because it simply (and incorrectly) subtracts annual yield on Currency D at inception from annual yield on currency E at inception: 4.0% - 0.65%= 3.35%"
+   },
+   {
+    "n": 44,
+    "q": "Based on Gupta’s observations and the Mundell-Fleming and portfolio balance approaches, Country A’s currency would be expected to:",
+    "options": [
+     "appreciate in the short term but depreciate in the long term.",
+     "depreciate in the short term towards a lower, long-term equilibrium exchange rate.",
+     "appreciate in the short term towards a higher, long-term equilibrium exchange rate."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the Mundell-Fleming model is a short-term model while the portfolio balance channel looks at long-term fiscal effects. In the short term the Mundell-Fleming model indicates that a more expansionary fiscal policy should cause the currency to appreciate (given highly mobile capital conditions and a restrictive monetary policy). But over the longer term the portfolio balance channel would indicate that as foreign holdings of bonds issued by the balance of trade deficit country increase, these foreign bondholders may wish to reduce their portfolio weights in that country and sell its currency. | B. Incorrect because in the shorter-term the currency is more likely to appreciate (Mundell-Fleming model) than depreciate. | C. Incorrect because although there may be short-term currency appreciation, longer-term fiscal effects are likely to cause depreciation."
+   }
+  ]
+ },
+ {
+  "id": "fx29-carlisle",
+  "source": "29 Oct paste (Econ currency exchange rates)",
+  "readings": [
+   5
+  ],
+  "title": "Carlisle: PPP, portfolio balance and currency crises",
+  "body": "Barkley Carlisle was recently hired as an associate analyst in the corporate finance department by Nexran Enterprises. Nexran is a US manufacturer of heavy industrial equipment that sells its products globally. Carlisle assists finance director Jennifer Brannigan in managing Nexran’s foreign currency risk. As part of the training process concerning the complexities of the foreign exchange (FX) markets, Brannigan provides Carlisle with Exhibit 1 and asks him to demonstrate his familiarity with some calculations, such as triangular arbitrage and expected future spot rates. A few days later, Brannigan and Carlisle meet to discuss the results of his work.\n\n \nExhibit 1 Interbank Currency Quotes and MRR Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\t\nProjected Spot in One Year\t \nOne-Year MRR Rates\nUSD/CHF\t1.0453\t1.0456\t1.0373\tCHF 0.15%\nUSD/EUR\t1.1241\t1.1243\t1.1324\tCAD 0.95%\nCAD/NZD\t0.8392\t0.8396\t---\tNZD 2.00%\nAfter reviewing the calculations, Brannigan asks Carlisle what factors determine the bid–offer spreads Nexran may face. Carlisle makes the following statements:\n\nStatement 1: Nexran should receive more favorable pricing on larger trades.\nStatement 2: Nexran should see the best market liquidity for euro trades when London opens for trading.\nStatement 3: Nexran’s strong credit rating should enable it to get tighter bid–offer quotes from dealers.\nThe conversation then moves to a discussion of some recent Nexran transactions. Six months ago, a European customer placed an order for EUR 20 million of oil field construction equipment with delivery and payment scheduled to take place one year later. Nexran hedged all of its exposure to the euro by entering into a forward position at a forward price of USD1.1716/EUR.\n\nNexran has just been informed by the customer that because of the collapse in oil prices, it is canceling the order. Brannigan tells Carlisle to mark the forward position to market to facilitate exiting the currency hedge. (Exhibit 2 provides information about current FX rates and interest rates.)\n\nExhibit 2 Six-Month Forward and MRR Rates\nPoints (USD/EUR)\t35/36\nMRR (EUR)\t0.71% (annualized)\nMRR (USD)\t0.53% (annualized)\nThe next transaction considered is a recently signed multiyear contract with a customer located in the country of Morlundan. Nexran will sell 25 pieces of equipment per year at a fixed price, with the sale priced in the Morlundan pound. Morlundan has a floating exchange rate, and capital flows are highly mobile. Morlundan also has an expansionary monetary policy with a restrictive fiscal policy. Brannigan asks Carlisle to determine the appropriate action Nexran should take to manage its Morlundan currency risk based on that country’s economic policies.\n\nAs a final item, Brannigan explains the impact of the balance of payment flows on exchange rates. She notes that in recent years, Nexran sold a sizable portion of its products to the Trundool Republic, a country that is running large current account surpluses versus the United States. Nexran’s sales to the Trundool Republic are expected to be a major component of the company’s future total sales. Consequently, Brannigan believes Nexran should hedge against a potential decline in the USD relative to the TRD because she is concerned that the Trundool Republic may decide to reduce its USD-denominated assets.",
+  "questions": [
+   {
+    "n": 52,
+    "q": "Based on the data in Exhibit 1, if a dealer quoted a bid–offer rate of CHF1.0741/EUR1.0746, then a profitable triangular arbitrage would most likely involve buying EUR1 from the dealer and then selling it in the interbank market for a profit of:",
+    "options": [
+     "CHF0.0005.",
+     "CHF0.0007.",
+     "CHF0.0008."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Calculate the CHF/EUR bid–offer cross rate implied by the interbank market using the equation CHF/EUR = (USD/CHF)–1 × USD/EUR = CHF/USD × USD/EUR. The equation shows that we have to invert the USD/CHF bid–offer quotes to get the CHF/USD bid–offer quotes. First, given the USD/CHF quotes of 1.0453/1.0456, take the inverse of each and interchange the bid and offer, such that the CHF/USD quotes are (1/1.0456)/(11.0453) = 0.95639/0.95666 = 0.9564/0.9567. Then multiply the CHF/USD and USD/EUR bid–offer quotes: Bid: 0.9564 × 1.1241 = 1.07509 = 1.0751 Offer: 0.9567 × 1.1243 = 1.07562 = 1.0756 Thus, the CHF/EUR cross-rate implied by the interbank market is 1.0751/1.0756. The dealer is posting an offer rate to sell the EUR at a rate below the interbank bid rate. Thus, triangular arbitrage would involve buying EUR from the dealer at 1.0746 (offer) and selling it in the interbank market at 1.0751 (bid) for a profit of CHF0.0005 (1.0751 – 1.0746) per EUR. CHF/EUR Bid\tOffer\tAction\tProfit Interbank\t---\t1.0756\t---\t--- Interbank\t1.0751\t---\tSell to Interbank\t--- Dealer\t \t1.0746\tBuy from Dealer\t--- Dealer\t1.0741\t---\t---\t--- ---\t---\t---\t---\tCHF0.0005 | B. Incorrect. It erroneously inverts the USD/CHF quotes but incorrectly calculates the interbank market cross-rate by mixing up the cross bids and offers. Bid: 0.9564 × 1.1243 = 1.07528 = 1.0753 Offer: 0.9567 × 1.1241 = 1.07543 = 1.0754 Thus, the CHF/EUR cross-rate implied by the interbank market is 1.0753/1.0754. Triangular arbitrage would involve buying EUR from the dealer at 1.0746 (offer) and selling it in the interbank market at 1.0753 (bid) for a profit of CHF0.0007 (1.0753 – 1.0746) per EUR. | C. Incorrect. It erroneously inverts the USD/CHF quotes but does not interchange the bid and offer and thus incorrectly calculates the interbank market cross rate. Bid: 0.9567 × 1.1241 = 1.07543 = 1.0754 Offer: 0.9564 × 1.1243 = 1.07528 = 1.0753 Thus, the CHF/EUR cross-rate implied by the interbank market is 1.0754/1.0753. (Note that the bid is higher than the offer.) Triangular arbitrage would involve buying EUR from the dealer at 1.0746 (offer) and selling it in the interbank market at 1.0754 (bid) for a profit of CHF0.0008 (1.0754 – 1.0746) per EUR."
+   },
+   {
+    "n": 53,
+    "q": "Using the bid–offer quote midpoint in Exhibit 1 as the current spot rate and assuming uncovered interest rate parity holds, the projected one-year spot rate for the CAD/NZD currency pair is closest to:",
+    "options": [
+     "0.8308.",
+     "0.8481.",
+     "0.8562."
+    ],
+    "answer": "A",
+    "why": "A. Correct. If uncovered interest rate parity holds, the expected spot rate one-year forward is equal to the one-year forward exchange rate. The forward exchange rate is calculated using the formula: where, Se = expected spot rate one-year forward F = one-year forward exchange rate Sf/d = spot rate today for the pair trade (mid-market of the CAD/NZD spot bid–offer = 0.8394) 1 + if = today’s one-year MRR for the foreign (price) currency 1 + id = today’s one-year MRR for the domestic (base) currency The CAD is the foreign (price) currency, and the NZD is the domestic (base) currency | B. Incorrect. It incorrectly reverses the MRR rates in the numerator and denominator in the calculation: Se = F = 0.8394[(1 + 0.02)/(1 + 0.0095)] = 0.84813 = 0.8481. | C. Incorrect. It incorrectly multiplies the mid-point of the spot rate by the NZD one-year MRR rate: Se = F = 0.8394(1 + 0.02) = 0.8562."
+   },
+   {
+    "n": 54,
+    "q": "Which of Carlisle’s statements about bid–offer spreads is the most accurate?",
+    "options": [
+     "The statement regarding market liquidity",
+     "The statement regarding Nexran’s credit rating",
+     "The statement regarding pricing on large trades"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The interbank FX markets are most liquid when the major FX trading centers are all open. The two largest, London and New York, overlap from approximately 8:00–11:00 a.m. NY time. As such, the interbank market for most currency pairs is typically most liquid during those hours, which is well after the open in London. | B. Correct. A client’s credit risk can be a factor because a client with a poor credit profile may be quoted a wider bid–offer spread than one with good credit, reflecting the greater settlement risk. | C. Incorrect. Transaction size can affect the bid–offer spread. Typically, the larger the transaction, the further away from the current spot exchange rate the dealing price. Wider spreads on larger trades reflect the greater difficulty the dealer faces in “laying off” the FX risk in the interbank market."
+   },
+   {
+    "n": 55,
+    "q": "Based on the data in Exhibits 1 and 2, the mark-to-market value for Nexran’s forward position related to the oil field construction equipment order is closest to:",
+    "options": [
+     "USD871,690.",
+     "USD874,000.",
+     "USD877,674."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Nexran sold EUR20 million forward to the settlement date at 1.1716 (USD/EUR). To mark the position to market, Nexran offsets the forward transaction by buying EUR 20 million six months forward to the settlement date. For the offsetting forward contract, because the EUR is the base currency in the USD/EUR quote, buying EUR forward means paying the offer for both the spot rate and forward points. The all-in six-month forward rate is calculated as 1.1243 + 0.0036 = 1.1279 USD/EUR. This rate gives a net cash flow on settlement day of EUR20,000,000 ´ (1.1716 – 1.1279) USD/EUR = 20,000,000 ´ 0.0437 = USD874,000. (This amount is a cash inflow because the EUR depreciated against the USD.) To determine the mark-to-market value of the original forward position, calculate the present value of the USD cash inflow using the six-month USD discount rate: USD874,000/[1 + 0.0053(180/360)] = USD871,690. | B. Incorrect. The present value of the cash flow was not calculated (step 4 of calculation). | C. Incorrect. The cash flow was calculated using the bid rate instead of the offer rate. The all-in six-month forward rate = 1.1241 + 0.0035 = 1.1276 This gives a net cash flow on settlement day of 20,000,000EUR × (1.1716 – 1.1276) USD/EUR = USD880,000, and the present value is calculated as USD880,000/[1 + 0.0053(180/360)] = USD877,674."
+   },
+   {
+    "n": 56,
+    "q": "Given Morlundan’s economic policies, which of the following actions would be most appropriate regarding currency risk on the multiyear contract in Morlundan?",
+    "options": [
+     "Nexran should hedge against appreciation of the Morlundan pound.",
+     "Nexran should hedge against depreciation of the Morlundan pound.",
+     "Nexran should not enter into a hedge because the exchange rate change is ambiguous."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The combination of an expansionary monetary policy and restrictive fiscal policy is bearish for a floating rate currency when capital mobility is high. Thus, entering into a hedge to protect against appreciation of the Mourlundan pound would not be the appropriate action. | B. Correct. The combination of an expansionary monetary policy and a restrictive fiscal policy should lead to lower interest rates, capital outflows, and downward pressure on (depreciation of) the Morlundan pound. The appropriate action would be for Nexran to hedge against the anticipated depreciation of the Morlundan pound. | C. Incorrect. The effect on the Morlundan pound would be ambiguous when the both the fiscal and monetary policies were either both expansionary or both restrictive."
+   },
+   {
+    "n": 57,
+    "q": "Brannigan’s belief that Nexran should hedge against the Trundool Republic dollar is best described as being based on which of the following exchange rate adjustment mechanisms?",
+    "options": [
+     "Portfolio balance",
+     "Debt sustainability",
+     "Flow supply/demand"
+    ],
+    "answer": "A",
+    "why": "A. Correct. The mechanism referred to by Brannigan is the portfolio balance channel. Current account imbalances shift financial wealth from deficit nations to surplus nations. Over time, this may lead to shifts in global asset preferences, which, in turn, could affect the path of exchange rates and hence optimal portfolio holdings. Attempts by the Trundool Republic to reduce USD holdings to desired levels could then have a profound negative impact on the USD’s value. | B. Incorrect. According to the debt sustainability channel, there should be a limit on the ability of countries to run persistently wide current account deficits. For deficit countries, rising net external debt levels as a percentage of GDP should result in downward revisions of the currency’s long-run equilibrium value. For surplus countries, rising net external asset levels as a percentage of GDP should give rise to upward revisions of the currency’s long-run equilibrium value. | C. Incorrect. The flow supply/demand channel is based on a model whereby purchases and sales of internationally traded goods and services require the exchange of domestic and foreign currencies in order to arrange payment for the goods and services. We would expect that countries with persistent current account surpluses would see their currencies appreciate over time and vice versa."
+   },
+   {
+    "n": 58,
+    "q": "A country exhibits high capital mobility and is implementing an excessive expansionary fiscal policy. All else being equal, according to the portfolio balance model, in the long run the currency of the country is most likely to:",
+    "options": [
+     "depreciate.",
+     "remain stable.",
+     "appreciate."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the portfolio balance model states that in the long run, governments that run large budget deficits on a sustained basis could eventually see their currencies decline in value. A domestic currency may rise in value when the expansionary fiscal policy is first put into place. As deficits mount over time and the government’s debt obligations rise, however, market participants will begin to wonder how that debt will be financed. If the volume of debt rises to levels that are believed to be unsustainable, market participants may believe that the central bank will eventually be pressured to “monetize” the debt—that is, to buy the government’s debt with newly created money. Such a scenario would clearly lead to a rapid reversal of the initial currency appreciation. | B. Incorrect because the portfolio balance model states that countries implementing an expansionary fiscal policy may see their currency depreciate in the long run and not remain stable. | C. Incorrect because according to the portfolio balance model countries implementing an expansionary fiscal policy may see their currency depreciate in the long run rather than appreciate."
+   },
+   {
+    "n": 59,
+    "q": "Which of the following conditions is most likely to increase a country’s vulnerability to a currency crisis?",
+    "options": [
+     "Liberalized capital markets",
+     "A floating exchange rate regime",
+     "Relatively low inflows of foreign capital"
+    ],
+    "answer": "A",
+    "why": "A. Correct because several studies have identified the liberalization of capital markets as a precursor to a currency crisis. Prior to a currency crisis, the capital markets have been liberalized to allow the free flow of capital. | B. Incorrect because countries with fixed or partially fixed exchange rates are more susceptible to currency crises than countries with floating exchange rates. | C. Incorrect because studies have found that currency crises are preceded by large inflows of foreign capital (relative to GDP) in the period leading up to a crisis, with short-term funding denominated in a foreign currency being particularly problematic."
+   }
+  ]
+ }
+]

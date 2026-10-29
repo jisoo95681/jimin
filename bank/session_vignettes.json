@@ -91,7 +91,8 @@
   "id": "s1a-hollingsworth",
   "source": "26 Oct session 1",
   "readings": [
-   6
+   6,
+   5
   ],
   "title": "Hollingsworth: Drawbridge growth models",
   "body": "Charles Hollingsworth is an investment strategist at Drawbridge Asset Partners (Drawbridge), an international investment firm. He is meeting with equity analyst Andrew Gillibrand and fixed-income analyst Eliana Navarro to discuss new investment opportunities and the economic factors they should consider as they make their investment selections.\nHollingsworth begins the meeting with the following statement:\n“Before we look at new investment opportunities, I want to review some prior transactions. A few months ago, Drawbridge entered into a carry trade in a set of currencies. This morning, we were unfortunately forced to close out the position at a sizable loss as a result of unexpected market volatility.”\nHollingsworth continues:\n“Earlier in the year, Drawbridge hedged a long exposure to the Australian dollar (AUD) by selling AUD 5 million forward against the US dollar (USD); the all-in forward price was 0.8940 (USD/AUD). It is now three months prior to the settlement date, and I want to mark the forward position to market.”\nExhibit 1 provides information about current rates in the foreign exchange markets.\nExhibit 1 Current Foreign Exchange Data\nSpot rate (USD/AUD)\t0.9062/0.9066\nThree-month points\t–36.8/–36.4\nThree-month MRR (AUD)\t2.88%\nThree-month MRR (USD)\t0.23%\nOn completion of the agenda items relating to the foreign exchange markets, Hollingsworth and his team move on to the economic growth projections for two of the countries in which Drawbridge is considering making new investments are presented in Exhibit 2. Hollingsworth prefers the Solow growth accounting equation to calculate potential GDP growth rather than the more simplistic labor productivity growth accounting equation.\nExhibit 2 Long-Term Growth Projections\nCountry\tInflation Rate (%)\tGrowth in Total Factor Productivity (%)\tOutput Elasticity of Capital\tGrowth Rate of Capital (%)\tGrowth Rate of Labor (%)\nCountry A\t1.7\t1.5\t0.3\t3.2\t0.4\nCountry B\t1.8\t1.3\t0.4\t3.7\t0.5\nHollingsworth presents the long-term relative performance of Countries C and D, shown in Exhibit 3. Although both countries had below-average levels of per capita GDP 50 years ago, over time, the per capita GDP growth rate of Country C has risen rapidly and for nearly 20 years has been well above average. The growth rate for Country D, however, has risen more slowly. Today, Country C ranks among the advanced economies whereas Country D remains a developing nation.\nExhibit 3 Real Per Capita GDP Growth\nCountry\tGDP/Capita 50 Years Ago\tGDP/Capita Today\tGDP Growth Rate over Past 50 Years\nCountry C\t6,950\t35,190\t3.30%\nCountry D\t8,240\t20,410\t1.83%",
@@ -117,6 +118,28 @@
     ],
     "answer": "C",
     "why": "A. Incorrect. Encouraging free trade is an outward-oriented policy. This policy attempts to integrate domestic industries with the global economy through trade and make exports a key driver of growth. | B. Incorrect. Foreign investment will potentially increase the developing economy’s physical capital stock, leading to higher productivity, employment and wages, and possibly increased domestic savings. | C. Correct. Policies that encourage the production of domestic substitutes are inward oriented, attempting to develop domestic industries by restricting imports, despite the fact that it may be more costly to do so. As a result, the country would not benefit from the positive effects of integrating domestic industries with the global economy and benefiting from trade and foreign investment."
+   },
+   {
+    "n": 35,
+    "q": "The primary factor that was most likely the cause of Drawbridge's outcome in its carry trade was:",
+    "options": [
+     "leverage.",
+     "flight to safety.",
+     "stop-loss orders."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The primary reason for crash risks is related to the fact that carry trades are leveraged: The low-yield currency is borrowed, with proceeds invested in the high-yield currency. The leverage magnifies the effect of losses and gains relative to the investors’ equity base. In low-volatility markets, investors can become complacent and allow positions to grow large in a search for yield. This crowded positioning tends to unwind rapidly when a market shock occurs because many traders try to exit their positions almost simultaneously before the leverage effects wipe out their equity. Stop-loss orders are triggered, and given the market uncertainty, there is a flight to safety that further increases demand for the low-yield currency. | B. Incorrect. During periods of market turmoil, there is generally a flight to safety into assets and currencies that seem to offer the most protection during times of uncertainty—typically low interest rate currencies. | C. Incorrect. Another factor that accelerates selling is that traders often have stop-loss orders in place that are triggered when price declines reach a certain level. This can lead to cascades of selling in which position liquidation begets further position liquidation."
+   },
+   {
+    "n": 36,
+    "q": "The mark-to-market value for Drawbridge’s forward position is closest to:",
+    "options": [
+     "–USD44,774.",
+     "–USD44,800.",
+     "–USD42,576."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Drawbridge sold AUD 5 million forward to the settlement date at an all-in forward price of 0.8940 (USD/AUD). To mark the position to market, Drawbridge offsets the forward transaction by buying AUD 5 million three months forward to the settlement date. For the offsetting forward contract, because the AUD is the base currency in the USD/AUD quote, buying AUD forward means paying the offer for both the spot rate and forward points. The all-in three-month forward rate is calculated as 0.9066 − 0.00364 = 0.90296This gives a net cash flow on settlement day of 5,000,000 × (0.8940 − 0.90296) = −USD44,800(This is a cash outflow because Drawbridge sold the AUD forward and the AUD appreciated against the USD). To determine the mark-to-market value of the original forward position, calculate the present value of the USD cash outflow using the three-month USD discount rate: −USD44,800 / [1 + 0.0023(90 / 360)] = −USD44,774. | B. Incorrect. The present value of the cash flow was not calculated (step 4 of calculation). | C. Incorrect. The cash flow was calculated using the bid rate instead of the offer rate. The all-in three-month forward rate = 0.9062 − 0.00368 = 0.90252 This gives a net cash flow on settlement day of 5,000,000 × (0.8940 − 0.90252) = −USD42,600, and the present value is calculated as −USD42,600 / [1 + 0.0023(90 / 360)] = −USD42,576."
    }
   ]
  },
@@ -151,11 +174,51 @@
     ],
     "answer": null,
     "why": "Key not included in the paste."
+   },
+   {
+    "n": 37,
+    "q": "Which of the statements regarding policy alternatives discussed between Birol and Pamuk in response to Daltonia’s recent increase in inflation and appreciation in exchange rate is least accurate?",
+    "options": [
+     "Birol’s statement regarding Dornbusch",
+     "Birol’s statement regarding Mundell–Fleming",
+     "Pamuk’s statement regarding the portfolio balance approach"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Birol’s statement regarding Dornbusch is accurate. | B. Correct. Birol’s statement regarding the Mundell–Fleming model is inaccurate because restrictive (not expansionary) fiscal policy, along with expansionary monetary policy, would lead to capital outflows and cause the currency to depreciate assuming high capital mobility. | C. Incorrect because Pamuk’s reply regarding the portfolio balance approach is accurate."
+   },
+   {
+    "n": 38,
+    "q": "Which of the recent economic developments discussed by Birol and Pamuk is most likely to lead to a currency crisis?",
+    "options": [
+     "The banking sector",
+     "The exchange rate system",
+     "The trend in terms of trade and monetary ratios"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Pamuk’s description of growth in the banking sector coupled with short-term funding denominated in foreign currency can lead to a currency crisis. Countries with fixed or partially fixed exchange rates are more susceptible. Broad measures of money such as M2 are likely to be rising (not falling) just prior to a crisis. The terms of trade are favorable for Daltonia. | B. Incorrect. Countries with fixed or partially fixed exchange rates are more susceptible. | C. Incorrect. Broad measures of money such as M2 are likely to be rising (not falling) just prior to a crisis."
+   },
+   {
+    "n": 39,
+    "q": "Based on the exchange rate quotes in Exhibit 2, an opportunistic European hedge fund interested in triangular arbitrage between the dealer and interbank markets is most likely to:",
+    "options": [
+     "discover that no triangular arbitrage opportunity exists.",
+     "buy EUR in the interbank market and sell EUR to the Daltonian dealer.",
+     "buy EUR from the Daltonian dealer and sell EUR in the interbank market."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. There is an arbitrage profit opportunity as shown in the calculations. | B. Correct. Calculate the interbank implied cross rate for (DRN/EUR). Invert the (EUR/USD) quotes. The 0.8045 bid becomes 1/0.8045 = 1.243 offer for (USD/EUR). The 0.8065 offer becomes 1/0.8065 = 1.240 bid for (USD/EUR). Determine the interbank implied cross currency quotes for (DRN/EUR) as follows: Bid: 1.205(DRN/USD) × 1.24 (USD/EUR) = 1.4942 (DRN/EUR) Offer: 1.210 (DRN/USD) × 1.243 (USD/EUR) = 1.504 (DNR/EUR). The offer on the interbank is less than the bid by the dealer. A hedge fund can by EUR (sell DRN) in the interbank market for DRN 1.504 and sell EUR (buy DRN) to the Daltonian dealer for a higher price of DRN 1.514. MAX17024-IS-Fa | C. Incorrect. This is the opposite of the profitable transaction."
+   },
+   {
+    "n": 40,
+    "q": "Using the data provided in Exhibit 2 for the interbank market only, a European investor who attempts to exploit the DNR currency market with a normal one-year carry trade based on a 100,000 EUR position will most likely achieve a net profit in EUR of:",
+    "options": [
+     "1,963.",
+     "2,218.",
+     "3,018."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Using the data provided in Exhibit 2 for the interbank market only, a European investor who attempts to exploit the DNR currency market with a normal one-year carry trade based on a 100,000 EUR position will most likely achieve a net profit in EUR of: Sell 100,000 EUR × (1/0.8065)(USD/EUR) = 123,992.56 USD Sell 123,992.56 USD × 1.2050(ENR/USD) = 149,411 DNR Invest at 3.0% DRN MRR: 149,411 DNR × (1 + 0.03) = 153,893.37 DNR Convert to EUR at projected spot: 153,893.37 DNR × (1/1.228)(USD/DNR) × 0.82(EUR/USD) = 102,763 EUR Less borrowing cost: 100,000 × 0.8% = EUR 800 Ending balance = EUR101,963 EUR Less 100,000 beginning value = EUR 1,963 profit | B. Incorrect. The mistake is using the bid of 0.8045 and inverting it in the first step. When you invert, the quote has a new base currency. The inverted bid is now an ask. | C. Incorrect. The mistake is omitting the deduction of the borrowing cost."
    }
-  ],
-  "key_missing": [
-   28,
-   29
   ]
  },
  {
