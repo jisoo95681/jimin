@@ -58,5 +58,140 @@
   ],
   "answer": "C",
   "why": "C is correct. ETFs that have the highest trading volumes in their asset class category are generally preferred for tactical trading applications."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 51,
+  "q": "A non-dividend-paying stock currently trades at $55.25. The annual interest rate is 3.75% with annual compounding. Using the no-arbitrage approach, the equilibrium 6-month forward price is closest to:",
+  "options": [
+   "$54.24.",
+   "$56.28.",
+   "$57.32."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because it divides the spot price by the interest rate (instead of multiplying) to arrive at the forward rate, or = F0 = FV(S0) = $55.25 / (1 + 3.75%)0.5 ≈ $54.24. | B. Correct because S0 = $55.25, r = 3.75% and T = 6/12 = 0.5, and F0 = FV(S0) = S0(1 + r)T = $55.25 × (1 + 3.75%)0.5 ≈ $56.28, where S0 = spot price at the initiation date, r = annually compounded interest rate, T = time to maturity in years, F0 = forward price at the initiation date, and FV = future value function. If we assume annual compounding (r), then FV(S0) = S0(1 + r)T. | C. Incorrect because it does not incorporate the six-month maturity when calculating the interest rate to arrive at the forward rate, or = F0 = FV(S0) = $55.25 × (1 + 3.75%) ≈ $57.32."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 52,
+  "q": "An analyst gathers the following information about a stock and its underlying cash flows:\nCurrent stock price\t$95.00\nDividend to be paid in 3 months\t$4.25\nAnnual interest rate with annual compounding\t5.30%\nUsing the no-arbitrage approach, the equilibrium 11-month forward price is closest to:",
+  "options": [
+   "$95.15.",
+   "$95.21.",
+   "$95.30."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because it calculates the benefit of the dividend for the entire 11 months, or F0 = FV(S0) – FV(D) = $95 (1 + 0.053)11/12 – $4.25 (1 + 0.053)11/12 = $99.6054 – $4.4560 ≈ $95.15. | B. Correct because S0 = $95, r = 5.3% (annual compounding), and T = 11/12, and after 3 months, we will receive the benefit of a $4.25 dividend, which earns interest for (11 – 3) = 8 months. Therefore, F0 = FV(S0) – FV(D) = $95 (1 + 0.053)11/12 – $4.25 (1 + 0.053)8/12 = $99.6054 – $4.3989 ≈ $95.21. | C. Incorrect because it calculates the benefit of the dividend for only 3 months, or F0 = FV(S0) – FV(D) = $95 (1 + 0.053)11/12 – $4.25 (1 + 0.053)3/12 = $99.6054 – $4.3052 ≈ $95.30."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 53,
+  "q": "An equity forward has a remaining maturity of six months. A dividend payment is announced before the forward's expiration date. If the news announcement does not change the underlying price, the forward value will most likely:",
+  "options": [
+   "decrease.",
+   "remain unchanged.",
+   "increase."
+  ],
+  "answer": "A",
+  "why": "A. Correct because the old forward price is fixed. The discounted difference in the new forward price and the old forward price is the value. If we impose a new dividend, it would lower the new forward price and thus decrease the value of the old forward contract. | B. Incorrect because the old forward price is fixed. The discounted difference in the new forward price and the old forward price is the value. If we impose a new dividend, it would lower the new forward price and thus decrease, not keep the same, the value of the old forward contract. | C. Incorrect because the old forward price is fixed. The discounted difference in the new forward price and the old forward price is the value. If we impose a new dividend, it would lower the new forward price and thus decrease, not increase, the value of the old forward contract."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 54,
+  "q": "A 1-year plain vanilla interest rate swap has semiannual resets. The fixed swap rate is 5.2% and the subsequent floating MRRs through the life of the contract are given as follows:\nTime\t6-Month MRR (Annualized) Observed at Time t\nt = 0\t5.0%\nt = 6 months\t4.8%\nt = 12 months\t5.4%\nIf the 30/360 day count method is used, the pay-fixed, receive-floating net cash flow at t = 6 months is closest to:",
+  "options": [
+   "–0.002 per unit notional.",
+   "–0.001 per unit notional.",
+   "0.001 per unit notional."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because this neglects the fact that the floating interest rate is set in advance and settled in arrears, i.e., it uses the MRR at t = 6 months rather than the MRR at t = 0; 0.5 × (0.048 – 0.052) = –0.002. This is also the value if the cash flow is stated on an annual basis. | B. Correct because the convention in the swap market is that the floating interest rate is assumed to be advanced set and settled in arrears; thus, rFLT,i (the floating-leg rate) is set at the beginning of the period and paid at the end. Therefore, the appropriate floating rate to use for the 6-month cash flow is the MRR at t = 0, i.e., 5.0%. Moreover, the pay-fixed, receive-floating net cash flow can be expressed as AP × (rFLT,i – rFIX), where rFIX is the swap's fixed rate and AP denotes the accrual period, which accounts for the payment frequency and day count methods. Since the 30/360 day count method is assumed and the payment frequency is semi-annual, AP = 180/360 = 0.5. Therefore, the net cash flow at t = 6 months, for every unit of the notional amount, is 0.5 × (0.050 – 0.052) = –0.001. | C. Incorrect because this is the net cash flow at t = 6 months for a receive-fixed, pay-floating swap, not a pay-fixed, received-floating swap (i.e., it is the negative of the correct cash flow). It is also the answer if the MRR at t = 12 months is used rather than the MRR at t = 0; 0.5 × (0.054 – 0.052) = 0.001 per unit notional."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 55,
+  "q": "Which of the following is not an assumption made when using replication with bonds to price a plain vanilla interest rate swap at initiation? The value of the floating-rate bond at initiation should be equal to:",
+  "options": [
+   "zero.",
+   "its par value.",
+   "the value of the fixed-rate bond."
+  ],
+  "answer": "A",
+  "why": "A. Correct because pricing the swap means to determine the rate (rFIX) such that the value of the swap [not the floating-rate bond] at initiation is zero. Said differently, to price the swap, the value of the fixed-rate bond must equal the value of the floating-rate bond. Moreover, the value of a floating-rate bond at the reset date (including initiation) is 1 (par) because the interest payment is set to match the discount rate. Recall that when the YTM (discount rate) of a bond is equal to the coupon rate, the bond sells at par. | B. Incorrect because the value of a floating-rate bond at the reset date (including initiation) is 1 (par) because the interest payment is set to match the discount rate. Recall that when the YTM (discount rate) of a bond is equal to the coupon rate, the bond sells at par. | C. Incorrect because, to price the swap, the value of the fixed-rate bond must equal the value of the floating-rate bond."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 56,
+  "q": "Sixty days ago, a European company entered into a receive-fixed GBP, pay-fixed EUR swap with the following specifications:\nSwap notional amount (exchanged at initiation and maturity)\tEUR 5 million\nOriginal swap term\t1 year, with quarterly resets\nFixed swap rate (at initiation) in EUR\t4.55%\nFixed swap rate (at initiation) in GBP\t5.28%\nGBP/EUR spot exchange rate at initiation (amount of GBP per 1 EUR)\t0.88\nCurrently, long positions in the associated bonds with unit face value are priced at EUR 0.97 and GBP 1.06, respectively. If the current exchange rate is 0.91 GBP/EUR, the value of the swap to the European company is closest to:",
+  "options": [
+   "GBP 250,500.",
+   "GBP 396,000.",
+   "GBP 693,057."
+  ],
+  "answer": "A",
+  "why": "A. Correct because the value of a fixed-for-fixed currency swap at some future point in time, say Time t, is simply the difference in a pair of fixed-rate bonds, one expressed in currency a [here GBP] and one expressed in currency b [here EUR]. To express the bonds in the same currency units, we convert the currency b bond into units of currency a through a spot foreign exchange transaction at a new rate St. The value of a 'receive currency a, pay currency b' (fixed-for-fixed) swap at any time t expressed in terms of currency a is the difference in bond values: VCS = Va – StVb. Moreover, the NA (or par value) of the bond denominated in currency a (NAa) must equal the spot exchange rate S0 times the notional amount (or par value) of the bond denominated in currency b (NAb). That is, NAa = S0 × NAb = 0.88 × 5,000,000 = GBP 4,400,000. Finally, the value of each fixed-rate bond can be computed by multiplying the notional amount in that currency by the value of a long position in a bond with face value equal to one unit of that currency (the values given in the question). Hence, VCS = (4,400,000 × 1.06) – [0.91 × (5,000,000 × 0.97)] = 4,664,000 – 4,413,500 = GBP 250,500. | B. Incorrect because it uses the exchange rate at initiation, rather than after 60 days, to convert the EUR fixed-rate bond value to GBP, yielding: VCS = (4,400,000 × 1.06) – [0.88 × (5,000,000 × 0.97)] = 4,664,000 – 4,268,000 = GBP 396,000. | C. Incorrect because it misinterprets the stated exchange rates as EUR per GBP, rather than GBP per EUR, i.e., concluding that S0 = 1/0.88 = 1.1363636 (GBP/EUR) and St = 1/0.91 = 1.0989011 (GBP/EUR). This yields: NAa = S0 × NAb = 1.1363636 × 5,000,000 = GBP 5,681,818 and VCS = (5,681,818 × 1.06) – [1.0989011 × (5,000,000 × 0.97)] ≈ 6,022,727 – 5,329,670 = GBP 693,057."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 57,
+  "q": "An analyst gathers the following market quotations for spot market reference rates up to one year:\nMaturity (Months)\t Rate\n3\t2.30%\n6\t2.50%\n9\t2.70%\n12\t3.00%\nAssuming a 30/360 day count, the no-arbitrage fixed rate on a new 9 × 12 forward rate agreement (FRA) is closest to:",
+  "options": [
+   "2.30%.",
+   "2.85%.",
+   "3.82%."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because it is simply the quoted market spot rate for three months (2.30%) from the table, instead of deriving the forward rate from the 9-month and 12-month spot rates. | B. Incorrect because it is calculated as the simple arithmetic average of the 9-month spot rate and the 12-month spot rate, i.e., (2.70% + 3.00%)/2 = 2.85%. | C. Correct because the FRA is created and priced at Time 0, the initiation date, and expires h days later. The underlying instrument has m days to maturity as of the FRA expiration date. We derive the forward rate (or FRA rate, FRA0) from two spot rates (such as MRR): the longer rate LT and the shorter rate Lh. FRA0 = {[1 + LTtT]/[1 + Lhth] – 1}/tm FRA0 = {[1 + 3.00%]/[1 + 2.70% × (9/12)] – 1}/(3/12) ≈ 3.82%"
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 58,
+  "q": "A company entered into a 2-year receive-equity, pay-fixed swap three months ago, where the notional amount of both legs is €5.0 million. If the equity stock price at swap initiation was €50 and the current fair value of the fixed leg of the swap is €5.3 million, the current break-even equity price for the swap is closest to:",
+  "options": [
+   "€47.",
+   "€50.",
+   "€53."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because the break-even equity price for the swap is the price at which the net fair value of the swap equals 0, hence the value of the receive-equity leg should equal €5.3 million. If the current equity price was €47, the value of the receive-equity leg would be (€47/€50) × €5.0 million = €4.7 million, not €5.3 million. | B. Incorrect because the break-even equity price for the swap is the price at which the net fair value of the swap equals 0, hence the value of the receive-equity leg should equal €5.3 million. If the current equity price was €50, the value of the receive-equity leg would be (€50/€50) × €5.0 million = €5.0 million, not €5.3 million. | C. Correct because the break-even equity price for the swap is the price at which the net fair value of the swap equals 0, hence the value of the receive-equity leg should equal €5.3 million. The current break-even equity price is such that the value of the receive-equity leg is (X/€50) × €5.0 million = €5.3 million. Hence, X = €5.3 million/€5.0 million × €50 = €53."
+ },
+ {
+  "source": "29 Oct paste (Deriv 28 test)",
+  "readings": [
+   28
+  ],
+  "n": 59,
+  "q": "An analyst gathers the following information about a bond futures contract and the underlying semiannual pay bond:\nClean bond price\t103\nCoupon rate\t3.00%\nDays since last coupon\t55\nDays until next coupon\t125\nConversion factor\t0.75\nDays until futures contract expiry\t30\nAnnualized 1-month risk-free rate\t3.25%\nIf the quoted futures price is 138, based on the carry arbitrage model this futures contract is:",
+  "options": [
+   "undervalued.",
+   "fairly valued.",
+   "overvalued."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because the quoted futures price is greater than the equilibrium futures price; hence, the futures contract is overvalued rather than undervalued based on its quoted price. | B. Incorrect because the quoted futures price is greater than the equilibrium futures price; hence, the futures contract is overvalued rather than fairly valued based on its quoted price. | C. Correct because, according to the carry arbitrage model, Q0 = [1/CF] {FV[B0 + AI0] – AIT – FVCI}, where CF = Conversion factor, B0 = Clean bond price, AI0 = Accrued interest at value date, AIT = Accrued interest at futures expiration, and FVCI = Future value of coupons paid. Accrued interest at value date: AI0 = [55/(55 + 125)] × 3% × 100/2 = 0.458 Accrued interest at futures expiration: AIT = [(30 + 55)/(55 + 125)] × 3% × 100/2 = 0.708 FV[B0 + AI0] = (103 + 0.458) × (1 + 3.25%)30/360 = 103.734 Substituting: Q0 = [1/0.75] {103.734 – 0.708 – 0} = 137.37 The quoted futures price of 138 is greater than the equilibrium futures price of 137.37; thus, the futures contract is overvalued."
  }
 ]
