@@ -4,6 +4,8 @@
 - Neoclassical steady state: ΔY/Y = θ / (1 – α) + n. Per capita = θ / (1 – α). Labor share = 1 – α.
 - Potential GDP growth (labor productivity method) = labor force growth + labor productivity growth.
 - Permanent per-capita growth: classical none · neoclassical only TFP · endogenous: trade, R&D, capital can raise it permanently.
+- Growth accounting: capital deepening = labor productivity growth – TFP growth (keep the sign of TFP). Cobb–Douglas = constant returns to scale, diminishing returns to each input. Growth up → real interest rate up, sovereign credit risk down.
+- Dutch disease = resource exports → currency **appreciation** → manufacturing uncompetitive. Convergence: absolute (all countries) · conditional (same saving, population growth, production function) · club (members, institutional change). Classify by the condition, not the speaker's label.
 - Convergence and club convergence → neoclassical. Higher saving raises the level of output per worker, not long-run growth (neoclassical).
 
 ## Currencies
