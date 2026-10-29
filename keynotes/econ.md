@@ -11,6 +11,9 @@
 - Arbitrage only if one market's bid > the other's offer: buy at the low offer, sell at the high bid.
 - Covered interest parity: F(f/d) = S(f/d) × (1 + i_f × t) / (1 + i_d × t), with t as a fraction of a year.
 - Carry trade: convert back at the future spot, then subtract the funding loan **with interest**. Profits if the high-yield currency falls by less than the rate differential.
+- Forward premium (P/B quote) = S × (i_P – i_B) × T/360 ÷ (1 + i_B × T/360): base rate in the denominator; i_P > i_B → premium. Mark-to-market a forward with an offsetting trade: buying base = pay the offer, discount at the price-currency rate.
+- BoP channels: flow = trade payments, slow (J-curve, Marshall–Lerner) · portfolio balance = wealth and asset preferences, diversification · debt sustainability = upper limit on persistent deficits, revises the long-run value. Deficit → depreciation in all three.
+- Mundell–Fleming: high capital mobility, both policies the same way → ambiguous; expansionary monetary + restrictive fiscal → depreciation; restrictive monetary + expansionary fiscal → appreciation. Low mobility: both expansionary → depreciation, both restrictive → appreciation, mixed → ambiguous.
 - Crisis warning signs (direction matters): big capital inflows before · FX reserves falling · M2 / bank reserves rising · overvalued currency · worsening terms of trade · fixed rate · banking crisis · higher inflation.
 
 ## Your traps
