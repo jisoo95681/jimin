@@ -1,0 +1,442 @@
+[
+ {
+  "id": "pD-1",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Doyle: BestFutures",
+  "body": "Tim Doyle is a portfolio manager at BestFutures Group, a hedge fund that frequently enters into derivative contracts either to hedge the risk of investments it holds or to speculate outside of those investments. Doyle works alongside Diane Kemper, a junior analyst at the hedge fund. They meet to evaluate new investment ideas and to review several of the firm’s existing investments.\n\nCarry Arbitrage Model\n\nDoyle and Kemper discuss the carry arbitrage model and how they can take advantage of mispricing in bond markets. Specifically, they would like to execute an arbitrage transaction on a Eurodollar futures contract in which the underlying Eurodollar bond is expected to make an interest payment in two months. Doyle makes the following statements:\n\nStatement 1: If the Eurodollar futures price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased.\n\nStatement 2: Based on the cost of carry model, the futures price would be higher if the underlying Eurodollar bond’s upcoming interest payment was expected in five months instead of two.\n\nThree-Year Treasury Note Futures Contract\n\nKemper then presents two investment ideas to Doyle. Kemper’s first investment idea is to purchase a three-year Treasury note futures contract. The underlying 2.4%, semi-annual three-year Treasury note is quoted at a clean price of 102. It has been 45 days since the three-year Treasury note’s last coupon payment, and the next coupon payment is payable in 135 days. Doyle asks Kemper to calculate the full spot price of the underlying three-year Treasury note.\n\n10-Year Treasury Note Futures Contract\n\nKemper’s second investment idea is to purchase a 10-year Treasury note futures contract. The underlying 3%, semi-annual 10-year Treasury note has a dirty price of 106.45. It has been 30 days since the 10-year Treasury note’s last coupon payment. The futures contract expires in 60 days. The quoted futures contract price is 142. The current annualized two-month risk-free rate is 1.85%. The conversion factor is 0.7400. Doyle asks Kemper to calculate the equilibrium quoted futures contract price based on the carry arbitrage model.\n\nJapanese Government Bonds\n\nAfter discussing Kemper’s new investment ideas, Doyle and Kemper evaluate one of their existing forward contract positions. Three months ago, BestFutures took a long position in six 10-year Japanese government bond (JGB) forward contracts, with each contract having a contract notional value of 200 million yen. The contracts had a price of JPY148 (quoted as a percentage of par) when the contracts were purchased. Now, the contracts have six months left to expiration and have a price of JPY151.50. The annualized six-month interest rate is 0.20%. Doyle asks Kemper to value the JGB forward position.\n\nInterest Rate Swaps\n\nAdditionally, Doyle asks Kemper to price a one-year plain vanilla swap. The spot rates and days to maturity at each payment date are presented in Exhibit 1.\n\nExhibit 1: Selected US Spot Rate Data\nDays to Maturity\tSpot Interest Rates (%)\n90\t1.40\n180\t1.55\n270\t1.75\n360\t1.95\n\nFinally, Doyle and Kemper review one of BestFutures’s pay-fixed interest rate swap positions. Two years ago, the firm entered into a JPY8 billion five-year interest rate swap, paying the fixed rate. The fixed rate when BestFutures entered into the swap two years ago was 0.25%. The current term structure of interest rates for JPY cash flows, which are relevant to the interest rate swap position, is presented in Exhibit 2.\n\nExhibit 2: Selected Japanese Interest Rate Data\nMaturity (Years)\tYen Spot Interest Rates (%)\tPresent Value Factors\n1\t0.04\t0.9996\n2\t0.09\t0.9982\n3\t0.12\t0.9964\nSum\t\t2.9942\n\nDoyle asks Kemper to calculate the value of the pay-fixed interest rate swap.",
+  "questions": [
+   {
+    "n": 2,
+    "q": "The full spot price of the three-year Treasury note is:",
+    "options": [
+     "102.00",
+     "102.30",
+     "102.90"
+    ],
+    "answer": "B",
+    "why": "AI = 45/180 × 1.2 = 0.30; 102 + 0.30 = 102.30"
+   },
+   {
+    "n": 3,
+    "q": "The equilibrium 10-year Treasury note quoted futures contract price is closest to:",
+    "options": [
+     "143.28",
+     "144.29",
+     "145.50"
+    ],
+    "answer": "A",
+    "why": "FV(106.45) = 106.45 × 1.0185^(60/360); AIT = 90/180 × 1.5 = 0.75; (FV – 0.75) ÷ 0.74"
+   },
+   {
+    "n": 4,
+    "q": "The value of the JGB long forward position is closest to:",
+    "options": [
+     "JPY41,958,063",
+     "JPY41,916,168",
+     "JPY42,000,000"
+    ],
+    "answer": "A",
+    "why": "(151.50 – 148) ÷ 1.002^0.5 per 100 × ¥200m × 6; wrong: no exponent / undiscounted"
+   },
+   {
+    "n": 5,
+    "q": "Based on Exhibit 1, the fixed rate of the one-year plain vanilla swap is closest to:",
+    "options": [
+     "1.93%",
+     "0.35%",
+     "2.57%"
+    ],
+    "answer": "A",
+    "why": "4 × (1 – z4) ÷ Σz; wrong: z1 in numerator / last factor left out of the sum"
+   },
+   {
+    "n": 6,
+    "q": "Based on Exhibit 2, the value of the pay-fixed interest rate swap is closest to:",
+    "options": [
+     "–JPY39,922,667",
+     "–JPY10,381,404",
+     "–JPY31,084,000"
+    ],
+    "answer": "C",
+    "why": "new rate = (1 – 0.9964) ÷ 2.9942 = 0.1202%; (0.1202% – 0.25%) × 2.9942 × JPY8bn; wrong: average spot rate / no Σz"
+   }
+  ]
+ },
+ {
+  "id": "pD-2",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Troubadour: Southern Shores",
+  "body": "Donald Troubadour is a derivatives trader for Southern Shores Investments. The firm seeks arbitrage opportunities in the forward and futures markets using the carry arbitrage model.\n\nTroubadour identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond. Current data on the futures contract and underlying bond are presented in Exhibit 1. The current annual compounded risk-free rate is 0.45%.\n\nExhibit 1: Current Data for Futures and Underlying Bond\nFutures Contract\t\tUnderlying Bond\t\nQuoted futures price\t118.50\tQuoted bond price\t108.50\nConversion factor\t0.92\tAccrued interest since last coupon payment\t0.12\nTime remaining to contract expiration\tTwo months\tAccrued interest at futures contract expiration\t0.31\nAccrued interest over life of futures contract\t0.00\t\t\n\nTroubadour next gathers information on a Japanese equity index futures contract, the Nikkei 225 Futures Contract:\n\nTroubadour holds a long position in a Nikkei 225 futures contract that has a remaining maturity of five months. The continuously compounded dividend yield on the Nikkei 225 Stock Index is 0.9%, and the current stock index level is 18,240. The continuously compounded annual interest rate is 0.35%.\n\nTroubadour next considers an equity forward contract for Texas Steel, Inc. (TSI). Information regarding TSI common shares and a TSI equity forward contract is presented in Exhibit 2.\n\nExhibit 2: Selected Information for TSI\nThe price per share of TSI’s common shares is $180.\nThe forward price per share for a nine-month TSI equity forward contract is $180.539730.\nAssume annual compounding.\n\nTroubadour takes a short position in the TSI equity forward contract. His supervisor asks, “Under which scenario would our position experience a loss?”\n\nThree months after contract initiation, Troubadour gathers information on TSI and the risk-free rate, which is presented in Exhibit 3.\n\nExhibit 3: Selected Data on TSI and the Risk-Free Rate (Three Months Later)\nThe price per share of TSI’s common shares is $176.\nThe risk-free rate is 0.450% (quoted on an annual compounding basis).\nTSI recently announced its regular semiannual dividend of $1.20 per share that will be paid exactly three months before contract expiration.\nThe market price of the TSI equity forward contract is equal to the no-arbitrage forward price.",
+  "questions": [
+   {
+    "n": 7,
+    "q": "Based on Exhibit 1 and assuming annual compounding, the arbitrage profit on the bond futures contract is closest to:",
+    "options": [
+     "0.63",
+     "0.32",
+     "0.75"
+    ],
+    "answer": "A",
+    "why": "F0 = 1.0045^(2/12) × (108.50 + 0.12) = 108.701; adjusted futures = 0.92 × 118.50 + 0.31 = 109.33; PV of the difference"
+   },
+   {
+    "n": 8,
+    "q": "The current no-arbitrage futures price of the Nikkei 225 futures contract is closest to:",
+    "options": [
+     "18,266.62",
+     "18,335.25",
+     "18,198.25"
+    ],
+    "answer": "C",
+    "why": "18,240 × e^((0.0035 – 0.009) × 5/12)"
+   },
+   {
+    "n": 9,
+    "q": "Based on Exhibit 2, Troubadour should find that an arbitrage opportunity relating to TSI shares is",
+    "options": [
+     "not available.",
+     "available based on carry arbitrage.",
+     "available based on reverse carry arbitrage."
+    ],
+    "answer": "A",
+    "why": "FV(180) at 0.40% for 0.75 years equals the forward price: no arbitrage"
+   },
+   {
+    "n": 10,
+    "q": "The most appropriate response to Troubadour’s supervisor’s question regarding the TSI forward contract is:",
+    "options": [
+     "a decrease in TSI’s share price, all else equal.",
+     "an increase in the risk-free rate, all else equal",
+     "a decrease in the market price of the forward contract, all else equal."
+    ],
+    "answer": "B",
+    "why": "Short loses when Ft rises: higher r raises Ft"
+   },
+   {
+    "n": 11,
+    "q": "Based on Exhibits 2 and 3, and assuming annual compounding, the per share value of Troubadour’s short position in the TSI forward contract three months after contract initiation is closest to:",
+    "options": [
+     "–$5.3335",
+     "$4.1349",
+     "$5.3335"
+    ],
+    "answer": "C",
+    "why": "Ft = (176 – 1.20/1.0045^0.25) × 1.0045^0.5; long value = (Ft – F0)/1.0045^0.5; short = the negative; wrong: sign / dividend ignored"
+   }
+  ]
+ },
+ {
+  "id": "pD-3",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Johnson: swaps and FRAs",
+  "body": "Sonal Johnson is a risk manager for a bank. She manages the bank’s risks using a combination of swaps and forward rate agreements (FRAs).\n\nJohnson prices a three-year MRR-based interest rate swap with annual resets using the present value factors presented in Exhibit 1.\n\nExhibit 1: Present Value Factors\nMaturity (years)\tPresent Value Factors\n1\t0.987654\n2\t0.972577\n3\t0.954905\n\nJohnson also uses the present value factors in Exhibit 1 to value an interest rate swap that the bank entered into one year ago as the pay-fixed (receive-floating) party. Selected data for the swap are presented in Exhibit 2. Johnson notes that the current equilibrium two-year fixed swap rate is 1.40%.\n\nExhibit 2\nSelected Data on Fixed for Floating Interest Rate Swap\t\nSwap notional amount\t$40,000,000\nOriginal swap term\tThree years, with annual resets\nFixed swap rate (since initiation)\t2.60%\n\nOne of the bank’s investments is exposed to movements in the Japanese yen, and Johnson desires to hedge the currency exposure. She prices a one-year fixed-for-fixed currency swap involving yen and US dollars, with a quarterly reset. Johnson uses the interest rate data presented in Exhibit 3 to price the currency swap.\n\nExhibit 3: Selected Japanese and US Interest Rate Data\nDays to Maturity\tYen Spot Interest Rates\tUS Dollar Spot Interest Rates\n90\t0.08%\t0.25%\n180\t0.14%\t0.45%\n270\t0.20%\t0.60%\n360\t0.30%\t0.80%\n\nJohnson next reviews an equity swap with an annual reset that the bank entered into six months ago as the receive-fixed, pay-equity party. Selected data regarding the equity swap, which is linked to an equity index, are presented in Exhibit 4. At the time of initiation, the underlying equity index was trading at 100.00.\n\nExhibit 4\nSelected Data on Equity Swap\t\nSwap notional amount\t$25,000,000\nOriginal swap term\tFive years, with annual resets\nFixed swap rate\t2.40%\n\nThe equity index is currently trading at 98.50, and relevant US spot rates, along with their associated present value factors, are presented in Exhibit 5.\n\nExhibit 5: Selected US Spot Rates and Present Value Factors\nMaturity (years)\tSpot Rate\tPresent Value Factors\n0.5\t0.50%\t0.997506\n1.5\t1.10%\t0.983768\n2.5\t1.40%\t0.966184\n3.5\t2.10%\t0.931532\n4.5\t2.70%\t0.891663\n\nJohnson reviews a 6 × 9 FRA that the bank entered into 90 days ago as the pay-fixed/receive-floating party. Selected data for the FRA are presented in Exhibit 6, and current MRR data are presented in Exhibit 7. Based on her interest rate forecast, Johnson also considers whether the bank should enter into new positions in 1 × 4 and 2 × 5 FRAs.\n\nExhibit 6\n6 × 9 FRA Data\t\nFRA term\t6 × 9\nFRA rate\t0.80%\nFRA notional amount\tUS$15,000,000\nFRA settlement terms\tAdvanced set, advanced settle\n\nExhibit 7\nCurrent MRR (Market Reference Rate)\t\n30-day MRR\t0.80%\n60-day MRR\t0.88%\n90-day MRR\t0.96%\n120-day MRR\t0.98%\n150-day MRR\t1.00%\n180-day MRR\t1.02%\n210-day MRR\t1.04%\n270-day MRR\t1.07%\n\nThree months later, the 6 × 9 FRA in Exhibit 6 reaches expiration, at which time the three-month US dollar MRR is 1.25% and the six-month US dollar MRR is 1.35%. Johnson determines that the appropriate discount rate for the FRA settlement cash flows is 1.25%.",
+  "questions": [
+   {
+    "n": 12,
+    "q": "Based on Exhibit 1, Johnson should price the three-year MRR-based interest rate swap at a fixed rate closest to:",
+    "options": [
+     "0.42%",
+     "4.72%",
+     "1.55%"
+    ],
+    "answer": "C",
+    "why": "(1 – z3) ÷ (z1 + z2 + z3); wrong: z1 in numerator / divided by z3 only"
+   },
+   {
+    "n": 13,
+    "q": "From the bank’s perspective, using data from Exhibit 1, the current value of the swap described in Exhibit 2 is closest to:",
+    "options": [
+     "–$940,911",
+     "–$2,038,640",
+     "–$1,399,265"
+    ],
+    "answer": "A",
+    "why": "2 years left: (0.0140 – 0.0260) × (z1 + z2) × $40m; wrong: old rate only / used all three factors"
+   },
+   {
+    "n": 14,
+    "q": "Based on Exhibit 3, Johnson should determine that the annualized equilibrium fixed swap rate for Japanese yen is closest to:",
+    "options": [
+     "0.0749%",
+     "0.2995%",
+     "0.1800%"
+    ],
+    "answer": "B",
+    "why": "yen PV factors; (1 – z4) ÷ Σz × 4; wrong: periodic rate / average of spot rates"
+   },
+   {
+    "n": 15,
+    "q": "From the bank’s perspective, using data from Exhibits 4 and 5, the fair value of the equity swap is closest to:",
+    "options": [
+     "$528,967",
+     "–$528,967",
+     "$3,237,392"
+    ],
+    "answer": "A",
+    "why": "fixed bond PV – 0.985 × $25m (receive fixed, pay equity); wrong: sign flipped / principal not discounted"
+   },
+   {
+    "n": 16,
+    "q": "Based on Exhibit 5, the current value of the equity swap described in Exhibit 4 would be zero if the equity index was currently trading the closest to:",
+    "options": [
+     "98.50",
+     "100.62",
+     "100.00"
+    ],
+    "answer": "B",
+    "why": "zero value: S/100 × NA = fixed bond value → 100 × Vfix/NA"
+   },
+   {
+    "n": 17,
+    "q": "From the bank’s perspective, based on Exhibits 6 and 7, the value of the 6 × 9 FRA 90 days after inception is closest to:",
+    "options": [
+     "$10,350",
+     "$20,700",
+     "$41,401"
+    ],
+    "answer": "A",
+    "why": "new FRA rate from L90 and L180; NA × (new – 0.80%) × 0.25 ÷ (1 + 0.0102 × 0.5); wrong: tm = 0.5 / no tm"
+   },
+   {
+    "n": 18,
+    "q": "Based on Exhibit 7, the no-arbitrage fixed rate on a new 1 × 4 FRA is closest to:",
+    "options": [
+     "0.89%",
+     "0.26%",
+     "1.04%"
+    ],
+    "answer": "C",
+    "why": "{[1 + L120 × 120/360] ÷ [1 + L30 × 30/360] – 1} ÷ (90/360)"
+   },
+   {
+    "n": 19,
+    "q": "Based on Exhibit 7, the fixed rate on a new 2 × 5 FRA is closest to:",
+    "options": [
+     "0.94%",
+     "1.08%",
+     "0.27%"
+    ],
+    "answer": "B",
+    "why": "{[1 + L150 × 150/360] ÷ [1 + L60 × 60/360] – 1} ÷ (90/360)"
+   },
+   {
+    "n": 20,
+    "q": "Based on Exhibit 6 and the three-month US dollar MRR at expiration, the payment amount that the bank will receive to settle the 6 × 9 FRA is closest to:",
+    "options": [
+     "$20,556",
+     "$16,822",
+     "$33,540"
+    ],
+    "answer": "B",
+    "why": "NA × (1.25% – 0.80%) × 0.25 ÷ (1 + 0.0125 × 0.25); wrong: 6-month MRR / tm = 0.5"
+   }
+  ]
+ },
+ {
+  "id": "pD-4",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Torres: Fabricantes Conchos",
+  "body": "Gabriela Torres is the CFO of Fabricantes Conchos (FabC), an automobile parts manufacturer located in Chihuahua, Mexico. She is currently evaluating the firm’s debt structure and anticipated financing needs.\n\nFabC sells most of its product to US auto companies and their suppliers through long-term contracts priced in US dollars. FabC’s debt is denominated in US dollars. Torres actively manages the firm’s interest rate risk profile using interest rate and fixed-income derivatives, specifically OTC forwards, futures, and swap contracts.\n\nTorres explains to her deputy, Alejandro Gutiérrez, “The derivatives contracts we enter into are typically priced using a carry arbitrage model to have zero cost to us at origination. In addition to requiring current interest rates and coupon payments of the underlying bonds, the model makes three assumptions: (1) There are no transaction costs for buying and selling securities; (2) short-selling proceeds become available when the short is covered; and (3) we can borrow and lend at the same risk-free rate of interest.”\n\nGutiérrez mentions a major new contract requiring FabC to increase its working capital by borrowing USD40 million in six months. Torres states she is concerned interest rates will rise substantially in the near future and is considering entering a long position (pay fixed) in a 6 × 24 forward rate agreement to lock in the price of the new loan. She asks Gutiérrez what the fixed rate would be using a 30/360 convention and the spot interest rates found in Exhibit 1.\n\nExhibit 1: USD Interest Rates\nMonths\tSpot Interest Rate\tPV Factor\n6\t1.80%\t0.9911\n12\t2.25%\t0.9780\n18\t2.70%\t0.9611\n24\t3.10%\t0.9416\n30\t3.35%\t0.9227\n36\t3.55%\t0.9038\n42\t3.70%\t0.8853\n48\t3.80%\t0.8681\n54\t3.88%\t0.8514\n60\t3.95%\t0.8351\n\nTorres tells Gutiérrez, “If we issue a long-term bond, it makes more sense to enter a bond futures contract in order to hedge interest rate changes. Typically, bond futures are quoted with pricing that reflects interest accrued since the last coupon payment. Therefore, in markets where spot prices are quoted “clean” rather than “dirty,” there can be some disconnect between spot and futures prices. In addition, a conversion factor must be applied to quoted bond prices because more than one bond can be delivered to fulfill the terms of the contract. The short (selling) counterparty to the contract will always want to deliver the cheapest bond when the forward contract matures. The conversion factor attempts to adjust for differences in pricing between the bonds that can be delivered to fulfill a particular contract.”\n\nTorres continues, “We are about to enter into a five-year loan with semi-annual interest payments based on prevailing six-month MRR. I think it might make sense to simultaneously enter into a pay-fixed five-year interest rate swap with semi-annual payments to effectively convert that to a fixed-rate loan. Based on the interest rates shown in Exhibit 1, what would the fixed rate be?”",
+  "questions": [
+   {
+    "n": 21,
+    "q": "When discussing the assumptions of the carry arbitrage model, Torres is least likely correct regarding:",
+    "options": [
+     "borrowing costs.",
+     "transaction costs.",
+     "short-sale proceeds."
+    ],
+    "answer": "C",
+    "why": "short-sale proceeds"
+   },
+   {
+    "n": 22,
+    "q": "Gutiérrez’s fixed-rate calculation for the forward rate agreement should be closest to:",
+    "options": [
+     "3.70%",
+     "3.50%",
+     "5.25%"
+    ],
+    "answer": "B",
+    "why": "{[1 + L24 × 24/12] ÷ [1 + L6 × 6/12] – 1} ÷ 1.5; wrong: 6 + 24 = 30 months / no division by tm"
+   },
+   {
+    "n": 23,
+    "q": "Is Torres most likely correct in her description of bond forward pricing issues?",
+    "options": [
+     "Yes.",
+     "No, she is incorrect with respect to accrued interest.",
+     "No, she is incorrect with respect to the conversion factor."
+    ],
+    "answer": "B",
+    "why": "futures are quoted clean or dirty like the spot bond"
+   },
+   {
+    "n": 24,
+    "q": "Gutiérrez’s calculation of the annual fixed rate for the five-year swap should be closest to:",
+    "options": [
+     "3.21%",
+     "3.95%",
+     "3.61%"
+    ],
+    "answer": "C",
+    "why": "(1 – 0.8351) ÷ ΣPV × 2; wrong: mean of the ten rates / five-year spot rate"
+   }
+  ]
+ },
+ {
+  "id": "pD-5",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Talbot: Rock Ledge Capital Advisors",
+  "body": "Laura Talbot is a portfolio manager at Rock Ledge Capital Advisors (RLCA), an investment firm based in Charlotte, North Carolina. Talbot is meeting with two assistant portfolio managers, Vinay Gupta and Zhong Geng, to review the performance of investments made by RLCA, to evaluate potential new investments and to review client requests for advice.\n\nTalbot asks Gupta to assess potential mispricing in equity futures markets with a goal of implementing an investment strategy to take advantage of any mispricing that may exist. Specifically, she asks him to evaluate a futures contract on the S&P 400 Mid-Cap stock index expiring in 120 days. The annual risk-free rate is 1.5% and the index price level is 2,480 today. The accumulated value of dividends reinvested over the life of the futures contract is $5.40 per contract.\n\nOne month (30 days) ago, RLCA entered into a long forward contract on the S&P 500 stock index expiring in 60 days. Talbot has asked Zhong to calculate the value of the forward position today — that is, 30 days after the contract was initiated. Zhong has collected the information in Exhibit 1 to carry out the valuation assignment.\n\nExhibit 1: Selected Financial Information for Valuation Assignment\t\n60-day S&P 500 forward contract, 30 days ago\t4,020.00\nS&P 500 index level today\t4,068.60\nAnnualized continuously compounded risk-free rate\t1.35%\nAnnualized continuously compounded dividend yield for S&P 500\t0.90%\n\nA client of RLCA currently has a $200,000,000 one-year loan that carries a 4.90% fixed interest rate. Talbot feels the current interest rate on the loan is high relative to current market rates and that rates will decline further. She recommends that RLCA’s client enter into a one-year pay floating MRR receiving fixed-interest rate swap with quarterly payments (30/360 day count convention). The notional amount of the swap is $200,000,000. The current MRR term structure and the corresponding present value factors are provided in Exhibit 2.\n\nExhibit 2: MRR Rates and PV Factors\nMaturity (Days)\tRate (%)\tPV Factor\n90\t0.80\t0.9980\n180\t1.00\t0.9950\n270\t1.15\t0.9914\n360\t1.80\t0.9823\n\nOne year ago, RLCA entered into the four-year pay-fixed, receive-floating MRR interest rate swap with annual resets, 30/360 day count, and a notional amount of $60,000,000. The fixed rate on the swap one year ago was 2.10%. Talbot wants to know the value of the swap today given the present value factors given in Exhibit 3.\n\nExhibit 3: Present Value Factors\nMaturity (Days)\tPV Factors\n360\t0.9810\n720\t0.9575\n1,080\t0.9302",
+  "questions": [
+   {
+    "n": 25,
+    "q": "Assuming a 360-day year, the S&P 400 Mid-Cap stock index futures price is closest to?",
+    "options": [
+     "2,475",
+     "2,498",
+     "2,487"
+    ],
+    "answer": "C",
+    "why": "2,480 × 1.015^(120/360) – 5.40"
+   },
+   {
+    "n": 26,
+    "q": "Based on the information in Exhibit 1 and assuming a 360-day year, the value of S&P 500 forward contract today is closest to:",
+    "options": [
+     "50.07",
+     "53.12",
+     "50.81"
+    ],
+    "answer": "A",
+    "why": "Ft = 4,068.60 × e^((0.0135 – 0.0090) × 30/360); (Ft – 4,020) × e^(–0.0135 × 30/360)"
+   },
+   {
+    "n": 27,
+    "q": "Based on Exhibit 2, the annualized fixed rate of the interest rate swap is closest to:",
+    "options": [
+     "0.45%",
+     "1.19%",
+     "1.78%"
+    ],
+    "answer": "C",
+    "why": "(1 – 0.9823) ÷ ΣPV × 4; wrong: periodic rate / mean of MRR rates"
+   },
+   {
+    "n": 28,
+    "q": "The market value of the pay fixed receive floating interest rate swap is closest to:",
+    "options": [
+     "–$573,438",
+     "$196,097",
+     "$573,438"
+    ],
+    "answer": "C",
+    "why": "new rate = (1 – 0.9302) ÷ 2.8687; –$60m × (2.10% – new) × 2.8687"
+   }
+  ]
+ },
+ {
+  "id": "pD-6",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Mafadi: Global Bullion and Tanzanite",
+  "body": "Mafadi Consulting Limited is a boutique financial services company located in Johannesburg, South Africa. Mafadi specializes in providing commodity and currency hedging solutions to institutional investors and corporations.\n\nAndre Fourie is a senior client services consultant for Mafadi. He manages relationships with a number of institutions to assist with their hedging needs. One of Fourie’s client’s is Global Bullion, a mining and exploration company headquartered in the United States.\n\nFourie is discussing forward contracts with Patrick Jacob, a new risk analyst at Global Bullion. Jacob is asking about similarities and differences between forward and futures contracts. Fourie makes the following comments to Jacob:\n\nComment 1: If you are long a futures or forward contract and the price of the underlying has risen, the value of a futures contract is most likely lower than that of the equivalent forward contract.\nComment 2: Forward contracts are marked to market each day, whereas futures contracts are not.\nComment 3: The market value of both futures and forward contracts at initiation is zero.\n\nJacob wants to understand more about the carry arbitrage approach to valuation and, as part of the discussion, Fourie describes the two fundamental rules for the arbitrageur:\n\nRule 1: The arbitrageur never uses her own money to purchase the underlying security and always invests any proceeds from short selling transactions at the risk-free rate.\nRule 2: The arbitrageur does not take any market price risk on the total trade, but individual components of the trade may involve price risk.\n\nMbali Ndlovu, a trader on Mafadi’s derivatives desk, works closely with Fourie to implement solutions for his clients. Fourie asks Ndlovu to review and calculate the value of a five-year ZAR25,000,000 swap into which Global Bullion entered two years ago. It is a receive-fixed, MRR-based interest rate swap with annual resets (30/360 day count). The fixed rate in the swap contract established two years ago was 3.4%. Exhibit 1 estimates the present value factors.\n\nExhibit 1: Present Value Factors for Five-Year Swap\nMaturity (years)\tPresent Value Factor\n1\t0.9780\n2\t0.9520\n3\t0.9235\n\nIn addition to assisting Fourie, Ndlovu focuses on finding profitable trades for Mafadi by investing the firm’s own capital. Ndlovu has noticed some unusual activity in foreign exchange forward rates, especially the rates for the New Zealand dollar (NZD) and the South African rand (ZAR), ZAR/NZD. The foreign exchange forward rate, F0(ZAR/NZD, T), is currently below the foreign exchange spot rate, S0(ZAR/NZD).\n\nNdlovu is also evaluating the forward contract in Zulu Mineral Mining (Zulu) stock to determine if an arbitrage opportunity exists. The South African 12-month prime rate is 3.50%. The spot price for Zulu is ZAR 72.40. Zulu pays an annual dividend of ZAR3.60, and the next dividend is paid in three months. Interest compounds annually.\n\nNdlovu receives a request from Fourie to structure an OTC swap transaction for one of his clients. After reviewing the request, Ndlovu agrees to be the counterparty for a one-year swap on Tanzanite Resources (Tanzanite) stock in which the client is seeking to enter into a receive-equity returns and pay-fixed arrangement. Tanzanite does not pay a dividend. The swap is structured as a quarterly reset, 30/360 day count, with a notional value of ZAR 8,000,000. The fixed rate is 3.6% annually. Tanzanite has a return of –2.8% for the first quarter.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Which of Fourie’s comments to Jacob is least likely accurate?",
+    "options": [
+     "Comment 1",
+     "Comment 2",
+     "Comment 3"
+    ],
+    "answer": "B",
+    "why": "Comment 2 is reversed"
+   },
+   {
+    "n": 30,
+    "q": "Are Fourie’s comments regarding fundamental rules for arbitrageurs most likely correct?",
+    "options": [
+     "Yes",
+     "No, Rule 1 is incorrect",
+     "No, Rule 2 is incorrect"
+    ],
+    "answer": "A",
+    "why": "both rules are correct"
+   },
+   {
+    "n": 31,
+    "q": "The value of Global Bullion’s swap contract is closest to:",
+    "options": [
+     "ZAR2,425,475",
+     "ZAR1,875,475",
+     "ZAR512,975"
+    ],
+    "answer": "C",
+    "why": "new rate = (1 – 0.9235) ÷ 2.8535; (3.4% – new) × 2.8535 × ZAR25m"
+   },
+   {
+    "n": 32,
+    "q": "The cash flow to Ndlovu after the first quarter of the Tanzanite swap is closest to:",
+    "options": [
+     "–ZAR152,952",
+     "ZAR295,048",
+     "ZAR512,000"
+    ],
+    "answer": "B",
+    "why": "fixed 1.036^(1/4) – 1 on 8m, plus the equity loss of 2.8% × 8m received by Ndlovu"
+   }
+  ]
+ },
+ {
+  "id": "pD-7",
+  "source": "Assistant-written practice (Paper D, 30 Oct: Deriv 28 test Q2-Q34 with numbers changed)",
+  "readings": [
+   28
+  ],
+  "title": "Paper D · Riley: Stone Ridge Capital Partners",
+  "body": "Matthew Riley is a managing director in the Derivatives Group at Stone Ridge Capital Partners (SRCP). Riley specializes in advising clients on the use of derivatives to manage portfolio management strategies. Riley is preparing to meet with four of the firm’s clients: Kaeun Kim, Erin Cline, Rahul Mehta, and Michael Mensah.\n\nFour months ago (120 days), Kim purchased a bond with a 3.5% annual coupon and a maturity date of seven years from the date of purchase. The bond has a face value of US$1,000 and pays interest every 180 days from the date of issue. Kim is concerned about a potential increase in interest rates over the next year and has approached Riley for advice on how to use forward contracts to manage this risk. Riley advises Kim to enter into a short position in a fixed-income forward contract expiring in 330 days. The annualized risk-free rate now is 1.8% per year and the price of the bond with accrued interest is US$1,062.80.\n\nOne month ago (30 days), Cline entered a pay floating 3 × 6 forward rate agreement (FRA) at a rate of 2.10% with a notional amount of US$8,000,000. At the time, the three-month MRR was 1.15% and the six-month MRR was 1.65%. Now, 30 days after entering the FRA, two-month MRR is 1.3% and the five-month MRR is 2.2%.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Based on a 360-day year, the price of the forward contract on the bond purchased by Kim is closest to:",
+    "options": [
+     "US$1,037",
+     "US$1,045",
+     "US$1,080"
+    ],
+    "answer": "B",
+    "why": "coupons of 17.50 at 60 and 240 days; (1,062.80 – PV) × 1.018^(330/360)"
+   },
+   {
+    "n": 34,
+    "q": "The current value of Cline’s FRA is closest to:",
+    "options": [
+     "–$13,753",
+     "–$13,879",
+     "$13,864"
+    ],
+    "answer": "A",
+    "why": "new rate = {[1 + 0.022 × 150/360] ÷ [1 + 0.013 × 60/360] – 1} ÷ 0.25; pay floating = negative"
+   }
+  ]
+ }
+]
