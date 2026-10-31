@@ -23,6 +23,7 @@
 - IFRS 9 debt: hold to collect → amortized cost · collect and sell → FVOCI · other → FVTPL. Reclassify only if the business model changes significantly, no restatement of prior periods.
 - DuPont: the 3-step is enough for an ROE trend; use 5 steps for tax, interest or EBIT margin. Without operational changes → leverage.
 - Cash-flow accruals ratio = [NI – (CFO + CFI)] / average NOA; lower = better; compare the ends of the window. OCF before interest and taxes: add back only what is inside CFO (interest is often in financing under IFRS).
+- Banks: NSFR = available stable funding (capital, deposits, long-term debt) ÷ required stable funding (from assets: more loans → ratio ↓). HQLA belong to the LCR, not the NSFR.
 
 ## Your traps
 - Cost of sales at the historical rate under the current rate method.
