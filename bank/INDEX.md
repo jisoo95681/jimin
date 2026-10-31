@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 114 vignettes · 182 in all. Plus 35 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 115 vignettes · 183 in all. Plus 51 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -21,7 +21,7 @@ Totals: app 68 vignettes · bank 114 vignettes · 182 in all. Plus 35 standalone
 | 13 | Dividends and Share Repurchases | 1 | 2 | 3 |
 | 14 | ESG Considerations | 0 | 6 | 6 |
 | 15 | Cost of Capital: Advanced Topics | 0 | 1 | 1 |
-| 16 | Corporate Restructuring | 0 | 2 | 2 |
+| 16 | Corporate Restructuring | 0 | 3 | 3 |
 | 17 | Equity Valuation: Applications and Processes | 0 | 1 | 1 |
 | 18 | Discounted Dividend Valuation | 2 | 1 | 3 |
 | 19 | Free Cash Flow Valuation | 1 | 4 | 5 |
@@ -66,7 +66,7 @@ Totals: app 68 vignettes · bank 114 vignettes · 182 in all. Plus 35 standalone
 **13 Dividends and Share Repurchases**: carlyle (app, 6Q); m2-3 (bank, 4Q); yeta (bank, 5Q)
 **14 ESG Considerations**: marker-esg (bank, 4Q); esg31-1 (bank, 6Q); esg31-2 (bank, 4Q); esg31-3 (bank, 4Q); esg31-4 (bank, 4Q); esg31-5 (bank, 4Q)
 **15 Cost of Capital: Advanced Topics**: s1a-costcap (bank, 5Q)
-**16 Corporate Restructuring**: pc-6 (bank, 4Q); jupiter-saturn (bank, 5Q)
+**16 Corporate Restructuring**: pc-6 (bank, 4Q); corp4-lee (bank, 5Q); jupiter-saturn (bank, 5Q)
 **17 Equity Valuation: Applications and Processes**: pc-8 (bank, 4Q)
 **18 Discounted Dividend Valuation**: charmed (app, 6Q); tasty (app, 6Q); s1b-miller (bank, 4Q)
 **19 Free Cash Flow Valuation**: izzo (app, 7Q); pc-3 (bank, 4Q); leigh-holt (bank, 6Q); singh-fcff (bank, 6Q); m2-8 (bank, 4Q)

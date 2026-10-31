@@ -17,5 +17,11 @@
 - r = D1 / P0 + g (D1 = next-year EPS × payout; payout constant → dividend growth = earnings growth). Build-up: risk-free + equity risk premium + size + specific-company premium.
 - Shadow banking = unregulated non-bank lending. Common law → stronger investor protection → lower risk premium than civil law.
 
+## Restructuring and cost of debt
+- Synergy signs: revenue synergy **+** revenue · revenue dis-synergy **–** revenue · cost synergy **–** expenses · cost dis-synergy **+** expenses · one-time integration costs **+** expenses in the year paid. Combined operating income = (A + B revenue + rev synergies – rev dis-synergies) – (A + B opex – cost synergies + cost dis-synergies + one-time costs).
+- Acquisition multiple with synergies = EV ÷ (EBITDA + synergies). Comparable company analysis = trading peers (sensitive to mispricing); comparable transaction analysis = prices paid in deals. Median of the ratios, then × target metric.
+- Matrix pricing: YTM of each comparable first, then interpolate by maturity (not an average, not coupons). Lease cost of debt: if the rate implicit in the lease cannot be computed, use the incremental borrowing rate.
+- Short-term rate + ERP over the short-term rate overstates long-term required return. ERP is lower in developed markets, rises in recessions and with inflation.
+
 ## Your traps
 - Stopping at the Year 1 increase; forgetting the dividend yield in r = D1/P0 + g; mixing up which conflict (principal-agent vs principal-principal) a structure creates.

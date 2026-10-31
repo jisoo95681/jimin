@@ -519,5 +519,245 @@
   "options": [],
   "answer": "",
   "why": "1 Bird in the hand: a) matters. 2 Homemade dividends: b) irrelevant. 3 High tax rates: a) matters."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 6,
+  "q": "An analyst wants to use a forward-looking approach to estimate the equity risk premium of a market in which public equities represent a relatively large share of the economy. The analyst has collected inflation and earnings growth data and wants to avoid the estimate being sensitive to recent market returns. The analyst also believes it is important to account for different rates of growth in earnings, dividends, and prices. The analyst should use which of the following estimation methods?",
+  "options": [
+   "Survey-based estimates",
+   "Macroeconomic modeling",
+   "The Gordon growth model"
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because surveys used to estimate the equity risk premium tend to be sensitive to recent market returns. Because the analyst wants to avoid his estimate being sensitive to recent market returns, survey-based estimates is not the best method to use. | B. Correct because equity risk premium estimates derived from macroeconomic models rely on a number of forecasted economic variables such as inflation and expected growth in real earnings per share. These models might be more reliable when public equities represent a relatively large share of the economy, as in many developed markets. Given the analyst's use of inflation and growth data, coupled with the fact that public equities represent a relatively large share of the economy, macroeconomic modeling is the best choice. | C. Incorrect because the Gordon growth model does not allow for changes in growth, dividends, and prices. An underlying assumption of the Gordon growth model is that earnings, dividends, and prices will grow at the same rate, resulting in a constant P/E. If, however, the analyst believes this is not likely to be the case going forward, an adjustment would be needed that reflects anticipated P/E multiple expansion or contraction. Therefore, using the Gordon growth model is not useful because the analyst believes that it is important to allow for different rates for the growth earnings, dividends, and prices in the estimation."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 7,
+  "q": "Last year, a company acquired an asset using a finance lease. At that time, the company disclosed the interest rate for the lease liability and the rate of interest it would pay to borrow, using a collateralized loan over the same term. However, the company did not disclose the direct initial costs associated with the lease. The company has no other liabilities. Since then, interest rates have significantly increased. Which of the following is the most appropriate method to estimate the company's current cost of debt?",
+  "options": [
+   "Calculate the rate implicit in the lease",
+   "Determine the company's incremental borrowing rate",
+   "Use the interest rate disclosed by the company at the time of asset acquisition"
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because the rate implicit in the lease (RIIL) is the discount rate that equates the sum of the present value of the lease payments and the present value of the residual value with the sum of the fair value of the leased asset and the lessor’s direct costs (e.g., legal fees). However, the direct costs associated with the lease are not disclosed. Therefore, the RIIL cannot be calculated. | B. Correct because the present value of the residual value and the lessor’s direct initial costs are often not known to the lessee (company) or analyst. If unknown [as in this case], the incremental borrowing rate (IBR), which is the rate of interest the company would pay to borrow using a collateralized loan over the same term, might be used. Therefore, provided the change in the interest environment, the IBR is an appropriate method to estimate the cost of debt of the company. | C. Incorrect because since the time of asset acquisition, interest rates have significantly increased. Therefore, using the interest rate disclosed at time of asset acquisition is not an accurate estimator for the current cost of debt of the company."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 8,
+  "q": "Which of the following is a bottom-up factor affecting a company's cost of capital?",
+  "options": [
+   "ESG risk",
+   "The risk-free rate",
+   "Capital availability"
+  ],
+  "answer": "A",
+  "why": "A. Correct because ESG risks are specific to an individual company and are therefore bottom-up factors. Even if industry peers face similar environmental risks, they will have varied approaches to dealing with them. No two companies are exactly alike with respect to their ESG risks, as reflected in company disclosures. A company with higher environmental, social, and governance (ESG) risk is likely to have a higher cost of capital. | B. Incorrect because the risk-free rate is a macroeconomic factor and therefore a top-down factor. Macroeconomic and country-specific economic factors, such as inflation rates, are reflected in benchmark interest rates and the overall level of credit spreads. Higher relative rates of inflation, represented in a higher risk-free rate, increase the cost of capital for companies. | C. Incorrect because capital availability represents a top-down, and not a bottom-up factor, that influences a company's cost of capital."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 9,
+  "q": "The equity risk premium (ERP) demanded by investors will most likely:",
+  "options": [
+   "decrease during recessions.",
+   "move inversely with relative rates of inflation.",
+   "be lower in developed economies than in developing economies."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because a company’s cost of capital is highly influenced by market conditions such as interest rates, inflation rates, and the macroeconomic environment.The ERP demanded by investors tends to increase during recessions and decrease during expansionary times, not vice versa. | B. Incorrect because macroeconomic and country-specific economic factors, such as inflation rates. When interest rates are relatively low and credit spreads are tight, the costs of debt and equity capital are lower. Higher relative rates of inflation, represented in a higher risk-free rate, increase the cost of capital for companies. Thus, as relative rates of inflation increase, the equity risk premium demanded by investors would also most likely increase. | C. Correct because developed economies typically have more established, liquid capital markets with greater capital availability, more stable currencies, better property protection, and a greater strength in the rule of law than those of developing economies. Consequently, the perceived risk associated with investing in companies in more mature capital markets is lower than for companies in less mature economies. Lower perceived risk translates into lower credit spreads, ERPs, and costs of capital for companies in more mature, or developed, economies."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 10,
+  "q": "Which of the following models for estimating a company's required return on equity does not directly account for a size premium?",
+  "options": [
+   "Expanded CAPM",
+   "Three-factor Fama–French model",
+   "Bond yield plus risk premium model"
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because the expanded CAPM model accounts directly for the size premium when estimating the required return on the company's equity. To estimate re for non-publicly traded or private companies, analysts can use an adaptation of the CAPM called the expanded CAPM, which adds a premium for small company size and other company-specific risks. The expanded CAPM requires estimation of a beta from a peer group of publicly traded companies. | B. Incorrect because the three-factor Fama–French model accounts directly for the size premium when estimating the required return on the company's equity. In the Fama–French three-factor model, in addition to the single market factor, equity returns can be explained by the size of the company—a size factor measured by market capitalization—and the relationship between the book value and equity value of a company’s equity, termed the value factor. Using this three-factor model, a company’s excess return on equity is calculated as: re = rf + β1 ERP + β2 SMB + β3 HML where SMB is the size premium, equal to the average difference in equity returns between companies with small and large capitalizations, and HML is the value premium, equal to the average difference in equity returns between companies with high and low book-to-market ratios. | C. Correct because the bond yield plus risk premium (BYPRP) approach estimates a company’s required return on equity as: re = rd + RP where rd is the company’s cost of debt (typically proxied by the YTM on the company’s long-term debt), and RP is a risk premium to compensate equity investors for additional risk relative to the risk of investing in the company’s debt securities. This model does not directly account for the size premium as the factor."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 11,
+  "q": "An analyst gathers the following data about a company's publicly traded preferred equity:\nDividend rate\t6.0%\nPar value\t$1100\nCurrent share price\t$990\nThe current cost of the preferred equity is closest to:",
+  "options": [
+   "5.4%.",
+   "6.0%.",
+   "6.7%."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because this answer mixes current price and par value, and calculates annual dividend as current share price multiplied by dividend rate ($59.4 = 990 × 0.06), and then cost of equity as re = 59.4 / 1100 + 0 = 5.4%. | B. Incorrect because this answer is simply the dividend rate of the preferred equity and does not take into account the difference between the par value and the current share price. Since the stock is actively traded, the current market price should be used to determine the cost of preferred equity. | C. Correct because based on dividend discount model, required return on equity (or cost of equity) can be calculated as: re = D1 / P0 + g where D1 is future expected annual dividend, P0 is the current share price, and g is expected growth rate in dividends. Based on the data above, D1 = par value × dividend rate = $1100 × 0.06 = $66, and g = 0, as the dividend is expected to be flat. Thus, re = 66 / 990 + 0 = 6.67% ≈ 6.7%."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 12,
+  "q": "An analyst wants to estimate the cost of equity of a private company using the build-up approach, and gathers the following data about relevant risk premia:\nEquity risk premium (ERP)\t6.0%\nSize premium (SP)\t4.5%\nSpecific-company risk premium (SCRP)\t5.0%\nIf the risk-free rate is 3.5% and peer beta is 1.5, the estimated cost of equity is closest to:",
+  "options": [
+   "15.5%.",
+   "19.0%.",
+   "22.0%."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because this answer choice omits the risk-free rate: re = 6.0% + 4.5% + 5.0% = 15.5%. | B. Correct because the build-up approach involves 'building up' the required return on equity, beginning with the risk-free rate, and then adding relevant risk premia to account for various risk considerations: re = rf + ERP + SP + SCRP where SP is a size premium and SCRP is a specific-company risk premium. Thus, re = 3.5% + 6.0% + 4.5% + 5.0% = 19.0%. | C. Incorrect because this answer choice uses the expanded CAPM model instead of the build-up approach: re = rf + βpeer ERP + SP + SCRP = 3.5% + 1.5 × 6.0% + 4.5% + 5.0% = 22.0%"
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 13,
+  "q": "An analyst is estimating the equity risk premium (ERP) for Trenton Company using the country spread model. Trenton is headquartered in Country 1, a developed market, which has an ERP of 4%. Trenton derives 30% of its sales in Country 2, a developing market with a sovereign yield spread of 3.1%. The analyst collects the following information:\n \tCountry 1\tCountry 2\nStandard deviation of equity market returns\t2.5%\t4.2%\nStandard deviation of bond market returns\t2.3%\t2.8%\nUsing the Damodaran model, the analyst's estimated ERP for Trenton should be closest to:",
+  "options": [
+   "5.01%.",
+   "5.40%.",
+   "8.65%."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because the calculation has used the standard deviations of the developed market (rather than the developing (local) market). ERP = ERP for the developed market + (λ × country risk premium) λ is the is the level of exposure of the company to the local country = 30%, percentage of sales in the developing market. Country risk premium = Sovereign yield spread × (σEquity/σBond) σEquity is the volatility of the developed country’s equity market = 2.5% and σBond is the volatility of the local developed country’s bond market = 2.3%. ERP = 4% + [0.3 × 3.1% × (2.5%/2.3%)] = 5.011% ≈ 5.01% | B. Correct because under the Damodaran model, the ERP is approximately 5.40%, as follows: ERP = ERP for the developed market + (λ × country risk premium) λ is the is the level of exposure of the company to the local country. In this case, the level of exposure is 30%, which is percentage of sales derived in the developing market. Country risk premium = Sovereign yield spread × (σEquity/σBond) σEquity is the volatility of the local (developing) country’s equity market = 4.2% and σBond is the volatility of the local (developing) country’s bond market = 2.8%. ERP = 4% + [0.3 × 3.1% × (4.2%/2.8%)] = 5.395% ≈ 5.40% | C. Incorrect because the calculation omits the required exposure (λ) of 30% based the percentage level of sales in the developing country. ERP = ERP for the developed market + country risk premium Country risk premium = Sovereign yield spread × (σEquity/σBond) σEquity is the volatility of the local (developing) country’s equity market = 4.2% and σBond is the volatility of the local (developing) country’s bond market = 2.8%. ERP = 4% + [3.1% × (4.2%/2.8%)] = 8.65%"
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 14,
+  "q": "An analyst researches Trenson, a private company whose total debt consists of a straight bond issue that pays interest semiannually and has a residual maturity of seven years. To estimate Trenson's cost of debt, the analyst gathers the following information on two straight bonds issued by companies that have similar credit quality to Trenson and pay interest semiannually:\n \tCoupon Rate\tRemaining Maturity\tCurrent Price\n(Per 100 of Par Value)\nBond 1\t4.8%\t5 years\t102.34\nBond 2\t6.4%\t8 years\t95.67\nBased on matrix pricing, the estimated yield to maturity of the Trenson bond is closest to:",
+  "options": [
+   "5.70%.",
+   "5.87%.",
+   "6.17%."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because 5.70% is the average YTM of the 5-year and 8-year bonds, rather than the interpolated YTM of the 7-year bond. Using these YTM from the correct answer, the average YTM is (4.275% + 7.119%)/2 = 5.697% ≈ 5.70% | B. Incorrect because it uses the coupon rates instead of the YTMs of the 5-year and 8-year bonds in calculating the YTM of the 7-year bond. The coupon rates for the 5-and 8-year bonds are 4.8% and 6.4%, respectively. The estimated annual incremental in the coupon rate is (6.4% – 4.8%)/(8 – 5) ≈ 0.533%. Using linear interpolation, the estimation of the YTM of the 7-year Trenson bond is: 4.8% + ((7 – 5) × 0.533%) = 5.867% ≈ 5.87% | C. Correct because this is the YTM of a bond with 7 years left to maturity using matrix pricing method. Using a financial calculator (with semi-annual payments): YTM for Bond 1: N = 5 × 2 = 10; PV = –102.34; PMT = 4.8/2 = 2.4; FV = 100; CPT I/Y = 2.1376%. 2.1376% × 2 ≈ 4.275%. YTM for Bond 2: N = 8 × 2 = 16; PV = –95.67; PMT = 6.4/2 = 3.2; FV = 100; CPT I/Y = 3.5596%. 3.5596% × 2 ≈ 7.119%. The estimated annual incremental in the yield is (7.119% – 4.275%)/(8 – 5) = 0.948%. Using linear interpolation, the estimation of the YTM of the 7-year maturity Trenson bond is: 4.275% + ((7 – 5) × 0.948%) = 6.171% ≈ 6.17%"
+ },
+ {
+  "source": "31 Oct paste (Corp Module 3 test)",
+  "readings": [
+   15
+  ],
+  "n": 15,
+  "q": "Which of the following is not included in the build-up approach for estimating the required return on equity for private companies?",
+  "options": [
+   "Beta",
+   "A size premium",
+   "The risk-free rate"
+  ],
+  "answer": "A",
+  "why": "A. Correct because an industry beta is a factor in the extended CAPM model, not the build-up model. The extended CAPM model for estimating the required return on equity (cost of equity) is: re = rf + βpeer (ERP) + SP + IP + SCRP, where rf = the risk-free rate; βpeer = the industry beta; ERP = equity risk premium; SP = size premium; IP = industry premium; and SCRP = specific company risk premium. | B. Incorrect because a size premium is included in the build-up model. The build-up model for estimating the required return on equity (cost of equity) is calculated as: re = rf + ERP + SP + SCRP, where rf = the risk-free rate; ERP = equity risk premium; SP = size premium; and SCRP = specific company risk premium. | C. Incorrect because the risk-free rate is included in the build-up model. The build-up model for estimating the required return on equity (cost of equity) is calculated as: re = rf + ERP + SP + SCRP, where rf = the risk-free rate; ERP = equity risk premium; SP = size premium; and SCRP = specific company risk premium."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 11,
+  "q": "A company seeking to increase vertical integration will most likely pursue a(n):",
+  "options": [
+   "acquisition.",
+   "divestment.",
+   "balance sheet restructuring."
+  ],
+  "answer": "A",
+  "why": "A. Correct because vertical integration is achieved through an acquisition. Moreover, a corporation may be dependent on another company for inputs or for distribution of its products. By acquiring that company, the acquirer will increase its vertical integration, which can result in lower costs and lower risks and provides a more compelling proposition to customers and investors. | B. Incorrect because divesting assets typically would either reduce or have no effect on vertical integration. The source of performance improvement for the divested business may be increased management attention, focus, or effort and potential synergies with the acquirer. | C. Incorrect because the motivation of a balance sheet restructuring is typically not vertical integration, but rather improving returns on capital. There are two general types of issuer-specific motivations for restructuring actions: opportunistic improvement and forced improvement. Opportunistic improvement includes actions that alter the business model, trim the cost structure, or modify the composition of the balance sheet—all with the intention to improve returns on capital. Forced improvements are actions taken to enhance returns on capital when profitability falls below investors’ required rate of return."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 12,
+  "q": "An analyst gathers the following projections (in $ millions) for the first year following Company B's acquisition by Company A:\n \tCompany A\tCompany B\nRevenues\t$15,000\t$4,500\nOperating expenses\t$7,500\t$1,500\nWhile these projections were made prior to the acquisition announcement, Company A expects revenue dis-synergies of $250 million and cost synergies of $300 million for the same period.\nBased on this information, the projected operating income (in $ millions) in the first year following the acquisition for the combined entity is:",
+  "options": [
+   "$9,950.",
+   "$10,550.",
+   "$11,050."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because the dis-synergies are correctly included in the calculation but not the synergies. (in $ millions)\tCompany A\tCompany B\tCombined Revenues\t$15,000\t$4,500\t$19,500 Subtract revenue dis-synergies\t \t \t– $250 $19,250 Expenses\t$7,500\t$1,500\t$9,000 Cost synergies incorrectly added\t \t \t+ $300 $9,300 Operating income\t \t \t$19,250 – $9,300 = $9,950 | B. Correct because according to the calculations below, which show intermediate steps. (in $ millions)\tCompany A\tCompany B\tCombined Revenues\t$15,000\t$4,500\t$19,500 Subtract revenue dis-synergies\t \t \t– $250 $19,250 Expenses\t$7,500\t$1,500\t$9,000 Subtract cost synergies\t \t \t– $300 $8,700 Operating income\t \t \t$19,250 – $8,700 = $10,550 | C. Incorrect because the synergies are correctly included in the calculation but not the dis-synergies. (in $ millions)\tCompany A\tCompany B\tCombined Revenues\t$15,000\t$4,500\t$19,500 Revenue dis-synergies incorrectly added\t \t \t+ $250 $19,750 Expenses\t$7,500\t$1,500\t$9,000 Subtract cost synergies\t \t \t– $300 $8,700 Operating income\t \t \t$19,750 – $8,700 = $11,050"
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 13,
+  "q": "An analyst gathers the following information in conducting comparable transaction analysis of an acquisition. For her analysis, she uses the median of valuation ratios from three recently closed comparable acquisitions.\nValuation Variable\tAcquired Company 1\tAcquired Company 2\tAcquired Company 3\nAcquisition share price\t$30\t$40\t$50\nEPS\t$2.50\t$2.20\t$3.00\nIf the target company had an EPS of $2.50 and was acquired at a price of $40 per share, the analyst should conclude that the acquirer:",
+  "options": [
+   "underpaid for this transaction.",
+   "paid fair value for this transaction.",
+   "overpaid for this transaction."
+  ],
+  "answer": "A",
+  "why": "A. Correct because the P/E ratio for the three companies is $30/$2.50 = 12 for Company 1, $40/$2.20 = 18.2 for Company 2 and $50/$3.00 = 16.7 for Company 3. The median of these three ratios is 16.7 and the estimated fair takeover value is 16.7 × $2.5 = $41.75. Compared to an acquisition price of $40, the acquirer underpaid for this transaction. | B. Incorrect because as demonstrated in the correct answer, the acquirer underpaid for this transaction. | C. Incorrect because as demonstrated in the correct answer, the acquirer underpaid for this transaction."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 14,
+  "q": "With regard to an analyst’s initial evaluation of a corporate restructuring, the size of a transaction affects:",
+  "options": [
+   "its timing only.",
+   "its materiality only.",
+   "both its timing and its materiality."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because materiality can be defined in this context along two dimensions: size and fit. The larger a restructuring, the more likely it is to affect an issuer’s future cash flows and financial position and thus its value. It is true that the length of the timeline is largely determined by the size and complexity of the transaction. However, the size also affects the materiality of the transaction. | B. Incorrect because an important consideration in the initial evaluation is timing. The length of the timeline is largely determined by the size and complexity of the transaction. It is true that materiality can be defined in this context along two dimensions: size and fit. However, the size also affects the timing of the transaction. | C. Correct because materiality can be defined in this context along two dimensions: size and fit. The larger a restructuring, the more likely it is to affect an issuer’s future cash flows and financial position and thus its value. Furthermore, an important consideration in the initial evaluation is timing. The length of the timeline is largely determined by the size and complexity of the transaction."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 15,
+  "q": "An analyst gathers the following information about a firm that is an acquisition target:\nMost recent annual EBITDA (in millions)\t$356\nEV (in millions)\t$6,000\nEV/EBITDA range of peers\t8x to 12x\nIf the acquirer expects to realize $270 million in EBITDA synergies by Year 2, the acquisition multiple implied by this transaction:",
+  "options": [
+   "is lower than the range of peers.",
+   "falls within the range of peers.",
+   "is higher than the range of peers."
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because the multiple falls within the range of peers. One could arrive at this incorrect answer by subtracting the multiple before synergies from the multiple after synergies. In this case, 6,000/270 – 6,000/356 = 5.37x, which is lower than the range of peers' multiples. | B. Correct because if synergies are included in the analysis, the acquisition EV/EBITDA multiple would be: 6,000/(270 + 356) = 9.58x, which falls within the range of peers' multiples. | C. Incorrect because the multiple falls within the range of peers. One could arrive at this incorrect answer if the synergies are not included in the analysis. In this case, the acquisition multiple would be: 6,000 / 356 = 16.85x, which is higher than the range of peers' multiples."
+ },
+ {
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "n": 16,
+  "q": "A company has $189 million in sales and $17 million of EBIT. All else equal, if the company restructures its operations to achieve an EBIT margin of 20%, the required percentage reduction in its operating expenses is closest to:",
+  "options": [
+   "9.9%.",
+   "11.0%.",
+   "12.1%."
+  ],
+  "answer": "C",
+  "why": "A. Incorrect because the percentage reduction in operating expenses is incorrectly calculated as EBIT divided by the operating expenses, or $17 million / $172 million = 9.9%. | B. Incorrect because the percentage reduction in operating expenses is incorrectly calculated as the target EBIT margin minus the actual EBIT margin, or 20% – 9% = 11%, where the current EBIT margin is calculated as EBIT/sales, or $17 million/$189 million = 9.0%. | C. Correct because the company's current EBIT margin is $17 million/$189 million = 9.0% which implies that the company had operating expenses of Sales – EBIT = $189 million – $17 million = $172 million. To achieve an EBIT margin of 20%, EBIT needs to be $189 million × 20% = $37.8 million, and the company must decrease its operating expenses by $37.8 million – $17 million = $20.8 million. In percent, the reduction is equal to $20.8 million/$172 million = 12.1%."
  }
 ]

@@ -1,0 +1,68 @@
+[
+ {
+  "id": "corp4-lee",
+  "source": "31 Oct paste (Corp Module 4 test)",
+  "readings": [
+   16
+  ],
+  "title": "Lee: Stratton and Midwest Oil, acquisition, synergies and capital structure",
+  "body": "Elaine Lee is an analyst at an investment bank covering the energy sector. She and her junior analyst are analyzing Stratton Oil Corporation.\n\nStratton Oil Corporation is a publicly traded, US-based energy company that just announced its acquisition of Midwest Oil Corporation, a smaller US-based energy company. Stratton will pay USD55 in cash and 2.25 Stratton shares for each Midwest share, for a total consideration of USD40 billion based on share prices just prior to the announcement. Stratton’s current trading enterprise value just prior to the announcement was USD170 billion. Lee concludes that the acquisition does not signal a change in strategy or focus for Stratton.\n\nStratton expects to realize annual recurring cost synergies of USD350 million (pre-tax), primarily from efficiencies in oil exploration and production activities and savings in corporate costs. The achievement of the full USD350 million in synergies is expected by the end of the third year after the acquisition closes. Synergies are realized in the amounts of USD117 million, USD233 million, and USD350 million in Years 1–3, respectively, and cash costs of USD175 million, USD280 million, and USD395 million are incurred in Years 1–3, respectively.\n\nExpectations for revenues and total operating expenses for Stratton and Midwest for the next three years prior to the acquisition announcement are shown in Exhibit 1.\n\nExhibit 1\nStratton and Midwest Year 1–3 Figures, Prior to Acquisition (USD millions)\nStratton\tYear 1\tYear 2\tYear 3\nRevenues\t21,325\t22,391\t23,511\nOperating expenses\t16,525\t17,351\t18,219\nMidwest\t\t\t\nRevenues\t5,350\t5,618\t5,898\nOperating expenses\t3,050\t3,203\t3,363\nLee’s junior analyst makes the following comment during a conversation with Lee:\n\nThe acquisition is considered immaterial in the initial evaluation step for Stratton because it does not signal a change in strategy or focus.\n\nStratton’s offer valued Midwest at an enterprise value of USD40.6 billion, including USD4.3 billion of existing Midwest debt. To finance the consideration of USD55 in cash and 2.25 Stratton shares for each Midwest share, Stratton will issue 104 million new shares and raise approximately USD26 billion in new debt and fund the remainder with cash on hand. Following the close, Stratton expects its outstanding debt will be approximately USD62 billion. Prior to the acquisition, Stratton has 1.096 billion shares outstanding trading at USD125 per share. Lee wants to determine how much the weights of debt and equity in Stratton’s capital structure will change assuming a constant share price and that the book value of debt equals its market value.\n\nDuring an internal meeting, Lee asks if Stratton could have achieved its same goals by undertaking an equity investment or joint venture. In response, Lee’s junior analyst makes the following three statements.\n\nStatement 1: Acquisitions require substantially greater capital investments than equity investments.\n\nStatement 2: Acquisitions and equity investments are similar in that they both allow the acquirer to gain control of the target.\n\nStatement 3: Relative to joint ventures, equity investments provide more equal governance representation and require larger investments.\n\nLee conducted a sum-of-the-parts valuation of Stratton’s three segments and calculated an estimated enterprise value of USD187 billion just prior to the announcement.",
+  "questions": [
+   {
+    "n": 6,
+    "q": "Based on Exhibit 1, the forecasted operating income in Year 3 for the combined Stratton and Midwest is closest to:",
+    "options": [
+     "USD7,432.",
+     "USD7,782.",
+     "USD8,177."
+    ],
+    "answer": "B",
+    "why": "B is correct. The forecasted operating income in Year 3 is calculated as follows:\n\nCombined Stratton and Midwest Oil: Year 1–3 Figures (USD millions)\nRevenues\tYear 1\tYear 2\tYear 3\nStratton\t21,325\t22,391\t23,511\nAdd: Midwest revenues\t5,350\t5,618\t5,898\nCombined revenues\t26,675\t28,009\t29,409\nOperating expenses\t\t\t\nStratton\t16,525\t17,351\t18,219\nAdd: Midwest\t3,050\t3,203\t3,363\nSubtract: synergies\t(117)\t(233)\t(350)\nAdd: one-time costs\t175\t280\t395\nCombined operating expenses\t19,633\t20,601\t21,627\nOperating income (Rev-OpEx)\t7,042\t7,408\t7,782\nA is incorrect because it incorrectly excludes Year 3 synergies of USD350 million. C is incorrect because it incorrectly excludes Year 3 one-time costs of USD395 million."
+   },
+   {
+    "n": 7,
+    "q": "Lee’s junior analyst’s comment about materiality is:",
+    "options": [
+     "correct.",
+     "incorrect because the acquisition is considered a small acquisition.",
+     "incorrect because the acquisition represents more than 10% of Stratton’s enterprise value prior to the transaction."
+    ],
+    "answer": "C",
+    "why": "C is correct. Materiality can be defined along two dimensions: size and fit. Although the acquisition does not signal a change in strategy or focus for Stratton, the transaction is considered large and material because it exceeds 10% of Stratton’s enterprise value prior to the transaction. The total consideration is USD40 billion, based on share prices just prior to the announcement; thus, it represents 23.5% of Stratton’s enterprise value just prior to the announcement of USD170 billion. A is incorrect because materiality can be defined along two dimensions: size and fit. Although the acquisition does not signal a change in strategy or focus for Stratton, the transaction is considered large and material because it exceeds 10% of Stratton’s enterprise value prior to the transaction. B is incorrect because the transaction is considered large and material because it exceeds 10% of Stratton’s enterprise value prior to the transaction."
+   },
+   {
+    "n": 8,
+    "q": "The weight of equity in Stratton’s capital structure as a result of the acquisition of Midwest assuming Lee’s two assumptions is closest to:",
+    "options": [
+     "29%.",
+     "71%.",
+     "81%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Following the close of the acquisition, Stratton expects its outstanding debt to total USD62 billion, after assuming USD4.3 billion in existing Midwest debt and issuing USD26 billion. Therefore, prior to the acquisition, Stratton had approximately (62 − 4.3 − 26 =) USD31.7 billion in debt and (1.096 billion shares outstanding × USD125 per share =) USD137.0 billion in equity, resulting in a mix of debt and equity of 19% and 81%, respectively. After the acquisition, Stratton will have USD62 billion in debt and (1.096 billion + 104 million =) 1.2 billion shares outstanding, which, priced at USD125 per share, results in USD150 billion in equity, resulting in a mix of debt and equity of 29% and 71%, respectively. The change in capital structure is summarized below.\n\nStratton’s Capital Structure before and after Acquisition of Midwest\nStratton Capital Structure\tPre-Acquisition\tPost-Acquisition\nDebt %\t19%\t29%\nEquity %\t81%\t71%\nA is incorrect because 29% represents the percentage of debt after acquisition. C is incorrect because 81% represents the percentage of equity prior to acquisition."
+   },
+   {
+    "n": 9,
+    "q": "Which of Lee’s junior analyst’s three statements is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. Acquisitions require substantially greater capital investments than equity investments. Acquisitions—not equity investments—allow the acquirer to gain control of the target. Relative to equity investments, joint ventures provide more equal governance representation and require larger investments. B is incorrect because acquisitions (not equity investments) allow the acquirer to gain control of the target. C is incorrect because relative to equity investments, joint ventures provide more equal governance representation and require larger investments."
+   },
+   {
+    "n": 10,
+    "q": "Stratton’s estimated conglomerate discount just prior to the announcement is:",
+    "options": [
+     "−USD17 billion.",
+     "USD0.",
+     "USD17 billion."
+    ],
+    "answer": "C",
+    "why": "C is correct. The estimated conglomerate discount just prior to the announcement is calculated as follows: Total estimated enterprise value from sum-of-the-parts valuation − Current trading enterprise value = USD187 billion − USD170 billion = USD17 billion. A is incorrect because it incorrectly subtracts the estimated enterprise value from the current trading enterprise value. B is incorrect because the estimated and current trading enterprise values are not equal."
+   }
+  ]
+ }
+]
