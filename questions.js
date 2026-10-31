@@ -5630,6 +5630,310 @@ const QUESTIONS = [
     options: ["Disclosure required by law", "Disclosing a well-known client to win new business", "The client permits the disclosure"],
     answer: 1,
     why: "Exceptions: PCP claim defence, illegal activity by the client, disclosure required by law, and client permission."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Convertible bond arbitrage belongs to which hedge fund category?",
+    options: ["Relative value", "Event driven", "Specialist"],
+    answer: 0,
+    why: "Long convertible, short stock, exploiting underpriced implied volatility: a relative value strategy, not event-driven or specialist."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Managed futures belongs to which hedge fund category?",
+    options: ["Specialist", "Opportunistic", "Relative value"],
+    answer: 1,
+    why: "Top-down across asset classes: opportunistic, like global macro. Not specialist."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Merger arbitrage typically uses leverage of about:",
+    options: ["300–500%", "600–700%", "Relatively little"],
+    answer: 0,
+    why: "Merger arbitrage: 300–500% to earn low double-digit returns. 600–700% is global macro."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Global macro funds often run leverage of about:",
+    options: ["300–500%", "400% (up to 1,500%)", "600–700% of fund assets"],
+    answer: 2,
+    why: "Global macro: often 600–700% of assets. 400% (up to 1,500%) is fixed-income arbitrage."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Fixed-income arbitrage leverage is commonly:",
+    options: ["Low", "400%, and 1,500% is not unheard of", "About 1/8 of capital as collateral"],
+    answer: 1,
+    why: "Fixed income is priced efficiently, so profits are small and leverage substantial."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Distressed securities funds are best described as having:",
+    options: ["High leverage and daily liquidity", "Low leverage, moderately high illiquidity and long lock-ups", "Net short positions and high leverage"],
+    answer: 1,
+    why: "Mostly long, passive or creditor-control, leverage low, lock-ups often 2 years."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A long/short equity fund is typically positioned:",
+    options: ["Market neutral", "Net long 40–60%", "Net short 30–60%"],
+    answer: 1,
+    why: "L/S equity keeps moderate long beta; it is not market neutral."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A dedicated short selling fund typically runs:",
+    options: ["60–120% short with no longs", "Net short 30–60% with some longs", "Net long 40–60%"],
+    answer: 0,
+    why: "Dedicated short: no longs, 60–120% short, cash tempers exposure. 30–60% net short is short-biased."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A short-biased fund typically runs:",
+    options: ["60–120% short, no longs", "Net short 30–60%, partly offset by longs", "Beta of zero"],
+    answer: 1,
+    why: "Short-biased: same idea as dedicated short but partly offset by longs, net short 30–60%."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "In stub trading the manager:",
+    options: ["Goes long and short two share classes of the same firm", "Goes long and short shares of a subsidiary and its parent, matching the percentage of the subsidiary the parent owns", "Goes long a convertible and short the stock"],
+    answer: 1,
+    why: "Stub trading is an equity market-neutral subtype on a subsidiary and its parent."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Multi-class trading, an equity market-neutral subtype, involves:",
+    options: ["Mispriced share classes of the same firm, e.g. voting vs non-voting", "A parent and its subsidiary", "Two co-integrated stocks in the same industry"],
+    answer: 0,
+    why: "Profit as prices revert to the historical relative valuation of the share classes."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Pairs trading relies on:",
+    options: ["Co-integrated prices of two similar stocks, with an unusual divergence exploited", "A forecast of central bank policy", "The spread between deal announcement and completion"],
+    answer: 0,
+    why: "One stock is overvalued, one undervalued; the divergence is expected to revert."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "In merger arbitrage, if the deal fails, the loss is on the order of:",
+    options: ["About 5%", "About 40%", "About 100%"],
+    answer: 1,
+    why: "Target falls and acquirer rises, so long target and short acquirer both lose. Hence significant left-tail risk."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which event-driven approach is more volatile and riskier?",
+    options: ["Hard catalyst: invest after the announcement", "Soft catalyst: invest before an event is announced", "Both are equally risky"],
+    answer: 1,
+    why: "Soft catalyst = before the announcement. Hard catalyst = after, while prices have not fully adjusted."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Event-driven hedge funds typically have lock-ups of:",
+    options: ["Often no redemptions for the first two years", "None, as they are very liquid", "One month"],
+    answer: 0,
+    why: "Long lock-ups reflect the time to complete or value an event or distressed exit."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "In liquidation, the claim repaid immediately after unsecured debt is:",
+    options: ["Preferred stock", "Convertible debt", "Common stock"],
+    answer: 1,
+    why: "Order: senior secured, unsecured, convertible, preferred, common."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "The opportunity in distressed securities exists partly because:",
+    options: ["Insurers and banks often cannot hold non-investment-grade securities, so downgraded debt is sold", "Distressed debt is always liquid", "Regulators ban short selling of distressed firms"],
+    answer: 0,
+    why: "Forced selling of downgraded debt creates pricing inefficiencies."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Fixed-income arbitrage returns most closely resemble:",
+    options: ["Writing puts: steady spread and carry, large loss if spreads widen", "Buying calls", "A long-only bond fund"],
+    answer: 0,
+    why: "If the spread widens, leverage makes the loss large (LTCM 1998)."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A convertible bond whose conversion price is well above the stock price:",
+    options: ["Behaves like the stock, delta close to 1", "Behaves like a straight bond, delta close to 0", "Has no option value at all"],
+    answer: 1,
+    why: "Out-of-the-money call, delta close to 0. Well below the stock price: in-the-money, delta close to 1."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A convertible bond arbitrageur hedges delta by:",
+    options: ["Buying more convertibles", "Shorting the underlying stock", "Selling the bond"],
+    answer: 1,
+    why: "Long convertible, short stock; the manager also hedges gamma."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Convertible bond arbitrage performs best in:",
+    options: ["Normal markets with liquidity, modest volatility and good new issuance", "Periods of illiquidity", "Periods of acute credit weakness"],
+    answer: 0,
+    why: "It is weak in illiquidity and acute credit weakness."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Managed futures funds typically post collateral of about:",
+    options: ["1/8 of capital", "Half of capital", "The full notional"],
+    answer: 0,
+    why: "Only derivatives with small margin; the rest sits in liquid securities such as short-term government bonds."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "In market stress managed futures returns are typically:",
+    options: ["Left-skewed", "Right-skewed, while other strategies show negative skew", "Perfectly correlated with equities"],
+    answer: 1,
+    why: "Very low correlation with other investments, so they improve total risk-adjusted return."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "The main risk of managed futures is:",
+    options: ["Crowding, leading to herding and execution slippage", "Deal failure", "Counterparty risk in OTC options"],
+    answer: 0,
+    why: "The more managers use similar signals, the less they work."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which opportunistic strategy uses discretionary approaches more?",
+    options: ["Managed futures", "Global macro", "They are identical"],
+    answer: 1,
+    why: "Global macro is mostly discretionary; managed futures is mostly systematic signals."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Global macro is least favoured by:",
+    options: ["High-volatility trending markets", "Low-volatility, mean-reverting markets", "Market stress"],
+    answer: 1,
+    why: "It does well in stress and volatility; returns are uneven and volatile."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "VIX futures are based on:",
+    options: ["Realized volatility of the S&P 500", "30-day implied volatility of the S&P 500", "The bond market"],
+    answer: 1,
+    why: "The VIX is mean-reverting, so crowded trend-following trades tend to lose and selling volatility to collect the premium is common."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "The payoff of a volatility or variance swap is:",
+    options: ["(Realized − expected variance) × notional", "(Expected − realized volatility) × price", "Spot − strike"],
+    answer: 0,
+    why: "Pure volatility exposure; such swaps are actually forwards."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A life settlement is profitable if:",
+    options: ["The PV of the death benefit exceeds the PV of premiums paid", "The insured lives longer than average", "Interest rates rise"],
+    answer: 0,
+    why: "Look for a low purchase price, low ongoing premiums and an insured likely to die relatively soon."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Reinsurance and life settlements strategies are described as:",
+    options: ["Liquid with high correlation to markets", "Illiquid, with returns almost uncorrelated with markets and business cycles", "Highly levered and correlated with equities"],
+    answer: 1,
+    why: "Insurance contracts are hard to sell after initiation."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A fund of funds can give diversified access from about:",
+    options: ["$100,000", "$1 million", "$20 million"],
+    answer: 0,
+    why: "A single hedge fund needs about $1 million, so 20 funds need $20 million."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "A fund of funds typically has a lock-up of:",
+    options: ["None", "1 year, then monthly or quarterly", "5 years"],
+    answer: 1,
+    why: "Better than single hedge funds, but the underlying funds may be stricter, creating a liquidity squeeze."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Compared with a fund of funds, a multi-strategy fund has:",
+    options: ["Greater leverage, faster tactical reallocation and better fees", "Better diversification of operational risk", "Lower fees only"],
+    answer: 0,
+    why: "Operational risk is not diversified and leverage can cause left-tail blow-ups (Amaranth 2006)."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which is NOT a disadvantage of a fund of funds?",
+    options: ["A second layer of fees", "Lack of transparency into the individual hedge funds", "Netting of performance fees"],
+    answer: 2,
+    why: "Fund of funds has NO netting of performance fees. Netting risk is the disadvantage."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which strategy is described with relatively little leverage?",
+    options: ["Dedicated short and short-biased", "Global macro", "Fixed-income arbitrage"],
+    answer: 0,
+    why: "Distressed is also low. Global macro and fixed income arbitrage are highly levered."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which strategy shows steady returns and a high Sharpe ratio but significant left-tail risk?",
+    options: ["Merger arbitrage", "Managed futures", "Dedicated short selling"],
+    answer: 0,
+    why: "Like selling insurance on the deal: steady income, a loss when it fails."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Which strategy is NOT expected to perform well in market stress?",
+    options: ["Global macro", "Managed futures", "Convertible bond arbitrage"],
+    answer: 2,
+    why: "It is weak with illiquidity and acute credit weakness."
+  },
+  {
+    topic: "Alternative Investments",
+    reading: "Hedge Fund Strategies",
+    q: "Equity market-neutral funds generally require leverage because:",
+    options: ["Beta is hedged away, leaving small returns", "They hold only illiquid assets", "They are net short"],
+    answer: 0,
+    why: "Returns are modest without leverage; mispricings that do not mean-revert are the main risk."
   }
 ];
 
