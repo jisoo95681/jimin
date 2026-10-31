@@ -193,5 +193,331 @@
   ],
   "answer": "C",
   "why": "A. Incorrect because the quoted futures price is greater than the equilibrium futures price; hence, the futures contract is overvalued rather than undervalued based on its quoted price. | B. Incorrect because the quoted futures price is greater than the equilibrium futures price; hence, the futures contract is overvalued rather than fairly valued based on its quoted price. | C. Correct because, according to the carry arbitrage model, Q0 = [1/CF] {FV[B0 + AI0] – AIT – FVCI}, where CF = Conversion factor, B0 = Clean bond price, AI0 = Accrued interest at value date, AIT = Accrued interest at futures expiration, and FVCI = Future value of coupons paid. Accrued interest at value date: AI0 = [55/(55 + 125)] × 3% × 100/2 = 0.458 Accrued interest at futures expiration: AIT = [(30 + 55)/(55 + 125)] × 3% × 100/2 = 0.708 FV[B0 + AI0] = (103 + 0.458) × (1 + 3.25%)30/360 = 103.734 Substituting: Q0 = [1/0.75] {103.734 – 0.708 – 0} = 137.37 The quoted futures price of 138 is greater than the equilibrium futures price of 137.37; thus, the futures contract is overvalued."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 11,
+  "q": "Which of the following assumptions is not required for Miller and Modigliani’s (MM) dividend theory?",
+  "options": [
+   "Shareholders have no transaction costs when buying and selling shares.",
+   "There are no taxes.",
+   "Investors prefer dividends over uncertain capital gains."
+  ],
+  "answer": "C",
+  "why": "C is correct. The MM dividend theory assumes no taxes or transaction costs, but it does not assume investors have a preference for dividends over capital gains."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 12,
+  "q": "Sophie Chan owns 100,000 shares of PAT Company. PAT is selling for €40 per share, so Chan’s investment is worth €4,000,000. Chan reinvests the gross amount of all dividends received to purchase additional shares. Assume that the clientele for PAT shares consists of tax-exempt investors. If PAT pays a €1.50 dividend, Chan’s new share ownership after reinvesting dividends at the ex-dividend price is most likely to be closest to:",
+  "options": [
+   "103,600.",
+   "103,750.",
+   "103,900."
+  ],
+  "answer": "C",
+  "why": "C is correct. Because the clientele for PAT investors has the same tax rate (zero) for dividends and capital gains, the ex-dividend stock price of PAT should decline by the amount of the dividend to €40 − €1.50 = €38.50. Chan will purchase €150,000/€38.50 = 3,896 additional shares. This increases her total shares owned to 103,896. Chan’s new share ownership is closest to 103,900."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 13,
+  "q": "Which of the following is most likely to signal negative information concerning a company?",
+  "options": [
+   "Share repurchase.",
+   "Decrease in the quarterly dividend rate.",
+   "A two-for-one stock split."
+  ],
+  "answer": "B",
+  "why": "B is correct. A decrease in the quarterly dividend rate is likely to signal negative information. A decrease is typically understood as signaling poor future business prospects."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 14,
+  "q": "WL Corporation is located in a jurisdiction that has a 40% corporate tax rate on pretax income and a 30% personal tax rate on dividends. WL distributes all its after-tax income to shareholders. What is the effective tax rate on WL pretax income distributed in dividends?",
+  "options": [
+   "42%.",
+   "58%.",
+   "70%."
+  ],
+  "answer": "B",
+  "why": "B is correct. The effective tax rate can be computed as 1 minus the fraction of 1 unit of earnings that investors retain after all taxes, or 1 − (1 − 0.40)(1 − 0.30) = 0.58 or 58% effective tax rate. Another way to obtain the solution: Corporate taxes = 1.00 × 0.40 = 0.40 and Personal taxes = 0.60 in dividends × 0.30 = 0.18, so Total tax = 0.40 + 0.18 = 0.58, or 58% effective rate."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 15,
+  "q": "Which of the following factors is least likely to be associated with a company having a low dividend payout ratio?",
+  "options": [
+   "High flotation costs on new equity issues.",
+   "High tax rates on dividends.",
+   "Low growth prospects."
+  ],
+  "answer": "C",
+  "why": "C is correct. With low growth prospects, a company would typically have a high payout ratio, returning funds to its shareholders rather than retaining funds."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 16,
+  "q": "The dividend policy of Berkshire Gardens Inc. can be represented by a gradual adjustment to a target dividend payout ratio. Last year Berkshire had earnings per share of US$3.00 and paid a dividend of US$0.60 a share. This year it estimates earnings per share will be US$4.00. Find its dividend per share for this year if it has a 25% target payout ratio and uses a five-year period to adjust its dividend.",
+  "options": [
+   "US$0.68.",
+   "US$0.80.",
+   "US$0.85."
+  ],
+  "answer": "A",
+  "why": "A is correct. The estimated dividend per share is US$0.68.\n\nPrevious DPS = US$0.60\nExpected EPS = US$4\nTarget payout ratio = 0.25\nFive-year adjustment factor = 1/5 = 0.2\nExpected dividend = Previous dividend + (Expected earnings × Target payout ratio − Previous dividend) × Adjustment factor\n= US$0.60 + [(US$4.00 × 0.25 − US$0.60) × 0.2]\n= US$0.60 + US$0.08\n= US$0.68"
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 17,
+  "q": "Beta Corporation is a manufacturer of inflatable furniture. Which of the following scenarios best reflects a stable dividend policy for Beta?",
+  "options": [
+   "Maintaining a constant dividend payout ratio of 40–50%.",
+   "Maintaining the dividend at US$1.00 a share for several years given no change in Beta’s long-term prospects.",
+   "Increasing the dividend 5% a year over several years to reflect the two years in which Beta recognized mark-to-market gains on derivatives positions."
+  ],
+  "answer": "B",
+  "why": "B is correct. Choice A is consistent with a constant dividend target payout ratio policy. Choice C is not correct because the earnings increases described are not sustainable long term."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 18,
+  "q": "A company has 1 million shares outstanding and earnings are £2 million. The company decides to use £10 million in surplus cash to repurchase shares in the open market. The company’s shares are trading at £50 per share. If the company uses the entire £10 million of surplus cash to repurchase shares at the market price, the company’s earnings per share will be closest to:",
+  "options": [
+   "£2.00.",
+   "£2.30.",
+   "£2.50."
+  ],
+  "answer": "C",
+  "why": "C is correct. At the current market price, the company can repurchase 200,000 shares (£10 million/£50 = 200,000 shares). The company would have 800,000 shares outstanding after the repurchase (1 million shares − 200,000 shares = 800,000 shares).\n\nEPS before the buyback is £2.00 (£2 million/1 million shares = £2.00). Total earnings after the buyback are the same because the company uses surplus (nonearning) cash to purchase the shares, but the number of shares outstanding is reduced to 800,000. EPS increases to £2.50 (£2 million/ 800,000 shares = £2.50)."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 19,
+  "q": "Devon Ltd. common shares sell at US$40 a share, and their estimated price-to-earnings ratio (P/E) is 32. If Devon borrows funds to repurchase shares at its after-tax cost of debt of 5%, its EPS is most likely to:",
+  "options": [
+   "increase.",
+   "decrease.",
+   "remain the same."
+  ],
+  "answer": "B",
+  "why": "B is correct. If the P/E is 32, the earnings-to-price ratio (earnings yield or E/P) is 1/32 = 3.125%. When the cost of capital is greater than the earnings yield, earnings dilution will result from the buyback."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 20,
+  "q": "A company can borrow funds at an after-tax cost of 4.5%. The company’s stock price is US$40 per share, earnings per share is US$2.00, and the company has 15 million shares outstanding. If the company borrows just enough to repurchase 2 million shares of stock at the prevailing market price, that company’s earnings per share is most likely to:",
+  "options": [
+   "increase.",
+   "decrease.",
+   "remain the same."
+  ],
+  "answer": "A",
+  "why": "A is correct. The company’s earnings yield (E/P) is US$2/US$40 = 0.05. When the earnings yield is greater than the after-tax cost of borrowed funds, EPS will increase if shares are repurchased using borrowed funds."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 21,
+  "q": "Crozet Corporation plans to borrow just enough money to repurchase 100,000 shares. The following information relates to the share repurchase:\n\nShares outstanding before buyback\t3.1 million\nEarnings per share before buyback\tUS$4.00\nShare price at time of buyback\tUS$50\nAfter-tax cost of borrowing\t6%\nCrozet’s earnings per share after the buyback will be closest to:",
+  "options": [
+   "US$4.03.",
+   "US$4.10.",
+   "US$4.23."
+  ],
+  "answer": "A",
+  "why": "A is correct.\n\nTotal earnings before buyback: US$4.00 × 3,100,000 shares = US$12,400,000\n\nTotal amount of borrowing: US$50 × 100,000 shares = US$5,000,000\n\nAfter-tax cost of borrowing the amount of funds needed: US$5,000,000 × 0.06 = US$300,000\n\nNumber of shares outstanding after buyback: 3,100,000 − 100,000 = 3,000,000\n\nEPS after buyback: (US$12,400,000 − US$300,000)/3,000,000 shares = US$4.03\n\nThe P/E before the buyback is US$50/US$4 = 12.5; thus, the E/P is 8%. The after-tax cost of debt is 6%; therefore, EPS will increase."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 22,
+  "q": "A company with 20 million shares outstanding decides to repurchase 2 million shares at the prevailing market price of €30 per share. At the time of the buyback, the company reports total assets of €850 million and total liabilities of €250 million. As a result of the buyback, that company’s book value per share will most likely:",
+  "options": [
+   "increase.",
+   "decrease.",
+   "remain the same."
+  ],
+  "answer": "C",
+  "why": "C is correct. The company’s book value before the buyback is €850 million in assets − €250 million in liabilities = €600 million. Book value per share is €600 million/20 million = €30 per share. The buyback will reduce equity by 2 million shares at the prevailing market price of €30 per share. The book value of equity will be reduced to €600 million − €60 million = €540 million, and the number of shares will be reduced to 18 million; €540 million/18 million = €30 book value per share. If the prevailing market price is equal to the book value per share at the time of the buyback, book value per share is unchanged."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 23,
+  "q": "An analyst gathered the following information about a company:\n\nNumber of shares outstanding\t10 million\nEarnings per share\tUS$2.00\nP/E\t20\nBook value per share\tUS$30\nIf the company repurchases 1 million shares at the prevailing market price, the resulting book value per share will be closest to:",
+  "options": [
+   "US$26.",
+   "US$27.",
+   "US$29."
+  ],
+  "answer": "C",
+  "why": "C is correct. The prevailing market price is US$2.00(20) = US$40.00 per share; thus, the buyback would reduce equity by US$40 million. Book value of equity before the buyback is US$300 million. Book value of equity after the buyback would be US$300 million − US$40 million = US$260 million. The number of shares outstanding after the buyback would be 9 million. Thus, book value per share after the buyback would be US$260 million/9 million = US$28.89 ≈ US$29."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 24,
+  "q": "If a company’s objective is to support its stock price in the event of a market downturn, it would be advised to authorize:",
+  "options": [
+   "an open market share repurchase plan to be executed over the next five years.",
+   "a tender offer share repurchase at a fixed price effective in 30 days.",
+   "a Dutch auction tender offer effective in 30 days."
+  ],
+  "answer": "A",
+  "why": "A is correct. Of the three methods, only an authorized open market share repurchase plan allows the company the flexibility to time share repurchases to coincide with share price declines."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 25,
+  "q": "A company has positive free cash flow and is considering whether to use the entire amount of that free cash flow to pay a special cash dividend or to repurchase shares at the prevailing market price. Shareholders’ wealth under the two options will be equivalent unless the:",
+  "options": [
+   "company’s book value per share is less than the prevailing market price.",
+   "company’s book value per share is greater than the prevailing market price.",
+   "tax consequences and/or information content for each alternative is different."
+  ],
+  "answer": "C",
+  "why": "C is correct. For the two options to be equivalent with respect to shareholders’ wealth, the amount of cash distributed, the taxation, and the information content must be the same for both options."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 26,
+  "q": "Assume that a company is based in a country that has no taxes on dividends or capital gains. The company is considering either paying a special dividend or repurchasing its own shares. Shareholders of the company would have:",
+  "options": [
+   "greater wealth if the company paid a special cash dividend.",
+   "greater wealth if the company repurchased its shares.",
+   "the same wealth under either a cash dividend or share repurchase program."
+  ],
+  "answer": "C",
+  "why": "C is correct. When there are no taxes, there are no tax differences between dividends and capital gains. All other things being equal, the effect on shareholder wealth of a dividend and a share repurchase should be the same."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 27,
+  "q": "Investors may prefer companies that repurchase their shares instead of paying a cash dividend when:",
+  "options": [
+   "capital gains are taxed at lower rates than dividends.",
+   "capital gains are taxed at the same rate as dividends.",
+   "the company needs more equity to finance capital expenditures."
+  ],
+  "answer": "A",
+  "why": "A is correct. When capital gains are taxed at lower rates than dividends, investors may prefer companies that return cash to shareholders through share repurchases rather than dividends."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 1,
+  "q": "The payment of a 10% stock dividend by a company will result in an increase in that company's:",
+  "options": [
+   "current ratio.",
+   "financial leverage.",
+   "contributed capital."
+  ],
+  "answer": "C",
+  "why": "A stock dividend transfers retained earnings to contributed capital."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 2,
+  "q": "If a company's common shares trade at very low prices, that company would be most likely to consider the use of a:",
+  "options": [
+   "stock split.",
+   "stock dividend.",
+   "reverse stock split."
+  ],
+  "answer": "C",
+  "why": "A reverse split raises the price per share into a more marketable range."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 3,
+  "q": "Pearce: Statement 1, a stock dividend will increase share price on the ex-dividend date. Statement 2, a stock split reduces the P/E ratio. Are both correct?",
+  "options": [
+   "No for both statements.",
+   "Yes for Statement 1, and no for Statement 2.",
+   "No for Statement 1, and yes for Statement 2."
+  ],
+  "answer": "A",
+  "why": "A stock dividend lowers the price per share; a split leaves P/E unchanged."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 4,
+  "q": "All other things being equal, the payment of an internally financed cash dividend is most likely to result in:",
+  "options": [
+   "a lower current ratio.",
+   "a higher current ratio.",
+   "the same current ratio."
+  ],
+  "answer": "A",
+  "why": "Cash falls, so the current ratio falls; a stock dividend leaves it unchanged."
+ },
+ {
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "n": 10,
+  "q": "Essay: match Column A (bird in the hand, homemade dividends, high tax rates on dividends) to Column B (dividend policy matters / is irrelevant).",
+  "options": [],
+  "answer": "",
+  "why": "1 Bird in the hand: a) matters. 2 Homemade dividends: b) irrelevant. 3 High tax rates: a) matters."
  }
 ]

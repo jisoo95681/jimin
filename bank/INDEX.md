@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 104 vignettes · 172 in all. Plus 13 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 109 vignettes · 177 in all. Plus 35 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ Totals: app 68 vignettes · bank 104 vignettes · 172 in all. Plus 13 standalone
 | 4 | Big Data Projects | 4 | 1 | 5 |
 | 5 | Currency Exchange Rates | 2 | 11 | 13 |
 | 6 | Economic Growth | 1 | 9 | 10 |
-| 7 | Intercorporate Investments | 6 | 2 | 8 |
+| 7 | Intercorporate Investments | 6 | 7 | 13 |
 | 8 | Employee Compensation | 2 | 1 | 3 |
 | 9 | Multinational Operations | 2 | 2 | 4 |
 | 10 | Analysis of Financial Institutions | 2 | 2 | 4 |
@@ -57,7 +57,7 @@ Totals: app 68 vignettes · bank 104 vignettes · 172 in all. Plus 13 standalone
 **4 Big Data Projects**: aries-bigdata (app, 15Q); voxkor (app, 9Q); ganymede (app, 7Q); quinn (app, 4Q); m1-10 (bank, 4Q)
 **5 Currency Exchange Rates**: smith-fx (app, 5Q); goldsworthy (app, 8Q); golden-island (bank, 5Q); tremblay-growth (bank, 6Q); fx29-wagener (bank, 7Q); fx29-beauregard (bank, 6Q); fx29-lopez (bank, 4Q); fx29-kaur (bank, 4Q); fx29-gupta (bank, 4Q); fx29-carlisle (bank, 8Q); m2-5 (bank, 4Q); s1a-hollingsworth (bank, 4Q); s1a-daltonia (bank, 6Q)
 **6 Economic Growth**: wagner-growth (app, 4Q); golden-island (bank, 5Q); tremblay-growth (bank, 6Q); eg29-klymchuk (bank, 9Q); eg29-amaral (bank, 6Q); eg29-schmidt (bank, 6Q); eg29-sagara (bank, 8Q); m1-4 (bank, 4Q); s1a-hollingsworth (bank, 4Q); s1a-daltonia (bank, 6Q)
-**7 Intercorporate Investments**: brannock (app, 5Q); halvorsen (app, 7Q); ninmount (app, 6Q); adore (app, 4Q); bardem (app, 4Q); ernst (app, 4Q); m1-6 (bank, 4Q); s1b-treadway (bank, 6Q)
+**7 Intercorporate Investments**: brannock (app, 5Q); halvorsen (app, 7Q); ninmount (app, 6Q); adore (app, 4Q); bardem (app, 4Q); ernst (app, 4Q); corp1-ladan (bank, 5Q); corp1-wu (bank, 2Q); corp1-carlyle (bank, 6Q); corp1-thornhill (bank, 4Q); corp1-larsen (bank, 4Q); m1-6 (bank, 4Q); s1b-treadway (bank, 6Q)
 **8 Employee Compensation**: kensington (app, 7Q); xyz (app, 5Q); pc-9 (bank, 4Q)
 **9 Multinational Operations**: triofind (app, 7Q); eurexim (app, 6Q); m1-2 (bank, 4Q); consol-can (bank, 6Q)
 **10 Analysis of Financial Institutions**: aries (app, 7Q); xyzbank (app, 6Q); m2-6 (bank, 4Q); paulinic (bank, 7Q)

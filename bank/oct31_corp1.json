@@ -1,0 +1,288 @@
+[
+ {
+  "id": "corp1-ladan",
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "title": "Ladan: Yeta Products, dividends and buybacks",
+  "body": "John Ladan is an analyst in the research department of an international securities firm. Ladan is currently analyzing Yeta Products, a publicly traded global consumer goods company located in the United States. Selected data for Yeta are presented in Exhibit 1.\n\nExhibit 1\nSelected Financial Data for Yeta Products\nMost Recent Fiscal Year\t \tCurrent\t \nPretax income\tUS$280 million\t \tShares outstanding\t100 million\nNet income after tax\tUS$182 million\t \tBook value per share\tUS$25.60\nCash flow from operations\tUS$235 million\t \tShare price\tUS$20.00\nCapital expenditures\tUS$175 million\t \t \t \nEarnings per share\tUS$1.82\t \t \t \nYeta currently does not pay a dividend, and the company operates with a target capital structure of 40% debt and 60% equity. However, on a recent conference call, Yeta’s management indicated that they are considering four payout proposals:\n\nProposal #1: Issue a 10% stock dividend.\n\nProposal #2: Repurchase US$40 million in shares using surplus cash.\n\nProposal #3: Repurchase US$40 million in shares by borrowing US$40 million at an after-tax cost of borrowing of 8.50%.\n\nProposal #4: Initiate a regular cash dividend.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "The implementation of Proposal #1 would generally lead to shareholders:",
+    "options": [
+     "having to pay tax on the dividend received.",
+     "experiencing a decrease in the total cost basis of their shares.",
+     "having the same proportionate ownership as before implementation."
+    ],
+    "answer": "C",
+    "why": "C is correct. The implementation of Proposal #1, a stock dividend, would not affect a shareholder’s proportionate ownership because all shareholders would receive the same proportionate increase in shares. Stock dividends, which are generally not taxable to shareholders, do not impact an investor’s total cost basis (they merely reduce the cost basis per share).\n\nA is incorrect because stock dividends are generally not taxable to shareholders. A stock dividend merely divides the “pie” (the market value of shareholders’ equity) into smaller pieces.\n\nB is incorrect because an investor’s total cost basis will not be affected by a stock dividend; a stock dividend merely reduces the cost basis per share."
+   },
+   {
+    "n": 6,
+    "q": "If Yeta’s management implemented Proposal #2 at the current share price shown in Exhibit 1, Yeta’s book value per share after implementation would be closest to:",
+    "options": [
+     "US$25.20.",
+     "US$25.71.",
+     "US$26.12."
+    ],
+    "answer": "B",
+    "why": "B is correct. If Yeta implemented Proposal #2, a repurchase of US$40 million in shares, the resulting book value per share (BVPS) would be US$25.71, calculated as follows:\n\nYeta has a current BVPS of US$25.60; therefore, total book value of equity is US$2,560 million (= US$25.60 × 100,000,000 shares).\n\nThe number of shares Yeta would repurchase is US$40 million/US$20.00 per share = 2 million shares.\n\nYeta shareholders’ book value of equity after the buyback would be US$2,520 million (= US$2,560 million − US$40 million).\n\nThe number of shares after the buyback would be 98 million (= 100 million − 2 million).\n\nThe BVPS after the buyback would be US$2,520 million/98 million = US$25.71.\n\nA is incorrect because US$25.20 incorrectly uses 100 million shares instead of 98 million shares in calculating BVPS after the buyback: US$2,520 million/100 million = US$25.20.\n\nC is incorrect because US$26.12 incorrectly uses US$2,560 million (current book value) instead of US$2,520 million as the book value of equity in calculating BVPS after the buyback. The BVPS after the buyback is incorrectly calculated as US$2,560 million/98 million = US$26.12."
+   },
+   {
+    "n": 7,
+    "q": "Based on Exhibit 1, if Yeta’s management implemented Proposal #3 at the current share price, earnings per share would:",
+    "options": [
+     "decrease.",
+     "remain unchanged.",
+     "increase."
+    ],
+    "answer": "C",
+    "why": "C is correct. In the case of external funding, a company’s earnings per share will increase if the stock’s earnings yield, which is the ratio of earnings per share to share price, exceeds the after-tax cost of borrowing. Yeta’s earnings yield is 9.10% (= US$1.82/US$20.00), which exceeds the after-tax cost of borrowing of 8.50%.\n\nA is incorrect because EPS will increase (not decrease) if the stock’s earnings yield (= US$1.82/US$20.00) exceeds the after-tax cost of borrowing. Yeta’s earnings yield of 9.10% exceeds the after-tax cost of borrowing of 8.50%.\n\nB is incorrect because EPS will increase (not remain unchanged) if the stock’s earnings yield (= US$1.82/US$20.00) exceeds the after-tax cost of borrowing. Yeta’s earnings yield of 9.10% exceeds the after-tax cost of borrowing of 8.50%."
+   },
+   {
+    "n": 8,
+    "q": "Based on Yeta’s target capital structure, Proposal #4 will most likely:",
+    "options": [
+     "increase the default risk of Yeta’s debt.",
+     "increase the agency conflict between Yeta’s shareholders and managers.",
+     "decrease the agency conflict between Yeta’s shareholders and bondholders."
+    ],
+    "answer": "A",
+    "why": "A is correct. Yeta is financed by both debt and equity; therefore, paying dividends can increase the agency conflict between shareholders and bondholders. The payment of dividends reduces the cash cushion available for the disbursement of fixed required payments to bondholders. All else equal, dividends increase the default risk of debt.\n\nB is incorrect because the agency conflict between shareholders and managers would decrease (not increase) with the payment of dividends. Paying out free cash flow to equity in dividends would constrain managers in their ability to overinvest by taking on negative net present value (NPV) projects.\n\nC is incorrect because paying dividends can increase (not decrease) the agency conflict between shareholders and bondholders. The payment of dividends would reduce the cash cushion available to Yeta for the disbursement of fixed required payments to bondholders. The payment of dividends transfers wealth from bondholders to shareholders and increases the default risk of debt."
+   },
+   {
+    "n": 9,
+    "q": "The implementation of Proposal #4 would most likely signal to Ladan and other investors that future earnings growth can be expected to:",
+    "options": [
+     "decrease.",
+     "remain unchanged.",
+     "increase."
+    ],
+    "answer": "C",
+    "why": "C is correct. Dividend initiations convey positive information and are associated with future earnings growth, whereas dividend omissions or reductions convey negative information and are associated with future earnings problems.\n\nA is incorrect because dividend initiations convey positive information and are associated with an expected increase (not a decrease) in future earnings growth. Dividend omissions or reductions convey negative information and are associated with future earnings problems.\n\nB is incorrect because dividend initiations convey positive information and are associated with an expectation that future earnings growth will increase (not remain unchanged). In contrast, dividend omissions or reductions convey negative information and are associated with future earnings problems.\n\n10Essay1 / 1 point\nMatch the phrases in Column A with the corresponding dividend theory in Column B. Note that you may use the answers in Column B more than once.\n\nColumn A\tColumn B\n1. Bird in the hand\ta) Dividend policy matters\n2. Homemade dividends\tb) Dividend policy is irrelevant\n3. High tax rates on dividends\t \n,ㅡ\nFeedback\nThe appropriate matches are as follows:\n\nColumn A\tColumn B\n1. Bird in the hand\ta) Dividend policy matters\n2. Homemade dividends\tb) Dividend policy is irrelevant\n3. High tax rates on dividends\ta) Dividend policy matters"
+   }
+  ]
+ },
+ {
+  "id": "corp1-wu",
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "title": "Wu: Wilson Chemical, special dividend vs buyback",
+  "body": "Janet Wu is treasurer of Wilson Chemical Company, a manufacturer of specialty chemicals used in industrial manufacturing and increasingly in technology applications. Wilson Chemical is selling one of its older divisions for US$70 million cash. Wu is considering whether to recommend a special dividend of US$70 million or a repurchase of 2 million shares of Wilson common stock in the open market. She is reviewing some possible effects of the buyback with the company’s financial analyst. Wilson has a long-term record of gradually increasing earnings and dividends.",
+  "questions": [
+   {
+    "n": 28,
+    "q": "Wilson’s share buyback could be a signal that the company:",
+    "options": [
+     "is decreasing its financial leverage.",
+     "views its shares as undervalued in the marketplace.",
+     "has more investment opportunities than it could fund internally."
+    ],
+    "answer": "B",
+    "why": "B is correct. Management sometimes undertakes share repurchases when it views shares as being undervalued in the marketplace."
+   },
+   {
+    "n": 29,
+    "q": "The most likely tax environment in which Wilson Chemical’s shareholders would prefer that Wilson repurchase its shares (share buybacks) instead of paying dividends is one in which:",
+    "options": [
+     "the tax rate on capital gains and dividends is the same.",
+     "capital gains tax rates are higher than dividend income tax rates.",
+     "capital gains tax rates are lower than dividend income tax rates."
+    ],
+    "answer": "C",
+    "why": "C is correct. Shareholders would prefer that the company repurchase its shares instead of paying dividends when the tax rate on capital gains is lower than the tax rate on dividends."
+   }
+  ]
+ },
+ {
+  "id": "corp1-carlyle",
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "title": "Carlyle: Avignon, payout policy and repurchase",
+  "body": "Barbara Carlyle is a financial adviser to high-net-worth individuals. She is currently reviewing the equity portfolio of a client and is considering adding new securities to it, as the client has indicated a preference for more income-producing securities. With this in mind, Carlyle takes a closer look at Avignon Corporation (“Avignon”), a chain of Canadian boutiques that has recently registered unusually high sales, resulting in large increases in the company’s cash balance. Avignon’s current stock price is C$47.33. Exhibit 1 shows earnings and dividends for the preceding four years.\n\nExhibit 1 Avignon Corporation Earnings and Dividend History\n \t2013\t2014\t2015\t2016\nEPS\tC$1.38\tC$1.39\tC$1.37\tC$1.44\nDPS\tC$0.20\tC$0.22\tC$0.22\tC$0.22\nCarlyle reviews analysts’ reports. She notes the significant change in cash due to the high sales volume and wonders whether that will prompt a dividend increase. However, most analysts have stated that because the industry is cyclical, the increase in sales is believed to be temporary.\n\nCarlyle asks her assistant, Richard Lee, to investigate whether Avignon might use its surplus cash for a share repurchase rather than for dividends. Lee, a junior analyst, comments that share repurchases can be beneficial for several reasons:\n\nThe distribution of cash among shareholders is equivalent to what would have otherwise been distributed to them as dividends.\nShare repurchases provide greater flexibility to management than the payment of cash dividends.\nWhen directly negotiated, share repurchases can be used to purchase stock for less than the current market price.\nLee believes that looking at other companies that have completed share repurchases could be helpful to his analysis. He looks at the history of SpeedyPro Inc. (“SpeedyPro”), a US-based industrial services company whose business depends heavily on the petroleum exploration and production sector. SpeedyPro made its first share repurchase in early 2017 using surplus cash. SpeedyPro’s selected financial information just prior to the repurchase is shown in Exhibit 2. \n\nExhibit 2 SpeedyPro, Inc. Selected Financial Information as of Year-End 2016\nNet income\t$124 million\nEPS\t$1.24\nShares outstanding\t100 million\nDetails of shares repurchase\n   Cash available for repurchase\t$836 million\n   Share price at the time of repurchase\t$38.00\n   Premium over current share price for repurchase\t10.0%\nLee returns to Carlyle to continue the discussion. Carlyle explains to Lee that a complete analysis of the impact of a share repurchase should also include an evaluation of the effects on leverage. She points out that Avignon’s most recent bond issue includes a covenant that limits the company’s debt-to-equity ratio to 35%. She asks Lee to prepare an analysis for Avignon, using the information in Exhibit 3, to see if the debt covenant will be violated if the company repurchases shares. \n\nExhibit 3 Avignon Corporation Selected Financial Information as of Year-End 2016\nBook value of equity\tC$3,600 million\nShares outstanding\t200 million\nCash available for repurchase\tC$155 million\nDebt-to-equity ratio\t30.0%\nAfter-tax cost of debt\t5.0%",
+  "questions": [
+   {
+    "n": 30,
+    "q": "Based on Exhibit 1, Avignon’s current dividend policy is best described as a:",
+    "options": [
+     "stable dividend policy.",
+     "residual dividend policy.",
+     "constant dividend payout ratio policy."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Avignon’s current dividend policy would be classified as stable because it has paid the same amount for the past three years regardless of earnings volatility. | B. Incorrect. A residual dividend policy is based on paying out the full amount of internally generated funds after capital expenditures. It is rarely used in practice because it typically results in highly volatile dividend payments. | C. Incorrect. A constant dividend payout ratio policy pays a fixed percentage of earnings, and the dividend will rise when earnings increase."
+   },
+   {
+    "n": 31,
+    "q": "If the analysts’ beliefs about the increase in sales are correct, the change in dividend policy that Avignon would most likely make would be to:",
+    "options": [
+     "declare a special dividend.",
+     "increase the quarterly dividend amount.",
+     "cut the quarterly dividend in anticipation of next year’s sales forecast."
+    ],
+    "answer": "A",
+    "why": "A. Correct. If analysts are correct that the change in sales is temporary, the company is most likely to declare a special dividend. Companies, particularly in cyclical industries, may choose to use special dividends to distribute more earnings during strong earning years. | B. Incorrect. Most companies strive to maintain or increase their dividends and will not increase the regular dividend unless they believe they can continue to pay at or above that level. Rather, they will pay an extra dividend at the end of the year when earnings are unusually good. | C. Incorrect. A record of consistent or increasing dividends is widely interpreted as a signal of profitability, and most companies strive to not reduce dividends."
+   },
+   {
+    "n": 32,
+    "q": "Which of Lee’s statements to Carlyle about share repurchases is least accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Statement 1 is least accurate. Although the amount of cash distributed is the same, only those shareholders who have their shares purchased by the company will receive any cash. | B. Incorrect. Statement 2 is correct. Management is not obligated to follow through after stating an intention to repurchase shares, whereas they must meet a declared dividend statement. | C. Incorrect. Statement 3 is correct. Research showed that 45% of private repurchases between 1984 and 2001 were actually made at discounts, indicating that many direct negotiation repurchases are generated by the liquidity needs of large investors who are in a weak negotiating position."
+   },
+   {
+    "n": 33,
+    "q": "If SpeedyPro had used all of its surplus cash to repurchase its shares, based on Exhibit 2, the percentage increase in EPS would have been closest to:",
+    "options": [
+     "10%.",
+     "25%.",
+     "28%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it applies the price premium (10%) to the EPS. | B. Correct. The increase in EPS was 25%, calculated as follows: Steps\tCalculation\t \tEPS EPS before the repurchase\tfrom Exhibit 2\t---\t$1.24 Surplus cash available for repurchase\t---\t$836 million\t--- # share outstanding before repurchase\t---\t100 million\t--- Share price at time of repurchase\t---\t$38.00\t--- Price premium for repurchase\t---\t10%\t--- Repurchase price per share\t$38.00 × 110%\t$41.80\t--- # shares repurchased\t$836 million ÷ $41.80 per share\t20 million\t--- # shares outstanding after repurchase\t100 million – 20 million\t80 million\t--- EPS after the repurchase\t$124 million ÷ 80 million shares\t---\t$1.55 % increase in EPS\t($1.55 – $1.24) ÷ $1.24\t---\t25% | C. Incorrect because it fails to include share premium. Shares to purchase (in millions) = 836/38 = 22. Shares outstanding after repurchase (in millions) = 100 – 22 = 78. EPS after the repurchase = $124/78 = $1.59. Change in EPS = 1.59/1.24 = 128% = 28.00% increase."
+   },
+   {
+    "n": 34,
+    "q": "Based on Exhibit 2, SpeedyPro most likely repurchased shares using:",
+    "options": [
+     "open market purchases.",
+     "a fixed-price tender offer.",
+     "a negotiated purchase agreement."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Open market purchases are market based and can be timed to avoid price impact. | B. Correct. SpeedyPro offered a 10% premium over the current price. This is most consistent with a fixed-price tender offer, which normally requires a premium. Negotiated purchase agreements are almost as likely to take place at prices lower than market because they are at prices above market, particularly when shareholders are trying to meet liquidity needs. Open market purchases are market based and can be timed to avoid price impact. | C. Incorrect. Negotiated purchase agreements are almost as likely to take place at prices lower than market as they are at prices above market when shareholders are trying to meet liquidity needs."
+   },
+   {
+    "n": 35,
+    "q": "The best answer to Carlyle’s question about the potential violation of the debt covenants is that the covenant:",
+    "options": [
+     "is not violated if Avignon repurchases shares.",
+     "will be violated if Avignon uses debt to finance the repurchase.",
+     "will be violated if Avignon uses the surplus cash to finance the repurchase."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The D/E is above the 35% threshold when the repurchase is financed with debt. | B. Correct. The debt-financed repurchase increases the debt-to-equity ratio above the 35% threshold and thus violates the debt covenant. Book value of equity (millions)\tExhibit 3\tC$3,600 Cash available for purchase (millions)\tExhibit 3\tC$155 Debt-to-equity ratio (D/E) before\tExhibit 3\t30.0% Book value of debt (millions)\t30% × C$3,600\tC$1,080 D/E with cash repurchase\tC$1,080 ÷ (C$3,600 – C$155)\t31.3% D/E with debt-financed repurchase\t(C$1,080 + C$155) ÷ (C$3,600 – C$155)\t35.8% | C. Incorrect. The D/E stays below 35% when the company uses the surplus cash to finance the repurchase."
+   }
+  ]
+ },
+ {
+  "id": "corp1-thornhill",
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "title": "Thornhill: AAPS, liquidating dividend, stock dividend, buybacks",
+  "body": "Michael Thornhill is CFO at American Automotive Parts & Service Corporation (AAPS), an automotive manufacturer that specializes in engine components in a number of established vehicle production lines. He is preparing for a meeting with members of the executive committee to discuss and prepare recommendations for the board to determine if AAPS should make any changes to its dividend policy and structure over the next fiscal year.\n\nIn preparation for this meeting, Thornhill summarizes AAPS's historical dividends and related information in Exhibit 1.\n\nExhibit 1\nDividend frequency\tQuarterly\nDividend amount, current\t$0.50/share\nNumber of shares outstanding\t10,000,000\nTarget payout ratio\t20%\nCorporate tax rate\t35%\nShare price – 52-week low-high\t$7.84 – $10.62\nShare price – closing\t$9.89\nIn the meeting, the first topic discussed is the recently completed sale of AAPS's brake parts division. The sale generated $29 million in cash proceeds. Thornhill recommends that the company issue a one-time dividend of $0.95/share to existing shareholders.\n\nThe Chief Operating Officer (COO) highlights that the company has a number of potential investments options and suggests that the company consider a 4% stock dividend instead. Thornhill agrees to prepare a summary of the effect the stock dividend would have on the company's results assuming a purchase price per share based on the current market price.\n\nThe following statements about the stock dividend are discussed:\n\nStatement 1:\tThe stock dividend would be negatively received by shareholders because it would increase their tax liability.  \nStatement 2:\tThe stock dividend would have a more adverse effect on the company's financial leverage ratios which are being closely monitored by the bank.\nStatement 3:\tThe flotation costs of the stock dividend would be lower than a traditional issuance and should be considered in their analysis.\nAs a result of the extended discussion and different perspectives on dividend payout structures, Thornhill suggests an alternative approach could be a share buyback transaction. The following statements are made:\n\nStatement 1:\tAAPS should negotiate a greenmail transaction directly with a major activist shareholder in order to secure a discount to the current market price.\nStatement 2:\tIf there is a concern about the perception of excluding other shareholders with the greenmail transaction, a fixed price tender offer could be accomplished quickly and allow them to purchase a pro rata portion of shares from all interested shareholders.\nStatement 3:\tAAPS should announce an open market repurchase program as it would provide flexibility to cancel the share purchases if the company is able to identify another project that would be a more effective use of funds.",
+  "questions": [
+   {
+    "n": 36,
+    "q": "The one-time dividend Thornhill recommends is best described as a:",
+    "options": [
+     "scrip dividend.",
+     "special dividend.",
+     "liquidating dividend."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because with a stock dividend (also known as a bonus issue of shares or a scrip dividend), the company distributes additional shares of its common stock to shareholders instead of cash. AAPS sold a division and distributed a portion of the proceeds back to shareholders and the one-time $0.95/share dividend is a liquidating dividend. | B. Incorrect because a special dividend is either a dividend paid by a company that does not pay dividends on a regular schedule or a dividend that supplements regular cash dividends with an extra payment. AAPS pays dividends and the one-time $0.95/share dividend is in relation to the brake parts division which is a liquidating dividend. | C. Correct because a liquidating dividend arises when a company sells a portion of its business for cash and the proceeds are distributed to shareholders. In this case, AAPS sold a division and distributed a portion of the proceeds back to shareholders and the one-time $0.95/share dividend is a liquidating dividend."
+   },
+   {
+    "n": 37,
+    "q": "If AAPS follows the COO's suggestion, the expected share price after the stock dividend is closest to:",
+    "options": [
+     "$9.49.",
+     "$9.51.",
+     "$10.29."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it assumes the 4% stock divided reduces the stock price by 4% = $9.89 x (1 – 0.04) = $9.49 | B. Correct. For a stock dividend, the total market value of the company is unaffected by the stock dividend because the decrease in the share price is exactly offset by the increase in the number of shares outstanding. The total cost basis of the shares remains the same; however, the number of shares owned increases. Assuming a shareholder owns 100 shares. Total value  = $989.00 [$9.89 x 100] With a 4.0% stock dividend, the number of shares would increase to 104. The new share price = Total value / new number of shares = $989.00 / 104 = $9.51 | C. Incorrect because it multiplies the current share price with the expected stock dividend growth = $9.89 × (1 + 0.04) = $10.29"
+   },
+   {
+    "n": 38,
+    "q": "Which of the following statements about the effect of the stock dividend is most accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a stock dividend is generally not taxable to shareholders because a stock dividend merely divides the \"pie\" (the market value of shareholders' equity) into smaller pieces. | B. Incorrect because a stock dividend has no economic impact on a company. Stock dividends do not affect assets or shareholders’ equity. Although retained earnings are reduced by the value of the stock dividends paid (i.e., by the number of shares issued × price per share), contributed capital increases by the same amount (i.e., the value of the shares issued). As a result, total shareholders’ equity does not change. Neither stock dividends nor stock splits affect liquidity ratios or financial leverage ratios. | C. Correct. Flotation costs are the costs associated with selling shares to the public that would include underwriters' fees, legal costs, registration expenses, and possible negative price effects and would be lower with a direct stock dividend to existing owners. The company did not have to spend any actual money issuing a dividend."
+   },
+   {
+    "n": 39,
+    "q": "In the share buyback discussion, the statement that is the least accurate is:",
+    "options": [
+     "Statement 1.",
+     "Statement 2.",
+     "Statement 3."
+    ],
+    "answer": "A",
+    "why": "A. Correct because in a greenmail transaction, the company buys back the would-be suitor's shares at a premium to the market price, not at a discount. Unsuccessful takeover attempts have ended with the company buying back the would-be suitor’s shares at a premium to the market price, referred to as a greenmail transaction, often to the detriment of remaining shareholders. | B. Incorrect because it is an accurate statement. A fixed price tender offer can be extended to all shareholders and can set at a fixed date in the near future. A company will make a fixed price tender offer to repurchase a specific number of shares at a fixed price that is typically at a premium to the current market price. By setting a fixed date, such as 30 days in the future, a fixed price tender offer can be accomplished quickly. | C. Incorrect because it is an accurate statement. The open market share repurchase method gives the company maximum flexibility. Open market repurchases are the most flexible option for a company because there is no legal obligation to undertake or complete the repurchase program; a company may not follow through with an announced program for various reasons, such as unexpected cash needs for liquidity, acquisitions, or capital expenditures."
+   }
+  ]
+ },
+ {
+  "id": "corp1-larsen",
+  "source": "31 Oct paste (Corp 1 test)",
+  "readings": [
+   7
+  ],
+  "title": "Larsen: Fjord Marine, dividend options",
+  "body": "Andrea Larsen is the CFO of Fjord Marine Industries (FMI), a Norwegian pleasure boat manufacturer. Larsen is reviewing FMI's dividend policy in advance of recommending a course of action to the Board of Directors regarding the current year dividend payment. \n\nFMI's business is influenced by many factors, including commodity prices, interest rates and general economic\n\nExhibit 1\n \tCurrent Year\tPrior Year\tTwo Years Ago\nPre-tax income (in NOK millions)\t600\t450\t400\nAfter-tax net income (in NOK millions)\t420\t315\t300\nDividends paid (in NOK millions)\t--- \t120\t115\nNumber of shares outstanding (in millions)\t6\t6\t6\nFMI's shares are currently trading at NOK 460.\n\nExhibit 1 shows that FMI had a very strong year in the current year, generating an additional NOK 105 million net income over the previous year. Larsen considers four possible options in addition to the regular dividend to return a portion of this additional capital to shareholders in the current year:\n\nOption 1:\tIssue a stock dividend of 20%.\nOption 2:\tIncrease the annual per share dividend by 20% more than the prior year.\nOption 3:\tMaintain the current annual dividend and pay a special dividend of NOK 10 per share.\nOption 4:\tRepurchase NOK 200 million worth of shares at a NOK 40 premium to the current share price.",
+  "questions": [
+   {
+    "n": 40,
+    "q": "For FMI, Option 1 would most likely:",
+    "options": [
+     "affect its capital structure.",
+     "reduce the volatility of its share price.",
+     "increase the value of each shareholder's ownership position in the company."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because from a company’s perspective, the key difference between a stock dividend and a cash dividend is that a cash dividend affects a company’s capital structure, whereas a stock dividend has no economic impact on a company. | B. Correct because the payment of a stock dividend also helps increase the stock’s float, which improves the liquidity of the shares and dampens share price volatility. | C. Incorrect because a stock dividend does not change the value of each shareholder’s ownership position because the increase in the number of shares held is accompanied by an offsetting decrease in earnings per share, and other measures of value per share, resulting from the greater number of shares outstanding."
+   },
+   {
+    "n": 41,
+    "q": "Compared to option 2, option 3 results in a total current year dividend payment per share that is:",
+    "options": [
+     "lower by NOK 6.",
+     "higher by NOK 6.",
+     "higher by NOK 7."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because under option 2, the current year dividend payment would be (NOK 120 million × 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 30. This response reverses the two options: NOK 24 – NOK 30 = – NOK 6. | B. Correct because under option 2, the current year dividend payment would be (NOK 120 million × 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 30. The per share dividend increase is therefore NOK 30 – NOK 24 = NOK 6. An extra dividend or special dividend (also known as an irregular dividend) is either a dividend paid by a company that does not pay dividends on a regular schedule or a dividend that supplements regular cash dividends with an extra payment. | C. Incorrect because under option 2, the current year dividend payment would be (NOK 120 million x 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 20 + NOK 10 = NOK 30. This response incorrectly uses the dividend payment from two years ago: NOK 115 million / 6 million shares ≈ NOK 19.17 per share. Therefore NOK 30 – (NOK 19.17 x 1.2) = NOK 30 – NOK 23 = NOK 7."
+   },
+   {
+    "n": 42,
+    "q": "Based on Exhibit 1, the safety of FMI's dividend in the prior year compared to two years ago:",
+    "options": [
+     "decreased.",
+     "remained the same.",
+     "increased."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe. | B. Incorrect because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe. | C. Correct because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe."
+   },
+   {
+    "n": 43,
+    "q": "If option 4 is implemented using surplus cash, which of the following is most likely to decrease? FMI's:",
+    "options": [
+     "total book value.",
+     "debt-to-equity ratio.",
+     "debt-to-assets ratio."
+    ],
+    "answer": "A",
+    "why": "A. Correct because share repurchases involve a reduction in shareholder equity and therefore a reduction in the total book value reported on the balance sheet. Whether the book value per share increases or decreases depends on whether the market price per share is above or below the book value per share. | B. Incorrect because share repurchases affect both the balance sheet and income statement. Both assets and shareholders’ equity decline if the repurchase is made with surplus cash. As a result, leverage increases. Debt ratios (leverage) will increase even more if the repurchase is financed with debt. The debt-to-equity ratio would therefore increase following a cash share repurchase. | C. Incorrect because share repurchases affect both the balance sheet and income statement. Both assets and shareholders’ equity decline if the repurchase is made with surplus cash. As a result, leverage increases. Debt ratios (leverage) will increase even more if the repurchase is financed with debt. The debt-to-assets ratio would therefore increase following a cash share repurchase as the denominator (total assets) decreases."
+   }
+  ]
+ }
+]
