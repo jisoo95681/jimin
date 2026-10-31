@@ -1,0 +1,295 @@
+[
+ {
+  "id": "esg31-1",
+  "source": "31 Oct paste (ESG test, Corporate Issuers Module 2)",
+  "readings": [
+   14
+  ],
+  "title": "Blass: Titian International, ESG factors and DCF valuation",
+  "body": "Theresa Blass manages the Toptier Balanced Fund (the Fund) and recently hired John Yorkton, a junior analyst, to help her research investment opportunities. Blass plans to integrate environmental, social, and governance (ESG) factors into her analysis. She is researching an equity investment in Titian International, a global steel producer. She asks Yorkton to identify ESG factors impacting Titian and estimate the equity valuation for the company.Yorkton uses proprietary methods to identify the ESG factors.\n\nYorkton points out that Titian’s steel production is energy intensive and relies on coal in producing its main product, stainless steel. The firm’s major customers are oil and gas firms using stainless steel in their drilling operations. Most of Titian’s steel capacity is located in developing economies, where it currently faces few environmental regulations. Titian has a 10-member board with a chairperson and 5 independent members. The chairperson is not the CEO, and the board is diverse, with 6 women. The company has an excellent record on employee health and safety. In a discussion with Blass about ESG factors in investment analysis, Yorkton makes the following statements:\n\nStatement 1:\nMaterial ESG information used in investment analysis is best obtained from the individual companies.\n\nStatement 2:\nThe level of disclosure varies among companies because these disclosures are voluntary.\n\nStatement 3:\nThe time horizon has little effect on the materiality of the underlying ESGfactors.\n\nYorkton integrates ESG factors into the equity valuation of Titian. He believes the company faces significant long-term risk due to regulatory changes regarding greenhouse gas emissions in the developing economies. These changes will have a negative impact on Titian’s steel capacity and its production costs. Based on long-term forecasts from the International Energy Agency (IEA), Yorkton expects oil and natural gas demand to decline over the next decade, reducing oil company capital expenditures on exploration and drilling. He uses a discounted cash flow model to value Titian stock.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The potential problem with Yorkton’s approach to identifying ESG factors is the:",
+    "options": [
+     "promotion of uniform accounting standards.",
+     "subjective assessment of ESG scores and rankings.",
+     "inconsistent reporting of ESG information and metrics among firms."
+    ],
+    "answer": "C",
+    "why": "C is correct. Yorkton uses the proprietary method to identify company and industry ESG factors. This approach relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K. The problem is inconsistent reporting of ESG information and metrics among firms. The level of disclosure also varies considerably among companies because ESG-related disclosures are voluntary. This creates comparability issues for analysts.\n\nA is incorrect because the promotion of uniform accounting standards is an alternative approach used to identify ESG reports. This approach involves not-for-profit initiatives and sustainability reporting frameworks that develop a standardized framework of ESG disclosures in corporate reporting. As an example, the Sustainable Accounting Standards Board (SASB) seeks to promote uniform accounting standards.\n\nB is incorrect because it relates to an alternative approach to identifying company and industry ESG factors. This approach involves using information supplied by ESG data vendors, such MSCI or Sustainalytics. The vendors provide ESG scores and/or rankings for each company. The problem with this approach is the subjective element to the interpretation of ESG scores and rankings."
+   },
+   {
+    "n": 2,
+    "q": "The most relevant industry risk factors affecting Titian are:",
+    "options": [
+     "social.",
+     "governance.",
+     "environmental."
+    ],
+    "answer": "C",
+    "why": "C is correct. In identifying a company’s ESG risks and opportunities, an analyst must determine which ESG factors are relevant to its industry. Industries such as energy and steel are typically more impacted by environmental factors. This is clearly the case with Titian. Titian’s steel production is energy intensive and relies on coal in producing its main product, stainless steel. Its major customers are oil and natural gas companies, and most of its steel capacity is located in developing economies, where it currently faces few environmental regulations. Changes in such regulations and projected declining demand for its main product are major risk factors for the firm.\n\nA is incorrect because social factors are typically not the most important industry-related ESG risk factors for steel companies. Employee health and safety is a material social factor for this company. This is not a risk since the company has an excellent record on employee health and safety.\n\nB is incorrect because governance factors are not a major risk for Titian. Titian’s board comprises 10 members, of whom 5 are independent. In addition, the board has gender diversity and no CEO duality, since the chairperson is not the CEO."
+   },
+   {
+    "n": 3,
+    "q": "Which of the statements made by Yorkton on ESG factors in investment analysis is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Statement 2 is correct because the level of disclosure varies considerably among companies since ESG-related disclosures are voluntary. This creates a comparability issue for analysts. This is a problem associated with the proprietary methods used to identify company and industry ESG factors.\n\nA is incorrect because Statement 1 is incorrect. The problems in doing ESG investment analysis based on company information are that the reporting of this information is inconsistent and that disclosures vary among companies.\n\nC is incorrect because Statement 3 is incorrect. The time horizon is an important factor affecting the materiality of the underlying ESG factors. Some ESG issues may affect a company’s performance in the short term, whereas other issues may be more relevant in the long term. This is especially true in credit analysis because of the different maturities of the bonds.\n\n4Essay1 / 1 point\nTitian faces long-term risk from ____ due to potential regulatory changes in the developing economies.\n\nEnvironmental factor\nFeedback\nTitian faces long-term risk from stranded assets due to potential regulatory changes in the developing economies.\n\nIf regulatory changes on greenhouse gas emissions are enacted in these developing economies, much of Titian’s stainless steel capacity will become obsolete or not economically viable. This will result in ESG-related adjustments to Titian’s balance sheet. The further reduction in oil demand will make the steel capacity economically unviable."
+   },
+   {
+    "n": 4,
+    "q": "Titian faces long-term risk from ____ due to potential regulatory changes in the developing economies.",
+    "options": [],
+    "answer": "",
+    "why": "Stranded assets: much of the stainless steel capacity becomes obsolete or not economically viable."
+   },
+   {
+    "n": 5,
+    "q": "Yorkton’s ESG integration approach is likely to impact equity valuation by:",
+    "options": [
+     "increasing revenues.",
+     "raising the discount rate.",
+     "reducing operating costs."
+    ],
+    "answer": "B",
+    "why": "B is correct. Titian faces significant long-term environmental risk factors. The imposition of stricter regulation on greenhouse gas emissions in the developing countries will result in stranded assets, as much of Titian steel capacity becomes obsolete and not economically viable. Shifting away from low-cost coal usage will likely result in higher operating costs, and declining oil and natural gas demand will result in lower revenues for stainless steel. Thus Yorkton should raise the discount rate for Titian to account for the higher environmental risk.\n\nA is incorrect because Titian’s revenues are likely to decline as a result of the projected fall in demand for oil and natural gas. As a result, oil and natural gas companies will cut their exploration and drilling budgets and reduce their purchases of stainless steel.\n\nC is incorrect since operating costs are likely to rise as Titian shifts away from using low-cost coal to more expensive energy sources."
+   },
+   {
+    "n": 6,
+    "q": "After integrating the ESG factors into the discounted cash flow model, the equity value of Titian is likely to:",
+    "options": [
+     "decrease.",
+     "remain unchanged.",
+     "increase."
+    ],
+    "answer": "A",
+    "why": "A is correct. The stock price for Titian is likely to decline. Titian faces significant long-term environmental risk as a result of more stringent future regulation on greenhouse gas emissions in the developing economies and a future decline in demand for its main product, stainless steel. Thus in the discount cash flow model, Titian should increase the cost of equity and most likely lower the growth rate in cash flow. Both factors will cause the price to fall.\n\nB is incorrect since the price of Titian is likely to decline and not remain unchanged.\n\nC is incorrect since the price of Titian is likely to decline and not increase."
+   }
+  ]
+ },
+ {
+  "id": "esg31-2",
+  "source": "31 Oct paste (ESG test, Corporate Issuers Module 2)",
+  "readings": [
+   14
+  ],
+  "title": "Marker: BR Hotels, ESG in corporate bonds",
+  "body": "Emily Marker, CFA, is a fixed-income analyst for the Namsan Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of BR Hotels, a publicly traded boutique hotel company. Marker notes that BR Hotels is a “green hotel” company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. The founding family owns 55% of the outstanding shares. Each ownership share has equivalent voting rights.The board of directors of BR Hotels consists of 15 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry.\n\nBR Hotels has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Marker and her supervisor discuss how BR Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Marker integrates ESG factors in the investment valuation of BR Hotels’ corporate bonds.",
+  "questions": [
+   {
+    "n": 7,
+    "q": "The potential conflict between or among shareholders and managers of BR Hotels can best be described as:",
+    "options": [
+     "voting caps.",
+     "a principal-agent problem.",
+     "a principal-principal problem."
+    ],
+    "answer": "C",
+    "why": "C is correct. BR Hotels has concentrated ownership, given that the family owns 55% of the shares. It also has concentrated voting power, since each ownership share has equal voting rights. In this ownership structure, the controlling shareholders have power over both management and minority shareholders. The controlling shareholders are referred to as strong shareholders and the managers as weak managers. The conflict in this structure exists between the controlling shareholders and the minority shareholders. The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. This conflict is referred to as a principal-principal problem.\n\nA is incorrect since the conflict for BR Hotels is a principal-principal problem. Voting caps are legal restrictions on the voting rights of large share positions. They result from an ownership structure of concentrated ownership and dispersed voting rights.\n\nB is incorrect since the conflict for BR Hotels is a principal-principal problem. The principal-agent problem occurs when the ownership structure has dispersed ownership and dispersed voting rights. In this case, the structure has weak shareholders and strong management, with a potentially significant conflict between the shareholders and the management."
+   },
+   {
+    "n": 8,
+    "q": "BR Hotels’ corporate governance risk is increased by:",
+    "options": [
+     "CEO duality.",
+     "family control.",
+     "the low percentage of independent board members."
+    ],
+    "answer": "C",
+    "why": "C is correct. The corporate governance risk for BR Hotels is high due to a low percentage of independent board members. Of the 15 members on the board, only one is independent. Many OECD countries have introduced a recommendation for the minimum ratio of independent directors serving on the board. They typically set the minimum ratio of independent directors in a range of 20%–50% or greater. BR Hotels falls below this range.\n\nA is incorrect since CEO duality is not a governance problem for BR Hotels. BR Hotels’ CEO and chairperson are separate, so there is no CEO duality. This is typically a sign of effective corporate governance. The independent chairperson and CEO roles help protect investor interests.\n\nB is incorrect because family control is not likely to increase governance risk for BR Hotels. Family control lowers the risks associated with principal-agent problems. This is the result of the family’s having concentrated ownership and management responsibility. The lower risk associated with the principal-agent problem is somewhat offset by the drawbacks of family control, which include poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent."
+   },
+   {
+    "n": 9,
+    "q": "The security analysis of BR Hotels is most likely focused on:",
+    "options": [
+     "mitigating downside risk.",
+     "adjusting the discount rate.",
+     "identifying potential opportunities."
+    ],
+    "answer": "A",
+    "why": "A is correct. The implementation of ESG factors in security analysis differs for equity analysis and fixed-income analysis. For BK Hotels’ corporate bonds, the focus of ESG integration is on mitigating downside risk. In contrast, in equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk.\n\nB is incorrect since adjusting the discount rate is typically used in equity analysis and not in fixed-income analysis. In valuing a stock, an analyst may choose to adjust the discount factor to account for the ESG risk. In fixed-income analysis, the credit spread or CDS is adjusted to reflect the ESG risk.\n\nC is incorrect since identifying potential opportunities is used in equity analysis and not in fixed-income analysis. In fixed-income analysis, the focus of ESG integration is on mitigating downside risk. In equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk."
+   },
+   {
+    "n": 10,
+    "q": "After integrating the ESG factors, the credit spread on BR Hotels’ bonds is most likely to:",
+    "options": [
+     "decrease.",
+     "remain unchanged.",
+     "increase."
+    ],
+    "answer": "C",
+    "why": "C is correct. BR Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 women out of 15 members), and low percentage of board members with hotel industry experience (20%). These factors are likely to increase investors’ perception of the corporation’s risk. The social risk for BR Hotels is also high. BR Hotels has a high labor turnover rate, pays most of its workforce at or near the minimum wage, and offers no health benefits. Legislation raising the minimum wage and the growing pressure on BR Hotels to offer benefits would increase operating costs. This could have a negative impact on future cash flows, which would be detrimental to the bond holders. The valuation of BR Hotels’ bonds could be adversely affected by the higher ESG risk. To account for the higher ESG risk, the credit spread on BR Hotels’ bonds is likely to increase.\n\nA is incorrect since the credit spread on BR Hotels’ bonds is likely to increase and not decrease.\n\nB is incorrect since the credit spread on BR Hotels’ bonds is likely to increase and not remain unchanged."
+   }
+  ]
+ },
+ {
+  "id": "esg31-3",
+  "source": "31 Oct paste (ESG test, Corporate Issuers Module 2)",
+  "readings": [
+   14
+  ],
+  "title": "Tyler: ChemiKa and PlastiKa, governance and green bonds",
+  "body": "Sugi Tyler is a chemical industry analyst for a global investment firm. Tyler is researching the impact of environment, social, and governance (ESG) issues as they relate to ChemiKa LLC (ChemiKa) and PlastiKa Corp (PlastiKa). She summarizes the companies' ownership and governance structures in Exhibit 1.\n\nExhibit 1\n \tChemiKa\tPlastiKa\nOwnership\tConcentrated\tDispersed\nVoting power\tConcentrated\tDispersed\nTotal number of directors \t19\t8\nNumber of independent directors\t12\t4\nTwo-tiered board\tNo\tYes\nCEO duality\tYes\tNo\nAverage board tenure\t8 years\t14 years\nIndependent committees:\nAudit\tYes\tNo\nCompensation\tYes\tYes\nDirector selection\tNo\tYes\nTyler shares this data with her co-worker Kim Myer and asks Myer to determine the risk of ChemiKa’s governance structure. Myer states:\"ChemiKa’s ownership and voting structure will likely diminish the ownership rights of minority shareholders which indicates principal-agent problem.\"\n\nTo evaluate the corporate governance policies and procedures of the two companies, Tyler considers the rankings provided by an independent ESG data analysis firm specializing in board and governance structure. The contributions of each board member are only considered after at least one year of service.\n\nThe ESG data analysis firm uses a scoring system awarding one point for favorable characteristics among the following:\n\nCEO duality is absent.\nAverage board tenure is below ten years.\nFor board independence, a two-tiered board is considered favorable. A simple majority of independent directors is generally favorable. However, in a one-tiered board which is considered unfavorable, a 60% majority of independent directors is the favorable threshold.\nIndependent committees for audit, compensation and director selection are present (1 point for the presence of each independent committee).\nIn recent years, both companies have faced increasing concern about the environmental impact of their products. In response to actions by shareholders, regulators and other constituencies, industry producers have made substantial capital investments toward production of more biodegradable products. ChemiKa has built a large bio-plastics plant and financed the project with green bonds which go alongside of the company’s conventional “plain vanilla” corporate bonds. Tyler notices that ChemiKa’s green bonds trade with tighter spreads than its conventional bonds.\n\nPlastiKa announces the addition of a chemical engineer as a new independent member of its board. Although not yet familiar with company's core operations, it is expected that he will lead the effort to meet increasing regulatory requirements and aid in new product research and development.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "Myer’s statement about ChemiKa's governance risk is:",
+    "options": [
+     "correct.",
+     "incorrect with respect to minority shareholders.",
+     "incorrect with respect to principal-agent problem."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the conflict described for ChemiKa is a principal-principal problem, not principal-agent problem. The combination of concentrated ownership and concentrated voting power often results in controlling shareholders maintaining a position of power over both managers and minority shareholders and this conflict is known as a principal–principal problem. | B. Incorrect because the statement is correct regarding minority shareholders. The conflict described for ChemiKa is a principal-principal problem. The combination of concentrated ownership and concentrated voting power often results in controlling shareholders maintaining a position of power over both managers and minority shareholders and this conflict is known as a principal–principal problem. | C. Correct because the conflict described for ChemiKa is a principal-principal problem, not a principal-agent problem. The combination of concentrated ownership and concentrated voting power often results in controlling shareholders maintaining a position of power over both managers and minority shareholders and this conflict is known as a principal–principal problem. Managers are considered weak whereas in a principal-agent conflict managers are strong."
+   },
+   {
+    "n": 12,
+    "q": "Based on the ESG data analysis firm's scoring system and Exhibit 1, compared to PlastiKa, ChemiKa most likely ranks:",
+    "options": [
+     "lower.",
+     "the same.",
+     "higher."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because based on the ESG data analysis firm's scoring system and Exhibit 1, ChemiKa and PlastiKa each has 4 points and they rank the same. | B. Correct because based on the ESG data analysis firm's scoring system and Exhibit 1, ChemiKa and PlastiKa each has 4 points and they rank the same: Exhibit 1 ChemiKa\tPlastiKa\tSCORE ChemiKa; PlastiKa Ownership\tConcentrated\tDispersed\tnot scored Voting power\tConcentrated\tDispersed\tnot scored Total number of directors \t19\t8\tnot scored Number of independent directors\t12\t4\t1 (63% majority), 0 (50% is not a majority) Two-tiered board\tNo\tYes\t0; 1 CEO duality\tYes\tNo\t0; 1 Average board tenure\t8 years\t14 years\t1; 0 Independent committees: Audit\tYes\tNo\t1; 0 Compensation\tYes\tYes\t1; 1 Director selection\tNo\tYes\t0; 1 Total\t \t \t4; 4 | C. Incorrect because based on the ESG data analysis firm's scoring system and Exhibit 1, ChemiKa and PlastiKa each has 4 points and they rank the same."
+   },
+   {
+    "n": 13,
+    "q": "The market pricing of ChemiKa's bonds that Tyler notices is most likely due to:",
+    "options": [
+     "greenwashing.",
+     "market demand.",
+     "greater bondholder recourse with the green bonds."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because greenwashing is the risk that the bond’s proceeds are not actually used for a beneficial environmental or climate-related project. If greenwashing were present, the proceeds from the new green bonds would have been used for additional non-green expenditures. ChemiKa's project to build a large bio-plastics plant is financed with green bonds. Also, greenwashing would diminish the company's credibility resulting in a lower value (higher credit spread) for all of its bonds. | B. Correct because green bonds typically resemble an issuer’s conventional bonds, with the exception that the bond proceeds are earmarked for green projects. Green bonds normally have the same credit ratings and bondholder recourse as conventional bonds of the same issuer (all else being equal). Some green bonds, however, may command a premium, or tighter credit spread, versus comparable conventional bonds because of market demand. | C. Incorrect because green bonds normally have the same credit ratings and bondholder recourse as conventional bonds of the same issuer (all else being equal)."
+   },
+   {
+    "n": 14,
+    "q": "Which of the following board policies and practices will be most improved by PlastiKa's new board member?",
+    "options": [
+     "Tenure",
+     "ESG risks",
+     "Governance"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the new board member has not yet served for at least one year and will therefore have no immediate effect on tenure. | B. Correct because the new board member has expertise in chemical engineering to apply to environmental regulatory issues as well as product research and development. In certain sectors/industries that rely on natural resources or face potentially large ESG risks, board members typically have expertise in environmental, climate, or social issues. | C. Incorrect because the new board member shows no evidence of broad experience or expertise in core company operations, management and governance. A board with concentrated skills and experience may lack sufficient expertise to govern, as may a board with diverse skills and expertise that are not directly related to the company’s core operations."
+   }
+  ]
+ },
+ {
+  "id": "esg31-4",
+  "source": "31 Oct paste (ESG test, Corporate Issuers Module 2)",
+  "readings": [
+   14
+  ],
+  "title": "Quinn: QC Technology, ownership, governance and ESG materiality",
+  "body": "The board of directors of QC Technology, Inc. (QCT), a publicly-traded manufacturer of semiconductors and electronics, hires an advisory team to complete an external review of the board's performance.\n\nAlex Quinn, an analyst on the external advisory team, summarizes QCT's current structure in Exhibit 1.\n\nExhibit 1\nOwnership Info\n  Equity type\tPublicly traded\n  Voting type\tStraight voting\n  Percentage of shares owned by largest shareholder\t40\nBoard Information\n  Board structure\tOne-Tier\n  CEO duality\tYes\n  Number of directors [including 5 independent*, 4 female]\t16\n  Average Tenure [years]\t8 \n  Percentage of directors with industry experience\t40\n* Minimum independent directors required is 3.\nQuinn notes that two directors are executives of significant QCT suppliers and each holds 10% of QCT's shares. QCT maintains a similar ownership stake in each supplier. QCT's founder, who is the largest QCT shareholder, also sits on the board of directors for each supplier. \n\nIn a discussion with Quinn's colleagues on the risk premium associated with QCT's shares, several recommendations are made.  \n\nRecommendation 1: Create a dual-class share structure.\nRecommendation 2: Appoint a lead independent director.\nRecommendation 3: Target four independent directors at all times (minimum number required plus one).\nAfter the discussion, Quinn considers a fourth recommendation to reduce the risk premium by assessing the potential benefits of completing a public disclosure that confirms that all independent directors will be approved by the entire shareholder base and the non-controlling shareholders going forward. \n\nIn discussions with QCT's management team, Quinn learns that 35% of QCT's term debt is scheduled to be redeemed in two years and that the bondholder is not planning to renew. This bondholder provides QCT and Quinn with a copy of an ESG assessment report that they had completed within the last two months.  Also, the management team indicates that QCT plans to implement initiatives to change their business model as part of their 5-year strategic planning including efforts to improve on-going sustainability. \n\nInitiative 1: Expand into the manufacturing of graphics processors the following year.\nInitiative 2: Begin to convert existing manufacturing plants to renewable energy sources after three years.\nInitiative 3: Adopt new and more stringent supply chain and sourcing standards for raw materials the following year. \nAs Quinn prepares a proprietary 5-year ESG assessment on QCT, he validates that once the new plants outlined in Initiative 2 are fully operational, QCT anticipates an 1% to 2% increase in their manufacturing energy costs which is expected to be offset by an improved competitive position resulting from the emissions reduction versus their non-renewable energy competitors.",
+  "questions": [
+   {
+    "n": 15,
+    "q": "QCT's current company ownership structure is best described as:",
+    "options": [
+     "vertical.",
+     "dispersed.",
+     "horizontal."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because vertical (or pyramid) ownership involves a company or group that has a controlling interest in two or more holding companies, which in turn have controlling interests in various operating companies. The relationship with the two significant QCT suppliers that each maintain 10% ownership and board representation and QCT's ownership in the suppliers reflect a horizontal ownership structure. | B. Incorrect because dispersed ownership reflects the existence of many shareholders, none of which has the ability to individually exercise control over the corporation. The relationship with the two significant QCT suppliers that each maintain 10% ownership and board representation and QCT's ownership in the suppliers reflect a horizontal ownership structure. As outlined in Exhibit 1, the largest shareholder owns 40% in addition to the 20% supplier stake indicate a concentrated ownership. Concentrated ownerships reflects an individual shareholder or a group (called controlling shareholders) with the ability to exercise control over the corporation. & In this context, a group is typically a family, another company (or companies), or a sovereign entity. | C. Correct because horizontal ownership involves companies with mutual business interests (e.g., key customers or suppliers) that have cross-holding share arrangements with each other. The relationship with the two significant QCT suppliers that each maintain 10% ownership and board representation and QCT's ownership in the suppliers reflect a horizontal ownership structure."
+   },
+   {
+    "n": 16,
+    "q": "Based on the recommendations provided by Quinn's colleagues and the information outlined in Exhibit 1, the recommendation that will have the most impact on decreasing the risk premium on QCT's shares is:",
+    "options": [
+     "recommendation 1.",
+     "recommendation 2.",
+     "recommendation 3."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because QCT currently has a straight voting share structure. A dual-class share structure differs from straight voting in that company founders and/or management typically have shares with more voting power than the class of shares available to the general public. This would increase the risk premium on the company shares as it is a potential conflict of interest between minority shareholders and the company's founders and management. | B. Correct because as outlined in Exhibit 1, QCT's company structure includes CEO duality whereby the chief executive officer (CEO) also serves as chairperson on the board. CEO duality may raise concerns that the monitoring and oversight role of the board may be compromised relative to independent chairperson and CEO roles. This would increase risk premium on QCT shares. When the chairperson is not independent or the role is combined, a company may appoint a lead independent director to help protect investor interests. This would likely improve corporate governance and thus result in a decrease of the risk premium. | C. Incorrect because this would actually decrease the current number of independent directors from five to four (still above the minimum number of three directors).  It should also be noted that independent board directors are defined as those with no material relationship with the company with regard to employment, ownership, or renumeration. As a result, the two directors from QCT's suppliers would also not be considered independent."
+   },
+   {
+    "n": 17,
+    "q": "The public disclosure that Quinn considers for the fourth recommendation is best described as:",
+    "options": [
+     "a stewardship code.",
+     "shareholder activism.",
+     "a special voting arrangement."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because many countries have introduced voluntary (and, in some instances, involuntary) codes, known as stewardship codes, that encourage investors to exercise their legal rights and increase their level of engagement in corporate governance. In this example, the pro-active disclosure is related to a special voting arrangement to protect minority shareholders in confirming independent directors on the board. | B. Incorrect because shareholder activism refers to strategies used by shareholders to attempt to compel a company to act in a desired manner. In this example, the pro-active disclosure is related to a special voting arrangement to protect minority shareholders in confirming independent directors on the board. | C. Correct because a special voting arrangements is a requirement designed to improve the position of minority shareholders. In this example, the pro-active disclosure is related to a special voting arrangement to protect minority shareholders in confirming independent directors on the board."
+   },
+   {
+    "n": 18,
+    "q": "The initiative that would have the highest level of materiality in the ESG assessment provided to QCT and Quinn would be:",
+    "options": [
+     "Initiative 1.",
+     "Initiative 2.",
+     "Initiative 3."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because in fixed-income analysis, the integration of ESG is generally focused on mitigating downside risk until redemption or maturity of the investment (i.e., bond). The expansion into a new market would be considered a growth opportunity completed as part of an equity analysis of ESG. | B. Incorrect because the conversion of the existing manufacturing plans to renewable energy sources would be outside of the investment time horizon for the bondholder (term debt lender) as the bond is scheduled to be redeemed prior the new plants being completed. | C. Correct because for the ESG assessment, the adoption of more stringent sourcing standards for raw materials would be considered an Environmental category topic, have sufficient material impact on QCT's supply chain, and be within the investment time horizon for the term debt lender."
+   }
+  ]
+ },
+ {
+  "id": "esg31-5",
+  "source": "31 Oct paste (ESG test, Corporate Issuers Module 2)",
+  "readings": [
+   14
+  ],
+  "title": "Ferguson and Malik: Ouse Inc., family ownership and ESG",
+  "body": "Ouse Inc., based in England, is a private company that produces and retails skin care products, primarily soaps and lotions. Catherine Ferguson and her sister co-founded the company 10 years ago because of their shared interest in developing plant-based products that are not tested on animals. Initially the two sisters owned all the shares, but two years ago they implemented performance-based compensation for the top five senior managers, and as part of this process, the managers now own a combined 10% of the equity.\n\nThe company is looking to expand its equity base to help fund a new production facility and support growth plans. Ferguson, who is responsible for the company’s financial management, is meeting with Haji Malik, a financial consultant, to explore Ouse’s equity financing options. Ferguson asks if they were to go public, could they have a share structure similar to a company like Facebook, where the co-founders could retain voting control of the company through the issuance of multi-voting ordinary (common) shares.\n\nMalik informs her that the dual class shares she has described are not permitted in the United Kingdom. He states that before Ouse considers going public, there are other options available. He suggests they look for private equity investment. He mentions being familiar with a private equity fund that runs a socially responsible investment (SRI) pool that could potentially be interested in Ouse. He says in order to qualify to be included in the SRI pool, a company needs to demonstrate positive attributes in all areas of ESG (environmental, social, and governance) considerations.\n\nFerguson is very interested in being associated with an SRI fund and asks how Ouse could qualify for the investment. Malik explains that the private equity fund he is thinking of uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups.\n\nFerguson explains to Malik that Ouse is implementing a new initiative to reduce the packaging associated with their products. The company will stock the majority of their products in bulk containers in their retail outlets. Customers will purchase refillable bottles, available in three different sizes, to be used for future purchases. This change will attract customers interested in reducing their plastic footprint. The company also expects the change to reduce shipping, packaging, and handling costs, both at the distribution centers and in the retail stores. The numerous individual bottles that would have been packaged for shipping and then unpacked and shelved at the stores will be replaced with larger bulk containers. Malik notes that when announced, analysts will use this information in their valuation of Ouse.",
+  "questions": [
+   {
+    "n": 19,
+    "q": "The change in ownership structure that occurred two years ago most likely addressed which of the following issues associated with family-owned businesses?",
+    "options": [
+     "Poor transparency",
+     "Interlocking directorships",
+     "Ability to attract quality management"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Family-owned businesses often suffer from a lack of transparency. The granting of some equity to senior management might not necessarily improve transparency because the Fergusons are still majority shareholders. | B. Incorrect. Interlocking directorships can be a problem in family-owned businesses when there is a corporate group controlling several corporations. There is no mention here of other related companies. | C. Correct. Ouse was initially a family-owned business, owned by Catherine Ferguson and her sister, which can make it difficult to attract quality talent for management positions. However, the implementation of a performance-based compensation plan two years ago would improve the motivation and rewards available to management and make it easier to attract quality talent."
+   },
+   {
+    "n": 20,
+    "q": "If Ouse were to go public with the share structure similar to Facebook that Ferguson asked about, which governance issue would most likely arise?",
+    "options": [
+     "Voting cap restrictions",
+     "Principal–agent problem",
+     "Principal–principal problem"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Voting caps describe legal restrictions on the voting rights of large share positions and are usually designed to deter foreign investors from obtaining control of strategically important local companies. | B. Incorrect. The principal–agent problem arises when voting power and ownership are both dispersed, leading to weak shareholders and strong managers. In this situation, managers may seek to use company resources to pursue their own interests. | C. Correct. Ferguson asked about the possibility of a dual class share structure, which creates concentrated ownership and concentrated voting power. The controlling shareholders may be able to allocate resources to their own benefit at the expense of the minority shareholders. This situation is known as the principal–principal problem."
+   },
+   {
+    "n": 21,
+    "q": "Which of the following approaches to identifying a company’s ESG factors best describes the one used by the private equity fund that Malik mentions?",
+    "options": [
+     "ESG data providers",
+     "Proprietary methods",
+     "Not-for-profit initiatives"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. ESG data providers would be independent organizations, such as MSCI or Sustainalytics, from whom the private equity fund would purchase information. | B. Correct. The private equity fund is using proprietary methods to identify and assess ESG investments. Proprietary methods include analysts using their own judgement based on information available from corporate reports, industry organizations, news reports, and environmental groups. | C. Incorrect. GRI (Global Reporting Initiative) and SASB (Sustainable Accounting Standards Board) are examples of not-for-profit organizations working to develop sustainability reporting standards. The private equity firm is not relying on those sources."
+   },
+   {
+    "n": 22,
+    "q": "Analysts interested in incorporating ESG factors into their analysis will most likely adjust for the announcement of the changes arising from Ouse’s new packaging initiative by:",
+    "options": [
+     "increasing the risk premium.",
+     "increasing the company’s fair value.",
+     "modifying only the qualitative ESG analysis."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The new packaging initiative is expected to reduce costs associated with shipping, packaging, and handling. These savings should increase Ouse’s operating margins and operating cash flows. The increase in margins and cash flow would decrease the risk premium, not increase it. | B. Correct. The new packaging initiative is expected to reduce costs associated with shipping, packaging, and handling. These savings should increase Ouse’s operating margins and operating cash flows. The higher earnings should result in an increase in the fair value estimate of Ouse. | C. Incorrect. Reducing packaging and the plastic footprint of customers increases the company’s reputation as a leader in environmental initiatives and would be reflected positively in the qualitative ESG analysis. But the plan will also save costs that will increase operating margins and cash flows, which are quantitative ESG factors."
+   }
+  ]
+ }
+]
