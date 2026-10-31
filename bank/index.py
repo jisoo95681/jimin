@@ -19,7 +19,7 @@ for v in app: rows.setdefault(num_of(v['reading']),[]).append(('app',v['id'],v['
 bank=[]
 stand=len(json.load(open(os.path.join(ROOT,'bank','standalone_questions.json')))) if os.path.exists(os.path.join(ROOT,'bank','standalone_questions.json')) else 0
 for f in sorted(glob.glob(os.path.join(ROOT,'bank','*.json'))):
-    if os.path.basename(f).startswith('standalone'): continue
+    if os.path.basename(f).startswith(('standalone','mock_')): continue
     for v in json.load(open(f)):
         bank.append(v)
         for r in v['readings']: rows.setdefault(r,[]).append(('bank',v['id'],v['title'],len(v['questions'])))

@@ -13,3 +13,7 @@ Purpose: keep every vignette the user has pasted, with the answer key, so that q
 2. Skip a vignette already in the bank (compare the first words of the body), tag every item with its reading numbers, rebuild `INDEX.md`, commit and push.
 3. Keep every reading represented; tell the user which readings are still empty.
 4. After a compaction, read `bank/INDEX.md` first, then load only the vignettes needed.
+
+## Assembled mocks
+- `mock_ga.json` = **Mock 가** (assembled 31 Oct for the user to take on Tuesday 3 Nov). 16 vignettes × 4 questions = 64 Q, built only from stored real vignettes (no invented ones) on readings not in Mock 1/2. Items copy existing vignettes (field `origin`), so `index.py` skips `mock_*.json`. Answer string: BABBBAABBABABACCBBCBCABABACABABBABABBCBACACACAABCCABBCBBBCCBBBAA. Not sent to the user; mark when they paste their answers.
+- User rule: never write new vignettes for empty readings; if a reading has none, leave it out. Ethics 40–42 count as reading 41.
