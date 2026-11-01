@@ -1,0 +1,222 @@
+[
+ {
+  "id": "pE-1",
+  "source": "Assistant-written practice (Paper E, 1 Nov: FSA 7 and 9 vignettes the user struggled with, numbers changed)",
+  "readings": [
+   7
+  ],
+  "title": "Paper E · Larkspur and Tamsin: Consolidation, goodwill methods and the equity method",
+  "body": "Larkspur plc, a manufacturer headquartered in the United Kingdom, reports under IFRS. On 31 December 2024 Larkspur paid £560 million in cash for a 70 percent stake in Tamsin Co. and obtained control. Larkspur has not yet chosen between the partial goodwill and full goodwill methods, and analyst Mira Okafor wants to compare the outcomes.\n\nTamsin's recorded net assets (book value) were £600 million at the acquisition date. The fair values of all of Tamsin's assets and liabilities equal their book values except for unrecorded customer relationships with a fair value of £80 million and a remaining life of 8 years (straight-line). If the full goodwill method is used, the fair value of the non-controlling interest is £240 million.\n\nOkafor forecasts that both companies' 2025 results will equal the 2024 results shown, excluding any acquisition accounting adjustments. Larkspur's net income of £150 million does not include any income from Tamsin. The balance sheets below reflect the £560 million paid, but do not yet reflect the accounting method chosen.\n\nExhibit 1\nIncome statements 2024 (£ millions)\tLarkspur\tTamsin\nRevenue\t1,800\t900\nNet income\t150\t60\n\nExhibit 2\nBalance sheets 31 Dec 2024 (£ millions)\tLarkspur\tTamsin\nCash\t90\t30\nReceivables\t140\t70\nInventory\t210\t100\nTotal current assets\t440\t200\nProperty, plant and equipment, net\t2,300\t1,000\nInvestment in Tamsin\t560\t—\nTotal assets\t3,300\t1,200\nCurrent liabilities\t260\t150\nLong-term debt\t900\t450\nTotal liabilities\t1,160\t600\nTotal equity\t2,140\t600\nTotal liabilities and equity\t3,300\t1,200",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Using the partial goodwill method, the goodwill Larkspur recognizes on the acquisition is closest to:",
+    "options": [
+     "£120 million",
+     "£84 million",
+     "£140 million"
+    ],
+    "answer": "B",
+    "why": "FVIA = 600 + 80 = 680. Partial goodwill = 560 – 70% × 680 = 560 – 476 = 84. £120m is full goodwill (560 + 240 – 680). £140m uses book value (560 – 70% × 600) and forgets the customer relationships."
+   },
+   {
+    "n": 2,
+    "q": "At 31 December 2024, Larkspur's total equity (including any non-controlling interest) will be highest if it reports the investment using:",
+    "options": [
+     "the equity method.",
+     "consolidation with partial goodwill.",
+     "consolidation with full goodwill."
+    ],
+    "answer": "C",
+    "why": "Parent equity is 2,140 in every case. NCI partial = 30% × 680 = 204, so total 2,344. NCI full = fair value 240, so total 2,380. The equity method has no NCI: 2,140. Full is highest."
+   },
+   {
+    "n": 3,
+    "q": "Using 2025 revenue divided by total assets at 31 December 2024, Larkspur's total asset turnover will be highest under:",
+    "options": [
+     "the equity method.",
+     "consolidation with partial goodwill.",
+     "consolidation with full goodwill."
+    ],
+    "answer": "B",
+    "why": "Equity method: 1,800 ÷ 3,300 = 0.545. Partial: assets = 3,300 – 560 + 1,200 + 80 + 84 = 4,104; 2,700 ÷ 4,104 = 0.658. Full: assets = 4,140; 2,700 ÷ 4,140 = 0.652. Same revenue, more assets under full, so partial is highest."
+   },
+   {
+    "n": 4,
+    "q": "Larkspur's 2025 net income attributable to Larkspur shareholders is closest to:",
+    "options": [
+     "£192 million",
+     "£200 million",
+     "£185 million"
+    ],
+    "answer": "C",
+    "why": "Amortization of customer relationships = 80 ÷ 8 = 10. Tamsin's adjusted income = 60 – 10 = 50. NCI share = 30% × 50 = 15. Attributable = 150 + 60 – 10 – 15 = 185. £200m is total consolidated income including NCI. £192m (150 + 70% × 60) forgets the amortization."
+   }
+  ]
+ },
+ {
+  "id": "pE-2",
+  "source": "Assistant-written practice (Paper E, 1 Nov: FSA 7 and 9 vignettes the user struggled with, numbers changed)",
+  "readings": [
+   7
+  ],
+  "title": "Paper E · Marden and Osric: Equity method income, goodwill, carrying value and an SPE",
+  "body": "Marden SA, a European company reporting under IFRS, acquired 7.0 million of the 20.0 million shares outstanding of Osric AG on 1 January 2020 at €8.00 per share. Marden classifies Osric as an associate. Additional data are in Exhibit 1.\n\nExhibit 1: Investment in Osric AG\nItem (€ millions unless stated)\tValue\nNet book value of Osric at 1 January 2020\t120.0\nFair value of Osric's plant and equipment above book value\t24.0\nRemaining life of the plant and equipment (straight-line)\t12 years\nCarrying value of Marden's investment in Osric, 1 January 2024\t61.0\nOsric net income, 2024\t28.0\nDividends paid by Osric, 2024\t€1.20 per share\n\nMarden also plans to raise funds against its trade receivables. It would create a special purpose entity (SPE) that it controls, invest €10 million of cash in the SPE, and have the SPE borrow €40 million from a bank. The SPE would then use the €50 million to buy €50 million of receivables from Marden. Marden will absorb any losses of the SPE.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "The contribution of Osric to Marden's 2024 net income is closest to:",
+    "options": [
+     "€9.8 million",
+     "€17.5 million",
+     "€9.1 million"
+    ],
+    "answer": "C",
+    "why": "Ownership = 7.0 ÷ 20.0 = 35%. Share of income = 35% × 28.0 = 9.8. Amortization = 35% × 24.0 ÷ 12 = 0.7. Contribution = 9.8 – 0.7 = 9.1. €9.8m forgets amortization. €17.5m adds dividends (8.4), which are not income."
+   },
+   {
+    "n": 6,
+    "q": "Which of the following best describes the accounting for goodwill from the Osric investment?",
+    "options": [
+     "No goodwill arises under the equity method.",
+     "€14.0 million is included in the investment in Osric account.",
+     "€5.6 million is included in the investment in Osric account."
+    ],
+    "answer": "C",
+    "why": "Price = 7.0 × 8.00 = 56.0. FVIA = 120 + 24 = 144. Goodwill = 56.0 – 35% × 144 = 56.0 – 50.4 = 5.6, inside the investment account. €14.0m = 56.0 – 35% × 120 is the excess over book value; it forgets the 35% × 24 = 8.4 allocated to plant and equipment."
+   },
+   {
+    "n": 7,
+    "q": "The carrying value of Marden's investment in Osric at 31 December 2024 is closest to:",
+    "options": [
+     "€61.7 million",
+     "€62.4 million",
+     "€70.1 million"
+    ],
+    "answer": "A",
+    "why": "Beginning 61.0 + share of income 9.8 – amortization 0.7 – dividends 35% × 24.0 = 8.4 → 61.7. €70.1m forgets dividends. €62.4m forgets amortization."
+   },
+   {
+    "n": 8,
+    "q": "Compared with its balance sheet before the SPE transaction, Marden's consolidated balance sheet will most likely show:",
+    "options": [
+     "lower receivables, higher cash and unchanged debt.",
+     "unchanged receivables, higher cash and higher debt.",
+     "unchanged cash, unchanged receivables and unchanged debt."
+    ],
+    "answer": "B",
+    "why": "Marden controls the SPE, so it consolidates it. Cash = –10 (invested) + 50 (paid for receivables) = +40. The SPE's bank loan is +40 debt. The receivables are still held inside the group, so they are unchanged. Result looks like borrowing against the receivables. Option 1 is a true sale; option 3 would need no outside funding."
+   }
+  ]
+ },
+ {
+  "id": "pE-3",
+  "source": "Assistant-written practice (Paper E, 1 Nov: FSA 7 and 9 vignettes the user struggled with, numbers changed)",
+  "readings": [
+   9
+  ],
+  "title": "Paper E · Tavistock and Kovar: Functional currency choice, net liability exposure and hyperinflation",
+  "body": "Tavistock Foods plc is a UK company that reports in pound sterling under IFRS. It owns Kovar Sp. z o.o., a subsidiary in Poland whose local currency is the Polish zloty (PLN). Tavistock has not yet determined Kovar's functional currency. Analyst Dev Rao is comparing the outcomes if the PLN or the GBP is chosen. Kovar uses the weighted-average cost method for inventory, and input prices in Poland have been mildly falling.\n\nKovar has accumulated losses. Its balance sheet at 31 December 2025 is shown in Exhibit 1, and exchange rates in Exhibit 2. Assume that Kovar's balance sheet position was the same at the beginning of the year.\n\nExhibit 1: Kovar Sp. z o.o.\nBalance sheet 31 Dec 2025 (PLN millions)\tAmount\nCash\t60\nAccounts receivable\t120\nInventory\t220\nFixed assets, net\t500\nTotal assets\t900\nAccounts payable\t140\nLong-term debt\t860\nTotal liabilities\t1,000\nShare capital\t200\nAccumulated losses\t(300)\nTotal equity\t(100)\nTotal liabilities and equity\t900\n\nExhibit 2\nExchange rates (PLN per GBP)\tRate\n1 January 2025\t5.00\nWeighted average when inventory was acquired\t5.10\nAverage rate in 2025\t5.20\n31 December 2025\t5.40",
+  "questions": [
+   {
+    "n": 9,
+    "q": "If the PLN is chosen as Kovar's functional currency, the translation effect for 2025 on Tavistock's financial statements will most likely be reported as:",
+    "options": [
+     "a gain in net income.",
+     "a decrease in the cumulative translation adjustment in equity.",
+     "an increase in the cumulative translation adjustment in equity."
+    ],
+    "answer": "C",
+    "why": "Current rate method: the translation result goes to equity (CTA), not net income. Exposure = net assets = –100 PLN, a net liability. The PLN weakens (PLN per GBP rises from 5.00 to 5.40), so the liability is worth fewer pounds: –100 ÷ 5.00 = –20.0 becomes –100 ÷ 5.40 = –18.5. The liability shrinks, so CTA increases."
+   },
+   {
+    "n": 10,
+    "q": "Tavistock's consolidated gross profit margin will most likely be highest if Kovar's results are translated using:",
+    "options": [
+     "the weighted-average cost method and the current rate method.",
+     "the weighted-average cost method and the temporal method.",
+     "FIFO and the current rate method."
+    ],
+    "answer": "A",
+    "why": "The PLN is weakening, so the current rate method gives the higher margin (temporal COGS uses the older, stronger-PLN rate 5.10 against the 5.20 average, which raises COGS in pounds). Prices are falling, so weighted average cost gives a higher margin than FIFO. Only weighted average + current rate satisfies both rules."
+   },
+   {
+    "n": 11,
+    "q": "If the GBP is chosen as Kovar's functional currency, the effect of the exchange rate change on Tavistock's 2025 financial statements will most likely be reported as:",
+    "options": [
+     "a remeasurement loss in net income.",
+     "an increase in the cumulative translation adjustment in equity.",
+     "a remeasurement gain in net income."
+    ],
+    "answer": "C",
+    "why": "GBP functional currency means the temporal method. Exposure = net monetary position = (60 + 120) – (140 + 860) = –820 PLN, a net monetary liability. The PLN weakens, so the liability is worth fewer pounds: a gain, reported in net income."
+   },
+   {
+    "n": 12,
+    "q": "If Poland becomes highly inflationary, Tavistock under IFRS would most likely translate Kovar's financial statements by:",
+    "options": [
+     "using the temporal method with no restatement for inflation.",
+     "restating them for inflation and then using the current exchange rate.",
+     "using the current rate method with no restatement for inflation."
+    ],
+    "answer": "B",
+    "why": "IAS 21 and IAS 29: restate the local-currency statements for inflation first, then translate at the current rate. The temporal method without restatement is the US GAAP treatment."
+   }
+  ]
+ },
+ {
+  "id": "pE-4",
+  "source": "Assistant-written practice (Paper E, 1 Nov: FSA 7 and 9 vignettes the user struggled with, numbers changed)",
+  "readings": [
+   9
+  ],
+  "title": "Paper E · Norwick and Kestrel: Temporal method, a strengthening foreign currency and net monetary assets",
+  "body": "Norwick, Inc. is a US company that reports in US dollars under US GAAP. Its Swiss subsidiary, Kestrel AG, reports in Swiss francs (CHF). Switzerland has seen mild inflation, and Kestrel records inventory using FIFO. Norwick's chief financial officer, Elena Brandt, is explaining to the board how the choice of Kestrel's functional currency affects the consolidated statements. She does not intend to identify the functional currency actually used.\n\nExhibit 1: Kestrel AG\nKestrel balance sheet 31 Dec 2025 (CHF millions)\tAmount\nCash\t400\nAccounts receivable\t250\nInventory\t300\nFixed assets, net\t1,200\nTotal assets\t2,150\nAccounts payable\t120\nLong-term debt\t200\nCommon stock\t900\nRetained earnings\t930\nTotal liabilities and equity\t2,150\n\nExhibit 2\nExchange rates (USD per CHF)\tRate\nWhen the first CHF 800 million of fixed assets was acquired\t0.95\nWhen the remaining CHF 400 million of fixed assets was acquired\t1.02\n31 December 2024\t1.04\nWeighted average when inventory was acquired\t1.06\nAverage rate in 2025\t1.07\n31 December 2025\t1.10",
+  "questions": [
+   {
+    "n": 13,
+    "q": "Norwick's consolidated gross profit margin for 2025 would be highest if Kestrel accounted for inventory using:",
+    "options": [
+     "FIFO, and its functional currency were the Swiss franc.",
+     "FIFO, and its functional currency were the US dollar.",
+     "LIFO, and its functional currency were the US dollar."
+    ],
+    "answer": "B",
+    "why": "Rates are USD per CHF and rising, so the CHF is strengthening. Then the temporal method gives the higher margin (inventory rate 1.06 is below the 1.07 average, so COGS in dollars is lower). Mild inflation makes FIFO higher than LIFO. FIFO + US dollar functional (temporal) is highest."
+   },
+   {
+    "n": 14,
+    "q": "If Kestrel's financial statements are translated using the temporal method, Norwick's consolidated fixed assets will most likely include:",
+    "options": [
+     "USD1,284 million.",
+     "USD1,168 million.",
+     "USD1,320 million."
+    ],
+    "answer": "B",
+    "why": "Fixed assets use the historical rates: 800 × 0.95 = 760 and 400 × 1.02 = 408; total = 1,168. 1,320 uses the year-end rate (1,200 × 1.10). 1,284 uses the average rate (1,200 × 1.07)."
+   },
+   {
+    "n": 15,
+    "q": "If the US dollar were Kestrel's functional currency, Norwick could reduce its balance sheet exposure by:",
+    "options": [
+     "using CHF 50 million of cash to buy additional inventory.",
+     "issuing CHF 50 million of long-term debt and holding the proceeds as cash.",
+     "using CHF 50 million of cash to repay long-term debt."
+    ],
+    "answer": "A",
+    "why": "Temporal exposure = net monetary position = (400 + 250) – (120 + 200) = +330, a net monetary asset. Cash to inventory swaps a monetary asset for a non-monetary one: 330 – 50 = 280, reduced. Repaying debt with cash lowers monetary assets and liabilities by the same 50: net unchanged at 330. Issuing debt and holding cash adds 50 to both: net unchanged."
+   },
+   {
+    "n": 16,
+    "q": "Assume Kestrel's net monetary position was unchanged during 2025. If the US dollar is the functional currency, the exchange rate effect in 2025 will most likely be:",
+    "options": [
+     "a remeasurement gain of USD9.9 million in net income.",
+     "a remeasurement loss of USD19.8 million in net income.",
+     "a remeasurement gain of USD19.8 million in net income."
+    ],
+    "answer": "C",
+    "why": "Net monetary position = +330 (asset). The CHF strengthens from 1.04 to 1.10, so a positive exposure gives a gain: 330 × (1.10 – 1.04) = 19.8. Using the average rate (330 × (1.10 – 1.07) = 9.9) gives the wrong amount."
+   }
+  ]
+ }
+]

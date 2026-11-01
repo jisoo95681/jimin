@@ -17,3 +17,4 @@ Purpose: keep every vignette the user has pasted, with the answer key, so that q
 ## Assembled mocks
 - `mock_ga.json` = **Mock 가** (assembled 31 Oct for the user to take on Tuesday 3 Nov). 16 vignettes × 4 questions = 64 Q, built only from stored real vignettes (no invented ones) on readings not in Mock 1/2. Items copy existing vignettes (field `origin`), so `index.py` skips `mock_*.json`. Answer string: BABBBAABBABABACCBBCBCABABACABABBABABBCBACACACAABCCABBCBBBCCBBBAA. Not sent to the user; mark when they paste their answers.
 - User rule: never write new vignettes for empty readings; if a reading has none, leave it out. Ethics 40–42 count as reading 41.
+- `mock_paperE.json` = **Paper E** (1 Nov): 4 assistant-written FSA vignettes (2 reading 7, 2 reading 9), 16 Q, built from vignettes the user struggled with, numbers changed. Answer string: BCBCCCABCACBBBAC (never sent to the user; mark when they paste answers). Skipped by `index.py` (prefix `mock_`).
