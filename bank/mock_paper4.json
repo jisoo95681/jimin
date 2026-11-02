@@ -1,0 +1,607 @@
+[
+ {
+  "id": "mock4-1",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'cannan' with names and numbers changed)",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Mock 4 · V1 · Fenwick: Crestlake Beverage & Build It Right",
+  "origin": "cannan",
+  "body": "Brian Fenwick is updating research reports on two well-established consumer companies before first quarter 2021 earnings reports are released. His supervisor, Colleen Aldrich, has asked Fenwick to use market-based valuations when updating the reports.\n\nCrestlake Beverage is a manufacturer and distributor of soft drinks and recently acquired a major water bottling company in order to offer a broader product line. The acquisition will have a significant impact on Crestlake's future results.\n\nBuild It Right is a US retail distributor of products for home improvement, primarily for those consumers who choose to do the work themselves. The home improvement industry is cyclical; the industry was adversely affected by the recent downturn in the economy, the level of foreclosures, and slow home sales. Although sales and earnings at Build It Right weakened, same store sales are beginning to improve as consumers undertake more home improvement projects. Poor performing stores were closed, resulting in significant restructuring charges in 2020.\n\nBefore approving Fenwick's work, Aldrich wants to discuss the calculations and choices of ratios used in the valuation of Crestlake and Build It Right. The data used by Fenwick in his analysis are summarized in Exhibit 1.\n\nExhibit 1: Select Financial Data for Crestlake Beverage and Build It Right\n\tCrestlake Beverage\tBuild It Right\n2020 earnings per share (EPS)\t$3.12\t$1.62\n2021 estimated EPS\t$3.60\t$1.85\nBook value per share end of year\t$58.30\t$10.90\nCurrent share price\t$64.80\t$35.10\nSales (billions)\t$29.40\t$58.20\nFree cash flow per share\t$2.52\t$0.18\nShares outstanding end of year\t2,100,000,000\t1,520,000,000\n\nFenwick advises Aldrich that he is considering three different approaches to value the shares of Build It Right:\n\nApproach 1\n\nPrice-to-book ratio (P/B)\n\nApproach 2\n\nPrice-to-earnings ratio (P/E) using trailing earnings\n\nApproach 3\n\nPrice-to-earnings ratio using normalized earnings\n\nFenwick tells Aldrich that he calculated the price-to-sales ratio (P/S) for Build It Right but chose not to use it in the valuation of the shares. Fenwick states to Aldrich that it is more appropriate to use the P/E than the P/S because\n\nReason 1\n\nEarnings are more stable than sales.\n\nReason 2\n\nEarnings are less easily manipulated than sales.\n\nReason 3\n\nThe P/E reflects financial leverage, whereas the P/S does not.\n\nFenwick also informs Aldrich that he did not use a price-to-cash-flow multiple in valuing the shares of Crestlake or Build It Right. The reason is that he could not identify a cash flow measure that would both account for working capital and noncash revenues and be after interest expense and thus not be mismatched with share price. Aldrich advises Fenwick that such a cash flow measure does exist.\n\nAldrich provides Fenwick with financial data on three close competitors as well as the overall beverage sector, which includes other competitors, in Exhibit 2. She asks Fenwick to determine, based on the P/E-to-growth (PEG) ratio, whether Crestlake shares are overvalued, fairly valued, or undervalued.\n\nExhibit 2: Beverage Sector Data\n\tForward P/E\tEarnings Growth\nCrestlake\t—\t10.00%\nCool Brook Tea Company\t15.80\t9.00%\nPinewood Soda\t16.90\t12.10%\nBarrel Root Beer\t41.50\t20%\nBeverage sector average\t16.10\t10.40%\n\nAfter providing Aldrich his answer, Fenwick is concerned about the inclusion of Barrel Root Beer in the comparables analysis. Specifically, Fenwick says to Aldrich: “I feel we should mitigate the effect of large outliers but not the impact of small outliers (i.e., those close to zero) when calculating the beverage sector P/E. What measure of central tendency would you suggest we use to address this concern?”\n\nAldrich requests that Fenwick incorporate their discussion points before submitting the reports for final approval.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on the information in Exhibit 1, the most appropriate price-to-earnings ratio to use in the valuation of Crestlake is closest to:",
+    "options": [
+     "25.71.",
+     "20.77.",
+     "18.00."
+    ],
+    "answer": "C",
+    "why": "The forward P/E should be used because the recent acquisition of the water bottling company will have a significant impact on future results; 2021 estimated EPS includes the new business. Forward P/E = $64.80 ÷ $3.60 = 18.00. Option B is the trailing P/E ($64.80 ÷ $3.12 = 20.77); option A is price ÷ free cash flow per share ($64.80 ÷ $2.52 = 25.71)."
+   },
+   {
+    "n": 2,
+    "q": "Based on the information in Exhibit 1, the price-to-sales ratio for Build It Right is closest to:",
+    "options": [
+     "0.31.",
+     "0.92.",
+     "1.18."
+    ],
+    "answer": "B",
+    "why": "P/S = price per share ÷ sales per share. Sales per share = $58.20 billion ÷ 1.52 billion shares = $38.29. P/S = $35.10 ÷ $38.29 = 0.92."
+   },
+   {
+    "n": 3,
+    "q": "Based on the information in Exhibits 1 and 2, Fenwick would most likely conclude that Crestlake's shares are:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "C",
+    "why": "PEG = forward P/E ÷ expected growth (in percent). Crestlake forward P/E = $64.80 ÷ $3.60 = 18.00 (forward earnings because of the acquisition); PEG = 18.00 ÷ 10.00 = 1.80. Cool Brook Tea 15.80 ÷ 9.00 = 1.76; Pinewood Soda 16.90 ÷ 12.10 = 1.40; sector average 16.10 ÷ 10.40 = 1.55. Crestlake’s PEG is higher than every comparable and the sector average: investors pay more per unit of growth, so the shares appear overvalued."
+   },
+   {
+    "n": 4,
+    "q": "The measure of central tendency that Aldrich will most likely recommend is the:",
+    "options": [
+     "median.",
+     "harmonic mean.",
+     "arithmetic mean."
+    ],
+    "answer": "B",
+    "why": "The harmonic mean reduces the impact of large outliers (the main problem with the arithmetic mean multiple) but not the impact of small outliers close to zero; it may even aggravate small outliers, but those are bounded by zero on the downside. The median reduces the impact of both large and small outliers."
+   }
+  ]
+ },
+ {
+  "id": "mock4-2",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'ctrf' with names and numbers changed)",
+  "readings": [],
+  "topic": "Alternative Investments",
+  "title": "Mock 4 · V2 · Vega: Pacific Educators’ Retirement Fund hedge fund allocation",
+  "origin": "ctrf",
+  "body": "Nina Vega is an investment analyst for the Pacific Educators' Retirement Fund (PERF). PERF's investment committee (IC) has asked Vega to evaluate a hedge fund allocation.\n\nAt an initial meeting, an IC member shares the following beliefs:\n\nStatement 1: Event-driven merger arbitrage strategies have left-tail risk because deals are more likely to fail during periods of market stress.\n\nStatement 2: Global macro strategies are typically bottom-up and depend little on trends in markets.\n\nStatement 3: Equity market-neutral managers construct portfolios with an expected beta of approximately zero.\n\nVega first reviews an event-driven opportunity. Calloway Robotics (CR) has announced it will acquire Dunmore Sensors (DS) in exchange for CR shares. A hedge fund under consideration has bought DS shares and sold CR shares in the ratio of the offer. The IC is worried about losses if the deal collapses and asks Vega to identify an option-based hedge.\n\nVega then examines a managed futures fund. The manager follows 12 liquid commodity futures. Each month, for each contract separately, the manager goes long if the contract's own trailing 12-month return is positive and short if it is negative. Because each position is set independently, the fund's net exposure can be long or short.\n\nFinally, Vega simulates adding a 20% allocation to individual hedge fund strategies. The IC requires (1) that the variance of the combined portfolio be less than 80% of the current portfolio's variance and (2) that the combined portfolio maximize risk-adjusted return, given that large negative events are expected. Exhibit 1 shows the results.\n\nExhibit 1: Simulated Combined Portfolios\nHedge fund strategy\tStandard deviation (%)\tSharpe ratio\tSortino ratio\tMaximum drawdown (%)\nCurrent portfolio\nNA\t9.60\t0.48\t1.05\t17.20\nThree potential portfolios with a 20% hedge fund allocation\nMerger arbitrage\t8.40\t0.62\t1.45\t7.80\nSystematic futures\t8.90\t0.71\t1.70\t9.80\nEquity market neutral\t8.50\t0.67\t1.58\t11.60",
+  "questions": [
+   {
+    "n": 5,
+    "q": "Which of the IC member's statements is incorrect?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "Statement 2 is incorrect: global macro is TOP-DOWN, and its key return source is discerning and capitalizing on trends in global markets, so it is exposed to market directionality. Statement 1 is correct: merger deals fail more often in stress, giving market sensitivity and left-tail risk. Statement 3 is correct: equity market-neutral managers target a portfolio beta of about zero."
+   },
+   {
+    "n": 6,
+    "q": "Which option positions would best hedge the merger arbitrage position against the deal collapsing?",
+    "options": [
+     "Long OTM puts on DS and long OTM calls on CR",
+     "Long OTM calls on DS and long OTM puts on CR",
+     "Long risk-free bonds, short OTM puts on CR, and long OTM calls on DS"
+    ],
+    "answer": "A",
+    "why": "The fund is long DS (target) and short CR (acquirer). If the deal fails, DS drops and CR rises. Puts on DS protect the long; calls on CR cover the short. B reverses the options. C is the payoff profile of merger arbitrage, not a hedge."
+   },
+   {
+    "n": 7,
+    "q": "The managed futures strategy Vega examines is best described as:",
+    "options": [
+     "time-series momentum.",
+     "cross-sectional momentum.",
+     "global macro."
+    ],
+    "answer": "A",
+    "why": "Each position depends only on that contract's own trend, set independently of the others, and the fund can be net long or net short: time-series momentum. Cross-sectional momentum would rank the contracts against each other and end up near market neutral."
+   },
+   {
+    "n": 8,
+    "q": "Based on the IC's two requirements, which simulated portfolio in Exhibit 1 is most suitable?",
+    "options": [
+     "Systematic futures",
+     "Equity market neutral",
+     "Merger arbitrage"
+    ],
+    "answer": "B",
+    "why": "Maximum variance = 0.80 × 9.60² = 73.73, so maximum SD = 8.59%. Systematic futures (8.90%) breaks the variance limit even though it has the highest Sortino ratio (1.70). Merger arbitrage (8.40%) and equity market neutral (8.50%) both pass. With large negative events expected, use the Sortino ratio (downside risk only): equity market neutral 1.58 beats merger arbitrage 1.45. Merger arbitrage’s lower maximum drawdown is not the measure the committee asked for."
+   }
+  ]
+ },
+ {
+  "id": "mock4-3",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'wagner-growth' with names and numbers changed)",
+  "readings": [],
+  "topic": "Economics",
+  "title": "Mock 4 · V3 · Brandt: Heim Builders and economic growth",
+  "origin": "wagner-growth",
+  "body": "Felix Brandt is the CEO of Heim Builders and Finance, based in Germany. The company specializes in building low-income housing in developing countries, using new, highly specialized technology that lowers labor costs. Brandt is considering an investment in three neighboring African countries. To fund the investment, he wants to invite both foreign and local institutional investors to participate as equity and debt investors. Brandt knows that the availability of mortgages for low-income earners increases home ownership. As a result, he intends to finance 30-year mortgages through a Special Purpose Vehicle, issuing tranches of publicly traded 30-year bonds. He collects the following information related to economic factors:\n\nExhibit 1\n\tCountry A\tCountry B\tCountry C\nGross savings as % of GDP\t9\t28\t34\nMarket capitalization as a % of GDP (%)\t5.8\tN/A - no securities exchange\t0.9\nPolitical stability\tMostly stable\tCivil war in outer regions\tStable\nRegulatory\tGood investor protection environment but slow court system\tUncertain investor protection rights\tImproving investor protection rights\nReceptiveness to foreign investment\tOpen - no restrictions with free flow of capital, local investor participation encouraged\tRestricted to certain sectors\tOpen subject to currency restrictions regarding repatriation of funds\n\nBrandt travels to each of the three African countries to meet with their Government officials for the purposes of further due diligence. In one of Brandt's meetings with a Minister of Finance, he asks about the long-term growth forecasts of the country's economy that will help him attract debt and equity investors. The Minister responds with the following statements:\n\nStatement 1\n\nWe are already seeing a boost in productivity as a result of our investment in public sector infrastructure over the last two years. We expect private sector productivity to make even bigger gains this year as the full impact of these investments are realized.\n\nStatement 2\n\nCorporate earnings growth over the last five years has been strong and the ratio of corporate profits to GDP is on an upward trend. We acknowledge this level of growth will likely not last forever, but real earnings growth can exceed the growth rate of potential GDP over the long term.\n\nStatement 3\n\nWe are confident our long-term growth forecasts are well-founded. When we extrapolate our GDP growth over the last ten years into the future, we predict growth will be above 3.5% over the long-term.\n\nAfterwards, Brandt attends a regional capital market development conference regarding the planned future introduction of a regional securities exchange. He wants to understand his options for raising the debt needed for the mortgage funding in each country. Brandt meets with the regulators attending the conference, including the CEO of the Financial Markets Authority (FMA). The FMA CEO says, “I firmly believe in absolute convergence whereby all countries within the region will benefit from steadily improving investment rates via technological advances provided by the new electronic trading. With access to this technology, we expect each of our country's per capita income growth rates to catch up to those of developed countries over time. We should eventually also get to the same per capita income levels as developed countries.”\n\nPrior to leaving the region, Brandt meets again with the Minister of Finance to ask for tax incentives to make his investment in that country. He makes the following justifications:\n\nJustification 1\n\nAs a result of my successful investments, more and more foreign investors will be attracted to the country. Therefore, the country will no longer be considered capital poor.\n\nJustification 2\n\nMy high-tech investment will likely cause the local housing industry to become more efficient; some local companies will become more innovative but some will leave the industry.\n\nJustification 3\n\nMy investment will cause capital growth to rise more quickly and will result in higher productivity growth, causing per capita incomes to converge.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Based only on the information provided in Exhibit 1, which country has the most favorable economic factors to support Brandt's proposed project?",
+    "options": [
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "answer": "A",
+    "why": "Brandt should invest where the factors limiting growth are weakest. Limiting factors: low saving and investment; poorly developed financial markets; weak or corrupt legal systems and failure to enforce laws; lack of property rights and political instability; poor public education and health; tax and regulatory policies discouraging entrepreneurship; restrictions on trade and capital flows. Country A has a higher market cap/GDP than C (B has no exchange), stronger investor rights than B or C, and no restrictions on foreign capital, unlike B (sector restrictions, civil war) and C (repatriation restrictions). A's savings rate is lower than C's, but since funding comes from foreign and domestic institutional investors, the investment environment matters more. So Country A is most favorable."
+   },
+   {
+    "n": 10,
+    "q": "Which of the statements made by the Minister of Finance about the country's growth prospects is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "Statement 1 is correct: infrastructure investment is an important source of productivity growth and belongs in the production function. Like R&D, public infrastructure boosts the productivity of private investment beyond the projects' direct benefits. Statement 2 is wrong: in the long run real earnings growth cannot exceed potential GDP growth, because that would require the profit share of GDP to rise forever. Statement 3 is wrong: simply extrapolating past GDP growth can mislead; growth rates change over time (Japan slowed after 1990; Brazil sped up after 1999), and small changes in potential growth have large effects on living standards."
+   },
+   {
+    "n": 11,
+    "q": "Which convergence hypothesis best supports the FMA CEO's belief?",
+    "options": [
+     "Club convergence",
+     "Absolute convergence",
+     "Conditional convergence"
+    ],
+    "answer": "A",
+    "why": "Club convergence: countries that are members of the “club” (rich and middle-income countries) converge to the income LEVEL of the richest countries, with the poorest members growing fastest; countries outside the club fall behind, but poor countries can join by making the appropriate institutional changes (here, the new regional exchange and electronic trading). It allows the same per capita income level. Despite the CEO using the words “absolute convergence”, absolute convergence means developing countries catch up REGARDLESS of their particular characteristics, not because of favorable changes. Conditional convergence requires the same saving rate, population growth rate and production function."
+   },
+   {
+    "n": 12,
+    "q": "Which of Brandt's justifications most likely reflects the neoclassical growth model?",
+    "options": [
+     "Justification 1",
+     "Justification 2",
+     "Justification 3"
+    ],
+    "answer": "C",
+    "why": "Neoclassical model: in an open economy, capital flows from capital-rich (high K/L) to capital-poor countries seeking higher returns, so the capital stock of developing countries grows faster than in rich countries even with low saving; faster capital growth raises productivity growth and per capita incomes converge (Justification 3). Justification 1 is wrong: as foreign capital flows in and the country becomes less capital poor, returns fall and global savers slow their investment. Justification 2 describes the selection effect from endogenous growth models: foreign competition forces less efficient domestic firms to exit and others to innovate."
+   }
+  ]
+ },
+ {
+  "id": "mock4-4",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 's1a-costcap' with names and numbers changed)",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "Mock 4 · V4 · Equity index and equity risk premium",
+  "origin": "s1a-costcap",
+  "body": "An equity index is established in Year 1 for a country that has recently moved to a market economy. The index vendor constructed returns for the four years prior to Year 1 based on the initial group of companies constituting the index in Year 1. From Year 12 to Year 16, a series of military confrontations concerning a disputed border disrupted the economy and financial markets. The dispute is conclusively arbitrated at the end of Year 16. In total, 20 years of equity market return history is available. Other selected data are in the following tables.\nSelected Data\nGeometric mean return relative to 10-year government bond returns (over a 20-year period)\t1.8% per year\nArithmetic mean return relative to 10-year government bond returns (over a 20-year period)\t2.1% per year\nIndex forward dividend yield\t1.5%\nForecasted public company earnings growth\t4% per year\nForecasted market P/E growth\t0.5% per year\nForecasted real GDP growth rate (by Year 19)\t3%\nCurrent vs. long-term inflation forecast\t5.5% vs. 3.5% per year\nCurrent yield curve (inversion)\tShort maturities: 8%\n\n10-year maturities: 6.5%",
+  "questions": [
+   {
+    "n": 13,
+    "q": "The inclusion of index returns prior to Year 1 would be expected to:",
+    "options": [
+     "bias the historical ERP estimate upward.",
+     "bias the historical ERP estimate downward.",
+     "have no effect on the historical ERP estimate."
+    ],
+    "answer": "A",
+    "why": "The backfilling of index returns using companies that have survived to the index construction date is expected to introduce a positive survivorship bias into returns."
+   },
+   {
+    "n": 14,
+    "q": "The events of Year 12 to Year 16 would be expected to:",
+    "options": [
+     "bias the historical ERP estimate upward.",
+     "bias the historical ERP estimate downward.",
+     "have no effect on the historical ERP estimate."
+    ],
+    "answer": "B",
+    "why": "The events of Year 12 through Year 16 depressed share returns but (1) are not a persistent feature of the stock market environment, (2) were not offset by other positive events within the historical record, and (3) have led to relatively low valuation levels, which are expected to rebound."
+   },
+   {
+    "n": 15,
+    "q": "In the current interest rate environment, using a required return on equity estimate based on the short-term government bond rate and a historical ERP defined in terms of a short-term government bond rate would be expected to:",
+    "options": [
+     "bias long-term required return on equity estimates upward.",
+     "bias long-term required return on equity estimates downward.",
+     "have no effect on long-term required return on equity estimates."
+    ],
+    "answer": "A",
+    "why": "The required return reflects the magnitude of the historical ERP, which is generally higher when based on a short-term interest rate (as a result of the normal upward-sloping yield curve), and the current value of the rate being used to represent the risk-free rate. The short-term rate is currently higher than the long-term rate, which will also increase the required return estimate. The short-term interest rate, however, overstates the long-term expected inflation rate. Using the short-term interest rate, estimates of the long-term required return on equity will be biased upward."
+   },
+   {
+    "n": 16,
+    "q": "An estimate of the ERP consistent with the Grinold–Kroner model is closest to:",
+    "options": [
+     "2.0%.",
+     "0.5%.",
+     "1.5%."
+    ],
+    "answer": "A",
+    "why": "Grinold–Kroner: expected equity return = dividend yield + inflation + real growth + change in P/E (no share-count change) = 1.5% + 3.5% + 3.0% + 0.5% = 8.5%. ERP = 8.5% − risk-free rate (10-year, 6.5%) = 2.0%. Option C subtracts the 8% short-term rate instead of the 10-year rate (8.5% − 8.0% = 0.5%); option B omits the 0.5% P/E growth (8.0% − 6.5% = 1.5%)."
+   }
+  ]
+ },
+ {
+  "id": "mock4-5",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'victory' with names and numbers changed)",
+  "readings": [],
+  "topic": "Ethical and Professional Standards",
+  "title": "Mock 4 · V5 · Pruitt: Summit Investment Management",
+  "origin": "victory",
+  "body": "Vanessa Pruitt, CFA, recently left her position as a portfolio manager at Brightmoor Investment Advisors (Brightmoor). Her departure was not restricted by a noncompete agreement, and before leaving, she returned the company-owned electronic devices she had been issued. Pruitt has started her own investment management firm, Summit Investment Management (Summit). She has talked with several individuals about joining the firm as part of the management team and potentially being an equity owner. Pruitt has lunch with Monica Reyes, CFA, the chief compliance officer at Brightmoor, as she is interested in offering Reyes a position at Summit. During their meeting, Pruitt shares with Reyes a presentation that includes the proposed management structure, the investment products to be offered, and a list of potential clients. Reyes noted several of the names on the list were clients Pruitt had frequent contact with while at Brightmoor.\n\nAlthough Reyes is excited about the opportunity to join Pruitt, she feels the timing is not quite right so she delays submitting her resignation. A short time later, she sees one of the clients Pruitt had noted in her presentation in the Brightmoor office. She stops to talk with the client who mentioned how much he missed working with Pruitt. Reyes tells the client she had recently seen Pruitt and shares her plans to open her own firm. The client gives Reyes his business card and asks her to have Pruitt contact him or to give him the name of her new firm. Reyes considers what she should do and comes up with the following options:\n\nOption 1: Call Pruitt and recount the conversation.\n\nOption 2: Do nothing until she joins Summit and then pass on the card to Pruitt.\n\nOption 3: Give the client the name of Pruitt’s new firm.\n\nWhile in her home office Pruitt prepares for a video call with Laura Dunmore, CFA. Pruitt met Dunmore while attending a CFA-sponsored conference. Dunmore is a portfolio manager specializing in alternative investments, specifically the use of futures and options to mitigate risk for accounts that allow the use of alternative investments. Pruitt is particularly interested in adding someone with this expertise as it is not her strength. Dunmore is very interest in working with Pruitt, but she feels Summit has not reached an asset management level to support the compensation she requires. They decide on a mutually beneficial arrangement in which Dunmore will create a report for Pruitt’s use with daily commentary about how she is navigating the market for her firm and their clients. Dunmore relishes the idea of working for a smaller firm and hopes to join Pruitt in the near future.\n\nSeveral months later, Summit has gained enough clients to support adding Dunmore as an employee. Dunmore submits her resignation to her current employer, and although they are disappointed, they are excited for her and her new opportunity. Because they really like her work they ask if she could provide them with a daily commentary about her views regarding the market. Additionally, they are willing to pay her a monthly fee for providing the service. Because it is basically the same report she is currently providing Pruitt, she agrees, and they negotiate a contract between the two of them with a quarterly fee paid direct to her. Dunmore informs Pruitt about the agreement, and Pruitt agrees but is only willing to do this for a period of one year. Pruitt makes the following recommendations regarding the arrangement:\n\nRecommendation 1: You need to draft an agreement outlining what you are doing and how much they are paying you over the next year.\n\nRecommendation 2: You and your former employer need to sign the agreement.\n\nRecommendation 3: We also need to send a disclosure to all of our clients and potential clients.",
+  "questions": [
+   {
+    "n": 17,
+    "q": "Based on the information provided, did Pruitt most likely violate any CFA Institute Code of Ethics and Standards of Professional Conduct during her lunch meeting with Reyes?",
+    "options": [
+     "No",
+     "Yes, with regards to Standard III, Duties to Clients",
+     "Yes, with regards to Standard IV, Duties to Employers"
+    ],
+    "answer": "A",
+    "why": "No violation. Once she has left Brightmoor, the skills and experience she gained there are not confidential, and simply knowing former clients' names generally isn't either (unless a confidentiality agreement or the law says so). She had no noncompete, returned the firm's devices, and there's no sign she contacted clients before leaving or used a Brightmoor client list.\nB is wrong: III(E) Preservation of Confidentiality protects client information, and she has nothing beyond their names.\nC is wrong: IV(A) Loyalty doesn't stop former employees contacting old clients, as long as the contact details don't come from the former employer's records and no noncompete is breached."
+   },
+   {
+    "n": 18,
+    "q": "Regarding her conversation with Brightmoor’s client, which option should Reyes most likely choose to prevent violating CFA Institute Code of Ethics and Standards of Professional Conduct?",
+    "options": [
+     "Option 1",
+     "Option 2",
+     "Option 3"
+    ],
+    "answer": "C",
+    "why": "Reyes still works for Brightmoor, so she owes loyalty to her employer, but her first duty is to the client. Giving the client the name of Pruitt's firm (Option 3) does what the client asked and leaves it to the client to make contact.\nA (Option 1, call Pruitt) is wrong: actively passing the client to a competitor could harm her current employer if the client moves his assets: IV(A) Loyalty.\nB (Option 2, wait until she joins Summit) is wrong: sitting on the card ignores the client's request, putting her own interests ahead of the client's: III(A) Loyalty, Prudence, and Care."
+   },
+   {
+    "n": 19,
+    "q": "Which CFA Institute Code of Ethics and Standards of Professional Conduct has Dunmore most likely violated?",
+    "options": [
+     "Standard IV(A), Loyalty",
+     "Standard I(B), Independence and Objectivity",
+     "Both Standard IV(A), Loyalty, and Standard I(B), Independence and Objectivity"
+    ],
+    "answer": "C",
+    "why": "Both.\nIV(A) Loyalty: while still employed, she gives another firm her daily commentary on how she is navigating the market for her employer and its clients. That harms her employer, and she is not acting solely for its benefit.\nI(B) Independence and Objectivity: she offers that commentary in return for the prospect of a job and a possible equity stake at Summit, a benefit that could compromise her objectivity. (The source explanation says 'join Brightmoor'; it means Summit.)\nSo A and B on their own are incomplete."
+   },
+   {
+    "n": 20,
+    "q": "Which recommendation with regards to Dunmore’s agreement is most likely insufficient to prevent a violation of CFA Institute Code of Ethics and Standards of Professional Conduct?",
+    "options": [
+     "Recommendation 1",
+     "Recommendation 2",
+     "Recommendation 3"
+    ],
+    "answer": "B",
+    "why": "IV(B) Additional Compensation Arrangements: pay that could conflict with the employer's interest needs written consent from ALL parties involved. Dunmore's employer is now Summit, so Pruitt must sign too, not just Dunmore and her former employer. Recommendation 2 is therefore incomplete.\nA is wrong: a written agreement stating the nature, approximate amount and duration of the pay is exactly what IV(B) recommends.\nC is wrong: disclosing the arrangement to clients and prospective clients is what VI(A) Disclosure of Conflicts requires."
+   }
+  ]
+ },
+ {
+  "id": "mock4-6",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'prostar' with names and numbers changed)",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Mock 4 · V6 · Pike: Bright Line Bonds",
+  "origin": "prostar",
+  "body": "Harper & Gale is a fixed-income specialty firm that offers advisory services to investment management companies. On 1 October 20X0, Warren Pike, a senior analyst at Harper & Gale, is reviewing three fixed-rate bonds issued by a local firm, Bright Line, Inc. The three bonds, whose characteristics are given in Exhibit 1, carry the highest credit rating.\n\nExhibit 1: Fixed-Rate Bonds Issued by Bright Line, Inc.\nBond\tMaturity\tCoupon\tType of Bond\nBond #1\t1 October 20X3\t4.60% annual\tOption-free\nBond #2\t1 October 20X3\t4.60% annual\tCallable at par on 1 October 20X1 and on 1 October 20X2\nBond #3\t1 October 20X3\t4.60% annual\tPutable at par on 1 October 20X1 and on 1 October 20X2\n\nThe one-year, two-year, and three-year par rates are 2.400%, 2.900%, and 3.300%, respectively. Based on an estimated interest rate volatility of 10%, Pike constructs the binomial interest rate tree shown in Exhibit 2.\n\nExhibit 2: Binomial Interest Rate Tree\n\tYear 0\tYear 1\tYear 2\nUpper\t2.40%\t3.7500%\t4.8500%\nMiddle\t\t\t3.9700%\nLower\t\t3.0700%\t3.2500%\n\nOn 19 October 20X0, Pike analyzes the convertible bond issued by Bright Line given in Exhibit 3. That day, the option-free value of Bright Line’s convertible bond is $1,040 and its stock price $33.00.\n\nExhibit 3: Convertible Bond Issued by Bright Line, Inc.\n\t\nIssue Date:\t6 December 20X0\nMaturity Date:\t6 December 20X4\nCoupon Rate:\t1.5%\nIssue Price:\t$1,000\nConversion Ratio:\t28",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The value of Bond #2 is closest to:",
+    "options": [
+     "103.813% of par.",
+     "101.325% of par.",
+     "102.148% of par."
+    ],
+    "answer": "C",
+    "why": "Work backwards from year 3 (cash flow 104.60). At each call date, value = min(value, 100), since the issuer calls when the bond is worth more than par. Year 2 values of the year-3 cash flow: upper 104.60 ÷ 1.0485 = 99.762 (not called); middle 104.60 ÷ 1.0397 = 100.606 → called at 100; lower 104.60 ÷ 1.0325 = 101.308 → called at 100. Year 1: upper [0.5 × (99.762 + 100) + 4.60] ÷ 1.0375 = 100.704 → called at 100; lower [0.5 × (100 + 100) + 4.60] ÷ 1.0307 = 101.484 → called at 100. Year 0: [0.5 × (100 + 100) + 4.60] ÷ 1.024 = 102.148% of par. Option A is the straight (option-free) value 103.813."
+   },
+   {
+    "n": 22,
+    "q": "The value of Bond #3 is closest to:",
+    "options": [
+     "103.813% of par.",
+     "103.869% of par.",
+     "102.148% of par."
+    ],
+    "answer": "B",
+    "why": "At each put date, value = max(value, 100), since holders put the bond when it is worth less than par. Year 2: upper 104.60 ÷ 1.0485 = 99.762 → put at 100; middle 100.606 and lower 101.308 stay above par. Year 1: upper [0.5 × (100 + 100.606) + 4.60] ÷ 1.0375 = 101.111; lower [0.5 × (100.606 + 101.308) + 4.60] ÷ 1.0307 = 102.413 (both above par, so not put). Year 0: [0.5 × (101.111 + 102.413) + 4.60] ÷ 1.024 = 103.869% of par. The putable bond is worth more than the straight bond (103.813); option C is the callable bond."
+   },
+   {
+    "n": 23,
+    "q": "All else being equal, if Pike assumes an interest rate volatility of 15% instead of 10%, the bond that would most likely increase in value is:",
+    "options": [
+     "Bond #1.",
+     "Bond #2.",
+     "Bond #3."
+    ],
+    "answer": "C",
+    "why": "Higher volatility raises the value of ANY option.\nPutable (#3) = straight + put → the investor owns the option, so value RISES.\nCallable (#2) = straight − call → the investor is short the option, so value FALLS.\nOption-free (#1): the tree is calibrated to the same par curve, so its value is unchanged by volatility."
+   },
+   {
+    "n": 24,
+    "q": "The conversion price of the bond in Exhibit 3 is closest to:",
+    "options": [
+     "$30.30.",
+     "$37.14.",
+     "$35.71."
+    ],
+    "answer": "C",
+    "why": "Conversion price = par value (issue price) ÷ conversion ratio = 1,000 ÷ 28 = $35.71 per share. Option A divides par by the STOCK PRICE (1,000 ÷ 33.00); option B uses the option-free (straight) value instead of par (1,040 ÷ 28)."
+   }
+  ]
+ },
+ {
+  "id": "mock4-7",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'consol-can' with names and numbers changed)",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Mock 4 · V7 · Whitlow: Meri-Can temporal method and functional currency",
+  "origin": "consol-can",
+  "body": "Meridian Turbines is a US-based corporation that sells mechanical engines and components used by electric utilities. Its Canadian subsidiary, Meri-Can, operates solely in Canada. It was created on 31 December 20X1, and Meridian Turbines determined at that time that it should use the US dollar as its functional currency.\n\nChief Financial Officer Grace Whitlow was asked to explain to the board of directors how exchange rates affect the financial statements of both Meri-Can and the consolidated financial statements of Meridian Turbines. For the presentation, Whitlow collects Meri-Can’s balance sheets for the years ended 20X1 and 20X2 (Exhibit 1), as well as relevant exchange rate information (Exhibit 2).\n\nExhibit 1\nMeri-Can Condensed Balance Sheet for Fiscal Years Ending 31 December (C$ millions)\nAccount\t20X2\t \t20X1\nCash\t135\t \t167\nAccounts receivable\t98\t \t—\nInventory\t77\t \t30\nFixed assets\t100\t \t100\nAccumulated depreciation\t(10)\t \t—\nTotal assets\t400\t \t297\nAccounts payable\t77\t \t22\nLong-term debt\t175\t \t175\nCommon stock\t100\t \t100\nRetained earnings\t48\t \t—\nTotal liabilities and shareholders’ equity\t400\t \t297\nExhibit 2\nExchange Rate Information\n \tUS$/C$\nRate on 31 December 20X1\t0.80\nAverage rate in 20X2\t0.88\nWeighted-average rate for inventory purchases\t0.88\nRate on 31 December 20X2\t0.91\nWhitlow explains that Meri-Can uses the FIFO inventory accounting method and that purchases of C$300 million and the sell-through of that inventory occurred evenly throughout 20X2. Her presentation includes reporting the translated amounts in US dollars for each item, as well as associated translation-related gains and losses. The board responds with several questions.\n\nWould there be a reason to change the functional currency to the Canadian dollar?\n\nWould there be any translation effects for Meridian Turbines if the functional currency for Meri-Can were changed to the Canadian dollar?\n\nWould a change in the functional currency have any impact on financial statement ratios for the parent company?\n\nWhat would be the balance sheet exposure to translation effects if the functional currency were changed?",
+  "questions": [
+   {
+    "n": 25,
+    "q": "After translating Meri-Can’s inventory and long-term debt into the parent company’s currency (US$), the amounts reported on Meridian Turbines’s financial statements on 31 December 20X2 would be closest to (in millions):",
+    "options": [
+     "$68 for inventory and $159 for long-term debt.",
+     "$68 for inventory and $154 for long-term debt.",
+     "$70 for inventory and $159 for long-term debt."
+    ],
+    "answer": "A",
+    "why": "The parent’s currency is the functional currency, so the temporal method applies. Inventory (non-monetary, FIFO, bought during 20X2) uses the weighted-average purchase rate: 77 × 0.88 = $67.8 million ≈ $68. Long-term debt (monetary) uses the year-end rate: 175 × 0.91 = $159.3 million ≈ $159. Option B translates debt at the average rate (175 × 0.88 = 154); option C translates inventory at the year-end rate (77 × 0.91 = 70)."
+   },
+   {
+    "n": 26,
+    "q": "After translating Meri-Can’s 31 December 20X2 balance sheet into the parent company’s currency (US$), the translated value of retained earnings will be closest to:",
+    "options": [
+     "$45 million.",
+     "$38 million.",
+     "$42 million."
+    ],
+    "answer": "C",
+    "why": "Temporal method, retained earnings is the plug. Assets: cash 135 × 0.91 = 122.85; receivables 98 × 0.91 = 89.18; inventory 77 × 0.88 = 67.76; fixed assets 100 × 0.80 = 80.00; accumulated depreciation −10 × 0.80 = −8.00; total = $351.8 million. Liabilities and stock: payables 77 × 0.91 = 70.07; debt 175 × 0.91 = 159.25; common stock 100 × 0.80 = 80.00; total = $309.3 million. Retained earnings = 351.8 − 309.3 = $42.5 million ≈ $42 million (rounding of the rate-weighted lines)."
+   },
+   {
+    "n": 27,
+    "q": "In response to the board’s third question, Whitlow should note that the change will most likely affect:",
+    "options": [
+     "the cash ratio.",
+     "fixed asset turnover.",
+     "receivables turnover."
+    ],
+    "answer": "B",
+    "why": "If the Canadian dollar is chosen as the functional currency, the current rate method will be used and the current exchange rate will be the rate used to translate all assets and liabilities. Currently, only monetary assets and liabilities are translated at the current rate. Sales are translated at the average rate during the year under either method. Fixed assets are translated using the historical rate under the temporal method but would switch to current rates under the current rate method. Therefore, there will most likely be an effect on sales/fixed assets. Because the cash ratio involves only monetary assets and liabilities, it is unaffected by the translation method. Receivables turnover pairs a monetary asset with sales and is thus also unaffected."
+   },
+   {
+    "n": 28,
+    "q": "In response to the board’s fourth question, the balance sheet exposure (in C$ millions) would be closest to:",
+    "options": [
+     "−19.",
+     "148.",
+     "400."
+    ],
+    "answer": "B",
+    "why": "If the functional currency were changed, then Meri-Can would use the current rate method and the balance sheet exposure would be equal to net assets (total assets − total liabilities). In this case, 400 − 77 − 175 = 148."
+   }
+  ]
+ },
+ {
+  "id": "mock4-8",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'tasty' with names and numbers changed)",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Mock 4 · V8 · Pierce: Golden Grain Foods Company",
+  "origin": "tasty",
+  "body": "Henry Doyle is the chief investment officer at a US pension fund sponsor, and Adam Pierce is an analyst for the pension fund who follows consumer/non-cyclical stocks. At the beginning of 20X9, Doyle asks Pierce to value the equity of Golden Grain Foods Company for its possible inclusion in the list of approved investments. Golden Grain Foods Company is involved in the production of frozen foods that are sold under its own brand name to retailers.\n\nPierce is considering whether a dividend discount model would be appropriate for valuing Golden Grain Foods. He has compiled the information in the following table for the company’s EPS and DPS during the last five years. The quarterly dividends paid by the company have been added to arrive at the annual dividends. Pierce has also computed the dividend payout ratio for each year as DPS/EPS and the growth rates in EPS and DPS.\n\nGolden Grain Foods Company: EPS and DPS, 20X4–20X8\nYear\tEPS ($)\tDPS ($)\tPayout Ratio\tGrowth in EPS (%)\tGrowth in DPS (%)\n20X8\t2.25\t0.64\t0.284\t2.7\t4.9\n20X7\t2.19\t0.61\t0.279\t4.3\t5.2\n20X6\t2.10\t0.58\t0.276\t2.9\t5.5\n20X5\t2.04\t0.55\t0.270\t4.6\t5.8\n20X4\t1.95\t0.52\t0.267\t\t\n\nPierce notes that the company’s EPS has been increasing at an average rate of 3.65% per year. The dividend payout ratio has remained fairly stable, and dividends have increased at an average rate of 5.33%. In view of a history of dividend payments by the company and the understandable relationship dividend policy bears to the company’s earnings, Pierce concludes that the DDM is appropriate to value the equity of Golden Grain Foods. Further, he expects the company’s moderate growth rate to persist and decides to use the Gordon growth model.\n\nPierce uses the CAPM to compute the return on equity. He uses the annual yield of 4.2% on the 10-year Treasury bond as the risk-free return. He estimates the expected US equity risk premium, with the S&P 500 Index used as a proxy for the market, to be 6.0% per year. The estimated beta of Golden Grain Foods against the S&P 500 Index is 1.15. Accordingly, Pierce’s estimate for the required return on equity for Golden Grain Foods is 0.042 + 1.15(0.06) = 0.111, or 11.10%.\n\nUsing the past growth rate in dividends of 5.33% as his estimate of the future growth rate in dividends, Pierce computes the value of Golden Grain Foods stock. He shows his analysis to Carla Mendes, his colleague at the pension fund who specializes in the frozen foods industry. Mendes concurs with the valuation approach used by Pierce but disagrees with the future growth rate he used. Mendes believes that the stock’s current price of $14.60 is the fair value of the stock.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Which of the following is closest to Pierce’s estimate of the stock’s value?",
+    "options": [
+     "$11.09.",
+     "$11.49.",
+     "$11.68."
+    ],
+    "answer": "C",
+    "why": "Gordon growth model, using next year’s dividend: D1 = D0 × (1 + g) = 0.64 × 1.0533 = 0.6741. V0 = D1 ÷ (r − g) = 0.6741 ÷ (0.1110 − 0.0533) = 0.6741 ÷ 0.0577 = $11.68. (D0 = 20X8 DPS $0.64; r = 11.10% from CAPM; g = 5.33% past dividend growth.) Option A divides D0 instead of D1; option B grows D0 at the EPS growth rate (3.65%) but keeps 5.33% in the denominator."
+   },
+   {
+    "n": 30,
+    "q": "Pierce considers a security trading within a band of ±10% of his estimate of intrinsic value to be within a “fair value range.” By that criterion, the stock of Golden Grain Foods is:",
+    "options": [
+     "undervalued.",
+     "overvalued.",
+     "fairly valued."
+    ],
+    "answer": "B",
+    "why": "Fair value band = intrinsic value ± 10%: upper 11.68 + 1.17 = $12.85; lower 11.68 − 1.17 = $10.51. The market price $14.60 is ABOVE the upper end of the band, so the stock is overvalued. Price below value = undervalued; price above value = overvalued."
+   },
+   {
+    "n": 31,
+    "q": "The beta of Golden Grain Foods stock of 1.15 that Pierce used in computing the required return on equity was based on monthly returns for the last 10 years. If Pierce uses daily returns for the last five years, the beta estimate is 1.30. If a beta of 1.30 is used, what would be Pierce’s estimate of the value of Golden Grain Foods stock?",
+    "options": [
+     "$5.62.",
+     "$9.59.",
+     "$10.10."
+    ],
+    "answer": "C",
+    "why": "New required return (CAPM): r = 0.042 + 1.30 × 0.06 = 0.120 (12.0%). V0 = D1 ÷ (r − g) = 0.6741 ÷ (0.120 − 0.0533) = 0.6741 ÷ 0.0667 = $10.10. A higher beta raises r, which lowers the value (from $11.68 to $10.10). Option B uses D0 instead of D1; option A forgets to subtract g (D1 ÷ r)."
+   },
+   {
+    "n": 32,
+    "q": "Mendes has suggested that the market price of Golden Grain Foods stock is its fair value. What is the implied growth rate of dividends given the stock’s market price? Use the required return on equity based on a beta of 1.15.",
+    "options": [
+     "5.33%.",
+     "11.1%.",
+     "6.43%."
+    ],
+    "answer": "C",
+    "why": "Set the Gordon value equal to the market price and solve for g: 14.60 = 0.64 × (1 + g) ÷ (0.1110 − g). 14.60 × 0.1110 − 14.60g = 0.64 + 0.64g, so g = (14.60 × 0.1110 − 0.64) ÷ (14.60 + 0.64) = 6.43%. (Price $14.60; D0 $0.64; r = 11.10% with beta 1.15.) Option A is the historical growth rate, which gives $11.68, not $14.60; option B is the required return, not a growth rate."
+   }
+  ]
+ },
+ {
+  "id": "mock4-9",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'jubilacion' with names and numbers changed)",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Mock 4 · V9 · Ramos: Futuro S.L.",
+  "origin": "jubilacion",
+  "body": "Diego Ramos, a recent graduate of the financial engineering program at a well-known university, has just been hired by Futuro S.L., a Madrid-based firm that specializes in retirement planning. He has been asked to develop a machine learning (ML) tool to help assign each client to one of the firm’s six strategic investment portfolios.\n\nTo build the training set with 40 defined features, 250 randomly selected working-age clients will be asked a set of open-ended questions by Marta Ibáñez, a market researcher. The resulting answers will include demographic data, information about risk preferences, and other retirement details. A Futuro analyst will assign each individual in the sample to one of the six portfolios. Ramos initially plans to perform machine learning analysis and use the model to assign new clients to the appropriate portfolio based on their responses to the questions.\n\nIbáñez brings a sample set of responses back to Ramos for further discussion. She tells him that in the interview sessions, many of the responses she has obtained are complex and subjective. For example, most individuals she interviews are not clear about the concept of risk tolerance and provide comparisons or abstract concepts rather than specific numbers or levels. In some cases, their fear of loss seems to increase at an increasing rate when some scenarios are presented. Ramos decides he will have to review these risk tolerance responses and use a model that groups them into risk categories.\n\nIbáñez delivers the completed set of interview data to Ramos. After some preliminary analysis, Ramos decides that he is ready to develop the algorithm the chatbot will use to advise clients as to which of its six strategic investment portfolios is best for meeting their retirement goals. Ramos notes that the final dataset has 40 features, and he is concerned that some of them are likely to be correlated, which may lead to model misstatement. He considers three methods to address this issue:\n\nMethod 1: Combine variables using the ensemble model.\n\nMethod 2: Use the bootstrap aggregating (bagging) method.\n\nMethod 3: Employ principal components analysis.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Ramos’s initial planned machine learning analysis is best described as a form of:",
+    "options": [
+     "categorical learning.",
+     "supervised learning.",
+     "unsupervised learning."
+    ],
+    "answer": "B",
+    "why": "An analyst labels each of the 250 training clients with the right portfolio, and the model learns to map the inputs (interview answers) to that known output for new clients. Learning from labeled data with a target is supervised learning. A is wrong: 'categorical learning' is not an ML method. C is wrong: unsupervised learning has no labels or target; it only finds structure in the data."
+   },
+   {
+    "n": 34,
+    "q": "If Ramos were to use a k–means neighbor model to analyze the client responses, the value for k would be closest to:",
+    "options": [
+     "6.",
+     "250.",
+     "40."
+    ],
+    "answer": "A",
+    "why": "k is the number of groups the clients are sorted into: the firm’s six strategic portfolios, so k = 6. Option C (40) is the number of features per client and option B (250) is the number of clients interviewed (observations), not the number of groups."
+   },
+   {
+    "n": 35,
+    "q": "The most appropriate model for Ramos to use in analyzing the responses to the risk tolerance questions is a:",
+    "options": [
+     "neural network (NN) model.",
+     "penalized regression model.",
+     "least absolute shrinkage and selection operator (LASSO) model."
+    ],
+    "answer": "A",
+    "why": "The risk-tolerance answers are complex and non-linear (fear of loss rising at an increasing rate). Neural networks are built for non-linear relationships and complex interactions. B and C are wrong: penalized regression and LASSO (a type of penalized regression) assume linear relationships and are mainly used for regression, not for grouping clients into categories."
+   },
+   {
+    "n": 36,
+    "q": "Which of the methods Ramos considers to address potential feature correlation is the most suitable?",
+    "options": [
+     "Method 1",
+     "Method 2",
+     "Method 3"
+    ],
+    "answer": "C",
+    "why": "Principal components analysis (Method 3) turns many correlated features into a few uncorrelated composite variables, reducing dimensions. Method 1 is wrong: ensemble learning combines the predictions of several models, not features. Method 2 is wrong: bagging creates many new training sets by sampling with replacement; the number of features doesn't change."
+   }
+  ]
+ },
+ {
+  "id": "mock4-10",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'crestpoint' with names and numbers changed)",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Mock 4 · V10 · Marlowe: Highfield Capital futures and swaps",
+  "origin": "crestpoint",
+  "body": "Helen Marlowe is a portfolio manager at Highfield Capital, a hedge fund that frequently uses derivatives to hedge or speculate. She works with Peter Nolan, a junior analyst.\n\nCarry Arbitrage Model\n\nMarlowe and Nolan discuss a futures contract in which the underlying bond is expected to make an interest payment in three months.\n\nStatement 1: If the futures price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased.\n\nStatement 2: Based on the cost of carry model, the futures price would be higher if the underlying bond's upcoming interest payment was expected in six months instead of three.\n\n10-Year Treasury Note\n\nNolan's second idea involves a 10-year Treasury note futures contract. The underlying 3.0%, semi-annual 10-year Treasury note has a dirty price of 104.60. It has been 30 days since the last coupon payment. The futures contract expires in 75 days. The current annualized risk-free rate is 1.50%. The conversion factor is 0.7600. Assume a 180-day coupon period.\n\nInterest Rate Swaps\n\nMarlowe asks Nolan to price a one-year plain vanilla swap using Exhibit 1.\n\nExhibit 1: Selected Spot Rate Data\nDays to maturity\tSpot interest rate (%)\n90\t1.20\n180\t1.40\n270\t1.55\n360\t1.70\n\nTwo years ago, Highfield entered into a EUR 5 billion five-year interest rate swap, paying the fixed rate, at a fixed rate of 0.12%. Three years remain until maturity. The current term structure for EUR cash flows is presented in Exhibit 2.\n\nExhibit 2: Selected EUR Interest Rate Data\nMaturity (years)\tSpot rate (%)\tPV factor\n1\t0.15\t0.9985\n2\t0.22\t0.9956\n3\t0.30\t0.9911\nSum\t\t2.9852",
+  "questions": [
+   {
+    "n": 37,
+    "q": "Which of Marlowe's statements is correct?",
+    "options": [
+     "Only Statement 1",
+     "Only Statement 2",
+     "Both Statement 1 and Statement 2"
+    ],
+    "answer": "C",
+    "why": "Statement 1 is correct: a futures price below the carry-arbitrage price is underpriced, so buy the futures (reverse carry arbitrage). Statement 2 is correct: a later interest payment means the future value of the coupon benefit is smaller, so the futures price is higher."
+   },
+   {
+    "n": 38,
+    "q": "The equilibrium quoted futures price of the 10-year Treasury note is closest to:",
+    "options": [
+     "136.91",
+     "137.73",
+     "138.06"
+    ],
+    "answer": "A",
+    "why": "The dirty price already includes accrued interest, so compound it to expiry: 104.60 × (1.015)^(75/360) = 104.9250. Accrued interest at expiry = (30 + 75)/180 × 1.5 = 0.8750. No coupon is paid during the 75 days. Quoted futures price = (104.9250 − 0.8750) ÷ 0.76 = 136.91. Option B subtracts only today’s accrued interest; option C forgets to subtract accrued interest at all."
+   },
+   {
+    "n": 39,
+    "q": "Based on Exhibit 1, the fixed rate of the one-year plain vanilla swap is closest to:",
+    "options": [
+     "1.69%",
+     "0.42%",
+     "1.46%"
+    ],
+    "answer": "A",
+    "why": "PV factors: 0.9970, 0.9930, 0.9885, 0.9833 (sum 3.9619). Fixed rate = (1 − 0.9833) ÷ (0.25 × 3.9619) = 1.69%. Option B is the 90-day periodic rate, not annualized; option C is a simple average of the spot rates."
+   },
+   {
+    "n": 40,
+    "q": "Based on Exhibit 2, the value of the pay-fixed interest rate swap is closest to:",
+    "options": [
+     "–EUR 26,588,800",
+     "EUR 26,588,800",
+     "EUR 8,906,900"
+    ],
+    "answer": "B",
+    "why": "Current fixed rate for the remaining three years = (1 − 0.9911) ÷ 2.9852 = 0.2981%. Highfield pays 0.12%, BELOW the current 0.30%, so its fixed-pay position has gained: value = (0.2981% − 0.12%) × 2.9852 × 5,000,000,000 ≈ +EUR 26.6 million (EUR 26,588,800). Option A has the wrong sign; option C leaves out the annuity factor."
+   }
+  ]
+ },
+ {
+  "id": "mock4-11",
+  "source": "Mock paper 4 (assembled 2 Nov from stored vignette 'carlisle' with names and numbers changed)",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Mock 4 · V11 · Whitcombe: Tomas Hargreave",
+  "origin": "carlisle",
+  "body": "Janet Whitcombe is a financial planner at a large wealth management firm. One of her clients, Tomas Hargreave, just received a sizable inheritance. He invests a portion of the inheritance in an annuity that will immediately increase his income by a substantial amount. He enlists Whitcombe’s help to invest the remaining amount of the inheritance.\n\nHargreave informs Whitcombe that he would like some short-term bonds in his portfolio. Whitcombe proposes purchasing a one-year domestic government zero-coupon bond. It has a face value of $100 and is currently priced at $96.00. Whitcombe estimates the one-year real risk-free rate at 1.30% and expects inflation over the next year to be 2.10%.\n\nIn an effort to provide Hargreave with some exposure to international markets, Whitcombe proposes three countries to look for investment opportunities. Selected data on the three countries are presented in Exhibit 1.\n\nExhibit 1: Selected Macroeconomic Data\n\tNominal GDP Growth\tInflation Rate\tVolatility of Real GDP Growth\tYield Curve Shape\tTrailing 12-Month Equity Index P/E\nCountry #1\t7.0%\t4.5%\tHigh\tFlat\t16.5\nCountry #2\t5.5%\t3.0%\tLow\tUpward slope\t17.3\nCountry #3\t4.0%\t2.5%\tLow\tFlat\t18.2\n\nIn her analysis, Whitcombe observes that the spread between the three-year default-free nominal bond and the default-free real zero-coupon bond in Country #3 is 2.5%.\n\nHargreave expresses concern that stocks may be currently overvalued in Country 3 given its 20-year historical equity index P/E of 16.0. Whitcombe comments, “I think the equilibrium P/E in Country #3 has increased because of changes in market conditions.”\n\nWhitcombe predicts that Country #3 will slip into a recession next quarter. She thinks it will be short-lived, lasting only 12 months or so, and considers the impact of such a recession on the performance of the country’s stocks and bonds.\n\nExhibit 2: Three-Year Corporate Bonds from Country #3\nCorporate Bond\tMoody’s Investors Service Rating\tSpread*\nBond A\tAaa\t1.4%\nBond B\tBaa1\t3.2%\nBond C\tB3\t5.3%\n*Spread versus three-year sovereign bond",
+  "questions": [
+   {
+    "n": 41,
+    "q": "The implied premium for inflation uncertainty for the one-year government zero-coupon bond proposed by Whitcombe is closest to:",
+    "options": [
+     "0.60%.",
+     "0.77%.",
+     "2.07%."
+    ],
+    "answer": "B",
+    "why": "Pricing a default-free nominal zero: P = Face ÷ (1 + l + θ + π), where l = real risk-free rate, θ = expected inflation and π = premium for inflation uncertainty. So 1 + l + θ + π = 100 ÷ 96.00 = 1.0417. With l = 1.30% and θ = 2.10%: π = 4.17% − 1.30% − 2.10% = 0.77%. Option A uses (100 − 96) ÷ 100 = 4.00% for the yield; option C forgets to subtract the real rate."
+   },
+   {
+    "n": 42,
+    "q": "Based on the data in Exhibit 1, current real short-term interest rates would most likely be highest in:",
+    "options": [
+     "Country #3.",
+     "Country #1.",
+     "Country #2."
+    ],
+    "answer": "B",
+    "why": "Real short-term rates rise with real GDP growth and with the volatility of real GDP growth. Real growth ≈ nominal growth − inflation: Country 1 = 7.0% − 4.5% = 2.5%; Country 2 = 5.5% − 3.0% = 2.5%; Country 3 = 4.0% − 2.5% = 1.5%. Countries 1 and 2 tie on growth, but Country 1 has HIGH growth volatility, so its real short-term rate is most likely the highest."
+   },
+   {
+    "n": 43,
+    "q": "The recent change in Country #3’s break-even inflation rate suggests that the expected rate of inflation over the next three years is:",
+    "options": [
+     "less than 2.5%.",
+     "equal to 2.5%.",
+     "greater than 2.5%."
+    ],
+    "answer": "A",
+    "why": "The 2.5% spread between the nominal and real default-free yields is the break-even inflation rate (BEI) = expected inflation + a premium for uncertainty about future inflation. That premium is most likely positive (investors can’t predict inflation with confidence), so expected inflation must be below 2.5%."
+   },
+   {
+    "n": 44,
+    "q": "If Whitcombe’s prediction about the economy of Country #3 is realized, the yield curve in Country #3 will most likely:",
+    "options": [
+     "remain flat.",
+     "become upward sloping.",
+     "become downward sloping."
+    ],
+    "answer": "B",
+    "why": "The curve is flat now. In a recession central banks cut policy rates, pulling short-term yields down; long-term yields fall less because the central bank is expected to bring short rates back to normal as the recession ends. Short rates falling more than long rates makes the curve upward sloping."
+   }
+  ]
+ }
+]
