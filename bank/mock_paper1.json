@@ -1,0 +1,607 @@
+[
+ {
+  "id": "mock1-1",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'xyz' with names and numbers changed)",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Mock 1 · V1 · Corvane SA: DB pension plan and option grants",
+  "origin": "xyz",
+  "body": "Corvane SA is a fictional company that uses a DB pension plan and stock option grants as part of its compensation to qualified employees. Corvane SA prepares its financial statements under IFRS.\n\nInformation on Corvane's DB plan and volatility assumptions used to value stock option grants were as follows:\n\nCorvane SA Defined Benefit Plan Information, Fiscal Year 2024\n\tFY2024\nEmployer contributions\t1,300\nCurrent service costs\t240\nPast service costs\t90\nDiscount rate used to estimate plan liabilities at beginning of year\t6.50%\nBenefit obligation at beginning of year\t51,000\nBenefit obligation at end of year\t50,640\nActuarial loss due to increase in plan obligation\t520\nPlan assets at beginning of year\t46,500\nPlan assets at end of year\t46,100\nActual return on plan assets\t3,100\nExpected rate of return on plan assets\t7.50%\n\nVolatility Assumptions Used to Value Stock Option Grants\nGrant year\tWeighted average expected volatility\n2024 valuation assumptions\n2020–2024\t24.00%\n2023 valuation assumptions\n2019–2023\t26.50%",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The amount recognized by Corvane as operating expense on the income statement related to its DB plan for fiscal year 2024 is closest to:",
+    "options": [
+     "330.",
+     "1,300.",
+     "240."
+    ],
+    "answer": "A",
+    "why": "Service cost = current 240 + past 90 = 330, recognized as an operating expense. 240 leaves out past service cost; 1,300 is the employer contribution, a cash flow, not an expense."
+   },
+   {
+    "n": 2,
+    "q": "If Corvane prepared its financial statements under US GAAP, the total amount recognized by Corvane on the income statement related to its DB plan for fiscal year 2024 (assuming the company chooses not to immediately recognize the actuarial loss and assuming there is no amortization of past service costs or actuarial gains and losses) would be closest to:",
+    "options": [
+     "68.",
+     "158.",
+     "625."
+    ],
+    "answer": "A",
+    "why": "US GAAP, no deferral amortization: service cost 240 + interest cost 6.5% × 51,000 = 3,315 − expected return 7.5% × 46,500 = 3,487.5 → 67.5. Past service cost goes to OCI. Option B adds past service cost (157.5); option C is the IFRS-type figure."
+   },
+   {
+    "n": 3,
+    "q": "An analyst is building a financial statement model for Corvane SA. The analyst assumes that service cost and the discount rate in FY2025 will be the same as in the previous year. The analyst's estimate of pension cost recognized on the income statement in FY2025 is closest to:",
+    "options": [
+     "330.",
+     "35.",
+     "625."
+    ],
+    "answer": "C",
+    "why": "IFRS: service cost 240 + 90 = 330, plus net interest = 6.5% × (50,640 − 46,100) = 295.1 → 625.1. 330 leaves out net interest; 35 subtracts it."
+   },
+   {
+    "n": 4,
+    "q": "If Corvane had used the same volatility assumption for its FY2024 option grants that it had used in FY2023, its FY2024 net income would have been:",
+    "options": [
+     "lower.",
+     "higher.",
+     "the same."
+    ],
+    "answer": "A",
+    "why": "Corvane used a lower volatility in FY2024 (24.00% vs 26.50% in FY2023). Lower volatility lowers option fair value and the expense. Using the FY2023 volatility would raise expense and lower net income."
+   }
+  ]
+ },
+ {
+  "id": "mock1-2",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'cds-3' with names and numbers changed)",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Mock 1 · V2 · Wallace-type CDS vignette: Granger Mining and Devotion",
+  "origin": "cds-3",
+  "body": "Fiona Hargreave manages the fixed-income portfolio for an Australian Dollar (AUD)25 billion superannuation fund (the Fund). Hargreave has been actively using CDS to manage the credit exposure of her portfolio, both for trading and hedging purposes. All of the Fund's CDS contracts conform to the International Swaps and Derivatives Association (ISDA) specifications and the related transactions adhere to ISDA protocols.\n\nHargreave's portfolio has a AUD100 million position in Granite Mining (Granite) 5-year senior unsecured bond (Bond 2), and she considers purchasing protection to hedge against her exposure.  The details of the CDS are presented in Exhibit 1.\n\nExhibit 1\nMaturity\t5 years\nDuration\t4.2 years\nCredit spread\t650bps\nCoupon rate\t5%\nHargreave purchases protection with a notional amount of AUD100 million using the above CDS.  One month later, Granite experiences a credit event, and its credit spread widens by 350bps as a result.  \n\nApart from hedging with CDSs, Hargreave is also contemplating trading ideas using them, and has been examining several companies on her shortlist. Below are her expectations on Radiant Oil (Radiant), Titan Energy (Titan), and Verity Inc (Verity) in the energy sector.\n\nExpectation 1: Radiant's credit curve will flatten, while Titan's credit curve will steepen\nExpectation 2: Radiant credit spread will narrow, while Titan's credit spread will widen\nIn response to her expectations of Radiant and Titan, Hargreave is considering the following trade strategies:\nStrategy 1: Buying short term credit protection and selling long term credit protection for Titan\nStrategy 2: Selling long term credit protection for Radiant, while buying long term credit protection for Titan\nHargreave also anticipates that Verity will undergo a leveraged buyout, issuing large amounts of debt to privatize all of its publicly traded shares.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "The upfront premium required to buy credit protection using Granite's 5-year CDS is closest to:",
+    "options": [
+     "7.5% notional.",
+     "6.3% notional.",
+     "6.5% notional."
+    ],
+    "answer": "B",
+    "why": "Upfront premium ≈ (credit spread − coupon) × duration = (650 − 500) bps × 4.2 = 6.3% of the notional. Using the 5-year maturity instead of the duration gives 7.5%; 6.5% is the spread itself."
+   },
+   {
+    "n": 6,
+    "q": "The estimated profit (in AUD millions) from Granite's CDS price change immediately after the credit event in the first month is closest to:",
+    "options": [
+     "14.7",
+     "17.5",
+     "10.0"
+    ],
+    "answer": "A",
+    "why": "Percentage price change ≈ change in spread × duration = 350 bps × 4.2 = 14.7%. Profit to the protection buyer = 14.7% × AUD100 million = AUD14.7 million. 10.0 adds spreads (350 + 650 bps); 17.5 uses the maturity (5 years)."
+   },
+   {
+    "n": 7,
+    "q": "Based on Hargreave's expectations on Radiant and Titan, which of the following trading strategies would most likely be profitable?",
+    "options": [
+     "Strategy 1 only",
+     "Strategy 2 only",
+     "Both Strategy 1 and Strategy 2"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Strategy 1 involves buying short term credit protection and selling long term credit protection for Titan. According to Expectation 1, Hargreave expects that \"Titan's credit curve will steepen\", and a steeper (flatter) curve means that long-term credit risk increases (decreases) relative to short-term credit risk. An investor who believes that long-term credit risk will increase relative to short-term credit risk (credit curve steepening) can buy protection by buying a long-term single-name CDS or selling a long-term CDS index and sell protection by selling a short-term single-name CDS or buying a short-term CDS index. | B. Correct because Strategy 2 involves selling long term credit protection for Radiant, while buying long term credit protection for Titan. According to Expectation 2, Hargreave expects that \"Radiant credit spread will narrow, while Titan's credit spread will widen\". A long/short credit trade is a bet that the credit position of one entity will improve relative to that of another the credit quality of Radiant will improve and that of Titan will weaken, so selling protection on Radiant and buying protection on Titan would be appropriate.  Strategy 1 involves buying short term credit protection and selling long term credit protection for Titan, which is not a profitable strategy given Expectation 1 where Hargreave expects that \"Titan's credit curve will steepen\". | C. Incorrect because while Strategy 2 is profitable, Strategy 1 is not. Strategy 2 involves selling long term credit protection for Radiant, while buying long term credit protection for Titan. According to Expectation 2, Hargreave expects that \"Radiant credit spread will narrow, while Titan's credit spread will widen\", thus Strategy 2 is a profitable strategy. However, Strategy 1 involves buying short term credit protection and selling long term credit protection for Titan, which is not a profitable strategy given Expectation 1 where Hargreave expects that \"Titan's credit curve will steepen\"."
+   },
+   {
+    "n": 8,
+    "q": "Based on Hargreave's expectation on Verity, which of the following trading will be the most profitable?",
+    "options": [
+     "Selling credit protection, and buying the underlying stock",
+     "Buying credit protection, and selling the underlying stock",
+     "Buying credit protection, as well as buying the underlying stock"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because while the stock leg will be profitable, the credit protection leg is likely to suffer a loss. The stock price will rise as the company repurchases all outstanding equity and the CDS price will rise as its spread widens to reflect the increased probability of default. | B. Incorrect because while the credit protection leg will be profitable, the stock leg is likely to suffer a loss. The stock price will rise as the company repurchases all outstanding equity and the CDS price will rise as its spread widens to reflect the increased probability of default. | C. Correct because the investor might consider buying the stock and buying credit protection. Both legs will profit if the LBO occurs because the stock price will rise as the company repurchases all outstanding equity and the CDS price will rise as its spread widens to reflect the increased probability of default."
+   }
+  ]
+ },
+ {
+  "id": "mock1-3",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 's1a-kim' with names and numbers changed)",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Mock 1 · V3 · Park: HanRyu Electronics residual income",
+  "origin": "s1a-kim",
+  "body": "Park Joon-ho is an equity analyst with Daegu Securities. Park is writing a research report on HanRyu Electronics, a South Korean company that is dual-listed on a US exchange and complies with US GAAP. As part of his analysis, Park wants to determine the intrinsic value of HanRyu’s common shares under both residual income and comparable valuation methods.\nWhen examining HanRyu’s financial data, Park notices that the company is underusing its debt capacity and its debt ratio is well below the optimal level. To support the valuation process, Park assembles in Exhibit 1 selected financial information from HanRyu’s 2013 and 2012 audited financial statements (values stated in South Korean won [KRW]). Other financial data pertaining to the valuation of HanRyu’s shares at 31 December 2013 are shown in Exhibit 2.\nExhibit 1 Selected Information from HanRyu’s 2013 and 2012 Financial Statements (KRW millions, except where noted)\n\tYear Ended 31 December 2013\t\nNet income\t118,000\t\nDividends\t47,000\t\nNumber of common shares outstanding (actual)\t30,000,000\t\n\tKRW at 31 December\t\n\t2013\t2012\nTotal stockholders' equity\t773,000\t702,000\n \nExhibit 2 Other Financial Data for HanRyu Electronics\nPretax cost of long-term debt\t5%\nRequired return on equity\t11%\nMarket price per share at 31 December 2013\tKRW57,000\n \nAt 31 December 2013, Park provided the following forecasted fundamentals for HanRyu:\n*  projected earnings per share (EPS) for 2014 are KRW4,300;\n*  expected long-term return on equity (ROE) is 16%;\n*  HanRyu will retain 50% of its earnings over the long term; and\n*  after 2014, earnings and dividends will grow at 8% per year.\nPark’s supervisor is concerned that the residual income model may not apply, and she asks Park to investigate possible clean surplus violations. Looking at HanRyu’s financial statement information, Park considers three items with possible violations to clean surplus accounting:\n1. Marketable securities classified as available-for-sale\n2. Non-domestic currency transactions with customers and suppliers\n3. Non-domestic currency translation adjustments from the consolidation of any self-sustaining subsidiary companies (for which the local currency is the functional currency)\nUpon completing the analysis, Park concludes that the net effects are not material to the financial statements and, accordingly, makes no adjustments to the information in Exhibit 1.\nPark believes that analyst forecasts are too pessimistic with respect to HanRyu’s residual income prospects after 2014. In a recent conference call, HanRyu’s management presented its plan to improve future profitability, particularly the economic value added (EVA), by focusing on the following three strategic company goals:\n1. Adjust financial leverage to the optimal level.\n2. Implement efficiencies in administrative functions.\n3. Reduce research and development (R&D) expenses.\nAs a final question, Park’s supervisor asks him why he prefers the residual income model to other approaches.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Using the information in Exhibits 1 and 2, HanRyu’s residual income (in millions) in 2013 is closest to:",
+    "options": [
+     "KRW40,780.",
+     "KRW33,000.",
+     "KRW71,000."
+    ],
+    "answer": "A",
+    "why": "Residual income = net income − equity charge on BEGINNING equity = 118,000 − 0.11 × 702,000 = 40,780. Option B uses end-of-year equity (≈ 32,970); option C is net income − dividends."
+   },
+   {
+    "n": 10,
+    "q": "Using the information in Exhibits 1 and 2, Park’s forecasts, and the single-stage (constant growth) residual income approach, the justified price-to-book ratio (P/B) at 31 December 2013 for HanRyu common stock is closest to:",
+    "options": [
+     "2.21.",
+     "2.42.",
+     "2.67."
+    ],
+    "answer": "C",
+    "why": "Justified P/B = (ROE − g) ÷ (r − g) = (0.16 − 0.08) ÷ (0.11 − 0.08) = 2.67. Option A is the market price ÷ book value per share (≈ 2.21); option B uses the historical ROE 118,000 ÷ 773,000."
+   },
+   {
+    "n": 11,
+    "q": "With respect to the three items that Park examined, which item is least likely to result in a clean surplus accounting violation?",
+    "options": [
+     "Item 1",
+     "Item 2",
+     "Item 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Although available for sale marketable securities are measured at fair market value on the balance sheet, any unrealized gains and losses that arise bypass the income statement and are reported in equity as a component of other comprehensive income thereby violating the clean surplus relationship. | B. Correct. There is no clean surplus violation if the ending book value of equity is equal to the beginning book value plus earnings minus dividends, apart from ownership transactions. In the ordinary course of business, non-domestic currency transactions with customers and suppliers (resulting from import purchase or export sale) are accounted for on both the income statement and balance sheet at fair value, and hence they do not violate clean surplus accounting. The other two items examined would affect other comprehensive income and hence violate the equity clean surplus relationship. | C. Incorrect. Financial statements of self-sustaining subsidiaries will be translated using the current rate method and any foreign exchange gains and losses will bypass the income statement and go into other comprehensive income, thus violating the clean surplus relationship."
+   },
+   {
+    "n": 12,
+    "q": "Which of management’s three strategic goals will least likely result in a higher EVA for HanRyu?",
+    "options": [
+     "Goal 1",
+     "Goal 2",
+     "Goal 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Adjusting financial leverage to the optimal level will decrease the cost of capital and therefore increase EVA. | B. Incorrect. Efficiencies in the administrative functions will decrease operating expenses, increase NOPAT, and thus increase EVA. | C. Correct. By definition, EVA = NOPAT – (C% × TC), where NOPAT is the net operating profit after taxes, C% is the cost of capital, and TC is the total capital employed. Efficiencies in the administrative functions will decrease operating expenses, increase NOPAT, and thus increase EVA. Adjusting financial leverage to the optimal level will decrease the cost of capital and thus increase EVA. R&D costs are added back to NOPAT when calculating EVA. Therefore, decreasing R&D will serve to lower NOPAT and thus lower EVA."
+   }
+  ]
+ },
+ {
+  "id": "mock1-4",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'newman-var' with names and numbers changed)",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Mock 1 · V4 · Keller: Crest Advisors VaR and risk limits",
+  "origin": "newman-var",
+  "body": "Anton Keller has recently joined Crest Advisors, a multi-asset management firm, as its Chief Risk Officer. He is conducting a risk assessment of the firm's portfolios.\nFund A has $620 million in assets. The fund's expected annual return is 9.6% and its annual standard deviation is 13.4%. Considering 250 days in a year, Keller calculates the daily 5% VaR for Fund A using the parametric method. The z-statistics for a 5% and a 10% one-tailed test are 1.65 and 1.28, respectively.\nKeller then analyzes Fund B, which is an actively managed bond fund. The manager for Fund B is considering adding mortgage-backed securities (MBS) to the portfolio. Keller calculates the fund's VaR based on historical data before adding MBS, and the fund's expected VaR after the addition of MBS. He also estimates the average loss before and after adding MBS to the portfolio when the VaR threshold is exceeded. These figures (in $ millions) are shown in Exhibit 1. Keller then calculates the incremental VaR for Fund B from adding the MBS position.\nExhibit 1\nMeasure\t5% VaR\nVaR before adding MBS\t4.15\nExpected VaR after adding MBS\t3.40\nAverage loss if VaR is exceeded, before adding MBS\t4.94\nExpected average loss if VaR is exceeded, after adding MBS\t3.88\nKeller proposes the introduction of shortfall limits on managed portfolios to Crest’s risk management framework. Under his proposal, a portfolio that suffers cumulative monthly losses greater than 150% of the daily VaR limit will have to be liquidated.\nIn response, Crest’s management asks Keller what metric can best estimate the degree to which the firm's portfolios could underperform their respective benchmarks in the future.",
+  "questions": [
+   {
+    "n": 13,
+    "q": "The daily 5% VaR for Fund A is closest to:",
+    "options": [
+     "$6.49 million.",
+     "$8.43 million.",
+     "$4.91 million."
+    ],
+    "answer": "B",
+    "why": "Daily return = 9.6% ÷ 250 = 0.0384%; daily SD = 13.4% ÷ √250 = 0.8475%. VaR = (1.65 × 0.8475% − 0.0384%) × $620 million = $8.43 million. Option C scales the annual VaR by √250 only; option A uses z = 1.28 (the 10% test)."
+   },
+   {
+    "n": 14,
+    "q": "The incremental VaR for Fund B is closest to:",
+    "options": [
+     "+$0.75 million.",
+     "–$0.75 million.",
+     "–$1.06 million."
+    ],
+    "answer": "B",
+    "why": "Incremental VaR = VaR after − VaR before = 3.40 − 4.15 = −$0.75 million. Option C uses the average losses beyond VaR (3.88 − 4.94 = −1.06); option A has the wrong sign."
+   },
+   {
+    "n": 15,
+    "q": "The framework suggested by Keller for risk management relies on:",
+    "options": [
+     "position limits.",
+     "risk budgeting.",
+     "stop-loss limits."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because position limits are constraints put on the market value of any given investment, but the framework Keller uses does not impose position limits on the investments. Position limits are exposure caps on issuer, currency, country, category, asset ownership, etc., which offer excellent control on over-concentration. However, they do not take into account duration, volatility, and correlation, as VaR does. In Keller's framework, he allocates a risk tolerance level for each portfolio and does not impose a limit on the type/value of investment the portfolio can have. His framework therefore does not indicate position limits. | B. Incorrect because the framework proposed by Keller is not an example of risk budgeting. In risk budgeting, the total risk appetite of the firm or portfolio is agreed on at the highest level of the entity and then allocated to sub-activities. Risk budgeting is more of a top-down approach where the organization allocates a risk budget to sub-divisions (based on the opportunity's attractiveness, risk capacity, skill of the business, etc.). This is implemented by using ex-ante tracking error budgets and the sub-units that generate the best rewards at minimum tracking error generally get allocated a higher risk capital. Instead, in Keller's framework, the managers have a stop-loss limit where a certain action will be taken if the monthly losses exceed a pre-defined level. This is a bottom-up way of managing risk and not the same as risk budgeting. | C. Correct because the framework proposed by Keller uses stop-loss limits and a correcting action if a certain loss level is hit. A stop-loss limit requires a reduction in the size of a portfolio, or its complete liquidation, when a loss of a particular size occurs in a specified period. In one form of a stop-loss limit, the portfolio’s positions are unwound if its losses over a pre-specified period exceed a pre-specified level. (Those levels are typically defined to align with the overall risk tolerance.) As an example, a portfolio might have a 10-day, 1% VaR limit of $5 million, but it will be liquidated if its cumulative monthly loss ever exceeds $8 million. In the stop-loss limit constraint, a corrective action is executed if the losses from an investment breach a pre-decided level. In this case, Keller proposes to liquidate any portfolio where monthly losses exceed the daily VaR limit by 150%."
+   },
+   {
+    "n": 16,
+    "q": "Which metric best addresses management's concern about estimating portfolio underperformance?",
+    "options": [
+     "Relative VaR",
+     "Surplus at risk",
+     "Maximum drawdown"
+    ],
+    "answer": "A",
+    "why": "A. Correct because ex-ante tracking error, also known as relative VaR, tracks the deviation of performance from the benchmark. As Keller's metric needs to track the future performance of the portfolios against benchmarks, the suitable metric needs to be forward looking and also based on the portfolios' current holdings. Ex-ante tracking error or relative VaR is a measure of that percentage of the portfolio that differs from the benchmark (i.e., a deviation from the benchmark). It is often monitored to help limit tracking error of the portfolio. Ex ante tracking error or relative VaR is a measure of the degree to which the performance of a given investment portfolio might deviate from its benchmark. Ex ante tracking error takes today’s benchmark-relative position and exposes it to the variability of past markets to estimate what kind of benchmark-relative performance could arise from the current portfolio. | B. Incorrect because surplus at risk is a risk measure that is used by pensions and estimates how much their assets might underperform the liabilities, but not usually used for tracking returns versus benchmarks. This measure is an application of VaR. It is computed by entering the assets in the portfolio into a VaR model as long positions and the pension liabilities as short fixed-income positions. It estimates how much the assets might underperform the liabilities, usually over one year, and pension plan sponsors may vary with respect to how high a level of confidence they choose to use (e.g., 84%, 95%, 99%). The more volatile the investments in the pension fund and the less well correlated these assets are with the liabilities, the higher the surplus at risk. | C. Incorrect because drawdown is a measure based on historical data used to identify the worst returning month or quarter and will not help tracking the underperformance relative to a benchmark for the future. Drawdown is often helpful in replacing standard deviation and historical beta measures where return distributions are non-normal. It can be helpful in assessing what the worst peak-to-trough decline in a portfolio’s historical returns is for hedge fund strategies like equity market neutral, long–short credit, or investments in illiquid asset classes with asymmetric return profiles. It is not useful for tracking the expected underperformance of a portfolio compared to its benchmark, which is Keller's requirement. - got all right but still add 35 and 36 in the app - you can make questions on the other definitions as well for 35 and 36 to keep my memories fresh Econ"
+   }
+  ]
+ },
+ {
+  "id": "mock1-5",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'd28-torres' with names and numbers changed)",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Mock 1 · V5 · Vega: Fabricaciones Delta interest rate hedging",
+  "origin": "d28-torres",
+  "body": "Marisol Vega is the CFO of Fabricaciones Delta (FabD), an automobile parts manufacturer located in Monterrey, Mexico. She is currently evaluating the firm’s debt structure and anticipated financing needs.\n\nFabD sells most of its product to US auto companies and their suppliers through long-term contracts priced in US dollars. FabD’s debt is denominated in US dollars. Vega actively manages the firm’s interest rate risk profile using interest rate and fixed-income derivatives, specifically OTC forwards, futures, and swap contracts.\n\nVega explains to her deputy, Rafael Mendoza, “The derivatives contracts we enter into are typically priced using a carry arbitrage model to have zero cost to us at origination. In addition to requiring current interest rates and coupon payments of the underlying bonds, the model makes three assumptions: (1) There are no transaction costs for buying and selling securities; (2) short-selling proceeds become available when the short is covered; and (3) we can borrow and lend at the same risk-free rate of interest.”\n\nMendoza mentions a major new contract requiring FabD to increase its working capital by borrowing USD28 million in six months. Vega states she is concerned interest rates will rise substantially in the near future and is considering entering a long position (pay fixed) in a 6 × 24 forward rate agreement to lock in the price of the new loan. She asks Mendoza what the fixed rate would be using a 30/360 convention and the spot interest rates found in Exhibit 1.\n\nExhibit 1 USD Interest Rates\nMonths\tSpot Interest Rate\tPV Factor\n6\t2.35%\t0.9884\n12\t2.90%\t0.9718\n18\t3.28%\t0.9531\n24\t3.58%\t0.9332\n30\t3.79%\t0.9135\n36\t4.02%\t0.8924\n42\t4.15%\t0.8732\n48\t4.21%\t0.8559\n54\t4.26%\t0.8391\n60\t4.29%\t0.8234\n \nVega tells Mendoza, “If we issue a long-term bond, it makes more sense to enter a bond futures contract in order to hedge interest rate changes. Typically, bond futures are quoted with pricing that reflects interest accrued since the last coupon payment. Therefore, in markets where spot prices are quoted “clean” rather than “dirty,” there can be some disconnect between spot and futures prices. In addition, a conversion factor must be applied to quoted bond prices because more than one bond can be delivered to fulfill the terms of the contract. The short (selling) counterparty to the contract will always want to deliver the cheapest bond when the forward contract matures. The conversion factor attempts to adjust for differences in pricing between the bonds that can be delivered to fulfill a particular contract.”\n\nVega continues, “We are about to enter into a five-year loan with semi-annual interest payments based on prevailing six-month MRR. I think it might make sense to simultaneously enter into a pay-fixed five-year interest rate swap with semi-annual payments to effectively convert that to a fixed-rate loan. Based on the interest rates shown in Exhibit 1, what would the fixed rate be?”",
+  "questions": [
+   {
+    "n": 17,
+    "q": "When discussing the assumptions of the carry arbitrage model, Vega is least likely correct regarding:",
+    "options": [
+     "borrowing costs.",
+     "transaction costs.",
+     "short-sale proceeds."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Vega is correct that the carry arbitrage model assumes funds can be borrowed and lent at the same risk-free rate. | B. Incorrect. Vega is correct that the carry arbitrage model assumes no market frictions, such as transaction costs. | C. Correct. Vega is incorrect regarding the availability of short-selling proceeds. The carry arbitrage approach assumes the proceeds from a short sale can be immediately used to purchase other securities."
+   },
+   {
+    "n": 18,
+    "q": "Mendoza’s fixed-rate calculation for the forward rate agreement should be closest to:",
+    "options": [
+     "3.94%",
+     "5.92%",
+     "3.99%"
+    ],
+    "answer": "A",
+    "why": "6×24 FRA rate = (Z6 ÷ Z24 − 1) ÷ (18/12) = (0.9884 ÷ 0.9332 − 1) ÷ 1.5 = 3.94%. Option B does not annualize the 18-month rate; option C is a linear shortcut with spot rates."
+   },
+   {
+    "n": 19,
+    "q": "Is Vega most likely correct in her description of bond forward pricing issues?",
+    "options": [
+     "Yes.",
+     "No, she is incorrect with respect to accrued interest.",
+     "No, she is incorrect with respect to the conversion factor."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Vega is incorrect with regard to her description of bond futures pricing and accrued interest. | B. Correct. Vega is incorrect in her description of pricing differences between the spot and futures markets based on accrued interest. Bond futures are generally quoted in the same way the spot bond market is quoted, whether 'clean' (without accrued interest) or 'dirty' (with accrued interest). futures contract equal in price. | C. Incorrect. Vega is correct in her description of the conversion factor, which is designed to make all bonds that can be delivered to fulfill the terms of a particular futures contract equal in price."
+   },
+   {
+    "n": 20,
+    "q": "Mendoza’s calculation of the annual fixed rate for the five-year swap should be closest to:",
+    "options": [
+     "3.91%",
+     "4.29%",
+     "3.68%"
+    ],
+    "answer": "A",
+    "why": "Swap fixed rate = (1 − Z60) ÷ ΣZ × 2 = (1 − 0.8234) ÷ 9.0439 × 2 = 3.91%. Option C is the average spot rate; option B is the 60-month spot rate."
+   }
+  ]
+ },
+ {
+  "id": "mock1-6",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'fx29-kaur' with names and numbers changed)",
+  "readings": [],
+  "topic": "Economics",
+  "title": "Mock 1 · V6 · Nair: Brightwave Media carry trade and parity",
+  "origin": "fx29-kaur",
+  "body": "Priya Nair is an analyst who works in the finance department of Brightwave Media Group (BMG), a global entertainment company based in London, United Kingdom. BMG creates digital and film media content as well as maintaining a number of theme parks around the world. As part of their year-end budget and forecasting process, Nair needs to evaluate their currency exposures that result from the theme parks generating local currency that needs to be regularly converted to GBP.\n\nNair pulls the current spot rate quotes from the interbank market and summarizes the results in Exhibit 1.\n\nExhibit 1\nTheme Park Location\tLocal Currency\t180-Day MRR* (annualized)\tQuoted Spot Rate\tCurrency Pair\nLondon, England\tGBP\t0.93%\t0.8612/0.8613\tGBP/EUR\nSan Diego, USA\tUSD\t0.52%\t1.2744/1.2747\tUSD/GBP\nTokyo, Japan\tJPY\t1.38%\t151.40/151.52\tJPY/USD\nAuckland, New Zealand\tNZD\t2.71%\t1.7231/1.7235\tNZD/EUR\n* Market reference rate\n\nIn a team meeting, Nair's boss provides an update that BMG is in the final stages of building a new park in Country A, an emerging market country that starts a discussion amongst the team about the economic and financial situation within the country. As each analyst shares their perspective, the following statements are made:\n\nStatement 1: \tThe equilibrium exchange rate between two countries is determined entirely by their interest rate differential.\nStatement 2:\tThe equilibrium exchange rate between two countries is determined entirely by their inflation rate differential.\nStatement 3: \tThe equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels.\nNair notes that Country A is currently experiencing positive economic growth, low unemployment, a high level of debt relative to GDP, and consistently maintains a current account surplus due to the demand for its commodities. Based on these factors and according to the flow supply/demand channel, Nair asserts in her analysis that Country A's currency should appreciate over time and that BMG should consider a longer-term hedging strategy.\n\nLastly, in researching Country A's low capital mobility environment, Nair learns that for an upcoming national election, the primary opposition party is campaigning on an expansionary fiscal policy and spending initiatives, which would conflict with the current restrictive monetary policy managed by their central bank.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The bid-offer on the NZD/GBP cross-rate implied by Exhibit 1 is closest to:",
+    "options": [
+     "1.4839/1.4845",
+     "2.0008/2.0010",
+     "2.0006/2.0013"
+    ],
+    "answer": "C",
+    "why": "NZD/GBP bid = NZD/EUR bid ÷ GBP/EUR offer = 1.7231 ÷ 0.8613 = 2.0006. NZD/GBP offer = NZD/EUR offer ÷ GBP/EUR bid = 1.7235 ÷ 0.8612 = 2.0013. Option A multiplies without inverting GBP/EUR."
+   },
+   {
+    "n": 22,
+    "q": "Based on Exhibit 1, the forward premium or discount for a 180-day forward contract and using the mid-market JPY/USD rate would be closest to:",
+    "options": [
+     "0.6496",
+     "–0.6496",
+     "1.2992"
+    ],
+    "answer": "A",
+    "why": "Forward premium = S × [T ÷ (1 + i_USD × T)] × (i_JPY − i_USD) = 151.46 × [0.5 ÷ (1 + 0.0052 × 0.5)] × (0.0138 − 0.0052) = 0.6496 JPY per USD. Option B reverses the sign of the rate difference."
+   },
+   {
+    "n": 23,
+    "q": "In the discussion with Nair's colleagues about Country A, the statement that best reflects the absolute version of PPP is:",
+    "options": [
+     "Statement 1.",
+     "Statement 2.",
+     "Statement 3."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the relationship between risk-free interest rates and spot/forward exchange is related to covered (and uncovered) interest rate parity.  The domestic currency will trade at a forward premium (discount), if, and only if, the foreign risk-free interest rate exceeds (subceeds) the domestic risk-free interest rate. | B. Incorrect because this statement refers to the relative version of PPP, which is the percentage change in the spot exchange rate will be completely determined by the difference between the foreign and domestic inflation rates. | C. Correct because the absolute version of PPP simply extends the law of one price to the broad range of goods and services that are consumed in different countries and asserts that the equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels."
+   },
+   {
+    "n": 24,
+    "q": "Nair's assertion about the change in the value of Country A's currency is most likely:",
+    "options": [
+     "correct because countries with trade surplus will finance their trade with increased borrowing.",
+     "incorrect because countries have an upper limit on the ability to borrow during trade surpluses.",
+     "correct because countries with persistent current account surpluses tend to appreciate over time."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it is based on the portfolio balance channel but misrepresents the impact of trade surpluses on borrowing. The portfolio balance channel asserts that countries with trade deficits will finance their trade with increased borrowing, which may lead to shifts in global asset preferences and influence exchange rates. | B. Incorrect because it is based on the debt sustainability channel but misrepresents the impact of upper limits of borrowing being associated with trade surpluses instead of trade deficits. The debt sustainability channel asserts that there should be some upper limit on the ability of countries to run persistently large current account deficits. | C. Correct because the flow supply/demand channel asserts that countries with persistent current account surpluses should see their currencies appreciate over time, and countries with persistent current account deficits should see their currencies depreciate over time."
+   }
+  ]
+ },
+ {
+  "id": "mock1-7",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'cadler' with names and numbers changed)",
+  "readings": [],
+  "topic": "Ethical and Professional Standards",
+  "title": "Mock 1 · V7 · Brandt: Calloway Asset Management",
+  "origin": "cadler",
+  "body": "Over the last 15 years, Helen Brandt, CFA, was the Director of Research at Calloway Asset Management, supervising more than 10 research analysts. Her team was responsible for making investment recommendations to the portfolio managers who determined which investment recommendations to implement. Calloway’s annual investment performance was always in the top quartile when compared to other investment firms managing similar portfolios. However, over the last 6 months, their rolling 12-month performance had dropped to the fourth quartile. Calloway’s clients were losing money despite the market rising. As a result, she and several others were terminated. To prepare for her employment search, she updates her LinkedIn profile by adding the following statement, “I was part of a team of investment professionals with a successful investment performance track record, with investment returns consistently ranking in the top quartile when compared to similar investment managers. As a result of our success, I was offered and subsequently accepted a board seat for a local charitable organization. Working with them has been so rewarding, despite taking a considerable amount of my time during evenings and weekends.”\n\nIn preparation for job interviews, Brandt reaches out to Calloway’s clients, former colleagues, and vendors to ask if they would write her a letter of recommendation. She makes the following requests to:\n\nCarla\n\n“Each year, you have given my team lots of kudos for our investment research and investment recommendations. I’m wondering if you wouldn’t mind writing a letter of recommendation for me. I can give you the details of my role as team leader so you can include them.”\n\nMartin\n\n“Since we both find ourselves looking for a job, how about we provide letters of recommendation for each other? I can provide some key points I would like for you to highlight, and you’re welcome to provide points for me to include in my recommendation of you.”\n\nGwen\n\n“When I get a new position, I’d love to recommend your services, as I appreciate the independent economic research reports you provided to my team. In the meantime, could you please write me a recommendation that mentions what great equity research reports my team provided to our clients?”\n\nDuring an interview with a potential employer, Brandt describes a time when quick thinking was rewarded with big returns for her clients: “We did our own extensive research and also received broker-sponsored company research. One time, we had just completed a research report on a large-cap company offering a competing product to one of the small-cap companies in which we had heavily invested. We determined it was time to sell the small-cap company, as it would likely lose considerable market share on its most popular product. In order to execute as quickly as we could before the market made the same determination, we sold 100% of the holdings in the small-cap company and bought the large-cap company for all of our discretionary clients. To expedite the small-cap trades, we utilized a few stockbrokers not yet on our approved broker list because our existing brokers told us they were unable to complete all of the trades requested in a timely manner. We found that it is critical to act fast when trading in small-cap shares. As a result, we were able to obtain incredible returns for most of our clients.”\n\nThe potential employer stated, “From your description of the large-cap trade, it sounds as if you may not have treated your non-discretionary clients equitably. If you were to work for us, how would you ensure all clients are treated fairly?” Brandt responded, “While I could make multiple recommendations, here are three:\n\nRecommendation 1\n\nMake sure any changes to investment recommendations are communicated equitably to all clients, making sure those clients who acted on any prior recommendations are notified.\n\nRecommendation 2\n\nAsk all clients to sign a waiver stating they acknowledge that when trading illiquid shares, fair dealing will not be possible as allocation will be on a first-come, first-served basis. We want to ensure clients have full disclosure of our trade allocation process.\n\nRecommendation 3\n\nProrate trades, both when buying and selling, in those times when 100% of the orders can’t be executed so all clients are able to benefit. To facilitate this, block trading should be utilized when available and company policies should reflect best execution procedures.”",
+  "questions": [
+   {
+    "n": 25,
+    "q": "In the initial update of her LinkedIn profile, Brandt most likely complied with which of the Standards?",
+    "options": [
+     "Misrepresentation",
+     "Disclosure of Conflicts",
+     "Performance Presentation"
+    ],
+    "answer": "B",
+    "why": "Standard VI(A) Disclosure of Conflicts: she disclosed the charity board seat and that it takes considerable evening and weekend time. That could reasonably interfere with duties to a future employer, and disclosing it lets the employer discuss it with her. She VIOLATED I(C) Misrepresentation and III(D) Performance Presentation by citing only the top-quartile record and omitting the recent fourth-quartile performance: performance information must be fair, accurate and complete."
+   },
+   {
+    "n": 26,
+    "q": "Which of Brandt’s recommendation requests most likely complies with Standard I(B): Independence and Objectivity now and/or in the future? Her request to:",
+    "options": [
+     "Carla",
+     "Martin",
+     "Gwen"
+    ],
+    "answer": "A",
+    "why": "Carla is a Calloway client with first-hand experience of the team’s work and no conflict that would compromise her objectivity. Martin: an exchange of favorable letters gives both something to gain, so neither is independent or objective. Gwen: Brandt implies she will recommend Gwen’s services to her next employer in return for a favorable letter, a benefit that could compromise Brandt’s future independence in selecting research providers; Gwen also likely has no first-hand knowledge of the equity research reports she’d be praising."
+   },
+   {
+    "n": 27,
+    "q": "Brandt’s quick-thinking action most likely violated Standard V(A): Diligence and Reasonable Basis because:",
+    "options": [
+     "outside parties influenced their investment action.",
+     "of the timing and execution of the small-cap share trades.",
+     "of an inappropriate swap of small-cap to large-cap shares."
+    ],
+    "answer": "B",
+    "why": "Using brokers not on the approved list skipped the firm’s due-diligence process for brokers and exposed clients to the risk of poor or untimely execution: a lack of diligence in taking investment action. The decision itself had a reasonable basis (their own extensive research on the competing product), so the swap (C) wasn’t inappropriate, and there is no sign they relied solely on outside (broker-sponsored) research (A)."
+   },
+   {
+    "n": 28,
+    "q": "Which of Brandt’s responses to the question regarding non-discretionary clients would most likely violate the Standards of Professional Conduct?",
+    "options": [
+     "Recommendation 1",
+     "Recommendation 2",
+     "Recommendation 3"
+    ],
+    "answer": "B",
+    "why": "Standard III(B) Fair Dealing: a waiver accepting first-come, first-served allocation does not remove the duty to treat clients fairly; client consent can never override the duty of fairness and loyalty to patently unfair allocation procedures. Recommendation 1 (communicate changed recommendations to all clients, especially those who acted on the earlier advice) and Recommendation 3 (pro-rate partially filled orders, use block trades, best execution) are recommended procedures under III(B)."
+   }
+  ]
+ },
+ {
+  "id": "mock1-8",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'elite-rivera' with names and numbers changed)",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Mock 1 · V8 · Marsh: Vantage Capital cross-section regression",
+  "origin": "elite-rivera",
+  "body": "Daniel Marsh is a portfolio manager at Vantage Capital (VC) based in the US. Marsh has a shortlist of 50 US public firms and wants to better understand the factors that may explain the cross-sectional variation in these stocks' returns. Based on the finance literature, Marsh believes that firm size and book-to-market ratio are important factors that need to be included in his model. He also thinks that being included in the Dow Jones Industrial Average Index (DJIA) can help a firm get more media attention and potentially attract more investors, which in turn may affect a stock's return.\n\nTo test his theory, Marsh collects the annual returns (r) of these 50 stocks in the year that just ended, as well as their market capitalizations (Size, in billions of dollars) and book-to-market ratios (BMRatio) at the end of the previous year. He also creates a dummy variable (Dow) that is coded 1 if a stock is included in the DJIA and 0 otherwise, and then runs the following regression:\n\nri = b0 + b1 lnSizei + b2 BMRatioi + b3 Dowi + εi\n\nwhere lnSizei is the natural log of the market capitalization of company i in billions of dollars and Dowi is the dummy variable. The output from the regression model is shown in Exhibit 1.\n\nExhibit 1\n\tCoefficient\tt-statistic\tp-value\nIntercept\t-0.7120\t-4.1102\t0.0001\nSize\t0.2146\t5.4310\t<0.0001\nBMRatio\t0.0612\t3.1005\t0.0033\nInDow\t-0.1207\t-1.7183\t0.0925\n\nExhibit 1 (continued)\n\t\nR2\t0.3912\nAdjusted R2\t0.3515\nStandard Error\t0.2779\nObservations\t50\n\nExhibit 1 (continued): ANOVA\n\tDegrees of freedom\tSum of squares\tMean squares\tF-statistic\tSignificance F\nRegression\t3\t2.2830\t0.7610\t9.853\t<0.0001\nResidual\t46\t3.5529\t0.0772\t\t\nTotal\t49\t5.8359\t\t\t\n\nMarsh shows his model and results to a summer intern, and asks whether he should use the reported R2 or adjusted R2 to measure the goodness of fit of his model. The intern replies, \"Adjusted R2 would be more appropriate in this case because the model has more than one independent variable. Adjusted R2 is adjusted for degrees of freedom and nondecreasing in the number of independent variables.\"",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Based on the results in Exhibit 1, which of the following interpretations regarding the coefficient of the variable BMRatio is most accurate?",
+    "options": [
+     "A stock's annual return is expected to increase by 1% for each 0.061% increase in its book-to-market ratio.",
+     "Holding Size and InDow variables constant, a stock's annual return is expected to increase by 0.061% for each 1% increase in its book-to-market ratio.",
+     "Assuming Size and InDow variables are both zero, a stock's annual return is expected to increase by 0.061% for each 1% increase in its book-to-market ratio."
+    ],
+    "answer": "B",
+    "why": "A slope coefficient in multiple regression is a partial effect: the change in the dependent variable for a one-unit change in that variable, holding the other independent variables constant. A reverses the relationship. C says \"when the others are zero\", which is not what a partial coefficient means."
+   },
+   {
+    "n": 30,
+    "q": "Using two-tailed t-tests to determine if the coefficients of the independent variables are equal to zero at the 0.05 significance level, the null hypotheses are most likely rejected for the coefficients of:",
+    "options": [
+     "Size and InDow only.",
+     "Size and BMRatio only.",
+     "InDow and BMRatio only."
+    ],
+    "answer": "B",
+    "why": "Reject H0 when the p-value is below 0.05. Size (p < 0.0001) and BMRatio (p = 0.0033) qualify. InDow (p = 0.0925) does not, so A and C, which include InDow, are wrong."
+   },
+   {
+    "n": 31,
+    "q": "The predicted annual return for a stock that is included in the DJIA, has a market capitalization of $64 billion and a book-to-market ratio of 0.52 is closest to:",
+    "options": [
+     "9.16%",
+     "21.23%",
+     "4.54%"
+    ],
+    "answer": "A",
+    "why": "r = -0.712 + 0.2146 × ln(64) + 0.0612 × 0.52 + (-0.1207) × 1 = 9.16%. Option C plugs in ln(64,000,000,000) instead of ln(64); option B sets Dow = 0 (a stock not in the DJIA)."
+   },
+   {
+    "n": 32,
+    "q": "The intern’s response to Marsh's question regarding the adjusted R2 measure is:",
+    "options": [
+     "correct.",
+     "incorrect with regard to the nondecreasing feature.",
+     "incorrect with regard to its appropriateness for Marsh's model."
+    ],
+    "answer": "B",
+    "why": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and C is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t| < 1), and it can even be negative. It is plain R² that never decreases when variables are added."
+   }
+  ]
+ },
+ {
+  "id": "mock1-9",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'schwalke' with names and numbers changed)",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Mock 1 · V9 · Holm: private equity firm valuing private companies",
+  "origin": "schwalke",
+  "body": "Anders Holm has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years. Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies.\n\nBefore starting his new position, Holm meets with a former classmate who works as an associate focused on private company valuations in order to resolve legal disputes. During the meeting, Holm’s classmate mentions that private business valuation often requires normalizing certain expense items on a company’s income statement before taking next steps.\n\nOn his first assignment, Holm is asked to estimate a WACC for a potential private target company. The partner has commented that the private target has a far lower debt ratio than would be considered optimal.\n\nHolm’s firm recently announced plans to buy one of the private companies that Holm has valued. Holm spent considerable time assessing the validity of different control premiums in analyzing a possible offer price.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Which valuation feature will Holm find different in valuing private companies versus public companies?",
+    "options": [
+     "Using FCFF to value companies",
+     "Using market multiples to value companies",
+     "Assessing discounts to account for illiquidity"
+    ],
+    "answer": "C",
+    "why": "An issue with private versus public company valuations is the need to adjust the valuation downward for a lack of liquidity (marketability). A and B are incorrect: FCFF and market multiples are used in both private and public company valuations."
+   },
+   {
+    "n": 34,
+    "q": "During Holm’s meeting with his former classmate, they discuss how their approaches to private company valuation vary given the different uses of their analysis. Which of the following best characterizes how Holm’s approach differs from that of his former classmate?",
+    "options": [
+     "Holm usually incorporates a DLOM.",
+     "Holm usually adjusts the investment value as a minority interest.",
+     "Holm’s approach usually considers a synergistic control premium."
+    ],
+    "answer": "C",
+    "why": "Holm’s firm buys and restructures private companies to take them public, so as a strategic buyer acquiring control it will consider a control premium. A DLOM and a minority-interest adjustment fit valuing a non-controlling, non-marketable stake (e.g. for litigation or tax), not his firm’s strategy of controlling and restructuring companies over five years."
+   },
+   {
+    "n": 35,
+    "q": "Which of the following statements best describes the meaning of “normalizing earnings” in the context of private business valuation?",
+    "options": [
+     "Adjustments to revenues and/or costs necessary to allow comparison of private company financial results to comparable public companies",
+     "Adjustments to offset the cyclicality of revenues and/or costs for private companies",
+     "Adjustments that allow comparisons due to the lack of marketability for private companies"
+    ],
+    "answer": "A",
+    "why": "Private companies, especially when a controlling owner is also a senior manager, may have non-market transactions (e.g. above- or below-market owner compensation, personal expenses, related-party rent) that distort earnings versus comparable public companies; normalizing removes them. Cyclicality adjustments apply to public companies too, and lack of marketability affects the discount, not earnings."
+   },
+   {
+    "n": 36,
+    "q": "Which statement best describes a possible bias in the WACC of the private target with a suboptimal debt ratio?",
+    "options": [
+     "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt.",
+     "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on equity.",
+     "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt."
+    ],
+    "answer": "B",
+    "why": "WACC = w_d r_d + w_e r_e (with after-tax r_d). Weights sum to one and r_e > r_d, so a lower debt weight (higher equity weight) pushes WACC up towards r_e. A suboptimally low debt ratio therefore gives a higher-than-optimal WACC (and a lower value). A is wrong: less debt does not lower WACC. C is wrong: a higher debt weight would likely lower WACC."
+   }
+  ]
+ },
+ {
+  "id": "mock1-10",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'thorpe' with names and numbers changed)",
+  "readings": [],
+  "topic": "Ethical and Professional Standards",
+  "title": "Mock 1 · V10 · Fletcher: Meadowlark Tea Products",
+  "origin": "thorpe",
+  "body": "One month ago, Owen Fletcher, a portfolio manager for an investment management firm and a CFA Program Level II candidate, received a letter from Rita Moreau, CFA, the designated officer for the CFA Institute Professional Conduct Program (PCP). The letter explained that the PCP had received a complaint, accusing him of violating the CFA Institute Code of Ethics and Standards of Professional Conduct. Moreau requested Fletcher’s cooperation, asking him to explain why he sold publicly traded Meadowlark Tea Products (Meadowlark) shares for both his personal and client accounts. Moreau noted the anonymous complaint she received indicated that sales were executed one day after his research visit to Meadowlark and the day before Meadowlark released an earnings warning due to an expected significant drop in profit margins.\n\nIn his defense, Fletcher responded in a letter to Moreau as follows: “I arranged the research visit to Meadowlark as part of my routine review of the company. We’re a small firm, so the portfolio managers do their own analysis. The earnings warning information I received from the chief financial officer (CFO) of Meadowlark was freely given; I didn’t ask for it. The CFO even stated he had been giving the same information to any analyst who had visited in the last two days. My clients would have been harmed if I had not sold, because other managers would be selling before me. Besides, what I did is not illegal in my market. I treated my clients fairly; I sold Meadowlark shares for all my clients before I sold my own.”\n\nConcerned about the strength of his defense and to avoid any additional violations, Fletcher consulted with the firm’s compliance officer. Consequently, to support his claim that he did not violate Standard III(B), Fair Dealing, and without violating his firm’s policies or any applicable local laws, Fletcher provided Moreau copies of documents for all the trades executed for his clients, including contact details and the percentage of assets under management (AUM) the trades represented.\n\nFletcher further stated in his letter to Moreau that he received from the CFO six very large gift baskets full of high-end tea products worth USD100 per basket. He explained his firm has a very strict policy about accepting gifts valued at more than USD100 per gift. Fletcher accepted and distributed the gift baskets on behalf of himself and his five colleagues. However, he noted that the gifts in no way influenced his investment decision.\n\nFollowing Fletcher’s submission to the CFA Institute Professional Conduct Program, Moreau informs him he has been found in violation of the CFA Institute Standards of Professional Conduct and will be publicly sanctioned and prohibited from future participation in the CFA Program exams. Fletcher contests the sanction and asks to present his case to a Disciplinary Review Committee Hearing Panel. While presenting his case, Fletcher mentions he regularly collects information he finds in the public domain when determining investment recommendations for his clients’ portfolios. He states that for “fast-moving consumer goods” (FMCG), he collects data by talking to industry experts who are former consultants of competing firms, making his own observations of the number of times grocery store shelves are restocked as well as gathering information from open specialty social media sites.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "As a result of Fletcher’s admission he traded in Meadowlark shares, which Standard will Moreau least likely investigate for a possible violation?",
+    "options": [
+     "Knowledge of the Law",
+     "Loyalty, Prudence, and Care",
+     "Material Nonpublic Information"
+    ],
+    "answer": "B",
+    "why": "III(A) Loyalty, Prudence, and Care is least likely at issue: he put clients’ interests ahead of his own by selling for all clients before himself. II(A) Material Nonpublic Information is the obvious issue: the earnings warning was material (would move the price) and not yet public, and being “freely given” or shared with a few visiting analysts doesn’t make it public. I(A) Knowledge of the Law is also at issue: even though insider trading is legal in his market, he must follow the stricter CFA Standards."
+   },
+   {
+    "n": 38,
+    "q": "Should Fletcher revise how he submitted his defense of the Standard relating to fair dealing to avoid violating the Standard relating to preservation of confidentiality?",
+    "options": [
+     "No",
+     "Yes, he must delete the contact details",
+     "Yes, he must remove the AUM percentage details"
+    ],
+    "answer": "A",
+    "why": "Information provided to the Professional Conduct Program as evidence in an investigation is kept in the strictest confidence, so a member or candidate who gives confidential client information to the PCP does not violate III(E) Preservation of Confidentiality. No need to remove contact or AUM details."
+   },
+   {
+    "n": 39,
+    "q": "Did Fletcher most likely violate the Standards by accepting the CFO’s six gift packages?",
+    "options": [
+     "No",
+     "Yes, he violated the Standard relating to misconduct",
+     "Yes, he violated the Standard relating to independence and objectivity"
+    ],
+    "answer": "A",
+    "why": "No violation. I(D) Misconduct: he complied with his firm’s policy (no gifts over USD100 per gift); the six USD100 baskets were shared among six people, one each. I(B) Independence and Objectivity: the gifts were unlikely to compromise his objectivity; his decision was driven by protecting clients ahead of the expected price drop."
+   },
+   {
+    "n": 40,
+    "q": "Which of Fletcher’s information sources described to the Hearing Panel is most susceptible to resulting in Fletcher violating the Standard relating to material nonpublic information?",
+    "options": [
+     "Social media",
+     "Industry experts",
+     "Grocery turnover observations"
+    ],
+    "answer": "B",
+    "why": "Expert networks are the risk: former consultants to competitors may still hold confidential, material nonpublic information, and members and candidates are responsible for not requesting or acting on such information from experts. Open specialty social media sites are public. His own observations of shelf restocking are public, non-material pieces of a mosaic, which is allowed under the mosaic theory."
+   }
+  ]
+ },
+ {
+  "id": "mock1-11",
+  "source": "Mock paper 1 (assembled 2 Nov from stored vignette 'pwpf' with names and numbers changed)",
+  "readings": [],
+  "topic": "Alternative Investments",
+  "title": "Mock 1 · V11 · Ridgeway: Cascade-Olympic Pension Fund hedge fund research",
+  "origin": "pwpf",
+  "body": "Kent Ridgeway is a portfolio analyst for the Cascade-Olympic Pension Fund (COPF). COPF's investment committee (IC) asks Ridgeway to research adding hedge funds to the COPF portfolio.\n\nA member of the IC meets with Ridgeway to discuss hedge fund strategies. During the meeting, the IC member admits that her knowledge of hedge fund strategies is fairly limited but tells Ridgeway she believes the following:\n\nStatement 1: Equity market-neutral strategies use a relative value approach.\n\nStatement 2: Event-driven strategies are not exposed to equity market beta risk.\n\nStatement 3: Opportunistic strategies have risk exposure to market directionality.\n\nThe IC member also informs Ridgeway that for equity-related strategies, the IC considers low volatility to be more important than negative correlation.\n\nRidgeway researches various hedge fund strategies. First, Ridgeway analyzes an event-driven strategy involving two companies, Aurora Applications (AA) and Tidewater Technologies (TT). AA's management, believing that its own shares are overvalued, uses its shares to acquire TT. The IC has expressed concern about this type of strategy because of the potential for loss if the acquisition unexpectedly fails. Ridgeway's research reveals a way to use derivatives to protect against this loss, and he believes that such protection will satisfy the IC's concern.\n\nNext, while researching relative value strategies, Ridgeway considers a government bond strategy that involves buying lower-liquidity, off-the-run bonds and selling higher-liquidity, duration-matched, on-the-run bonds.\n\nRidgeway examines an opportunistic strategy implemented by one of the hedge funds under consideration. The hedge fund manager selects 12 AAA rated corporate bonds with actively traded futures contracts and approximately equal durations. For each corporate bond, the manager calculates the 30-day change in the yield spread over a constant risk-free rate. He then ranks the bonds according to this spread change. For the bonds that show the greatest spread narrowing (widening), the hedge fund will take long (short) positions in their futures contracts. The net holding for this strategy is market neutral.\n\nRidgeway also plans to recommend a specialist hedge fund strategy that would allow COPF to maintain a high Sharpe ratio even during a financial crisis when equity markets fall.\n\nThe IC has been considering the benefits of allocating to a fund of funds (FoF) or to a multi-strategy fund (MSF). Ridgeway receives the following email from a member of the IC:\n\n\"From my perspective, an FoF is superior even though it entails higher manager-specific operational risk and will require us to pay a double layer of fees without being able to net performance fees on individual managers. I especially like the tactical allocation advantage of FoFs—that they are more likely to be well informed about when to tactically reallocate to a particular strategy and more capable of shifting capital between strategies quickly.\"\n\nFinally, Ridgeway creates a model to simulate adding selected individual hedge fund strategies to the current portfolio with a 20% allocation. The IC's primary considerations for a combined portfolio are (1) that the variance of the combined portfolio must be less than 90% of that of the current portfolio and (2) that the combined portfolio maximize the risk-adjusted return with the expectation of large negative events. Exhibit 1 provides historical performance and risk metrics for three simulated portfolios.\n\nExhibit 1: Performance of Various Combined Portfolios\nHedge fund strategy\tStandard deviation (%)\tSharpe ratio\tSortino ratio\tMaximum drawdown (%)\nCurrent portfolio\nNA\t8.30\t0.54\t1.10\t15.20\nThree potential portfolios with a 20% hedge fund allocation\nMerger arbitrage\t8.05\t0.76\t1.90\t5.90\nSystematic futures\t7.05\t0.82\t1.82\t8.50\nEquity market neutral\t7.40\t0.71\t1.74\t11.20",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Which of the IC member's statements regarding hedge fund strategies is incorrect?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "Statement 2 is incorrect: event-driven strategies such as merger arbitrage have some natural equity market beta. Market stress can disrupt a deal, and deals are more likely to fail in stress periods, so merger arbitrage has market sensitivity and left-tail risk (and high fees make it an expensive form of embedded beta). A is wrong: equity market neutral does use a relative value approach (balanced longs and shorts, near-zero net market exposure, betting on mean reversion of mispriced pairs). C is wrong: opportunistic/global macro strategies depend on spotting global trends, so they are exposed to market directionality (\"trendiness\")."
+   },
+   {
+    "n": 42,
+    "q": "Based on what the IC considers important for equity-related strategies, which strategy should Ridgeway most likely avoid?",
+    "options": [
+     "Long/short equity",
+     "Equity market neutral",
+     "Dedicated short selling and short biased"
+    ],
+    "answer": "C",
+    "why": "The IC ranks low volatility above negative correlation. Dedicated short / short-biased strategies offer negative correlation but lower return goals and higher volatility (short beta exposure), so avoid them. A is wrong: long/short equity targets about 50% lower standard deviation than long-only with similar returns. B is wrong: equity market neutral is well diversified with steadier, lower-volatility returns (beta ≈ 0), except when heavy leverage forces downsizing."
+   },
+   {
+    "n": 43,
+    "q": "The specialist hedge fund strategy that Ridgeway plans to recommend is most likely:",
+    "options": [
+     "cross-asset volatility trading between the US and Japanese markets.",
+     "selling equity volatility and collecting the volatility risk premium.",
+     "buying longer-dated out-of-the-money options on VIX index futures."
+    ],
+    "answer": "C",
+    "why": "Long equity volatility is a crisis hedge: volatility is about 80% negatively correlated with equity returns, so it lowers portfolio standard deviation and supports the Sharpe ratio (at the cost of premium). Longer-dated options have more vega; OTM options trade at higher implied volatility. A is wrong: cross-asset volatility trading can carry idiosyncratic macro risks that hurt in a crisis. B is wrong: the volatility seller provides crash insurance and loses in a crisis."
+   },
+   {
+    "n": 44,
+    "q": "Based on the IC's primary considerations for a combined portfolio, which simulated hedge fund strategy portfolio in Exhibit 1 creates the most suitable combined portfolio?",
+    "options": [
+     "Merger arbitrage",
+     "Systematic futures",
+     "Equity market neutral"
+    ],
+    "answer": "B",
+    "why": "Maximum variance = 0.90 × 8.30² = 61.99, so maximum SD = 7.87%. Merger arbitrage (8.05) breaks the variance limit even though it has a high Sortino ratio. Systematic futures (7.05) and equity market neutral (7.40) pass. With large negative events expected, use the Sortino ratio (downside risk only): systematic futures 1.82 beats equity market neutral 1.74."
+   }
+  ]
+ }
+]

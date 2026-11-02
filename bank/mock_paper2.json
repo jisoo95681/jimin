@@ -1,0 +1,607 @@
+[
+ {
+  "id": "mock2-1",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'stigwood' with names and numbers changed)",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Mock 2 · V1 · Lindqvist: Private Equity Valuation Model",
+  "origin": "stigwood",
+  "body": "Peter Lindqvist is a partner at a private equity advisory firm. He is meeting with a data analysis consultant, Karin Ahlberg. Upon meeting Ahlberg, Lindqvist states that his firm has structured data from private equity transactions that had been conducted over the past year. He desires to merge that data with related publicly traded firm data to find factors that can be used to predict future firm valuations.\n\nLindqvist suggests a support vector machine algorithm because the target variable is continuous and the algorithm does not require a user defined hyperparameter. Instead, Ahlberg suggests using an algorithm with a least absolute shrinkage and selection operator.\n\nLindqvist then expresses concerns about the model overfitting problem. Ahlberg responds that managing overfitting is a tradeoff between cost and complexity. She suggests using k-fold cross-validation to mitigate overfitting.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Lindqvist's suggested algorithm is most likely:",
+    "options": [
+     "correct.",
+     "incorrect in regard to the continuous target variable.",
+     "incorrect in regard to the user define hyperparameter."
+    ],
+    "answer": "B",
+    "why": "A support vector machine (SVM) is a linear classifier: it finds the hyperplane that best separates the observations into two groups, so it needs a binary (categorical) target. Firm valuation is continuous, so the SVM is the wrong tool. A is wrong for that reason. C is wrong: Lindqvist is right that the SVM does not need a user-defined hyperparameter, so that part of his reasoning is not the problem."
+   },
+   {
+    "n": 2,
+    "q": "The algorithm suggested by Ahlberg is a:",
+    "options": [
+     "k-nearest neighbor algorithm.",
+     "penalized regression algorithm.",
+     "classification and regression tree algorithm."
+    ],
+    "answer": "B",
+    "why": "LASSO (least absolute shrinkage and selection operator) is the best-known penalized regression: it adds a penalty for each included feature, shrinking weak coefficients to zero. It also suits a continuous target like firm valuation. A (KNN) and C (CART) are different algorithms that don't use a LASSO penalty."
+   },
+   {
+    "n": 3,
+    "q": "What is most likely the cost referenced by Ahlberg in regard to managing overfitting?",
+    "options": [
+     "The variance error less the base error",
+     "Computational time and resource expenses",
+     "The difference between the in- and out-of-sample error rates"
+    ],
+    "answer": "C",
+    "why": "Data scientists frame overfitting as a trade-off between cost and complexity, where cost is the gap between in-sample and out-of-sample error rates. A more complex model fits the training data better but generalizes worse, so the gap widens. A is wrong: variance error and base error are components of out-of-sample error, not the 'cost'. B is wrong: computing time and resources are not the cost meant here."
+   },
+   {
+    "n": 4,
+    "q": "The overfitting mitigation technique suggested by Ahlberg most likely requires:",
+    "options": [
+     "the target variable not being specified.",
+     "having different validation samples applied within the execution of the technique.",
+     "having the same training sample, but in a random sequence within the execution of the technique."
+    ],
+    "answer": "B",
+    "why": "In k-fold cross-validation the data (excluding the test sample) are shuffled and split into k equal parts (k is typically 5 or 10). Each round trains on k − 1 parts and validates on the remaining one, repeated k times, so every data point is validated once and trained on k − 1 times. The validation sample changes every round. A is wrong: it is used in supervised learning, which needs a specified target. C is wrong: the training sample itself changes each round, not just its order."
+   }
+  ]
+ },
+ {
+  "id": "mock2-2",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 's1b-miller' with names and numbers changed)",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Mock 2 · V2 · Doyle: Orion, Lantana and Magnolia dividend discount models",
+  "origin": "s1b-miller",
+  "body": "Karen Doyle is an analyst for a global equity mutual fund. The fund is well-diversified and holds both dividend-paying and non-dividend-paying shares. She is evaluating three of the fund's holdings.\nOne holding is Canada-based Orion, a profitable non-dividend-paying company that is viewed by the market as an acquisition target. Doyle expects Orion's level of corporate debt to change significantly over time. Because Orion reports a number of items through other comprehensive income, its net income does not always fully reflect underlying economic conditions. Doyle considers the type of model she should use to value Orion.\nA second holding, UK-based Lantana, currently pays an annual dividend of £1.85 per share. Dividends are initially expected to grow at an annual rate of 9%, but then decline linearly during an 10-year period to a final and perpetual annual growth rate of 4%. Lantana's required return on equity is 8.75%. Doyle uses the H-model to value Lantana.\nA third holding, France-based Magnolia, is in a mature growth phase. Magnolia has a dividend payout ratio of 45%, a return on assets of 7.50%, and an equity multiplier of 1.25. Upon further analysis, Doyle concludes that Magnolia is over valued.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "Which of the following is the most appropriate model for Doyle to use in valuing Orion?﻿",
+    "options": [
+     "Residual income",
+     "Free cash flow to equity",
+     "Free cash flow to the firm"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Orion is a profitable company and is also an acquisition target; therefore, the free cash flow model is more appropriate. The residual income model, is most suitable when: * the company is not paying dividends, as an alternative to a free cash flow model, or * the company’s expected free cash flows are negative within the analyst’s comfortable forecast horizon. In addition, the residual income model is less appropriate because Orion reports a number of items through other comprehensive income on the balance sheet, which distorts its reported income statement results. Although Doyle may be able to adjust for such items in her model, this in combination with the above means that residual income is not the mostappropriate model in this case. | B. Incorrect because free cash flow models are most suitable when the company is non-dividend-paying and the investor takes a control perspective. In this circumstance, however, Orion has expectations of a changing level of corporate debt (leverage) and so FCFF is therefore more appropriate to use as a valuation model than FCFE. | C. Correct because free cash flow models are most suitable when the company is non-dividend-paying and the investor takes a control perspective. Since Orion is a target for acquisition and has expectations of a changing level of corporate debt (leverage), the FCFF model is the appropriate model to use for valuation purposes."
+   },
+   {
+    "n": 6,
+    "q": "Based on the H-model, Lantana's value per share is closest to:",
+    "options": [
+     "£60.",
+     "£41.",
+     "£50."
+    ],
+    "answer": "C",
+    "why": "H-model: V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), H = 10/2 = 5: = 1.85 × 1.04 ÷ 0.0475 + 1.85 × 5 × 0.05 ÷ 0.0475 = 40.51 + 9.74 = £50. Option B is the first term only; option A uses H = 10."
+   },
+   {
+    "n": 7,
+    "q": "Magnolia's sustainable dividend growth rate is closest to:",
+    "options": [
+     "2.4%.",
+     "4.2%.",
+     "6.2%."
+    ],
+    "answer": "C",
+    "why": "g = retention × ROE. ROE = ROA × equity multiplier = 6.5% × 1.60 = 10.4%; retention = 1 − 0.40 = 0.60; g = 0.60 × 10.4% = 6.24%. Option A divides ROA by the multiplier; option B uses the payout ratio."
+   },
+   {
+    "n": 8,
+    "q": "Based on Doyle's analysis, the share price of Magnolia would be expected to grow at:",
+    "options": [
+     "a slower rate than its dividends.",
+     "the same rate as its dividends.",
+     "a faster rate than its dividends."
+    ],
+    "answer": "A",
+    "why": "A. Correct because Magnolia is currently overvalued. If prices are efficient (price equals value), price is indeed expected to grow at a rate of g. If there is mispricing (price is different from value), however, the actual rate of capital appreciation depends on the nature of the mispricing. An overvaluation would be corrected by the share price growing at a slower rate than dividends. | B. Incorrect because Magnolia is overvalued not fairly valued | C. Incorrect because Magnolia is overvalued not undervalued"
+   }
+  ]
+ },
+ {
+  "id": "mock2-3",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'sedgwick' with names and numbers changed)",
+  "readings": [],
+  "topic": "Ethical and Professional Standards",
+  "title": "Mock 2 · V3 · Weber: Halston Investment Management",
+  "origin": "sedgwick",
+  "body": "Nadia Weber, CFA, was recently hired by Halston Investment Management (Halston) as its new chief executive officer. Halston’s parent company owns several subsidiaries in the financial services industry. Although there are currently no outstanding compliance issues, Halston’s employees have a history of unethical behavior and always seem to be on the brink of additional violations. Halston’s board of directors has tasked Weber with bringing the firm’s policies and procedures into compliance with the CFA Institute Code of Ethics and Standards of Professional Conduct.\n\nShortly after Weber was hired, the following announcement appeared in a major financial newspaper:\n\n“The board of directors of Halston Investment Management is pleased to announce the hiring of Ms. Nadia Weber, CFA, as the company’s new chief executive officer. She has demonstrated the ability to successfully complete a rigorous and comprehensive study program demanded by the CFA designation. The credibility of her CFA charter and the skills the CFA Program cultivates are key assets Ms. Weber brings to Halston. As a CFA charterholder, Ms. Weber has superior qualities to manage our clients’ investments and guide the investment process. We are thrilled to have Ms. Nadia Weber, CFA, as a member of the Halston Investment Management team.”\n\nOne of the first things Weber did after arriving at the firm was to meet with Dale Ito, CFA, the firm’s chief compliance officer. Ito had been with the firm only a few months. He told Weber the previous violations had primarily related to equity research, equity trading, and client confidentiality. After reviewing the summary of violations and the firm’s existing handbook, Weber and Ito decided to submit the following recommendations regarding the firm’s trade allocation procedures for block trades to the board of directors for approval:\n\nRecommendation 1\n\nAll accounts participating in a block trade should receive the same execution price and pay the same commission rate.\n\nRecommendation 2\n\nOrders will be executed on a first-in, first-out basis, with consideration given to bundling orders for efficiency.\n\nDuring the meeting Ito also mentioned to Weber that the company handbook fails to address an area where he has some concerns and suggested the following policy addition, breaking it down into three points:\n\nPoint 1\n\nTraders are prohibited from engaging in communication with brokers or dealers that would artificially cause a stock’s price to rise or fall.\n\nPoint 2\n\nResearch analysts are not allowed to communicate unrealistic expectations regarding a company’s results that may affect the market price of a stock.\n\nPoint 3\n\nPortfolio managers are not allowed to enter into an agreement to promote the stock of any publicly listed company.\n\nIto later received a call from a news reporter who requested an interview. Ito is one of several people at the firm authorized to speak with the press. The reporter was interested in writing a piece about Weber and the circumstances behind her joining the firm. They scheduled a time for the call and Ito forwarded to the reporter a copy of the board’s press release. Prior to the interview, Weber told Ito to address the reporter’s questions truthfully but not to provide any details. When asked during the interview about the firm’s history of unethical behavior, Ito responded, “One of Ms. Weber’s first acts was to strengthen the firm’s Code of Ethics, and although there had been a few prior incidences of questionable conduct, they were exaggerated in the press and happen in most investment firms.”",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Which statement in Halston’s hiring announcement is most likely an incorrect reference to the CFA Program or the CFA designation? The statement referencing:",
+    "options": [
+     "the skills the program cultivates.",
+     "her ability to manage investments and guide the process.",
+     "the demands of the study program for the CFA designation."
+    ],
+    "answer": "B",
+    "why": "Standard VII(B): the designation must not be used in a way that misrepresents or exaggerates its meaning. Claiming that, as a charterholder, she “has superior qualities to manage our clients’ investments” is a claim of superiority, an exaggeration. Describing the rigorous study program and the credibility and skills the program cultivates are acceptable references."
+   },
+   {
+    "n": 10,
+    "q": "Are the recommendations submitted to the board of directors most likely consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing?",
+    "options": [
+     "Yes",
+     "No with regard to Recommendation 1",
+     "No with regard to Recommendation 2"
+    ],
+    "answer": "A",
+    "why": "Both are recommended procedures for fair trade allocation under III(B): all accounts in a block trade get the same execution price and commission (Recommendation 1), and orders are executed first-in, first-out with bundling for efficiency (Recommendation 2). Other recommended procedures: pro-rata allocation of partial fills, written allocation policies, disclosure of the procedures."
+   },
+   {
+    "n": 11,
+    "q": "When considering the three points of Ito’s new policy as a whole, which CFA Institute Standard of Professional Conduct is he most likely addressing?",
+    "options": [
+     "Standard VI: Conflict of Interest",
+     "Standard II: Integrity of Capital Markets",
+     "Standard V: Investment Analysis, Recommendations, and Actions"
+    ],
+    "answer": "B",
+    "why": "All three points target market manipulation, Standard II(B) (under Standard II, Integrity of Capital Markets): no communications that artificially move a stock’s price (Point 1), no misleading or unrealistic information that distorts prices (Point 2), and no agreements to promote a stock with intent to mislead (Point 3). Standard II(B) covers both information-based and transaction-based manipulation."
+   },
+   {
+    "n": 12,
+    "q": "Who has most likely violated the CFA Institute Standards of Professional Conduct regarding the newspaper interview?",
+    "options": [
+     "Ito",
+     "Weber",
+     "Both Ito and Weber"
+    ],
+    "answer": "A",
+    "why": "Ito violated I(D) Misconduct. Downplaying the prior incidents alone might not be a violation (we don’t know the facts), but claiming such conduct “happens in most investment firms” is untrue and not something he could know; it reflects adversely on his integrity and competence. Weber did nothing wrong: telling him to answer truthfully without giving details supports confidentiality (III(E)) and her supervisory duty."
+   }
+  ]
+ },
+ {
+  "id": "mock2-4",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'hamilton-nevis' with names and numbers changed)",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Mock 2 · V4 · Prescott: Alder Capital binomial and BSM option valuation",
+  "origin": "hamilton-nevis",
+  "body": "Julian Prescott is CEO and CIO of Alder Capital, a Registered Investment Advisory firm. He is meeting with Tom Ellery, head trader, and Mark Sedley, a recently hired analyst, to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.\nPrescott begins by stating that the binomial option valuation (binomial) model and the Black-Scholes-Merton (BSM) model are each useful in understanding option valuation approaches. Prescott compares the binomial model to the BSM model, stating that “both the binomial model and the BSM model are dependent on the path of the underlying security price during the term of the option. In addition, both models assume the investor is not taking price risk and the risk-free interest rate is used to discount future outcomes that are probabilistic.”\nEllery describes the two-period binomial model to Sedley and provides information related to Linden Corporation’s common stock and options on that stock (presented in Exhibit 1). Linden stock does not pay a dividend.\nExhibit 1 Information on Linden Corporation Stock and Options\nStock price\t$80\nCall strike\t$80\nLinden bond rate\t6.00%\nRisk-free interest rate\t4.00%\nUp factor\t1.20\nDown factor\t0.90\nThe price of a one-year call option on Linden Corporation common stock is $8.10. Based on this price and on information provided in Exhibit 1, Prescott, Sedley, and Ellery believe that an arbitrage opportunity may exist, which arbitrageurs could exploit based on the binomial model no-arbitrage approach. Prescott states the arbitrageurs should buy call options using borrowed funds. Sedley disagrees, stating that arbitrageurs should short-sell shares and lend the proceeds. Ellery also disagrees, stating that arbitrageurs should buy shares using borrowed funds.\nSedley discusses European-style and American-style call options in the context of the multiperiod binomial model. Sedley states that “by dividing the time steps of the two-period binomial model into a larger number of shorter and equal length time steps, the expectations approach can be applied to a European-style call option to calculate its value based on the present value of expected future cash flows. For a non-dividend-paying stock, an American-style call option’s value can be calculated based on the present value of expected future cash flows because American-style call options and European-style call options can be described and interpreted similarly and because the no-arbitrage approach applies to each.”",
+  "questions": [
+   {
+    "n": 13,
+    "q": "Prescott’s comparison of the binomial model and the BSM model is least likely correct with respect to:",
+    "options": [
+     "price risk.",
+     "future outcomes.",
+     "path-dependency."
+    ],
+    "answer": "C",
+    "why": "Both models hedge price risk and discount at the risk-free rate; both are path-independent for European options, so path-dependency is the incorrect part."
+   },
+   {
+    "n": 14,
+    "q": "The value of a two-year European call option on Linden Corporation shares is likely closestto:",
+    "options": [
+     "$11.09.",
+     "$10.43.",
+     "$10.03."
+    ],
+    "answer": "C",
+    "why": "Risk-neutral probability π = (1 + r − d) ÷ (u − d) = (1.04 − 0.90) ÷ 0.30 = 0.4667. Payoffs: uu = 35.2, ud = 6.4, dd = 0. Value = [π² × 35.2 + 2π(1 − π) × 6.4] ÷ 1.04² = $10.03. Option B discounts once; option A uses π = 0.5."
+   },
+   {
+    "n": 15,
+    "q": "With respect to the one-year call option on Linden stock, whose strategy is most likelycorrect?",
+    "options": [
+     "Ellery's",
+     "Sedley's",
+     "Prescott's"
+    ],
+    "answer": "A",
+    "why": "The one-year model value is π × (96 − 80) ÷ 1.04 = $7.18, below the market price $8.10, so the call is overpriced: sell the call and hold the replicating portfolio, which is long shares financed by borrowing (Ellery’s strategy). Buying the call (Prescott) or shorting shares and lending (Sedley) takes the wrong side."
+   },
+   {
+    "n": 16,
+    "q": "Is Sedley’s statement about European-style and American-style call options most likely correct?",
+    "options": [
+     "Yes",
+     "No, regarding European-style call options",
+     "No, regarding American-style call options"
+    ],
+    "answer": "A",
+    "why": "Both parts are correct: the expectations approach applies to European calls with many time steps, and for a non-dividend-paying stock an American call is never exercised early, so it is valued like a European call."
+   }
+  ]
+ },
+ {
+  "id": "mock2-5",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 's1a-suess' with names and numbers changed)",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Mock 2 · V5 · Falk: Summit Multi-Asset Capital credit and ABS analysis",
+  "origin": "s1a-suess",
+  "body": "Ingrid Falk is a senior portfolio manager at Summit Multi-Asset Capital, a fixed income manager. Junior analyst, Victor Lau, has been analyzing two groups of securities; corporate bonds and asset backed securities. He discusses his processes and observations with Falk.\nLau states: “When analyzing corporate bonds, I use a model that helps me calculate the present value of the credit risk. My model includes the following factors:\n* Factor 1: The projected amount of possible default loss before recovery\n* Factor 2: An assumed loss severity \nFalk explains: “We purchased the BBB rated Beacon Financial five-year bond, which currently has a modified duration of 4.1, and a yield to maturity of 5.85%.”\nLau comments: “I recently analyzed the bond using the data in Exhibit 1 containing a one-year transition matrix and spread data, and calculated it has an expected return of 1.62% over the next year.\"\nExhibit 1 \nFrom/To\tAAA\tAA\tA\tBBB\tBB\tB\tCCC & Below\nBBB\t.10\t.90\t5.00\t83.60\t6.30\t3.20\t.90\nCredit Spread\t.75\t.95\t1.10\t1.60\t3.80\t7.00\t10.50\nSix months after the Beacon Financial bond purchase, it is downgraded to BB. Lau examines the market reaction and states:\n“Following the downgrade, the actual credit spread observed in the market is smaller than that predicted in my model.\"\nFalk observes: “I see that the credit spreads on the near-term Beacon Financial bonds rose significantly above credit spreads on the longer term bonds. This tells us valuable information regarding market expectations.”\nFalk comments: “Credit analysis for corporate debt is different than that for asset-backed securities. I understand this pool of automobile loans is the first securitized bond issue you have evaluated for us and I would like to understand some of your conclusions.”\nLau replies: \"The originator of the auto ABS supplied us with the FICO credit score distribution of the large number of individual borrowers in the pool. This underlying assets are considered to be both granular and homogenous. The originator sold the loans into a special purpose entity, which typically leads to higher financing costs compared to the direct obligation financings of the originator. However, investors seeking greater diversification, with more stable underlying cash flows, are attracted to these types of securities.\"",
+  "questions": [
+   {
+    "n": 17,
+    "q": "When describing the factors included in his model for evaluating the present value of credit risk, Lau has most likely omitted the:",
+    "options": [
+     "recovery rate.",
+     "expected exposure.",
+     "probability of default."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect, because given the recovery rate assumption, we can determine the assumed loss given default (the amount of loss if a default occurs). A related term is loss severity; if the recovery rate is (X)%, the assumed loss severity is (1–X)%. | B. Incorrect, because this has been taken into consideration in Factor 2, as the assumed loss severity is a related term to the recovery rate. Given the recovery rate assumption, we can determine the assumed loss given default (the amount of loss if a default occurs). A related term is loss severity; if the recovery rate is (X)%, the assumed loss severity is (1–X)%. | C. Correct, because the three factors required are expected exposure, recovery rate, and the probability of default. The third factor is the assumed probability of default, which is the probability that a bond issuer will not meet its contractual obligations on schedule."
+   },
+   {
+    "n": 18,
+    "q": "The difference in credit spreads between Lau’s expectation in his model and the actual spread observed after Beacon bond's downgrade is most likely due to the market assuming a higher:",
+    "options": [
+     "recovery rate.",
+     "loss given default.",
+     "credit valuation adjustment."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Lau has observed a lower credit spread than predicted. Smaller credit spreads indicate that risk-averse investors require less compensation for uncertainty. A higher assumed recovery rate would be a factor for a lower spread, while a higher loss given default or higher CVA would imply a higher credit spread. | B. Incorrect because a higher assumed loss given default would be a sign of a higher default (and credit) risk and results in a higher instead of a lower credit spread. | C. Incorrect because the credit valuation adjustment (CVA) is the sum of present values of expected losses and a higher CVA would result in a higher instead of a lower credit spread."
+   },
+   {
+    "n": 19,
+    "q": "Regarding Lau's comments on the auto ABS, he is most likely correct on:",
+    "options": [
+     "both financing costs and investor preferences.",
+     "investor preferences, but incorrect on financing costs.",
+     "financing costs, but incorrect on investor preferences."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect, because while Lau is correct with respect to investor preferences, he is incorrect with respect to financing costs. | B. Correct because while Lau is correct with respect to investor preferences, he is incorrect with respect to financing costs. Investors, however, seek to benefit from greater diversification, more stable and predictable underlying cash flows, and a return that is greater than that of securities with similar ratings, which provide a reward for accepting the greater complexity associated with collateralized debt. The isolation of securitized assets in a special purpose entity generally decreases the relative financing cost for these assets on a stand-alone basis as compared to a general obligation financing of the debt originator. | C. Incorrect, because while Lau is correct with respect to investor preferences, he is incorrect with respect to financing costs."
+   },
+   {
+    "n": 20,
+    "q": "The difference between near-term and longer-term credit spreads following Beacon bond's downgrade is most likely due to:",
+    "options": [
+     "strong current cash flow and high profit margins.",
+     "a relatively stable expectation of default over time.",
+     "market expectations of improved future profitability."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. Strong current cash flow and high profit margins are characteristic of a high-quality issuer and is consistent with an upward sloping credit term structure. | B. Incorrect because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. A flat credit term structure is an indication of a relatively stable expectation of default over time. A constant hazard rate will tend to flatten the credit curve. | C. Correct because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. A downward sloping credit term structure can result from a significant increase in leverage (as in a leveraged buyout or restructuring) and can indicate investor expectations that increased efficiencies will lead to improved future cash flow and profitability, benefiting debt investors. Strong current cash flow and high profit margins are characteristic of a high-quality issuer and is consistent with an upward sloping credit term structure. A flat credit term structure is an indication of a relatively stable expectation of default over time"
+   }
+  ]
+ },
+ {
+  "id": "mock2-6",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'frazee' with names and numbers changed)",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Mock 2 · V6 · Hollis: Beacon & Ward Capital active management",
+  "origin": "frazee",
+  "body": "Peter Hollis is chief investment officer at Beacon & Ward Capital. Hollis hires a third-party adviser to develop a custom benchmark for three actively managed balanced funds he oversees: Fund X, Fund Y, and Fund Z. (Balanced funds are funds invested in equities and bonds.) The benchmark needs to be composed of 60% global equities and 40% global bonds. The third-party adviser submits the proposed benchmark to Hollis, who rejects the benchmark based on the following concerns:\n\nConcern 1\n\nMany securities he wants to purchase are not included in the benchmark portfolio.\n\nConcern 2\n\nOne position in the benchmark portfolio will be somewhat costly to replicate.\n\nConcern 3\n\nThe benchmark portfolio is a float-adjusted, capitalization-weighted portfolio.\n\nAfter the third-party adviser makes adjustments to the benchmark to alleviate Hollis’s concerns, Hollis accepts the benchmark portfolio. He then asks his research staff to develop risk and expected return forecasts for Funds X, Y, and Z as well as for the benchmark. The forecasts are presented in Exhibit 1.\n\nExhibit 1: Forecasted Portfolio Statistics for Funds X, Y, and Z and the Benchmark\n\tFund X\tFund Y\tFund Z\tBenchmark\nPortfolio weights:\t\t\t\t\n Global equities (%)\t60.0\t65.0\t68.0\t60.0\n Global bonds (%)\t40.0\t35.0\t32.0\t40.0\nExpected return (%)\t10.4\t11.9\t13.6\t9.8\nExpected volatility (%)\t16.8\t19.2\t21.7\t16.0\nActive risk (%)\t4.8\t8.6\t18.0\tN/A\nSharpe ratio (SR)\t0.48\t0.50\t0.52\t0.47\nData are based on a risk-free rate of 2.3%.\n\nHollis decides to add a fourth offering to his group of funds, Fund W, which will use the same benchmark as in Exhibit 1. Hollis estimates Fund W’s information ratio to be 0.40. He is considering adding the following constraint to his portfolio construction model: Fund W would now have maximum over- and underweight constraints of 7% on single-country positions.\n\nHollis conducts a search to hire a manager for the global equity portion of Fund W and identifies three candidates. He asks the candidates to prepare risk and return forecasts relative to Fund W’s benchmark based on their investment strategy, with the only constraint being no short selling. Each candidate develops independent annual forecasts with active return projections that are uncorrelated and constructs a portfolio made up of stocks that are diverse both geographically and across economic sectors. Selected data for the three candidates’ portfolios are presented in Exhibit 2.\n\nExhibit 2: Forecasted Portfolio Data for Equity Portion of Fund W\n\tCandidate A\tCandidate B\tCandidate C\nRebalancing\tAnnually\tAnnually\tAnnually\nNumber of securities\t100\t64\t36\nInformation ratio (IR)\t0.640\t0.730\t0.686\nTransfer coefficient (TC)\t0.800\t0.760\t0.520\nInformation coefficient*\t0.08\t0.12\t0.22\n*Information coefficient based on previously managed funds.\n\nHollis asks Candidate C to re-evaluate portfolio data given the following changes:\n\nChange 1\n\nFix the number of securities to 50.\n\nChange 2\n\nRebalance on a semi-annual basis.\n\nChange 3\n\nAdd maximum over- or underweight constraints on sector weightings.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "Based on Exhibit 1, which fund is expected to produce the greatest consistency of active return?",
+    "options": [
+     "Fund X",
+     "Fund Y",
+     "Fund Z"
+    ],
+    "answer": "B",
+    "why": "The information ratio measures the consistency of active return: IR = (R_P − R_B) ÷ active risk. Fund X: (10.4 − 9.8) ÷ 4.8 = 0.12. Fund Y: (11.9 − 9.8) ÷ 8.6 = 0.24. Fund Z: (13.6 − 9.8) ÷ 18.0 = 0.21. Fund Y has the highest IR (Fund Z has the highest Sharpe ratio, Fund X the lowest active risk)."
+   },
+   {
+    "n": 22,
+    "q": "Based on Exhibit 1, combining Fund W with a fund that replicates the benchmark would produce a Sharpe ratio closest to:",
+    "options": [
+     "0.62.",
+     "0.87.",
+     "0.47."
+    ],
+    "answer": "A",
+    "why": "With the optimal amount of active risk, SR_P² = SR_B² + IR². SR_B = (9.8 − 2.3) ÷ 16.0 = 0.47; SR_P = √(0.47² + 0.40²) = 0.62. Option C is the benchmark alone; option B adds the ratios instead of their squares."
+   },
+   {
+    "n": 23,
+    "q": "Based on the data presented in Exhibit 2, the candidate with the greatest skill at achieving active returns appears to be:",
+    "options": [
+     "Candidate A.",
+     "Candidate B.",
+     "Candidate C."
+    ],
+    "answer": "B",
+    "why": "The IR measures the consistency of active return on a risk-adjusted basis; a higher IR generally indicates more skill. Candidate B has the highest IR (0.730) vs. Candidate C (0.686) and Candidate A (0.640). Candidate C has the highest IC (0.22), but its low TC (0.520) and small breadth (36 stocks) offset it."
+   },
+   {
+    "n": 24,
+    "q": "Which proposed change to Fund W would most likely decrease Candidate C’s information ratio?",
+    "options": [
+     "Change 1",
+     "Change 2",
+     "Change 3"
+    ],
+    "answer": "C",
+    "why": "Fundamental law: IR = TC × IC × √BR, where BR is breadth (the number of independent active bets per year). Change 3 adds sector over/underweight caps, a constraint that reduces the correlation between optimal and actual active weights, i.e. lowers TC, so the IR falls. Change 1 (36 → 50 securities) and Change 2 (annual → semi-annual rebalancing) both increase breadth, which RAISES the IR."
+   }
+  ]
+ },
+ {
+  "id": "mock2-7",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'corp1-thornhill' with names and numbers changed)",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "Mock 2 · V7 · Ashby: Midland Automotive Components dividends and buybacks",
+  "origin": "corp1-thornhill",
+  "body": "David Ashby is CFO at Midland Automotive Components Corporation (MACC), an automotive manufacturer that specializes in engine components in a number of established vehicle production lines. He is preparing for a meeting with members of the executive committee to discuss and prepare recommendations for the board to determine if MACC should make any changes to its dividend policy and structure over the next fiscal year.\n\nIn preparation for this meeting, Ashby summarizes MACC's historical dividends and related information in Exhibit 1.\n\nExhibit 1\nDividend frequency\tQuarterly\nDividend amount, current\t$0.60/share\nNumber of shares outstanding\t8,000,000\nTarget payout ratio\t25%\nCorporate tax rate\t30%\nShare price – 52-week low-high\t$10.15 – $13.28\nShare price – closing\t$12.40\nIn the meeting, the first topic discussed is the recently completed sale of MACC's brake parts division. The sale generated $36 million in cash proceeds. Ashby recommends that the company issue a one-time dividend of $1.50/share to existing shareholders.\n\nThe Chief Operating Officer (COO) highlights that the company has a number of potential investments options and suggests that the company consider a 5% stock dividend instead. Ashby agrees to prepare a summary of the effect the stock dividend would have on the company's results assuming a purchase price per share based on the current market price.\n\nThe following statements about the stock dividend are discussed:\n\nStatement 1:\tThe stock dividend would be negatively received by shareholders because it would increase their tax liability.  \nStatement 2:\tThe stock dividend would have a more adverse effect on the company's financial leverage ratios which are being closely monitored by the bank.\nStatement 3:\tThe flotation costs of the stock dividend would be lower than a traditional issuance and should be considered in their analysis.\nAs a result of the extended discussion and different perspectives on dividend payout structures, Ashby suggests an alternative approach could be a share buyback transaction. The following statements are made:\n\nStatement 1:\tMACC should negotiate a greenmail transaction directly with a major activist shareholder in order to secure a discount to the current market price.\nStatement 2:\tIf there is a concern about the perception of excluding other shareholders with the greenmail transaction, a fixed price tender offer could be accomplished quickly and allow them to purchase a pro rata portion of shares from all interested shareholders.\nStatement 3:\tMACC should announce an open market repurchase program as it would provide flexibility to cancel the share purchases if the company is able to identify another project that would be a more effective use of funds.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "The one-time dividend Ashby recommends is best described as a:",
+    "options": [
+     "scrip dividend.",
+     "special dividend.",
+     "liquidating dividend."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because with a stock dividend (also known as a bonus issue of shares or a scrip dividend), the company distributes additional shares of its common stock to shareholders instead of cash. MACC sold a division and distributed a portion of the proceeds back to shareholders and the one-time $1.50/share dividend is a liquidating dividend. | B. Incorrect because a special dividend is either a dividend paid by a company that does not pay dividends on a regular schedule or a dividend that supplements regular cash dividends with an extra payment. MACC pays dividends and the one-time $1.50/share dividend is in relation to the brake parts division which is a liquidating dividend. | C. Correct because a liquidating dividend arises when a company sells a portion of its business for cash and the proceeds are distributed to shareholders. In this case, MACC sold a division and distributed a portion of the proceeds back to shareholders and the one-time $1.50/share dividend is a liquidating dividend."
+   },
+   {
+    "n": 26,
+    "q": "If MACC follows the COO's suggestion, the expected share price after the stock dividend is closest to:",
+    "options": [
+     "$13.02.",
+     "$11.78.",
+     "$11.81."
+    ],
+    "answer": "C",
+    "why": "A stock dividend leaves total market value unchanged and increases the share count, so the price falls by dividing: 12.40 ÷ 1.05 = $11.81. Option B subtracts 5% from the price (12.40 × 0.95 = 11.78); option A multiplies by 1.05."
+   },
+   {
+    "n": 27,
+    "q": "Which of the following statements about the effect of the stock dividend is most accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a stock dividend is generally not taxable to shareholders because a stock dividend merely divides the \"pie\" (the market value of shareholders' equity) into smaller pieces. | B. Incorrect because a stock dividend has no economic impact on a company. Stock dividends do not affect assets or shareholders’ equity. Although retained earnings are reduced by the value of the stock dividends paid (i.e., by the number of shares issued × price per share), contributed capital increases by the same amount (i.e., the value of the shares issued). As a result, total shareholders’ equity does not change. Neither stock dividends nor stock splits affect liquidity ratios or financial leverage ratios. | C. Correct. Flotation costs are the costs associated with selling shares to the public that would include underwriters' fees, legal costs, registration expenses, and possible negative price effects and would be lower with a direct stock dividend to existing owners. The company did not have to spend any actual money issuing a dividend."
+   },
+   {
+    "n": 28,
+    "q": "In the share buyback discussion, the statement that is the least accurate is:",
+    "options": [
+     "Statement 1.",
+     "Statement 2.",
+     "Statement 3."
+    ],
+    "answer": "A",
+    "why": "A. Correct because in a greenmail transaction, the company buys back the would-be suitor's shares at a premium to the market price, not at a discount. Unsuccessful takeover attempts have ended with the company buying back the would-be suitor’s shares at a premium to the market price, referred to as a greenmail transaction, often to the detriment of remaining shareholders. | B. Incorrect because it is an accurate statement. A fixed price tender offer can be extended to all shareholders and can set at a fixed date in the near future. A company will make a fixed price tender offer to repurchase a specific number of shares at a fixed price that is typically at a premium to the current market price. By setting a fixed date, such as 30 days in the future, a fixed price tender offer can be accomplished quickly. | C. Incorrect because it is an accurate statement. The open market share repurchase method gives the company maximum flexibility. Open market repurchases are the most flexible option for a company because there is no legal obligation to undertake or complete the repurchase program; a company may not follow through with an announced program for various reasons, such as unexpected cash needs for liquidity, acquisitions, or capital expenditures."
+   }
+  ]
+ },
+ {
+  "id": "mock2-8",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'sam' with names and numbers changed)",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Mock 2 · V8 · Lind: Harbor Asset Management arbitrage-free valuation",
+  "origin": "sam",
+  "body": "Nora Lind is a fixed-income analyst with the hedge fund Harbor Asset Management (HAM). HAM invests in a variety of global fixed-income strategies, including fixed-income arbitrage. Lind is responsible for pricing individual investments and analyzing market data to assess the opportunity for arbitrage. She uses two methods to value bonds:\n\nMethod 1: Discount each year’s cash flow separately using the appropriate interest rate curve.\n\nMethod 2: Build and use a binomial interest rate tree.\n\nLind compiles pricing data for a list of annual pay bonds (Exhibit 1). Each of the bonds will mature in two years, and Lind considers the bonds risk-free; both the one-year and two-year benchmark spot rates are 2.5%. Lind calculates the arbitrage-free prices and identifies an arbitrage opportunity to recommend to her team.\n\nExhibit 1: Market Data for Selected Bonds\nAsset\tCoupon\tMarket Price\nBond A\t1%\t97.1089\nBond B\t3%\t100.9637\nBond C\t5%\t104.0986\n\nNext, Lind uses the benchmark yield curve provided in Exhibit 2 to consider arbitrage opportunities of both option-free corporate bonds and corporate bonds with embedded options. The benchmark bonds in Exhibit 2 pay coupons annually, and the bonds are priced at par.\n\nExhibit 2: Benchmark Par Curve\nMaturity (years)\tYield-to-Maturity (YTM)\n1\t3.2%\n2\t4.2%\n3\t5.3%\n\nLind then identifies three mispriced three-year annual coupon bonds and compiles data on the bonds (see Exhibit 3).\n\nExhibit 3: Market Data of Annual Pay Corporate Bonds\nCompany\tCoupon\tMarket Price\tYield\tEmbedded Option?\nCalloway-Reid Inc.\t3.5%\t95.6805\t5.8%\tNo\nSol y Mar Intl.\t0%\t88.1347\t4.3%\tYes\nPembroke Rowan Motors\t0%\t83.2531\t6.3%\tNo\n\nLastly, Lind identifies two mispriced Norwegian bonds, Bond X, a three-year bond, and Bond Y, a five-year bond. Both are 5.5% annual coupon bonds. To calculate the bonds’ values, Lind devises the first three years of the interest rate lognormal tree presented in Exhibit 4 using historical interest rate volatility data. Lind considers how these data would change if implied volatility, which is higher than historical volatility, were used instead.\n\nExhibit 4: Interest Rate Tree—Forward Rates Based on Norwegian Market\nNode\tTime 0\tTime 1\tTime 2\nUpper\t\t4.5%\t6.5%\nMiddle\t1.5%\t\t5.5%\nLower\t\t2.5%\t3.5%\nAn interest rate tree at time 0, 1 and 2. Time 0, 1.5% followed by 4.5% and 2.5% in time 1. 4.5% is followed by 6.5% and 5.5% in time 2. 2.5% is followed by 5.5% and 3.5% in time 2.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Based on Exhibit 1, which of the following bonds most likely includes an arbitrage opportunity?",
+    "options": [
+     "Bond A",
+     "Bond B",
+     "Bond C"
+    ],
+    "answer": "C",
+    "why": "Arbitrage-free value = each cash flow discounted at the 2.5% spot rate: Bond C (5%) = 5 ÷ 1.025 + 105 ÷ 1.025² = 104.8186. The market price 104.0986 is below it, so buy Bond C and sell its stripped cash flows. Bonds A and B trade at their arbitrage-free values (97.1089, 100.9637)."
+   },
+   {
+    "n": 30,
+    "q": "Based on Exhibits 2 and 3 and using Method 1, the amount (in absolute terms) by which the Calloway-Reid Inc. corporate bond is mispriced is closest to:",
+    "options": [
+     "0.6200 per 100 of par value.",
+     "0.5549 per 100 of par value.",
+     "0.4203 per 100 of par value."
+    ],
+    "answer": "A",
+    "why": "Bootstrap spot rates from the par curve: z1 = 3.2%, z2 = 4.2212%, z3 = 5.3787%. Value of the 3.5% three-year bond = 3.5 ÷ 1.032 + 3.5 ÷ (1 + z2)² + 103.5 ÷ (1 + z3)³ = 95.0605. Mispricing = 95.6805 − 95.0605 = 0.6200. The other options discount at the par yields or a flat 5.3%."
+   },
+   {
+    "n": 31,
+    "q": "Method 1 would most likely not be an appropriate valuation technique for the bond issued by:",
+    "options": [
+     "Calloway-Reid Inc.",
+     "Sol y Mar Intl.",
+     "Pembroke Rowan Motors."
+    ],
+    "answer": "B",
+    "why": "Sol y Mar has an embedded option. Its future cash flows depend on whether the option is exercised, which depends on where interest rates go. Method 1 (fixed cash flows discounted at spot rates) can't capture that; you need a tree in which rates can take different future values given a volatility assumption (Method 2).\nA and C are wrong: Calloway-Reid and Pembroke Rowan are option-free, so both methods give the same arbitrage-free value."
+   },
+   {
+    "n": 32,
+    "q": "Based on Exhibit 4 and using Method 2, the correct price for Bond X is closest to:",
+    "options": [
+     "95.4424",
+     "111.5971",
+     "106.0971"
+    ],
+    "answer": "C",
+    "why": "Work backward through the tree (probability ½ each, 5.5% coupon). Time 2: 105.5 ÷ (1 + 6.5%, 5.5%, 3.5%) = 99.0610, 100.0000, 101.9324. Time 1: 4.5% node = 100.5077; 2.5% node = 103.8694. Time 0 = 106.0971. Option B adds the coupon again at time 0; option A leaves out the coupons within the tree."
+   }
+  ]
+ },
+ {
+  "id": "mock2-9",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'ic1-4' with names and numbers changed)",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Mock 2 · V9 · Whitfield: Northgate Clinics joint venture and SPE",
+  "origin": "ic1-4",
+  "body": "Northgate Clinics, Inc. operates a chain of hospitals throughout the United States. The company has been expanding by acquiring local hospitals. Its largest acquisition, that of Riverton Medical, was made in 2001 under the pooling of interests method. Northgate complies with US GAAP.\n\nNorthgate is currently forming a 50/50 joint venture with Meridian Care under which the companies will share control of several hospitals. Northgate plans to use the equity method to account for the joint venture. Meridian Care complies with IFRS and will use the proportionate consolidation method to account for the joint venture.\n\nPaul Whitfield is an equity analyst who covers both companies. He has estimated the joint venture’s financial information for 2018 in order to prepare his estimates of each company’s earnings and financial performance. This information is presented in Exhibit 1.\n\nExhibit 1\nSelected Financial Statement Forecasts for Joint Venture ($ Millions)\nYear ending 31 December\t2018\nRevenue\t1,560\nOperating income\t139\nNet income\t71\n31 December\t2018\nTotal assets\t1,720\nShareholders’ equity\t805\nMeridian Care recently announced it had formed a special purpose entity through which it plans to sell up to $120 million of its accounts receivable. Meridian Care has no voting interest in the SPE, but it is expected to absorb any losses that it may incur. Whitfield wants to estimate the impact this will have on Meridian Care’s consolidated financial statements.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Based on Whitfield’s estimates, the amount of joint venture revenue (in $ millions) included on Northgate’s consolidated 2018 financial statements should be closest to:",
+    "options": [
+     "$0.",
+     "$780.",
+     "$1,560."
+    ],
+    "answer": "A",
+    "why": "A is correct. Under the equity method, Northgate would record its interest in the joint venture’s net profit as a single line item, but would show no line-by-line contribution to revenues or expenses."
+   },
+   {
+    "n": 34,
+    "q": "Based on Whitfield’s estimates, the amount of joint venture net income included on the consolidated financial statements of each venturer will most likely be:",
+    "options": [
+     "higher for Northgate.",
+     "higher for Meridian Care.",
+     "the same for both Northgate and Meridian Care."
+    ],
+    "answer": "C",
+    "why": "C is correct. Net income will be the same under the equity method and proportional consolidation. However, sales, cost of sales, and expenses are different because under the equity method the net effect of sales, cost of sales, and expenses is reflected in a single line."
+   },
+   {
+    "n": 35,
+    "q": "Based on Whitfield’s estimates, the amount of the joint venture’s 31 December 2018 total assets (in $ millions) that will be included on Meridian Care’s consolidated financial statements will be closest to:",
+    "options": [
+     "$0.",
+     "$860.",
+     "$1,720."
+    ],
+    "answer": "B",
+    "why": "B is correct. Under the proportionate consolidation method, Meridian Care’s consolidated financial statements will include its 50 percent share of the joint venture’s total assets."
+   },
+   {
+    "n": 36,
+    "q": "If Meridian Care sells its receivables to the SPE, its consolidated financial results will least likely show:",
+    "options": [
+     "a higher revenue for 2018.",
+     "the same cash balance at 31 December 2018.",
+     "the same accounts receivable balance at 31 December 2018."
+    ],
+    "answer": "A",
+    "why": "A is correct. Revenue will not be higher for 2018 because Meridian Care controls the SPE and thus eliminates intra-entity transactions and balances in consolidation. Consolidated revenue will thus present the results as if this transaction did not occur."
+   }
+  ]
+ },
+ {
+  "id": "mock2-10",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 's1b-beaumont' with names and numbers changed)",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Mock 2 · V10 · Fournier: Lyon Funds ETF applications and risks",
+  "origin": "s1b-beaumont",
+  "body": "Camille Fournier is a corporate bond portfolio manager at Lyon Funds, LLC in Burlington, VT. She manages a US$650 million fund of primarily investment grade corporate bonds. The fund can also invest in fixed-income securities within the high-yield emerging market and in the sovereign and municipal sectors. As a result of market volatility, Fournier has been noting that inflows and outflows are larger and more frequent than in the past. Because her fund is benchmarked against the Barclays Bloomberg Corporate Bond Index, and her peer universe is competitive, Fournier is looking at ways to ensure that the cash flows do not adversely affect fund performance. She considers the use of exchange-traded funds (ETFs) to manage her market exposures in the fund.\nLucas Morel, an analyst on Fournier’s team is not familiar with ETFs. He asks Fournier to explain how the mechanics of ETFs work and what parties are involved in the process. Fournier describes the roles to Morel of different parties involved in ETFs by making the following statements:\nStatement 1:\tETFs trade in the secondary market throughout the course of the day at the then-current market price. In that regard, they are like any other stock in which buyers and sellers are matched.\nStatement 2:\tThere is a primary market for ETFs in which there is a creation and redemption process for shares. Here, the arbitrage gap is reduced to a narrow band to ensure that the price of the ETF and the underlying securities trade around a barrow band.\nStatement 3:\tIf, for example, ETF shares are being created, an intermediary receives the basket of in-kind securities at settlement.\nFournier then asks Morel to analyze in more detail the economics surrounding ETFs. Morel conducts a thorough analysis of the costs of an ETF, such as bid–ask spreads and sources of premiums and discounts. He summarizes his findings to Fournier in the following notes:\nNote 1:\tA number of factors can determine the width of bid–ask spreads. These include creation or redemption fees, trading costs, and importantly, the bid–ask spread of the underlying securities. Similar to any other stock, the market maker is compensated, including a profit spread, for the risks of holding and hedging a security which are a function of liquidity.\nNote 2:\tETFs can trade at either a premium or discount to the underlying, which affect trading costs negatively or positively. Exchanges disclose the indicated intraday net asset values (NAVs), which are estimates of fair value based on the creation basket. Premiums and discounts are driven by a number of factors, including timing differences and stale pricing, which can be meaningful for foreign securities.\nFournier continues to assess the use of ETFs in her portfolio. She constantly evaluates risks that different investments can introduce into her strategy. She asks Morel to work with the risk management group to identify these risks and report back to her. Morel provides Fournier a report with his findings on ETF risks starting with an executive summary, which is provided in Exhibit 1.\nExhibit 1 Executive Summary of ETF Risks\nETFs introduce unique risks because of their structure, holdings, and underlying exposures. Counterparty risk is prevalent in certain ETF legal structures, such as synthetic ETFs in which investors could lose all the principal invested if the issuer defaults. Funds that use over-the-counter (OTC) derivatives, such as exchange traded notes (ETNs), are subject to settlement risk, which is the result of counterparty risk between settlement periods. Leveraged and inverse funds might not deliver the expected performance over the desired time horizon that was expected based on the underlying exposures.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "Based on Fournier’s objectives in managing her fund, which application of ETFs is least likely applicable?",
+    "options": [
+     "Portfolio liquidity management",
+     "Portfolio completion strategies",
+     "Portfolio transition management"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because portfolio liquidity management is easily achieved with the use of ETFs. | B. Incorrect because Fournier can use ETFs to invest the outflows or meet redemptions and keep her exposure to the market. | C. Correct because transition management refers to the process of hiring and firing managers — or making changes to allocations with existing managers. In this application, the manager can add the desired exposure to a market segment with ETFs while shedding exposure to the market segment she has received in kind. Fournier is experiencing inflows and outflows in her corporate bond fund. An efficient way to maintain the desired exposure is to buy and sell ETFs as flows occur. Using ETFs for portfolio completion can help fill in temporary gaps in exposure while she finds individual bonds to trade. The liquidity of ETFs relative to individual bonds allows Fournier to quickly invest inflows or meet redemptions."
+   },
+   {
+    "n": 38,
+    "q": "The roles of the parties involved in the mechanics of ETFs that Fournier describes to Morel in her three statements, can most likely be described in order as those of the:",
+    "options": [
+     "ETF sponsor, market maker, and authorized participant.",
+     "market maker, authorized participant and ETF sponsor.",
+     "authorized participant, ETF sponsor, and market maker."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because activities listed are conducted first by the market maker, second by the authorized participant, and third by the ETF sponsor. | B. Correct because several parties are involved in the primary or creation or redemption and secondary trading of ETFs. If the trade is submitted through a broker in the secondary market, a market maker will execute the transaction. If ETF shares need to be created or redeemed because of demand or supply, the only group of investors permitted in this process is a special group of institutional investors called authorized participants. The ETF issuer or the sponsor transacts with the authorized participant receiving or providing in-kind securities in the settlement process. | C. Incorrect because activities listed are conducted first by the market maker, second by the authorized participant, and third by the ETF sponsor."
+   },
+   {
+    "n": 39,
+    "q": "Are Morel’s notes regarding the economics surrounding ETFs most likely correct?",
+    "options": [
+     "Yes",
+     "No, he is incorrect with regard to Note 1",
+     "No, he is incorrect with regard to Note 2"
+    ],
+    "answer": "A",
+    "why": "A. Correct because Morel is correct with regard to both notes. He has accurately described the economics surrounding ETFs pertaining to both bid-ask spreads and premiums and discounts. | B. Incorrect because Note 1 regarding bid-ask spreads is correct. | C. Incorrect because Note 2 regarding premiums and discounts is correct."
+   },
+   {
+    "n": 40,
+    "q": "Which type of ETF has Morel least likely associated correctly with the risks described in his executive summary in Exhibit 1?",
+    "options": [
+     "ETNs",
+     "Synthetic ETFs",
+     "Leveraged and inverse funds"
+    ],
+    "answer": "A",
+    "why": "A. Correct because Morel has correctly identified a number of risks that investors face when investing in ETFs. Certain risk are more closely associated with specific types of ETFs. He correctly notes the risks associated with leveraged and inverse funds, which are intended to deliver their expected return relative to their exposure over very short periods. These are not intended to be buy-and-hold investments for periods generally longer than a month or even days in some cases without rebalancing of the position. He also correctly associates synthetic ETFs, such as swap-based funds that use OTC derivatives to gain exposure and are subject to both counterparty and settlement risk. Morel has incorrectly associated ETNs with settlement risk, which is the result of counterparty risk between settlement periods. ETNs do not hold underlying securities but rather are unsecured obligations of the institutions that issue them and therefore are subject to counterparty risk. | B. Incorrect because Morel has correctly described the risks associated with synthetic ETFs. | C. Incorrect because Morel has correctly described the risks associated with leveraged and inverse funds."
+   }
+  ]
+ },
+ {
+  "id": "mock2-11",
+  "source": "Mock paper 2 (assembled 2 Nov from stored vignette 'eurexim' with names and numbers changed)",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Mock 2 · V11 · Vidal: Valtec subsidiary in Moldova",
+  "origin": "eurexim",
+  "body": "Marco Vidal is an analyst for a credit rating agency. One of the companies he follows, Valtec SA, is based in Spain and complies with International Financial Reporting Standards (IFRS). Vidal has learned that Valtec used EUR190 million of its own cash and borrowed an equal amount to open a subsidiary in Moldova. The funds were converted into leu (MDL) on 31 December 20X1 at an exchange rate of EUR1.00 = MDL19.50 and used to purchase MDL2,600 million in fixed assets and MDL520 million of inventories.\n\nVidal is concerned about the effect that the subsidiary’s results might have on Valtec’s consolidated financial statements. He calls Valtec’s Chief Financial Officer, but learns little. Valtec is not willing to share sales forecasts and has not even made a determination as to the subsidiary’s functional currency.\n\nAbsent more useful information, Vidal decides to explore various scenarios to determine the potential impact on Valtec’s consolidated financial statements. Moldova is not currently in a hyperinflationary environment, but Vidal is concerned that this situation could change. Vidal also believes the euro will depreciate against the leu for the foreseeable future.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "If Moldova’s economy becomes highly inflationary, Valtec will most likely translate inventory by:",
+    "options": [
+     "restating for inflation and using the temporal method.",
+     "restating for inflation and using the current exchange rate.",
+     "using the temporal method with no restatement for inflation."
+    ],
+    "answer": "B",
+    "why": "Valtec reports under IFRS. IAS 21 with IAS 29: first RESTATE the subsidiary's statements for local inflation, then translate ALL items at the CURRENT exchange rate.\nC is the US GAAP approach: temporal method, parent's currency treated as functional, no inflation restatement.\nA mixes the two; restated amounts are not then translated with the temporal method."
+   },
+   {
+    "n": 42,
+    "q": "Given Vidal’s belief about the direction of exchange rates, Valtec’s gross profit margin would be highest if it accounts for the Moldova subsidiary’s inventory using:",
+    "options": [
+     "FIFO and the temporal method.",
+     "FIFO and the current rate method.",
+     "weighted-average cost and the temporal method."
+    ],
+    "answer": "A",
+    "why": "Two choices judged separately. With (some) inflation, FIFO charges the oldest, cheapest costs to COGS, so its gross profit is higher than weighted-average cost. The euro depreciates, so the leu STRENGTHENS: under the temporal method COGS uses older historical rates when the leu was weaker, so COGS look smaller in euros and the margin is higher than under the current rate method (same as the local margin). Best combination: FIFO + temporal."
+   },
+   {
+    "n": 43,
+    "q": "If the euro is chosen as the Moldova subsidiary’s functional currency, Valtec will translate its fixed assets using the:",
+    "options": [
+     "average rate for the reporting period.",
+     "rate in effect when the assets were purchased.",
+     "rate in effect at the end of the reporting period."
+    ],
+    "answer": "B",
+    "why": "Parent’s currency (EUR) as the functional currency means the TEMPORAL method. Fixed assets are non-monetary items carried at historical cost, so they use the HISTORICAL rate (when bought): MDL2,600m ÷ 19.50 = EUR133.3m, fixed at that amount. The average rate is for most income statement items; the current rate is for monetary items under the temporal method (or everything under the current rate method)."
+   },
+   {
+    "n": 44,
+    "q": "Based on the information available and Vidal’s expectations regarding exchange rates, if the leu is chosen as the Moldova subsidiary’s functional currency, Valtec will most likely report:",
+    "options": [
+     "an addition to the cumulative translation adjustment.",
+     "a translation gain or loss as a component of net income.",
+     "a subtraction from the cumulative translation adjustment."
+    ],
+    "answer": "A",
+    "why": "Current rate method: the adjustment goes to equity through the CTA, not net income (that rules out the second option). Exposure = net assets (positive). The euro depreciates, so the leu strengthens and net assets are worth more euros: a positive adjustment, an addition to the CTA."
+   }
+  ]
+ }
+]
