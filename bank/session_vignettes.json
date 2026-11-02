@@ -921,11 +921,56 @@
   "id": "s1b-treadway",
   "source": "27 Oct session 1",
   "readings": [
-   7
+   7,
+   11
   ],
   "title": "Treadway: Knight and CCCL intercorporate investments",
   "body": "Hannah Treadway is an analyst at Knight Investment Management (Knight). Knight holds Cooper Creek Cable Limited (CCCL) as part of its AFE (Australian and Far East) investment portfolio. CCCL is a diversified cable and communications company operating in Western Australia. The company consists of three divisions:\n* Cable: Provides subscription television services and high speed internet to residential customers.\n* Media: Owns and operates a group of radio stations and publishes several magazines.\n* Wireless: Is engaged in wireless voice and data communications services.\nTreadway is just starting her annual review of the company based on its most recent financial statements, excerpts of which are in Exhibits 1 and 2. The financial statements for CCCL are prepared in accordance with Australian Accounting Standards (AASB), which comply with IFRS. All figures are in Australian dollars ($).\nExhibit 1 Cooper Creek Cable Limited Statement of Earnings for Years Ending December 31 (all figures in $ thousands)\n\t2016\t2015\nRevenue\t711,200\t674,600\nProgramming and communication expenses\t312,900\t317,000\nGross margin\t398,300\t357,600\nDepreciation expense\t98,750\t78,650\nAmortization of intangibles\t7,250\t8,150\nReversal of impairment loss\t–12,500\t---\nGain on sale of assets held for sale\t–14,400\t---\nOperating costs\t185,900\t173,000\nInterest expense\t64,100\t65,900\nIncome from investments in associates\t1,200\t850\nProfit before tax\t70,400\t32,750\nTax benefit (expense)\t17,600\t–8,187\nNet profit for the year\t88,000\t24,563\nExhibit 2 Cooper Creek Cable Limited Balance Sheet as of December 31 (all figures in $ thousands)\n\t2016\t2015\nCash\t95,600\t74,400\nAccounts receivable, net\t35,700\t33,500\nAssets held for sale\t---\t23,500\nTotal current assets\t131,300\t131,400\nInvestments in associates\t42,700\t42,300\nCapital assets, net\t221,800\t241,200\nIntangible assets, net\t43,250\t24,500\nGoodwill\t11,000\t6,500\nDeferred tax assets\t185,500\t169,900\nTotal assets\t635,550\t615,800\n\nTrade payables\t92,100\t104,200\nInterest bearing loans\t49,700\t\nShort-term unearned revenue\t12,500\t21,250\nOther liabilities\t23,800\t23,000\nTotal current Liabilities\t178,100\t148,450\nInterest bearing debt\t703,800\t814,300\nLong-term unearned revenue\t6,500\t13,500\nTotal liabilities\t888,400\t976,250\n\nIssued capital\t556,400\t536,800\nAccumulated losses\t–809,250\t–897,250\nTotal equity\t–252,850\t–360,450\nTotal liabilities and equity\t635,550\t615,800\nCCCL sustained substantial losses in its start-up period (2001–2005) (from which it is still benefiting for tax purposes) but has been profitable since 2005, reporting a record profit after tax in 2016. However, Treadway is wondering if CCCL’s revenues in general are supported by cash flows and if the company might be trying to increase the appearance of profitability in order to increase the share price, which remains low.\nThe Wireless division was acquired by CCCL in a share purchase in late 2015. Treadway wants to review the accounting policies CCCL has adopted for both revenue and expenses incurred on long-term wireless contracts (Exhibit 3).\nExhibit 3 Excerpts of Accounting Policy Notes (all figures in thousands)\nNote 1 d) Long-Term Wireless Contracts\nCustomers who enter into long-term service contracts for wireless services can obtain their mobile devices for a nominal amount. Commencing in 2016, the discount offered on the devices, relative to the regular price, is capitalized as a customer acquisition cost and amortized straight-line over the life of the contract, or a minimum of three years. Previously this amount was recognized in income immediately.\nNote 1 g) Unearned Revenue\nUnearned revenue for subscriptions, or for services paid in advance, was historically recognized on a straight-line basis over the term of the contract or subscription, which was typically three years. After reviewing the historical pattern of usage and cancellations for service contracts in 2016, the pattern of recognition was changed to recognize the majority of the revenues in the first 12 months after the service contract is signed with the remainder recognized in the following year.\nNote 12) Broadcast Licenses\nDuring 2016, the company successfully disposed of broadcast licenses that were held for sale for $37,900 (net book value of $23,500). Based on the successful completion of that sale the impairment losses taken in 2014 on other licenses have been reversed, restoring those intangible assets to their amortized historical cost. Broadcast licenses are amortized over a period of 15 to 25 years.\nOn reading the note about the rapid reversal of the impairment loss related to the Broadcast licenses (Exhibit 3, Note 12) Treadway strongly believes that it arose as an attempt by management to manage earnings. She realizes that both her 2014 and 2015 analyses were impacted by these actions and now need to be reconsidered.\nAs part of her annual review, Treadway determines the Altman’s Z-scores for CCCL. The results for the current and past years are reported in Exhibit 4.\nExhibit 4 Cooper Creek Cable Limited Altman Z-Scores\n\t2016\t2015\nAltman Z-score*\t2.14\t1.82\n* Critical values: 1.81 and 3.0\t\t\nFinally, Treadway noted that during 2016 CCCL acquired 100% of MusicMusic (MM), a specialty cable music channel in an all-stock deal. At the time of the acquisition MM reported intangible assets for broadcast licenses at a value of $2,500. CCCL estimated the fair value of those licenses to be $5,500 at that date and estimated the value of the MusicMusic brand name to be $2,000, all figures in thousands. The acquisition did not give rise to any goodwill.",
   "questions": [
+   {
+    "n": 27,
+    "q": "The change in which of the following items most likely indicates that CCCL might be recognizing revenue early?",
+    "options": [
+     "Unearned revenue",
+     "Deferred tax assets",
+     "Days sales in receivables"
+    ],
+    "answer": "A",
+    "why": "A. Correct. In the past, revenue from service contracts had been recognized on a straight-line basis over the (typical) three-year period of the contract (Note 1 g in Exhibit 3). Under the new policy, most of the revenue is recognized in the first year and all of it within the two-year time frame. This represents a much more aggressive revenue recognition policy. An increase in DSO could be an indicator of early revenue recognition but for CCCL the ratio did not change significantly (18.1 days in 2015 to 18.3 days in 2016 using year-end receivables). Deferred tax assets (Exhibit 2) can arise from differences in revenue recognition for taxes and financial statement purposes (they would rise with increases in unearned revenue), but there is no indication here that revenue is the reason for the increase in deferred tax assets DTA (in fact, unearned revenue decreased). The deferred tax assets most likely arise from the loss carry forwards generated from earlier losses. | B. Incorrect. Deferred tax assets can arise from differences in revenue recognition for taxes and financial statement purposes (they rise with increases in unearned revenue), but there is no indication here that revenue is the reason for the increase in DTA (in fact, unearned revenue decreased). They most likely arise from the loss carry forwards arising from earlier losses. | C. Incorrect. An increase in DSO could be an indicator of early revenue recognition but for CCCL the ratio did not change substantially (18.1 days to 18.3 days using yearend receivables). 2016: 711,200/35,700 = 19.9× ≥ 18.3 days 2015: 674,600/33,500 = 20.1× ≥ 18.1 days"
+   },
+   {
+    "n": 28,
+    "q": "The new accounting policy adopted in 2016 for the customer acquisition cost related to long-term wireless contracts (Exhibit 3, Note 1 d) most likely increases CCCL’s:",
+    "options": [
+     "debt to asset ratio.",
+     "quality of earnings.",
+     "cash from operations."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The total assets would increase by the amount capitalized (as opposed to expensed) (be higher) hence the D/A ratio would decrease. | B. Incorrect. Capitalizing decreases the quality of earnings because it would be more conservative and closer to cash flow to expense the losses in the period. The future benefit and the ability to match these costs to revenues are uncertain, particularly given CCCL’s new policy to accelerate the recognition of revenue on long-term contracts. | C. Correct. In 2016, CCCL started capitalizing the discount offered (from selling the mobile devices at a lower price) instead of recording it in the period it is incurred. This change in the policy would increase net income (by lowering expenses) and cash from operations. The amounts capitalized would be recorded as cash outflows for investing activities, compared to cash from operations if they were expensed."
+   },
+   {
+    "n": 29,
+    "q": "If Treadway’s belief about management’s motivation behind the 2014 treatment of the broadcast licenses is correct, compared to the actual economic results in 2015, her original 2015 analysis would most likely have:",
+    "options": [
+     "understated ROA.",
+     "overstated net profit margin.",
+     "understated fixed asset turnover."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. In 2015 the intangible assets were understated and net profit was overstated (due to the lower amortization expense), so ROA would have been overstated in 2015, not understated. | B. Correct. The broadcast licenses were written down in 2014, but the write-down was reversed in 2016. Therefore, during 2015 the intangible assets were understated, which would have understated amortization expense for the year and increased profit. Thus in 2015, net profit margin was overstated. | C. Incorrect. In 2015 the intangible assets were understated, which would have increased asset turnover (Sales/Average total assets), so it would have been overstated during the year."
+   },
+   {
+    "n": 30,
+    "q": "From her Altman Score results, Treadway is most likely to conclude that the probability of bankruptcy for CCCL has:",
+    "options": [
+     "decreased.",
+     "remained uncertain.",
+     "increased."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The Altman score has increased, which might suggest less bankruptcy risk, but it is still in that zone of uncertainty. | B. Correct. Altman scores in excess of 3.0 indicate low probability of bankruptcy; those below 1.81 indicate a high probability of bankruptcy. Scores within the 1.81 to 3.0 range do not provide a clear indication of bankruptcy. | C. Incorrect. The Altman score has increased, which might suggest less bankruptcy risk, but it is still in that zone of uncertainty."
+   },
    {
     "n": 47,
     "q": "The cash received (in thousands) from CCCL’s investments in associates in 2016 is closest to:",

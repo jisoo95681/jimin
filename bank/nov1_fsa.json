@@ -1,0 +1,807 @@
+[
+ {
+  "id": "fsa6-eastview",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   12,
+   11
+  ],
+  "title": "Bailey: Eastview DuPont, segments and accruals",
+  "body": "Ione Bailey is a financial analyst who is examining the most recent annual report of Eastview Inc., a US-based company that complies with US GAAP. Bailey wants to determine Eastview's ROE as well as the trend in its ROE components by using DuPont analysis. Data used for this purpose is presented in Exhibit 1.\nExhibit 1\n \tMost Recent Year\tPrevious Year\tTwo Years Ago\nRevenue (USD million)\t 750\t680\t600\nNet income (USD million)\t60\t55\t50\nTotal liabilities (USD million)\t230\t220\t200\nTotal asset turnover ratio\t1.30\t1.25\t1.20\nBailey also wants to evaluate Eastview's three geographic operating segments to assess their ROI and growth during the most recent year. For this purpose, she prepares the data presented in Exhibit 2 for the most recent year.\nExhibit 2\n \tEurope\tAsia\tAmericas\nSegment EBIT margin %\t12.5\t13.1\t12.8\nSegment % of total assets\t26.5\t31.2\t42.3\nSegment % of total capital expenditures\t32.2\t29.1\t38.7\nNext, while reading the notes to the financial statements in the annual report, Bailey observes that Eastview's property, plant and equipment have depreciable lives that are 20% longer than its industry competitors' average. For comparison purposes, Bailey adjusts the financial statements to determine the effect of the difference on the company's financial ratios and information.\nFinally, in order to assess Eastview's accruals and earnings quality, Bailey calculates the accruals ratios that are presented in Exhibit 3.\nExhibit 3\n \tMost Recent Year\tPrevious Year\tTwo Years Ago\nBalance-sheet-based accruals ratio (%)\t7.9\t3.8\t3.1\nCash-flow-based accruals ratio (%)\t4.7\t4.4\t2.6",
+  "questions": [
+   {
+    "n": 8,
+    "q": "Based on the 3 years of data provided for DuPont analysis, Eastview's financial leverage has been:",
+    "options": [
+     "trending lower.",
+     "stable.",
+     "trending higher."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the 3-year trend has been stable. | B. Correct because financial leverage can be determined from the information provided as follows: Formula\tMost recent year\tPrevious year\tTwo years ago Total assets\tRevenues/Total asset turnover\t750/1.30 = 576.92\t680/1.25 = 544\t600/1.2 = 500 Total shareholders' equity\tTotal assets – Total liabilities\t576.92 – 230 = 346.92\t544 – 220 = 324\t500 – 200 = 300 Financial leverage\tTotal assets/Total shareholders' equity\t576.92/346.92 = 1.663\t544/324=1.679\t500/300 = 1.667 Accordingly, the 3-year trend in financial leverage has been stable at 1.7. | C. Incorrect because the 3-year trend has been stable."
+   },
+   {
+    "n": 9,
+    "q": "Based on the segment information, Eastview is growing its business the most in:",
+    "options": [
+     "Asia.",
+     "Europe.",
+     "Americas."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Europe is growing fastest. In the most recent year, the Asia segment has the highest EBIT margin % but growth should be measured using capital expenditures % to total asset %. | B. Correct because the ratio of the total capital expenditures % to the total assets % measures segment business growth. A ratio of less than 1 indicates that the segment is being allocated a lesser proportion of capital expenditures than its proportion of total assets; if a trend develops, the segment will become less significant over time. A ratio of greater than 1 indicates the company is growing the segment; the segment is receiving a 'growth allocation' of capital spending. Accordingly, the segment growth evaluation is as follows: Europe: 32.2% ÷ 26.5% = 1.215 Asia: 29.1% ÷ 31.2% = 0.933 Americas: 38.7% ÷ 42.3% = 0.915 Accordingly, Europe is the geographic segment that is growing fastest. | C. Incorrect because Europe is growing fastest. The Americas segment has the highest total capital expenditure % as well as the highest total assets % but growth should be measured using capital expenditures % to total asset %."
+   },
+   {
+    "n": 10,
+    "q": "After Bailey makes the adjustment for Eastview's treatment of its property, plant and equipment, which of the following will increase?",
+    "options": [
+     "Debt-to-equity ratio",
+     "Book value per share",
+     "Operating profit margin"
+    ],
+    "answer": "A",
+    "why": "A. Correct because the debt-to-equity ratio (Total debt ÷ Total shareholders' equity) will increase. Net income and therefore shareholders' equity will decrease after Bailey makes the adjustment for a greater amount of depreciation expense. There is no effect on total debt. | B. Incorrect because book value per share (Common shareholders' equity ÷ Total number of common shares outstanding) will decrease. Net income and therefore shareholders' equity will decrease after Bailey makes the adjustment for a greater amount of depreciation expense. There is no effect on the total number of common shares outstanding. | C. Incorrect because the operating profit margin (Operating profit ÷ Total revenues) will decrease after Bailey makes the adjustment to record a greater amount of depreciation expense to make Eastview more comparable with its competitors. Operating profit will be reduced. There is no effect on total revenues."
+   },
+   {
+    "n": 11,
+    "q": "Based on the Bailey's calculations, Eastview's balance-sheet-based accruals ratio is:",
+    "options": [
+     "trending lower and improving.",
+     "trending lower and deteriorating.",
+     "trending higher and deteriorating."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the balance-sheet-based accruals ratio is deteriorating and trending higher. | B. Incorrect because the balance-sheet-based accruals ratio is trending higher. | C. Correct because the percentage trend of the balance-sheet-based accruals ratio is increasing over the 3-year period. This trend indicates that accruals are an increasing factor in the financial results."
+   }
+  ]
+ },
+ {
+  "id": "fsa6-dorado",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   12,
+   11
+  ],
+  "title": "Winslow: Dorado Beverages growth by acquisition, earnings quality and segments",
+  "body": "Natalyn Winslow is an analyst working for High Impact Investments (HII), which manages a variety of investment funds. She analyzes the recent performance of Dorado Beverages SA (DB), a multinational brewer of carbonated beverages that recently entered the energy drinks market. As a core holding, DB's prominence in Europe provides geographic diversification for HII which tends to be North-America-centric. \nWinslow refers to DB's most recent year and previous year balance sheets and comments: \"DB is continuing to follow a growth-by-acquisition strategy.\" In addition, Winslow adjusts DB's most recent year income statement to determine the company's net income under the direct control of management by using information (in EUR millions) in Exhibit 1.\nExhibit 1\n \tMost Recent Year\nIncome from operations\t1,765\nIncome from investments in associates\t191\nInterest expense\t(648)\nTaxes\t(238)\nNet income\t1,070\nOf which:\nNet income attributable to non-controlling interests\t86\nNet income attributable to shareholders\t984\nWinslow and her team assess the quality of DB's overall performance. The consensus is positive, but Winslow disagrees with her team for the following reasons:\nReason 1: The rate of fluctuation in the cash-flow-based accruals ratio is low.\nReason 2: Balance-sheet-based accruals are trending down relative to total assets.\nReason 3: Income from operations is consistently higher than cash generated from operations.\nWinslow and her team notice from DB's annual report that the company has four segments. They analyze DB's segments by using information (in EUR millions) in Exhibit 2.\nExhibit 2\n \tMost Recent Year\tPrevious Year\n \tSales\tEBIT\tAssets\tSales\nCarbonated drinks - Europe\t2,845\t955\t12,416\t2,758\nCarbonated drinks - North America\t1,913\t558\t5,876\t1,721\nCarbonated drinks - Asia Pacific\t535\t172\t2,661\t503\nEnergy drinks\t284\t16\t1,219\t202\nTotal\t5,577\t1,701\t22,172\t5,184\nAfter performing the segment analysis, Winslow and her team conclude on the following statements:\nStatement 1: The sales growth rate in carbonated drinks - North America is stronger than that of energy drinks.\nStatement 2: Carbonated drinks - Europe's EBIT margin is superior to that of carbonated drinks - North America. \nStatement 3: Asset turnover in carbonated drinks - Europe is better than that of DB overall.",
+  "questions": [
+   {
+    "n": 12,
+    "q": "Which of the following balance sheet line items is most appropriate to justify Winslow's comment about DB's growth strategy?",
+    "options": [
+     "Goodwill",
+     "Long-term debt",
+     "Property, plant and equipment"
+    ],
+    "answer": "A",
+    "why": "A. Correct because goodwill arises when a company acquires another business. Goodwill and intangible assets are hallmarks of a growth-by-acquisition strategy. | B. Incorrect because although long-term debt may have changed (likely increased) as a result of a growth-by-acquisition strategy, it may also have changed because of changes to the target capital structure or a share-based acquisition strategy. | C. Incorrect because although property, plant and equipment may have changed (likely increased) as a result of a growth-by-acquisition strategy, it may also have changed because of significant new direct investments in capital. In addition, the nature of DB's industry suggests that acquisitions may include significant intangible assets (e.g., brands) that would not significantly change DB's property, plant and equipment."
+   },
+   {
+    "n": 13,
+    "q": "After Winslow's adjustment, DB's net income (in EUR millions) under management's direct control is:",
+    "options": [
+     "793.",
+     "879.",
+     "984."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it correctly excludes income from investments in associates but incorrectly excludes net income attributable to non-controlling interests. Net income attributable to shareholders \t984 Less: Income from investments in associates\t(191) 793 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management. | B. Correct because it excludes the income from investments in associates which is not under DB's direct control (in EUR millions): Net income\t1,070 Less: Income from investments in associates\t (191) 879 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management. | C. Incorrect because this answer is net income attributable to shareholders which incorrectly includes income from investments in associates but incorrectly excludes net income attributable to non-controlling interests: Net income\t1,070 Less: Net income attributable to non-controlling interests\t   (86) Net income attributable to shareholders\t984 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management."
+   },
+   {
+    "n": 14,
+    "q": "Which of the following reasons best supports Winslow's disagreement with her team about DB's overall performance?",
+    "options": [
+     "Reason 1",
+     "Reason 2",
+     "Reason 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a pattern of steady cash-flow-based accruals is unlikely to raise concerns. An erratic or upward-moving trend in cash-flow-based accruals would be concerning. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher. | B. Incorrect because it is upward-trending relative accruals that could suggest management is trying to manipulate reported performance. Downward trending accruals provide less opportunity for manipulation. The analyst notes that the absolute level of accruals on the balance sheet is minor relative to the size of the operating assets, on either an ending balance basis or an average basis. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher. | C. Correct because the quality of income from operations is considered better when it is backed by cash flow. In this case, cash generated from operations is not fully backing income from operations, thereby calling the quality of income from operations into question. If the cash flow generated by operations was significantly or consistently less than operating profit, one would have reason to be suspicious about the quality of the operating profit."
+   },
+   {
+    "n": 15,
+    "q": "With respect to the segment analysis, which of the following statements is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because per the table below (in EUR millions except where indicated), the sales growth rate in carbonated drinks - North America is lower, and thus weaker, than that of Energy Drinks, not stronger. Carbonated drinks - North America\tEnergy Drinks \tAnalysis Sales - Most recent year (A)\t1,913\t284\t--- Sales - Previous year (B)\t1,721\t202\t--- Sales growth % (A/B)\t11.2%\t40.6%\tCarbonated drinks - North America lower | B. Correct because per the table below (in EUR millions except where indicated), carbonated drinks - Europe's EBIT margin is higher than, and thus superior to that of carbonated drinks - North America. Carbonated drinks - Europe\tCarbonated drinks - North America\tAnalysis EBIT  (A)\t955\t558\t--- Sales  (B)\t2,845\t1,913\t--- EBIT margin % (A/B)\t33.6%\t29.2%\tCarbonated drinks - Europe higher | C. Incorrect because per the table below (in EUR millions except where indicated), carbonated drinks - Europe's asset turnover is lower, and thus worse, than that of DB overall, not better. Carbonated drinks - Europe\tDB overall\tAnalysis Sales (A)\t2,845\t5,577\t--- Assets (B)\t12,416\t22,172\t--- Asset turnover (A/B)\t0.23x\t0.25x\tCarbonated drinks - Europe lower"
+   }
+  ]
+ },
+ {
+  "id": "fsa6-rhine",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   12
+  ],
+  "title": "Petersen: Rhine AG divisional capex, tax and liquidity",
+  "body": "Claus Petersen, a pension fund equity analyst, is preparing an analysis of Rhine AG for the upcoming quarterly fund meeting. Rhine is a Germany-based manufacturer that operates three distinct divisions: children’s products (infant car seats, strollers, cribs, etc.), recreational products (bicycles, bicycle trailers, etc.), and home furnishings (contemporary furniture). All three divisions sell through retail outlets around the world.\nThe company has been pursuing an aggressive growth strategy, achieved through both foreign acquisitions and organic growth. Petersen is interested in determining how well Rhine is allocating its resources between the three divisions and the effects of the foreign acquisitions on overall performance. Exhibit 1 summarizes selected divisional and corporate data for the current year and the prior year.\nExhibit 1 Rhine AG Selected Divisional and Corporate Data (€ millions)\n \tTotal for Three Divisions\tChildren's Products\tRecreational Products\tHome Furnishings\n \tCurrent Year\tPrior Year\tCurrent Year\tPrior Year\tCurrent Year\tPrior Year\tCurrent Year\tPrior Year\nRevenues\t2,837.1\t2,775.5\t1,176.2\t1,236.2\t1,034.1\t930.0\t626.8\t609.3\nGross profit\t621.4\t640.8\t296.6\t337.6\t246.0\t220.3\t78.8\t82.9\nOperating profit\t172.7\t219.4\t64.7\t115.7\t72.9\t62.2\t35.1\t41.5\nEarnings before taxes (EBT)\t136.6\t170.0\t---\t---\t---\t---\t---\t---\nNet earnings after tax\t109.9\t132.3\t---\t---\t---\t---\t---\t---\nTotal assets\t2,498.0\t2,479.5\t1,270.9\t1,249.6\t961.5\t948.5\t265.6\t281.4\nCapital expenditures\t32.7\t42.3\t22.1\t30.0\t6.7\t8.6\t3.9\t3.7\nProportion of capital expenditures\t100%\t100%\t67.6%\t70.9%\t20.5%\t20.3%\t11.9%\t8.7%\nProportion of total assets\t100%\t100%\t50.9%\t50.4%\t38.5%\t38.3%\t10.6%\t11.3%\nPetersen’s preferred method to determine which division is becoming less significant over time is to review the relationship between capital expenditures and total assets by operating division. He plans to base his conclusion on the assumption that the current year's investment behavior is representative of future investment patterns.\nPetersen knows that revenues in the children’s products division have suffered because of declining birth rates in Europe and North America, but he believes that if Rhine can maintain the operating margin for this division then overall company profitability should not be affected.\nCorinna Berg, another analyst with the fund, reminds Petersen that during the current year, the US dollar weakened against the euro by 4% and that 50% of the sales in the recreational products division are sold in the United States.\nPetersen recalls that some of the recent global expansion was aimed at establishing operations in Ireland because its statutory corporate tax rate is lower than the German rate of 29.8%. If Petersen assumes that other tax credits were the same in the current year as the prior year, he can analyze changes in Rhine’s effective tax rate to determine whether the geographic mix of the company’s profits has changed in the current year.\nPetersen finally examines the company’s liquidity ratios, which are shown in Exhibit 2. Even though the company’s current and quick ratio have improved, his interpretation of the changes in the company’s cash conversion cycle is that the company’s liquidity position has deteriorated.\nExhibit 2 Rhine AG Selected Ratios\nRatio\tCurrent Year\tPrior Year\t2 Years Prior\nCurrent ratio\t2.31\t2.17\t1.16\nQuick ratio\t1.06\t0.89\t0.53\nAccounts receivable turnover\t5.82\t6.08\t6.11\nInventory turnover\t3.78\t3.91\t4.09\nAccounts payable turnover\t5.71\t5.78\t5.60\nCash conversion cycle\t95 days\t90 days\t84 days\nWorried that the balance sheet–based and cash flow–based accruals ratios (not shown) raise some concerns about the possible use of accruals to manage earnings, Petersen asks Berg for advice on what further type of analysis he should do as a follow-up on this issue.",
+  "questions": [
+   {
+    "n": 16,
+    "q": "Using Petersen’s preferred method and current year divisional data, the best conclusion Peterson can make about which division will potentially become less significant in the future is that it will be:",
+    "options": [
+     "home furnishings.",
+     "children’s products.",
+     "recreational products."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Petersen prefers to use the relationship between capital expenditures and total assets by operating division and thus would use the ratio of capital expenditure proportion to total asset proportion for each division. This ratio for the recreational products division is less than 1 (see table), indicating that Rhine is allocating a lower proportion of capital expenditures to that division relative to asset proportions. If this trend continues, the recreational products division will become less significant over time. Children’s Products\tRecreational Products\tHome Furnishings\tTotal for the Three Divisions Proportion of capital expenditures (Exhibit 1)\t67.6%\t20.5%\t11.9%\t100.0% Proportion of total assets (Exhibit 1)\t50.9%\t38.5%\t10.6%\t100.0% Ratio: Proportion of capital expenditures to proportion of total assets\t1.3\t0.5\t1.1\t1.0 | B. Incorrect. Petersen prefers to use the relationship between capital expenditures and total assets by operating division and thus would use the ratio of capital expenditure proportion to total asset proportion for each division. This ratio for the recreational products division is less than 1 (see table), indicating that Rhine is allocating a lower proportion of capital expenditures to that division relative to asset proportions. If this trend continues, the recreational products division will become less significant over time. Children’s Products\tRecreational Products\tHome Furnishings\tTotal for the Three Divisions Proportion of capital expenditures (Exhibit 1)\t67.6%\t20.5%\t11.9%\t100.0% Proportion of total assets (Exhibit 1)\t50.9%\t38.5%\t10.6%\t100.0% Ratio: Proportion of capital expenditures to proportion of total assets\t1.3\t0.5\t1.1\t1.0 | C. Correct. Petersen prefers to use the relationship between capital expenditures and total assets by operating division and thus would use the ratio of capital expenditure proportion to total asset proportion for each division. This ratio for the recreational products division is less than 1 (see table), indicating that Rhine is allocating a lower proportion of capital expenditures to that division relative to asset proportions. If this trend continues, the recreational products division will become less significant over time. Children’s Products\tRecreational Products\tHome Furnishings\tTotal for the Three Divisions Proportion of capital expenditures (Exhibit 1)\t67.6%\t20.5%\t11.9%\t100.0% Proportion of total assets (Exhibit 1)\t50.9%\t38.5%\t10.6%\t100.0% Ratio: Proportion of capital expenditures to proportion of total assets\t1.3\t0.5\t1.1\t1.0"
+   },
+   {
+    "n": 17,
+    "q": "If the children’s products division had been able to maintain its prior year operating margin in the current year, the company’s overall operating margin in current year, compared to the prior year, would have been:",
+    "options": [
+     "lower.",
+     "the same.",
+     "higher."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Apply the prior year operating margin for the children’s products division to the current year revenues for the division to determine what the current year overall operating profit margin would have been if the margin had been maintained, and then compare it with the prior year overall operating profit margin. Operating margin in children’s products in prior year = Operating profit/revenues\t115.7/1,236.2\t9.4% Apply the 9.4% margin to current year revenues for division\t0.094 × 1,176.2\t110.6 Increase in current year operating profit for division, had the margin been maintained\t110.6 – 64.7\t45.9 Revised current year company operating profit with increase in children’s products operating profit\t172.7 + 45.9\t218.6 Revised current year company operating margin\t218.6/2,837.1\t7.7% Prior year company operating margin\t219.4/2,775.5\t7.9% Even if the children’s products division had maintained its operating margin in the current year, the overall company operating margin would still have decreased slightly (7.7% versus 7.9%). | B. Incorrect. It is not the same. | C. Incorrect: If they incorrectly add the full 110.6 to the operating profit (and not just the incremental change) then it would be higher: (172.7 + 110.6)/2,837.1 = 10%."
+   },
+   {
+    "n": 18,
+    "q": "Compared with 2 years prior, the change in which working capital account most likely had the largest effect on Petersen’s observed deterioration in liquidity?",
+    "options": [
+     "Inventory",
+     "Accounts payable",
+     "Accounts receivable"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Petersen interprets that the changes in the cash conversion cycle (CCC) indicate a deterioration in liquidity. The CCC has increased since 2 years prior, from 84 days to 95 days (see the following table). The working capital account that had the largest effect on the increase was inventory because the holding period has increased 6.4 days. Current Year\tPrior Year Working Capital Account\tTurnover\tDays (365/Turnover)\tTurnover\tDays Accounts receivable\t5.82\t62.7\t6.11\t59.8 Inventory\t3.78\t96.6\t4.09\t89.2 Accounts payable\t5.71\t63.9\t5.60\t65.2 Cash conversion cycle*\t \t95.4\t \t83.8 * CCC = Days in sales + Days in inventory – Days in payables. | B. Incorrect. Accounts payable management has stayed fairly constant. In fact, they are paying off their A/P a little faster than before, which would be a sign of improved liquidity. | C. Incorrect. Accounts receivable management did deteriorate with collections slowing by three days, but the change in inventory management was greater at approximately six days."
+   },
+   {
+    "n": 19,
+    "q": "Berg’s best answer to Petersen’s question about further analysis is that he should conduct a:",
+    "options": [
+     "DuPont analysis.",
+     "Cash flow ratio analysis.",
+     "Discounted cash flow analysis."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Concerns about earnings manipulation are best addressed by cash flow ratios, such as operating cash flow before interest and taxes to operating income. DuPont provides useful information about the components of a company’s ROE but would not detect earnings management. | B. Correct. Concerns about earnings manipulation are best addressed by cash flow ratios, such as operating cash flow before interest and taxes to operating income. | C. Incorrect. Concerns about earnings manipulation are best addressed by cash flow ratios, such as operating cash flow before interest and taxes to operating income. Cash flow projections would be more useful for determining valuation"
+   }
+  ]
+ },
+ {
+  "id": "fsa5-miland",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   11
+  ],
+  "title": "Matei: Miland and Globales earnings quality",
+  "body": "Ioana Matei is a senior portfolio manager for an international wealth management firm. She directs research analyst Teresa Pereira to investigate the earnings quality of Miland Communications and Globales, Inc.\n\nPereira first reviews industry data and the financial reports of Miland Communications for the past few years. Pereira then makes the following three statements about Miland:\n\nStatement 1:\nMiland shortened the depreciable lives for capital assets.\n\nStatement 2:\nRevenue growth has been higher than that of industry peers.\n\nStatement 3:\nDiscounts to customers and returns from customers have decreased.\n\nPereira also observes that Miland has experienced increasing inventory turnover, increasing receivables turnover, and net income greater than cash flow from operations. She estimates the following regression model to assess Miland’s earnings persistence:\n\nEarningst+1 = α + β1Cash flowt + β2Accrualst + ε\nPereira and Matei discuss quantitative models such as the Beneish model, used to assess the likelihood of misreporting. Pereira makes the following two statements to Matei:\n\nStatement 4:\nAn advantage of using quantitative models is that they can determine cause and effect between model variables.\n\nStatement 5:\nA disadvantage of using quantitative models is that their predictive power declines over time because many managers have learned to test the detectability of manipulation tactics by using the model.\n\nPereira concludes her investigation of Miland by examining the company’s reported pre-tax income of $5.4 billion last year. This amount includes $1.2 billion of acquisition and divestiture-related expenses, $0.5 billion of restructuring expenses, and $1.1 billion of other non-operating expenses. Pereira determines that the acquisition and divestiture-related expenses as well as restructuring expenses are non-recurring expenses, but other expenses are recurring expenses.\n\nMatei then asks Pereira to review last year’s financial statements for Globales, Inc. and assess the effect of two possible misstatements. Upon doing so, Pereira judges that Globales improperly recognized EUR50 million of revenue and improperly capitalized EUR100 million of its cost of revenue. She then estimates the effect of these two misstatements on net income, assuming a tax rate of 25%.\n\nPereira compares Globales, Inc.’s financial statements with those of an industry competitor. Both firms have similar, above-average returns on equity (ROE), although Globales has a higher cash flow component of earnings. Pereira applies the mean reversion principle in her forecasts of the two firms’ future ROE.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of Pereira’s statements describes an accounting warning sign of potential overstatement or non-sustainability of operating and/or net income?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. An increase (not a decrease) in discounts and returns would be a warning sign."
+   },
+   {
+    "n": 2,
+    "q": "Which of Pereira’s statements about Miland Communications is most likely a warning sign of potential earnings manipulation?",
+    "options": [
+     "The trend in inventory turnover",
+     "The trend in receivables turnover",
+     "The amount of net income relative to cash flow from operations"
+    ],
+    "answer": "C",
+    "why": "C is correct. Net income being greater than cash flow from operations is a warning sign that the firm may be using aggressive accrual accounting policies that shift current expenses to future periods. Decreasing, not increasing, inventory turnover could suggest inventory obsolescence problems that should be recognized. Decreasing, not increasing, receivables turnover could suggest that some revenues are fictitious or recorded prematurely or that the allowance for doubtful accounts is insufficient."
+   },
+   {
+    "n": 3,
+    "q": "Based on the regression model used by Pereira, earnings persistence for Miland would be highest if:",
+    "options": [
+     "β1 is less than 0.",
+     "β1 is greater than β2.",
+     "β2 is greater than β1."
+    ],
+    "answer": "B",
+    "why": "B is correct. When earnings are decomposed into a cash component and an accruals component, research has shown that the cash component is more persistent. A beta coefficient (β1) on the cash flow variable that is larger than the beta coefficient (β2) on the accruals variable indicates that the cash flow component of earnings is more persistent than the accruals component. This result provides evidence of earnings persistence."
+   },
+   {
+    "n": 4,
+    "q": "Which of Pereira’s statements regarding the use of quantitative models to assess the likelihood of misreporting is correct?",
+    "options": [
+     "Only Statement 4",
+     "Only Statement 5",
+     "Both Statement 4 and Statement 5"
+    ],
+    "answer": "B",
+    "why": "B is correct. Earnings manipulators have learned to test the detectability of earnings manipulation tactics by using the model to anticipate analysts’ perceptions. They can reduce their likelihood of detection; therefore, Statement 5 is correct. As a result, the predictive power of the Beneish model can decline over time. An additional limitation of using quantitative models is that they cannot determine cause and effect between model variables. Quantitative models establish only associations between variables, and Statement 4 is incorrect.\n\nA is incorrect because quantitative models cannot determine cause and effect between model variables. They are capable only of establishing associations between variables. Therefore, Statement 4 is incorrect."
+   },
+   {
+    "n": 5,
+    "q": "Based on Pereira’s determination of recurring and non-recurring expenses for Miland, the company’s recurring or core pre-tax earnings last year is closest to:",
+    "options": [
+     "$4.3 billion.",
+     "$4.8 billion.",
+     "$7.1 billion."
+    ],
+    "answer": "C",
+    "why": "C is correct. Recurring or core pre-tax earnings would be $7.1 billion, which is the company’s reported pre-tax income of $5.4 billion plus the $1.2 billion of non-recurring (i.e., one-time) acquisitions and divestiture expenses plus the $0.5 billion of non-recurring restructuring expenses."
+   },
+   {
+    "n": 6,
+    "q": "After adjusting the Globales, Inc. income statement for the two possible misstatements, the decline in net income is closest to:",
+    "options": [
+     "EUR37.5 million.",
+     "EUR112.5 million.",
+     "EUR150.0 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. The correction of the revenue misstatement would result in lower revenue by EUR50 million, and the correction of the cost of revenue misstatement would result in higher cost of revenue by EUR100 million. The result is a reduction in pre-tax income of EUR150 million. Applying a tax rate of 25%, the reduction in net income would be 150 × (1 − 0.25) = EUR112.5 million."
+   },
+   {
+    "n": 7,
+    "q": "Pereira should forecast that the ROE for Globales is likely to decline:",
+    "options": [
+     "more slowly than that of the industry competitor.",
+     "at the same rate as the industry competitor.",
+     "more rapidly than that of the industry competitor."
+    ],
+    "answer": "A",
+    "why": "A is correct. Based on the principle of mean reversion, the high ROE for both firms should revert towards the mean. Globales has a higher cash flow component to its return than the peer firm, however, so its high return on common equity should persist longer than that of the peer firm. The peer firm has a higher accruals component, so it is likely to revert more quickly."
+   }
+  ]
+ },
+ {
+  "id": "fsa5-big",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   11
+  ],
+  "title": "Dodd: BIG Industrial, Construction Supply and Dynamic Production",
+  "body": "Emmitt Dodd is a portfolio manager for Upsilon Advisers. Dodd meets with Sonya Webster, the firm’s analyst responsible for the machinery industry, to discuss three established companies: BIG Industrial, Construction Supply, and Dynamic Production. Webster provides Dodd with research notes for each company that reflect trends during the last three years:\n\n \n\nBIG Industrial:\nNote 1:\nOperating income has been much lower than operating cash flow (OCF).\n\nNote 2:\nAccounts payable has increased, while accounts receivable and inventory have substantially decreased.\n\nNote 3:\nAlthough OCF was positive, it was just sufficient to cover capital expenditures, dividends, and debt repayments.\n\nConstruction Supply:\nNote 4:\nOperating margins have been relatively constant.\n\nNote 5:\nThe growth rate in revenue has exceeded the growth rate in receivables.\n\nNote 6:\nOCF was stable and positive, close to its reported net income, and just sufficient to cover capital expenditures, dividends, and debt repayments.\n\nDynamic Production:\nNote 7:\nOCF has been more volatile than that of other industry participants.\n\nNote 8:\nOCF has fallen short of covering capital expenditures, dividends, and debt repayments.\n\nDodd asks Webster about the use of quantitative tools to assess the likelihood of misreporting. Webster tells Dodd she uses the Beneish model, and she presents the estimated M-scores for each company in Exhibit 1.\n\nExhibit 1\nBeneish Model M-scores\nCompany\t2017\t2016\tChange in M-score\nBIG Industrial\t−1.54\t−1.82\t0.28\nConstruction Supply\t−2.60\t−2.51\t−0.09\nDynamic Production\t−1.86\t−1.12\t−0.74\nWebster tells Dodd that Dynamic Production was required to restate its 2016 financial statements as a result of its attempt to inflate sales revenue. Customers of Dynamic Production were encouraged to take excess product in 2016, and they were then allowed to return purchases in the subsequent period, without penalty.\n\nWebster’s industry analysis leads her to believe that innovations have caused some of the BIG Industrial’s inventory to become obsolete. Webster expresses concern to Dodd that although the notes to the financial statements for BIG Industrial are informative about its inventory cost methods, its inventory is overstated.\n\nThe BIG Industrial income statement reflects a profitable 49% unconsolidated equity investment. Webster calculates the return on sales of BIG Industrial based on the reported income statement. Dodd notes that industry peers consolidate similar investments. Dodd asks Webster to use a comparable method of calculating the return on sales for BIG Industrial.",
+  "questions": [
+   {
+    "n": 8,
+    "q": "Which of Webster’s notes about BIG Industrial provides an accounting warning sign of a potential reporting problem?",
+    "options": [
+     "Only Note 1",
+     "Only Note 2",
+     "Both Note 1 and Note 2"
+    ],
+    "answer": "B",
+    "why": "B is correct. Only Note 2 provides a warning sign. The combination of increases in accounts payable with substantial decreases in accounts receivable and inventory are an accounting warning sign that management may be overstating cash flow from operations. Note 1 does not necessarily provide a warning sign. Operating income being greater than operating cash flow is a warning sign of a potential reporting problem. In this case, however, BIG Industrial’s operating income is lower than its operating cash flow."
+   },
+   {
+    "n": 9,
+    "q": "Do either of Webster’s Notes 4 or 5 about Construction Supply describe an accounting warning sign of potential overstatement or non-sustainability of operating income?",
+    "options": [
+     "No",
+     "Yes, Note 4 provides a warning sign",
+     "Yes, Note 5 provides a warning sign"
+    ],
+    "answer": "A",
+    "why": "A is correct. Neither Note 4 nor Note 5 provides an accounting warning sign of potential overstatement or non-sustainability of operating income.\n\nIncreases in operating margins can be a warning sign of potential overstatement or non-sustainability of operating and/or net income. In this case, however, operating margins for Construction Supply have been relatively constant during the last three years.\n\nA growth rate in receivables exceeding the growth rate in revenue is an accounting warning sign of potential overstatement or non-sustainability of operating income. In this case, however, Construction Supply’s revenue growth exceeds the growth rate in receivables."
+   },
+   {
+    "n": 10,
+    "q": "Based on Webster’s research notes, which company would most likely be described as having high-quality cash flow?",
+    "options": [
+     "BIG Industrial",
+     "Construction Supply",
+     "Dynamic Production"
+    ],
+    "answer": "B",
+    "why": "B is correct. High-quality OCF means the performance is of high reporting quality and also of high results quality. For established companies, high-quality operating cash flow would typically be positive; be derived from sustainable sources; be adequate to cover capital expenditures, dividends, and debt repayments; and have relatively low volatility compared with industry peers. Construction Supply reported positive OCF during each of the last three years. The OCF appears to be derived from sustainable sources, because it compares closely with reported net income. Finally, OCF was adequate to cover capital expenditures, dividends, and debt repayments. Although the OCF for BIG Industrial has been positive and just sufficient to cover capital expenditures, dividends, and debt repayments, the increases in accounts payable and substantial decreases in accounts receivable and inventory during the last three years are an accounting warning sign that management may be overstating cash flow from operations. For Dynamic Production, OCF has been more volatile than other industry participants, and it has fallen short of covering capital expenditures, dividends, and debt repayments for the last three years. Both of these conditions are warning signs for Dynamic Production."
+   },
+   {
+    "n": 11,
+    "q": "Based on the Beneish model results for 2017 in Exhibit 1, which company has the highest probability of being an earnings manipulator?",
+    "options": [
+     "BIG Industrial",
+     "Construction Supply",
+     "Dynamic Production"
+    ],
+    "answer": "A",
+    "why": "A is correct. Higher M-scores indicate an increased probability of earnings manipulation. The company with the highest M-score in 2017 is BIG Industrial, with an M-score of −1.54. Construction Supply has the lowest M-score at −2.60, and Dynamic Production also has a lower M-score at −1.86. The M-score for BIG Industrial is above the relevant cutoff of −1.78."
+   },
+   {
+    "n": 12,
+    "q": "Based on the information related to its restatement, Dynamic Production reported poor operating cash flow quality in 2016 by understating:",
+    "options": [
+     "inventories.",
+     "net income.",
+     "trade receivables."
+    ],
+    "answer": "A",
+    "why": "A is correct. The items primarily affected by improper revenue recognition include net income, receivables, and inventories. When revenues are overstated, net income and receivables will be overstated and inventories will be understated."
+   },
+   {
+    "n": 13,
+    "q": "Webster’s concern about BIG Industrial’s inventory suggests poor reporting quality, most likely resulting from a lack of:",
+    "options": [
+     "completeness.",
+     "clear presentation.",
+     "unbiased measurement."
+    ],
+    "answer": "C",
+    "why": "C is correct. Webster is concerned that innovations have made some of BIG Industrial’s inventory obsolete. This scenario suggests impairment charges for inventory may be understated and that the inventory balance does not reflect unbiased measurement."
+   },
+   {
+    "n": 14,
+    "q": "In response to Dodd’s request, Webster’s recalculated return on sales will most likely:",
+    "options": [
+     "decrease.",
+     "remain the same.",
+     "increase."
+    ],
+    "answer": "A",
+    "why": "A is correct. The use of unconsolidated joint ventures or equity-method investees may reflect an overstated return on sales ratio, because the parent company’s consolidated financial statements include its share of the investee’s profits but not its share of the investee’s sales. An analyst can adjust the reported amounts to better reflect the combined amounts of sales. Reported net income divided by the combined amount of sales will result in a decrease in the net profit margin."
+   }
+  ]
+ },
+ {
+  "id": "fsa5-stellar",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   11
+  ],
+  "title": "Martinez: Stellar reporting and earnings quality",
+  "body": "Mike Martinez is an equity analyst who has been asked to analyze Stellar, Inc. by his supervisor, Dominic Anderson. Stellar exhibited strong earnings growth last year; however, Anderson is skeptical about the sustainability of the company’s earnings. He wants Martinez to focus on Stellar’s financial reporting quality and earnings quality.\n\nAfter conducting a thorough review of the company’s financial statements, Martinez concludes the following:\n\nConclusion 1:\nAlthough Stellar’s financial statements adhere to generally accepted accounting principles (GAAP), Stellar understates earnings in periods when the company is performing well and overstates earnings in periods when the company is struggling.\n\nConclusion 2:\nStellar most likely understated the value of amortizable intangibles when recording the acquisition of Solar, Inc. last year. No goodwill impairment charges have been taken since the acquisition.\n\nConclusion 3:\nOver time, the accruals component of Stellar’s earnings is large relative to the cash component.\n\nConclusion 4:\nStellar reported an unusually sharp decline in accounts receivable in the current year, and an increase in long-term trade receivables.",
+  "questions": [
+   {
+    "n": 15,
+    "q": "Based on Martinez’s conclusions, Stellar’s financial statements are best categorized as:",
+    "options": [
+     "non-GAAP compliant.",
+     "GAAP compliant, but with earnings management.",
+     "GAAP compliant and decision useful, with sustainable and adequate returns."
+    ],
+    "answer": "B",
+    "why": "B is correct. Stellar’s financial statements are GAAP compliant (Conclusion 1) but cannot be relied upon to assess earnings quality. There is evidence of earnings management: understating and overstating earnings depending upon the results of the period (Conclusion 1), understated amortizable intangibles (Conclusion 2), and a high accruals component in the company’s earnings (Conclusion 3)."
+   },
+   {
+    "n": 16,
+    "q": "Based on Conclusion 2, after the acquisition of Solar, Stellar’s earnings are most likely:",
+    "options": [
+     "understated.",
+     "fairly stated.",
+     "overstated."
+    ],
+    "answer": "C",
+    "why": "C is correct. Martinez believes that Stellar most likely understated the value of amortizable intangibles when recording the acquisition of a rival company last year. Impairment charges have not been taken since the acquisition (Conclusion 2). Consequently, the company’s earnings are likely to be overstated because amortization expense is understated. This understatement has not been offset by an impairment charge."
+   },
+   {
+    "n": 17,
+    "q": "In his follow-up analysis relating to Conclusion 3, Martinez should focus on Stellar’s:",
+    "options": [
+     "total accruals.",
+     "discretionary accruals.",
+     "non-discretionary accruals."
+    ],
+    "answer": "B",
+    "why": "B is correct. Martinez concluded that the accruals component of Stellar’s earnings was large relative to the cash component (Conclusion 3). Earnings with a larger component of accruals are typically less persistent and of lower quality. An important distinction is between accruals that arise from normal transactions in the period (called non-discretionary) and accruals that result from transactions or accounting choices outside the normal (called discretionary accruals). The discretionary accruals are possibly made with the intent to distort reported earnings. Outlier discretionary accruals are an indicator of possibly manipulated—and thus low quality earnings. Thus, Martinez is primarily focused on discretionary accruals, particularly outlier discretionary accruals (referred to as abnormal accruals)."
+   },
+   {
+    "n": 18,
+    "q": "What will be the impact on Stellar in the current year if Martinez’s belief in Conclusion 4 is correct? Compared with the previous year, Stellar’s:",
+    "options": [
+     "current ratio will increase.",
+     "days sales outstanding (DSO) will decrease.",
+     "accounts receivable turnover will decrease."
+    ],
+    "answer": "B",
+    "why": "B is correct. Because accounts receivable will be lower than reported in the past, Stellar’s DSO [Accounts receivable/(Revenues/365)] will decrease. Stellar’s accounts receivable turnover (365/days’ sales outstanding) will increase with the lower DSO, giving the false impression of a faster turnover. The company’s current ratio will decrease (current assets will decrease with no change in current liabilities)."
+   }
+  ]
+ },
+ {
+  "id": "fsa5-coleridge",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   11
+  ],
+  "title": "Thorsell: Coleridge warning signs and pension discount rate",
+  "body": "Maxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS. Thorsell wants to evaluate the quality of the company's financial reports for the purpose of making an investment recommendation to her firm. To begin her analysis, Thorsell observes the following:\n\nObservation 1: Increases in operating margin occurred during each of the past 3 years.\nObservation 2: Average depreciation lives on assets were reduced by two years from that of preceding years.\nObservation 3: The growth in revenues has exceeded the growth in receivables during the past 3-year period.\nNext, Thorsell notes that Coleridge's receivables turnover ratio, inventory turnover ratio, and Beneish M-scores have all increased each year during the preceding 3-year period. She also notes that consistent with past years, Coleridge has generated only accounting losses when it sells any one of its long-term assets. The losses are presented on the income statement after operating income, and when they occur they are significant in amount. \n\nThorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates. For comparison purposes, Thorsell adjusts Coleridge's financial statements before computing the company's financial ratios.",
+  "questions": [
+   {
+    "n": 19,
+    "q": "Which of the following Thorsell's observations most likely indicates a potential accounting warning sign?",
+    "options": [
+     "Observation 1",
+     "Observation 2",
+     "Observation 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct because according to the Accounting Warning Signs in the reading, a trend of increasing operating margins indicates a potential accounting warning sign. | B. Incorrect because according to the Accounting Warning Signs in the reading, it is an increase in depreciation lives rather than a decrease in depreciation lives that indicates a potential accounting warning sign. In the case of Coleridge, average depreciation lives on assets were reduced. | C. Incorrect because according to the Accounting Warning Signs in the reading, it is an increasing trend of receivables growing faster than revenues that indicates a potential accounting warning sign. In the case of Coleridge, revenues are growing faster than receivables."
+   },
+   {
+    "n": 20,
+    "q": "An indicator of low earnings quality is most likely evidenced by the trend in Coleridge's:",
+    "options": [
+     "M-score.",
+     "inventory turnover ratio.",
+     "receivables turnover ratio."
+    ],
+    "answer": "A",
+    "why": "A. Correct because higher M-scores (i.e., less negative numbers) indicate an increased probability of earnings manipulation. | B. Incorrect because a declining (not increasing) inventory turnover ratio could suggest obsolescence problems. | C. Incorrect because a declining (not increasing) receivables turnover ratio could suggest that some revenues are fictitious or recorded prematurely or that the allowance for doubtful accounts is insufficient."
+   },
+   {
+    "n": 21,
+    "q": "With respect to the sale of its long-term assets, Coleridge most likely displays:",
+    "options": [
+     "low earnings quality only.",
+     "low financial reporting quality only.",
+     "both low earnings quality and low financial reporting quality."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because this also displays low financial reporting quality. | B. Incorrect because this also displays low earnings quality. | C. Correct because a consistent pattern of recognizing accounting losses when any long-term assets are sold demonstrates that depreciation expense is being understated during the periods that the assets are in use. An understatement of depreciation expense will cause operating income to be higher than what it otherwise would be if there was no management bias in the depreciation expense estimate. Although the accounting losses are properly displayed on the income statement, there is an intentional lag in time (perhaps many years) as to when that ultimate cost is recognized. A biased accounting decision to understate depreciation expense does not faithfully represent the economic circumstances of the accounting periods in which it occurs because operating income and the carrying value of the long-term assets are both overstated. This is a clear indication of low financial reporting quality. Financial reports can range from those that contain relevant and faithfully representational information to those that contain information that is pure fabrication. Earnings quality will also be low because operating incomes are higher than what they should be each and every year because of the deliberate understatement of depreciation expense. Operating income infers sustainable income whereas net income does not (since net income also includes the non-recurring recognition of accounting gains and losses that are generated from the occasional disposal of long-term assets and settlement of long-term liabilities). Earnings (results) quality can range from high and sustainable to low and unsustainable."
+   },
+   {
+    "n": 22,
+    "q": "With respect to the defined benefit pension plan assumption, which of the following will decrease after Thorsell's adjustment?",
+    "options": [
+     "Debt-to-equity ratio",
+     "Book value per share",
+     "Financial leverage ratio"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the debt-to-equity ratio (total debt ÷ total shareholders' equity) will increase since total debt will increase and total stockholders' equity will decrease after Thorsell makes the pension discount rate adjustment by reducing the discount rate by 0.5%. | B. Correct because the book value per share (common stockholders' equity ÷ total number of common shares outstanding) will decrease once Thorsell makes the pension discount rate adjustment. After reducing the discount rate by 0.5%, (a higher discount rate assumption results in a lower estimated pension obligation) the underfunded plan obligation will increase (that is, become even more underfunded) and total shareholders' equity (via accumulated other comprehensive income) will decrease. The number of common shares outstanding is not affected. | C. Incorrect because the financial leverage ratio (average total assets ÷ average shareholders' equity) will increase since total assets will remain unchanged and total shareholders' equity will decrease after Thorsell makes the pension discount rate adjustment by reducing the discount rate by 0.5%. Total shareholders' equity (via accumulated other comprehensive income) will decrease."
+   }
+  ]
+ },
+ {
+  "id": "fsa4-chen",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Chen: Great White North Bank capital and asset quality",
+  "body": "Mindy Chen manages a global equity portfolio for First Dawn Investment Management. Chen analyzes Great White North Bank (GWNB) for possible inclusion in the portfolio. Chen uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach with an emphasis on capital adequacy and asset quality.\n\nChen begins her analysis by assessing GWNB's capital adequacy using the data in Exhibit 1.\n\nExhibit 1 (in USD millions)\nRegulatory Capital and Risk-Weighted Assets\tCurrent Year\tPrior Year\nCommon Equity Tier 1 capital\t17,252\t14,783\nAdditional Tier 1 Capital\t1,879\t1,927\nTier 2 Capital\t1,554\t988\nRisk-weighted assets\t218,617\t212,587\nChen recalls that the minimum total capital ratio under Basel III is 8%. Chen then analyzes GWNB's asset quality using the data in Exhibit 2.\n\nExhibit 2 (in USD millions)\nAssets\tCurrent Year\tPrior Year\nLiquid assets\t62,809\t41,474\nInvestments\t14,602\t14,481\nLoans\t211,537\t220,828\nAllowance for loan losses\t\n17,500\n18,600\nTangible assets\t32,180\t\n32,405\nIntangible assets\t13,798\t13,482\nDeferred tax assets\t4,897\t4,735\nTotal assets\t357,323\t346,005\nChen considers the proportionate increases in the following income statement items and how they would impact GWNB's CAMELS rating:\n\nItem 1: Trading income\nItem 2: Service income\nItem 3: Net interest income",
+  "questions": [
+   {
+    "n": 21,
+    "q": "Based on Exhibit 1, compared to the prior year, GWNB's current year Total Tier 1 Capital ratio most likely has a net increase closest to:",
+    "options": [
+     "0.89%.",
+     "0.94%.",
+     "1.13%."
+    ],
+    "answer": "A",
+    "why": "A. Correct because GWNB's Total Tier 1 Capital ratio in the prior year = (14,783 + 1,927) / 212,587 ≈ 0.0786 = 7.86%. In the current year GWNB's Total Tier 1 Capital ratio = (17,252 + 1,879) / 218,617 ≈ 0.0875 = 8.75%. GWNB's Total Tier 1 Capital ratio therefore increased by 8.75% – 7.86% = 0.89% in the current year. | B. Incorrect because this is the increase in GWNB's Common Equity Tier 1 Capital ratio. In the prior year = 14,783 / 212,587 ≈ 0.0695 = 6.95%. In the current year GWNB's Total Tier 1 Capital ratio = 17,252 / 218,617 ≈ 0.0789 = 7.89%. GWNB's Common Equity Tier 1 Capital ratio therefore increased by 7.89% – 6.95% = 0.94% in the current year. | C. Incorrect because this is the increase in GWNB's Total Capital ratio. Total Capital ratio in the prior year = (14,783 + 1,927 + 988) / 212,587 ≈ 0.0833 = 8.33%. In the current year GWNB's Total Capital ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 0.0946 = 9.46%. GWNB's Total Capital ratio therefore improved in the current year by 9.46% – 8.33% = 1.13%."
+   },
+   {
+    "n": 22,
+    "q": "Did GWNB meet the minimum total capital requirement under Basel III in both the current and prior years?",
+    "options": [
+     "Yes.",
+     "No, GWNB was below the minimum Basel III total capital requirement in the prior year.",
+     "No, GWNB was below the minimum Basel III total capital requirement in the current year."
+    ],
+    "answer": "A",
+    "why": "A. Correct because GWNB's minimum total capital requirement exceeded 8% in both the prior and current years. To calculate the ratio in each year we use: (common equity tier 1 capital + additional tier 1 capital + tier 2 capital) / (risk-weighted assets). For the prior year GWNBs ratio = (14,783 + 1,927 + 988) / 212,857 ≈ 8.3% which exceeds the 8% minimum. For the current year GWNBs ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 9.5% which exceeds the 8% minimum. | B. Incorrect because in the prior year GWNBs ratio = (14,783 + 1,927 + 988) / 212,857 ≈ 8.3% which exceeds the 8% minimum. | C. Incorrect because in the current year GWNBs ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 9.5% which exceeds the 8% minimum."
+   },
+   {
+    "n": 23,
+    "q": "Based on Exhibit 2, compared to the prior year GWNB's asset quality in the current year most likely:",
+    "options": [
+     "decreased.",
+     "stayed the same.",
+     "increased."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality. | B. Incorrect because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality. | C. Correct because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality."
+   },
+   {
+    "n": 24,
+    "q": "Which of the income statement items that Chen considers would most likely result in an improved CAMELs rating?",
+    "options": [
+     "Item 1 and Item 2",
+     "Item 1 and Item 3",
+     "Item 2 and Item 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because trading income (Item 1) for banks tends to be more volatile and therefore of lower quality. | B. Incorrect because trading income (Item 1) for banks tends to be more volatile and therefore of lower quality. | C. Correct because service income (Item 2) and net interest income (Item 3) provide more sustainable earnings than does trading income (Item 1). Regarding sustainability of a bank’s earnings, it is important to examine the composition of earnings. Banks’ earnings typically comprise (a) net interest income (the difference between interest earned on loans minus interest paid on the deposits supporting those loans), (b) service income, and (c) trading income. Of these three general sources, trading income is typically the most volatile. Thus, a greater proportion of net interest income and service income is typically more sustainable than trading income."
+   }
+  ]
+ },
+ {
+  "id": "fsa4-green",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Green: Second National Bank, Basel III and Tier 1",
+  "body": "Matthew Green, a research analyst, is asked to evaluate the performance of Second National Bank (SNB), a US commercial bank. Green prepares a research report to support his recommendation. \n\nGreen notices that SNB's CEO was appointed 18 months ago. Previously, the CEO was the president of a non-profit, non-public depository institution that offered a comparable selection of deposits, loans, and mortgages as SNB.\n\nGreen includes the following Basel III highlights in his research report:\n\nHighlight 1 : Basel III specifies the minimum percentage of its risk-weighted assets that a bank must fund with equity capital. \nHighlight 2 : Basel III specifies that a bank must hold enough high-quality liquid assets to cover its liquidity needs in a 30-day liquidity stress scenario. \nHighlight 3 : Basel III requires a bank to have a minimum amount of stable funding relative to the bank's liquidity needs in a 90-day liquidity stress scenario. \nTo assess the ability of SNB to meet Basel III minimum capital requirements, Green calculates SNB's Total Tier 1 Capital. Green reviews the latest financial disclosures, and includes retained earnings, accumulated other comprehensive income, and all instruments with a fixed maturity that are subordinate to depositors in his calculation.\n\nGreen notices that the allowance for loan losses decreased year over year as a result of a recovery of a prior fiscal year charge-off. Green calculates several comparative ratios to assess the quality of the allowance for loan losses.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "Which of the following best describes the CEO's previous financial institution?",
+    "options": [
+     "Mutual bank",
+     "Mortgage bank",
+     "Savings and loan association"
+    ],
+    "answer": "A",
+    "why": "A. Correct because credit unions, cooperative and mutual banks are depository institutions that function like banks and offer many of the same services as banks. They are owned by their members, rather than being publicly traded like many banks. Another difference from commercial banks is that these institutions are organized as non-profits and, therefore, do not pay income taxes. | B. Incorrect because mortgage banks originate, sell, and service mortgages and are usually active participants in the securitization markets. | C. Incorrect because savings and loan associations are depository institutions that specialize in financing long-term residential mortgages."
+   },
+   {
+    "n": 26,
+    "q": "Which of the following highlights included in Green's research report is incorrect?",
+    "options": [
+     "Highlight 1",
+     "Highlight 2",
+     "Highlight 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Basel III specifies the minimum percentage of its risk-weighted assets that a bank must fund with equity capital. Therefore, Highlight 1 is an accurate statement. | B. Incorrect because Basel III specifies that a bank must hold enough high-quality liquid assets to covers its liquidity needs in a 30-day liquidity stress scenario. Therefore, Highlight 2 is an accurate statement. | C. Correct because Basel III requires a bank to have a minimum amount of stable funding relative to the bank's liquidity needs over a one-year horizon and not a 90-day liquidity stress scenario. Therefore, Highlight 3 is an inaccurate statement."
+   },
+   {
+    "n": 27,
+    "q": "In calculating SNB's Total Tier 1 Capital, Green is incorrect in regard to:",
+    "options": [
+     "retained earnings.",
+     "accumulated other comprehensive income.",
+     "instruments that are subordinate to depositors."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because common Equity Tier 1 Capital includes common stock, issuance surplus related to common stock, retained earnings, accumulated other comprehensive income, and certain adjustments including the deduction of intangible assets and deferred tax assets. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should be included in SNB's Total Tier 1 Capital. | B. Incorrect because common Equity Tier 1 Capital includes common stock, issuance surplus related to common stock, retained earnings, accumulated other comprehensive income, and certain adjustments including the deduction of intangible assets and deferred tax assets. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should be included in SNB's Total Tier 1 Capital. | C. Correct because instruments that are subordinate to depositors and to general creditors of the bank must not have a fixed maturity to be included in Other Tier 1 Capital. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should not be included in SNB's Total Tier 1 Capital."
+   },
+   {
+    "n": 28,
+    "q": "The comparative ratio that Green is least likely to calculate is the ratio of the allowance for loan losses to:",
+    "options": [
+     "net income.",
+     "net loan charge-offs.",
+     "non-performing loans."
+    ],
+    "answer": "A",
+    "why": "A. Correct because this ratio would not provide any insight to the quality of the allowance for loan losses as it would only represent a comparison against the overall net income of the financial institution. | B. Incorrect because it is one of three ratios are helpful in assessing the quality of the allowance for loan losses: - the ratio of the allowance for loan losses to non-performing loans - the ratio of the allowance for loan losses to net loan charge-offs - the ratio of the provision for loan losses to net loan charge-offs | C. Incorrect because it is one of three ratios are helpful in assessing the quality of the allowance for loan losses: - the ratio of the allowance for loan losses to non-performing loans - the ratio of the allowance for loan losses to net loan charge-offs - the ratio of the provision for loan losses to net loan charge-offs"
+   }
+  ]
+ },
+ {
+  "id": "fsa4-takahashi",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Takahashi: Yatabe and Sapporo Hoken, Basel III and P&C",
+  "body": "Aiko Takahashi works as a senior examiner for the Financial Institutions Agency (FIA), and Haruto Suzuki is one of the analysts who reports to her. Suzuki is a new hire who previously worked at an investment firm that specialized in manufacturing companies. His first two weeks at the FIA were spent in training sessions focused on the Basel III regulatory framework for banks to prepare him for his new analyst role.\n\nAt today’s weekly meeting, Takahashi and her analysts are conducting a preliminary review of some of their assigned insurance institutions. Suzuki arrives early, so Takahashi takes the opportunity to ask him to explain his understanding of the Basel III framework. Suzuki describes three enhancements that Basel III incorporated as part of its transition from the previous iteration:\n\nEnhancement 1: Additional measures to ensure sufficient earnings quality, thereby strengthening banks’ regulatory capital.\nEnhancement 2: More stringent capital requirements that prevent banks from taking on excessive financial leverage.\nEnhancement 3: Increased funding stability by giving preference to interbank deposits over those from consumers.\nThe other analysts arrive, and the meeting gets underway. The group is scheduled to review two insurance companies: Yatabe Holdings (YH) and Sapporo Hoken (SH). Takahashi focuses first on YH, a property and casualty insurer. Takahashi notes that the property and casualty market has been in a “hard” phase for a few years now, and she wonders whether the results will show the beginning of a cyclical shift.\n\nThe group reviews YH’s profitability information that Suzuki has provided in Exhibit 1. Takahashi asks Suzuki to calculate YH’s combined ratio:\n\nExhibit 1 Excerpts from YH’s Financial Statements\n(¥ billions)\t \nLoss expense and loss adjustment expense\t38,467\nNet premiums earned\t62,939\nNet premiums written\t49,241\nUnderwriting expense\t23,960\nGlancing at her watch, Takahashi notes that they don’t have enough time to look at SH. She comments that SH has a lot of international business and suggests they finish this discussion at next week’s meeting.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Which of the enhancements Suzuki describes regarding the Basel III regulatory framework is most accurate?",
+    "options": [
+     "Enhancement 1",
+     "Enhancement 2",
+     "Enhancement 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Earnings quality was not a focus of Basel III, though the changes implemented under Basel III will likely lead to improved earnings quality. | B. Correct. In the aftermath of the 2008 crisis, one of the key changes in Basel III was an increase in the required level of equity funding of banks’ risk-weighted assets. This measure essentially prevents banks from assuming excessive financial leverage. | C. Incorrect. Although Basel III did increase requirements for stable funding, deposits from consumers are considered more stable than those raised in the interbank markets. Therefore, increased funding stability is achieved by giving preference to consumer deposits, not interbank deposits."
+   },
+   {
+    "n": 30,
+    "q": "If Takahashi’s interpretation of the current phase of the property and casualty market is correct, a cyclical shift is most likely to result in:",
+    "options": [
+     "a tightening of underwriting standards.",
+     "capital adequacy being easier to achieve.",
+     "additional competitors entering the market."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. In hard insurance markets, premiums and profitability are high and insurers can set high underwriting standards. As competitors are attracted to this profitability and the market softens, underwriting standards and premiums drop as everyone offers the cheapest deals. | B. Incorrect. Hard markets feature higher premium prices, increased profitability, and an increased ability for insurers to maintain adequate capital. Capital typically depletes as markets soften, making capital adequacy more difficult to achieve. | C. Correct. In hard insurance markets, insurance premiums and industry profits are high as are underwriting standards. This attracts competitors that offer lower premiums resulting in lower profitability, a softening of the market, and a weakening of underwriting standards."
+   },
+   {
+    "n": 31,
+    "q": "Based on Exhibit 1, YH’s combined ratio is closest to:",
+    "options": [
+     "61.1%.",
+     "109.8%.",
+     "126.8%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because this is the loss Expenses & loss adjustment expense ratio (in ¥ billions, except %): Loss Expense & Loss Adjustment Expense Ratio Loss expense & loss adjustment expense\t38,467 Net premiums earned\t62,939 Ratio\t61.1% | B. Correct. Loss Expense & Loss Adjustment expense ratio and the underwriting expense ratio (in ¥ billions, except %): Loss Expense & Loss Adjustment Expense Ratio (A)\tUnderwriting Expense Ratio (B)\tCombined Ratio (A+B) Loss expense & loss adjustment expense\t38,467\tUnderwriting expense\t23,960 Net premiums earned\t62,939\tNet premiums written\t49,241 Ratio (A)\t61.1%\tRatio (B)\t48.7%\t109.8% | C. Incorrect. In this calculation, the loss expense & loss adjustment expense ratio incorrectly uses net premiums written as the denominator (in ¥ billions, except %): Incorrect Loss Expense & Loss Adjustment Expense Ratio (A)\tUnderwriting Expense Ratio (B)\tCombined Ratio (A+B) Loss expense & loss adjustment expense\t38,467\tUnderwriting expense\t23,960 Net premiums written (incorrect)\t49,241\tNet premiums written\t49,241 Ratio (A)\t78.1%\tRatio (B)\t48.7%\t126.8%"
+   },
+   {
+    "n": 32,
+    "q": "Based solely on the comment Takahashi makes in postponing the review of SH to the next meeting, the primary line of insurance that SH offers is most likely:",
+    "options": [
+     "reinsurance.",
+     "life and health.",
+     "property and casualty."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Reinsurance business is largely international, while the rest of the insurance market has a smaller proportion of cross-border business. | B. Incorrect. Life and health insurance companies tend to have a smaller proportion of cross-border business. Reinsurance companies are much more likely to have significant international business. | C. Incorrect. Property and casualty insurance companies tend to have a smaller proportion of cross-border business. Reinsurance companies are much more likely to have significant international business."
+   }
+  ]
+ },
+ {
+  "id": "fsa4-reddy",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Reddy: First West Bank CAMELS and capital adequacy",
+  "body": "Suri Reddy, a junior equity analyst at Sutton Management Inc. (Sutton), is currently on rotation in the Financial Institutions sub-group at Sutton to assist in the evaluation of First West Bank (First West), a small regional bank in the northwestern United States.\n\nIn preparation for her first meeting with her new team, Reddy makes the following notes about how she thinks banks differ from the industrial companies on which she usually works.\n\nBanks will have fewer tangible assets.\nBank assets are predominantly measured at fair market value.\nBecause banks do not carry inventory, liquidity risks will be negligible.\nSutton uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach to analyzing banks, and Reddy is assigned to look at First West’s capital adequacy. Exhibit 1 contains the capital adequacy ratios for First West for the past five years and the Basel III guidelines.\n\nExhibit 1 Capital Adequacy Ratios for First West Bank and Basel III Requirements\n \tBasel III\tCurrent Year\tPrevious Year\t2 Years Prior\t3 Years Prior\t4 Years Prior\nCommon equity tier 1 ratio\t4.5%\t9.5%\t9.1%\t8.5%\t8.0%\t8.0%\nTotal tier 1 capital ratio\t6.0\t10.7\t11.0\t9.7\t9.3\t9.7\nTotal capital ratio\t8.0\t12.5\t13.1\t12.7\t12.8\t13.9\nTo further understand the changes in the Current Year, Reddy retrieves the detailed components of the ratios for the past two years, shown in Exhibit 2.\n\nExhibit 2 Details of Capital Adequacy Ratios for First West Bank for the Current Year and the Previous Year (in $ thousands)\nCommon equity tier 1\tCurrent Year\tPrevious Year\nQualifying common shares\t756,800\t749,600\nRetained earnings\t1,488,600\t1,355,000\nAccumulated other comprehensive income\t(29,000)\t(32,700)\n \t2,216,400\t2,071,900\nRegulatory adjustments\t(206,800)\t(208,600)\nCommon equity tier 1\t2,009,600\t1,863,300\n \nTier 1 capital\t2,274,800\t2,233,400\nTotal capital (tier 1 & 2)\t2,644,800\t2,669,400\n \nRisk-weighted assets\t21,180,100\t20,364,500\nFinally, Reddy reviews First West’s annual report for background information on non-CAMELS factors that will be relevant to the analysis. First West focuses on loans to small and mid-sized regional businesses. Its mission is to provide a comprehensive approach to business owners of the region by primarily serving their domestic needs for business, personal banking, and wealth management. Using a relationship-based approach, First West holds the dominant position in its regional market. Reddy considers how these factors affect risk exposure for First West relative to global competitors that are considering entering its market.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Which of Reddy’s notes concerning banks versus industrials is least accurate? The note concerning:",
+    "options": [
+     "fair value.",
+     "liquidity risks.",
+     "tangible assets."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Reddy’s note about fair value is correct. Banks’ assets are primarily financial assets (loans) and are often measured at fair value. | B. Correct. Liquidity risk is a major concern for a bank, despite not carrying inventory. A bank’s assets are primarily financial assets (loans), which are often measured at fair value. It is important that a bank have adequate liquidity in its assets such that it could withstand the demand for a redemption of deposits (liabilities) if it arose. | C. Incorrect. Reddy’s note about tangible assets is correct. Banks generally do have fewer tangible assets than industrials."
+   },
+   {
+    "n": 34,
+    "q": "Based on the most important metric in Exhibit 1, the best conclusion about First West’s capital adequacy over the past five years is that it has:",
+    "options": [
+     "declined.",
+     "improved.",
+     "been unstable."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The total capital ratio decreased over the period, but it is not considered the most important metric in assessing capital adequacy. | B. Correct. The most important metric in assessing capital adequacy is the common equity tier 1 ratio. First West improved its position in that ratio by 150 bps in the five-year period (8.0% to 9.5%). | C. Incorrect. The total capital ratio has been unstable (decreasing, increasing, and then decreasing again), but it is not considered the most important metric in assessing capital adequacy."
+   },
+   {
+    "n": 35,
+    "q": "Using Exhibits 1 and 2, the greatest effect on the improvement in the common equity tier 1 ratio from the Previous Year to the Current Year is best explained by the:",
+    "options": [
+     "increase in retained earnings.",
+     "increase in risk-weighted assets.",
+     "decrease in accumulated other comprehensive income."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The common equity tier 1 ratio is Common equity tier 1 ÷ Risk weighted assets. The increase in retained earnings, with a growth rate of 9.9%, had the greatest effect on the improvement in the common equity tier 1 ratio as shown in the table below. Although the percentage decrease in the negative amount of accumulated other comprehensive income was larger, at 11.3%, it is on a much smaller base and, therefore, would have had a smaller effect. The risk-weighted assets increased, which would decrease the ratio because it is the denominator. Change in Components of the Common Equity Tier 1 Ratio (in $ thousands) Current Year\tPrevious Year\tChange\tGrowth Qualifying common shares\t756,800\t749,600\t7,200\t1.0% Retained earnings\t1,488,600\t1,355,000\t133,600\t9.9% Accumulated other comprehensive income\t(29,000)\t(32,700)\t3,700\t(11.3)% 2,216,400\t2,071,900\t144,500\t7.0% Regulatory adjustments\t(206,800)\t(208,600) Common equity tier 1\t2,009,600\t1,863,300\t146,300\t7.9% Risk-weighted assets\t21,180,100\t20,364,500\t815,600\t4.0% | B. Incorrect. The risk-weighted assets had the largest dollar increase, but it would decrease the ratio because it is the denominator. | C. Incorrect. Although the decrease in the negative amount of accumulated other comprehensive income was larger, at 11.3%, than the increase in retained earnings, it is on a much smaller base and, therefore, would have had a smaller effect."
+   },
+   {
+    "n": 36,
+    "q": "Which of the following non-CAMELS factors would be least relevant to Reddy’s analysis of First West?",
+    "options": [
+     "Currency exposure",
+     "Mission of the bank",
+     "Competitive position"
+    ],
+    "answer": "A",
+    "why": "A. Correct. First West is a regional bank focusing on the northwestern United States and primarily serving the domestic needs of their clients. It is not likely exposed to large foreign currency risks associated with holding deposits or making loans in other currencies. It could be doing some FX exchange for clients but would not have large FX currency exposure. Therefore, currency exposure would be the least relevant of the indicated factors related to her analysis. The mission of First West is to serve the business owners of the northwestern United States. As such, its fortunes are heavily tied to the economic factors of the area, which means it is less well diversified than larger banks. Although it currently has a dominant position in the region, the entry of global banks would increase the risk to the bank. | B. Incorrect. The mission of First West is to serve the business owners of the northwestern United States. As such, its fortunes are heavily tied to the economic factors of the area, which means it is less well diversified than larger banks. Therefore, the mission of the bank is relevant to her analysis. | C. Incorrect. First West is the dominant bank in the region, but the entry of global banks that are considering entering the market would increase the risk to the bank. Therefore, its competitive position is relevant to her analysis."
+   }
+  ]
+ },
+ {
+  "id": "fsa4-nanlife",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Cioffi and Yu: NANLife and bank earnings quality",
+  "body": "Joseph Cioffi and Amanda Yu, interns in the financial institutions division of an investment firm, are cleaning up outstanding issues in a few files.\n\nThey start by examining the investment allocation and returns on the investment portfolio for NANLife Group, a life and health insurance company, using data Cioffi prepared (Exhibit 1).\n\nExhibit 1 Investment Allocation and Returns, NANLife Group, in $ Millions\nInvestment portfolio as of 31 December\t2018\t2017\nLoans and deposits\t8,800\t9,000\nDebt securities \t141,000\t130,800\nEquity securities\t40,250\t34,000\nDerivative financial instruments\t130\t90\nTotal financial investments \t190,180\t173,890\nTotal investment portfolio\t195,080\t178,490\nInvestment returns for the year ending 31 December\t2018\t2017\nInterest income\t6,610\t5,850\nDividend income\t820\t750\nRental income\t175\t170\nInvestment income\t7,605\t6,770\nGains (losses) on fixed-income investments\t300\t(125)\nGains (losses) on other investments\t1,540\t1,665\nTotal investment returns\t9,445\t8,310\nCioffi asks, “Why does NANLife have a much larger portion of its investment portfolio in equity securities compared with the property and casualty company we were working on yesterday?”\n\nYu replies, “NANLife can take greater risks with its investments for two reasons: First, its claims are relatively more predictable, and second, the claims have a shorter duration.”\n\nBefore moving on Cioffi comments,\n\n“It was interesting to learn about the insurance industry when working on the NANLife file. Unlike the banking industry, it does not have to follow international standards for capital adequacy, but as a US-based insurer, NANLife still has some US requirements to meet. The company also prepares its financial statements using statutory accounting rules that differ from both US GAAP and IFRS.”\n\nNext, they turn their attention to a commercial bank file that still required some work on the assessment of earnings quality, using summary earnings information prepared by Yu (Exhibit 2).\n\nExhibit 2 Selected Earnings Information from Bank File, in $ Thousands\n \t2018\t2017\t2016\t2015\t2014\nInterest income\t640,400\t614,000\t606,300\t607,300\t599,000\nInterest expense\t225,800\t231,700\t246,600\t260,300\t262,700\nNet interest income\t414,600\t382,300\t359,700\t347,000\t336,300\n \nTrading income\t3,200\t5,140\t6,600\t(900)\t15,430\nOther income\t135,400\t125,200\t116,500\t117,200\t100,300\n \nTotal income net of interest expense\t553,200\t512,640\t482,800\t463,300\t452,030\n \nProvision for credit losses\t8,400\t13,800\t9,900\t10,500\t7,090\n \nEarnings before taxes\t117,600\t95,800\t91,600\t78,800\t87,211\nYu states,\n\n“We have to finish the CAMELS (capital adequacy, asset quality, management capabilities, earnings sufficiency, liquidity position, and sensitivity to market risk) analysis on this file. In my preliminary review of the bank’s earnings information, I assigned a score reflecting high quality of earnings, based on the following points:\n\nThe trading income is volatile, but it is a small portion of the earnings.\nNet interest income has been growing at a constant rate over the period.\nThe proportion of total income from net interest income has been stable in the most recent years.”\nCioffi replies,\n\n“I think we need to dig a little deeper. We need to look at the estimates that are used to determine earnings and whether the bank is using them to manage earnings before taxes (EBT). The provision for credit losses is an estimate where management can exercise wide discretion. Let’s look at what portion of the 2018 increase in EBT comes from the change in that estimate.”",
+  "questions": [
+   {
+    "n": 37,
+    "q": "The average return on fixed-income assets for NANLife in 2018 is closest to:",
+    "options": [
+     "4.6%.",
+     "4.8%.",
+     "5.1%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. It does not include the gains and losses on fixed-income investments: 6,610 ÷ 144,800 = 4.6%. | B. Correct. The average return on fixed-income assets is calculated as follows: Investment income from fixed income ÷ Average fixed-income assets. Investment income = Interest income + Gains/losses from fixed-income investments = $6,610 + $300 = $6,910. Average fixed-income assets including debt securities + Loan and deposits = (½)($8,800 + $141,000) + (½)($9,000 + $130,800) = $144,800. Average return = 6,910 ÷ 144,800 = 4.8%. | C. Incorrect. It does not include the loans and deposits as fixed-income investments: Average debt securities = ($141,000 + $130,800) × ½ = $135,900. 6,910 ÷ 135,900 = 5.1%."
+   },
+   {
+    "n": 38,
+    "q": "From 2017 to 2018, the risk related to the investment allocation for NANLife is best described as having shown:",
+    "options": [
+     "a decrease.",
+     "no change.",
+     "an increase."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The proportion allocated to loans and deposits and debt securities has decreased, but this would decrease the overall risk of the investment portfolio because fixed-income investments are less risky than equity investments. The higher proportion allocated to equity would increase the portfolio risk. | B. Incorrect. The total financial investments have not changed materially (97.4% to 97.5%), but that is not the best measure of the risk of the investment portfolio. The allocation of the portfolio between fixed-income and equity securities is a better measure of portfolio risk. | C. Correct. When the investment portfolio is examined using a common-size format, the proportion of the portfolio invested in equity securities has increased from 19.0% to 20.6% (see table below) whereas the proportion allocated to loans and deposits and debt securities has decreased. Equity investments are normally riskier than fixed-income investments, which would indicate that the investment portfolio’s asset allocation is riskier in 2018 than in 2017. Analysis of NANLife’s Investment Portfolio Asset Allocation 2018\t2017 Loans and deposits\t8,800\t4.5%\t9,000\t5.0% Debt securities\t141,000\t72.3%\t130,800\t73.3% Equity securities\t40,250\t20.6%\t34,000\t19.0% Derivative financial instruments\t130\t0.1%\t90\t0.1% Total financial investments\t190,180\t97.5%\t173,890\t97.4% Investment properties\t4,900\t2.5%\t4,600\t2.6% Total investment portfolio\t195,080\t100.0%\t178,490\t100.0%"
+   },
+   {
+    "n": 39,
+    "q": "Yu’s reply to Cioffi’s question concerning the higher portion of equity securities in NANLife’s investment portfolio is best described as correct with respect to:",
+    "options": [
+     "both reasons.",
+     "only the first reason.",
+     "only the second reason."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The products of a P&C company are usually shorter duration than those of an L&H company; thus, that part of Yu’s answer is incorrect. | B. Correct. Yu is incorrect about the duration of the claims of NANLife. NANLife is a life and health insurance (L&H) company. L&H companies’ claims are more predictable than those of property and casualty (P&C) companies, and their claims also have a longer duration than P&C those of companies. It is the combination of both of these factors that allows L&H companies to hold a greater proportion of equity investments than P&C companies. | C. Incorrect. The products of a P&C company are usually shorter duration than those of an L&H company; thus, that part of Yu’s answer is incorrect."
+   },
+   {
+    "n": 40,
+    "q": "Cioffi’s comments about the regulatory requirements for NANLife are best described as:",
+    "options": [
+     "correct.",
+     "incorrect with respect to accounting rules.",
+     "incorrect with respect to capital adequacy requirements."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Cioffi’s comments about the regulatory requirements for US-based insurance companies are all correct. The insurance industry does not have a set of global regulatory standards like Basel III, but capital standards do exist in various jurisdictions, including the United States. In the United States, the NAIC (National Association of Insurance Commissioners) has established minimum capital adequacy standards. Also in the United States, insurance companies prepare financial reports according to statutory accounting rules, which differ from US GAAP and IFRS. | B. Incorrect. Cioffi’s comments with respect to accounting rules are correct. In the United States, insurance companies prepare financial reports according to statutory accounting rules, which differ from US GAAP and IFRS. | C. Incorrect. Cioffi’s comments with respect to capital adequacy are correct. The insurance industry does not have a set of global regulatory standards as the banking industry has with its Basel III regulations, but capital standards do exist in various jurisdictions, including the United States. In the United States, the NAIC has established minimum capital adequacy standards."
+   },
+   {
+    "n": 41,
+    "q": "Using Exhibit 2, which of Yu’s points in support of the CAMELS score she assigns for earnings quality is least accurate? The point concerning:",
+    "options": [
+     "trading income volatility.",
+     "growth in net interest income.",
+     "net interest income proportion."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Her point about trading income is accurate. Although it is volatile, it is a small portion of net income in support of higher quality of earnings. Trading income is the least sustainable of the three types of income; therefore, low reliance on it is better for earnings quality. | B. Correct. Yu’s point about the constant rate of growth of net interest income is not accurate. As shown in the table below (Part A), the growth rate for net interest income has been increasing, not stable, over the five-year period. Her point about trading income is accurate. Although it is volatile, it is a small portion of net income, which supports a rating of higher quality of earnings. Trading income is the least sustainable of the three types of income; therefore, low reliance on it is better for earnings quality. As shown in Part B of the table below, the mix between net interest income and other income has been stable over the last three years, which is also a sign in support of high-quality earnings. Analysis of Bank Income 2018\t2017\t2016\t2015\t2014 Part A Year-to-year growth rate Net interest income\t8.4%\t6.3%\t3.7%\t3.2%\t--- Part B Portion of total income net of interest expense Trading income\t0.6%\t1.0%\t1.4%\t–0.2%\t3.4% Net interest income\t74.9%\t74.6%\t74.5%\t74.9%\t74.4% Other income\t24.5%\t24.4%\t24.1%\t25.3%\t22.2% Total income net of interest expense\t100.0%\t100.0%\t100.0%\t100.0%\t100.0% | C. Incorrect. As shown in Part B of the table above, the mix between net interest income and other income has been stable over the last three years, which is also a sign in support of high-quality earnings."
+   },
+   {
+    "n": 42,
+    "q": "Based on Exhibit 2, the proportion of the increase in the 2018 earnings before taxes that comes from the change in the provision for credit losses is closest to:",
+    "options": [
+     "4.6%.",
+     "7.1%.",
+     "24.8%."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect; it is the change in the provision ($5,400) as a proportion of EBT but does not consider the change in EBT: 5,400 ÷ 117,600 = 4.6%. | B. Incorrect; it is the provision for credit losses as a proportion of EBT but does not consider the change in the two values: $8,400 ÷ $117,600 = 7.1%. | C. Correct. A decrease in the provision for credit losses would have the effect of increasing earnings before taxes. As shown in the table below, in 2018, EBT increased by $21,800 but the provision for credit losses decreased by $5,400, thus accounting for 24.8% of the change in EBT. Analysis of Change in EBT and Provision for Credit Losses, in $ Thousands 2018\t2017\tChange Provision for credit losses\t8,400\t13,800\t(5,400) EBT\t117,600\t95,800\t21,800 Percentage increase in EBT from decrease in provision\t---\t---\t24.8%"
+   }
+  ]
+ },
+ {
+  "id": "fsa4-gallo",
+  "source": "1 Nov paste (FSA Modules 4, 5 and 6 quizzes)",
+  "readings": [
+   10
+  ],
+  "title": "Gallo: Banco San Bruno earnings, Tier 1 and CAMELS",
+  "body": "Giulia Gallo works as a senior manager at the National Banking Regulatory Commission (NBRC). She is meeting with her team today to review Banco San Bruno (BSB), a large commercial bank with operations across the country. The central bank announced a rate hike last month, and Gallo wants to re-examine BSB’s ability to withstand the changing environment. Antonio Rossi, her junior colleague, displays the summary information (Exhibit 1) he has gathered on BSB’s earnings composition and comments that he thinks the earnings composition has become less volatile and more sustainable.\n\nExhibit 1 Key Components of BSB’s Earnings\n(€ millions)\tCurrent Year\tPrior Year\nNet interest income\t55,288\t50,285\nNet fee income\t22,648\t21,107\nNet trading income\t18,651\t18,624\nTotal\t96,587\t90,016\nGallo further explains that BSB has been flagged by the data analytics system. The flag warns that BSB may be acting to boost its net interest income by shifting its portfolio toward more long-term assets without a corresponding shift on the liability side of the balance sheet. “I don’t like it,” said Gallo. Seeing Rossi’s puzzled look, she adds, “It’s a value creation strategy in a stable interest rate market, but it heightens their risk, especially in this environment of increasing rates.”\n\nThe team next turns to BSB’s balance sheet. Rossi displays the information he has gathered (Exhibit 2), and they use it to calculate the Total Tier 1 Capital.\n\nExhibit 2 Excerpts from BSB’s Year-End Balance Sheet\n(€ billions)\tCurrent Year\tPrior Year\nCustomer deposits\t502\t572\nSubordinated debt\t23\t21\nPreferred shares\t17\t17\nCommon shares\t12\t12\nRetained earnings\t187\t201\nAs the discussion draws to a close, Gallo mentions that at the next meeting, they will complete a detailed CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) analysis of BSB.",
+  "questions": [
+   {
+    "n": 43,
+    "q": "Rossi’s comment about BSB’s earnings composition is best described as:",
+    "options": [
+     "correct.",
+     "incorrect with respect to volatility.",
+     "incorrect with respect to sustainability."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Net trading income is typically considered more volatile than net interest income or net fee income. As a component of the total, BSB’s net trading income has decreased from 20.7% to 19.3% per the following table, while the sustainable components (net interest income and net fee income) have increased. Overall, BSB’s earnings composition has become less volatile and more sustainable. (€ millions)\tCurrent Year\t(%)\tPrior Year\t(%) Net interest income\t55,288\t57.2%\t50,285\t55.9% Net fee income\t22,648\t23.5%\t21,107\t23.4% Net trading income\t18,651\t19.3%\t18,624\t20.7% Total\t96,587\t100.0%\t90,016\t100.0% | B. Incorrect. Net trading income, which is typically considered volatile income, has decreased as a proportion of the total. As such, Rossi’s comment that the earnings composition has become less volatile is correct. | C. Incorrect. Both net interest income and net fee income, which are considered more sustainable sources of income, have increased as a proportion of the total. As such, Rossi’s comment that the earnings composition has become more sustainable is correct."
+   },
+   {
+    "n": 44,
+    "q": "The value creation strategy Gallo refers to is best described as:",
+    "options": [
+     "maturity transformation.",
+     "contractual maturity mismatch.",
+     "risk-weighted asset stratification."
+    ],
+    "answer": "A",
+    "why": "A. Correct. When banks borrow money (liabilities) on shorter terms than the terms for lending to customers (assets), they create value by lending at higher rates than their short-term funding costs. This is called maturity transformation. | B. Incorrect. A contractual maturity mismatch is the result of the strategy described but is not the name of the strategy itself. | C. Incorrect. Risk-weighted asset stratification is part of the process of assessing a bank’s capital adequacy."
+   },
+   {
+    "n": 45,
+    "q": "BSB’s Total Tier 1 Capital (in billions) for the current year is closest to:",
+    "options": [
+     "€199.",
+     "€216.",
+     "€239."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. This calculation correctly includes the Common Equity Tier 1 components (common shares (€12) and retained earnings (€187)) for a total of €199. However, it incorrectly excludes preferred shares, which should be included as part of Total Tier 1 Capital. 12 + 187 = €199. | B. Correct. Total Tier 1 Capital includes Common Equity Tier 1 Capital plus other instruments (such as preferred shares) that bear no fixed maturity and carry no requirement to pay dividends or interest without the full discretion of the bank. Common Equity Tier 1 Capital includes common stock, capital surplus, retained earnings, and other comprehensive income. BSB’s Total Tier 1 Capital is as follows: (€ billions) Common stock\t12 Retained earnings\t187 Common Equity Tier 1 Capital\t199 Preferred shares\t17 Total Tier 1 Capital\t€216 | C. Incorrect. This calculation correctly includes preferred shares (€17), common shares (€12), and retained earnings (€187). However, it incorrectly also includes subordinated debt (€23), bringing the total to €239. Subordinated debt is part of Tier 2 Capital. 17 + 12 + 187 +23 = €239."
+   },
+   {
+    "n": 46,
+    "q": "In the next meeting when completing the detailed analysis suggested by Gallo, which of the following topics is least likely to be covered?",
+    "options": [
+     "Currency exposure",
+     "Governance structure",
+     "Concentration of funding"
+    ],
+    "answer": "A",
+    "why": "A. Correct. In the next meeting, they are to complete a detailed CAMELS analysis of BSB, which would not include an analysis of currency exposure. Currency exposure is relevant to the analysis of a bank, but it is not covered by the CAMELS approach. | B. Incorrect. A strong governance structure is a critically important aspect of the management capabilities element of CAMELS. | C. Incorrect. Concentration of funding is one of the liquidity-monitoring metrics described in Basel III. It is covered under the liquidity position element of CAMELS."
+   }
+  ]
+ }
+]
