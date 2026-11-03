@@ -1,0 +1,530 @@
+[
+ {
+  "id": "retry1-1",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Retry 1 · Q1 · from M2 Q23",
+  "origin": "M2 Q23",
+  "body": "Information ratio (IR): Candidate A 0.700; B 0.630; C 0.540.\nTransfer coefficient: 0.70; 0.60; 0.45. Information coefficient: 0.10; 0.15; 0.20. Number of securities: 100; 49; 36.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on the data, the candidate with the greatest skill at achieving active returns appears to be:",
+    "options": [
+     "Candidate C.",
+     "Candidate A.",
+     "Candidate B."
+    ],
+    "answer": "B",
+    "why": "The IR measures the consistency of active return per unit of active risk; the highest IR means the most skill. A = 0.70 × 0.10 × √100 = 0.700; B = 0.60 × 0.15 × √49 = 0.630; C = 0.45 × 0.20 × √36 = 0.540. Candidate C has the highest IC but low breadth and TC pull its IR down."
+   }
+  ]
+ },
+ {
+  "id": "retry1-2",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Retry 1 · Q2 · from M1 Q17",
+  "origin": "M1 Q17",
+  "body": "A manager states that the carry arbitrage model assumes: (1) transaction costs are negligible; (2) short-sale proceeds are available immediately; (3) the borrowing rate may be higher than the lending rate.",
+  "questions": [
+   {
+    "n": 2,
+    "q": "The manager is least likely correct regarding:",
+    "options": [
+     "borrowing and lending rates.",
+     "short-sale proceeds.",
+     "transaction costs."
+    ],
+    "answer": "A",
+    "why": "The model assumes borrowing and lending at the SAME risk-free rate, so statement (3) is wrong. No transaction costs and immediate availability of short-sale proceeds are both stated assumptions of the model."
+   }
+  ]
+ },
+ {
+  "id": "retry1-3",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Retry 1 · Q3 · from M2 Q35",
+  "origin": "M2 Q35",
+  "body": "Beta Ltd (IFRS) owns 40% of a joint venture and uses proportionate consolidation.\nJoint venture total assets at year end: $3,100 million.",
+  "questions": [
+   {
+    "n": 3,
+    "q": "The amount of the joint venture's total assets included on Beta's consolidated financial statements is closest to:",
+    "options": [
+     "$0.",
+     "$3,100 million.",
+     "$1,240 million."
+    ],
+    "answer": "C",
+    "why": "Proportionate consolidation includes the investor's share (40%) of every line item: 0.40 × 3,100 = $1,240 million. $0 would be the equity method line-by-line effect; $3,100 million would be full consolidation."
+   }
+  ]
+ },
+ {
+  "id": "retry1-4",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Retry 1 · Q4 · from M2 Q15",
+  "origin": "M2 Q15",
+  "body": "Stock price $50; call strike $48; risk-free rate 3%; up factor 1.25; down factor 0.80; no dividend. The one-year call trades at $6.60.\nStrategy 1: sell the call and buy shares using borrowed funds. Strategy 2: buy the call, short-sell shares and lend the proceeds. Strategy 3: buy the call using borrowed funds.",
+  "questions": [
+   {
+    "n": 4,
+    "q": "With respect to the one-year call option, which strategy is most likely correct?",
+    "options": [
+     "Strategy 3.",
+     "Strategy 1.",
+     "Strategy 2."
+    ],
+    "answer": "C",
+    "why": "One-year model value = π × (S·u − K) ÷ (1 + r) = 0.5111 × 14.5 ÷ 1.03 = $7.20, above the market price $6.60: the call is underpriced. Buy the call and sell the replicating portfolio (short shares and lend): Strategy 2. Selling the call is the wrong side, and buying it with borrowed funds adds risk instead of locking in the gain."
+   }
+  ]
+ },
+ {
+  "id": "retry1-5",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Retry 1 · Q5 · from M2 Q20",
+  "origin": "M2 Q20",
+  "body": "A bond's near-term credit spreads are below its longer-term credit spreads: the credit spread curve is upward sloping.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "The upward-sloping credit spread curve is most likely due to:",
+    "options": [
+     "strong current cash flow and high profit margins.",
+     "market expectations of improved future profitability.",
+     "a relatively stable expectation of default over time."
+    ],
+    "answer": "A",
+    "why": "An upward-sloping credit curve is characteristic of a high-quality issuer with strong current cash flow and margins. A stable default expectation gives a flat curve; improving expectations after distress give an inverted curve."
+   }
+  ]
+ },
+ {
+  "id": "retry1-6",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "Retry 1 · Q6 · from M2 Q26",
+  "origin": "M2 Q26",
+  "body": "The company considers an 8% stock dividend; closing share price $26.40; assume total market value is unchanged by the dividend.",
+  "questions": [
+   {
+    "n": 6,
+    "q": "The expected share price after the stock dividend is closest to:",
+    "options": [
+     "$24.29.",
+     "$24.44.",
+     "$28.51."
+    ],
+    "answer": "B",
+    "why": "A stock dividend leaves total value unchanged and raises the share count: price = 26.40 ÷ 1.08 = $24.44. Subtracting 8% gives $24.29; multiplying by 1.08 gives $28.51."
+   }
+  ]
+ },
+ {
+  "id": "retry1-7",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Retry 1 · Q7 · from M1 Q32",
+  "origin": "M1 Q32",
+  "body": "An intern says: \"Adjusted R² is more appropriate than R² for a model with several independent variables because it is adjusted for degrees of freedom; adjusted R² can never be negative.\"",
+  "questions": [
+   {
+    "n": 7,
+    "q": "The intern's statement is:",
+    "options": [
+     "incorrect with regard to adjusted R² never being negative.",
+     "incorrect with regard to its appropriateness for a multiple regression.",
+     "correct."
+    ],
+    "answer": "A",
+    "why": "Adjusted R² is the better measure with several variables, so that part is right. But adjusted R² CAN be negative (when R² is low and k is large relative to n); plain R² cannot. One wrong part makes the whole statement incorrect."
+   }
+  ]
+ },
+ {
+  "id": "retry1-8",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Retry 1 · Q8 · from M1 Q33",
+  "origin": "M1 Q33",
+  "body": "An analyst with a background in valuing public firms starts valuing private companies.",
+  "questions": [
+   {
+    "n": 8,
+    "q": "Which valuation feature will the analyst find different in valuing private companies versus public companies?",
+    "options": [
+     "Using market multiples of comparable firms.",
+     "Using free cash flow to equity as the cash flow measure.",
+     "Assessing a discount for lack of marketability."
+    ],
+    "answer": "C",
+    "why": "Free cash flow models and market multiples are used for both public and private companies. The adjustment specific to private shares is the discount for lack of marketability (illiquidity)."
+   }
+  ]
+ },
+ {
+  "id": "retry1-9",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Retry 1 · Q9 · from M1 Q31",
+  "origin": "M1 Q31",
+  "body": "r = b0 + b1 lnSize + b2 BMRatio + b3 Dow; coefficients: intercept −0.5400; Size 0.1800; BMRatio 0.0750; InDow −0.0900.\nA stock is included in the DJIA (Dow = 1), has a market capitalization of $48 billion (Size is in billions of dollars) and a book-to-market ratio of 0.60.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "The predicted annual return for this stock is closest to:",
+    "options": [
+     "–28.24%",
+     "11.18%",
+     "20.18%"
+    ],
+    "answer": "B",
+    "why": "ln(48) = 3.8712. r = −0.5400 + 0.1800 × 3.8712 + 0.0750 × 0.60 − 0.0900 × 1 = 11.18%. 20.18% sets Dow = 0 (no −0.0900); -28.24% uses log base 10 instead of the natural log."
+   }
+  ]
+ },
+ {
+  "id": "retry1-10",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Retry 1 · Q10 · from M2 Q37",
+  "origin": "M2 Q37",
+  "body": "A pension fund is replacing its small-cap manager and wants market exposure during the changeover.",
+  "questions": [
+   {
+    "n": 10,
+    "q": "Which ETF application is most likely applicable?",
+    "options": [
+     "Portfolio liquidity management.",
+     "Portfolio transition management.",
+     "Portfolio completion strategies."
+    ],
+    "answer": "B",
+    "why": "Transition management is about changing managers or allocations while keeping exposure, which is the case here. Liquidity management handles cash flows; completion fills gaps in exposure."
+   }
+  ]
+ },
+ {
+  "id": "retry1-11",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Retry 1 · Q11 · from M1 Q2",
+  "origin": "M1 Q2",
+  "body": "Service cost 310; past service cost 120.\nDiscount rate on liabilities 6.0%; benefit obligation at beginning of year 48,000.\nPlan assets at beginning of year 44,000; expected rate of return on plan assets 7.0%.\nAssume the actuarial loss is not immediately recognized and there is no amortization of past service costs or actuarial gains and losses.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "If the company prepared its financial statements under US GAAP, the total amount recognized on its income statement related to the defined benefit plan for the year is closest to:",
+    "options": [
+     "230.",
+     "670.",
+     "110."
+    ],
+    "answer": "C",
+    "why": "US GAAP P&L cost = service cost + interest cost − expected return = 310 + 2,880 − 3,080 = 110. Past service cost goes to OCI and is not amortized here, so adding it (230) is wrong. 670 is the IFRS-type figure: service + past service + net interest (240)."
+   }
+  ]
+ },
+ {
+  "id": "retry1-12",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Alternative Investments",
+  "title": "Retry 1 · Q12 · from M1 Q44",
+  "origin": "M1 Q44",
+  "body": "Current portfolio standard deviation 9.00%. The variance of the combined portfolio must be less than 85% of the current portfolio's variance; maximize risk-adjusted return with large negative events expected.\nStandard deviation / Sortino ratio: merger arbitrage 8.10% / 1.45; systematic futures 8.60% / 1.80; equity market neutral 7.70% / 1.60.",
+  "questions": [
+   {
+    "n": 12,
+    "q": "Which simulated portfolio is most suitable?",
+    "options": [
+     "Equity market neutral.",
+     "Merger arbitrage.",
+     "Systematic futures."
+    ],
+    "answer": "A",
+    "why": "Maximum variance = 0.85 × 9.00² = 68.85, so maximum SD = 8.30%. Systematic futures (8.60%) fails. Merger arbitrage (8.10%) and equity market neutral (7.70%) pass. With large negative events expected, use the Sortino ratio: 1.60 > 1.45, so equity market neutral."
+   }
+  ]
+ },
+ {
+  "id": "retry1-13",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Retry 1 · Q13 · from M1 Q4",
+  "origin": "M1 Q4",
+  "body": "Weighted average expected volatility used to value option grants: 25.00% for 2024 grants; 22.00% for 2023 grants.\nHigher volatility raises an option's fair value.",
+  "questions": [
+   {
+    "n": 13,
+    "q": "If the company had used for its 2024 option grants the same volatility assumption it used for 2023, its 2024 net income would have been:",
+    "options": [
+     "lower.",
+     "the same.",
+     "higher."
+    ],
+    "answer": "C",
+    "why": "Using the 2023 volatility (22%) instead of 25% lowers the fair value of the 2024 options. A lower fair value means a lower compensation expense, so net income would have been higher."
+   }
+  ]
+ },
+ {
+  "id": "retry1-14",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Alternative Investments",
+  "title": "Retry 1 · Q14 · from M1 Q43",
+  "origin": "M1 Q43",
+  "body": "A hedge fund adviser wants a specialist strategy that lets the fund maintain a high Sharpe ratio even during a financial crisis when equity markets fall.",
+  "questions": [
+   {
+    "n": 14,
+    "q": "The specialist strategy that fits this objective is most likely:",
+    "options": [
+     "buying longer-dated out-of-the-money options on VIX index futures.",
+     "selling equity volatility and collecting the volatility risk premium.",
+     "cross-asset volatility trading between two markets."
+    ],
+    "answer": "A",
+    "why": "Long volatility gains when equities fall (volatility is strongly negatively correlated with equity returns), so buying OTM VIX options protects in a crisis. Selling volatility loses in a crisis, and cross-asset volatility trading carries idiosyncratic macro risk."
+   }
+  ]
+ },
+ {
+  "id": "retry1-15",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Ethics",
+  "title": "Retry 1 · Q15 · from M2 Q10",
+  "origin": "M2 Q10",
+  "body": "A firm proposes these procedures for allocating block trades. Recommendation 1: partially filled block orders are allocated pro rata to the participating accounts. Recommendation 2: block trades are allocated first to the accounts that pay the firm the highest fees.",
+  "questions": [
+   {
+    "n": 15,
+    "q": "Are the recommendations most likely consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing?",
+    "options": [
+     "Yes.",
+     "No, with regard to Recommendation 2.",
+     "No, with regard to Recommendation 1."
+    ],
+    "answer": "B",
+    "why": "Pro rata allocation of partial fills is a recommended fair-dealing procedure. Favoring accounts that pay higher fees treats clients unfairly and violates III(B)."
+   }
+  ]
+ },
+ {
+  "id": "retry1-16",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Retry 1 · Q16 · from M1 Q9",
+  "origin": "M1 Q9",
+  "body": "Net income 96,500; dividends 38,000 (KRW millions).\nTotal stockholders' equity: 640,000 at end of 2013; 590,000 at end of 2012.\nRequired return on equity 10%.",
+  "questions": [
+   {
+    "n": 16,
+    "q": "Residual income (in millions) for 2013 is closest to:",
+    "options": [
+     "KRW32,500.",
+     "KRW37,500.",
+     "KRW58,500."
+    ],
+    "answer": "B",
+    "why": "Residual income = net income − required return × beginning equity = 96,500 − 0.10 × 590,000 = 37,500. Using end-of-year equity gives 32,500; net income − dividends gives 58,500."
+   }
+  ]
+ },
+ {
+  "id": "retry1-17",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "Retry 1 · Q17 · from M2 Q2",
+  "origin": "M2 Q2",
+  "body": "An analyst suggests using an algorithm with a least absolute shrinkage and selection operator (LASSO) to predict a continuous target (firm valuation).",
+  "questions": [
+   {
+    "n": 17,
+    "q": "The algorithm suggested is a:",
+    "options": [
+     "penalized regression algorithm.",
+     "k-nearest neighbor algorithm.",
+     "classification and regression tree algorithm."
+    ],
+    "answer": "A",
+    "why": "LASSO adds a penalty for each included feature and shrinks weak coefficients to zero: it is a penalized regression. KNN and CART are different algorithms with no LASSO penalty."
+   }
+  ]
+ },
+ {
+  "id": "retry1-18",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Retry 1 · Q18 · from M2 Q32",
+  "origin": "M2 Q32",
+  "body": "Interest rate tree (forward rates): time 0: 2.0%; time 1: 5.0% (upper), 3.0% (lower); time 2: 7.0% (upper), 6.0% (middle), 4.0% (lower).\nA three-year bond pays a 4.5% annual coupon. Probability of an up or down move is 0.5.",
+  "questions": [
+   {
+    "n": 18,
+    "q": "Using the binomial interest rate tree, the correct price of the bond is closest to:",
+    "options": [
+     "93.1792",
+     "106.3334",
+     "101.8334"
+    ],
+    "answer": "C",
+    "why": "Time 2: 104.5 ÷ 1.07 = 97.6636; 104.5 ÷ 1.06 = 98.5849; 104.5 ÷ 1.04 = 100.4808. Time 1 (5.0%): [0.5 × (97.6636 + 98.5849) + 4.5] ÷ 1.05 = 97.7374; time 1 (3.0%): 101.0028. Time 0: [0.5 × (97.7374 + 101.0028) + 4.5] ÷ 1.02 = 101.8334. 93.1792 leaves out all coupons; 106.3334 adds the coupon a second time."
+   }
+  ]
+ },
+ {
+  "id": "retry1-19",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "Retry 1 · Q19 · from M2 Q39",
+  "origin": "M2 Q39",
+  "body": "Note 1: The width of an ETF's bid–ask spread depends only on the bid–ask spread of the underlying securities.\nNote 2: Premiums and discounts to NAV are driven by timing differences and stale pricing, which can be meaningful for foreign securities.",
+  "questions": [
+   {
+    "n": 19,
+    "q": "Are the notes most likely correct?",
+    "options": [
+     "Yes.",
+     "No, incorrect with regard to Note 1.",
+     "No, incorrect with regard to Note 2."
+    ],
+    "answer": "B",
+    "why": "Note 1 is wrong: the spread also depends on creation or redemption fees and trading costs, not only on the underlying securities' spreads. Note 2 is a correct description."
+   }
+  ]
+ },
+ {
+  "id": "retry1-20",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "Retry 1 · Q20 · from M2 Q33",
+  "origin": "M2 Q33",
+  "body": "Alpha Corp (US GAAP) owns 40% of a joint venture and uses the equity method.\nJoint venture revenue for 2019: $2,400 million.",
+  "questions": [
+   {
+    "n": 20,
+    "q": "The amount of joint venture revenue included on Alpha's 2019 financial statements is closest to:",
+    "options": [
+     "$0.",
+     "$960 million.",
+     "$2,400 million."
+    ],
+    "answer": "A",
+    "why": "Under the equity method the investor reports one income line (its share of net income) and no line-by-line revenue. $960 million (40%) is the proportionate consolidation amount; $2,400 million is full consolidation."
+   }
+  ]
+ },
+ {
+  "id": "retry1-21",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "Retry 1 · Q21 · from M2 Q14",
+  "origin": "M2 Q14",
+  "body": "Stock price $50; call strike $48; risk-free rate 3%; up factor 1.25; down factor 0.80; no dividend.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The value of a two-year European call option on the stock is closest to:",
+    "options": [
+     "$8.61.",
+     "$8.04.",
+     "$8.36."
+    ],
+    "answer": "C",
+    "why": "π = (1 + r − d) ÷ (u − d) = (1.03 − 0.80) ÷ 0.45 = 0.5111. Payoffs: uu = 30.125; ud = 2; dd = 0. Value = [π² × 30.125 + 2π(1 − π) × 2] ÷ 1.03² = $8.36. $8.04 uses π = 0.5; $8.61 discounts only once."
+   }
+  ]
+ },
+ {
+  "id": "retry1-22",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Equity Valuation",
+  "title": "Retry 1 · Q22 · from M1 Q10",
+  "origin": "M1 Q10",
+  "body": "Expected long-term ROE 14%; required return on equity 10%; earnings and dividends grow at 6% per year.\nMarket price KRW48,000 per share; shares outstanding 25,000,000; total equity 640,000 (KRW millions); net income 96,500 (KRW millions).",
+  "questions": [
+   {
+    "n": 22,
+    "q": "Using the single-stage residual income approach, the justified price-to-book ratio (P/B) is closest to:",
+    "options": [
+     "2.27.",
+     "2.00.",
+     "1.88."
+    ],
+    "answer": "B",
+    "why": "Justified P/B = (ROE − g) ÷ (r − g) = (0.14 − 0.06) ÷ (0.10 − 0.06) = 2.00. 1.88 is the current market price ÷ book value per share (48,000 ÷ 25,600); 2.27 uses last year's ROE (15.08%)."
+   }
+  ]
+ },
+ {
+  "id": "retry1-23",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Economics",
+  "title": "Retry 1 · Q23 · from M1 Q24",
+  "origin": "M1 Q24",
+  "body": "Country B consistently runs a current account deficit.\nAn analyst asserts, using the flow supply/demand channel, that Country B's currency should depreciate over time.",
+  "questions": [
+   {
+    "n": 23,
+    "q": "The analyst's assertion is most likely:",
+    "options": [
+     "correct because countries with persistent current account deficits tend to see their currencies depreciate.",
+     "incorrect because deficits are financed by borrowing, which makes the currency appreciate.",
+     "incorrect because the flow supply/demand channel applies only to countries with surpluses."
+    ],
+    "answer": "A",
+    "why": "The flow supply/demand channel says persistent surpluses lead to appreciation and persistent deficits lead to depreciation. The assertion is therefore correct. The channel applies to both surpluses and deficits, and borrowing to finance a deficit does not make the currency appreciate."
+   }
+  ]
+ },
+ {
+  "id": "retry1-24",
+  "source": "Retry paper 1 (3 Nov): questions missed in Mock 1 and Mock 2, option order changed and numbers changed for calculations",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "Retry 1 · Q24 · from M2 Q30",
+  "origin": "M2 Q30",
+  "body": "Par curve (bonds priced at par, annual coupons): 1 year 2.0%; 2 years 3.6%; 3 years 5.5%.\nA three-year 6% annual coupon corporate bond has a market price of 106.00.\nValue the bond by discounting each cash flow separately with the appropriate spot rate.",
+  "questions": [
+   {
+    "n": 24,
+    "q": "The amount (in absolute terms) by which the bond is mispriced is closest to:",
+    "options": [
+     "6.00 per 100 of par value.",
+     "4.26 per 100 of par value.",
+     "4.62 per 100 of par value."
+    ],
+    "answer": "C",
+    "why": "Bootstrap spot rates: z1 = 2.0%; z2 = 3.6293%; z3 = 5.6409%. Value = 101.3799; mispricing = 106.00 − 101.3799 = 4.62. Discounting with the par yields gives 101.7437 (mispricing 4.26); 6.00 is just price − par."
+   }
+  ]
+ }
+]
