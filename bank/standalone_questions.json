@@ -759,5 +759,160 @@
   ],
   "answer": "C",
   "why": "A. Incorrect because the percentage reduction in operating expenses is incorrectly calculated as EBIT divided by the operating expenses, or $17 million / $172 million = 9.9%. | B. Incorrect because the percentage reduction in operating expenses is incorrectly calculated as the target EBIT margin minus the actual EBIT margin, or 20% – 9% = 11%, where the current EBIT margin is calculated as EBIT/sales, or $17 million/$189 million = 9.0%. | C. Correct because the company's current EBIT margin is $17 million/$189 million = 9.0% which implies that the company had operating expenses of Sales – EBIT = $189 million – $17 million = $172 million. To achieve an EBIT margin of 20%, EBIT needs to be $189 million × 20% = $37.8 million, and the company must decrease its operating expenses by $37.8 million – $17 million = $20.8 million. In percent, the reduction is equal to $20.8 million/$172 million = 12.1%."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23
+  ],
+  "n": 4,
+  "q": "Which forward rate cannot be computed from the one-, two-, three-, and four-year spot rates? The rate for a:",
+  "options": [
+   "one-year loan beginning in two years",
+   "two-year loan beginning in two years",
+   "three-year loan beginning in two years"
+  ],
+  "answer": "C",
+  "why": "f2,3 needs the five-year spot rate z5 and the two-year spot rate z2; z5 is not provided."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23
+  ],
+  "n": 5,
+  "q": "Consider spot rates for three zero-coupon bonds: z(1) = 3%, z(2) = 4%, and z(3) = 5%. Which statement is correct? The forward rate for a one-year loan beginning in one year will be:",
+  "options": [
+   "less than the forward rate for a one-year loan beginning in two years.",
+   "greater than the forward rate for a two-year loan beginning in one year.",
+   "greater than the forward rate for a one-year loan beginning in two years."
+  ],
+  "answer": "A",
+  "why": "f1,1 = 1.04²/1.03 − 1 = 5%; f2,1 = 1.05³/1.04² − 1 = 7%. An upward-sloping yield curve gives an upward-sloping forward curve."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23
+  ],
+  "n": 6,
+  "q": "If one-period forward rates are decreasing with maturity, the yield curve is most likely:",
+  "options": [
+   "flat.",
+   "upward sloping.",
+   "downward sloping."
+  ],
+  "answer": "C",
+  "why": "Decreasing one-period forward rates mean a downward-sloping forward curve, which implies a downward-sloping yield curve (long-term spot rates below short-term ones)."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23
+  ],
+  "n": 11,
+  "q": "The one-year spot rate z1 is 4%, the forward rate for a one-year loan beginning in one year is 6%, and the forward rate for a one-year loan beginning in two years is 8%. Which of the following rates is closest to the three-year spot rate?",
+  "options": [
+   "4.0%",
+   "6.0%",
+   "8.0%"
+  ],
+  "answer": "B",
+  "why": "(1 + z3)³ = (1.04)(1.06)(1.08), so z3 = 5.987%."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23
+  ],
+  "n": 12,
+  "q": "The one-year spot rate z1 is 5%, and the forward price for a one-year zero-coupon bond beginning in one year is 0.9346. The spot price of a two-year zero-coupon bond is closest to:",
+  "options": [
+   "0.87.",
+   "0.89.",
+   "0.93."
+  ],
+  "answer": "B",
+  "why": "DF1 = 1/1.05 = 0.9524; DF2 = DF1 × F1,1 = 0.9524 × 0.9346 = 0.8901."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23,
+   24
+  ],
+  "n": 13,
+  "q": "In a typical interest rate swap contract, the swap rate is best described as the interest rate for the:",
+  "options": [
+   "fixed-rate leg of the swap.",
+   "floating-rate leg of the swap.",
+   "difference between the fixed and floating legs of the swap."
+  ],
+  "answer": "A",
+  "why": "The swap rate is the interest rate of the fixed-rate leg."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23,
+   24
+  ],
+  "n": 14,
+  "q": "A two-year fixed-for-floating MRR swap is 1.00%, and the two-year US Treasury bond is yielding 0.63%. The swap spread is closest to:",
+  "options": [
+   "37 bps.",
+   "100 bps.",
+   "163 bps."
+  ],
+  "answer": "A",
+  "why": "Swap spread = 1.00% − 0.63% = 0.37% = 37 bps."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23,
+   24
+  ],
+  "n": 15,
+  "q": "The swap spread is quoted as 50 bps. If the five-year US Treasury bond is yielding 2%, the rate paid by the fixed payer in a five-year interest rate swap is closest to:",
+  "options": [
+   "0.50%.",
+   "1.50%.",
+   "2.50%."
+  ],
+  "answer": "C",
+  "why": "Swap rate = Treasury yield + swap spread = 2.0% + 0.5% = 2.5%."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23,
+   24
+  ],
+  "n": 16,
+  "q": "If the three-month T-bill rate drops and MRR remains the same, the relevant TED spread:",
+  "options": [
+   "increases.",
+   "decreases.",
+   "does not change."
+  ],
+  "answer": "A",
+  "why": "TED = 3-month MRR − 3-month T-bill rate; a lower T-bill rate widens the spread."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz",
+  "readings": [
+   23,
+   24
+  ],
+  "n": 17,
+  "q": "Given the yield curve for US Treasury zero-coupon bonds, which spread is most helpful pricing a corporate bond? The:",
+  "options": [
+   "Z-spread.",
+   "TED spread.",
+   "MRR–OIS spread, formerly the Libor–OIS spread."
+  ],
+  "answer": "A",
+  "why": "The Z-spread is the single spread added to each rate of the spot curve to price a risky bond."
  }
 ]

@@ -1,0 +1,332 @@
+[
+ {
+  "id": "ts-fwd-4-5-6",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Forward rates from one-, two- and three-year zero-coupon yields (4%, 5%, 6%)",
+  "body": "A one-year zero-coupon bond yields 4.0%. The two- and three-year zero-coupon bonds yield 5.0% and 6.0%, respectively.",
+  "questions": [
+   {
+    "n": 7,
+    "q": "The rate for a one-year loan beginning in one year is closest to:",
+    "options": [
+     "4.5%.",
+     "5.0%.",
+     "6.0%."
+    ],
+    "answer": "C",
+    "why": "(1 + 0.05)² = (1 + 0.04)(1 + f1,1), so f1,1 = 6.010%."
+   },
+   {
+    "n": 8,
+    "q": "The forward rate for a two-year loan beginning in one year is closest to:",
+    "options": [
+     "5.0%.",
+     "6.0%.",
+     "7.0%."
+    ],
+    "answer": "C",
+    "why": "(1 + 0.06)³ = (1 + 0.04)(1 + f1,2)², so f1,2 = 7.014%."
+   },
+   {
+    "n": 9,
+    "q": "The forward rate for a one-year loan beginning in two years is closest to:",
+    "options": [
+     "6.0%.",
+     "7.0%.",
+     "8.0%."
+    ],
+    "answer": "C",
+    "why": "(1 + 0.06)³ = (1 + 0.05)²(1 + f2,1), so f2,1 = 8.029%."
+   },
+   {
+    "n": 10,
+    "q": "The five-year spot rate is not provided here; however, the forward price for a two-year zero-coupon bond beginning in three years is known to be 0.8479. The price today of a five-year zero-coupon bond is closest to:",
+    "options": [
+     "0.7119.",
+     "0.7835.",
+     "0.9524."
+    ],
+    "answer": "A",
+    "why": "DF3 = 1/(1.06)³ = 0.8396. Forward pricing model: DF5 = DF3 × F3,2 = 0.8396 × 0.8479 = 0.7119."
+   }
+  ]
+ },
+ {
+  "id": "ts-madison",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Madison: Cardinal Capital, term structure theories, volatility and factor model",
+  "body": "Rowan Madison is a junior analyst at Cardinal Capital. Sage Winter, a senior portfolio manager and Madison’s supervisor, meets with Madison to discuss interest rates and review two bond positions in the firm’s fixed-income portfolio.\n\nWinter begins the meeting by asking Madison to state her views on the term structure of interest rates. Madison responds:\n\n“Yields are a reflection of expected spot rates and risk premiums. Investors demand risk premiums for holding long-term bonds, and these risk premiums increase with maturity.”\n\nWinter tells Madison that, based on recent changes in spreads, she is concerned about a perceived increase in counterparty risk in the economy and its effect on the portfolio. Madison asks Winter:\n\n“Which spread measure should we use to assess changes in counterparty risk in the economy?”\n\nWinter is also worried about the effect of yield volatility on the portfolio. She asks Madison to identify the economic factors that affect short-term and long-term rate volatility. Madison responds:\n\n“Short-term rate volatility is mostly linked to uncertainty regarding monetary policy, whereas long-term rate volatility is mostly linked to uncertainty regarding the real economy and inflation.”\n\nFinally, Winter asks Madison to analyze the interest rate risk portfolio positions in a 5-year and a 20-year bond. Winter requests that the analysis be based on level, slope, and curvature as term structure factors. Madison presents her analysis in Exhibit 1.\n\nExhibit 1\nThree-Factor Model of Term Structure\nFactor\tTime to Maturity (years): 5\tTime to Maturity (years): 20\nLevel\t–0.4352%\t–0.5128%\nSteepness\t–0.0515%\t–0.3015%\nCurvature\t0.3963%\t0.5227%\nNote: Entries indicate how yields would change for a one standard deviation increase in a factor.\n\nWinter asks Madison to perform two analyses:\n\nAnalysis 1: Calculate the expected change in yield on the 20-year bond resulting from a two-standard-deviation increase in the steepness factor.\nAnalysis 2: Calculate the expected change in yield on the five-year bond resulting from a one-standard-deviation decrease in the level factor and a one-standard-deviation decrease in the curvature factor.",
+  "questions": [
+   {
+    "n": 48,
+    "q": "Madison’s views on the term structure of interest rates are most consistent with the:",
+    "options": [
+     "local expectations theory.",
+     "segmented markets theory.",
+     "liquidity preference theory."
+    ],
+    "answer": "C",
+    "why": "Liquidity preference theory: investors demand a liquidity premium for the added interest rate risk of long-maturity bonds, and the premium increases with maturity."
+   },
+   {
+    "n": 49,
+    "q": "Is Madison’s response regarding the factors that affect short-term and long-term rate volatility correct?",
+    "options": [
+     "Yes",
+     "No, she is incorrect regarding factors linked to long-term rate volatility",
+     "No, she is incorrect regarding factors linked to short-term rate volatility"
+    ],
+    "answer": "A",
+    "why": "Short-term rate volatility is mostly linked to uncertainty about monetary policy; long-term rate volatility to uncertainty about the real economy and inflation."
+   },
+   {
+    "n": 50,
+    "q": "Based on Exhibit 1, the results of Analysis 1 should show the yield on the 20-year bond decreasing by:",
+    "options": [
+     "0.3015%.",
+     "0.6030%.",
+     "0.8946%."
+    ],
+    "answer": "B",
+    "why": "Factors are standardized to unit standard deviation: change = −0.3015% × 2 = −0.6030%."
+   },
+   {
+    "n": 51,
+    "q": "Based on Exhibit 1, the results of Analysis 2 should show the yield on the five-year bond:",
+    "options": [
+     "decreasing by 0.8315%.",
+     "decreasing by 0.0389%.",
+     "increasing by 0.0389%."
+    ],
+    "answer": "C",
+    "why": "A one-standard-deviation decrease in level and in curvature: change = +0.4352% − 0.3963% = +0.0389%."
+   }
+  ]
+ },
+ {
+  "id": "ts-brown",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Brown: Institutional Investments, rolling down the yield curve, TED spread, bullish flattening",
+  "body": "Tony Brown is a fund manager with Institutional Investments, a fixed-income asset management firm. He actively manages his fund's holdings, duration, and yield curve exposure.\n\nBrown's fund currently has a large position in two option-free and default-risk-free zero-coupon bonds. The first bond has a 1-year maturity and the other bond has a 10-year maturity. Brown's view is that the spot curve one year from today will reflect the current forward curve. One of Brown's analysts disagrees with his view and proposes a \"rolling down the yield curve\" strategy. Brown's investment horizon is seven years. Interest rate information for option-free and default-risk-free zero-coupon bonds is contained in Exhibit 1.\n\nExhibit 1\nMaturity (years)\t1\t2\t3\nSpot rate\t3.00%\t4.00%\t5.00%\n1-year forward rate\tf0,1 = 3.00%\tf1,1 = 5.01%\tf2,1 = 7.03%\n\nBrown next focuses his attention on the short end of the yield curve. He observes the US Treasury bill rate, the overnight indexed swap rate (OIS), and the secured overnight transactions market reference rate (MRR). He collects the current rate and spread information in Exhibit 2 and uses it to calculate the 3-month TED spread.\n\nExhibit 2\n3-Month US Treasury Bill Rate\t3-Month OIS Rate\t3-Month MRR – 3-Month OIS Spread\n4 bps\t6 bps\t9 bps\n\nLater in the day, Brown meets with another analyst to discuss the current fixed-income environment. This second analyst believes fixed-income markets are about to enter a period of high uncertainty. This analyst also expects a flight to quality and a bullish flattening of the yield curve. He recommends Brown adjust the fund's exposure through the purchase and sale of option-free default-risk-free bonds.",
+  "questions": [
+   {
+    "n": 63,
+    "q": "If Brown's view of spot rates one year from today is accurate, the 1-year total return of the 10-year bond will be:",
+    "options": [
+     "less than the total return of the 1-year bond.",
+     "equal to the total return of the 1-year bond.",
+     "greater than the total return of the 1-year bond."
+    ],
+    "answer": "B",
+    "why": "If spot rates evolve as implied by the current forward curve, bonds of any tenor earn the one-year rate (the risk-free rate) over the one-year period."
+   },
+   {
+    "n": 64,
+    "q": "To implement the first analyst's proposed strategy, Brown would purchase bonds with a maturity:",
+    "options": [
+     "shorter than seven years.",
+     "equal to seven years.",
+     "longer than seven years."
+    ],
+    "answer": "C",
+    "why": "Rolling down the yield curve means buying bonds with maturity longer than the investment horizon (here seven years), expecting an unchanged upward-sloping curve, and selling them at the horizon."
+   },
+   {
+    "n": 65,
+    "q": "The 3-month TED spread that Brown calculates should equal:",
+    "options": [
+     "5 bps.",
+     "11 bps.",
+     "13 bps."
+    ],
+    "answer": "B",
+    "why": "3-month MRR = (MRR − OIS spread) + OIS = 9 + 6 = 15 bps. TED = MRR − T-bill = 15 − 4 = 11 bps."
+   },
+   {
+    "n": 66,
+    "q": "The strategy best suited to exploit the second analyst's expected changes to the current fixed-income environment is to:",
+    "options": [
+     "extend duration and construct a bullet portfolio.",
+     "extend duration and construct a barbell portfolio.",
+     "keep duration constant and construct a barbell portfolio."
+    ],
+    "answer": "B",
+    "why": "Flight to quality: government yields fall, so extend duration. Bullish flattening (long rates fall more than short rates): shift from a bullet to a barbell."
+   }
+  ]
+ },
+ {
+  "id": "ts-scai",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Klopp: SCAI spot rates, bootstrapping and relative value scenarios",
+  "body": "SCAI is a registered investment adviser based in Nashville, Tennessee, providing investment and private wealth management advice to endowments, retirement plans, and corporations. Dieter Klopp, a portfolio manager, is meeting with analysts Nabil Salah and Lisa Suarez to discuss fixed-income investment opportunities and portfolio management strategies. Klopp presents the group with the information on spot rates shown in Exhibit 1:\n\nExhibit 1 Spot Rates for Zero-Coupon Bonds\nMaturity (Years)\tSpot Rate\n1\t2.041%\n2\t2.598%\n3\t2.818%\n4\t2.956%\n5\t3.304%\n\nSalah is currently evaluating a corporate bond and makes the following statements:\n\nStatement 1: “The value of a bond calculated by discounting its future cash flows by their corresponding spot rates will be the same as the value obtained by discounting future cash flows by the yield-to-maturity of a bond, as long as the yield-to-maturity is some weighted average of the spot rates.”\nStatement 2: “Yield-to-maturity is a good estimate of the expected return on a bond assuming coupons are reinvested at the prevailing spot rates.”\nStatement 3: “If the yield curve remains flat during the holding period, the realized rate of return on a bond will be the same as the expected rate of return.”\n\nSalah asks Klopp to explain the spot curve in Exhibit 1. Klopp responds that the spot rate curve in Exhibit 1 is derived from the par curve using a process called bootstrapping. The par rates are yields-to-maturity, at various maturities, for on-the-run, coupon-paying government bonds priced at par. Bootstrapping is a process of forward substitution, where successive spot rates are derived from par rates one at a time. The process begins with recognizing that the one-year spot rate is the same as the one-year par rate. The two-year spot rate, r(2), is then calculated by solving the following equation: [equation not captured in the paste]. This process continues until all spot rates are derived.\n\nKlopp then asks Suarez how the spot curve can be used in fixed-income analysis. Suarez responds, “Our expectations regarding the evolution of future spot rates compared to the forward curve allow for an evaluation of the relative value of a bond and the identification of appropriate bond trading strategies. Interest rate scenarios and corresponding appropriate strategies are outlined here”:\n\nScenario 1: If we expect future spot rates to be lower than current forward rates, then we should short the bond since it is likely to be overvalued.\nScenario 2: If the spot curve is expected to be above the forward curve and our expectations turn out to be correct, the bond should be purchased since the one-year return will be more than the one-year risk-free rate.\nScenario 3: If the yield curve is upward sloping and we expect it to remain static, then a strategy of buying bonds with maturities longer than the investment holding period will allow us to earn a return greater than a maturity matching strategy.",
+  "questions": [
+   {
+    "n": 67,
+    "q": "Based on the information in Exhibit 1, the forward rate for a two-year zero-coupon bond issued three years from today is closest to:",
+    "options": [
+     "3.13%.",
+     "4.04%.",
+     "4.71%."
+    ],
+    "answer": "B",
+    "why": "(1 + f3,2)² = (1.03304)⁵ ÷ (1.02818)³ = 1.08235, so f3,2 = 1.08235^0.5 − 1 = 4.04%. 3.13% is a simple average of the 4- and 5-year spot rates; 4.71% wrongly uses the 5- and 4-year spot rates."
+   },
+   {
+    "n": 68,
+    "q": "Which of Salah’s three statements is least likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "Statement 2 is incorrect: YTM is a poor estimate of expected return when rates are volatile, the curve is steep, default risk is significant or there are embedded options, because coupons are not reinvested at the YTM. Statements 1 and 3 are correct."
+   },
+   {
+    "n": 69,
+    "q": "Is Klopp’s statement on par rates and bootstrapping most likely correct?",
+    "options": [
+     "Yes.",
+     "No, he is incorrect about par rates.",
+     "No, he is incorrect about bootstrapping."
+    ],
+    "answer": "C",
+    "why": "Klopp describes par rates correctly but misstates the equation used in bootstrapping (the first term of the two-year equation)."
+   },
+   {
+    "n": 70,
+    "q": "In Suarez’s response to Klopp, under which scenario is the recommended strategy most likely appropriate?",
+    "options": [
+     "Scenario 1",
+     "Scenario 2",
+     "Scenario 3"
+    ],
+    "answer": "C",
+    "why": "Scenario 3: an upward-sloping curve expected to stay static makes buying maturities longer than the horizon (rolling down) earn more than maturity matching. Scenario 1 should be a purchase (bond undervalued); in Scenario 2 the bond should be shorted (return below the risk-free rate)."
+   }
+  ]
+ },
+ {
+  "id": "ts-gfc",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Aguero: GFC Advisory, term structure theories, interest rate models and volatility",
+  "body": "GFC Advisory is a private independent investment firm that provides solutions and advice to individuals and institutions in the United States and internationally. Fernando Aguero is the director of research and is meeting with analysts Sergio Torres, Matteo Pochettino, and Karen Dengler to discuss the development of a research note that explains the role of the term structure of interest rates in fixed-income investment decision making.\n\nAguero asks the group to describe how traditional theories of the term structure of interest rates explain the shape of the yield curve as well as the relationship between forward rates and expected future spot rates. Each of the analysts responds as follows:\n\nDengler states that the unbiased expectations theory applies to risky and risk-free assets and maintains that forward rates are an unbiased predictor of expected future spot rates. This theory can explain an upward sloping or downward sloping yield curve.\n\nPochettino responds that under the liquidity preference theory, investors require a liquidity premium to lend over longer maturities. The theory states that forward rates are an upwardly biased estimate of expected future spot rates, and the yield curve will typically be upward sloping. A downward sloping yield curve is only possible if expected future spot rates decline by enough to offset the liquidity premium.\n\nTorres notes that according to the segmented markets theory, the shape of the yield curve is determined by supply and demand for funds at each maturity and that institutions will deviate from their preferred maturities if they are adequately compensated.\n\nAguero states there are modern theories of the term structure that offer more precise ways of describing the evolution of interest rates, specifically the Cox–Ingersoll–Ross (CIR) model, the Vasicek model, and the Ho–Lee model. He notes that all three models are structured similarly in that they have a drift term and a stochastic term. Aguero states the three models also assume that short-term interest rates converge to the long-term rate over time. He concludes by stating that while the CIR and Vasicek models assume constant interest rate volatility, the Ho–Lee model allows for interest rate volatility to increase with the level of interest rates.\n\nAguero notes that yield curve shaping risk is important in fixed-income portfolio management and asks for input on how this should be addressed in the research note. Dengler responds that our note should indicate three factors that describe yield curve movement: level, steepness, and curvature. The risk associated with these three factors can be measured using effective duration.\n\nTorres states the research note should also include a discussion of the impact of interest rate volatility on fixed-income portfolio management and makes the following statements:\n\nStatement 1: “Interest rate volatility is an important consideration because it impacts the option values embedded in some fixed-income securities.”\nStatement 2: “Long-term interest rates are typically more volatile than short-term interest rates.”\nStatement 3: “Long-term interest rate volatility is linked to uncertainty regarding the real economy and inflation, whereas short-term interest rate volatility is related to uncertainty regarding monetary policy.”",
+  "questions": [
+   {
+    "n": 71,
+    "q": "With regard to Aguero’s question regarding traditional theories of the term structure of interest rates, who is most likely correct?",
+    "options": [
+     "Torres",
+     "Dengler",
+     "Pochettino"
+    ],
+    "answer": "C",
+    "why": "Pochettino correctly describes liquidity preference theory. Torres describes preferred habitat (deviating if compensated), not segmented markets. Dengler is wrong: the unbiased expectations theory assumes risk neutrality and applies to risk-free assets."
+   },
+   {
+    "n": 72,
+    "q": "In his statement about modern theories of the term structure, Aguero is most likely correct about:",
+    "options": [
+     "interest rate volatility.",
+     "the structure of the interest rate models.",
+     "convergence of short-term and long-term interest rates."
+    ],
+    "answer": "B",
+    "why": "All three models (CIR, Vasicek, Ho–Lee) have a drift term and a stochastic term. He is wrong on volatility (Vasicek and Ho–Lee have constant volatility; CIR's volatility increases with the level of rates) and on convergence (CIR and Vasicek are mean reverting; Ho–Lee is not)."
+   },
+   {
+    "n": 73,
+    "q": "Is Dengler’s response to Aguero regarding yield curve shaping risk most likely correct?",
+    "options": [
+     "Yes.",
+     "No, she is incorrect about factors affecting yield curve movements.",
+     "No, she is incorrect about the measure of risk associated with the three factors."
+    ],
+    "answer": "C",
+    "why": "Level, steepness and curvature are the right factors, but effective duration measures only parallel shifts (level). Key rate duration is used for steepness and curvature (shaping risk)."
+   },
+   {
+    "n": 74,
+    "q": "Which of Torres’ statements on interest rate volatility is least likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "Statement 2 is incorrect: the volatility term structure shows that short-term rates are more volatile than long-term rates. Statements 1 and 3 are correct."
+   }
+  ]
+ },
+ {
+  "id": "ts-halstead",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics quiz review)",
+  "readings": [
+   23
+  ],
+  "title": "Halstead: Capital Advisors, realized return, breakeven forward rate and credit spread measures",
+  "body": "Halstead Capital Advisors is an investment advisory firm that specializes in taxable fixed-income investing. Its clients consist of medium sized foundations and endowments who select outside managers such as Halstead after having formulated their investment policy and asset allocation targets.\n\nHalstead’s chief investment strategist, Charles Scott, and quantitative analyst, Catherine Bird, are meeting to discuss a research report that Bird is producing. The report will address various fixed-income investing topics, including investment strategies, credit spreads, and yield curve movements.\n\nBird is evaluating two US Treasury instruments. The first is a newly issued 7.00% coupon bond with a 5-year maturity issued at a price of $101.15 ($100.00 face value) with a yield to maturity of 6.72%. The second is newly issued zero-coupon bond with a 5-year maturity issued at a price of $71.30 ($100.00 face value) with a yield to maturity of 7.00%. Current US Treasury spot rates and extrapolated forward rates are provided in Exhibit 1. Bird expects that the future path of interest rates will follow that which is implied by the forward curve.\n\nExhibit 1 Spot and Forward Interest Rates\nMaturity (n)\tSpot Rates r(n)\tForward Rate (1 year), n – 1 years forward: f(n – 1,1)\tForward Rates (n – 1 year), 1 year forward: f(1, n – 1)\n1\t3.00%\t3.00%\t3.00%\n2\t4.00%\t5.01%\t5.01%\n3\t5.00%\t7.03%\t6.01%\n4\t6.00%\t9.06%\t7.02%\n5\t7.00%\t11.10%\t8.02%\n\nBird proposes to review other credit spread indicators that measure credit and liquidity risk for money market securities, general creditworthiness of individual debt issuers, and counterparty risk. Bird offers the following statements about measures of credit risk:\n\nStatement 1: The TED spread represents the difference between MRR and overnight bank lending rates.\nStatement 2: The MRR–OIS spread represents the difference between MRR and corporate bond spreads.\nStatement 3: The Z spread represents the constant basis point spread that is added to the implied spot yield curve to measure the price of credit risky bonds.",
+  "questions": [
+   {
+    "n": 75,
+    "q": "Using the information provided in Exhibit 1 and assuming that Bird’s interest rate expectation materializes, the realized return for an investor who buys and holds to maturity the US Treasury 7.00% coupon bond would most likely be:",
+    "options": [
+     "less than the yield to maturity.",
+     "equal to the yield to maturity.",
+     "greater than the yield to maturity."
+    ],
+    "answer": "C",
+    "why": "Coupons are reinvested at forward rates that rise above the YTM because the spot curve is upward sloping. Future value of the bond with coupons reinvested at forward rates = 141.87 against a price of 101.15, so the annualized realized return is 7.0%, above the 6.72% YTM."
+   },
+   {
+    "n": 76,
+    "q": "Using the information provided in Exhibit 1 and assuming that Bird’s interest rate expectation materializes, the forward rate at which an investor would be indifferent to purchasing the US Treasury zero coupon note today or one year from today is closest to:",
+    "options": [
+     "7.02%.",
+     "8.02%.",
+     "11.10%."
+    ],
+    "answer": "B",
+    "why": "The breakeven rate is the one-year-forward, four-year rate: (1.07)^5 = (1.03)(1 + f1,4)^4, so f1,4 = 8.02%. 7.02% is f(1,3); 11.10% is f(4,1)."
+   },
+   {
+    "n": 77,
+    "q": "Using the information provided in Exhibit 1 and assuming that Bird’s interest rate expectation materializes, the year one holding period return for the Zero Coupon bond is closest to:",
+    "options": [
+     "3.00%.",
+     "5.01%.",
+     "7.00%."
+    ],
+    "answer": "A",
+    "why": "If spot rates evolve as implied by the forward curve, the one-year return of any bond equals the one-year rate (3.00%). The five-year zero bought at 71.30 is worth 73.45 one year later: 73.45 ÷ 71.30 − 1 = 3.00%."
+   },
+   {
+    "n": 78,
+    "q": "Which of Bird’s statements regarding measures of credit risk is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "Statement 3 describes the Z-spread. Statement 1 is wrong: the TED spread is MRR minus the T-bill rate. Statement 2 is wrong: the MRR–OIS spread is MRR minus the overnight indexed swap rate."
+   }
+  ]
+ }
+]

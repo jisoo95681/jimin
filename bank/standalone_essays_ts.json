@@ -1,0 +1,137 @@
+[
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 1,
+  "q": "Given spot rates for one-, two-, and three-year zero coupon bonds, how many forward rates can be calculated?",
+  "model_answer": "Three: f1,1 (from z1 and z2), f2,1 (from z2 and z3) and f1,2 (from z1 and z3). E.g. [1 + z3]³ = [1 + z2]²[1 + f2,1]; [1 + z3]³ = [1 + z1][1 + f1,2]²."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 2,
+  "q": "Give two interpretations for the following forward rate: The two-year forward rate one year from now is 2%.",
+  "model_answer": "(1) 2% is the rate that makes an investor indifferent between buying a three-year zero-coupon bond or investing in a one-year zero and, when it matures, reinvesting in a two-year zero. (2) 2% is the rate that can be locked in today by buying the three-year zero rather than rolling a one-year zero into a two-year zero."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 3,
+  "q": "Describe the relationship between forward rates and spot rates if the yield curve is flat.",
+  "model_answer": "A flat curve means all spot rates are equal; the forward rate model then shows all forward rates equal the spot rate."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 41,
+  "q": "Define the yield-to-maturity for a coupon bond.",
+  "model_answer": "The expected rate of return on a bond if it is held to maturity, there is no default, and the bond and all coupons are reinvested at the original yield-to-maturity."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 42,
+  "q": "Is it possible for a coupon bond to earn less than the yield-to-maturity if held to maturity?",
+  "model_answer": "Yes: if coupons are reinvested at rates lower than the initial YTM, realized returns are lower."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 43,
+  "q": "If a bond trader believes that current forward rates overstate future spot rates, how might she profit from that conclusion?",
+  "model_answer": "If forward rates exceed expected future spot rates, the market price is below intrinsic value (discounting at too high a rate): buy the undervalued bond; if the expected spot rates are realized, the price rises."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 44,
+  "q": "Explain the strategy of rolling down the yield curve.",
+  "model_answer": "Buy a bond with maturity beyond the investment horizon when the curve is upward sloping. If the curve does not change level or shape, the bond rolls down the curve, is priced at successively lower yields, and is sold at a gain, giving a higher return than a maturity-matched bond."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 45,
+  "q": "What are the advantages of using the swap curve as a benchmark of interest rates relative to a government bond yield curve?",
+  "model_answer": "Some countries have no liquid government bond market at all maturities but an active swap market with more points available to build a curve, so the swap curve may be the better benchmark."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 46,
+  "q": "What is the TED spread, and what type of risk does it measure?",
+  "model_answer": "The difference between MRR and the US T-bill rate of matching maturity. An indicator of perceived credit and liquidity risk; it reflects counterparty risk in the banking sector."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 47,
+  "q": "What is the SOFR rate, and which market conditions does it reflect?",
+  "model_answer": "The secured overnight financing rate: overnight cash borrowing collateralized by US Treasuries, a volume-weighted index of qualified repo transactions; it reflects supply and demand in secured funding (repo) markets."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 52,
+  "q": "According to the local expectations theory, what would be the difference in the one-month total return if an investor purchased a five-year zero-coupon bond versus a two-year zero-coupon bond?",
+  "model_answer": "None: the total return over a one-month horizon is the same for both (expected return equals the risk-free rate over the short period)."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 53,
+  "q": "Compare the segmented market and the preferred habitat term structure theories.",
+  "model_answer": "Both explain the curve through supply and demand by maturity. In segmented markets, participants are limited to maturities matching their liabilities. In preferred habitat, participants prefer a maturity but will deviate if other maturities offer sufficient compensation."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 54,
+  "q": "List the three factors that have empirically been observed to affect Treasury security returns and explain how each of these factors affects returns on Treasury securities.",
+  "model_answer": "Level (parallel shifts: an upward shift lowers returns on all maturities), slope/steepness (a steeper curve raises short-maturity and lowers long-maturity returns), and curvature (e.g. rates falling at the short and long ends while rising at intermediate maturities lifts short- and long-maturity returns and lowers intermediate ones)."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 55,
+  "q": "What has been observed to be the most important factor in affecting Treasury returns?",
+  "model_answer": "The change in the level of interest rates."
+ },
+ {
+  "source": "4 Nov, Module 1 term structure quiz (essay)",
+  "readings": [
+   23
+  ],
+  "n": 56,
+  "q": "Which measures of yield curve risk can measure shaping risk?",
+  "model_answer": "Key rate durations and measures based on sensitivities to level, slope and curvature movements can address shaping risk; effective duration cannot."
+ }
+]
