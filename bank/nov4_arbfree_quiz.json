@@ -1,0 +1,508 @@
+[
+ {
+  "id": "af-black",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Black: Coral Bond Management, arbitrage across exchanges and binomial tree calibration",
+  "body": "Katrina Black, a portfolio manager at Coral Bond Management, Ltd., is conducting a training session with Alex Sun, a junior analyst in the fixed-income department. Black wants to explain to Sun the arbitrage-free valuation framework used by the firm. Black presents Sun with Exhibit 1, showing a fictitious bond being traded on three exchanges, and asks Sun to identify the arbitrage opportunity of the bond. Sun agrees to ignore transaction costs in his analysis.\n\nExhibit 1\nThree-Year, €100 par, 3.00% Coupon, Annual Pay Option-Free Bond\n\tEurex\tNYSE Euronext\tFrankfurt\nPrice\t€103.7956\t€103.7815\t€103.7565\n\nBlack shows Sun some exhibits that were part of a recent presentation. Exhibit 3 presents most of the data of a binomial lognormal interest rate tree fit to the yield curve shown in Exhibit 2. Exhibit 4 presents most of the data of the implied values for a four-year, option-free, annual pay bond with a 2.5% coupon based on the information in Exhibit 3.\n\nExhibit 2\nYield-to-Maturity Par Rates for One-, Two-, and Three-Year Annual Pay Option-Free Bonds\nOne-year\tTwo-year\tThree-year\n1.25%\t1.50%\t1.70%\n\nExhibit 3\nBinomial Interest Rate Tree Fit to the Yield Curve (Volatility = 10%)\n[Tree figure not captured in the paste: higher and lower interest rates at time 0, 1, 2, 3 and 4 at volatility 10%.]\n\nExhibit 4\nImplied Values (in Euros) for a 2.5%, Four-Year, Option-Free, Annual Pay Bond Based on Exhibit 3\n[Tree figure not captured in the paste: bond values at each node, times 0 to 4, coupon 2.50%.]\n\nBlack asks about the missing data in Exhibits 3 and 4 and directs Sun to complete the following tasks related to those exhibits:\n\nTask 1: Test that the binomial interest tree has been properly calibrated to be arbitrage free.\nTask 2: Develop a spreadsheet model to calculate pathwise valuations. To test the accuracy of the spreadsheet, use the data in Exhibit 3 and calculate the value of the bond if it takes a path of lowest rates in Year 1 and Year 2 and the second lowest rate in Year 3.\nTask 3: Identify a type of bond where the Monte Carlo calibration method should be used in place of the binomial interest rate method.\nTask 4: Update Exhibit 3 to reflect the current volatility, which is now 15%.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on Exhibit 1, the best action that an investor should take to profit from the arbitrage opportunity is to:",
+    "options": [
+     "buy on Frankfurt, sell on Eurex.",
+     "buy on NYSE Euronext, sell on Eurex.",
+     "buy on Frankfurt, sell on NYSE Euronext."
+    ],
+    "answer": "A",
+    "why": "The same bond trades at three prices: buy where it is cheapest (Frankfurt 103.7565) and sell where it is dearest (Eurex 103.7956) for a risk-free profit of 0.0391 per 100 par. Buy NYSE/sell Eurex gives 0.0141; buy Frankfurt/sell NYSE gives 0.0250."
+   },
+   {
+    "n": 2,
+    "q": "Based on Exhibits 1 and 2, the exchange that reflects the arbitrage-free price of the bond is:",
+    "options": [
+     "Eurex.",
+     "Frankfurt.",
+     "NYSE Euronext."
+    ],
+    "answer": "C",
+    "why": "Bootstrap spot rates from the par rates: z1 = 1.25%, z2 = 1.5019%, z3 = 1.7049%. PV = 3/1.0125 + 3/(1.015019)² + 103/(1.017049)³ = 2.9630 + 2.9119 + 97.9066 = 103.7815, the NYSE Euronext price. Eurex discounts at the YTM; Frankfurt discounts all cash flows at the year-3 spot rate."
+   },
+   {
+    "n": 3,
+    "q": "Recall from the reading that each node is represented by both a time element and a rate change component. Which of the following statements about the missing data in Exhibit 3 is correct?",
+    "options": [
+     "Node 3–2 can be derived from Node 2–2.",
+     "Node 4–1 should be equal to Node 4–5 multiplied by e^0.4.",
+     "Node 2–2 approximates the implied one-year forward rate two years from now."
+    ],
+    "answer": "C",
+    "why": "Node 2–2 is the middle node in Year 2 and is close to the implied one-year forward rate two years from now. Node 4–1 equals Node 4–5 times e^0.8 (not e^0.4). Node 3–2 cannot be derived from Node 2–2; it can be derived from another Year 3 node (e.g. Node 3–4 times e^(4σ))."
+   },
+   {
+    "n": 4,
+    "q": "Based on the information in Exhibits 3 and 4, the bond price in euros at Node 1–2 in Exhibit 4 is closest to:",
+    "options": [
+     "102.7917.",
+     "104.8640.",
+     "105.2917."
+    ],
+    "answer": "A",
+    "why": "Value = [0.5 × (101.5168 + 102.1350) + 2.5] ÷ (1 + rate at Node 1–2) = 102.7917, using the middle and lower Year 2 node values and the 2.5 coupon."
+   },
+   {
+    "n": 5,
+    "q": "A benefit of performing Task 1 is that it:",
+    "options": [
+     "enables the model to price bonds with embedded options.",
+     "identifies benchmark bonds that have been mispriced by the market.",
+     "allows investors to realize arbitrage profits through stripping and reconstitution."
+    ],
+    "answer": "A",
+    "why": "Calibration verifies the tree against known benchmark values; once verified, the tree can value bonds with embedded options whose cash flows depend on future rates. Calibration does not identify mispriced benchmarks (they are assumed correctly priced) and it is designed to be arbitrage free, so it does not create stripping profits."
+   },
+   {
+    "n": 6,
+    "q": "If the assumed volatility is changed as Black requested in Task 4, the forward rates shown in Exhibit 3 will most likely:",
+    "options": [
+     "spread out.",
+     "remain unchanged.",
+     "converge to the spot rates."
+    ],
+    "answer": "A",
+    "why": "Volatility enters the multiple between nodes (e^(xσ)); raising it from 10% to 15% spreads the possible forward rates out. Lower volatility narrows them toward the implied forward rates."
+   }
+  ]
+ },
+ {
+  "id": "af-alvarez",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Alvarez: Canzim Asset Management, dominance, binomial trees, pathwise valuation and Monte Carlo",
+  "body": "Meredith Alvarez is a junior fixed-income analyst with Canzim Asset Management. Her supervisor, Stephanie Hartson, asks Alvarez to review the asset price and payoff data shown in Exhibit 1 to determine whether an arbitrage opportunity exists.\n\nExhibit 1\nPrice and Payoffs for Two Risk-Free Assets\nAsset\tPrice Today\tPayoff in One Year\nAsset A\t$500\t$525\nAsset B\t$1,000\t$1,100\n\nHartson also shows Alvarez data for a bond that trades in three different markets in the same currency. These data appear in Exhibit 2.\n\nExhibit 2\n2% Coupon, Five-Year Maturity, Annual Pay Bond\n\tNew York\tHong Kong SAR\tMumbai\nYield-to-Maturity\t1.9%\t2.3%\t2.0%\n\nHartson asks Alvarez to value two bonds (Bond C and Bond D) using the binomial tree in Exhibit 3. Exhibit 4 presents selected data for both bonds.\n\nExhibit 3\nBinomial Interest Rate Tree with Volatility = 25%\nTime 0\tTime 1\tTime 2\n\t\t2.7183%\n\t2.8853%\t\n1.500%\t\t1.6487%\n\t1.7500%\t\n\t\t1.0000%\n\nExhibit 4\nSelected Data on Annual Pay Bonds\nBond\tMaturity\tCoupon Rate\nBond C\t2 years\t2.5%\nBond D\t3 years\t3.0%\n\nHartson tells Alvarez that she and her peers have been debating various viewpoints regarding the conditions underlying binomial interest rate trees. The following statements were made in the course of the debate.\n\nStatement 1: The only requirements needed to create a binomial interest rate tree are current benchmark interest rates and an assumption about interest rate volatility.\nStatement 2: Potential interest rate volatility in a binomial interest rate tree can be estimated using historical interest rate volatility or observed market prices from interest rate derivatives.\nStatement 3: A bond value derived from a binomial interest rate tree with a relatively high volatility assumption will be different from the value calculated by discounting the bond’s cash flows using current spot rates.\n\nBased on data in Exhibit 5, Hartson asks Alvarez to calibrate a binomial interest rate tree starting with the calculation of implied forward rates shown in Exhibit 6.\n\nExhibit 5\nSelected Data for a Binomial Interest Rate Tree\nMaturity\tPar Rate\tSpot Rate\n1\t2.5000%\t2.5000%\n2\t3.5000%\t3.5177%\n\nExhibit 6\nCalibration of Binomial Interest Rate Tree with Volatility = 25%\nTime 0\tTime 1\n\t5.8365%\n2.500%\t\n\tLower one-period forward rate\n\nHartson mentions pathwise valuations as another method to value bonds using a binomial interest rate tree. Using the binomial interest rate tree in Exhibit 3, Alvarez calculates the possible interest rate paths for Bond D shown in Exhibit 7.\n\nExhibit 7\nInterest Rate Paths for Bond D\nPath\tTime 0\tTime 1\tTime 2\n1\t1.500%\t2.8853%\t2.7183%\n2\t1.500\t2.8853\t1.6487\n3\t1.500\t1.7500\t1.6487\n4\t1.500\t1.7500\t1.0000\n\nBefore leaving for the day, Hartson asks Alvarez about the value of using the Monte Carlo method to simulate a large number of potential interest rate paths to value a bond. Alvarez makes the following statements.\n\nStatement 4: Increasing the number of paths increases the estimate’s statistical accuracy.\nStatement 5: The bond value derived from a Monte Carlo simulation will be closer to the bond’s true fundamental value.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "Based on Exhibit 1, Alvarez finds that an arbitrage opportunity is:",
+    "options": [
+     "not available.",
+     "available based on the dominance principle.",
+     "available based on the value additivity principle."
+    ],
+    "answer": "B",
+    "why": "Both assets are risk free but Asset A implies a 5% discount rate (500/525 = 0.95238) and Asset B 10% (1,000/1,100 = 0.90909). Dominance is violated: sell two units of Asset A for $1,000 and buy one unit of Asset B; no outlay today and a $50 inflow in one year ($1,100 − 2 × $525)."
+   },
+   {
+    "n": 12,
+    "q": "Based on the data in Exhibit 2, the most profitable arbitrage opportunity would be to buy the bond in:",
+    "options": [
+     "Mumbai and sell it in Hong Kong SAR.",
+     "Hong Kong SAR and sell it in New York.",
+     "New York and sell it in Hong Kong SAR."
+    ],
+    "answer": "B",
+    "why": "The highest YTM (Hong Kong SAR, 2.3%) means the lowest price; the lowest YTM (New York, 1.9%) means the highest price. Buy in Hong Kong SAR and sell in New York."
+   },
+   {
+    "n": 13,
+    "q": "Based on Exhibits 3 and 4, the value of Bond C at the upper node at Time 1 is closest to:",
+    "options": [
+     "97.1957.",
+     "99.6255.",
+     "102.1255."
+    ],
+    "answer": "B",
+    "why": "Time 2 cash flow = 102.5 (par + final coupon). Value at the upper Time 1 node = 102.5 ÷ 1.028853 = 99.6255."
+   },
+   {
+    "n": 14,
+    "q": "Based on Exhibits 3 and 4, the price for Bond D is closest to:",
+    "options": [
+     "97.4785.",
+     "103.3230.",
+     "106.3230."
+    ],
+    "answer": "B",
+    "why": "Time 3 cash flow 103. Time 2 nodes: 103/1.027183 = 100.2742; 103/1.016487 = 101.3294; 103/1.010000 = 101.9802. Working back to Time 1 and Time 0 with the node expression gives 103.3230."
+   },
+   {
+    "n": 15,
+    "q": "Which of the various statements regarding binomial interest rate trees is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "Volatility can be estimated from historical volatility or from market prices of interest rate derivatives. Statement 1 is wrong: a third requirement is an interest rate model. Statement 3 is wrong: for an option-free bond a calibrated tree gives the same value as spot-rate discounting regardless of the volatility assumption."
+   },
+   {
+    "n": 16,
+    "q": "Based on Exhibits 5 and 6, the value of the lower one-period forward rate is closest to:",
+    "options": [
+     "3.5122%.",
+     "3.5400%.",
+     "4.8037%."
+    ],
+    "answer": "B",
+    "why": "Lower rate = higher rate × e^(−2σ) = 0.058365 × e^(−0.50) = 3.5400%."
+   },
+   {
+    "n": 17,
+    "q": "Based on Exhibits 4 and 7, the present value of Bond D’s cash flows following Path 2 is closest to:",
+    "options": [
+     "97.0322.",
+     "102.8607.",
+     "105.8607."
+    ],
+    "answer": "B",
+    "why": "Path 2 uses rates 1.500%, 2.8853% and 1.6487%: PV = 3/1.015 + 3/(1.015 × 1.028853) + 103/(1.015 × 1.028853 × 1.016487) = 102.8607."
+   },
+   {
+    "n": 18,
+    "q": "Which of the statements regarding Monte Carlo simulation is correct?",
+    "options": [
+     "Only Statement 4 is correct.",
+     "Only Statement 5 is correct.",
+     "Both Statement 4 and Statement 5 are correct."
+    ],
+    "answer": "A",
+    "why": "More paths increase the statistical accuracy of the estimate, but they do not move it closer to the bond's true fundamental value."
+   }
+  ]
+ },
+ {
+  "id": "af-jones",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Jones: Sparling Capital, equilibrium and arbitrage-free term structure models",
+  "body": "Keisha Jones is a junior analyst at Sparling Capital. Julie Anderson, a senior partner and Jones’s manager, meets with Jones to discuss interest rate models used for the firm’s fixed-income portfolio.\n\nAnderson begins the meeting by asking Jones to describe features of equilibrium and arbitrage-free term structure models. Jones responds by making the following statements:\n\nStatement 1: Equilibrium term structure models are factor models that use the observed market prices of a reference set of financial instruments, assumed to be correctly priced, to model the market yield curve.\nStatement 2: In contrast, arbitrage-free term structure models seek to describe the dynamics of the term structure by using fundamental economic variables that are assumed to affect interest rates.\n\nAnderson then asks Jones about her preferences concerning term structure models. Jones states:\n\nI prefer arbitrage-free models. Even though equilibrium models require fewer parameters to be estimated relative to arbitrage-free models, arbitrage-free models allow for time-varying parameters. In general, this allowance leads to arbitrage-free models being able to model the market yield curve more precisely than equilibrium models.",
+  "questions": [
+   {
+    "n": 20,
+    "q": "Which of Jones’s statements regarding equilibrium and arbitrage-free term structure models is incorrect?",
+    "options": [
+     "Statement 1 only",
+     "Statement 2 only",
+     "Both Statement 1 and Statement 2"
+    ],
+    "answer": "C",
+    "why": "Both statements swap the descriptions: equilibrium models use fundamental economic variables; arbitrage-free models use observed market prices of a reference set of instruments to model the market yield curve."
+   },
+   {
+    "n": 21,
+    "q": "Is Jones correct in describing key differences in equilibrium and arbitrage-free models as they relate to the number of parameters and model accuracy?",
+    "options": [
+     "Yes",
+     "No, she is incorrect about which type of model requires fewer parameter estimates.",
+     "No, she is incorrect about which type of model is more precise at modeling market yield curves."
+    ],
+    "answer": "A",
+    "why": "Equilibrium models need fewer parameters; arbitrage-free models allow time-varying parameters and can therefore fit the market yield curve more precisely."
+   },
+   {
+    "n": 22,
+    "q": "Which of the following statements comparing the Ho–Lee and Kalotay–Williams–Fabozzi (KWF) equilibrium term structure models is correct?",
+    "options": [
+     "The Ho–Lee model assumes constant volatility, while the KWF model does not.",
+     "The KWF model incorporates the possibility of negative rates, while the Ho–Lee model does not.",
+     "The KWF model describes the log of the dynamics of the short rate, while the Ho–Lee model does not."
+    ],
+    "answer": "C",
+    "why": "KWF is similar to Ho–Lee (time-dependent drift, no mean reversion, constant volatility) but describes the log of the short rate dynamics."
+   }
+  ]
+ },
+ {
+  "id": "af-fujioka",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Fujioka: Desna Securities, no-arbitrage conditions, binomial tree, pathwise and Monte Carlo valuation",
+  "body": "Susan Fujioka, a fixed-income portfolio manager at Desna Securities, hires Ahti Maalouf, an independent contractor who is an expert in fixed-income valuation. Fujioka provides him with copies of the spreadsheets she currently uses for valuation. She asks him to help her build models that will allow her to more accurately identify mispriced securities.\n\nAt their first meeting, Maalouf notes that Fujioka currently values option-free bonds by discounting their future expected cash flows using the zero-coupon yield curve. He asks her why she has not adopted the more flexible binomial interest rate tree framework. She replies, “My approach will calculate the same values for option-free bonds as those produced by a properly calibrated binomial tree. Furthermore, it would require special programming techniques to calibrate a binomial tree to match benchmark risk-free bond prices, making implementation of that approach quite costly.”\n\nMaalouf explains, “Valuation using a binomial interest rate tree is based on the principle of no arbitrage. In order for there to be no arbitrage in a financial market, three conditions must be met:\n\nCondition 1: If the risk of any security is higher than that of another, its expected return must also be higher.\nCondition 2: The price of any two risk-free securities with the same timing and amount of payoffs must be the same.\nCondition 3: The price of any portfolio of securities must equal the sum of the prices of the individual securities in the portfolio.”\n\nMaalouf provides Fujioka with the zero-coupon yield curve in Exhibit 1 and asks her to use her current approach to calculate the arbitrage-free value of an option-free, fixed-rate, four-year bond with a 3.5% coupon rate, annual payments, and a face value of 100.\n\nExhibit 1 Zero-Coupon Yield Curve\nMaturity\tYield\n1\t2.15%\n2\t3.45\n3\t4.01\n4\t4.4\n\nUsing a different set of benchmark bond values, Maalouf constructs the calibrated binomial interest rate tree shown in Exhibit 2. He shows Fujioka how to value a three-year, option-free, fixed-rate bond with a 2.8% coupon rate, annual payments, and a face value of 100 using this interest rate tree.\n\nExhibit 2 Calibrated Binomial Interest Rate Tree\nToday\tYear 1\tYear 2\tYear 3\n1.50%\t2.85% (up), 2.16% (down)\t4.56%, 3.45%, 2.60%\t6.76%, 5.11%, 3.86%, 2.92%\n\nMaalouf explains, “An alternative to the calculations I just showed you is pathwise valuation. In this variation, you would determine all the possible paths interest rates could take in our binomial tree and value the bond along each path. The value of the bond is then calculated as the average of the values across all paths. For the four-year bond you evaluated earlier, you would need to calculate its value for 2^4, or 16, different paths.”\n\nFujioka tells Maalouf that she has been reading about the use of Monte Carlo forward-rate simulation for fixed-income valuation. She asks Maalouf to further explain this approach to her. Maalouf replies, “The Monte Carlo approach is quite different from the binomial tree approach I have been describing to you. Some of these differences include the following:\n\nDifference 1: The Monte Carlo approach does not require calibration, whereas the binomial tree approach does.\nDifference 2: The Monte Carlo approach is typically used when cash flows are path dependent, whereas the binomial tree approach only allows one expected cash flow per node, regardless of the path of interest rates.\nDifference 3: The Monte Carlo approach randomly simulates a fixed number of interest rate paths and values the security only across those paths, whereas the binomial tree approach values the security across all possible interest rate paths on the tree.”",
+  "questions": [
+   {
+    "n": 23,
+    "q": "Is Fujioka most likely correct when comparing her approach to valuation with the binomial interest rate tree framework?",
+    "options": [
+     "Yes.",
+     "No, she is incorrect regarding calibration of interest rate trees.",
+     "No, the values estimated by the two approaches will likely be different."
+    ],
+    "answer": "B",
+    "why": "Calibration can be done with spreadsheet software (e.g. Solver) without special programming or great expense. For an option-free bond, a properly calibrated tree and the zero-coupon curve give the same value."
+   },
+   {
+    "n": 24,
+    "q": "Of the three conditions Maalouf claims are necessary for a market to be arbitrage free, he is least likely correct regarding:",
+    "options": [
+     "Condition 1.",
+     "Condition 2.",
+     "Condition 3."
+    ],
+    "answer": "A",
+    "why": "No-arbitrage concerns risk-free securities and portfolios, not the relation between risk and expected return of risky securities. Condition 2 (dominance / law of one price) and Condition 3 (value additivity) must hold."
+   },
+   {
+    "n": 25,
+    "q": "The value Fujioka calculates for the four-year bond is closest to:",
+    "options": [
+     "96.764.",
+     "96.931.",
+     "98.149."
+    ],
+    "answer": "B",
+    "why": "Discount each cash flow at its spot rate: 3.5/1.0215 + 3.5/1.0345² + 3.5/1.0401³ + 103.5/1.044⁴ = 96.931. 96.764 discounts every cash flow at the 4-year yield (4.40%); 98.149 at the 3-year yield (4.01%)."
+   },
+   {
+    "n": 26,
+    "q": "The value Maalouf estimates for the three-year bond using the binomial tree in Exhibit 2 is closest to:",
+    "options": [
+     "100.623",
+     "100.908",
+     "103.507"
+    ],
+    "answer": "B",
+    "why": "Time 3 cash flow 102.8. Time 2: 102.8/1.0456 = 98.317; 102.8/1.0345 = 99.372; 102.8/1.0260 = 100.195. Time 1: [0.5 × (98.317 + 99.372) + 2.8] ÷ 1.0285 = 98.828 and [0.5 × (99.372 + 100.195) + 2.8] ÷ 1.0216 = 100.415. Time 0: [0.5 × (98.828 + 100.415) + 2.8] ÷ 1.015 = 100.908."
+   },
+   {
+    "n": 27,
+    "q": "Is Maalouf most likely correct in his description of pathwise valuation?",
+    "options": [
+     "Yes.",
+     "No, the values on each path are weighted by their probability of occurrence.",
+     "No, he is incorrect regarding the number of paths needed to value the four-year bond."
+    ],
+    "answer": "C",
+    "why": "For a four-year bond the first one-year rate is known and the next three are random, so there are 2³ = 8 paths (not 2⁴ = 16). Path values are averaged with equal probability (not probability weighted)."
+   },
+   {
+    "n": 28,
+    "q": "Of the three differences Maalouf describes between the binomial tree approach to fixed-income valuation and the Monte Carlo simulation approach, he is least likely correct regarding:",
+    "options": [
+     "Difference 1.",
+     "Difference 2.",
+     "Difference 3."
+    ],
+    "answer": "A",
+    "why": "Monte Carlo does require calibration: a drift term (a fixed amount) is added to every forward rate on every simulated path so the simulated benchmark bond values equal their market prices. Differences 2 and 3 are correct."
+   }
+  ]
+ },
+ {
+  "id": "af-zhang",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Zhang: Arbitrage Partners, arbitrage-free valuation and tree construction",
+  "body": "Davis Zhang is a fixed-income analyst at Arbitrage Partners, a hedge fund focusing on global macro arbitrage opportunities. The fixed-income team focuses on securities issued in developing markets that trade in multiple world financial centers. Zhang is conducting a training session for a new analyst, John Holly.\n\nZhang explains: “Our fixed-income team focuses on constructing a portfolio of fixed-income securities issued in local markets that trade in multiple markets around the world. We seek out securities we believe to be mispriced and identify these using an arbitrage-free approach to valuation, which can be described as follows. The cash flows of any fixed-income security can be thought of as a package of separate zero-coupon bonds. Each zero-coupon bond in such a package is valued separately at a discount rate corresponding to the interest rate on the yield curve at the time of the cash flow.\n\nWhen the present values of the coupon payments are summed and added to the present value of the principal payment at maturity, the result should equal the current price of the bond. In order to calculate the arbitrage-free value of a bond, we determine the future coupon and principal payments for the bond. If the yield curve is positively sloped, the appropriate interest rate used to discount each cash flow will be different. However, in the event the yield curve is flat, all cash flows will be discounted in the same manner as in the traditional approach to valuing bonds.”\n\nHolly comments: “Last year, South Africa issued multiple two-year and four-year Green Bonds denominated in US dollars with annual coupons. The four-year bonds were callable, while the two-year bonds had no embedded options.\n\nI recall an example of an arbitrage opportunity of the two-year bonds trading in different global financial centers. The benchmark yield curve, bond coupon rates, and bond prices are shown in Exhibits 1 and 2.”\n\nExhibit 1 Benchmark Interest Rates\nMaturity (years)\tCoupon Rate\tSpot Rate\t1-Year Implied Forward Rate\n1\t5.00%\t5%\t5.00% (current)\n2\t5.97%\t6%\t7.01%\n3\t6.91%\t7%\t9.03%\n4\t7.81%\t8%\t11.06%\n\nExhibit 2 Bond Price Quotes\nMarket\tCoupon Rate\tQuoted Price\nDubai\t1%\t90.842\nShanghai\t2%\t92.684\nNew York\t4%\t94.630\n\nZhang adds: “While your example represents good practice, we also need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates. We typically construct an interest rate tree as a visual representation of the paths of future interest rates, with the average of possible future values being centered on the current yield curve. The following three steps can be employed to construct an interest rate tree for valuing a particular bond:\n\nStep 1: Using prices of the benchmark bonds, determine the current par curve.\nStep 2: Estimate interest rate volatility, and calculate the potential paths of future rates.\nStep 3: Starting with the current market price, calculate each successive node’s value.\n\nThe interest rate tree must then be calibrated to fit the actual yield curve while being consistent with an underlying interest rate model.”\n\nHolly states: “I believe the iterative process must involve a trial-and-error search to determine the higher and lower rates subsequent to each node in the tree, which branches out from an average yield centered on the forward rate curve. The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Is Zhang most likely correct in his description of calculating the arbitrage-free approach to fixed-income security valuation?",
+    "options": [
+     "Yes.",
+     "No, with respect to the discount rate used with a flat yield curve.",
+     "No, with respect to the discount rate used with a positively sloped yield curve."
+    ],
+    "answer": "A",
+    "why": "With a positively sloped curve each cash flow is discounted at a different (higher for later) spot rate; with a flat curve the same rate applies to all, as in the traditional approach."
+   },
+   {
+    "n": 30,
+    "q": "According to the data in Exhibits 1 and 2, in which trading location is the bond most likely mispriced?",
+    "options": [
+     "Dubai",
+     "Shanghai",
+     "New York"
+    ],
+    "answer": "C",
+    "why": "Discounting at the spot rates gives 90.842 (Dubai) and 92.684 (Shanghai), equal to their quotes. The 4%-coupon bond in New York has an arbitrage-free value above its quote of 94.630, so it is underpriced."
+   },
+   {
+    "n": 31,
+    "q": "Which of Zhang’s three steps to value bonds with embedded options is least likely correct?",
+    "options": [
+     "Step 1",
+     "Step 2",
+     "Step 3"
+    ],
+    "answer": "C",
+    "why": "Node values are found by backward induction starting from the known value at maturity, not by starting with the current market price."
+   },
+   {
+    "n": 32,
+    "q": "When describing calibrating the interest rate tree, Holly is least likely correct with respect to the:",
+    "options": [
+     "volatility assumption.",
+     "assumption of log-normality.",
+     "value of the bond being evaluated."
+    ],
+    "answer": "C",
+    "why": "Calibration depends on a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds, not the bond being evaluated."
+   }
+  ]
+ },
+ {
+  "id": "af-wenger",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Wenger: WPC Capital Management, spot rate versus tree valuation, pathwise and Monte Carlo",
+  "body": "Laurent Wenger is a portfolio manager in the fixed-income division of WPC Capital Management (WPCM), based in Charlotte, North Carolina. WPCM seeks to identify and exploit fixed-income market inefficiencies. Wenger is meeting with analysts Zhong Geng, Irene Goll, and Rakesh Tandon to evaluate securities for inclusion in WPCM’s US Core Bond portfolio.\n\nWenger asks the group to determine the arbitrage-free value of an option-free bond issued by ECWI Corporation that matures in four years and pays an annual coupon of 1.25% on a face amount of $100. This bond is priced to yield 2.241%. To assist with the analysis, Wenger presents the group with the following interest rate information in Exhibits 1 and 2.\n\nExhibit 1 Benchmark Spot Rates (Zero-Coupon Yield Curve)\nMaturity (Years)\tSpot Rate\n1\t1.550%\n2\t1.822%\n3\t2.241%\n4\t2.614%\n\nExhibit 2 One-Year Implied Forward Rates\nMaturity (Years)\tOne-Year Forward Rate\nCurrent one-year rate\t1.550%\nOne year forward\t2.096%\nTwo years forward\t3.084%\nThree years forward\t3.742%\n\nZhong asks, “Are there other ways to calculate the arbitrage-free value of a bond?” Goll responds, “Yes, the arbitrage-free value of a bond can also be calculated using a binomial interest rate tree, such as the one in Exhibit 3 below, where the interest rate tree provides a representation of how one-year forward rates evolve based on an interest rate model that identifies factors with predictable paths, an interest rate volatility assumption, and where forward rates on the tree are consistent with the current benchmark yield curve.”\n\nWenger asks the group to use the binomial interest rate tree in Exhibit 3 to calculate the arbitrage-free value of a three-year option-free bond issued by BIR Corporation. This bond pays an annual coupon of 1.75% on a face amount of $100.\n\nExhibit 3 Three-Year Binomial Interest Rate Tree\n[Tree figure not captured in the paste. From the answer key: time 0 rate 1.55%; Time 1 rates 2.41% (upper) and 1.78% (lower); Time 2 rates 4.08%, 3.02%, 2.24%.]\n\nWenger asks, “Would you get the same value for the BIR Corporation bond if you used the spot rates from Exhibit 1?”\n\nGeng responds: “Yes, if the volatility assumed in the one-year implied forward rates in Exhibit 1 matches the volatility assumed in the binomial tree.”\n\nGoll responds: “No, because the binomial interest rate tree in Exhibit 3 provides multiple paths for the evolution of interest rates, whereas the spot rates in Exhibit 1 do not allow for rates to follow multiple paths.”\n\nTandon responds: “Yes, but only if the binomial interest rates in Exhibit 3 are calibrated to match the term structure of interest rates in Exhibit 1 so that they produce the correct benchmark bond values.”\n\nWenger presents the group with a third bond to evaluate. Issued by the NIAA Corporation, this bond matures in three years and has an embedded option that allows it to be called in two years. The bond pays an annual coupon of 2.5% on a face amount of $100. Wenger asks the group to identify appropriate methods to calculate the arbitrage-free value for this bond. Geng responds, “The arbitrage-free value of this bond can be calculated using the benchmark spot rate curve (zero-coupon yield curve), the binomial interest rate tree, or the Monte Carlo method.”\n\nTandon asks Geng how pathwise valuation compares with the Monte Carlo method. Geng responds with the following statements:\n\nStatement 1: “Pathwise valuation calculates the present value of the bond’s cash flows for each possible interest rate path, whereas the Monte Carlo method calculates present values for randomly selected interest rate paths.”\nStatement 2: “Interest rate paths for both the pathwise valuation and the Monte Carlo method are based on an assumption of interest rate volatility and an interest rate model that is calibrated to the current benchmark term structure of interest rates.”\nStatement 3: “In pathwise valuation, a constant is added to all interest rate paths so that the resulting present value for each benchmark bond is equal to its market value. No such adjustment is made in the Monte Carlo method.”",
+  "questions": [
+   {
+    "n": 33,
+    "q": "The arbitrage-free value of the ECWI Corporation bond is closest to:",
+    "options": [
+     "$90.98.",
+     "$94.92.",
+     "$96.25."
+    ],
+    "answer": "B",
+    "why": "Discount each cash flow at the spot rates: 1.25/1.0155 + 1.25/1.01822² + 1.25/1.02241³ + 101.25/1.02614⁴ = $94.92. $90.98 wrongly uses forward rates; $96.25 discounts at the YTM (2.241%)."
+   },
+   {
+    "n": 34,
+    "q": "Goll’s response to Zhong’s question is least likely correct with respect to:",
+    "options": [
+     "the interest model.",
+     "interest rate volatility.",
+     "the benchmark yield curve."
+    ],
+    "answer": "A",
+    "why": "The factors in an interest rate model are random (stochastic), not predictable. The tree rests on a volatility assumption and its forward rates must be consistent with the current benchmark yield curve (calibration), so those parts are correct."
+   },
+   {
+    "n": 35,
+    "q": "Based on the information in Exhibit 3, the value of the BIR Corporation bond is closest to:",
+    "options": [
+     "$93.57.",
+     "$98.62.",
+     "$100.37."
+    ],
+    "answer": "B",
+    "why": "Time 3 cash flow 101.75. Time 2: 101.75/1.0408 = 97.761; 101.75/1.0302 = 98.767; 101.75/1.0224 = 99.521. Work back through Time 1 (rates 2.41% and 1.78%) and Time 0 with the node expression: $98.62. $93.57 ignores the coupons; $100.37 adds a coupon at Time 0."
+   },
+   {
+    "n": 36,
+    "q": "With respect to Wenger’s question on valuing BIR Corporation bonds using the rates from Exhibit 1, who is most likely correct?",
+    "options": [
+     "Goll",
+     "Geng",
+     "Tandon"
+    ],
+    "answer": "C",
+    "why": "A tree calibrated to the benchmark term structure gives the same value as spot-rate valuation for an option-free bond. The forward rates in Exhibit 1 do not require a volatility assumption, so Geng is wrong; Goll's point has no bearing on valuation."
+   },
+   {
+    "n": 37,
+    "q": "Geng’s response to Wenger regarding the valuation of the NIAA Corporation bond is least likely correct with respect to the:",
+    "options": [
+     "spot rate curve.",
+     "Monte Carlo method.",
+     "binomial interest rate tree."
+    ],
+    "answer": "A",
+    "why": "The NIAA bond has an embedded call option, so its cash flows depend on interest rates. The spot rate curve cannot value it; the binomial tree and Monte Carlo methods generate rate-dependent cash flows and can."
+   },
+   {
+    "n": 38,
+    "q": "Which of Geng’s statements to Tandon is least likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "Monte Carlo is the method that needs a drift term (a constant added to all rates on all paths) so benchmark bond values equal market values; pathwise valuation on a calibrated tree does not need it."
+   }
+  ]
+ },
+ {
+  "id": "af-annisquam",
+  "source": "Portal paste, 4 Nov (Module 2: The Arbitrage-Free Valuation Framework quiz review, Q1-44)",
+  "readings": [
+   24
+  ],
+  "title": "Annisquam: Wingaersheek Arbitrage, strips, binomial tree, calibration and Monte Carlo",
+  "body": "Sandy Annisquam is the head of trading at Wingaersheek Arbitrage Opportunities, LLP, a hedge fund specializing in fixed-income strategies. The firm’s investment approach is to exploit small price differences across similar or identical securities. Annisquam has asked Choate Hake to develop a comprehensive automated trading system that will allow traders to identify opportunities in the market. Annisquam and Hake are discussing several applications that need to be developed for the traders.\n\nHake begins development on an algorithm that will evaluate government bonds that have been stripped. He tests his logic by evaluating a dollar-denominated Tangoran government bond with a 3.20%, annual pay coupon maturing in three years, using data in Exhibit 1. The bond is quoted in the market at $103.50.\n\nExhibit 1 Spot, Par, and Forward Rates\n\tYear 1\tYear 2\tYear 3\nSpot Rate\t1.10%\t1.50%\t2.01%\nPar Rate\t1.10%\t1.50%\t2.00%\nForward Rate\t1.10%\t1.91%\t3.04%\n\nHake develops a framework for valuing bonds using a binomial interest rate tree. He understands that there are several factors used in developing the tree and asks Annisquam for counsel on the correct data to use. Annisquam makes the following comments to Hake:\n\nComment 1: In the valuation process, the interest rate tree generates cash flows that are interest rate dependent but does not provide the interest rates used to discount those cash flows.\nComment 2: Two assumptions must be made to create a binomial tree. The first is an interest rate model such as a lognormal model of interest rates. The second is a volatility of interest rates.\nComment 3: Volatility can be measured relative to the current level of rates. By using a lognormal distribution, interest rate movements are proportional to the level of rates and are bounded at the low end by zero.\n\nAnnisquam asks Hake to use a binomial interest rate tree to calculate the value of a bond. He tests the module using a three-year, $100 par value, 4% annual pay coupon bond and the data in Exhibit 2.\n\nExhibit 2 Three-Year Binomial Rate Tree\n[Tree figure not captured in the paste. From the answer key: Time 2 rates 4.50%, 3.25%, 2.35%.]\n\nAnnisquam tells Hake that he needs to calibrate the binomial interest rate tree to match a term structure of interest rates. Hake wants to better understand this process and asks Annisquam to describe it. Annisquam says, “Calibrating an interest rate tree requires an iterative process that ensures that the upper and lower rates are consistent with the volatility assumption, the interest rate model, and the observed market value of the benchmark bond. The cash flows of the bond are discounted using the interest rate tree, and if this doesn’t produce the correct price, another pair of forward rates is selected and the process is repeated.”\n\nAnnisquam then develops a model that compares the value of a bond determined using a binomial interest rate tree to its value determined using spot rates. The bond he selects for the comparison is non-benchmark, option-free, and has five years to maturity and an annual-pay coupon rate of 3%. The coupon rate is below the coupon rate of the benchmark bond. The yield curve is currently downward sloping. The output of Annisquam’s model shows that the spot rates generate a value equal to the market price of the bond, but the interest rate tree methodology produces a higher value.\n\nAnnisquam wants Hake to develop a program for pricing securities that are interest rate path dependent, such as mortgage-backed securities (MBS). He believes that using the Monte Carlo method and employing 2,000 simulations will provide an average present value across all scenarios equal to the actual market value of the securities. Hake runs a simulation and uses it to value a benchmark bond. He finds that the value generated does not equal the market price of the bond.",
+  "questions": [
+   {
+    "n": 39,
+    "q": "Based on the market price of the Tangoran government bond and the interest rates in Exhibit 1, what profitable arbitrage opportunity should Hake’s algorithm most likely identify?",
+    "options": [
+     "Buying the strips and selling the bond",
+     "Buying the bond and selling the strips",
+     "Buying the Year 1 and Year 2 strips and selling the Year 3 strip"
+    ],
+    "answer": "A",
+    "why": "Valued at spot rates the bond's cash flows are worth $103.4816, below the market price of $103.50: buy the strips, reconstitute the bond and sell it. Using par rates instead gives 103.519 (the opposite, wrong trade). Arbitrage must compare all strips with the bond, not single strips."
+   },
+   {
+    "n": 40,
+    "q": "Which of Annisquam’s comments regarding binomial interest rate trees is least likely correct?",
+    "options": [
+     "Comment 1",
+     "Comment 2",
+     "Comment 3"
+    ],
+    "answer": "A",
+    "why": "The interest rate tree does two things: it generates the interest-rate-dependent cash flows AND supplies the interest rates used to discount them. Comments 2 and 3 are correct."
+   },
+   {
+    "n": 41,
+    "q": "Using the backward induction method and the data in Exhibit 2, the value of the bond Hake has been asked to value is closest to:",
+    "options": [
+     "101.069",
+     "101.584",
+     "102.532"
+    ],
+    "answer": "C",
+    "why": "Time 3 cash flow 104. Time 2: 104/1.0450 = 99.522; 104/1.0325 = 100.726; 104/1.0235 = 101.612. Work back to Time 1 and Time 0 with the node expression (adding the 4 coupon at each step): 102.532."
+   },
+   {
+    "n": 42,
+    "q": "Is Annisquam most likely correct in regard to his comments on calibrating a binomial interest rate tree?",
+    "options": [
+     "Yes.",
+     "No, he incorrectly describes the iterative process.",
+     "No, he is incorrect regarding the interest rate used."
+    ],
+    "answer": "A",
+    "why": "His description of the iterative calibration (consistent with volatility, interest rate model and the benchmark bond's market value, retrying other forward rate pairs until the price matches) is correct."
+   },
+   {
+    "n": 43,
+    "q": "Assuming Annisquam’s spot rate valuation is correct, why does his model most likely produce a different result?",
+    "options": [
+     "He is valuing a non-benchmark bond.",
+     "The yield curve is downward sloping.",
+     "The model is incorrect because both methodologies should value the bonds equally."
+    ],
+    "answer": "C",
+    "why": "The binomial tree is built from the spot curve and the no-arbitrage condition, so any option-free bond has the same value under both methods; a different result means the tree model is wrong."
+   },
+   {
+    "n": 44,
+    "q": "To correct the problem Hake encounters when using a Monte Carlo simulation, he would most likely:",
+    "options": [
+     "adjust the volatility assumption.",
+     "increase the number of simulations.",
+     "add a constant to all interest rates on all paths."
+    ],
+    "answer": "C",
+    "why": "A raw Monte Carlo simulation matches benchmark bond prices only by chance. Adding a constant (drift term) to all rates on all paths makes the average present value of each benchmark bond equal its market value."
+   }
+  ]
+ }
+]
