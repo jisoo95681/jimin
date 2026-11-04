@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 137 vignettes · 205 in all. Plus 51 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 138 vignettes · 206 in all. Plus 51 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -28,8 +28,8 @@ Totals: app 68 vignettes · bank 137 vignettes · 205 in all. Plus 51 standalone
 | 20 | Market-Based Valuation | 3 | 2 | 5 |
 | 21 | Residual Income Valuation | 0 | 4 | 4 |
 | 22 | Private Company Valuation | 2 | 1 | 3 |
-| 23 | Term Structure and Interest Rate Dynamics | 0 | 4 | 4 |
-| 24 | Arbitrage-Free Valuation Framework | 1 | 3 | 4 |
+| 23 | Term Structure and Interest Rate Dynamics | 0 | 5 | 5 |
+| 24 | Arbitrage-Free Valuation Framework | 1 | 4 | 5 |
 | 25 | Bonds with Embedded Options | 1 | 1 | 2 |
 | 26 | Credit Analysis Models | 1 | 3 | 4 |
 | 27 | Credit Default Swaps | 0 | 7 | 7 |
@@ -73,8 +73,8 @@ Totals: app 68 vignettes · bank 137 vignettes · 205 in all. Plus 51 standalone
 **20 Market-Based Valuation**: cannan (app, 7Q); centralino (app, 6Q); pinho (app, 7Q); m2-2 (bank, 4Q); s1a-stratton (bank, 6Q)
 **21 Residual Income Valuation**: m1-7 (bank, 4Q); nkomo (bank, 8Q); castovan (bank, 10Q); s1a-kim (bank, 5Q)
 **22 Private Company Valuation**: schwalke (app, 5Q); schwalke2 (app, 5Q); pc-4 (bank, 4Q)
-**23 Term Structure and Interest Rate Dynamics**: s2a-tyo (bank, 11Q); m1-9 (bank, 4Q); nguyen (bank, 7Q); s2a-mathews (bank, 5Q)
-**24 Arbitrage-Free Valuation Framework**: sam (app, 4Q); pc-7 (bank, 4Q); s2a-tyo (bank, 11Q); s2a-mathews (bank, 5Q)
+**23 Term Structure and Interest Rate Dynamics**: s2a-akron (bank, 6Q); s2a-tyo (bank, 11Q); m1-9 (bank, 4Q); nguyen (bank, 7Q); s2a-mathews (bank, 5Q)
+**24 Arbitrage-Free Valuation Framework**: sam (app, 4Q); pc-7 (bank, 4Q); s2a-akron (bank, 6Q); s2a-tyo (bank, 11Q); s2a-mathews (bank, 5Q)
 **25 Bonds with Embedded Options**: prostar (app, 10Q); m2-1 (bank, 4Q)
 **26 Credit Analysis Models**: liecken (app, 8Q); m1-1 (bank, 4Q); cds-5 (bank, 6Q); s1a-suess (bank, 4Q)
 **27 Credit Default Swaps**: m1-1 (bank, 4Q); cds-1 (bank, 6Q); cds-2 (bank, 8Q); cds-3 (bank, 4Q); cds-4 (bank, 4Q); cds-5 (bank, 6Q); cds-6 (bank, 6Q)

@@ -1,0 +1,80 @@
+[
+ {
+  "id": "s2a-akron",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics, Q57-62)",
+  "readings": [
+   23,
+   24
+  ],
+  "title": "Akron: Cuyahoga Fixed Income Advisors, six training modules",
+  "body": "Bill Akron is Director of Research at Cuyahoga Fixed Income Advisors. He has a large staff of research analysts and each year adds six new hires to the group. In addition to their regular work assignments, the analysts undergo formal training conducted by Akron. He plans to have six modules over the coming weeks each covering key fixed-income concepts. In each module, Akron starts out by outlining a lesson.\n\nModule 1:\n\n“A good place to start a fixed-income program is with a discussion of the yield curve and the information it conveys. This lesson will be theoretical in nature as we discuss interpretations of the term structure of interest rates. I want to present three theories that explain the shape of the yield curve. First is the pure expectations theory, which states that the forward rate is an unbiased predictor of the future spot rate. This theory assumes investors are affected by uncertainty and require a risk premium. Second is the liquidity preference theory, which postulates that investors are willing to take on more risk by investing in longer maturity bonds if they are paid a liquidity premium. Its explanation for an upward sloping yield curve, even if spot rates are expected to be unchanged, is the liquidity premium. A third explanation of the shape of the yield curve is the segmented markets theory, which says that yields are a function of supply and demand for funds in a specific maturity segment. This last theory is very similar to the preferred habitat theory and is premised on investors and borrowers having strong preferences for particular maturities.”\n\nModule 2:\n\n“Let’s use the term structure of interest rates to price bonds, and in particular, I want you to fully understand the relationships between spot and forward rates and yield to maturity. Use the data in Exhibit 1 to determine whether a 4% coupon Treasury bond, maturing in four years and offered by a dealer at a yield-to maturity of 7.89% is cheap (buy recommendation), fairly valued (hold recommendation), or rich (sell recommendation) based on arbitrage opportunities.”\n\nExhibit 1 Select Spot and Forward Rates\n\tYear 1\tYear 2\tYear 3\tYear 4\nSpot Rate\t0.055\t---\t---\t0.0825\nDiscount Factor\t---\t---\t0.8163\t---\nForward Rate f(2,1)\t---\t---\t0.0852\t---\n\nModule 3:\n\n“Today I want to go over techniques we use at Cuyahoga to add alpha to our active fixed-income strategies. Many of our portfolio managers like to use a portfolio management strategy called riding the yield curve. This strategy can enhance total return in two ways. First, it increases the yield of the portfolio by buying bonds with maturities longer than their investment horizon whenever the yield curve is upward sloping and expected to maintain the same level and whenever the shape and spot rates rise as predicted by forward rates. Second, even if interest rates increase unexpectedly, since the bonds roll down the yield curve, the bonds will appreciate in price.”\n\nModule 4:\n\n“Today I want to go over several spread measures used in fixed-income markets. The Z-spread provides a useful measure of risk for credit instruments such as corporate bonds. It uses the implied spot yield curve and adds the spread necessary to discount the bond’s cash flows and derive its current market price. The TED spread is used for the valuation of government bonds and is calculated as the difference between MRR and the yield on a T-bill of equal maturity. The MRR–OIS spread incorporates unsecured lending between banks. It serves as a good measure of the risk and liquidity of money market securities.”\n\nModule 5:\n\n“Swap rates are very useful in the valuation of bonds. I would like you to use the information in Exhibit 2 to value a bond, issued by AAA-rated European Supranational Bank (ESB), maturing in 3.86 years, with a coupon rate of 2.86% paid annually. Dealers are quoting the bond flat to swaps. Simple interpolation can be used to perform the calculations.”\n\nExhibit 2 Yield Measures at Various Maturities\nMaturity (Years)\t1\t2\t3\t4\t5\nOff the run Bund yield (%)\t0.25\t0.32\t0.46\t0.57\t0.66\nOn the run Bund yield (%)\t0.21\t0.27\t0.41\t0.5\t0.59\nSwap rate (%)\t0.81\t0.89\t1.05\t1.16\t1.27\n\nModule 6:\n\n“Consider a portfolio of zero-coupon bonds that mature at different times in the future. Changes in interest rates are not always parallel across maturities, so let’s analyze what happens as rates change across the yield curve. Let’s assume that the portfolio has sensitivities to factors as provided in Exhibit 3. The portfolio has equal weightings in each key rate duration and an effective duration of 4.7. I would like you to assess the impact on the return of the portfolio if rates rise evenly across the curve and also when the curve flattens but does not twist.”\n\nExhibit 3 Factor Movements per One Standard Deviation Shift and Portfolio Key Rate Durations\nYear\t5\t10\t30\nParallel\t1\t1\t1\nSteepness\t1\t0.5\t–1\nCurvature\t0.5\t0\t1\nKey rate durations\t1.8\t3.6\t8.7",
+  "questions": [
+   {
+    "n": 57,
+    "q": "Akron is least likely correct with regard to which theory of the term structure of interest rates?",
+    "options": [
+     "Liquidity preference theory",
+     "Segmented markets theory",
+     "Pure expectations theory"
+    ],
+    "answer": "C",
+    "why": "Akron is incorrect regarding uncertainty under the pure expectations theory. The theory assumes risk neutrality: investors are unaffected by uncertainty and risk premiums do not exist. The statements on liquidity preference and segmented markets are correct."
+   },
+   {
+    "n": 58,
+    "q": "Based on the data in Exhibit 1 and the yield to maturity quoted by the dealer referenced in Module 2, what action should an analyst most likely take with regard to the Treasury bond?",
+    "options": [
+     "Buy",
+     "Sell",
+     "Hold"
+    ],
+    "answer": "B",
+    "why": "Step 1: calculate the year 3 spot rate from the discount factor. Step 2: using the year 3 spot rate and f(2,1), calculate the year 2 spot rate. Step 3: using the spot rates, calculate the YTM of the bond: 8.14%. The quoted YTM of 7.89% is more expensive (price = 87.08) than the spot-rate based value (price = 86.34), so the analyst should sell."
+   },
+   {
+    "n": 59,
+    "q": "Is Akron most likely correct with regard to how portfolio managers can profit from riding the yield curve?",
+    "options": [
+     "Yes.",
+     "No, he is incorrect with respect to bond maturities.",
+     "No, he is incorrect regarding the impact of interest rate changes."
+    ],
+    "answer": "C",
+    "why": "Akron is incorrect in stating that the strategy will increase total return even if rates rise unexpectedly. If rates rise by more than predicted by forward rates, the bond loses value as it is priced using higher rates. He is correct regarding the increased yield."
+   },
+   {
+    "n": 60,
+    "q": "Akron is least likely correct with regard to which spread measure in Module 4?",
+    "options": [
+     "Z-spread",
+     "TED spread",
+     "MRR–OIS spread"
+    ],
+    "answer": "B",
+    "why": "The TED spread is not used for the valuation of individual bonds but is an indicator of perceived risk in the general economy. It is the difference between MRR and the yield on a T-bill of equal maturity. His descriptions of the Z-spread and the MRR–OIS spread are correct."
+   },
+   {
+    "n": 61,
+    "q": "Based on the data in Exhibit 2, the spread the market is expecting for the credit and liquidity component of the yield to maturity for the ESB bond is closest to:",
+    "options": [
+     "0.59",
+     "0.66",
+     "1.14"
+    ],
+    "answer": "B",
+    "why": "The swap spread represents the return investors require for credit and liquidity. Dealers quote the bond flat to swaps, so there is no added spread. The swap spread is measured over the on-the-run government security (the Bund). Bund yield for the maturity: 0.41 + 0.86 × (0.50 − 0.41) = 0.49. Swap rate: 1.05 + 0.86 × (1.16 − 1.05) = 1.14. Spread = 1.14 − 0.49 = 0.66. 0.59 uses the off-the-run Bund (0.46 + 0.86 × 0.11 = 0.55; 1.14 − 0.55 = 0.59); 1.14 is the swap rate only."
+   },
+   {
+    "n": 62,
+    "q": "Assuming rates change as described by Akron and based on Exhibit 3, the impact on the portfolio as outlined in Module 6 would be most likely be a loss in value from changes in:",
+    "options": [
+     "level and a gain from changes in steepness.",
+     "level and a loss from changes in steepness.",
+     "steepness and a gain from changes in curvature."
+    ],
+    "answer": "B",
+    "why": "A parallel shift would produce a loss across each key rate duration (sensitivity 1); a 100 bp parallel shift is about a 4.7% loss. A flattening in the long end gives a loss given the sensitivity of −1 (e.g. a 100 bp decline in the 30-year key rate: about −2.9%). There is no curvature impact since the curve did not twist."
+   }
+  ]
+ }
+]
