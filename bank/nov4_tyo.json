@@ -1,0 +1,135 @@
+[
+ {
+  "id": "s2a-tyo",
+  "source": "Portal paste, 4 Nov (Module 1: Term Structure and Interest Rate Dynamics, Q30-40)",
+  "readings": [
+   23,
+   24
+  ],
+  "title": "Tyo: global fixed income fund, term structure and yield curve",
+  "body": "Liz Tyo is a fund manager for an actively managed global fixed-income fund that buys bonds issued in Countries A, B, and C. She and her assistant are preparing the quarterly markets update. Tyo begins the meeting by distributing the daily rates sheet, which includes the current government spot rates for Countries A, B, and C as shown in Exhibit 1\n\nExhibit 1\nToday’s Government Spot Rates\nMaturity\tCountry A\tCountry B\tCountry C\nOne year\t0.40%\t–0.22%\t14.00%\nTwo years\t0.70\t–0.20\t12.40\nThree years\t1.00\t–0.12\t11.80\nFour years\t1.30\t–0.02\t11.00\nFive years\t1.50\t0.13\t10.70\n\nTyo asks her assistant how these spot rates were obtained. The assistant replies, “Spot rates are determined through the process of bootstrapping. It entails backward substitution using par yields to solve for zero-coupon rates one by one, in order from latest to earliest maturities.”\n\nTyo then provides a review of the fund’s performance during the last year and comments, “The choice of an appropriate benchmark depends on the country’s characteristics. For example, although Countries A and B have both an active government bond market and a swap market, Country C’s private sector is much bigger than its public sector, and its government bond market lacks liquidity.”\n\nTyo further points out, “The fund’s results were mixed; returns did not benefit from taking on additional risk. We are especially monitoring the riskiness of the corporate bond holdings. For example, our largest holdings consist of three four-year corporate bonds (Bonds 1, 2, and 3) with identical maturities, coupon rates, and other contract terms. These bonds have Z-spreads of 0.55%, 1.52%, and 1.76%, respectively.”\n\nTyo continues, “We also look at risk in terms of the swap spread. We considered historical three-year swap spreads for Country B, which reflect that market’s credit and liquidity risks, at three different points in time.” Tyo provides the information in Exhibit 2.\n\nExhibit 2\nSelected Historical Three-Year Rates for Country B\nPeriod\tGovernment Bond Yield (%)\tFixed-for-Floating MRR Swap (%)\n1 month ago\t–0.10\t0.16\n6 months ago\t–0.08\t0.01\n12 months ago\t–0.07\t0.71\n\nTyo then suggests that the firm was able to add return by riding the yield curve. The fund plans to continue to use this strategy but only in markets with an attractive yield curve for this strategy.\n\nShe moves on to present her market views on the respective yield curves for a five-year investment horizon.\n\nCountry A: “The government yield curve has changed little in terms of its level and shape during the last few years, and I expect this trend to continue. We assume that future spot rates reflect the current forward curve for all maturities.”\n\nCountry B: “Because of recent economic trends, I expect a reversal in the slope of the current yield curve. We assume that future spot rates will be higher than current forward rates for all maturities.”\n\nCountry C: “To improve liquidity, Country C’s central bank is expected to intervene, leading to a reversal in the slope of the existing yield curve. We assume that future spot rates will be lower than today’s forward rates for all maturities.”\n\nTyo’s assistant asks, “Assuming investors require liquidity premiums, how can a yield curve slope downward? What does this imply about forward rates?”\n\nTyo answers, “Even if investors require compensation for holding longer-term bonds, the yield curve can slope downward—for example, if there is an expectation of severe deflation. Regarding forward rates, it can be helpful to understand yield curve dynamics by calculating implied forward rates. To see what I mean, we can use Exhibit 1 to calculate the forward rate for a two-year Country C loan beginning in three years.”",
+  "questions": [
+   {
+    "n": 30,
+    "q": "Did Tyo’s assistant accurately describe the process of bootstrapping?",
+    "options": [
+     "Yes",
+     "No, with respect to par yields",
+     "No, with respect to backward substitution"
+    ],
+    "answer": "C",
+    "why": "The assistant said bootstrapping uses backward substitution from latest to earliest maturities. Bootstrapping uses forward substitution with par yields, solving zero-coupon rates one by one from earliest to latest maturities."
+   },
+   {
+    "n": 31,
+    "q": "The swap curve is a better benchmark than the government spot curve for:",
+    "options": [
+     "Country A.",
+     "Country B.",
+     "Country C."
+    ],
+    "answer": "C",
+    "why": "Country C’s private sector is much bigger than its public sector and its government bond market lacks liquidity, so the swap curve is the more relevant benchmark."
+   },
+   {
+    "n": 32,
+    "q": "Based on Exhibit 2, the implied credit and liquidity risks as indicated by the historical three-year swap spreads for Country B were the lowest:",
+    "options": [
+     "1 month ago.",
+     "6 months ago.",
+     "12 months ago."
+    ],
+    "answer": "B",
+    "why": "Swap spread = swap rate − government yield. 1 month ago 0.16 − (−0.10) = 0.26%; 6 months ago 0.01 − (−0.08) = 0.09%; 12 months ago 0.71 − (−0.07) = 0.78%. The lowest spread was 6 months ago."
+   },
+   {
+    "n": 33,
+    "q": "Based on Exhibit 1 and Tyo’s expectations, which country’s term structure is currently best for traders seeking to ride the yield curve?",
+    "options": [
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "answer": "A",
+    "why": "Country A’s curve is upward sloping (a condition for riding the yield curve) and more so than Country B’s; Tyo expects the curve to stay unchanged."
+   },
+   {
+    "n": 34,
+    "q": "Based on Exhibit 1 and assuming Tyo’s market views on yield curve changes are realized, the forward curve of which country will lie below its spot curve?",
+    "options": [
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "answer": "B",
+    "why": "The forward curve lies below the spot curve when the spot curve slopes downward. Country B’s upward-sloping curve is expected to reverse into a downward slope. Country A stays upward sloping and Country C becomes upward sloping, so their forward curves lie above the spot curves."
+   },
+   {
+    "n": 35,
+    "q": "Based on Exhibit 1 and Tyo’s expectations for the yield curves, Tyo most likely perceives the bonds of which country to be fairly valued?",
+    "options": [
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "answer": "A",
+    "why": "Tyo assumes future spot rates equal the current forward rates for Country A, so the market discounts at the rates she projects: fairly valued. For Country B she expects higher future spot rates (overvalued); for Country C lower (undervalued)."
+   },
+   {
+    "n": 36,
+    "q": "With respect to their discussion of yield curves, Tyo and her assistant are most likely discussing which term structure theory?",
+    "options": [
+     "Pure expectations theory",
+     "Local expectations theory",
+     "Liquidity preference theory"
+    ],
+    "answer": "C",
+    "why": "Liquidity preference theory says liquidity premiums compensate investors for the added interest rate risk of lending long term and increase with maturity. Tyo and her assistant assume liquidity premiums exist."
+   },
+   {
+    "n": 37,
+    "q": "Tyo’s assistant should calculate a forward rate closest to:",
+    "options": [
+     "9.07%.",
+     "9.58%.",
+     "9.97%."
+    ],
+    "answer": "A",
+    "why": "(1 + z5)^5 = (1 + z3)^3 × (1 + f3,2)^2 → (1.107)^5 = (1.118)^3 × (1 + f3,2)^2 → f3,2 = 9.07%."
+   },
+   {
+    "n": 38,
+    "q": "During economic expansions, monetary authorities raise benchmark rates to help control inflation. This action is most often consistent with:",
+    "options": [
+     "bearish flattening.",
+     "bullish steepening.",
+     "bearish steepening."
+    ],
+    "answer": "A",
+    "why": "Raising the benchmark rate lifts short-term yields more than long-term yields: bearish flattening."
+   },
+   {
+    "n": 39,
+    "q": "When government budget deficits fall, fiscal supply-side effects are most likely to result in:",
+    "options": [
+     "higher bond yields.",
+     "a steeper yield curve.",
+     "lower bond yields."
+    ],
+    "answer": "C",
+    "why": "When budget deficits fall, there is less government debt supply, which results in lower bond yields."
+   },
+   {
+    "n": 40,
+    "q": "A flight to quality is most often associated with:",
+    "options": [
+     "a general rise in the level of interest rates.",
+     "bullish flattening.",
+     "bearish flattening."
+    ],
+    "answer": "B",
+    "why": "A flight to quality is associated with bullish flattening: long-term rates fall by more than short-term rates."
+   }
+  ]
+ }
+]
