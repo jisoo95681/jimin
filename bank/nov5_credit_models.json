@@ -1,0 +1,90 @@
+[
+ {
+  "id": "ca-lebedeva",
+  "source": "Module 4 Credit Analysis Models quiz (pasted Nov 5)",
+  "readings": [
+   26
+  ],
+  "title": "Credit analysis · Lebedeva & Kowalski: migration, CVA tree, credit spread term structure",
+  "body": "Anna Lebedeva is a fixed-income portfolio manager. Paulina Kowalski, a junior analyst, and Lebedeva meet to review several positions in Lebedeva’s portfolio.\n\nLebedeva begins the meeting by discussing credit rating migration. Kowalski asks Lebedeva about the typical impact of credit rating migration on the expected return on a bond. Lebedeva asks Kowalski to estimate the expected return over the next year on a bond issued by Entre Corp. The BBB rated bond has a yield to maturity of 5.50% and a modified duration of 7.54. Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1. She assumes that market spreads and yields will remain stable over the year.\n\nExhibit 1 One-Year Transition Matrix for BBB Rated Bonds and Credit Spreads\nRating: AAA | AA | A | BBB | BB | B | CCC, CC, C\nProbability (%): 0.02 | 0.30 | 4.80 | 85.73 | 6.95 | 1.75 | 0.45\nCredit spread: 0.60% | 0.90% | 1.10% | 1.50% | 3.40% | 6.50% | 9.50%\n\nLebedeva next asks Kowalski to analyze a three-year bond, issued by VraiRive S.A., using an arbitrage-free framework. The bond’s coupon rate is 5%, with interest paid annually and a par value of 100. In her analysis, she makes the following three assumptions:\nThe annual interest rate volatility is 10%.\nThe recovery rate is one-third of the exposure each period.\nThe annual probability of default each year is 2.00%.\n\nSelected information on benchmark government bonds for the VraiRive bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2 Par Curve Rates for Annual Payment Benchmark Government Bonds\nMaturity | Coupon Rate | Price | Discount Factor | Spot Rate | Forward Rate\n1 | 3.00% | 100 | 0.970874 | 3.0000% | 3.0000%\n2 | 4.20% | 100 | 0.920560 | 4.2255% | 5.4656%\n3 | 5.00% | 100 | 0.862314 | 5.0618% | 6.7547%\n\nExhibit 3 One-Year Binomial Interest Rate Tree for 10% Volatility (risk-neutral probabilities in parentheses)\nDate 0 rate: 3.00%. Date 1 rates (top to bottom): 6.0139%, 4.9238%. Date 2 rates (top to bottom): 8.1823%, 6.6991%, 5.4848%.\n\nKowalski estimates the value of the VraiRive bond assuming no default (VND) as well as the fair value of the bond. She then estimates the bond’s yield to maturity and the bond’s credit spread over the benchmark in Exhibit 2. Kowalski asks Lebedeva, “What might cause the bond’s credit spread to decrease?”\n\nLebedeva and Kowalski next discuss the drivers of the term structure of credit spreads. Kowalski tells Lebedeva the following:\nStatement 1: The credit term structure for the most highly rated securities tends to be either flat or slightly upward sloping.\nStatement 2: The credit term structure for lower-rated securities is often steeper, and credit spreads widen with expectations of strong economic growth.\n\nNext, Kowalski analyzes the outstanding bonds of DLL Corporation, a high-quality issuer with a strong, competitive position. Her focus is to determine the rationale for a positive-sloped credit spread term structure.\n\nLebedeva ends the meeting by asking Kowalski to recommend a credit analysis approach for a securitized asset-backed security (ABS) held in the portfolio. This non-static asset pool is made up of many medium-term auto loans that are homogeneous, and each loan is small relative to the total value of the pool.",
+  "questions": [
+   {
+    "n": 24,
+    "q": "The most appropriate response to Kowalski’s question regarding credit rating migration is that it has:",
+    "options": [
+     "a negative impact.",
+     "no impact.",
+     "a positive impact."
+    ],
+    "answer": "A",
+    "why": "A is correct. Credit spread migration typically reduces the expected return: rating-change probabilities are skewed toward downgrade, and the spread increase on downgrades is much larger than the spread decrease on upgrades."
+   },
+   {
+    "n": 25,
+    "q": "Based on Exhibit 1, the one-year expected return on the Entre Corp. bond is closest to:",
+    "options": [
+     "3.73%.",
+     "5.50%.",
+     "7.27%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Expected return = YTM + expected % price change from migration. Each transition: −7.54 × (new spread − 1.50%) × probability. Sum = −1.76715%. Expected return = 5.50% − 1.77% = 3.73%."
+   },
+   {
+    "n": 26,
+    "q": "Based on Kowalski’s assumptions and Exhibit 2 and Exhibit 3, the credit spread on the VraiRive bond is closest to:",
+    "options": [
+     "0.6949%.",
+     "0.9388%.",
+     "1.4082%."
+    ],
+    "answer": "C",
+    "why": "C is correct. Step 1: VND from the tree (discount at tree forward rates, risk-neutral probs 0.5) = 100.0000. Step 2: CVA = sum of PV(expected exposure × LGD fraction × POD): exposures 103.0000, 103.3535, 105.0000; LGD = 2/3 of exposure; POD 2%, 1.96%, 1.9208%; discounted at benchmark spot discount factors 0.970874, 0.920560, 0.862314 → 1.3333 + 1.2432 + 1.1594 = 3.7360. Fair value = 100 − 3.7360 = 96.2640. Step 3: YTM from 96.2640 = 6.4082%; spread = 6.4082% − 5.0000% = 1.4082%."
+   },
+   {
+    "n": 27,
+    "q": "The most appropriate response to Kowalski’s question relating to the credit spread is:",
+    "options": [
+     "an increase in the probability of default.",
+     "an increase in the loss given default.",
+     "a decrease in the risk-neutral probability of default."
+    ],
+    "answer": "C",
+    "why": "C is correct. A lower risk-neutral POD lowers the CVA and the credit spread. Higher LGD or higher POD raises CVA, lowers fair value, and raises YTM and credit spread."
+   },
+   {
+    "n": 28,
+    "q": "Which of Kowalski’s statements regarding the term structure of credit spreads is correct?",
+    "options": [
+     "Only Statement 1",
+     "Only Statement 2",
+     "Both Statement 1 and Statement 2"
+    ],
+    "answer": "A",
+    "why": "A is correct. For the highest-rated issuers spreads are very low with a floor at zero, so the term structure is flat or slightly upward sloping. Lower-quality issuers are more sensitive to the credit cycle; credit spreads decrease (not increase) with expectations of economic growth (countercyclical to benchmark rates)."
+   },
+   {
+    "n": 29,
+    "q": "DLL’s credit spread term structure is most consistent with the firm having:",
+    "options": [
+     "low leverage.",
+     "weak cash flow.",
+     "a low profit margin."
+    ],
+    "answer": "A",
+    "why": "A is correct. Positive-sloped credit spread curves arise for high-quality issuers with a strong competitive position in a stable industry: low leverage, strong cash flow, high profit margin. Very low short-term spreads rise with maturity given greater macro, competitive and technological uncertainty."
+   },
+   {
+    "n": 30,
+    "q": "Given the description of the asset pool of the ABS, Kowalski should recommend a:",
+    "options": [
+     "loan-by-loan approach.",
+     "portfolio-based approach.",
+     "statistics-based approach."
+    ],
+    "answer": "B",
+    "why": "B is correct. Granular, homogeneous auto loans support a portfolio-based approach. Loan-by-loan suits large heterogeneous discrete loans; a statistics-based approach suits a static book, but this pool is dynamic."
+   }
+  ]
+ }
+]
