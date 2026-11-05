@@ -1,0 +1,57 @@
+[
+ {
+  "id": "ca-wong",
+  "source": "Module 4 Credit Analysis Models quiz (pasted Nov 5)",
+  "readings": [
+   26
+  ],
+  "title": "Credit analysis · Wong & Cage: CVA of 4-year bond, zero-coupon credit spread, spread term structure, ABS approach",
+  "body": "Benjamin Wong is a quantitative analyst modeling the credit risk of a fixed-income fund (the Fund) to support portfolio management. James Cage, the portfolio manager, asks Wong to calculate certain metrics on the Fund's positions to measure the credit risk of the Fund. Wong analyzes the following fixed-income instruments held by the Fund.\n\nBond 1 is an A rated corporate bond maturing in 4 years, with details presented in Exhibit 1 below:\nExhibit 1: Par value $1,000 | Coupon rate 2.00% | Government bond yield 1.00% | Risk-neutral probability of default 1.20% | Recovery rate 40%\nWong calculates the Credit Valuation Adjustment and the credit spread of Bond 1 as requested by Cage.\n\nPer Cage's request, Wong calculates the credit spread of Bond 2, a BBB rated zero-coupon bond maturing in 5 years, in order to compare its valuation relative to other zero-coupon bonds with similar credit rating and maturity. Bond 2's details presented in Exhibit 2 below:\nExhibit 2: Par value $1,000.00 | Market value $923.70 | Value assuming no default $953.82 | Credit valuation adjustment $67.81\n\nWhile reviewing the Fund's investment grade portfolio, Wong examines Bond 3, an AAA rated bond.\nBond 3 matures in 5 years with a modified duration of 4, and a yield to maturity of 1.50%. Assuming no default and the market spreads and yield will remain stable over the year. Wong compiles the data in Exhibit 3 which comprises a partial credit transition matrix and credit spreads for different rating categories, in order to assess the expected return of the bond over the next year:\nExhibit 3: Rating AAA | AA | A | BBB | BB | B | CCC or below\nProbability (%) 90.00 | 9.00 | 0.60 | 0.15 | 0.10 | 0.10 | 0.05\nCredit spread (%) 0.60 | 0.90 | 1.10 | 1.50 | 3.40 | 6.50 | 9.50\n\nWong analyzes the ABS positions held by the fund, and considers the appropriate credit analysis approach for ABS 1. ABS 1's underlying collateral pool comprises medium-term automobile loans which are considered both granular and homogenous.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Assuming no interest rate volatility and a flat benchmark yield curve, Bond 1's Credit Valuation Adjustment is closest to:",
+    "options": [
+     "$28.56.",
+     "$28.99.",
+     "$29.27."
+    ],
+    "answer": "A",
+    "why": "A is correct. CVA = sum of PV of expected losses. Exposure each year = PV (at 1% government yield) of the remaining cash flows: Year 1 = 1,020/1.01³ + 20/1.01² + 20/1.01 + 20 = 1,049.41. Recovery = 40% × exposure; LGD = exposure − recovery = 629.65. POD_t = 1.2% × survival to t−1 (1.2000%, 1.1856%, 1.1714%, 1.1573%). Expected loss = LGD × POD; PV = × DF (0.990099, 0.980296, 0.970590, 0.960980). PV of expected losses: 7.4809 + 7.2503 + 7.0255 + 6.8064 = 28.56. B uses undiscounted exposures (1,080/1,060/1,040/1,020); C does not discount the expected losses."
+   },
+   {
+    "n": 42,
+    "q": "The credit spread of Bond 2 is closest to:",
+    "options": [
+     "150 bps.",
+     "156 bps.",
+     "160 bps."
+    ],
+    "answer": "A",
+    "why": "A is correct. Fair value = VND − CVA = 953.82 − 67.81 = 886.01; YTM from 886.01 = 1,000/(1+y)^5 → 2.45%. YTM of VND: 953.82 = 1,000/(1+y)^5 → 0.95%. Spread = 2.45% − 0.95% = 1.50% = 150 bps. B uses market value instead of VND; C uses market value alone (1.60%)."
+   },
+   {
+    "n": 43,
+    "q": "The term structure of Bond 3's credit spread is most likely:",
+    "options": [
+     "steeply inverted.",
+     "flat or slightly upward.",
+     "steeply upward sloping."
+    ],
+    "answer": "B",
+    "why": "B is correct. For the highest-rated investment-grade securities, spreads are extremely low with a lower bound of zero, so migration is only possible in one direction; the credit term structure is flat or slightly upward sloping. Steeply inverted applies to distressed high-yield; steeply upward applies to lower credit quality."
+   },
+   {
+    "n": 44,
+    "q": "Given the description of ABS 1's asset pool, Wong would most appropriately adopt a:",
+    "options": [
+     "loan-by-loan approach.",
+     "portfolio-based approach.",
+     "statistics-based approach."
+    ],
+    "answer": "B",
+    "why": "B is correct. Granular and homogeneous auto loans in a dynamic pool support a portfolio-based approach. Loan-by-loan suits discrete, large, heterogeneous loans. Statistics-based suits a static book of loans (short-term structured finance vehicles with granular, homogeneous assets)."
+   }
+  ]
+ }
+]
