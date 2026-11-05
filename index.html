@@ -587,6 +587,31 @@
     .card { border: 0; padding: 0; box-shadow: none; }
     .note { break-inside: avoid; }
   }
+
+  /* Key notes questions: one long scrolling page per list, one Submit at the bottom; mastered questions are greyed. */
+  .cc.k { background: #fde7d3; color: var(--navy); }
+  .cc.k h2 { font-size: clamp(1.5rem, 5vw, 2.3rem); }
+  .kq-card { position: relative; }
+  .kq-card.kq-gray::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: rgba(110, 118, 130, .26); pointer-events: none; }
+  .kq-card .meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .kq-card .q { margin: 6px 0 10px; font-weight: 600; line-height: 1.45; }
+  .kq-figwrap { margin: 4px 0 10px; text-align: center; }
+  .kq-fig { width: 100%; max-width: 360px; height: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--white); }
+  .kq-fig text { font: 11px -apple-system, "Segoe UI", sans-serif; fill: var(--navy); }
+  .kq-table { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-size: .92rem; }
+  .kq-table th, .kq-table td { border: 1px solid var(--border); padding: 8px 9px; text-align: left; vertical-align: top; }
+  .kq-table thead th, .kq-table tbody th { color: var(--navy); }
+  .kq-table thead th { background: var(--aqua-pale); }
+  .kq-table tbody th { background: var(--aqua-pale); font-weight: 700; }
+  .kq-table td.kq-blank { height: 42px; background: repeating-linear-gradient(45deg, #fff, #fff 6px, #f6fbfb 6px, #f6fbfb 12px); }
+  .kq-table td.kq-filled { background: var(--good-bg); }
+  .kq-ans { padding: 10px 12px; border-left: 3px solid var(--good); background: var(--good-bg); border-radius: 8px; margin: 6px 0 8px; }
+  .kq-note { color: var(--muted); font-size: .85rem; margin: 4px 0 8px; }
+  .kq-why { color: var(--muted); font-size: .88rem; margin: 6px 0 4px; }
+  .kq-self { display: flex; gap: 8px; margin: 6px 0 2px; }
+  .kq-self .btn { flex: 1; }
+  .kq-submit { margin: 18px 0 6px; }
+  .kq-submit .btn { width: 100%; }
 </style>
 </head>
 <body class="loading">
@@ -607,13 +632,14 @@
 <script src="questions.js"></script>
 <script src="vignettes.js"></script>
 <script src="notes.js"></script>
+<script src="keyq.js"></script>
 <script src="garden.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v164 · 2026-11-01";
+  const APP_VERSION = "v165 · 2026-11-05";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1064,11 +1090,171 @@
     app.append(card);
   }
 
+  // ---------- Key notes questions ----------
+  // The user's handwritten notes as recall questions. A list is one long page: answer everything, press Submit once at the bottom.
+  // Multiple choice is marked at once; tables and formulas are written on paper, then the answer shows and the user marks it right or wrong.
+  // A question in a row of 2 right answers is greyed; 3 in a row and it leaves the reading list (it always stays in "All").
+  const KQ_KEY = "cfa-keyq";
+  const kqLoad = () => { try { return JSON.parse(localStorage.getItem(KQ_KEY)) || {}; } catch { return {}; } };
+  const kqSave = d => { try { localStorage.setItem(KQ_KEY, JSON.stringify(d)); } catch {} };
+  const kqSt = (d, q) => d[q.id] || { streak: 0, tries: 0 };
+  function kqRecord(q, ok) {
+    const d = kqLoad(), st = { ...kqSt(d, q) };
+    st.tries += 1; st.streak = ok ? st.streak + 1 : 0; st.last = today();
+    d[q.id] = st; kqSave(d);
+    return st;
+  }
+  function kqSummary() {
+    const d = kqLoad(), m = KEYQ.filter(q => kqSt(d, q).streak >= 3).length;
+    return `${plural(KEYQ.length, "question")} · ${m} mastered`;
+  }
+  // Plain text with [[a|b]] fractions, ^powers and _{subscripts} turned into HTML (the text is escaped first).
+  function kqFmt(s) {
+    const esc = String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return fmtMath(esc.replace(/_\{([^}]*)\}/g, "<sub>$1</sub>").replace(/\[\[([^|\]]*)\|([^\]]*)\]\]/g, '<span class="frac"><span>$1</span><span>$2</span></span>'));
+  }
+  const kqHtml = (tag, html, cls) => { const e = el(tag, cls ? { className: cls } : {}); e.innerHTML = kqFmt(html); return e; };
+  const KQ_TYPE = { mc: "Multiple choice", table: "Fill the table", formula: "Write the formula" };
+  const KQ_FIGS = (() => {
+    const base = body => `<svg class="kq-fig" viewBox="0 0 280 170" xmlns="http://www.w3.org/2000/svg"><defs><marker id="kqa" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2f678e"/></marker></defs><line x1="30" y1="140" x2="262" y2="140" stroke="#5f6a84"/><line x1="30" y1="14" x2="30" y2="140" stroke="#5f6a84"/>${body}</svg>`;
+    const cds = up => {
+      const y = x => (up ? 125 - (x - 30) * 80 / 220 : 85);
+      const pts = [[90, "A", "short"], [200, "B", "long"]].map(([x, l, w]) => `<circle cx="${x}" cy="${y(x)}" r="4" fill="#c2453d"/><text x="${x - 4}" y="${y(x) - 9}" font-weight="700">${l}</text><text x="${x - 14}" y="154">${w}</text>`).join("");
+      return base(`<polyline points="30,${y(30)} 250,${y(250)}" fill="none" stroke="#2f678e" stroke-width="2.5"/>${pts}<text x="205" y="166">maturity</text><text x="34" y="26">CDS spread</text>`);
+    };
+    const yc = (ds, dl) => base(`<path d="M30 70 Q110 40 250 30" fill="none" stroke="#2f678e" stroke-width="2.5"/><path d="M30 ${70 + ds} Q110 ${40 + (ds + dl) / 2} 250 ${30 + dl}" fill="none" stroke="#c2453d" stroke-width="2.5"/><text x="205" y="166">maturity</text><text x="34" y="26">yield</text><text x="170" y="118" style="fill:#2f678e">before (blue)</text><text x="170" y="130" style="fill:#c2453d">after (red)</text>`);
+    const conv = () => base(`<line x1="30" y1="42" x2="262" y2="42" stroke="#292645" stroke-dasharray="5 4"/><text x="36" y="36">conversion price</text><line x1="40" y1="126" x2="262" y2="126" stroke="#5f6a84"/><text x="44" y="120">S0</text><line x1="100" y1="124" x2="100" y2="88" stroke="#2f678e" stroke-width="2" marker-end="url(#kqa)"/><text x="108" y="96">S1 (below)</text><line x1="190" y1="124" x2="190" y2="18" stroke="#2f678e" stroke-width="2" marker-end="url(#kqa)"/><text x="196" y="26">S2 (above)</text><text x="34" y="26">share price</text>`);
+    const tree = () => {
+      const X = [50, 112, 174, 236], cy = 82, gap = 28;
+      const ys = c => Array.from({ length: c + 1 }, (_, i) => cy - (c * gap) / 2 + i * gap);
+      let svg = "";
+      X.slice(0, 3).forEach((x, c) => ys(c).forEach((y, i) => { svg += `<line x1="${x}" y1="${y}" x2="${X[c + 1]}" y2="${ys(c + 1)[i]}" stroke="#9fb2c4"/><line x1="${x}" y1="${y}" x2="${X[c + 1]}" y2="${ys(c + 1)[i + 1]}" stroke="#9fb2c4"/>`; }));
+      X.forEach((x, c) => ys(c).forEach(y => { svg += `<circle cx="${x}" cy="${y}" r="7" fill="${c < 3 ? "#bbe9e9" : "#e3e7ea"}" stroke="#2f678e"/>`; }));
+      X.forEach((x, c) => { svg += `<text x="${x - 6}" y="156">t${c}</text>`; });
+      return `<svg class="kq-fig" viewBox="0 0 280 170" xmlns="http://www.w3.org/2000/svg">${svg}<text x="6" y="14">binomial tree of rates, columns t0 to t3</text></svg>`;
+    };
+    return { "cds-up": () => cds(true), "cds-flat": () => cds(false), "yc-bullstp": () => yc(40, 8), "yc-bearflat": () => yc(-30, -8), "yc-bullflat": () => yc(8, 40), conv, tree3: tree };
+  })();
+
+  function kqHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => kqHub("back");
+    app.append(nav("Menu", () => home("back")));
+    const d = kqLoad();
+    app.append(el("h1", { className: "title" }, "Key notes questions"),
+      el("p", { className: "sub" }, "Your own notes as recall questions. Pick a topic, then a reading."));
+    KEYQ_SUBJECTS.forEach(([name, rs]) => {
+      const items = KEYQ.filter(q => rs.includes(q.reading)), m = items.filter(q => kqSt(d, q).streak >= 3).length;
+      const b = el("button", { className: "nt-item" + (items.length ? "" : " absorbed") });
+      b.append(el("b", {}, name), el("span", {}, items.length ? `${plural(items.length, "question")} · ${m} mastered` : "No questions yet"));
+      b.onclick = () => { if (items.length) kqSubject(name); };
+      app.append(b);
+    });
+  }
+
+  function kqSubject(name, dir = "fwd") {
+    screen(dir);
+    backTo = () => kqSubject(name, "back");
+    app.append(nav("Key notes questions", () => kqHub("back")));
+    const d = kqLoad(), rs = KEYQ_SUBJECTS.find(s => s[0] === name)[1], all = KEYQ.filter(q => rs.includes(q.reading));
+    app.append(el("h1", { className: "title" }, name), el("p", { className: "sub" }, "Choose a reading, or All to practise every question of the topic. 3 right in a row removes a question from its reading list; it stays in All."));
+    const add = (title, items, spec) => {
+      const m = items.filter(q => kqSt(d, q).streak >= 3).length, left = items.length - m;
+      const b = el("button", { className: "nt-item" + (items.length ? "" : " absorbed") });
+      b.append(el("b", {}, title), el("span", {}, items.length ? `${plural(items.length, "question")} · ${left} to practise · ${m} mastered` : "No questions yet"));
+      b.onclick = () => { if (items.length) kqPage(spec); };
+      app.append(b);
+    };
+    add(`All · ${name}`, all, { title: `All · ${name}`, subject: name, items: all, all: true });
+    rs.forEach(r => { const items = all.filter(q => q.reading === r); add(`${r} · ${NOTE_READINGS[r]}`, items, { title: `${r} · ${NOTE_READINGS[r]}`, subject: name, items, all: false }); });
+    const reset = el("button", { className: "link-btn" }, `Reset progress for ${name}`);
+    reset.onclick = () => { if (!confirm(`Reset the right-in-a-row counts for ${name}?`)) return; const dd = kqLoad(); all.forEach(q => delete dd[q.id]); kqSave(dd); kqSubject(name, "back"); };
+    app.append(el("div", { className: "row" }, ""), reset);
+  }
+
+  function kqPage(spec, dir = "fwd") {
+    screen(dir);
+    backTo = () => kqPage(spec, "back");
+    app.append(nav(spec.subject, () => kqSubject(spec.subject, "back")));
+    const d0 = kqLoad();
+    const items = spec.all ? spec.items : spec.items.filter(q => kqSt(d0, q).streak < 3);
+    app.append(el("h1", { className: "title" }, spec.title),
+      el("p", { className: "sub" }, items.length ? "Scroll down, answer everything, press Submit once at the bottom. Write tables and formulas on paper." : "Every question here is mastered (3 right in a row). They are still in the All list."));
+    if (!items.length) return;
+    const state = { submitted: false }, reveals = [];
+    items.forEach((q, idx) => {
+      const st = kqSt(d0, q), card = el("div", { className: "card kq-card" + (st.streak >= 2 ? " kq-gray" : "") });
+      const meta = el("div", { className: "meta" }), dots = el("div", { className: "nt-dots" });
+      [0, 1, 2].forEach(k => dots.append(el("i", { className: st.streak > k ? "on" : "" })));
+      meta.append(el("span", {}, `${idx + 1} · ${q.reading} ${NOTE_READINGS[q.reading]} · ${KQ_TYPE[q.type]}`), dots);
+      card.append(meta);
+      card.append(kqHtml("p", q.q, "q"));
+      if (q.fig) { const f = el("div", { className: "kq-figwrap" }); f.innerHTML = KQ_FIGS[q.fig](); card.append(f); }
+      const after = el("div");
+      const badge = (ok, txt) => el("span", { className: `nt-badge ${ok ? "good" : "bad"}` }, txt);
+      const selfCheck = () => {
+        const row = el("div", { className: "kq-self" }), yes = el("button", { className: "btn small" }, "✓ Got it"), no = el("button", { className: "btn small ghost" }, "✗ Missed");
+        const done = ok => { const s = kqRecord(q, ok); row.replaceWith(el("div", {}, ok ? `✓ Got it · ${s.streak} in a row` : "✗ Missed · count starts again")); };
+        yes.onclick = () => done(true); no.onclick = () => done(false);
+        row.append(yes, no); after.append(row);
+      };
+      if (q.type === "mc") {
+        const order = shuffle(q.o.map((_, i) => i)); let pick = null;
+        const btns = order.map((oi, pos) => {
+          const b = el("button", { className: "opt" });
+          b.innerHTML = `${LETTERS[pos]}. ${kqFmt(q.o[oi])}`;
+          b.onclick = () => { if (state.submitted) return; pick = oi; btns.forEach(x => x.classList.remove("sel")); b.classList.add("sel"); };
+          card.append(b);
+          return b;
+        });
+        reveals.push(() => {
+          btns.forEach((b, pos) => { b.disabled = true; b.classList.remove("sel"); if (order[pos] === q.a) b.classList.add("correct"); else if (order[pos] === pick) b.classList.add("wrong"); });
+          let ok = null;
+          if (pick === null) after.append(el("span", { className: "nt-badge soft" }, "Not answered: no count change"));
+          else { ok = pick === q.a; const s = kqRecord(q, ok); after.append(badge(ok, ok ? `✓ Correct · ${s.streak} in a row` : "✗ Not quite")); }
+          if (q.why) after.append(kqHtml("p", q.why, "kq-why"));
+          return ok;
+        });
+      } else if (q.type === "table") {
+        const tbl = el("table", { className: "kq-table" }), thead = el("thead"), tr0 = el("tr"), tbody = el("tbody"), blanks = [];
+        q.head.forEach(h => tr0.append(kqHtml("th", h || " ")));
+        thead.append(tr0);
+        q.rows.forEach(r => { const tr = el("tr"); tr.append(kqHtml("th", r[0])); r.slice(1).forEach(c => { const td = el("td", { className: "kq-blank" }); tr.append(td); blanks.push([td, c]); }); tbody.append(tr); });
+        tbl.append(thead, tbody); card.append(tbl);
+        reveals.push(() => { blanks.forEach(([td, c]) => { td.className = "kq-filled"; td.innerHTML = kqFmt(c); }); if (q.note) after.append(kqHtml("p", q.note, "kq-note")); selfCheck(); return null; });
+      } else {
+        reveals.push(() => { after.append(kqHtml("div", q.a, "kq-ans")); if (q.note) after.append(kqHtml("p", q.note, "kq-note")); selfCheck(); return null; });
+      }
+      card.append(after);
+      app.append(card);
+    });
+    const sub = el("div", { className: "kq-submit" }), go = el("button", { className: "btn" }, "Submit");
+    go.onclick = () => {
+      if (state.submitted) return;
+      state.submitted = true; go.disabled = true;
+      let mcTotal = 0, mcRight = 0, manual = 0;
+      reveals.forEach(r => { const ok = r(); if (ok === null) { /* unanswered or self-checked */ } if (ok === true) mcRight += 1; if (ok !== null) mcTotal += 1; });
+      manual = items.filter(q => q.type !== "mc").length;
+      const sum = el("div", { className: "card" });
+      sum.append(el("p", { className: "kicker" }, "Submitted"),
+        el("p", { className: "score" }, mcTotal ? `${mcRight} / ${mcTotal}` : "–"),
+        el("p", { className: "sub" }, `Multiple choice marked.${manual ? ` ${manual} table / formula question${manual === 1 ? "" : "s"}: check your paper against the answers above and press Got it or Missed.` : ""}`));
+      const row = el("div", { className: "row" }), again = el("button", { className: "btn" }, "Try again");
+      again.onclick = () => kqPage(spec, "back");
+      const back = el("button", { className: "btn ghost" }, "Back to list");
+      back.onclick = () => kqSubject(spec.subject, "back");
+      row.append(again, back); sum.append(row);
+      sub.after(sum);
+      sum.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    sub.append(go); app.append(sub);
+  }
+
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Wrong-answer notes.
+  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Wrong-answer notes, 6 = Key notes questions.
   // The menu comes back to the card you last opened, even after the app is closed and reopened.
-  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 6 ? v : 1; } catch { return 1; } })();
+  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 7 ? v : 1; } catch { return 1; } })();
   const saveHomePos = i => { homePos = i; try { localStorage.setItem("cfa-home-pos", String(i)); } catch {} };
   function home(dir = "back") {
     screen(dir);
@@ -1079,7 +1265,8 @@
       { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
       { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() },
       { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() },
-      { cls: "n", kicker: "Review", title: "Wrong-answer notes", info: notesSummary(), open: () => notesHub() }
+      { cls: "n", kicker: "Review", title: "Wrong-answer notes", info: notesSummary(), open: () => notesHub() },
+      { cls: "k", kicker: "Recall", title: "Key notes questions", info: kqSummary(), open: () => kqHub() }
     ];
     const N = cards.length;
     const wrap = el("div", { className: "carousel" });
