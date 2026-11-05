@@ -1,0 +1,101 @@
+[
+ {
+  "id": "eo-smith-carter",
+  "source": "Portal paste, 5 Nov (Module 3: Valuation and Analysis of Bonds with Embedded Options, Q11-18)",
+  "readings": [
+   25
+  ],
+  "title": "Smith and Carter: Alpha Corporation bonds with embedded options",
+  "body": "John Smith, an investment adviser, meets with Lydia Carter to discuss her pending retirement and potential changes to her investment portfolio. Domestic economic activity has been weakening recently, and Smith’s outlook is that equity market values will be lower during the next year. He would like Carter to consider reducing her equity exposure in favor of adding more fixed-income securities to the portfolio.\n\nGovernment yields have remained low for an extended period, and Smith suggests considering investment-grade corporate bonds to provide additional yield above government debt issues. In light of recent poor employment figures and two consecutive quarters of negative GDP growth, the consensus forecast among economists is that the central bank, at its next meeting this month, will take actions that will lead to lower interest rates.\n\nSmith and Carter review par, spot, and one-year forward rates (Exhibit 1) and four fixed-rate investment-grade bonds issued by Alpha Corporation that are being considered for investment (Exhibit 2).\n\nExhibit 1\nPar, Spot, and One-Year Forward Rates (annual coupon payments)\nMaturity (Years)\tPar Rate (%)\tSpot Rate (%)\tOne-Year Forward (%)\n1\t1.0000\t1.0000\t1.0000\n2\t1.2000\t1.2012\t1.4028\n3\t1.2500\t1.2515\t1.3522\n\nExhibit 2\nSelected Fixed-Rate Bonds of Alpha Corporation\nBond\tAnnual Coupon\tType of Bond\nBond 1\t1.5500%\tStraight bond\nBond 2\t1.5500%\tConvertible bond: currently trading out of the money\nBond 3\t1.5500%\tPutable bond: putable at par one year and two years from now\nBond 4\t1.5500%\tCallable bond: callable at par without any protection periods\nNote: All bonds in Exhibit 2 have remaining maturities of exactly three years.\n\nCarter tells Smith that the local news media have been reporting that housing starts, exports, and demand for consumer credit are all relatively strong, even in light of other poor macroeconomic indicators. Smith explains that the divergence in economic data leads him to believe that volatility in interest rates will increase. Smith also states that he recently read a report issued by Brown and Company forecasting that the yield curve could invert within the next six months.\n\nSmith develops a binomial interest rate tree with a 15% interest rate volatility assumption to assess the value of Alpha Corporation’s bonds. Exhibit 3 presents the interest rate tree.\n\nExhibit 3\nBinomial Interest Rate Tree for Alpha Corporation with 15% Interest Rate Volatility\nYear 0\tYear 1\tYear 2\n1.00%\t1.6121% (upper), 1.1943% (lower)\t1.7862% (upper), 1.3233% (middle), 0.9803% (lower)\n\nCarter asks Smith about the possibility of analyzing bonds that have lower credit ratings than the investment-grade Alpha bonds. Smith discusses four other corporate bonds with Carter. Exhibit 4 presents selected data on the four bonds.\n\nExhibit 4\nSelected Information on Fixed-Rate Bonds for Beta, Gamma, Delta, and Rho Corporations\nBond\tIssuer\tBond Features\tCredit Rating\nBond 5\tBeta Corporation\tCoupon 1.70%; Callable in Year 2; OAS of 45 bps\tB\nBond 6\tGamma Corporation\tCoupon 1.70%; Callable in Year 2; OAS of 65 bps\tB\nBond 7\tDelta Corporation\tCoupon 1.70%; Callable in Year 2; OAS of 85 bps\tB\nBond 8\tRho Corporation\tCoupon 1.70%; Callable in Year 2; OAS of 105 bps\tCCC\nNotes: All bonds have remaining maturities of three years. OAS stands for option-adjusted spread.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "Based on Exhibit 2, and assuming that the forecast for interest rates and Smith’s outlook for equity returns are validated, which bond’s option is most likely to be exercised?",
+    "options": [
+     "Bond 2",
+     "Bond 3",
+     "Bond 4"
+    ],
+    "answer": "C",
+    "why": "Lower rates make the call on Bond 4 valuable (yield below the 1.55% coupon) so Alpha may call. Lower equity values keep the convertible (Bond 2) further out of the money, and the put on Bond 3 is more likely exercised when rates rise."
+   },
+   {
+    "n": 12,
+    "q": "Based on Exhibit 2, the current price of Bond 1 is most likely greater than the current price of:",
+    "options": [
+     "Bond 2.",
+     "Bond 3.",
+     "Bond 4."
+    ],
+    "answer": "C",
+    "why": "Same coupon and maturity: the callable bond (Bond 4) is worth less than the straight bond because investors are short the call. The convertible and the putable bond are worth more than the straight bond because investors pay for those options."
+   },
+   {
+    "n": 13,
+    "q": "Assuming the forecast for interest rates is proven accurate, which bond in Exhibit 2 will likely experience the smallest price increase?",
+    "options": [
+     "Bond 1",
+     "Bond 3",
+     "Bond 4"
+    ],
+    "answer": "C",
+    "why": "With falling rates the call option in Bond 4 gains value, which offsets the price rise; the put in Bond 3 loses value when rates fall."
+   },
+   {
+    "n": 14,
+    "q": "Based on the information in Exhibit 1 and Exhibit 2, the value of the embedded option in Bond 4 is closest to:",
+    "options": [
+     "nil.",
+     "0.1906.",
+     "0.8789."
+    ],
+    "answer": "C",
+    "why": "Straight bond value with spot rates = 1.55/1.01 + 1.55/1.012012² + 101.55/1.012515³ = 100.8789. A callable bond with no call protection cannot exceed 100, so call value = 100.8789 − 100 = 0.8789."
+   },
+   {
+    "n": 15,
+    "q": "If Smith’s interest rate volatility forecast turns out to be true, which bond in Exhibit 2 is likely to experience the greatest price increase?",
+    "options": [
+     "Bond 2",
+     "Bond 3",
+     "Bond 4"
+    ],
+    "answer": "B",
+    "why": "Higher volatility raises option values: the putable bond (straight + put) rises; the callable bond (straight − call) falls; the out-of-the-money convertible behaves like a straight bond."
+   },
+   {
+    "n": 16,
+    "q": "If the Brown and Company forecast comes true, which of the following is most likely to occur? The value of the embedded option in:",
+    "options": [
+     "Bond 3 decreases.",
+     "Bond 4 decreases.",
+     "both Bond 3 and Bond 4 increases."
+    ],
+    "answer": "A",
+    "why": "As the curve goes from upward sloping to flat to inverted, the put option value decreases and the call option value increases."
+   },
+   {
+    "n": 17,
+    "q": "Based on Exhibit 2 and Exhibit 3, the market price of Bond 4 is closest to:",
+    "options": [
+     "100.0000.",
+     "100.5123.",
+     "100.8790."
+    ],
+    "answer": "A",
+    "why": "The market price of a callable bond with no protection period cannot exceed the call price of 100."
+   },
+   {
+    "n": 18,
+    "q": "Which of the following conclusions regarding the bonds in Exhibit 4 is correct?",
+    "options": [
+     "Bond 5 is relatively cheaper than Bond 6.",
+     "Bond 7 is relatively cheaper than Bond 6.",
+     "Bond 8 is relatively cheaper than Bond 7."
+    ],
+    "answer": "B",
+    "why": "For bonds of similar credit quality, a larger OAS means the bond is cheaper: Bond 7 (85 bps) is cheaper than Bond 6 (65 bps). Bond 8 is rated CCC, so its OAS cannot be compared directly with Bond 7 (B)."
+   }
+  ]
+ }
+]
