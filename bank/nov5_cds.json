@@ -1,0 +1,101 @@
+[
+ {
+  "id": "cds-smith-chan",
+  "source": "Portal paste, 5 Nov (Module 5: Credit Default Swaps, Q7-14)",
+  "readings": [
+   27
+  ],
+  "title": "Smith and Chan: sovereign wealth fund CDS strategies",
+  "body": "John Smith, a fixed-income portfolio manager at a €10 billion sovereign wealth fund (the Fund), meets with Sofia Chan, a derivatives strategist with Shire Gate Securities (SGS), to discuss investment opportunities for the Fund. Chan notes that SGS adheres to ISDA (International Swaps and Derivatives Association) protocols for credit default swap (CDS) transactions and that any contract must conform to ISDA specifications. Before the Fund can engage in trading CDS products with SGS, the Fund must satisfy compliance requirements.\n\nSmith explains to Chan that fixed-income derivatives strategies are being contemplated for both hedging and trading purposes. Given the size and diversified nature of the Fund, Smith asks Chan to recommend a type of CDS that would allow the Fund to simultaneously fully hedge multiple fixed-income exposures.\n\nSmith and Chan discuss opportunities to add trading profits to the Fund. Smith asks Chan to determine the probability of default associated with a five-year investment-grade bond issued by Orion Industrial. Selected data on the Orion Industrial bond are presented in Exhibit 1.\n\nExhibit 1\nSelected Data on Orion Industrial Five-Year Bond\nYear\tHazard Rate\n1\t0.22%\n2\t0.35%\n3\t0.50%\n4\t0.65%\n5\t0.80%\n\nChan explains that a single-name CDS can also be used to add profit to the Fund over time. Chan describes a hypothetical trade in which the Fund sells £6 million of five-year CDS protection on Orion, where the CDS contract has a duration of 3.9 years. Chan assumes that the Fund closes the position six months later, after Orion’s credit spread narrowed from 150 bps to 100 bps.\n\nChan discusses the mechanics of a long/short trade. In order to structure a number of potential trades, Chan and Smith exchange their respective views on individual companies and global economies. Chan and Smith agree on the following outlooks.\n\nOutlook 1: The European economy will weaken.\nOutlook 2: The US economy will strengthen relative to that of Canada.\nOutlook 3: The credit quality of electric car manufacturers will improve relative to that of traditional car manufacturers.\n\nChan believes US macroeconomic data are improving and that the general economy will strengthen in the short term. Chan suggests that a curve trade could be used by the Fund to capitalize on her short-term view of a steepening of the US credit curve.\n\nAnother short-term trading opportunity that Smith and Chan discuss involves the merger and acquisition market. SGS believes that Delta Corporation may make an unsolicited bid at a premium to the market price for all of the publicly traded shares of Zega, Inc. Zega’s market capitalization and capital structure are comparable to Delta’s; both firms are highly levered. It is anticipated that Delta will issue new equity along with 5- and 10-year senior unsecured debt to fund the acquisition, which will significantly increase its debt ratio.",
+  "questions": [
+   {
+    "n": 7,
+    "q": "To satisfy the compliance requirements referenced by Chan, the Fund is most likely required to:",
+    "options": [
+     "set a notional amount.",
+     "post an upfront payment.",
+     "sign an ISDA master agreement."
+    ],
+    "answer": "C",
+    "why": "Parties to CDS contracts agree to conform to ISDA specifications, set out in the ISDA master agreement that they sign before any transactions."
+   },
+   {
+    "n": 8,
+    "q": "Which type of CDS should Chan recommend to Smith?",
+    "options": [
+     "CDS index",
+     "Tranche CDS",
+     "Single-name CDS"
+    ],
+    "answer": "A",
+    "why": "A CDS index (CDX, iTraxx) lets the Fund fully hedge multiple exposures at once; a tranche CDS hedges them only partially."
+   },
+   {
+    "n": 9,
+    "q": "Based on Exhibit 1, the probability of Orion defaulting on the bond during the first three years is closest to:",
+    "options": [
+     "1.07%.",
+     "2.50%.",
+     "3.85%."
+    ],
+    "answer": "A",
+    "why": "Survival: 0.9978 × 0.9965 × 0.9950 = 0.9893, so the probability of default in the first three years is 1 − 0.9893 = 1.07%."
+   },
+   {
+    "n": 10,
+    "q": "To close the position on the hypothetical Orion trade, the Fund:",
+    "options": [
+     "sells protection at a higher premium than it paid at the start of the trade.",
+     "buys protection at a lower premium than it received at the start of the trade.",
+     "buys protection at a higher premium than it received at the start of the trade."
+    ],
+    "answer": "B",
+    "why": "The Fund sold protection (received the premium). With the spread narrowing, it closes by buying protection at a lower premium than it received, locking in the gain."
+   },
+   {
+    "n": 11,
+    "q": "The hypothetical Orion trade generated an approximate:",
+    "options": [
+     "loss of £117,000.",
+     "gain of £117,000.",
+     "gain of £234,000."
+    ],
+    "answer": "B",
+    "why": "Approximate profit = change in spread × duration × notional = 0.005 × 3.9 × £6 million = £117,000. A gain, because the Fund sold protection at 150 bps and closed by buying it at 100 bps."
+   },
+   {
+    "n": 12,
+    "q": "Based on the three economic outlook statements, a profitable long/short trade would be to:",
+    "options": [
+     "sell protection using a Canadian CDX IG and buy protection using a US CDX IG.",
+     "buy protection using an iTraxx Crossover and sell protection using an iTraxx Main.",
+     "buy protection using an electric car CDS and sell protection using a traditional car CDS."
+    ],
+    "answer": "B",
+    "why": "Outlook 1: Europe weakens, so buy protection on the high-yield index (iTraxx Crossover) and sell protection on the investment-grade index (iTraxx Main)."
+   },
+   {
+    "n": 13,
+    "q": "The curve trade that would best capitalize on Chan’s view of the US credit curve is to:",
+    "options": [
+     "buy protection using a 20-year CDX and buy protection using a 2-year CDX.",
+     "buy protection using a 20-year CDX and sell protection using a 2-year CDX.",
+     "sell protection using a 20-year CDX and buy protection using a 2-year CDX."
+    ],
+    "answer": "B",
+    "why": "For a steepening view, buy protection on the long maturity (short it) and sell protection on the short maturity (go long it). A steeper curve means long-term credit risk rises relative to short-term."
+   },
+   {
+    "n": 14,
+    "q": "A profitable equity-versus-credit trade involving Delta and Zega is to:",
+    "options": [
+     "short Zega shares and buy protection on Delta using the 10-year CDS.",
+     "go long Zega shares and buy protection on Delta using 5-year CDS.",
+     "go long Delta shares and buy protection on Delta using 5-year CDS."
+    ],
+    "answer": "B",
+    "why": "Zega's shares should rise on the unsolicited bid; Delta's extra debt raises its default risk, so buy protection on Delta (spreads widen)."
+   }
+  ]
+ }
+]
