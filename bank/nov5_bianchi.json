@@ -1,0 +1,112 @@
+[
+ {
+  "id": "eo-bianchi",
+  "source": "Portal paste, 5 Nov (Module 3: Valuation and Analysis of Bonds with Embedded Options, Q28-36)",
+  "readings": [
+   25
+  ],
+  "title": "Bianchi: Maneval Investments, effective duration, convexity and convertible bonds",
+  "body": "Jules Bianchi is a bond analyst for Maneval Investments, Inc. Bianchi gathers data on three corporate bonds, as shown in Exhibit 1.\n\nExhibit 1\nSelected Bond Data\nIssuer\tCoupon Rate\tPrice\tBond Description\nAyrault, Inc. (AI)\t5.25%\t100.200\tCallable at par in one year and two years from today\nBlum, Inc. (BI)\t5.25%\t101.300\tOption-free\nCresson Enterprises (CE)\t5.25%\t102.100\tPutable at par in one year from today\nNote: Each bond has a remaining maturity of three years, annual coupon payments, and a credit rating of BBB.\n\nTo assess the interest rate risk of the three bonds, Bianchi constructs two binomial interest rate trees based on a 10% interest rate volatility assumption and a current one-year rate of 4%. Panel A of Exhibit 2 provides an interest rate tree assuming the benchmark yield curve shifts down by 30 bps, and Panel B provides an interest rate tree assuming the benchmark yield curve shifts up by 30 bps. Bianchi determines that the AI bond is currently trading at an option-adjusted spread (OAS) of 13.95 bps relative to the benchmark yield curve.\n\nExhibit 2\nBinomial Interest Rate Trees\n[Tree figures not captured in the paste: Panel A, interest rates shift down by 30 bps; Panel B, interest rates shift up by 30 bps; trees at year 0, 1 and 2. From the answer key: the AI bond value is PV– = 100.78 if rates shift down 30 bps and PV+ = 99.487 if rates shift up 30 bps.]\n\nArmand Gillette, a convertible bond analyst, stops by Bianchi’s office to discuss two convertible bonds. One is issued by DeLille Enterprises (DE), and the other is issued by Raffarin Incorporated (RI). Selected data for the two bonds are presented in Exhibit 3 and Exhibit 4.\n\nExhibit 3\nSelected Data for DE Convertible Bond\nIssue price\t€1,000 at par\nConversion period\t13 September 20X5 to 12 September 20X8\nInitial conversion price\t€10.00 per share\nThreshold dividend\t€0.50 per share\nChange of control conversion price\t€8.00 per share\nCommon stock share price on issue date\t€8.70\nShare price on 17 September 20X5\t€9.10\nConvertible bond price on 17 September 20X5\t€1,123\n\nExhibit 4\nSelected Data for RI Convertible Bond\nStraight bond value\t€978\nValue of embedded issuer call option\t€43\nValue of embedded investor put option\t€26\nValue of embedded call option on issuer’s stock\t€147\nConversion price\t€12.50\nCurrent common stock share price\t€11.75\n\nGillette makes the following comments to Bianchi:\n\n“The DE bond does not contain any call or put options, but the RI bond contains both an embedded call option and put option. I expect that DeLille Enterprises will soon announce a common stock dividend of €0.70 per share.”\n\n“My belief is that, over the next year, Raffarin’s share price will appreciate toward the conversion price but not exceed it.”",
+  "questions": [
+   {
+    "n": 28,
+    "q": "Based on Exhibit 1 and Exhibit 2, the effective duration for the AI bond is closest to:",
+    "options": [
+     "1.98.",
+     "2.15.",
+     "2.73."
+    ],
+    "answer": "B",
+    "why": "Effective duration = (PV– − PV+) ÷ (2 × PV0 × Δcurve) = (100.78 − 99.487) ÷ (2 × 100.2 × 0.003) = 2.15."
+   },
+   {
+    "n": 29,
+    "q": "If benchmark yields were to fall, which bond in Exhibit 1 would most likely experience a decline in effective duration?",
+    "options": [
+     "AI bond",
+     "BI bond",
+     "CE bond"
+    ],
+    "answer": "A",
+    "why": "The AI bond is callable: when rates fall the call moves into the money and limits price appreciation, so effective duration decreases. It is already in the money (price 100.200 above the call price of par)."
+   },
+   {
+    "n": 30,
+    "q": "Based on Exhibit 1, for the BI bond, one-sided:",
+    "options": [
+     "up-duration will be greater than one-sided down-duration.",
+     "down-duration will be greater than one-sided up-duration.",
+     "up-duration and one-sided down-duration will be about equal."
+    ],
+    "answer": "C",
+    "why": "BI is option-free, so one-sided up-duration and down-duration are about equal."
+   },
+   {
+    "n": 31,
+    "q": "Based on Exhibit 1, which key rate duration is the largest for the BI bond?",
+    "options": [
+     "One-year key rate duration",
+     "Two-year key rate duration",
+     "Three-year key rate duration"
+    ],
+    "answer": "C",
+    "why": "For an option-free bond the longest key rate duration is at maturity, where the largest cash flow (coupon plus principal) occurs."
+   },
+   {
+    "n": 32,
+    "q": "Which bond in Exhibit 1 most likely has the lowest effective convexity?",
+    "options": [
+     "AI bond",
+     "BI bond",
+     "CE bond"
+    ],
+    "answer": "A",
+    "why": "A callable bond with the call in the money has lower effective convexity than an option-free bond or a putable bond with the put out of the money. AI is priced above its call price of par (call in the money); CE's put is out of the money (price 2.1% above par)."
+   },
+   {
+    "n": 33,
+    "q": "Based on Exhibit 3, if DeLille Enterprises pays the dividend expected by Gillette, the conversion price of the DE bond will:",
+    "options": [
+     "be adjusted downward.",
+     "not be adjusted.",
+     "be adjusted upward."
+    ],
+    "answer": "A",
+    "why": "The expected dividend of €0.70 exceeds the threshold dividend of €0.50, so the conversion price is adjusted downward."
+   },
+   {
+    "n": 34,
+    "q": "Based on Exhibit 3, the market conversion premium per share for the DE bond on 17 September 20X5 is closest to:",
+    "options": [
+     "€0.90.",
+     "€2.13.",
+     "€2.53."
+    ],
+    "answer": "B",
+    "why": "Market conversion price = bond price ÷ conversion ratio = €1,123 ÷ 100 shares (€1,000 ÷ €10.00) = €11.23. Premium per share = €11.23 − €9.10 = €2.13."
+   },
+   {
+    "n": 35,
+    "q": "Based on Exhibit 4, the arbitrage-free value of the RI bond is closest to:",
+    "options": [
+     "€814.",
+     "€1,056.",
+     "€1,108."
+    ],
+    "answer": "C",
+    "why": "Value of a callable putable convertible = straight bond + conversion option (call on the issuer's stock) − issuer call + investor put = €978 + €147 − €43 + €26 = €1,108."
+   },
+   {
+    "n": 36,
+    "q": "Based on Exhibit 4 and Gillette’s forecast regarding Raffarin’s share price, the return on the RI bond over the next year is most likely to be:",
+    "options": [
+     "lower than the return on Raffarin’s common shares.",
+     "the same as the return on Raffarin’s common shares.",
+     "higher than the return on Raffarin’s common shares."
+    ],
+    "answer": "A",
+    "why": "The share price rises toward but not beyond the conversion price (the bond is out of the money), so the bond's price rises by less than the share price."
+   }
+  ]
+ }
+]
