@@ -134,6 +134,61 @@ const KEYQ = [];
   mc(25, "Share price rises from S0 to S2, above the conversion price (see chart). The convertible bond:", ["Behaves like the stock: the price tracks the share price", "Still rises much less than the stock", "Falls because it is in the money"], 0, "In the money, the minimum value is the conversion value, so the bond follows the share.", "conv");
   mc(25, "A convertible bond is a straight bond plus:", ["A call option on the common stock", "A put option on the common stock", "A put option on the bond"], 0, "The conversion option is a call on the issuer's stock.");
 
+  fm(25, "Formula: convertible bond, callable (issuer can call the bond) =", "straight bond + value of call option on the stock − value of call option on the bond", "The issuer's call on the bond belongs to the issuer, so it reduces the value to the holder.");
+  fm(25, "Formula: convertible bond that is both callable and putable =", "straight bond + value of call option on the stock − value of call option on the bond + value of put option on the bond");
+  mc(25, "Which option is SUBTRACTED from the value of a callable convertible bond?", ["The issuer's call option on the bond", "The holder's call option on the stock", "The holder's put option on the bond"], 0, "Holder-owned options (stock call, bond put) are added; the issuer-owned bond call is subtracted.");
+
+  // ================= 26 Credit Analysis Models =================
+  fm(26, "Formula: fair value of a risky bond =", "VND − CVA", "VND = value assuming no default, from the tree without any default adjustment.");
+  fm(26, "Formula: credit spread (from a credit value analysis) =", "YTM (credit risky bond) − YTM (risk-free bond, from VND)", "Credit risky bond: price = VND − CVA. Risk-free bond: price = VND.");
+  mc(26, "To get the YTM of the risk-free bond for the credit spread, which price do you use?", ["The VND (value assuming no default)", "The market value", "The fair value (VND − CVA)"], 0, "The market value is often given to confuse you. Use VND, FV, coupon (PMT) and N to solve the YTM on the calculator.");
+  tb(26, "Current price of the bond vs VND − CVA", ["Current price of the bond", "Valuation"], [["Above VND − CVA", "Overvalued"], ["Below VND − CVA", "Undervalued"]]);
+  mc(26, "The market price of a bond is 98 and its VND − CVA is 96.3. The bond is:", ["Overvalued", "Undervalued", "Fairly valued"], 0, "The price is above the model fair value.");
+  fm(26, "Formula: expected exposure at each date in the credit value analysis tree =", "Σ (node value × node probability) + coupon", "Add the coupon once per date. At maturity the exposure is par plus the last coupon.");
+  fm(26, "Formula: risk-neutral probability of default p* (one period), price of 100 =", "100 = [[ (expected payment without default) × (1 − p*) + (expected payment with default) × p* | 1 + r ]]", "Solve for p*. r is the risk-free rate.");
+  fm(26, "Formula: expected future value of a bond with a chance of default =", "(principal + coupon) × (% it makes the full payment) + (principal + coupon) × recovery rate × (% default)");
+  mc(26, "A decrease in the risk-neutral probability of default makes the credit spread:", ["Decrease", "Increase", "Stay the same"], 0, "A lower probability of default lowers the CVA, raises the fair value and lowers the YTM and credit spread.");
+  mc(26, "Besides credit risk, the observed spread over a risk-free bond in practice also includes:", ["Liquidity and tax effects", "Only the recovery rate", "Only inflation compensation"], 0, "Observed spread: liquidity, tax and credit.");
+  mc(26, "Which statement is correct about default risk premium?", ["Actual (historical) default rates do not include the premium for timing uncertainty; risk-neutral rates do", "Actual default rates include the premium; risk-neutral rates do not", "Both include it"], 0, "Using the actual default rate in the model understates the credit risk priced by the market.");
+  tb(26, "Hazard rate: survival and default probabilities", ["", "Hazard rate constant (h)", "Hazard rate varies (h_{t})"], [
+    ["PS_{t}", "(1 − h)^{t}", "(1 − h_{1})(1 − h_{2})...(1 − h_{t})"],
+    ["PD_{t}", "PS_{t−1} × h", "PS_{t−1} × h_{t}"],
+    ["PS_{0}", "1", "1"],
+    ["PD_{1}", "1 × h", "1 × h_{1}"]],
+    "Your notebook wrote the varying PS as 1 − (1 − h_{1})...(1 − h_{n}). That is the cumulative probability of default; PS has no leading 1 −.");
+  mc(26, "Hazard rate is the same as:", ["The conditional probability of default", "The unconditional probability of default in year t", "The cumulative probability of default"], 0, "Conditional on surviving to the start of the period.");
+  mc(26, "In real life the hazard rate:", ["Changes every year, which makes more sense than a constant rate", "Is always constant", "Is always zero in year 1"], 0, "Many textbook cases use a constant hazard rate for simplicity.");
+  mc(26, "A bond has a constant hazard rate of 2%. The probability of default in year 2 is:", ["0.98 × 2% = 1.96%", "2%", "0.98² × 2% = 1.92%"], 0, "PD_{2} = PS_{1} × h = 0.98 × 2%.");
+  fm(26, "Formula: expected return with credit rating migration over one year (bond at par, YTM = coupon) =", "coupon − Σ [ modified duration × (new spread − original spread) × probability ]", "If a YTM is given, use the YTM in place of the coupon.");
+  mc(26, "In the migration table, a rating upgrade (spread narrows) adds what to the expected return?", ["A positive price change", "A negative price change", "No change"], 0, "Upgrade = positive, downgrade = negative.");
+  mc(26, "Credit rating migration typically has what effect on the expected return?", ["Reduces it", "Increases it", "No effect"], 0, "Two reasons: the probabilities are skewed toward downgrades, and spreads widen far more on downgrades than they narrow on upgrades.");
+  tb(26, "Why migration reduces the expected return", ["Reason", "Detail"], [["Probability distribution", "Skewed negatively toward downgrades"], ["Spread change", "Increase in credit spread for downgrades is much larger than the decrease for upgrades"]]);
+  tb(26, "Credit scoring", ["Factor", "High credit score means"], [["Credit history", "Longer"], ["Delinquencies", "Absence of delinquencies"], ["Utilisation", "Lower"], ["Credit inquiries", "Fewer"], ["Types of credit used", "Wider variety"]],
+    "Credit scoring is for individuals and small businesses.");
+  tb(26, "Credit rating", ["Item", "Detail"], [
+    ["Applies to", "Corporate debt, ABS, government / quasi-government debt"],
+    ["Rates", "Senior unsecured debt"],
+    ["Other classes", "Notching"],
+    ["Higher loss given default", "Lower seniority"]],
+    "Notching: a bond that ranks lower in the capital structure has its rating lowered by one step (or more).");
+  mc(26, "Notching adjusts the issuer rating for:", ["The priority of the claim (loss given default)", "The probability of default only", "The bond's coupon rate"], 0, "Lower seniority means higher loss given default, so the bond rating is notched down.");
+  tb(26, "Structural model (balance sheet + option pricing)", ["", "Detail"], [
+    ["Strengths", "Provides an economic rationale for default and explains why it happens; uses option pricing models to value risky debt"],
+    ["Weaknesses", "Complex balance sheets; assumes the company assets are traded in the market; burdensome to implement; measuring the default barrier can be challenging"]]);
+  tb(26, "Reduced-form model (macroeconomic + company-specific data)", ["", "Detail"], [
+    ["Input", "Default intensity = probability of default over the next time period, estimated with regression"],
+    ["Strengths", "Does not assume company assets trade; default intensity can vary as company fundamentals and the economy change"],
+    ["Disadvantages", "Does not explain why default happens; default is treated as a random event (a surprise), when that is never true"]]);
+  mc(26, "In a structural model, equity is analogous to:", ["A call option on the company assets with strike = face value of debt", "A put option on the company assets", "A call option on the debt"], 0, "Assets above the debt: equity holders keep the excess. Below: equity is worth zero (default).");
+  mc(26, "Which model assumes that the company assets are traded in the market?", ["Structural model", "Reduced-form model", "Both"], 0, "A weakness of the structural model.");
+  mc(26, "Which model estimates the default intensity using regression on macroeconomic and company-specific variables?", ["Reduced-form model", "Structural model", "Neither"], 0, "Reduced-form models use observable variables.");
+  mc(26, "Which is a weakness of reduced-form models?", ["They do not explain why default happens", "They need the market value of company assets", "They need the default barrier"], 0, "Default is treated as a random event.");
+  tb(26, "Credit analysis approach for an ABS asset pool", ["Asset pool", "Approach"], [
+    ["Static book of loans", "Statistics-based"],
+    ["Auto loans: granular, homogeneous, dynamic pool", "Portfolio-based"],
+    ["Large, discrete, heterogeneous loans", "Loan-by-loan"]]);
+  mc(26, "A dynamic pool of many small, similar auto loans calls for which approach?", ["Portfolio-based", "Statistics-based", "Loan-by-loan"], 0, "Granular and homogeneous means portfolio-based; static means statistics-based.");
+
   // ================= 27 Credit Default Swaps =================
   tb(27, "CDS position when the credit changes", ["Credit", "CDS position", "Credit exposure"], [["Credit improves", "Sell protection", "Long credit"], ["Credit deteriorates", "Buy protection", "Short credit"]]);
   mc(27, "You expect the credit quality of the reference entity to improve. You should:", ["Sell protection (long credit)", "Buy protection (short credit)", "Buy protection (long credit)"], 0, "The protection seller gains when the spread tightens.");
