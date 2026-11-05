@@ -237,6 +237,185 @@ const KEYQ = [];
   mc(29, "You hold a long stock position and want to hedge it with an option. You:", ["Buy a put", "Buy a call", "Sell a put"], 0, "Then pick the right Greek for the question.");
   mc(29, "Interest rates are expected to rise. The profitable position is:", ["A payer swap or a payer swaption", "A receiver swap or a receiver swaption", "A short payer swaption"], 0, "The payer pays the fixed rate and receives floating.");
 
+  // ================= 5 Currency Exchange Rates =================
+  fm(5, "Formula: mark-to-market value of a currency forward at time t =", "[[(FP_{t} − FP_{0}) × NP|1 + R_{price} × [[days remaining|360]]]]", "FP_{t} = the forward price now for the remaining term, FP_{0} = the price agreed earlier. Discount with the price currency rate.");
+  mc(5, "In the mark-to-market value of a forward, the discount rate is:", ["The interest rate of the price currency", "The interest rate of the base currency", "The average of the two rates"], 0, "The settlement amount is in the price currency.");
+  mc(5, "The interbank FX market is most liquid at which time and trade size?", ["8am to 11am ET, small amounts", "8am to 11am ET, big amounts", "Midnight ET, small amounts"], 0, "Both conditions together give the best liquidity.");
+  mc(5, "For an all-in forward rate, which currency do you use?", ["The currency you will be buying", "The currency you will be selling", "Always the base currency"], 0, "Use the offer side for the currency you buy.");
+  tb(5, "UIRP: sign of the interest rate difference", ["R_{price} − R_{base}", "What happens to the base currency"], [["Positive", "Base appreciates by the difference"], ["Negative", "Base depreciates by the difference"]], "Applied, the base currency investment generates a return equal to R_{base}.");
+  mc(5, "Spot NZD/EUR is 1.5541, 1-year MRR is 0.53% for EUR and 3.39% for NZD. Under UIRP the EUR (base):", ["Appreciates by 2.86%", "Depreciates by 2.86%", "Appreciates by 3.92%"], 0, "3.39% − 0.53% = 2.86%, so a EUR investor in NZD earns about 0.53%.");
+  tb(5, "Carry trade: JPY/EUR example", ["Terms", "Return formula"], [
+    ["EUR terms (your base)", "[S_{0} × (1 + R_{JPY}) × [[1|S_{1}]]] − 1 − R_{EUR}"],
+    ["JPY terms", "[S_{1} × (1 + R_{EUR}) × [[1|S_{0}]]] − 1 − R_{JPY}"]],
+    "To get a cross rate, always use offer quotes only.");
+  mc(5, "A country runs a consistent current account surplus. Its currency over time:", ["Appreciates", "Depreciates", "Stays constant"], 0, "A consistent deficit means the currency depreciates over time.");
+  tb(5, "Currency crisis signals (CRRIB M2)", ["Letter", "Signal"], [
+    ["C", "Capital inflows up (free capital movement market)"],
+    ["R", "Reserves down"],
+    ["R", "Real exchange rate overvalued"],
+    ["I", "Inflation up"],
+    ["B", "Banking stress up"],
+    ["M2", "M2 / reserves increases quickly"]],
+    "Also: exports and imports falling.");
+  mc(5, "Which is a currency crisis signal?", ["Rising M2 relative to reserves", "Rising reserves", "An undervalued real exchange rate"], 0, "Reserves fall and the real exchange rate is overvalued before a crisis.");
+  tb(5, "Mundell-Fleming model: what it evaluates", ["Variable", "Evaluated?"], [["Interest rate", "Yes"], ["Exchange rate", "Yes"], ["Inflation", "No"]], "It evaluates the short-term effect of monetary and fiscal policy.");
+  tb(5, "Mundell-Fleming under flexible exchange rates", ["Policy", "Currency"], [["Expansionary monetary", "Depreciation"], ["Expansionary fiscal", "Appreciation"]],
+    "Flexible regime: the exchange rate is determined by foreign supply and demand for the currency.");
+  tb(5, "Mundell-Fleming: monetary / fiscal mix (E = expansionary, R = restrictive)", ["Monetary / fiscal", "High mobility (developed)", "Low mobility (emerging)"], [
+    ["E / E", "Ambiguous", "Depreciation"],
+    ["E / R", "Depreciation", "Ambiguous"],
+    ["R / E", "Appreciation", "Ambiguous"],
+    ["R / R", "Ambiguous", "Appreciation"]]);
+  tb(5, "Fixed exchange rate regimes: pressure on the currency", ["Policy", "Pressure"], [
+    ["Expansionary monetary", "Depreciation"],
+    ["Restrictive monetary", "Appreciation"],
+    ["Expansionary fiscal", "Depreciation"],
+    ["Restrictive fiscal", "Appreciation"]],
+    "Under a fixed regime the government decides the rate; these are only pressures. It cannot counter a depreciation if it lacks USD reserves.");
+  mc(5, "The central bank wants to counter a depreciation under a fixed exchange rate regime but cannot because:", ["It lacks enough foreign reserves", "The rate is set by supply and demand", "Capital mobility is too low"], 0, "Defending a peg needs reserves.");
+  tb(5, "Monetary approach to exchange rate determination", ["Model", "Key idea"], [
+    ["Pure monetary model", "PPP holds constantly: an x% rise in money supply raises the price level x% and the currency depreciates x%"],
+    ["Dornbusch overshooting model", "Prices are sticky, so there is no immediate price effect; the currency overshoots the long-run PPP level"]],
+    "Fixed output; only monetary policy is considered.");
+  tb(5, "Dornbusch overshooting: path of the exchange rate", ["Policy", "Path"], [
+    ["Expansionary monetary", "Depreciates, then appreciates slowly"],
+    ["Restrictive monetary", "Appreciates, then depreciates slowly"]]);
+  mc(5, "Prices are sticky in which monetary exchange rate model?", ["Dornbusch overshooting model", "Pure monetary model", "Portfolio balance approach"], 0, "The pure monetary model holds PPP all the time.");
+  tb(5, "Portfolio balance approach (fiscal policy, long run)", ["Step", "What happens"], [
+    ["1", "A fiscal deficit means the government borrows from (foreign) investors"],
+    ["2", "Investors compare the risk and return of holding the currency"],
+    ["3", "Risk > return: they stop investing, so the currency depreciates"],
+    ["4", "Risk < return: they keep investing"]]);
+  mc(5, "A government runs a growing fiscal deficit. Investors judge the risk to be greater than the return. The currency:", ["Depreciates", "Appreciates", "Stays stable"], 0, "Portfolio balance approach: investors stop buying the government's debt.");
+  mc(5, "Combining Mundell-Fleming and portfolio balance, the exchange rate after a fiscal expansion most likely:", ["Appreciates in the short term, then depreciates in the long term", "Depreciates in the short term, then appreciates in the long term", "Appreciates in both the short and long term"], 0, "Free cash flows first attract capital; later the fiscal deficit worries investors.");
+
+  // ================= 6 Economic Growth =================
+  fm(6, "Formula: growth in potential GDP =", "ΔY = ΔT + αΔK + (1 − α)ΔL", "T = technology (total factor productivity), α = capital's share of output.");
+  fm(6, "Formula (neoclassical): sustainable growth rate of output per capita =", "[[θ|1 − α]]", "θ = technology growth; α = capital's share.");
+  fm(6, "Formula (neoclassical): sustainable growth rate of output =", "[[θ|1 − α]] + ΔL", "The per capita formula is shorter because labour force growth drops out.");
+  mc(6, "Which sustainable growth rate has the shorter formula?", ["Output per capita", "Total output", "Both are the same"], 0, "Per capita growth excludes the growth of the labour force.");
+  mc(6, "The steady state growth rate of output equals:", ["TFP growth scaled by labour's share, plus labour force growth", "TFP growth scaled by capital's share, plus capital growth", "Capital growth minus labour force growth"], 0, "θ ÷ (1 − α) + ΔL.");
+  fm(6, "Formula: in the steady state, α =", "[[r × K|Y]]", "α is the share of capital in output; (1 − α) is labour's contribution.");
+  fm(6, "Formula: in the steady state, MPK = rental price of capital r, so r =", "[[α × Y|K]]", "MPK = marginal product of capital = marginal cost of capital.");
+  mc(6, "A higher α means:", ["A bigger capital deepening effect", "A smaller capital deepening effect", "No capital deepening effect"], 0, "A developing country also gets a bigger capital deepening effect.");
+
+  // ================= 10 Analysis of Financial Institutions =================
+  tb(10, "Loan loss ratios", ["Ratio", "How to read it"], [
+    ["Allowance for loan losses ÷ net loan charge-offs", "Increasing: cushion up; decreasing: cushion down"],
+    ["Provision for loan losses ÷ net loan charge-offs", "Above 1: conservative; equal to 1: flat allowance; below 1: aggressive accounting"],
+    ["Allowance for loan losses ÷ non-performing loans", "Increasing (above 1): sufficient provision; decreasing: not sufficient"]]);
+  mc(10, "A bank's provision for loan losses ÷ net loan charge-offs is 0.8. This suggests:", ["Aggressive accounting", "Conservative accounting", "A flat allowance"], 0, "Below 1 is aggressive.");
+  mc(10, "Allowance for loan losses ÷ non-performing loans is decreasing. The provision is:", ["Becoming insufficient", "Becoming more than sufficient", "Unaffected"], 0, "Rising or above 1 means sufficient.");
+  mc(10, "Asked which bank has the better trading revenue as a contribution to total revenue, choose:", ["The lower figure", "The higher figure", "The same figure"], 0, "Trading revenue is volatile, so it is not sustainable.");
+  mc(10, "When the yield curve inverts, a bank's net interest revenue:", ["Falls", "Rises", "Is unchanged"], 0, "It borrows short at higher rates and lends long at lower rates.");
+  tb(10, "Asset quality ratios", ["Ratio", "If it increases", "If it decreases"], [["Liquid assets ÷ total assets", "Good", "Bad"], ["Loans ÷ total assets", "Bad", "Good"]]);
+  tb(10, "Bank capital tiers", ["Tier", "Components"], [
+    ["Common equity tier 1", "Common stock, additional paid-in capital, retained earnings, OCI, less intangibles and DTA"],
+    ["Other tier 1", "Preferred stock with discretionary dividends"],
+    ["Tier 2", "Convertible bonds"]]);
+  mc(10, "Preferred stock with discretionary dividends counts as:", ["Other tier 1 capital", "Common equity tier 1", "Tier 2 capital"], 0, "Common equity tier 1 is common stock based.");
+  mc(10, "Which item is deducted from common equity tier 1?", ["Intangibles", "Retained earnings", "Additional paid-in capital"], 0, "Deferred tax assets are deducted as well.");
+  tb(10, "P&C insurance cycle", ["Stage", "What follows"], [
+    ["High competition: new businesses suffer (soft period)", "Capital base shrinks"],
+    ["Shrinking capital base", "Reduced competition, healthy prices (hard pricing)"],
+    ["Hard pricing", "Attracts new businesses"],
+    ["New businesses start to increase competition", "Back to a soft period"]]);
+  mc(10, "Reduced competition and healthy prices in the P&C insurance cycle is called:", ["Hard pricing", "Soft pricing", "A shrinking capital base"], 0, "Hard pricing follows the shrinking capital base.");
+  mc(10, "Which insurers mainly do international (cross-border) business?", ["Reinsurers", "Life and health insurers", "P&C insurers"], 0, "Life, health and P&C insurers do little cross-border business.");
+  mc(10, "Maturity transformation means a bank:", ["Borrows on shorter terms than it lends", "Borrows on longer terms than it lends", "Lends and borrows on the same terms"], 0, "It creates value by lending at a higher rate.");
+
+  // ================= 8 Employee Compensation =================
+  fm(8, "Formula: net pension asset or liability =", "ending plan assets − ending PBO");
+  tb(8, "Roll-forward of plan assets and PBO", ["Plan assets", "PBO"], [
+    ["Beginning plan assets", "Beginning PBO"],
+    ["+ employer contributions", "+ service cost"],
+    ["+ actual return on plan assets", "+ interest cost"],
+    ["− benefits paid", "+ actuarial losses (− gains) − benefits paid"],
+    ["Ending plan assets", "Ending PBO"]],
+    "Your notes wrote employee contribution and actuarial gains. The employer contributes to the plan, and actuarial losses increase the PBO.");
+  fm(8, "Formula: interest cost under US GAAP =", "beginning PBO × discount rate");
+  fm(8, "Formula: interest under IFRS =", "beginning funded status × discount rate", "Positive = net interest income; negative = net interest expense.");
+  mc(8, "Under IFRS, net interest on an underfunded plan (negative funded status) is:", ["Net interest expense", "Net interest income", "Zero"], 0, "Funded status = plan assets − PBO.");
+  tb(8, "Pension costs in the income statement", ["", "IFRS", "US GAAP"], [
+    ["Service cost", "Current and past", "Current only"],
+    ["Interest", "Interest cost on funded status", "Interest cost"],
+    ["Expected return on plan assets", "Not deducted separately", "Deducted"]]);
+  mc(8, "Past service cost is part of the service cost recognised in income under:", ["IFRS", "US GAAP", "Both"], 0, "US GAAP recognises only current service cost in the cost.");
+  fm(8, "Formula: RSU expense for a year =", "(number of RSUs vested × FV) − (number of RSUs forfeited × FV)", "Vested and forfeited units may have different fair values, so check each.");
+  mc(8, "RSUs add to the basic shares of a year by:", ["The number of RSUs that vested that year", "The number of RSUs granted that year", "The number of unvested RSUs"], 0, "Vested RSUs have been converted into common shares.");
+  tb(8, "Windfall and shortfall", ["", "Settlement-date price vs grant-date value", "Tax deduction", "Result"], [
+    ["Windfall", "Higher", "Larger", "Tax lower than expected"],
+    ["Shortfall", "Lower", "Smaller", "Tax higher than expected"]]);
+  fm(8, "Formula: tax effect amount =", "[units vested × (settlement price − grant-date value)] × tax rate", "Positive = windfall; negative = shortfall.");
+  tb(8, "Where the windfall or shortfall goes", ["", "Windfall", "Shortfall"], [
+    ["US GAAP", "Reduces income tax expense", "Increases income tax expense"],
+    ["IFRS", "Equity", "Equity"]]);
+  tb(8, "Effect on the effective tax rate", ["", "US GAAP", "IFRS", "IFRS vs US GAAP"], [
+    ["Windfall", "↓", "No effect", "IFRS higher"],
+    ["Shortfall", "↑", "No effect", "IFRS lower"]],
+    "Under IFRS the windfall or shortfall goes straight to equity, so the tax rate is not affected.");
+  fm(8, "Formula: diluted shares (treasury stock method with stock grants) =", "basic shares + potentially dilutive shares − [[cash proceeds + average unrecognised expense|average share price]]");
+  fm(8, "Formula: average unrecognised compensation expense =", "[[unrecognised expense at t = 0 + unrecognised expense at t = 1|2]]");
+  fm(8, "Formula: cash proceeds from options =", "number of options × exercise price", "RSUs and stock grants have zero cash proceeds.");
+  mc(8, "Potentially dilutive shares include:", ["Unvested RSUs and in-the-money options", "All options, whether in or out of the money", "Vested RSUs only"], 0, "Out-of-the-money options are antidilutive.");
+  tb(8, "Stock option inputs, from the company's point of view", ["Change", "Option value", "Result for the company"], [
+    ["Higher risk-free rate", "↑", "Bad"],
+    ["Higher expected life", "↑", "Bad"],
+    ["Higher dividend yield", "↓", "Good"]],
+    "A higher option value means a higher compensation expense.");
+
+  // ================= 18 Discounted Dividend Valuation =================
+  mc(18, "The payout ratio can be written as:", ["DPS ÷ EPS", "EPS ÷ DPS", "1 + b"], 0, "b is the retention ratio and 1 − b is the payout ratio.");
+  fm(18, "Formula: preferred stock value =", "[[D_{0}|r_{e}]] = [[D_{0}|ERP + R_{f}]]", "Check whether the given rate is r_{e} or only the equity risk premium. Never use the ERP on its own as the required return.");
+  mc(18, "A question gives the equity risk premium and the risk-free rate (beta = 1). To discount the preferred dividend you use:", ["R_{f} + ERP", "ERP alone", "R_{f} alone"], 0, "The required rate of return, not the risk premium.");
+
+  // ================= 19 Free Cash Flow Valuation =================
+  fm(19, "Formula: ΔWC =", "Δ current assets − Δ current liabilities", "Exclude cash and cash equivalents.");
+  fm(19, "Formula: FCFE from net income (DR = debt ratio) =", "NI − (1 − DR)(FCInv − Depn) − (1 − DR)(WCInv)", "Your notes show 1 − [...] with a minus inside the bracket. It is NI, and both reinvestment terms are subtracted.");
+  mc(19, "FCFE is preferred to DDM when:", ["Dividends differ greatly from FCFE", "Dividends equal FCFE", "The firm pays no dividend and never will"], 0, "FCFE shows the ability to pay dividends; if dividends differ, use FCFE.");
+
+  // ================= 21 Residual Income Valuation =================
+  fm(21, "Formula: residual income =", "net income − r_{e} × (beginning amount of equity)", "Always use the beginning equity.");
+
+  // ================= 22 Private Company Valuation =================
+  fm(22, "Formula: discount for lack of control (DLOC) =", "1 − ( [[1|1 + control premium]] )");
+  fm(22, "Formula: total discount =", "1 − (1 − DLOC)(1 − DLOM)");
+  tb(22, "Factors affecting the DLOM", ["Factor", "DLOM"], [
+    ["Impending IPO or firm sale", "↓"],
+    ["Restrictions on selling shares", "↑"],
+    ["Large pool of buyers", "↓"],
+    ["Greater ownership concentration", "↑"]]);
+  mc(22, "An impending IPO or firm sale makes the DLOM:", ["Lower", "Higher", "Unchanged"], 0, "The shares become easier to sell.");
+  mc(22, "Which factor increases the DLOM?", ["Restrictions on selling shares", "A large pool of buyers", "An impending IPO"], 0, "Less marketability means a higher discount.");
+  tb(22, "Methods of estimating the DLOM", ["Method", "Detail"], [
+    ["Private vs public shares", "Compare private shares to public shares"],
+    ["Pre-IPO vs post-IPO", "Compare the price before and after the IPO"],
+    ["Public company option", "[[at-the-money put option value|stock price]]"]]);
+  fm(22, "Formula: reinvestment rate b =", "[[g|WACC]]", "Your note. In general b = g ÷ the return on new investment; the two are equal when that return equals WACC.");
+  fm(22, "Formula: value of the firm (private firm, constant growth) =", "[[EBIT(1 − T)(1 − b)|WACC − g]]");
+
+  // ================= 30 Commodities and Commodity Derivatives =================
+  tb(30, "Convenience yield and storage cost", ["Condition", "Curve", "Inventory"], [
+    ["Convenience yield > storage cost", "Backwardation", "Falls"],
+    ["Convenience yield < storage cost", "Contango", "Rises"]]);
+  mc(30, "Convenience yield is below storage cost. The futures curve is in:", ["Contango", "Backwardation", "Neither"], 0, "Inventory builds up.");
+
+  // ================= 32 Real Estate through Publicly Traded Securities =================
+  mc(32, "NAVPS of a REIT is estimated with:", ["Direct capitalisation", "Depreciated historical cost", "Book value of equity"], 0, "Depreciated historical cost is not used.");
+  mc(32, "A REIT has high leverage and trades at a discount to NAVPS. Refinancing its maturing debt is likely to be:", ["Difficult", "Easy", "Unaffected"], 0, "It cannot easily raise equity or sell assets at a good price.");
+
+  // ================= 33 Hedge Fund Strategies =================
+  tb(33, "Short strategies", ["Strategy", "Positions"], [
+    ["Dedicated short", "Only short positions: 60% to 120% short, the rest in cash"],
+    ["Short-biased", "Short and long positions: net short 30% to 60%"]],
+    "Both trade single equities (individual stocks), not indices.");
+  mc(33, "A dedicated short fund holds:", ["Only short positions", "Short and long positions", "Only index futures"], 0, "A short-biased fund holds both.");
+  tb(33, "Life settlements: what the buyer wants", ["Characteristic", "Wanted"], [
+    ["Purchase price", "Low"],
+    ["Premium payments", "Low"],
+    ["Insured's life", "Dies earlier than expected"]],
+    "Your notes wrote low surrender value; the textbook says low purchase price.");
+
   // ================= 23 Term Structure and Interest Rate Dynamics =================
   fm(23, "Formula: expanded forward rate formula, (1 + S_n)^n =", "(1 + S_1)(1 + f_{1,1})(1 + f_{2,1})(1 + f_{3,1}) ... (1 + f_{n−1,1})");
   fm(23, "Formula: swap spread =", "swap rate − government (on-the-run) bond yield of the same maturity", "The first-page note wrote floating minus fixed; the textbook definition is swap rate minus government yield.");
