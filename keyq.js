@@ -47,7 +47,7 @@ const KEYQ = [];
     ["Preferred habitat", "Has a preferred maturity but moves if paid extra"]]);
   mc(23, "Which theory says investors stay in their own maturity segment even for extra profit?", ["Segmented markets", "Preferred habitat", "Local expectations"], 0, "Preferred habitat investors will move maturity for compensation; segmented market investors will not.");
   mc(23, "Liquidity preference theory says the premium:", ["Increases with maturity", "Is zero for all maturities", "Decreases with maturity"], 0, "Investors want more compensation for longer maturities (more interest rate risk).");
-  mc(23, "Which is NOT an assumption behind the yield to maturity?", ["Coupons are reinvested at the risk-free rate", "The bond is held to maturity", "There is no default"], 0, "YTM assumes coupons are reinvested at the YTM itself.");
+  mc(23, "Which is NOT an assumption behind the yield to maturity?", ["Coupons earn the risk-free rate", "The bond is held until maturity", "No default occurs"], 0, "YTM assumes coupons are reinvested at the YTM itself.");
   mc(23, "If coupons are reinvested at a rate below the YTM, the realized return is:", ["Likely below the YTM", "Likely above the YTM", "Exactly the YTM"], 0, "The YTM assumes reinvestment at the YTM; a lower reinvestment rate lowers the realized return.");
   mc(23, "In countries with low-liquidity government bond markets, the better benchmark is the:", ["Swap curve", "Government spot curve", "Corporate par curve"], 0, "An active swap market gives more points for a curve when government bonds are illiquid.");
   tb(23, "Spreads and related risks", ["Spread", "Definition", "What it shows"], [
@@ -60,7 +60,7 @@ const KEYQ = [];
   mc(23, "The MRR–OIS spread is considered an indicator of:", ["Risk and liquidity of money market securities", "Credit risk of a single corporate bond", "The slope of the government yield curve"], 0, "OIS is almost risk free; MRR carries bank credit and liquidity risk.");
   mc(23, "The TED spread is:", ["MRR − T-bill rate of the same maturity", "Swap rate − government yield", "Yield on bond − swap rate"], 0, "TED = 3-month MRR − 3-month T-bill rate.");
   mc(23, "I-spread is:", ["Yield on the bond − swap rate", "Swap rate − government yield", "MRR − OIS rate"], 0, "I-spread measures a credit-risky bond over the swap curve.");
-  mc(23, "SOFR is a rate for the:", ["Repo market (secured, overnight)", "Unsecured interbank market", "Treasury bill auction"], 0, "Secured overnight financing rate, collateralized by Treasuries.");
+  mc(23, "SOFR is a rate for the:", ["Repo market, secured overnight", "Unsecured interbank lending, overnight", "Treasury bill auctions, weekly"], 0, "Secured overnight financing rate, collateralized by Treasuries.");
   fm(23, "Formula: forward price F(j,k) in terms of the forward rate f(j,k) =", "[[1|(1 + f(j,k))^k]]");
   fm(23, "Formula: interpolated yield for maturity m_i between a shorter maturity m_s and a longer maturity m_l =", "y_s + [[y_l − y_s|m_l − m_s]] × (m_i − m_s)", "Check that the result lies between y_s and y_l.");
   mc(23, "Interpolating a yield for 3.86 years uses which two maturities?", ["3 years and 4 years", "2 years and 5 years", "4 years and 5 years"], 0, "Use the maturities on each side of 3.86; the weight on the longer one is 0.86.");
@@ -68,9 +68,9 @@ const KEYQ = [];
 
   // ================= 24 Arbitrage-Free Valuation Framework =================
   mc(24, "A question says a bond is mispriced and gives the par curve, the coupon and N. The first step is to:", ["Bootstrap the par curve into a spot curve", "Discount the cash flows at the bond's YTM", "Use the forward rates only"], 0, "Spot rates are needed to discount each cash flow separately.");
-  mc(24, "After finding the spot curve, the next step is to:", ["Discount the coupons and principal with the spot rates to get the PV", "Average the spot rates", "Solve for the YTM first"], 0, "PV = Σ cash flow ÷ (1 + spot)^t.");
-  mc(24, "With N, FV, PV and PMT known, the calculator gives:", ["I/Y (the YTM)", "The spot rate of the last year", "The forward rate"], 0, "The remaining input I/Y is the yield to maturity.");
-  mc(24, "If the bond is mispriced, you find the answer by comparing:", ["The PV from spot rates with the given market price", "The YTM with the coupon rate", "Two forward rates"], 0, "Value below price: overpriced; value above price: underpriced.");
+  mc(24, "After finding the spot curve, the next step is to:", ["Discount cash flows at spot rates", "Average the spot rates", "Solve for the YTM first"], 0, "PV = Σ cash flow ÷ (1 + spot)^t.");
+  mc(24, "With N, FV, PV and PMT known, the calculator gives:", ["The YTM", "The last spot rate", "The last forward rate"], 0, "The remaining input I/Y is the yield to maturity.");
+  mc(24, "If the bond is mispriced, you find the answer by comparing:", ["PV from spot rates vs the market price", "YTM vs the coupon rate", "One forward rate vs another"], 0, "Value below price: overpriced; value above price: underpriced.");
   tb(24, "Term structure models: equilibrium vs arbitrage-free", ["Type", "Models", "Based on"], [
     ["Equilibrium", "CIR, Vasicek", "Macroeconomic (fundamental) variables"],
     ["Arbitrage-free", "Ho–Lee, KWF", "Observed market prices; benchmark bonds assumed correctly priced"]]);
@@ -81,14 +81,14 @@ const KEYQ = [];
     ["KWF", "d ln(r) = θ dt + σ dz", "Like Ho–Lee but for ln(r); constant volatility"]]);
   mc(24, "Which type of term structure model needs fewer parameters to estimate?", ["Equilibrium models", "Arbitrage-free models", "Both need the same number"], 0, "Arbitrage-free models allow time-varying parameters, so they have more parameters and fit the curve more precisely.");
   mc(24, "Which model assumes bonds are correctly priced (calibrated to market prices)?", ["Ho–Lee", "Vasicek", "CIR"], 0, "Arbitrage-free models (Ho–Lee, KWF) use market prices of a reference set of instruments.");
-  mc(24, "Asset A costs 500 and pays 525 in one year; Asset B costs 1,000 and pays 1,100 (both risk free). The arbitrage is to:", ["Sell two units of A, buy one unit of B: $50 profit in one year", "Buy two units of A, sell one unit of B", "Buy A and B equally"], 0, "B is cheap relative to A (10% vs 5% implied return). Sell 2A for 1,000, buy B: receive 1,100, pay 1,050.");
+  mc(24, "Asset A costs 500 and pays 525 in one year; Asset B costs 1,000 and pays 1,100 (both risk free). The arbitrage is to:", ["Sell two units of A, buy one of B", "Buy two units of A, sell one of B", "Buy one unit of each"], 0, "B is cheap relative to A (10% vs 5% implied return). Sell 2A for 1,000, buy B: receive 1,100, pay 1,050.");
   mc(24, "If the YTM is lower, the bond price is:", ["Higher", "Lower", "Unchanged"], 0, "Price and yield move in opposite directions.");
   mc(24, "For an option-free bond, valuation with spot rates and valuation with a calibrated binomial tree give:", ["The same value whatever the volatility", "Different values; the tree is higher", "Different values; the tree is lower"], 0, "Volatility matters only when there is an embedded option.");
   fm(24, "Formula: pathwise value of a 3-year bond on one path (coupon C, face FV, rates S1, S2, S3 on the path) =", "[[C|(1 + S_1)]] + [[C|(1 + S_1)(1 + S_2)]] + [[FV + C|(1 + S_1)(1 + S_2)(1 + S_3)]]", "Each cash flow is discounted by the rates of that path, not by spot rates.");
   mc(24, "A zero-coupon yield curve is the same thing as the:", ["Spot rate curve", "Par curve", "Forward curve"], 0, "Zero-coupon yields are spot rates.");
   mc(24, "To value a 3-year bond on the tree, which columns of interest rates do you use?", ["t0, t1 and t2 only", "t0, t1, t2 and t3", "t1, t2 and t3"], 0, "The t3 column would discount a fourth-year cash flow, so it is not needed.", "tree3");
   mc(24, "Calibrating the interest rate tree needs a volatility assumption, an interest rate model and:", ["The observed market value of the benchmark bond", "The market value of the bond being valued", "The yield to maturity of the bond being valued"], 0, "The tree is fitted to benchmark bonds, then used to value the target bond.");
-  mc(24, "The interest rate movements on a binomial tree are:", ["Unpredictable (stochastic)", "Predictable", "Constant"], 0, "The interest rate factors are random; the tree captures this with up and down moves.");
+  mc(24, "The interest rate movements on a binomial tree are:", ["Random (stochastic)", "Predictable (deterministic)", "Constant (fixed)"], 0, "The interest rate factors are random; the tree captures this with up and down moves.");
 
   // ================= 25 Bonds with Embedded Options =================
   fm(25, "Formula: conversion price =", "[[par (issue) value of the convertible bond|conversion ratio]]");
@@ -101,13 +101,13 @@ const KEYQ = [];
     ["Yield curve flatter", "↑", "↓", "↓", "↓"], ["Yield curve steeper", "↓", "↑", "↑", "↑"]],
     "Callable bond = straight − call; putable bond = straight + put. The bond columns show the net direction.");
   tb(25, "OAS and volatility", ["", "OAS (callable bond)", "OAS (putable bond)"], [["Volatility ↑", "↓", "↑"], ["Volatility ↓", "↑", "↓"]]);
-  mc(25, "Rank the prices of otherwise identical bonds:", ["Callable < straight < putable (and convertible)", "Straight < callable < putable", "Putable < straight < callable"], 0, "Investor-held options add value, the issuer's call subtracts value.");
+  mc(25, "Rank the prices of otherwise identical bonds:", ["Callable < straight < putable", "Straight < callable < putable", "Putable < straight < callable"], 0, "Investor-held options add value, the issuer's call subtracts value.");
   mc(25, "OAS can be compared across bonds only if they have the same:", ["Credit rating", "Coupon", "Maturity date"], 0, "A larger OAS reflects compensation for credit risk as well.");
   mc(25, "For two bonds with the same credit rating, the one with the larger OAS is:", ["Underpriced (cheap)", "Overpriced (rich)", "Fairly priced"], 0, "Higher OAS means more spread over the benchmark for the same risk.");
   fm(25, "Formula: OAS is the constant spread that, added to every one-period forward rate on the tree, makes ... =", "the present value of the bond's cash flows (model value) equal to the bond's market price");
   mc(25, "A floating-rate coupon is the one-year reference rate with a cap of 5% and a floor of 4%. At a node where the rate is 6.78% the coupon is:", ["5%", "6.78%", "4%"], 0, "The cap limits the coupon: coupon = min(rate, cap).");
   mc(25, "Same bond, node where the rate is 3.945%. The coupon is:", ["4%", "3.945%", "5%"], 0, "The floor stops the coupon from going below 4%: coupon = max(rate, floor).");
-  mc(25, "A cap on a floating-rate coupon is, for the investor:", ["Unfavourable (limits the coupon)", "Favourable", "Neutral"], 0, "It limits the coupon when rates rise; it benefits the issuer.");
+  mc(25, "A cap on a floating-rate coupon is, for the investor:", ["Unfavourable, it limits the coupon", "Favourable, it adds to the coupon", "Neutral, it has no effect"], 0, "It limits the coupon when rates rise; it benefits the issuer.");
   fm(25, "Formula: convertible bond (non-callable) =", "straight bond + value of the call option on the stock");
   fm(25, "Formula: callable convertible bond =", "straight bond + value of the call option on the stock − value of the issuer call option");
   fm(25, "Formula: callable and putable convertible bond =", "straight bond + call option on the stock − issuer call option + investor put option");
@@ -115,13 +115,13 @@ const KEYQ = [];
     ["Conversion price > market share price", "Bond: interest rate and credit spread"],
     ["Conversion price < market share price", "Stock: stock price movement"],
     ["Conversion price = market share price", "Hybrid"]]);
-  mc(25, "The effective duration of a floating-rate bond is close to:", ["The time to the next reset", "Its maturity", "Zero always"], 0, "The coupon resets, so only the time until the next reset matters.");
+  mc(25, "The effective duration of a floating-rate bond is close to:", ["The time to the next reset", "Its time to maturity", "Zero, always"], 0, "The coupon resets, so only the time until the next reset matters.");
   mc(25, "A floating-rate bond resets annually. Its effective duration is about:", ["1", "The years to maturity", "0.5"], 0, "Time to next reset = 1 year at most.");
   fm(25, "Formula: market conversion price =", "[[market price of the convertible bond|conversion ratio]]");
   fm(25, "Formula: market conversion premium per share =", "market conversion price − stock market price of the share");
   fm(25, "Formula: market conversion premium ratio =", "[[market conversion premium per share|market price of common stock]]");
   fm(25, "Formula: premium over straight value =", "( [[market price of the convertible bond|straight value]] ) − 1");
-  mc(25, "If the actual dividend is higher than the threshold dividend, the conversion price:", ["Is adjusted down (conversion ratio up)", "Is adjusted up", "Is not adjusted"], 0, "The adjustment compensates holders who give up the extra dividend, so more shares per bond.");
+  mc(25, "If the actual dividend is higher than the threshold dividend, the conversion price:", ["Adjusted down, conversion ratio up", "Adjusted up, conversion ratio down", "Not adjusted at all"], 0, "The adjustment compensates holders who give up the extra dividend, so more shares per bond.");
   tb(25, "Effective duration and convexity vs interest rates", ["", "Rates ↑", "Rates ↓"], [
     ["Straight: duration", "↓", "↑"], ["Straight: convexity", "+ve", "+ve"],
     ["Callable: duration", "↑ (= straight)", "↓ (< straight)"], ["Callable: convexity", "+ve", "↓ (can turn −ve)"],
@@ -131,7 +131,7 @@ const KEYQ = [];
   tb(25, "Key rate duration: where it is largest", ["Bond", "Largest key rate duration at"], [["Option-free", "Maturity"], ["Callable or putable", "Exercise date"]],
     "For a callable or putable bond with the option in the money.");
   mc(25, "Share price rises from S0 to S1, still below the conversion price (see chart). The convertible bond price:", ["Rises, but by less than the share price", "Rises by the same % as the share price", "Falls"], 0, "The option is still out of the money, so the straight bond part moves little.", "conv");
-  mc(25, "Share price rises from S0 to S2, above the conversion price (see chart). The convertible bond:", ["Behaves like the stock: the price tracks the share price", "Still rises much less than the stock", "Falls because it is in the money"], 0, "In the money, the minimum value is the conversion value, so the bond follows the share.", "conv");
+  mc(25, "Share price rises from S0 to S2, above the conversion price (see chart). The convertible bond:", ["Tracks the share price closely", "Rises much less than the stock", "Falls as the stock rises"], 0, "In the money, the minimum value is the conversion value, so the bond follows the share.", "conv");
   mc(25, "A convertible bond is a straight bond plus:", ["A call option on the common stock", "A put option on the common stock", "A put option on the bond"], 0, "The conversion option is a call on the issuer's stock.");
 
   fm(25, "Formula: convertible bond, callable (issuer can call the bond) =", "straight bond + value of call option on the stock − value of call option on the bond", "The issuer's call on the bond belongs to the issuer, so it reduces the value to the holder.");
@@ -149,7 +149,7 @@ const KEYQ = [];
   fm(26, "Formula: expected future value of a bond with a chance of default =", "(principal + coupon) × (% it makes the full payment) + (principal + coupon) × recovery rate × (% default)");
   mc(26, "A decrease in the risk-neutral probability of default makes the credit spread:", ["Decrease", "Increase", "Stay the same"], 0, "A lower probability of default lowers the CVA, raises the fair value and lowers the YTM and credit spread.");
   mc(26, "Besides credit risk, the observed spread over a risk-free bond in practice also includes:", ["Liquidity and tax effects", "Only the recovery rate", "Only inflation compensation"], 0, "Observed spread: liquidity, tax and credit.");
-  mc(26, "Which statement is correct about default risk premium?", ["Actual (historical) default rates do not include the premium for timing uncertainty; risk-neutral rates do", "Actual default rates include the premium; risk-neutral rates do not", "Both include it"], 0, "Using the actual default rate in the model understates the credit risk priced by the market.");
+  mc(26, "Which statement is correct about default risk premium?", ["Actual rates exclude the premium, risk-neutral include it", "Actual rates include the premium, risk-neutral exclude it", "Both include the premium"], 0, "Using the actual default rate in the model understates the credit risk priced by the market.");
   tb(26, "Hazard rate: survival and default probabilities", ["", "Hazard rate constant (h)", "Hazard rate varies (h_{t})"], [
     ["PS_{t}", "(1 − h)^{t}", "(1 − h_{1})(1 − h_{2})...(1 − h_{t})"],
     ["PD_{t}", "PS_{t−1} × h", "PS_{t−1} × h_{t}"],
@@ -157,7 +157,7 @@ const KEYQ = [];
     ["PD_{1}", "1 × h", "1 × h_{1}"]],
     "Your notebook wrote the varying PS as 1 − (1 − h_{1})...(1 − h_{n}). That is the cumulative probability of default; PS has no leading 1 −.");
   mc(26, "Hazard rate is the same as:", ["The conditional probability of default", "The unconditional probability of default in year t", "The cumulative probability of default"], 0, "Conditional on surviving to the start of the period.");
-  mc(26, "In real life the hazard rate:", ["Changes every year, which makes more sense than a constant rate", "Is always constant", "Is always zero in year 1"], 0, "Many textbook cases use a constant hazard rate for simplicity.");
+  mc(26, "In real life the hazard rate:", ["Changes every year", "Is constant for ever", "Is zero in year 1"], 0, "Many textbook cases use a constant hazard rate for simplicity.");
   mc(26, "A bond has a constant hazard rate of 2%. The probability of default in year 2 is:", ["0.98 × 2% = 1.96%", "2%", "0.98² × 2% = 1.92%"], 0, "PD_{2} = PS_{1} × h = 0.98 × 2%.");
   fm(26, "Formula: expected return with credit rating migration over one year (bond at par, YTM = coupon) =", "coupon − Σ [ modified duration × (new spread − original spread) × probability ]", "If a YTM is given, use the YTM in place of the coupon.");
   mc(26, "In the migration table, a rating upgrade (spread narrows) adds what to the expected return?", ["A positive price change", "A negative price change", "No change"], 0, "Upgrade = positive, downgrade = negative.");
@@ -171,7 +171,7 @@ const KEYQ = [];
     ["Other classes", "Notching"],
     ["Higher loss given default", "Lower seniority"]],
     "Notching: a bond that ranks lower in the capital structure has its rating lowered by one step (or more).");
-  mc(26, "Notching adjusts the issuer rating for:", ["The priority of the claim (loss given default)", "The probability of default only", "The bond's coupon rate"], 0, "Lower seniority means higher loss given default, so the bond rating is notched down.");
+  mc(26, "Notching adjusts the issuer rating for:", ["The priority of the claim", "The probability of default", "The bond's coupon rate"], 0, "Lower seniority means higher loss given default, so the bond rating is notched down.");
   tb(26, "Structural model (balance sheet + option pricing)", ["", "Detail"], [
     ["Strengths", "Provides an economic rationale for default and explains why it happens; uses option pricing models to value risky debt"],
     ["Weaknesses", "Complex balance sheets; assumes the company assets are traded in the market; burdensome to implement; measuring the default barrier can be challenging"]]);
@@ -179,7 +179,7 @@ const KEYQ = [];
     ["Input", "Default intensity = probability of default over the next time period, estimated with regression"],
     ["Strengths", "Does not assume company assets trade; default intensity can vary as company fundamentals and the economy change"],
     ["Disadvantages", "Does not explain why default happens; default is treated as a random event (a surprise), when that is never true"]]);
-  mc(26, "In a structural model, equity is analogous to:", ["A call option on the company assets with strike = face value of debt", "A put option on the company assets", "A call option on the debt"], 0, "Assets above the debt: equity holders keep the excess. Below: equity is worth zero (default).");
+  mc(26, "In a structural model, equity is analogous to:", ["A call on the assets, strike = debt face value", "A put on the assets, strike = debt face value", "A call on the debt, strike = asset value"], 0, "Assets above the debt: equity holders keep the excess. Below: equity is worth zero (default).");
   mc(26, "Which model assumes that the company assets are traded in the market?", ["Structural model", "Reduced-form model", "Both"], 0, "A weakness of the structural model.");
   mc(26, "Which model estimates the default intensity using regression on macroeconomic and company-specific variables?", ["Reduced-form model", "Structural model", "Neither"], 0, "Reduced-form models use observable variables.");
   mc(26, "Which is a weakness of reduced-form models?", ["They do not explain why default happens", "They need the market value of company assets", "They need the default barrier"], 0, "Default is treated as a random event.");
@@ -193,12 +193,12 @@ const KEYQ = [];
   tb(27, "CDS position when the credit changes", ["Credit", "CDS position", "Credit exposure"], [["Credit improves", "Sell protection", "Long credit"], ["Credit deteriorates", "Buy protection", "Short credit"]]);
   mc(27, "You expect the credit quality of the reference entity to improve. You should:", ["Sell protection (long credit)", "Buy protection (short credit)", "Buy protection (long credit)"], 0, "The protection seller gains when the spread tightens.");
   mc(27, "Buying protection gives you what credit exposure?", ["Short credit", "Long credit", "No exposure"], 0, "You profit if the credit gets worse.");
-  mc(27, "Upward sloping CDS curve (see chart): the trade in your notes is to:", ["Sell protection at A (short maturity), buy protection at B (long maturity)", "Buy protection at A, sell protection at B", "Buy protection at both"], 0, "Per the notebook: sell the short maturity, buy the long maturity on the upward sloping curve.", "cds-up");
-  mc(27, "Flat CDS curve (see chart): the trade in your notes is to:", ["Buy protection at A (short), sell protection at B (long)", "Sell protection at A, buy protection at B", "Sell protection at both"], 0, "Per the notebook: buy the short maturity, sell the long maturity on the flat curve.", "cds-flat");
+  mc(27, "Upward sloping CDS curve (see chart): the trade in your notes is to:", ["Sell protection at A, buy protection at B", "Buy protection at A, sell protection at B", "Buy protection at both A and B"], 0, "Per the notebook: sell the short maturity, buy the long maturity on the upward sloping curve.", "cds-up");
+  mc(27, "Flat CDS curve (see chart): the trade in your notes is to:", ["Buy protection at A, sell protection at B", "Sell protection at A, buy protection at B", "Sell protection at both A and B"], 0, "Per the notebook: buy the short maturity, sell the long maturity on the flat curve.", "cds-flat");
   tb(27, "Economy improves: high yield vs investment grade", ["Economy improves", "Position"], [["High yield", "Sell (protection)"], ["Investment grade", "Buy (protection)"]]);
   mc(27, "The economy improves. Which CDS trade does your note suggest?", ["Sell protection on high yield, buy protection on investment grade", "Buy protection on high yield, sell protection on investment grade", "Buy protection on both"], 0, "High yield spreads tighten more than investment grade spreads.");
   tb(27, "Bond spread vs CDS spread", ["", "Bond", "CDS"], [["Bond spread > CDS spread", "Buy", "Buy"], ["Bond spread < CDS spread", "Sell", "Sell"]], "Buying the CDS means buying protection.");
-  mc(27, "Bond spread is greater than the CDS spread. The trade is to:", ["Buy the bond and buy the CDS (protection)", "Sell the bond and sell the CDS", "Buy the bond and sell the CDS"], 0, "The bond's yield is too high relative to the cost of protection.");
+  mc(27, "Bond spread is greater than the CDS spread. The trade is to:", ["Buy the bond and buy protection", "Sell the bond and sell protection", "Buy the bond and sell protection"], 0, "The bond's yield is too high relative to the cost of protection.");
   fm(27, "Formula: bond spread =", "yield on the bond − MRR");
   fm(27, "Formula: CDS price per 100 par =", "100 − upfront premium");
   fm(27, "Formula: upfront premium =", "(credit spread − coupon) × duration");
