@@ -24,6 +24,219 @@ const KEYQ = [];
   const tb = (r, title, head, rows, note) => KEYQ.push({ id: nid(r), reading: r, type: "table", q: title, head, rows, note: note || "" });
   const fm = (r, q, a, note) => KEYQ.push({ id: nid(r), reading: r, type: "formula", q, a, note: note || "" });
 
+  // ================= 1 Multiple Regression =================
+  fm(1, "Formula: standard error of the estimate (SEE) =", "√MSE = √[[SSE|n − k − 1]]");
+  fm(1, "Formula: R² =", "[[RSS|SST]]", "RSS = regression (explained) sum of squares; SST = total sum of squares.");
+  fm(1, "Formula: adjusted R² =", "1 − ( [[n − 1|n − k − 1]] × (1 − R²) )");
+  fm(1, "Formula: multiple R =", "√R²");
+  mc(1, "Compared with R², adjusted R² can:", ["Be negative and fall when a variable is added", "Never be negative and never fall", "Rise every time a variable is added"], 0, "Only adjusted R² can fall (and go below zero) when a variable adds little explanatory power.");
+  tb(1, "Regression problems: error type, test and fix", ["Problem", "Error type", "Test", "Fix"], [
+    ["Heteroskedasticity", "Type I", "Breusch-Pagan (BP)", "Robust (White) standard errors"],
+    ["Multicollinearity", "Type II", "VIF", "Swap, drop or add variables; increase N"],
+    ["Serial correlation", "Type I", "Breusch-Godfrey (BG)", "Robust (Newey-West) standard errors"]],
+    "Error type = the error the problem tends to cause in the t-tests.");
+  tb(1, "Regression problems: effect on standard errors, t-test and F-test", ["Problem", "Standard errors", "t-test", "F-test"], [
+    ["Heteroskedasticity", "Low", "High", "Unreliable"],
+    ["Multicollinearity", "High", "Low", "Not affected"],
+    ["Serial correlation", "Low", "High", "High"]]);
+  mc(1, "Multicollinearity makes the standard errors and the t-statistics:", ["Standard errors high, t-statistics low", "Standard errors low, t-statistics high", "Standard errors low, t-statistics low"], 0, "Inflated standard errors give low t-statistics and Type II errors.");
+  mc(1, "Which test is used to detect heteroskedasticity?", ["Breusch-Pagan", "Variance inflation factor", "Breusch-Godfrey"], 0, "VIF is for multicollinearity and Breusch-Godfrey is for serial correlation.");
+  mc(1, "The F-test is unreliable when the regression has:", ["Heteroskedasticity", "Multicollinearity", "A large R²"], 0, "Multicollinearity does not affect the F-test.");
+  tb(1, "Signals of multicollinearity", ["Statistic", "What you see"], [["R²", "Large"], ["F-statistic", "Significant"], ["t-statistics", "Low or insignificant"], ["Standard errors", "Inflated"]]);
+  tb(1, "Durbin-Watson test zones", ["DW statistic", "Conclusion"], [
+    ["Below the lower limit", "Positive serial correlation (reject)"],
+    ["Between lower limit and upper limit", "Inconclusive"],
+    ["Between upper limit and 4 − upper limit", "No serial correlation"],
+    ["Between 4 − upper limit and 4 − lower limit", "Inconclusive"],
+    ["Above 4 − lower limit", "Negative serial correlation (reject)"]],
+    "A question gives you the limits and the t-statistic; build this table with the limits.");
+  tb(1, "Model selection tests", ["Test", "Formula", "Purpose"], [
+    ["F-test (nested models)", "[[(SSE_{R} − SSE_{U}) ÷ q|SSE_{U} ÷ (n − k − 1)]]", "Do the q added independent variables significantly reduce SSE?"],
+    ["F-test (overall)", "[[RSS_{U} ÷ k|SSE_{U} ÷ (n − k − 1)]]", "Does at least one independent variable explain a significant part of the dependent variable?"],
+    ["AIC", "n × ln([[SSE|n]]) + 2(k + 1)", "Better forecast"],
+    ["BIC", "n × ln([[SSE|n]]) + ln(n)(k + 1)", "Better goodness of fit"]],
+    "AIC comes before BIC alphabetically and has the simpler formula.");
+  mc(1, "Which criterion is used to choose the model with the better forecast?", ["AIC", "BIC", "R²"], 0, "BIC is used for goodness of fit; both prefer the lower value.");
+  mc(1, "The correct ordering of the three means is:", ["Harmonic ≤ geometric ≤ arithmetic", "Arithmetic ≤ geometric ≤ harmonic", "Geometric ≤ harmonic ≤ arithmetic"], 0, "They are equal only when all observations are the same.");
+  mc(1, "If ln(1 + x) = 0.7, then x equals:", ["e^{0.7} − 1", "ln(0.7) − 1", "e^{0.7}"], 0, "Take e to the power of both sides: 1 + x = e^{0.7}.");
+
+  // ================= 2 Time-Series Analysis =================
+  mc(2, "In an AR(1) model, to decide whether the next value will rise or fall you compare:", ["The current value and the mean-reverting level", "The slope coefficient and the value 1", "The residual and the value zero"], 0, "If the current value is above the mean-reverting level b_{0} ÷ (1 − b_{1}), the next value is expected to fall.");
+  tb(2, "Seasonality: which lag to check", ["Data", "Lag"], [["Quarterly", "4th lag"], ["Monthly", "12th lag"]], "Only the last lag of each cycle needs checking.");
+  mc(2, "The seasonal lag has a p-value below the level of significance. This means:", ["Seasonality is present", "Seasonality is absent", "The series has a unit root"], 0, "Reject the null that the seasonal autocorrelation is zero.");
+  tb(2, "Covariance stationarity: three constants", ["Constant", "Over time"], [["Mean", "Constant"], ["Variance", "Constant"], ["Covariance with its own lags", "Constant"]]);
+  mc(2, "Which is NOT required for covariance stationarity?", ["A positive autocorrelation", "A constant mean", "A constant variance"], 0, "The covariance with its own lags must be constant, not positive.");
+  tb(2, "Regressing one time series on another", ["Regression 1", "Regression 2", "Residuals", "Regression result"], [
+    ["No unit root", "No unit root", "Not tested", "Valid"],
+    ["Unit root", "No unit root", "Not tested", "Invalid"],
+    ["Unit root", "Unit root", "Cointegrated", "Valid"],
+    ["Unit root", "Unit root", "Unit root", "Invalid"]],
+    "Regression 1 and 2 are the two time series tested for a unit root; the residual test only matters when both have a unit root.");
+
+  // ================= 3 Machine Learning =================
+  mc(3, "LASSO is a:", ["Penalised regression algorithm", "Clustering algorithm", "Classification algorithm"], 0, "Least absolute shrinkage and selection operator: it penalises the number of features.");
+  mc(3, "A support vector machine (SVM) is a:", ["Linear classification algorithm for two classes", "Clustering algorithm for many groups", "Penalised regression algorithm"], 0, "It separates the data into one of two classifiers.");
+  tb(3, "Clustering (unsupervised learning)", ["Algorithm", "How it works"], [
+    ["K-means", "Hyperparameter k (number of clusters) is set before running"],
+    ["Hierarchical, bottom-up (agglomerative)", "Start with single observations; similar ones are merged as time passes"],
+    ["Hierarchical, top-down (divisive)", "Start with one big group; it is split as time passes"]]);
+  mc(3, "K-means clustering needs which input before it runs?", ["The number of clusters", "A labelled target variable", "The number of hidden layers"], 0, "That number is a hyperparameter.");
+  mc(3, "A deep learning network is a neural network with:", ["Many hidden layers, often over 20", "Exactly one hidden layer", "Two hidden layers, never more"], 0, "Your note: at least two layers but mostly more than 20.");
+  mc(3, "Overfitting is mainly a problem for:", ["Supervised learning with many features", "Unsupervised learning with many clusters", "Unsupervised learning with few features"], 0, "It is not a concern for unsupervised learning.");
+  mc(3, "A learning curve plots:", ["Validation and test accuracy vs training size", "Training error vs number of features", "Cluster size vs elapsed time"], 0, "Used to see whether more training data would improve the model.");
+  mc(3, "CART is suited to a relationship between independent and dependent variables that is:", ["Non-linear", "Linear", "Absent"], 0, "It splits the data in two at each node, for example into buy and sell.");
+
+  // ================= 7 Intercorporate Investments =================
+  fm(7, "Formula: equity method goodwill =", "purchase price − % ownership × (FV of identifiable net assets)", "Same as partial goodwill. Long form: purchase price − % × BV of net assets − % × (FV − BV of total assets). Use FV, not BV.");
+  fm(7, "Formula: equity method investment account at year end =", "purchase price + % × net income − % × dividends − [[% × (FV − BV) of identifiable assets|N]]", "The last term is the amortisation of the excess purchase price over N years.");
+  fm(7, "Formula: equity method contribution to net earnings =", "% × net income − [[% × (FV − BV) of identifiable assets|N]]");
+  mc(7, "How do the investment account and the contribution to net earnings differ under the equity method?", ["The investment account includes the purchase price and dividends; net earnings does not", "Net earnings includes the purchase price and dividends; the investment account does not", "Both include the purchase price but not dividends"], 0, "Net earnings only picks up the share of net income less the amortisation.");
+  mc(7, "Fair value of identifiable assets is not given. You can estimate it as:", ["Book value plus excess fair value", "Book value less depreciation", "Purchase price times % owned"], 0, "Then use it for equity method or acquisition method goodwill.");
+  mc(7, "Under the equity method, unrealised profit on upstream and downstream sales is:", ["Initially deferred", "Recognised immediately", "Eliminated permanently"], 0, "It is recognised when the goods are sold to a third party.");
+  fm(7, "Formula: impairment loss under IFRS =", "carrying amount − recoverable amount", "Your note wrote RA − CA, which would be negative for an impairment. A loss arises when the carrying amount is above the recoverable amount.");
+  fm(7, "Formula: non-controlling interest under the partial goodwill method (IFRS) =", "% not owned × FV of identifiable net assets");
+  fm(7, "Formula: full goodwill =", "[[purchase price|% ownership]] − FV of identifiable assets", "Also: purchase price + FV of NCI − FV of identifiable assets.");
+  fm(7, "Formula: partial goodwill =", "purchase price − % ownership × FV of identifiable assets", "Same as the equity method goodwill. Use FV, not BV.");
+  mc(7, "A question says the whole excess goes to identifiable assets. Then:", ["No goodwill; both computed the same way", "Goodwill equals the whole excess", "Only full goodwill is zero"], 0, "Full and partial goodwill are both zero, so everything else is computed with them.");
+  tb(7, "IFRS 9 measurement", ["Category", "Carried at"], [["FVPL and FVOCI", "Market (fair) value"], ["Amortised cost", "Historical cost"]]);
+  tb(7, "Special purpose entity (SPE)", ["", "Treatment"], [["IFRS", "Always consolidated; cannot be classified as a qualifying SPE"], ["US GAAP", "A qualifying SPE needs no consolidation"]]);
+  mc(7, "Under which standard does a qualifying SPE not need to be consolidated?", ["US GAAP", "IFRS", "Both"], 0, "IFRS has no qualifying SPE.");
+  tb(7, "Cash of a consolidated SPE", ["Source of the SPE's money", "Consolidated cash"], [
+    ["Money from a bank outside the company", "Increases"],
+    ["Money from the parent", "Eliminated: no change"],
+    ["No money from outside", "Unchanged"]]);
+  mc(7, "After an SPE is consolidated, revenue from transactions between the SPE and the parent:", ["Is eliminated and adds nothing to revenue", "Adds to consolidated revenue", "Moves to other comprehensive income"], 0, "The parent absorbing the SPE's losses is what forces consolidation.");
+  tb(7, "Joint venture: equity method vs proportionate consolidation", ["", "Equity method", "Proportionate"], [
+    ["Revenue", "Unchanged", "Increases"],
+    ["Net income", "Increases", "Increases by the same amount"],
+    ["Assets", "Unchanged", "Increases"],
+    ["Equity", "Increases", "Increases by the same amount"]]);
+  tb(7, "Comparing the three methods", ["Item", "Ranking"], [
+    ["Assets, liabilities, expenses, revenue", "Acquisition > proportionate > equity"],
+    ["Net income", "Same under all three"],
+    ["Equity", "Same under proportionate and equity method"]],
+    "Net income = parent net income + % ownership × subsidiary net income; do not just use the parent figure.");
+  mc(7, "Under the equity method versus the acquisition method, net profit margin, ROE and ROA are:", ["Higher", "Lower", "The same"], 0, "Your note: revenue, assets and equity are lower under the equity method.");
+  mc(7, "ROE, ROA and D/E are higher under:", ["Partial goodwill than full goodwill", "Full goodwill than partial goodwill", "Neither: they are the same"], 0, "Partial goodwill gives smaller assets and equity.");
+  mc(7, "A holds a 10% stake classified as FVPL, bought for 90m. At year end the stake is worth 97m and a dividend of 4m was received. Pre-tax income from the stake:", ["11m", "7m", "12m"], 0, "Holding gain 7m + dividend (40m × 10%) 4m.");
+  mc(7, "A buys 75% of B by issuing shares. A's debt-to-assets ratio:", ["Falls", "Rises", "Stays the same"], 0, "The acquisition only adds assets and equity; debt is unchanged.");
+  tb(7, "Reclassification of an investment", ["Rule", "Detail"], [["When allowed", "If there are significant changes in operations"], ["Prior statements", "No need to change"]]);
+
+  // ================= 8 Employee Compensation =================
+  mc(8, "Employer contributions to a defined benefit plan are shown in the cash flow statement as:", ["Cash outflows in operating activities", "Cash outflows in financing activities", "Cash outflows in investing activities"], 0, "They are an operating cash outflow.");
+  tb(8, "Higher volatility (σ) and stock compensation", ["Instrument", "Fair value", "Operating expense", "Net income"], [["RSU", "Same", "Same", "Same"], ["Stock option", "Increase", "Increase", "Decrease"]]);
+  mc(8, "Volatility of the share price increases. Which grant is NOT affected?", ["Restricted stock units", "Stock options", "Both"], 0, "RSU value depends on the share price, not volatility.");
+
+  // ================= 9 Multinational Operations =================
+  fm(9, "Formula: foreign transaction gain =", "$ amount × (end-of-year currency − currency used in the transaction)");
+  mc(9, "In translating a balance sheet, the plug number is:", ["CTA or residual income, depending on the method", "Retained earnings, under both methods", "Goodwill, under both methods"], 0, "After translating at mixed rates, the balance sheet does not balance.");
+  tb(9, "Translating a balance sheet: three steps", ["Step", "What to do"], [
+    ["1", "Translate the old balance sheet with the correct method (current rate or temporal)"],
+    ["2", "Items now use different rates, so assets ≠ liabilities + equity"],
+    ["3", "Fill the gap with CTA (current rate) or residual income (temporal)"]]);
+  mc(9, "In your balance sheet exercise, the only monetary assets are:", ["Cash and accounts receivable", "Inventory and PPE", "Goodwill and inventory"], 0, "Monetary items are remeasured at the current rate under the temporal method.");
+  tb(9, "Functional currency, method and the plug", ["Functional currency", "Method", "Foreign currency ↑", "Foreign currency ↓"], [
+    ["Presentation currency", "Temporal", "Residual income ↓", "Residual income ↑"],
+    ["Local currency", "Current rate", "CTA ↑", "CTA ↓"]],
+    "The arrows hold for a net monetary liability exposure under temporal and a net asset exposure under the current rate method.");
+  tb(9, "Which translation method or inventory method gives the higher gross margin?", ["Situation", "Higher margin"], [
+    ["Foreign (local) currency appreciating", "Temporal"],
+    ["Foreign (local) currency depreciating", "Current rate"],
+    ["Inflation rising", "FIFO"],
+    ["Inflation falling", "LIFO"]]);
+  tb(9, "Finding the functional currency (in ranking order)", ["Rank", "Check"], [["1", "Currency of revenue"], ["2", "Currency of operating costs"], ["3", "Currency of financing costs"]]);
+  mc(9, "A company earns all revenue in GBP, but all costs are paid in EUR. Its functional currency is:", ["GBP", "EUR", "The parent's currency"], 0, "Revenue ranks above operating costs.");
+  tb(9, "Reducing balance sheet exposure", ["Step", "What to do"], [
+    ["1", "Find the net exposure with the translation method (only items translated at the current rate count)"],
+    ["2", "Choose the option that moves that number towards zero"]],
+    "Net asset exposure: reduce assets. Net liability exposure: reduce liabilities.");
+  mc(9, "A subsidiary has a net asset exposure under the current rate method. To reduce the exposure the company should:", ["Reduce assets", "Reduce liabilities", "Increase assets"], 0, "Move the net exposure towards zero.");
+
+  // ================= 10 Analysis of Financial Institutions =================
+  fm(10, "Formula: underwriting loss ratio =", "[[claims paid + change in loss reserves|net premiums earned]]", "Measures the relative efficiency of the company's underwriting standards.");
+  fm(10, "Formula: expense ratio =", "[[underwriting expenses including commissions|net premiums written]]", "Measures the efficiency of the company's operations.");
+  tb(10, "Bank: stable funding is assessed by", ["Check", "More stable"], [["Length of deposits", "Long-term deposits (vs short)"], ["Who deposits", "Consumers (vs interbank)"]]);
+  mc(10, "Which source of bank deposits is the more stable funding?", ["Consumer deposits", "Interbank deposits", "Both are equally stable"], 0, "Consumers are less likely to withdraw quickly.");
+
+  // ================= 11 Evaluating Quality of Financial Reports =================
+  tb(11, "Warning signs of profitability", ["Warning sign"], [
+    ["Revenue growth higher than peers"],
+    ["Receivables growth higher than revenue growth"],
+    ["Higher rate of customer returns"],
+    ["High proportion of revenue in the final quarter"]]);
+  mc(11, "Which is a warning sign when comparing net income with CFO?", ["Net income above CFO", "Net income below CFO", "Net income equal to CFO"], 0, "Net income below CFO is fine.");
+  mc(11, "A higher Altman Z-score means:", ["Lower bankruptcy risk", "Higher bankruptcy risk", "Higher earnings manipulation"], 0, "Above the high critical value is safe; below the low value signals bankruptcy.");
+  mc(11, "A Beneish M-score above −1.78 suggests:", ["Likely earnings manipulation", "No manipulation", "Bankruptcy risk"], 0, "A higher M-score is bad.");
+  mc(11, "Growth through acquisition most directly increases:", ["Goodwill", "Inventory turnover", "Receivables turnover"], 0, "Look at goodwill when a company grows by acquisitions.");
+  mc(11, "DuPont analysis is used for:", ["Commenting on ROE", "Detecting earnings manipulation", "Estimating bankruptcy risk"], 0, "Cash flow ratio analysis is the tool for earnings manipulation.");
+  mc(11, "High accruals are:", ["A bad sign for earnings quality", "A good sign for earnings quality", "Irrelevant to earnings quality"], 0, "Accruals can be split into discretionary and non-discretionary.");
+  tb(11, "Accruals", ["Type", "Meaning"], [
+    ["Non-discretionary", "Comes from operating the business; explained by the regression"],
+    ["Discretionary", "Comes from management choices and can manipulate earnings; the residual (noise)"]]);
+  mc(11, "An increase in operating margin is:", ["An accounting warning sign", "A sign of better quality", "Neutral"], 0, "Check why the margin improved.");
+  mc(11, "Bill-and-hold and channel stuffing both:", ["Increase accounts receivable and decrease receivables turnover", "Decrease accounts receivable and increase receivables turnover", "Increase inventory turnover"], 0, "Revenue is booked early, so receivables grow.");
+  mc(11, "A company reports interest paid in CFF under IFRS. Restating it to CFO for comparison:", ["Raises CFF and lowers CFO", "Lowers CFF and raises CFO", "Does not change CFO"], 0, "The cost moves into operating cash flow.");
+
+  // ================= 12 Integration of FSA Techniques =================
+  fm(12, "Formula: ratio of operating cash flow before interest and taxes to operating income =", "[[operating cash flow before interest and taxes|operating income]]", "A high ratio means earnings are backed by cash flow.");
+  tb(12, "Where interest and dividends appear in the cash flow statement", ["Item", "IFRS", "US GAAP"], [
+    ["Interest paid", "CFO or CFF", "CFO"],
+    ["Interest received", "CFO or CFI", "CFO"],
+    ["Dividends received", "CFO or CFI", "CFO"]],
+    "If IFRS interest paid is already in CFF, you do not need to add it back for the ratio.");
+  fm(12, "Formula: segment % of total capital expenditures ÷ segment % of total assets: above 1 means", "The segment is growing; below 1 means it is shrinking.");
+  fm(12, "Formula: three-step DuPont ROE =", "[[net income|revenue]] × [[revenue|assets]] × [[assets|equity]]");
+  fm(12, "Formula: five-step DuPont ROE =", "[[net income|EBT]] × [[EBT|EBIT]] × [[EBIT|revenue]] × [[revenue|assets]] × [[assets|equity]]");
+  mc(12, "When comparing company A with the market average, A's PPE depreciable lives are 20% longer. To adjust to the market you:", ["Raise depreciation; net income, equity fall; D/E rises", "Lower depreciation; net income, equity rise; D/E falls", "Keep depreciation; adjust the tax rate instead"], 0, "Shorter lives mean more depreciation each year.");
+
+  // ================= 28 Pricing and Valuation of Forward Commitments =================
+  fm(28, "Formula: value of a long forward at time t =", "PV (F_{t} − F_{0}) = [[FP_{t} − FP_{0}|(1 + r)^{T − t}]]", "FP_{t} = S_{t} × (1 + r)^{T − t} (less the FV of dividends). F_{0} does not change.");
+  fm(28, "Formula: value of a short forward at time t =", "PV (F_{0} − F_{t}) = −(value of the long)");
+  mc(28, "A 9-month forward was agreed at 123. Six months later the share price is 131 (no dividends, r = 1.6%, annual compounding). The value of the long forward is:", ["$8.49", "$8.52", "$8.00"], 0, "FP_{t} = 131 × 1.016^{0.25} = 131.52. Value = (131.52 − 123) ÷ 1.016^{0.25}.");
+  mc(28, "When valuing an equity forward at time t, which price do you carry forward to the expiry date?", ["The spot price at time t", "The spot price when the contract started", "The original forward price"], 0, "Use S_{t}, then discount only the difference with the original forward price.");
+  fm(28, "Formula: forward price with remaining dividends =", "S × (1 + r)^{T} − (FV of dividends to T)", "If the problem says the dividends are already accumulated to expiry, subtract them without discounting.");
+  mc(28, "The problem says dividends are accumulated to the expiry date. You:", ["Subtract them as given, undiscounted", "Discount them back to today first", "Ignore them completely"], 0, "An accumulated dividend is already a future value.");
+  fm(28, "Formula: present value of the forward price with continuous compounding =", "FP × e^{−r(T − t)}");
+  fm(28, "Formula: forward price with continuous compounding and dividend yield δ =", "S_{t} × e^{(r − δ)(T − t)}", "Use T − t in the exponent, not T.");
+  mc(28, "With continuous compounding, the exponent in the forward formula uses:", ["T − t, the time remaining", "T, the full life", "t, the time elapsed"], 0, "T − t is the remaining life of the forward.");
+  tb(28, "Forward priced away from its no-arbitrage value", ["Market forward price vs fair price", "Forward is", "Arbitrage"], [
+    ["Above the fair price", "Overvalued", "Cash-and-carry: sell forward, borrow, buy the asset"],
+    ["Below the fair price", "Undervalued", "Reverse cash-and-carry: buy forward, short the asset, lend"]],
+    "Your notes use MP and FP for these two prices. Check which one a question calls market and which fair.");
+  mc(28, "A forward trades below its no-arbitrage price. The arbitrage is to:", ["Buy forward, short the asset, lend", "Sell forward, borrow, buy the asset", "Buy forward, borrow, buy the asset"], 0, "Reverse cash-and-carry.");
+  mc(28, "When valuing a bond futures contract, accrued interest for the quoted futures price is measured at:", ["The expiration date", "Today", "The last coupon date"], 0, "A last coupon 30 days ago with 90 days to expiry gives 120 days of accrual.");
+  mc(28, "A bond paid its last coupon 30 days ago and the futures contract expires in 90 days. Days of accrued interest at expiry:", ["120", "90", "30"], 0, "30 + 90 = 120.");
+  fm(28, "Formula: value of a pay-fixed swap (new vs old fixed rate) =", "Σ Z × (SFR_{new} − SFR_{old}) × [[n|360]] × NP", "Z = discount factors for the remaining payments only. n = days in the period; 360 for annual periods.");
+  mc(28, "To get SFR_{new} for the swap valuation, which discount factors do you use?", ["Only those of the remaining payments", "All discount factors in the table", "Only the first one"], 0, "If the table has more factors than payments left, ignore the extra ones.");
+  fm(28, "Formula: FRA settlement value at T (the FRA is at h, m days loan) =", "(MRR_{h} − FRA_{0}) × [[m|360]] × NP", "Settlement is at T; the value at h is this amount discounted.");
+  fm(28, "Formula: FRA settlement value at h =", "[[settlement value at T|1 + MRR_{h} × [[m|360]]]]");
+  fm(28, "Formula: FRA value for the party that pays fixed (at date g) =", "[[(FRA_{g} − FRA_{0}) × t_{m}|1 + D_{T − g} × t_{T − g}]]", "The value for the party that pays floating is the negative of this.");
+  tb(28, "Equity swap: two kinds of question", ["Question", "Calculation"], [
+    ["Total value", "Receive equity, pay fixed: NP × [[Index_{1}|Index_{0}]] − (Σ Z × coupon + Z_{last} × NP)"],
+    ["Total value", "Receive fixed, pay equity: (Σ Z × coupon + Z_{last} × NP) − NP × [[Index_{1}|Index_{0}]]"],
+    ["Cash flow of one quarter", "NP × fixed % − NP × equity return % (divide annual fixed % by 4)"]],
+    "If the coupon % is not given, use the discount factors to find the swap fixed rate first.");
+  tb(28, "Currency swap: keep this order", ["Step", "What to do"], [
+    ["1", "Find the notional principal in each currency"],
+    ["2", "Value the foreign currency leg: coupons plus final NP, each discounted with its discount factor, and add up"],
+    ["3", "Value the own currency leg: next floating payment plus NP, discounted at MRR for the days remaining"],
+    ["4", "Convert one leg at the current exchange rate and take the difference"]],
+    "Coupon per period = rate ÷ 2 for semi-annual payments.");
+  tb(28, "Dividend types", ["Type", "Meaning"], [
+    ["Liquidating dividend", "The company sells assets and pays the cash out"],
+    ["Scrip dividend", "Stock dividend"],
+    ["Special dividend", "Cash dividend in excess of the regular dividend"]]);
+
+  // ================= 29 Valuation of Contingent Claims =================
+  tb(29, "Option Greek signs", ["", "Delta", "Gamma", "Vega", "Theta", "Rho"], [
+    ["Long call", "+", "+", "+", "−", "+"],
+    ["Short call", "−", "−", "−", "+", "−"],
+    ["Long put", "−", "+", "+", "−", "−"],
+    ["Short put", "+", "−", "−", "+", "+"]]);
+  mc(29, "Which positions have negative gamma?", ["Short call and short put", "Long call and short put", "Long put and short call"], 0, "Long options have positive gamma; short options negative.");
+  mc(29, "You hold a long stock position and want to hedge it with an option. You:", ["Buy a put", "Buy a call", "Sell a put"], 0, "Then pick the right Greek for the question.");
+  mc(29, "Interest rates are expected to rise. The profitable position is:", ["A payer swap or a payer swaption", "A receiver swap or a receiver swaption", "A short payer swaption"], 0, "The payer pays the fixed rate and receives floating.");
+
   // ================= 23 Term Structure and Interest Rate Dynamics =================
   fm(23, "Formula: expanded forward rate formula, (1 + S_n)^n =", "(1 + S_1)(1 + f_{1,1})(1 + f_{2,1})(1 + f_{3,1}) ... (1 + f_{n−1,1})");
   fm(23, "Formula: swap spread =", "swap rate − government (on-the-run) bond yield of the same maturity", "The first-page note wrote floating minus fixed; the textbook definition is swap rate minus government yield.");
