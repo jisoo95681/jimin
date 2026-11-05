@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 154 vignettes · 222 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 155 vignettes · 223 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -31,7 +31,7 @@ Totals: app 68 vignettes · bank 154 vignettes · 222 in all. Plus 62 standalone
 | 23 | Term Structure and Interest Rate Dynamics | 0 | 11 | 11 |
 | 24 | Arbitrage-Free Valuation Framework | 1 | 11 | 12 |
 | 25 | Bonds with Embedded Options | 1 | 3 | 4 |
-| 26 | Credit Analysis Models | 1 | 4 | 5 |
+| 26 | Credit Analysis Models | 1 | 5 | 6 |
 | 27 | Credit Default Swaps | 0 | 7 | 7 |
 | 28 | Pricing and Valuation of Forward Commitments | 4 | 18 | 22 |
 | 29 | Valuation of Contingent Claims | 5 | 2 | 7 |
@@ -76,7 +76,7 @@ Totals: app 68 vignettes · bank 154 vignettes · 222 in all. Plus 62 standalone
 **23 Term Structure and Interest Rate Dynamics**: s2a-akron (bank, 6Q); ts-fwd-4-5-6 (bank, 4Q); ts-madison (bank, 4Q); ts-brown (bank, 4Q); ts-scai (bank, 4Q); ts-gfc (bank, 4Q); ts-halstead (bank, 4Q); s2a-tyo (bank, 11Q); m1-9 (bank, 4Q); nguyen (bank, 7Q); s2a-mathews (bank, 5Q)
 **24 Arbitrage-Free Valuation Framework**: sam (app, 4Q); pc-7 (bank, 4Q); s2a-akron (bank, 6Q); af-black (bank, 6Q); af-alvarez (bank, 8Q); af-jones (bank, 3Q); af-fujioka (bank, 6Q); af-zhang (bank, 4Q); af-wenger (bank, 6Q); af-annisquam (bank, 6Q); s2a-tyo (bank, 11Q); s2a-mathews (bank, 5Q)
 **25 Bonds with Embedded Options**: prostar (app, 10Q); eo-bianchi (bank, 9Q); eo-smith-carter (bank, 8Q); m2-1 (bank, 4Q)
-**26 Credit Analysis Models**: liecken (app, 8Q); ca-lebedeva (bank, 7Q); m1-1 (bank, 4Q); cds-5 (bank, 6Q); s1a-suess (bank, 4Q)
+**26 Credit Analysis Models**: liecken (app, 8Q); ca-cromwell (bank, 6Q); ca-lebedeva (bank, 7Q); m1-1 (bank, 4Q); cds-5 (bank, 6Q); s1a-suess (bank, 4Q)
 **27 Credit Default Swaps**: m1-1 (bank, 4Q); cds-1 (bank, 6Q); cds-2 (bank, 8Q); cds-3 (bank, 4Q); cds-4 (bank, 4Q); cds-5 (bank, 6Q); cds-6 (bank, 6Q)
 **28 Pricing and Valuation of Forward Commitments**: crestpoint (app, 6Q); meridian (app, 5Q); fabc (app, 4Q); troubadour (app, 5Q); pD-1 (bank, 5Q); pD-2 (bank, 5Q); pD-3 (bank, 9Q); pD-4 (bank, 4Q); pD-5 (bank, 4Q); pD-6 (bank, 4Q); pD-7 (bank, 2Q); d28-doyle (bank, 6Q); d28-troubadour (bank, 5Q); d28-johnson (bank, 9Q); d28-torres (bank, 4Q); d28-pak (bank, 4Q); m2-7 (bank, 4Q); s2a-talbot (bank, 4Q); s1b-whitney (bank, 6Q); d28-mafadi (bank, 4Q); d28-stoneridge (bank, 4Q); d28-megaarb (bank, 4Q)
 **29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); hamilton-nevis (bank, 4Q); m1-5 (bank, 4Q)

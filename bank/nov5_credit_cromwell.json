@@ -1,0 +1,79 @@
+[
+ {
+  "id": "ca-cromwell",
+  "source": "Module 4 Credit Analysis Models quiz (pasted Nov 5)",
+  "readings": [
+   26
+  ],
+  "title": "Credit analysis · Cromwell & Thames: CVA steps, credit scores/ratings, migration, structural vs reduced-form",
+  "body": "Henry Cromwell is the director of quantitative research at Blackfriars Asset Advisers, a fixed-income firm located in London. Rebecca Thames recently joined Cromwell’s analyst team supporting credit analysis and credit risk modeling. After a brief orientation on the firm and its investment process, Cromwell instructs Thames to develop a model that derives the credit valuation adjustment (CVA). Cromwell makes the following comments regarding credit modeling.\n\nComment 1: The factors to consider in modeling credit risk are the expected exposure to default loss, the risk-neutral probability of default, and the loss given default.\nComment 2: The use of an actual default rate in the model may overstate the observed value for a corporate bond because it includes a default risk premium associated with uncertainty over the timing of possible default loss.\nComment 3: The observed credit spread may also be higher than required for credit risk to compensate for a liquidity premium and tax considerations.\n\nThames reminds Cromwell that her model assumes zero interest rate volatility and a flat government yield curve. Cromwell responds that Thames should relax these unrealistic assumptions. Thames outlines the steps to take in valuing risky bonds under this scenario in Exhibit 1.\n\nExhibit 1 Steps in Valuing Risky Bonds, Arbitrage-Free Framework\nStep 1: • Build the binomial interest rate tree under the assumption of no arbitrage. • Apply an assumption of interest rate volatility. • Using the spot curve, derive implied zero-coupon rates, discount factors, and forward rates.\nStep 2: • Use the risk-neutral probability of default as determined by a credit model. • Assign a recovery rate based on the company’s credit rating. • Calculate the present value of the product of the loss given default and the probability of default.\nStep 3: • Determine the value for the corporate bond assuming no default (VND). • Calculate the CVA. • Calculate the fair value of the bond as the VND minus the CVA.\n\nCromwell works with another analyst, George Hastings, to discuss credit scoring and credit rating models. Hastings starts the conversation by saying, “Credit scoring models are primarily applied to consumers or small business borrowers. In some cases, only negative information, such as delinquencies or defaults, are used, while other models use a mix of factors, such as payment history and recent credit searches.” The focus of credit scores is the probability of default. Hastings continues, “Credit ratings, on the other hand, are used in the corporate and sovereign bond market and also for asset-backed securities. Ratings are focused on probability of default. Credit rating agencies, such as Standard & Poor’s, consider the loss given default by means of notching, which adjusts the issuer rating to reflect the priority of claims in the capital structure.”\n\nCromwell explains that the migration of a company’s ratings can have an impact on the total return of a bond holding. As an example, he selects a 10-year maturity, 5% coupon bond currently trading at par and rated A+ by Standard & Poor’s. He asks Thames to calculate the expected total return over a one-year horizon assuming the bond is downgraded by two notches and to determine why the year-end duration for the bond is 6.9. The average G-spread for corporate bonds across the credit spectrum is shown in Exhibit 2.\n\nExhibit 2 Bond Market G-Spread by Credit Rating\nS&P Rating | G-Spread (%)\nAAA 0.30 | AA+ 0.45 | AA 0.60 | AA– 0.70 | A+ 0.85 | A 1.00 | A– 1.10 | BBB+ 1.30 | BBB 1.45 | BBB– 1.60\n\nCromwell and Thames get into a discussion on structural and reduced-form models of credit risk. Cromwell is a proponent of these models and tells Thames, “Structural models are dependent on the structure of the company’s balance sheet. Equity is analogous to a purchased call option on the assets of the company whereby the strike price equals the face value of the debt. Strengths of these models are that they aim to explain why default occurs and are dependent on readily available public information, such as the market value of the company’s assets. Weaknesses are that the models can be burdensome to implement and measuring the default barrier can be challenging.”\n\nThames responds with her view of credit models for corporate credit risk, saying “Reduced-form models have less restrictive assumptions than structural models. The default intensity is estimated using regression analysis on company-specific and macroeconomic variables. Strengths of these models are that they directly reflect the business cycle in the credit risk measure and its inputs are observable variables. Weaknesses of the model are that they do not explain the reason for default and they assume that default occurs at a defined point in time.”",
+  "questions": [
+   {
+    "n": 31,
+    "q": "Cromwell is least likely correct with regard to which point regarding credit modeling?",
+    "options": [
+     "Comment 1",
+     "Comment 2",
+     "Comment 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Comment 2 is wrong: an actual default rate does NOT include the default risk premium for timing uncertainty, so using it overstates the bond’s value (the risk-neutral PD includes the premium). Comments 1 and 3 are correct."
+   },
+   {
+    "n": 32,
+    "q": "Which step in Exhibit 1 regarding valuing risky bonds has Thames most likely outlined correctly?",
+    "options": [
+     "Step 1",
+     "Step 2",
+     "Step 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. The third point in Step 1 is wrong: the par curve (each bond priced at par), not the spot curve, is used to derive implied zero-coupon rates. In the second point of Step 2 the recovery rate is not based on the company’s credit rating; it should conform to the seniority of the debt issue and the nature of the issuer’s assets. Step 3 is correct."
+   },
+   {
+    "n": 33,
+    "q": "Are Hastings’s comments regarding credit scores and credit ratings most likely correct?",
+    "options": [
+     "Yes.",
+     "No, he is incorrect with regard to credit scores.",
+     "No, he is incorrect with regard to credit ratings."
+    ],
+    "answer": "A",
+    "why": "A is correct. Both comments on credit scores and credit ratings are correct."
+   },
+   {
+    "n": 34,
+    "q": "Assuming no change in market conditions and a flat yield curve and using Exhibit 2, the expected return on Cromwell’s sample bond over a one-year horizon is closest to:",
+    "options": [
+     "–1.73%.",
+     "3.28%.",
+     "6.73%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Downgrade two notches from A+ to A–: G-spread widens from 0.85% to 1.10%. Expected return = [−6.9 × (1.10% − 0.85%)] + 5.00% = 3.275%. A omits the coupon (3.275% − 5.00%); C uses +6.9 instead of −6.9."
+   },
+   {
+    "n": 35,
+    "q": "Cromwell is least likely correct with regard to which aspect of structural models?",
+    "options": [
+     "The strengths",
+     "The description",
+     "The weaknesses"
+    ],
+    "answer": "A",
+    "why": "A is correct. The strengths are wrong: the necessary data are not always readily available (e.g., undisclosed debt), and structural models assume company assets trade in markets with observable values, which is unrealistic. The description and weaknesses are correct."
+   },
+   {
+    "n": 36,
+    "q": "Thames is least likely correct with regard to which aspect of reduced-form models?",
+    "options": [
+     "The strengths",
+     "The description",
+     "The weaknesses"
+    ],
+    "answer": "C",
+    "why": "C is correct. The weaknesses are wrong: reduced-form models assume default comes as a ‘surprise’ and can occur at any time (not at a defined point in time). She is correct that they do not explain the reason for default."
+   }
+  ]
+ }
+]
