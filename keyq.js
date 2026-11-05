@@ -148,4 +148,14 @@ const KEYQ = [];
   fm(27, "Formula: CDS price per 100 par =", "100 − upfront premium");
   fm(27, "Formula: upfront premium =", "(credit spread − coupon) × duration");
   mc(27, "If the credit spread is above the CDS coupon, the CDS price per 100 par is:", ["Below 100", "Above 100", "Exactly 100"], 0, "The upfront premium is positive and is subtracted from 100.");
+  tb(27, "Upfront premium: who pays and who receives", ["Trade", "Side I take", "Spread > coupon", "Spread < coupon"], [
+    ["Open new: buy protection", "Buyer", "Pay", "Receive"],
+    ["Close an existing seller position (buy protection to close)", "Buyer", "Pay", "Receive"],
+    ["Open new: sell protection", "Seller", "Receive", "Pay"],
+    ["Close an existing buyer position (sell protection to close)", "Seller", "Receive", "Pay"]],
+    "Closing puts you on the opposite side of the position you hold. Spread > coupon: the buyer pays, the seller receives.");
+  tb(27, "Gain or loss on an existing CDS position", ["My position", "Spread narrows (credit improves)", "Spread widens (credit worsens)"], [["Protection seller", "Gain", "Loss"], ["Protection buyer", "Loss", "Gain"]],
+    "Gain/loss compares the current spread with the ORIGINAL spread. Paying or receiving the upfront premium compares the current spread with the COUPON.");
+  mc(27, "You hold a protection seller position (coupon 5%, original spread 650 bps) and the spread is now 600 bps. If you close it today, you:", ["Pay an upfront premium and realize a gain", "Receive an upfront premium and realize a gain", "Pay an upfront premium and realize a loss"], 0, "Closing means buying protection; spread 600 > coupon 500, so you pay. The spread narrowed (650 to 600), so the seller gains.");
+  mc(27, "A protection buyer enters a new CDS when the current spread (200 bps) is below the coupon (500 bps). The buyer:", ["Receives an upfront premium", "Pays an upfront premium", "Pays nothing"], 0, "Spread below coupon: the buyer receives and the seller pays.");
 })();
