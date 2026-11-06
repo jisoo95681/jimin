@@ -241,11 +241,15 @@ const KEYQ = [];
   fm(28, "Formula: present value of the forward price with continuous compounding =", "FP × e^{−r(T − t)}");
   fm(28, "Formula: forward price with continuous compounding and dividend yield δ =", "S_{t} × e^{(r − δ)(T − t)}", "Use T − t in the exponent, not T.");
   mc(28, "With continuous compounding, the exponent in the forward formula uses:", ["T − t, the time remaining", "T, the full life", "t, the time elapsed"], 0, "T − t is the remaining life of the forward.");
-  tb(28, "Forward priced away from its no-arbitrage value", ["Market forward price vs fair price", "Forward is", "Arbitrage"], [
-    ["Above the fair price", "Overvalued", "Cash-and-carry: sell forward, borrow, buy the asset"],
-    ["Below the fair price", "Undervalued", "Reverse cash-and-carry: buy forward, short the asset, lend"]],
-    "Your notes use MP and FP for these two prices. Check which one a question calls market and which fair.");
-  mc(28, "A forward trades below its no-arbitrage price. The arbitrage is to:", ["Buy forward, short the asset, lend", "Sell forward, borrow, buy the asset", "Buy forward, borrow, buy the asset"], 0, "Reverse cash-and-carry.");
+  tb(28, "Forward or futures mispricing: Q = quoted (market) price, F = fair (model) price", ["Q compared with F", "The forward is", "Action: first letter = what you do with the forward"], [
+    ["Q above F", "Expensive", "SBB, cash-and-carry: Sell forward, Borrow, Buy the asset"],
+    ["Q below F", "Cheap", "BSL, reverse cash-and-carry: Buy forward, Short the asset, Lend"]],
+    "Name the two prices first: Q is the price quoted in the market, F is the price from the carry model. Whatever the question calls them (MP, FP, market, fair), decide which is Q and which is F.");
+  mc(28, "The quoted forward price is below the fair price from the carry model. The forward is cheap, so you:", ["Buy the forward, short the asset, lend", "Sell the forward, borrow, buy the asset", "Buy the forward, borrow, buy the asset"], 0, "BSL: Buy forward, Short the asset, Lend (reverse cash-and-carry).");
+  mc(28, "The quoted forward price is above the fair price from the carry model. You:", ["Sell the forward, borrow, buy the asset", "Buy the forward, short the asset, lend", "Sell the forward, short the asset, lend"], 0, "SBB: Sell forward, Borrow, Buy the asset (cash-and-carry).");
+  mc(28, "In the abbreviations SBB and BSL, the first letter tells you:", ["What you do with the forward", "What you do with the asset", "Whether you borrow or lend"], 0, "S = sell the (expensive) forward; B = buy the (cheap) forward.");
+  mc(28, "Cash-and-carry is the trade you make when the quoted forward price is:", ["Higher than the fair price", "Lower than the fair price", "Equal to the fair price"], 0, "You carry the asset (buy it with borrowed money) and sell the expensive forward.");
+  mc(28, "Reverse cash-and-carry is the trade you make when the quoted forward price is:", ["Lower than the fair price", "Higher than the fair price", "Equal to the fair price"], 0, "You buy the cheap forward and short the asset.");
   mc(28, "When valuing a bond futures contract, accrued interest for the quoted futures price is measured at:", ["The expiration date", "Today", "The last coupon date"], 0, "A last coupon 30 days ago with 90 days to expiry gives 120 days of accrual.");
   mc(28, "A bond paid its last coupon 30 days ago and the futures contract expires in 90 days. Days of accrued interest at expiry:", ["120", "90", "30"], 0, "30 + 90 = 120.");
   fm(28, "Formula: value of a pay-fixed swap (new vs old fixed rate) =", "Σ Z × (SFR_{new} − SFR_{old}) × [[n|360]] × NP", "Z = discount factors for the remaining payments only. n = days in the period; 360 for annual periods.");
