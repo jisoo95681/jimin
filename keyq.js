@@ -342,14 +342,26 @@ const KEYQ = [];
   mc(5, "Combining Mundell-Fleming and portfolio balance, the exchange rate after a fiscal expansion most likely:", ["Appreciates in the short term, then depreciates in the long term", "Depreciates in the short term, then appreciates in the long term", "Appreciates in both the short and long term"], 0, "Free cash flows first attract capital; later the fiscal deficit worries investors.");
 
   // ================= 6 Economic Growth =================
-  tb(6, "Growth theories: classical vs neoclassical vs endogenous", ["", "Classical", "Neoclassical", "Endogenous"], [
-    ["Keyword", "Malthus trap", "Solow, steady state", "Romer, R&D"],
-    ["Capital returns", "Diminishing (land is fixed)", "Diminishing", "No diminishing returns (human capital, R&D)"],
-    ["Technology", "Temporary boost", "Exogenous", "Endogenous"],
-    ["Per capita income", "Returns to subsistence", "Reaches a steady state", "Grows permanently"],
-    ["Raising the saving rate / investment", "Does not help", "Raises the level only", "Raises the growth rate"],
-    ["Convergence", "No", "Yes (absolute or conditional)", "Not required"]],
-    "Memory hooks: classical = babies eat the growth; neoclassical = brakes on capital; endogenous = invest and it keeps going.");
+  mc(6, "The Malthus trap belongs to which growth theory?", ["Classical", "Neoclassical", "Endogenous"], 0, "Population growth eats up every gain in income.");
+  mc(6, "The Solow model and the steady state belong to which growth theory?", ["Neoclassical", "Classical", "Endogenous"], 0, "Solow built the neoclassical model.");
+  mc(6, "Romer and R&D spending belong to which growth theory?", ["Endogenous", "Neoclassical", "Classical"], 0, "Romer built the endogenous growth model.");
+  mc(6, "Which growth theory says that capital has diminishing returns because land is fixed?", ["Classical", "Endogenous", "Neoclassical"], 0, "Land is the fixed factor in the classical model.");
+  mc(6, "Which growth theory assumes diminishing returns to capital and a steady state?", ["Neoclassical", "Endogenous", "Classical"], 0, "Each extra unit of capital adds less output.");
+  mc(6, "Which growth theory says that broad capital (human capital, R&D) does not have diminishing returns?", ["Endogenous", "Neoclassical", "Classical"], 0, "This is why growth can continue without a steady state.");
+  mc(6, "In which growth theory is a technology gain only temporary?", ["Classical", "Neoclassical", "Endogenous"], 0, "Population growth later pushes income back down.");
+  mc(6, "In which growth theory is technology produced by investment inside the model?", ["Endogenous", "Neoclassical", "Classical"], 0, "Firms invest in R&D and human capital.");
+  mc(6, "In which growth theory does per capita income reach a steady state?", ["Neoclassical", "Endogenous", "Classical"], 0, "Capital per worker stops rising once diminishing returns bind.");
+  mc(6, "In which growth theory can per capita income keep growing permanently without exogenous technology?", ["Endogenous", "Neoclassical", "Classical"], 0, "Investment in knowledge keeps raising output.");
+  mc(6, "Raising the saving rate raises only the level of output per capita, not the long-run growth rate, in which theory?", ["Neoclassical", "Endogenous", "Classical"], 0, "Diminishing returns absorb the extra capital.");
+  mc(6, "Raising investment in R&D raises the long-run growth rate in which theory?", ["Endogenous", "Neoclassical", "Classical"], 0, "Returns to broad capital do not diminish.");
+  mc(6, "In which growth theory does more saving or investment NOT help per capita income in the long run?", ["Classical", "Neoclassical", "Endogenous"], 0, "Extra income just raises the population.");
+  mc(6, "Conditional convergence belongs to which growth theory?", ["Neoclassical", "Endogenous", "Classical"], 0, "Countries converge to their own steady states.");
+  mc(6, "Absolute convergence requires countries to have the same:", ["Saving rate and technology", "Population size", "Current level of income"], 0, "Then they converge to the same steady state.");
+  mc(6, "In which growth theory is convergence NOT required?", ["Endogenous", "Neoclassical", "None of them"], 0, "Growth rates can differ permanently.");
+  mc(6, "In which growth theory does convergence not apply because income returns to subsistence?", ["Classical", "Neoclassical", "Endogenous"], 0, "There is no sustained rise in income to converge on.");
+  mc(6, "Open economy capital flows from rich to poor countries speed up convergence in which theory?", ["Neoclassical", "Endogenous", "Classical"], 0, "Poor countries offer a higher marginal product of capital.");
+  mc(6, "The sustainable growth rate of output per capita equals θ ÷ (1 − α) in which theory?", ["Neoclassical", "Endogenous", "Classical"], 0, "θ is exogenous technology growth.");
+  mc(6, "Which theory has technology growth θ as an outside input?", ["Neoclassical", "Endogenous", "Classical"], 0, "It is not explained inside the model.");
   mc(6, "Which growth theory predicts that poorer countries grow faster and catch up with richer ones?", ["Neoclassical", "Endogenous", "Classical"], 0, "Diminishing returns to capital give poor countries a higher marginal product of capital.");
   mc(6, "In which growth theory is technology treated as exogenous?", ["Neoclassical", "Endogenous", "Both of them"], 0, "In endogenous theory, firms and investment produce the technology.");
   mc(6, "A higher saving rate raises the long-run growth rate of output per capita in which theory?", ["Endogenous", "Neoclassical", "Classical"], 0, "In neoclassical theory it only raises the level of output per capita.");
