@@ -342,6 +342,18 @@ const KEYQ = [];
   mc(5, "Combining Mundell-Fleming and portfolio balance, the exchange rate after a fiscal expansion most likely:", ["Appreciates in the short term, then depreciates in the long term", "Depreciates in the short term, then appreciates in the long term", "Appreciates in both the short and long term"], 0, "Free cash flows first attract capital; later the fiscal deficit worries investors.");
 
   // ================= 6 Economic Growth =================
+  tb(6, "Growth theories: capital returns, technology, population, per capita income", ["", "Classical", "Neoclassical", "Endogenous"], [
+    ["Capital returns", "Diminishing (land is fixed)", "Diminishing", "No diminishing returns (human capital, R&D)"],
+    ["Technology", "Temporary boost", "Exogenous", "Endogenous"],
+    ["Population", "Grows when income is high and pushes income back down", "Labour force grows at a given rate", "Not the focus; knowledge drives growth"],
+    ["Per capita income", "Returns to subsistence", "Reaches a steady state", "Grows permanently"]],
+    "Memory hooks: classical = babies eat the growth; neoclassical = brakes on capital; endogenous = invest and it keeps going.");
+  mc(6, "In which growth theory does a rise in income lead to faster population growth that pushes income back down?", ["Classical", "Neoclassical", "Endogenous"], 0, "This is the Malthus trap.");
+  mc(6, "Which statement about population fits the neoclassical growth model?", ["The labour force grows at a given rate", "Population growth removes every gain in income", "Population growth is the main driver of long-run growth"], 0, "Labour force growth is an outside input in the Solow model.");
+  mc(6, "Which growth theory treats population growth as the main force limiting growth?", ["Classical", "Neoclassical", "Endogenous"], 0, "Income stays near subsistence because the population keeps rising.");
+  mc(6, "Which growth theory does NOT make population growth the focus, and puts knowledge and human capital at the centre?", ["Endogenous", "Classical", "Neoclassical"], 0, "Investment in knowledge keeps output per person rising.");
+  mc(6, "Which two theories both assume diminishing returns to capital?", ["Classical and neoclassical", "Neoclassical and endogenous", "Classical and endogenous"], 0, "Endogenous theory drops diminishing returns for broad capital.");
+  mc(6, "Which two theories treat technology as something that does NOT come from investment inside the model?", ["Classical and neoclassical", "Neoclassical and endogenous", "Classical and endogenous"], 0, "Endogenous theory makes technology a result of investment.");
   mc(6, "The Malthus trap belongs to which growth theory?", ["Classical", "Neoclassical", "Endogenous"], 0, "Population growth eats up every gain in income.");
   mc(6, "The Solow model and the steady state belong to which growth theory?", ["Neoclassical", "Classical", "Endogenous"], 0, "Solow built the neoclassical model.");
   mc(6, "Romer and R&D spending belong to which growth theory?", ["Endogenous", "Neoclassical", "Classical"], 0, "Romer built the endogenous growth model.");
