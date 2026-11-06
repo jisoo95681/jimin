@@ -176,6 +176,12 @@ const KEYQ = [];
     ["1", "Translate the old balance sheet with the correct method (current rate or temporal)"],
     ["2", "Items now use different rates, so assets ≠ liabilities + equity"],
     ["3", "Fill the gap with CTA (current rate) or residual income (temporal)"]]);
+  tb(9, "Balance sheet exposure by translation method", ["Method", "Balance sheet exposure ="], [["Current rate", "Total assets − total liabilities (net assets)"], ["Temporal", "Monetary assets − monetary liabilities"]], "Do not also subtract equity: assets − liabilities already equals equity.");
+  fm(9, "Formula: balance sheet exposure under the current rate method =", "Total assets − total liabilities", "This equals net assets, which is the same as shareholders' equity.");
+  fm(9, "Formula: balance sheet exposure under the temporal method =", "Monetary assets − monetary liabilities", "Monetary items are cash, receivables, payables and debt. Inventory and fixed assets are not monetary.");
+  mc(9, "Under the current rate method, the balance sheet exposure equals:", ["Total assets − total liabilities", "Monetary assets − monetary liabilities", "Total assets − total liabilities − equity"], 0, "Net assets are exposed because every item is translated at the current rate.");
+  mc(9, "Under the temporal method, the balance sheet exposure equals:", ["Monetary assets − monetary liabilities", "Total assets − total liabilities", "Non-monetary assets − monetary liabilities"], 0, "Only monetary items are translated at the current rate.");
+  mc(9, "A subsidiary has cash 135, receivables 98, inventory 77, net fixed assets 90, payables 77 and debt 175 (all C$). Its balance sheet exposure under the temporal method is:", ["−19", "148", "400"], 0, "Monetary assets 233 less monetary liabilities 252.");
   mc(9, "In your balance sheet exercise, the only monetary assets are:", ["Cash and accounts receivable", "Inventory and PPE", "Goodwill and inventory"], 0, "Monetary items are remeasured at the current rate under the temporal method.");
   tb(9, "Functional currency, method and the plug", ["Functional currency", "Method", "Foreign currency ↑", "Foreign currency ↓"], [
     ["Presentation currency", "Temporal", "Residual income ↓", "Residual income ↑"],
