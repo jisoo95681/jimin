@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 156 vignettes · 224 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 159 vignettes · 227 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -12,13 +12,13 @@ Totals: app 68 vignettes · bank 156 vignettes · 224 in all. Plus 62 standalone
 | 4 | Big Data Projects | 4 | 1 | 5 |
 | 5 | Currency Exchange Rates | 2 | 11 | 13 |
 | 6 | Economic Growth | 1 | 9 | 10 |
-| 7 | Intercorporate Investments | 6 | 15 | 21 |
-| 8 | Employee Compensation | 2 | 1 | 3 |
+| 7 | Intercorporate Investments | 6 | 10 | 16 |
+| 8 | Employee Compensation | 2 | 4 | 6 |
 | 9 | Multinational Operations | 2 | 4 | 6 |
 | 10 | Analysis of Financial Institutions | 2 | 8 | 10 |
 | 11 | Evaluating Quality of Financial Reports | 0 | 10 | 10 |
 | 12 | Integration of FSA Techniques | 0 | 4 | 4 |
-| 13 | Dividends and Share Repurchases | 1 | 2 | 3 |
+| 13 | Dividends and Share Repurchases | 1 | 7 | 8 |
 | 14 | ESG Considerations | 0 | 6 | 6 |
 | 15 | Cost of Capital: Advanced Topics | 0 | 1 | 1 |
 | 16 | Corporate Restructuring | 0 | 3 | 3 |
@@ -57,13 +57,13 @@ Totals: app 68 vignettes · bank 156 vignettes · 224 in all. Plus 62 standalone
 **4 Big Data Projects**: aries-bigdata (app, 15Q); voxkor (app, 9Q); ganymede (app, 7Q); quinn (app, 4Q); m1-10 (bank, 4Q)
 **5 Currency Exchange Rates**: smith-fx (app, 5Q); goldsworthy (app, 8Q); golden-island (bank, 5Q); tremblay-growth (bank, 6Q); fx29-wagener (bank, 7Q); fx29-beauregard (bank, 6Q); fx29-lopez (bank, 4Q); fx29-kaur (bank, 4Q); fx29-gupta (bank, 4Q); fx29-carlisle (bank, 8Q); m2-5 (bank, 4Q); s1a-hollingsworth (bank, 4Q); s1a-daltonia (bank, 6Q)
 **6 Economic Growth**: wagner-growth (app, 4Q); golden-island (bank, 5Q); tremblay-growth (bank, 6Q); eg29-klymchuk (bank, 9Q); eg29-amaral (bank, 6Q); eg29-schmidt (bank, 6Q); eg29-sagara (bank, 8Q); m1-4 (bank, 4Q); s1a-hollingsworth (bank, 4Q); s1a-daltonia (bank, 6Q)
-**7 Intercorporate Investments**: brannock (app, 5Q); halvorsen (app, 7Q); ninmount (app, 6Q); adore (app, 4Q); bardem (app, 4Q); ernst (app, 4Q); corp1-ladan (bank, 5Q); corp1-wu (bank, 2Q); corp1-carlyle (bank, 6Q); corp1-thornhill (bank, 4Q); corp1-larsen (bank, 4Q); ic1-1 (bank, 6Q); ic1-2 (bank, 5Q); ic1-3 (bank, 5Q); ic1-4 (bank, 5Q); ic1-5 (bank, 7Q); ic1-6 (bank, 4Q); ic1-7 (bank, 1Q); ic1-8 (bank, 1Q); m1-6 (bank, 4Q); s1b-treadway (bank, 10Q)
-**8 Employee Compensation**: kensington (app, 7Q); xyz (app, 5Q); pc-9 (bank, 4Q)
+**7 Intercorporate Investments**: brannock (app, 5Q); halvorsen (app, 7Q); ninmount (app, 6Q); adore (app, 4Q); bardem (app, 4Q); ernst (app, 4Q); ic1-1 (bank, 6Q); ic1-2 (bank, 5Q); ic1-3 (bank, 5Q); ic1-4 (bank, 5Q); ic1-5 (bank, 7Q); ic1-6 (bank, 4Q); ic1-7 (bank, 1Q); ic1-8 (bank, 1Q); m1-6 (bank, 4Q); s1b-treadway (bank, 10Q)
+**8 Employee Compensation**: kensington (app, 7Q); xyz (app, 5Q); pc-9 (bank, 4Q); ec-ski (bank, 7Q); ec-terra (bank, 6Q); ec-colleague (bank, 5Q)
 **9 Multinational Operations**: triofind (app, 7Q); eurexim (app, 6Q); ic1-7 (bank, 1Q); ic1-8 (bank, 1Q); m1-2 (bank, 4Q); consol-can (bank, 6Q)
 **10 Analysis of Financial Institutions**: aries (app, 7Q); xyzbank (app, 6Q); fsa4-chen (bank, 4Q); fsa4-green (bank, 4Q); fsa4-takahashi (bank, 4Q); fsa4-reddy (bank, 4Q); fsa4-nanlife (bank, 6Q); fsa4-gallo (bank, 4Q); m2-6 (bank, 4Q); paulinic (bank, 7Q)
 **11 Evaluating Quality of Financial Reports**: fsa6-eastview (bank, 4Q); fsa6-dorado (bank, 4Q); fsa5-miland (bank, 7Q); fsa5-big (bank, 7Q); fsa5-stellar (bank, 4Q); fsa5-coleridge (bank, 4Q); m1-6 (bank, 4Q); libra (bank, 4Q); s1b-treadway (bank, 10Q); s1b-abay (bank, 7Q)
 **12 Integration of FSA Techniques**: fsa6-eastview (bank, 4Q); fsa6-dorado (bank, 4Q); fsa6-rhine (bank, 4Q); s1b-abay (bank, 7Q)
-**13 Dividends and Share Repurchases**: carlyle (app, 6Q); m2-3 (bank, 4Q); yeta (bank, 5Q)
+**13 Dividends and Share Repurchases**: carlyle (app, 6Q); corp1-ladan (bank, 5Q); corp1-wu (bank, 2Q); corp1-carlyle (bank, 6Q); corp1-thornhill (bank, 4Q); corp1-larsen (bank, 4Q); m2-3 (bank, 4Q); yeta (bank, 5Q)
 **14 ESG Considerations**: marker-esg (bank, 4Q); esg31-1 (bank, 6Q); esg31-2 (bank, 4Q); esg31-3 (bank, 4Q); esg31-4 (bank, 4Q); esg31-5 (bank, 4Q)
 **15 Cost of Capital: Advanced Topics**: s1a-costcap (bank, 5Q)
 **16 Corporate Restructuring**: pc-6 (bank, 4Q); corp4-lee (bank, 5Q); jupiter-saturn (bank, 5Q)
