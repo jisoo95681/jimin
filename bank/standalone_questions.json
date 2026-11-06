@@ -929,5 +929,875 @@
   ],
   "answer": "A",
   "why": "The Ho–Lee model is arbitrage free and can be calibrated to closely match the observed term structure."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 1,
+  "q": "Smith, a research analyst with a brokerage firm, decides to change his recommendation for the common stock of Green Company, Inc., from a “buy” to a “sell.” He mails this change in investment advice to all the firm’s clients on Wednesday. The day after the mailing, a client calls with a buy order for 500 shares of Green Company. In this circumstance, Smith should:",
+  "options": [
+   "accept the order.",
+   "advise the customer of the change in recommendation before accepting the order.",
+   "not accept the order because it is contrary to the firm’s recommendation."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question involves Standard III(B) Fair Dealing. Smith disseminated a change in the stock recommendation to his clients but then received a request contrary to that recommendation from a client who probably had not yet received the recommendation. Prior to executing the order, Smith should take additional steps to ensure that the customer has received the change of recommendation. Answer A is incorrect because the client placed the order prior to receiving the recommendation and, therefore, does not have the benefit of Smith’s most recent recommendation. Answer C is also incorrect; simply because the client request is contrary to the firm’s recommendation does not mean a member can override a direct request by a client. After Smith contacts the client to ensure that the client has received the changed recommendation, if the client still wants to place a buy order for the shares, Smith is obligated to comply with the client’s directive."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 2,
+  "q": "Which statement about a manager’s use of client brokerage commissions violates the Code and Standards?",
+  "options": [
+   "A client may direct a manager to use that client’s brokerage commissions to purchase goods and services for that client.",
+   "Client brokerage commissions should be used to benefit the client and should be commensurate with the value of the brokerage and research services received.",
+   "Client brokerage commissions may be directed to pay for the investment manager’s operating expenses."
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question involves Standard III(A) Loyalty, Prudence, and Care and the specific topic of soft dollars or soft commissions. Answer C is the correct choice because client brokerage commissions may not be directed to pay for the investment manager’s operating expenses. Answer B describes how members and candidates should determine how to use brokerage commissions—that is, if the use is in the best interests of clients and is commensurate with the value of the services provided. Answer A describes a practice that is commonly referred to as “directed brokerage.” Because brokerage is an asset of the client and is used to benefit the client, not the manager, such practice does not violate a duty of loyalty to the client. Members and candidates are obligated in all situations to disclose to clients their practices in the use of client brokerage commissions."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 3,
+  "q": "Jamison is a junior research analyst with Howard & Howard, a brokerage and investment banking firm. Howard & Howard’s mergers and acquisitions department has represented the Britland Company in all of its acquisitions for the past 20 years. Two of Howard & Howard’s senior officers are directors of various Britland subsidiaries. Jamison has been asked to write a research report on Britland. What is the best course of action for her to follow?",
+  "options": [
+   "Jamison may write the report but must refrain from expressing any opinions because of the special relationships between the two companies.",
+   "Jamison should not write the report because the two Howard & Howard officers serve as directors for subsidiaries of Britland.",
+   "Jamison may write the report if she discloses the director relationship between the two companies."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question involves Standard VI(A) Avoid or Disclose Conflicts. The question establishes a conflict of interest in which an analyst, Jamison, is asked to write a research report on a company that is a client of her employer. In addition, two directors of the company are senior officers of Jamison’s employer. Best practice would be to avoid the conflicts of interest by not providing a research report on companies that are clients of or have a director relationship with Howard & Howard. If the conflicts are not avoided, both the client relationship and director relationship must be disclosed by Jamison in her research report. Answer C is incorrect because Jamison would be disclosing only one of the conflicts. Answer A is incorrect because whether Jamison expresses any opinions in the report is irrelevant to her duty to disclose all conflicts of interest. Not expressing opinions does not relieve the analyst of the responsibility to disclose the special relationships between the two companies."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 4,
+  "q": "Which of the following statements clearly conflicts with the recommended procedures for compliance presented in the CFA Institute Standards of Practice Handbook?",
+  "options": [
+   "Firms should disclose to clients the personal investing policies and procedures established for their employees.",
+   "Prior approval must be obtained for the personal investment transactions of all employees.",
+   "For confidentiality reasons, personal transactions and holdings should not be reported to employers unless mandated by regulatory organizations."
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question asks about compliance procedures relating to personal investments of members and candidates. The statement in answer C clearly conflicts with the recommended procedures in the Standards of Practice Handbook. Employers should compare personal transactions of employees with those of clients on a regular basis regardless of the existence of a requirement by any regulatory organization. Such comparisons ensure that employees’ personal trades do not conflict with their duty to their clients, and the comparisons can be conducted in a confidential manner. The statement in answer A does not conflict with the procedures in the Handbook. Disclosure of such policies will give full information to clients regarding potential conflicts of interest on the part of those entrusted to manage their money. Answer B is incorrect because firms are encouraged to establish policies whereby employees clear their personal holdings and transactions with their employers."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 5,
+  "q": "Bronson provides investment advice to the board of trustees of a private university endowment fund. The trustees have provided Bronson with the fund’s financial information, including planned expenditures. Bronson receives a phone call on Friday afternoon from Murdock, a prominent alumnus, requesting that Bronson fax him comprehensive financial information about the fund. According to Murdock, he has a potential contributor but needs the information that day to close the deal and cannot contact any of the trustees. Based on the CFA Institute Standards, Bronson should:",
+  "options": [
+   "send Murdock the information because disclosure would benefit the client.",
+   "not send Murdock the information, to preserve confidentiality.",
+   "send Murdock the information, provided Bronson promptly notifies the trustees."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question relates to Standard III(A) Loyalty, Prudence, and Care and Standard III(E) Preservation of Confidentiality. In this case, the member manages funds of a private endowment. Clients—in this case, the trustees of the fund—must place some trust in members and candidates. Bronson cannot disclose confidential financial information to anyone without the permission of the fund, regardless of whether the disclosure may benefit the fund. Therefore, answer A is incorrect. Answer C is incorrect because Bronson must notify the fund and obtain the fund’s permission before publicizing the information."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 6,
+  "q": "Willier is the research analyst responsible for following Company X. All the information he has accumulated and documented suggests that the outlook for the company’s new products is poor, so the stock should be rated a weak “hold.” During lunch, however, Willier overhears a financial analyst from another firm whom he respects offer opinions that conflict with Willier’s forecasts and expectations. Upon returning to his office, Willier releases a strong “buy” recommendation to the public. Willier:",
+  "options": [
+   "violated the Standards by failing to distinguish between facts and opinions in his recommendation.",
+   "violated the Standards because he did not have a reasonable and adequate basis for his recommendation.",
+   "was in full compliance with the Standards."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question relates to Standard V(A) Diligence and Reasonable Basis. The opinion of another financial analyst is not an adequate basis for Willier’s action in changing the recommendation. Answer C is thus incorrect. Answer A is incorrect because, although it is true that members and candidates must distinguish between facts and opinions in recommendations, the question does not illustrate a violation of that nature. If the opinion overheard by Willier had sparked him to conduct additional research and investigation that justified a change of opinion, then a changed recommendation would be appropriate."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 7,
+  "q": "An investment management firm has been hired by ETV Corporation to work on an additional public offering for the company. The firm’s brokerage unit now has a “sell” recommendation on ETV, but the head of the investment banking department has asked the head of the brokerage unit to change the recommendation from “sell” to “buy.” According to the Standards, the head of the brokerage unit would be permitted to:",
+  "options": [
+   "increase the recommendation by no more than one increment (in this case, to a “hold” recommendation).",
+   "place the company on a restricted list and give only factual information about the company.",
+   "assign a new analyst to decide whether the stock deserves a higher rating."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question relates to Standard I(B) Independence and Objectivity. When asked to change a recommendation on a company stock to gain business for the firm, the head of the brokerage unit must refuse in order to maintain his independence and objectivity in making recommendations. He must not yield to pressure by the firm’s investment banking department. To avoid the appearance of a conflict of interest, the firm should discontinue issuing recommendations about the company. Answer A is incorrect; changing the recommendation in any manner that is contrary to the analyst’s opinion violates the duty to maintain independence and objectivity. Answer C is incorrect because merely assigning a new analyst to decide whether the stock deserves a higher rating will not address the conflict of interest."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 8,
+  "q": "Albert and Tye, who recently started their own investment advisory business, have registered to take the Level III CFA exam. Albert’s business card reads, “Judy Albert, CFA Level II.” Tye has not put anything about the CFA designation on his business card, but promotional material that he designed for the business describes the CFA requirements and indicates that Tye participates in the CFA Program and has completed Levels I and II. According to the Standards:",
+  "options": [
+   "Albert has violated the Standards, but Tye has not.",
+   "Tye has violated the Standards, but Albert has not.",
+   "both Albert and Tye have violated the Standards."
+  ],
+  "answer": "A",
+  "why": "The correct answer is A. Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program is the subject of this question. The reference on Albert’s business card implies that there is a “CFA Level II” designation; Tye merely indicates in promotional material that he is participating in the CFA Program and has completed Levels I and II. Candidates may not imply that there is some sort of partial designation earned after passing a level of the CFA exam. Therefore, Albert has violated Standard VII(B). Candidates may communicate that they are participating in the CFA Program, however, and may state the levels that they have completed. Therefore, Tye has not violated Standard VII(B)."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 9,
+  "q": "Scott works for a regional brokerage firm. He estimates that Walkton Industries will increase its dividend by US$1.50 a share during the next year. He realizes that this increase is contingent on pending legislation that would, if enacted, give Walkton a substantial tax break. The US representative for Walkton’s home district has told Scott that, although she is lobbying hard for the bill and prospects for its passage are favorable, concern of the US Congress over the federal deficit could cause the tax bill to be voted down. Walkton Industries has not made any statements about a change in dividend policy. Scott writes in his research report, “We expect Walkton’s stock price to rise by at least US$8.00 a share by the end of the year because the dividend will increase by US$1.50 a share. Investors buying the stock at the current time should expect to realize a total return of at least 15% on the stock.” According to the Standards:",
+  "options": [
+   "Scott violated the Standards because he used material inside information.",
+   "Scott violated the Standards because he failed to separate opinion from fact.",
+   "Scott violated the Standards by basing his research on uncertain predictions of future government action."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question relates to Standard V(B) Communication with Clients and Prospective Clients. Scott has issued a research report stating that he expects the price of Walkton Industries stock to rise by US$8 a share “because the dividend will increase” by US$1.50 per share. He has made this statement knowing that the dividend will increase only if Congress enacts certain legislation, an uncertain prospect. By stating that the dividend will increase, Scott failed to separate fact from opinion. The information regarding passage of legislation is not material nonpublic information because it is conjecture, and the question does not state whether the US representative gave Scott her opinion on the passage of the legislation in confidence. She could have been offering this opinion to anyone who asked. Therefore, answer A is incorrect. It may be acceptable to base a recommendation, in part, on an expectation of future events, even though they may be uncertain. Therefore, answer C is incorrect."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 10,
+  "q": "Which one of the following actions will help ensure the fair treatment of brokerage firm clients when a new investment recommendation is made?",
+  "options": [
+   "Informing all people in the firm in advance that a recommendation is to be disseminated",
+   "Distributing recommendations to institutional clients prior to individual accounts",
+   "Minimizing the time between the decision and the dissemination of a recommendation"
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question, which relates to Standard III(B) Fair Dealing, tests the knowledge of the procedures that will assist members and candidates in treating clients fairly when making investment recommendations. The step listed in C will help ensure the fair treatment of clients. Answer A may have negative effects on the fair treatment of clients. The more people who know about a pending change, the greater the chance that someone will inform some clients before the information’s release. The firm should establish policies that limit the number of people who are aware in advance that a recommendation is to be disseminated. Answer B, distributing recommendations to institutional clients before distributing them to individual accounts, discriminates among clients on the basis of size and class of assets and is a violation of Standard III(B)."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 11,
+  "q": "The mosaic theory holds that an analyst:",
+  "options": [
+   "violates the Code and Standards if the analyst fails to have knowledge of and comply with applicable laws.",
+   "can use material public information and nonmaterial nonpublic information in the analyst’s analysis.",
+   "should use all available and relevant information in support of an investment recommendation."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question deals with Standard II(A) Material Nonpublic Information. The mosaic theory states that an analyst may use material public information and nonmaterial nonpublic information in creating a larger picture than shown by any individual piece of information and the conclusions the analyst reaches become material only after the pieces are assembled. Answers A and C are accurate statements relating to the Code and Standards but do not describe the mosaic theory."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 12,
+  "q": "Jurgen is a portfolio manager. One of her firm’s clients has told Jurgen that he will compensate her beyond the compensation provided by her firm on the basis of the capital appreciation of his portfolio each year. Jurgen should:",
+  "options": [
+   "turn down the additional compensation because it will result in conflicts with the interests of other clients’ accounts.",
+   "turn down the additional compensation because it will create undue pressure on her to achieve strong short-term performance.",
+   "obtain permission from her employer prior to accepting the compensation arrangement."
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question involves Standard IV(B) Additional Compensation Arrangements. The arrangement described in the question—whereby Jurgen would be compensated beyond the compensation provided by her firm, on the basis of an account’s performance—is not a violation of the Standards as long as Jurgen discloses the arrangement in writing to her employer and obtains permission from her employer prior to entering into the arrangement. Answers A and B are incorrect; although the private compensation arrangement could conflict with the interests of other clients and lead to short-term performance pressures, members and candidates may enter into such agreements as long as they have disclosed the arrangements to their employer and obtained permission for the arrangement from their employer."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 13,
+  "q": "One of the discretionary accounts managed by Farnsworth is the Jones Corporation employee profit-sharing plan. Jones, the company president, recently asked Farnsworth to vote the shares in the profit-sharing plan in favor of the slate of directors nominated by Jones Corporation and against the directors sponsored by a dissident stockholder group. Farnsworth does not want to lose this account, because he directs all the account’s trades to a brokerage firm that provides Farnsworth with useful information about tax-free investments. Although this information is not of value in managing the Jones Corporation account, it does help in managing several other accounts. The brokerage firm providing this information also offers the lowest commissions for trades and provides best execution. Farnsworth investigates the director issue, concludes that the management-nominated slate is better for the long-run performance of the company than the dissident group’s slate, and votes accordingly. Farnsworth:",
+  "options": [
+   "violated the Standards in voting the shares in the manner requested by Jones but not in directing trades to the brokerage firm.",
+   "did not violate the Standards in voting the shares in the manner requested by Jones or in directing trades to the brokerage firm.",
+   "violated the Standards in directing trades to the brokerage firm but not in voting the shares as requested by Jones."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question relates to Standard III(A) Loyalty, Prudence, and Care—specifically, a member’s or candidate’s responsibility for voting proxies and the use of client brokerage. According to the facts stated in the question, Farnsworth did not violate Standard III(A). Although the company president asked Farnsworth to vote the shares of the Jones Corporation profit-sharing plan a certain way, Farnsworth investigated the issue and concluded, independently, the best way to vote. Therefore, even though his decision coincided with the wishes of the company president, Farnsworth is not in violation of his responsibility to be loyal and to provide care to his clients. In this case, the participants and the beneficiaries of the profit-sharing plan are the clients, not the company’s management. Had Farnsworth not investigated the issue or had he yielded to the president’s wishes and voted for a slate of directors that he had determined was not in the best interest of the company, Farnsworth would have violated his responsibilities to the beneficiaries of the plan. In addition, because the brokerage firm provides the lowest commissions and best execution for securities transactions, Farnsworth has met his obligations to the client in using this brokerage firm. It does not matter that the brokerage firm also provides research information that is not useful for the account generating the commission, because Farnsworth is not paying extra money of the client for that information."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 14,
+  "q": "Brown works for an investment counseling firm. Green, a new client of the firm, is meeting with Brown for the first time. Green used another counseling firm for financial advice for years, but she has switched her account to Brown’s firm. After spending a few minutes getting acquainted, Brown explains to Green that she has discovered a highly undervalued stock that offers large potential gains. She recommends that Green purchase the stock. Brown has committed a violation of the Standards. What should she have done differently?",
+  "options": [
+   "Brown should have determined Green’s needs, objectives, and tolerance for risk before making a recommendation of any type of security.",
+   "Brown should have thoroughly explained the characteristics of the company to Green, including the characteristics of the industry in which the company operates.",
+   "Brown should have explained her qualifications, including her education, training, and experience and the meaning of the CFA designation."
+  ],
+  "answer": "A",
+  "why": "The correct answer is A. In this question, Brown is providing investment recommendations before making inquiries about the client’s financial situation, investment experience, or investment objectives. Brown is thus violating Standard III(C) Suitability. Answers B and C provide examples of information members and candidates should discuss with their clients at the outset of the relationship, but these answers do not constitute a complete list of those factors. Answer A is the best answer."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 15,
+  "q": "Grey recommends the purchase of a mutual fund that invests solely in long-term US Treasury bonds. He makes the following statements to his clients: \n\nI. “The payment of the bonds is guaranteed by the US government; therefore, the default risk of the bonds is virtually zero.” \n\nII. “If you invest in the mutual fund, you will earn a 10% rate of return each year for the next several years based on historical performance of the market.” \n\nDid Grey’s statements violate the CFA Institute Code and Standards?",
+  "options": [
+   "Neither statement violated the Code and Standards.",
+   "Only statement I violated the Code and Standards.",
+   "Only statement II violated the Code and Standards."
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question involves Standard I(C) Misrepresentation. Statement I is a factual statement that discloses to clients and prospects accurate information about the terms of the investment instrument. Statement II, which guarantees a specific rate of return for a mutual fund, is an opinion stated as a fact and, therefore, violates Standard I(C). If statement II were rephrased to include a qualifying statement, such as “in my opinion, investors may earn . . . , ” it would not be in violation of the Standards."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 16,
+  "q": "Anderb, a portfolio manager for XYZ Investment Management Company—a registered investment organization that advises investment firms and private accounts—was promoted to that position three years ago. Bates, her supervisor, is responsible for reviewing Anderb’s portfolio account transactions and her required monthly reports of personal stock transactions. Anderb has been using Jonelli, a broker, almost exclusively for brokerage transactions for the portfolio account. For securities in which Jonelli’s firm makes a market, Jonelli has been giving Anderb lower prices for personal purchases and higher prices for personal sales than Jonelli gives to Anderb’s portfolio accounts and other investors. Anderb has been filing monthly reports with Bates only for those months in which she has no personal transactions, which is about every fourth month. Which of the following is most likely to be a violation of the Code and Standards?",
+  "options": [
+   "Anderb failed to disclose to her employer her personal transactions.",
+   "Anderb owned the same securities as those of her clients.",
+   "Bates allowed Anderb to use Jonelli as her broker for personal trades."
+  ],
+  "answer": "A",
+  "why": "The correct answer is A. This question involves three of the Standards. Anderb, the portfolio manager, has been obtaining more favorable prices for her personal securities transactions than she gets for her clients, which is a breach of Standard III(A) Loyalty, Prudence, and Care. In addition, she violated Standard I(D) Misconduct by failing to adhere to company policy and by hiding her personal transactions from her firm. Anderb’s supervisor, Bates, violated Standard IV(C) Responsibilities of Supervisors; although the company had requirements for reporting personal trading, Bates failed to adequately enforce those requirements. Answer B does not represent a violation because Standard VI(B) Priority of Transactions requires that personal trading in a security be conducted after the trading in that security of clients and the employer. The Code and Standards do not prohibit owning such investments, although firms may establish policies that limit the investment opportunities of members and candidates. Answer C does not represent a violation, because the Code and Standards do not contain a prohibition against employees using the same broker for their personal accounts that they use for their client accounts. This arrangement should be disclosed to the employer so that the employer may determine whether a conflict of interest exists."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 17,
+  "q": "Which of the following is a correct statement of a member’s or candidate’s duty under the Code and Standards?",
+  "options": [
+   "In the absence of specific applicable law or other regulatory requirements, the Code and Standards govern the member’s or candidate’s actions.",
+   "A member or candidate is required to comply only with applicable local laws, rules, regulations, or customs, even though the Code and Standards may impose a higher degree of responsibility or a higher duty on the member or candidate.",
+   "A member or candidate who trades securities in a securities market where no applicable local laws or stock exchange rules regulate the use of material nonpublic information may take investment action based on material nonpublic information."
+  ],
+  "answer": "A",
+  "why": "The correct answer is A because this question relates to Standard I(A) Knowledge of the Law—specifically, global application of the Code and Standards. Members and candidates who practice in multiple jurisdictions may be subject to various securities laws and regulations. If applicable law is more strict than the requirements of the Code and Standards, members and candidates must adhere to applicable law; otherwise, members and candidates must adhere to the Code and Standards. Therefore, answer A is correct. Answer B is incorrect because members and candidates must adhere to the higher standard set by the Code and Standards if local applicable law is less strict. Answer C is incorrect because when no applicable law exists, members and candidates are required to adhere to the Code and Standards, and the Code and Standards prohibit the use of material nonpublic information."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 18,
+  "q": "Ward is scheduled to visit the corporate headquarters of Evans Industries. Ward expects to use the information he obtains there to complete his research report on Evans stock. Ward learns that Evans plans to pay all of Ward’s expenses for the trip, including the costs of meals, his hotel room, and air transportation. Which of the following actions would be the best course for Ward to take under the Code and Standards?",
+  "options": [
+   "Accept the expense-paid trip, and write an objective report.",
+   "Pay for all travel expenses, including the costs of meals and incidental items.",
+   "Accept the expense-paid trip, but disclose the value of the services accepted in the report."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. The best course of action under Standard I(B) Independence and Objectivity is to avoid a conflict of interest whenever possible. Therefore, for Ward to pay for all his expenses is the correct answer. Answer C details a course of action in which the conflict would be disclosed, but the solution is not as appropriate as avoiding the conflict of interest. Answer A would not be the best course because it would not remove the appearance of a conflict of interest; even though the report would not be affected by the reimbursement of expenses, it could appear to be."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 19,
+  "q": "Which of the following statements is correct under the Code and Standards?",
+  "options": [
+   "CFA Institute members and candidates are prohibited from undertaking independent practice in competition with their employer.",
+   "Written consent from the employer is necessary to permit independent practice that could result in compensation or other benefits in competition with a member’s or candidate’s employer.",
+   "Members and candidates are prohibited from making arrangements or preparations to go into a competitive business before terminating their relationship with their employer."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. Under Standard IV(A) Loyalty, members and candidates may undertake independent practice that may result in compensation or other benefit in competition with their employer as long as they obtain consent from their employer. Answer C is not consistent with the Standards because the Standards allow members and candidates to make arrangements or preparations to go into competitive business as long as those arrangements do not interfere with their duty to their current employer. Answer A is not consistent with the Standards because the Standards do not include a complete prohibition against undertaking independent practice."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 20,
+  "q": "Smith is a financial analyst with XYZ Brokerage Firm. She is preparing a purchase recommendation on JNI Corporation. Which of the following situations is most likely to represent a conflict of interest for Smith that would have to be avoided or disclosed?",
+  "options": [
+   "Smith frequently purchases items produced by JNI.",
+   "XYZ holds for its own account a substantial common stock position in JNI.",
+   "Smith’s brother-in-law is a supplier to JNI."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. This question involves Standard VI(A) Avoid or Disclose Conflicts—specifically, the holdings of an analyst’s employer in company stock. XYZ ownership of the stock of the company that is the subject of the research report creates a conflict of interest that must be disclosed in the research report. XYZ could avoid the conflict by not having Smith prepare a recommendation for JNI or any other company in which XYZ has an ownership interest. Answers A and C do not describe conflicts of interest that Smith would have to avoid or disclose. Answer A describes the use of a firm’s products, which would not be a required disclosure because it will likely not create a conflict of interest. In answer C, the relationship between the analyst and the company through a relative is so tangential that it does not create a conflict of interest necessitating disclosure."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 21,
+  "q": "Michelieu tells a prospective client, “I may not have a long-term track record yet, but I’m sure that you’ll be very pleased with my recommendations and service. In the three years that I’ve been in the business, my equity-oriented clients have averaged a total return of more than 26% a year.” The statement is true, but Michelieu only has a few clients, and one of his clients took a large position in a penny stock (against Michelieu’s advice) and realized a huge gain. This large return caused the average of all of Michelieu’s clients to exceed 26% a year. Without this one investment, the average gain would have been 8% a year. Has Michelieu violated the Standards?",
+  "options": [
+   "No, because Michelieu is not promising that he can earn a 26% return in the future.",
+   "No, because the statement is a true and accurate description of Michelieu’s track record.",
+   "Yes, because the statement misrepresents Michelieu’s track record."
+  ],
+  "answer": "C",
+  "why": "The correct answer is C. This question relates to Standard I(C) Misrepresentation. Although Michelieu’s statement about the total return of his clients’ accounts on average may be technically true, it is misleading because the majority of the gain resulted from one client’s large position taken against Michelieu’s advice. Therefore, this statement misrepresents the investment performance the member is responsible for. He has not taken steps to present a fair, accurate, and complete presentation of performance. Answer B is thus incorrect. Answer A is incorrect because although Michelieu is not guaranteeing future results, his words are still a misrepresentation of his performance history."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 22,
+  "q": "An investment banking department of a brokerage firm often receives material nonpublic information that could have considerable value if used in advising the firm’s brokerage clients. In order to conform to the Code and Standards, which one of the following is the best policy for the brokerage firm?",
+  "options": [
+   "Permanently prohibit both “buy” and “sell” recommendations of the stocks of clients of the investment banking department.",
+   "Establish physical and informational barriers within the firm to prevent the exchange of information between the investment banking and brokerage operations.",
+   "Monitor the exchange of information between the investment banking department and the brokerage operation."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. The best policy to prevent violation of Standard II(A) Material Nonpublic Information is the establishment of firewalls in a firm to prevent the exchange of insider information. The physical and informational barrier of a firewall between the investment banking department and the brokerage operation prevents the investment banking department from providing information to analysts on the brokerage side who may be writing recommendations on a company stock. Prohibiting recommendations of the stock of companies that are clients of the investment banking department is an alternative, but answer A states that this prohibition would be permanent, which is not the best answer. Once an offering is complete and the material nonpublic information obtained by the investment banking department becomes public, resuming publishing recommendations on the stock is not a violation of the Code and Standards, because the information of the investment banking department no longer gives the brokerage operation an advantage in writing the report. Answer C is incorrect because no exchange of information should be occurring between the investment banking department and the brokerage operation, so monitoring of such exchanges is not an effective compliance procedure for preventing the use of material nonpublic information."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 23,
+  "q": "Stewart has been hired by Goodner Industries, Inc., to manage its pension fund. Stewart’s duty of loyalty, prudence, and care is owed to:",
+  "options": [
+   "the management of Goodner.",
+   "the participants and beneficiaries of Goodner’s pension plan.",
+   "the shareholders of Goodner."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. Under Standard III(A) Loyalty, Prudence, and Care, members and candidates who manage a company’s pension fund owe these duties to the participants and beneficiaries of the pension plan, not the management of the company or the company’s shareholders."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 24,
+  "q": "Which of the following statements is a stated purpose of disclosure in Standard VI(C) Referral Fees?",
+  "options": [
+   "Disclosure will allow the client to request discounted service fees.",
+   "Disclosure will help the client evaluate any possible partiality shown in the recommendation of services.",
+   "Disclosure means advising a prospective client about the referral arrangement once a formal client relationship has been established."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. Answer B gives one of the two primary reasons listed in the Handbook for disclosing referral fees to clients under Standard VI(C) Referral Fees. (The other is to allow clients and employers to evaluate the full cost of the services.) Answer A is incorrect because Standard VI(C) does not require members or candidates to discount their fees when they receive referral fees. Answer C is inconsistent with Standard VI(C) because disclosure of referral fees, to be effective, should be made to prospective clients before entering into a formal client relationship with them."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 25,
+  "q": "Rose, a portfolio manager for a local investment advisory firm, is planning to sell a portion of his personal investment portfolio to cover the costs of his child’s academic tuition. Rose wants to sell a portion of his holdings in Household Products, but his firm recently upgraded the stock to “strong buy.” Which of the following describes Rose’s options under the Code and Standards?",
+  "options": [
+   "Based on his firm’s “buy” recommendation, Rose cannot sell the shares because he would be improperly prospering from the inflated recommendation.",
+   "Rose is free to sell his personal holdings once his firm is properly informed of his intentions.",
+   "Rose can sell his personal holdings but only when a client of the firm places an order to buy shares of Household."
+  ],
+  "answer": "B",
+  "why": "The correct answer is B. Standard VI(B) Priority of Transactions does not limit transactions of company employees that differ from current recommendations as long as the sale does not disadvantage current clients. Thus, answer A is incorrect. Answer C is incorrect because the Standard does not require the matching of personal and client trades."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 26,
+  "q": "A former hedge fund manager, Jackman, has decided to launch a new private wealth management firm. From his prior experiences, he believes the new firm needs to achieve US$1 million in assets under management in the first year. Jackman offers a US$10,000 incentive to any adviser who joins his firm with the minimum of US$200,000 in committed investments. Jackman places notice of the opening on several industry web portals and career search sites. Which of the following is correct according to the Code and Standards?",
+  "options": [
+   "A member or candidate is eligible for the new position and incentive if he or she can arrange for enough current clients to switch to the new firm and if the member or candidate discloses the incentive fee.",
+   "A member or candidate may not accept employment with the new firm, because Jackman’s incentive offer violates the Code and Standards.",
+   "A member or candidate is not eligible for the new position unless he or she is currently unemployed, because soliciting the clients of the member’s or candidate’s current employer is prohibited."
+  ],
+  "answer": "C",
+  "why": "Answer C is correct. Standard IV(A) Loyalty discusses activities permissible to members and candidates when they are leaving their current employer; soliciting clients is strictly prohibited. Thus, answer A is inconsistent with the Code and Standards even with the required disclosure. Answer B is incorrect because the offer does not directly violate the Code and Standards. There may be out-of-work members and candidates who can arrange the necessary commitments without violating the Code and Standards."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 27,
+  "q": "Carter works for Invest Today, a local asset management firm. A broker that provides Carter with proprietary research through client brokerage arrangements is offering a new trading service. The broker is offering low-fee, execution-only trades to complement its traditional full-service execution-and-research trades. To entice Carter and other asset managers to send additional business its way, the broker will apply the commissions paid on the new service toward satisfying the brokerage commitment of the prior full-service arrangements. Carter has always been satisfied with the execution provided on the full-service trades, and the fees of the new low-fee trades are comparable to those of other brokers currently used for the accounts that prohibit soft dollar arrangements.",
+  "options": [
+   "Carter can trade for his accounts that prohibit soft dollar arrangements under the new low-fee trading scheme.",
+   "Carter cannot use the new trading scheme because the commissions are prohibited by the soft dollar restrictions of the accounts.",
+   "Carter should trade only through the new low-fee scheme and should increase his trading volume to meet his required commission commitment."
+  ],
+  "answer": "A",
+  "why": "Answer A is correct. The question relates to Standard III(A) Loyalty, Prudence, and Care. Carter believes the broker offers effective execution at a fee that is comparable with those of other brokers, so he is free to use the broker for all accounts. Answer B is incorrect because the accounts that prohibit soft dollar arrangements do not want to fund the purchase of research by Carter. The new trading scheme does not incur additional commissions from clients, so it would not go against the prohibitions. Answer C is incorrect because Carter should not incur unnecessary or excessive “churning” of the portfolios (excessive trading) for the purpose of meeting the brokerage commitments of soft dollar arrangements."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 28,
+  "q": "Rule has worked as a portfolio manager for a large investment management firm for the past 10 years. Rule earned his CFA charter last year and has decided to open his own investment management firm. After leaving his current employer, Rule creates some marketing material for his new firm. He states in the material, “In earning the CFA charter, a highly regarded credential in the investment management industry, I further enhanced the portfolio management skills learned during my professional career. While completing the examination process in three consecutive years, I consistently received the highest possible scores on the topics of Ethics, Alternative Investments, and Portfolio Management.” Has Rule violated Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program in his marketing material?",
+  "options": [
+   "Rule violated Standard VII(B) in stating that he completed the exams in three consecutive years.",
+   "Rule violated Standard VII(B) in stating that he received the highest scores in the topics of Ethics, Alternative Investments, and Portfolio Management.",
+   "Rule did not violate Standard VII(B)."
+  ],
+  "answer": "B",
+  "why": "Answer B is correct, according to Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program. CFA Program candidates do not receive their actual scores on the exam. Topic and subtopic results are grouped into three broad categories, and the exam is graded only as “pass” or “fail.” Although a candidate may have achieved a topical score of “above 70%,” she or he cannot factually state that she or he received the highest possible score because that information is not reported. Thus, answer C is incorrect. Answer A is incorrect as long as the member or candidate actually completed the exams consecutively. Standard VII(B) does not prohibit the communication of factual information about completing the CFA Program in three consecutive years."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 29,
+  "q": "Stafford is a portfolio manager for a specialized real estate mutual fund. Her firm clearly describes in the fund’s prospectus its soft dollar policies. Stafford decides that entering the CFA Program will enhance her investment decision-making skill and decides to use the fund’s soft dollar account to pay the registration and exam fees for the CFA Program. Which of the following statements is most likely correct?",
+  "options": [
+   "Stafford did not violate the Code and Standards because the prospectus informed investors of the fund’s soft dollar policies.",
+   "Stafford violated the Code and Standards because improving her investment skills is not a reasonable use of the soft dollar account.",
+   "Stafford violated the Code and Standards because the CFA Program does not meet the definition of research allowed to be purchased with brokerage commissions."
+  ],
+  "answer": "C",
+  "why": "Answer C is correct. According to Standard III(A) Loyalty, Prudence, and Care, the CFA Program would be considered a personal or firm expense and should not be paid for with the fund’s brokerage commissions. Soft dollar accounts should be used only to purchase research services that directly assist the investment manager in the investment decision-making process, not to assist the management of the firm or to further education. Thus, answer A is incorrect. Answer B is incorrect because the reasonableness of how the money is used is not an issue; the issue is that educational expense is not research."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 30,
+  "q": "Long has been asked to be the keynote speaker at an upcoming investment conference. The event is being hosted by one of the third-party investment managers currently used by his pension fund. The manager offers to cover all conference and travel costs for Long and make the conference registrations free for three additional members of his investment management team. To ensure that the conference obtains the best speakers, the host firm has arranged for an exclusive golf outing for the day following the conference on a local championship-caliber course. Which of the following is least likely to violate Standard I(B)?",
+  "options": [
+   "Long may accept only the offer to have his conference-related expenses paid by the host firm.",
+   "Long may accept the offer to have his conference-related expenses paid and may attend the exclusive golf outing at the expense of the hosting firm.",
+   "Long may accept the entire package of incentives offered to speak at this conference."
+  ],
+  "answer": "A",
+  "why": "Answer A is correct. Standard I(B) Independence and Objectivity emphasizes the need for members and candidates to maintain their independence and objectivity. Best practices dictate that firms adopt a strict policy not to accept compensation for travel arrangements. At times, however, accepting paid travel would not compromise one’s independence and objectivity. Answers B and C are incorrect because the added benefits—free conference admission for additional staff members and an exclusive golf retreat for the speaker—could be viewed as inducements related to the firm’s working arrangements and not solely related to the speaking engagement. Should Long wish to bring other team members or participate in the golf outing, he or his firm should be responsible for the associated fees."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 31,
+  "q": "Andrews, a private wealth manager, is conducting interviews for a new research analyst for his firm. One of the candidates is Wright, an analyst with a local investment bank. During the interview, while Wright is describing his analytical skills, he mentions a current merger in which his firm is acting as the adviser. Andrews has heard rumors of a possible merger between the two companies, but no releases have been made by the companies concerned. Which of the following actions by Andrews is least likely a violation of the Code and Standards?",
+  "options": [
+   "Waiting until the next day before trading on the information to allow time for it to become public",
+   "Notifying all investment managers in his firm of the new information so none of their clients are disadvantaged",
+   "Placing the securities mentioned as part of the merger on the firm’s restricted trading list"
+  ],
+  "answer": "C",
+  "why": "Answer C is correct. The guidance to Standard II(A) Material Nonpublic Information recommends adding securities to the firm’s restricted list when the firm has or may have material nonpublic information. By adding these securities to this list, Andrews would uphold this standard. Because waiting until the next day will not ensure that news of the merger is made public, answer A is incorrect. Negotiations between the two companies may take much longer, and the merger may never happen. Andrews must wait until the information is disseminated to the market before he trades on that information. Answer B is incorrect because Andrews should not disclose the information to other managers; no trading is allowed on material nonpublic information."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 32,
+  "q": "Pietro, president of Local Bank, has hired the bank’s market maker, Vogt, to seek a merger partner. Local is currently listed on a stock exchange and has not reported that it is seeking strategic alternatives. Vogt has discussed the possibility of a merger with several firms, but they have all decided to wait until after the next period’s financial data are available. The potential buyers believe the results will be worse than the results of prior periods and will allow them to pay less for Local Bank. Pietro wants to increase the likelihood of structuring a merger deal quickly. Which of the following actions would most likely be a violation of the Code and Standards?",
+  "options": [
+   "Pietro could instruct Local Bank to issue a press release announcing that it has retained Vogt to find a merger partner.",
+   "Pietro could place a buy order for 2,000 shares (or four times the average weekly volume) through Vogt for his personal account.",
+   "After confirming with Local’s chief financial officer, Pietro could instruct Local to issue a press release reaffirming the firm’s prior announced earnings guidance for the full fiscal year."
+  ],
+  "answer": "B",
+  "why": "Answer B is correct. Through placing a personal purchase order that is significantly greater than the average volume, Pietro is violating Standard II(B) Market Manipulation. He is attempting to manipulate an increase in the share price and thus bring a buyer to the negotiating table. The news of a possible merger and confirmation of the firm’s earnings guidance may also have positive effects on the price of Local Bank, but Pietro’s actions in instructing the release of the information does not represent a violation through market manipulation. Announcements of this nature are common and practical to keep investors informed. Thus, answers A and C are incorrect."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 33,
+  "q": "ABC Investment Management acquires a new, very large account with two concentrated positions. The firm’s current policy is to add new accounts for the purpose of performance calculation after the first full month of management. Cupp is responsible for calculating the firm’s performance returns. Before the end of the initial month, Cupp notices that one of the significant holdings of the new accounts is acquired by another company, causing the value of the investment to double. Because of this holding, Cupp decides to account for the new portfolio as of the date of transfer, thereby allowing ABC Investment to reap the positive impact of that month’s portfolio return. Which of the following statements is true?",
+  "options": [
+   "Cupp did not violate the Code and Standards, because the GIPS standards allow composites to be updated on the date of large external cash flows.",
+   "Cupp did not violate the Code and Standards, because companies are allowed to determine when to incorporate new accounts into their composite calculation.",
+   "Cupp violated the Code and Standards because the inclusion of the new account produces an inaccurate calculation of the monthly results according to the firm’s stated policies."
+  ],
+  "answer": "C",
+  "why": "Answer C is correct. Cupp violated Standard III(D) Performance Presentations when he deviated from the firm’s stated policies solely to capture the gain from the holding being acquired. Answer A is incorrect because the firm does not claim GIPS compliance and the GIPS standards require external cash flows to be treated in a manner consistent with the firm’s documented policies. Answer B is incorrect because the firm does not state that it is updating its composite policies. If such a change were to occur, all cash flows for the month would have to be reviewed to ensure their consistent treatment under the new policy."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 34,
+  "q": "Cannan has been working from home on weekends and occasionally saves correspondence with clients and completed reports on her home computer. Because of worsening market conditions, Cannan is one of several employees released by her firm. While Cannan is looking for a new job, she uses the files she saved at home to request letters of recommendation from former clients. She also provides to prospective clients some of the reports as examples of her abilities. Which of the following statements is true?",
+  "options": [
+   "Cannan violated the Code and Standards because she did not receive permission from her former employer to keep or use the files after her employment ended.",
+   "Cannan did not violate the Code and Standards, because the files were created and saved on her own time and computer.",
+   "Cannan violated the Code and Standards because she is prohibited from saving files on her home computer."
+  ],
+  "answer": "A",
+  "why": "Answer A is correct. According to Standard V(C) Record Retention, Cannan needed the permission of her employer to maintain the files at home after her employment ended. Without that permission, she should have deleted the files. All files created as part of a member’s or candidate’s professional activity are the property of the firm, even those created outside normal work hours. Thus, answer B is incorrect. Answer C is incorrect because the Code and Standards do not prohibit using one’s personal computer to complete work for one’s employer."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 35,
+  "q": "Quinn sat for the Level III CFA exam this past weekend. He updates his resume with the following statement: “In finishing the CFA Program, I improved my skills related to researching investments and managing portfolios. I will be eligible for the CFA charter upon completion of the required work experience.” Which of the following statements is true?",
+  "options": [
+   "Quinn violated the Code and Standards by claiming he improved his skills through the CFA Program.",
+   "Quinn violated the Code and Standards by incorrectly stating that he is eligible for the CFA charter.",
+   "Quinn did not violate the Code and Standards with his resume update."
+  ],
+  "answer": "B",
+  "why": "Answer B is correct. According to Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program, Quinn cannot claim to have finished the CFA Program or be eligible for the CFA charter until he officially learns that he has passed the Level III CFA exam. Until the results for the most recent exam are released, those who sat for the exam should continue to refer to themselves as “candidates.” Thus, answer C is incorrect. Answer A is incorrect because members and candidates may discuss areas of practice in which they believe the CFA Program improved their personal skills."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 36,
+  "q": "During a round of golf, Rodriguez, chief financial officer of Mega Retail, mentions to Hart, a local investment adviser and long-time personal friend, that Mega is having an exceptional sales quarter. Rodriguez expects the results to be almost 10% above the current estimates. The next day, Hart initiates the purchase of a large stake in the local exchange-traded retail fund for her personal account.",
+  "options": [
+   "Hart violated the Code and Standards by investing in the exchange-traded fund that included Mega Retail.",
+   "Hart did not violate the Code and Standards, because she did not invest directly in securities of Mega Retail.",
+   "Rodriguez did not violate the Code and Standards, because the comments made to Hart were not intended to solicit an investment in Mega Retail."
+  ],
+  "answer": "A",
+  "why": "Answer A is correct. Hart’s decision to invest in the retail fund appears directly correlated with Rodriguez’s statement about the successful quarter of Mega Retail and thus violates Standard II(A) Material Nonpublic Information. Rodriguez’s information would be considered material because it would influence the share price of Mega Retail and probably influence the price of the entire exchange-traded retail fund. Thus, answer B is incorrect. Answer C is also incorrect because Rodriguez shared information that was both material and nonpublic. Company officers regularly have such knowledge about their firms, which is not a violation. The sharing of such information, however, even in a conversation between friends, does violate Standard II(A)."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 37,
+  "q": "Park is very frustrated after taking the Level II CFA exam. While she was studying for the exam, to supplement the curriculum provided, she ordered and used study material from a third-party provider. Park believes the additional material focused her attention on specific topic areas that were not tested while ignoring other areas. She posts the following statement on the provider’s discussion board: “I am very dissatisfied with your firm’s CFA Program Level II material. I found the exam extremely difficult and myself unprepared for specific questions after using your product. How could your service provide such limited instructional resources on the analysis of inventories and taxes when the exam had multiple questions about them? I will not recommend your products to other candidates.” Which of the following statements is true?",
+  "options": [
+   "Park violated the Code and Standards by purchasing third-party review material.",
+   "Park violated the Code and Standards by providing her opinion on the difficulty of the exam.",
+   "Park violated the Code and Standards by providing specific information on topics tested on the exam."
+  ],
+  "answer": "C",
+  "why": "Answer C is correct. Standard VII(A) Conduct as Members and Candidates in the CFA Program prohibits providing information to candidates or the public that is considered confidential to the CFA Program. In revealing that questions related to the analysis of inventories and analysis of taxes were on the exam, Park has violated this standard. Answer B is incorrect because the guidance for the standard explicitly acknowledges that members and candidates are allowed to offer their opinions about the CFA Program. Answer A is incorrect because candidates are not prohibited from using outside resources."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 38,
+  "q": "Paper was recently terminated as one of a team of five managers of an equity fund. The fund had two value-focused managers and terminated one of them to reduce costs. In a letter sent to prospective employers, Paper presents, with written permission of the firm, the performance history of the fund to demonstrate his past success. Which of the following statements is true?",
+  "options": [
+   "Paper did not violate the Code and Standards.",
+   "Paper violated the Code and Standards by claiming the performance of the entire fund as his own.",
+   "Paper violated the Code and Standards by including the historical results of his prior employer."
+  ],
+  "answer": "B",
+  "why": "Answer B is correct. Paper has violated Standard III(D) Performance Presentation by not disclosing that he was part of a team of managers that achieved the results shown. If he had also included the return of the portion he directly managed, he would not have violated the standard. Thus, answer A is incorrect. Answer C is incorrect because Paper received written permission from his prior employer to include the results."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 39,
+  "q": "Townsend was recently appointed to the board of directors of a youth golf program that is the local chapter of a national not-for-profit organization. The program is beginning a new fund-raising campaign to expand the number of annual scholarships it provides. Townsend believes many of her clients make annual donations to charity. The next week in her regular newsletter to all clients, she includes a small section discussing the fund-raising campaign and her position on the organization’s board. Which of the following statements is true?",
+  "options": [
+   "Townsend did not violate the Code and Standards.",
+   "Townsend violated the Code and Standards by soliciting donations from her clients through the newsletter.",
+   "Townsend violated the Code and Standards by not getting approval of the organization before soliciting her clients."
+  ],
+  "answer": "A",
+  "why": "Answer A is correct. Townsend has not provided any information about her clients to the leaders or managers of the golf program; thus, she has not violated Standard III(E) Preservation of Confidentiality. Providing contact information about her clients for a direct-mail solicitation would have been a violation. Answer B is incorrect because the notice in the newsletter does not violate Standard III(E). Answer C is incorrect because the golf program’s fund-raising campaign had already begun, so discussing the opportunity to donate was appropriate."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 40,
+  "q": "Jimmy Lan, CFA, is a technology analyst at Pacific Securities, Inc., and is a leading authority on Japanese technology companies. Lan’s clients include many leading Japanese equity managers. While still employed at Pacific, Lan makes plans during weekends to start a new company, JL Consulting. His plans consist of contracting office space, interviewing potential employees, and purchasing office equipment. Once he feels ready to launch his new firm, Lan provides Pacific with his resignation notice. After leaving, Lan constructs earnings models of the technology companies he previously covered, using the knowledge and experience gained while at Pacific. He then contacts former clients by using public sources and encourages them to become clients of his new firm. Are Lan’s actions in compliance with the Code and Standards?",
+  "options": [
+   "Yes, assuming he is not in breach of any non-compete agreement signed while at Pacific Securities",
+   "No, because he is prohibited from engaging in activities related to starting his new business while still employed by Pacific Securities",
+   "No, because the names of former clients, modeling skills and experience gained by Lan are confidential information of Pacific Securities"
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because Lan’s actions do not violate Standard IV(A)–Duties to Employers. Lan does not use company time to make arrangements for his new venture, nor does he misappropriate any information (financial models or client contacts) from his former employer. All of the actions performed by Lan are permissible under Standard IV(A).\n\nIncorrect Answer Feedback: Incorrect because members and candidates are not prohibited from making arrangements for a new venture while still employed providing they do so on their own time and do not inappropriately use company property.\n\nIncorrect Answer Feedback: Incorrect because general skills and experience gained while employed are not considered confidential or privileged information. Likewise, simple knowledge of the names and existence of former clients is generally not considered confidential information under Standard IV(A).\nStandard IV(A)–Loyalty\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 41,
+  "q": "Marc Davidson, CFA, works as a trust specialist for Integrity Financial. On his own time, Davidson starts a part time consulting business providing advice to Trustees for a fee. Since this is only part time work, he doesn’t inform Integrity of the consulting business. Davidson asks his assistant to compile a list of Integrity’s clients and their contact information. The following month, Davidson is offered a similar role at Integrity’s largest competitor, Legacy Trust Services, Inc. After he begins working at Legacy, his new manager arranges for him to meet with a number of prospective clients, many of whom are clients of Integrity. After meeting with Davidson, a number of former Integrity clients decide to transfer their business to Legacy. Did Davidson’s action violate the Code and Standards?",
+  "options": [
+   "No",
+   "Yes, Davidson’s part time consulting business is a violation of the Standards",
+   "Yes, both Davidson’s part time consulting business and his meetings with Integrity clients are a violation of the Standards"
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because his consulting business is a violation of Standard IV(A).\n\nCorrect Answer Feedback: Correct because members and candidates are required to disclose any compensation arrangement to their employers that involves performing tasks or services that their employers can charge for. Disclosure is required even if the activities occur during non-work hours.\n\nIncorrect Answer Feedback: Incorrect because being hired by a competing firm does not constitute a violation of Standard IV(A). In addition, Davidson is not utilizing confidential information from Integrity to solicit former clients. Although Davidson had a list of client contacts prepared while at Integrity, his new employer arranges the meetings.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 42,
+  "q": "Heidi Katz is a CFA candidate and an analyst at a pension consulting firm. Her father is a major shareholder and managing director at Saturn Partners, a large hedge fund. When assisting in an alternative manager search for a pension client, Katz plans to recommend Saturn’s market-neutral strategy because she feels it meets all of the pension plan’s criteria. Given this situation, the best course of action for Katz is to:",
+  "options": [
+   "not present this strategy to the client and recommend another strategy.",
+   "disclose the potential conflict to the pension client when discussing this recommendation.",
+   "disclose the potential conflict to her employer and follow their guidance regarding disclosure of her relationship to the client."
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because if Katz believes the Saturn strategy is the best available choice she can make this recommendation, but she must disclose the relationship with her father’s fund.\n\nCorrect Answer Feedback: Correct because Standard VI(A) requires disclosure of conflicts but does not prohibit members from making recommendations as long as the potential conflicts are appropriately disclosed.\n\nIncorrect Answer Feedback: Incorrect because even if her employer guides Katz not to disclose a potential conflict, she must still disclose any reasonable influences on her objectivity when making a recommendation to a client or prospective client.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 43,
+  "q": "James Woods, CFA, is a Portfolio Manager at ABC Securities. Woods has reasonable grounds to believe his colleague, Sandra Clarke, a CFA Level II Candidate, is engaged in unethical trading activities that may also be in violation of local securities laws. Woods is not Clarke’s supervisor, and her activities do not impact Woods or any of the portfolios for which he is responsible. Based on the Code and Standards, the recommended course of action is for Woods to:",
+  "options": [
+   "not take any action because he is not directly involved.",
+   "report Sandra Clarke to ABC’s trading supervisor or compliance department.",
+   "report Sandra Clarke to the appropriate governmental or regulatory organization."
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because Woods has an obligation to report the activity to attempt to stop these activities.\n\nCorrect Answer Feedback: Correct because under Standard I(A) in situations where a member or candidate is aware of employer engagement in unethical or illegal activity, it is recommended that they attempt to stop the behavior by bringing it to the attention through a supervisor or the firm’s compliance department.\n\nIncorrect Answer Feedback: Incorrect because the Code and Standards do not compel members or candidates to report violations to governmental or regulatory authorities unless required to do so by law.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 44,
+  "q": "Madeline Smith, CFA, was recently promoted to senior portfolio manager. In her new position, Smith is required to supervise three portfolio managers. Smith asks for a copy of her firm’s written supervisory policies and procedures, but is advised that no such policies are required by regulatory standards in the country where Smith works. According to the Standards of Practice Handbook, Smith’s most appropriate course of action would be to:",
+  "options": [
+   "require her firm to adopt the CFA Institute Code of Ethics and Standards of Professional Conduct.",
+   "require the employees she supervises to adopt the CFA Institute Code of Ethics and Standards of Professional Conduct.",
+   "decline to accept supervisory responsibility until her firm adopts procedures to allow her to adequately exercise such responsibility."
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because these actions will not provide a complete compliance system with which the portfolio manager can adequately exercise her supervisory responsibilities.\n\nIncorrect Answer Feedback: Incorrect because these actions will not provide a complete compliance system with which the portfolio manager can adequately exercise her supervisory responsibilities.\n\nCorrect Answer Feedback: Correct because if a member cannot fulfill supervisory responsibilities because of the absence of a compliance system or because of an inadequate compliance system, the member should decline in writing to accept supervisory responsibility until the firm adopts reasonable procedures to allow the member to adequately exercise such responsibility (Standard IV(C)).\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 45,
+  "q": "Jiro Sato, CFA, deputy treasurer for May College, manages the Student Scholarship Trust. Sato issued a Request for Proposal (RFP) for domestic equity managers. Pamela Peters, CFA, a good friend of Sato, introduces him to representatives from Capital Investments, who submitted a proposal. Sato selected Capital as a manager based on the firm’s excellent performance record. Shortly after the selection, Peters, who had outstanding performance as an equity manager with another firm, accepted a lucrative job with Capital. Which of the CFA charterholders violated the CFA Institute Standards of Professional Conduct?",
+  "options": [
+   "Both violated Standards",
+   "Peters violated Standards",
+   "Neither violated Standards"
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because there is no indication of inappropriate behavior in selection of the equity manager or in the acceptance of employment with that manager; both decisions were based on the excellent performance records of the manager and the member, respectively.\n\nIncorrect Answer Feedback: Incorrect because there is no indication that Peters or Sato violated Standard I(B) by Peters joining Capital.\n\nCorrect Answer Feedback: Correct because members should use reasonable care and judgment to maintain independence and objectivity [Standard I(B)]. There is no indication of inappropriate behavior in selection of the equity manager or in the acceptance of employment with that manager; both decisions were based on the excellent performance records of the manager and the member, respectively.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 46,
+  "q": "When Jefferson Piedmont, CFA, joined Branch Investing, Branch began using a quantitative stock selection model Piedmont had developed on his own personal time prior to his employment with Branch. One year later when Piedmont left the firm, he found the original copy of the model he had developed in a file at his home and presented it to his new employer, who immediately began using the model. According to the Standards of Practice Handbook, did Piedmont most likely violate any CFA Institute Standards of Professional Conduct?",
+  "options": [
+   "No",
+   "Yes, because he misappropriated property now belonging to Branch",
+   "Yes, because he failed to inform his new employer the model was the same one used by his previous employer"
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because although departing employees may not take employer property when departing [Standard IV(A)–Duties to Employers (Loyalty)], the model Piedmont presented to his new employer was not Branch’s property. It was created by Piedmont prior to his employment with Branch. The model was not created for Branch in the course of his employment, but was adopted by Branch.\n\nIncorrect Answer Feedback: Incorrect because the model Piedmont presented to his new employer was not Branch’s property. It was created by Piedmont prior to his employment with Branch.\n\nIncorrect Answer Feedback: Incorrect because the model was not created for Branch in the course of his employment, but was adopted by Branch.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 47,
+  "q": "Jeffrey Jones passed the Level I CFA exam in 1997 and the Level II exam in 2009. He is not currently enrolled for the Level III exam. According to the CFA Institute Standards of Professional Conduct, which of the following is the most appropriate way for Jones to refer to his participation in the CFA Program?",
+  "options": [
+   "Jeffrey Jones, CFA (expected 2014)",
+   "Candidate in the CFA Institute CFA Program",
+   "Passed Level II of the CFA examination in 2009"
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because it is an improper reference to use “expected” as part of the designation.\n\nIncorrect Answer Feedback: Incorrect because a person can only state he is a Candidate if he is currently enrolled in the CFA Program.\n\nCorrect Answer Feedback: Correct because no designation exists for someone who has passed Level I, Level II, or Level III of the CFA exam [Standard VII(B)]. Persons who have passed a certain level of the exam may state that they have completed that level. A person can only state he is a Candidate if he is currently enrolled in the CFA Program. It is also an improper reference to use “expected” a part of the designation.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 48,
+  "q": "Reiko Kimisaki, CFA, is an investment advisor for a national social security fund in a frontier market with a very limited and illiquid capital market. The labor force is young with an investment time horizon of 25 to 30 years. She has been asked to suggest ways to increase the investment return of the overall portfolio. After careful assessment of the fund’s previous investment history and available asset classes, she considers investment in private equity. What is Kimisaki’s lowest priority to avoid any Code of Ethics and Standards of Professional Conduct violations prior to making this investment recommendation?",
+  "options": [
+   "Assess the risk tolerance of the fund",
+   "Analyze the expected returns of private equity in the market",
+   "Determine if the Investment Policy Statement allows for alternative investments"
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because assessing risk of a client is a key role in determining investment suitability.\n\nCorrect Answer Feedback: Correct because prior to undertaking analysis with regard to expected returns, an advisor must determine suitability of an investment class including whether it fits within the client’s risk tolerance and if it is an allowable asset class as per the client’s Investment Policy Statement. Only once these factors have been determined should she proceed if appropriate to analyze expected returns to determine a particular investment recommendation.\n\nIncorrect Answer Feedback: Incorrect because before introducing a new asset class, it must be determined if that asset class is an allowable asset class as defined by the Investment Policy Statement."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 49,
+  "q": "A central bank fines a commercial bank it supervises for not following statutory regulations regarding non-performing loan provisions on three large loans as a result of the bank’s loan provisioning policy. Louis Marie Buffet, CFA, sits on the Board of Directors of the commercial bank as a non-executive director, representing minority shareholders. He also chairs the internal audit committee of the bank that determines the loan provisioning policy of the bank. Mercy Gatabaki, CFA, is the bank’s external auditor and follows international auditing standards whereby she tests the loan portfolio by randomly selecting loans to check for compliance in all aspects of central bank regulations. Which charterholder is most likely in violation of the Code and Standards?",
+  "options": [
+   "Both",
+   "Buffet",
+   "Gatabaki"
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because only Buffet is most likely to have violated Standard I–Professionalism by not following central bank regulations.\n\nCorrect Answer Feedback: Correct because Buffet sat on the audit committee that determined the bank’s provisioning policies that were contrary to the statutory regulations of the central bank. As a result, he most likely violated Standard I–Professionalism by not abiding with regulations of a regulatory body. Gatabaki did not violate Standard I–Professionalism as it is not apparent she knowingly facilitated the incorrect provisioning policy,\n\nIncorrect Answer Feedback: Incorrect because Gatabaki most likely did not violate Standard I–Professionalism as it is not apparent she knowingly facilitated the incorrect provisioning policy or followed it. Gatabaki randomly selects loans for her audit and given the relatively small number of loans in violation, it is likely she did not come across the files which were treated in a manner by the bank that was contrary to the central bank regulations.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 50,
+  "q": "Ileana Inkster, CFA, was recently offered a senior management position within the trust department at a regional bank. The department is new, but the bank has plans to expand it significantly over the next few months. Inkster has been told she will be expected to help grow the client base of the trust department. She is informed that the trust department plans to conduct educational seminars and pursue the attendees as new clients. Inkster notices that recent seminar advertisements prepared by the bank’s marketing department do not mention that investment products will be for sale at the seminar. The ads indicate attendees can “learn how to immediately add $100,000 to their net worth.” What should Inkster most likely do to avoid violating any CFA Institute Standards of Professional Conduct?",
+  "options": [
+   "Decline to accept the new position",
+   "Accept the position and revise the marketing material",
+   "Accept the position and inform senior management of inadequate compliance procedures"
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because the prospective supervisor’s first step should be to not take the position. Accepting the position with inadequate procedures in place or improper marketing material would leave Inkster at risk of incurring a violation of the Code and Standards—Standard IV(C)–Responsibilities of Supervisors. She could agree to be hired as an interim consultant with the bank in order to implement adequate procedures before taking on any supervisory role.\n\nIncorrect Answer Feedback: Incorrect because Inkster should bring the improper marketing material to the attention of the firm's senior managers and recommend corrective action before taking the position.\n\nIncorrect Answer Feedback: Incorrect because Inkster should bring the inadequate compliance system to the attention of the bank's senior managers and recommend corrective action be taken before accepting the position."
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 51,
+  "q": "Margie Germainne, CFA, is a risk management consultant who has been asked by a small investment bank to recommend policies to prevent bank employees from front-running client orders. These clients generally invest in one or more of the bank’s large cap equity unit trusts. To ensure compliance with the CFA Institute Standards of Professional Conduct, Germainne should least likely recommend which of the following? Employees should be restricted from trading:",
+  "options": [
+   "equity related securities.",
+   "without prior permission.",
+   "during established time periods."
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because while Standard VI(B)–Priority of Transactions is designed to prevent any potential conflict of interest or the appearance of a conflict of interest with respect to personal transactions, it does not ban employees from trading securities. A ban on all equity related securities could be excessively restrictive to employees and unnecessary if appropriate personal transaction policies and procedures are in place.\n\nIncorrect Answer Feedback: Incorrect because requiring staff members to receive prior permission for personal trading (preclearance procedures) is a recommended practice\n\nIncorrect Answer Feedback: Incorrect because a restricted trading period is a recommended practice\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 52,
+  "q": "Richard Cardinal, CFA, is the founder of Volcano Capital Research, an investment management firm whose sole activity is short selling. Cardinal seeks out companies whose stocks have had large price increases. Cardinal also pays several lobbying firms to update him immediately on any legislative or regulatory changes that may impact his target companies. Cardinal sells short those target companies he estimates are near the peak of their sales and earnings and that his sources identify as facing legal or regulatory challenges. Immediately after he sells a stock, Cardinal conducts a public relations campaign to disclose all of the negative information he has gathered on the company, even if the information is not yet public. Which of Cardinal’s following actions is most likely to be in violation of the CFA Institute Standards of Professional Conduct?",
+  "options": [
+   "Selling stock short",
+   "Trading on information from lobbyists",
+   "Disclosing information about target companies"
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because selling stock short is a management strategy and does not necessarily violate any aspect of the Code and Standards.\n\nIncorrect Answer Feedback: Incorrect because it appears a reasonable and diligent effort has been made as required by Standard V(A)–Diligence and Reasonable Basis to determine the investment action is sound and suitable for his clients. Information gathering is an integral part of investment analysis and the methods described do not necessarily violate any aspect of the CFA Code and Standards.\n\nCorrect Answer Feedback: Correct because Cardinal’s actions related to the public relations campaign and class action lawsuits are specifically intended to manipulate share prices lower and to advantage the manager. Cardinal has made deliberate attempts to create artificial price volatility designed to have a material impact on the price of an issuer’s stock, in violation of Standard II(B)–Market Manipulation.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 53,
+  "q": "Oliver Opdyke, CFA, works for an independent research organization that does not manage any client money. In the course of his analysis of Red Ribbon Mining he hears rumors that the president of Red Ribbon, Richard Leisberg, has recently been diagnosed with late stage Alzheimer’s disease, a fact not publicly known. The final stage of Alzheimer’s is when individuals lose the ability to respond to their environment, the ability to speak, and, ultimately, the ability to control movement. Leisberg is the charismatic founder of Red Ribbon, and under his leadership the company grew to become one of the largest in the industry. According to the CFA Institute Code of Ethics and Standards of Professional Conduct, the most appropriate action for Opdyke is to:",
+  "options": [
+   "immediately publish a sell recommendation for Red Ribbon Mining.",
+   "confirm the president’s diagnosis before publishing his research report.",
+   "encourage Red Ribbon Mining management to disclose the president’s medical condition."
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because members and candidates should make reasonable efforts to achieve public dissemination of information that is material and nonpublic. This effort usually entails encouraging the issuer company to make the information public. In publishing a sell recommendation immediately, the analyst would be relying upon material nonpublic information and be in violation of Standard II(A)–Material Nonpublic Information.\n\nIncorrect Answer Feedback: Incorrect because members and candidates must not knowingly engage in any conduct that may induce company insiders to privately disclose material nonpublic information or to trade on such information. The information about the president’s medical condition is material and nonpublic. By publishing a recommendation based in part on information privately disclosed, the analyst would be relying upon material nonpublic information and be in violation of Standard II(A)–Material Nonpublic Information.\n\nCorrect Answer Feedback: Correct because members and candidates should make reasonable efforts to achieve public dissemination of information that is material and nonpublic, as required by Standard II(A)–Material Nonpublic Information. This effort usually entails encouraging the issuer company to make the information public. In this case, if the diagnosis is fact and not rumor, then this information is material and should be disclosed.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 54,
+  "q": "Christina Ng, a Level I CFA candidate, defaulted on a bank loan she obtained to pay for her Master’s degree tuition when her wedding cost more than expected. A micro finance loan company lent her money to pay off the tuition loan in full including penalties and interest. The micro finance loan company even extended further credit to pay for her parent’s outstanding medical bills. Unfortunately, her parent’s health problems escalated to the point where Ng had to take extensive time away from work to deal with the issues. She was subsequently fired and consequently defaulted on the second loan. As she was no longer employed, Ng decided to file for personal bankruptcy. Do the loan defaults leading up to Ng’s bankruptcy most likely violate Standard I(D)–Misconduct?",
+  "options": [
+   "No.",
+   "Yes, with regard to the first loan default.",
+   "Yes, with regard to the second loan default."
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because while Ng’s first loan default, which played a part in the subsequent bankruptcy, is a result of poor financial choices (i.e., paying for higher wedding costs rather than her tuition loan), neither of the loan defaults or bankruptcy involves fraudulent or deceitful business conduct but are based on unfortunate personal circumstances. Therefore, she would most likely not be in violation of Standard I(D)–Misconduct.\n\nIncorrect Answer Feedback: Incorrect because while Ng’s bankruptcy may reflect poor financial choices by paying for higher wedding costs rather than her tuition loan, the bankruptcy does not involve fraudulent or deceitful business conduct. Therefore, she would most likely not be in violation of Standard I(D)–Misconduct.\n\nIncorrect Answer Feedback: Incorrect because the bankruptcy does not involve fraudulent or deceitful business conduct. Therefore, she would most likely not be in violation of Standard I(D)–Misconduct.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 55,
+  "q": "Henrietta Huerta, CFA, writes a weekly investment newsletter to market her services and obtain new asset management clients. A third party distributes the free newsletter on her behalf to those individuals on its mailing list. As a result, it is widely read by thousands of individual investors. The newsletter recommendations reflect most of Huerta’s investment actions. After completing further research on East-West Coffee Roasters, Huerta decides to change her initial buy recommendation to a sell. To avoid violating the CFA Institute Standards of Professional Conduct it would be most appropriate for Huerta to distribute the new investment recommendation to:",
+  "options": [
+   "newsletter recipients first.",
+   "asset management clients first.",
+   "newsletter recipients and asset management clients simultaneously."
+  ],
+  "answer": "B",
+  "why": "Incorrect Answer Feedback: Incorrect because according to Standard III(A)–Loyalty, Prudence, and Care members and candidates when making investment recommendations (or changing investment recommendations) must give priority to clients; i.e., asset management clients rather than to non-clients; i.e., newspaper recipients who receive the newsletter for free from a third party distribution list.\n\nCorrect Answer Feedback: Correct because according to Standard III(A)–Loyalty, Prudence, and Care, members and candidates must place their clients’ interests first before their own interests. The temptation may be to release the changed recommendation to newsletter recipients simultaneously with or even before the asset management clients to try to obtain new clients. However, to avoid violating Standard III(A)–Loyalty, Prudence, and Care, Huerta must ensure that any change in an investment recommendation is first distributed to her asset management clients before any newsletter recipients, who are not necessarily clients (that is, they receive the newsletter for free from a third party distribution list).\n\nIncorrect Answer Feedback: Incorrect because according to Standard III(A)–Loyalty, Prudence, and Care, members and candidates when making investment recommendations (or changing investment recommendations) must give priority to clients, i.e., asset management clients rather than to non-clients, i.e., newspaper recipients who receive the newsletter for free from a third party distribution list.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 56,
+  "q": "Danielle Deschutes, CFA, is a portfolio manager who is part of a 10-person team that manages equity portfolios for institutional clients. A competing firm, South West Managers, asks Deschutes to interview for a position within its firm and to bring her performance history to the interview. Deschutes receives written permission from her current employer to bring the performance history of the stock portfolio with her. At the interview, she discloses that the performance numbers represent the work of her team and describes the role of each member. To bolster her credibility, Deschutes also provides the names of institutional clients and related assets constituting the portfolio. During her interview Deschutes most likely violated the CFA Institute Standards of Professional Conduct with regards to:",
+  "options": [
+   "the stock portfolio’s performance history.",
+   "her contribution to the portfolio’s returns.",
+   "providing details of the institutional clients."
+  ],
+  "answer": "C",
+  "why": "Incorrect Answer Feedback: Incorrect because Standard III(D)–Performance Presentation does not prohibit showing past performance of funds managed at a prior firm as part of a performance track record as long as showing that record is accompanied by appropriate disclosures about where the performance took place and the person’s specific role in achieving that performance, which has been done in this case.\n\nIncorrect Answer Feedback: Incorrect because the specific role the portfolio manager played in achieving the performance and the portion of the return that she was directly responsible for should be disclosed as required by Standard III(D)–Performance Presentation. Deschutes explains that the performance was a team effort and there is no indication she tried to exaggerate her role in obtaining the performance nor did she specifically state a return she was directly responsible for which would be difficult to determine as a member of a team.\n\nCorrect Answer Feedback: Correct because Deschutes most likely violated Standard III(E)–Preservation of Confidentiality by failing to preserve the confidentiality of client records when she disclosed specific details about clients in the equity portfolio.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 57,
+  "q": "When Abdullah Younis, CFA, was hired as a portfolio manager at an asset management firm two years ago and was told he could allocate his work hours as he saw fit. At that time, Younis served on the board of three nonpublic golf equipment companies and managed a pooled investment fund for several members of his immediate family. Younis was not compensated for his board service or for managing the pooled fund. Younis’ investment returns attract interest from friends and co-workers who persuade him to include their assets in his investment pool. Younis recently retired from all board responsibilities and now spends more than 80% of his time managing the investment pool for which he charges non-family members a management fee. Younis has never told his employer about any of these activities. To comply with the CFA Institute Standards of Professional Conduct with regards to his business activities over the past two years, Younis would least likely be required to disclose which of the following to his employer?",
+  "options": [
+   "Board activities",
+   "Family investment pool management",
+   "Non-family member management fees"
+  ],
+  "answer": "A",
+  "why": "Correct Answer Feedback: Correct because golf equipment is a business independent of the financial services industry such that any board obligations would not likely be considered a conflict of interest requiring disclosure according to Standard IV(B), Additional Compensation Arrangements. Standard IV(B) requires members and candidates to obtain permission from their employer before accepting compensation or other benefits from third parties for the services that might create a conflict with their employer’s interests. Managing investments for family and non-family members could likely create a conflict of interest for Younis’ employer and should be disclosed to his employer.\n\nIncorrect Answer Feedback: Incorrect, as Younis should have made full and fair disclosure of all matters that could reasonably be expected to impair his independence and objectivity or interfere with his respective duties to his clients, prospective clients, and employer as required by Standard VI(A), Avoid or Disclose Conflicts. Since the majority of his time is now spent on fund management, in potential competition with his employer, he would need to disclose this. Disclosure of the outside work should also have been made at the time of employment so that his employer was fully aware of these activities and could make their own judgment on whether or not these activities impaired the broker’s ability to complete his responsibilities at the financial services organization.\n\nIncorrect Answer Feedback: Incorrect, as Younis should have made full and fair disclosure of all matters that could reasonably be expected to impair his independence and objectivity or interfere with his respective duties to his clients, prospective clients, and employer as required by Standard VI(A), Avoid or Disclose Conflicts. Since the majority of his time is now spent on fund management, in potential competition with his employer, he would need to disclose this. Disclosure of the outside work should also have been made at the time of employment so that his employer was fully aware of these activities and could make their own judgment on whether or not these activities impaired the broker’s ability to complete his responsibilities at the financial services organization.\n\n(no answer)"
+ },
+ {
+  "source": "6 Nov Ethics set (Standards of Professional Conduct practice)",
+  "readings": [
+   41
+  ],
+  "n": 69,
+  "q": "Jenny Wilkin, CFA, leaves her employer ABC Investment (ABCI) to start her own investment firm. She has no noncompete agreement with ABCI. Wilkin leaves all research records at ABCI, and only takes an internal analysis of ABCI's sales strategy. After leaving ABCI, she uses the internet to look up the clients she served at her former firm. Using the contact data she finds on the internet, she solicits clients and encourages them to switch to her new firm.\nDid Wilkin violate the Standard relating to loyalty?",
+  "options": [
+   "No",
+   "Yes, by taking an internal analysis of ABCI's sales strategy",
+   "Yes, by soliciting business from ABCI clients to switch to her new firm"
+  ],
+  "answer": "B",
+  "why": "A. Incorrect because, as noted in the correct answer, Wilkin violated the Standard relating to loyalty by taking the internal analysis of ABCI's sales strategy. | B. Correct because according to Standard IV(A): Loyalty, the member or candidate must not take records or files to a new employer without the written permission of the previous employer. Also, firm records or work performed on behalf of the firm that is stored in paper copy or electronically for the member’s or candidate’s convenience while employed, however, should be erased or returned to the employer unless the firm gives permission to keep those records after employment ends. The internal sales strategy analysis is the property of ABCI, so Wilkin violated the Standards by taking the analysis. | C. Incorrect because according to Standard IV(A): Loyalty, a member or candidate who is contemplating seeking other employment must not contact existing clients or potential clients prior to leaving his or her employer for purposes of soliciting their business for the new employer. Also, once an employee has left the firm, the skills and experience that an employee obtained while employed are not “confidential” or “privileged” information. Similarly, simple knowledge of the names and existence of former clients is generally not confidential information unless deemed such by an agreement or by law. In this case, with no noncompete agreement, Wilkins is allowed to solicit clients using simple knowledge using the internet. Incorrect answer: (no answer) Correct Answer: Yes, by taking an internal analysis of ABCI's sales strategy"
  }
 ]

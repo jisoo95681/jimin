@@ -621,6 +621,10 @@
   .kq-chip.bad { background: #fde1df; border-color: #c2453d; }
   .kq-ghost { position: fixed; z-index: 50; pointer-events: none; transform: translate(-50%, -60%); box-shadow: 0 6px 18px rgba(0,0,0,.25); background: #fff; }
   .kq-over { outline: 2px solid var(--navy); background: #eef8f8; }
+  .kq-vig { margin: 4px 0 10px; border: 1px solid var(--border); border-radius: 10px; background: #fbfdfd; text-align: left; }
+  .kq-vig summary { cursor: pointer; padding: 8px 10px; font-weight: 600; color: var(--navy); }
+  .kq-vigbody { padding: 2px 12px 10px; font-size: .9rem; line-height: 1.5; max-height: 55vh; overflow: auto; }
+  .kq-vigbody p { margin: 6px 0; }
   .kq-table td.kq-filled { background: var(--good-bg); }
   .kq-ans { padding: 10px 12px; border-left: 3px solid var(--good); background: var(--good-bg); border-radius: 8px; margin: 6px 0 8px; }
   .kq-note { color: var(--muted); font-size: .85rem; margin: 4px 0 8px; }
@@ -656,7 +660,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v180 · 2026-11-06";
+  const APP_VERSION = "v181 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
