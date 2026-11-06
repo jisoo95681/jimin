@@ -660,7 +660,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v181 · 2026-11-06";
+  const APP_VERSION = "v182 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1164,7 +1164,7 @@
     const d = kqLoad();
     app.append(el("h1", { className: "title" }, "Key notes questions"),
       el("p", { className: "sub" }, "Your own notes as recall questions. Pick a topic, then a reading, or open the questions day by day."));
-    const nDays = new Set(KEYQ.map(q => q.day)).size, byDay = el("button", { className: "nt-item" });
+    const nDays = new Set(kqDayItems().map(q => q.day)).size, byDay = el("button", { className: "nt-item" });
     byDay.append(el("b", {}, "Questions sorted by days"), el("span", {}, `${plural(nDays, "day")} · what you added each day`));
     byDay.onclick = () => kqDays();
     app.append(byDay);
@@ -1182,7 +1182,10 @@
     backTo = () => kqSubject(name, "back");
     app.append(nav("Key notes questions", () => kqHub("back")));
     const d = kqLoad(), rs = KEYQ_SUBJECTS.find(s => s[0] === name)[1], all = KEYQ.filter(q => rs.includes(q.reading));
-    app.append(el("h1", { className: "title" }, name), el("p", { className: "sub" }, "Choose a reading, or All to practise every question of the topic. 3 right in a row removes a question from its reading list; it stays in All."));
+    const sess = [...new Set(all.map(q => q.sess).filter(Boolean))].sort((a, b) => a - b);
+    app.append(el("h1", { className: "title" }, name), el("p", { className: "sub" }, sess.length
+      ? "Choose a session (random groups of 20 questions), or All to practise every question. 3 right in a row removes a question from its session; it stays in All."
+      : "Choose a reading, or All to practise every question of the topic. 3 right in a row removes a question from its reading list; it stays in All."));
     const add = (title, items, spec) => {
       const m = items.filter(q => kqSt(d, q).streak >= 3).length, left = items.length - m;
       const b = el("button", { className: "nt-item" + (items.length ? "" : " absorbed") });
@@ -1191,13 +1194,16 @@
       app.append(b);
     };
     add(`All · ${name}`, all, { title: `All · ${name}`, subject: name, items: all, all: true });
-    rs.forEach(r => { const items = all.filter(q => q.reading === r); add(`${r} · ${NOTE_READINGS[r]}`, items, { title: `${r} · ${NOTE_READINGS[r]}`, subject: name, items, all: false }); });
+    if (sess.length) sess.forEach(n => { const items = all.filter(q => q.sess === n); add(`Session ${n}`, items, { title: `${name} · Session ${n}`, subject: name, items, all: false }); });
+    else rs.forEach(r => { const items = all.filter(q => q.reading === r); add(`${r} · ${NOTE_READINGS[r]}`, items, { title: `${r} · ${NOTE_READINGS[r]}`, subject: name, items, all: false }); });
     const reset = el("button", { className: "link-btn" }, `Reset progress for ${name}`);
     reset.onclick = () => { if (!confirm(`Reset the right-in-a-row counts for ${name}?`)) return; const dd = kqLoad(); all.forEach(q => delete dd[q.id]); kqSave(dd); kqSubject(name, "back"); };
     app.append(el("div", { className: "row" }, ""), reset);
   }
 
   // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
+  // Ethics (readings 40-42) is practised in sessions, so it is not part of the day lists.
+  const kqDayItems = () => KEYQ.filter(q => !(q.reading >= 40 && q.reading <= 42));
   const kqToday = () => new Date(Date.now() - 2 * 3600 * 1000).toLocaleDateString("en-CA");
   const kqDayLabel = day => {
     const t = new Date(day + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
@@ -1207,11 +1213,11 @@
     screen(dir);
     backTo = () => kqDays("back");
     app.append(nav("Key notes questions", () => kqHub("back")));
-    const d = kqLoad(), days = [...new Set(KEYQ.map(q => q.day))].sort().reverse();
+    const d = kqLoad(), days = [...new Set(kqDayItems().map(q => q.day))].sort().reverse();
     app.append(el("h1", { className: "title" }, "Questions sorted by days"),
       el("p", { className: "sub" }, "The questions you added each day. A day ends at 2:00 the next morning. 3 right in a row removes a question from its day list."));
     days.forEach(day => {
-      const items = KEYQ.filter(q => q.day === day), m = items.filter(q => kqSt(d, q).streak >= 3).length, label = kqDayLabel(day);
+      const items = kqDayItems().filter(q => q.day === day), m = items.filter(q => kqSt(d, q).streak >= 3).length, label = kqDayLabel(day);
       const b = el("button", { className: "nt-item" });
       b.append(el("b", {}, label), el("span", {}, `${plural(items.length, "question")} · ${items.length - m} to practise · ${m} mastered`));
       b.onclick = () => kqPage({ title: label, navLabel: "Sorted by days", back: () => kqDays("back"), items, all: false });
