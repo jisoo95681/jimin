@@ -639,7 +639,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v175 · 2026-11-06";
+  const APP_VERSION = "v176 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1189,7 +1189,7 @@
       meta.append(el("span", {}, `${idx + 1} · ${q.reading} ${NOTE_READINGS[q.reading]} · ${KQ_TYPE[q.type]}`), dots);
       card.append(meta);
       card.append(kqHtml("p", q.q, "q"));
-      if (q.fig) { const f = el("div", { className: "kq-figwrap" }); f.innerHTML = KQ_FIGS[q.fig](); card.append(f); }
+      if (q.fig) { const f = el("div", { className: "kq-figwrap" }); f.innerHTML = KQ_FIGS[q.fig] ? KQ_FIGS[q.fig]() : q.fig; card.append(f); }
       const after = el("div");
       const badge = (ok, txt) => el("span", { className: `nt-badge ${ok ? "good" : "bad"}` }, txt);
       const selfCheck = () => {
