@@ -342,6 +342,20 @@ const KEYQ = [];
   mc(5, "Combining Mundell-Fleming and portfolio balance, the exchange rate after a fiscal expansion most likely:", ["Appreciates in the short term, then depreciates in the long term", "Depreciates in the short term, then appreciates in the long term", "Appreciates in both the short and long term"], 0, "Free cash flows first attract capital; later the fiscal deficit worries investors.");
 
   // ================= 6 Economic Growth =================
+  tb(6, "Growth theories: classical vs neoclassical vs endogenous", ["", "Classical", "Neoclassical", "Endogenous"], [
+    ["Keyword", "Malthus trap", "Solow, steady state", "Romer, R&D"],
+    ["Capital returns", "Diminishing (land is fixed)", "Diminishing", "No diminishing returns (human capital, R&D)"],
+    ["Technology", "Temporary boost", "Exogenous", "Endogenous"],
+    ["Per capita income", "Returns to subsistence", "Reaches a steady state", "Grows permanently"],
+    ["Raising the saving rate / investment", "Does not help", "Raises the level only", "Raises the growth rate"],
+    ["Convergence", "No", "Yes (absolute or conditional)", "Not required"]],
+    "Memory hooks: classical = babies eat the growth; neoclassical = brakes on capital; endogenous = invest and it keeps going.");
+  mc(6, "Which growth theory predicts that poorer countries grow faster and catch up with richer ones?", ["Neoclassical", "Endogenous", "Classical"], 0, "Diminishing returns to capital give poor countries a higher marginal product of capital.");
+  mc(6, "In which growth theory is technology treated as exogenous?", ["Neoclassical", "Endogenous", "Both of them"], 0, "In endogenous theory, firms and investment produce the technology.");
+  mc(6, "A higher saving rate raises the long-run growth rate of output per capita in which theory?", ["Endogenous", "Neoclassical", "Classical"], 0, "In neoclassical theory it only raises the level of output per capita.");
+  mc(6, "Which theory says that per capita income returns to a subsistence level as the population grows?", ["Classical", "Neoclassical", "Endogenous"], 0, "This is the Malthus trap.");
+  mc(6, "In which theory can the income gap between rich and poor countries persist or widen?", ["Endogenous", "Neoclassical", "None of them"], 0, "There are no diminishing returns to broad capital, so nothing forces catch-up.");
+  mc(6, "Which pair matches the theory to its key person or idea?", ["Neoclassical – Solow; Endogenous – Romer", "Neoclassical – Romer; Endogenous – Solow", "Classical – Solow; Neoclassical – Malthus"], 0, "Solow built the steady-state model; Romer built the endogenous model.");
   fm(6, "Formula: growth in potential GDP =", "ΔY = ΔT + αΔK + (1 − α)ΔL", "T = technology (total factor productivity), α = capital's share of output.");
   fm(6, "Formula (neoclassical): sustainable growth rate of output per capita =", "[[θ|1 − α]]", "θ = technology growth; α = capital's share.");
   fm(6, "Formula (neoclassical): sustainable growth rate of output =", "[[θ|1 − α]] + ΔL", "The per capita formula is shorter because labour force growth drops out.");
