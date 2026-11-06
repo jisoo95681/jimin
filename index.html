@@ -604,6 +604,23 @@
   .kq-table thead th { background: var(--aqua-pale); }
   .kq-table tbody th { background: var(--aqua-pale); font-weight: 700; }
   .kq-table td.kq-blank { height: 42px; background: repeating-linear-gradient(45deg, #fff, #fff 6px, #f6fbfb 6px, #f6fbfb 12px); }
+  .kq-hint { color: var(--muted); font-size: .88rem; margin: 2px 0 8px; }
+  .kq-pool { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; min-height: 48px; border: 1px dashed var(--border); border-radius: 10px; background: #fbfdfd; }
+  .kq-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 10px; }
+  .kq-group { border: 1px solid var(--border); border-radius: 10px; padding: 8px; background: var(--white); }
+  .kq-group > b { display: block; margin-bottom: 6px; color: var(--navy); font-size: .9rem; }
+  .kq-slotrow { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+  .kq-slotrow i { font-style: normal; font-weight: 700; color: var(--muted); width: 1.2em; text-align: right; }
+  .kq-slot { flex: 1; min-height: 38px; border: 1px dashed var(--border); border-radius: 8px; display: flex; align-items: center; padding: 2px; }
+  .kq-zone { min-height: 52px; display: flex; flex-wrap: wrap; gap: 5px; padding: 4px; border: 1px dashed var(--border); border-radius: 8px; align-content: flex-start; }
+  .kq-chip { padding: 7px 10px; border-radius: 8px; background: var(--aqua-pale); border: 1px solid var(--border); color: var(--navy); font-size: .88rem; line-height: 1.2; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .kq-chip.sel { outline: 2px solid var(--navy); background: #fff; }
+  .kq-chip.drag { opacity: .35; }
+  .kq-chip.locked { cursor: default; }
+  .kq-chip.good { background: var(--good-bg); border-color: #3a9a63; }
+  .kq-chip.bad { background: #fde1df; border-color: #c2453d; }
+  .kq-ghost { position: fixed; z-index: 50; pointer-events: none; transform: translate(-50%, -60%); box-shadow: 0 6px 18px rgba(0,0,0,.25); background: #fff; }
+  .kq-over { outline: 2px solid var(--navy); background: #eef8f8; }
   .kq-table td.kq-filled { background: var(--good-bg); }
   .kq-ans { padding: 10px 12px; border-left: 3px solid var(--good); background: var(--good-bg); border-radius: 8px; margin: 6px 0 8px; }
   .kq-note { color: var(--muted); font-size: .85rem; margin: 4px 0 8px; }
@@ -639,7 +656,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v179 · 2026-11-06";
+  const APP_VERSION = "v180 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1114,7 +1131,7 @@
     return fmtMath(esc.replace(/_\{([^}]*)\}/g, "<sub>$1</sub>").replace(/\[\[([^|\]]*)\|([^\]]*)\]\]/g, '<span class="frac"><span>$1</span><span>$2</span></span>'));
   }
   const kqHtml = (tag, html, cls) => { const e = el(tag, cls ? { className: cls } : {}); e.innerHTML = kqFmt(html); return e; };
-  const KQ_TYPE = { mc: "Multiple choice", table: "Fill the table", formula: "Write the formula" };
+  const KQ_TYPE = { mc: "Multiple choice", table: "Fill the table", formula: "Write the formula", sort: "Drag into groups" };
   const KQ_FIGS = (() => {
     const base = body => `<svg class="kq-fig" viewBox="0 0 280 170" xmlns="http://www.w3.org/2000/svg"><defs><marker id="kqa" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2f678e"/></marker></defs><line x1="30" y1="140" x2="262" y2="140" stroke="#5f6a84"/><line x1="30" y1="14" x2="30" y2="140" stroke="#5f6a84"/>${body}</svg>`;
     const cds = up => {
@@ -1142,7 +1159,11 @@
     app.append(nav("Menu", () => home("back")));
     const d = kqLoad();
     app.append(el("h1", { className: "title" }, "Key notes questions"),
-      el("p", { className: "sub" }, "Your own notes as recall questions. Pick a topic, then a reading."));
+      el("p", { className: "sub" }, "Your own notes as recall questions. Pick a topic, then a reading, or open the questions day by day."));
+    const nDays = new Set(KEYQ.map(q => q.day)).size, byDay = el("button", { className: "nt-item" });
+    byDay.append(el("b", {}, "Questions sorted by days"), el("span", {}, `${plural(nDays, "day")} · what you added each day`));
+    byDay.onclick = () => kqDays();
+    app.append(byDay);
     KEYQ_SUBJECTS.forEach(([name, rs]) => {
       const items = KEYQ.filter(q => rs.includes(q.reading)), m = items.filter(q => kqSt(d, q).streak >= 3).length;
       const b = el("button", { className: "nt-item" + (items.length ? "" : " absorbed") });
@@ -1172,10 +1193,33 @@
     app.append(el("div", { className: "row" }, ""), reset);
   }
 
+  // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
+  const kqToday = () => new Date(Date.now() - 2 * 3600 * 1000).toLocaleDateString("en-CA");
+  const kqDayLabel = day => {
+    const t = new Date(day + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+    return day === kqToday() ? `${t} · today` : t;
+  };
+  function kqDays(dir = "fwd") {
+    screen(dir);
+    backTo = () => kqDays("back");
+    app.append(nav("Key notes questions", () => kqHub("back")));
+    const d = kqLoad(), days = [...new Set(KEYQ.map(q => q.day))].sort().reverse();
+    app.append(el("h1", { className: "title" }, "Questions sorted by days"),
+      el("p", { className: "sub" }, "The questions you added each day. A day ends at 2:00 the next morning. 3 right in a row removes a question from its day list."));
+    days.forEach(day => {
+      const items = KEYQ.filter(q => q.day === day), m = items.filter(q => kqSt(d, q).streak >= 3).length, label = kqDayLabel(day);
+      const b = el("button", { className: "nt-item" });
+      b.append(el("b", {}, label), el("span", {}, `${plural(items.length, "question")} · ${items.length - m} to practise · ${m} mastered`));
+      b.onclick = () => kqPage({ title: label, navLabel: "Sorted by days", back: () => kqDays("back"), items, all: false });
+      app.append(b);
+    });
+  }
+
   function kqPage(spec, dir = "fwd") {
     screen(dir);
     backTo = () => kqPage(spec, "back");
-    app.append(nav(spec.subject, () => kqSubject(spec.subject, "back")));
+    const kqBack = () => (spec.back ? spec.back() : kqSubject(spec.subject, "back"));
+    app.append(nav(spec.navLabel || spec.subject, kqBack));
     const d0 = kqLoad();
     const items = spec.all ? spec.items : spec.items.filter(q => kqSt(d0, q).streak < 3);
     app.append(el("h1", { className: "title" }, spec.title),
@@ -1215,6 +1259,88 @@
           if (q.why) after.append(kqHtml("p", q.why, "kq-why"));
           return ok;
         });
+      } else if (q.type === "sort") {
+        const chips = [];
+        q.groups.forEach((g, gi) => g.items.forEach((t, si) => chips.push({ id: chips.length, text: t, g: gi, s: g.ordered ? si : -1 })));
+        const order = shuffle(chips.map(c => c.id)), loc = chips.map(() => ({ g: -1, s: -1 }));
+        let sel = null;
+        const pool = el("div", { className: "kq-pool" }), grid = el("div", { className: "kq-groups" });
+        pool.dataset.drop = "pool";
+        const zones = q.groups.map((g, gi) => {
+          const box = el("div", { className: "kq-group" }), slots = [];
+          box.append(el("b", {}, g.name));
+          if (g.ordered) g.items.forEach((_, si) => {
+            const row = el("div", { className: "kq-slotrow" }), slot = el("div", { className: "kq-slot" });
+            slot.dataset.drop = "slot"; slot.dataset.g = gi; slot.dataset.s = si;
+            row.append(el("i", {}, String(si + 1)), slot); box.append(row); slots.push(slot);
+          });
+          else { const z = el("div", { className: "kq-zone" }); z.dataset.drop = "zone"; z.dataset.g = gi; box.append(z); slots.push(z); }
+          grid.append(box);
+          return slots;
+        });
+        const chipEl = chips.map(c => el("div", { className: "kq-chip" }, c.text));
+        const render = () => {
+          pool.textContent = ""; zones.forEach(zs => zs.forEach(z => { z.textContent = ""; }));
+          order.forEach(id => {
+            const l = loc[id], host = l.g < 0 ? pool : zones[l.g][q.groups[l.g].ordered ? l.s : 0];
+            chipEl[id].classList.toggle("sel", sel === id); host.append(chipEl[id]);
+          });
+        };
+        const place = (id, g, s) => {
+          const from = loc[id];
+          if (g >= 0 && q.groups[g].ordered) { const other = loc.findIndex((l, j) => j !== id && l.g === g && l.s === s); if (other >= 0) loc[other] = { g: from.g, s: from.s }; }
+          loc[id] = { g, s }; sel = null; render();
+        };
+        const dropOn = (id, t) => {
+          if (!card.contains(t) || state.submitted) return;
+          const k = t.dataset.drop;
+          if (k === "pool") place(id, -1, -1); else if (k === "slot") place(id, +t.dataset.g, +t.dataset.s); else place(id, +t.dataset.g, -1);
+        };
+        const dropAt = (x, y) => { const t = document.elementFromPoint(x, y); return t && t.closest("[data-drop]"); };
+        [pool, ...zones.flat()].forEach(z => { z.onclick = ev => { if (sel !== null && !state.submitted && !ev.target.closest(".kq-chip")) dropOn(sel, z); }; });
+        chipEl.forEach((e, id) => {
+          e.onpointerdown = ev => {
+            if (state.submitted) return;
+            ev.preventDefault();
+            const sx = ev.clientX, sy = ev.clientY; let ghost = null, drag = false, lastY = sy, timer = null;
+            try { e.setPointerCapture(ev.pointerId); } catch {}
+            const clearOver = () => document.querySelectorAll(".kq-over").forEach(x => x.classList.remove("kq-over"));
+            const move = m => {
+              lastY = m.clientY;
+              if (!drag && Math.hypot(m.clientX - sx, m.clientY - sy) > 6) {
+                drag = true; ghost = el("div", { className: "kq-chip kq-ghost" }, chips[id].text); document.body.append(ghost); e.classList.add("drag");
+                timer = setInterval(() => { if (lastY < 70) window.scrollBy(0, -14); else if (lastY > window.innerHeight - 70) window.scrollBy(0, 14); }, 16);
+              }
+              if (drag) { ghost.style.left = m.clientX + "px"; ghost.style.top = m.clientY + "px"; clearOver(); const t = dropAt(m.clientX, m.clientY); if (t && card.contains(t)) t.classList.add("kq-over"); }
+            };
+            const up = m => {
+              e.removeEventListener("pointermove", move); e.removeEventListener("pointerup", up); e.removeEventListener("pointercancel", up);
+              clearInterval(timer); clearOver(); if (ghost) ghost.remove(); e.classList.remove("drag");
+              if (drag) { const t = dropAt(m.clientX, m.clientY); if (t) dropOn(id, t); }
+              else if (sel !== null && sel !== id && loc[id].g >= 0 && q.groups[loc[id].g].ordered) place(sel, loc[id].g, loc[id].s);
+              else { sel = sel === id ? null : id; render(); }
+            };
+            e.addEventListener("pointermove", move); e.addEventListener("pointerup", up); e.addEventListener("pointercancel", up);
+          };
+        });
+        card.append(el("p", { className: "kq-hint" }, "Drag an item into a group, or tap an item and then tap the group. Numbered groups need the right order."), pool, grid);
+        render();
+        reveals.push(() => {
+          chipEl.forEach(e => e.classList.add("locked"));
+          const key = el("div", { className: "kq-key" });
+          key.append(el("p", { className: "kq-note" }, "Correct groups:"));
+          q.groups.forEach(g => key.append(el("p", { className: "kq-why" }, `${g.name}: ${g.ordered ? g.items.map((t, i) => `${i + 1}. ${t}`).join(" → ") : g.items.join(", ")}`)));
+          let ok = null;
+          if (!loc.some(l => l.g >= 0)) after.append(el("span", { className: "nt-badge soft" }, "Not answered: no count change"));
+          else {
+            ok = true;
+            chips.forEach((c, id) => { const l = loc[id], right = l.g === c.g && (c.s < 0 || l.s === c.s); chipEl[id].classList.add(right ? "good" : "bad"); if (!right) ok = false; });
+            const s = kqRecord(q, ok); after.append(badge(ok, ok ? `✓ All correct · ${s.streak} in a row` : "✗ Not quite: green is right, red is wrong"));
+          }
+          after.append(key);
+          if (q.note) after.append(kqHtml("p", q.note, "kq-note"));
+          return ok;
+        });
       } else if (q.type === "table") {
         const tbl = el("table", { className: "kq-table" }), thead = el("thead"), tr0 = el("tr"), tbody = el("tbody"), blanks = [];
         q.head.forEach(h => tr0.append(kqHtml("th", h || " ")));
@@ -1234,15 +1360,15 @@
       state.submitted = true; go.disabled = true;
       let mcTotal = 0, mcRight = 0, manual = 0;
       reveals.forEach(r => { const ok = r(); if (ok === null) { /* unanswered or self-checked */ } if (ok === true) mcRight += 1; if (ok !== null) mcTotal += 1; });
-      manual = items.filter(q => q.type !== "mc").length;
+      manual = items.filter(q => q.type === "table" || q.type === "formula").length;
       const sum = el("div", { className: "card" });
       sum.append(el("p", { className: "kicker" }, "Submitted"),
         el("p", { className: "score" }, mcTotal ? `${mcRight} / ${mcTotal}` : "–"),
-        el("p", { className: "sub" }, `Multiple choice marked.${manual ? ` ${manual} table / formula question${manual === 1 ? "" : "s"}: check your paper against the answers above and press Got it or Missed.` : ""}`));
+        el("p", { className: "sub" }, `Multiple choice and sorting questions marked.${manual ? ` ${manual} table / formula question${manual === 1 ? "" : "s"}: check your paper against the answers above and press Got it or Missed.` : ""}`));
       const row = el("div", { className: "row" }), again = el("button", { className: "btn" }, "Try again");
       again.onclick = () => kqPage(spec, "back");
       const back = el("button", { className: "btn ghost" }, "Back to list");
-      back.onclick = () => kqSubject(spec.subject, "back");
+      back.onclick = kqBack;
       row.append(again, back); sum.append(row);
       sub.after(sum);
       sum.scrollIntoView({ behavior: "smooth", block: "start" });
