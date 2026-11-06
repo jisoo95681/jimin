@@ -1,0 +1,520 @@
+[
+ {
+  "id": "re-eastland",
+  "source": "Module 2 Overview of Types of Real Estate Investment quiz (pasted Nov 6)",
+  "readings": [
+   31
+  ],
+  "title": "Real estate · Eastland Endowment: appraisal-based index allocation, valuation methods, due diligence, loan sizing",
+  "body": "Jane Lee is the new chief investment officer of the Eastland University Endowment Fund (the Fund). Historically, the Fund has invested based on a 60% equity/40% fixed-income allocation. However, Lee is looking to change the fund’s allocation to include real estate assets after incorporating data from the appraisal-based Global Real Estate Fund Index. GREFI returns and volatilities imply strong risk-adjusted performance from real estate assets with low correlation with stocks and bonds. Lee is considering the following two asset allocations:\n\nAllocation 1:\n50% equity/35% fixed income/15% real estate\n\nAllocation 2:\n55% equity/35% fixed income/10% real estate\n\nAllocation 1 is based on an allocation model incorporating the GREFI data, while Allocation 2 assumes a higher correlation between real estate and other asset classes in an attempt to adjust for smoothing and therefore has a lower real estate market allocation.\n\nLee recently hired Jon Tarrow as the Fund’s new head of real estate. During a recent meeting, Tarrow and Lee concluded that the initial real estate investment strategy would be to acquire stabilized office buildings located in primary markets. Tarrow has been working on the potential acquisition of a 100% occupied Class A office building located in New York City. Tarrow and his junior analyst will conduct a thorough due diligence process for the property. Tarrow has also hired an appraiser to value the building and provide valuation support. The appraiser will use three different approaches to estimate the building’s value but will place emphasis on both the direct capitalization and the discounted cash flow methods.\n\nDuring an internal meeting, the junior analyst makes the following three statements about the appraiser’s two primary valuation methods:\n\nStatement 1:\nThe direct capitalization method requires an estimation of a terminal value.\n\nStatement 2:\nProperties expected to generate faster growth will require a capitalization rate that results in a higher value.\n\nStatement 3:\nThe direct capitalization and discounted cash flow methods both consider growth and property quality.\n\nThe appraiser has concluded that net operating income for the New York City office building is expected to be USD15.6 million for the first year, and after that, NOI is expected to increase at 0.50% annually for the foreseeable future. The building’s value is also expected to increase by 0.50% annually, and investors expect to achieve a 5.75% required rate of return given the level of risk.\n\nAfter considering the appraiser’s valuation, Lee then tells Tarrow that she can negotiate a purchase price of USD283 million for the building. Furthermore, she can procure a loan with an interest-only 5.25% coupon provided that the loan-to-value ratio does not exceed 65% and the debt service coverage ratio is at least 1.65×, with the loan balance due after 10 years.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of the following statements is most accurate as to how Lee should decide on Allocation 1 versus Allocation 2?",
+    "options": [
+     "Lee should prefer Allocation 2 to Allocation 1 because real estate is closely correlated with other asset classes.",
+     "Lee should prefer Allocation 1 to Allocation 2 to ensure an optimal Sharpe ratio.",
+     "Lee should prefer Allocation 2 to Allocation 1 because the GREFI likely understates the volatility of real estate and its correlation with stocks and bonds."
+    ],
+    "answer": "C",
+    "why": "C is correct. The appraisal-based GREFI likely overstates the Sharpe ratio of real estate and underestimates the correlation of real estate returns with those of stocks and bonds. As a result, Allocation 1 likely includes more real estate in the allocation than is optimal. Response A does not provide the correct reason for why a lower real estate allocation makes sense, and Response B ignores the problems associated with appraisal-based indexes."
+   },
+   {
+    "n": 2,
+    "q": "Which of the junior analyst’s three statements regarding the appraiser’s two primary valuation methods is incorrect?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A is the correct choice because Statement 1 is incorrect. The discounted cash flow method (not the direct capitalization method) requires a terminal value by capitalizing NOI at some future date. Responses B and C are not correct, because both Statements 2 and 3 are correct. Properties expected to generate faster growth will use a capitalization rate that results in a higher value, and properties with slower growth will use a capitalization rate that results in a lower value. Both income approaches consider growth and property quality."
+   },
+   {
+    "n": 3,
+    "q": "Which of the following phases of the due diligence process is most likely to ensure that the building’s NOI projection for the next year is correct?",
+    "options": [
+     "Documentation review",
+     "Current lease review",
+     "Future lease outlook"
+    ],
+    "answer": "B",
+    "why": "B is the most likely portion of the due diligence process of the three choices to ensure that the NOI projections are correct. Currently, the building is 100% occupied, so the current lease review would provide information as to whether there will be any leases up for renewal during the next year. Response A is incorrect because documentation review ensures that there are no legal issues that may complicate the purchase of the building. Response C is likely incorrect given that the building is 100% occupied, so the outlook for re-leasing space is not likely to be included in NOI projections."
+   },
+   {
+    "n": 4,
+    "q": "Based on the direct capitalization method, the appraiser’s current value of the New York City office building is closest to:",
+    "options": [
+     "USD249,600,000.",
+     "USD271,300,000.",
+     "USD297,100,000."
+    ],
+    "answer": "C",
+    "why": "C is correct. The value of a property = NOI/(r − g), where r = the discount rate (required return) and g = the growth rate for income (given constant growth in income, value will grow at the same rate). Therefore, the building’s value is calculated as follows:\n\n15,600,000/(5.75% – 0.50%) = 297,142,857 (= 297,100,000 after rounding).\nResponse A is incorrect because a property value of 249,600,000 is incorrectly calculated as follows:\n\n15,600,000/(5.75% + 0.50%) = 249,600,000.\nResponse B is incorrect because a property value of 271,300,000 is incorrectly calculated as follows:\n\n15,600,000/5.75% = 271,300,000."
+   },
+   {
+    "n": 5,
+    "q": "The maximum loan amount that the Fund can obtain on the New York City office building is closest to:",
+    "options": [
+     "USD111.5 million.",
+     "USD180.1 million.",
+     "USD184 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. Based on the LTV, the maximum loan amount would be 65% of 283 million, or 183.95 million, with a DSC of 1.62×, which is below the 1.65 minimum. However, with a minimum DSC of 1.65×, the maximum debt service would be 15,600,000/1.65 = 9,454,545. This amount is the mortgage payment that would result in a 1.65× DSC for an interest-only loan. If the loan is interest only, then we can obtain the loan amount by simply dividing the mortgage payment by the interest rate. Therefore, the loan amount would be 9,454,545/0.0525 = 180,086,580 (= 180,100,000 after rounding). Because the loan amount based on the minimum DSC results in a lower loan amount, that would be the maximum amount that could be borrowed.\n\nResponse A is incorrect because USD117,100,000 is incorrectly calculated as follows:\n\n283,000,000/1.65 = 180,086,580.\n180,086,580 × 65% = 111,484,848 (= 111,500,000 after rounding).\nC is incorrect because USD184 million is the rounded loan amount based on the maximum LTV of 65%. Because the loan amount based on the minimum DSC results in a lower loan amount, USD180,086,580 ($180,100,000 rounded) would be the maximum loan amount that could be borrowed."
+   }
+  ]
+ },
+ {
+  "id": "re-delphinus1",
+  "source": "Module 2 Overview of Types of Real Estate Investment quiz (pasted Nov 6)",
+  "readings": [
+   31
+  ],
+  "title": "Real estate · Delphinus Brothers: three properties, unreimbursed expenses, real estate cycle, valuation",
+  "body": "Amanda Rodriguez is an alternative investment analyst for a US investment management firm, Delphinus Brothers. Delphinus’s chief investment officer, Michael Tang, has informed Rodriguez that he wants to reduce the amount invested in traditional asset classes and gain exposure to the real estate sector by acquiring commercial property in the United States. Rodriguez is asked to analyze potential commercial real estate investments for Delphinus Brothers. Selected data on three commercial real estate properties are shown in Exhibit 1.\n\nExhibit 1\nSelected Property Data\nProperty Type\tProperty 1\tProperty 2\tProperty 3\nDowntown Office\nBuilding\tGrocery-Anchored\nRetail Center\tMulti-Family\nBuilding\nLocation\tNew York City\tMiami\tBoston\nAge\t10 years\t7 years\t5 years\nOccupancy\t90.00%\t93.00%\t95.00%\nSquare feet or number of units\t100,000 sf\t205,000 sf\t360,000 sf\nGross potential rental income\t$4,750,000\t$1,800,000\t$3,100,000\nLoss to lease\t($475,000)\t($90,000)\t$155,000\nGross rental income\t$5,225,000\t$1,890,000\t$2,945,000\nVacancy loss\t($564,333)\t($156,887)\t($157,250)\nNet rental income\t$4,660,667\t$1,733,113\t$2,787,750\nExpense reimbursement revenue\t$333,333\t$426,248\t$0\nOther income (includes % rent)\t$560,000\t$15,000\t$45,000\nEffective gross income\t$5,554,000\t$2,174,361\t$2,832,750\nProperty management fees\t($203,160)\t($83,374)\t($119,510)\nOther operating expenses\t($2,100,000)\t($342,874)\t($1,175,000)\nNet operating income\t$3,250,840\t$1,748,113\t$1,538,240\nRodriguez asks Tang about the relative magnitudes of operating expenses in determining property NOI. Tang explains that the retail center in Miami is able to be fully reimbursed for its operating expenses but that the office property in New York City and the multi-family property in Boston must absorb considerable unreimbursed operating expenses.\n\nTang comments to Rodriguez that these three properties may be in different phases of the real estate cycle. He specifically cites the differences between gross potential rental income and gross rental income in making his argument. In response to Tang’s comments, Rodriguez makes the two following statements about the office building in New York City:\n\nStatement 1:\nI believe that the office market in New York City is likely to enter the recovery stage of the real estate cycle within two years.\n\nStatement 2:\nI believe that the high vacancy rates indicate that the net operating income of the office building has the potential to improve within two years.\n\nTang continues the conversation by commenting about the relative riskiness of various types of real estate given such developments as the COVID-19 pandemic, the movement toward remote working, and the evolution of internet-based retail.\n\nRodriguez asks Tang about the appropriateness of various valuation methods on these three properties. Tang suggests that the sales comparison approach is likely to be useful, but he is particularly interested in seeing the valuation results from an income approach for each of the three properties.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of the following statements is most accurate regarding the effect of unreimbursed operating expenses on the NOI of the New York City and Boston properties?",
+    "options": [
+     "The NOI of the office property in New York City is more negatively affected by unreimbursed operating expenses than is the NOI of the multi-family property in Boston.",
+     "The NOI of the multi-family property in Boston is more negatively affected by unreimbursed operating expenses than is the NOI of the office property in New York City.",
+     "The NOIs of both properties are affected similarly by unreimbursed operating expenses."
+    ],
+    "answer": "B",
+    "why": "B is correct. The multi-family property in Boston has total operating expenses of USD1,294,510 (the sum of its property management fees plus other operating expenses) and zero in expense reimbursement revenue. Dividing this amount by effective gross income creates a ratio of 45.7%. Doing the same for the office property in New York City creates a ratio of 35.5%. Response A is incorrect because although the New York City property has higher expenses, it also has higher income amounts as well. Response C is incorrect because the effect of unreimbursed expenses is clearly different for the two properties."
+   },
+   {
+    "n": 2,
+    "q": "Which of the following properties is least likely to be in the oversupply phase of its real estate cycle, based on Tang’s argument?",
+    "options": [
+     "The office building in New York City",
+     "The retail center in Miami",
+     "The multi-family complex in Boston"
+    ],
+    "answer": "C",
+    "why": "C is correct. The difference between gross potential rental income and gross rental income is represented by the loss to lease figure. A positive loss to lease reflects that current lease rates are lower than potential lease rates. The multi-family complex in Boston is the only property of the three for which gross rental income is lower than potential income. This is likely due to a lack of supply of rental housing. Responses A and B are both incorrect because the negative loss to lease may indicate excess supply and a likelihood that lease rates are decreasing."
+   },
+   {
+    "n": 3,
+    "q": "Which of the following responses is most accurate regarding Rodriguez’s Statement 1 and Statement 2?",
+    "options": [
+     "Statements 1 and 2 are both accurate statements.",
+     "Statement 1 is more accurate than Statement 2.",
+     "Statement 2 is more accurate than Statement 1."
+    ],
+    "answer": "B",
+    "why": "B is correct. The vacancy rate likely indicates that the New York City office building market is currently in either an oversupply or a recession phase. Rodriguez’s first statement implies that the recession phase will be short in duration, followed by recovery. Her Statement 2 implies a movement into the expansion phase of the real estate cycle given her comment about improving NOI. Response A is incorrect because her statements are inconsistent in terms of their implications about the real estate cycle."
+   },
+   {
+    "n": 4,
+    "q": "Which of the three property types faces the lowest level of relative risk factors associated with structural and technological changes in the real estate market?",
+    "options": [
+     "Office property in New York City",
+     "Retail center in Miami",
+     "Multi-family property in Boston"
+    ],
+    "answer": "C",
+    "why": "C is correct, by the process of elimination. Office properties are negatively affected by the structural shift towards remote working, so Response A is incorrect. Retail centers face difficulties in the wake of technological change and the rise of internet-based retail, so Response B is incorrect. Residential housing is more of a necessity than the other two types of properties, so from a relative risk perspective, the multi-family property faces the lowest risk due to these changes."
+   },
+   {
+    "n": 5,
+    "q": "Given Rodriguez’s comment in Statement 1 about office property in New York City, which of the following approaches to estimating property value is most appropriate?",
+    "options": [
+     "Direct capitalization method using last year’s NOI",
+     "Sales comparison approach",
+     "Direct capitalization method using a normalized NOI forecast."
+    ],
+    "answer": "C",
+    "why": "C is correct. The direct capitalization method uses a single-period cash flow in the valuation, so properties subject to significant dynamics in their future NOI projections should use a normalized NOI or the discounted cash flow method. The office property in New York City appears to be subject to short-term NOI disruptions due to the real estate cycle. The sales comparison approach (Response B) is less appropriate in this case due to the continued expectation of a real estate market recovery, while the proposed use of last year’s NOI (Response A) does not represent a normalized NOI."
+   }
+  ]
+ },
+ {
+  "id": "re-delphinus2",
+  "source": "Module 2 Overview of Types of Real Estate Investment quiz (pasted Nov 6)",
+  "readings": [
+   31
+  ],
+  "title": "Real estate · Delphinus Brothers: NYC office DCF, sales comparison, cost approach, private real estate",
+  "body": "Michael Tang, the chief investment officer of Delphinus Brothers, asks an analyst at the firm, Amanda Rodriguez, to focus her analysis on the 100,000 square foot office property in New York City (introduced in the previous question set). Tang believes that Delphinus can purchase the property for USD50 million.\n\nRodriguez begins her analysis by assembling the data shown in Exhibit 1.\n\nExhibit 1\nSix-Year NOI and DCF Assumptions for New York City Office Property\nYear 1\tYear 2\tYear 3\tYear 4\tYear 5\tYear 6\nNOI\t$3,250,840\t$3,185,823\t$3,217,681\t$3,265,947\t$3,339,430\t$3,439,613\nDCF Assumptions\t\t\t\t\t\t\nInvestment holding period\t5 years\t\t\t\t\t\nGoing-in cap rate\t6.50%\t\t\t\t\t\nTerminal cap rate\t6.00%\t\t\t\t\t\nDiscount rate\t9.00%\t\t\t\t\t\nUsing the data from Exhibit 1, Rodriguez is able to compute a value of USD49.9 million for this property using the DCF method. After Rodriguez presents this valuation to Tang, Tang is surprised that the analysis does not demonstrate that the property is underpriced. Tang asks Rodriguez to value the property using the sales comparison method, and she compiles the data shown in Exhibit 2.\n\nExhibit 2\nSales Comparison Data for Comparable Office Properties\nVariable\tNYC Office\tSales Comp A\tSales Comp B\tSales Comp C\nAge (years)\t10\t5\t12\t25\nCondition\tGood\tExcellent\tGood\tAverage\nLocation\tPrime\tSecondary\tSecondary\tPrime\nSale price (per ft2)\t\t$415/ft2\t$395/ft2\t$400/ft2\nAdjustments:\t\t\t\t\nAge (years)\t\t–10%\t2%\t10%\nCondition\t\t–10%\t0%\t10%\nLocation\t\t15%\t15%\t0%\nTotal adjustments\t\t–5%\t17%\t20%\nTo conclude her valuation work on the office property, Rodriguez compiles detailed data on the replacement costs of the office building, its land value, and the total depreciation. She finds that the cost of constructing a building identical to the subject property is USD57 million. The land value is USD7 million, and the total depreciation is USD5 million. From these data, she calculates a value of the property using the cost approach.\n\nRodriguez presents her valuation findings to Tang. After a thorough review of the valuation including consideration of a variety of scenarios, Tang decides to proceed with plans to purchase the office property in New York City. He contacts several potential lenders, ultimately deciding to contract with Rich Life Insurance, a publicly traded company with extensive investments in commercial real estate, to discuss terms on arranging a loan of USD35 million.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of the following amounts is closest to the undiscounted terminal value of the New York City office property at the end of the five-year investment holding period?",
+    "options": [
+     "USD57.3 million",
+     "USD52.9 million",
+     "USD55.7 million"
+    ],
+    "answer": "A",
+    "why": "A is correct. Terminal value is calculated by dividing the sixth-year NOI by the terminal cap rate of 6% (3,439,613/0.06). Response B is incorrect because this amount is obtained by dividing the sixth-year NOI by the going-in cap rate. Response C incorrectly uses the fifth-year NOI instead of the sixth-year NOI."
+   },
+   {
+    "n": 2,
+    "q": "Which of the following statements is most correct about cap rates and discount rates used in the discounted cash flow valuation of the New York City office property using the data in Exhibit 1?",
+    "options": [
+     "The going-in cap rate is used to discount the first-year NOI in the discounted cash flow valuation.",
+     "The terminal cap rate equals the difference between the discount rate and the constant growth rate of NOI between Years 5 and 6.",
+     "The growth rate of NOI in Years 1 through 5 equals the difference between the discount rate and the going-in cap rate."
+    ],
+    "answer": "B",
+    "why": "B is correct. The difference between the discount rate of 9% and the terminal cap rate of 6% equals the constant growth rate of 3%, and the sixth-year NOI of 3,439,613 is 3% greater than the fifth-year NOI of 3,339,340 (3,439,613/3,339,340 = 1.03). Response A is incorrect because each year of NOI is discounted using the discount rate of 9%. Response C is incorrect: If this statement were true, then NOI growth in Years 1–5 would be 2.5% (9% – 6.5%), but the growth rate observed is closer to 1%. A calculation of the compound annual growth rate of NOI between Year 1 and Year 5 is 1.14%."
+   },
+   {
+    "n": 3,
+    "q": "Which of the following statements is consistent with the results of a sales comparison valuation using the information from Exhibit 2?",
+    "options": [
+     "The sales comparison approach to valuing the office property is consistent with Tang’s belief that the property is underpriced.",
+     "The sales comparison approach to valuing the office property suggests that the property is overpriced by approximately 12%.",
+     "The sales comparison approach to valuing the office property suggests that the property is overpriced by approximately 19%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Applying the sum of adjustments to each of the comparable properties yields adjusted per square foot values of 394.25 for Sales Comp A [= 415 × (1 – 0.05)], 462.15 for Sales Comp B [= 395 × (1 + 0.17)], and 480 for Sales Comp C [= 400 × (1 + 0.20)]. The average of these three adjusted per square foot values is 445.47, and multiplying this number by the office property’s 100,000 square feet yields an implied property value of USD44.5 million. Comparing this amount to the expected purchase price of USD50 million reflects an approximate 12% difference."
+   },
+   {
+    "n": 4,
+    "q": "Which of the following statements is most accurate regarding Rodriguez’s valuation of the office property using the cost approach?",
+    "options": [
+     "The replacement cost may exceed the market price of the property’s building if the real estate cycle for this property is in the oversupply phase.",
+     "Rodriguez’s valuation of the office property implies that it is overpriced.",
+     "Replacement costs include the real estate developer’s profits."
+    ],
+    "answer": "A",
+    "why": "A is correct. During an oversupply phase of the real estate cycle, the cost approach may inflate the value estimate because replacement costs of the building are likely higher than the true market value of the building. Response B is incorrect: The value estimate using the data is USD59 million (57 + 7 – 5), and this estimate is higher than the expected purchase price of USD50 million. Response C is incorrect because the developer’s profit is a component of the overall costs used to estimate building replacement cost."
+   },
+   {
+    "n": 5,
+    "q": "If Tang purchases the office property in New York City, what are the forms of real estate investment taken by Delphinus Brothers and Rich Life Insurance?",
+    "options": [
+     "Delphinus invests in public real estate equity and Rich invests in public real estate debt.",
+     "Delphinus invests in private real estate equity and Rich invests in private real estate debt.",
+     "Delphinus invests in private real estate equity and Rich invests in public real estate debt."
+    ],
+    "answer": "B",
+    "why": "B is correct. Both parties are investors in private real estate because buying a property directly is a private market transaction. Delphinus takes a private position in real estate equity by investing USD15 million, and Rich takes a private position in real estate debt by lending USD35 million to Delphinus to purchase the property. Responses A and C are incorrect because public investments in real estate revolve around such securities as REITs, MBS, and covered bonds."
+   }
+  ]
+ },
+ {
+  "id": "re-rossi",
+  "source": "Module 3 Investments in Real Estate through Publicly Traded Securities quiz (pasted Nov 6)",
+  "readings": [
+   31,
+   32
+  ],
+  "title": "Real estate · Rossi and Patel: appraisal-based index, REOC vs REIT, AFFO, NAV per share",
+  "body": "Matteo Rossi is a financial adviser specializing in commercial real estate investing. He meets with Anika Patel, a new client, who wants to diversify her portfolio by adding real estate investments to it.\n\nUsing data from an appraisal-based index, Rossi discusses real estate return and risk statistics with Patel and compares them to the return and risk of Patel's current portfolio of stocks and bonds. Based on Patel's investment objectives, Rossi recommends the following types of investments: \n\nInvestment 1: A real estate operating company (REOC);\nΙnvestment 2: An equity real estate investment trust (REIT).\nPatel asks Rossi how REITs and REOCs are valued. Rossi mentions that the following measures are widely used in the valuation of REITs and REOCs: \nMeasure 1: EBITDA;\nMeasure 2: Funds from operations (FFO);\nMeasure 3: Adjusted funds from operations (AFFO).\nNext, Rossi presents Patel with the valuation of a REIT. REIT A is a multi-family REIT and its NAV is calculated based on the net operating income (NOI) information in Exhibit 1.\n\nExhibit 1\n \tREIT A\nProperty subsector\tMulti-family\nLast-12-month real estate NOI\t$280,000\nLast-12-month non-cash rent\t$9,800\nLast-12-month capital expenditures\t$40,000\nCash and equivalents\t$69,300\nTotal debt\t$823,000\nDiscount rate\t6.5%\nEstimated growth rate\t1.5%\nShares outstanding\t50,000",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The type of index Rossi uses will most likely:",
+    "options": [
+     "introduce noise in the index measurement.",
+     "overstate the diversification benefits of real estate.",
+     "have values that lead the transaction values in the market."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because this is a problem associated with transaction-based indexes, not appraisal-based indexes. Transaction-based indexes can be noisy (that is, they include random elements in the observations) because of the need to use statistical techniques to estimate the index. So, there may be upward or downward movements from quarter to quarter that are somewhat random even though in general (viewed over a year or longer) the index is capturing the correct movements in the market. On the other hand, appraisal-based indexes combine valuation information from individual properties and provide a measure of market movements. | B. Correct because Rossi uses an appraisal-based index, and appraisal-based indexes are often criticized for having appraisal lag, which results from appraised values tending to lag when there are sudden shifts in the market. Appraisal lag tends to smooth the index, meaning that it has less volatility. It behaves somewhat like a moving average of what an index would look like if it were based on values obtained from transactions rather than appraisals. Because of the lag in appraisal-based real estate indexes, they will also tend to have a lower correlation with other asset classes. The smoothing effect will also overstate Sharpe ratios, which is problematic if the index is used in asset allocation models to determine how much of a portfolio should be allocated to real estate versus other asset classes. The appropriate allocation to and benefits from private real estate would likely be overestimated. | C. Incorrect because appraisal-based indexes are often criticized for having appraisal lag, which results from appraised values tending to lag when there are sudden shifts in the market. In an upward market, transaction prices usually start to rise first. Then as these higher prices are reflected in comparable sales and investor surveys, they are captured in appraised values. Thus, appraisal-based indexes may not capture the price increase until a quarter or more after it was reflected in transactions. The same lag would also occur in a down market, with appraised values not falling as soon as transaction prices. Incorrect answer: (no answer) Correct Answer: overstate the diversification benefits of real estate."
+   },
+   {
+    "n": 2,
+    "q": "Compared to Investment 1 recommended by Rossi, Investment 2 most likely:",
+    "options": [
+     "requires less expertise in real estate investing.",
+     "is better able to hold properties under development.",
+     "avoids double taxation on dividends received by investors."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because investment in publicly traded equity investments (in REITs or REOCs) requires much less expertise than private equity investments because investors benefit from having their property interests actively managed on their behalf by professional managers and from having their business interests overseen and guided by boards of directors, as in the case of all public corporations. Therefore, both types of investment provide access to professional management, limiting the required investor qualifications to equity investing generally. | B. Incorrect because the relatively low rates of income retention that are required to maintain a REIT’s tax-free status can detract from income growth potential. In most countries, REITs are required to distribute 90%–100% of their otherwise taxable earnings, invest at least 75% of their assets in real estate, and derive at least 75% of income from real estate rental income or interest on mortgages. To engage in non-REIT-qualifying activities, such as merchant development, REITs form taxable REIT subsidiaries (TRS). On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs if they engage to a large extent in the development of for-sale real estate properties. | C. Correct because REIT and passthrough structures avoid corporate income taxation, leaving only the investor to pay taxes on dividends received. On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs, if they are located in countries that do not have a tax-advantaged REIT regime in place, if they engage to a large extent in the development of for-sale real estate properties, or if they offer other non-qualifying services, such as brokerage and third-party property management. Incorrect answer: (no answer) Correct Answer: avoids double taxation on dividends received by investors."
+   },
+   {
+    "n": 3,
+    "q": "Which of the measures discussed by Rossi best reflects the dividend-paying ability of a REIT?",
+    "options": [
+     "Measure 1",
+     "Measure 2",
+     "Measure 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because EBITDA is not a cash-focused measure of current economic income. The purpose of the adjustments to net earnings made in computing FFO and AFFO is to obtain a more tangible, cash-focused measure of sustainable economic income that reduces reliance on non-cash accounting estimates and excludes non-economic, non-cash charges. | B. Incorrect because AFFO is more reflective of a REIT’s dividend-paying ability than FFO. Adjusted funds from operations, also known as funds available for distribution (FAD) or cash available for distribution, is a refinement of FFO that is designed to be a more accurate measure of current economic income. AFFO is most often defined as FFO adjusted to remove any non-cash rent and to subtract maintenance-type capital expenditures and leasing costs (including leasing agents’ commissions and tenants’ improvement allowances). | C. Correct because adjusted funds from operations, also known as funds available for distribution (FAD) or cash available for distribution, is a refinement of FFO that is designed to be a more accurate measure of current economic income. AFFO is most often defined as FFO adjusted to remove any non-cash rent and to subtract maintenance-type capital expenditures and leasing costs (including leasing agents’ commissions and tenants’ improvement allowances). AFFO is also more reflective of a REIT’s dividend-paying ability than FFO. Incorrect answer: (no answer) Correct Answer: Measure 3"
+   },
+   {
+    "n": 4,
+    "q": "The NAV per share for REIT A is closest to:",
+    "options": [
+     "$69.31.",
+     "$78.39.",
+     "$94.63."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it incorrectly discounts next-12-month cash NOI as opposed to capping it (i.e., it uses the discount rate instead of the cap rate). Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Last-12-month cash NOI = $270,200 Next-12-month growth in NOI = $270,200 × 1.5% = $4,053 Estimated next-12-month cash NOI = $270,200 + $4,053 = $274,253 Estimated value of operating real estate = Estimated next-12-month cash NOI/discount rate = $274,253/6.5% = $4,219,276.92. Plus: Cash and equivalents $69,300 Estimated gross asset value = $4,288,576.92 Less: Total debt = $823,000 Net asset value (NAV) = $3,465,576.92 NAV per share = $3,465,576.92/50,000 = $69.31. | B. Incorrect because it reduces last-12-month NOI by capital expenditure. However, the income return is not the same as cash flow, because cash flow is calculated after capital expenditures. That is, the amount of cash flow available each quarter is net operating income (or rental revenue less property operating expenses, including property taxes and insurance) minus capital expenditures. Cap rate = discount rate – estimated growth rate = 6.5% – 1.5% = 5.0% Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Less: Last-12-month capital expenditures = $40,000 Last-12-month cash NOI = $230,200 Next-12-month growth in NOI = $230,200 × 1.5% = $3,453 Estimated next-12-month cash NOI = $230,200 + $3,453 = $233,653 Estimated value of operating real estate = Estimated next-12-month cash NOI/cap rate = $233,653/5.0% = $4,673,060. Estimated gross asset value = $4,742,360 Less: Total debt = $823,000 Net asset value (NAV) = $3,919,360 NAV per share = $3,919,360/50,000 = $78.39. | C. Correct because the value of $94.63 is calculated as follows: Cap rate = discount rate – estimated growth rate = 6.5% – 1.5% = 5.0% Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Last-12-month cash NOI = $270,200 Next-12-month growth in NOI = $270,200 × 1.5% = $4,053 Estimated next-12-month cash NOI = $270,200 + $4,053 = $274,253 Estimated value of operating real estate = Estimated next-12-month cash NOI/cap rate = $274,253/5.0% = $5,485,060. Estimated gross asset value = $5,554,360 Less: Total debt = $823,000 Net asset value (NAV) = $4,731,360 NAV per share = $4,731,360/50,000 = $94.63. Incorrect answer: (no answer) Correct Answer: $94.63."
+   }
+  ]
+ },
+ {
+  "id": "re-bay",
+  "source": "Module 3 Investments in Real Estate through Publicly Traded Securities quiz (pasted Nov 6)",
+  "readings": [
+   32
+  ],
+  "title": "Real estate · Bay Realty REIT: REIT type, NAVPS statements, FFO and AFFO, P/FFO",
+  "body": "Maitha Smith is the chief investment officer of the Westland Pension Fund (the “Fund”). Smith and her junior analyst are analyzing Bay Realty Corp. (“Bay”), a publicly traded REIT based in San Francisco, for a potential investment. Bay currently owns and operates 40 office buildings totaling 8 million square feet. These properties exhibit an average LTV (loan-to-value) ratio of 40%. Bay owns no other real estate–related assets. Bay’s senior executives are company employees who report to the board of directors, whose members are elected by shareholders.\n\nSmith first instructs her junior analyst to conduct an NAVPS (net asset value per share) analysis on Bay. The junior analyst makes the following three statements:\n\nStatement 1: NAVPS should not include investors’ assessments of the value of any non-asset-based income streams, the value of non–real estate assets, or the value added by management.\n\nStatement 2: REITs whose shares trade below NAVPS or have high leverage might have a more difficult time raising new capital to fund acquisitions and development, which could limit long-term growth.\n\nStatement 3: Shares priced at discounts to NAVPS are interpreted as indications of potential overvaluation.\n\nTo complement the NAVPS, Smith instructs her junior analyst to also calculate FFO and AFFO measures for Bay. The junior analyst then makes the following three statements as part of the ongoing discussion:\n\nStatement 4: AFFO better approximates a company’s sustainable dividend-paying capacity than FFO.\n\nStatement 5: FFO and AFFO are based on net income available to equity and thus represent levered income.\n\nStatement 6: FFO is superior to AFFO as a measure of economic income and thus economic return because it takes into account the capital expenditures necessary to maintain the economic income of a property portfolio.\n\nAfter the discussion, the junior analyst obtains selected information on Bay, which is shown in Exhibit 1:\n\nExhibit 1\nNon-cash (straight-line) rent\t$215,000\nRecurring maintenance–type capital expenditures and leasing commissions\t$700,000\nAdjusted funds from operations\t$4,000,000\nAFFO per share\t$5.00\nCurrent stock price\t$80.00",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of the following best describes Bay?",
+    "options": [
+     "Mortgage REIT",
+     "Internally managed REIT",
+     "Real estate operating company (REOC)"
+    ],
+    "answer": "B",
+    "why": "B is correct. Bay is internally managed, or self-managed. Bay’s senior executives are company employees who report to the board of directors, whose members are elected by shareholders. Fully integrated REITs, such as Bay, generally have fewer conflicts than REITs that are externally advised or externally managed.\n\nA is incorrect because Bay is an equity REIT, not a mortgage REIT. Bay currently owns and operates 40 office buildings totaling 8 million square feet.\n\nC is incorrect because REOCs are ordinary taxable real estate ownership companies, which are different from REITs. Businesses are organized as REOCs, as opposed to REITs, if they are located in countries that do not have a tax-advantaged REIT regime in place, if they engage to a large extent in the development of for-sale real estate properties, or if they offer other non-qualifying services, such as brokerage and third-party property management."
+   },
+   {
+    "n": 2,
+    "q": "Which of the junior analyst’s three statements regarding NAVPS is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. REITs whose shares trade below NAVPS or have high leverage might have a more difficult time raising new capital to fund acquisitions and development, which in turn could limit long-term growth, in contrast to REITs that trade at or above NAVPS.\n\nA is incorrect because NAVPS should include investors’ assessments of the value of any non-asset-based income streams, the value of non–real estate assets, and the value added by management.\n\nC is incorrect because shares priced at discounts to NAVPS are interpreted as indications of potential undervaluation."
+   },
+   {
+    "n": 3,
+    "q": "Which of the junior analyst’s three statements regarding FFO and AFFO is incorrect?",
+    "options": [
+     "Statement 4",
+     "Statement 5",
+     "Statement 6"
+    ],
+    "answer": "C",
+    "why": "C is the correct choice because Statement 6 is incorrect. AFFO is superior to FFO (not the other way around) as a measure of economic income and thus economic return because it takes into account the capital expenditures necessary to maintain the economic income of a property portfolio.\n\nA is not the correct choice because Statement 4 is true. AFFO better approximates a company’s sustainable dividend-paying capacity than FFO.\n\nB is not the correct choice because Statement 5 is true. Both FFO and AFFO are based on net income available to equity and thus represent levered income."
+   },
+   {
+    "n": 4,
+    "q": "Based on Exhibit 1, Bay’s P/FFO is closest to:",
+    "options": [
+     "14.3×.",
+     "13.0×.",
+     "20.7×."
+    ],
+    "answer": "B",
+    "why": "B is correct. FFO = AFFO + Non-cash (straight-line) rent + Recurring maintenance–type capital expenditures and leasing commissions = $4,000,000 + $215,000 + $700,000 = $4,915,000. The number of shares outstanding = 4,000,000/5.00 = 800,000. FFO per share = $4,915,000/800,000 = $6.14.\n\nCurrent stock price = $80.00 per share.\n\nP/FFO = $80.00/$6.14 = 13.0×.\n\nA is incorrect because 14.3× is incorrectly calculated as follows:\n\n$4,000,000 – $215,000 + $700,000 = $4,485,000. The number of shares outstanding = 4,000,000/5.00 = 800,000. FFO per share = $4,485,000/800,000 = $5.61.\n\nCurrent stock price = $80.00 per share.\n\nP/FFO = $80.00/$5.61 = 14.3×.\n\nC is incorrect because 20.7× is incorrectly calculated as follows:\n\n$4,000,000 – $215,000 – $700,000 = $3,085,000. The number of shares outstanding = 4,000,000/5.00 = 800,000. FFO per share = $3,085,000/800,000 = $3.86.\n\nCurrent stock price = $80.00 per share.\n\nP/FFO = $80.00/$3.86 = 20.7×."
+   }
+  ]
+ },
+ {
+  "id": "re-hui-lin",
+  "source": "Module 3 Investments in Real Estate through Publicly Traded Securities quiz (pasted Nov 6)",
+  "readings": [
+   32
+  ],
+  "title": "Real estate · Lin and Nowak: REIT vs REOC, NAV, two-step DDM, P/FFO and P/AFFO, risk",
+  "body": "Hui Lin, CFA, is an investment manager looking to diversify his portfolio by adding equity real estate investments. Lin and his investment analyst, Maria Nowak, are discussing whether they should invest in publicly traded real estate investment trusts or public real estate operating companies. Nowak expresses a strong preference for investing in public REITs in taxable accounts.\n\nLin schedules a meeting to discuss this matter, and for the meeting, Lin asks Nowak to gather data on three specific REITs and come prepared to explain her preference for public REITs over public REOCs. At the meeting, Lin asks Nowak,\n\n“Why do you prefer to invest in public REITs over public REOCs for taxable accounts?”\n\nNowak provides Lin with an explanation for her preference of public REITs and provides Lin with data on the three REITs shown in Exhibit 1 and Exhibit 2.\n\nThe meeting concludes with Lin directing Nowak to identify the key investment characteristics along with the principal risks of each REIT and to investigate the valuation of the three REITs. Specifically, Lin asks Nowak to value each REIT using four different methodologies:\n\nValuation Method 1: Net asset value\n\nValuation Method 2: Discounted cash flow valuation using a two-step dividend model\n\nValuation Method 3: Relative valuation using property subsector average P/FFO multiple\n\nValuation Method 4: Relative valuation using property subsector average P/AFFO multiple\n\nExhibit 1\nSelect REIT Financial Information\n \tREIT A\tREIT B\tREIT C\nProperty subsector\tOffice\tStorage\tHealth Care\nEstimated 12-month cash net operating income\t$350,000\t$267,000\t$425,000\nFunds from operations\t$316,965\t$290,612\t$368,007\nCash and equivalents\t$308,700\t$230,850\t$341,000\nAccounts receivable\t$205,800\t$282,150\t$279,000\nDebt and other liabilities\t$2,014,000\t$2,013,500\t$2,010,000\nNon-cash rents\t$25,991\t$24,702\t$29,808\nRecurring maintenance–type capital expenditures\t$63,769\t$60,852\t$80,961\nShares outstanding\t56,100\t67,900\t72,300\nExhibit 2\nREIT Dividend Forecasts and Average Price Multiples\n \tREIT A\tREIT B\tREIT C\nExpected annual dividend next year\t$3.80\t$2.25\t$4.00\nDividend growth rate in Years 2 and 3\t4.0%\t5.0%\t4.5%\nDividend growth rate (after Year 3 into perpetuity)\t3.5%\t4.5%\t4.0%\nAssumed cap rate\t7.0%\t6.25%\t6.5%\n \t \t \t \nProperty subsector average P/FFO multiple\t14.4×\t13.5×\t15.1×\nProperty subsector average P/AFFO multiple\t18.3×\t17.1×\t18.9×\nNote: Nowak estimates an 8% cost of equity capital for all REITs and a risk-free rate of 4.0%.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Nowak’s most likely response to Lin’s question is that the type of real estate security she prefers:",
+    "options": [
+     "offers a high degree of operating flexibility.",
+     "provides dividend income that is exempt from double taxation.",
+     "has below-average correlations with overall stock market returns."
+    ],
+    "answer": "B",
+    "why": "B is correct. REITs are tax-advantaged entities, whereas REOC securities are not typically tax-advantaged entities. More specifically, REITs are typically exempt from the double taxation of income that comes from taxes being due at the corporate level and again when dividends or distributions are made to shareholders in some jurisdictions, such as the United States."
+   },
+   {
+    "n": 2,
+    "q": "Based on Exhibit 1 and Exhibit 2, the value per share for REIT A using valuation Method 1 is closest to:",
+    "options": [
+     "$51.26.",
+     "$62.40.",
+     "$98.30."
+    ],
+    "answer": "B",
+    "why": "B is correct. The NAV is $62.40.\n\nEstimated cash NOI\t350,000\nAssumed cap rate\t0.07\nEstimated value of operating real estate (350,000/0.07)\t5,000,000\nPlus: Cash + accounts receivable\t514,500\nLess: Debt and other liabilities\t2,014,000\nNet asset value\t3,500,500\nShares outstanding\t56,100\n            NAV/share\t            $62.40"
+   },
+   {
+    "n": 3,
+    "q": "Based on Exhibit 1 and Exhibit 2, the value per share of REIT B using Valuation Method 3 is closest to:",
+    "options": [
+     "$40.77.",
+     "$57.78.",
+     "$73.19."
+    ],
+    "answer": "B",
+    "why": "B is correct. The value per share is $57.78, calculated as follows:\n\nFunds from operations = $290,612.\nShares outstanding = 67,900 shares.\nFFO/share = $290,612/67,900 shares = $4.28.\nApplying the property subsector average P/FFO multiple of 13.5× yields a value per share of\n\n$4.28 × 13.5 = $57.78."
+   },
+   {
+    "n": 4,
+    "q": "Based on Exhibit 2, the value per share of REIT C using Valuation Method 2 is closest to:",
+    "options": [
+     "$55.83.",
+     "$97.57.",
+     "$100.91."
+    ],
+    "answer": "C",
+    "why": "C is correct. The value per share for REIT C is $100.91.\n\n \tStep 1\t\tStep 2\n \tYear 1\tYear 2\tYear 3\t\tYear 4\nDividends per share\t$4.00\t$4.18\t$4.37\t \t$4.54\nValue of stock at end of 2013a\t \t \t$113.57\t \t \n \t \t \t$117.94\t \t \nDiscount rate: 8.00%\nNet present value of all dividends:b $100.91\naCalculated as $4.54/(0.08 – 0.04) = $113.57.\nbCalculated as $4.00/(1.08) + $4.18/(1.08)2 + $117.94/(1.08)3 = $100.91."
+   },
+   {
+    "n": 5,
+    "q": "Based on Exhibit 1 and Exhibit 2, the value per share of REIT A using Valuation Method 4 is closest to:",
+    "options": [
+     "$58.32.",
+     "$74.12.",
+     "$103.40."
+    ],
+    "answer": "B",
+    "why": "B is correct. The value per share is $74.11, calculated as follows:\n\nFunds from operations (FFO) = $316,965.\nLess: Non-cash rents: $25,991\nLess: Recurring maintenance–type capital expenditures: $63,769\nEquals AFFO: $227,205\nShares outstanding = 56,100 shares.\nAFFO/share = $227,205/56,100 shares = $4.05.\nApplying the property subsector average P/AFFO multiple of 18.3× yields a value per share of\n\n$4.05 × 18.3 = $74.12."
+   },
+   {
+    "n": 6,
+    "q": "The risk factor most likely to adversely affect an investment in REIT B is:",
+    "options": [
+     "new competitive facilities.",
+     "tenants’ sales per square foot.",
+     "obsolescence of existing space."
+    ],
+    "answer": "A",
+    "why": "A is correct. As a storage REIT, this investment faces competitive pressures because the ease of entry into the field of self-storage properties can lead to periods of overbuilding."
+   }
+  ]
+ },
+ {
+  "id": "re-wang",
+  "source": "Module 3 Investments in Real Estate through Publicly Traded Securities quiz (pasted Nov 6)",
+  "readings": [
+   32
+  ],
+  "title": "Real estate · Wang and Caudill: forms of real estate investing, FFO and AFFO, Baldwin two-step DDM",
+  "body": "Tim Wang is a financial adviser specializing in commercial real estate investing. He is meeting with Mark Caudill, a new client who is looking to diversify his investment portfolio by adding real estate investments. Caudill has heard about various investment vehicles related to real estate from his friends and is seeking a more in-depth understanding of these investments from Wang.\n\nWang begins the meeting by advising Caudill of four options that are available when investing in real estate, including the following:\n\nOption 1. Direct ownership in real estate\n\nOption 2. Publicly traded real estate investment trusts\n\nOption 3. Publicly traded real estate operating companies\n\nOption 4. Publicly traded residential mortgage-backed securities\n\nWang next asks Caudill about his investment preferences. Caudill responds by telling Wang that he prefers to invest in equity securities that are highly liquid, provide high income, and are not subject to double taxation.\n\nCaudill asks Wang how the economic performance of REITs and REOCs is evaluated and how their shares are valued. Wang advises Caudill there are multiple measures of economic performance for REITs and REOCs, including the following:\n\nMeasure 1. Net operating income\n\nMeasure 2. Funds from operations\n\nMeasure 3. Adjusted funds from operations\n\nIn response, Caudill asks Wang,\n\n“Which of the three measures is the best measure of a REIT’s current economic return to shareholders?”\n\nTo help Caudill’s understanding of valuation, Wang presents Caudill with data on Baldwin, a health care REIT that primarily invests in independent and assisted senior housing communities in large cities across the United States. Selected financial data on Baldwin for the past two years are provided in Exhibit 1.\n\nExhibit 1\nBaldwin REIT Summarized Income Statement (USD thousands, except per-share data)\n \tYear Ending 31 December\n \t2019\t\t2018\nRental income\t339,009\t \t296,777\nOther property income\t6,112\t \t4,033\nTotal income\t345,121\t \t300,810\nRental expenses\t \t \t \nProperty operating expenses\t19,195\t \t14,273\nProperty taxes\t3,610\t \t3,327\nTotal property expenses\t22,805\t \t17,600\nNet operating income\t322,316\t \t283,210\nOther income (gains on sale of properties)\t2,162\t \t1,003\nGeneral and administrative expenses\t21,865\t \t19,899\nDepreciation and amortization\t90,409\t \t78,583\nNet interest expenses\t70,017\t \t56,404\nNet income\t142,187\t \t129,327\nWeighted average shares outstanding\t121,944\t \t121,863\nEarnings per share\t1.17\t \t1.06\nDividend per share\t0.93\t \t0.85\nPrice/FFO, based on year-end stock price\t11.5×\t \t12.7×\nBefore the meeting, Wang had put together some valuation assumptions for Baldwin in anticipation of discussing valuation with Caudill. Wang explains the process of valuing a REIT share using discounted cash flow analysis, and he proceeds to estimate the value of Baldwin on a per-share basis using a two-step dividend discount model using the data provided in Exhibit 2.\n\nExhibit 2\nBaldwin Valuation Projections and Assumptions\nCurrent risk-free rate\t4.0%\nBaldwin beta\t0.90\nMarket risk premium\t5.0%\nAppropriate discount rate (CAPM)\t8.5%\n \t \nExpected dividend per share, 1 year from today\t$1.00\nExpected dividend per share, 2 years from today\t$1.06\nLong-term growth rate in dividends, starting in Year 3\t5.0%",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on Caudill’s investment preferences, the type of real estate investment Wang is most likely to recommend to Caudill is:",
+    "options": [
+     "Option 2.",
+     "Option 3.",
+     "Option 4."
+    ],
+    "answer": "A",
+    "why": "A is correct. Option 2 (publicly traded REITs) best satisfies Caudill’s investment preferences. REITs are equity investments that, in general, are income tax exempt at the corporate/trust level, so there is no double income taxation. To qualify for the income tax exemption, REITs are legally obligated to pay out a high percentage of taxable income to their shareholders, which typically results in relatively high dividend income for investors. Lastly, public REITs are generally liquid because they are traded in stock exchanges."
+   },
+   {
+    "n": 2,
+    "q": "Relative to Option 2 and Option 3, an advantage of investing in Option 1 is:",
+    "options": [
+     "greater liquidity.",
+     "lower investment requirements.",
+     "greater control over property-level investment decisions."
+    ],
+    "answer": "C",
+    "why": "C is correct. Direct property ownership offers greater control over property-level investment decisions compared with the level of control exhibited by shareholders in REITs and REOCs."
+   },
+   {
+    "n": 3,
+    "q": "The Baldwin REIT is least likely to experience long-run negative effects from:",
+    "options": [
+     "an economic recession.",
+     "an unfavorable change in population demographics.",
+     "a major reduction in government funding of health care."
+    ],
+    "answer": "A",
+    "why": "A is correct. Baldwin, a health care REIT, is largely resistant to economic recessions but is exposed to changes in population demographics and changes in government funding for health care."
+   },
+   {
+    "n": 4,
+    "q": "The most appropriate response to Caudill’s question is:",
+    "options": [
+     "Measure 1.",
+     "Measure 2.",
+     "Measure 3."
+    ],
+    "answer": "C",
+    "why": "C is correct. Measure 3, adjusted funds from operations, is a refinement of FFO that is designed to be a more accurate measure of current economic income. In essence, FFO is adjusted to remove any non-cash rent and to include a provision for maintenance-type capital expenditures and leasing costs. Maintenance expenses are required for a business to continue as a going concern."
+   },
+   {
+    "n": 5,
+    "q": "Based on Exhibit 1, the 2019 year-end share price of Baldwin was closest to:",
+    "options": [
+     "$13.23.",
+     "$21.73.",
+     "$30.36."
+    ],
+    "answer": "B",
+    "why": "B is correct. Baldwin’s FFO per share in 2019 was $1.89, and the resulting share price was $21.73. First, calculate FFO per share in 2019, and then apply the year-end P/FFO multiple of 11.5×.\n\nFFO = accounting net earnings, excluding (a) depreciation charges on real estate, (b) deferred tax charges, and (c) gains or losses from sales of property and debt restructuring.\n2019 accounting net income: $142,187\n2019 depreciation charges: $90,409\n2019 deferred tax charges: na\n2019 gains on sale of properties (other income): $2,162\n2019 shares outstanding: 121,944\n2019 year-end price/FFO = 11.5×.\n2019 Baldwin FFO per share = ($142,187 + $90,409 – $2,162)/121,944 shares = $1.89. At the given 2019 year-end price/FFO multiple of 11.5×, this results in a share price for Baldwin of $1.89 × 11.5 = $21.73."
+   },
+   {
+    "n": 6,
+    "q": "Based on Exhibit 2, the intrinsic value of the Baldwin REIT on a per share basis using the two-step dividend discount model is closest to:",
+    "options": [
+     "$26.72.",
+     "$27.59.",
+     "$28.76."
+    ],
+    "answer": "C",
+    "why": "C is correct. The estimated value per share for the Baldwin REIT using a two-step dividend discount model is $28.76, calculated as follows:\n\n \tStep 1\t\tStep 2\n \tYear 1\tYear 2\t\tYear 3\nDividends per share\t$1.00\t$1.06\t \t$1.11\nValue of stock at end of Year 2a\t \t$31.71\t \t \n \t \t$32.77\t \t \nDiscount rate: 8.50%\n            Net present value of all dividends:b $28.76\naCalculated as $1.11/(0.085 – 0.05) = $31.71.\nbCalculated as $1.00/(1.085) + $32.77/(1.085)2 = $28.76."
+   }
+  ]
+ },
+ {
+  "id": "re-rosse",
+  "source": "Module 3 Investments in Real Estate through Publicly Traded Securities quiz (pasted Nov 6)",
+  "readings": [
+   32
+  ],
+  "title": "Real estate · Chatham REIT analysis: NAVPS, AFFO, valuation factors, dividend growth model",
+  "body": "Mary Rosse is the North American REIT analyst for Chatham Equity Partners, a Canadian investment advisory firm based in Windsor that analyzes public real estate globally. She is explaining Chatham’s investment process and valuation criteria to Chatham’s new junior analyst, Gordon Annear.\n\nRosse explains to Annear: “We focus primarily on economic income and current appraised market values minus liabilities as benchmarks when selecting REITs for investment. I have started to look at Northeast Community Properties (NECP), a newly listed US multifamily apartment REIT.”\n\nAdjustments to NECP’s financial data at the end of last quarter are summarized in Exhibits 1 and 2.\n\nExhibit 1 NECP Financial Data with Analyst Adjustments (in 000s US$) \nProperty cost\t365,000\nProperty book value\t289,250\nPro forma cash NOI for last 12 months\t26,600\nEstimated next 12 months cash NOI\t27,930\nAssumed cap rate\t6.50%\nEstimated value of operating real estate\t430,000\nTangible assets\t12,350\nEstimated gross asset value\t442,350\nTotal debt (and other liabilities)\t75,750\nOther liabilities\t35,335\nNet asset value\t331,265\nShares outstanding\t6,335\nMarket capitalization\t304,226\nAnnear comments, “Some valuation approaches require a measure of current economic income. I believe it is better to use adjusted funds from operations for this than the more widely used funds from operations measure because it takes into account maintenance and leasing expenses needed to maintain the income stream and is less subject to error or variation in estimation.”\n\nRosse continues: “I prefer to employ the following three factors for REIT valuation.”\n\nFactor 1: Capitalization rates,\nFactor 2: Cash flow variability of properties, and\nFactor 3: Year-ahead estimated funds from operations (FFO) and adjusted funds from operations (AFFO). \nRosse then states: “We can also value REITs using the dividend growth model. Yesterday the NECP share price closed at US$62.81.” Rosse estimates that NECP's cost of equity is 6.6%, its expected dividend per share is $2.54, and that dividends are expected to grow at a constant rate of 3%. Year-ahead AFFO is estimated to be $3.13/share and the P/AFFO ratio for peers is 19.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Using the data in Exhibit 1, NECP’s net asset value per share is closest to:",
+    "options": [
+     "US$45.66.",
+     "US$48.02.",
+     "US$52.29."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. This is the book value per share (Property book value/number of shares). Book values are based on depreciated historical costs rather than current appraised values. | B. Incorrect. This is the current share price (market capitalization/number of shares). | C. Correct. The net asset value per share (NAVPS) is 52.29. )Net asset value/number of shares) = (331,265,000/6,335,000 = 52.29). The NAVPS often is used as a fundamental benchmark for the value of a REIT. Discounts in the REIT share price from NAVPS are interpreted as indications of potential undervaluation. NAVPS is considered to be a superior measure of the net worth of a real estate company compared with book value per share. Incorrect answer: (no answer) Correct Answer: US$52.29."
+   },
+   {
+    "n": 2,
+    "q": "Is Annear most likely correct in his reasons for preferring adjusted funds from operations as a measure of economic income?",
+    "options": [
+     "Yes.",
+     "No, because he is incorrect about treatment of capital expenditures.",
+     "No, because he is incorrect about the potential for variation and error in estimation."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Annear is incorrect about the potential for variation and error in estimation of maintenance and leasing expenses needed to maintain the income stream of the property. | B. Incorrect. AFFO does take maintenance-type capital expenditures and leasing costs into consideration. | C. Correct. Annear is incorrect in his assessment of the potential for variation or error in estimation. Adjusted funds from operations (AFFO) is a refinement of funds from operations (FFO), which takes into consideration the leasing and maintenance-type capital expenditures necessary to maintain the economic income of a property. It is, however, subject to more variation and error in estimation than FFO. The precise annual provision required to maintain and lease space in a property is difficult to predict and the actual expense in any single year may be more or less because of the timing of capital expenditures and the uneven expiration schedules of leases. Incorrect answer: (no answer) Correct Answer: No, because he is incorrect about the potential for variation and error in estimation."
+   },
+   {
+    "n": 3,
+    "q": "Which of Rosse’s three valuation factors would most likely not be classified as a relative valuation approach?",
+    "options": [
+     "Factor 1",
+     "Factor 2",
+     "Factor 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Capitalization rates are used as an input to calculate net operating income when calculating net worth, or net asset value, which is not a market-based relative value approach. | B. Incorrect. Factor 2 describes inputs to a relative value (or market-based) approach to valuing REIT stocks. | C. Incorrect. Factor 3 describes inputs to a relative value (or market-based) approach to valuing REIT stocks. Incorrect answer: (no answer) Correct Answer: Factor 1"
+   },
+   {
+    "n": 4,
+    "q": "Annear will most likely conclude that the NECP shares are:",
+    "options": [
+     "overvalued according to the dividend growth model and overvalued using AFFO.",
+     "overvalued according to the dividend growth model, but undervalued using AFFO.",
+     "undervalued according to the dividend growth model, but overvalued using AFFO."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. NECP is not overvalued when using the two-step DDM. | B. Incorrect. NECP is neither overvalued according to the two-step DDM nor undervalued when using AFFO. | C. Correct. According to the dividend growth model, price is 2.54/(0.066 - 0.03) = $70.56. AFFO/share is 3.13 and with a peer multiple of 19, the price is 59.47. Compared with the share price of 62.81, NECP overvalued according to AFFO and undervalued according to dividend growth. Incorrect answer: (no answer) Correct Answer: undervalued according to the dividend growth model, but overvalued using AFFO."
+   }
+  ]
+ }
+]

@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 159 vignettes · 227 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 167 vignettes · 235 in all. Plus 62 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -36,8 +36,8 @@ Totals: app 68 vignettes · bank 159 vignettes · 227 in all. Plus 62 standalone
 | 28 | Pricing and Valuation of Forward Commitments | 4 | 18 | 22 |
 | 29 | Valuation of Contingent Claims | 5 | 2 | 7 |
 | 30 | Commodities and Commodity Derivatives | 0 | 2 | 2 |
-| 31 | Types of Real Estate Investment | 0 | 2 | 2 |
-| 32 | Real Estate through Publicly Traded Securities | 0 | 1 | 1 |
+| 31 | Types of Real Estate Investment | 0 | 6 | 6 |
+| 32 | Real Estate through Publicly Traded Securities | 0 | 6 | 6 |
 | 33 | Hedge Fund Strategies | 2 | 1 | 3 |
 | 34 | Economics and Investment Markets | 1 | 2 | 3 |
 | 35 | Analysis of Active Portfolio Management | 1 | 2 | 3 |
@@ -81,8 +81,8 @@ Totals: app 68 vignettes · bank 159 vignettes · 227 in all. Plus 62 standalone
 **28 Pricing and Valuation of Forward Commitments**: crestpoint (app, 6Q); meridian (app, 5Q); fabc (app, 4Q); troubadour (app, 5Q); pD-1 (bank, 5Q); pD-2 (bank, 5Q); pD-3 (bank, 9Q); pD-4 (bank, 4Q); pD-5 (bank, 4Q); pD-6 (bank, 4Q); pD-7 (bank, 2Q); d28-doyle (bank, 6Q); d28-troubadour (bank, 5Q); d28-johnson (bank, 9Q); d28-torres (bank, 4Q); d28-pak (bank, 4Q); m2-7 (bank, 4Q); s2a-talbot (bank, 4Q); s1b-whitney (bank, 6Q); d28-mafadi (bank, 4Q); d28-stoneridge (bank, 4Q); d28-megaarb (bank, 4Q)
 **29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); hamilton-nevis (bank, 4Q); m1-5 (bank, 4Q)
 **30 Commodities and Commodity Derivatives**: musicale-apex (bank, 8Q); m2-11 (bank, 4Q)
-**31 Types of Real Estate Investment**: pc-5 (bank, 4Q); s2a-ferguson (bank, 4Q)
-**32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q)
+**31 Types of Real Estate Investment**: pc-5 (bank, 4Q); re-eastland (bank, 5Q); re-delphinus1 (bank, 5Q); re-delphinus2 (bank, 5Q); re-rossi (bank, 4Q); s2a-ferguson (bank, 4Q)
+**32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q); re-rossi (bank, 4Q); re-bay (bank, 4Q); re-hui-lin (bank, 6Q); re-wang (bank, 6Q); re-rosse (bank, 4Q)
 **33 Hedge Fund Strategies**: pwpf (app, 8Q); ctrf (app, 9Q); m2-11 (bank, 4Q)
 **34 Economics and Investment Markets**: carlisle (app, 7Q); m1-8 (bank, 4Q); s2a-ferguson (bank, 4Q)
 **35 Analysis of Active Portfolio Management**: frazee (app, 7Q); m1-3 (bank, 4Q); m1-8 (bank, 4Q)
