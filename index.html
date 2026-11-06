@@ -604,6 +604,7 @@
   .kq-table thead th { background: var(--aqua-pale); }
   .kq-table tbody th { background: var(--aqua-pale); font-weight: 700; }
   .kq-table td.kq-blank { height: 42px; background: repeating-linear-gradient(45deg, #fff, #fff 6px, #f6fbfb 6px, #f6fbfb 12px); }
+  .kq-subj { margin: 18px 0 6px; color: var(--navy); }
   .kq-hint { color: var(--muted); font-size: .88rem; margin: 2px 0 8px; }
   .kq-pool { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; min-height: 48px; border: 1px dashed var(--border); border-radius: 10px; background: #fbfdfd; }
   .kq-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 10px; }
@@ -660,7 +661,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v182 · 2026-11-06";
+  const APP_VERSION = "v183 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1164,6 +1165,10 @@
     const d = kqLoad();
     app.append(el("h1", { className: "title" }, "Key notes questions"),
       el("p", { className: "sub" }, "Your own notes as recall questions. Pick a topic, then a reading, or open the questions day by day."));
+    const mainN = KQ_MAIN_TABLES.length, mainB = el("button", { className: "nt-item" });
+    mainB.append(el("b", {}, "Main tables to remember"), el("span", {}, `${plural(mainN, "table")} · read them or practise filling them in`));
+    mainB.onclick = () => kqMain();
+    app.append(mainB);
     const nDays = new Set(kqDayItems().map(q => q.day)).size, byDay = el("button", { className: "nt-item" });
     byDay.append(el("b", {}, "Questions sorted by days"), el("span", {}, `${plural(nDays, "day")} · what you added each day`));
     byDay.onclick = () => kqDays();
@@ -1199,6 +1204,35 @@
     const reset = el("button", { className: "link-btn" }, `Reset progress for ${name}`);
     reset.onclick = () => { if (!confirm(`Reset the right-in-a-row counts for ${name}?`)) return; const dd = kqLoad(); all.forEach(q => delete dd[q.id]); kqSave(dd); kqSubject(name, "back"); };
     app.append(el("div", { className: "row" }, ""), reset);
+  }
+
+  // The tables the user picked as the ones to remember: read them filled in, or practise filling them in.
+  function kqMain(dir = "fwd") {
+    screen(dir);
+    backTo = () => kqMain("back");
+    app.append(nav("Key notes questions", () => kqHub("back")));
+    const items = KQ_MAIN_TABLES.map(t => KEYQ.find(q => q.type === "table" && q.q === t)).filter(Boolean);
+    app.append(el("h1", { className: "title" }, "Main tables to remember"),
+      el("p", { className: "sub" }, `${plural(items.length, "table")}, grouped by topic. Read them here, or practise filling them in.`));
+    const prac = el("button", { className: "btn" }, "Practise filling these tables");
+    prac.onclick = () => kqPage({ title: "Main tables to remember", navLabel: "Main tables", back: () => kqMain("back"), items, all: true });
+    const pr = el("div", { className: "row" }); pr.append(prac); app.append(pr);
+    KEYQ_SUBJECTS.forEach(([name, rs]) => {
+      const group = items.filter(q => rs.includes(q.reading)).sort((a, b) => rs.indexOf(a.reading) - rs.indexOf(b.reading));
+      if (!group.length) return;
+      app.append(el("h2", { className: "kq-subj" }, name));
+      group.forEach(q => {
+        const card = el("div", { className: "card kq-card" });
+        const meta = el("div", { className: "meta" }); meta.append(el("span", {}, `${q.reading} ${NOTE_READINGS[q.reading]}`)); card.append(meta, kqHtml("p", q.q, "q"));
+        const tbl = el("table", { className: "kq-table" }), thead = el("thead"), tr0 = el("tr"), tbody = el("tbody");
+        q.head.forEach(x => tr0.append(kqHtml("th", x || " ")));
+        thead.append(tr0);
+        q.rows.forEach(r => { const tr = el("tr"); tr.append(kqHtml("th", r[0])); r.slice(1).forEach(c => tr.append(kqHtml("td", c))); tbody.append(tr); });
+        tbl.append(thead, tbody); card.append(tbl);
+        if (q.note) card.append(kqHtml("p", q.note, "kq-note"));
+        app.append(card);
+      });
+    });
   }
 
   // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
