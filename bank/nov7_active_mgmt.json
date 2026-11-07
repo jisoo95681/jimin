@@ -31,5 +31,82 @@
     "why": "The statistic is the transfer coefficient (TC): the cross-sectional correlation between the risk-weighted forecasts (E(RA) ÷ risk) and the risk-adjusted active weights (Δw × risk). TC: Manager 1 = 0.7267, Manager 2 = 0.8504, Manager 3 = −0.0020. Manager 2 has the highest TC."
    }
   ]
+ },
+ {
+  "id": "ap-robbin",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Robbin (TRS): value added, information ratio, fundamental law",
+  "body": "Elizabeth Robbin is the new chief investment officer at Teacher Retirement Systems (TRS), which oversees 21 funds from 11 different firms. She plans to implement new performance measurement tools for selecting and evaluating TRS’s managers.\n\nRobbin is meeting with her staff to gauge what they know about manager selection and evaluation. She starts by asking her staff to share with her their understanding of the term “value added.” She notes the following responses from three analysts, David Gladden, Agnes Wert, and Sandra Marano.\n\nGladden: A manager adds value when the portfolio return is greater than that of its benchmark.\nWert: A manager adds value when he produces a positive rate of return.\nMarano: Value added can come from multiple sources, including asset allocation and security selection.\nRobbin reviews data compiled by Gladden for Bosphorus Investment Advisers for the meeting. After reviewing Gladden’s work, Robbin requests that the analysts include the information ratio in all future exhibits.\n\nExhibit 1 Bosphorus Investment Advisors: Selected Statistics\nFund average annual return (%)\t18.54\nFund standard deviation\t10.7\nBenchmark average annual return (%)\t18.14\nBenchmark standard deviation\t9.55\nSharpe ratio\t1.59\nActive risk\t1.56\nBecause the analysts are unfamiliar with the use of the information ratio, Robbin explains how it might be useful in investment manager selection and in choosing the level of active portfolio risk. She asks each analyst to make an observation about his or her understanding of the information ratio.\n\nMarano: The information ratio will change as the active weights deviate from the benchmark weights.\nGladden: Because TRS’s investment policy prohibits short positions, TRS would be unable to take advantage of any optimized portfolios with increased active risk.\nWert: The information ratio appears to be the best criterion to evaluate the past performance of our active managers.\nRobbin points out that the Sharpe ratio and the information ratio are both useful tools in evaluating portfolio managers and asks Gladden to explain some of the important differences between the two.\n\nGladden notes, “The information ratio is a measure of relative expected or realized reward to risk, whereas the Sharpe ratio measures the absolute risk–return trade-off of a portfolio. Sharpe ratios help investors focus on the relative value added by active management. Although the information ratio is not affected by the addition of cash or leverage, the Sharpe ratio is affected by the addition of either.”\n\nRobbin then introduces the Fundamental Law of Active Management to her analysts, illustrating it with a graphic called the “correlation triangle.” “This graph explains how a manager’s forecasted returns, decisions about the portfolio’s active weights, and realized active returns are related to each other,” she says.\n\nWert observes, “That makes sense. It is difficult to add value if the manager’s forecasts do not correspond at least somewhat to the realized active returns. Also, if the portfolio manager does not overweight securities for which he has forecasted the best relative returns, he will not generate positive relative returns.”\n\nLastly, Robbin illustrates to her team how they might apply the Fundamental Law of Active Management in evaluating the performance of Kariba Investment Management.\n\nRobbin observes, “Kariba may be overstating its expected active return. Because Kariba rebalances weekly, it claims that its number of independent decisions is high. However, some of these securities (exchange-traded funds) may cluster in economic regions where the same general analysis applies to several securities. That would mean that Kariba’s breadth is in fact much lower than stated. Furthermore, Kariba asserts that each security is independently evaluated. That may not be true either. For example, a strategy that favors a particular economic region will likely persist for several months, and therefore, the investment decisions are not independent. Again, the result would be a lower breadth.”",
+  "questions": [
+   {
+    "n": 52,
+    "q": "Which statement regarding the measurement of value added is least likely to be correct?",
+    "options": [
+     "The statement made by Wert",
+     "The statement made by Marano",
+     "The statement made by Gladden"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Positive return alone does not reflect value added. The value added of an actively managed portfolio (RA) is the difference between the return on the portfolio (RP) and the return on the benchmark portfolio (RB). RA = RP – RB | B. Incorrect. Marano’s statement is correctly referring to value added and further breaking down the measurement into subsections of security selection and industry weightings. | C. Incorrect. Value added is the difference between the return on the portfolio and the return on the benchmark portfolio, so Gladden’s statement is true."
+   },
+   {
+    "n": 53,
+    "q": "Based on the information presented in Exhibit 1, the information ratio for Bosphorus is closest to:",
+    "options": [
+     "0.26.",
+     "0.53.",
+     "0.95."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The information ratio is calculated by dividing the active return (RA) by the active risk. The active risk is the standard deviation of the difference between portfolio return and the benchmark return: STD(RP – RB). | B. Incorrect. The information ratio is calculated by dividing the active return (RA) by the active risk. The active risk is the standard deviation of the difference between portfolio return and the benchmark return: STD(RP – RB). | C. Incorrect. The information ratio is calculated by dividing the active return (RA) by the active risk. The active risk is the standard deviation of the difference between portfolio return and the benchmark return: STD(RP – RB)."
+   },
+   {
+    "n": 54,
+    "q": "With respect to the information ratio, which analyst’s observation is least likely correct?",
+    "options": [
+     "The observation made by Wert",
+     "The observation made by Marano",
+     "The observation made by Gladden"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The best criterion to evaluate past performance of active managers is the information ratio, so the statement made by Wert is correct. | B. Correct. The information ratio is unaffected by the aggressiveness of the active weights (deviations from benchmark weights) because both the active return and the active risk increase proportionally. | C. Incorrect. To increase the active risk of a portfolio, one would need to shorten the benchmark portfolio, so Gladden’s statement is correct."
+   },
+   {
+    "n": 55,
+    "q": "In his statement regarding the information and Sharpe ratios, Gladden is most likely correct with regard to:",
+    "options": [
+     "the impact of cash and leverage.",
+     "the Sharpe ratio and relative value.",
+     "absolute versus relative return measures."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The Sharpe ratio is not affected by the addition of cash or leverage, but the information ratio is impacted. | B. Incorrect. The information ratio, not the Sharpe ratio, is useful to help investors focus on the relative value added by active management. | C. Correct. The information ratio is a measure of relative expected or realized reward to risk, whereas the Sharpe ratio measures the absolute risk–return trade-off of a portfolio."
+   },
+   {
+    "n": 56,
+    "q": "Is Wert correct in her assessment of the Fundamental Law of Active Management?",
+    "options": [
+     "Yes",
+     "No, she is incorrect about the manager’s forecasts",
+     "No, she is incorrect about the manager’s security weightings"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Both observations are correct. A manager’s forecasts must correspond at least somewhat to the realized returns if the manager is to generate a positive relative return (information coefficient), and the manager must overweight securities for which he has forecasted the best relative returns in order to generate positive relative returns (transfer coefficient). | B. Incorrect. A manager’s forecasts must correspond at least somewhat to the realized returns if the manager is to generate a positive relative return (information coefficient). | C. Incorrect. A manager must overweight securities for which he has forecasted the best relative returns in order to generate positive relative returns (transfer coefficient)."
+   },
+   {
+    "n": 57,
+    "q": "Is Robbin correct with respect to her assertion about Kariba overstating its expected active return?",
+    "options": [
+     "Yes.",
+     "No, she is incorrect regarding the impact of the number of independent decisions.",
+     "No, she is incorrect regarding the impact of the overlap in individual security evaluations."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The expected active return is expressed as the expected information ratio multiplied by the active risk target, or Expected active return = If the number of independent decisions is lower, or if individual securities are affected by an assumption or forecast that persists through multiple rebalancing periods, then breadth will be lower, reducing the information ratio and thus the expected active return. | B. Incorrect. If there is cross-sectional dependence, then the number of independent decisions would be lower, thus lowering breadth and the expected active return. | C. Incorrect. Lowering the number of independent decisions would lower the breadth, and therefore lower the expected active return."
+   }
+  ]
  }
 ]

@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 178 vignettes · 246 in all. Plus 138 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 179 vignettes · 247 in all. Plus 138 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -40,7 +40,7 @@ Totals: app 68 vignettes · bank 178 vignettes · 246 in all. Plus 138 standalon
 | 32 | Real Estate through Publicly Traded Securities | 0 | 6 | 6 |
 | 33 | Hedge Fund Strategies | 2 | 1 | 3 |
 | 34 | Economics and Investment Markets | 1 | 6 | 7 |
-| 35 | Analysis of Active Portfolio Management | 1 | 3 | 4 |
+| 35 | Analysis of Active Portfolio Management | 1 | 4 | 5 |
 | 36 | Exchange-Traded Funds | 0 | 2 | 2 |
 | 37 | Using Multifactor Models | 0 | 3 | 3 |
 | 38 | Measuring and Managing Market Risk | 3 | 3 | 6 |
@@ -85,7 +85,7 @@ Totals: app 68 vignettes · bank 178 vignettes · 246 in all. Plus 138 standalon
 **32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q); re-rossi (bank, 4Q); re-bay (bank, 4Q); re-hui-lin (bank, 6Q); re-wang (bank, 6Q); re-rosse (bank, 4Q)
 **33 Hedge Fund Strategies**: pwpf (app, 8Q); ctrf (app, 9Q); m2-11 (bank, 4Q)
 **34 Economics and Investment Markets**: carlisle (app, 7Q); em-simmons (bank, 4Q); em-gera (bank, 4Q); em-gosser (bank, 4Q); em-rutherford (bank, 4Q); m1-8 (bank, 4Q); s2a-ferguson (bank, 4Q)
-**35 Analysis of Active Portfolio Management**: frazee (app, 7Q); ap-managers (bank, 2Q); m1-3 (bank, 4Q); m1-8 (bank, 4Q)
+**35 Analysis of Active Portfolio Management**: frazee (app, 7Q); ap-managers (bank, 2Q); ap-robbin (bank, 6Q); m1-3 (bank, 4Q); m1-8 (bank, 4Q)
 **36 Exchange-Traded Funds**: m1-3 (bank, 4Q); s1b-beaumont (bank, 4Q)
 **37 Using Multifactor Models**: pc-10 (bank, 4Q); m1-3 (bank, 4Q); altuve (bank, 6Q)
 **38 Measuring and Managing Market Risk**: flusk (app, 8Q); eastern (app, 5Q); ima (app, 7Q); newman-var (bank, 4Q); m2-4 (bank, 4Q); s2a-lowvol (bank, 3Q)
