@@ -1,0 +1,35 @@
+[
+ {
+  "id": "ap-managers",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz",
+  "readings": [
+   35
+  ],
+  "title": "Active management · three managers: information coefficient and transfer coefficient",
+  "body": "You are analyzing three investment managers for a new mandate. The following table provides the managers’ ex-ante active return expectations and portfolio weights. The last two columns include the risk and the ex post, realized active returns for the four stocks. Use the following data for the following two questions:\n\n\tManager 1 Δw\tManager 1 E(RA)\tManager 2 Δw\tManager 2 E(RA)\tManager 3 Δw\tManager 3 E(RA)\tRisk\tRealized RA\nSecurity 1\t−0.125\t0.03\t0.2\t0.04\t−0.05\t0.025\t0.17\t0.06\nSecurity 2\t0.025\t0.04\t0\t0.01\t0.05\t0.015\t0.10\t0.07\nSecurity 3\t0.075\t0.05\t−0.1\t0\t0.05\t0.005\t0.12\t0.04\nSecurity 4\t0.025\t0.06\t−0.1\t0.02\t−0.05\t0.015\t0.25\t0.02",
+  "questions": [
+   {
+    "n": 25,
+    "q": "Suppose all three managers claim to be good at forecasting returns. According to the expanded fundamental law of active management, which manager is the best at efficiently building portfolios by anticipating future returns?",
+    "options": [
+     "Manager 1",
+     "Manager 2",
+     "Manager 3"
+    ],
+    "answer": "C",
+    "why": "The statistic is the information coefficient (IC): the correlation between the risk-weighted forecasts (E(RA) ÷ risk) and the risk-weighted realized active returns (realized RA ÷ risk). Realized RA ÷ risk: 0.353, 0.700, 0.333, 0.080. IC: Manager 1 = 0.5335, Manager 2 = 0.0966, Manager 3 = 0.6769. Manager 3 has the highest IC."
+   },
+   {
+    "n": 26,
+    "q": "Suppose all three managers claim to be efficient in portfolio construction. According to the expanded fundamental law of active management, which manager is the best at building portfolios to make full use of their ability to correctly anticipate returns?",
+    "options": [
+     "Manager 1",
+     "Manager 2",
+     "Manager 3"
+    ],
+    "answer": "B",
+    "why": "The statistic is the transfer coefficient (TC): the cross-sectional correlation between the risk-weighted forecasts (E(RA) ÷ risk) and the risk-adjusted active weights (Δw × risk). TC: Manager 1 = 0.7267, Manager 2 = 0.8504, Manager 3 = −0.0020. Manager 2 has the highest TC."
+   }
+  ]
+ }
+]
