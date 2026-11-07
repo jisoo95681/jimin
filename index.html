@@ -661,7 +661,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v188 · 2026-11-06";
+  const APP_VERSION = "v189 · 2026-11-06";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1237,7 +1237,7 @@
 
   // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
   // Ethics (readings 40-42) is practised in sessions, so it is not part of the day lists.
-  const kqDayItems = () => KEYQ.filter(q => !(q.reading >= 40 && q.reading <= 42));
+  const kqDayItems = () => KEYQ.filter(q => !(q.reading >= 40 && q.reading <= 42) || q.inDay);
   const kqToday = () => new Date(Date.now() - 2 * 3600 * 1000).toLocaleDateString("en-CA");
   const kqDayLabel = day => {
     const t = new Date(day + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
