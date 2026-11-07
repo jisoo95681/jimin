@@ -1281,6 +1281,29 @@ const KEYQ = [];
   mc(41, "Which of the study group’s pledges would most likely be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate?", ["Pledge 3", "Pledge 2", "Pledge 1"], 0, "Pledge 3 (Avoid discussing the particulars of the topic areas tested with each other.) would be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate.", ev);
   }
   inDay = false;
+
+  // ===== 8 Employee Compensation: PBO, discount rate and roll-forward =====
+  setDay("2026-11-07");
+  fm(8, "Formula: PBO at year-end (roll-forward) =", "beginning PBO + service cost + interest cost + past service cost + actuarial losses − actuarial gains − benefits paid", "The beginning PBO is already a present value, so no discounting step is needed.");
+  fm(8, "Formula: interest cost on the PBO =", "beginning PBO × discount rate", "The passage of one year brings the payments closer, so the present value grows.");
+  tb(8, "PBO and its assumptions", ["Assumption", "If it rises, the PBO"], [["Discount rate", "Falls"], ["Salary growth rate", "Rises"], ["Mortality rate", "Falls"], ["Expected return on plan assets", "Not affected"]], "Expected return on plan assets affects pension cost and plan assets, not the PBO. The ABO ignores future salary growth.");
+  mc(8, "The PBO is the:", ["Present value of the promised pension benefits", "Fair value of the plan assets", "Total pension benefits paid this year"], 0, "");
+  mc(8, "A higher discount rate lowers the PBO because:", ["Future benefits are discounted more heavily", "Fewer employees qualify for benefits", "The expected return on plan assets rises"], 0, "PBO = Σ benefit ÷ (1 + discount rate)^t.");
+  mc(8, "When the discount rate rises, the resulting actuarial item is a:", ["Gain", "Loss", "Neither a gain nor a loss"], 0, "A lower PBO produces an actuarial gain.");
+  mc(8, "When the discount rate falls, the resulting actuarial item is a:", ["Loss", "Gain", "Neither a gain nor a loss"], 0, "A higher PBO produces an actuarial loss.");
+  mc(8, "An actuarial loss:", ["Increases the PBO", "Decreases the PBO", "Does not change the PBO"], 0, "");
+  mc(8, "An actuarial gain:", ["Decreases the PBO", "Increases the PBO", "Does not change the PBO"], 0, "");
+  mc(8, "Benefits paid to retirees:", ["Reduce the PBO", "Increase the PBO", "Do not change the PBO"], 0, "");
+  mc(8, "In the PBO roll-forward, the interest cost equals:", ["Beginning PBO × discount rate", "Ending PBO × discount rate", "Plan assets × expected return"], 0, "");
+  mc(8, "In the PBO roll-forward, no discounting step is needed because the beginning PBO is already a:", ["Present value", "Future value", "Book value"], 0, "");
+  mc(8, "On a financial calculator, a future pension benefit is entered as FV. The PBO is then the:", ["PV", "FV", "I/Y"], 0, "N is the number of years to payment, I/Y is the discount rate.");
+  mc(8, "A rise in the salary growth rate:", ["Increases the PBO", "Decreases the PBO", "Does not change the PBO"], 0, "Future salaries and benefits grow faster.");
+  mc(8, "A rise in the mortality rate (people die earlier):", ["Lowers the PBO", "Raises the PBO", "Does not change the PBO"], 0, "Benefits are paid for a shorter time.");
+  mc(8, "Longer life expectancy of the plan members:", ["Increases the PBO", "Decreases the PBO", "Does not change the PBO"], 0, "");
+  mc(8, "The expected return on plan assets affects:", ["Pension cost but not the PBO", "The PBO but not pension cost", "Both the PBO and pension cost"], 0, "");
+  mc(8, "Which assumption does NOT affect the ABO?", ["Salary growth rate", "Discount rate", "Mortality rate"], 0, "The ABO is based on current salaries.");
+  mc(8, "The ABO differs from the PBO because the ABO does not include:", ["Future salary increases", "Past service", "The discount rate"], 0, "");
+  mc(8, "Service cost is the:", ["Present value of the benefits earned by employees this year", "Increase in the PBO caused by the passage of time", "Benefits paid to retirees"], 0, "");
   // Ethics questions are grouped in random sessions of 20. A new Ethics question without a session goes into the last session until it has 20, then into a new one.
   (function () {
     const eth = KEYQ.filter(q => q.reading >= 40 && q.reading <= 42);
