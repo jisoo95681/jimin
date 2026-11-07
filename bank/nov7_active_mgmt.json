@@ -108,5 +108,390 @@
     "why": "A. Correct. The expected active return is expressed as the expected information ratio multiplied by the active risk target, or Expected active return = If the number of independent decisions is lower, or if individual securities are affected by an assumption or forecast that persists through multiple rebalancing periods, then breadth will be lower, reducing the information ratio and thus the expected active return. | B. Incorrect. If there is cross-sectional dependence, then the number of independent decisions would be lower, thus lowering breadth and the expected active return. | C. Incorrect. Lowering the number of independent decisions would lower the breadth, and therefore lower the expected active return."
    }
   ]
+ },
+ {
+  "id": "ap-martinez",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Martinez: security selection, asset allocation, information ratio",
+  "body": "John Martinez is assessing the performance of the actively managed diversified asset portfolio. The diversified asset portfolio is invested in equities, bonds, and real estate, and allocations to these asset classes and to the holdings within them are constrained.\n\nSelected return and financial data for the portfolio for 2019 are presented in Exhibit 1.\n\nExhibit 1\nDiversified Asset Portfolio 2019 Portfolio Performance\n \tSub-Portfolio Return (%)\tBenchmark Return (%)\tPortfolio Allocation (%)\tStrategic Asset Allocation (%)\nEquities sub-portfolio\t36.9\t31.6\t63\t60\nBond sub-portfolio\t−2.4\t−2.6\t28\t35\nReal estate sub-portfolio\t33.4\t28.3\t9\t5\nMartinez uses several risk-adjusted return metrics to assess the performance of the diversified asset portfolio, including the information ratio and the Sharpe ratio. Selected risk, return, and statistical data for the portfolio are presented in Exhibit 2.\n\nExhibit 2\nDiversified Asset Portfolio Data, 2000-2019\n \tTransfer Coefficient (TC)\tInformation Coefficient (IC)\tBreadth (BR)\nEquities sub-portfolio\t0.90\t0.091\t21\nBond sub-portfolio\t0.79\t0.087\t23\nReal estate sub-portfolio\t0.86\t0.093\t19\nMartinez has recently hired Kenneth Singh to help him evaluate portfolios. Martinez asks Singh about the possible effects on the portfolio’s information ratio if cash were added to the diversified asset portfolio or if the aggressiveness of the portfolio’s active weights were increased. Singh responds with two statements:\n\nStatement 1:\nAdding cash to the portfolio would change the portfolio’s expected information ratio.\n\nStatement 2:\nIncreasing the aggressiveness of active weights (in a proportional manner) would not change the portfolio’s expected information ratio.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "Based on Exhibit 1, the value added to the diversified asset portfolio attributable to the security selection decision in 2019 was closest to:",
+    "options": [
+     "2.3%.",
+     "3.9%.",
+     "6.1%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Based on the differences in returns for the portfolio and benchmark in Exhibit 1, the value added by each asset class within the portfolio is shown in the following table:\n\n \tSub-Portfolio Return (%)\tBenchmark Return (%)\tValue Added (%)\tPortfolio Allocation (%)\nEquities sub-portfolio\t36.9\t31.6\t5.3\t63\nBond sub-portfolio\t−2.4\t−2.6\t0.2\t28\nReal estate sub-portfolio\t33.4\t28.3\t5.1\t9\nThe value added from security selection is calculated as the sum of the actual portfolio weights multiplied by each sub-portfolio’s value added measure. Thus, the value added from security selection is calculated as: Value added from security selection = 0.63(5.3%) + 0.28(0.2%) + 0.09(5.1%) = 3.9%.\n\nA is incorrect. It represents the value added from asset allocation (2.3%).\n\nC is incorrect. It represents the total value added (2.3% + 3.9% = 6.1%, with rounding)."
+   },
+   {
+    "n": 12,
+    "q": "Based on Exhibit 1, the value added of the diversified asset portfolio attributable to the asset allocation decision in 2019 was closest to:",
+    "options": [
+     "2.3%.",
+     "3.9%.",
+     "6.1%."
+    ],
+    "answer": "A",
+    "why": "A is correct. The value added from asset allocation is calculated as the sum of the differences in the weights between the strategic (benchmark) allocation and the actual sub-portfolio allocation multiplied by each sub-portfolio’s benchmark return.\n\n \tBenchmark Return (%)\tActual Asset Allocation (%)\tStrategic Asset Allocation (%)\tActual − Strategic Asset Allocation (%)\nEquities sub-portfolio\t31.6\t63\t60\t+3\nBond sub-portfolio\t−2.6\t28\t35\t−7\nReal estate sub-portfolio\t28.3\t9\t5\t+4\nThus, the value added by the active asset allocation decision is calculated as\n\nValue added from asset allocation decision = 0.03(31.6%) − 0.07(−2.6%) + 0.04(28.3%) = 2.3%.\nB is incorrect. It is the value added from security selection.\n\nC is incorrect. It is the total value added."
+   },
+   {
+    "n": 13,
+    "q": "Based on data in Exhibit 2 and using the information ratio as the criterion for evaluating performance, which sub-portfolio had the best performance in the period 2000–2019?",
+    "options": [
+     "The bond sub-portfolio.",
+     "The equities sub-portfolio.",
+     "The real estate sub-portfolio."
+    ],
+    "answer": "B",
+    "why": "B is correct. The information ratio for a portfolio can be expressed as follows:\n\nIR\n=\n(\nTC\n)\n(\nIC\n)\nBR\n.\nThe information ratios for the three sub-portfolios are calculated as follows:\n\n \tInformation Ratio\nEquities sub-portfolio\t0.90 × 0.091 × (21)0.5 = 0.38\nBond sub-portfolio\t0.79 × 0.087 × (23)0.5 = 0.33\nReal estate sub-portfolio\t0.86 × 0.093 × (19)0.5 = 0.35\nBased on the information ratio, the equities sub-portfolio outperformed the real estate sub-portfolio. The information ratio for the equities sub-portfolio of 0.38 was higher than the information ratio for the real estate sub-portfolio of 0.35 and the bond sub-portfolio of 0.33."
+   },
+   {
+    "n": 14,
+    "q": "Which of Singh’s statements regarding the information ratio is correct?",
+    "options": [
+     "Only Statement 1",
+     "Only Statement 2",
+     "Both Statement 1 and Statement 2"
+    ],
+    "answer": "C",
+    "why": "C is correct. Adding cash to the portfolio increases the expected SR, but the benchmark’s expected SR remains unchanged – therefore the IR must decrease, meaning statement 1 is correct.\n \nAs for statement 2, as long as we change the active weights in a proportional manner there should be no change in the expected information ratio – however, if we do some type of asymmetrical change across multiple sources of active risk we cannot be assured of the same result."
+   }
+  ]
+ },
+ {
+  "id": "ap-indigo",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Indigo Fund and the S&P 500: maximum Sharpe ratio and optimal weights",
+  "body": "S&P 500\tIndigo Fund\nExpected annual return\t9.0%\t10.5%\nReturn standard deviation\t18.0%\t25.0%\nSharpe ratio\t0.333\t0.30\nActive return\t \t1.2%\nActive risk\t \t8.0%\nInformation ratio\t \t0.15\nNote: Data are based on a risk-free rate of 2.3%.",
+  "questions": [
+   {
+    "n": 18,
+    "q": "What is the maximum Sharpe ratio that a manager can achieve by combining the S&P 500 benchmark portfolio and the Indigo Fund?",
+    "options": [
+     "0.333",
+     "0.365",
+     "0.448"
+    ],
+    "answer": "B",
+    "why": "B is correct. The highest squared Sharpe ratio of an actively managed portfolio is\n\nSR\nP\n2\n=\nSR\nB\n2\n+\nIR\n2\n=\n0.333\n2\n+\n0.15\n2\n=\n0.1334\n.\nThe highest Sharpe ratio is SRP = \n0.1334\n = 0.365."
+   },
+   {
+    "n": 19,
+    "q": "Which of the following pairs of weights would be used to achieve the highest Sharpe ratio and optimal amount of active risk through combining the Indigo Fund and benchmark portfolio, respectively?",
+    "options": [
+     "1.014 on Indigo and −0.014 on the benchmark",
+     "1.450 on Indigo and −0.450 on the benchmark",
+     "1.500 on Indigo and −0.500 on the benchmark"
+    ],
+    "answer": "A",
+    "why": "A is correct. The optimal amount of active risk is\n\nσ\nA\n=\nIR\nSR\nB\nσ\nB\n=\n0.15\n0.333\n18.0\n%\n=\n8.11\n%\n.\nThe weight on the active portfolio (Indigo) would be 8.11%/8.0% = 1.014, and the weight on the benchmark portfolio would be 1 − 1.014 = −0.014.\n\nWe can demonstrate that these weights achieve the maximum Sharpe ratio (of 0.365). Note that 8.11% is the optimal level of active risk and that Indigo has an expected active return of 1.014(1.2%) = 1.217% over the benchmark and a total excess return of 6.0% + 1.217% = 7.217%. The portfolio total risk is\n\nσP2 = σB2 + σA2 = 18.02 + 8.1112 = 389.788.\nTaking the square root, σP = 19.743, and the optimal Sharpe ratio is indeed 7.217/19.743 = 0.365."
+   }
+  ]
+ },
+ {
+  "id": "ap-smith",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Smith (Brickman): manager selection and asset allocation",
+  "body": "Steven Smith, the CFO at Brickman Industries, is considering replacing the current portfolio manager of the firm's pension assets. He has identified three alternative managers as a possible replacement. \n\nSmith first reviews the current manager's portfolio, which is invested in an equity fund and a fixed-income fund. Exhibit 1 shows the portfolio's strategic asset allocation and current allocation to these funds as well as the return on the two funds and their benchmarks.\n\nExhibit 1\n \tBenchmark Return\tStrategic Asset Allocation\tFund Return\tManager's Allocation\nEquity fund\t14%\t60%\t17%\t50%\nFixed-income fund\t6%\t40%\t4%\t50%\nSmith next collects information on the alternative managers and uses both the Sharpe ratio and the information ratio for his initial analysis. As part of this analysis, he determines what factors would impact both of these ratios.\n\nSmith then collects select data about the three portfolio managers and summarizes his findings in Exhibit 2.\n\nExhibit 2\n \tActive Return\tActive Risk\tSharpe Ratio\tInformation Coefficient\tTransfer Coefficient\nManager 1\t9.4%\t17.3%\t0.63\t0.57\t0.70\nManager 2\t8.8%\t15.4%\t0.51\t0.68\t0.20\nManager 3\t8.2%\t14.9%\t0.70\t0.28\t1.00",
+  "questions": [
+   {
+    "n": 30,
+    "q": "The current manager's value added from asset allocation is closest to:",
+    "options": [
+     "–0.8%.",
+     "–0.3%.",
+     "0.5%."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the value added from asset allocation is equal to the sum of the differences in the weights between the strategic allocation and the actual portfolio allocation (Δw) multiplied by the respective benchmark return (RB). RA = (ΔwequityRB,equity + Δwfixed incomeRB,fixed income) RA = (50% – 60%)(0.14) + (50% – 40%)(0.06) = –0.014 + 0.006 = –0.008= –0.8%. | B. Incorrect because this is the value added from both security selection and asset allocation. Portfolio return = (0.17 × 0.5) + (0.04 × 0.5) = 0.085 + 0.02 = 0.105 = 10.5%. Benchmark return = (0.14 × 0.6) + (0.06 × 0.4) = 0.084 + 0.024 = 0.108 = 10.8%. 10.5% – 10.8% = –0.3%. | C. Incorrect because the value added from security selection is equal to RA = RP – RB, where RP is the portfolio return, RB is the benchmark return, and RA is the value added over the benchmark. RA = 0.5(17% – 14%) + 0.5(4% – 6%) = 0.5%."
+   },
+   {
+    "n": 31,
+    "q": "Which of the following factors impacts both of the ratios that Smith uses in his initial analysis of the alternative managers?",
+    "options": [
+     "The choice of benchmark portfolio",
+     "The volatility of the portfolio's returns",
+     "The degree of leverage in the portfolio"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because, while the information ratio would be impacted by the choice of underlying benchmark, the Sharpe ratio would not be. The Sharpe ratio (SRP) does not factor in benchmark returns or risk. SRP = (RP – RF)/σP, where RP = Portfolio return, RF = the risk free rate, and σP = the standard deviation of the portfolio. The information ratio of an actively managed portfolio is calculated by dividing the active return by active risk and therefore, as active return and active risk are calculated using benchmark return and benchmark risk, the information ratio would be impacted by the choice of underlying benchmark. | B. Correct because both the Sharpe ratio and the information ratio would be impacted by the volatility of returns of the portfolio. Sharpe ratio - The Sharpe ratio is used to compare the portfolio return in excess of a riskless rate with the volatility of the portfolio return. SRP = (RP – RF)/σP, where RP = Portfolio return, RF = the risk free rate, and σP = the standard deviation of the portfolio, Information ratio - The information ratio of an actively managed portfolio is calculated by dividing the active return by active risk, where active risk is the standard deviation (volatility) of the excess return of the portfolio over the return of the benchmark. | C. Incorrect because, while the information ratio would be impacted by the degree of leverage in the portfolio, the Sharpe ratio would not be. Sharpe ratio - An important property is that the Sharpe ratio is unaffected by the addition of cash or leverage in a portfolio. Information ratio - Unlike the Sharpe ratio, the information ratio is affected by the addition of cash or the use of leverage. For example, if the investor adds cash to a portfolio of risky assets, the information ratio for the combined portfolio will generally shrink."
+   },
+   {
+    "n": 32,
+    "q": "Based on Exhibit 2, which manager has the highest information ratio?",
+    "options": [
+     "Manager 1",
+     "Manager 2",
+     "Manager 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the information ratio (IR) is the active return / the active risk. The candidate may choose Manager 1 if they multiply the active return by the Sharpe ratio: Manager 1 = 9.4% × 0.63 = 5.92% Manager 2 = 8.8% × 0.51 = 4.49% Manager 3 = 8.2% × 0.70 = 5.74%. The candidate might also choose this if they invert the IR calculation (active risk/active return): Manager 1 = 17.3/9.4 = 1.84 Manager 2 = 15.4/8.8 = 1.75 Manager 3 = 14.9/8.2 = 1.82. | B. Correct because the information ratio (IR) is the active return / the active risk. The IR for each manager is as follows: Manager 1 = 9.4/17.3 = 0.5434 Manager 2 = 8.8/15.4 = 0.5714 Manager 3 = 8.2/14.9 = 0.5503. Thus, Manager 2 has the highest information ratio. | C. Incorrect because the information ratio (IR) is the active return / the active risk. In this case, the candidate might choose Manager 3 because they have the lowest active risk and the highest Sharpe ratio."
+   },
+   {
+    "n": 33,
+    "q": "Based on Exhibit 2, which manager most likely has the fewest investment constraints?",
+    "options": [
+     "Manager 1",
+     "Manager 2",
+     "Manager 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Manager 1 does not have the highest transfer coefficient. A candidate may choose Manager 1 because they multiply the information coefficient and the transfer coefficient. Manager 1 = 0.57 x 0.7 = 0.40 Manager 2 = 0.68 x 0.2 = 0.14 Manager 3 = 0.28 x 1.0 = 0.28 | B. Incorrect because Manager 2 does not have the highest transfer coefficient. Manager 2 has the highest information coefficient rather than transfer coefficient. A candidate may confuse the two factors. | C. Correct because a low TC results from the formal or informal constraints imposed on the structure of the portfolio. In fact, at TC = 0.00, there would be no correspondence between the active return forecasts and active weights taken and thus no expectation of value added from active management. In contrast, TC = 1.00 (no binding constraints) represents a perfect correspondence between active weights taken and forecasted active returns. Since Manager 3 has the highest transfer coefficient, they most likely have the fewest portfolio constraints."
+   }
+  ]
+ },
+ {
+  "id": "ap-bauer",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Bauer: fixed-income managers and Portfolio D",
+  "body": "Anna Bauer runs a small family office investment firm. She is reviewing several active portfolio managers for potential inclusion into her portfolio.\n\nBauer identifies three unconstrained, diversified fixed-income portfolios with three different managers as potential investments. Each manager has the same benchmark. To evaluate the managers, Bauer reviews the annual performance data in Exhibit 1 and assumes a risk-free rate of 0.50%.\n\nExhibit 1\n \tBenchmark\tPortfolio A\tPortfolio B\tPortfolio C\nReturn\t8.75%\t8.80%\t9.40%\t10.50%\nStandard deviation of returns\t17.50%\t17.60%\t19.20%\t24.20%\nActive risk\t0.00%\t3.06%\t3.32%\t9.46%\nBauer also evaluates Portfolio D. The portfolio has no investment constraints and is invested in an equity fund and a fixed-income fund. Exhibit 2 shows Portfolio D's strategic asset allocation and its current allocation to these funds as well as the return of the funds and their two benchmarks.\n\nExhibit 2\n \tPortfolio D Allocation\tStrategic Asset Allocation\tFund Return\tBenchmark Return\nFixed-income fund\t70%\t50%\t10.00%\t8.00%\nEquity fund\t30%\t50%\t12.00%\t10.50%\nBauer next examines the annual performance data in Exhibit 3 in order to determine the level of active risk that would maximize the Sharpe ratio of Portfolio D.\n\nExhibit 3\n \tBenchmark\tPortfolio D\nNumber of securities\t60\t50\nStandard deviation of returns\t12.30%\t13.80%\nSharpe ratio\t0.71\t0.73\nInformation ratio\t---\t0.23\nBauer meets with the manager of Portfolio D. She informs the manager that the family office will require ESG considerations to be incorporated into all of their investments going forward. The manager considers how the imposition of ESG constraints will affect their performance as measured by the fundamental law of active management.",
+  "questions": [
+   {
+    "n": 34,
+    "q": "Which portfolio in Exhibit 1 has the highest information ratio?",
+    "options": [
+     "Portfolio A",
+     "Portfolio B",
+     "Portfolio C"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Manager A's portfolio has the highest Sharpe ratio, but the lowest information ratio. SR = (RP – RF)/σP, where RP is the portfolio return, RF is the risk-free rate, and σP is the standard deviation of the portfolio return. Using the figures presented in Exhibit 1: For Portfolio A, SR = (8.80% – 0.50%)/17.60% = 8.30%/17.60% = 0.472 For Portfolio B, SR = (9.40% – 0.50%)/19.20% = 8.90%/19.20% = 0.464 For Portfolio C, SR = (10.50% – 0.50%)/24.20% = 10.00%/24.20% = 0.413 | B. Correct because the information ratio tells the investor how much active return has been earned, or is expected to be earned, for incurring the level of active risk. Active return, RA, is the difference between the managed portfolio return, RP, and the benchmark portfolio return, RB. The information ratio of an actively managed portfolio, IR, is calculated by dividing the active return, RA, by active risk σA: IR = (RP – RB)/σ(RP – RB) = RA/σA. Using the figures presented in Exhibit 1: For Portfolio A, IR = (8.80% – 8.75%)/3.06% = 0.05%/3.06% = 0.016 For Portfolio B, IR = (9.40% – 8.75%)/3.32% = 0.65%/3.32% = 0.196 For Portfolio C, IR = (10.50% – 8.75%)/9.46% = 1.75%/9.46% = 0.185 Therefore, Portfolio B has the highest information ratio. | C. Incorrect because Manager C's portfolio has the highest return and active risk, but not the highest information ratio."
+   },
+   {
+    "n": 35,
+    "q": "The value added to Portfolio D that is attributable to security selection is closest to:",
+    "options": [
+     "–0.5%.",
+     "1.4%.",
+     "1.9%."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it is the value added due to asset allocation, calculated as the active weights for the fixed-income and the equity fund multiplied by each fund's benchmark return, respectively. The active weight for the fixed-income fund is 20% (= 70% portfolio allocation – 50% as per the strategic asset allocation). The active weight for the equity fund is –20% (= 30% portfolio allocation – 50% as per the strategic asset allocation). Therefore, the value added due to asset allocation is equal to 20% × 8.00% – 20% × 10.50% = 1.60% – 2.10% = –0.5%. | B. Incorrect because it is the total value added by Portfolio D, RA = RP – RB = (70% × 10.00% + 30% × 12.00%) – (50% × 8.00% + 50% × 10.50%) = (7.00% + 3.60%) – (4.00% + 5.25%) = 10.60% – 9.25% = 1.35% ≈ 1.4%. | C. Correct because the value added due to security selection is the product of the active return RA = RP – RB and the allocated weight to the fixed-income and equity funds, respectively; 70%(10.00% – 8.00%) + 30%(12.00% – 10.50%) = 1.40% + 0.45% = 1.85% ≈ 1.9%."
+   },
+   {
+    "n": 36,
+    "q": "The level of active risk that would maximize the Sharpe ratio of Portfolio D is closest to:",
+    "options": [
+     "4.0%.",
+     "4.3%.",
+     "5.9%."
+    ],
+    "answer": "A",
+    "why": "A. Correct because for unconstrained portfolios, the level of active risk that leads to the highest Sharpe ratio is σA = IR/SRB × σB, where σB is the standard deviation of the benchmark's return, IR is the portfolio's information ratio and SRB is the benchmark's Sharpe ratio. Using the information presented in Exhibit 2, σA = 0.23/0.71 × 12.30% = 0.0398 ≈ 4.0%. | B. Incorrect because it incorrectly uses the Sharpe ratio and risk of the portfolio in the calculation of the Sharpe ratio-maximizing level of active risk; σA = IR/SRD × σD = 0.23/0.73 × 13.80% = 0.04348 ≈ 4.3%. | C. Incorrect because it is the portfolio's active risk, calculated as σA = RA/IR, where RA is the active return of the portfolio and IR is the portfolio's information ratio; RA = RP – RB = (70% × 10.00% + 30% × 12.00%) – (50% × 8.00% + 50% × 10.50%) = (7.00% + 3.60%) – (4.00% + 5.25%) = 10.60% – 9.25% = 1.35%; σA = 0.0135/0.23 = 0.0587 ≈ 5.9%."
+   },
+   {
+    "n": 37,
+    "q": "In terms of the fundamental law, the family office's investment requirements will most likely lower Portfolio D's:",
+    "options": [
+     "active risk only.",
+     "transfer coefficient only.",
+     "active risk and transfer coefficient."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Portfolio D will be under the constraint of having fewer eligible securities available; the risk level he prefers to take with the available securities is not constrained. Active risk is the volatility of the active return. | B. Correct because Portfolio D is currently unconstrained and therefore its transfer coefficient equals 1; the planned addition of ESG constraint would reduce this. Like the information coefficient, the transfer coefficient, TC, is a simple multiplicative factor in the fundamental law. It measures the extent to which constraints reduce the expected value added of the investor’s forecasting ability. In the absence of constraints, the transfer coefficient is approximately 1.00, resulting in the basic form of the fundamental law. However, in practice, investors often work under constraints that result in TC values between 0.20 and 0.80. | C. Incorrect because while Portfolio D's transfer coefficient will be lowered by the added constraints, its active risk will be unaffected."
+   }
+  ]
+ },
+ {
+  "id": "ap-mackie",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Mackie: three managers and the fundamental law",
+  "body": "Paula Mackie is a portfolio manager with a family office. She is reviewing the performance of three managers of active portfolios over the past year.\n\nFirst, Mackie considers Manager 1's portfolio, which is invested in an equity fund and a fixed-income fund. Exhibit 1 shows Manager 1's strategic asset allocation and current allocation to these funds as well as the return on the two funds and their benchmarks.\n\nExhibit 1\n \tFund Return\tBenchmark Return\tStrategic Asset Allocation\tManager 1 Allocation\nEquity fund\t10.0%\t12.0%\t50%\t60%\nFixed-income fund\t3.0%\t1.0%\t50%\t40%\nMackie meets with Manager 2, who runs an unconstrained global equities portfolio. Mackie informs Manager 2 that the family office will require ESG considerations to be incorporated into all of their investments going forward. The manager considers how the imposition of ESG constraints will affect portfolio performance as measured by the fundamental law of active management.\n\nAfter her discussion with Manager 2, Mackie does further research into the strengths and limitations of the fundamental law of active management and makes the following observations:\n\nObservation 1: If returns are not independent, the number of assets in a portfolio is not an adequate measure of breadth.\nObservation 2: The fundamental law requires the empirical validity of the CAPM.\nLastly, Mackie gathers information about Manager 3's portfolio in Exhibit 2. She uses the fundamental law of active management to evaluate the portfolio's performance.\n\nExhibit 2\nInformation coefficient\t0.09\nTransfer coefficient\t0.70\nBreadth\t9\nActive portfolio risk\t0.33",
+  "questions": [
+   {
+    "n": 38,
+    "q": "The value added to Manager 1's portfolio attributable to security selection is closest to:",
+    "options": [
+     "–0.4%.",
+     "0.7%.",
+     "1.1%."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the value added by security selection is the product of the active return (RA), which is the return on each underlying fund (RP) less the return on its respective benchmark (RB), and the allocated weight given to each fund, respectively. In this case: 0.6(0.10 – 0.12) + 0.4(0.03 – 0.01) = –1.2% + 0.8% = –0.4%. | B. Incorrect because it is Manager 1's portfolio return less the benchmark return, or the total value added (RA = RP – RB): [(0.6)(0.1) + (0.4)(0.03)] – [(0.5)(0.12) + (0.5)(0.01)] = 7.2% – 6.5% = 0.7%. It is also the sum of the value added by security selection and the value added by asset allocation: –0.4% + 1.1% = 0.7%. | C. Incorrect because it is the value added by asset allocation, not by security selection. Since the active weights are 60% to the Equity fund (compared with 50% for the Strategic Asset Allocation) and 40% to the Fixed-income fund (compared with 50% for the Strategic Asset Allocation), the value added from asset allocation is (60% – 50%)(0.12) + (40% – 50%)(0.01) = 1.2% – 0.1% = 1.1%."
+   },
+   {
+    "n": 39,
+    "q": "In terms of the fundamental law of active management, the family office's investment requirements will most likely lower Manager 2's:",
+    "options": [
+     "breadth.",
+     "active risk.",
+     "transfer coefficient."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because breadth measures the number of independent decisions; it is not affected by constraints on the fund. For example, despite fewer eligible stocks, if the manager increased the frequency of trading, it would increase the breadth. | B. Incorrect because Manager 2 will be under the constraint of having fewer eligible securities available; the risk level he prefers to take with the available securities is not constrained. Active risk is \"the volatility of the active return.\" | C. Correct because Manager 2's portfolio is currently unconstrained and therefore its transfer coefficient equals 1, the planned addition of ESG constraint would reduce this. Like the information coefficient, the transfer coefficient, TC, is a simple multiplicative factor in the fundamental law. It measures the extent to which constraints reduce the expected value added of the investor’s forecasting ability. In the absence of constraints, the transfer coefficient is approximately 1.00, resulting in the basic form of the fundamental law. However, in practice, investors often work under constraints that result in TC values between 0.20 and 0.80."
+   },
+   {
+    "n": 40,
+    "q": "Are both of Mackie's observations about the fundamental law of active management correct?",
+    "options": [
+     "Yes",
+     "No, only Observation 1 is correct",
+     "No, only Observation 2 is correct"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Statement 2 is incorrect. The fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns. | B. Correct because the number of individual assets, N, is not an adequate measure of strategy breadth, BR, when the active returns between individual assets are correlated, as defined by the risk model, and forecasts are not independent from period to period. Another example of the limitation of the fundamental law due to the lack of decision independence is the active management of fixed-income portfolios. Statement 2 is incorrect because the fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns. | C. Incorrect because the fundamental law does not require the empirical validity of the CAPM. The fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns."
+   },
+   {
+    "n": 41,
+    "q": "Based on the fundamental law of active management, Manager 3's information ratio is closest to:",
+    "options": [
+     "0.06.",
+     "0.19.",
+     "0.57."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it is the expected active return, not the information ratio. The fundamental law states that E(RA) = (IC)(TC)(BR)0.5σA, where E(RA) is the expected active return, IC is the information coefficient, TC is the transfer coefficient, BR is the breadth, and σA is the active standard deviation. In this case E(RA) = (0.09)(0.7)(9)0.5(0.33) = 0.0624 ≈ 0.06. | B. Correct because the fundamental law states that E(RA) = (IC)(TC)(BR)0.5σA, where E(RA) is the expected active return, IC is the information coefficient, TC is the transfer coefficient, BR is the breadth, and σA is the active portfolio risk. Since the Information ratio is E(RA)/σA, from the above equation it can be shown that the IR = (IC)(TC)(BR)0.5 = (0.09)(0.7)(9)0.5 = 0.189 ≈ 0.19. | C. Incorrect because the square root of the breadth has been omitted, resulting in IR = (0.09)(0.7)(9) = 0.567 ≈ 0.57. This is also closest to the misinterpretation of the expected active return being (IC)(TC)(BR)0.5, leading to E(RA)/σA = [(0.09)(0.7)(9)0.5] / (0.33) = 0.5727 ≈ 0.57."
+   }
+  ]
+ },
+ {
+  "id": "ap-spencer",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Spencer (Reed): value added and the fundamental law",
+  "body": "Matthew Spencer is a senior consultant in the institutional consulting division of Reed & Associates (Reed). Reed advises its institutional clients on asset manager selection and provides ongoing evaluation and performance analysis of all the fund managers in its database. Spencer was recently engaged by the retirement fund of a large municipality that has ten managers, each specializing in a particular asset class or style. Spencer notes that the members of the fund's investment committee vary greatly in their level of understanding of financial markets and active portfolio management. He hopes to increase their comprehension during a meeting scheduled for the following day.\n\nAt the start of the meeting, Spencer provides the investment committee members with a report outlining the three-year historical performance and value-added statistics for the fund's ten managers. He highlights the fund’s best- and worst-performing managers for the same period. David Moore, a new committee member, asks Spencer how to interpret value added statistics. Spencer responds with the following statements.\n\nStatement 1: The measurement is derived from the various sources that make up the contribution from active management decisions, including asset allocation and security selection.\nStatement 2: It appraises active management decisions and further compares the portfolio’s return in excess of the benchmark with the risk-free rate and relative to the standard deviation of returns.\nStatement 3: The statistic is a useful tool for comparing relative returns, but it is most applicable in comparing active management decisions of equity portfolios.\nSpencer wants to ensure the committee understands the amount of active management risk its equity growth fund managers are taking in the portfolios. He mentions he is particularly concerned about the risk statistics for Atlanta Asset Management. The statistics have him questioning whether the manager is actually adding value by following an active management strategy. He provides the committee with data presented in Exhibit 1.\n\nExhibit 1 Selected Data for Atlanta Asset Management\nBenchmark return\t–9.0%\nPortfolio return\t–11.0%\nRisk-free rate\t2.00%\nStandard deviation of portfolio returns\t5.75%\nStandard deviation of benchmark returns\t4.75%\nActive risk\t3.75%\nPortfolio Sharpe ratio\t–2.26\nBenchmark Sharpe ratio\t–2.32\nSpencer has asked a colleague, Jennifer Cook, to prepare a performance attribution analysis on the portfolios of each of the fund’s investment managers and to review the report with the committee. He requested that she include in the report an analysis showing the various components of the fundamental law of active management. Cook believes it is important to convey to the committee the significance of the interaction among the various components. She comments to the members that there is a low probability of a manager adding value if its forecast of active returns does not correlate with its realized active return over time.\n\nSpencer is also worried about one of the fund’s small-cap managers whose portfolio has been underperforming its benchmark for the past few years, and the output from Cook’s fundamental law analysis was troubling. Spencer has recommended the fund consider replacing the manager and has provided the committee with a list of several alternative managers. Moore reviews the handout containing the expected information ratio and active risk measures and asks whether one statistic is more relevant than the other. Spencer responds, “They are both equally important.”\n\nTo better familiarize himself with the various managers the fund employs, Moore continues to study Cook’s report showing the various components of the fundamental law of active management. He notes the committee has yet to talk about the fixed-income advisers used by the fund. He is curious how the fundamental law of active management applies to the analysis of fixed-income managers and asks Cook for her opinion.\n\nThe final item Spencer wants to discuss with the committee concerns a notification he received from Rossi Asset Management, one of the fund’s active managers, regarding a change in the quantitative investment process that Rossi now uses. All of the fund’s managers are contractually required to provide written notification when implementing such changes. The correspondence addresses a change recently made regarding the rebalancing frequency. The manager previously rebalanced the portfolio on a quarterly basis but has now moved to rebalancing on a monthly basis. Rossi believe this change allows it more opportunities to outperform its benchmark.",
+  "questions": [
+   {
+    "n": 42,
+    "q": "Which of Spencer’s statements responding to Moore’s question is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Value added is determined by deviations from benchmark performance and arises from deviation from portfolio benchmark weights. This calculation can be further broken down into the various sources that make up the contribution from active management decision, including asset allocation and security selection. If every asset in the managed portfolio is held at its benchmark weight, there would be no value added relative to the benchmark. | B. Incorrect. The determination of value added does not include either the risk-free rate or the standard deviation of returns. | C. Incorrect. The use of value added is applicable to the evaluation of relative return of most asset classes."
+   },
+   {
+    "n": 43,
+    "q": "Based on Exhibit 1, which of the following statements regarding Atlanta Asset Management is least likely correct?",
+    "options": [
+     "The manager is likely a closet indexer",
+     "On a risk-adjusted basis, the manager has added value",
+     "The manager’s strategy has not added value on a risk-adjusted basis"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. This statement is correct. | B. Correct. Atlanta Asset Management has not added value on a risk-adjusted basis. A fund manager that pursues an active investment strategy but manages the portfolio in such a way to appear more like an index fund is referred to as a closet index fund manager. The Sharpe ratio for the portfolio is close to the benchmark: The portfolio Sharpe ratio is –2.26, and the benchmark Sharpe ratio is –2.32. In addition, the information ratio is negative, –0.53. Taken together, these data suggest there is very little active management. Information ratio = [–9.0% – (–11.0%)/3.75%] = –0.53 | C. Incorrect. This statement is correct."
+   },
+   {
+    "n": 44,
+    "q": "Which component of the fundamental law of active management most likely explains Cook’s comment to the fund’s committee?",
+    "options": [
+     "Value added",
+     "Transfer coefficient",
+     "Information coefficient"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Value added measures the realized value added through active management. It is defined as the difference between the realized return on he actively managed portfolio and the benchmark portfolio. | B. Incorrect. The transfer coefficient measures the degree to which the investor’s forecasted active returns are translated into active weights. | C. Correct. The information coefficient, also known as signal quality, links forecasted active returns with realized active returns. Managers will have difficulty adding value if their forecast of active returns does not at least loosely correspond with their realized active returns. Over time, skill in forecasting returns will add more value and lead to a higher information coefficient."
+   },
+   {
+    "n": 45,
+    "q": "Is Spencer’s response to Moore regarding small-cap managers most likely correct?",
+    "options": [
+     "Yes",
+     "No, the committee should focus on active risk",
+     "No, the committee should focus on the expected information ratio"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The committee should focus on the information ratio. It is the single best criterion for evaluating active investment manager’s performance given the same benchmark. | B. Incorrect, active risk alone will not lead to the highest Sharpe ratio given the fund’s risk aversion. The highest information ratio manager will produce the highest Sharpe ratio for the fund. | C. Correct. The expected information ratio is the single best criterion for evaluating active investment managers’ performance given the same benchmark. Selecting the highest information ratio manager will produce the highest Sharpe ratio for the portfolio."
+   },
+   {
+    "n": 46,
+    "q": "How should Cook most likely respond to Moore’s request for her opinion?",
+    "options": [
+     "There is a lack of decision independence",
+     "There is more accuracy when accessing the skill level",
+     "There are no limitations for using the fundamental law across all asset classes"
+    ],
+    "answer": "A",
+    "why": "A. Correct. A limitation of the fundamental law with the active management of fixed-income portfolios is the lack of decision independence. Virtually all bonds have some form of duration risk, credit risk, and optionality, so their returns are highly correlated in subtler ways. | B. Incorrect. The assessment process is similar when looking at the skill level across all asset classes. However, forecasting ability probably differs among different asset segments and varies over time. | C. Incorrect. Limitations do exist for utilizing the fundamental law for evaluating active fixed-income strategies."
+   },
+   {
+    "n": 47,
+    "q": "What effect will Rossi’s process change most likely have with regard to the fundamental law of active management?",
+    "options": [
+     "It will have little effect on the value of the components under the fundamental law of active management",
+     "It reduces the number of constraints on the actively managed portfolio and, therefore, reduces the transfer coefficient",
+     "Both the breadth and expected information ratio could increase, as long as the active returns are uncorrelated over time and the information coefficient remains the same"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. An increase in the frequency of rebalancing will affect both the breadth and information ratio. | B. Incorrect. Increasing the rebalancing frequency does not affect the transfer coefficient. Constraints that might limit the degree to which the monthly active management decisions could be implemented would lower the transfer coefficient. | C. Correct. Increasing the rebalancing frequency from quarterly to monthly will increase the breadth but only if active management decisions are uncorrelated over time. Few active management decision opportunities mean that the information coefficient for a market timing strategy must be high to achieve even a modest information ratio. The information ratio will also increase assuming the information coefficient remains at the same level."
+   }
+  ]
+ },
+ {
+  "id": "ap-barolo",
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "title": "Active management · Barolo: benchmark, information ratio and fundamental law",
+  "body": "Francesca Barolo is an equity portfolio manager at Gruppo Nebbiolo, Spa, an investment management firm located in Turin, Italy. She is meeting with Diego Moscato, the equity research manager at Dolcetto Partners, with the objective of receiving a buy rating on her funds from this key institutional investment consulting firm.\n\nBarolo and Moscato meet to discuss the firm’s investment philosophy, team, and process, as well as her performance track record. Barolo tells Moscato that she firmly believes in active management and her ability to add value relative to a benchmark because markets are inefficient.\n\nBarolo starts the meeting by stating that the criteria for benchmark selection is as follows: “It should be market capitalization weighted and should reflect the opportunity set available. The positions can be replicated at a low cost, weights are known ex ante, and return data are timely on an ex post basis. Value added is calculated as the sum of the active asset allocation decisions and the weighted sum of the value added from security selection. The firm conducts performance attribution based on a decomposition of value added into several sources, which include asset allocation, sector selection, and security selection.”\nThe meeting then progresses to a discussion of the risk and return measures presented in Exhibit 1. Barolo notes that during this period, the risk-free rate was 1.75%, and the benchmark return was 9.00%.\n\nExhibit 1 Data for the Nebbiolo Funds\n \tPortfolio Return\tActive Risk\nFund A\t10.10%\t4.00%\nFund B\t10.50%\t6.25%\nFund C\t11.85%\t7.30%\nMoscato tells Barolo that he likes to measure the consistency of active returns when reviewing and comparing managers. Because Barolo manages three funds, he was going to rank them in his analysis.\n\nMoscato asks Barolo, “As an active manager, what is your approach to generating excess returns?”\n\nBarolo responds, “I am a firm believer in the fundamental law of active management” and makes the following three points to support her view:\n\nPoint 1: The productivity of an active portfolio manager depends on both the skill level and how many opportunities are identified and put to use in the funds. The information ratio measures how much active return has been earned for the level of active risk taken.\nPoint 2: The information coefficient is the correlation between forecasted active returns and realized active returns. The transfer coefficient measures the degree to which a fund manager’s forecast is translated into active weights.\nPoint 3: Breadth is important and represents the number of independent decisions a fund manager makes in constructing the portfolio. Mathematically, breadth can be expressed as the number of independent investment opportunities squared.\nBarolo’s and Moscato’s discussion evolves into a debate about the strengths and limitations of the fundamental law of active management. Barolo provides her perspective, “The strength of the fundamental law of active management is that it provides a framework for evaluating and comparing managers based on skill. It can even produce operational measurements of the essential elements of an active management strategy. However, it also has some limitations. First, it does not consider covariances in calculating breadth. Second, it cannot measure ex ante value added.”",
+  "questions": [
+   {
+    "n": 48,
+    "q": "Are the criteria that Barolo describes to Moscato at the start of the meeting most likely correct?",
+    "options": [
+     "Yes",
+     "No, she is incorrect regarding benchmark selection",
+     "No, she is incorrect regarding performance attribution"
+    ],
+    "answer": "A",
+    "why": "A. Correct because Barolo is correct in describing the process for selecting a benchmark, the calculation of value added, and performance attribution. The criteria she describes across these practices are a reasonable approach to measuring value added in active portfolio management. | B. Incorrect because Barolo’s comment regarding benchmark selection is correct. | C. Incorrect because Barolo’s comments regarding value-added calculation and performance attribution are correct."
+   },
+   {
+    "n": 49,
+    "q": "Given Moscato’s preference for risk and return measurement and based on the data in Exhibit 1, how does he most likely rank the funds?",
+    "options": [
+     "Fund A, Fund B, Fund C",
+     "Fund B, Fund C, Fund A",
+     "Fund C, Fund A, Fund B"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the correct ranking is based on the information ratio and is Funds C (0.39), Fund A (0.28), Fund B (0.24). | B. Incorrect because this is the ranking based on the Sharpe ratio. | C. Correct because the correct measure of risk and return in this application is the information ratio. The information ratio compares the active return from a portfolio relative to a benchmark with the volatility of the active return. It provides a way to measure the consistency of active returns. The Sharpe ratio is used to measure portfolio return in excess of a riskless rate. Calculate each fund’s information ratio as follows: I R = R P - R B S T D R P - R B = R A S T D R A ; I R = 10 . 10 + 9 . 00 4 . 00 = 0 . 28 ; I R = 10 . 50 - 9 . 00 6 . 25 = 11 . 85 - 9 . 00 7 . 30 = 0 . 39 The fund with the highest information ratio shows the most value added from active management. The ranking per the calculations is therefore Fund C, Fund A, Fund B."
+   },
+   {
+    "n": 50,
+    "q": "Which of Barolo’s points regarding the fundamental law of active management is least likely accurate?",
+    "options": [
+     "Point 1",
+     "Point 2",
+     "Point 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Point 1 is correct. | B. Incorrect because Point 2 is correct. | C. Correct because Barolo is correct with regard to Points 1 and 2. When she discusses breadth in Point 3, mathematically, it is expressed as the square root of the number of independent investment opportunities. Conceptually, breadth is equal to the number of independent decisions made per year by the investor in constructing the portfolio."
+   },
+   {
+    "n": 51,
+    "q": "Barolo is least likely correct with regard to which aspect of the strength and limitations of the fundamental law of active management?",
+    "options": [
+     "The strength",
+     "First limitation",
+     "Second limitation"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Barolo is correct regarding the strengths of the fundamental law of active management. | B. Incorrect because Barolo is incorrect that the fundamental law of active management does not consider covariances in calculating breadth. | C. Correct because Barolo provides Moscato with several strengths and limitations of the fundamental law of active management, although her list is not exhaustive. Her comment regarding the strengths are correct as is the first point regarding covariances in calculating breadth. Her comment regarding the inability to measure ex ante value added is not correct; the model can measure both ex ante and ex post value added."
+   }
+  ]
  }
 ]

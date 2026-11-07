@@ -2069,5 +2069,215 @@
   ],
   "answer": "C",
   "why": "C is correct. During recessions, cyclical companies are likely to experience sharp declines in earnings, more so than non-cyclical companies. In contrast, while coming out of a recession, cyclical companies are likely to generate higher earnings growth relative to non-cyclical companies."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 1,
+  "q": "Wei Liu makes two statements about active portfolio management:\n\nStatement 1:\nThe “active return” of an actively managed portfolio is the difference between the portfolio’s return and the return on the benchmark portfolio, and it is equal to the managed portfolio’s alpha.\n\nStatement 2:\nThe active weights are the differences in the managed portfolio’s weights and the benchmark’s weights.\n\nAre Liu’s statements correct?",
+  "options": [
+   "Only Statement 1 is correct.",
+   "Only Statement 2 is correct.",
+   "Both statements are correct."
+  ],
+  "answer": "B",
+  "why": "B is correct. Although the first part of Statement 1 is correct (active return, or value added, equals the difference between the managed portfolio return and the benchmark return), active return is not the same as alpha. In other words, RA = RP − RB, while αP = RP − βP × RB. Statement 2 correctly defines active weights."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 2,
+  "q": "The benchmark weights and returns for each of the five stocks in the Capitol Index are given in the following table. The Tukol Fund uses the Capitol Index as its benchmark, and the fund’s portfolio weights are also shown in the table.\n\nStock\tPortfolio Weight (%)\tBenchmark Weight (%)\t20X2 Return (%)\n1\t30\t24\t14\n2\t30\t20\t15\n3\t20\t20\t12\n4\t10\t18\t8\n5\t10\t18\t10\nWhat is the value added (active return) for the Tukol Fund?",
+  "options": [
+   "0.00%",
+   "0.90%",
+   "1.92%"
+  ],
+  "answer": "B",
+  "why": "B is correct. The portfolio active return is equal to the portfolio return minus the benchmark return:\n\nRA = RP − RB.\nThe portfolio return is ;\n\nRP = 0.30(14%) + 0.30(15%) + 0.20(12%) + 0.10(8%) + 0.10(10%) = 12.9%.\nThe benchmark return is ;\n\nRB = 0.24(14%) + 0.20(15%) + 0.20(12%) + 0.18(8%) + 0.18(10%) = 12.0%.\nThus, the active return is\n\nRA = RP − RB = 12.9% − 12.0% = 0.9%.\nNote that this same correct answer can be obtained in two other equivalent ways. The active weights are the differences between the portfolio and benchmark weights, or Δwi = wP,i − wB,i. Computing the active weights from the table provided, the active return is\n\nRA = \n = 0.06(14%) + 0.10(15%) + 0(12%) − 0.08(8%) − 0.08(10%)\n = 0.9%.\nFinally, we could express the active security returns as their differences from the benchmark return, or RAi = Ri − RB. Computing the active security returns from the table provided, the portfolio active return is the sum product of the active weights and the active security returns:\n\nRA = \n = 0.06(2%) + 0.10(3%) + 0(0%) − 0.08(−4%) − 0.08(−2%)\n = 0.9%."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 3,
+  "q": "Consider the following asset class returns for calendar year 20X2:\n\nAsset Class\tPortfolio Weight (%)\tBenchmark Weight (%)\tPortfolio Return (%)\tBenchmark Return (%)\nDomestic equities\t55\t40\t10\t8\nInternational equities\t20\t30\t10\t9\nBonds\t25\t30\t5\t6\nWhat is the value added (or active return) for the managed portfolio?",
+  "options": [
+   "0.25%",
+   "0.35%",
+   "1.05%"
+  ],
+  "answer": "C",
+  "why": "C is correct. The active return is equal to the portfolio return minus the benchmark return:\n\n.\nThe portfolio return is RP =  = 0.55(10%) + 0.20(10%) + 0.25(5%) = 8.75%.\n\nThe benchmark return is RB =  = 0.40(8%) + 0.30(9%) + 0.30(6%) = 7.70%.\n\nThus, RA = RP − RB = 8.75% − 7.70% = 1.05%."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 15,
+  "q": "Gertrude Fischer mentions two properties of the Sharpe ratio and the information ratio that she says are very useful.\n\nProperty 1:\nThe Sharpe ratio is unaffected by the addition of cash or leverage in a portfolio.\n\nProperty 2:\nThe information ratio for an unconstrained portfolio is unaffected by the aggressiveness of the active weights.\n\nAre Fischer’s two properties correct?",
+  "options": [
+   "Yes.",
+   "No. Only Property 1 is correct.",
+   "No. Only Property 2 is correct."
+  ],
+  "answer": "A",
+  "why": "A is correct. Both properties are correct. For Property 1, if wP is the weight of an actively managed portfolio and (1 − wP) is the weight on risk-free cash, changing wP does not change the Sharpe ratio, as can be seen in this equation:\n\n.\nFor Property 2, the information ratio of an unconstrained portfolio is unaffected by multiplying the active security weights, ∆wi, by a constant."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 16,
+  "q": "An analyst is given the following information about a portfolio and its benchmark. In particular, the analyst is concerned that the portfolio is a closet index fund. The T-bill return chosen to represent the risk-free rate is 0.50%.\n\n \tBenchmark\tPortfolio\nReturn\t8.75%\t8.90%\nRisk\t17.50%\t17.60%\nActive return\t0.00%\t0.15%\nActive risk\t0.00%\t0.79%\nSharpe ratio\t0.4714\t0.4773\nInformation ratio\tN/A\t0.1896\nWhich of the following three statements does not justify your belief that the portfolio is a closet index?\n\nThe Sharpe ratio of the portfolio is close to the Sharpe ratio of the benchmark.\n\nThe information ratio of the portfolio is relatively small.\n\nThe active risk of the portfolio is very low.",
+  "options": [
+   "Statement I",
+   "Statement II",
+   "Statement III"
+  ],
+  "answer": "B",
+  "why": "B is correct. A closet index will have a very low active risk and will also have a Sharpe ratio very close to the benchmark. Therefore, Statements I and III are consistent with a closet index portfolio. A closet index’s information ratio can be indeterminate (because the active risk is so low) and is often negative due to management fees."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 17,
+  "q": "You have a portfolio 100% allocated to a manager with an ex post, active risk at 8.0%. You choose to allocate a 75% position to the active manager and 25% to the benchmark to bring the portfolio back to your target active risk of 6.0%. If the manager’s information ratio is 0.50, what happens to the information ratio of the portfolio after the reallocation?",
+  "options": [
+   "The information ratio increases because the lower active risk reduces the denominator of the ratio.",
+   "The information ratio remains unchanged because allocations between the active portfolio and the benchmark don’t affect the information ratio.",
+   "The information ratio decreases because allocating some of the portfolio to the benchmark means that the external manager generates less active return."
+  ],
+  "answer": "B",
+  "why": "B is correct. The information ratio is unaffected by rebalancing the active portfolio and the benchmark portfolio. In this case, the active return and active risk are both reduced by 25% and the information ratio will be unchanged."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 20,
+  "q": "The benchmark portfolio is the S&P 500. Which of the following three portfolios can be combined with the benchmark portfolio to produce the highest combined Sharpe ratio?\n\n \tS&P 500\tPortfolio A\tPortfolio B\tPortfolio C\nExpected annual return\t9.0%\t10.0%\t9.5%\t9.0%\nReturn standard deviation\t18.0%\t20.0%\t20.0%\t18.0%\nSharpe ratio\t0.333\t0.350\t0.325\t0.333\nActive return\t0\t1.0%\t0.5%\t0\nActive risk\t0\t10.0%\t3.0%\t2.0%\nNote: Data are based on a risk-free rate of 2.3%.",
+  "options": [
+   "Portfolio A",
+   "Portfolio B",
+   "Portfolio C"
+  ],
+  "answer": "B",
+  "why": "B is correct. The optimal active portfolio is the portfolio with the highest information ratio, the ratio of active return to active risk. The IRs for the three active portfolios are as follows:\n\nIRA = 1.0/10.0 = 0.10\nIRB = 0. 5/3.0 = 0.167\nIRC = 0/2.0 = 0.00\nPortfolio B has the highest IR and is the best active portfolio; it is therefore the best portfolio to combine with the benchmark."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 21,
+  "q": "You are considering three managers for a small-cap growth mandate. After careful analysis, you produce the following forward-looking expectations about the managers’ active risk and active return:\n\n \tManager A\tManager B\tManager C\nActive return\t0.7%\t0.6%\t1.2%\nActive risk\t3.2%\t3.1%\t6.3%\nIf you intend to rely on the information ratio to make your decision, which manager should you choose?",
+  "options": [
+   "Manager A",
+   "Manager B",
+   "Manager C"
+  ],
+  "answer": "A",
+  "why": "A is correct. Manager A has the highest information ratio. The information ratio is defined as IR = . The managers in this example have the following information ratios:\n\n \tManager A\tManager B\tManager C\nInformation ratio\t0.7/3.2 = 0.219\t0.6/3.1 = 0.194\t1.2/6.3 = 0.190"
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 22,
+  "q": "Based on the fundamental law of active management, if a portfolio manager has an information ratio of 0.75, an information coefficient of 0.1819, and a transfer coefficient of 1.0, how many securities are in the portfolio manager’s fund, making the assumption that the active returns are uncorrelated.",
+  "options": [
+   "About 2",
+   "About 4",
+   "About 17"
+  ],
+  "answer": "C",
+  "why": "C is correct. Using the equation IR* = IC ×  and assuming that breadth can be interpreted as number of securities in the portfolio, solving for breadth in the equation yields  = 17.000."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 23,
+  "q": "Two analysts make the following statements about the transfer coefficient in the expanded fundamental law of active management:\n\nAnalyst One says, “The transfer coefficient measures how well the realized returns correlate with the anticipated returns, adjusted for risk.”\n\nAnalyst Two says, “The transfer coefficient measures how well the realized returns correlate with the active weights, adjusted for risk.”\n\nWhich, if either, analyst is correct?",
+  "options": [
+   "Only Analyst One is correct.",
+   "Only Analyst Two is correct.",
+   "Neither analyst is correct."
+  ],
+  "answer": "C",
+  "why": "C is correct. The transfer coefficient measures how well the anticipated (ex ante), risk-adjusted returns correlate with the risk-adjusted active weights. This is also expressed in the equation for the transfer coefficient: TC = ρ(μi/σi,Δwiσi)."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 24,
+  "q": "The expanded fundamental law of active management is stated as follows:\n\n.\nWhich component on the righthand side represents the extent to which the portfolio manager’s expectations are realized?",
+  "options": [
+   "The transfer coefficient, TC",
+   "The information coefficient, IC",
+   "The breadth, BR"
+  ],
+  "answer": "B",
+  "why": "B is correct. The IC measures an investment manager’s ability to forecast returns."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 27,
+  "q": "Manager 1 has an information coefficient of 0.15 and a transfer coefficient of 1.0 and invests in 50 securities. Manager 2 has a different strategy, investing in more securities; however, he is subject to investment constraints that reduce his transfer coefficient. Manager 2 has an information coefficient of 0.10 and a transfer coefficient of 0.8 and invests in 100 securities. The investment selections of each manager are independent decisions. If both managers target an active risk of 5.0%, which manager will have the greater expected active return?",
+  "options": [
+   "Manager 1",
+   "Manager 2",
+   "Both managers will have the same active return."
+  ],
+  "answer": "A",
+  "why": "A is correct. Manager 1’s IR = TC × IC ×  = 1.0 × 0.15 ×  = 1.06. Manager 2’s IR = 0.8 × 0.10 ×  = 0.80. Manager 1’s active return is 1.06(5.0) = 5.3%, and Manager 2’s expected active return is 0.80(5.0) = 4.0%. Manager 1 has the greater expected active return."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 28,
+  "q": "Nick Young is concerned that Goudon Partners, one of his money managers, overestimates its expected active return because Goudon overstates its strategy breadth. Young makes two notes about his concern:\n\nNote 1:\nAlthough Goudon claims that the number of independent asset decisions is high because it uses 200 stocks, many of these stocks cluster in industries where the same general analysis applies to several stocks.\n\nNote 2:\nGoudon claims that each stock is independent and evaluated each month, or 12 times per year. These analyses are not independent because some of their strategies, such as favoring a particular industry or favoring value stocks, persist beyond one month. For example, a strategy of favoring low-P/E stocks will persist for several months and the investment decisions are not independent.\n\nIf his judgments are correct, are Young’s notes about the overstatement of breadth correct?",
+  "options": [
+   "Only Note 1 is correct.",
+   "Only Note 2 is correct.",
+   "Both Notes 1 and 2 are correct."
+  ],
+  "answer": "C",
+  "why": "C is correct. If the decisions about each of the 200 stocks are not independent, and if the decisions about a stock from one month to the next are not independent, then Goudon Partners is overstating its estimates of its breadth and its expected active returns."
+ },
+ {
+  "source": "7 Nov Module 2 Analysis of Active Portfolio Management quiz (full 57 questions)",
+  "readings": [
+   35
+  ],
+  "n": 29,
+  "q": "Caramel Associates uses the fundamental law to estimate its expected active returns. Two things have changed. First, Caramel will lower its estimate of the information coefficient because they felt their prior estimates reflected overconfidence. Second, their major clients have relaxed several constraints on their portfolios—including social screens, prohibitions on short selling, and constraints on turnover. Which of these changes will increase the expected active return?",
+  "options": [
+   "Only the lower information coefficient",
+   "Only the relaxation of several portfolio constraints",
+   "Both the lower information coefficient and the relaxation of portfolio constraints"
+  ],
+  "answer": "B",
+  "why": "B is correct. Although the relaxation of portfolio constraints will increase the transfer coefficient (and expected active returns), the lower information coefficient reduces the information ratio and the expected active return."
  }
 ]
