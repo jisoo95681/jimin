@@ -1,0 +1,354 @@
+[
+ {
+  "id": "etf-rutledge",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Rutledge: mechanics, tracking error, bid-ask spreads, holding cost",
+  "body": "Howie Rutledge is a senior portfolio strategist for an endowment fund. Rutledge meets with recently hired junior analyst Larry Stosur to review the fund’s holdings.\n\nRutledge asks Stosur about the mechanics of exchange-traded funds (ETFs). Stosur responds by making the following statements:\n\nStatement 1:\nUnlike mutual fund shares that can be shorted, ETF shares cannot be shorted.\n\nStatement 2:\nIn the ETF creation/redemption process, the authorized participants (APs) absorb the costs of transacting securities for the ETF’s portfolio.\n\nStatement 3:\nIf ETF shares are trading at a discount to NAV and arbitrage costs are sufficiently low, APs will buy the securities in the creation basket and exchange them for ETF shares from the ETF sponsor.\n\nRutledge notes that one holding, ETF 1, is trading at a premium to its intraday NAV. He reviews the ETF’s pricing and notes that the premium to the intraday NAV is greater than the expected arbitrage costs.\n\nStosur is evaluating three ETFs for potential investment. He notes that the ETFs have different portfolio characteristics that are likely to affect each ETF’s tracking error. A summary of the characteristics for the ETFs is presented in Exhibit 1.\n\nExhibit 1\nETF Characteristics Affecting Tracking Error\n \tETF 2\tETF 3\tETF 4\nPortfolio Construction Approach\tFull Replication\tRepresentative Sampling\tFull Replication\nType of Foreign Holdings\tLocal shares\tADRs*\tADRs*\nEngagement in Securities Lending\tYes\tYes\tNo\n*ADRs are American Depositary Receipts.\nRutledge and Stosur discuss the factors that influence ETF bid–ask spreads. Stosur tells Rutledge that quoted bid–ask spreads for a particular transaction size are (1) negatively related to the amount of the ongoing order flow in the ETF, (2) positively related to the costs and risks for the ETF liquidity provider, and (3) positively related to the amount of competition among market makers for the ETF.\n\nAs ETF shares may trade at prices that are different from the NAV, Rutledge examines selected data in Exhibit 2 for three ETFs that might have this problem.\n\nExhibit 2\nSelected Data on ETFs\n \tETF 5\tETF 6\tETF 7\nPercentage of Foreign Holdings\t10%\t50%\t90%\nTrading Frequency\tHigh\tLow\tLow\nRutledge considers a new ETF investment for the fund. He plans to own the ETF for nine months. The ETF has the following trading costs and management fees:\n\nAnnual management fee of 0.32%\n\nRound-trip trading commissions of 0.20%\n\nBid–offer spread of 0.10% on purchase and sale\n\nRutledge asks Stosur to compute the expected total holding period cost for investing in the ETF.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "Which of Stosur’s statements regarding ETF mechanics is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Statement 2 is correct. A significant advantage of the ETF creation/redemption process is that the AP absorbs all costs of transacting the securities for the fund’s portfolio. APs pass these costs to investors in the ETF’s bid–ask spread, incurred by ETF buyers and sellers. Thus, non-transacting shareholders of an ETF are shielded from the negative impact of transaction costs caused by other investors entering and exiting the fund. In contrast, when investors enter or exit a traditional mutual fund, the mutual fund manager incurs costs to buy or sell investments arising from this activity, which affects all fund shareholders. This makes the ETF structure inherently fairer: Frequent ETF traders bear the cost of their activity, while buy-and-hold ETF shareholders are shielded from those costs. Investors cannot short mutual fund shares, but they can short ETF shares. Also, if ETF shares are trading at a discount to NAV and arbitrage costs are sufficiently low, APs will buy ETF shares and exchange them for the securities in the redemption basket. Statement 3 describes the scenario that would occur if the ETF shares are trading at a premium to NAV.\n\nA is incorrect because Statement 1 is incorrect. Investors cannot short mutual fund shares, but they can short ETF shares.\n\nC is incorrect because Statement 3 is incorrect. If ETF shares are trading at a discount to NAV and arbitrage costs are sufficiently low, APs will buy ETF shares and exchange them for the securities in the redemption basket. Statement 3 describes the scenario that would occur if ETF shares are trading at a premium to NAV."
+   },
+   {
+    "n": 6,
+    "q": "Given the current pricing of ETF 1, the most likely transaction to occur is that:",
+    "options": [
+     "new ETF shares will be created by the APs.",
+     "redemption baskets will be received by APs from the ETF sponsor.",
+     "retail investors will exchange baskets of securities that the ETF tracks for creation units."
+    ],
+    "answer": "A",
+    "why": "A is correct. When the share price of an ETF is trading at a premium to its intraday NAV and arbitrage costs are minimal, APs will step in and take advantage of the arbitrage. Specifically, APs will buy the basket of securities that the ETF tracks (the creation basket) and exchange it with the ETF sponsor for new ETF shares (a creation unit). These new ETF shares received by APs can then be sold on the open market to realize arbitrage profits.\n\nB is incorrect because in the case of an ETF trading at a premium to NAV, the APs will not receive redemption baskets of securities. Instead, the APs will deliver creation baskets to the ETF sponsor and receive new ETF shares.\n\nC is incorrect because only APs can deliver creation baskets or receive redemption baskets from the ETF sponsors. Retail investors can buy and sell ETF shares on the open market."
+   },
+   {
+    "n": 7,
+    "q": "Which ETF in Exhibit 1 is most likely to have the lowest tracking error?",
+    "options": [
+     "ETF 2",
+     "ETF 3",
+     "ETF 4"
+    ],
+    "answer": "A",
+    "why": "A is correct. Compared with a full replication approach, ETF portfolios managed using a representative sampling/optimization approach are likely to have greater tracking error. Also, differences in trading hours for depositary receipts and local constituent shares create discrepancies between the portfolio and index values. These discrepancies can lead to greater tracking error for portfolios holding ADRs in lieu of the underlying local shares. In exchange, the ETF receives a fee and earns interest on the collateral posted by the borrower (generally, overnight fixed-income securities), which creates income for the portfolio. As long as this securities-lending income is less than the fund expenses, it will lower the tracking error, but if it becomes larger, then it will become a source of tracking error. ETF 2 uses a full replication approach, holds only local foreign shares, and engages in securities lending. Therefore, ETF 2 will likely have the lowest tracking error out of the ETFs in Exhibit 1. ETF 3 will likely have greater tracking error than ETF 2 because it is managed using a representative sampling approach and is invested in depositary receipts in lieu of local shares. ETF 4 will likely have greater tracking error than ETF 2 because it is invested in depositary receipts in lieu of local shares and does not engage in securities lending."
+   },
+   {
+    "n": 8,
+    "q": "Stosur’s statement about quoted bid–ask spreads is incorrect with respect to the:",
+    "options": [
+     "amount of the ongoing order flow in the ETF.",
+     "costs and risks for the ETF liquidity providers.",
+     "amount of competition among market makers for the ETF."
+    ],
+    "answer": "C",
+    "why": "C is correct. Several factors determine the width of an ETF’s quoted bid–ask spread. First, the amount of ongoing order flow in the ETF is negatively related to the bid–ask spread (more flow means lower spreads). Second, the actual costs and risks for the liquidity provider are positively related to spreads (more costs and risks mean higher spreads); the spread is compensation to the liquidity provider for incurring these costs and risks. Finally, the amount of competition among market makers for that ETF is negatively related to the bid–ask spread (more competition means lower spreads).\n\nA is incorrect because Stosur is correct in stating that the quoted bid–ask spread for a particular transaction size is negatively related to the amount of the ongoing order flow in the ETF (more flow means lower spreads).\n\nB is incorrect because Stosur is correct in stating that the quoted bid–ask spread for a particular transaction size is positively related to the costs and risks for the ETF liquidity provider (more costs and risks mean higher spreads). The bid–ask spread represents the market maker’s price for taking the other side of the ETF transaction, which includes the costs and risks to carry the position on its books and/or to hedge the position using underlying securities or closely related ETFs or derivatives."
+   },
+   {
+    "n": 9,
+    "q": "Which ETF in Exhibit 2 is most likely to trade at the largest premium or discount relative to NAV?",
+    "options": [
+     "ETF 5",
+     "ETF 6",
+     "ETF 7"
+    ],
+    "answer": "C",
+    "why": "C is correct. ETFs that trade infrequently may have large premiums or discounts to NAV, because the ETF may not have traded in the hours leading up to the market close and NAV may have significantly risen or fallen during that time because of market movement. Furthermore, NAV is often a poor fair value indicator for ETFs holding foreign securities because of differences in exchange closing times between the underlying (e.g., foreign stocks, bonds, or commodities) and the exchange where the ETF trades. Therefore, ETF 7 is most likely to have the largest discount or premium because it has a low trading frequency and has the highest percentage of foreign holdings among the three ETFs.\n\nA is incorrect because ETF 5 has the lowest percentage of foreign holdings among the three ETFs and is the one ETF with a high trading frequency. Therefore, relative to ETF 7, with its low trading frequency and high foreign holdings, ETF 5 is likely to trade at smaller premiums or discounts.\n\nB is incorrect because ETF 6 has a lower percentage of foreign holdings than ETF 7. Even though both ETF 6 and ETF 7 have the same low trading frequency, the lower percentage of foreign holdings for ETF 6 is likely to result in it trading at smaller premiums or discounts."
+   },
+   {
+    "n": 10,
+    "q": "Excluding the compounding effect, the expected total holding period cost for investing in the ETF over a nine-month holding period is closest to:",
+    "options": [
+     "0.54%.",
+     "0.62%.",
+     "0.64%."
+    ],
+    "answer": "A",
+    "why": "A is correct. The expected total holding period cost for investing in the ETF over the nine-month holding period is calculated as follows:\n\nTotal expected holding period cost = Annual management fee + Round-trip trading commissions + Bid–offer spread on purchase/sale.\nTotal expected holding period cost = (9/12) × (0.32%) + 0.20% + 0.10% = 0.54%."
+   }
+  ]
+ },
+ {
+  "id": "etf-provident",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Provident Advisers: authorized participants, tracking error, completion strategies, smart beta",
+  "body": "Provident Advisers is a registered investment advisory firm that uses exchange-traded funds (ETFs) for its clients’ investment portfolios. Ted Sorrill is CEO and chief investment officer of Provident. Steve Mives, a prospective client, is a high-net-worth individual who is considering transforming his actively managed portfolio of individual stocks and bonds into actively managed and passive ETFs. Mives is considering this strategy because of the advice of his accountant, Andrew Hart. Sorrill, Mives, and Hart are meeting to discuss ETFs and their growing use in the construction of investment portfolios.\n\nSorrill begins the meeting by describing how ETFs are subject to the same regulations as mutual funds and noting that ETFs trade intra-day, similar to public stocks. Hart adds that ETF authorized participants use the primary market to both create and redeem ETF shares, and the secondary market to conduct trades in ETFs to eliminate the arbitrage gap.\n\nMives asks Sorrill to describe how ETF performance is measured. Sorrill explains that most ETFs are designed to track the performance of a specific benchmark index, such as the S&P 500 Index. Sorrill cautions, however, that there are numerous sources of tracking error that may cause a deviation in an ETF’s return relative to its benchmark index. Sorrill provides an example, stating that one of the sources of tracking error is an ETF portfolio manager’s operations with short sellers.\n\nMives wants to maintain the current blended stock and bond benchmark allocations following his portfolio’s transition from individual stocks and bonds to active and passive ETFs. Sorrill states that whenever active ETF managers implement active views, gaps with respect to desired market exposures may result. For Mives’s portfolio, Sorrill plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings. Passive ETFs will enable Sorrill to maintain benchmark exposure while not necessarily replacing an active ETF manager.\n\nHart states that active ETF strategies have evolved such that market capitalization is no longer the only benchmark factor for equity strategies and that fixed-income strategies may be constructed with minimal sensitivity to movements in interest rates. He states that smart beta equity risk factors, such as dividend yield, size, value, and momentum, enable investors to implement an active view while continuing to track a designated benchmark. He then describes the strategy of smart beta fixed-income ETFs that focus on generating returns from taking credit risk and hedging out duration risk.",
+  "questions": [
+   {
+    "n": 28,
+    "q": "Is Hart’s statement about ETF authorized participants most likely correct?",
+    "options": [
+     "Yes",
+     "No, regarding their use of the primary markets",
+     "No, regarding their trades in the secondary markets"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Hart’s statement is incorrect. ETF authorized participants do not trade in the secondary market. ETF authorized participants create and redeem shares in the primary market. | B. Incorrect. Hart’s statement that ETF authorized participants create and redeem ETF shares in the primary markets is correct. | C. Correct. Hart’s statement about authorized participants is not correct because of trades in the secondary market. ETF secondary market trades are transactions between buyers and sellers of existing ETF shares. No new ETF shares are created by trades in the secondary market. ETF authorized participants create and redeem ETF shares in the primary market."
+   },
+   {
+    "n": 29,
+    "q": "In describing tracking error, Sorrill’s example most likely relates to:",
+    "options": [
+     "trading costs.",
+     "full replication.",
+     "securities lending."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Trading costs are a source of tracking error but are not caused by operations with short sellers. | B. Incorrect. Replication (lack of full replication) is a source of tracking error but is not caused by operations with short sellers. | C. Correct. Sorrill’s description of ETF tracking error includes a reference to securities lending by the ETF portfolio manager. Many ETF portfolio managers lend a portion of their portfolio holdings to short sellers. Securities lending provides income for an ETF that offsets a portion of an ETF’s administrative expenses."
+   },
+   {
+    "n": 30,
+    "q": "Sorrill’s explanation of benchmark exposure most likely describes portfolio:",
+    "options": [
+     "rebalancing.",
+     "completion strategies.",
+     "liquidity management."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Sorrill’s explanation describes completion strategies, not portfolio rebalancing. Portfolio rebalancing describes how ETFs are used by investors to remain fully invested according to target weights whenever changes in market values cause a portfolio’s segments to deviate from target weights. | B. Correct. Sorrill’s explanation of benchmark exposure describes portfolio completion. ETFs can be used to fill a temporary gap in exposure to an asset class. Gaps may arise whenever an active manager transitions a portfolio away from a desired market exposure (for example, the portfolio’s benchmark). An investor may use a passive ETF to maintain the exposure while retaining the manager. | C. Incorrect. Sorrill’s explanation describes completion strategies, not portfolio liquidity management. Portfolio liquidity management describes how ETFs are used by investors to efficiently invest excess cash balances, which reduces a portfolio’s cash drag."
+   },
+   {
+    "n": 31,
+    "q": "Is Hart’s comments about active ETF strategies most likely correct?",
+    "options": [
+     "Yes",
+     "No, because of the comment about smart beta equity risk factors",
+     "No, because of the comment about smart beta fixed-income ETFs"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Hart’s comments about smart beta are correct. Factor (smart beta) ETFs are benchmarked to an index created with predefined rules for screening and weighting constituent holdings whose index rules are structured around return drivers, or factors, such as dividend yield, size, value, and momentum. Academic research has supported these factors as contributors to the equity risk premium. Hart’s comment about smart beta fixed-income ETFs is correct. Interest rate swaps are used by the managers of smart beta fixed-income ETFs to minimize interest rate risk, enabling the ETFs’ return to be generated by taking credit risk. | B. Incorrect. Hart’s comment about smart beta equity risk factors is correct. | C. Incorrect. Hart’s comment about smart beta fixed-income ETFs is correct."
+   }
+  ]
+ },
+ {
+  "id": "etf-set1",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31) (single questions grouped by the assistant, 4 per set; the one-paragraph intro was added, the questions are unchanged)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Menon: basic mechanics",
+  "body": "Ravi Menon is a junior analyst at Halden Wealth Partners. His supervisor asks him to review the basic mechanics of exchange-traded funds (ETFs) and to answer the following four questions.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which of the following statements regarding exchange-traded funds (ETFs) is correct? ETFs:",
+    "options": [
+     "disclose their holdings on a quarterly basis.",
+     "trade in both primary and secondary markets.",
+     "offer a creation/redemption mechanism that allows any investor to create or redeem shares."
+    ],
+    "answer": "B",
+    "why": "B is correct. ETFs trade in both primary and secondary markets. The primary market for ETF trading is that which exists on an over-the-counter basis between authorized participants (APs), a special group of institutional investors, and the ETF issuer or sponsor. This process is referred to as creation/redemption, and it is only through these primary market transactions that shares of the ETF can be created or destroyed. ETFs also trade in the secondary market on exchanges. Secondary market trading happens between any pair of market participants—individual or institutional investors, market makers, and so on."
+   },
+   {
+    "n": 2,
+    "q": "The list of securities that a particular ETF wants to own, which is disclosed daily by all ETFs, is referred to as the:",
+    "options": [
+     "creation unit.",
+     "creation basket.",
+     "redemption basket."
+    ],
+    "answer": "B",
+    "why": "B is correct. Each day, ETF managers publicly disclose a list of securities that they want to own, which is referred to as the creation basket. This basket also serves as the portfolio for determining the intrinsic net asset value (NAV) of the ETF on the basis of prices during the trading day."
+   },
+   {
+    "n": 3,
+    "q": "When an authorized participant transacts to create or redeem ETF shares, the related costs are ultimately borne:",
+    "options": [
+     "solely by the ETF sponsor.",
+     "by transacting shareholders.",
+     "proportionally by all existing ETF shareholders."
+    ],
+    "answer": "B",
+    "why": "B is correct. The AP generally absorbs all the costs associated with buying or selling the securities in the baskets or the ETF shares and pays an additional fee to the ETF provider to cover processing fees associated with creation/redemption activities. APs pass these costs to investors in the ETF’s bid–ask spread, which is incurred by investors entering (ETF share buyers) and exiting (ETF share sellers) the fund."
+   },
+   {
+    "n": 4,
+    "q": "Assuming arbitrage costs are minimal, which of the following is most likely to occur when the share price of an ETF is trading at a premium to its intraday NAV?",
+    "options": [
+     "New ETF shares will be created by the ETF sponsor.",
+     "Redemption baskets will be received by APs from the ETF sponsor.",
+     "Retail investors will exchange baskets of securities that the ETF tracks for creation units."
+    ],
+    "answer": "A",
+    "why": "A is correct. When the share price of an ETF is trading at a premium to its intraday NAV and assuming arbitrage costs are minimal, APs will step in and take advantage of the arbitrage. Specifically, APs will step in and buy the basket of securities that the ETF tracks (the creation basket) and exchange it with the ETF provider for new ETF shares (a creation unit). These new shares received by APs can then be sold on the open market to realize arbitrage profits."
+   }
+  ]
+ },
+ {
+  "id": "etf-set2",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31) (single questions grouped by the assistant, 4 per set; the one-paragraph intro was added, the questions are unchanged)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Östberg: performance and tracking error",
+  "body": "Clara Östberg is a portfolio assistant at Norland Asset Management. She is preparing an internal note on how ETF performance and tracking error are measured and answers the following four questions.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "An ETF’s reported tracking error is typically measured as the:",
+    "options": [
+     "standard deviation of the difference in daily returns between an ETF and its benchmark.",
+     "difference in annual return between an ETF and its benchmark over the past 12 months.",
+     "annualized standard deviation of the difference in daily returns between an ETF and its benchmark."
+    ],
+    "answer": "C",
+    "why": "C is correct. An ETF’s tracking error is typically reported as the annualized standard deviation of the daily differential returns of the ETF and its benchmark."
+   },
+   {
+    "n": 12,
+    "q": "To best assess an ETF’s performance, which reflects the impact of portfolio rebalancing expenses and other fees, an investor should:",
+    "options": [
+     "review daily return differences between the ETF and its benchmark.",
+     "perform a rolling return assessment between the ETF and its benchmark.",
+     "compare the ETF’s annual expense ratio with that of other ETFs in its asset class category."
+    ],
+    "answer": "B",
+    "why": "B is correct. A rolling return assessment, referred to in the ETF industry as the “tracking difference,” provides a more informative picture of the investment outcome for an investor in an ETF. Such an analysis allows investors to see the cumulative effect of portfolio management and expenses over an extended period. It also allows for comparison with other annual metrics such as a fund’s expense ratio. Tracking error, as a statistic, reveals only ETF tracking variability; it does not reveal to investors whether the fund is over- or underperforming its index or whether that tracking error is concentrated over a few days or is more consistently experienced. An ETF’s expense ratio does not fully reflect the investor experience. That is, the expense ratio does not reflect the cost of portfolio rebalancing or other fees, making it an inferior assessment measure relative to a rolling return assessment."
+   },
+   {
+    "n": 13,
+    "q": "An ETF’s tracking error, as traditionally reported, indicates to investors:",
+    "options": [
+     "whether the ETF is underperforming or outperforming its underlying index.",
+     "the magnitude by which an ETF’s returns deviate from its benchmark over time.",
+     "the distribution of differences in daily returns between the ETF and its benchmark."
+    ],
+    "answer": "B",
+    "why": "B is correct. An ETF’s tracking error is typically reported as the annualized standard deviation of the daily differential returns of the ETF and its benchmark. Therefore, an ETF’s reported tracking error indicates to investors the magnitude by which an ETF’s returns deviate from those of its benchmark over time."
+   },
+   {
+    "n": 14,
+    "q": "For a typical ETF, which of the following sources of tracking error is most likely to be the smallest contributor to tracking error?",
+    "options": [
+     "Representative sampling",
+     "Fees and expenses incurred by the ETF",
+     "Changes to the underlying index securities"
+    ],
+    "answer": "C",
+    "why": "C is correct. Although additions and deletions of securities from the underlying benchmark index may occur and result in tracking error, such index changes generally occur infrequently (often quarterly). In addition, ETF portfolio managers may work with APs for index rebalance trades to ensure market-on-close pricing to minimize this source of tracking error. Therefore, the resulting tracking error caused by index changes will not likely be as large as the tracking error caused by representative sampling or by fees and expenses incurred by the ETF."
+   }
+  ]
+ },
+ {
+  "id": "etf-set3",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31) (single questions grouped by the assistant, 4 per set; the one-paragraph intro was added, the questions are unchanged)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Okafor: taxes and costs",
+  "body": "Daniel Okafor is a financial planner at Brightwater Advisers. He is comparing the tax treatment and the costs of ETFs for a client and answers the following four questions.",
+  "questions": [
+   {
+    "n": 15,
+    "q": "Which of the following statements relating to capital gains in ETFs and mutual funds is correct?",
+    "options": [
+     "ETFs tend to distribute less in capital gains than mutual funds do.",
+     "Mutual funds may elect not to distribute all realized capital gains in a given year.",
+     "The selling of ETF shares by some investors may create capital gains that affect the remaining ETF investors in terms of taxes."
+    ],
+    "answer": "A",
+    "why": "A is correct. ETFs tend to distribute far less in capital gains relative to mutual funds. This is mostly due to the fact that ETFs have historically had significantly lower turnover than mutual funds have had."
+   },
+   {
+    "n": 16,
+    "q": "Which of the following statements regarding distributions made by ETFs is correct?",
+    "options": [
+     "Return-of-capital (ROC) distributions are generally not taxable.",
+     "ETFs generally reinvest any dividends received back into the ETF’s holdings.",
+     "A dividend distribution is a distribution paid to investors in excess of an ETF’s earnings."
+    ],
+    "answer": "A",
+    "why": "A is correct. Return-of-capital distributions are amounts paid out in excess of an ETF’s earnings and serve to reduce an investor’s cost basis by the amount of the distribution. These distributions are generally not taxable."
+   },
+   {
+    "n": 17,
+    "q": "Investors buying ETFs:",
+    "options": [
+     "incur management fees that decrease with the length of the holding period.",
+     "are assured of paying a price equal to the NAV if they purchase shares at the market close.",
+     "incur trading costs in the form of commissions and bid–ask spreads at the time of purchase."
+    ],
+    "answer": "C",
+    "why": "C is correct. ETF trading costs in the form of commissions and bid–ask spreads are paid by investors buying or selling ETF shares on an exchange. These trading costs are influenced by the bid–ask spread of the ETF, the size of the trade relative to the normal trading activity of the ETF, and the ease of hedging the ETF by the market-making community. Even the closing price of the ETF on the exchange includes a premium or discount to the NAV, driven by supply and demand factors on the exchange and the market impact costs of executing an exchange transaction. The purchase and sale trading costs of an ETF are paid regardless of holding period, whereas other costs, such as management fees, increase as the holding period lengthens."
+   },
+   {
+    "n": 18,
+    "q": "Consider an ETF with the following trading costs and management fees:\n\nAnnual management fee of 0.40%\n\nRound-trip trading commissions of 0.55%\n\nBid–offer spread of 0.20% on purchase and sale\n\nExcluding compound effects, the expected total holding-period cost for investing in the ETF over a nine-month holding period is closest to:",
+    "options": [
+     "1.05%.",
+     "1.15%.",
+     "1.25%."
+    ],
+    "answer": "A",
+    "why": "A is correct. The expected total holding-period cost for investing in the ETF over a nine-month holding period is calculated as follows:\n\nTotal holding-period cost = Annual management fee + Round-trip trading commissions + Bid–offer spread on purchase/sale.\nTotal holding-period cost = (9/12) × (0.40%) + 0.55% + 0.20% = 1.05%."
+   }
+  ]
+ },
+ {
+  "id": "etf-set4",
+  "source": "7 Nov Module 3 Exchange-Traded Funds quiz (23/31) (single questions grouped by the assistant, 4 per set; the one-paragraph intro was added, the questions are unchanged)",
+  "readings": [
+   36
+  ],
+  "title": "ETFs · Zhao: spreads, risks and uses",
+  "body": "Mei-Lin Zhao is an ETF research associate at Tamarack Securities. She reviews bid–ask spreads, ETF risks and the uses of ETFs and answers the following four questions.",
+  "questions": [
+   {
+    "n": 19,
+    "q": "The bid–ask spread for very liquid, high-volume ETFs will be least influenced by the:",
+    "options": [
+     "market maker’s desired profit spread.",
+     "creation/redemption fees and other direct costs.",
+     "likelihood of receiving an offsetting ETF order in a short time frame."
+    ],
+    "answer": "B",
+    "why": "B is correct. ETF bid–ask spreads are generally less than or equal to the combination of the following:\n\n± Creation/redemption fees and other direct costs, such as brokerage and exchange fees\n\n+ Bid–ask spread of the underlying securities held by the ETF\n\n+ Compensation for the risk of hedging or carrying positions by liquidity providers (market makers) for the remainder of the trading day\n\n+ Market maker’s desired profit spread\n\n− Discount related to the likelihood of receiving an offsetting ETF order in a short time frame\n\nFor very liquid and high-volume ETFs, buyers and sellers are active throughout the trading day. Therefore, because most of these ETF trades are matched extremely quickly and never involve the creation/redemption process, the first three factors listed do not contribute heavily to their bid–ask spreads. So, creation/redemption fees and other direct costs are not likely to have much influence on these ETFs’ bid–ask spreads."
+   },
+   {
+    "n": 20,
+    "q": "Such factors as regulations, competition, and corporate actions relate to:",
+    "options": [
+     "fund-closure risk.",
+     "counterparty risk.",
+     "expectation-related risk."
+    ],
+    "answer": "A",
+    "why": "A is correct. Fund-closure risk is the risk that an ETF may shut down. The reasons that lead to an ETF closing down often have to do with changes in regulations, increased competition, and corporate activity (merger and acquisition activity within the ETF industry)."
+   },
+   {
+    "n": 21,
+    "q": "John Smith has invested in an inverse ETF. Smith is a novice investor who is not familiar with inverse ETFs, and therefore, he is unsure how the ETF will perform because of a lack of understanding of the ETF’s risk and return characteristics. This risk is best described as:",
+    "options": [
+     "counterparty risk.",
+     "holdings-based risk.",
+     "expectation-related risk."
+    ],
+    "answer": "C",
+    "why": "C is correct. Expectation-related risk is the risk that some ETF investors may not fully understand how more complex ETFs will perform because of a lack of understanding of sophisticated assets classes and strategies."
+   },
+   {
+    "n": 22,
+    "q": "Factor (smart beta) strategy ETFs are least likely to be used by investors:",
+    "options": [
+     "to modify portfolio risk.",
+     "for tactical trading purposes.",
+     "to seek outperformance versus a benchmark."
+    ],
+    "answer": "B",
+    "why": "B is correct. Factor strategy ETFs are usually benchmarked to an index created with predefined rules for screening and/or weighting stock holdings and are considered longer-term, buy-and-hold investment options rather than tactical trading instruments. The strategy index rules are structured around return drivers or factors, such as value, dividend yield, earnings or dividend growth, quality, stock volatility, or momentum. Investors using factor-based investing seek outperformance versus a benchmark or portfolio risk modification."
+   }
+  ]
+ }
+]
