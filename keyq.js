@@ -1143,4 +1143,22 @@ const KEYQ = [];
     let top = Math.max(0, ...eth.map(q => q.sess)), n = eth.filter(q => q.sess === top).length;
     eth.filter(q => !q.sess).forEach(q => { if (n >= 20 || top === 0) { top += 1; n = 0; } q.sess = top; n += 1; });
   })();
+
+  // ===== 35 Analysis of Active Portfolio Management: security selection and asset allocation from a sub-portfolio table =====
+  setDay("2026-11-07");
+  {
+  const tf = "<table class=\"kq-table\"><thead><tr><th></th><th>Sub-portfolio return (%)</th><th>Benchmark return (%)</th><th>Portfolio allocation (%)</th><th>Strategic asset allocation (%)</th></tr></thead><tbody><tr><th>Domestic equities</th><td>12.4</td><td>10.9</td><td>60</td><td>50</td></tr><tr><th>Fixed income</th><td>3.2</td><td>2.8</td><td>30</td><td>35</td></tr><tr><th>Alternatives</th><td>8.6</td><td>9.2</td><td>10</td><td>15</td></tr></tbody></table>";
+  mc(35, "Using this table, the security selection effect of the portfolio is closest to:", ["0.96%", "0.80%", "1.45%"], 0, "Security selection = Σ portfolio weight × (portfolio return − benchmark return). Domestic equities: 0.60 × (12.4 − 10.9) = 0.900; Fixed income: 0.30 × (3.2 − 2.8) = 0.120; Alternatives: 0.10 × (8.6 − 9.2) = −0.060. Sum = 0.960, about 0.96%.", tf);
+  mc(35, "Using this table, the asset allocation effect of the portfolio is closest to:", ["0.49%", "0.16%", "1.45%"], 0, "Asset allocation = Σ (portfolio weight − strategic weight) × benchmark return. Domestic equities: (60 − 50)% × 10.9 = 1.090; Fixed income: (30 − 35)% × 2.8 = −0.140; Alternatives: (10 − 15)% × 9.2 = −0.460. Sum = 0.490, about 0.49%. Check: selection 0.96% + allocation 0.49% = active return 1.45%.", tf);
+  }
+  {
+  const tf = "<table class=\"kq-table\"><thead><tr><th></th><th>Sub-portfolio return (%)</th><th>Benchmark return (%)</th><th>Portfolio allocation (%)</th><th>Strategic asset allocation (%)</th></tr></thead><tbody><tr><th>Global equities</th><td>18.2</td><td>15.0</td><td>45</td><td>50</td></tr><tr><th>Global bonds</th><td>2.0</td><td>1.2</td><td>40</td><td>35</td></tr><tr><th>Cash</th><td>0.9</td><td>0.7</td><td>15</td><td>15</td></tr></tbody></table>";
+  mc(35, "Using this table, the security selection effect of the portfolio is closest to:", ["1.79%", "1.91%", "1.10%"], 0, "Security selection = Σ portfolio weight × (portfolio return − benchmark return). Global equities: 0.45 × (18.2 − 15.0) = 1.440; Global bonds: 0.40 × (2.0 − 1.2) = 0.320; Cash: 0.15 × (0.9 − 0.7) = 0.030. Sum = 1.790, about 1.79%.", tf);
+  mc(35, "Using this table, the asset allocation effect of the portfolio is closest to:", ["−0.69%", "−0.12%", "1.10%"], 0, "Asset allocation = Σ (portfolio weight − strategic weight) × benchmark return. Global equities: (45 − 50)% × 15.0 = −0.750; Global bonds: (40 − 35)% × 1.2 = 0.060; Cash: (15 − 15)% × 0.7 = 0.000. Sum = −0.690, about −0.69%. Check: selection 1.79% + allocation −0.69% = active return 1.10%.", tf);
+  }
+  {
+  const tf = "<table class=\"kq-table\"><thead><tr><th></th><th>Sub-portfolio return (%)</th><th>Benchmark return (%)</th><th>Portfolio allocation (%)</th><th>Strategic asset allocation (%)</th></tr></thead><tbody><tr><th>Equities</th><td>\u22128.5</td><td>\u221210.2</td><td>58</td><td>65</td></tr><tr><th>Bonds</th><td>1.9</td><td>2.4</td><td>30</td><td>25</td></tr><tr><th>Commodities</th><td>5.6</td><td>4.1</td><td>12</td><td>10</td></tr></tbody></table>";
+  mc(35, "Using this table, the security selection effect of the portfolio is closest to:", ["1.02%", "1.13%", "1.93%"], 0, "Security selection = Σ portfolio weight × (portfolio return − benchmark return). Equities: 0.58 × (−8.5 − (−10.2)) = 0.986; Bonds: 0.30 × (1.9 − 2.4) = −0.150; Commodities: 0.12 × (5.6 − 4.1) = 0.180. Sum = 1.016, about 1.02%.", tf);
+  mc(35, "Using this table, the asset allocation effect of the portfolio is closest to:", ["0.92%", "−0.11%", "1.93%"], 0, "Asset allocation = Σ (portfolio weight − strategic weight) × benchmark return. Equities: (58 − 65)% × (−10.2) = 0.714; Bonds: (30 − 25)% × 2.4 = 0.120; Commodities: (12 − 10)% × 4.1 = 0.082. Sum = 0.916, about 0.92%. Check: selection 1.02% + allocation 0.92% = active return 1.93%.", tf);
+  }
 })();
