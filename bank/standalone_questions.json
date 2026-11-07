@@ -1799,5 +1799,275 @@
   ],
   "answer": "B",
   "why": "A. Incorrect because, as noted in the correct answer, Wilkin violated the Standard relating to loyalty by taking the internal analysis of ABCI's sales strategy. | B. Correct because according to Standard IV(A): Loyalty, the member or candidate must not take records or files to a new employer without the written permission of the previous employer. Also, firm records or work performed on behalf of the firm that is stored in paper copy or electronically for the member’s or candidate’s convenience while employed, however, should be erased or returned to the employer unless the firm gives permission to keep those records after employment ends. The internal sales strategy analysis is the property of ABCI, so Wilkin violated the Standards by taking the analysis. | C. Incorrect because according to Standard IV(A): Loyalty, a member or candidate who is contemplating seeking other employment must not contact existing clients or potential clients prior to leaving his or her employer for purposes of soliciting their business for the new employer. Also, once an employee has left the firm, the skills and experience that an employee obtained while employed are not “confidential” or “privileged” information. Similarly, simple knowledge of the names and existence of former clients is generally not confidential information unless deemed such by an agreement or by law. In this case, with no noncompete agreement, Wilkins is allowed to solicit clients using simple knowledge using the internet. Incorrect answer: (no answer) Correct Answer: Yes, by taking an internal analysis of ABCI's sales strategy"
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 1,
+  "q": "All else equal, which of the following would most likely explain the fall in price of a particular company’s shares?",
+  "options": [
+   "The expected inflation rate falls.",
+   "The company’s future cash flows are expected to increase.",
+   "The yield to maturity on real default-free investments rises."
+  ],
+  "answer": "C",
+  "why": "C is correct. According to the fundamental pricing equation, the market value of an asset is affected by economic factors that influence the asset’s expected future cash flows, default-free interest rates, expected inflation rates, or the asset’s risk premium. From Equation 1, expected cash flows are in the numerator, while expected inflation and the real risk-free rate are in the denominator. Consequently, a rise in the real risk-free rate (the yield to maturity on a default-free instrument) will lead to a fall in the price of a risky asset, such as stock, by increasing the rate at which its cash flows are discounted."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 9,
+  "q": "The covariance between a risk-averse investor’s inter-temporal rate of substitution and the expected future price of a risky asset is typically:",
+  "options": [
+   "negative.",
+   "zero.",
+   "positive."
+  ],
+  "answer": "A",
+  "why": "A is correct. For risk-averse investors, when the expected future price of the investment is high (low), the marginal utility of future consumption relative to that of current consumption is low (high). Hence, the covariance of the inter-temporal rate of substitution with asset price is expected to be negative for risk-averse investors."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 10,
+  "q": "The prices of one-period, real default-free government bonds are likely to be most sensitive to changes in:",
+  "options": [
+   "investors’ inflation expectations.",
+   "the expected volatility of economic growth.",
+   "the covariance between investors’ inter-temporal rates of substitution and the expected future prices of the bonds."
+  ],
+  "answer": "B",
+  "why": "B is correct. Only changes in default-free real interest rates will affect the price of real, default-free bonds. The average level of default-free real interest rates is positively related to the volatility of economic growth in the economy; thus, changes in the expected volatility of economic growth would likely lead to changes in default-free real interest rates, which in turn would affect the prices of real, default-free government bonds."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 11,
+  "q": "Default-free real interest rates tend to be relatively high in countries with high expected economic growth because investors:",
+  "options": [
+   "increase current borrowing.",
+   "have high inter-temporal rates of substitution.",
+   "have high uncertainty about levels of future consumption."
+  ],
+  "answer": "A",
+  "why": "A is correct. The average level of default-free real interest rates is positively related to the expected rate of growth of the underlying economy and also to the volatility of economic growth in the economy. During periods of high expected economic growth, investors are less worried about the future and their consumption abilities in the future; that is, their inter-temporal rate of substitution is low, so they borrow more today and save less. Other things being equal, this means that the average level of default-free real interest rates (the reciprocal of the rate of substitution, see Equation 4) should be higher in an economy with high growth and lower in an economy with lower, more stable growth."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 12,
+  "q": "Positive output gaps are usually associated with:",
+  "options": [
+   "deflation.",
+   "high unemployment.",
+   "economic growth beyond sustainable capacity."
+  ],
+  "answer": "C",
+  "why": "C is correct. An economy operating with a positive output gap—that is, where the level of actual GDP exceeds potential GDP—is producing beyond its sustainable capacity. Positive output gaps are usually associated with high and/or rising inflation, while high levels of unemployment usually accompany negative output gaps."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 13,
+  "q": "All else equal, an investor expects future inflation to increase, but the uncertainty of future inflation to fall. For such an investor the break-even inflation rate:",
+  "options": [
+   "is uncertain.",
+   "is expected to fall.",
+   "is expected to rise."
+  ],
+  "answer": "A",
+  "why": "A is correct. The break-even inflation rate is the difference between the yield on a zero-coupon, default-free nominal bond and on a zero-coupon, default-free real bond of the same maturity. The rate incorporates changing expectations about inflation and changing perceptions about the uncertainty of the future inflation environment. Consequently, if inflation is expected to rise while the uncertainty about future inflation falls (in Equation 10, θt,s rises but πt,s falls), it is unclear in which direction break-even inflation rates will move."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 14,
+  "q": "The difference between the yield on a zero-coupon, default-free nominal bond and the yield on a zero-coupon, default-free real bond of the same maturity reflects:",
+  "options": [
+   "investors’ expectations about future inflation only.",
+   "a premium for the uncertainty of future inflation only.",
+   "both, investors’ expectations about future inflation and a premium for the uncertainty of future inflation."
+  ],
+  "answer": "C",
+  "why": "C is correct. The difference between the yield on a zero-coupon, default-free nominal bond and the yield on a zero-coupon, default-free real bond of the same maturity is known as the break-even inflation rate. This break-even inflation rate will incorporate the inflation expectations of investors over the investment horizon of the two bonds, plus a risk premium to compensate investors for uncertainty about future inflation. Break-even inflation rates are not simply the market’s best estimate of future inflation over the relevant investment horizon, because break-even inflation rates also include a risk premium to compensate investors for their uncertainty about future inflation."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 15,
+  "q": "During a recession, the slope of the yield curve for default-free government bonds is most likely to:",
+  "options": [
+   "flatten.",
+   "steepen.",
+   "become inverted."
+  ],
+  "answer": "B",
+  "why": "B is correct. During a recession, short rates are often lower because central banks tend to lower their policy rate in these times because the output gap is likely to be negative. However, the impact of such monetary policy on longer-term rates will not be as strong, so long rates may not fall by as much as short rates. The central bank will usually be expected to bring short-term rates back to normal as the recession recedes, and the risk-free rates will increase as economic growth recovers. Thus, the slope of the yield curve will typically steepen during a recession."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 16,
+  "q": "One interpretation of an upward sloping yield curve is that the returns to short-dated bonds are:",
+  "options": [
+   "uncorrelated with bad times.",
+   "more positively correlated with bad times than are returns to long-dated bonds.",
+   "more negatively correlated with bad times than are returns to long-dated bonds."
+  ],
+  "answer": "C",
+  "why": "C is correct. One interpretation of an upward-sloping yield curve is that returns to short-dated bonds are more negatively correlated with bad times than are returns to long-dated bonds. This interpretation is based on the notion that investors are willing to pay a premium and accept a lower return for short-dated bonds if they believe that long-dated bonds are not a good hedge against economic “bad times.”"
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 17,
+  "q": "An analyst, who measures yield as a combination of interest rates and premiums, observes an upward-sloping, default-free government bond nominal yield curve. Which of the following statements is correct?",
+  "options": [
+   "Interest rates must be expected to rise in the future.",
+   "Bond risk premiums must be expected to rise in the future.",
+   "Expectations relating to the future direction of interest rates are indeterminate."
+  ],
+  "answer": "C",
+  "why": "C is correct. An upward-sloping yield curve may be caused by a combination of expected rate increases and positive bond risk premiums. It may also be a combination of expectations that interest rates will be unchanged in the future coupled with positive bond risk premiums. Lastly, an upward-sloping yield curve may actually be a reflection of expected rate cuts that are more than offset by the existence of positive bond risk premiums. So, expectations relating to the future direction of interest rates are indeterminate."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 18,
+  "q": "A corporate bond has a remaining maturity of 1 year, has a face value of EUR100, and is currently priced at EUR90.90. The real risk-free rate is 3.25%. Inflation is expected to be 2.0% next year, and the premium required by investors for inflation uncertainty is 0.25%.\n\nThe implied credit risk premium embedded in the bond’s price is best described as:",
+  "options": [
+   "equal to (100/90.90) − 1 = 10%.",
+   "10% reduced by the real risk-free rate and expected inflation.",
+   "10% reduced by the real risk-free rate, expected inflation, and the premium for inflation uncertainty."
+  ],
+  "answer": "C",
+  "why": "C is correct. The implied credit risk premium embedded in the bond’s price is the yield (10%) less the default-risk-free nominal interest rate, which includes a premium for inflation uncertainty. See Example 15. The credit risk premium can be calculated as 4.51% in this case:"
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 19,
+  "q": "A decrease in the prices of AAA-rated corporate bonds during a recession would most likely be the result of:",
+  "options": [
+   "expectations of higher inflation.",
+   "increases in credit risk premiums.",
+   "increases in short-term, default-free interest rates."
+  ],
+  "answer": "B",
+  "why": "B is correct. During recessions, the risk premium that investors demand on financial assets, particularly those that are not default-free, such as corporate bonds, may rise because investors in general may be less willing and able to take on heightened default risk during such periods. Specifically, the credit risk premium demanded by investors tends to rise in times of economic weakness, when the probability of a corporate default and bankruptcy is highest."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 20,
+  "q": "During an economic period when spreads between corporate and government bonds are narrowing, and spreads between higher- and lower-rated corporate bond categories are also narrowing, it can be expected that:",
+  "options": [
+   "government bonds will outperform corporate bonds.",
+   "lower-rated corporate bonds will outperform higher-rated corporate bonds.",
+   "higher-rated corporate bonds will outperform lower-rated corporate bonds."
+  ],
+  "answer": "B",
+  "why": "B is correct. When spreads are narrowing, investors seem to be less discerning between issues with weak versus strong credit, and the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Thus, during times when corporate bond spreads are narrowing relative to government bonds and the spreads between higher- and lower-rated bond categories are also narrowing, corporate bonds will generally outperform government bonds and lower-rated corporate bonds will tend to outperform higher-rated corporate bonds."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 21,
+  "q": "The sensitivity of a corporate bond’s spread to changes in the business cycle is most likely to be:",
+  "options": [
+   "uncorrelated with the level of cyclicality in the company’s business.",
+   "positively correlated with the level of cyclicality in the company’s business.",
+   "negatively correlated with the level of cyclicality of the company’s business."
+  ],
+  "answer": "B",
+  "why": "B is correct. The sensitivity of a corporate bond’s spread to changes in the business cycle and the level of cyclicality tend to be positively correlated. The greater the level of cyclicality, the greater the sensitivity of the bond’s spread to changes in the business cycle."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 22,
+  "q": "The category of bonds whose spreads can be expected to widen the most during an economic downturn are bonds from the:",
+  "options": [
+   "cyclical sector with low credit ratings.",
+   "cyclical sector with high credit ratings.",
+   "non-cyclical sector with low credit ratings."
+  ],
+  "answer": "A",
+  "why": "A is correct. During an economic downturn, the spreads of corporate bonds can be expected to widen, because the risk premium that investors demand on risky financial assets will increase. When spreads widen, the spreads on bonds issued by corporations with a low credit rating and that are part of the cyclical sector will tend to widen the most."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 23,
+  "q": "With regard to the credit risk of the sovereign debt issued by country governments, which of the following statements is correct? The credit risk premium on such debt is:",
+  "options": [
+   "zero because governments can print money to settle their debt.",
+   "negligibly small because no country has defaulted on sovereign debt.",
+   "a non-zero and positive quantity that varies depending on a country’s creditworthiness."
+  ],
+  "answer": "C",
+  "why": "C is correct. Credit premiums have been an important component of the expected return on bonds issued by countries (sovereign debt). The credit premium varies from country to country depending on how creditworthy investors consider it to be. The fact that countries have both printed money to pay back debt and defaulted on it gives rise to a non-zero credit risk premium."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 25,
+  "q": "Which of the following financial assets is likely to offer the most effective hedge against bad consumption outcomes?",
+  "options": [
+   "Equities.",
+   "Short-dated, default-free government bonds.",
+   "Long-dated, default-free government bonds."
+  ],
+  "answer": "B",
+  "why": "B is correct. The relative certainty about the real payoff from short-dated, default-free government bonds and, therefore, the relative certainty about the amount of consumption that the investor will be able to undertake with the payoff indicate that an investment in such bonds would be a good hedge against bad consumption outcomes."
+ },
+ {
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "n": 26,
+  "q": "When assessing investment opportunities in equities, investors should:",
+  "options": [
+   "assign higher equity risk premiums to non-cyclical companies, relative to cyclical companies.",
+   "forecast lower volatility in the growth rate of earnings for cyclical companies, relative to non-cyclical companies.",
+   "forecast higher growth rates in earnings for cyclical companies coming out of a recession, relative to non-cyclical companies."
+  ],
+  "answer": "C",
+  "why": "C is correct. During recessions, cyclical companies are likely to experience sharp declines in earnings, more so than non-cyclical companies. In contrast, while coming out of a recession, cyclical companies are likely to generate higher earnings growth relative to non-cyclical companies."
  }
 ]

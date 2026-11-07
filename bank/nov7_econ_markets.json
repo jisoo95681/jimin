@@ -1,0 +1,222 @@
+[
+ {
+  "id": "em-simmons",
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "title": "Economics and Investment Markets · Simmons: real rates, inflation-linked bonds, credit spreads",
+  "body": "Mona Simmons is an analyst at Bluestone Fixed-Income Advisors, a fixed-income investment management firm located in Chicago, IL. Bluestone manages a variety of fixed-income strategies, primarily for institutional clients. Simmons provides economic research to portfolio managers by analyzing economic data and advising how these data may influence various segments of the fixed-income markets.\n\nSimmons is working on an assessment of the current economic conditions and the resulting impact on future real risk-free interest rates for a number of countries. She plans to present her findings at the upcoming investment committee meeting. As part of her research, she has collected the data provided in Exhibit 1 through the end of the second quarter.\n\nExhibit 1 Actual & Estimated GDP Growth Data\nEconomy\tActual Q1 Yr/Yr Growth\tActual Q2 Yr/Yr Growth\tEstimated Q3 Yr/Yr Growth\tEstimated 10-Year GDP Growth Rate\tEstimated 10-Year Standard Deviation of GDP Growth\nGermany\t2.9%\t2.7%\t2.8%\t2.9%\t1.9%\nUnited Kingdom\t2.4%\t2.6%\t2.9%\t2.9%\t1.4%\nUnited States\t2.5%\t2.8%\t2.7%\t2.7%\t1.6%\nAt the investment committee meeting, Simmons recommends purchasing United Kingdom inflation-linked government bonds. In her discussion, she makes the following statements about inflation-linked bonds: \n\nStatement 1:\t“The break-even inflation rate incorporates the yield difference between longer dated and shorter dated inflation-linked bonds.”\nStatement 2:\t“The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about the quantity of goods and services investors will be able to consume in the future.”\nStatement 3:\t“Increases in uncertainty about future inflation are associated with lower break-even inflation rates.”\nLloyd Redfield, a portfolio manager on the foreign bond team, asks Simmons to review the current business cycle and yield curve in Australia. The Australian economy entered a recession approximately 6 months ago, and the Australian Central Bank has been reducing its policy rate. Simmons expects the Australian economy to gradually improve over the next 6–12 months and the government bond curve to change from its currently flat state to an upward sloping state. Simmons believes the future upward slope of the yield curve will be influenced by investor expectations for declining policy rates, increasing inflation premiums for longer dated bonds, and bond risk premiums that are negatively related to consumption hedging benefits.\n\nGiven the ongoing recession in Australia, Redfield is reviewing Australian corporate bonds with the same five-year maturity held in the foreign bond strategy. The three bonds being reviewed are listed in Exhibit 2. Redfield agrees with Simmons’ assessment of the Australian economy.\nExhibit 2 Australia Corporate Bond Holdings\nBond\tCredit Rating\tSector\tProbability of Default\tEstimated Recovery Rate\tSpread over Government Bonds\nA\tA\tConsumer Staples\t0.5%\t40%\t200 bps\nB\tBBB–\tConsumer Discretionary\t2.0%\t35%\t350 bps\nC\tBB\tIndustrial\t3.5%\t45%\t650 bps\nBased on this information, Redfield makes the following comments to Simmons regarding the Australian bonds:\nComment 1:\tYou can calculate the expected loss by multiplying the probability of default by the recovery rate.\nComment 2:\tRelative to bond B and bond C, bond A has likely experienced the worst price return over the last 9 months.\nComment 3:\tBased on your economic forecasts, in 6–12 months overall credit spreads should narrow and the rate of improvement will likely be greatest for bond C.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Using only the data in Exhibit 1, which country will Simmons most likely expect to have the highest average real short-term risk-free interest rates over the forecasted horizon?",
+    "options": [
+     "Germany",
+     "United States",
+     "United Kingdom"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Germany has the highest combination of expected GDP growth and expected GDP volatility of the countries presented in Exhibit 1. Thus, all else held constant, it would have the highest expected real short-term risk-free rates. | B. Incorrect. The United States has both a relatively low rate of expected GDP growth and expected GDP volatility. | C. Incorrect. While the United Kingdom has a relatively high expected GDP growth rate, it has the lowest expected volatility of GDP growth."
+   },
+   {
+    "n": 34,
+    "q": "Which of Simmons’ statements concerning inflation-linked bonds is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Statement 1 (The break-even inflation rate incorporates the yield difference between longer dated inflation-linked bonds and shorter dated inflation-linked bonds.) is incorrect. The break-even inflation rate incorporates the yield difference between inflation-linked and non-inflation-linked government bonds of the same maturity, not the yield difference between longer dated inflation-linked bonds and shorter dated inflation-linked bonds. | B. Correct. Since Simmons makes her statements while looking at the yield difference between nominal and inflation-linked bonds, Statement 2 (The difference in yields reflects the uncertainty about the quantity of goods and services investors will be able to consume in the future.) is correct. The difference in yields incorporates uncertainty about future inflation and, therefore, the uncertainty about the quantity of goods and services investors will be able to consume in the future. | C. Incorrect. Statement 3 (Increases in uncertainty about future inflation are associated with lower break-even inflation rates.) is incorrect. Increases in uncertainty about future inflation would be associated with higher, not lower, break-even inflation rates."
+   },
+   {
+    "n": 35,
+    "q": "Which one of Simmons’ factors is most likely accurate with regard to investors influencing the future shape of the yield curve?",
+    "options": [
+     "Inflation premiums",
+     "Bond risk premiums",
+     "Policy rate expectations"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Simmons’ forecast is supported by increasing inflation premiums for longer dated bonds. Many factors can influence an upward sloping yield curve, including higher risk premiums as maturities increase. | B. Incorrect. An upward sloping curve would be associated with bond risk premiums that are positively, not negatively, related to the consumption hedging benefits of government bonds. | C. Incorrect. Investor expectations for declining policy rates are more likely to result in an inverted yield curve, not an upward sloping curve."
+   },
+   {
+    "n": 36,
+    "q": "Which of Redfield’s comments regarding the Australian corporate bonds in Exhibit 2 is most likely correct?",
+    "options": [
+     "Comment 1",
+     "Comment 2",
+     "Comment 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Comment 1 is incorrect. Expected loss = Probability of default x (1 – Recovery rate). For example, bond B has an expected loss of 2% x (1 – 35%) = 1.3%. | B. Incorrect. Comment 2 is incorrect. The Australian economy entered recession approximately 6 months ago. As the business cycle turns down, those issuers with good credit ratings tend to outperform those with lower ratings as the spreads between low and higher quality issuers widen. | C. Correct. Comment 3 is correct. When credit spreads are generally narrowing, the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Bond C has the lowest credit rating, highest probability of default, and widest spread over government bonds and should experience the greatest rate of improvement as the Australian economy improves and spreads narrow."
+   }
+  ]
+ },
+ {
+  "id": "em-gera",
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "title": "Economics and Investment Markets · GERA: surprises, growth and volatility, earnings cycles",
+  "body": "Jose Ramires and Antonio Gomes are analysts at Global Economic Research Affiliates (GERA), an economic research firm. GERA focuses on providing research and investment recommendations to the global asset management community. Ramires and Gomes are reviewing Countries A, B, and C for possible investment.\n\nThey discuss the role that economic news has in adjusting market valuations. Ramires provides the example of economic data that were recently released on Country B's economy. The most recent report showed that quarterly GDP declined at a 2.5% annualized rate. This was relative to market expectations of a 3.2% decline. Ramires discusses the immediate impact of the release of Country B's GDP report on the credit spreads of Country B's government bonds.\n\nGERA forecasts that Country A and Country C will experience the same long-term real GDP growth rate, which is significantly higher than the growth rate estimate for Country B. GERA's expectations are that Country A and Country B will have similar levels of volatility of real GDP growth, with volatility expected to be significantly higher than that of Country C.\n\nMaria Silva is an equity strategist at GERA. Silva believes it is important to study the relationships between economic cycles and corporate earnings, and she has made the following observations:\n\nObservation 1:\tCorporate profitability tends to be a lagging indicator of the business cycle and improvements are not typically evident until a recovery is well underway.\nObservation 2:\tAn understanding of the business cycle is more important for making earnings projections over the long term than the short term.\nObservation 3:\tDurable goods manufacturers have much more volatile earnings profiles than non-durable goods manufacturers because of the dramatic shifts in economic cycle-related demand.\nGERA also offers a corporate bond research service designed to identify attractive industries for fixed-income investment based on economic cycles. GERA is currently forecasting a period of above-consensus growth.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "Following the GDP release, the credit spreads of Country B's government bonds are most likely to:",
+    "options": [
+     "narrow.",
+     "remain unchanged.",
+     "widen."
+    ],
+    "answer": "A",
+    "why": "A. Correct because market news is only really considered relevant for impacting valuations when it reflects a change to existing consensus expectations as the consensus is already priced into valuations. In this case, Country B posted a quarterly GDP number that was significantly better than expectations and since this was an unexpected positive surprise, spreads should narrow, all else being equal. | B. Incorrect because Country B posted a quarterly GDP number that was significantly better than expectations and since this was an unexpected positive surprise, spreads should narrow, not remain unchanged, all else being equal. | C. Incorrect because Country B posted a quarterly GDP number that was significantly better than expectations and since this was an unexpected positive surprise, spreads should narrow, not widen, all else being equal."
+   },
+   {
+    "n": 38,
+    "q": "Based on GERA's GDP growth forecasts, which country will most likely have the highest short-term interest rates, all else being equal?",
+    "options": [
+     "Country A",
+     "Country B",
+     "Country C"
+    ],
+    "answer": "A",
+    "why": "A. Correct because Country A is expected to have the highest level of real GDP growth rates (tied with Country C) but also high levels of volatility of real GDP growth, both of which are positively correlated with the level of real default-free interest rates. | B. Incorrect because Country B is expected to have the lowest level of real GDP growth by a significant amount. Real default-free interest rates over time are positively correlated with both real GDP growth and the volatility of real GDP growth. | C. Incorrect because Country C is expected to have the highest level of real GDP growth rates (tied with Country A) but with lower levels of volatility of real GDP growth. Since both of these factors are positively correlated with the level of real default-free interest rates, we would expect Country C to have lower interest rates than Country A, all else being equal."
+   },
+   {
+    "n": 39,
+    "q": "Which of Silva's observations regarding economic cycles and corporate earnings is most accurate?",
+    "options": [
+     "Observation 1",
+     "Observation 2",
+     "Observation 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because corporate profitability is considered a leading, not lagging, indicator of the business cycle. Improvements in profitability are often evident before a recovery is underway. | B. Incorrect because an understanding of the business cycle is crucial for making earnings projections, particularly in the short term. | C. Correct because durable goods manufacturers do have more volatile earnings profiles than non-durable goods manufacturers because of the dramatic shifts in economic cycle-related demand."
+   },
+   {
+    "n": 40,
+    "q": "Based on GERA's global economic forecast, which of the following industries is most appropriate for GERA's corporate bond research service to recommend?",
+    "options": [
+     "Airline industry",
+     "Beverage industry",
+     "Household products industry"
+    ],
+    "answer": "A",
+    "why": "A. Correct because in times of narrowing spreads, lower-rated more economically sensitive corporate bonds will tend to outperform higher-rated bonds in more stable industries. Airline bonds are generally more economically sensitive than consumer staples industries such as beverages and household products and would be likely to outperform in this environment. | B. Incorrect because in times of narrowing spreads, lower-rated more economically sensitive corporate bonds will tend to outperform higher-rated bonds in more stable industries. Airline bonds are generally more economically sensitive than consumer staples industries such as beverages and household products and would be likely to outperform in this environment. | C. Incorrect because in times of narrowing spreads, lower-rated more economically sensitive corporate bonds will tend to outperform higher-rated bonds in more stable industries. Airline bonds are generally more economically sensitive than consumer staples industries such as beverages and household products and would be likely to outperform in this environment."
+   }
+  ]
+ },
+ {
+  "id": "em-gosser",
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "title": "Economics and Investment Markets · Gosser: Taylor rule, break-even inflation, P/E",
+  "body": "Evelyn Gosser is an analyst tasked with estimating changes in interest rates and risk premiums to help make investment decisions in various countries. \n\nFor the country of Jurica, Gosser analyzes data in order to forecast changes in central bank policy rates and the government bond rate. She gathers the information in Exhibit 1. Based on this data, she concludes the current policy rate is too low.\n\nExhibit 1\nActual GDP (in $ billions)\t465\nPotential GDP (in $ billions)\t455\nTarget inflation rate\t2.50%\nInflation rate\t2.00%\nReal rate that balances long-term savings and borrowing\t0.50%\nCurrent policy rate\t2.25%\nIn addition to the information in Exhibit 1, Gosser gathers information on zero-coupon government bond rates as an input into her forecasts of the break-even inflation rate. The yield on a 5-year default-free real bond is 1.8%, and the yield on a default-free nominal bond with the same maturity is 4.3%.\n\nFinally, Gosser considers the risk premiums and valuation of equities in the country of Paleotopia. The country has experienced a long period of economic growth. She believes that a recession is likely to occur in the near future and recommends investing in companies that are better at hedging lower consumption.\n\nGosser notes that current P/E ratios are high by historical standards, but she expects them to decrease. She justifies her expectations on future P/E ratios by linking them to her forecasts of an increase in inflation expectations, a decrease in equity risk premiums, and a decline in the real rate of interest.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "The break-even inflation rate in Jurica is closest to:",
+    "options": [
+     "1.3%.",
+     "2.5%.",
+     "3.8%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it is the difference between the real bond yield of 1.80% and the real rate that balances savings and borrowing; 1.80% – 0.50% = 1.30%. However, the breakeven inflation rate is the difference between zero-coupon default-free nominal and real bond rates with the same maturity. Also, 2.25% – 0.50% = 1.75%, closest to 1.30%, should a candidate calculate the following: current policy rate less the real rate that balances savings and borrowing. | B. Correct because the difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. The BEI rate for Jurica is 4.30% – 1.80% = 2.50%. | C. Incorrect because it is the difference between the yield on nominal bonds and the real rate that balances savings and borrowing; 4.30% – 0.50% = 3.80%. However, the breakeven inflation rate is the difference between zero-coupon default-free nominal and real bond rates with the same maturity."
+   },
+   {
+    "n": 42,
+    "q": "Based on Gosser's forecast for the Paleotopian economy, the most appropriate companies to invest in produce:",
+    "options": [
+     "staple goods.",
+     "durable goods.",
+     "discretionary goods."
+    ],
+    "answer": "A",
+    "why": "A. Correct because non-cyclical companies have earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors. | B. Incorrect because companies producing durable goods have sales and profits that are sensitive to the economic cycle. As a recession is feared, firms in durable goods industries are likely to underperform. A non-cyclical company has earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors. | C. Incorrect because companies producing discretionary goods have sales that are cyclical in nature. Given the forecast of a recession, firms in discretionary goods industries are likely to underperform the market. A non-cyclical company has earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors."
+   },
+   {
+    "n": 43,
+    "q": "Gosser's conclusion about the level of the policy rate is best supported by the difference between:",
+    "options": [
+     "actual and potential GDP.",
+     "the target and actual inflation rates.",
+     "the current policy rate and the target inflation rate."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the actual GDP is greater than the potential GDP, creating a positive output gap, but the inflation rate is below its target rate. Using the Taylor rule, the policy rate = It + tt + 0.5(tt – t*t) + 0.5(Yt – Y*t) and the neutral rate = It + tt, where It = real rate that balances savings and borrowing tt = inflation rate t*t = target inflation rate Yt = actual GDP output (in log scale) Y*t = potential GDP output (in log scale), and (Yt – Y*t) = output gap. Given the information in the exhibit, the neutral rate = 0.5% + 2.0% = 2.5%. However, the current policy rate is 2.25% (= 0.5% + 2.0% + 0.5 × (2.0% – 2.5%) + 0.5 × output gap = 2.25% + 0.5 × output gap). The current policy rate would be appropriate if the output gap was 0. However, the output gap is positive (Actual GDP > Potential GDP), so the current policy rate is too low. | B. Incorrect because the target inflation rate and the actual inflation rate are consistent with the policy rate if the output gap is zero. A lower inflation rate than the target inflation rate would cause the policy rate to move lower (not higher). | C. Incorrect because the current policy rate (2.25%) is below the target inflation rate (2.50%) because it accounts for the fact that the reported inflation rate is below the target inflation rate. Per the Taylor rule, the adjustment to the neutral rate is equal to 0.5(2.0% – 2.5%) = –0.25%; 2.50% – 0.25% = 2.25%. This would have been an appropriate policy rate had the output gap been 0. However, the output gap is positive."
+   },
+   {
+    "n": 44,
+    "q": "Which of Gosser's forecasts supports her expectation about changes in P/E ratios?",
+    "options": [
+     "Real interest rate",
+     "Equity risk premium",
+     "Inflation expectations"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because high P/E ratios are likely associated win a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Gosser is expecting a decrease in the real rate of interest, which will have a positive (increasing) effect on P/E ratios. | B. Incorrect because high P/E ratios are likely associated with a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Gosser is expecting a decrease in the equity risk premium, which will have a positive (increasing) effect on P/E ratios. | C. Correct because high P/E ratios are likely associated with a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Gosser is expecting an increase in inflation expectations, which will have a negative (decreasing) effect on P/E ratios."
+   }
+  ]
+ },
+ {
+  "id": "em-rutherford",
+  "source": "7 Nov Module 1 Economics and Investment Markets quiz (35/48)",
+  "readings": [
+   34
+  ],
+  "title": "Economics and Investment Markets · Quantum: payroll news, TIPS, credit and equity cycles",
+  "body": "Andrew Rutherford is a fixed-income analyst with Quantum Credit Advisers, an institutional investment management company. Quantum offers a variety of fixed-income oriented investment strategies, including a core-plus-bond strategy as well as a popular long–short credit hedge fund. Rutherford participates in Quantum’s weekly fixed-income committee meetings.\n\nA macro topic for this week’s fixed-income committee is the possibility that the US Federal Reserve Board (Fed) will raise the federal funds rate (FFR) 25 bps at their next meeting. Quantum’s committee believes that the Fed is likely to hold off raising the FFR for at least six months because of weak economic data, and that weakness will be seen in the upcoming payroll numbers. Quantum expects the monthly non-farm payroll report to show that the US labor market added only 90,000 jobs this month, roughly in line with consensus expectations. The committee is debating what will happen to the short end of the US yield curve (and what will happen subsequently to short-dated bond prices) if the payroll report comes in at the level they expect.\n\nQuantum’s committee forecasts weaker-than-expected GDP growth in the future and expects that GDP growth will be more volatile as the economy ultimately adjusts to a changing interest rate policy. Rutherford believes these factors will exert downward pressure on short-term Treasury Inflation-Protected Securities (TIPS) rates.\n\nAs part of Rutherford’s analysis, he forecasts the real one-year risk-free rate to be 0.25% and average inflation over the next year to be 1.5%. A zero-coupon nominal Treasury bond with 1-year to maturity and a par value of $100 is currently trading at $98.05. Rutherford notes the discrepancy in market pricing relative to his forecasts.\n\nDiana Coombs is a senior credit analyst at Quantum. Based on the GDP outlook from the committee, she evaluates three bonds from different sectors (shown in Exhibit 1) for a potential new short position in the company’s hedge fund. All three bonds mature in five years.\n\nExhibit 1 Credit Market Observations\n \tEconomic Sector\tDebt/\nCapital\tEnterprise Value/EBITDA\tSpread to Treasuries (bps)\tCredit Rating\nBond 1\tPharmaceutical\t52.2%\t7.2\t255\tBaa2\nBond 2\tConsumer Discretionary\t48.3%\t7.8\t220\tBaa1\nBond 3\tSoft Drinks\t32.3%\t8.5\t210\tA3\nQuantum is looking to enhance its equity offerings. It has recently hired David Wu to help construct a quantitative equity rotation strategy that will use economic input from the fixed-income committee. Wu has a background in quantitative modeling of equity markets and is tasked with developing an aggregate earnings forecasts. He is also working on incorporating a target equity risk premium into an equity rotation model. Wu makes the following observations based on his prior experiences:\n\nObservation 1: The equity premium should be larger than, and positively correlated with, the corporate bond premium.\nObservation 2: Corporate profitability is a leading economic indicator.\nObservation 3: Equities provide superior consumption-hedging properties to high-quality bonds.\nThe equity rotation model can allocate between small- and large-cap stocks and growth and value stocks and can take targeted sector positions to enhance returns relative to the broader equity market. As the model is nearing completion, Wu evaluates how it would have performed during previous economic cycles. He runs extensive backtesting and observes the following tendencies of the model in the aftermath of recessions:\n\nRotates from consumer discretionary to consumer staple stocks\nRotates from large-cap growth stocks into large-cap value stocks\nRotates from small-cap value stocks to mid-cap value stocks",
+  "questions": [
+   {
+    "n": 45,
+    "q": "Which of the following is the most likely impact on short-term bond prices if Quantum’s expectations regarding the payroll report are correct?",
+    "options": [
+     "Fall",
+     "No change",
+     "Rise"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Bond prices are unlikely to rise or fall based on this information because it is already anticipated by the market. | B. Correct. Although Quantum is forecasting a fairly low non-farm payroll number, their expectation is in line with market consensus forecasts. Although this data may be considered weak, it provides information that is anticipated and thus already reflected in asset prices. Prices would be more likely to rise or fall if the news is a surprise relative to fully anticipated information. | C. Incorrect. Bond prices are unlikely to rise or fall based on this information because it is already anticipated by the market."
+   },
+   {
+    "n": 46,
+    "q": "Is Rutherford most likely correct with regard to the impact on short-term TIPS rates?",
+    "options": [
+     "Yes",
+     "No, with regard to the impact of growth",
+     "No, with regard to the impact of volatility"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Rutherford is incorrect about the impact higher GDP volatility should have on short-term TIPS rates. | B. Incorrect. Rutherford is correct about the impact higher GDP growth should have on short-term TIPS rates. | C. Correct. Short-term TIPS are a proxy for real default-free interest rates in the United States. Real default-free interest rates should be positively related to GDP growth and positively related to the expected volatility of GDP growth. Expected increases in GDP volatility would put upward pressure on short-term TIPS rates, all else being held equal."
+   },
+   {
+    "n": 47,
+    "q": "Which implied market expectation most likely accounts for the discrepancy in bond pricing that Rutherford notes?",
+    "options": [
+     "Credit risk",
+     "Interest rate risk",
+     "Inflation uncertainty"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Given that this is a Treasury bond, it is considered risk-free and does not include a premium for credit risk. | B. Incorrect. Interest rate risk is already being incorporated into the term structure of the yield curve and does not need to be separately added. | C. Correct. The breakeven inflation rate incorporates both premiums for expectations about inflation and for the uncertainty of the future inflation environment."
+   },
+   {
+    "n": 48,
+    "q": "Based on Quantum’s economic forecast and the data in Exhibit 1, which bond is Coombs most likely to recommend as the short position for the hedge fund?",
+    "options": [
+     "Bond 1",
+     "Bond 2",
+     "Bond 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Bond 1 is in a non-cyclical industry, unlike Bond 2, which is in a cyclical industry. Bond 1 has a slightly higher debt-to-capital ratio than Bond 2 but not material. Bond 2 has a relatively tight spread compared with Bond 1. These factors suggest that Bond 2 is a better candidate for a short position. | B. Correct. Bond 1 is in a non-cyclical industry, unlike Bond 2, that is in a cyclical industry. Bond 1 has a slightly higher debt-to-capital ratio than Bond 2 but not material. Bond 2 has a relatively tight spread compared with Bond 1. These factors suggest that Bond 2 is a better candidate for a short position. During an environment in which GDP is forecast to surprise to the downside, higher-rated issues are likely to outperform such as Bond 3. Given Quantum’s expectation for declining GDP and its relatively tight spread, Bond 2 is the best candidate for a short position. | C. Incorrect. During an environment where GDP is forecast to surprise to the downside, higher rated issues such as Bond 3 are likely to outperform."
+   }
+  ]
+ }
+]
