@@ -1,650 +1,650 @@
 [
  {
   "id": "mock5-1",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Equity Valuation",
-  "title": "Cátia Pinho: Adesivo, Enviado and Gesticular",
-  "origin": "pinho",
-  "body": "Cátia Pires is a supervisor in the equity research division of Mesa Securities. Pires asks Flávia Soares, a junior analyst, to complete an analysis of Aderente S.A., Entregue S.A., and Gestora S.A.\n\nPires directs Soares to use a valuation metric that would allow for a meaningful ranking of relative value of the three companies’ shares. Exhibit 1 provides selected financial information for the three companies.\n\nExhibit 1: Selected Financial Information for Aderente, Entregue, and Gestora (Brazilian Real, BRL)\n\tAderente\tEntregue\tGestora\nStock’s current price\t14.72\t72.20\t132.16\nDiluted EPS (last four quarters)\t0.81\t2.92\t–0.05\nDiluted EPS (next four quarters)\t0.91\t3.10\t2.85\nDividend rate (annualized most recent dividend)\t0.44\t1.24\t0.00\n\nSoares reviews underlying trailing EPS for Aderente. Aderente has basic trailing EPS of BRL0.84. Soares finds the following note in Aderente’s financial statements:\n\n“On a per share basis, Aderente incurred in the last four quarters\ni. from a lawsuit, a nonrecurring gain of BRL0.04; and\nii. from factory integration, a nonrecurring cost of BRL0.03 and a recurring cost of BRL0.01 in increased depreciation.”\n\nSoares notes that Aderente is forecasted to pay semiannual dividends of BRL0.24 next year. Soares estimates five-year earnings growth rates for the three companies, which are presented in Exhibit 2.\n\nExhibit 2: Earnings Growth Rate Estimates over Five Years\nCompany\tEarnings Growth Rate Estimate (%)\nAderente\t16.67\nEntregue\t21.91\nGestora\t32.33\n\nPires asks Soares about the possible use of the price-to-sales ratio (P/S) in assessing the relative value of the three companies. Soares tells Pires:\n\nStatement 1: The P/S is not affected by revenue recognition practices.\nStatement 2: The P/S is less subject to distortion from expense accounting than is the P/E.\n\nPires asks Soares about using the Fed and Yardeni models to assess the value of the equity market. Soares states:\n\nStatement 3: The Fed model concludes that the market is undervalued when the market’s current earnings yield is greater than the 10-year Treasury bond yield.\nStatement 4: The Yardeni model includes the consensus five-year earnings growth rate forecast for the market index.\n\nSoares also analyzes the three companies using the enterprising value (EV)-to-EBITDA multiple. Soares notes that the EBITDA for Gestora for the most recent year is BRL560 million and gathers other selected information on Gestora, which is presented in Exhibit 3.\n\nExhibit 3: Selected Information on Gestora at Year End (BRL Millions)\nMarket Value of Debt\tMarket Value of Common Equity\tMarket Value of Preferred Equity\tCash\tShort-Term Investments\n1,733\t6,766\t275\t581\t495\n\nPires asks Soares about the use of momentum indicators in assessing the shares of the three companies. Soares states:\n\nStatement 5: Relative-strength indicators compare an equity’s performance during a period with the performance of some group of equities or its own past performance.\nStatement 6: In the calculation of standardized unexpected earnings (SUE), the magnitude of unexpected earnings is typically scaled by the standard deviation of analysts’ earnings forecasts.",
+  "title": "Centralino S.p.A.",
+  "origin": "centralino",
+  "body": "Andrea Ruffo is a junior analyst with AquistareFianco, an independent equity research firm. Ruffo's supervisor asks her to update, as of 1 January 2020, a quarterly research report for Valtellina S.p.A., a telecommunications company headquartered in Italy. On that date, Valtellina's common share price is €50 and its preferred shares trade for €5.25 per share.\n\nRuffo gathers information on Valtellina. Exhibit 1 presents earnings and dividend data, and Exhibit 2 presents balance sheet data. Net sales were €3.182 billion in 2019. Ruffo estimates a required return of 15% for Valtellina and forecasts growth in dividends of 6% into perpetuity.\n\nExhibit 1: Earnings and Dividends for Valtellina, 2016–2020\n\t2016\t2017\t2018\t2019\t2020(E)\nEarnings per share (EPS, €)\t4.93\t5.25\t4.46\t5.64\t6.00\nDividends per share (DPS, €)\t2.45\t2.60\t2.60\t2.75\t2.91\nReturn on equity (ROE)\t13.01%\t13.71%\t11.58%\t14.21%\t14.96%\nThe data for 2016–2019 are actual and for 2020 are estimated.\n\nExhibit 2: Summary Balance Sheet for Valtellina, Year Ended 31 December 2019 (€ millions)\nAssets\t\tLiabilities and Shareholders' Equity\t\nCash and cash equivalents\t102\tCurrent liabilities\t259\nAccounts receivable\t305\tLong-term debt\t367\nInventory\t333\tTotal liabilities\t626\nTotal current assets\t740\tPreferred shares\t80\nProperty and equipment, net\t913\tCommon shares\t826\nTotal assets\t1,653\tRetained earnings\t121\n\t\tTotal shareholders' equity\t1,027\n\t\tTotal liabilities and shareholders' equity\t1,653\nThe market value of long-term debt is equal to its book value. Shares outstanding are 41.94 million common shares and 16.00 million preferred shares.\n\nExhibit 3 presents forward price-to-earnings ratios (P/Es) for Valtellina's peer group. Ruffo assumes no differences in fundamentals among the peer-group companies.\n\nExhibit 3: Peer Group Forward P/Es\nCompany\tForward P/E\nBrinaregalo\t5.9\nCamporio\t8.3\nEsperto\t3.0\nFornodissione\t15.0\nRadoresto\t4.6\n\nRuffo also wants to calculate normalized EPS using the average return on equity method. She determines that the 2016–19 time period in Exhibit 1 represents a full business cycle for Valtellina.",
   "questions": [
    {
     "n": 1,
-    "q": "Based on Pires’s directive and the data from the last four quarters presented in Exhibit 1, the valuation metric that Soares should use is the:",
+    "q": "Based on Exhibit 1, the trailing P/E for Valtellina as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
     "options": [
-     "earnings-to-price ratio (E/P).",
-     "production-to-demand ratio (P/D).",
-     "price-to-earnings ratio (P/E)."
+     "8.3.",
+     "8.9.",
+     "9.9."
     ],
-    "answer": "A",
-    "why": "Gestora's trailing EPS is negative (–0.05), so its trailing P/E (132.16 / –0.05) is negative and meaningless; it can't be ranked alongside the others (C is wrong).\nE/P puts the negative EPS in the NUMERATOR, giving a small negative earnings yield that still ranks sensibly:\nAderente [[0.81|14.72]] = 5.5% · Entregue [[2.92|72.20]] = 4.0% · Gestora [[–0.05|132.16]] = –0.04%\nHigher E/P = cheaper, so the ranking is meaningful.\nB (\"production-to-demand\") isn't a valuation multiple at all.",
-    "src": "pinho Q1"
+    "answer": "B",
+    "why": "Trailing P/E = [[current price|most recent four quarters' EPS]] = €50 / €5.64 = 8.9. Traps: 8.3 is the forward P/E (€50 / €6.00); 9.9 uses the 2016–19 average EPS of €5.07.",
+    "src": "centralino Q1"
    },
    {
     "n": 2,
-    "q": "Based on Exhibit 1 and the note to Aderente’s financial statements, the trailing P/E for Aderente using underlying EPS is closest to:",
+    "q": "Based on Exhibit 1 and Ruffo's estimates of return and dividend growth, Valtellina's justified forward P/E based on the Gordon growth dividend discount model is closest to:",
     "options": [
-     "18.4.",
-     "18.2.",
-     "17.7."
+     "5.4.",
+     "8.3.",
+     "5.7."
     ],
     "answer": "A",
-    "why": "Start from DILUTED trailing EPS (BRL0.81) and strip out nonrecurring items:\n− nonrecurring lawsuit gain: −0.04\n+ nonrecurring factory integration cost: +0.03\n(The BRL0.01 extra depreciation is RECURRING, so it stays in.)\nUnderlying EPS = 0.81 − 0.04 + 0.03 = BRL0.80\nTrailing P/E = [[14.72|0.80]] = 18.4\nC (17.7) makes the same adjustments to BASIC EPS: 14.72 / (0.84 − 0.04 + 0.03 = 0.83). Diluted EPS is the standard base.\nB (18.2) uses unadjusted diluted EPS: 14.72 / 0.81.",
-    "src": "pinho Q2"
+    "why": "Justified forward P/E = [[D1/E1|r − g]]. Payout = €2.91 / €6.00 = 0.485. P0/E1 = 0.485 / (0.15 − 0.06) = 5.39 ≈ 5.4. Trap: 5.7 is the justified TRAILING P/E, [[p(1 + g)|r − g]] = (2.75/5.64)(1.06)/0.09 = 5.74. 8.3 is the actual forward P/E.",
+    "src": "centralino Q2"
    },
    {
     "n": 3,
-    "q": "Which of Soares’s statements concerning the use of the P/S is correct?",
+    "q": "Based on Exhibit 2, the price-to-book multiple for Valtellina is closest to:",
     "options": [
-     "Statement 1 only",
-     "Statement 2 only",
-     "Both Statement 1 and Statement 2"
+     "2.0.",
+     "2.5.",
+     "2.2."
     ],
-    "answer": "B",
-    "why": "Statement 2 is correct: sales are the top line, so they aren't distorted by expense accounting (depreciation, write-offs etc.) the way earnings are.\nStatement 1 is wrong: sales CAN be distorted by revenue recognition practices, especially ones that speed up recognition. That rules out A and C.",
-    "src": "pinho Q4"
+    "answer": "C",
+    "why": "Book value per share uses COMMON equity: total shareholders' equity − preferred = €1,027 − €80 = €947 million. BVPS = €947 million / 41.94 million = €22.58. P/B = €50 / €22.58 = 2.2. Trap: 2.0 forgets to subtract the preferred shares (€1,027m / 41.94m = €24.49).",
+    "src": "centralino Q3"
    },
    {
     "n": 4,
-    "q": "Based on Exhibit 3, Gestora’s EV/EBITDA multiple is closest to:",
+    "q": "Based on Exhibit 2, the multiple of enterprise value to sales for Valtellina as of 31 December 2019 is closest to:",
     "options": [
-     "14.6.",
-     "11.4.",
-     "13.7."
+     "0.74.",
+     "0.77.",
+     "0.67."
     ],
-    "answer": "C",
-    "why": "EV = debt + common equity + preferred equity − cash − short-term investments (all at market value)\nEV = 1,733 + 6,766 + 275 − 581 − 495 = BRL7,698 million\nEV/EBITDA = [[7,698|560]] = 13.7\nB (11.4) reverses signs: it subtracts debt and adds cash and investments (6,766 + 275 − 1,733 + 581 + 495 = 6,384).\nA (14.6) subtracts only the cash (8,774 − 581 = 8,193). Short-term investments are cash equivalents and are deducted too.",
-    "src": "pinho Q6"
+    "answer": "B",
+    "why": "EV = market value of common + market value of preferred + market value of debt − cash = (€50 × 41.94m) + (€5.25 × 16.00m) + €367m − €102m = €2,097m + €84m + €367m − €102m = €2,446 million. EV/sales = €2.446 billion / €3.182 billion = 0.77. Trap: 0.74 leaves out the preferred shares.",
+    "src": "centralino Q4"
    }
   ]
  },
  {
   "id": "mock5-2",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Ethical and Professional Standards",
-  "title": "Brian Patrick: Northside Capital Advisers",
-  "origin": "northside",
-  "body": "Brian Gordon, CFA, has recently joined Eastwind Capital Advisers (Eastwind) as the firm’s assistant compliance officer. Eastwind manages individual accounts with conservative mandates for a variety of retirements funds, as well as individual accounts for high-net-worth investors with long investment horizons. Kyle Lim, CFA, is Eastwind’s chief compliance officer and Gordon’s supervisor. Lim has been with the firm since its inception and wrote the firm’s original Code of Ethics and Compliance Manual. Lim provides Gordon with a copy of both documents and asks Gordon to review them. He instructs Gordon to highlight any areas he feels should be revised or enhanced. Gordon lists the items that need to be addressed.\n\nThe first item Gordon adds to his list concerns the responsibilities of supervisors. Although the information contained in the Compliance Manual is accurate, he believes it needs to be augmented so the firm’s supervisors have a clear understanding of their responsibilities. He advises adding the following items to the firm’s Compliance Manual, recommending Supervisors should do the following:\n\nRecommendation 1: Conduct an initial review of the firm’s Policies and Procedures, and review as necessary to ensure they are consistent with applicable laws and regulations.\n\nRecommendation 2: Incorporate a professional conduct evaluation as part of the employee’s performance review.\n\nRecommendation 3: Review the actions of all the firm’s employees, and identify violators.\n\nGordon believes he needs a better understanding of the investment process before he makes any investment-policy-related recommendations. He meets with Staci Danbury, the firm’s chief investment officer. Following his meeting with Danbury, Gordon suggests the following enhancements to the firm’s Compliance Manual related to investment research:\n\nProposal 1: Develop criteria for assessing analysts’ research quality and contribution, including the accuracy and timing of their recommendations.\n\nProposal 2: Appoint a supervisor to review and approve communication material.\n\nProposal 3: Develop detailed, written guidance that establishes the due diligence procedures.\n\nGordon asks Danbury to provide him with a copy of a recent research report that would have been distributed to the firm’s clients. Gordon is provided a copy of the PT Marlin (PT) report, written by Amanda Wells, CFA. PT is involved in the manufacture of aluminum cans supplied to the soft drink industry. She mentions that PT has recently gone through a reorganization and is in a turnaround situation, so the potential returns are quite large. The shares were recently purchased for all client portfolios in a block trade. After reviewing the report, Gordon meets with Wells to discuss her approach to researching companies, meeting with company management, and determining earnings estimates. Wells explains to Gordon how carefully she documents her meetings with management and shares her notes with him. He compares the meeting notes with Wells’s recent report and notices she has included management’s guidance for earnings and margins along with her own estimates.\n\nGordon’s review of the firm’s Code and Compliance Policies and Procedures is almost complete. The final item to review is how the firm handles employees’ trading. He notices the current Policies and Procedures are lacking. He notes that the firm currently restricts employee participation in IPOs, has a very narrow blackout period for employees trading securities on their buy list, and ensures personal trading policies are kept confidential. Lim tells Gordon of the difficulty he experienced in trying to get more robust personal trading policies and procedures approved. The board has historically been reluctant to put restrictions in place that limit the staff’s ability to invest their personal funds.",
+  "title": "Ethics · Sobhani: Better Investments",
+  "origin": "eth6-sobhani",
+  "body": "Lantern Investments, founded by Arlo Sandoval, CFA, five years ago, is an investment adviser serving mostly middle-income clients along with several high-net-worth clients. Sandoval initially worked alone, but because of rapid growth, Lantern Investments has expanded to 20 employees today. Lantern Investments continues to add new clients and recently hired a junior analyst, Shiro Murakami.\n\nMurakami is registered for Level I of the CFA exams. He recently learned that Sandoval has been an instructor with a CFA exam prep program for many years, so he asks Sandoval if he can provide any tips on the exam. Sandoval responds, “Our prep course providers looked at the curriculum readings and based on this analysis we do not think you should worry about exotic over-the-counter (OTC) derivatives being tested. Instead focus on the core body of knowledge. CFA Institute has a heavier weighting on equities and fixed-income analysis, and I am sure the exam will always have a similar emphasis.” Murakami replies, “when I took the practice exam it seemed to have more weight on alternative investments.”\n\nIn a meeting with Stanley Pruitt, a prospective client who recently sold his business for over $100 million, Sandoval learns that Pruitt plans to quit working. Pruitt asks for ideas on how to invest his sale proceeds to build wealth within a trust structure so that he can pass capital on to his twin sons, who are 19-year-old students. Sandoval tells Pruitt:\n\nConsidering your objectives specifically, I looked at infrastructure projects in developing countries for clients interested in diversifying their portfolios with long-duration projects, consistent cash flow, high operating margins, and a positive correlation to inflation. These types of investments require large up-front cash injections, patience, and the ability to accept a long cash out period. But, there are several benefits to this type of investment that I think are important for you, including diversification, exposure to rapidly growing economies, and returns, which are currently in the 8%–12% range, based on my review of similar investments.\n\nSandoval advises two clients to diversify their portfolios into real estate. He refers them to a licensed attorney who specializes in real estate investments. Sandoval is paid a referral fee by the attorney, which he fully discloses once a client makes an investment. The attorney offered both clients the opportunity to invest in a loan secured by mortgages on three commercial warehouses. One of the clients buys into the lucrative deal, but Sandoval recommends the other client defer his investment because of liquidity constraints. When the liquidity issues are finally resolved, the investment is no longer available.\n\nReviewing the firm’s bank account, Sandoval notices several unauthorized credit card payments for thousands of dollars. Janet Whitmore, Sandoval’s personal assistant, confesses to obtaining a credit card in Sandoval’s name and using this card to fund her personal travels. Local law requires investment advisors to inform their regulators of any employee theft. But, because Whitmore is Sandoval’s cousin, he verbally reprimands her: “From now on I will hold the checkbook, and if you ever do something like this again I will report you to the regulators.”",
   "questions": [
    {
     "n": 5,
-    "q": "Which of Gordon’s recommendations is most likely insufficient to comply with the Standard relating to responsibilities of supervisors?",
+    "q": "When discussing the CFA examination, did either Sandoval or Murakami violate the Standard relating to conduct as participants in CFA Institute Programs?",
     "options": [
-     "Recommendation 1",
-     "Recommendation 2",
-     "Recommendation 3"
+     "Yes, Sandoval violated the Standard",
+     "Yes, both Sandoval and Murakami violated the Standard",
+     "No"
     ],
-    "answer": "A",
-    "why": "Standard IV(C), Responsibilities of Supervisors: once a compliance program exists, supervisors must review and update it PERIODICALLY (and whenever laws change) so it stays adequate. An initial review plus reviews 'as necessary' does not commit to periodic reviews, so Recommendation 1 falls short. Recommendations 2 (including professional conduct in performance reviews) and 3 (reviewing employees' actions and identifying violators) are appropriate supervisory procedures.",
-    "src": "northside Q1"
+    "answer": "C",
+    "why": "A. Incorrect because the information disclosed about the exams by either Sandoval or Murakami is not confidential program information, so they are not in violation of Standard VII(A). | B. Incorrect because the information disclosed about the exams by either Sandoval or Murakami is not confidential program information, so they are not in violation of Standard VII(A). | C. Correct because the information disclosed about the exams by either Sandoval or Murakami is not confidential CFA Program information, so they are not in violation of Standard VII(A), Conduct as Participants in CFA Institute Programs. Sandoval’s information was based upon his analysis of the readings and is his opinion, and Murakami referenced the practice exam, which does not reflect content in the actual CFA exam.",
+    "src": "eth6-sobhani Q5"
    },
    {
     "n": 6,
-    "q": "To indicate the area of the investment research process he wants to address, Gordon should most likely label the proposals as follows:",
+    "q": "Sandoval’s advice to Pruitt with regards to a potential investment is most consistent with the Standards concerning which of the following?",
     "options": [
-     "Proposal 1 = Compensation, Proposal 2 = Reasonable Basis, Proposal 3 = Distribution.",
-     "Proposal 1 = Reasonable Basis, Proposal 2 = Distribution, Proposal 3 = Compensation.",
-     "Proposal 1 = Compensation, Proposal 2 = Distribution, Proposal 3 = Reasonable Basis."
+     "Performance Presentation",
+     "Diligence and Reasonable Basis",
+     "Suitability"
     ],
-    "answer": "C",
-    "why": "These are Standard V(A), Diligence and Reasonable Basis, recommended procedures:\n• Compensation (Proposal 1): measurable criteria for the quality, contribution and accuracy of analysts' research, used in evaluating and paying them.\n• Distribution (Proposal 2): a supervisory analyst reviews and approves material before it goes out.\n• Reasonable Basis (Proposal 3): written due diligence procedures for judging whether a recommendation has a reasonable and adequate basis.\nA swaps Distribution and Reasonable Basis; B swaps Compensation and Reasonable Basis.",
-    "src": "northside Q2"
+    "answer": "A",
+    "why": "A. Correct because Sandoval has only stated historical returns for these types of investments based on research of other similar investments. In addition, he has not promised a specific return, so he is not in violation of Standard III(D), Performance Presentation. Sandoval is, however, in violation of Standard III(A), Loyalty, Prudence, and Care, because he is required to identify the actual client, who in this case would be Pruitt and the trust beneficiaries, the twins. From the information provided, there is no evidence that Sandoval knows or has considered the twins’ investment objectives and constraints and thus is also in violation of Standard III(C), Suitability. | B. Incorrect because even though Sandoval has disclosed some of the risks related to this type of investment, he has not discussed any country-related risks such as different accounting standards, different business practices, and unstable governments. Standard V(A), Diligence and Reasonable Basis, requires that the manager should ensure that the client’s objectives and expectations for the performance of the account are realistic and suitable to the client’s circumstance and that the risks involved are appropriate. | C. Incorrect because there is no evidence that Sandoval knows or has considered the investment objectives and constraints of the twins and therefore is in violation of Standard III(C), Suitability.",
+    "src": "eth6-sobhani Q6"
    },
    {
     "n": 7,
-    "q": "Which of the following Standards has most likely been violated in relation to the research report and purchase of PT Marlin?",
+    "q": "Concerning his advice related to real estate investments, did Sandoval most likely violate the Standards?",
     "options": [
-     "Suitability",
-     "Fair Dealing",
-     "Misrepresentation"
+     "No.",
+     "Yes, with regard to Referral Fees.",
+     "Yes, with regard to Fair Dealing."
     ],
-    "answer": "A",
-    "why": "Standard III(C), Suitability: a high-risk turnaround stock was bought for ALL client portfolios, including the retirement accounts with conservative mandates, so it was not consistent with those portfolios' objectives and constraints. B is wrong: buying for everyone in one block trade treats clients fairly (no one was favoured). C is wrong: Wells cited management's guidance alongside her own estimates, so she did not present others' work as her own.",
-    "src": "northside Q3"
+    "answer": "B",
+    "why": "A. Incorrect because Sandoval violated Standard VI(C), Referral Fees. | B. Correct because Standard VI(C), Referral Fees, requires members and candidates to disclose to their employer, clients, and prospective clients, as appropriate, any compensation, consideration, or benefit received from or paid to others for the recommendation of products or services before entry into any formal agreement for services. In this case, Sandoval advises clients of the referral fee arrangement after the fact, thus violating Standard VI(C). | C. Incorrect because Sandoval did not violate Standard III(B), Fair Dealing, because he dealt fairly and objectively with his clients, delaying the real estate investment due to liquidity constraints rather than preferential treatment.",
+    "src": "eth6-sobhani Q7"
    },
    {
     "n": 8,
-    "q": "Which of Eastwind’s current personal trading policies is least consistent with the recommended procedures for the Standard relating to priority of transactions?",
+    "q": "With regard to his actions related to Whitmore, Sandoval least likely violated the Standard relating to:",
     "options": [
-     "IPO restriction",
-     "Policy confidentiality",
-     "Blackout trading window"
+     "disclosure of conflicts.",
+     "knowledge of the law",
+     "misconduct."
     ],
-    "answer": "B",
-    "why": "Standard VI(B), Priority of Transactions, recommends that firms disclose their personal-investing policies to investors on request; keeping them confidential goes against this. A is wrong: restricting employees from IPOs is a recommended procedure (it avoids taking opportunities from clients or appearing to receive favours). C is wrong: a blackout period, even a narrow one, is recommended to stop front-running client trades.",
-    "src": "northside Q4"
+    "answer": "A",
+    "why": "A. Correct because Sandoval has not violated Standard VI(A), Disclosure of Conflicts, because disclosure of his relationship with Whitmore is not required because it would not impair Sandoval’s independence and objectivity nor interfere with his respective duties to clients. But, by not following local law and reporting his cousin’s malfeasance, Sandoval violated Standard I(A), Knowledge of the Law, and as a result also violated Standard I(D), Misconduct, because his actions reflect adversely on his professional reputation and integrity. | B. Incorrect because Standard I(A), Knowledge of the Law, states that members and candidates must understand and comply with all applicable laws, rules, and regulations (including the CFA Institute Code of Ethics and Standards of Professional Conduct) of any government, regulatory organization, licensing agency, or professional association governing their professional activities. Even though his cousin has been involved in the theft it does not alleviate the member from following local law, which requires him to report the theft to regulatory authorities. | C. Incorrect because Sandoval is in violation of Standard I(D), Misconduct, which requires that members and candidates must not engage in any professional conduct involving dishonesty, fraud, or deceit or commit any act that reflects adversely on their professional reputation, integrity, or competence. By not following local law and reporting his cousin’s malfeasance, Sobahni violated Standard I(A), Knowledge of the Law, and as a result also violated Standard I(D), Misconduct, because his actions reflect adversely on his professional reputation or integrity.",
+    "src": "eth6-sobhani Q8"
    }
   ]
  },
  {
   "id": "mock5-3",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Portfolio Management",
-  "title": "Tina Ming: Flusk Pension Fund",
-  "origin": "flusk",
-  "body": "Tina Moon is a senior portfolio manager at Harlow Pension Fund (Harlow). Harlow’s portfolio is composed of fixed-income instruments structured to match Harlow’s liabilities. Moon works with Shrikant McCoy, Harlow’s risk analyst.\n\nMoon and McCoy discuss the latest risk report. McCoy calculated value at risk (VaR) for the entire portfolio using the historical method and assuming a lookback period of five years and 250 trading days per year. McCoy presents VaR measures in Exhibit 1.\n\nExhibit 1: Harlow Portfolio VaR (in $ millions)\nConfidence Interval\tDaily VaR\tMonthly VaR\n95%\t1.10\t5.37\n\nAfter reading McCoy’s report, Moon asks why the number of daily VaR breaches over the last year is zero even though the portfolio has accumulated a substantial loss.\n\nNext, Moon requests that McCoy perform the following two risk analyses on Harlow’s portfolio:\n\nAnalysis 1\n\nUse scenario analysis to evaluate the impact on risk and return of a repeat of the last financial crisis.\n\nAnalysis 2\n\nEstimate over one year, with a 95% level of confidence, how much Harlow’s assets could underperform its liabilities.\n\nMoon recommends purchasing newly issued emerging market corporate bonds that have embedded options. Prior to buying the bonds, Moon wants McCoy to estimate the effect of the purchase on Harlow’s VaR. McCoy suggests running a stress test using a historical period specific to emerging markets that encompassed an extreme change in credit spreads.\n\nAt the conclusion of their conversation, Moon asks the following question about risk management tools: “What are the advantages of VaR compared with other risk measures?”",
+  "title": "Randy Gorver: Eastern Regional Bank",
+  "origin": "eastern",
+  "body": "Randall Garver, chief risk officer at Northern Regional Bank, and John Ashby, assistant risk officer, are currently conducting a risk assessment of several of the bank’s independent investment functions. These reviews include the bank’s fixed-income investment portfolio and an equity fund managed by the bank’s trust department. Garver and Ashby are also assessing Northern Regional’s overall risk exposure.\n\nNorthern Regional Bank Fixed-Income Investment Portfolio\n\nThe bank’s proprietary fixed-income portfolio is structured as a barbell portfolio: About half of the portfolio is invested in zero-coupon Treasuries with maturities in the 3- to 5-year range (Portfolio P1), and the remainder is invested in zero-coupon Treasuries with maturities in the 10- to 15-year range (Portfolio P2). Georges Mendes, the portfolio manager, has discretion to allocate between 40% and 60% of the assets to each maturity “bucket.” He must remain fully invested at all times. Exhibit 1 shows details of this portfolio.\n\nExhibit 1: US Treasury Barbell Portfolio\n\tP1 (3–5 Years)\tP2 (10–15 Years)\nAverage duration\t3.30\t11.07\nAverage yield to maturity\t1.45%\t2.23%\nMarket value\t$50.3 million\t$58.7 million\n\nTrust Department’s Equity Fund\n\nUse of Options: The trust department of Northern Regional Bank manages an equity fund called the Index Plus Fund, with $325 million in assets. This fund’s objective is to track the S&P 500 Index price return while producing an income return 1.5 times that of the S&P 500. The bank’s chief investment officer (CIO) uses put and call options on S&P 500 stock index futures to adjust the risk exposure of certain client accounts that have an investment in this fund. The portfolio of a 60-year-old widow with a below-average risk tolerance has an investment in this fund, and the CIO has asked his assistant, Janet Farrow, to propose an options strategy to bring the portfolio’s delta to 0.90.\n\nValue at Risk: The Index Plus Fund has a value at risk (VaR) of $6.5 million at 5% for one day. Garver asks Ashby to write a brief summary of the portfolio VaR for the report he is preparing on the fund’s risk position.\n\nCombined Bank Risk Exposures\n\nThe bank has adopted a new risk policy, which requires forward-looking risk assessments in addition to the measures that look at historical risk characteristics. Management has also become very focused on tail risk since the subprime crisis and is evaluating the bank’s capital allocation to certain higher-risk lines of business. Garver must determine what additional risk metrics to include in his risk reporting to address the new policy. He asks Ashby to draft a section of the risk report that will address the risk measures’ adequacy for capital allocation decisions.",
   "questions": [
    {
     "n": 9,
-    "q": "Based on Exhibit 1, Harlow’s portfolio is expected to experience:",
+    "q": "If Mendes is expecting a 50 bp increase in yields at all points along the yield curve, which of the following trades is he most likely to execute to minimize his risk?",
     "options": [
-     "an average daily loss of $1.10 million 5% of the time during the next 250 trading days.",
-     "a loss over one month equal to or exceeding $5.37 million 5% of the time.",
-     "a minimum daily loss of $1.10 million over the next year."
+     "Reduce the duration of P2 to 10 years and reduce the duration of P1 to 3 years",
+     "Sell $35 million of P2 and reinvest the proceeds in three-year bonds",
+     "Sell $15 million of P2 and reinvest the proceeds in three-year bonds"
     ],
-    "answer": "B",
-    "why": "VaR is the MINIMUM loss expected a given percentage of the time over a given period. A 5% VaR (95% confidence) of $5.37 million monthly means a loss of at least $5.37 million is expected in 5% of months; 95% of the time the loss should not exceed it. A drops the probability (it isn’t a loss every day). A is wrong because VaR is a minimum loss in the tail, not an average loss (that would be conditional VaR).",
-    "src": "flusk Q1"
+    "answer": "C",
+    "why": "To cut interest rate risk before yields rise, shorten duration, within the 40%–60% limit per bucket. Total = 50.3 + 58.7 = $109.0m. Selling $15m of P2 leaves 43.7 / 109.0 = 40.1% in P2 (the minimum allowed), with the proceeds at the shortest permitted maturity (3 years). Selling $35m would leave P2 at 23.7 / 109.0 = 21.7%, below the 40% floor. C cuts duration far less.",
+    "src": "eastern Q1"
    },
    {
     "n": 10,
-    "q": "The number of Harlow’s VaR breaches most likely resulted from:",
+    "q": "Which of the following options strategies is Farrow most likely to recommend for the client’s portfolio?",
     "options": [
-     "using a 95% confidence interval instead of a 99% confidence interval.",
-     "using a standard normal distribution in the VaR model.",
-     "lower market volatility during the last year compared with the lookback period."
+     "Short calls",
+     "Short puts",
+     "Long calls"
     ],
-    "answer": "C",
-    "why": "VaR is vulnerable to changes in volatility regime. If last year was calmer than the five-year lookback, VaR (built on the more volatile history) stays high, so daily losses can stay below it every day while still adding up to a large total loss. B: historical simulation uses actual past changes in risk factors, not a normal distribution (that’s the parametric method). A: a 99% level gives a LARGER VaR, so with zero breaches at 95% there would still be zero breaches.",
-    "src": "flusk Q2"
+    "answer": "A",
+    "why": "An index-tracking portfolio has delta 1. To reach 0.90 the options must add negative delta. Long calls have delta 0 to +1, so short calls have delta 0 to −1: they lower the portfolio delta. Short puts have POSITIVE delta (long puts are 0 to −1), so they would raise it.",
+    "src": "eastern Q2"
    },
    {
     "n": 11,
-    "q": "To perform Analysis 1, McCoy should use historical bond:",
+    "q": "Which of the following statements regarding the VaR of the Index Plus Fund is correct?",
     "options": [
-     "yields.",
-     "prices.",
-     "durations."
+     "Five percent of the time, the portfolio can be expected to experience a loss of at least $6.5 million.",
+     "Ninety-five percent of the time, the portfolio can be expected to experience a one-day loss of no more than $6.5 million.",
+     "The expected maximum loss for the portfolio is $6.5 million."
     ],
     "answer": "A",
-    "why": "To replay a past crisis on today’s holdings, reprice the current bonds using historical yields of bonds with similar maturities; yields drive bond prices. Historical prices of today’s bonds may not exist, or may not reflect their current characteristics (e.g. maturity). Durations change with the passage of time, so past durations don’t describe the current bonds.",
-    "src": "flusk Q3"
+    "why": "VaR is a minimum loss in the tail: on 5% of days the loss will be at least $6.5 million. It is not a maximum loss (C); losses can be far larger. C implies the fund has a LOSS on 95% of days; correctly, returns will be ≥ −$6.5 million on 95% of days, and those returns include gains.",
+    "src": "eastern Q3"
    },
    {
     "n": 12,
-    "q": "The limitation of the approach requested for Analysis 1 is that it:",
+    "q": "To comply with the new bank policy on risk assessment, which of the following is the best set of risk measures to add to the chief risk officer’s risk reporting?",
     "options": [
-     "omits asset correlations.",
-     "assumes no deviation from historical market events.",
-     "precludes incorporating portfolio manager actions."
+     "Conditional VaR, stress test, and scenario analysis",
+     "Monte Carlo VaR, incremental VaR, and stress test",
+     "Parametric VaR, marginal VaR, and scenario analysis"
     ],
-    "answer": "B",
-    "why": "A historical scenario replays one past period exactly; history will not repeat in exactly the same way. It is complementary to VaR but needs other measures (e.g. hypothetical scenarios, reverse stress tests). It does capture the correlations of that period (A is wrong).",
-    "src": "flusk Q4"
+    "answer": "A",
+    "why": "The policy wants forward-looking measures and a focus on tail risk. Conditional VaR (expected loss beyond VaR) measures the tail; stress tests and scenario analysis apply historical or hypothetical extreme events to current holdings. The other sets mix in VaR variants and position-change measures (incremental, marginal VaR) that don’t address the tail or forward-looking requirement.",
+    "src": "eastern Q4"
    }
   ]
  },
  {
   "id": "mock5-4",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Quantitative Methods",
-  "title": "Alwyn Rivera: Elite Investments",
-  "origin": "elite-rivera",
-  "body": "Alden Ramos is a portfolio manager at Prime Investments (PI) based in the US. Ramos has a shortlist of 50 US public firms and wants to better understand the factors that may explain the cross-sectional variation in these stocks' returns. Based on the finance literature, Ramos believes that firm size and book-to-market ratio are important factors that need to be included in his model. He also thinks that being included in the Dow Jones Industrial Average Index (DJIA) can help a firm get more media attention and potentially attract more investors, which in turn may affect a stock's return.\n\nTo test his theory, Ramos collects the annual returns (r) of these 50 stocks in the year that just ended, as well as their market capitalizations (Size, in billions of dollars) and book-to-market ratios (BMRatio) at the end of the previous year. He also creates a dummy variable (Dow) that is coded 1 if a stock is included in the DJIA and 0 otherwise, and then runs the following regression:\n\nri = b0 + b1 lnSizei + b2 BMRatioi + b3 Dowi + εi\n\nwhere lnSizei is the natural log of the market capitalization of company i in billions of dollars and Dowi is the dummy variable. The output from the regression model is shown in Exhibit 1.\n\nExhibit 1\n\tCoefficient\tt-statistic\tp-value\nIntercept\t-0.6483\t-3.8773\t0.0003\nSize\t0.1777\t5.1125\t<0.0001\nBMRatio\t0.0433\t2.9346\t0.0052\nInDow\t-0.1641\t-1.8362\t0.0728\n\nExhibit 1 (continued)\n\t\nR2\t0.3700\nAdjusted R2\t0.3289\nStandard Error\t0.2827\nObservations\t50\n\nExhibit 1 (continued): ANOVA\n\tDegrees of freedom\tSum of squares\tMean squares\tF-statistic\tSignificance F\nRegression\t3\t2.1593\t0.7198\t9.006\t<0.0001\nResidual\t46\t3.6766\t0.0799\t\t\nTotal\t49\t5.8359\t\t\t\n\nRamos shows his model and results to a summer intern, and asks whether he should use the reported R2 or adjusted R2 to measure the goodness of fit of his model. The intern replies, \"Adjusted R2 would be more appropriate in this case because the model has more than one independent variable. Adjusted R2 is adjusted for degrees of freedom and nondecreasing in the number of independent variables.\"",
+  "title": "Hu and Li: log-linear trend and ML model choice",
+  "origin": "tb1-hu",
+  "body": "Sang Hao is the quantitative analyst for Guanlin Equity Partners. Hao has been busy over the past week modeling the macroeconomic data of an emerging market.\nThe data for the past 24 months is shown in Exhibit 1.\nExhibit 1 (line graph, described): macroeconomic data against month (1 to 24). Exponential growth: about 25 at month 1, about 100 at month 12, accelerating to just over 500 (about 535) by month 24.\nHao ponders how she can run a regression that will model the data for this country in the most appropriate way. She decides to regress the macroeconomic values against a time variable. The resulting plot of the residuals is shown in Exhibit 2.\nExhibit 2 (scatter plot, described): residuals against month over a 28-month period. Residuals begin near +100, decline steadily to a low of about -100 at month 14, then rise symmetrically to above +100 by month 26. The points form a clear U-shaped curve, indicating a systematic pattern in the residuals over time.\nHao set up a meeting with Qiming Lu, senior analyst, to discuss the progress on a model that Lu was developing. The model is supposed to forecast return over the next month for a group of 100 midsize companies. A portfolio with a long position in 10 stocks with the highest forecasted return and a corresponding short position in 10 stocks with the lowest return is envisioned. Lu mentions that he is collecting the relevant fundamental and technical variable data for the 100 companies.\nLu states that he would rather take the broad sample of 1,000 stocks with the highest trading volume and divide the sample into 10 groups of diverse characteristics. The intent is to select one stock from each group to long/short so as to diversify the portfolio composition and reduce risk.",
   "questions": [
    {
     "n": 13,
-    "q": "Based on the results in Exhibit 1, which of the following interpretations regarding the coefficient of the variable BMRatio is most accurate?",
+    "q": "To best model the emerging markets data using linear regression, Hao should use:",
     "options": [
-     "Holding MCap and InDow variables constant, a stock's annual return is expected to increase by 0.043% for each 1% increase in its book-to-market ratio.",
-     "A stock's annual return is expected to increase by 1% for each 0.043% increase in its book-to-market ratio.",
-     "Assuming MCap and InDow variables are both zero, a stock's annual return is expected to increase by 0.043% for each 1% increase in its book-to-market ratio."
+     "White's correction for the standard errors.",
+     "the natural log of the dependent variable.",
+     "an adjustment for multicollinearity."
     ],
-    "answer": "A",
-    "why": "A slope coefficient in multiple regression is a partial effect: the change in the dependent variable for a one-unit change in that variable, holding all the other independent variables constant. So 0.043 is the expected rise in return per unit rise in BMRatio, with size and DJIA membership held constant. A reverses the relationship. C is wrong: the coefficient means 'holding the others constant', not 'when the others are zero'; setting them to zero would be a different (simple) regression with a different coefficient.",
-    "src": "elite-rivera Q1"
+    "answer": "B",
+    "why": "The data follow a log-linear (exponential) trend. Taking the natural log of the dependent variable makes the data linear so it can be modeled with linear regression.",
+    "src": "tb1-hu Q1"
    },
    {
     "n": 14,
-    "q": "Using two-tailed t-tests to determine if the coefficients of the independent variables are equal to zero at the 0.05 significance level, the null hypotheses are most likely rejected for the coefficients of:",
+    "q": "The most likely problem in Hao's regression of the emerging market data and the most appropriate test for it in the regression is:",
     "options": [
-     "InDow and BMRatio only.",
-     "Size and InDow only.",
-     "Size and BMRatio only."
+     "Serial correlation / Dickey-Fuller",
+     "Cointegrated variables / Engle-Granger",
+     "Serial correlation / Durbin-Watson"
     ],
     "answer": "C",
-    "why": "Reject H0 (coefficient = 0) when the p-value is below 0.05. Size (p < 0.0001) and BMRatio (p = 0.0052) qualify. InDow (p = 0.0728) does not, so it is not significant at 5% (it would be at 10%). That rules out B and A, which both include InDow.",
-    "src": "elite-rivera Q2"
+    "why": "The residuals in Exhibit 2 are positively correlated (positive, then negative, then positive): serial correlation, common in trend models. In a linear trend model the Durbin-Watson statistic detects it. (Options are Problem / Test pairs.)",
+    "src": "tb1-hu Q2"
    },
    {
     "n": 15,
-    "q": "The predicted annual return for a stock that is included in the DJIA, has a market capitalization of $52 billion and a book-to-market ratio of 0.45 is closest to:",
+    "q": "Which model would be most appropriate for Lu to use in predicting returns?",
     "options": [
-     "3.59%.",
-     "7.33%.",
-     "−9.08%."
+     "Clustering model.",
+     "KNN model.",
+     "Penalized regression model."
     ],
     "answer": "C",
-    "why": "r = −0.6483 + 0.1777 × ln(Size in $ billions) + 0.0433 × BMRatio − 0.1641 × Dow, with Size = 52, BMRatio = 0.45 and Dow = 1 (in the DJIA):\n= −0.6483 + 0.1777 × ln(52) + 0.0433 × 0.45 − 0.1641 × 1\n= −0.6483 + 0.1777 × 3.9512 + 0.0195 − 0.1641 = −0.0908 = −9.08%.\nA (3.59%) plugs in ln(52,000,000,000) instead of ln(52), and then mislabels 3.59 as a percentage. B (7.33%) sets Dow = 0, which is the prediction for a stock NOT in the DJIA.",
-    "src": "elite-rivera Q3"
+    "why": "The objective is to forecast monthly returns from fundamental and technical variables: not a classification problem, so clustering and KNN are inappropriate. Penalized regression uses a limited number of the most important features.",
+    "src": "tb1-hu Q3"
    },
    {
     "n": 16,
-    "q": "The intern’s response to Ramos's question regarding the adjusted R2 measure is:",
+    "q": "Lu's suggested diversification problem could be best addressed using the:",
     "options": [
-     "incorrect with regard to the nondecreasing feature.",
-     "incorrect with regard to its appropriateness for Ramos's model.",
-     "correct."
+     "K-means clustering.",
+     "principal component analysis (PCA).",
+     "LASSO."
     ],
     "answer": "A",
-    "why": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and B is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t| < 1), and it can even be negative. It is plain R² that never decreases when variables are added.",
-    "src": "elite-rivera Q4"
+    "why": "K-means partitions observations into k (here 10) non-overlapping clusters, so one stock can be drawn from each group. PCA is for dimension reduction; LASSO is for regression, not clustering.",
+    "src": "tb1-hu Q4"
    }
   ]
  },
  {
   "id": "mock5-5",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Financial Statement Analysis",
-  "title": "BetterCare and Supreme: joint venture methods and receivables SPE",
-  "origin": "ic1-4",
-  "body": "WellCare Hospitals, Inc. operates a chain of hospitals throughout the United States. The company has been expanding by acquiring local hospitals. Its largest acquisition, that of Countywide Medical, was made in 2001 under the pooling of interests method. WellCare complies with US GAAP.\n\nWellCare is currently forming a 50/50 joint venture with Summit Healthcare under which the companies will share control of several hospitals. WellCare plans to use the equity method to account for the joint venture. Summit Healthcare complies with IFRS and will use the proportionate consolidation method to account for the joint venture.\n\nErik Olsen is an equity analyst who covers both companies. He has estimated the joint venture’s financial information for 2018 in order to prepare his estimates of each company’s earnings and financial performance. This information is presented in Exhibit 1.\n\nExhibit 1\nSelected Financial Statement Forecasts for Joint Venture ($ Millions)\nYear ending 31 December\t2018\nRevenue\t1,430\nOperating income\t128\nNet income\t62\n31 December\t2018\nTotal assets\t1,500\nShareholders’ equity\t740\nSummit Healthcare recently announced it had formed a special purpose entity through which it plans to sell up to $100 million of its accounts receivable. Summit Healthcare has no voting interest in the SPE, but it is expected to absorb any losses that it may incur. Olsen wants to estimate the impact this will have on Summit Healthcare’s consolidated financial statements.",
+  "title": "Cinnamon: 19% to 50% stake, equity method vs consolidation",
+  "origin": "ic1-2",
+  "body": "Saffron, Inc. is a diversified manufacturing company headquartered in the United Kingdom. It complies with IFRS. In 2017, Saffron held a 19 percent passive equity ownership interest in Oxford Processing. In December 2017, Saffron announced that it would be increasing its ownership interest to 50 percent effective 1 January 2018 through a cash purchase. Saffron and Oxford have no intercompany transactions.\n\nPeter Lambert, an analyst following both Saffron and Oxford, is curious how the increased stake will affect Saffron’s consolidated financial statements. He asks Saffron’s CFO how the company will account for the investment, and is told that the decision has not yet been made. Lambert decides to use his existing forecasts for both companies’ financial statements to compare the outcomes of alternative accounting treatments.\n\nLambert assembles abbreviated financial statement data for Saffron (Exhibit 1) and Oxford (Exhibit 2) for this purpose.\n\nExhibit 1\nSelected Financial Statement Information for Saffron, Inc. (£ Millions)\nYear ending 31 December\t2017\t2018*\nRevenue\t1,400\t1,575\nOperating income\t126\t142\nNet income\t62\t69\n31 December\t2017\t2018*\nTotal assets\t1,170\t1,317\nShareholders’ equity\t616\t685\n* Estimates made prior to announcement of increased stake in Oxford.\nExhibit 2\nSelected Financial Statement Information for Oxford Processing (£ Millions)\nYear ending 31 December\t2017\t2018*\nRevenue\t1,000\t1,100\nOperating income\t80\t88\nNet income\t40\t44\nDividends paid\t20\t22\n31 December\t2017\t2018*\nTotal assets\t800\t836\nShareholders’ equity\t440\t462\n* Estimates made prior to announcement of increased stake by Saffron.",
   "questions": [
    {
     "n": 17,
-    "q": "Based on Olsen’s estimates, the amount of joint venture revenue (in $ millions) included on WellCare’s consolidated 2018 financial statements should be closest to:",
+    "q": "In 2018, if Saffron is deemed to have control over Oxford, it will most likely account for its investment in Oxford using:",
     "options": [
-     "$1,430.",
-     "$715.",
-     "$0."
+     "the acquisition method.",
+     "proportionate consolidation.",
+     "the equity method."
     ],
-    "answer": "C",
-    "why": "C is correct. Under the equity method, WellCare would record its interest in the joint venture’s net profit as a single line item, but would show no line-by-line contribution to revenues or expenses.",
-    "src": "ic1-4 Q17"
+    "answer": "A",
+    "why": "A is correct. If Saffron is deemed to have control over Oxford, it would use the acquisition method to account for Oxford and prepare consolidated financial statements. Proportionate consolidation is not permitted for joint ventures; the equity method is used for joint ventures and when there is significant influence but not control.",
+    "src": "ic1-2 Q7"
    },
    {
     "n": 18,
-    "q": "Based on Olsen’s estimates, the amount of joint venture net income included on the consolidated financial statements of each venturer will most likely be:",
+    "q": "At 31 December 2018, Saffron’s total shareholders’ equity on its balance sheet would most likely be:",
     "options": [
-     "higher for WellCare.",
-     "higher for Summit Healthcare.",
-     "the same for both WellCare and Summit Healthcare."
+     "highest if Saffron is deemed to have control of Oxford.",
+     "independent of the accounting method used for the investment in Oxford.",
+     "highest if Saffron is deemed to have significant influence over Oxford."
     ],
-    "answer": "C",
-    "why": "C is correct. Net income will be the same under the equity method and proportional consolidation. However, sales, cost of sales, and expenses are different because under the equity method the net effect of sales, cost of sales, and expenses is reflected in a single line.",
-    "src": "ic1-4 Q18"
+    "answer": "A",
+    "why": "A is correct. If Saffron is deemed to have control over Oxford, consolidated financial statements would be prepared and Saffron’s total shareholders’ equity would increase and include the amount of the noncontrolling interest. If Saffron is deemed to have significant influence, the equity method would be used and there would be no change in the total shareholders’ equity of Saffron.",
+    "src": "ic1-2 Q8"
    },
    {
     "n": 19,
-    "q": "Based on Olsen’s estimates, the amount of the joint venture’s 31 December 2018 total assets (in $ millions) that will be included on Summit Healthcare’s consolidated financial statements will be closest to:",
+    "q": "In 2018, Saffron’s net profit margin would be highest if:",
     "options": [
-     "$0.",
-     "$750.",
-     "$1,500."
+     "it is deemed to have control of Oxford.",
+     "it had not increased its stake in Oxford.",
+     "it is deemed to have significant influence over Oxford."
     ],
-    "answer": "B",
-    "why": "B is correct. Under the proportionate consolidation method, Summit Healthcare’s consolidated financial statements will include its 50 percent share of the joint venture’s total assets.",
-    "src": "ic1-4 Q19"
+    "answer": "C",
+    "why": "C is correct. If Saffron is deemed to have significant influence, it would report half of Oxford’s net income as a line item on its income statement, but no additional revenue is shown. Its profit margin is thus higher than if it consolidated Oxford’s results, which would impact revenue and income, or if it only reported 19 percent of Oxford’s dividends (no change in ownership).",
+    "src": "ic1-2 Q9"
    },
    {
     "n": 20,
-    "q": "Based on Olsen’s estimates, the amount of joint venture shareholders’ equity at 31 December 2018 included on the consolidated financial statements of each venturer will most likely be:",
+    "q": "At 31 December 2018, assuming control and recognition of goodwill, Saffron’s reported debt to equity ratio will most likely be highest if it accounts for its investment in Oxford using the:",
     "options": [
-     "the same for both WellCare and Summit Healthcare.",
-     "higher for WellCare.",
-     "higher for Summit Healthcare."
+     "equity method.",
+     "full goodwill method.",
+     "partial goodwill method."
     ],
-    "answer": "A",
-    "why": "A is correct. The choice of equity method or proportionate consolidation does not affect reported shareholders’ equity.",
-    "src": "ic1-4 Q20"
+    "answer": "C",
+    "why": "C is correct. The full and partial goodwill method will have the same amount of debt; however, shareholders’ equity will be higher under full goodwill (and the debt to equity ratio will be lower). Therefore, the debt to equity will be higher under partial goodwill. If control is assumed, Saffron cannot use the equity method.",
+    "src": "ic1-2 Q10"
    }
   ]
  },
  {
   "id": "mock5-6",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Equity Valuation",
-  "title": "Yandie Izzo: Companies A, B and C",
-  "origin": "izzo",
-  "body": "Yvette Izard manages a dividend growth strategy for a large asset management firm. Izard meets with her investment team to discuss potential investments in three companies: Company A, Company B, and Company C. Statements of cash flow for the three companies are presented in Exhibit 1.\n\nExhibit 1: Statements of Cash Flow, Most Recent Fiscal Year End (Amounts in Millions of Dollars)\n\tCompany A\tCompany B\tCompany C\nCash Flow from Operating Activities\t\t\t\nNet Income\t4,844\t1,212\t15,409\nAdjustments\t\t\t\n  Depreciation\t500\t288\t3,746\n  Other noncash expenses\t1,000\t—\t—\n  Changes in working capital\t\t\t\n    (Increase) Decrease accounts receivable\t(452)\t(150)\t(536)\n    (Increase) Decrease inventories\t—\t(200)\t(803)\n    Increase (Decrease) accounts payable\t(210)\t100\t(3)\n    Increase (Decrease) other current liabilities\t540\t14\t350\n      Net cash from operating activities\t6,222\t1,264\t18,163\nCash Flow from Investing Activities\t\t\t\n(Purchase) Sale of fixed assets\t2,379\t(1,000)\t(3,463)\n      Net cash from investing activities\t2,379\t(1,000)\t(3,463)\nCash Flow from Financing Activities\t\t\t\nIncrease (Decrease) notes payable\t25\t3000\t1,238\nIncrease (Decrease) long-term debt\t(1,500)\t(1,000)\t(1,379)\nPayment of common stock dividends\t(1,000)\t(237)\t(15,000)\n      Net cash from financing activities\t(2,475)\t1,763\t(15,141)\nNet change in cash and cash equivalents\t6,126\t2,027\t(441)\nCash and equivalents at beginning of year\t50\t100\t3,000\nCash and equivalents at end of year\t6,176\t2,127\t2,559\nSupplemental Cash Flow Disclosures\t\t\t\nInterest\t(353)\t(50)\t(552)\nIncome taxes\t(1,605)\t(648)\t(3,787)\n\nIzard’s team first discusses key characteristics of Company A. The company has a history of paying modest dividends relative to FCFE, has a stable capital structure, and is owned by a controlling investor.\n\nThe team also considers the impact of Company A’s three noncash transactions in the most recent year on its FCFE, including the following:\n\nTransaction 1: A $900 million loss on a sale of equipment\nTransaction 2: An impairment of intangibles of $400 million\nTransaction 3: A $300 million reversal of a previously recorded restructuring charge\n\nIn addition, Company A’s annual report indicates that the firm expects to incur additional noncash charges related to restructuring over the next few years.\n\nTo value the three companies’ shares, one team member suggests valuing the companies’ shares using net income as a proxy for FCFE. Another team member proposes forecasting FCFE using a sales-based methodology based on the following equation:\n\nFCFE = NI – (1 – DR)(FCInv – Dep) – (1 – DR)(WCInv).\n\nIzard’s team ultimately decides to use actual free cash flow to value the three companies’ shares. Selected data and assumptions are provided in Exhibit 2.\n\nExhibit 2: Supplemental Data and Valuation Assumptions\n\tCompany A\tCompany B\tCompany C\nTax rate\t35%\t35%\t30%\nBeta\t1.00\t0.90\t1.10\nBefore-tax cost of debt\t6%\t7%\t6%\nTarget debt ratio\t50%\t30%\t40%\nMarket data:\t\t\t\n  Risk-free rate: 3%\t\t\t\n  Market risk premium: 7%\t\t\t\n\nThe team calculates the intrinsic value of Company B using a two-stage FCFE model. FCFE growth rates for the first four years are estimated at 10%, 9%, 8%, and 7%, respectively, before declining to a constant 6% starting in the fifth year.\n\nTo calculate the intrinsic value of Company C’s equity, the team uses the FCFF approach assuming a single-stage model where FCFF is expected to grow at 5% indefinitely.",
+  "title": "Charmed Energy",
+  "origin": "charmed",
+  "body": "Brian Dawes, an analyst at a UK-based globally diversified equity mutual fund, has been assigned the task of estimating a fair value of the common stock of Radiant Energy. Dawes is aware of several approaches that could be used for this purpose. After carefully considering the characteristics of the company and its competitors, he believes Radiant will have extraordinary growth for the next few years and normal growth thereafter. So, he has concluded that a two-stage DDM is the most appropriate for valuing the stock.\n\nRadiant pays semi-annual dividends. The total dividends during 2016, 2017, and 2018 have been C$0.114, C$0.15, and C$0.175, respectively. These imply a growth rate of 32% in 2017 and 17% in 2018. Dawes believes that the growth rate will be 14% in the next year. He has estimated that the first stage will include the next eight years.\n\nDawes is using the CAPM to estimate the required return on equity for Radiant. He has estimated that the company's beta, as measured against the S&P/TSX Composite Index (formerly TSE 300 Composite Index), is 0.84. The Canadian risk-free rate, as measured by the annual yield on the 10-year government bond, is 4.1%. The equity risk premium for the Canadian market is estimated at 5.5%. Based on these data, Dawes has estimated that the required return on Radiant Energy's stock is 0.041 + 0.84(0.055) = 0.0872, or 8.72%. Dawes is doing the analysis in January 2019, and the stock price at that time is C$17.\n\nDawes realizes that even within the two-stage DDM, there could be some variations in the approach. He would like to explore how these variations affect the stock's valuation. Specifically, he wants to estimate the value of the stock for each of the following approaches separately.\n\nApproach 1\n\nThe dividend growth rate will be 14% throughout the first stage of eight years. The dividend growth rate thereafter will be 7%.\n\nApproach 2\n\nInstead of using the estimated stable growth rate of 7% in the second stage, Dawes wants to use his estimate that eight years later, Radiant Energy's stock will be worth 17 times its earnings per share (trailing P/E of 17). He expects that the earnings retention ratio at that time will be 0.70.\n\nApproach 3\n\nIn contrast to the first approach, in which the growth rate declines abruptly from 14% in the eighth year to 7% in the ninth, the growth rate would decline linearly from 14% in the first year to 7% in the ninth.",
   "questions": [
    {
     "n": 21,
-    "q": "Which noncash transaction should be subtracted from net income in arriving at Company A’s FCFE?",
+    "q": "What is the terminal value of the stock based on the first approach?",
     "options": [
-     "Transaction 1",
-     "Transaction 2",
-     "Transaction 3"
+     "C$31.06.",
+     "C$17.65.",
+     "C$33.09."
     ],
-    "answer": "C",
-    "why": "Noncash items are reversed out of net income:\n• Transaction 1, loss on sale of equipment: reduced NI with no cash outflow → ADD back +900\n• Transaction 2, impairment of intangibles: reduced NI, noncash → ADD back +400\n• Transaction 3, reversal of a restructuring charge: INCREASED NI with no cash inflow → SUBTRACT −300\nNoncash losses/charges are added back (A and B); noncash gains are subtracted.",
-    "src": "izzo Q2"
+    "answer": "A",
+    "why": "D8 = 0.175 × 1.14⁸ = C$0.4992. Terminal value at the end of year 8: V8 = [[D9|r − g]] = 0.4992 × 1.07 / (0.0872 − 0.07) = C$31.0550. Dividends D1–D8: 0.1995, 0.2274, 0.2593, 0.2956, 0.3369, 0.3841, 0.4379, 0.4992; their PVs at 8.72% sum to C$1.7433. PV of V8 = 31.0550 / 1.0872⁸ = C$15.9095. Total value V0 = C$17.6528. Trap: C$17.65 is the stock's value today, not the terminal value.",
+    "src": "charmed Q1"
    },
    {
     "n": 22,
-    "q": "Based on Exhibit 1, Company A’s FCFE for the most recent year is closest to:",
+    "q": "In the first approach, what proportion of the stock's total value is represented by the value of second stage?",
     "options": [
-     "$7,126 million.",
-     "$5,318 million.",
-     "$6,126 million."
+     "0.90.",
+     "0.10.",
+     "0.52."
     ],
     "answer": "A",
-    "why": "FCFE = NI + noncash charges − WCInv − FCInv + net borrowing\nNet income: 4,844\n+ Noncash charges (depreciation 500 + other noncash 1,000): +1,500\n− Working capital investment (AR −452, AP −210, other CL +540 = −122): −122\n+ Proceeds from sale of fixed assets: +2,379\n+ Net borrowing (notes +25, LT debt −1,500 = −1,475): −1,475\nFCFE = $7,126 million\n(Shortcut: CFO 6,222 + CFI 2,379 + net borrowing −1,475 = 7,126.)\nB ($5,318) flips two signs: it subtracts the asset sale proceeds and adds back the debt repayment.\nC ($6,126) is the net change in cash, which also deducts the $1,000 dividend. Dividends are a USE of FCFE, not a deduction from it.",
-    "src": "izzo Q3"
+    "why": "Value of the second stage = PV of V8 = C$15.9095. Total value = C$17.6528. Proportion = 15.9095 / 17.6528 = 0.90. The terminal value usually dominates a multistage DDM.",
+    "src": "charmed Q2"
    },
    {
     "n": 23,
-    "q": "Based on Exhibit 1, using net income as a proxy for Company B’s FCFE would result in an intrinsic value that is:",
+    "q": "What is the stock's terminal value based on the second approach (earnings multiple)?",
     "options": [
-     "lower than the intrinsic value if actual FCFE were used.",
-     "equal to the intrinsic value if actual FCFE were used.",
-     "higher than the intrinsic value if actual FCFE were used."
+     "C$33.09.",
+     "C$12.12.",
+     "C$28.29."
     ],
-    "answer": "A",
-    "why": "Company B's actual FCFE:\nNet income: 1,212\n+ Depreciation: +288\n− WCInv (AR −150, inventory −200, AP +100, other CL +14 = −236): −236\n− Fixed capital investment: −1,000\n+ Net borrowing (notes +3,000, LT debt −1,000): +2,000\nFCFE = $2,264 million\nNI ($1,212m) is far BELOW FCFE ($2,264m), mainly because of the $2,000m of net borrowing, so a value built on NI is lower (B and C are wrong).\nNI is only a fair proxy when depreciation ≈ capex, working capital is steady and there is no net borrowing.",
-    "src": "izzo Q4"
+    "answer": "C",
+    "why": "V8/E8 = 17 and the payout ratio D8/E8 = 1 − 0.70 = 0.30. With D8 = C$0.4992, E8 = 0.4992 / 0.30 = C$1.6640. So V8 = 17 × 1.6640 = C$28.2880.",
+    "src": "charmed Q3"
    },
    {
     "n": 24,
-    "q": "Based on Exhibit 1 and Exhibit 2 and the proposed two-stage FCFE model, the intrinsic value of Company B’s equity is closest to:",
+    "q": "What is the stock's current value based on the second approach?",
     "options": [
-     "$70,602 million.",
-     "$79,596 million.",
-     "$73,588 million."
+     "C$16.24.",
+     "C$28.29.",
+     "C$17.65."
     ],
-    "answer": "B",
-    "why": "(Missing formulas rebuilt.)\nFCFE₀ = $2,264 million (see the previous FCFE question).\nRequired return (CAPM): r = 3% + 0.90 × 7% = 9.3%\nForecast FCFE:\nYear 1 (10%): 2,264.00 × 1.10 = 2,490.40\nYear 2 (9%): 2,490.40 × 1.09 = 2,714.54\nYear 3 (8%): 2,714.54 × 1.08 = 2,931.70\nYear 4 (7%): 2,931.70 × 1.07 = 3,136.92\nYear 5 (6%): 3,136.92 × 1.06 = 3,325.13\nPV of years 1–4 = [[2,490.40|1.093]] + [[2,714.54|1.093²]] + [[2,931.70|1.093³]] + [[3,136.92|1.093⁴]]\n= 2,278.50 + 2,272.25 + 2,245.22 + 2,197.97 = 8,993.94\nTerminal value at end of year 4: TV₄ = [[FCFE₅|r − g]] = [[3,325.13|0.093 − 0.06]] = 100,761.60\nPV of TV₄ = [[100,761.60|1.093⁴]] = 70,601.58\nEquity value = 8,993.94 + 70,601.58 = $79,596 million\nA ($70,602m) is the PV of the terminal value alone; it leaves out the first four years.\nC ($73,588m) discounts the terminal value over 5 years instead of 4. TV₄ is a value at the END of year 4, so it's discounted 4 periods.",
-    "src": "izzo Q6"
+    "answer": "A",
+    "why": "V8 = 17 × 1.6640 = C$28.2880. PV of V8 = 28.2880 / 1.0872⁸ = C$14.4919. Add the PV of D1 through D8 (C$1.7433): V0 = 14.4919 + 1.7433 = C$16.2352. Trap: C$17.65 is the value from the first approach; C$28.29 is the terminal value.",
+    "src": "charmed Q4"
    }
   ]
  },
  {
   "id": "mock5-7",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Fixed Income",
-  "title": "Betty Tatton: Sailboat Asset Management",
-  "origin": "sam",
-  "body": "Betty Talbot is a fixed-income analyst with the hedge fund Harbor Asset Management (HAM). HAM invests in a variety of global fixed-income strategies, including fixed-income arbitrage. Talbot is responsible for pricing individual investments and analyzing market data to assess the opportunity for arbitrage. She uses two methods to value bonds:\n\nMethod 1: Discount each year’s cash flow separately using the appropriate interest rate curve.\n\nMethod 2: Build and use a binomial interest rate tree.\n\nTalbot compiles pricing data for a list of annual pay bonds (Exhibit 1). Each of the bonds will mature in two years, and Talbot considers the bonds risk-free; both the one-year and two-year benchmark spot rates are 2%. Talbot calculates the arbitrage-free prices and identifies an arbitrage opportunity to recommend to her team.\n\nExhibit 1: Market Data for Selected Bonds\nAsset\tCoupon\tMarket Price\nBond A\t1%\t98.0584\nBond B\t3%\t100.9641\nBond C\t5%\t105.8247\n\nNext, Talbot uses the benchmark yield curve provided in Exhibit 2 to consider arbitrage opportunities of both option-free corporate bonds and corporate bonds with embedded options. The benchmark bonds in Exhibit 2 pay coupons annually, and the bonds are priced at par.\n\nExhibit 2: Benchmark Par Curve\nMaturity (years)\tYield-to-Maturity (YTM)\n1\t3.0%\n2\t4.0%\n3\t5.0%\n\nTalbot then identifies three mispriced three-year annual coupon bonds and compiles data on the bonds (see Exhibit 3).\n\nExhibit 3: Market Data of Annual Pay Corporate Bonds\nCompany\tCoupon\tMarket Price\tYield\tEmbedded Option?\nHollis-Barton Inc.\t3%\t94.9984\t5.6%\tNo\nLuna y Estrellas Intl.\t0%\t88.8996\t4.0%\tYes\nPeaton Scorpio Motors\t0%\t83.9619\t6.0%\tNo\n\nLastly, Talbot identifies two mispriced Swiss bonds, Bond X, a three-year bond, and Bond Y, a five-year bond. Both are 6% annual coupon bonds. To calculate the bonds’ values, Talbot devises the first three years of the interest rate lognormal tree presented in Exhibit 4 using historical interest rate volatility data. Talbot considers how these data would change if implied volatility, which is higher than historical volatility, were used instead.\n\nExhibit 4: Interest Rate Tree—Forward Rates Based on Swiss Market\nNode\tTime 0\tTime 1\tTime 2\nUpper\t\t4%\t6%\nMiddle\t1%\t\t5%\nLower\t\t2%\t3%\nAn interest rate tree at time 0, 1 and 2. Time 0, 1% followed by 4% and 2% in time 1. 4% is followed by 6% and 5% in time 2. 2% is followed by 5% and 3% in time 2.\n\nExhibit 5 (reconstructed): Valuing Bond X, 6% Three-Year Bond\nNode\tTime 0\tTime 1\tTime 2\nUpper\t\t4% → 102.3810\t6% → 100.0000\nMiddle\t1% → 109.0085\t\t5% → 100.9524\nLower\t\t2% → 105.8162\t3% → 102.9126\nNot in the original paste: rebuilt from the solution. Time 3 cash flow = 106 at every node; values shown exclude the coupon paid at that node.",
+  "title": "Madison: Cardinal Capital, term structure theories, volatility and factor model",
+  "origin": "ts-madison",
+  "body": "Rowan Mallory is a junior analyst at Summit Capital. Sage Wexler, a senior portfolio manager and Mallory’s supervisor, meets with Mallory to discuss interest rates and review two bond positions in the firm’s fixed-income portfolio.\n\nWexler begins the meeting by asking Mallory to state her views on the term structure of interest rates. Mallory responds:\n\n“Yields are a reflection of expected spot rates and risk premiums. Investors demand risk premiums for holding long-term bonds, and these risk premiums increase with maturity.”\n\nWexler tells Mallory that, based on recent changes in spreads, she is concerned about a perceived increase in counterparty risk in the economy and its effect on the portfolio. Mallory asks Wexler:\n\n“Which spread measure should we use to assess changes in counterparty risk in the economy?”\n\nWexler is also worried about the effect of yield volatility on the portfolio. She asks Mallory to identify the economic factors that affect short-term and long-term rate volatility. Mallory responds:\n\n“Short-term rate volatility is mostly linked to uncertainty regarding monetary policy, whereas long-term rate volatility is mostly linked to uncertainty regarding the real economy and inflation.”\n\nFinally, Wexler asks Mallory to analyze the interest rate risk portfolio positions in a 5-year and a 20-year bond. Wexler requests that the analysis be based on level, slope, and curvature as term structure factors. Mallory presents her analysis in Exhibit 1.\n\nExhibit 1\nThree-Factor Model of Term Structure\nFactor\tTime to Maturity (years): 5\tTime to Maturity (years): 20\nLevel\t–0.4352%\t–0.5128%\nSteepness\t–0.0515%\t–0.3015%\nCurvature\t0.3963%\t0.5227%\nNote: Entries indicate how yields would change for a one standard deviation increase in a factor.\n\nWexler asks Mallory to perform two analyses:\n\nAnalysis 1: Calculate the expected change in yield on the 20-year bond resulting from a two-standard-deviation increase in the steepness factor.\nAnalysis 2: Calculate the expected change in yield on the five-year bond resulting from a one-standard-deviation decrease in the level factor and a one-standard-deviation decrease in the curvature factor.",
   "questions": [
    {
     "n": 25,
-    "q": "Based on Exhibit 1, which of the following bonds most likely includes an arbitrage opportunity?",
+    "q": "Mallory’s views on the term structure of interest rates are most consistent with the:",
     "options": [
-     "Bond A",
-     "Bond B",
-     "Bond C"
+     "local expectations theory.",
+     "liquidity preference theory.",
+     "segmented markets theory."
     ],
     "answer": "B",
-    "why": "Arbitrage-free value = each cash flow discounted at its own spot rate (here 2% for both years):\nBond B (3%): [[3|1.02]] + [[103|1.02²]] = 2.9412 + 99.0004 = 101.9416\nMarket price 100.9641 is BELOW that, so buy Bond B and sell the individual cash flows (strip it into zeros), pocketing about 0.98 per 100 par.\nA is wrong: Bond A (1%): [[1|1.02]] + [[101|1.02²]] = 98.0584 = its market price.\nC is wrong: Bond C (5%): [[5|1.02]] + [[105|1.02²]] = 105.8247 = its market price.\nOnly B's price differs from its arbitrage-free value.",
-    "src": "sam Q1"
+    "why": "Liquidity preference theory: investors demand a liquidity premium for the added interest rate risk of long-maturity bonds, and the premium increases with maturity.",
+    "src": "ts-madison Q48"
    },
    {
     "n": 26,
-    "q": "Based on Exhibits 2 and 3 and using Method 1, the amount (in absolute terms) by which the Hollis-Barton Inc. corporate bond is mispriced is closest to:",
+    "q": "Is Mallory’s response regarding the factors that affect short-term and long-term rate volatility correct?",
     "options": [
-     "0.5156 per 100 of par value.",
-     "0.4682 per 100 of par value.",
-     "0.3368 per 100 of par value."
+     "Yes",
+     "No, she is incorrect regarding factors linked to long-term rate volatility",
+     "No, she is incorrect regarding factors linked to short-term rate volatility"
     ],
     "answer": "A",
-    "why": "Step 1 – bootstrap spot rates from the par curve (each par bond's coupon = its YTM, price 100):\nz1 = 3% (one cash flow, so YTM = spot rate)\nz2: 100 = [[4|1.03]] + [[104|(1 + z2)²]] → z2 = 4.0202%\nz3: 100 = [[5|1.03]] + [[5|1.040202²]] + [[105|(1 + z3)³]] → z3 ≈ 5.07%\nStep 2 – value Hollis-Barton (3% coupon, 3 years) at those spot rates:\n[[3|1.03]] + [[3|1.040202²]] + [[103|1.0507³]] = 94.4828\nMispricing = market 94.9984 − value 94.4828 = 0.5156 (the bond is overpriced).\nC (0.3368) discounts each cash flow at the par YTMs (3%, 4%, 5%) instead of spot rates: value 94.6616.\nB (0.4682) bootstraps with the 3-year bond's coupon for every year instead of each par bond's own coupon: value 94.5302.",
-    "src": "sam Q2"
+    "why": "Short-term rate volatility is mostly linked to uncertainty about monetary policy; long-term rate volatility to uncertainty about the real economy and inflation.",
+    "src": "ts-madison Q49"
    },
    {
     "n": 27,
-    "q": "Method 1 would most likely not be an appropriate valuation technique for the bond issued by:",
+    "q": "Based on Exhibit 1, the results of Analysis 1 should show the yield on the 20-year bond decreasing by:",
     "options": [
-     "Peaton Scorpio Motors.",
-     "Hollis-Barton Inc.",
-     "Luna y Estrellas Intl."
+     "0.8946%.",
+     "0.6030%.",
+     "0.3015%."
     ],
-    "answer": "C",
-    "why": "Luna y Estrellas has an embedded option. Its future cash flows depend on whether the option is exercised, which depends on where interest rates go. Method 1 (fixed cash flows discounted at spot rates) can't capture that; you need a tree in which rates can take different future values given a volatility assumption (Method 2).\nB and A are wrong: Hollis-Barton and Peaton Scorpio are option-free, so both methods give the same arbitrage-free value.",
-    "src": "sam Q3"
+    "answer": "B",
+    "why": "Factors are standardized to unit standard deviation: change = −0.3015% × 2 = −0.6030%.",
+    "src": "ts-madison Q50"
    },
    {
     "n": 28,
-    "q": "Based on Exhibit 4 and using Method 2, the correct price for Bond X is closest to:",
+    "q": "Based on Exhibit 1, the results of Analysis 2 should show the yield on the five-year bond:",
     "options": [
-     "97.2998.",
-     "109.0085.",
-     "115.0085."
+     "decreasing by 0.0389%.",
+     "increasing by 0.0389%.",
+     "decreasing by 0.8315%."
     ],
     "answer": "B",
-    "why": "Bond X: 6% annual coupon, 3 years. Work backward through the tree (each branch has probability ½).\nTime 2 (final cash flow 106):\n6%: [[106|1.06]] = 100.0000; 5%: [[106|1.05]] = 100.9524; 3%: [[106|1.03]] = 102.9126\nTime 1 (average of the next two values + 6 coupon, discounted at the node rate):\n4%: [[½(100.0000 + 6) + ½(100.9524 + 6)|1.04]] = 102.3810\n2%: [[½(100.9524 + 6) + ½(102.9126 + 6)|1.02]] = 105.8162\nTime 0 (1%):\n[[½(102.3810 + 6) + ½(105.8162 + 6)|1.01]] = 109.0085\nA (97.2998) subtracts the coupon at each node instead of adding it.\nC (115.0085) adds a 6 coupon at Time 0; no coupon is paid today.",
-    "src": "sam Q4"
+    "why": "A one-standard-deviation decrease in level and in curvature: change = +0.4352% − 0.3963% = +0.0389%.",
+    "src": "ts-madison Q51"
    }
   ]
  },
  {
   "id": "mock5-8",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Ethical and Professional Standards",
-  "title": "Suzy Mercer: Shangri-la Development Associates",
-  "origin": "mercer",
-  "body": "Nora Whitfield, CFA, is currently working as a capital market adviser in a developing country. While attending a regional securities exchange conference, she introduces herself to Terrence Bae, CFA. Bae is one of several partners at Lotus Crest Advisory Partners, a consulting firm specializing in capital market expansion in developing countries. When making her introduction, Whitfield states, “I’m an independent adviser working with the government of a developing country to improve its capital market sector. I’ve heard a lot about the work you’ve done. Could we talk about my consulting assignment and a possible role for you?”\n\nWhitfield continues, “I’m looking for someone with your background and stellar reputation to help create a strategic plan to develop the asset management industry. The client’s goal is to get the Securities Exchange to be a part of a regional exchange. This will help the locally listed companies gain more exposure. However, given the budget I’ve been given, I can afford to hire only an individual. Bae, would this be of interest to you?”\n\nWhitfield continues the conversation by informing Bae that she will also be approaching other industry participants, particularly in the fund management industry, who are attending the conference. Bae responds, “I sure hope you are not talking to Daniel Okoro, who manages several startup funds. I think he has a drinking problem. There is a rumor his last startup fund was not well received by the investors, likely due to his drinking. As one charterholder to another, please do your due diligence first before you hire anyone. As you have already pointed out, my reputation is stellar. Why don’t we meet tonight for dinner at my ‘members only’ club to discuss your project further? I can introduce you to other influential people who are currently looking for experienced advisers in your field for upcoming assignments. I’m sure if they knew we were working together, it would really go a long way in obtaining future assignments from these industry leaders.”\n\nWhitfield informs Bae that she is unfortunately not able to meet him for dinner because of a previous engagement. She subsequently says to Bae, “I’m wondering how you would respond to a situation whereby a regulator chooses not to implement extensive policies and regulations regarding the integrity of capital markets I recommended. They say my suggested policies and regulations related to market manipulation, material nonpublic information, and protecting client interests are too complicated, and they do not have the judicial competency to back them up. Consequently, they have requested I recommend just one primary rule.” Thereafter, Whitfield seeks out Daniel Okoro, a CFA candidate, to ask for his version of what happened with his investors. Okoro responds, “What actually happened was I got sick in a restaurant after having an adverse reaction to some medication. People uploaded photos to social media and stated I was falling over drunk. Subsequently, I wrote a letter to the investors explaining the situation and assuring them I had found another highly qualified fund manager after several weeks to take over until such time I had fully recovered. When I could, I looked at the fund when I was in the hospital for a week, but the fund needs close supervision, so that’s why I wanted to find another manager. One investor commented, ‘Key-person risk was not identified in the fund’s prospectus.’ Within one week we sent out a revision to the prospectus identifying key-person risk.”",
+  "title": "Ethics · Watson: study group and Standards scenarios",
+  "origin": "eth6-watson",
+  "body": "Alden Weston is a Level II CFA candidate. In addition to studying the curriculum independently, he and several of his coworkers have formed a study group that uses many of the resources provided by CFA Institute to prepare for the exam. They meet every Monday to review the previous week’s study materials and discuss items needing further clarification. This week’s reading is the CFA Institute Standards of Professional Conduct. After studying the Standards, Weston answers the topic questions offered by CFA Institute. He notes three scenarios he wants to clarify with the group.\n\nWeston brings up the first scenario and lays out the following facts given: A research analyst makes a presentation to a small group of investors. Prior to the start of the meeting, the analyst chatted with several individuals outside the meeting room. The analyst commented that she had just gotten off the phone with the CFO of a company she follows where they talked about a recently announced merger by a competitor. The analyst starts the presentation and discusses her research process and her published investment recommendations on the companies under her coverage. She mentions her call with the CFO as well as the comments she made during an interview on a major television network relating to the merger.\n\nIn the second scenario, Weston states, “I'm really struggling to understand the following two recommendations and question if they apply to Standard I(B): Independence and Objectivity:\n\nRecommendation 1: Firms should require prior approval for employees participating in initial public offerings.\nRecommendation 2: Firms should implement effective supervisory and review procedures to ensure compliance with personal investment policies.”\nThe final scenario he wants to discuss with the group has to do with policy recommendations made by a firm’s chief compliance officer regarding communication with clients and prospective clients. The officer provided her firm’s board the following policies for approval:\n\nPolicy 1: When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model.\nPolicy 2: If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social media post.\nPolicy 3: Significant changes in risk characteristics for either a security or asset strategy should be communicated to all clients.\nDuring their gathering, Weston and his coworkers also discuss how they could unintentionally violate Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate. The group affirms their commitment to the high ethical standards of CFA Institute and talks about how a violation might occur. They make the following pledges to help each other stay in compliance with Standard VII following the exam:\n\nPledge 1: Abstain from making any comments about the curriculum on social media.\nPledge 2: Refrain from expressing negative comments about the CFA Program.\nPledge 3: Avoid discussing the particulars of the topic areas tested with each other.",
   "questions": [
    {
     "n": 29,
-    "q": "To avoid violating any CFA Institute Standards of Professional Conduct, which of the following is Bae’s most appropriate response to Whitfield’s question?",
+    "q": "In the first scenario Weston discusses, did the research analyst most likely violate any CFA Institute Standards of Professional Conduct?",
     "options": [
-     "“I’m not able to take on projects as an individual.”",
-     "“I can refer you to another independent adviser.”",
-     "“I will need to touch base with my partners.”"
+     "No.",
+     "Yes, with regard to the presentation.",
+     "Yes, with regard to the discussion prior to the presentation."
     ],
-    "answer": "C",
-    "why": "Standard IV, Duties to Employers: the work is a business opportunity for Bae's firm. Taking it as an individual would compete with his firm and deprive it of his skills and revenue (IV(C) Loyalty) and mean extra pay from a competing activity (IV(A) Additional Compensation Arrangements). He should first take it to his partners, who might, for example, cut their fees to win it. B shuts the firm out without asking. C hands the opportunity to someone else, again without giving his firm the chance.",
-    "src": "mercer Q1"
+    "answer": "A",
+    "why": "A. Correct. In the first scenario Weston provides no evidence of any violation of the CFA Institute Standards of Professional Conduct. The discussion prior to the meeting is not a violation of Standard II(A): Material Nonpublic Information. Standard II(A) states Members and Candidates who possess material nonpublic information that could affect the value of an investment must not act or cause others to act on the information. While a merger would be considered material information, this merger had already been announced so the information is public. Additionally, no details were given about the merger and no company names were disclosed, so it is unclear which companies she is discussing. There is no evidence she violated Standard III(B): Fair Dealing or Standard V(B): Communication with Clients and Prospective Clients in her discussion of her research process and published investment recommendations or in the comments she made about the merger during an interview on a major television network. Standard III(B) states Members and Candidates must deal fairly and objectively with all clients when providing investment analysis, making investment recommendations, taking investment action, or engaging in other professional activities. Standard V(B) states Members and Candidates must disclose to clients and prospective clients the basic format and general principles of the investment processes they use to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes. There is no evidence to indicate she treated the clients in the meeting differently than any other clients. She simply talked about the research process and her research recommendations and opinions that had already been published. | B. Incorrect. The first scenario Weston notes provides no evidence of any violation of the Standards of Professional Conduct. | C. Incorrect. The first scenario Weston notes provides no evidence of any violation of the Standards of Professional Conduct.",
+    "src": "eth6-watson Q1"
    },
    {
     "n": 30,
-    "q": "In the continued conversation between Whitfield and Bae, which sub-standard of Standard I: Professionalism did Bae least likely violate?",
+    "q": "Do the recommendations Weston outlines in the second scenario most likely apply to Standard I(B): Independence and Objectivity?",
     "options": [
-     "Independence and Objectivity",
-     "Misrepresentation",
-     "Misconduct"
+     "Yes.",
+     "No, with regard to Recommendation 2.",
+     "No, with regard to Recommendation 1."
     ],
-    "answer": "B",
-    "why": "I(A) Misrepresentation is least likely violated: Whitfield herself called his reputation stellar, so repeating it is not a misrepresentation. C is violated: I(D) Misconduct (labelled I(C) in your source): spreading a rumour that Okoro drinks damages another's reputation and reflects badly on Bae's integrity. A is violated: I(B), hinting that influential contacts would give Whitfield future work if she hires him is a benefit meant to sway her choice of adviser.",
-    "src": "mercer Q2"
+    "answer": "A",
+    "why": "A. Correct. Both Recommendation 1 (“Firms should require prior approval for employees participating in initial public offerings.”) and Recommendation 2 (“Firms should implement effective supervisory and review procedures to ensure compliance with personal investment policies.”) apply to Standard I(B): Independence and Objectivity. Standard I(B) states Members and Candidates must use reasonable care and judgment to achieve and maintain independence and objectivity in their professional activities. Members and Candidates must not offer, solicit, or accept any gift, benefit, compensation, or consideration that reasonably could be expected to compromise their own or another’s independence and objectivity. The recommended procedures for compliance suggest investments be restricted and require prior approval for employee participation in IPOs. The recommended procedures also suggest review procedures be implemented to ensure compliance with policies relating to their personal investment activities. | B. Incorrect. Both Recommendation 1 and Recommendation 2 apply to Standard I(B): Independence and Objectivity. | C. Incorrect. Both Recommendation 1 and Recommendation 2 apply to Standard I(B): Independence and Objectivity.",
+    "src": "eth6-watson Q2"
    },
    {
     "n": 31,
-    "q": "Which of the following should Bae most likely advise with regard to the regulator’s request?",
+    "q": "In the third scenario, which policy presented by the chief compliance officer would least likely be fully compliant with Standard V: Investment Analysis, Recommendations, and Actions?",
     "options": [
-     "Require material information be made public within 24 hours",
-     "When trading, insist service providers give preference to investors",
-     "Ban the “pumping up” of investment prices"
+     "Policy 1",
+     "Policy 2",
+     "Policy 3"
     ],
     "answer": "B",
-    "why": "One broad rule that puts investors' interests first covers the most ground: it supports loyalty to clients and also makes trading on material nonpublic information and market manipulation unacceptable, since both put others ahead of investors. C is too narrow: it targets only information-based manipulation, not transaction-based manipulation or insider trading. B could harm investors: not all material information should be public (e.g. competitive secrets).",
-    "src": "mercer Q3"
+    "why": "A. Incorrect. Policy 1 and Policy 3 are both consistent with Standard V(B): Communication with Clients and Prospective Clients. | B. Correct. Policy 2 (“If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social medial post.”) is not fully compliant with Standard V: Investment Analysis, Recommendations, and Actions. When using social media, every effort should be made to treat clients fairly. However, to be consistent with Standard V(B), when utilizing capsule form or a condensed form of communication, clients should be notified that additional information and analyses are available from the producer of the report. Notifying all clients that a social media post has been made does not meet this requirement. Specifically, Standard V(B): Communication with Clients and Prospective Clients states Members and Candidates must: 1) Disclose to clients and prospective clients the basic format and general principles of the investment processes they use to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes; 2) Disclose to clients and prospective clients significant limitations and risks associated with the investment process; 3) Use reasonable judgment in identifying which factors are important to their investment analyses, recommendations, or actions and include those factors in communications with clients and prospective clients; and 4) Distinguish between fact and opinion in the presentation of investment analysis and recommendations. Policy 1 (“When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model.”) and Policy 3 (“Significant changes in risk characteristics for either a security or asset strategy should be communicated to all clients.”) are both consistent with Standard V(B): Communication with Clients and Prospective Clients. | C. Incorrect. Policy 1 and Policy 3 are both consistent with Standard V(B): Communication with Clients and Prospective Clients.",
+    "src": "eth6-watson Q3"
    },
    {
     "n": 32,
-    "q": "During the conversation between Okoro and Whitfield, Okoro revealed he had most likely violated which CFA Institute Standards of Professional Conduct?",
+    "q": "Which of the study group’s pledges would most likely be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate?",
     "options": [
-     "Both Standard I: Professionalism and Standard V: Investment Analysis, Recommendations, and Actions",
-     "Standard V: Investment Analysis, Recommendations, and Actions",
-     "Standard I: Professionalism"
+     "Pledge 2",
+     "Pledge 3",
+     "Pledge 1"
     ],
-    "answer": "A",
-    "why": "Okoro was effectively the fund's only manager, yet key-person risk was missing from the prospectus. That omission is a misrepresentation under I(A) (Standard I), and failing to disclose a significant risk of the investment process breaches V(B) Communication with Clients and Prospective Clients (Standard V). So both Standards were violated, even though he later corrected the prospectus.",
-    "src": "mercer Q4"
+    "answer": "B",
+    "why": "A. Incorrect. Pledge 1 (Abstain from making any comments about the curriculum on social media.) and Pledge 2 (Refrain from expressing negative comments about the CFA Program.) are not violations of Standard VII(A). | B. Correct. Pledge 3 (Avoid discussing the particulars of the topic areas tested with each other.) would be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate. Specifically, Standard VII(A): Conduct as Participants in CFA Institute Programs states Members and Candidates must not engage in any conduct that compromises the reputation or integrity of CFA Institute or the CFA designation or the integrity, validity, or security of the CFA Institute programs. All aspects of the exam, including questions, broad topical areas, and formulas tested or not tested, are considered confidential until such time as CFA Institute elects to release them publicly. Therefore, members of the group should not discuss any exam-related content, including the particulars of the topic areas tested on the exam, with each other. Given the increased use of online forums as well as new technologies, CFA Institute polices blogs, forums, and related social networking groups for information considered confidential. Pledge 1 (Abstain from making any comments about the curriculum on social media.) and Pledge 2 (Refrain from expressing negative comments about the CFA Program.) are not in violation of Standard VII(A). The standard does not prohibit candidates from discussing nonconfidential information or curriculum material with others, nor does it prohibit expressing opinions regarding CFA Institute, the CFA Program, or other CFA Institute programs. Members and Candidates are free to disagree and express their disagreement with CFA Institute or its policies, its procedures, or any advocacy positions taken by the organization. The group is therefore free to express their negative opinions to others and on social media. | C. Incorrect. Pledge 1 (Abstain from making any comments about the curriculum on social media.) and Pledge 2 (Refrain from expressing negative comments about the CFA Program.) are not violations of Standard VII(A).",
+    "src": "eth6-watson Q4"
    }
   ]
  },
  {
   "id": "mock5-9",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Economics",
-  "title": "Wagener: forward rates, MTM and parity",
-  "origin": "fx29-wagener",
-  "body": "Callum Weir, a student at the University of Otago in New Zealand, has been asked to prepare a presentation on foreign exchange rates for his international business course. Weir has a basic understanding of exchange rates but would like a practitioner’s perspective, and he has arranged an interview with currency trader Hana McKenna. During the interview, Weir asks McKenna,\n\nCould you explain what drives exchange rates? I’m curious as to why our New Zealand dollar was affected by the European debt crisis in 2011 and what other factors impact it.\n\nIn response, McKenna begins with a general discussion of exchange rates. She notes that international parity conditions illustrate how exchange rates are linked to expected inflation, interest rate differences, and forward exchange rates as well as current and expected future spot rates. McKenna makes the following statement:\n\nStatement 1: “Fortunately, the international parity condition most relevant for FX carry trades does not always hold.”\n\nMcKenna continues her discussion:\n\nFX carry traders go long (i.e., buy) high-yield currencies and fund their position by shorting—that is, borrowing in—low-yield currencies. Unfortunately, crashes in currency values can occur which create financial crises as traders unwind their positions. For example, in 2008, the New Zealand dollar was negatively impacted when highly leveraged carry trades were unwound. In addition to investors, consumers and business owners can also affect currency exchange rates through their impact on their country’s balance of payments. For example, if New Zealand consumers purchase more goods from China than New Zealand businesses sell to China, New Zealand will run a trade account deficit with China.\n\nMcKenna further explains,\n\nStatement 2: “A trade surplus will tend to cause the currency of the country in surplus to appreciate, while a deficit will cause currency depreciation. Exchange rate changes will result in immediate adjustments in the prices of traded goods as well as in the demand for imports and exports. These changes will immediately correct the trade imbalance.”\n\nMcKenna next addresses the influence of monetary and fiscal policy on exchange rates:\n\nCountries also exert significant influence on exchange rates both through the initial mix of their fiscal and monetary policies and by subsequent adjustments to those policies. Various models have been developed to identify how these policies affect exchange rates. The Mundell–Fleming model addresses how changes in both fiscal and monetary policies affect interest rates and ultimately exchange rates in the short term.\n\nMcKenna describes monetary models by stating,\n\nStatement 3: “Monetary models of exchange rate determination focus on the effects of inflation, price level changes, and risk premium adjustments.”\n\nMcKenna continues her discussion:\n\nSo far, we’ve touched on balance of payments and monetary policy. The portfolio balance model addresses the impacts of sustained fiscal policy on exchange rates. I must take a client call but will return shortly. In the meantime, here is some relevant literature on the models I mentioned along with a couple of questions for you to consider:\n\nQuestion 1: Assume an emerging market (EM) country has restrictive monetary and fiscal policies under low capital mobility conditions. Are these policies likely to lead to currency appreciation or currency depreciation or to have no impact?\n\nQuestion 2: Assume a developed market (DM) country has an expansive fiscal policy under high capital mobility conditions. Why is its currency most likely to depreciate in the long run under an integrated Mundell–Fleming and portfolio balance approach?\n\nUpon her return, Weir and McKenna review the questions. McKenna notes that capital flows can have a significant impact on exchange rates and have contributed to currency crises in both EM and DM countries. She explains that central banks, such as the Reserve Bank of New Zealand, use FX market intervention as a tool to manage exchange rates. McKenna states,\n\nStatement 4: “Some studies have found that EM central banks tend to be more effective in using exchange rate intervention than DM central banks, primarily because of one important factor.”\n\nMcKenna continues her discussion:\n\nStatement 5: “I mentioned that capital inflows could cause a currency crisis, leaving fund managers with significant losses. In the period leading up to a currency crisis, I would predict that an affected country’s:\n\nPrediction 1: foreign exchange reserves will increase.\n\nPrediction 2: broad money growth will increase.\n\nPrediction 3: exchange rate will be substantially higher than its mean level during tranquil periods.”\n\nAfter the interview, McKenna agrees to meet the following week to discuss more recent events on the New Zealand dollar.",
+  "title": "Beauregard: CapFX bid/offer, cross rates and forwards",
+  "origin": "fx29-beauregard",
+  "body": "Alexandra Bellerose was recently hired as an analyst at NovaFX Partners, a US-based currency trading firm that maintains offices in major financial centers around the world. Bellerose assists NovaFX foreign currency strategist Robert Thiessen. The firm executes trades for clients and manages a foreign currency investment fund. Bellerose is meeting with Thiessen to discuss the characteristics of the foreign exchange markets.\n\nThiessen explains that knowing what establishes a currency’s real long-term equilibrium value helps investors manage risk exposure: \n\n“To better serve our clients and maximize the performance of our investment fund, we need to be able to filter out the short-term noise in exchange rates so that we can better understand their likely direction over the long term.”\n\nHe notes that current account trends influence the path of exchange rates over time through several mechanisms \n\n“Of the three mechanisms that economists identify, I have the most confidence in the one that assumes there are long-run limits on current account deficits.”\n\nBellerose has concerns about the firm’s experiences during currency crises. She recalls reading a study produced by the IMF that an impending currency crisis is signaled by numerous economic variables. She makes the following statements with regard to some of these variables:\n\nTrade balances exhibit substantial decline prior to the crisis.\nA country has distinctive economic growth patterns ahead of the crisis.\nInflation is significantly higher in the pre-crisis period.\nThiessen and Bellerose discuss some of NovaFX’s recent trades using the currency quotes and rates provided in Exhibits 1 and 2. (For all currency pairs provided, the notation used is, for example, USD/AUD: US dollars per Australian dollar.)\n\nBased on the data in Exhibit 1, a European client recently entered into a one-year JPY/EUR carry trade based on the projected outlook for the two currencies.\nA South Korean-based client producing electronic components signed a long-term contract to deliver components to a Canadian aircraft parts manufacturer. The client wanted to estimate the hedging cost for a sale scheduled to close in nine months. Based on the data presented in Exhibit 2, the client entered into a nine-month (270-day) KRW/CAD forward contract.\nExhibit 1 Interbank Currency Quotes and Libor Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\tProjected Spot in One Year\tOne-Year Libor Rates\nUSD/AUD\t0.7050\t0.7083\t0.7148\tJPY 0.15%\nUSD/EUR\t1.0851\t1.0873\t1.0984\tUSD 0.80%\nUSD/NZD\t0.6740\t0.6770\t---\tEUR 1.40%\nJPY/USD\t117.62\t117.66\t118.32\tNZD 2.00%\n \nExhibit 2 Interbank Currency Quotes and Libor Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\t270-Day Libor (annualized)\nKRW/CAD\t869.813\t871.598\tKRW 1.50%\n---\t---\t---\tCAD 1.75%",
   "questions": [
    {
     "n": 33,
-    "q": "The international parity condition McKenna is referring to in Statement 1 is:",
+    "q": "The mechanism about which Thiessen is most confident as an explanation for the long-run equilibrium value of exchange rates is best described as the:",
     "options": [
-     "purchasing power parity.",
-     "uncovered interest rate parity.",
-     "covered interest rate parity."
+     "portfolio balance channel.",
+     "debt sustainability channel.",
+     "flow supply/demand channel."
     ],
     "answer": "B",
-    "why": "B is correct. The carry trade strategy is dependent on the fact that uncovered interest rate parity does not hold in the short or medium term. If uncovered interest rate parity held, it would mean that investors would receive identical returns from either an unhedged foreign currency investment or a domestic currency investment because the appreciation/depreciation of the exchange rate would offset the yield differential. However, during periods of low volatility, evidence shows that high-yield currencies do not depreciate enough and low-yield currencies do not appreciate enough to offset the yield differential.",
-    "src": "fx29-wagener Q14"
+    "why": "A. Incorrect. The portfolio balance channel assumes that current account imbalances shift financial wealth from deficit nations to surplus nations. Countries with trade deficits will finance their trade with increased borrowing. This behavior may lead to shifts in global asset preferences, which in turn could influence the path of exchange rates. | B. Correct. Thiessen prefers the debt sustainability channel as a means to assess the long-run equilibrium value of exchange rates. According to this mechanism, there should be some upper limit on the ability of countries to run persistently large current account deficits. If a country runs a large and persistent current account deficit over time, eventually it will experience an untenable rise in debt owed to foreign investors. If such investors believe that the deficit country’s external debt is rising to unsustainable levels, they are likely to reason that a major depreciation of the deficit country’s currency will be required at some point to ensure that the current account deficit narrows significantly and that the external debt stabilizes at a level deemed sustainable. | C. Incorrect. The flow supply/demand channel mechanism focuses on the fact that purchases and sales of internationally traded goods and services require the exchange of domestic and foreign currencies in order to arrange payment for those goods and services. Such shifts in currency demand should exert upward pressure on the value of the surplus nation’s currency and downward pressure on the value of the deficit nation’s currency.",
+    "src": "fx29-beauregard Q21"
    },
    {
     "n": 34,
-    "q": "In Statement 2, McKenna is most likely failing to consider the:",
-    "options": [
-     "initial gap between the country’s imports and exports.",
-     "lag in the response of import and export demand to price changes.",
-     "effect of an initial trade deficit on a country’s exchange rates."
-    ],
-    "answer": "B",
-    "why": "B is correct. McKenna states that exchange rates will immediately correct the trade imbalance. She is describing the flow supply/demand channel, which assumes that trade imbalances will be corrected as the deficit country’s currency depreciates, causing its exports to become more competitive and its imports to become more expensive. Studies indicate that there can be long lags between exchange rate changes, changes in the prices of traded goods, and changes in the trade balance. In the short run, exchange rates tend to be more responsive to investment and financing decisions.",
-    "src": "fx29-wagener Q15"
-   },
-   {
-    "n": 35,
-    "q": "The least appropriate factor used to describe the type of models mentioned in Statement 3 is:",
-    "options": [
-     "price level changes.",
-     "inflation.",
-     "risk premium adjustments."
-    ],
-    "answer": "C",
-    "why": "C is correct. Risk premiums are more closely associated with the portfolio balance approach. The portfolio balance approach addresses the impact of a country’s net foreign asset/liability position. Under the portfolio balance approach, investors are assumed to hold a diversified portfolio of assets including foreign and domestic bonds. Investors will hold a country’s bonds as long as they are compensated appropriately. Compensation may come in the form of higher interest rates and/or higher risk premiums.",
-    "src": "fx29-wagener Q16"
-   },
-   {
-    "n": 36,
-    "q": "The best response to Question 1 is that the policies will:",
-    "options": [
-     "have no impact.",
-     "lead to currency depreciation.",
-     "lead to currency appreciation."
-    ],
-    "answer": "C",
-    "why": "C is correct. The currency is likely to appreciate. The emerging market country has both a restrictive monetary policy and a restrictive fiscal policy under conditions of low capital mobility. Low capital mobility indicates that interest rate changes induced by monetary and fiscal policy will not cause large changes in capital flows. Implementation of restrictive policies should result in an improvement in the trade balance, which will result in currency appreciation.",
-    "src": "fx29-wagener Q17"
-   }
-  ]
- },
- {
-  "id": "mock5-10",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
-  "readings": [],
-  "topic": "Corporate Issuers",
-  "title": "Blass: Titian International, ESG factors and DCF valuation",
-  "origin": "esg31-1",
-  "body": "Theresa Bellamy manages the Summit Balanced Fund (the Fund) and recently hired John Yardley, a junior analyst, to help her research investment opportunities. Bellamy plans to integrate environmental, social, and governance (ESG) factors into her analysis. She is researching an equity investment in Tarsus International, a global steel producer. She asks Yardley to identify ESG factors impacting Tarsus and estimate the equity valuation for the company.Yardley uses proprietary methods to identify the ESG factors.\n\nYardley points out that Tarsus’s steel production is energy intensive and relies on coal in producing its main product, stainless steel. The firm’s major customers are oil and gas firms using stainless steel in their drilling operations. Most of Tarsus’s steel capacity is located in developing economies, where it currently faces few environmental regulations. Tarsus has a 10-member board with a chairperson and 5 independent members. The chairperson is not the CEO, and the board is diverse, with 6 women. The company has an excellent record on employee health and safety. In a discussion with Bellamy about ESG factors in investment analysis, Yardley makes the following statements:\n\nStatement 1:\nMaterial ESG information used in investment analysis is best obtained from the individual companies.\n\nStatement 2:\nThe level of disclosure varies among companies because these disclosures are voluntary.\n\nStatement 3:\nThe time horizon has little effect on the materiality of the underlying ESGfactors.\n\nYardley integrates ESG factors into the equity valuation of Tarsus. He believes the company faces significant long-term risk due to regulatory changes regarding greenhouse gas emissions in the developing economies. These changes will have a negative impact on Tarsus’s steel capacity and its production costs. Based on long-term forecasts from the International Energy Agency (IEA), Yardley expects oil and natural gas demand to decline over the next decade, reducing oil company capital expenditures on exploration and drilling. He uses a discounted cash flow model to value Tarsus stock.",
-  "questions": [
-   {
-    "n": 37,
-    "q": "The potential problem with Yardley’s approach to identifying ESG factors is the:",
-    "options": [
-     "inconsistent reporting of ESG information and metrics among firms.",
-     "promotion of uniform accounting standards.",
-     "subjective assessment of ESG scores and rankings."
-    ],
-    "answer": "A",
-    "why": "A is correct. Yardley uses the proprietary method to identify company and industry ESG factors. This approach relies on using company-specific ESG data that is publicly available from annual reports, proxy reports, corporate sustainability reports, and regulatory filings such as the 10-K. The problem is inconsistent reporting of ESG information and metrics among firms. The level of disclosure also varies considerably among companies because ESG-related disclosures are voluntary. This creates comparability issues for analysts.\n\nB is incorrect because the promotion of uniform accounting standards is an alternative approach used to identify ESG reports. This approach involves not-for-profit initiatives and sustainability reporting frameworks that develop a standardized framework of ESG disclosures in corporate reporting. As an example, the Sustainable Accounting Standards Board (SASB) seeks to promote uniform accounting standards.\n\nC is incorrect because it relates to an alternative approach to identifying company and industry ESG factors. This approach involves using information supplied by ESG data vendors, such MSCI or Sustainalytics. The vendors provide ESG scores and/or rankings for each company. The problem with this approach is the subjective element to the interpretation of ESG scores and rankings.",
-    "src": "esg31-1 Q1"
-   },
-   {
-    "n": 38,
-    "q": "The most relevant industry risk factors affecting Tarsus are:",
-    "options": [
-     "environmental.",
-     "governance.",
-     "social."
-    ],
-    "answer": "A",
-    "why": "A is correct. In identifying a company’s ESG risks and opportunities, an analyst must determine which ESG factors are relevant to its industry. Industries such as energy and steel are typically more impacted by environmental factors. This is clearly the case with Tarsus. Tarsus’s steel production is energy intensive and relies on coal in producing its main product, stainless steel. Its major customers are oil and natural gas companies, and most of its steel capacity is located in developing economies, where it currently faces few environmental regulations. Changes in such regulations and projected declining demand for its main product are major risk factors for the firm.\n\nC is incorrect because social factors are typically not the most important industry-related ESG risk factors for steel companies. Employee health and safety is a material social factor for this company. This is not a risk since the company has an excellent record on employee health and safety.\n\nB is incorrect because governance factors are not a major risk for Tarsus. Tarsus’s board comprises 10 members, of whom 5 are independent. In addition, the board has gender diversity and no CEO duality, since the chairperson is not the CEO.",
-    "src": "esg31-1 Q2"
-   },
-   {
-    "n": 39,
-    "q": "Which of the statements made by Yardley on ESG factors in investment analysis is correct?",
+    "q": "Which of Bellerose’s statements regarding a currency crisis is the most accurate?",
     "options": [
      "Statement 1",
      "Statement 2",
      "Statement 3"
     ],
+    "answer": "C",
+    "why": "A. Incorrect. Statement 1 is inaccurate. The trade balance displays no significant difference between its behavior in pre-crisis periods and in tranquil periods. | B. Incorrect. Statement 2 is inaccurate. Real economic activity does not display a distinctive pattern ahead of a crisis but falls sharply in the aftermath of a crisis. | C. Correct. Statement 3 is the most accurate. Inflation tends to be significantly higher in pre-crisis periods compared with tranquil periods.",
+    "src": "fx29-beauregard Q22"
+   },
+   {
+    "n": 35,
+    "q": "Using the bid–offer quote midpoint in Exhibit 1 as the current spot rate and assuming that uncovered interest rate parity holds, the projected one-year spot rate for the USD/NZD currency pair is closest to:",
+    "options": [
+     "0.6890.",
+     "0.6835.",
+     "0.6676."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The candidate incorrectly multiplied the mid-point of the spot rate by one plus the NZD one-year MRR rate, failing to include the USD MRR rate in the equation: Se = F = 0.6755(1 + 0.02) = 0.68901 = 0.6890. | B. Incorrect. The candidate incorrectly reversed the MRR rates in the numerator and denominator in the calculation. | C. Correct. If uncovered interest rate parity holds, the expected spot rate one-year forward is equal to the one-year forward exchange rate. The forward exchange rate is calculated using the formula: where Se = expected spot rate one-year forward F = one-year forward exchange rate Sf/d = spot rate today for the pair trade (mid-market of the USD/NZD spot bid–offer = 0.6755) 1 + if = today’s one-year MRR for the foreign (price) currency 1 + id = today’s one-year MRR for the domestic (base) currency The USD is the foreign (price) currency and the NZD is the domestic (base) currency",
+    "src": "fx29-beauregard Q23"
+   },
+   {
+    "n": 36,
+    "q": "Based on the data in Exhibit 1, the bid EUR/AUD cross-rate implied by the interbank market is closest to:",
+    "options": [
+     "0.7650.",
+     "0.6484.",
+     "0.6497."
+    ],
     "answer": "B",
-    "why": "B is correct. Statement 2 is correct because the level of disclosure varies considerably among companies since ESG-related disclosures are voluntary. This creates a comparability issue for analysts. This is a problem associated with the proprietary methods used to identify company and industry ESG factors.\n\nA is incorrect because Statement 1 is incorrect. The problems in doing ESG investment analysis based on company information are that the reporting of this information is inconsistent and that disclosures vary among companies.\n\nC is incorrect because Statement 3 is incorrect. The time horizon is an important factor affecting the materiality of the underlying ESG factors. Some ESG issues may affect a company’s performance in the short term, whereas other issues may be more relevant in the long term. This is especially true in credit analysis because of the different maturities of the bonds.\n\n4Essay1 / 1 point\nTarsus faces long-term risk from ____ due to potential regulatory changes in the developing economies.\n\nEnvironmental factor\nFeedback\nTarsus faces long-term risk from stranded assets due to potential regulatory changes in the developing economies.\n\nIf regulatory changes on greenhouse gas emissions are enacted in these developing economies, much of Tarsus’s stainless steel capacity will become obsolete or not economically viable. This will result in ESG-related adjustments to Tarsus’s balance sheet. The further reduction in oil demand will make the steel capacity economically unviable.",
-    "src": "esg31-1 Q3"
+    "why": "A. Incorrect. The candidate incorrectly multiplies the two bid rates to calculate the interbank market cross-rate. Bid: 0.7050 × 1.0851 = 0.76500 = 0.7650 Thus, the EUR/AUD bid cross-rate implied by the interbank market is 0.7650. | B. Correct. The bid EUR/AUD is calculated as follows: Sell EUR/Buy AUD = Sell EUR/Buy USD × Sell USD/Buy AUD, which will require the inversion of USD/EUR to EUR/USD. Given the USD/EUR quotes of 1.0851/1.0873, take the inverse of each and interchange the bid and offer, such that the USD/EUR quotes are (1/1.0873)/(1/1.0851) = 0.91971/0.92157 = 0.9197/0.9216. Then multiply the EUR/USD and USD/AUD bid quotes: Bid: 0.9197 × 0.7050 = 0.64839 = 0.6484 Thus, the USD/EUR bid cross-rate implied by the interbank market is 0.6484. | C. Incorrect. The candidate inverts the USD/EUR quotes but does not interchange the bid and offer and thus incorrectly calculates the interbank market bid cross-rate using the offer cross-rate. Bid: 0.9216 × 0.7050 = 0.64973 = 0.6497 Thus, the EUR/AUD bid cross-rate implied by the interbank market is 0.6497.",
+    "src": "fx29-beauregard Q24"
+   }
+  ]
+ },
+ {
+  "id": "mock5-10",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "Larsen: Fjord Marine, dividend options",
+  "origin": "corp1-larsen",
+  "body": "Annika Lund is the CFO of Harbor Marine Industries (FMI), a Norwegian pleasure boat manufacturer. Lund is reviewing FMI's dividend policy in advance of recommending a course of action to the Board of Directors regarding the current year dividend payment. \n\nFMI's business is influenced by many factors, including commodity prices, interest rates and general economic\n\nExhibit 1\n \tCurrent Year\tPrior Year\tTwo Years Ago\nPre-tax income (in NOK millions)\t600\t450\t400\nAfter-tax net income (in NOK millions)\t420\t315\t300\nDividends paid (in NOK millions)\t--- \t120\t115\nNumber of shares outstanding (in millions)\t6\t6\t6\nFMI's shares are currently trading at NOK 460.\n\nExhibit 1 shows that FMI had a very strong year in the current year, generating an additional NOK 105 million net income over the previous year. Lund considers four possible options in addition to the regular dividend to return a portion of this additional capital to shareholders in the current year:\n\nOption 1:\tIssue a stock dividend of 20%.\nOption 2:\tIncrease the annual per share dividend by 20% more than the prior year.\nOption 3:\tMaintain the current annual dividend and pay a special dividend of NOK 10 per share.\nOption 4:\tRepurchase NOK 200 million worth of shares at a NOK 40 premium to the current share price.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "For FMI, Option 1 would most likely:",
+    "options": [
+     "affect its capital structure.",
+     "reduce the volatility of its share price.",
+     "increase the value of each shareholder's ownership position in the company."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because from a company’s perspective, the key difference between a stock dividend and a cash dividend is that a cash dividend affects a company’s capital structure, whereas a stock dividend has no economic impact on a company. | B. Correct because the payment of a stock dividend also helps increase the stock’s float, which improves the liquidity of the shares and dampens share price volatility. | C. Incorrect because a stock dividend does not change the value of each shareholder’s ownership position because the increase in the number of shares held is accompanied by an offsetting decrease in earnings per share, and other measures of value per share, resulting from the greater number of shares outstanding.",
+    "src": "corp1-larsen Q40"
+   },
+   {
+    "n": 38,
+    "q": "Compared to option 2, option 3 results in a total current year dividend payment per share that is:",
+    "options": [
+     "lower by NOK 6.",
+     "higher by NOK 7.",
+     "higher by NOK 6."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because under option 2, the current year dividend payment would be (NOK 120 million × 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 30. This response reverses the two options: NOK 24 – NOK 30 = – NOK 6. | B. Incorrect because under option 2, the current year dividend payment would be (NOK 120 million x 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 20 + NOK 10 = NOK 30. This response incorrectly uses the dividend payment from two years ago: NOK 115 million / 6 million shares ≈ NOK 19.17 per share. Therefore NOK 30 – (NOK 19.17 x 1.2) = NOK 30 – NOK 23 = NOK 7. | C. Correct because under option 2, the current year dividend payment would be (NOK 120 million × 1.2) / 6 million shares = NOK 24 per share. Under option 3 the total dividend paid would be NOK 120 million / 6 million + NOK 10 = NOK 30. The per share dividend increase is therefore NOK 30 – NOK 24 = NOK 6. An extra dividend or special dividend (also known as an irregular dividend) is either a dividend paid by a company that does not pay dividends on a regular schedule or a dividend that supplements regular cash dividends with an extra payment.",
+    "src": "corp1-larsen Q41"
+   },
+   {
+    "n": 39,
+    "q": "Based on Exhibit 1, the safety of FMI's dividend in the prior year compared to two years ago:",
+    "options": [
+     "increased.",
+     "remained the same.",
+     "decreased."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe. | B. Incorrect because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe. | C. Incorrect because the dividend coverage ratio (after-tax net income / dividends paid) increased from 300/115 ≈ 2.609 from two years ago to 315/120 = 2.625 in the prior year, which means the probability of receiving a dividend increased making the dividend more safe.",
+    "src": "corp1-larsen Q42"
    },
    {
     "n": 40,
-    "q": "Yardley’s ESG integration approach is likely to impact equity valuation by:",
+    "q": "If option 4 is implemented using surplus cash, which of the following is most likely to decrease? FMI's:",
     "options": [
-     "increasing revenues.",
-     "raising the discount rate.",
-     "reducing operating costs."
+     "debt-to-assets ratio.",
+     "total book value.",
+     "debt-to-equity ratio."
     ],
     "answer": "B",
-    "why": "B is correct. Tarsus faces significant long-term environmental risk factors. The imposition of stricter regulation on greenhouse gas emissions in the developing countries will result in stranded assets, as much of Tarsus steel capacity becomes obsolete and not economically viable. Shifting away from low-cost coal usage will likely result in higher operating costs, and declining oil and natural gas demand will result in lower revenues for stainless steel. Thus Yardley should raise the discount rate for Tarsus to account for the higher environmental risk.\n\nA is incorrect because Tarsus’s revenues are likely to decline as a result of the projected fall in demand for oil and natural gas. As a result, oil and natural gas companies will cut their exploration and drilling budgets and reduce their purchases of stainless steel.\n\nC is incorrect since operating costs are likely to rise as Tarsus shifts away from using low-cost coal to more expensive energy sources.",
-    "src": "esg31-1 Q5"
+    "why": "A. Incorrect because share repurchases affect both the balance sheet and income statement. Both assets and shareholders’ equity decline if the repurchase is made with surplus cash. As a result, leverage increases. Debt ratios (leverage) will increase even more if the repurchase is financed with debt. The debt-to-assets ratio would therefore increase following a cash share repurchase as the denominator (total assets) decreases. | B. Correct because share repurchases involve a reduction in shareholder equity and therefore a reduction in the total book value reported on the balance sheet. Whether the book value per share increases or decreases depends on whether the market price per share is above or below the book value per share. | C. Incorrect because share repurchases affect both the balance sheet and income statement. Both assets and shareholders’ equity decline if the repurchase is made with surplus cash. As a result, leverage increases. Debt ratios (leverage) will increase even more if the repurchase is financed with debt. The debt-to-equity ratio would therefore increase following a cash share repurchase.",
+    "src": "corp1-larsen Q43"
    }
   ]
  },
  {
   "id": "mock5-11",
-  "source": "Mock paper 5 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 5 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Financial Statement Analysis",
-  "title": "Employee compensation · Sallie Kwan Industrials: RSU expense, basic and diluted shares, windfall",
-  "origin": "ec-ski",
-  "body": "Marlow Kwok Industrials (MKI) is a Singapore-based automation equipment manufacturer that reports under US GAAP. The company disclosed the following information in a note to its financial statements titled “Share-Based Compensation.”\n\nUnder our Share Incentive Plan, the Company grants restricted stock units (“RSUs”) to its officers, employees, directors and other eligible persons of up to 83,000,000 Class A ordinary shares. RSUs vest 25% on the first anniversary year from the grant date and the remaining 75% vest in 12 substantially equal quarterly installments. RSU activity for the two years ended 31 December 20X2 was as follows.\n\nRSU activity | Number of Shares | Weighted Average Grant-Date Fair Value per Share (SGD)\nUnvested at 31 December 20X0 | 4,754,972 | 12.34\nGranted | 6,249,313 | 20.50\nVested and settled | (2,131,415) | 13.67\nForfeited | (791,433) | 15.22\nUnvested at 31 December 20X1 | 8,081,437 | 18.02\nGranted | 5,034,735 | 72.37\nVested and settled | (3,332,063) | 19.25\nForfeited | (442,181) | 28.74\nUnvested at 31 December 20X2 | 9,341,928 | 46.36\n\nShare-based compensation expense for RSUs is measured based on the fair value of the Company’s ordinary shares on the date of grant. MKI accounts for forfeitures as they occur.\n\nUnrecognized share-based compensation expense as of 31 December 20X0, 20X1, and 20X2 was SGD 58.7, SGD 145.6, and SGD 433.1 million, respectively.",
+  "title": "Employee compensation · Terra Mercado: pension and option assumptions and earnings quality",
+  "origin": "ec-terra",
+  "body": "Tierra Dorada is a retailer that compensates employees with a DB pension plan and stock options in addition to short-term benefits and a DC plan. Tierra Dorada prepares its financial statements in accordance with US GAAP and reports in BRL.\n\nPaul Fenwick, CFA, is an equity analyst concerned with earnings quality. He is particularly interested in whether the discretionary assumptions the company is making regarding compensation plans are contributing to the recent earnings growth at Tierra Dorada. He gathers information from the company’s regulatory filings regarding the pension plan assumptions and assumptions related to option valuation for the three years ended 31 December 20X3.\n\nAssumptions Used for Tierra Dorada DB Plan | 20X3 | 20X2 | 20X1\nExpected long-term rate of return on plan assets | 6.06% | 6.14% | 6.79%\nDiscount rate used to estimate pension obligation at beginning of year | 4.85% | 4.94% | 5.38%\nEstimated salary growth rate | 4.00% | 4.44% | 4.25%\nEstimated inflation rate | 3.00% | 2.72% | 2.45%\n\nAssumptions Used for Tierra Dorada Option Grants | 20X3 | 20X2 | 20X1\nRisk-free rate | 4.6% | 3.8% | 2.4%\nExpected life | 5.0 yrs | 4.5 yrs | 5.0 yrs\nDividend yield | 1.0% | 0.0% | 0.0%\nExpected volatility | 29% | 31% | 35%",
   "questions": [
    {
     "n": 41,
-    "q": "The amount recognized as operating expense on MKI’s income statement related to its Equity Incentive Plan for the year ended 31 December 20X2 is closest to:",
+    "q": "Compared to the 20X3 reported financial statements, if Tierra Dorada had used the same expected long-term rate of return on plan assets assumption in 20X3 as it used in 20X1, its year-end 20X3 pension obligation would most likely have been:",
     "options": [
-     "SGD 123.1 million.",
-     "SGD 51.4 million.",
-     "SGD 64.1 million."
+     "lower.",
+     "higher.",
+     "the same."
     ],
-    "answer": "B",
-    "why": "B is correct. The operating expense is the share-based compensation expense: RSUs vested × their grant-date fair value, less forfeitures × their grant-date fair value. (3,332,063 × 19.25) − (442,181 × 28.74) = 51,433,931.",
-    "src": "ec-ski Q13"
+    "answer": "C",
+    "why": "C is correct. The assumed long-term rate of return on plan assets is not a component used in calculating the pension obligation, so there would be no change. It can affect the pension expense under US GAAP.",
+    "src": "ec-terra Q20"
    },
    {
     "n": 42,
-    "q": "The increase in MKI’s basic shares outstanding in the year ended 31 December 20X2 from its Equity Incentive Plan is closest to:",
+    "q": "Compared to the reported 20X3 financial statements, if Tierra Dorada had used the same discount rate it used in 20X1, it would have most likely reported lower:",
     "options": [
-     "5,034,735.",
-     "3,332,063.",
-     "2,889,882."
+     "total liabilities.",
+     "net income.",
+     "cash flow from operating activities."
     ],
-    "answer": "B",
-    "why": "B is correct. Settlement of RSUs increases basic shares outstanding: 3,332,063 RSUs settled in 20X2. Forfeited RSUs are not deducted, as these are RSUs, not common shares.",
-    "src": "ec-ski Q14"
+    "answer": "A",
+    "why": "A is correct. A higher discount rate (5.38% instead of 4.85%) reduces the present value of the pension obligation (liability). In most cases a higher discount rate also decreases the interest cost component, so periodic pension cost would be lower and net income higher. Cash flow from operating activities is not affected.",
+    "src": "ec-terra Q21"
    },
    {
     "n": 43,
-    "q": "The average market price for MKI shares at the time of settlement for the RSUs that vested in 20X2 was SGD 71.50. Assuming a statutory tax rate of 17%, the impact to MKI’s income tax expense for 20X2 related to share-based compensation is closest to:",
+    "q": "Compared to the assumptions Tierra Dorada used to compute its periodic pension cost in 20X1, earnings in 20X3 were most favorably affected by the change in the:",
     "options": [
-     "a SGD 29.6 million reduction in income tax expense.",
-     "a SGD 29.6 million increase in income tax expense.",
-     "a SGD174.1 million reduction in income tax expense."
+     "expected long-term rate of return on plan assets.",
+     "discount rate.",
+     "estimated future salary increases."
     ],
-    "answer": "A",
-    "why": "A is correct. Excess tax benefit (windfall) = statutory tax rate × (tax deduction − share-based compensation expense recognized) = 0.17 × [(71.50 × 3,332,063) − (19.25 × 3,332,063)] = 29,597,050, a reduction in income tax expense under US GAAP.",
-    "src": "ec-ski Q15"
+    "answer": "C",
+    "why": "C is correct. All three assumptions were lower in 20X3 than in 20X1. Lower expected salary increases reduce the service cost. A lower discount rate increases the obligation and, in most cases, the interest cost. A lower expected return on plan assets typically increases the periodic pension cost.",
+    "src": "ec-terra Q22"
    },
    {
     "n": 44,
-    "q": "MKI reported basic shares outstanding of 270,400,000 and positive net income on its income statement for the year ended 31 December 20X2. Besides unvested RSUs, MKI had no other potentially dilutive securities outstanding. Assuming an average share price of SGD 71.50 for the year, diluted shares outstanding for the year ended 31 December 20X2 is closest to:",
+    "q": "Compared to the pension assumptions Tierra Dorada used in 20X2, which of the following pairs of assumptions used in 20X3 is most likely internally inconsistent?",
     "options": [
-     "279,341,928.",
-     "273,284,585.",
-     "275,695,075."
+     "Estimated future salary increases, inflation",
+     "Expected long-term rate of return on plan assets, discount rate",
+     "Discount rate, estimated future salary increases"
     ],
-    "answer": "C",
-    "why": "C is correct (treasury stock method). Basic 270,400,000 + unvested RSUs 9,341,928 − assumed repurchases of average unrecognized expense (145.6 + 433.1) ÷ 2 = 289.350 million ÷ 71.50 = 4,046,853, giving 275,695,075.",
-    "src": "ec-ski Q17"
+    "answer": "A",
+    "why": "A is correct. The inflation estimate rose from 20X2 to 20X3 but the estimate of future salary increases was lowered. Normally, salary increases are positively related to inflation.",
+    "src": "ec-terra Q23"
    }
   ]
  }

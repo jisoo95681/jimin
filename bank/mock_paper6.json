@@ -1,650 +1,650 @@
 [
  {
   "id": "mock6-1",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Alternative Investments",
-  "title": "Real estate · Eastland Endowment: appraisal-based index allocation, valuation methods, due diligence, loan sizing",
-  "origin": "re-eastland",
-  "body": "Jane Hale is the new chief investment officer of the Westgate University Endowment Fund (the Fund). Historically, the Fund has invested based on a 60% equity/40% fixed-income allocation. However, Hale is looking to change the fund’s allocation to include real estate assets after incorporating data from the appraisal-based Global Real Estate Fund Index. GREFI returns and volatilities imply strong risk-adjusted performance from real estate assets with low correlation with stocks and bonds. Hale is considering the following two asset allocations:\n\nAllocation 1:\n50% equity/35% fixed income/15% real estate\n\nAllocation 2:\n55% equity/35% fixed income/10% real estate\n\nAllocation 1 is based on an allocation model incorporating the GREFI data, while Allocation 2 assumes a higher correlation between real estate and other asset classes in an attempt to adjust for smoothing and therefore has a lower real estate market allocation.\n\nHale recently hired Jon Tatum as the Fund’s new head of real estate. During a recent meeting, Tatum and Hale concluded that the initial real estate investment strategy would be to acquire stabilized office buildings located in primary markets. Tatum has been working on the potential acquisition of a 100% occupied Class A office building located in New York City. Tatum and his junior analyst will conduct a thorough due diligence process for the property. Tatum has also hired an appraiser to value the building and provide valuation support. The appraiser will use three different approaches to estimate the building’s value but will place emphasis on both the direct capitalization and the discounted cash flow methods.\n\nDuring an internal meeting, the junior analyst makes the following three statements about the appraiser’s two primary valuation methods:\n\nStatement 1:\nThe direct capitalization method requires an estimation of a terminal value.\n\nStatement 2:\nProperties expected to generate faster growth will require a capitalization rate that results in a higher value.\n\nStatement 3:\nThe direct capitalization and discounted cash flow methods both consider growth and property quality.\n\nThe appraiser has concluded that net operating income for the New York City office building is expected to be USD15.6 million for the first year, and after that, NOI is expected to increase at 0.50% annually for the foreseeable future. The building’s value is also expected to increase by 0.50% annually, and investors expect to achieve a 5.75% required rate of return given the level of risk.\n\nAfter considering the appraiser’s valuation, Hale then tells Tatum that she can negotiate a purchase price of USD283 million for the building. Furthermore, she can procure a loan with an interest-only 5.25% coupon provided that the loan-to-value ratio does not exceed 65% and the debt service coverage ratio is at least 1.65×, with the loan balance due after 10 years.",
+  "title": "Real estate · Rossi and Patel: appraisal-based index, REOC vs REIT, AFFO, NAV per share",
+  "origin": "re-rossi",
+  "body": "Marco Ricci is a financial adviser specializing in commercial real estate investing. He meets with Anita Shah, a new client, who wants to diversify her portfolio by adding real estate investments to it.\n\nUsing data from an appraisal-based index, Ricci discusses real estate return and risk statistics with Shah and compares them to the return and risk of Shah's current portfolio of stocks and bonds. Based on Shah's investment objectives, Ricci recommends the following types of investments: \n\nInvestment 1: A real estate operating company (REOC);\nΙnvestment 2: An equity real estate investment trust (REIT).\nShah asks Ricci how REITs and REOCs are valued. Ricci mentions that the following measures are widely used in the valuation of REITs and REOCs: \nMeasure 1: EBITDA;\nMeasure 2: Funds from operations (FFO);\nMeasure 3: Adjusted funds from operations (AFFO).\nNext, Ricci presents Shah with the valuation of a REIT. REIT A is a multi-family REIT and its NAV is calculated based on the net operating income (NOI) information in Exhibit 1.\n\nExhibit 1\n \tREIT A\nProperty subsector\tMulti-family\nLast-12-month real estate NOI\t$280,000\nLast-12-month non-cash rent\t$9,800\nLast-12-month capital expenditures\t$40,000\nCash and equivalents\t$69,300\nTotal debt\t$823,000\nDiscount rate\t6.5%\nEstimated growth rate\t1.5%\nShares outstanding\t50,000",
   "questions": [
    {
     "n": 1,
-    "q": "Which of the following statements is most accurate as to how Hale should decide on Allocation 1 versus Allocation 2?",
+    "q": "The type of index Ricci uses will most likely:",
     "options": [
-     "Hale should prefer Allocation 2 to Allocation 1 because real estate is closely correlated with other asset classes.",
-     "Hale should prefer Allocation 1 to Allocation 2 to ensure an optimal Sharpe ratio.",
-     "Hale should prefer Allocation 2 to Allocation 1 because the GREFI likely understates the volatility of real estate and its correlation with stocks and bonds."
+     "overstate the diversification benefits of real estate.",
+     "have values that lead the transaction values in the market.",
+     "introduce noise in the index measurement."
     ],
-    "answer": "C",
-    "why": "C is correct. The appraisal-based GREFI likely overstates the Sharpe ratio of real estate and underestimates the correlation of real estate returns with those of stocks and bonds. As a result, Allocation 1 likely includes more real estate in the allocation than is optimal. Response A does not provide the correct reason for why a lower real estate allocation makes sense, and Response B ignores the problems associated with appraisal-based indexes.",
-    "src": "re-eastland Q1"
+    "answer": "A",
+    "why": "A. Correct because Ricci uses an appraisal-based index, and appraisal-based indexes are often criticized for having appraisal lag, which results from appraised values tending to lag when there are sudden shifts in the market. Appraisal lag tends to smooth the index, meaning that it has less volatility. It behaves somewhat like a moving average of what an index would look like if it were based on values obtained from transactions rather than appraisals. Because of the lag in appraisal-based real estate indexes, they will also tend to have a lower correlation with other asset classes. The smoothing effect will also overstate Sharpe ratios, which is problematic if the index is used in asset allocation models to determine how much of a portfolio should be allocated to real estate versus other asset classes. The appropriate allocation to and benefits from private real estate would likely be overestimated. | B. Incorrect because appraisal-based indexes are often criticized for having appraisal lag, which results from appraised values tending to lag when there are sudden shifts in the market. In an upward market, transaction prices usually start to rise first. Then as these higher prices are reflected in comparable sales and investor surveys, they are captured in appraised values. Thus, appraisal-based indexes may not capture the price increase until a quarter or more after it was reflected in transactions. The same lag would also occur in a down market, with appraised values not falling as soon as transaction prices. Incorrect answer: (no answer) Correct Answer: overstate the diversification benefits of real estate. | C. Incorrect because this is a problem associated with transaction-based indexes, not appraisal-based indexes. Transaction-based indexes can be noisy (that is, they include random elements in the observations) because of the need to use statistical techniques to estimate the index. So, there may be upward or downward movements from quarter to quarter that are somewhat random even though in general (viewed over a year or longer) the index is capturing the correct movements in the market. On the other hand, appraisal-based indexes combine valuation information from individual properties and provide a measure of market movements.",
+    "src": "re-rossi Q1"
    },
    {
     "n": 2,
-    "q": "Which of the junior analyst’s three statements regarding the appraiser’s two primary valuation methods is incorrect?",
+    "q": "Compared to Investment 1 recommended by Ricci, Investment 2 most likely:",
     "options": [
-     "Statement 1",
-     "Statement 2",
-     "Statement 3"
+     "avoids double taxation on dividends received by investors.",
+     "is better able to hold properties under development.",
+     "requires less expertise in real estate investing."
     ],
     "answer": "A",
-    "why": "A is the correct choice because Statement 1 is incorrect. The discounted cash flow method (not the direct capitalization method) requires a terminal value by capitalizing NOI at some future date. Responses B and C are not correct, because both Statements 2 and 3 are correct. Properties expected to generate faster growth will use a capitalization rate that results in a higher value, and properties with slower growth will use a capitalization rate that results in a lower value. Both income approaches consider growth and property quality.",
-    "src": "re-eastland Q2"
+    "why": "A. Correct because REIT and passthrough structures avoid corporate income taxation, leaving only the investor to pay taxes on dividends received. On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs, if they are located in countries that do not have a tax-advantaged REIT regime in place, if they engage to a large extent in the development of for-sale real estate properties, or if they offer other non-qualifying services, such as brokerage and third-party property management. Incorrect answer: (no answer) Correct Answer: avoids double taxation on dividends received by investors. | B. Incorrect because the relatively low rates of income retention that are required to maintain a REIT’s tax-free status can detract from income growth potential. In most countries, REITs are required to distribute 90%–100% of their otherwise taxable earnings, invest at least 75% of their assets in real estate, and derive at least 75% of income from real estate rental income or interest on mortgages. To engage in non-REIT-qualifying activities, such as merchant development, REITs form taxable REIT subsidiaries (TRS). On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs if they engage to a large extent in the development of for-sale real estate properties. | C. Incorrect because investment in publicly traded equity investments (in REITs or REOCs) requires much less expertise than private equity investments because investors benefit from having their property interests actively managed on their behalf by professional managers and from having their business interests overseen and guided by boards of directors, as in the case of all public corporations. Therefore, both types of investment provide access to professional management, limiting the required investor qualifications to equity investing generally.",
+    "src": "re-rossi Q2"
    },
    {
     "n": 3,
-    "q": "Based on the direct capitalization method, the appraiser’s current value of the New York City office building is closest to:",
+    "q": "Which of the measures discussed by Ricci best reflects the dividend-paying ability of a REIT?",
     "options": [
-     "USD249,600,000.",
-     "USD271,300,000.",
-     "USD297,100,000."
+     "Measure 1",
+     "Measure 2",
+     "Measure 3"
     ],
     "answer": "C",
-    "why": "C is correct. The value of a property = NOI/(r − g), where r = the discount rate (required return) and g = the growth rate for income (given constant growth in income, value will grow at the same rate). Therefore, the building’s value is calculated as follows:\n\n15,600,000/(5.75% – 0.50%) = 297,142,857 (= 297,100,000 after rounding).\nResponse A is incorrect because a property value of 249,600,000 is incorrectly calculated as follows:\n\n15,600,000/(5.75% + 0.50%) = 249,600,000.\nResponse B is incorrect because a property value of 271,300,000 is incorrectly calculated as follows:\n\n15,600,000/5.75% = 271,300,000.",
-    "src": "re-eastland Q4"
+    "why": "A. Incorrect because EBITDA is not a cash-focused measure of current economic income. The purpose of the adjustments to net earnings made in computing FFO and AFFO is to obtain a more tangible, cash-focused measure of sustainable economic income that reduces reliance on non-cash accounting estimates and excludes non-economic, non-cash charges. | B. Incorrect because AFFO is more reflective of a REIT’s dividend-paying ability than FFO. Adjusted funds from operations, also known as funds available for distribution (FAD) or cash available for distribution, is a refinement of FFO that is designed to be a more accurate measure of current economic income. AFFO is most often defined as FFO adjusted to remove any non-cash rent and to subtract maintenance-type capital expenditures and leasing costs (including leasing agents’ commissions and tenants’ improvement allowances). | C. Correct because adjusted funds from operations, also known as funds available for distribution (FAD) or cash available for distribution, is a refinement of FFO that is designed to be a more accurate measure of current economic income. AFFO is most often defined as FFO adjusted to remove any non-cash rent and to subtract maintenance-type capital expenditures and leasing costs (including leasing agents’ commissions and tenants’ improvement allowances). AFFO is also more reflective of a REIT’s dividend-paying ability than FFO. Incorrect answer: (no answer) Correct Answer: Measure 3",
+    "src": "re-rossi Q3"
    },
    {
     "n": 4,
-    "q": "The maximum loan amount that the Fund can obtain on the New York City office building is closest to:",
+    "q": "The NAV per share for REIT A is closest to:",
     "options": [
-     "USD180.1 million.",
-     "USD111.5 million.",
-     "USD184 million."
+     "$69.31.",
+     "$94.63.",
+     "$78.39."
     ],
-    "answer": "A",
-    "why": "A is correct. Based on the LTV, the maximum loan amount would be 65% of 283 million, or 183.95 million, with a DSC of 1.62×, which is below the 1.65 minimum. However, with a minimum DSC of 1.65×, the maximum debt service would be 15,600,000/1.65 = 9,454,545. This amount is the mortgage payment that would result in a 1.65× DSC for an interest-only loan. If the loan is interest only, then we can obtain the loan amount by simply dividing the mortgage payment by the interest rate. Therefore, the loan amount would be 9,454,545/0.0525 = 180,086,580 (= 180,100,000 after rounding). Because the loan amount based on the minimum DSC results in a lower loan amount, that would be the maximum amount that could be borrowed.\n\nResponse B is incorrect because USD117,100,000 is incorrectly calculated as follows:\n\n283,000,000/1.65 = 180,086,580.\n180,086,580 × 65% = 111,484,848 (= 111,500,000 after rounding).\nC is incorrect because USD184 million is the rounded loan amount based on the maximum LTV of 65%. Because the loan amount based on the minimum DSC results in a lower loan amount, USD180,086,580 ($180,100,000 rounded) would be the maximum loan amount that could be borrowed.",
-    "src": "re-eastland Q5"
+    "answer": "B",
+    "why": "A. Incorrect because it incorrectly discounts next-12-month cash NOI as opposed to capping it (i.e., it uses the discount rate instead of the cap rate). Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Last-12-month cash NOI = $270,200 Next-12-month growth in NOI = $270,200 × 1.5% = $4,053 Estimated next-12-month cash NOI = $270,200 + $4,053 = $274,253 Estimated value of operating real estate = Estimated next-12-month cash NOI/discount rate = $274,253/6.5% = $4,219,276.92. Plus: Cash and equivalents $69,300 Estimated gross asset value = $4,288,576.92 Less: Total debt = $823,000 Net asset value (NAV) = $3,465,576.92 NAV per share = $3,465,576.92/50,000 = $69.31. | B. Correct because the value of $94.63 is calculated as follows: Cap rate = discount rate – estimated growth rate = 6.5% – 1.5% = 5.0% Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Last-12-month cash NOI = $270,200 Next-12-month growth in NOI = $270,200 × 1.5% = $4,053 Estimated next-12-month cash NOI = $270,200 + $4,053 = $274,253 Estimated value of operating real estate = Estimated next-12-month cash NOI/cap rate = $274,253/5.0% = $5,485,060. Estimated gross asset value = $5,554,360 Less: Total debt = $823,000 Net asset value (NAV) = $4,731,360 NAV per share = $4,731,360/50,000 = $94.63. Incorrect answer: (no answer) Correct Answer: $94.63. | C. Incorrect because it reduces last-12-month NOI by capital expenditure. However, the income return is not the same as cash flow, because cash flow is calculated after capital expenditures. That is, the amount of cash flow available each quarter is net operating income (or rental revenue less property operating expenses, including property taxes and insurance) minus capital expenditures. Cap rate = discount rate – estimated growth rate = 6.5% – 1.5% = 5.0% Last-12-month NOI = $280,000 Less: Non-cash rents = $9,800 Less: Last-12-month capital expenditures = $40,000 Last-12-month cash NOI = $230,200 Next-12-month growth in NOI = $230,200 × 1.5% = $3,453 Estimated next-12-month cash NOI = $230,200 + $3,453 = $233,653 Estimated value of operating real estate = Estimated next-12-month cash NOI/cap rate = $233,653/5.0% = $4,673,060. Estimated gross asset value = $4,742,360 Less: Total debt = $823,000 Net asset value (NAV) = $3,919,360 NAV per share = $3,919,360/50,000 = $78.39.",
+    "src": "re-rossi Q4"
    }
   ]
  },
  {
   "id": "mock6-2",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Portfolio Management",
-  "title": "Beaumont and Dupuis: ETF applications and structures",
-  "origin": "s1b-beaumont",
-  "body": "Maelys Beaulieu is a corporate bond portfolio manager at Lyon Funds, LLC in Burlington, VT. She manages a US$500 million fund of primarily investment grade corporate bonds. The fund can also invest in fixed-income securities within the high-yield emerging market and in the sovereign and municipal sectors. As a result of market volatility, Beaulieu has been noting that inflows and outflows are larger and more frequent than in the past. Because her fund is benchmarked against the Barclays Bloomberg Corporate Bond Index, and her peer universe is competitive, Beaulieu is looking at ways to ensure that the cash flows do not adversely affect fund performance. She considers the use of exchange-traded funds (ETFs) to manage her market exposures in the fund.\nMaxime Durand, an analyst on Beaulieu’s team is not familiar with ETFs. He asks Beaulieu to explain how the mechanics of ETFs work and what parties are involved in the process. Beaulieu describes the roles to Durand of different parties involved in ETFs by making the following statements:\nStatement 1:\tETFs trade in the secondary market throughout the course of the day at the then-current market price. In that regard, they are like any other stock in which buyers and sellers are matched.\nStatement 2:\tThere is a primary market for ETFs in which there is a creation and redemption process for shares. Here, the arbitrage gap is reduced to a narrow band to ensure that the price of the ETF and the underlying securities trade around a barrow band.\nStatement 3:\tIf, for example, ETF shares are being created, an intermediary receives the basket of in-kind securities at settlement.\nBeaulieu then asks Durand to analyze in more detail the economics surrounding ETFs. Durand conducts a thorough analysis of the costs of an ETF, such as bid–ask spreads and sources of premiums and discounts. He summarizes his findings to Beaulieu in the following notes:\nNote 1:\tA number of factors can determine the width of bid–ask spreads. These include creation or redemption fees, trading costs, and importantly, the bid–ask spread of the underlying securities. Similar to any other stock, the market maker is compensated, including a profit spread, for the risks of holding and hedging a security which are a function of liquidity.\nNote 2:\tETFs can trade at either a premium or discount to the underlying, which affect trading costs negatively or positively. Exchanges disclose the indicated intraday net asset values (NAVs), which are estimates of fair value based on the creation basket. Premiums and discounts are driven by a number of factors, including timing differences and stale pricing, which can be meaningful for foreign securities.\nBeaulieu continues to assess the use of ETFs in her portfolio. She constantly evaluates risks that different investments can introduce into her strategy. She asks Durand to work with the risk management group to identify these risks and report back to her. Durand provides Beaulieu a report with his findings on ETF risks starting with an executive summary, which is provided in Exhibit 1.\nExhibit 1 Executive Summary of ETF Risks\nETFs introduce unique risks because of their structure, holdings, and underlying exposures. Counterparty risk is prevalent in certain ETF legal structures, such as synthetic ETFs in which investors could lose all the principal invested if the issuer defaults. Funds that use over-the-counter (OTC) derivatives, such as exchange traded notes (ETNs), are subject to settlement risk, which is the result of counterparty risk between settlement periods. Leveraged and inverse funds might not deliver the expected performance over the desired time horizon that was expected based on the underlying exposures.",
+  "title": "Active management · Mackie: three managers and the fundamental law",
+  "origin": "ap-mackie",
+  "body": "Paula Maddison is a portfolio manager with a family office. She is reviewing the performance of three managers of active portfolios over the past year.\n\nFirst, Maddison considers Manager 1's portfolio, which is invested in an equity fund and a fixed-income fund. Exhibit 1 shows Manager 1's strategic asset allocation and current allocation to these funds as well as the return on the two funds and their benchmarks.\n\nExhibit 1\n \tFund Return\tBenchmark Return\tStrategic Asset Allocation\tManager 1 Allocation\nEquity fund\t10.0%\t12.0%\t50%\t60%\nFixed-income fund\t3.0%\t1.0%\t50%\t40%\nMaddison meets with Manager 2, who runs an unconstrained global equities portfolio. Maddison informs Manager 2 that the family office will require ESG considerations to be incorporated into all of their investments going forward. The manager considers how the imposition of ESG constraints will affect portfolio performance as measured by the fundamental law of active management.\n\nAfter her discussion with Manager 2, Maddison does further research into the strengths and limitations of the fundamental law of active management and makes the following observations:\n\nObservation 1: If returns are not independent, the number of assets in a portfolio is not an adequate measure of breadth.\nObservation 2: The fundamental law requires the empirical validity of the CAPM.\nLastly, Maddison gathers information about Manager 3's portfolio in Exhibit 2. She uses the fundamental law of active management to evaluate the portfolio's performance.\n\nExhibit 2\nInformation coefficient\t0.09\nTransfer coefficient\t0.70\nBreadth\t9\nActive portfolio risk\t0.33",
   "questions": [
    {
     "n": 5,
-    "q": "Based on Beaulieu’s objectives in managing her fund, which application of ETFs is least likely applicable?",
+    "q": "The value added to Manager 1's portfolio attributable to security selection is closest to:",
     "options": [
-     "Portfolio completion strategies",
-     "Portfolio transition management",
-     "Portfolio liquidity management"
+     "0.7%.",
+     "–0.4%.",
+     "1.1%."
     ],
     "answer": "B",
-    "why": "A. Incorrect because Beaulieu can use ETFs to invest the outflows or meet redemptions and keep her exposure to the market. | B. Correct because transition management refers to the process of hiring and firing managers — or making changes to allocations with existing managers. In this application, the manager can add the desired exposure to a market segment with ETFs while shedding exposure to the market segment she has received in kind. Beaulieu is experiencing inflows and outflows in her corporate bond fund. An efficient way to maintain the desired exposure is to buy and sell ETFs as flows occur. Using ETFs for portfolio completion can help fill in temporary gaps in exposure while she finds individual bonds to trade. The liquidity of ETFs relative to individual bonds allows Beaulieu to quickly invest inflows or meet redemptions. | C. Incorrect because portfolio liquidity management is easily achieved with the use of ETFs.",
-    "src": "s1b-beaumont Q24"
+    "why": "A. Incorrect because it is Manager 1's portfolio return less the benchmark return, or the total value added (RA = RP – RB): [(0.6)(0.1) + (0.4)(0.03)] – [(0.5)(0.12) + (0.5)(0.01)] = 7.2% – 6.5% = 0.7%. It is also the sum of the value added by security selection and the value added by asset allocation: –0.4% + 1.1% = 0.7%. | B. Correct because the value added by security selection is the product of the active return (RA), which is the return on each underlying fund (RP) less the return on its respective benchmark (RB), and the allocated weight given to each fund, respectively. In this case: 0.6(0.10 – 0.12) + 0.4(0.03 – 0.01) = –1.2% + 0.8% = –0.4%. | C. Incorrect because it is the value added by asset allocation, not by security selection. Since the active weights are 60% to the Equity fund (compared with 50% for the Strategic Asset Allocation) and 40% to the Fixed-income fund (compared with 50% for the Strategic Asset Allocation), the value added from asset allocation is (60% – 50%)(0.12) + (40% – 50%)(0.01) = 1.2% – 0.1% = 1.1%.",
+    "src": "ap-mackie Q38"
    },
    {
     "n": 6,
-    "q": "The roles of the parties involved in the mechanics of ETFs that Beaulieu describes to Durand in her three statements, can most likely be described in order as those of the:",
+    "q": "In terms of the fundamental law of active management, the family office's investment requirements will most likely lower Manager 2's:",
     "options": [
-     "ETF sponsor, market maker, and authorized participant.",
-     "market maker, authorized participant and ETF sponsor.",
-     "authorized participant, ETF sponsor, and market maker."
+     "transfer coefficient.",
+     "active risk.",
+     "breadth."
     ],
-    "answer": "B",
-    "why": "A. Incorrect because activities listed are conducted first by the market maker, second by the authorized participant, and third by the ETF sponsor. | B. Correct because several parties are involved in the primary or creation or redemption and secondary trading of ETFs. If the trade is submitted through a broker in the secondary market, a market maker will execute the transaction. If ETF shares need to be created or redeemed because of demand or supply, the only group of investors permitted in this process is a special group of institutional investors called authorized participants. The ETF issuer or the sponsor transacts with the authorized participant receiving or providing in-kind securities in the settlement process. | C. Incorrect because activities listed are conducted first by the market maker, second by the authorized participant, and third by the ETF sponsor.",
-    "src": "s1b-beaumont Q25"
+    "answer": "A",
+    "why": "A. Correct because Manager 2's portfolio is currently unconstrained and therefore its transfer coefficient equals 1, the planned addition of ESG constraint would reduce this. Like the information coefficient, the transfer coefficient, TC, is a simple multiplicative factor in the fundamental law. It measures the extent to which constraints reduce the expected value added of the investor’s forecasting ability. In the absence of constraints, the transfer coefficient is approximately 1.00, resulting in the basic form of the fundamental law. However, in practice, investors often work under constraints that result in TC values between 0.20 and 0.80. | B. Incorrect because Manager 2 will be under the constraint of having fewer eligible securities available; the risk level he prefers to take with the available securities is not constrained. Active risk is \"the volatility of the active return.\" | C. Incorrect because breadth measures the number of independent decisions; it is not affected by constraints on the fund. For example, despite fewer eligible stocks, if the manager increased the frequency of trading, it would increase the breadth.",
+    "src": "ap-mackie Q39"
    },
    {
     "n": 7,
-    "q": "Are Durand’s notes regarding the economics surrounding ETFs most likely correct?",
+    "q": "Are both of Maddison's observations about the fundamental law of active management correct?",
     "options": [
-     "No, he is incorrect with regard to Note 2",
-     "No, he is incorrect with regard to Note 1",
+     "No, only Observation 2 is correct",
+     "No, only Observation 1 is correct",
      "Yes"
     ],
-    "answer": "C",
-    "why": "A. Incorrect because Note 2 regarding premiums and discounts is correct. | B. Incorrect because Note 1 regarding bid-ask spreads is correct. | C. Correct because Durand is correct with regard to both notes. He has accurately described the economics surrounding ETFs pertaining to both bid-ask spreads and premiums and discounts.",
-    "src": "s1b-beaumont Q26"
+    "answer": "B",
+    "why": "A. Incorrect because the fundamental law does not require the empirical validity of the CAPM. The fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns. | B. Correct because the number of individual assets, N, is not an adequate measure of strategy breadth, BR, when the active returns between individual assets are correlated, as defined by the risk model, and forecasts are not independent from period to period. Another example of the limitation of the fundamental law due to the lack of decision independence is the active management of fixed-income portfolios. Statement 2 is incorrect because the fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns. | C. Incorrect because Statement 2 is incorrect. The fundamental law does not require the empirical validity of the CAPM, the multi-factor APT (arbitrage pricing theory), or any other equilibrium theory of required returns.",
+    "src": "ap-mackie Q40"
    },
    {
     "n": 8,
-    "q": "Which type of ETF has Durand least likely associated correctly with the risks described in his executive summary in Exhibit 1?",
+    "q": "Based on the fundamental law of active management, Manager 3's information ratio is closest to:",
     "options": [
-     "Synthetic ETFs",
-     "Leveraged and inverse funds",
-     "ETNs"
+     "0.06.",
+     "0.19.",
+     "0.57."
     ],
-    "answer": "C",
-    "why": "A. Incorrect because Durand has correctly described the risks associated with synthetic ETFs. | B. Incorrect because Durand has correctly described the risks associated with leveraged and inverse funds. | C. Correct because Durand has correctly identified a number of risks that investors face when investing in ETFs. Certain risk are more closely associated with specific types of ETFs. He correctly notes the risks associated with leveraged and inverse funds, which are intended to deliver their expected return relative to their exposure over very short periods. These are not intended to be buy-and-hold investments for periods generally longer than a month or even days in some cases without rebalancing of the position. He also correctly associates synthetic ETFs, such as swap-based funds that use OTC derivatives to gain exposure and are subject to both counterparty and settlement risk. Durand has incorrectly associated ETNs with settlement risk, which is the result of counterparty risk between settlement periods. ETNs do not hold underlying securities but rather are unsecured obligations of the institutions that issue them and therefore are subject to counterparty risk.",
-    "src": "s1b-beaumont Q27"
+    "answer": "B",
+    "why": "A. Incorrect because it is the expected active return, not the information ratio. The fundamental law states that E(RA) = (IC)(TC)(BR)0.5σA, where E(RA) is the expected active return, IC is the information coefficient, TC is the transfer coefficient, BR is the breadth, and σA is the active standard deviation. In this case E(RA) = (0.09)(0.7)(9)0.5(0.33) = 0.0624 ≈ 0.06. | B. Correct because the fundamental law states that E(RA) = (IC)(TC)(BR)0.5σA, where E(RA) is the expected active return, IC is the information coefficient, TC is the transfer coefficient, BR is the breadth, and σA is the active portfolio risk. Since the Information ratio is E(RA)/σA, from the above equation it can be shown that the IR = (IC)(TC)(BR)0.5 = (0.09)(0.7)(9)0.5 = 0.189 ≈ 0.19. | C. Incorrect because the square root of the breadth has been omitted, resulting in IR = (0.09)(0.7)(9) = 0.567 ≈ 0.57. This is also closest to the misinterpretation of the expected active return being (IC)(TC)(BR)0.5, leading to E(RA)/σA = [(0.09)(0.7)(9)0.5] / (0.33) = 0.5727 ≈ 0.57.",
+    "src": "ap-mackie Q41"
    }
   ]
  },
  {
   "id": "mock6-3",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Fixed Income",
-  "title": "Aguero: GFC Advisory, term structure theories, interest rate models and volatility",
-  "origin": "ts-gfc",
-  "body": "Lumen Advisory is a private independent investment firm that provides solutions and advice to individuals and institutions in the United States and internationally. Fernando Alvarez is the director of research and is meeting with analysts Sergio Tavares, Matteo Pellegrini, and Karen Dunbar to discuss the development of a research note that explains the role of the term structure of interest rates in fixed-income investment decision making.\n\nAlvarez asks the group to describe how traditional theories of the term structure of interest rates explain the shape of the yield curve as well as the relationship between forward rates and expected future spot rates. Each of the analysts responds as follows:\n\nDunbar states that the unbiased expectations theory applies to risky and risk-free assets and maintains that forward rates are an unbiased predictor of expected future spot rates. This theory can explain an upward sloping or downward sloping yield curve.\n\nPellegrini responds that under the liquidity preference theory, investors require a liquidity premium to lend over longer maturities. The theory states that forward rates are an upwardly biased estimate of expected future spot rates, and the yield curve will typically be upward sloping. A downward sloping yield curve is only possible if expected future spot rates decline by enough to offset the liquidity premium.\n\nTavares notes that according to the segmented markets theory, the shape of the yield curve is determined by supply and demand for funds at each maturity and that institutions will deviate from their preferred maturities if they are adequately compensated.\n\nAlvarez states there are modern theories of the term structure that offer more precise ways of describing the evolution of interest rates, specifically the Cox–Ingersoll–Ross (CIR) model, the Vasicek model, and the Ho–Lee model. He notes that all three models are structured similarly in that they have a drift term and a stochastic term. Alvarez states the three models also assume that short-term interest rates converge to the long-term rate over time. He concludes by stating that while the CIR and Vasicek models assume constant interest rate volatility, the Ho–Lee model allows for interest rate volatility to increase with the level of interest rates.\n\nAlvarez notes that yield curve shaping risk is important in fixed-income portfolio management and asks for input on how this should be addressed in the research note. Dunbar responds that our note should indicate three factors that describe yield curve movement: level, steepness, and curvature. The risk associated with these three factors can be measured using effective duration.\n\nTavares states the research note should also include a discussion of the impact of interest rate volatility on fixed-income portfolio management and makes the following statements:\n\nStatement 1: “Interest rate volatility is an important consideration because it impacts the option values embedded in some fixed-income securities.”\nStatement 2: “Long-term interest rates are typically more volatile than short-term interest rates.”\nStatement 3: “Long-term interest rate volatility is linked to uncertainty regarding the real economy and inflation, whereas short-term interest rate volatility is related to uncertainty regarding monetary policy.”",
+  "title": "CDS · Marcos Pereira: Tundra Partners",
+  "origin": "cds-4",
+  "body": "Marco Pinto is a credit analyst with Steppe Partners, a hedge fund manager. Steppe enters into single-name CDS for speculative purposes.  Pinto compiles information about Steppe’s CDS portfolio in Exhibit 1.\n\nExhibit 1\n \tPosition\tCoupon\tOrigination Credit Spread\tCurrent Credit Spread\nCDS 1\tProtection Buyer\t1.0%\t75 bps\t100 bps\nCDS 2\tProtection Seller\t1.0%\t100 bps\t200 bps\nCDS 3\tProtection Seller\t5.0%\t650 bps\t600 bps\nCDS 4\tProtection Seller\t5.0%\t450 bps\tIn default\nCDS 1 and 2 relate to the same reference entity, and were entered into by Steppe on the same date. CDS 1 and 2 have a remaining time to maturity of 2 and 5 years respectively.\n\nExhibit 2\nMaturity\tTrading Price\nSenior unsecured bond\t3 years\t30% of par\nSenior unsecured bond\t5 years\t35% of par\nSubordinated unsecured bond\t8 years\t20% of par\nPinto also whether Steppe should invest in CDS 5. He calculates that CDS 5’s reference entity has a hazard rate of 1.35% and 2.35% in each of the next 2 years.\n\nPinto notices that the market expects a local company to be the target of a leveraged buyout (LBO), whereby it will issue large amounts of debt and use the proceeds to repurchase its publicly traded equity. As a result, the credit spread of the company's senior unsecured bonds with 5 years until maturity has increased to 450 bps. A comparable 5-year CDS currently trades at a spread of 400 bps. Pinto believes that credit spreads in both markets should soon converge.",
   "questions": [
    {
     "n": 9,
-    "q": "With regard to Alvarez’s question regarding traditional theories of the term structure of interest rates, who is most likely correct?",
+    "q": "When Steppe entered into CDS 1 and 2, its view about the reference entity's credit curve was most likely that the curve would:",
     "options": [
-     "Tavares",
-     "Dunbar",
-     "Pellegrini"
+     "remained unchanged.",
+     "flatten.",
+     "steepen."
     ],
-    "answer": "C",
-    "why": "Pellegrini correctly describes liquidity preference theory. Tavares describes preferred habitat (deviating if compensated), not segmented markets. Dunbar is wrong: the unbiased expectations theory assumes risk neutrality and applies to risk-free assets.",
-    "src": "ts-gfc Q71"
+    "answer": "B",
+    "why": "A. Incorrect because, as explained in the rationale for the correct answer, with CDS 1 and 2, Steppe entered into a curve trade expecting that the reference entity's credit curve would flatten, not remain unchanged. | B. Correct because entering into CDS 1 and 2 together constitute a curve trade, which involves buying single-name or index protection at one maturity and selling protection in the same reference entity at a different maturity. A steeper curve means that long-term credit risk increases relative to short term credit risk. An investor who believes that long-term credit risk will increase relative to short-term credit risk (credit curve steepening) can buy protection by buying a long-term single-name CDS and sell protection by selling a short-term single-name CDS. On the other hand, a flatter curve means that long-term credit risk decreases relative to short term credit risk.  An investor who believes that long-term credit risk will decrease relative to short-term credit risk (credit curve flattening) can sell protection by selling a long-term single-name CDS and buy protection by buying a short-term single-name CDS.  This is the case of the curve trade entered into by Steppe. Therefore, its view about the reference entity's credit curve was that it would flatten. | C. Incorrect because, as explained in the rationale for the correct answer, with CDS 1 and 2, Steppe entered into a curve trade expecting that the reference entity's credit curve would flatten, not steepen.",
+    "src": "cds-4 Q19"
    },
    {
     "n": 10,
-    "q": "In his statement about modern theories of the term structure, Alvarez is most likely correct about:",
+    "q": "If Steppe closes its position in CDS 3 today, it will:",
     "options": [
-     "interest rate volatility.",
-     "the structure of the interest rate models.",
-     "convergence of short-term and long-term interest rates."
+     "pay an upfront premium and monetize a gain.",
+     "receive an upfront premium and monetize a gain.",
+     "pay an upfront premium and monetize a loss."
     ],
-    "answer": "B",
-    "why": "All three models (CIR, Vasicek, Ho–Lee) have a drift term and a stochastic term. He is wrong on volatility (Vasicek and Ho–Lee have constant volatility; CIR's volatility increases with the level of rates) and on convergence (CIR and Vasicek are mean reverting; Ho–Lee is not).",
-    "src": "ts-gfc Q72"
+    "answer": "A",
+    "why": "A. Correct because if Steppe was to close its position in CDS 3, it will have to buy credit protection with a newly created CDS with a coupon of 5.0% and the same remaining maturity as CDS 3.  As the reference entity’s credit spread is currently 600 bps, to buy such credit protection, Steppe has to pay an upfront premium. However, as the reference entity’s credit spread decreased by 50 bps (i.e., credit quality improved) the upfront premium that Steppe has to pay is lower than the upfront premium it received at origination. Therefore, it will monetize a gain. | B. Incorrect because Steppe will pay an upfront premium and monetize a gain. | C. Incorrect because Steppe will pay an upfront premium and monetize a gain.",
+    "src": "cds-4 Q20"
    },
    {
     "n": 11,
-    "q": "Is Dunbar’s response to Alvarez regarding yield curve shaping risk most likely correct?",
+    "q": "Based on Pinto's analysis, the probability of default of CDS 5’s reference entity within the next 2 years is closest to:",
     "options": [
-     "No, she is incorrect about the measure of risk associated with the three factors.",
-     "No, she is incorrect about factors affecting yield curve movements.",
-     "Yes."
+     "3.70%.",
+     "3.73%.",
+     "3.67%."
     ],
-    "answer": "A",
-    "why": "Level, steepness and curvature are the right factors, but effective duration measures only parallel shifts (level). Key rate duration is used for steepness and curvature (shaping risk).",
-    "src": "ts-gfc Q73"
+    "answer": "C",
+    "why": "A. Incorrect because it incorrectly computes the probability of default of the entity in the next 2 years as the sum of the two hazard rates: Probability of default = 1.35% + 2.35% = 3.70% | B. Incorrect because it incorrectly computes the probability of default of the entity in the next 2 years as: Probability of default = [(1 +1.35%) x (1+ 2.35%) - 1]  = 3.73% | C. Correct because the probability of default of the entity in the next 2 years is computed as: Probability of default = 1 – Probability of Survival in the next 2 years whereas, Probability of survival in the next 2 years = (1 – hazard rate year 1) x (1 – hazard rate year 2) Probability of survival in the next 2 years = (1 – 1.35%) x (1 – 2.35%) = 96.33% Therefore, Probability of default = 1 – 96.33% = 3.67%",
+    "src": "cds-4 Q21"
    },
    {
     "n": 12,
-    "q": "Which of Tavares’ statements on interest rate volatility is least likely correct?",
+    "q": "Which of the following trades is consistent with Pinto's belief about the local company's credit spread convergence?",
     "options": [
-     "Statement 1",
-     "Statement 2",
-     "Statement 3"
+     "Buy bonds and sell CDS credit protection",
+     "Buy bonds and buy CDS credit protection",
+     "Sell bonds and buy CDS credit protection"
     ],
     "answer": "B",
-    "why": "Statement 2 is incorrect: the volatility term structure shows that short-term rates are more volatile than long-term rates. Statements 1 and 3 are correct.",
-    "src": "ts-gfc Q74"
+    "why": "A. Incorrect because as explained in the rationale for the correct answer Steppe should buy bonds and buy credit protection. | B. Correct because the credit spread situation provide an opportunity for a basis trade.  Per the reading, the general idea behind most basis trades is that any such mispricing is likely to be temporary and the spreads in the bond and the CDS markets should return to equivalence when the market recognizes the disparity. For example, suppose the bond market implies a 4.5% credit risk premium whereas the CDS market implies a 4.0% credit risk premium. The trader does not know which is correct but believes these two rates will eventually converge. From the perspective of the CDS, its risk premium is too low relative to the bond credit risk premium. From the perspective of the bond, its risk premium is too high relative to the CDS market, which means its price is too low. So, the CDS market could be pricing in too little credit risk, and/or the bond market could be pricing in too much credit risk. Either market could be correct, it does not matter. The investor would buy the bond at a price that appears to overestimate its credit risk, and, at the same time, buy credit protection at what appears to be an unjustifiably low premium. If the convergence occurs, the trade would capture the 0.5% differential in the two markets. | C. Incorrect because as explained in the rationale for the correct answer Steppe should buy bonds and buy credit protection.",
+    "src": "cds-4 Q22"
    }
   ]
  },
  {
   "id": "mock6-4",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Corporate Issuers",
-  "title": "Lee: Stratton and Midwest Oil, acquisition, synergies and capital structure",
-  "origin": "corp4-lee",
-  "body": "Elaine Ross is an analyst at an investment bank covering the energy sector. She and her junior analyst are analyzing Granite Oil Corporation.\n\nGranite Oil Corporation is a publicly traded, US-based energy company that just announced its acquisition of Lakeshore Oil Corporation, a smaller US-based energy company. Granite will pay USD55 in cash and 2.25 Granite shares for each Lakeshore share, for a total consideration of USD40 billion based on share prices just prior to the announcement. Granite’s current trading enterprise value just prior to the announcement was USD170 billion. Ross concludes that the acquisition does not signal a change in strategy or focus for Granite.\n\nGranite expects to realize annual recurring cost synergies of USD350 million (pre-tax), primarily from efficiencies in oil exploration and production activities and savings in corporate costs. The achievement of the full USD350 million in synergies is expected by the end of the third year after the acquisition closes. Synergies are realized in the amounts of USD117 million, USD233 million, and USD350 million in Years 1–3, respectively, and cash costs of USD175 million, USD280 million, and USD395 million are incurred in Years 1–3, respectively.\n\nExpectations for revenues and total operating expenses for Granite and Lakeshore for the next three years prior to the acquisition announcement are shown in Exhibit 1.\n\nExhibit 1\nGranite and Lakeshore Year 1–3 Figures, Prior to Acquisition (USD millions)\nGranite\tYear 1\tYear 2\tYear 3\nRevenues\t21,325\t22,391\t23,511\nOperating expenses\t16,525\t17,351\t18,219\nLakeshore\t\t\t\nRevenues\t5,350\t5,618\t5,898\nOperating expenses\t3,050\t3,203\t3,363\nRoss’s junior analyst makes the following comment during a conversation with Ross:\n\nThe acquisition is considered immaterial in the initial evaluation step for Granite because it does not signal a change in strategy or focus.\n\nGranite’s offer valued Lakeshore at an enterprise value of USD40.6 billion, including USD4.3 billion of existing Lakeshore debt. To finance the consideration of USD55 in cash and 2.25 Granite shares for each Lakeshore share, Granite will issue 104 million new shares and raise approximately USD26 billion in new debt and fund the remainder with cash on hand. Following the close, Granite expects its outstanding debt will be approximately USD62 billion. Prior to the acquisition, Granite has 1.096 billion shares outstanding trading at USD125 per share. Ross wants to determine how much the weights of debt and equity in Granite’s capital structure will change assuming a constant share price and that the book value of debt equals its market value.\n\nDuring an internal meeting, Ross asks if Granite could have achieved its same goals by undertaking an equity investment or joint venture. In response, Ross’s junior analyst makes the following three statements.\n\nStatement 1: Acquisitions require substantially greater capital investments than equity investments.\n\nStatement 2: Acquisitions and equity investments are similar in that they both allow the acquirer to gain control of the target.\n\nStatement 3: Relative to joint ventures, equity investments provide more equal governance representation and require larger investments.\n\nRoss conducted a sum-of-the-parts valuation of Granite’s three segments and calculated an estimated enterprise value of USD187 billion just prior to the announcement.",
+  "title": "Marker: BR Hotels, ESG in corporate bonds",
+  "origin": "esg31-2",
+  "body": "Emma Marlowe, CFA, is a fixed-income analyst for the Hanbit Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of KT Hotels, a publicly traded boutique hotel company. Marlowe notes that KT Hotels is a “green hotel” company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. The founding family owns 55% of the outstanding shares. Each ownership share has equivalent voting rights.The board of directors of KT Hotels consists of 15 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry.\n\nKT Hotels has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Marlowe and her supervisor discuss how KT Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Marlowe integrates ESG factors in the investment valuation of KT Hotels’ corporate bonds.",
   "questions": [
    {
     "n": 13,
-    "q": "Based on Exhibit 1, the forecasted operating income in Year 3 for the combined Granite and Lakeshore is closest to:",
+    "q": "The potential conflict between or among shareholders and managers of KT Hotels can best be described as:",
     "options": [
-     "USD7,782.",
-     "USD7,432.",
-     "USD8,177."
+     "a principal-agent problem.",
+     "voting caps.",
+     "a principal-principal problem."
     ],
-    "answer": "A",
-    "why": "A is correct. The forecasted operating income in Year 3 is calculated as follows:\n\nCombined Granite and Lakeshore Oil: Year 1–3 Figures (USD millions)\nRevenues\tYear 1\tYear 2\tYear 3\nGranite\t21,325\t22,391\t23,511\nAdd: Lakeshore revenues\t5,350\t5,618\t5,898\nCombined revenues\t26,675\t28,009\t29,409\nOperating expenses\t\t\t\nGranite\t16,525\t17,351\t18,219\nAdd: Lakeshore\t3,050\t3,203\t3,363\nSubtract: synergies\t(117)\t(233)\t(350)\nAdd: one-time costs\t175\t280\t395\nCombined operating expenses\t19,633\t20,601\t21,627\nOperating income (Rev-OpEx)\t7,042\t7,408\t7,782\nB is incorrect because it incorrectly excludes Year 3 synergies of USD350 million. C is incorrect because it incorrectly excludes Year 3 one-time costs of USD395 million.",
-    "src": "corp4-lee Q6"
+    "answer": "C",
+    "why": "C is correct. KT Hotels has concentrated ownership, given that the family owns 55% of the shares. It also has concentrated voting power, since each ownership share has equal voting rights. In this ownership structure, the controlling shareholders have power over both management and minority shareholders. The controlling shareholders are referred to as strong shareholders and the managers as weak managers. The conflict in this structure exists between the controlling shareholders and the minority shareholders. The controlling shareholders can potentially divert resources for their own benefit at the expense of the minority shareholders. This conflict is referred to as a principal-principal problem.\n\nB is incorrect since the conflict for KT Hotels is a principal-principal problem. Voting caps are legal restrictions on the voting rights of large share positions. They result from an ownership structure of concentrated ownership and dispersed voting rights.\n\nA is incorrect since the conflict for KT Hotels is a principal-principal problem. The principal-agent problem occurs when the ownership structure has dispersed ownership and dispersed voting rights. In this case, the structure has weak shareholders and strong management, with a potentially significant conflict between the shareholders and the management.",
+    "src": "esg31-2 Q7"
    },
    {
     "n": 14,
-    "q": "The weight of equity in Granite’s capital structure as a result of the acquisition of Lakeshore assuming Ross’s two assumptions is closest to:",
+    "q": "KT Hotels’ corporate governance risk is increased by:",
     "options": [
-     "81%.",
-     "29%.",
-     "71%."
+     "the low percentage of independent board members.",
+     "CEO duality.",
+     "family control."
     ],
-    "answer": "C",
-    "why": "C is correct. Following the close of the acquisition, Granite expects its outstanding debt to total USD62 billion, after assuming USD4.3 billion in existing Lakeshore debt and issuing USD26 billion. Therefore, prior to the acquisition, Granite had approximately (62 − 4.3 − 26 =) USD31.7 billion in debt and (1.096 billion shares outstanding × USD125 per share =) USD137.0 billion in equity, resulting in a mix of debt and equity of 19% and 81%, respectively. After the acquisition, Granite will have USD62 billion in debt and (1.096 billion + 104 million =) 1.2 billion shares outstanding, which, priced at USD125 per share, results in USD150 billion in equity, resulting in a mix of debt and equity of 29% and 71%, respectively. The change in capital structure is summarized below.\n\nGranite’s Capital Structure before and after Acquisition of Lakeshore\nGranite Capital Structure\tPre-Acquisition\tPost-Acquisition\nDebt %\t19%\t29%\nEquity %\t81%\t71%\nB is incorrect because 29% represents the percentage of debt after acquisition. A is incorrect because 81% represents the percentage of equity prior to acquisition.",
-    "src": "corp4-lee Q8"
+    "answer": "A",
+    "why": "A is correct. The corporate governance risk for KT Hotels is high due to a low percentage of independent board members. Of the 15 members on the board, only one is independent. Many OECD countries have introduced a recommendation for the minimum ratio of independent directors serving on the board. They typically set the minimum ratio of independent directors in a range of 20%–50% or greater. KT Hotels falls below this range.\n\nB is incorrect since CEO duality is not a governance problem for KT Hotels. KT Hotels’ CEO and chairperson are separate, so there is no CEO duality. This is typically a sign of effective corporate governance. The independent chairperson and CEO roles help protect investor interests.\n\nC is incorrect because family control is not likely to increase governance risk for KT Hotels. Family control lowers the risks associated with principal-agent problems. This is the result of the family’s having concentrated ownership and management responsibility. The lower risk associated with the principal-agent problem is somewhat offset by the drawbacks of family control, which include poor transparency, modest considerations for minority shareholder rights, and difficulty in attracting quality management talent.",
+    "src": "esg31-2 Q8"
    },
    {
     "n": 15,
-    "q": "Which of Ross’s junior analyst’s three statements is correct?",
+    "q": "The security analysis of KT Hotels is most likely focused on:",
     "options": [
-     "Statement 1",
-     "Statement 2",
-     "Statement 3"
+     "adjusting the discount rate.",
+     "mitigating downside risk.",
+     "identifying potential opportunities."
     ],
-    "answer": "A",
-    "why": "A is correct. Acquisitions require substantially greater capital investments than equity investments. Acquisitions—not equity investments—allow the acquirer to gain control of the target. Relative to equity investments, joint ventures provide more equal governance representation and require larger investments. B is incorrect because acquisitions (not equity investments) allow the acquirer to gain control of the target. C is incorrect because relative to equity investments, joint ventures provide more equal governance representation and require larger investments.",
-    "src": "corp4-lee Q9"
+    "answer": "B",
+    "why": "B is correct. The implementation of ESG factors in security analysis differs for equity analysis and fixed-income analysis. For BK Hotels’ corporate bonds, the focus of ESG integration is on mitigating downside risk. In contrast, in equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk.\n\nA is incorrect since adjusting the discount rate is typically used in equity analysis and not in fixed-income analysis. In valuing a stock, an analyst may choose to adjust the discount factor to account for the ESG risk. In fixed-income analysis, the credit spread or CDS is adjusted to reflect the ESG risk.\n\nC is incorrect since identifying potential opportunities is used in equity analysis and not in fixed-income analysis. In fixed-income analysis, the focus of ESG integration is on mitigating downside risk. In equity analysis, ESG integration is used to both identify potential opportunities and mitigate downside risk.",
+    "src": "esg31-2 Q9"
    },
    {
     "n": 16,
-    "q": "Granite’s estimated conglomerate discount just prior to the announcement is:",
+    "q": "After integrating the ESG factors, the credit spread on KT Hotels’ bonds is most likely to:",
     "options": [
-     "USD17 billion.",
-     "−USD17 billion.",
-     "USD0."
+     "increase.",
+     "decrease.",
+     "remain unchanged."
     ],
     "answer": "A",
-    "why": "A is correct. The estimated conglomerate discount just prior to the announcement is calculated as follows: Total estimated enterprise value from sum-of-the-parts valuation − Current trading enterprise value = USD187 billion − USD170 billion = USD17 billion. B is incorrect because it incorrectly subtracts the estimated enterprise value from the current trading enterprise value. C is incorrect because the estimated and current trading enterprise values are not equal.",
-    "src": "corp4-lee Q10"
+    "why": "A is correct. KT Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 women out of 15 members), and low percentage of board members with hotel industry experience (20%). These factors are likely to increase investors’ perception of the corporation’s risk. The social risk for KT Hotels is also high. KT Hotels has a high labor turnover rate, pays most of its workforce at or near the minimum wage, and offers no health benefits. Legislation raising the minimum wage and the growing pressure on KT Hotels to offer benefits would increase operating costs. This could have a negative impact on future cash flows, which would be detrimental to the bond holders. The valuation of KT Hotels’ bonds could be adversely affected by the higher ESG risk. To account for the higher ESG risk, the credit spread on KT Hotels’ bonds is likely to increase.\n\nB is incorrect since the credit spread on KT Hotels’ bonds is likely to increase and not decrease.\n\nC is incorrect since the credit spread on KT Hotels’ bonds is likely to increase and not remain unchanged.",
+    "src": "esg31-2 Q10"
    }
   ]
  },
  {
   "id": "mock6-5",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Economics",
-  "title": "Klymchuk: ECONO growth accounting, convergence and stock markets",
-  "origin": "eg29-klymchuk",
-  "body": "Victor Kovalenko, the chief economist at MACRO Consulting (MC), is reviewing the long-term GDP growth of three countries. Kovalenko is interested in forecasting the long-term change in stock market value for each country. Exhibit 1 presents current country characteristics and historical information on select economic variables for the three countries.\n\nExhibit 1\nSelect Country Factors and Historical Economic Data\n2009–2019\nCountry Factors\tGrowth in Hours Worked (%)\tGrowth in Labor Productivity (%)\tGrowth in TFP (%)\tGrowth in GDP (%)\nCountry A\t\nHigh level of savings and investment\n\nHighly educated workforce\n\nLow tariffs on foreign imports\n\nLimited natural resources\n\n0.9\t2.4\t0.6\t3.3\nCountry B\t\nDeveloped financial markets\n\nModerate levels of disposable income\n\nSignificant foreign direct and indirect investments\n\nSignificant natural resources\n\n−0.3\t1.6\t0.8\t1.3\nCountry C\t\nPolitically unstable\n\nLimited property rights\n\nPoor public education and health\n\nSignificant natural resources\n\n1.8\t0.8\t−0.3\t2.6\nKovalenko instructs an associate economist at EC to assist him in forecasting the change in stock market value for each country. Kovalenko reminds the associate of the following:\n\nStatement 1: “Over short time horizons, percentage changes in GDP, the ratio of earnings to GDP, and the price-to-earnings ratio are important factors for describing the relationship between economic growth and stock prices. However, I am interested in a long-term stock market forecast.”\n\nA client is considering investing in the sovereign debt of Country A and Country B and asks Kovalenko his opinion of each country’s credit risk. Kovalenko tells the client the following:\n\nStatement 2: “Over the next 10 years, I forecast higher potential GDP growth for Country A and lower potential GDP growth for Country B. The capital per worker is similar and very high for both countries, but per capita output is greater for Country A.”\n\nThe client tells Kovalenko that Country A will offer 50-year bonds and that he believes the bonds could be a good long-term investment given the higher potential GDP growth. Kovalenko responds to the client as follows:\n\nStatement 3: “After the next 10 years, I think the sustainable rate of economic growth for Country A will be affected by a growing share of its population over the age of 65, a declining percentage under age 16, and minimal immigration.”\n\nThe client is surprised to learn that Country C, a wealthy, oil-rich country with significant reserves, is experiencing sluggish economic growth and asks Kovalenko for an explanation. Kovalenko responds by stating:\n\nStatement 4: “Although countries with greater access to natural resources are often wealthier, the relationship between resource abundance and economic growth is not clear. My analysis shows that the presence of a dominant natural resource (oil) in Country C is constraining growth. Interestingly, Country A has few natural resources but is experiencing a strong rate of increase in per capita GDP growth.”\n\nKovalenko knows that growth in per capita income cannot be sustained by pure capital deepening. He asks the associate economist to determine how important capital deepening is as a source of economic growth for each country. Kovalenko instructs the associate to use the data provided in Exhibit 1.\n\nKovalenko and his associate debate the concept of convergence. The associate economist believes that developing countries, irrespective of their particular characteristics, will eventually equal developed countries in per capita output. Kovalenko responds as follows:\n\nStatement 5: “Poor countries will only converge to the income levels of the richest countries if they make appropriate institutional changes.”",
+  "title": "Amaral and Mantri: institutions, capital deepening and Mali strategies",
+  "origin": "eg29-amaral",
+  "body": "At an international finance and economics conference in Bamako, Mali, Joao Almeida of Brazil and Lucinda Menon of India are discussing how to spur their countries’ economic growth. Almeida believes that growth can be bolstered by removing institutional impediments and suggests several possibilities for Brazil: launching a rural literacy program, clarifying property rights laws, and implementing a new dividend tax on foreign investors.\n\nMenon responds that for India, capital deepening will be more effective, and she has proposed the following ideas: building a group of auto and textile factories in the southern states, developing a north–south and east–west highway network, and sponsoring a patent initiative.\n\nIn response, Almeida says to Menon:\n\n“Based on endogenous growth theory, one of those proposals is more likely to raise total factor productivity than result in pure capital deepening.”\n\nAlthough Menon recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:\n\nChannel 1\tDeepening the capital base\nChannel 2\tMaking investments in technology\nChannel 3\tMaintaining a low rupee exchange rate\nEach country’s basic economic statistics were presented at the conference. Selected data for Brazil and India are presented in Exhibit 1. Adama Konaté, a fund manager based in Mali, is planning to increase the fund’s allocation to international equities and, after some preliminary analysis, has determined the new allocation will be to Brazilian or Indian equities. After reviewing the data in Exhibit 1, Konaté decides that the allocation will be to Indian equities.\n\nExhibit 1\nEconomic Statistics for Brazil and India\nEconomic Statistic\tBrazil\tIndia\nGDP per capita, 2018\t$14,360\t$6,999\nGDP per capita growth, 2000–2018\t1.3%\t5.8%\nGDP growth, 2005–2018\t2.0%\t7.2%\n- Growth resulting from labor productivity component\t1.3%\t6.3%\n- Growth resulting from capital deepening component\t1.9%\t4.5%\nKonaté is concerned about the low standard of living in Mali and its large informal sector. To improve per capita GDP, Konaté is considering five specific strategies:\n\nStrategy 1\n\nLower the country’s tax rate.\n\nStrategy 2\n\nIntroduce policies that encourage the return of highly educated Malian emigrants.\n\nStrategy 3\n\nBuild daycare centers to increase women’s participation in the workforce.\n\nStrategy 4\n\nImpose high tariffs on imports to protect the country’s nascent industries.\n\nStrategy 5\n\nUse economic development bank loans to improve the country’s transport and manufacturing infrastructure.",
   "questions": [
    {
     "n": 17,
-    "q": "Based on the country factors provided in Exhibit 1, the country most likely to be considered a developing country is:",
+    "q": "Which of Almeida’s initiatives is least likely to achieve his stated growth objective?",
     "options": [
-     "Country C.",
-     "Country B.",
-     "Country A."
+     "Rural literacy",
+     "Dividend tax",
+     "Property rights"
     ],
-    "answer": "A",
-    "why": "A is correct. Country A is the most likely to be a developing economy. Political instability, limited property rights, and poor public education and health are all factors that limit economic growth and thereby contribute to a relatively low standard of living.",
-    "src": "eg29-klymchuk Q1"
+    "answer": "B",
+    "why": "B is correct. Almeida’s initiative to implement a new dividend tax is likely to impede inflows of equity capital by making equity investment in Brazil less attractive for foreign investors. Capital flows, or lack thereof, have a major impact on economic growth because, in an open economy, world savings can finance domestic investment. As a potential source of funds, foreign investment breaks the vicious cycle of low income, low domestic savings, and low investment.",
+    "src": "eg29-amaral Q10"
    },
    {
     "n": 18,
-    "q": "Based on Exhibit 1, capital deepening as a source of growth was most important for:",
+    "q": "Which proposal for India is Almeida most likely referring to in his response to Menon?",
     "options": [
-     "Country C.",
-     "Country A.",
-     "Country B."
+     "Highway network",
+     "Auto and textile factories",
+     "Patent initiative"
     ],
-    "answer": "B",
-    "why": "B is correct. The associate economist can measure the effect of pure capital deepening by measuring the difference of the growth rates of labor productivity and total factor productivity. The larger the difference, the more important capital deepening is as a source of economic growth. From 2000–2010, Country A’s labor productivity grew by 2.4% per year, of which 0.6% came from TFP growth and 1.8% from capital deepening (2.4% − 0.6% = 1.8%).",
-    "src": "eg29-klymchuk Q2"
+    "answer": "C",
+    "why": "C is correct. Menon’s proposal to sponsor a patent initiative, which is likely to result in technology investment and improvement, is likely to cause a proportional upward shift in the entire production function, allowing the economy to produce higher output per worker for a given level of capital per worker. Technological progress also increases the marginal product of capital relative to its marginal cost.",
+    "src": "eg29-amaral Q11"
    },
    {
     "n": 19,
-    "q": "Based on Statement 1, over the requested forecast horizon, the factor that will most likely drive stock market performance is the percentage change in:",
+    "q": "The channel that is least likely to help India overcome its challenge of lacking significant natural resources is:",
     "options": [
-     "the earnings to GDP ratio.",
-     "the price-to-earnings ratio.",
-     "GDP."
+     "Channel 1.",
+     "Channel 2.",
+     "Channel 3."
     ],
     "answer": "C",
-    "why": "C is correct. In the long run, the GDP growth rate is the most important driver of stock market performance. Therefore, the associate economist should focus on the drivers of long-run potential GDP growth. The ratio of earnings to GDP cannot increase indefinitely because that would imply that profit would eventually absorb all of GDP. This ratio cannot shrink forever, either, because unprofitable companies will go out of business. Thus, the annualized growth rate of the earnings to GDP ratio must be approximately zero over long time horizons, and this ratio should not be a dominant factor in forecasting long-term stock market performance. Similarly, the price-to-earnings ratio cannot grow or contract at a finite rate forever because investors will not pay an excessive price for each dollar of earnings, nor will they give away earnings for free. Therefore the rate of change in the price-to-earnings ratio must be approximately zero over long time horizons and should not be a dominant factor in the forecast of long-term stock market performance.",
-    "src": "eg29-klymchuk Q3"
+    "why": "C is correct. Maintaining a low currency exchange rate is a policy aimed at maintaining demand for the country’s exports. It would have little direct impact on the potential growth rate of aggregate supply. It might boost long-term capacity growth indirectly, however, by encouraging adoption of leading edge technology. Nonetheless, it would not be expected to be as powerful as capital deepening and/or investment in technology.",
+    "src": "eg29-amaral Q12"
    },
    {
     "n": 20,
-    "q": "Based solely on the predictions in Statement 2, over the next decade Country B’s sovereign credit risk will most likely:",
+    "q": "Based on Exhibit 1, which Indian economic statistic least likely supports Konaté’s international equity allocation preference?",
     "options": [
-     "increase.",
-     "not change.",
-     "decrease."
+     "Growth resulting from labor productivity",
+     "GDP per capita",
+     "Growth resulting from capital deepening"
     ],
-    "answer": "A",
-    "why": "A is correct. Credit rating agencies consider the growth rate of potential GDP when evaluating the credit risk of sovereign debt. The chief economist’s expectation for lower potential GDP growth for Country B over the next decade increases the perceived credit risk of its sovereign bonds.",
-    "src": "eg29-klymchuk Q4"
+    "answer": "B",
+    "why": "B is correct. Konaté’s decision to invest in equities in India is supported by the country’s strong economic growth. For global investors, economic growth is important because equity composite valuations depend to a great extent on both the level of economic output (GDP per capita and GDP overall) and the rate of economic growth. Relative to Brazil, India’s growth rate in per capita GDP has been much higher, and furthermore, the growth rate in GDP has also been much higher than that of Brazil. In contrast to the growth rate, the relatively low level of GDP per capita in India is less likely to indicate attractive equity investment opportunities. Low per capita GDP suggests that India may lack sufficient industrial and financial infrastructure to support some types of industries. It also indicates that domestic purchasing power is relatively limited, decreasing the potential for higher-margin, domestically oriented businesses.",
+    "src": "eg29-amaral Q13"
    }
   ]
  },
  {
   "id": "mock6-6",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Financial Statement Analysis",
-  "title": "Matei: Miland and Globales earnings quality",
-  "origin": "fsa5-miland",
-  "body": "Ioana Marin is a senior portfolio manager for an international wealth management firm. She directs research analyst Teresa Paiva to investigate the earnings quality of Valdor Communications and Globex, Inc.\n\nPaiva first reviews industry data and the financial reports of Valdor Communications for the past few years. Paiva then makes the following three statements about Valdor:\n\nStatement 1:\nValdor shortened the depreciable lives for capital assets.\n\nStatement 2:\nRevenue growth has been higher than that of industry peers.\n\nStatement 3:\nDiscounts to customers and returns from customers have decreased.\n\nPaiva also observes that Valdor has experienced increasing inventory turnover, increasing receivables turnover, and net income greater than cash flow from operations. She estimates the following regression model to assess Valdor’s earnings persistence:\n\nEarningst+1 = α + β1Cash flowt + β2Accrualst + ε\nPaiva and Marin discuss quantitative models such as the Beneish model, used to assess the likelihood of misreporting. Paiva makes the following two statements to Marin:\n\nStatement 4:\nAn advantage of using quantitative models is that they can determine cause and effect between model variables.\n\nStatement 5:\nA disadvantage of using quantitative models is that their predictive power declines over time because many managers have learned to test the detectability of manipulation tactics by using the model.\n\nPaiva concludes her investigation of Valdor by examining the company’s reported pre-tax income of $5.4 billion last year. This amount includes $1.2 billion of acquisition and divestiture-related expenses, $0.5 billion of restructuring expenses, and $1.1 billion of other non-operating expenses. Paiva determines that the acquisition and divestiture-related expenses as well as restructuring expenses are non-recurring expenses, but other expenses are recurring expenses.\n\nMarin then asks Paiva to review last year’s financial statements for Globex, Inc. and assess the effect of two possible misstatements. Upon doing so, Paiva judges that Globex improperly recognized EUR50 million of revenue and improperly capitalized EUR100 million of its cost of revenue. She then estimates the effect of these two misstatements on net income, assuming a tax rate of 25%.\n\nPaiva compares Globex, Inc.’s financial statements with those of an industry competitor. Both firms have similar, above-average returns on equity (ROE), although Globex has a higher cash flow component of earnings. Paiva applies the mean reversion principle in her forecasts of the two firms’ future ROE.",
+  "title": "Winslow: Dorado Beverages growth by acquisition, earnings quality and segments",
+  "origin": "fsa6-dorado",
+  "body": "Natalie Wexford is an analyst working for Bright Impact Investments (HII), which manages a variety of investment funds. She analyzes the recent performance of Azulejo Beverages SA (DB), a multinational brewer of carbonated beverages that recently entered the energy drinks market. As a core holding, DB's prominence in Europe provides geographic diversification for HII which tends to be North-America-centric. \nWexford refers to DB's most recent year and previous year balance sheets and comments: \"DB is continuing to follow a growth-by-acquisition strategy.\" In addition, Wexford adjusts DB's most recent year income statement to determine the company's net income under the direct control of management by using information (in EUR millions) in Exhibit 1.\nExhibit 1\n \tMost Recent Year\nIncome from operations\t1,765\nIncome from investments in associates\t191\nInterest expense\t(648)\nTaxes\t(238)\nNet income\t1,070\nOf which:\nNet income attributable to non-controlling interests\t86\nNet income attributable to shareholders\t984\nWexford and her team assess the quality of DB's overall performance. The consensus is positive, but Wexford disagrees with her team for the following reasons:\nReason 1: The rate of fluctuation in the cash-flow-based accruals ratio is low.\nReason 2: Balance-sheet-based accruals are trending down relative to total assets.\nReason 3: Income from operations is consistently higher than cash generated from operations.\nWexford and her team notice from DB's annual report that the company has four segments. They analyze DB's segments by using information (in EUR millions) in Exhibit 2.\nExhibit 2\n \tMost Recent Year\tPrevious Year\n \tSales\tEBIT\tAssets\tSales\nCarbonated drinks - Europe\t2,845\t955\t12,416\t2,758\nCarbonated drinks - North America\t1,913\t558\t5,876\t1,721\nCarbonated drinks - Asia Pacific\t535\t172\t2,661\t503\nEnergy drinks\t284\t16\t1,219\t202\nTotal\t5,577\t1,701\t22,172\t5,184\nAfter performing the segment analysis, Wexford and her team conclude on the following statements:\nStatement 1: The sales growth rate in carbonated drinks - North America is stronger than that of energy drinks.\nStatement 2: Carbonated drinks - Europe's EBIT margin is superior to that of carbonated drinks - North America. \nStatement 3: Asset turnover in carbonated drinks - Europe is better than that of DB overall.",
   "questions": [
    {
     "n": 21,
-    "q": "Which of Paiva’s statements describes an accounting warning sign of potential overstatement or non-sustainability of operating and/or net income?",
+    "q": "Which of the following balance sheet line items is most appropriate to justify Wexford's comment about DB's growth strategy?",
+    "options": [
+     "Property, plant and equipment",
+     "Long-term debt",
+     "Goodwill"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because although property, plant and equipment may have changed (likely increased) as a result of a growth-by-acquisition strategy, it may also have changed because of significant new direct investments in capital. In addition, the nature of DB's industry suggests that acquisitions may include significant intangible assets (e.g., brands) that would not significantly change DB's property, plant and equipment. | B. Incorrect because although long-term debt may have changed (likely increased) as a result of a growth-by-acquisition strategy, it may also have changed because of changes to the target capital structure or a share-based acquisition strategy. | C. Correct because goodwill arises when a company acquires another business. Goodwill and intangible assets are hallmarks of a growth-by-acquisition strategy.",
+    "src": "fsa6-dorado Q12"
+   },
+   {
+    "n": 22,
+    "q": "After Wexford's adjustment, DB's net income (in EUR millions) under management's direct control is:",
+    "options": [
+     "984.",
+     "793.",
+     "879."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because this answer is net income attributable to shareholders which incorrectly includes income from investments in associates but incorrectly excludes net income attributable to non-controlling interests: Net income\t1,070 Less: Net income attributable to non-controlling interests\t   (86) Net income attributable to shareholders\t984 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management. | B. Incorrect because it correctly excludes income from investments in associates but incorrectly excludes net income attributable to non-controlling interests. Net income attributable to shareholders \t984 Less: Income from investments in associates\t(191) 793 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management. | C. Correct because it excludes the income from investments in associates which is not under DB's direct control (in EUR millions): Net income\t1,070 Less: Income from investments in associates\t (191) 879 Including the net investments and returns of associates with the full reported value of Nestlé’s own assets and income would introduce noise into the analytical signals. The returns earned by associates are not under the direct control of Nestlé’s management.",
+    "src": "fsa6-dorado Q13"
+   },
+   {
+    "n": 23,
+    "q": "Which of the following reasons best supports Wexford's disagreement with her team about DB's overall performance?",
+    "options": [
+     "Reason 2",
+     "Reason 3",
+     "Reason 1"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it is upward-trending relative accruals that could suggest management is trying to manipulate reported performance. Downward trending accruals provide less opportunity for manipulation. The analyst notes that the absolute level of accruals on the balance sheet is minor relative to the size of the operating assets, on either an ending balance basis or an average basis. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher. | B. Correct because the quality of income from operations is considered better when it is backed by cash flow. In this case, cash generated from operations is not fully backing income from operations, thereby calling the quality of income from operations into question. If the cash flow generated by operations was significantly or consistently less than operating profit, one would have reason to be suspicious about the quality of the operating profit. | C. Incorrect because a pattern of steady cash-flow-based accruals is unlikely to raise concerns. An erratic or upward-moving trend in cash-flow-based accruals would be concerning. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher.",
+    "src": "fsa6-dorado Q14"
+   },
+   {
+    "n": 24,
+    "q": "With respect to the segment analysis, which of the following statements is correct?",
     "options": [
      "Statement 1",
      "Statement 2",
      "Statement 3"
     ],
     "answer": "B",
-    "why": "B is correct. Higher growth in revenue than that of industry peers is an accounting warning sign of potential overstatement or non-sustainability of operating income. Shortening the depreciable lives of capital assets is a conservative change and not a warning sign. An increase (not a decrease) in discounts and returns would be a warning sign.",
-    "src": "fsa5-miland Q1"
-   },
-   {
-    "n": 22,
-    "q": "Which of Paiva’s statements about Valdor Communications is most likely a warning sign of potential earnings manipulation?",
-    "options": [
-     "The trend in receivables turnover",
-     "The amount of net income relative to cash flow from operations",
-     "The trend in inventory turnover"
-    ],
-    "answer": "B",
-    "why": "B is correct. Net income being greater than cash flow from operations is a warning sign that the firm may be using aggressive accrual accounting policies that shift current expenses to future periods. Decreasing, not increasing, inventory turnover could suggest inventory obsolescence problems that should be recognized. Decreasing, not increasing, receivables turnover could suggest that some revenues are fictitious or recorded prematurely or that the allowance for doubtful accounts is insufficient.",
-    "src": "fsa5-miland Q2"
-   },
-   {
-    "n": 23,
-    "q": "Based on the regression model used by Paiva, earnings persistence for Valdor would be highest if:",
-    "options": [
-     "β2 is greater than β1.",
-     "β1 is less than 0.",
-     "β1 is greater than β2."
-    ],
-    "answer": "C",
-    "why": "C is correct. When earnings are decomposed into a cash component and an accruals component, research has shown that the cash component is more persistent. A beta coefficient (β1) on the cash flow variable that is larger than the beta coefficient (β2) on the accruals variable indicates that the cash flow component of earnings is more persistent than the accruals component. This result provides evidence of earnings persistence.",
-    "src": "fsa5-miland Q3"
-   },
-   {
-    "n": 24,
-    "q": "Which of Paiva’s statements regarding the use of quantitative models to assess the likelihood of misreporting is correct?",
-    "options": [
-     "Only Statement 4",
-     "Only Statement 5",
-     "Both Statement 4 and Statement 5"
-    ],
-    "answer": "B",
-    "why": "B is correct. Earnings manipulators have learned to test the detectability of earnings manipulation tactics by using the model to anticipate analysts’ perceptions. They can reduce their likelihood of detection; therefore, Statement 5 is correct. As a result, the predictive power of the Beneish model can decline over time. An additional limitation of using quantitative models is that they cannot determine cause and effect between model variables. Quantitative models establish only associations between variables, and Statement 4 is incorrect.\n\nA is incorrect because quantitative models cannot determine cause and effect between model variables. They are capable only of establishing associations between variables. Therefore, Statement 4 is incorrect.",
-    "src": "fsa5-miland Q4"
+    "why": "A. Incorrect because per the table below (in EUR millions except where indicated), the sales growth rate in carbonated drinks - North America is lower, and thus weaker, than that of Energy Drinks, not stronger. Carbonated drinks - North America\tEnergy Drinks \tAnalysis Sales - Most recent year (A)\t1,913\t284\t--- Sales - Previous year (B)\t1,721\t202\t--- Sales growth % (A/B)\t11.2%\t40.6%\tCarbonated drinks - North America lower | B. Correct because per the table below (in EUR millions except where indicated), carbonated drinks - Europe's EBIT margin is higher than, and thus superior to that of carbonated drinks - North America. Carbonated drinks - Europe\tCarbonated drinks - North America\tAnalysis EBIT  (A)\t955\t558\t--- Sales  (B)\t2,845\t1,913\t--- EBIT margin % (A/B)\t33.6%\t29.2%\tCarbonated drinks - Europe higher | C. Incorrect because per the table below (in EUR millions except where indicated), carbonated drinks - Europe's asset turnover is lower, and thus worse, than that of DB overall, not better. Carbonated drinks - Europe\tDB overall\tAnalysis Sales (A)\t2,845\t5,577\t--- Assets (B)\t12,416\t22,172\t--- Asset turnover (A/B)\t0.23x\t0.25x\tCarbonated drinks - Europe lower",
+    "src": "fsa6-dorado Q15"
    }
   ]
  },
  {
   "id": "mock6-7",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Equity Valuation",
-  "title": "Ulrich Schwalke: JNK Corporation",
-  "origin": "schwalke2",
-  "body": "Ulrich Scholz continues his work in valuing private companies, taking specific interest in transactions involving public companies buying private company targets. As he has seen in his work, private company discount rates are often biased because private firms typically have less access to debt capital.\n\nWhile Scholz has experience using CAPM for public companies, he has rarely used it for private firms, instead relying on the expanded CAPM or a build-up approach to estimate required return on equity. When using the expanded CAPM for a private company, KRN Corporation, Scholz gathered beta estimates from publicly traded comparable companies. On a recent engagement, he found the average beta from public comparables of 1.20. The average debt ratio of the public comparables exceeded that of KRN, while tax rates were equal between the public comparables and KRN.\n\nContinuing in his role, Scholz completed many private company valuations for entire businesses. As a result, certain methods of calculating terminal values seemed to be more useful for his work than other methods.\n\nScholz had initially struggled with applying discounts in private company valuation but became more comfortable with different estimation methods. In particular, he finds an option-based approach to quantifying the lack of marketability quite useful. In his recent work on valuing KRN, he estimated the value of three put options with three months until expiration on the most similar public comparable company to KRN. The public comparable was trading at a stock price of EUR 29.70. The three-month risk-free rate is 4%. The put option valuation results are summarized as follows:\n\nKRN Put Option Exercise Prices and Values\nExercise price\tPut option value\nEUR 25\tEUR 1.25\nEUR 30\tEUR 3.75\nEUR 35\tEUR 6.95",
+  "title": "Nkomo: residual income, MVA and fade",
+  "origin": "nkomo",
+  "body": "Mandla Ncube, CFA, a senior equity analyst with Ellison-Brandt Investments, South Africa, has been assigned a recent graduate, Mpho Maseko, to assist in valuations. Maseko is interested in pursuing a career in equity analysis. In their first meeting, Ncube and Maseko discuss the concept of residual income and its commercial applications. Ncube asks Maseko to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.\n\nExhibit 1\nHypothetical Firm Data (amounts in South African rand)\nCurrent share price\tR25.43\nBook value per share\tR20.00\nTotal shares outstanding\t30 million\nCost of equity\t13%\nMarket value of debt\tR55 million\nAccounting book value of total capital\tR650 million\nIntrinsic share value of equity derived from residual income model\tR22.00\nNcube also shares his valuation report of the hypothetical firm with Maseko. Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share. To assess Maseko’s knowledge of residual income valuation, Ncube asks Maseko two questions about the hypothetical firm:\n\nQuestion 1:\nWhat conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?\n\nQuestion 2:\nSuppose you estimated the intrinsic value of a firm’s shares using a constant growth residual income model, and you found that your estimate of intrinsic value equaled the book value per share. What would that finding imply about that firm’s return on equity?\n\nSatisfied with Maseko’s response, Ncube requests that Maseko use the single-stage residual income model to determine the intrinsic value of the equity of Dawson Breweries, a brewery and bottling company, using data provided in Exhibit 2.\n\nExhibit 2\nDawson Breweries Data (amounts in South African rand)\nConstant long-term growth rate\t9.5%\nConstant long-term ROE\t13%\nCurrent market price per share\tR150.70\nBook value per share\tR55.81\nCost of equity\t11%\nNcube also wants to update an earlier valuation of Brownstone, a food retailer. The valuation report, completed at the end of 2020, concluded an intrinsic value per share of R11.00 for Brownstone. The share price at that time was R8.25. Ncube points out to Maseko that in late 2020, Brownstone announced a significant restructuring charge, estimated at R2 million, that would be reported as part of operating earnings in Brownstone’s 2020 annual income statement. Ncube asks Maseko the following question about the restructuring charge:\n\nQuestion 3:\nWhat was the correct way to treat the estimated R2 million restructuring charge in my 2020 valuation report?\n\nSatisfied with Maseko’s response, Ncube mentions to Maseko that Brownstone recently (near the end of 2021) completed the acquisition of a chain of convenience stores. Ncube requests that Maseko complete, as of the beginning of 2022, an updated valuation of Brownstone under two scenarios:\n\nScenario 1:\nEstimate the value of Brownstone shares using a multistage residual income model with the data provided in Exhibit 3. Under Scenario 1, expected ROE in 2025 is 26%, but it is assumed that the firm’s ROE will slowly decline towards the cost of equity thereafter.\n\nScenario 2:\nEstimate the value of Brownstone shares using a multistage residual income model with the data provided in Exhibit 3, but assume that at the end of 2024, share price is expected to equal book value per share.\n\nScenario 3:\nExhibit 3\nBrownstone Data (amounts in South African rand)\nLong-term growth rate starting in 2025\t9.0%\nExpected ROE in 2025\t26%\nCurrent market price per share\tR16.55\nBook value per share, beginning of 2022\tR7.60\nCost of equity\t10%\nPersistence factor\t0.70\n  \n\n \t2022\t2023\t2024\nExpected earnings per share\tR3.28\tR3.15\tR2.90\nExpected dividend per share\tR2.46\tR2.36\tR2.06",
   "questions": [
    {
     "n": 25,
-    "q": "Which statement best reflects how discount rate biases may affect offer prices in transactions involving public company buyers and private company targets?",
+    "q": "Based on the information in Exhibit 1, the market value added of the hypothetical firm is closest to:",
     "options": [
-     "Public company buyers pay offer prices for private companies that do not reflect any control premium.",
-     "Public company buyers pay offer prices for private firms that reflect the higher discount rates that apply to private companies.",
-     "Public company buyers pay offer prices for private firms that reflect improvements the buyer will make after a successful acquisition."
+     "R168 million.",
+     "R65 million.",
+     "R113 million."
     ],
-    "answer": "C",
-    "why": "A public buyer has better access to debt and can make improvements (e.g. cutting expenses, a better capital structure), so its offer price reflects the value after those improvements, not the private firm's higher stand-alone discount rate. B contradicts this. A is wrong: a buyer gaining control is likely to pay a control premium.",
-    "src": "schwalke2 Q1"
+    "answer": "A",
+    "why": "A is correct. Market value added equals the market value of firm minus total accounting book value of total capital.\nMarket value added = Market value of company – Accounting book value of total capital\nMarket value of firm = Market value of debt + Market value of equity\nMarket value of firm = R55 million + (30,000,000 × R25.43)\nMarket value of firm = R55 million + R762.9 million = R817.9 million\nMarket value added = R817.9 million – R650 million = R167.9 million, or approximately R168 million.",
+    "src": "nkomo Q9"
    },
    {
     "n": 26,
-    "q": "Which statement best explains why the CAPM may be inappropriate for estimating required return on equity for private firms?",
+    "q": "The most appropriate response to Ncube’s Question 1 would be that the present value of future residual earnings is expected to be:",
     "options": [
-     "The CAPM assumes investors are well diversified.",
-     "The CAPM was only designed for publicly traded stocks.",
-     "The CAPM does not utilize a company-specific risk premium."
+     "zero.",
+     "positive.",
+     "negative."
     ],
-    "answer": "A",
-    "why": "CAPM prices only systematic (market) risk because it assumes investors hold diversified portfolios. Private company owners are rarely well diversified: much of their wealth is tied up in the company, so they bear its total risk. B is wrong: the CAPM can be applied to any asset, traded or not. C: the absence of a separate company-specific premium follows from the diversification assumption; the expanded CAPM adds such premiums (size, company-specific risk) precisely because that assumption fails for private owners.",
-    "src": "schwalke2 Q2"
+    "answer": "B",
+    "why": "B is correct. The intrinsic value of R22.00 is greater than the current book value of R20.00. The residual income model states that the intrinsic value of a stock is its book value per share plus the present value of expected (future) per share residual income. The higher intrinsic value per share, relative to book value per share, indicates that the present value of expected per share residual income is positive.",
+    "src": "nkomo Q10"
    },
    {
     "n": 27,
-    "q": "Which statement is most correct regarding Scholz’s estimation of KRN’s beta?",
+    "q": "The most appropriate response to Ncube’s Question 2 would be that the firm’s return on equity is:",
     "options": [
-     "Scholz estimates KRN’s beta to be greater than 1.20.",
-     "Scholz estimates KRN’s beta to be 1.20.",
-     "Scholz estimates KRN’s beta to be less than 1.20."
+     "equal to the firm’s cost of equity.",
+     "higher than the firm’s cost of equity.",
+     "lower than the firm’s cost of equity."
     ],
-    "answer": "C",
-    "why": "Betas observed for public comparables are levered. First unlever: βu = [[βL|1 + (1 − t)(D/E)]] (the higher the comparables' debt ratio, the lower the unlevered beta). Then relever at KRN's capital structure: βL(KRN) = βu [1 + (1 − t)(D/E)KRN]. Tax rates are equal and KRN has less debt than the comparables, so KRN's relevered beta is below 1.20.",
-    "src": "schwalke2 Q3"
+    "answer": "A",
+    "why": "A is correct because the intrinsic value is the book value per share, B0,plus the expected residual income stream, or B0 + [(ROE – r)B0/(r – g)]. If ROE equals the cost of equity (r), then V0 = B0. This implies that ROE is equal to the cost of the equity, and therefore there is no residual income contribution to the intrinsic value. As a result, intrinsic value would be equal to book value.",
+    "src": "nkomo Q11"
    },
    {
     "n": 28,
-    "q": "Which amount most closely estimates the DLOM for KRN?",
+    "q": "Based on the information in Exhibit 2, the intrinsic value per share of the equity of Dawson Breweries is closest to:",
     "options": [
-     "12.4%",
-     "12.6%",
-     "12.5%"
+     "R186.03.",
+     "R97.67.",
+     "R130.22."
     ],
-    "answer": "B",
-    "why": "The put option approach uses an at-the-money put based on the forward price. Forward = 29.70 × e^(0.04 × 0.25) = EUR 30.00, so use the EUR 30 put. DLOM = [[put value|stock price]] = 3.75 / 29.70 = 12.63% ≈ 12.6%. Trap: 12.5% divides by the EUR 30 exercise price instead of the stock price.",
-    "src": "schwalke2 Q5"
+    "answer": "C",
+    "why": "C is correct. With a single-stage residual income (RI) model, the intrinsic value, V0, is calculated assuming a constant return on equity (ROE) and a constant earnings growth (g).",
+    "src": "nkomo Q12"
    }
   ]
  },
  {
   "id": "mock6-8",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Portfolio Management",
-  "title": "Mock 1 · Souza: Franca active management",
-  "origin": "m1-8",
-  "body": "Carl Santos is a portfolio manager with Frasier Advisors.\nDuring a client meeting, Santos presents current economic data and Frasier's forecasts for next year, as shown in Exhibit 1. The client asks Santos to identify a sector that should experience the smallest decrease in profitability under Frasier's forecast.\nExhibit 1\nEconomic Indicator\tCurrent\tForecast\nNominal GDP growth rate\t5.00%\t4.50%\nInflation rate\t3.00%\t5.00%\nUnemployment rate\t3.75%\t5.25%\nSantos tells prospective clients that based on his bottom-up security selection, he has delivered strong risk-adjusted returns relative to his benchmark. To illustrate his portfolio's performance, he provides data for the past five years shown in Exhibit 2. The average risk-free rate was 3.50% over this period.\nExhibit 2\n \tPortfolio\tBenchmark\nAverage annual return\t7.50%\t5.60%\nStandard deviation of returns\t15.00%\t12.00%\nActive risk\t5.00%\t---\nSantos uses the fundamental law of active management in portfolio construction. He is analyzing the information coefficient and target active risk to determine what actions would result in smaller optimal active weights for his portfolio.\nA prospective client has equity portfolio guidelines that restrict the maximum overweights and underweights on industry sectors. Santos evaluates the effect of these guidelines.",
+  "title": "ETFs · Provident Advisers: authorized participants, tracking error, completion strategies, smart beta",
+  "origin": "etf-provident",
+  "body": "Prudent Advisers is a registered investment advisory firm that uses exchange-traded funds (ETFs) for its clients’ investment portfolios. Tom Sorensen is CEO and chief investment officer of Prudent. Steve Marlow, a prospective client, is a high-net-worth individual who is considering transforming his actively managed portfolio of individual stocks and bonds into actively managed and passive ETFs. Marlow is considering this strategy because of the advice of his accountant, Andrew Holt. Sorensen, Marlow, and Holt are meeting to discuss ETFs and their growing use in the construction of investment portfolios.\n\nSorensen begins the meeting by describing how ETFs are subject to the same regulations as mutual funds and noting that ETFs trade intra-day, similar to public stocks. Holt adds that ETF authorized participants use the primary market to both create and redeem ETF shares, and the secondary market to conduct trades in ETFs to eliminate the arbitrage gap.\n\nMarlow asks Sorensen to describe how ETF performance is measured. Sorensen explains that most ETFs are designed to track the performance of a specific benchmark index, such as the S&P 500 Index. Sorensen cautions, however, that there are numerous sources of tracking error that may cause a deviation in an ETF’s return relative to its benchmark index. Sorensen provides an example, stating that one of the sources of tracking error is an ETF portfolio manager’s operations with short sellers.\n\nMarlow wants to maintain the current blended stock and bond benchmark allocations following his portfolio’s transition from individual stocks and bonds to active and passive ETFs. Sorensen states that whenever active ETF managers implement active views, gaps with respect to desired market exposures may result. For Marlow’s portfolio, Sorensen plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings. Passive ETFs will enable Sorensen to maintain benchmark exposure while not necessarily replacing an active ETF manager.\n\nHolt states that active ETF strategies have evolved such that market capitalization is no longer the only benchmark factor for equity strategies and that fixed-income strategies may be constructed with minimal sensitivity to movements in interest rates. He states that smart beta equity risk factors, such as dividend yield, size, value, and momentum, enable investors to implement an active view while continuing to track a designated benchmark. He then describes the strategy of smart beta fixed-income ETFs that focus on generating returns from taking credit risk and hedging out duration risk.",
   "questions": [
    {
     "n": 29,
-    "q": "Based on Frasier's forecasts, which of the following sectors will most likely have the smallest decrease in profitability next year?",
+    "q": "Is Holt’s statement about ETF authorized participants most likely correct?",
     "options": [
-     "Staple consumer goods",
-     "Discretionary consumer goods",
-     "Durable goods"
+     "No, regarding their use of the primary markets",
+     "Yes",
+     "No, regarding their trades in the secondary markets"
     ],
-    "answer": "A",
-    "why": "Incorrect Answer Feedback: Incorrect because the data in Exhibit 1 forecasts a contraction in the economy (negative real GDP growth) over the next year. Companies that produce durable goods would see earnings fall substantially in this type of economic environment. We can expect then that the profits of companies that produce durable as opposed to non-durable goods to be commensurately more volatile too.\n\nCorrect Answer Feedback: Correct because the data in Exhibit 1 forecasts a contraction in the economy over the next year. Nominal GDP growth will decline from 5.00% to 4.50% and real GDP growth from 2.00% to –0.50%, and the unemployment rate will increase by 1.50 percentage points. Recessions are associated with declines in employment, incomes, output, and, subsequently, profitability. Cyclical sectors are represented by companies that produce discretionary consumer goods, whereas the non-cyclical index is represented by an index that includes companies that produce staple (or less discretionary) consumer goods. The demand for staples will remain fairly stable over the business cycle.\n\nIncorrect Answer Feedback: Incorrect because the data in Exhibit 1 forecasts a contraction in the economy (negative real GDP growth) over the next year. Companies that produce discretionary consumer goods would see earnings fall substantially in this type of economic environment.",
-    "src": "m1-8 Q29"
+    "answer": "C",
+    "why": "A. Incorrect. Holt’s statement that ETF authorized participants create and redeem ETF shares in the primary markets is correct. | B. Incorrect. Holt’s statement is incorrect. ETF authorized participants do not trade in the secondary market. ETF authorized participants create and redeem shares in the primary market. | C. Correct. Holt’s statement about authorized participants is not correct because of trades in the secondary market. ETF secondary market trades are transactions between buyers and sellers of existing ETF shares. No new ETF shares are created by trades in the secondary market. ETF authorized participants create and redeem ETF shares in the primary market.",
+    "src": "etf-provident Q28"
    },
    {
     "n": 30,
-    "q": "The information ratio for Santos's portfolio over the past five years is closest to:",
+    "q": "In describing tracking error, Sorensen’s example most likely relates to:",
     "options": [
-     "0.38.",
-     "0.80.",
-     "0.27."
+     "full replication.",
+     "securities lending.",
+     "trading costs."
     ],
-    "answer": "A",
-    "why": "Incorrect Answer Feedback: Incorrect because in this calculation, the Sharpe ratio, (RP – RF)/σP, was calculated instead of the information ratio, (7.50% – 3.50%)/15.00% = 4.00%/15.00% = 0.27.\n\nCorrect Answer Feedback: Correct because the information ratio (IR) is calculated as:\nIR = (RP – RB)/σ(RP – RB) = RA/σA = (7.50% – 5.60%)/5.00% = 1.90%/5.00% = 0.38.\nIR compares a portfolio's active return relative to a benchmark with the volatility of the active return or active risk.\n\nIncorrect Answer Feedback: Incorrect because in this calculation, the risk-free rate was used rather than the benchmark return, (7.50% – 3.50%)/5.00% = 4.00%/5.00% = 0.80.",
-    "src": "m1-8 Q30"
+    "answer": "B",
+    "why": "A. Incorrect. Replication (lack of full replication) is a source of tracking error but is not caused by operations with short sellers. | B. Correct. Sorensen’s description of ETF tracking error includes a reference to securities lending by the ETF portfolio manager. Many ETF portfolio managers lend a portion of their portfolio holdings to short sellers. Securities lending provides income for an ETF that offsets a portion of an ETF’s administrative expenses. | C. Incorrect. Trading costs are a source of tracking error but are not caused by operations with short sellers.",
+    "src": "etf-provident Q29"
    },
    {
     "n": 31,
-    "q": "Which of the following would most likely result in Santos's desired change of optimal active weights?",
+    "q": "Sorensen’s explanation of benchmark exposure most likely describes portfolio:",
     "options": [
-     "A decrease in both the information coefficient and the target active risk",
-     "A decrease in the information coefficient and an increase in the target active risk",
-     "An increase in the information coefficient and a decrease in the target active risk"
+     "rebalancing.",
+     "completion strategies.",
+     "liquidity management."
     ],
-    "answer": "C",
-    "why": "Incorrect Answer Feedback: Incorrect because investors with higher IC, or ability to forecast returns, will add more value over time but only to the extent that those forecasts are exploited in the construction of the managed portfolio. So, a higher information coefficient results in smaller optimal active weights.\n\nCorrect Answer Feedback: Correct because investors with higher IC, or ability to forecast returns, will add more value over time but only to the extent that those forecasts are exploited in the construction of the managed portfolio. So, a higher information coefficient results in smaller optimal active weights. In addition, the desire for more active portfolio risk requires larger individual active weights. So, a lower target active risk results in smaller optimal active weights.\n\nIncorrect Answer Feedback: Incorrect because investors with higher IC, or ability to forecast returns, will add more value over time but only to the extent that those forecasts are exploited in the construction of the managed portfolio. So, a higher information coefficient results in smaller optimal active weights. In addition, the desire for more active portfolio risk requires larger individual active weights. So, a lower target active risk results in smaller active weights.",
-    "src": "m1-8 Q31"
+    "answer": "B",
+    "why": "A. Incorrect. Sorensen’s explanation describes completion strategies, not portfolio rebalancing. Portfolio rebalancing describes how ETFs are used by investors to remain fully invested according to target weights whenever changes in market values cause a portfolio’s segments to deviate from target weights. | B. Correct. Sorensen’s explanation of benchmark exposure describes portfolio completion. ETFs can be used to fill a temporary gap in exposure to an asset class. Gaps may arise whenever an active manager transitions a portfolio away from a desired market exposure (for example, the portfolio’s benchmark). An investor may use a passive ETF to maintain the exposure while retaining the manager. | C. Incorrect. Sorensen’s explanation describes completion strategies, not portfolio liquidity management. Portfolio liquidity management describes how ETFs are used by investors to efficiently invest excess cash balances, which reduces a portfolio’s cash drag.",
+    "src": "etf-provident Q30"
    },
    {
     "n": 32,
-    "q": "The most likely effect of the prospective client's equity portfolio guidelines is a reduction in:",
+    "q": "Is Holt’s comments about active ETF strategies most likely correct?",
     "options": [
-     "breadth.",
-     "the information coefficient.",
-     "the transfer coefficient."
+     "No, because of the comment about smart beta equity risk factors",
+     "No, because of the comment about smart beta fixed-income ETFs",
+     "Yes"
     ],
     "answer": "C",
-    "why": "Incorrect Answer Feedback: Incorrect because breadth refers to the number of independent decisions. The guidelines restrict the weightings but not the number of decisions.\n\nCorrect Answer Feedback: Correct because the prospective client has imposed constraints on portfolio construction. The long-only and maximum over- or underweight constraints substantially reduce the transfer of active return forecasts into active weights.\n\nIncorrect Answer Feedback: Incorrect because the information coefficient is independent of client guidelines or constraints but rather relates to the investor's capability in forecasting. IC is the ex ante information coefficient that measures the assumed accuracy of the investor’s relative rankings.",
-    "src": "m1-8 Q32"
+    "why": "A. Incorrect. Holt’s comment about smart beta equity risk factors is correct. | B. Incorrect. Holt’s comment about smart beta fixed-income ETFs is correct. | C. Correct. Holt’s comments about smart beta are correct. Factor (smart beta) ETFs are benchmarked to an index created with predefined rules for screening and weighting constituent holdings whose index rules are structured around return drivers, or factors, such as dividend yield, size, value, and momentum. Academic research has supported these factors as contributors to the equity risk premium. Holt’s comment about smart beta fixed-income ETFs is correct. Interest rate swaps are used by the managers of smart beta fixed-income ETFs to minimize interest rate risk, enabling the ETFs’ return to be generated by taking credit risk.",
+    "src": "etf-provident Q31"
    }
   ]
  },
  {
   "id": "mock6-9",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Derivatives",
-  "title": "Doyle: BestFutures, Eurodollar and Treasury futures, JGB forward, swaps",
-  "origin": "d28-doyle",
-  "body": "Tim Dawson is a portfolio manager at TopFutures Group, a hedge fund that frequently enters into derivative contracts either to hedge the risk of investments it holds or to speculate outside of those investments. Dawson works alongside Diane Keller, a junior analyst at the hedge fund. They meet to evaluate new investment ideas and to review several of the firm’s existing investments.\n\nCarry Arbitrage Model\n\nDawson and Keller discuss the carry arbitrage model and how they can take advantage of mispricing in bond markets. Specifically, they would like to execute an arbitrage transaction on a Eurodollar futures contract in which the underlying Eurodollar bond is expected to make an interest payment in two months. Dawson makes the following statements:\n\nStatement 1:\nIf the Eurodollar futures price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased.\n\nStatement 2:\nBased on the cost of carry model, the futures price would be higher if the underlying Eurodollar bond’s upcoming interest payment was expected in five months instead of two.\n\nThree-Year Treasury Note Futures Contract\n\nKeller then presents two investment ideas to Dawson. Keller’s first investment idea is to purchase a three-year Treasury note futures contract. The underlying 1.5%, semi-annual three-year Treasury note is quoted at a clean price of 101. It has been 60 days since the three-year Treasury note’s last coupon payment, and the next coupon payment is payable in 120 days. Dawson asks Keller to calculate the full spot price of the underlying three-year Treasury note.\n\n10-Year Treasury Note Futures Contract\n\nKeller’s second investment idea is to purchase a 10-year Treasury note futures contract. The underlying 2%, semi-annual 10-year Treasury note has a dirty price of 104.17. It has been 30 days since the 10-year Treasury note’s last coupon payment. The futures contract expires in 90 days. The quoted futures contract price is 129. The current annualized three-month risk-free rate is 1.65%. The conversion factor is 0.7025. Dawson asks Keller to calculate the equilibrium quoted futures contract price based on the carry arbitrage model.\n\nJapanese Government Bonds\n\nAfter discussing Keller’s new investment ideas, Dawson and Keller evaluate one of their existing forward contract positions. Three months ago, BestFutures took a long position in eight 10-year Japanese government bond (JGB) forward contracts, with each contract having a contract notional value of 100 million yen. The contracts had a price of JPY153 (quoted as a percentage of par) when the contracts were purchased. Now, the contracts have six months left to expiration and have a price of JPY155. The annualized six-month interest rate is 0.12%. Dawson asks Keller to value the JGB forward position.\n\nInterest Rate Swaps\n\nAdditionally, Dawson asks Keller to price a one-year plain vanilla swap. The spot rates and days to maturity at each payment date are presented in Exhibit 1.\n\nExhibit 1\nSelected US Spot Rate Data\nDays to Maturity\tSpot Interest Rates (%)\n90\t1.90\n180\t2.00\n270\t2.10\n360\t2.20\nFinally, Dawson and Keller review one of BestFutures’s pay-fixed interest rate swap positions. Two years ago, the firm entered into a JPY5 billion five-year interest rate swap, paying the fixed rate. The fixed rate when BestFutures entered into the swap two years ago was 0.10%. The current term structure of interest rates for JPY cash flows, which are relevant to the interest rate swap position, is presented in Exhibit 2.\n\nExhibit 2\nSelected Japanese Interest Rate Data\nMaturity (Years)\tYen Spot Interest Rates (%)\tPresent Value Factors\n1\t0.03\t0.9997\n2\t0.06\t0.9988\n3\t0.08\t0.9976\nSum\t \t2.9961\nDawson asks Keller to calculate the value of the pay-fixed interest rate swap.",
+  "title": "Arnie Burr: Princeton Capital",
+  "origin": "princeton",
+  "body": "Arnold Birch is CEO and chief investment officer of Plymouth Capital, a registered investment advisory firm. He is working with Tom Jeffries, head trader, and Jim Maddox, a new analyst. They meet to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.\n\nBirch begins the discussion by stating that the Black–Scholes–Merton (BSM) model is a relatively straightforward tool for valuing options despite its rigorous computational components. Birch writes the BSM model on the firm’s whiteboard, presented as Exhibit 1.\n\nExhibit 1: BSM Model for Options on Non-Dividend Paying Stocks\n\nc = SN(d1) – e^(–rT)XN(d2),\nand\np = e^(–rT)XN(–d2) – SN(–d1),\nwhere\nd1 = [[ln(S/X) + (r + σ²/2)T|σ√T]] and d2 = d1 − σ√T.\n\n(The definitions of d1 and d2 were missing from the copied text; the standard BSM definitions are shown.)\n\nBirch wants to assess Maddox’s comprehension of the components of the BSM. Maddox states that a call option can be viewed as a leveraged position in the underlying stock. To replicate a call option, the appropriate strategy is to purchase N(d1) shares and simultaneously borrow an amount e^(–rT)XN(–d2).\n\nJeffries introduces option Greeks into the conversation, stating, “The BSM model contains six inputs: the stock price, the option’s exercise price, dividends, the risk-free interest rate, time to maturity, and implied volatility. The effect of the BSM model inputs on the price of an option can be measured by the option Greeks. Delta and gamma are measures of the relationship between a change in the stock price and the option price. Theta is a measure that typically approaches zero at an increasing rate as the option approaches maturity. Holding all other factors constant, Vega is a measure that typically is higher whenever an option is “out of the money.”\n\nBirch states that a client would like to sell calls on 1,000 shares of Weston stock. Stock and option information on Weston stock is presented in Exhibit 2.\n\nExhibit 2: Option Information on Weston Corporation Stock\n\t\nStock Price\t$100\nCall Option Exercise Price\t$100\nCall Option Value\t$9.23\nCall Option Delta\t0.587\nCall Option Gamma\t0.019\n\nBirch asks Maddox to outline an appropriate hedging strategy. Maddox replies that to be fully hedged, an option trader will need to consider how changes in the stock price relative to the option exercise price affect the value of the call options. To be fully hedged against a small change in the stock price, Maddox suggests that the proper strategy to construct the hedge is to use call option delta and add the call option gamma to arrive at the number of shares required.\n\nMaddox notes that the implied volatility for the Weston call option outlined in Exhibit 2 is 30%. With respect to other call options on Weston stock, Maddox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Birch adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Jeffries concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising.",
   "questions": [
    {
     "n": 33,
-    "q": "Which of Dawson’s statements regarding the Eurodollar futures contract price is correct?",
+    "q": "Maddox’s statement about the BSM model is least likely correct with respect to:",
     "options": [
-     "Only Statement 1",
-     "Only Statement 2",
-     "Both Statement 1 and Statement 2"
+     "the leveraged position in a stock.",
+     "purchasing (d1) shares.",
+     "borrowing an amount e–rTXN(–d2)."
     ],
     "answer": "C",
-    "why": "C is correct. Dawson’s first statement is correct. Unless the Eurodollar futures contract’s quoted price is equal to the no-arbitrage futures price, there is an arbitrage opportunity. Moreover, if the quoted futures price is less than the no-arbitrage futures price, then to take advantage of the arbitrage opportunity, the Eurodollar futures contract should be purchased and the underlying Eurodollar bond should be sold short. Dawson would then lend the short sale proceeds at the risk-free rate. The strategy that comprises those transactions is known as reverse carry arbitrage.\n\nDawson’s second statement is also correct. Based on the cost of carry model, the futures price is calculated as the future value of the sum of the underlying plus the underlying carry costs minus the future value of any ownership benefits. If the Eurodollar bond’s interest payment was expected in five months instead of two, the benefit of the cash flow would occur three months later, so the future value of the benefits term would be slightly lower. Therefore, the Eurodollar futures contract price would be slightly higher if the Eurodollar bond’s interest payment was expected in five months instead of two months.\n\nA is incorrect because Dawson’s Statement 2 is correct (not incorrect). Based on the cost of carry model, the futures price would be higher if the underlying Eurodollar bond’s interest payment took place in five months instead of two months.\n\nB is incorrect because Dawson’s Statement 1 is correct (not incorrect). If the Eurodollar’s futures contract price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased.",
-    "src": "d28-doyle Q1"
+    "why": "A call is a leveraged stock position: buy N(d1) shares and BORROW e^(−rT) X N(d2), which is exactly the second term of c = S N(d1) − e^(−rT) X N(d2). The amount e^(−rT) X N(−d2) is what is LENT when replicating a put (p = e^(−rT) X N(−d2) − S N(−d1)). B and A are correct parts of his statement.",
+    "src": "princeton Q1"
    },
    {
     "n": 34,
-    "q": "The full spot price of the three-year Treasury note is:",
+    "q": "Jeffries’s statement about option Greeks is least likely correct with respect to:",
     "options": [
-     "101.50.",
-     "101.00.",
-     "101.25."
+     "vega.",
+     "theta.",
+     "delta and gamma."
     ],
-    "answer": "C",
-    "why": "C is correct. The full spot price of the three-year Treasury note is calculated as\n\nS0 = Quoted bond price + Accrued interest = B0 + AI0.\n\nAI = (60/180) × (1.5/2) = 0.25.\nS0 = 101 + 0.25 = 101.25.\nB is incorrect because 101 is the quoted clean (not the full spot) price of the three-year Treasury note. The clean price excludes accrued interest; the full price, also referred to as the dirty price, includes accrued interest.\n\nA is incorrect because the number of days until the next coupon payment (instead of the accrual period) is incorrectly used to compute accrued interest:\n\nAI = (120/180) × (1.5/2) = 0.50.\nS0 = 101 + 0.50 = 101.50.",
-    "src": "d28-doyle Q2"
+    "answer": "A",
+    "why": "Vega (sensitivity to volatility) is HIGHEST for options at or near the money and lower when they are deep in or out of the money, so his vega claim is wrong. B is wrong: theta (time decay) does behave as he describes, changing at an increasing rate as expiry nears. C is wrong: delta and gamma do both measure how the option responds to changes in the stock price.",
+    "src": "princeton Q2"
    },
    {
     "n": 35,
-    "q": "The equilibrium 10-year Treasury note quoted futures contract price is closest to:",
+    "q": "Is Maddox’s suggested hedging strategy for Weston options most likely correct?",
     "options": [
-     "149.78.",
-     "147.94.",
-     "148.89."
+     "No, he should only use delta",
+     "No, he should subtract gamma",
+     "Yes"
     ],
-    "answer": "B",
-    "why": "B is correct. The equilibrium 10-year quoted futures contract price based on the carry arbitrage model is calculated as\n\nQ0 = (1/CF) × [FV(B0 + AI0) − AIT− FVCI].\nCF = 0.7025.\nB0 = 104.00.\nAI0 = 0.17.\nAIT = (120/180 × 2/2) = 0.67.\nFVCI = 0.\n\nC is incorrect because accrued interest at expiration is not subtracted in the equilibrium quoted futures contract price formula:\n\n\nA is incorrect because the future value is incorrectly calculated (the exponent of 3/12 is omitted):",
-    "src": "d28-doyle Q3"
+    "answer": "C",
+    "why": "Per the source answer: delta (0.587) shows how many shares hedge one call now, and gamma (0.019) shows how much delta changes for a $1 move in the stock. Adding them, 0.587 + 0.019 = 0.606 shares per call, anticipates the new delta after a small rise in the stock. B is wrong: gamma is added, not subtracted.\nNote: in the standard curriculum a plain delta hedge uses delta alone, and gamma risk is neutralized with other options, not shares. Treat this answer as specific to this question.",
+    "src": "princeton Q3"
    },
    {
     "n": 36,
-    "q": "The value of the JGB long forward position is closest to:",
+    "q": "Whose comment regarding implied volatility is most likely correct?",
     "options": [
-     "JPY16,000,000.",
-     "JPY15,990,409.",
-     "JPY15,980,823."
+     "Jeffries’s",
+     "Maddox’s",
+     "Birch’s"
     ],
     "answer": "B",
-    "why": "B is correct. The value of the JGB forward position is calculated as\n\n\nTherefore, the value of the long forward position is 1.9988 per JPY100 par value.\n\nFor the long position in eight contracts with each contract having a par value of 100 million yen, the value of the position is calculated as\n\n0.019988 × (JPY100,000,000) × 8 = JPY15,990,409.\nC is incorrect because the present value of the difference between the price when the contracts were purchased and the current price of the contracts was incorrectly computed (the exponent of 6/12 is omitted):\n\nVt = Ft − F0 = (155 − 153)/(1 + 0.0012) = 1.9980.\n0.019980 × (JPY100,000,000) × 8 = JPY15,980,823.\nA is incorrect because the absolute difference (not the present value of the difference) between the price when the contracts were purchased and the current price of the contracts was computed:\n\nVt = Ft − F0 = (155 − 153) = 2.\n0.02 × (JPY100,000,000) × 8 = JPY16,000,000.",
-    "src": "d28-doyle Q4"
+    "why": "Maddox is right: the volatility surface shows implied volatility across both exercise prices and maturities. C is wrong: implied volatility is backed out from MARKET option prices and reflects expected FUTURE volatility; it is not calculated from historical volatility. A is wrong: when demand for hedging rises, the skew steepens, so its shape differs from the smile; they don't become identical.",
+    "src": "princeton Q4"
    }
   ]
  },
  {
   "id": "mock6-10",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Fixed Income",
-  "title": "CDS · John Smith: compliance, equity vs credit",
-  "origin": "cds-2",
-  "body": "John Sullivan, a fixed-income portfolio manager at a €10 billion sovereign wealth fund (the Fund), meets with Sofia Cho, a derivatives strategist with Crown Gate Securities (CGS), to discuss investment opportunities for the Fund. Cho notes that CGS adheres to ISDA (International Swaps and Derivatives Association) protocols for credit default swap (CDS) transactions and that any contract must conform to ISDA specifications. Before the Fund can engage in trading CDS products with CGS, the Fund must satisfy compliance requirements.\n\nSullivan explains to Cho that fixed-income derivatives strategies are being contemplated for both hedging and trading purposes. Given the size and diversified nature of the Fund, Sullivan asks Cho to recommend a type of CDS that would allow the Fund to simultaneously fully hedge multiple fixed-income exposures.\n\nSullivan and Cho discuss opportunities to add trading profits to the Fund. Sullivan asks Cho to determine the probability of default associated with a five-year investment-grade bond issued by Vega Industrial. Selected data on the Vega Industrial bond are presented in Exhibit 1.\n\nExhibit 1\nSelected Data on Vega Industrial Five-Year Bond\nYear\tHazard Rate\n1\t0.22%\n2\t0.35%\n3\t0.50%\n4\t0.65%\n5\t0.80%\nCho explains that a single-name CDS can also be used to add profit to the Fund over time. Cho describes a hypothetical trade in which the Fund sells £6 million of five-year CDS protection on Vega, where the CDS contract has a duration of 3.9 years. Cho assumes that the Fund closes the position six months later, after Vega’s credit spread narrowed from 150 bps to 100 bps.\n\nCho discusses the mechanics of a long/short trade. In order to structure a number of potential trades, Cho and Sullivan exchange their respective views on individual companies and global economies. Cho and Sullivan agree on the following outlooks.\n\nOutlook 1: The European economy will weaken.\n\nOutlook 2: The US economy will strengthen relative to that of Canada.\n\nOutlook 3: The credit quality of electric car manufacturers will improve relative to that of traditional car manufacturers.\n\nCho believes US macroeconomic data are improving and that the general economy will strengthen in the short term. Cho suggests that a curve trade could be used by the Fund to capitalize on her short-term view of a steepening of the US credit curve.\n\nAnother short-term trading opportunity that Sullivan and Cho discuss involves the merger and acquisition market. CGS believes that Delta Corporation may make an unsolicited bid at a premium to the market price for all of the publicly traded shares of Zega, Inc. Zega’s market capitalization and capital structure are comparable to Delta’s; both firms are highly levered. It is anticipated that Delta will issue new equity along with 5- and 10-year senior unsecured debt to fund the acquisition, which will significantly increase its debt ratio.",
+  "title": "Zhang: Arbitrage Partners, arbitrage-free valuation and tree construction",
+  "origin": "af-zhang",
+  "body": "Dennis Zhou is a fixed-income analyst at Equilibrium Partners, a hedge fund focusing on global macro arbitrage opportunities. The fixed-income team focuses on securities issued in developing markets that trade in multiple world financial centers. Zhou is conducting a training session for a new analyst, John Hollis.\n\nZhou explains: “Our fixed-income team focuses on constructing a portfolio of fixed-income securities issued in local markets that trade in multiple markets around the world. We seek out securities we believe to be mispriced and identify these using an arbitrage-free approach to valuation, which can be described as follows. The cash flows of any fixed-income security can be thought of as a package of separate zero-coupon bonds. Each zero-coupon bond in such a package is valued separately at a discount rate corresponding to the interest rate on the yield curve at the time of the cash flow.\n\nWhen the present values of the coupon payments are summed and added to the present value of the principal payment at maturity, the result should equal the current price of the bond. In order to calculate the arbitrage-free value of a bond, we determine the future coupon and principal payments for the bond. If the yield curve is positively sloped, the appropriate interest rate used to discount each cash flow will be different. However, in the event the yield curve is flat, all cash flows will be discounted in the same manner as in the traditional approach to valuing bonds.”\n\nHollis comments: “Last year, South Africa issued multiple two-year and four-year Green Bonds denominated in US dollars with annual coupons. The four-year bonds were callable, while the two-year bonds had no embedded options.\n\nI recall an example of an arbitrage opportunity of the two-year bonds trading in different global financial centers. The benchmark yield curve, bond coupon rates, and bond prices are shown in Exhibits 1 and 2.”\n\nExhibit 1 Benchmark Interest Rates\nMaturity (years)\tCoupon Rate\tSpot Rate\t1-Year Implied Forward Rate\n1\t5.00%\t5%\t5.00% (current)\n2\t5.97%\t6%\t7.01%\n3\t6.91%\t7%\t9.03%\n4\t7.81%\t8%\t11.06%\n\nExhibit 2 Bond Price Quotes\nMarket\tCoupon Rate\tQuoted Price\nDubai\t1%\t90.842\nShanghai\t2%\t92.684\nNew York\t4%\t94.630\n\nZhou adds: “While your example represents good practice, we also need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates. We typically construct an interest rate tree as a visual representation of the paths of future interest rates, with the average of possible future values being centered on the current yield curve. The following three steps can be employed to construct an interest rate tree for valuing a particular bond:\n\nStep 1: Using prices of the benchmark bonds, determine the current par curve.\nStep 2: Estimate interest rate volatility, and calculate the potential paths of future rates.\nStep 3: Starting with the current market price, calculate each successive node’s value.\n\nThe interest rate tree must then be calibrated to fit the actual yield curve while being consistent with an underlying interest rate model.”\n\nHollis states: “I believe the iterative process must involve a trial-and-error search to determine the higher and lower rates subsequent to each node in the tree, which branches out from an average yield centered on the forward rate curve. The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
   "questions": [
    {
     "n": 37,
-    "q": "To satisfy the compliance requirements referenced by Cho, the Fund is most likely required to:",
+    "q": "Is Zhou most likely correct in his description of calculating the arbitrage-free approach to fixed-income security valuation?",
     "options": [
-     "post an upfront payment.",
-     "set a notional amount.",
-     "sign an ISDA master agreement."
+     "Yes.",
+     "No, with respect to the discount rate used with a positively sloped yield curve.",
+     "No, with respect to the discount rate used with a flat yield curve."
     ],
-    "answer": "C",
-    "why": "C is correct. Parties to CDS contracts generally agree that their contracts will conform to ISDA specifications. These terms are specified in the ISDA master agreement, which the parties to a CDS sign before any transactions are made. Therefore, to satisfy the compliance requirements referenced by Cho, the sovereign wealth fund must sign an ISDA master agreement with CGS.",
-    "src": "cds-2 Q7"
+    "answer": "A",
+    "why": "With a positively sloped curve each cash flow is discounted at a different (higher for later) spot rate; with a flat curve the same rate applies to all, as in the traditional approach.",
+    "src": "af-zhang Q29"
    },
    {
     "n": 38,
-    "q": "Which type of CDS should Cho recommend to Sullivan?",
+    "q": "According to the data in Exhibits 1 and 2, in which trading location is the bond most likely mispriced?",
     "options": [
-     "CDS index",
-     "Tranche CDS",
-     "Single-name CDS"
+     "New York",
+     "Dubai",
+     "Shanghai"
     ],
     "answer": "A",
-    "why": "A is correct. A CDS index (e.g., CDX and iTraxx) would allow the Fund to simultaneously fully hedge multiple fixed-income exposures. A tranche CDS will also hedge multiple exposures, but it would only partially hedge those exposures.",
-    "src": "cds-2 Q8"
+    "why": "Discounting at the spot rates gives 90.842 (Dubai) and 92.684 (Shanghai), equal to their quotes. The 4%-coupon bond in New York has an arbitrage-free value above its quote of 94.630, so it is underpriced.",
+    "src": "af-zhang Q30"
    },
    {
     "n": 39,
-    "q": "Based on Exhibit 1, the probability of Vega defaulting on the bond during the first three years is closest to:",
+    "q": "Which of Zhou’s three steps to value bonds with embedded options is least likely correct?",
     "options": [
-     "3.85%.",
-     "1.07%.",
-     "2.50%."
+     "Step 1",
+     "Step 2",
+     "Step 3"
     ],
-    "answer": "B",
-    "why": "B is correct. Based on Exhibit 1, the probability of survival for the first year is 99.78% (100% minus the 0.22% hazard rate). Similarly, the probability of survival for the second and third years is 99.65% (100% minus the 0.35% hazard rate) and 99.50% (100% minus the 0.50% hazard rate), respectively. Therefore, the probability of survival of the Vega bond through the first three years is equal to 0.9978 × 0.9965 × 0.9950 = 0.9893, and the probability of default sometime during the first three years is 1 – 0.9893, or 1.07%.",
-    "src": "cds-2 Q9"
+    "answer": "C",
+    "why": "Node values are found by backward induction starting from the known value at maturity, not by starting with the current market price.",
+    "src": "af-zhang Q31"
    },
    {
     "n": 40,
-    "q": "The hypothetical Vega trade generated an approximate:",
+    "q": "When describing calibrating the interest rate tree, Hollis is least likely correct with respect to the:",
     "options": [
-     "gain of £117,000.",
-     "loss of £117,000.",
-     "gain of £234,000."
+     "volatility assumption.",
+     "assumption of log-normality.",
+     "value of the bond being evaluated."
     ],
-    "answer": "A",
-    "why": "A is correct. The gain on the hypothetical Vega trade is £117,000, calculated as follows.\n\nApproximate profit = Change in credit spread (in bps) × Duration × Notional amount.\nApproximate profit = (150 bps – 100 bps) × 3.9 × £6 million.\nApproximate profit = 0.005 × 3.9 × £6 million.\n= £117,000.\nThe Fund gains because it sold protection at a spread of 150 bps and closed out the position by buying protection at a lower spread of 100 bps.",
-    "src": "cds-2 Q11"
+    "answer": "C",
+    "why": "Calibration depends on a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds, not the bond being evaluated.",
+    "src": "af-zhang Q32"
    }
   ]
  },
  {
   "id": "mock6-11",
-  "source": "Mock paper 6 (assembled 6 Nov from stored vignettes: the user's wrong-answer and least-practised topics; names changed, options reordered)",
+  "source": "Mock paper 6 (rebuilt 7 Nov from stored vignettes that had not appeared in any earlier mock; names changed, options reordered)",
   "readings": [],
   "topic": "Ethical and Professional Standards",
-  "title": "Trevor Blevin: Regal Bank and Spalding",
-  "origin": "regal",
-  "body": "Trevor Brandt, a CFA candidate and a former employee of Crown Bank (Crown), recently joined Hartwell Asset Management as the head of compliance. He is shocked by today’s front-page business news headline: “Crown Depositors Left in the Cold: Central Bank Regulator Places Bank under Statutory Management”. The article mentions the reason for Crown’s closure was the CEO’s illegal behavior, including fraud, as well as money laundering associated with a major client. The discovery occurred one month after the death of Crown’s CEO, Mr. James Moretti. Up until three weeks ago, Brandt headed Crown’s internal audit department and knew nothing of any fraud or client money laundering, despite having recently supervised a major internal audit exercise.\n\nWanting to get more information, Brandt calls his former colleague, Mira Chandra, CFA. Chandra, who works in Crown’s business development department, acts as the investor relations officer and headed the team for Crown’s recent corporate bond issue. The bond issue, approved by the central bank and the capital markets regulator, was hugely successful and oversubscribed. Chandra tells Brandt she too was shocked by the central bank’s actions. Nothing seemed out of line or suspicious regarding Crown’s financial well-being when the team diligently prepared the bond offering documents. She reminds Brandt, that he, along with Crown’s compliance officer, signed off on all of the public marketing materials used for the bond issue, which included reviewing all of the extensive financial analysis undertaken. Chandra adds, “In the latest regulatory inspection, all of the anti-money-laundering and lending procedures were reviewed with no queries raised.”\n\nCrown’s board of directors is concerned that the newspaper’s headline will create panic among depositors and cause a run on Crown if it is allowed to reopen. In an attempt at damage control, the board instructs Chandra to draft a public press release regarding the central bank’s investigations of fraud by the deceased CEO and the money laundering charges made against one of the bank’s major clients. Chandra presents the following three draft statements to the board.\n\nStatement 1: “Crown Bank has been placed under statutory management by the central bank as a result of illegal activity by Mr. Moretti, the deceased CEO, and Wesley Mining Corp, a major client.”\n\nStatement 2: “The central bank has placed Crown Bank under statutory management pending further investigation into alleged illegal activity by a former senior manager and a bank client.”\n\nStatement 3: “Crown Bank has been placed under statutory management by the central bank as a result of illegal activity.”\n\nMeanwhile, Brandt, still reeling from the Crown Bank saga, decides to take another look at Hartwell’s compliance policies and procedures to ensure they are fully in line with the CFA Institute Standards of Professional Conduct. While reviewing the firm’s anti-money-laundering policies, he notices lapses with respect to recently implemented laws, and he is afraid the firm may already be in violation. He plans to update the existing policies as soon as possible.\n\nAfter concluding his review, Brandt recommends to Hartwell’s board of directors changes to the firm’s conflicts of interest policies. Brandt is concerned the staff may not be putting clients’ interests ahead of their own when trading for their personal accounts. He asks for the board’s endorsement of revisions in the following two policies:\n\nPolicy 1: Staff are not allowed to participate in any private placements.\n\nPolicy 2: Any client accounts that include staff as beneficiaries must trade after all other client accounts.",
+  "title": "Ethics · Kostecka: Bope account and Jabbertalk IPO",
+  "origin": "eth6-kostecka",
+  "body": "Jacob Kowalski, CFA, is a portfolio manager at Harlan Investment Management, an asset management and research focused organization. After obtaining his CFA charter last month, Kowalski was transferred to the private wealth management division at Harlan.\n\nDhruv Bapat, a private wealth client, was involved in a major motorcycle accident and is in critical condition, fighting for his life. Bapat is a single parent with a daughter, Pavan Naidoo, in her mid-twenties. Since the accident, Naidoo has managed her father’s affairs, paying all expenses, including investment advisory fees. In several conversations with Naidoo, Kowalski highlighted Bapat’s low risk tolerance and investment goal of capital preservation. Naidoo has indicated her interest in managing the account more aggressively and possibly moving to another management firm. Naidoo recently petitioned the court to appoint her full power of attorney to legally manage Bapat’s affairs. Prior to the court decision, Naidoo asks Kowalski to invest her father’s account in the initial public offering (IPO) of Bluechirp, a highly sought after social media company that has yet to generate a profit.\n\nThe following week, the court approves Naidoo’s request to act on behalf of her father.\n\nNaidoo establishes a non-discretionary investment account at Harlan tied to her newly established business. Shortly thereafter, Kowalski joins the board of Talkwave.com, a smaller social media competitor to Bluechirp. Based on his knowledge of Bluechirp, Kowalski believes the stock of Talkwave is a good investment, even though it is not yet profitable. Buoyed by his faith in social media, Kowalski ultimately purchases shares of Talkwave’s IPO for Naidoo’s account, as well as for all clients he currently manages. When Kowalski informs Naidoo of the purchase, she expresses concern about her legal responsibilities and lack of accounting knowledge in overseeing the account. Kowalski provides Naidoo a list of recommended professionals he has worked with in the past, including attorneys and accountants. When he was in college 10 years earlier, Kowalski was engaged to one of the attorneys but broke off the relationship prior to their wedding, and one of the accountants was Kowalski’s college roommate. Since then, Kowalski has not had any contact with the lawyer and accountant.\n\nThe Talkwave investment is profitable on the first day of trading, doubling from its opening price. Kowalski tells his clients the multifactor valuation model used by Harlan shows Talkwave stock is still undervalued. Harlan’s research report, due out the next day, will recommend investors hold their Talkwave shares. However, Kowalski tells all his clients simultaneously they should sell their shares because he believes Talkwave is overvalued and the stock price will fall soon. Kowalski notes he has followed through on this belief by selling his personal holdings of Talkwave shares. Naidoo ignores Kowalski’s recommendation to sell Talkwave. Over the next week, the stock declines 75%.\n\nWatching Talkwave’s severe share price decline, Naidoo becomes furious with Kowalski because he did not sell shares of Talkwave in her account. She files a complaint with Kowalski’s supervisor, Sally Feng, CFA, claiming she was misled on the value of the IPO in the days immediately after the stock started trading. Kowalski responds to the complaint by telling Feng, “the analyst who wrote the hold recommendation on Talkwave has only passed his CFA Level II examination. As a charterholder, I have earned the right to use the CFA designation, so I am more qualified to manage clients’ investments.”",
   "questions": [
    {
     "n": 41,
-    "q": "Based on the information given, are Brandt and/or Chandra most likely in violation of the Standards regarding their role in Crown’s corporate bond issuance and the subsequent statutory management of Crown Bank?",
+    "q": "With regard to the investment request made by Naidoo to invest in Bluechirp, Kowalski should most likely:",
     "options": [
-     "Yes, Brandt is likely in violation with regard to Standard IV(C), Responsibilities of Supervisors.",
-     "No.",
-     "Yes, both Brandt and Chandra are likely to be in violation with regard to Standard V(A), Diligence and Reasonable Basis."
+     "seek advice from the court.",
+     "follow Bapat’s investment goals.",
+     "comply with her request."
     ],
     "answer": "B",
-    "why": "Both worked diligently: Brandt ran a major internal audit, Chandra's team prepared the offering carefully, the bond was approved by two regulators, and a recent regulatory inspection raised no queries. A fraud that was well hidden and undetected despite reasonable efforts is not, by itself, a violation. A is wrong: nothing suggests Brandt failed to make reasonable efforts to detect violations as a supervisor. C is wrong: there is no sign either lacked diligence or a reasonable basis for their work.",
-    "src": "regal Q1"
+    "why": "A. Incorrect because the account should still be managed as the client requested since the daughter has not yet been granted legal responsibility over her father’s affairs by the court. An investment in an IPO of an unprofitable social networking company most likely does not meet the father’s investment goal. | B. Correct. The account should be managed according to the client’s investment goal of capital preservation and a low risk tolerance. Under Standard III(A) –Loyalty, Prudence, and Care, the first step for members and candidates in fulfilling their duty of loyalty to clients is to determine the identity of the “client” to whom the duty of loyalty is owed. Only when the daughter is granted legal responsibility over her father’s affairs by the court does she become the client. | C. Incorrect because the account should still be managed as the client requested, an investment goal of capital preservation and a low risk tolerance. An investment in an IPO of an unprofitable social networking company most likely does not meet Bapat’s investment goal. Since the daughter has not yet been granted legal responsibility over her father’s affairs by the court, the adviser is not required to follow through on this request.",
+    "src": "eth6-kostecka Q21"
    },
    {
     "n": 42,
-    "q": "To prevent violating any of the Standards, which statement should Chandra most likely recommend that the board of directors use for Crown’s press release?",
+    "q": "With regard to investing in Talkwave and recommending experts, Kowalski most likely needs to disclose conflicts related to his:",
     "options": [
-     "Statement 1",
-     "Statement 2",
-     "Statement 3"
+     "accountant relationship.",
+     "attorney relationship.",
+     "board membership."
     ],
-    "answer": "B",
-    "why": "Statement 2 says only what is known: the bank is under statutory management pending investigation into ALLEGED illegal activity, without naming anyone. Nobody has been charged or found guilty, so naming the deceased CEO and the client (Statement 1) or stating as fact that illegal activity caused it (Statement 3) would imply guilt, damage reputations and could expose the bank to defamation. That breaches her duty of loyalty to her employer (IV(A)) and to its client (III(A)).",
-    "src": "regal Q2"
+    "answer": "C",
+    "why": "A. Incorrect because even though one of the accountants Kowalski recommended is his college roommate, this is only one of several individuals he recommended and it is not a basic conflict of interest, which needs to be disclosed. | B. Incorrect because even though Kowalski was previously engaged to one of the attorneys, the relationship ended a decade ago and it is unlikely that this relationship poses a potential conflict of interest at this time. | C. Correct. Kowalski’s board service creates the opportunity to receive material nonpublic information involving Talkwave and is a basic conflict of interest. As a result, according to Standard VI(A)–Conflicts of Interest, the directorship should be disclosed. Members and candidates must make full and fair disclosure of all matters that could reasonably be expected to impair their independence and objectivity or interfere with respective duties to their clients, prospective clients, and their employer. Because the member has not made any disclosure concerning his board membership, he is in violation of Standard VI(A). Kowalski has also ignored his clients mandate of low risk tolerance and capital preservation and is in violation of Standard III(C)–Suitability. In addition, Naidoo has violated her fiduciary duty as a “trustee” of the account as she failed to manage her father’s portfolio in accordance with his wishes.",
+    "src": "eth6-kostecka Q22"
    },
    {
     "n": 43,
-    "q": "What action should Brandt most likely take regarding his discovery about Hartwell’s anti-money-laundering policies so as to comply with the Standards?",
+    "q": "In relation to Kowalski’s handling of the Talkwave stock recommendation, which of the following CFA Institute Standards of Professional Conduct did he least likely violate?",
     "options": [
-     "Set up procedures to obtain timely information regarding any changes in legislation",
-     "Arrange an annual review of all the firm’s compliance policies",
-     "Require all client service employees to undergo training regarding the new legislation"
+     "Communication with Clients",
+     "Priority of Transactions",
+     "Fair Dealing"
     ],
-    "answer": "A",
-    "why": "The problem is that new laws took effect before the firm's policies were updated. The fix is a process to learn about legal changes in time, so policies are updated before each law takes effect (Knowledge of the Law, plus supervisors' duty to keep procedures adequate). B is wrong: an annual review can still miss a law that takes effect between reviews. C is too narrow: training should cover all employees, and training alone doesn't stop the firm falling behind new laws.",
-    "src": "regal Q3"
+    "answer": "C",
+    "why": "A. Incorrect because according to Standard V(B)–Communication with Clients and Prospective Clients, Kowalski should have distinguished fact from opinion. In addition, Kowalski should also disclose to clients and prospective clients the basic format and general principles of the investment processes used to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes and use reasonable judgment in identifying which factors are important to his investment analyses, recommendations, or actions and include those factors in communications with clients and prospective clients. | B. Incorrect because Kowalski has violated Standard VI(B)–Priority of Transactions. There is a potential conflict of interest because the client and the adviser hold the same stock, so the client should be given first priority to trade Talkwave. | C. Correct. Standard III(B)–Fair Dealing requires members and candidates to deal fairly and objectively with all clients when providing investment analysis, making investment recommendations, taking investment action, or engaging in other professional activities. When Kowalski informs clients of the upcoming investment recommendation by Harlan, he has treated all clients fairly because this disclosure is provided to all of his current clients.",
+    "src": "eth6-kostecka Q23"
    },
    {
     "n": 44,
-    "q": "Would Brandt’s suggested revisions in Hartwell’s conflict of interest policies most likely violate the CFA Institute Standards of Professional Conduct?",
+    "q": "When Kowalski defends himself against Naidoo’s complaint, he most likely violated the CFA Institute Code of Ethics and Standards of Professional Conduct concerning the:",
     "options": [
-     "Yes, in regard to Policy 1",
-     "No",
-     "Yes, in regard to Policy 2"
+     "reference to candidacy in the CFA Program.",
+     "right to use the CFA designation.",
+     "misrepresentation of the meaning of the designation."
     ],
     "answer": "C",
-    "why": "Standard VI(A), Priority of Transactions: client accounts in which staff are beneficiaries (e.g. family accounts) are still CLIENT accounts. They must be treated like every other client account, neither favoured nor disadvantaged, so always trading them last (Policy 2) is unfair to those clients. A is wrong: strict limits on staff private placements are recommended, and a full ban (Policy 1) is allowed.",
-    "src": "regal Q4"
+    "why": "A. Incorrect because he properly references his colleague as a Level II candidate. | B. Incorrect because there is no indication that Kowalski does not have the right to use the CFA designation especially since he recently received his charter. | C. Correct. Statements overstating the competency of an individual or imply, either directly or indirectly, that superior performance can be expected from someone with the CFA designation are not allowed under Standard VII(B)–Reference to CFA Institute, the CFA Designation, and the CFA Program. The Standard specifically states that when referring to CFA Institute, CFA Institute membership, the CFA designation, or candidacy in the CFA Program, members and candidates must not misrepresent or exaggerate the meaning or implications of membership in the CFA Institute, holding the CFA designation, or candidacy in the CFA Program.",
+    "src": "eth6-kostecka Q24"
    }
   ]
  }
