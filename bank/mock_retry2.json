@@ -1,0 +1,750 @@
+[
+ {
+  "id": "retry2-1",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "centralino",
+  "origin": "centralino",
+  "body": "Elena Marchetti is a junior analyst with Ponte Equity Research, an independent equity research firm. Marchetti's supervisor asks her to update, as of 1 January 2020, a quarterly research report for Brianza S.p.A., a telecommunications company headquartered in Italy. On that date, Brianza's common share price is €46 and its preferred shares trade for €4.80 per share.\n\nMarchetti gathers information on Brianza. Exhibit 1 presents earnings and dividend data, and Exhibit 2 presents balance sheet data. Net sales were €2.964 billion in 2019. Marchetti estimates a required return of 14% for Brianza and forecasts growth in dividends of 5% into perpetuity.\n\nExhibit 1: Earnings and Dividends for Brianza, 2016–2020\n\t2016\t2017\t2018\t2019\t2020(E)\nEarnings per share (EPS, €)\t4.61\t4.98\t4.27\t5.12\t5.60\nDividends per share (DPS, €)\t2.30\t2.45\t2.45\t2.60\t2.75\nReturn on equity (ROE)\t12.40%\t13.00%\t11.10%\t13.50%\t14.10%\nThe data for 2016–2019 are actual and for 2020 are estimated.\n\nExhibit 2: Summary Balance Sheet for Brianza, Year Ended 31 December 2019 (€ millions)\nAssets\t\tLiabilities and Shareholders' Equity\t\nCash and cash equivalents\t96\tCurrent liabilities\t244\nAccounts receivable\t288\tLong-term debt\t352\nInventory\t321\tTotal liabilities\t596\nTotal current assets\t705\tPreferred shares\t76\nProperty and equipment, net\t870\tCommon shares\t790\nTotal assets\t1,575\tRetained earnings\t113\n\t\tTotal shareholders' equity\t979\n\t\tTotal liabilities and shareholders' equity\t1,575\nThe market value of long-term debt is equal to its book value. Shares outstanding are 39.20 million common shares and 15.00 million preferred shares.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on Exhibit 1, the trailing P/E for Brianza as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
+    "options": [
+     "9.7.",
+     "9.0.",
+     "8.2."
+    ],
+    "answer": "B",
+    "why": "Trailing P/E = price ÷ most recent four quarters' EPS = €46 ÷ €5.12 = 9.0. 8.2 is the forward P/E (€46 ÷ €5.60); 9.7 uses the 2016–19 average EPS (€4.745)."
+   },
+   {
+    "n": 2,
+    "q": "Based on Exhibit 2, the multiple of enterprise value to sales for Brianza as of 31 December 2019 is closest to:",
+    "options": [
+     "0.72.",
+     "0.75.",
+     "0.69."
+    ],
+    "answer": "A",
+    "why": "EV = common (€46 × 39.20m = €1,803.2m) + preferred (€4.80 × 15.00m = €72.0m) + debt €352m − cash €96m = €2,131.2m. EV/sales = 2,131.2 ÷ 2,964 = 0.72. 0.69 leaves out the preferred shares; 0.75 adds the cash instead of subtracting it."
+   }
+  ]
+ },
+ {
+  "id": "retry2-2",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "terra",
+  "origin": "terra",
+  "body": "Casa Luminar is a retailer that compensates employees with a DB pension plan and stock options in addition to short-term benefits and a DC plan. Casa Luminar prepares its financial statements in accordance with US GAAP and reports in MXN.\n\nMartin Okoye, CFA, is an equity analyst concerned with earnings quality. He is particularly interested in whether the discretionary assumptions the company is making regarding compensation plans are contributing to the recent earnings growth at Casa Luminar. He gathers information from the company's regulatory filings regarding the pension plan assumptions and assumptions related to option valuation for the three years ended 31 December 20X3.\n\nAssumptions Used for Casa Luminar DB Plan\t20X3\t20X2\t20X1\nExpected long-term rate of return on plan assets\t6.30%\t6.40%\t7.05%\nDiscount rate used to estimate pension obligation at beginning of year\t4.70%\t4.85%\t5.25%\nEstimated salary growth rate\t3.80%\t4.20%\t4.05%\nEstimated inflation rate\t3.10%\t2.80%\t2.50%",
+  "questions": [
+   {
+    "n": 3,
+    "q": "Compared to the assumptions Casa Luminar used to compute its periodic pension cost in 20X1, earnings in 20X3 were most favorably affected by the change in the:",
+    "options": [
+     "expected long-term rate of return on plan assets.",
+     "estimated future salary increases.",
+     "discount rate."
+    ],
+    "answer": "B",
+    "why": "All three assumptions were lower in 20X3 than in 20X1. Lower expected salary increases reduce the service cost. A lower discount rate increases the obligation and in most cases the interest cost. A lower expected return on plan assets typically increases the periodic pension cost."
+   },
+   {
+    "n": 4,
+    "q": "Compared to the pension assumptions Casa Luminar used in 20X2, which of the following pairs of assumptions used in 20X3 is most likely internally inconsistent?",
+    "options": [
+     "Expected long-term rate of return on plan assets, discount rate",
+     "Discount rate, estimated future salary increases",
+     "Estimated future salary increases, inflation"
+    ],
+    "answer": "C",
+    "why": "Inflation rose from 2.80% to 3.10% while the salary growth estimate fell from 4.20% to 3.80%. Salary increases are normally positively related to inflation, so this pair is inconsistent."
+   }
+  ]
+ },
+ {
+  "id": "retry2-3",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Alternative Investments",
+  "title": "rossi",
+  "origin": "rossi",
+  "body": "Dominic Hale is a financial adviser specializing in commercial real estate investing. He meets with Sophie Ranger, a new client, who wants to diversify her portfolio by adding real estate investments to it.\n\nUsing data from an appraisal-based index, Hale discusses real estate return and risk statistics with Ranger and compares them to the return and risk of Ranger's current portfolio of stocks and bonds. Based on Ranger's investment objectives, Hale recommends the following types of investments:\n\nInvestment 1: A real estate operating company (REOC);\nInvestment 2: An equity real estate investment trust (REIT).\n\nRanger asks Hale how REITs and REOCs are valued. Hale mentions that the following measures are widely used in the valuation of REITs and REOCs:\nMeasure 1: EBITDA;\nMeasure 2: Funds from operations (FFO);\nMeasure 3: Adjusted funds from operations (AFFO).",
+  "questions": [
+   {
+    "n": 5,
+    "q": "The type of index Hale uses will most likely:",
+    "options": [
+     "have values that lead the transaction values in the market.",
+     "overstate the diversification benefits of real estate.",
+     "introduce noise in the index measurement."
+    ],
+    "answer": "B",
+    "why": "An appraisal-based index suffers from appraisal lag: values lag the market, the index is smoothed (lower volatility and lower correlation with other assets), so the diversification benefits and Sharpe ratio are overstated."
+   },
+   {
+    "n": 6,
+    "q": "Compared to Investment 1 recommended by Hale, Investment 2 most likely:",
+    "options": [
+     "avoids double taxation on dividends received by investors.",
+     "is better able to hold properties under development.",
+     "requires less expertise in real estate investing."
+    ],
+    "answer": "A",
+    "why": "REITs pass income through and avoid corporate income tax, so only the investor is taxed on dividends. REOCs are ordinary taxable companies and are the ones that develop properties for sale. Public REITs and REOCs both give access to professional management."
+   },
+   {
+    "n": 7,
+    "q": "Which of the measures discussed by Hale best reflects the dividend-paying ability of a REIT?",
+    "options": [
+     "Measure 1",
+     "Measure 2",
+     "Measure 3"
+    ],
+    "answer": "C",
+    "why": "AFFO is FFO adjusted to remove non-cash rent and to subtract maintenance-type capital expenditures and leasing costs: a cash-focused measure of dividend-paying ability. EBITDA is not a cash-focused measure; FFO is less refined than AFFO."
+   }
+  ]
+ },
+ {
+  "id": "retry2-4",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Ethics",
+  "title": "sobhani",
+  "origin": "sobhani",
+  "body": "Beacon Wealth Partners, founded by Marcus Whitlock, CFA, six years ago, is an investment adviser serving mostly middle-income clients along with several high-net-worth clients. Whitlock initially worked alone, but because of rapid growth, Beacon Wealth Partners has expanded to 18 employees today. Beacon Wealth Partners continues to add new clients and recently hired a junior analyst, Kenji Aoyama.\n\nIn a meeting with Howard Beckett, a prospective client who recently sold his business for over $90 million, Whitlock learns that Beckett plans to quit working. Beckett asks for ideas on how to invest his sale proceeds to build wealth within a trust structure so that he can pass capital on to his twin daughters, who are 19-year-old students. Whitlock tells Beckett:\n\nConsidering your objectives specifically, I looked at infrastructure projects in developing countries for clients interested in diversifying their portfolios with long-duration projects, consistent cash flow, high operating margins, and a positive correlation to inflation. These types of investments require large up-front cash injections, patience, and the ability to accept a long cash out period. But, there are several benefits to this type of investment that I think are important for you, including diversification, exposure to rapidly growing economies, and returns, which are currently in the 7%–11% range, based on my review of similar investments.",
+  "questions": [
+   {
+    "n": 8,
+    "q": "Whitlock's advice to Beckett with regards to a potential investment is most consistent with the Standards concerning which of the following?",
+    "options": [
+     "Performance Presentation",
+     "Diligence and Reasonable Basis",
+     "Suitability"
+    ],
+    "answer": "A",
+    "why": "Whitlock only quotes historical returns of similar investments and promises no specific return, so he is consistent with III(D) Performance Presentation. He is in violation of III(A) Loyalty, Prudence and Care (he did not identify the actual clients: Beckett and the trust beneficiaries) and of V(A) Diligence and Reasonable Basis and III(C) Suitability, because he did not consider the objectives of the actual client."
+   }
+  ]
+ },
+ {
+  "id": "retry2-5",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "miller",
+  "origin": "miller",
+  "body": "Karen Whitfield is an analyst for a global equity mutual fund. The fund is well-diversified and holds both dividend-paying and non-dividend-paying shares. She is evaluating some of the fund's holdings.\n\nOne holding is Canada-based Cormorant, a profitable non-dividend-paying company that is viewed by the market as an acquisition target. Whitfield expects Cormorant's level of corporate debt to change significantly over time. Because Cormorant reports a number of items through other comprehensive income, its net income does not always fully reflect underlying economic conditions. Whitfield considers the type of model she should use to value Cormorant.\n\nAnother holding, France-based Marigold, is in a mature growth phase. Marigold has a dividend payout ratio of 40%, a return on assets of 8.00%, and an equity multiplier of 1.30. Upon further analysis, Whitfield concludes that Marigold is over valued.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Which of the following is the most appropriate model for Whitfield to use in valuing Cormorant?",
+    "options": [
+     "Free cash flow to the equity",
+     "Residual income",
+     "Free cash flow to the firm"
+    ],
+    "answer": "C",
+    "why": "Cormorant is profitable and an acquisition target, and its debt will change significantly, so the free cash flow to the firm model is most appropriate. Residual income suits companies that pay no dividends AND have negative free cash flows or unreliable forecasts; here the OCI items distort net income, which makes residual income less suitable. FCFE is hard to forecast when leverage changes."
+   },
+   {
+    "n": 10,
+    "q": "Based on Whitfield's analysis, the share price of Marigold would be expected to grow at:",
+    "options": [
+     "a slower rate than its dividends.",
+     "the same rate as its dividends.",
+     "a faster rate than its dividends."
+    ],
+    "answer": "A",
+    "why": "If price equals value, price grows at g, the same rate as dividends. Marigold is overvalued, and the overvaluation is corrected by the price growing more slowly than dividends."
+   }
+  ]
+ },
+ {
+  "id": "retry2-6",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Economics",
+  "title": "beauregard",
+  "origin": "beauregard",
+  "body": "Nadia Fontaine was recently hired as an analyst at AlphaBridge FX, a US-based currency trading firm that maintains offices in major financial centers around the world. Fontaine assists AlphaBridge foreign currency strategist Paul Keller. The firm executes trades for clients and manages a foreign currency investment fund. Fontaine is meeting with Keller to discuss the characteristics of the foreign exchange markets.\n\nKeller explains that knowing what establishes a currency’s real long-term equilibrium value helps investors manage risk exposure:\n\n“To better serve our clients and maximize the performance of our investment fund, we need to be able to filter out the short-term noise in exchange rates so that we can better understand their likely direction over the long term.”\n\nHe notes that current account trends influence the path of exchange rates over time through several mechanisms.\n\n“Of the three mechanisms that economists identify, I have the most confidence in the one that assumes there are long-run limits on current account deficits.”\n\nKeller and Fontaine discuss some of AlphaBridge’s recent trades using the currency quotes and rates provided in Exhibit 1. (For all currency pairs provided, the notation used is, for example, USD/AUD: US dollars per Australian dollar.)\n\nExhibit 1 Interbank Currency Quotes and Libor Rates\nCurrency Pair\tBid (Spot)\tOffer (Spot)\tProjected Spot in One Year\tOne-Year Libor Rates\nUSD/AUD\t0.6920\t0.6951\t0.7010\tJPY 0.10%\nUSD/EUR\t1.0620\t1.0644\t1.0750\tUSD 1.05%\nUSD/NZD\t0.6580\t0.6611\t---\tEUR 1.20%\nJPY/USD\t112.40\t112.45\t113.02\tNZD 1.85%",
+  "questions": [
+   {
+    "n": 11,
+    "q": "The mechanism about which Keller is most confident as an explanation for the long-run equilibrium value of exchange rates is best described as the:",
+    "options": [
+     "portfolio balance channel.",
+     "debt sustainability channel.",
+     "flow supply/demand channel."
+    ],
+    "answer": "B",
+    "why": "Keller prefers the mechanism that assumes there are long-run limits on current account deficits: the debt sustainability channel (an upper limit on net external debt relative to GDP). The portfolio balance channel is about shifts in financial wealth and asset preferences; the flow channel is about the supply and demand for currency from trade flows."
+   },
+   {
+    "n": 12,
+    "q": "Based on the data in Exhibit 1, the bid EUR/AUD cross-rate implied by the interbank market is closest to:",
+    "options": [
+     "0.6516.",
+     "0.7349.",
+     "0.6501."
+    ],
+    "answer": "C",
+    "why": "Sell EUR / buy AUD = sell EUR / buy USD × sell USD / buy AUD. EUR/USD bid = 1 ÷ USD/EUR offer = 1 ÷ 1.0644 = 0.93950. Bid EUR/AUD = 0.93950 × 0.6920 = 0.6501. 0.7349 multiplies the two bids; 0.6516 inverts the USD/EUR bid instead of the offer."
+   }
+  ]
+ },
+ {
+  "id": "retry2-7",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "etf",
+  "origin": "etf",
+  "body": "Sterling Advisers is a registered investment advisory firm that uses exchange-traded funds (ETFs) for its clients’ investment portfolios. Anders Lindqvist is CEO and chief investment officer of Sterling. Peter Haldane, a prospective client, is a high-net-worth individual who is considering transforming his actively managed portfolio of individual stocks and bonds into actively managed and passive ETFs. Haldane is considering this strategy because of the advice of his accountant, Neil Garrity. Lindqvist, Haldane, and Garrity are meeting to discuss ETFs and their growing use in the construction of investment portfolios.\n\nHaldane asks Lindqvist to describe how ETF performance is measured. Lindqvist explains that most ETFs are designed to track the performance of a specific benchmark index, such as the S&P 500 Index. Lindqvist cautions, however, that there are numerous sources of tracking error that may cause a deviation in an ETF’s return relative to its benchmark index. Lindqvist provides an example, stating that one of the sources of tracking error is an ETF portfolio manager’s operations with short sellers.\n\nHaldane wants to maintain the current blended stock and bond benchmark allocations following his portfolio’s transition from individual stocks and bonds to active and passive ETFs. Lindqvist states that whenever active ETF managers implement active views, gaps with respect to desired market exposures may result. For Haldane’s portfolio, Lindqvist plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings. Passive ETFs will enable Lindqvist to maintain benchmark exposure while not necessarily replacing an active ETF manager.\n\nGarrity states that active ETF strategies have evolved such that market capitalization is no longer the only benchmark factor for equity strategies and that fixed-income strategies may be constructed with minimal sensitivity to movements in interest rates. He states that smart beta equity risk factors, such as dividend yield, size, value, and momentum, enable investors to implement an active view while continuing to track a designated benchmark. He then describes the strategy of smart beta fixed-income ETFs that focus on generating returns from taking credit risk and hedging out duration risk.",
+  "questions": [
+   {
+    "n": 13,
+    "q": "In describing tracking error, Lindqvist's example most likely relates to:",
+    "options": [
+     "securities lending.",
+     "trading costs.",
+     "full replication."
+    ],
+    "answer": "A",
+    "why": "Many ETF portfolio managers lend part of the holdings to short sellers. Securities lending produces income that offsets part of the expenses but is a source of tracking error. Lack of full replication and trading costs are also sources of tracking error but are not operations with short sellers."
+   },
+   {
+    "n": 14,
+    "q": "Lindqvist's explanation of benchmark exposure most likely describes portfolio:",
+    "options": [
+     "completion strategies.",
+     "liquidity management.",
+     "rebalancing."
+    ],
+    "answer": "A",
+    "why": "ETFs fill a temporary gap in exposure that arises when an active manager implements an active view, while the investor keeps the active manager: a completion strategy. Rebalancing restores target weights after market values drift; liquidity management invests excess cash to reduce cash drag."
+   },
+   {
+    "n": 15,
+    "q": "Are Garrity's comments about active ETF strategies most likely correct?",
+    "options": [
+     "No, because of the comment about smart beta fixed-income ETFs",
+     "No, because of the comment about smart beta equity risk factors",
+     "Yes"
+    ],
+    "answer": "C",
+    "why": "Both comments are correct. Smart beta equity ETFs follow rules-based factors (dividend yield, size, value, momentum) while tracking a designated benchmark. Smart beta fixed-income ETFs take credit risk and use interest rate swaps to hedge out duration risk."
+   }
+  ]
+ },
+ {
+  "id": "retry2-8",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "larsen",
+  "origin": "larsen",
+  "body": "Marit Solberg is the CFO of Northwind Boats (NWB), a Norwegian pleasure boat manufacturer. Solberg is reviewing NWB's dividend policy in advance of recommending a course of action to the Board of Directors regarding the current year dividend payment.\n\nExhibit 1\n\tCurrent Year\tPrior Year\tTwo Years Ago\nPre-tax income (in NOK millions)\t640\t480\t420\nAfter-tax net income (in NOK millions)\t448\t336\t294\nDividends paid (in NOK millions)\t---\t128\t120\nNumber of shares outstanding (in millions)\t8\t8\t8\nNWB's shares are currently trading at NOK 520.\n\nExhibit 1 shows that NWB had a very strong year in the current year, generating an additional NOK 112 million net income over the previous year. Solberg considers four possible options in addition to the regular dividend to return a portion of this additional capital to shareholders in the current year:\n\nOption 1:\tIssue a stock dividend of 25%.\nOption 2:\tIncrease the annual per share dividend by 25% more than the prior year.\nOption 3:\tMaintain the current annual dividend and pay a special dividend of NOK 12 per share.\nOption 4:\tRepurchase NOK 250 million worth of shares at a NOK 45 premium to the current share price.",
+  "questions": [
+   {
+    "n": 16,
+    "q": "Compared to option 2, option 3 results in a total current year dividend payment per share that is:",
+    "options": [
+     "lower by NOK 8.",
+     "higher by NOK 8.",
+     "higher by NOK 12."
+    ],
+    "answer": "B",
+    "why": "Option 2: (NOK 128 million × 1.25) ÷ 8 million shares = NOK 20 per share. Option 3: NOK 128 million ÷ 8 million = NOK 16, plus the special dividend of NOK 12 = NOK 28. Option 3 is higher by NOK 8. 'Lower by NOK 8' reverses the options; 'higher by NOK 12' compares only the special dividend."
+   },
+   {
+    "n": 17,
+    "q": "If option 4 is implemented using surplus cash, which of the following is most likely to decrease? NWB's:",
+    "options": [
+     "debt-to-assets ratio.",
+     "total book value.",
+     "debt-to-equity ratio."
+    ],
+    "answer": "B",
+    "why": "A repurchase paid with surplus cash reduces assets and shareholders' equity, so the total book value falls. Both debt ratios increase because the denominator (assets or equity) decreases."
+   }
+  ]
+ },
+ {
+  "id": "retry2-9",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "charmed",
+  "origin": "charmed",
+  "body": "Adrian Voss, an analyst at a UK-based globally diversified equity mutual fund, has been assigned the task of estimating a fair value of the common stock of Meridian Power. Voss is aware of several approaches that could be used for this purpose. After carefully considering the characteristics of the company and its competitors, he believes Meridian will have extraordinary growth for the next few years and normal growth thereafter. So, he has concluded that a two-stage DDM is the most appropriate for valuing the stock.\n\nMeridian pays semi-annual dividends. The total dividends during 2016, 2017, and 2018 have been C$0.205, C$0.255, and C$0.300, respectively. These imply a growth rate of 24% in 2017 and 18% in 2018. Voss believes that the growth rate will be 12% in the next year. He has estimated that the first stage will include the next eight years.\n\nVoss is using the CAPM to estimate the required return on equity for Meridian. He has estimated that the company's beta, as measured against the S&P/TSX Composite Index, is 0.92. The Canadian risk-free rate, as measured by the annual yield on the 10-year government bond, is 3.8%. The equity risk premium for the Canadian market is estimated at 5.2%. Based on these data, Voss has estimated that the required return on Meridian's stock is 0.038 + 0.92(0.052) = 0.0858, or 8.58%. Voss is doing the analysis in January 2019, and the stock price at that time is C$19.\n\nVoss realizes that even within the two-stage DDM, there could be some variations in the approach. He would like to explore how these variations affect the stock's valuation. Specifically, he wants to estimate the value of the stock for each of the following approaches separately.\n\nApproach 1\nThe dividend growth rate will be 12% throughout the first stage of eight years. The dividend growth rate thereafter will be 6%.\n\nApproach 2\nInstead of using the estimated stable growth rate of 6% in the second stage, Voss wants to use his estimate that eight years later, Meridian's stock will be worth 15 times its earnings per share (trailing P/E of 15). He expects that the earnings retention ratio at that time will be 0.65.",
+  "questions": [
+   {
+    "n": 18,
+    "q": "In the first approach, what proportion of the stock's total value is represented by the value of the second stage?",
+    "options": [
+     "0.85.",
+     "0.92.",
+     "0.15."
+    ],
+    "answer": "A",
+    "why": "D1 to D8 grow at 12% from C$0.300. PV of D1–D8 = C$2.7664. V8 = D8 × 1.06 ÷ (0.0858 − 0.06) = C$30.5177; PV of V8 = C$15.7962. Total value = C$18.5626. Second stage share = 15.7962 ÷ 18.5626 = 0.85. 0.15 is the first-stage share; 0.92 uses the undiscounted terminal value."
+   },
+   {
+    "n": 19,
+    "q": "What is the stock's terminal value based on the second approach (earnings multiple)?",
+    "options": [
+     "C$17.14.",
+     "C$31.83.",
+     "C$11.14."
+    ],
+    "answer": "B",
+    "why": "Payout ratio = 1 − 0.65 = 0.35, so E8 = D8 ÷ 0.35 = C$0.7428 ÷ 0.35 = C$2.1223. V8 = 15 × 2.1223 = C$31.83. C$17.14 divides by the retention ratio; C$11.14 multiplies D8 by 15 instead of E8."
+   },
+   {
+    "n": 20,
+    "q": "What is the stock's current value based on the second approach?",
+    "options": [
+     "C$16.48.",
+     "C$19.24.",
+     "C$18.56."
+    ],
+    "answer": "B",
+    "why": "PV of V8 = 31.8338 ÷ 1.0858^8 = C$16.4774; add PV of D1–D8 (C$2.7664): V0 = C$19.24. C$18.56 is the value from the first approach; C$16.48 leaves out the first-stage dividends."
+   }
+  ]
+ },
+ {
+  "id": "retry2-10",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "cds",
+  "origin": "cds",
+  "body": "Luca Moretti is a credit analyst with Tundra Partners, a hedge fund manager. Tundra enters into single-name CDS for speculative purposes. Moretti compiles information about Tundra's CDS portfolio in Exhibit 1.\n\nExhibit 1\n\tPosition\tCoupon\tOrigination Credit Spread\tCurrent Credit Spread\nCDS 1\tProtection Buyer\t1.0%\t80 bps\t120 bps\nCDS 2\tProtection Seller\t1.0%\t110 bps\t230 bps\nCDS 3\tProtection Seller\t5.0%\t700 bps\t640 bps\nCDS 4\tProtection Seller\t5.0%\t480 bps\tIn default",
+  "questions": [
+   {
+    "n": 21,
+    "q": "If Tundra closes its position in CDS 3 today, it will:",
+    "options": [
+     "pay an upfront premium and monetize a gain.",
+     "receive an upfront premium and monetize a gain.",
+     "pay an upfront premium and monetize a loss."
+    ],
+    "answer": "A",
+    "why": "Tundra is the protection seller, so to close it must buy protection with a new CDS with a 5.0% coupon and the same remaining maturity. The current spread (640 bps) is above the coupon, so it pays an upfront premium. The spread fell by 60 bps (credit quality improved), so the premium it pays is lower than the one it received at origination: a gain."
+   }
+  ]
+ },
+ {
+  "id": "retry2-11",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Quantitative Methods",
+  "title": "hu",
+  "origin": "hu",
+  "body": "Tomas Eklund is a quantitative analyst for Northgate Equity Partners. Eklund set up a meeting with Samuel Okoro, senior analyst, to discuss the progress on a model that Okoro was developing. The model is supposed to forecast return over the next month for a group of 120 midsize companies. A portfolio with a long position in 12 stocks with the highest forecasted return and a corresponding short position in 12 stocks with the lowest return is envisioned. Okoro mentions that he is collecting the relevant fundamental and technical variable data for the 120 companies.\n\nOkoro states that he would rather take the broad sample of 1,200 stocks with the highest trading volume and divide the sample into 12 groups of diverse characteristics. The intent is to select one stock from each group to long/short so as to diversify the portfolio composition and reduce risk.",
+  "questions": [
+   {
+    "n": 22,
+    "q": "Which model would be most appropriate for Okoro to use in predicting returns?",
+    "options": [
+     "KNN model.",
+     "Clustering model.",
+     "Penalized regression model."
+    ],
+    "answer": "C",
+    "why": "The objective is to forecast monthly returns from many fundamental and technical variables: a prediction with a continuous target, not a classification or a grouping problem. Penalized regression keeps only the most important features. Clustering and KNN are not appropriate here."
+   }
+  ]
+ },
+ {
+  "id": "retry2-12",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "holt",
+  "origin": "holt",
+  "body": "Nathan Boyd is preparing a presentation that analyzes the valuation of the common stock of two companies under consideration as additions to his firm’s recommended list, Jasper Corporation and Calder Corporation. Boyd has prepared preliminary valuations of both companies using an FCFE model and is also preparing a value estimate for Jasper using a dividend discount model. Calder’s 2019 and 2020 financial statements, contained in Exhibit 1 and Exhibit 2, are prepared in accordance with US GAAP.\n\nExhibit 1\nCalder Corporation Consolidated Balance Sheets (US$ Millions)\n\t2020\t2019\nAssets\t\t\nCurrent assets\t\t\nCash and cash equivalents\t$ 340\t$ 295\nAccounts receivable\t742\t690\nInventories\t815\t760\nTotal current assets\t1,897\t1,745\nGross fixed assets\t4,100\t3,600\nLess: Accumulated depreciation\t1,150\t890\nNet fixed assets\t2,950\t2,710\nTotal assets\t$4,847\t$4,455\nLiabilities and shareholders’ equity\t\t\nCurrent liabilities\t\t\nAccounts payable\t$ 462\t$ 430\nAccrued taxes and expenses\t140\t118\nNotes payable\t480\t455\nTotal current liabilities\t1,082\t1,003\nLong-term debt\t1,520\t1,470\nCommon stock\t500\t500\nRetained earnings\t1,745\t1,482\nTotal liabilities and shareholders’ equity\t$4,847\t$4,455\n\nExhibit 2\nCalder Corporation Consolidated Income Statement for the Year Ended 31 December 2020 (US$ Millions)\nTotal revenues\t$3,180\nCost of goods sold\t1,240\nSelling, general, and administrative expenses\t810\nEarnings before interest, taxes, depreciation, and amortization (EBITDA)\t1,130\nDepreciation expense\t260\nOperating income\t870\nInterest expense\t186\nPretax income\t684\nIncome tax (at 32%)\t219\nNet income\t$ 465\n\nBoyd presents his valuations of the common stock of Jasper and Calder to his supervisor, Diane Crowe. Crowe has the following comment:\n\n“I recommend you use an FCFF model to value Calder’s common stock instead of using an FCFE model because Calder has had a history of leverage changes in the past.”\n\nBoyd responds: “I will calculate Calder’s FCFF for 2020 and estimate the value of Calder’s common stock using an FCFF model.”",
+  "questions": [
+   {
+    "n": 23,
+    "q": "Calder’s FCFE (in millions) for 2020 is closest to:",
+    "options": [
+     "$322.",
+     "$247.",
+     "$172."
+    ],
+    "answer": "B",
+    "why": "FCFE = NI + NCC − FCInv − WCInv + net borrowing. NCC = depreciation 260; FCInv = increase in gross fixed assets = 4,100 − 3,600 = 500; WCInv = Δ(receivables + inventories) − Δ(payables + accrued) = (52 + 55) − (32 + 22) = 53; net borrowing = Δnotes payable 25 + Δlong-term debt 50 = 75. FCFE = 465 + 260 − 500 − 53 + 75 = $247. Check: FCFF − Int(1 − t) + net borrowing gives the same. $172 leaves out net borrowing; $322 adds net borrowing twice."
+   },
+   {
+    "n": 24,
+    "q": "Crowe’s recommendation to use an FCFF model to value Calder is:",
+    "options": [
+     "logical, given the prospect of Calder changing its capital structure.",
+     "not logical because FCFE represents a more direct approach to free cash flow valuation.",
+     "not logical because an FCFF model is used only to value the total firm."
+    ],
+    "answer": "A",
+    "why": "FCFF is often selected when the capital structure is expected to change, because FCFF is easier to estimate than FCFE in the presence of changing financial leverage. FCFF gives firm value; subtract debt (and preferred) to get the equity value."
+   }
+  ]
+ },
+ {
+  "id": "retry2-13",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Ethics",
+  "title": "watson",
+  "origin": "watson",
+  "body": "Calvin Mercer is a Level II CFA candidate. In addition to studying the curriculum independently, he and several of his coworkers have formed a study group that uses many of the resources provided by CFA Institute to prepare for the exam. They meet every Monday to review the previous week’s study materials and discuss items needing further clarification. This week’s reading is the CFA Institute Standards of Professional Conduct. After studying the Standards, Mercer answers the topic questions offered by CFA Institute. He notes three scenarios he wants to clarify with the group.\n\nMercer brings up the first scenario and lays out the following facts given: A research analyst makes a presentation to a small group of investors. Prior to the start of the meeting, the analyst chatted with several individuals outside the meeting room. The analyst commented that she had just gotten off the phone with the CFO of a company she follows where they talked about a recently announced merger by a competitor. The analyst starts the presentation and discusses her research process and her published investment recommendations on the companies under her coverage. She mentions her call with the CFO as well as the comments she made during an interview on a major television network relating to the merger.\n\nThe final scenario he wants to discuss with the group has to do with policy recommendations made by a firm’s chief compliance officer regarding communication with clients and prospective clients. The officer provided her firm’s board the following policies for approval:\n\nPolicy 1: When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model.\nPolicy 2: If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social media post.\nPolicy 3: Significant changes in risk characteristics for either a security or asset strategy should be communicated to all clients.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "In the first scenario Mercer discusses, did the research analyst most likely violate any CFA Institute Standards of Professional Conduct?",
+    "options": [
+     "Yes, with regard to the discussion prior to the presentation.",
+     "Yes, with regard to the presentation.",
+     "No."
+    ],
+    "answer": "C",
+    "why": "No violation. The discussion before the meeting is not a violation of Standard II(A) Material Nonpublic Information: a merger is material, but this merger had already been announced, so the information is public. Nothing indicates a violation in the presentation either."
+   },
+   {
+    "n": 26,
+    "q": "In the third scenario, which policy presented by the chief compliance officer would least likely be fully compliant with Standard V: Investment Analysis, Recommendations, and Actions?",
+    "options": [
+     "Policy 1",
+     "Policy 2",
+     "Policy 3"
+    ],
+    "answer": "B",
+    "why": "Policies 1 and 3 are consistent with Standard V(B) Communication with Clients and Prospective Clients. Policy 2 is not fully compliant: under Standard V(B), when a capsule or condensed form of communication is used (such as social media), clients should be notified that additional information and analyses are available from the producer of the report. Notifying all clients that a social media post has been made does not meet this requirement."
+   }
+  ]
+ },
+ {
+  "id": "retry2-14",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Financial Statement Analysis",
+  "title": "dorado",
+  "origin": "dorado",
+  "body": "Olivia Prescott is an analyst working for Crestline Capital (CCI), which manages a variety of investment funds. She analyzes the recent performance of Fonteva Beverages SA (FB), a multinational brewer of carbonated beverages that recently entered the energy drinks market. As a core holding, FB's prominence in Europe provides geographic diversification for CCI, which tends to be North-America-centric.\n\nPrescott refers to FB's most recent year and previous year balance sheets and comments: \"FB is continuing to follow a growth-by-acquisition strategy.\" In addition, Prescott adjusts FB's most recent year income statement to determine the company's net income under the direct control of management by using information (in EUR millions) in Exhibit 1.\n\nExhibit 1\n\tMost Recent Year\nIncome from operations\t1,842\nIncome from investments in associates\t214\nInterest expense\t(702)\nTaxes\t(256)\nNet income\t1,098\nOf which:\t\nNet income attributable to non-controlling interests\t94\nNet income attributable to shareholders\t1,004\n\nPrescott and her team assess the quality of FB's overall performance. The consensus is positive, but Prescott disagrees with her team for the following reasons:\n\nReason 1: The rate of fluctuation in the cash-flow-based accruals ratio is low.\nReason 2: Balance-sheet-based accruals are trending down relative to total assets.\nReason 3: Income from operations is consistently higher than cash generated from operations.",
+  "questions": [
+   {
+    "n": 27,
+    "q": "After Prescott's adjustment, FB's net income (in EUR millions) under management's direct control is:",
+    "options": [
+     "790.",
+     "1,004.",
+     "884."
+    ],
+    "answer": "C",
+    "why": "Management controls the subsidiaries in full (including the non-controlling interest share) but not the associates. Net income 1,098 − income from associates 214 = 884. 1,004 is net income attributable to shareholders (it still includes the associates' income and excludes the non-controlling interest); 790 = 1,004 − 214 removes the associates but also removes the non-controlling interest share."
+   },
+   {
+    "n": 28,
+    "q": "Which of the following reasons best supports Prescott's disagreement with her team about FB's overall performance?",
+    "options": [
+     "Reason 1",
+     "Reason 2",
+     "Reason 3"
+    ],
+    "answer": "C",
+    "why": "Income from operations that is consistently higher than cash generated from operations means earnings are not backed by cash, which calls their quality into question. A steady (low-fluctuation) cash-flow-based accruals ratio is not a warning sign, and balance-sheet accruals trending down give less room for manipulation."
+   }
+  ]
+ },
+ {
+  "id": "retry2-15",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Derivatives",
+  "title": "princeton",
+  "origin": "princeton",
+  "body": "Gordon Blake is CEO and chief investment officer of Harbour Capital, a registered investment advisory firm. He is working with Terry Jordan, head trader, and Ravi Mehta, a new analyst. They meet to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.\n\nJordan introduces option Greeks into the conversation, stating, “The BSM model contains six inputs: the stock price, the option’s exercise price, dividends, the risk-free interest rate, time to maturity, and implied volatility. The effect of the BSM model inputs on the price of an option can be measured by the option Greeks. Delta and gamma are measures of the relationship between a change in the stock price and the option price. Theta is a measure that typically approaches zero at an increasing rate as the option approaches maturity. Holding all other factors constant, Vega is a measure that typically is higher whenever an option is “out of the money.”\n\nMehta notes that the implied volatility for a Wexham call option is 30%. With respect to other call options on Wexham stock, Mehta states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Blake adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Jordan concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising.",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Jordan’s statement about option Greeks is least likely correct with respect to:",
+    "options": [
+     "delta and gamma.",
+     "vega.",
+     "theta."
+    ],
+    "answer": "B",
+    "why": "Vega (sensitivity to volatility) is highest for options at or near the money and lower when they are deep in or out of the money, so his vega claim is wrong. Theta (time decay) behaves as he describes; delta and gamma both measure how the option responds to changes in the stock price."
+   },
+   {
+    "n": 30,
+    "q": "Whose comment regarding implied volatility is most likely correct?",
+    "options": [
+     "Blake’s",
+     "Jordan’s",
+     "Mehta’s"
+    ],
+    "answer": "C",
+    "why": "Mehta is right: the volatility surface shows implied volatility across both exercise prices and maturities. Blake is wrong: implied volatility is backed out of market option prices and reflects expected future volatility. Jordan is wrong: when the demand for hedging rises the skew steepens, so its shape differs from the smile."
+   }
+  ]
+ },
+ {
+  "id": "retry2-16",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Portfolio Management",
+  "title": "eastern",
+  "origin": "eastern",
+  "body": "Dennis Holloway, chief risk officer at Western Provincial Bank, and Sam Pritchard, assistant risk officer, are currently conducting a risk assessment of several of the bank’s independent investment functions. These reviews include the bank’s fixed-income investment portfolio and an equity fund managed by the bank’s trust department. Holloway and Pritchard are also assessing Western Provincial’s overall risk exposure.\n\nWestern Provincial Bank Fixed-Income Investment Portfolio\n\nThe bank’s proprietary fixed-income portfolio is structured as a barbell portfolio: About half of the portfolio is invested in zero-coupon Treasuries with maturities in the 3- to 5-year range (Portfolio P1), and the remainder is invested in zero-coupon Treasuries with maturities in the 10- to 15-year range (Portfolio P2). Owen Baptiste, the portfolio manager, has discretion to allocate between 40% and 60% of the assets to each maturity “bucket.” He must remain fully invested at all times. Exhibit 1 shows details of this portfolio.\n\nExhibit 1: US Treasury Barbell Portfolio\n\tP1 (3–5 Years)\tP2 (10–15 Years)\nAverage duration\t3.45\t10.85\nAverage yield to maturity\t1.60%\t2.40%\nMarket value\t$48.0 million\t$62.0 million\n\nTrust Department’s Equity Fund\n\nUse of Options: The trust department of Western Provincial Bank manages an equity fund called the Core Plus Fund, with $410 million in assets. This fund’s objective is to track the S&P 500 Index price return while producing an income return 1.5 times that of the S&P 500. The bank’s chief investment officer (CIO) uses put and call options on S&P 500 stock index futures to adjust the risk exposure of certain client accounts that have an investment in this fund. The portfolio of a 60-year-old widow with a below-average risk tolerance has an investment in this fund, and the CIO has asked his assistant, Janine Okafor, to propose an options strategy to bring the portfolio’s delta to 0.85.",
+  "questions": [
+   {
+    "n": 31,
+    "q": "If Baptiste is expecting a 75 bp increase in yields at all points along the yield curve, which of the following trades is he most likely to execute to minimize his risk?",
+    "options": [
+     "Sell $18 million of P2 and reinvest the proceeds in three-year bonds",
+     "Sell $36 million of P2 and reinvest the proceeds in three-year bonds",
+     "Reduce the duration of P2 to 10 years and reduce the duration of P1 to 3 years"
+    ],
+    "answer": "A",
+    "why": "To cut interest rate risk before yields rise, shorten the duration within the 40%–60% limit per bucket. Total = 48.0 + 62.0 = $110.0m. Minimum for P2 = 40% × 110.0 = $44.0m, so at most $18m can be sold. Selling $36m would leave P2 at 26 ÷ 110 = 23.6%, below the 40% floor. Reducing each bucket's duration cuts the duration far less."
+   },
+   {
+    "n": 32,
+    "q": "Which of the following options strategies is Okafor most likely to recommend for the client’s portfolio?",
+    "options": [
+     "Short calls",
+     "Short puts",
+     "Long calls"
+    ],
+    "answer": "A",
+    "why": "An index-tracking portfolio has a delta of 1. To reach 0.85 the options must add negative delta. Long calls have a delta of 0 to +1, so short calls have a delta of 0 to −1 and lower the portfolio delta. A short put has a positive delta, so it would raise it."
+   }
+  ]
+ },
+ {
+  "id": "retry2-17",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "singh",
+  "origin": "singh",
+  "body": "Rahul Verma, an equity portfolio manager at a wealth management company, meets with junior research analyst Julia Tan to discuss a potential investment in Aurelio Limited.\n\nVerma and Tan discuss the impact of dividends, share repurchases, and leverage on Aurelio's free cash flow. Tan tells Verma the following:\n\nStatement 1:\tChanges in leverage do not impact free cash flow to equity.\nStatement 2:\tTransactions between the company and its shareholders, such as the payment of dividends or share repurchases, do affect free cash flow.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Which of Tan’s statements regarding free cash flow is (are) correct?",
+    "options": [
+     "Statement 1 only",
+     "Statement 2 only",
+     "Neither Statement 1 nor Statement 2"
+    ],
+    "answer": "C",
+    "why": "Transactions between the company and its shareholders (cash dividends, share repurchases, share issuances) do not affect free cash flow. Leverage changes do have an impact: more debt financing increases the interest tax shield and changes net borrowing, which affects FCFE. Neither statement is correct."
+   }
+  ]
+ },
+ {
+  "id": "retry2-18",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Corporate Issuers",
+  "title": "esg",
+  "origin": "esg",
+  "body": "Grace Whitfield, CFA, is a fixed-income analyst for the Orchard Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of Bellview Hotels, a publicly traded boutique hotel company. Whitfield notes that Bellview Hotels is a “green hotel” company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. The founding family owns 60% of the outstanding shares. Each ownership share has equivalent voting rights. The board of directors of Bellview Hotels consists of 12 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and 25% of the board members have experience in the hotel industry.\n\nBellview Hotels has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Whitfield and her supervisor discuss how Bellview Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Whitfield integrates ESG factors in the investment valuation of Bellview Hotels’ corporate bonds.",
+  "questions": [
+   {
+    "n": 34,
+    "q": "After integrating the ESG factors, the credit spread on Bellview Hotels’ bonds is most likely to:",
+    "options": [
+     "increase.",
+     "decrease.",
+     "remain unchanged."
+    ],
+    "answer": "A",
+    "why": "Bellview faces significant corporate governance risk (one independent director out of 12, little gender diversity, few directors with industry experience) and social risk (high labor turnover, minimum wages, no health benefits, and expected higher costs from legislation). These raise investors' perception of risk and may reduce future cash flows, so the credit spread is likely to increase."
+   }
+  ]
+ },
+ {
+  "id": "retry2-19",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Economics",
+  "title": "amaral",
+  "origin": "amaral",
+  "body": "At an international finance and economics conference in Nairobi, Kenya, Rafael Duarte of Brazil and Anjali Rao of India are discussing how to spur their countries’ economic growth. Duarte believes that growth can be bolstered by removing institutional impediments and suggests several possibilities for Brazil: launching a rural literacy program, clarifying property rights laws, and implementing a new dividend tax on foreign investors.\n\nAlthough Rao recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:\n\nChannel 1:\tDeepening the capital base\nChannel 2:\tMaking investments in technology\nChannel 3:\tMaintaining a low rupee exchange rate",
+  "questions": [
+   {
+    "n": 35,
+    "q": "Which of Duarte’s initiatives is least likely to achieve his stated growth objective?",
+    "options": [
+     "Property rights",
+     "Dividend tax",
+     "Rural literacy"
+    ],
+    "answer": "B",
+    "why": "A new dividend tax makes equity investment in Brazil less attractive for foreign investors and impedes capital inflows. In an open economy, foreign investment can finance domestic investment and break the cycle of low income, low savings and low investment. Literacy and property rights both support growth."
+   },
+   {
+    "n": 36,
+    "q": "The channel that is least likely to help India overcome its challenge of lacking significant natural resources is:",
+    "options": [
+     "Channel 1.",
+     "Channel 2.",
+     "Channel 3."
+    ],
+    "answer": "C",
+    "why": "Maintaining a low currency supports demand for exports but has little direct effect on the growth rate of potential output (aggregate supply). Capital deepening and investment in technology raise productivity and capacity, so they are the channels that substitute for natural resources."
+   }
+  ]
+ },
+ {
+  "id": "retry2-20",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "nkomo",
+  "origin": "nkomo",
+  "body": "Sipho Dlamini, CFA, a senior equity analyst with Karoo Capital, South Africa, has been assigned a recent graduate, Lerato Khumalo, to assist in valuations. Khumalo is interested in pursuing a career in equity analysis. In their first meeting, Dlamini and Khumalo discuss the concept of residual income and its commercial applications. Dlamini asks Khumalo to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.\n\nExhibit 1\nHypothetical Firm Data (amounts in South African rand)\nCurrent share price\tR31.60\nBook value per share\tR24.00\nTotal shares outstanding\t40 million\nCost of equity\t12%\nMarket value of debt\tR70 million\nAccounting book value of total capital\tR900 million\nIntrinsic share value of equity derived from residual income model\tR27.00\n\nDlamini also shares his valuation report of the hypothetical firm with Khumalo. Dlamini’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R27.00 per share. To assess Khumalo’s knowledge of residual income valuation, Dlamini asks Khumalo two questions about the hypothetical firm:\n\nQuestion 1:\nWhat conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?\n\nQuestion 2:\nSuppose you estimated the intrinsic value of a firm’s shares using a constant growth residual income model, and you found that your estimate of intrinsic value equaled the book value per share. What would that finding imply about that firm’s return on equity?",
+  "questions": [
+   {
+    "n": 37,
+    "q": "Based on the information in Exhibit 1, the market value added of the hypothetical firm is closest to:",
+    "options": [
+     "R364 million.",
+     "R304 million.",
+     "R434 million."
+    ],
+    "answer": "C",
+    "why": "Market value added = market value of the company − accounting book value of total capital. Market value of the company = market value of debt + market value of equity = R70m + (40m × R31.60 = R1,264m) = R1,334m. MVA = R1,334m − R900m = R434m. R364m leaves out the debt; R304m subtracts the book value of equity (R960m) from the market value of equity."
+   },
+   {
+    "n": 38,
+    "q": "The most appropriate response to Dlamini’s Question 1 would be that the present value of future residual earnings is expected to be:",
+    "options": [
+     "zero.",
+     "negative.",
+     "positive."
+    ],
+    "answer": "C",
+    "why": "The residual income model says intrinsic value = book value per share + PV of expected per share residual income. The intrinsic value (R27.00) is above the book value (R24.00), so the PV of expected residual income is positive (R3.00 per share)."
+   },
+   {
+    "n": 39,
+    "q": "The most appropriate response to Dlamini’s Question 2 would be that the firm’s return on equity is:",
+    "options": [
+     "equal to the firm’s cost of equity.",
+     "higher than the firm’s cost of equity.",
+     "lower than the firm’s cost of equity."
+    ],
+    "answer": "A",
+    "why": "V₀ = B₀ + (ROE − r) × B₀ ÷ (r − g). If V₀ equals B₀ there is no residual income, so ROE must equal the cost of equity."
+   }
+  ]
+ },
+ {
+  "id": "retry2-21",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Fixed Income",
+  "title": "zhang",
+  "origin": "zhang",
+  "body": "Daniel Ho is a fixed-income analyst at Meridian Partners, a hedge fund focusing on global macro arbitrage opportunities. The fixed-income team focuses on securities issued in developing markets that trade in multiple world financial centers. Ho is conducting a training session for a new analyst, Ian Pratt.\n\nHo explains: “We need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates. We typically construct an interest rate tree as a visual representation of the paths of future interest rates, with the average of possible future values being centered on the current yield curve. The following three steps can be employed to construct an interest rate tree for valuing a particular bond:\n\nStep 1: Using prices of the benchmark bonds, determine the current par curve.\nStep 2: Estimate interest rate volatility, and calculate the potential paths of future rates.\nStep 3: Starting with the current market price, calculate each successive node’s value.\n\nThe interest rate tree must then be calibrated to fit the actual yield curve while being consistent with an underlying interest rate model.”\n\nPratt states: “I believe the iterative process must involve a trial-and-error search to determine the higher and lower rates subsequent to each node in the tree, which branches out from an average yield centered on the forward rate curve. The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
+  "questions": [
+   {
+    "n": 40,
+    "q": "When describing calibrating the interest rate tree, Pratt is least likely correct with respect to the:",
+    "options": [
+     "assumption of log-normality.",
+     "value of the bond being evaluated.",
+     "volatility assumption."
+    ],
+    "answer": "B",
+    "why": "The tree is calibrated with a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds so that the tree fits the actual yield curve. It is not calibrated to the market value of the bond being evaluated; the calibrated tree is then used to value that bond."
+   }
+  ]
+ },
+ {
+  "id": "retry2-22",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "stratton",
+  "origin": "stratton",
+  "body": "The Hartwell Club is a US-based small investment club formed by a group of friends who had recently graduated from university. Today the club holds a regular bimonthly meeting, and two members have new companies for the club to analyze. The club uses a combination of comparables and forecasted fundamentals to make its investment decisions.\n\nMaya Fischer has done some preliminary research on Pelton Ltd. (Pelton). Located in Pennsylvania, Pelton is a small manufacturer of products, supplies, and food for domestic animals. Fischer starts by showing the club a recent news release from Pelton’s website (Exhibit 1).\n\nExhibit 1 Pelton Ltd. Press Release Core EPS Announcement\nWe are pleased to report an increase in Core EPS from $1.17 to $1.50 for the year-ended 31 December 2017. The company continues to pursue its growth-by-acquisition strategy, acquiring smaller specialty companies in the pet supplies industry. Acquisitions over the past two years have allowed us to increase our asset base by 18%, and we expect similar opportunities for growth in the next few years.\n\t31 December 2017\t31 December 2016\nEPS\t$1.18\t$1.02\nCore EPS*\t$1.50\t$1.17\n* Core EPS is a non-GAAP measure that excludes acquisition charges of $0.20 and $0.15 in 2017 and 2016, respectively, as well as $0.12 in 2017 related to the settlement of a lawsuit.\n\nFischer notes that Pelton is currently trading at $13.56 and reminds the club that the company had been sued over patent infringement for producing coats and blankets for dogs with the names and logos of local professional sports teams on them without the teams’ permission. The company had settled quickly out of court to avoid further negative publicity. Fischer believes the company will not be incurring legal fees again in the foreseeable future but believes that because the company’s strategy is to grow by acquisition, costs related to acquisitions will continue to be incurred and are relevant in any analysis. She does not agree with the company’s exclusion of those costs from core EPS. She calculates Pelton’s trailing price-to-earnings ratio (P/E) on the basis of her beliefs.\n\nUsing data available from the New York Stock Exchange (NYSE), Fischer finds the average P/E multiple for the Consumer Goods Index (15.4) and the Processed and Packaged Goods sector of that index (29.6). She then performs a screen to narrow the latter group down to other, smaller processed and packaged goods producers to create her own index for comparison purposes. Partial results for the companies identified in her screen are shown in Exhibit 2.\n\nExhibit 2 Partial Results of Market Screen of Companies in Processed and Packaged Goods Fischer’s Index\nCompany\tMarket Cap in US$ millions\tP/E\nRKT Inc.\t8.40\t11.8\nNora Industries Inc.\t31.50\t13.2\nEllis Brothers Co.\t480.00\t6.1\nMoore Foods Ltd.\t620.00\t19.5\nSigma Delights Inc.\t510.00\t17.0\n\nThe club members further discuss Fischer’s index and the wide range in both market capitalizations and P/Es for companies in the index. The discussion focuses on whether the arithmetic mean of the index is the best value to be using in their analysis. Fischer remembers learning about the weighted harmonic mean. She decides to calculate the weighted harmonic mean for the index and makes the following statement to support her decision:\n\n“The harmonic mean can be used to mitigate the effects of both large and small outliers.”",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Based on Exhibit 1 and Fischer’s beliefs about recurring costs, her trailing P/E is closest to:",
+    "options": [
+     "9.04.",
+     "10.43.",
+     "11.49."
+    ],
+    "answer": "B",
+    "why": "Fischer treats the acquisition costs as recurring (keep them in EPS) and the lawsuit as non-recurring (exclude it). Recurring EPS = reported EPS $1.18 + $0.12 lawsuit = $1.30. Trailing P/E = $13.56 ÷ $1.30 = 10.43. 9.04 uses the company's core EPS ($1.50); 11.49 uses reported EPS and keeps the one-off legal cost."
+   },
+   {
+    "n": 42,
+    "q": "The weighted harmonic mean of the P/Es in Fischer’s index (Exhibit 2) is closest to:",
+    "options": [
+     "14.7.",
+     "11.5.",
+     "11.5."
+    ],
+    "answer": "B",
+    "why": "Weighted harmonic mean = 1 ÷ Σ(weight ÷ P/E), with market cap weights = 1,649.90 ÷ Σ(cap ÷ P/E) = 1,649.90 ÷ 143.58 = 11.5. 11.5 is the simple (unweighted) harmonic mean; 14.7 is the market-cap weighted arithmetic mean."
+   }
+  ]
+ },
+ {
+  "id": "retry2-23",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Ethics",
+  "title": "kostecka",
+  "origin": "kostecka",
+  "body": "Martin Kessler, CFA, is a portfolio manager at Corvin Investment Management, an asset management and research focused organization. After obtaining his CFA charter last month, Kessler was transferred to the private wealth management division at Corvin.\n\nRaman establishes a non-discretionary investment account at Corvin tied to her newly established business. Shortly thereafter, Kessler joins the board of Chatloop.com, a smaller social media competitor to Streamly. Based on his knowledge of Streamly, Kessler believes the stock of Chatloop is a good investment, even though it is not yet profitable. Buoyed by his faith in social media, Kessler ultimately purchases shares of Chatloop’s IPO for Raman’s account, as well as for all clients he currently manages. When Kessler informs Raman of the purchase, she expresses concern about her legal responsibilities and lack of accounting knowledge in overseeing the account. Kessler provides Raman a list of recommended professionals he has worked with in the past, including attorneys and accountants. When he was in college 10 years earlier, Kessler was engaged to one of the attorneys but broke off the relationship prior to their wedding, and one of the accountants was Kessler’s college roommate. Since then, Kessler has not had any contact with the lawyer and accountant.\n\nThe Chatloop investment is profitable on the first day of trading, doubling from its opening price. Kessler tells his clients the multifactor valuation model used by Corvin shows Chatloop stock is still undervalued. Corvin’s research report, due out the next day, will recommend investors hold their Chatloop shares. However, Kessler tells all his clients simultaneously they should sell their shares because he believes Chatloop is overvalued and the stock price will fall soon. Kessler notes he has followed through on this belief by selling his personal holdings of Chatloop shares. Raman ignores Kessler’s recommendation to sell Chatloop. Over the next week, the stock declines 75%.",
+  "questions": [
+   {
+    "n": 43,
+    "q": "In relation to Kessler’s handling of the Chatloop stock recommendation, which of the following CFA Institute Standards of Professional Conduct did he least likely violate?",
+    "options": [
+     "Fair Dealing",
+     "Priority of Transactions",
+     "Communication with Clients"
+    ],
+    "answer": "A",
+    "why": "Fair Dealing requires members to deal fairly and objectively with all clients when making recommendations. Kessler told all his clients at the same time to sell, so he treated them fairly. He violated V(B) Communication with Clients (he should distinguish fact from opinion and disclose the basis of his recommendation, which conflicts with the firm's hold report) and VI(B) Priority of Transactions (clients and the adviser held the same stock, and clients' transactions must come first)."
+   }
+  ]
+ },
+ {
+  "id": "retry2-24",
+  "source": "Retry Paper 2 (8 Nov): Mock 5 and 6 misses and guesses plus earlier equity misses; vignettes cut to the relevant parts, names and numbers changed",
+  "readings": [],
+  "topic": "Equity",
+  "title": "kim",
+  "origin": "kim",
+  "body": "Park Min-jun is an equity analyst with Busan Securities. Park is writing a research report on HanBit Electronics, a South Korean company that is dual-listed on a US exchange and complies with US GAAP. As part of his analysis, Park wants to determine the intrinsic value of HanBit’s common shares under both residual income and comparable valuation methods.\n\nWhen examining HanBit’s financial data, Park notices that the company is underusing its debt capacity and its debt ratio is well below the optimal level. To support the valuation process, Park assembles in Exhibit 1 selected financial information from HanBit’s 2013 and 2012 audited financial statements (values stated in South Korean won [KRW]). Other financial data pertaining to the valuation of HanBit’s shares at 31 December 2013 are shown in Exhibit 2.\n\nExhibit 1 Selected Information from HanBit’s 2013 and 2012 Financial Statements (KRW millions, except where noted)\n\tYear Ended 31 December 2013\t\nNet income\t118,000\t\nDividends\t46,000\t\nNumber of common shares outstanding (actual)\t35,000,000\t\n\tKRW at 31 December\t\n\t2013\t2012\nTotal stockholders' equity\t820,000\t760,000\n\nExhibit 2 Other Financial Data for HanBit Electronics\nPretax cost of long-term debt\t5%\nRequired return on equity\t11%\nMarket price per share at 31 December 2013\tKRW58,000",
+  "questions": [
+   {
+    "n": 44,
+    "q": "Using the information in Exhibits 1 and 2, HanBit’s residual income (in millions) in 2013 is closest to:",
+    "options": [
+     "KRW34,400.",
+     "KRW27,800.",
+     "KRW72,000."
+    ],
+    "answer": "A",
+    "why": "Residual income = net income − equity charge, where the equity charge = required return on equity × beginning-of-year equity: 118,000 − 0.11 × 760,000 = 118,000 − 83,600 = KRW34,400. KRW27,800 uses end-of-year equity; KRW72,000 is net income minus dividends (no equity charge)."
+   }
+  ]
+ }
+]
