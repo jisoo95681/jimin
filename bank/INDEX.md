@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 199 vignettes · 267 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 204 vignettes · 272 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -43,7 +43,7 @@ Totals: app 68 vignettes · bank 199 vignettes · 267 in all. Plus 152 standalon
 | 35 | Analysis of Active Portfolio Management | 1 | 11 | 12 |
 | 36 | Exchange-Traded Funds | 0 | 8 | 8 |
 | 37 | Using Multifactor Models | 0 | 10 | 10 |
-| 38 | Measuring and Managing Market Risk | 3 | 3 | 6 |
+| 38 | Measuring and Managing Market Risk | 3 | 8 | 11 |
 | 39 | Backtesting and Simulation | 2 | 2 | 4 |
 | 40 | Code of Ethics and Standards of Professional Conduct | 0 | 0 | 0 |
 | 41 | Guidance for Standards I–VII | 8 | 13 | 21 |
@@ -88,6 +88,6 @@ Totals: app 68 vignettes · bank 199 vignettes · 267 in all. Plus 152 standalon
 **35 Analysis of Active Portfolio Management**: frazee (app, 7Q); ap-managers (bank, 2Q); ap-robbin (bank, 6Q); ap-martinez (bank, 4Q); ap-indigo (bank, 2Q); ap-smith (bank, 4Q); ap-bauer (bank, 4Q); ap-mackie (bank, 4Q); ap-spencer (bank, 6Q); ap-barolo (bank, 4Q); m1-3 (bank, 4Q); m1-8 (bank, 4Q)
 **36 Exchange-Traded Funds**: etf-rutledge (bank, 6Q); etf-provident (bank, 4Q); etf-set1 (bank, 4Q); etf-set2 (bank, 4Q); etf-set3 (bank, 4Q); etf-set4 (bank, 4Q); m1-3 (bank, 4Q); s1b-beaumont (bank, 4Q)
 **37 Using Multifactor Models**: pc-10 (bank, 4Q); mf-cheung (bank, 6Q); mf-low (bank, 4Q); mf-martinez (bank, 4Q); mf-yusuf (bank, 6Q); mf-cho (bank, 4Q); mf-tia (bank, 6Q); mf-wilson (bank, 6Q); m1-3 (bank, 4Q); altuve (bank, 6Q)
-**38 Measuring and Managing Market Risk**: flusk (app, 8Q); eastern (app, 5Q); ima (app, 7Q); newman-var (bank, 4Q); m2-4 (bank, 4Q); s2a-lowvol (bank, 3Q)
+**38 Measuring and Managing Market Risk**: flusk (app, 8Q); eastern (app, 5Q); ima (app, 7Q); mr-hiram (bank, 6Q); mr-applegate (bank, 6Q); mr-citadel (bank, 6Q); mr-hoskins (bank, 6Q); mr-muckroth (bank, 4Q); newman-var (bank, 4Q); m2-4 (bank, 4Q); s2a-lowvol (bank, 3Q)
 **39 Backtesting and Simulation**: gwp (app, 8Q); yuen (app, 8Q); m2-4 (bank, 4Q); s2a-lowvol (bank, 3Q)
 **41 Guidance for Standards I–VII**: cadler (app, 4Q); thorpe (app, 4Q); sedgwick (app, 4Q); northside (app, 4Q); amc (app, 4Q); mercer (app, 4Q); regal (app, 4Q); victory (app, 4Q); pc-11 (bank, 4Q); eth6-watson (bank, 4Q); eth6-sobhani (bank, 4Q); eth6-cheng (bank, 4Q); eth6-kostecka (bank, 4Q); eth6-novak (bank, 4Q); eth6-mehta (bank, 4Q); m1-11 (bank, 4Q); m2-9 (bank, 4Q); m2-10 (bank, 4Q); eth-pierce (bank, 4Q); s1a-pcp (bank, 4Q); s2a-oconnor (bank, 8Q)

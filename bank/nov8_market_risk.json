@@ -1,0 +1,365 @@
+[
+ {
+  "id": "mr-hiram",
+  "source": "8 Nov Module 5 Measuring and Managing Market Risk quiz (36/52, 69%)",
+  "readings": [
+   38
+  ],
+  "title": "Market risk · Hiram/LICIA: VaR method choice, CVaR, hypothetical scenario, parametric 1% VaR, duration",
+  "body": "Hiram Life (Hiram), a large multinational insurer located in Canada, has received permission to increase its ownership in an India-based life insurance company, LICIA, from 26% to 49%. Before completing this transaction, Hiram wants to complete a risk assessment of LICIA’s investment portfolio. Judith Hamilton, Hiram’s chief financial officer, has been asked to brief the management committee on investment risk in its India-based insurance operations.\n\nLICIA’s portfolio, which has a market value of CAD260 million, is currently structured as shown in Exhibit 1. Despite its more than 1,000 individual holdings, the portfolio is invested predominantly in India. The Indian government bond market is highly liquid, but the country’s mortgage and infrastructure loan markets, as well as the corporate bond market, are relatively illiquid. Individual mortgage and corporate bond positions are large relative to the normal trading volumes in these securities. Given the elevated current and fiscal account deficits, Indian investments are also subject to above-average economic risk.\n\nHamilton begins with a summary of the India-based portfolio. Exhibit 1 presents the current portfolio composition and the risk and return assumptions used to estimate value at risk (VaR).\n\nExhibit 1\nSelected Assumptions for LICIA’s Investment Portfolio\n \tAllocation\tAverage Daily Return\tDaily Standard Deviation\nIndia government securities\t50%\t0.015%\t0.206%\nIndia mortgage/infrastructure loans\t25%\t0.045%\t0.710%\nIndia corporate bonds\t15%\t0.025%\t0.324%\nIndia equity\t10%\t0.035%\t0.996%\nInfrastructure is a rapidly growing asset class with limited return history; the first infrastructure loans were issued just 10 years ago.\n\nHamilton’s report to the management committee must outline her assumptions and provide support for the methods she used in her risk assessment. If needed, she will also make recommendations for rebalancing the portfolio to ensure its risk profile is aligned with that of Hiram.\n\nHamilton develops the assumptions shown in Exhibit 2, which will be used for estimating the portfolio VaR.\n\nExhibit 2\nVaR Input Assumptions for Proposed CAD260 Million Portfolio\nMethod\tAverage Return Assumption\tStandard Deviation Assumption\nMonte Carlo simulation\t0.026%\t0.501%\nParametric approach\t0.026%\t0.501%\nHistorical simulation\t0.023%\t0.490%\nHamilton elects to apply a one-day, 5% VaR limit of CAD2 million in her risk assessment of LICIA’s portfolio. This limit is consistent with the risk tolerance the committee has specified for the Hiram portfolio.\n\nThe markets’ volatility during the last 12 months has been significantly higher than the historical norm, with increased frequency of large daily losses, and Hamilton expects the next 12 months to be equally volatile.\n\nShe estimates the one-day 5% portfolio VaR for LICIA’s portfolio using three different approaches:\n\nExhibit 3\nVaR Results over a One-Day Period for Proposed Portfolio\nMethod\t5% VaR\nMonte Carlo simulation\tCAD2,095,565\nParametric approach\tCAD2,083,610\nHistorical simulation\tCAD1,938,874\nThe committee is likely to have questions in a number of key areas—the limitations of the VaR report, potential losses in an extreme adverse event, and the reliability of the VaR numbers if the market continues to exhibit higher-than-normal volatility. Hamilton wants to be certain that she has thoroughly evaluated the risks inherent in the LICIA portfolio and compares them with the risks in Hiram’s present portfolio.\n\nHamilton believes the possibility of a ratings downgrade on Indian sovereign debt is high and not yet fully reflected in securities prices. If the rating is lowered, many of the portfolio’s holdings will no longer meet Hiram’s minimum ratings requirement. A downgrade’s effect is unlikely to be limited to the government bond portfolio. All asset classes can be expected to be affected to some degree. Hamilton plans to include a scenario analysis that reflects this possibility to ensure that management has the broadest possible view of the risk exposures in the India portfolio.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "Given Hamilton’s expectations, which of the following models is most appropriate to use in estimating portfolio VaR?",
+    "options": [
+     "Parametric method",
+     "Historical simulation method",
+     "Monte Carlo simulation method"
+    ],
+    "answer": "C",
+    "why": "C is correct. The Monte Carlo simulation method can accommodate virtually any distribution, an important factor given the increased frequency of large daily losses. This method can also more easily accommodate the large number of portfolio holdings. The Monte Carlo method allows the user to develop her own forward-looking assumptions about the portfolio’s risk and return characteristics, unlike the historical simulation method, which uses the current portfolio and re-prices it using the actual historical changes in the key factors experienced during the lookback period. Given the limited return history for infrastructure investments and Hamilton’s expectations for higher-than-normal volatility, the historical simulation method would be a suboptimal choice."
+   },
+   {
+    "n": 22,
+    "q": "Which risk measure is Hamilton most likely to present when addressing the committee’s concerns regarding potential losses in extreme stress events?",
+    "options": [
+     "Relative VaR",
+     "Incremental VaR",
+     "Conditional VaR"
+    ],
+    "answer": "C",
+    "why": "C is correct. Conditional VaR is a measure of tail risk that provides an estimate of the average loss that would be incurred if the VaR cutoff is exceeded."
+   },
+   {
+    "n": 23,
+    "q": "The scenario analysis that Hamilton prepares for the committee is most likely a:",
+    "options": [
+     "stress test.",
+     "historical scenario.",
+     "hypothetical scenario."
+    ],
+    "answer": "C",
+    "why": "C is correct. A hypothetical scenario analysis allows the risk manager to estimate the likely effect of the scenario on a range of portfolio risk factors. A sovereign ratings downgrade would affect Hiram’s India equity and corporate bond exposures as well as the government bond exposure. In addition, the assumptions used in constructing the scenario analysis can specifically address the effect of a need to sell large position sizes under decreased liquidity conditions resulting from a ratings downgrade. VaR alone does not accurately reflect the risk of large position sizes, which may be difficult to trade."
+   },
+   {
+    "n": 24,
+    "q": "The scenario analysis that Hamilton prepares for the committee is a valuable tool to supplement VaR because it:",
+    "options": [
+     "incorporates historical data to evaluate the risk in the tail of the VaR distribution.",
+     "enables Hamilton to isolate the risk stemming from a single risk factor—the ratings downgrade.",
+     "allows the committee to assess the effect of low liquidity in the event of a ratings downgrade."
+    ],
+    "answer": "C",
+    "why": "C is correct. A hypothetical scenario analysis allows Hamilton to estimate the direct effect of a ratings downgrade on the portfolio’s government bond holdings and the resulting need to sell a number of the portfolio’s holdings because they no longer meet the ratings guidelines. VaR alone does not accurately reflect the risk of large position sizes, which may be difficult to trade. The hypothetical scenario analysis will also highlight the effect of increased economic turmoil on all of the portfolio’s exposures, not only the government bond exposures."
+   },
+   {
+    "n": 25,
+    "q": "Using the data in Exhibit 2, the portfolio’s annual 1% parametric VaR is closest to:",
+    "options": [
+     "CAD17 million.",
+     "CAD31 million.",
+     "CAD48 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. The VaR is derived as follows:\n\nVaR = {[E(Rp) − 2.33σp](−1)}(Portfolio value),\nwhere\n\nE(Rp) = Annualized daily return = (0.00026 × 250) = 0.065\n250 = Number of trading days annually\n2.33 = Number of standard deviations to attain 1% VaR\nσp = Annualized standard deviation =  = 0.079215\nPortfolio value = CAD260,000,000\nVaR = −(0.065 − 0.184571) × CAD260,000,000\n= CAD31,088,460."
+   },
+   {
+    "n": 26,
+    "q": "What additional risk measures would be most appropriate to add to Hamilton’s risk assessment?",
+    "options": [
+     "Delta",
+     "Duration",
+     "Tracking error"
+    ],
+    "answer": "B",
+    "why": "B is correct. Given the large fixed-income exposure in the LICIA portfolio, examining the portfolio duration more closely would be prudent. Duration is the primary sensitivity exposure measure for fixed-income investments."
+   }
+  ]
+ },
+ {
+  "id": "mr-applegate",
+  "source": "8 Nov Module 5 Measuring and Managing Market Risk quiz (36/52, 69%)",
+  "readings": [
+   38
+  ],
+  "title": "Market risk · Applegate (Patel): VaR statements, parametric method, CVaR, gamma vs vega, hedge fund risk measures, tail risk",
+  "body": "Pari Patel is a senior portfolio manager at Applegate Capital Management, an institutional hedge fund manager in San Francisco that offers a variety of strategies. Patel oversees the management of the Applegate Hedged Alpha Fund, a mutual fund with the objective of providing capital appreciation while minimizing downside risk. Justin Flaherty is a junior analyst on Patel’s team.\n\nPatel works closely with Applegate’s risk and compliance teams to ensure he understands the inherent risks in the portfolio. Each morning, Patel receives a risk report with a number of metrics to help him assess portfolio exposures and risks.\n\nPatel is reviewing the daily risk report with Flaherty to discuss why value at risk (VaR) is an important measure of risk. Flaherty makes the following three statements regarding VaR:\n\nStatement 1:\tVaR measures the minimum expected loss, rather than the maximum expected loss, in a portfolio.\nStatement 2:\tVaR is used to estimate portfolio losses that are likely to occur at a fixed point in time, rather than over a period of time.\nStatement 3:\tVaR measures portfolio volatility in percentage terms.\nPatel replies to Flaherty’s statements by focusing on specific aspects of VaR: “Applegate’s process begins with a risk decomposition of the portfolio holdings, typically assumes normal distribution of risk factors, and then uses the expected return and standard deviation for each risk factor to estimate the VaR. The VaR threshold is converted to a z-distribution. We then calculate the expected return and volatility of the portfolio and adjust to the desired time interval. Finally, we can obtain VaR and convert it into a dollar amount by multiplying by the portfolio value.”\n\nIn reviewing the VaR report, Patel would like more insight on the average loss that would occur if the VaR cutoff is extended and asks Flaherty to contact the risk team to improve the reporting metrics. After discussing with his colleague on the risk team, Flaherty responds that going forward they will add conditional VaR, incremental VaR, and marginal VaR to the report.\n\nIn addition to VaR, the risk report includes other measures that assist Patel in better understanding portfolio sensitivities. Patel uses option strategies within the fund to manage exposures. Patel asks Flaherty to review sensitivity risk measures to better understand the option exposure within the fund. Flaherty uses gamma to understand how sensitive option prices are to an increase in volatility of the underlying stock and delta to determine how large moves in the value of the fund positions will affect associated option values.\n\nMarcus Thompson oversees risk management at Applegate on a firm-wide basis. Because of the use of leverage, Thompson pays particular attention to risk measures to understand the sources and uses of cash and the risk of hitting leverage limits and facing margin calls. He uses a number of metrics in his risk dashboard and communicates to managers and firm leadership when actions need to be taken to mitigate risk.\n\nThompson frequently reviews Applegate’s strategies to identify those with greater-than-expected tail risk. Doing so helps him understand potential capital allocation requirements for meeting tail risk losses. He is asked to review the following three newly proposed fund strategies and to assess potential tail risk and capital requirements:\n\nStrategy 1:\tLong–short equity fund targeting an equity market beta of 0.2 based on fundamental long and short equity research\nStrategy 2:\tLong-only option strategy that uses technical analysis and momentum to trade call and put options on a short-term basis\nStrategy 3:\tAlternative income strategy focused on long credit positions combined with selling insurance and writing options to generate premium income",
+  "questions": [
+   {
+    "n": 27,
+    "q": "Which one of Flaherty’s statements on VaR is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Statement 1 is accurate. VaR can be used to measure the minimum, not maximum, expected loss. | B. Incorrect. Flaherty is incorrect regarding VaR being expressed at a fixed point in time. VaR is expressed over a period of time. VaR can be expressed in terms of either percentage loss or value loss. | C. Incorrect. Statement 3 is incorrect. VaR measures not portfolio volatility but, rather, portfolio losses expressed in terms of either percentage loss or value loss."
+   },
+   {
+    "n": 28,
+    "q": "Which estimation of VaR is Patel most likely describing?",
+    "options": [
+     "Parametric",
+     "Monte Carlo",
+     "Historical simulation"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Patel is describing the parametric approach to estimating VaR. The parametric method uses the expected return and standard deviation for each risk factor to estimate the VaR. The VaR threshold is converted to a z-distribution value. The expected return and volatility of the portfolio is calculated and adjusted to the desired time interval. Parametric VaR is obtained by taking a point on the distribution that is to the left of the mean and convert it into a dollar amount by multiplying by the portfolio value. | B. Incorrect. In the Monte Carlo method, the user develops assumptions about the statistical characteristics of the distribution and uses those characteristics to generate random outcomes that represent hypothetical returns to a portfolio with specified characteristics. | C. Incorrect. The historical simulation method uses the current portfolio and reprices it using the actual historical changes in the key factors experienced during the look-back period."
+   },
+   {
+    "n": 29,
+    "q": "Which extension of VaR will most likely meet Patel’s needs?",
+    "options": [
+     "Marginal",
+     "Conditional",
+     "Incremental"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Marginal VaR is similar to incremental VaR and measures the effect of an anticipated change to the portfolio. | B. Correct. Conditional VaR, also referred to as expected tail loss or expected shortfall, is used to determine the average loss that would be incurred if the VaR cutoff is exceeded. | C. Incorrect. Incremental VaR is used to determine how VaR will change if a position size is changed relative to the remaining positions."
+   },
+   {
+    "n": 30,
+    "q": "Is Flaherty most likely correct in his use of sensitivity measures to assess the impact of the option positions in the fund?",
+    "options": [
+     "Yes",
+     "No, with regard to delta",
+     "No, with regard to gamma"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Flaherty is incorrect with regard to the discussion of gamma. | B. Incorrect. Delta is the measure of the change in value of the option relative to the change in value of the underlying and does not address changes in volatility. | C. Correct. Gamma is the measure of the change in value of the delta (second derivative) relative to the change in value of the underlying and also does not address changes in volatility. Vega is expressed as the change in the value of an option over the change in volatility of the underlying."
+   },
+   {
+    "n": 31,
+    "q": "Which risk measure is Thompson least likely to use in his analysis?",
+    "options": [
+     "VaR",
+     "Active share",
+     "Gross exposure"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. VaR can be used by hedge funds at a high confidence level for short holding periods to help understand the magnitude of exposure. | B. Correct. Active share is the measure of the percentage of the portfolio that differs from the benchmark and would not be an appropriate measure of firm-wide risk. In addition, active share is more frequently used for traditional asset managers who have explicit benchmarks, compared with hedge funds, such as Applegate, which are typically absolute return oriented. | C. Incorrect. Gross exposure measures the combination of long and short exposures and can be an important metric in the management of hedge fund exposure."
+   },
+   {
+    "n": 32,
+    "q": "Which of the strategies Thompson is asked to review is most likely to involve significant tail risk and potential capital requirements?",
+    "options": [
+     "Strategy 1",
+     "Strategy 2",
+     "Strategy 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. A long–short equity fund targeting an equity market beta of 0.2 is unlikely to require capital even in a tail risk event. | B. Incorrect. A long-only option strategy may experience significant loss of value, but because it involves buying and then selling options, it does not involve the same tail risk as a short option strategy. | C. Correct. An alternative income strategy focused on long credit positions combined with selling insurance and writing options to generate premium income would have greater-than-expected tail risk because of the writing of insurance and options. A significant unexpected outcome in these strategies could result in potential capital requirements."
+   }
+  ]
+ },
+ {
+  "id": "mr-citadel",
+  "source": "8 Nov Module 5 Measuring and Managing Market Risk quiz (36/52, 69%)",
+  "readings": [
+   38
+  ],
+  "title": "Market risk · Citadel (Alexander): VaR advantages, parametric VaR, scenario analysis, Greeks, risk limits, VaR statements",
+  "body": "Citadel Investment Partners is a global asset management firm offering a wide variety of mutual funds to both institutional and individual investors. Simon Alexander, Citadel’s chief risk officer, is responsible for risk oversight across the firm’s many strategies, as well as communication of any risk issues to the portfolio management, compliance, and executive teams. Alexander oversees a team of six analysts who are responsible for the ongoing calculation and assessment of portfolio risk. Citadel uses a variety of methods when estimating risk, including value at risk (VaR), sensitivity risk measures, and scenario risk measures.\n\nJennifer Woolridge just joined Citadel as a risk analyst, and Alexander is familiarizing her with how the firm measures portfolio risk. In a conversation with Woolridge, Alexander asks her what she has learned regarding the advantages of using VaR as a risk management tool. Woolridge responds, “The advantages of VaR are that it (1) can be used for performance evaluation, (2) provides an estimate of downside exposure during a worst-case scenario, and (3) avoids subjectivity.”\n\nLater that day, Woolridge receives an email from Alexander asking her to estimate the dollar VaR at the 5% level for the firm’s developing market equity fund. Woolridge estimates VaR using the parametric method (assuming normal distribution) with the inputs in Exhibit 1.\n\nExhibit 1 Data for Developing Market Equity Fund\nPortfolio value\t$500 million\nDaily expected return\t0.04%\nDaily expected volatility\t1.30%\nAlexander then asks Jun Lee, a senior risk analyst in the group, to explain to Woolridge how Citadel uses scenario risk measures. Lee explains, “Scenario analysis complements VaR because it can better account for market liquidity. A limitation of scenario analysis, however, is that it has a greater reliance on historical market data than does VaR.”\n\nLee then explains how the risk exposures of option positions may increase or decrease overall portfolio risk. Lee and Woolridge discuss delta, gamma, and vega as option sensitivity measures. Woolridge summarizes what she has learned to make sure she has understood correctly: “Delta measures the sensitivity of an option to the price of the underlying security and ranges from –0.5 to +0.5. Gamma is a second-order effect that measures the sensitivity of delta to price changes in the underlying. Vega is a first-order effect that measures the change in an option’s volatility relative to the change in price of the underlying.”\n\nAlexander receives a call from Sandra Patterson, Citadel’s CEO. Patterson expresses her concern that the firm’s $500 million multi-asset fund has failed to protect investors during a recent market decline. Alexander drafts an updated risk management policy to present to the investment committee. The goal of this policy is to ensure that the fund limits the likelihood of severe downside losses for investors. The new policy reads as follows:\n\n“The multi-asset fund has a 5-day, 1% VaR limit of $10 million, and the fund will undertake hedging activities, including the purchase of protective put options, if its cumulative 30-day loss ever exceeds $15 million. In addition, the magnitude of the hedge shall be designed to increase as losses increase.”\n\nFollowing the investment committee’s approval, Patterson references the updated risk management policy in her quarterly letter to investors. She states, “At Citadel, we take risk management very seriously. In response to recent investor concerns about volatility in our multi-asset fund, we have implemented a new policy. We limit fund losses to 2% of assets with a 99% level of confidence, with additional measures to limit total losses to 3% over a rolling 30-day period.”",
+  "questions": [
+   {
+    "n": 37,
+    "q": "Woolridge’s comments on the advantages of VaR are most likely correct regarding:",
+    "options": [
+     "subjectivity.",
+     "downside exposure.",
+     "performance evaluation."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. VaR does rely on subjective inputs such as the desired VaR cutoff, the time horizon for which VaR will be measured, and the estimation method. | B. Incorrect. VaR is not a worst-case scenario and losses can and will exceed VaR. | C. Correct. VaR can be used as the basis for risk adjustment of returns, which is required in performance evaluation. VaR is not a worst-case scenario, and losses can and will exceed VaR. The measure does rely on subjective inputs, such as the desired VaR cutoff, the time horizon for which VaR will be measured, and the estimation method."
+   },
+   {
+    "n": 38,
+    "q": "Using the inputs in Exhibit 1, Woolridge’s estimate of VaR is most likely closest to:",
+    "options": [
+     "$6.5 million.",
+     "$10.5 million.",
+     "$18.9 million."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. This is the answer derived by multiplying the portfolio value by the daily volatility ($500,000,000 × 1.3%). | B. Correct. Use the parametric method to calculate the following: Step 1\tMultiply the portfolio standard deviation by 1.65 (the 5% VaR level translates to a point on the distribution curve that lies 1.65 standard deviations to the left of the mean). 0.013 × 1.65 = 0.0215 Step 2\tSubtract the answer obtained in Step 1 from the expected return. 0.0004 – 0.0215 = –0.0211 Step 3\tBecause VaR is expressed as a positive number, change the sign of Step 2. –0.0211 becomes 0.0211 Step 4\tMultiply the result in Step 3 by the portfolio value. $500,000,000 × 0.0211 = $10,550,000 | C. Incorrect. This is the answer derived by using 0.04 instead of 0.0004 in Step 2."
+   },
+   {
+    "n": 39,
+    "q": "Are Lee’s comments regarding scenario analysis most likely correct?",
+    "options": [
+     "Yes",
+     "No, with regard to historical data",
+     "No, with regard to market liquidity"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Scenario analysis does not need to rely on history and can be free of the volatility and correlation behavior of recent market history. | B. Correct. Scenario analysis does not need to rely on history, and in this way, it can be free of the volatility and correlation behavior of recent market history, which might not represent current market conditions. Scenarios can be tailored to model a portfolio’s most concentrated positions to experience even greater price movements, allowing liquidity to be taken into account. | C. Incorrect. Scenarios can be tailored to expose a portfolio’s most concentrated positions to experience even greater movements, allowing liquidity to be taken into account."
+   },
+   {
+    "n": 40,
+    "q": "Which option sensitivity measure does Woolridge most accurately describe?",
+    "options": [
+     "Vega",
+     "Delta",
+     "Gamma"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Vega is first-order effect that measures the change in the value of an option to the change in volatility of the underlying (not the change in the volatility of an option to the change in price of the underlying). | B. Incorrect. Delta measures the sensitivity of an option to the price of the underlying security and ranges from –1 to +1, not –0.5 to +0.5. | C. Correct. Gamma is a second-order effect that measures the sensitivity of delta to price changes in the underlying. Delta measures an option’s sensitivity to the price of the underlying security and ranges from –1 to +1. Vega is a first-order effect that measures the change in an option’s value relative to the change in volatility of the underlying."
+   },
+   {
+    "n": 41,
+    "q": "Alexander’s risk management policy for the multi-asset fund is least likely an example of:",
+    "options": [
+     "risk budgeting.",
+     "scenario limits.",
+     "stop-loss limits."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The five-day, 1% VaR limit of $10 million is an example of risk budgeting. | B. Correct. Alexander’s policy does not incorporate a scenario limit, which establishes a limit on the estimated loss for a given scenario that, if exceeded, would require corrective action in the portfolio. An example of a scenario limit would be a policy describing an action to take if interest rates increased by 100 bps. The five-day, 1% VaR limit of $10 million is an example of risk budgeting. The initiation of hedges above a certain loss level is an alternative form of a stop-loss limit called drawdown control or portfolio insurance. | C. Incorrect. The initiation of hedges above a certain loss level is an alternative form of a stop-loss limit called drawdown control or portfolio insurance."
+   },
+   {
+    "n": 42,
+    "q": "Patterson’s comments to Citadel’s investors are least likely accurate with regard to her:",
+    "options": [
+     "use of confidence levels.",
+     "discussion of limiting losses.",
+     "implied percentage declines from dollar VaR limits."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. It is appropriate to imply a 1% VaR as a 99% level of confidence. | B. Correct. VaR is an expression of a minimum loss. It is incorrect for Patterson to state that the policy will limit fund losses to 2% ($10 million/$500 million) over a five-day period. In practice, the maximum loss possible in an unleveraged portfolio is the portfolio’s entire value. | C. Incorrect. VaR is often expressed in dollar terms, but it can also be expressed in percentage terms."
+   }
+  ]
+ },
+ {
+  "id": "mr-hoskins",
+  "source": "8 Nov Module 5 Measuring and Managing Market Risk quiz (36/52, 69%)",
+  "readings": [
+   38
+  ],
+  "title": "Market risk · Hoskins Bank: VaR statements, VaR methods, VaR extensions, scenario analysis, bank vs asset manager, capital allocation",
+  "body": "Hoskins Bank Corporation (HB) is a US bank holding company with lines of business in corporate banking, retail banking, capital markets, and private wealth management.\n\nHB’s annual risk assessment meeting with its external regulator will be in 90 days. In preparation for this meeting, Richard Hextall, CEO, and Alice Klink, chief risk officer, are meeting with independent risk consultant David Donovan, a principal of Donovan and MacNab Risk Advisory LLC.\n\nHextall asks Klink to review HB’s primary risk exposures. Klink begins by suggesting that the liquidity gap is a primary risk exposure for retail banking, stating that “with a 99% level of confidence, we expect our ratio of interest-earning assets to interest-paying liabilities will range between 90% and 110%.” For corporate banking, Klink believes that credit deterioration is a primary risk exposure and states that “over any 1-month period, there is a 1% probability of incurring a single-name loan loss for an amount that is not greater than 0.55% of the loan portfolio.” Klink believes that market risk is a primary risk exposure for capital markets, stating that “there is a 1% chance of HB losing at least 1.30% of its Tier 1 capital over a 1-day period.”\n\nDuring last year’s review, the regulator expressed concern that HB did not have an effective risk management process in place for its short-term, investment-grade bond portfolio. Donovan asks about the bank’s progress in addressing this concern. Hextall explains that HB has implemented a value at risk (VaR) approach and notes that there are three distinct methods to estimate VaR. The parametric method assumes that the distribution of returns on the risk factors is normal, and it is considered to be a straightforward approach. The historical simulation method also relies on the normal distribution assumption. The Monte Carlo simulation method relies on neither a normal distribution nor past returns and, as a result, is able to accommodate bonds that may contain embedded options.\n\nDonovan cautions Hextall that VaR may not capture information related to large losses, portfolio composition, and performance. He states that these limitations may be addressed by variations, or extensions, to VaR. For example, CVaR captures the potential loss if VaR is exceeded. IVaR measures ex ante tracking error. Relative VaR is used to determine the effect on VaR from any changes in portfolio composition.\n\nRecalling the financial crisis, Hextall asks Klink about HB’s potential exposure to any future adverse, extreme events. Klink replies that HB’s investment portfolio currently holds short-duration, high-investment-grade bonds but does not hold any equity securities or derivative instruments. Klink adds that the illiquidity conditions that were prevalent during the financial crisis continue to exist, according to a reverse stress test she conducted on ten plausible independent risk factors.\n\nDonovan transitions the discussion to the private wealth division by asking Hextall to discuss the differences in risk measurement for banks in comparison to traditional asset managers, such as HB’s private wealth division. Hextall states that risk measures for banks typically consider liquidity, solvency, and capital sufficiency, whereas risk measures for traditional asset managers typically are focused on investment performance. Hextall provides an example, stating that “HB, for its private wealth clients, calculates active share for each client and uses ex ante tracking error to measure the degree to which clients’ current portfolios might underperform their benchmarks in the future. For equity-only portfolios, forward-looking beta is used to measure sensitivity to the broad equity market.”\n\nHextall asks Klink to review the constraints used in the context of measuring the risk of the corporate banking division. Klink responds by stating that the corporate banking division’s capital allocation is $2,800 million. This amount considers market risk, credit risk, and operational risk for which the minimum required return is 11%. Capital limits, position limits, and stop-loss limits are assigned to manage both overall exposure and exposure to single-name event risk. The market risk management constraints for each of the corporate banking division’s lending groups are summarized in Exhibit 1.\n\nExhibit 1 Market Risk Management Constraints for Corporate Banking Lending Groups ($ Millions)\nLending Group\tReturn\tCapital Limit\tPosition Limit\tStop-Loss Limit\nSecured\t120\t800\t32\t80\nCash Flow\t120\t1,200\t24\t60\nReal Estate\t120\t1,000\t10\t70",
+  "questions": [
+   {
+    "n": 43,
+    "q": "Which of Klink’s statements regarding HB’s risk exposures is most likely correct as it relates to value at risk?",
+    "options": [
+     "The statement about retail banking",
+     "The statement about capital markets",
+     "The statement about corporate banking"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Klink’s statement about the risk exposure in retail banking is not correct in the context of value at risk. There is no reference to a time period. | B. Correct. Klink’s statement about the risk exposure in capital markets is correct in the context of value at risk. The VaR statement contains each of these elements: (1) a minimum loss (2) over a defined time period (3) with a stated probability. Klink’s statement about capital markets correctly captures each of these elements: (1) Minimum loss is “1.30% of Tier 1 capital”; (2) the defined time period is “over a one-day period”; and (3) the stated probability is “our risk of losing is 1%.” | C. Incorrect. Klink’s statement about the risk exposure in corporate banking is not correct in the context of value at risk. The statement incorrectly references the single-name loan loss as a maximum loss, not a minimum loss."
+   },
+   {
+    "n": 44,
+    "q": "Which of Hextall’s explanations regarding the three distinct methods of VaR is least likely correct?",
+    "options": [
+     "Historical",
+     "Parametric",
+     "Monte Carlo"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Hextall incorrectly explains the historical method by stating that it relies on the assumption that the distribution of returns on the risk factors is a normal distribution. The historical method is based on actual returns and, accordingly, is not constrained by the assumption of a normal distribution. | B. Incorrect. Hextall’s explanation about the parametric method is correct. | C. Incorrect. Hextall’s explanation about the Monte Carlo simulation method is correct."
+   },
+   {
+    "n": 45,
+    "q": "Donavan’s statement about extensions to VaR is most likely correct with respect to:",
+    "options": [
+     "IVaR.",
+     "CVaR.",
+     "relative VaR."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. IVaR (incremental value at risk) measures how changes in the portfolio’s composition affect the portfolio’s VaR. Ex ante tracking error is measured by relative VaR. | B. Correct. CVaR (conditional value at risk) answers the question, how much can I expect to lose if VaR is exceeded? This measure is also referred to as expected tail loss and expected shortfall. CVaR is best derived by using either the Monte Carlo or historical methods, in which returns beyond the VaR cutoff may be averaged. | C. Incorrect. Relative VaR is a measure of the degree to which the performance of the portfolio might deviate from its benchmark. Relative VaR is also referred to as ex ante tracking error."
+   },
+   {
+    "n": 46,
+    "q": "In replying to Hextall’s recollection of the financial crisis, Klink most likely considered which risk measure?",
+    "options": [
+     "VaR",
+     "Scenario analysis",
+     "Sensitivity analysis"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. VaR is used to measure the probability of a large loss. One limitation of VaR is its failure to take into account illiquidity. | B. Correct. Scenario analysis is used for estimating how a portfolio might perform under conditions of market stress. Scenario risk measures estimate the portfolio returns that would result from a hypothetical change in markets. Stress tests and reverse stress tests are closely related to scenario risk measures. In addressing the possibility of direct exposure to extreme, negative events, Klink is describing a reverse stress test in which specific exposures of the portfolio (10 in this example) are identified. A hypothetical stress test (reverse stress test) is designed to measure its effect on each of these exposures. | C. Incorrect. Sensitivity analysis is used to estimate how gains and losses in the portfolio change with changes in the underlying risk factors. For a short-term investment portfolio consisting entirely of short-duration, high-credit-quality fixed-income securities, there is likely little or no exposure to market sensitivity risk measures, such as beta, duration, convexity, delta, and gamma."
+   },
+   {
+    "n": 47,
+    "q": "Is Hextall’s statement regarding the private wealth division most likely correct?",
+    "options": [
+     "Yes",
+     "No, it is incorrect about forward-looking beta",
+     "No, it is incorrect about ex ante tracking error"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Hextall’s statement is correct. Risk measures for banks are typically focused on liquidity, solvency, and capital sufficiency, whereas risk measures for traditional asset managers are typically focused on investment performance. Ex ante tracking error correctly compares the current portfolio with its benchmark in attempting to measure future potential performance. Forward-looking beta is a current risk measure of a current portfolio and measures an equity portfolio’s sensitivity to the broad equity market. | B. Incorrect. Hextall’s statement about forward-looking beta is correct. | C. Incorrect. Hextall’s statement about ex ante tracking error is correct."
+   },
+   {
+    "n": 48,
+    "q": "With respect to capital allocation, which lending group listed in Exhibit 1 is least likely attractive?",
+    "options": [
+     "Secured",
+     "Cash Flow",
+     "Real Estate"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. The Secured lending group is not least attractive, because its 15% rate of return ($120 million/$800 million) exceeds the 11% hurdle rate. | B. Correct. From a capital allocation perspective, the Cash Flow lending group is least attractive because its 10% rate of return is below the 11% minimum return (hurdle rate) required for the corporate banking division. The hurdle rate is being used as a risk measure since the $3,000 million aggregate amount of economic capital currently being consumed by the three lending groups exceeds the $2,800 million regulatory amount established for corporate banking. The rate of return is calculated as Portfolio return/Economic capital. The calculation for the Cash Flow group is $120 million/$1,200 million = 10%. | C. Incorrect. The Real Estate lending group is not least attractive, because its 12% rate of return ($120 million/$1,000 million) exceeds the 11% hurdle rate."
+   }
+  ]
+ },
+ {
+  "id": "mr-muckroth",
+  "source": "8 Nov Module 5 Measuring and Managing Market Risk quiz (36/52, 69%)",
+  "readings": [
+   38
+  ],
+  "title": "Market risk · Muckroth (O'Callahan): VaR reasons, parametric VaR, incremental VaR, risk categories by investor type",
+  "body": "Dierdre O’Callahan is a senior risk manager at Muckroth Investment Management, a global investment firm headquartered in Dublin, Ireland. O’Callahan’s team is responsible for tracking and estimating portfolio risk for the firm’s various investment strategies and for communicating risk exposures to Muckroth’s portfolio managers, investment committee, and chief risk officer. O’Callahan’s team also offers risk consulting services to the firm’s institutional investor clients.\n\nWhen assessing portfolio risk, O’Callahan makes frequent use of value at risk (VaR) in addition to other measures, such as volatility, sensitivity risk, and scenario risk. O’Callahan believes that VaR is an appropriate risk measure in this application for the following reasons:\n\nReason 1:\tThe reliability of VaR can be easily verified through a process known as backtesting.\nReason 2: \tVaR takes portfolio liquidity into account when some of the assets are relatively illiquid.\nReason 3:\tVaR effectively accounts for an increase in asset correlations during times of market stress.\nMichelle Ryan is a senior portfolio manager on the Muckroth Alpha Fund. Ryan and O’Callahan are reviewing the VaR report O’Callahan prepared for this fund to ensure that the fund is within the risk parameters established by the firm and communicated to investors. The Alpha Fund has assets under management of €315 million and has an expected annualized return of 10.4% with a volatility of 17.52%. The report describes VaR in both percentage and euro terms. It uses the parametric method of VaR at the 5% level (1.65 standard deviations), assuming 250 trading days per year.\n\nAfter reviewing the current VaR report, Ryan asks O’Callahan to calculate how much the VaR estimate would change if she were to reduce the portfolio weight of Bordeaux Industries stock in the Alpha Fund from 6% to 2% of the portfolio and then use the proceeds to establish a new 4% position in Riga Bank & Trust. O’Callahan tells Ryan that there are several extensions of VaR analysis that she can run.\n\nAxiomada, a prospective institutional client, is impressed by Muckroth’s investment track record and would like to learn more about the consulting services Muckroth offers to monitor risk. Representatives from Axiomada set up a meeting with O’Callahan to discuss how Muckroth considers important risk categories facing institutional investors. O’Callahan provides Axiomada with a risk management document Muckroth has prepared for institutional clients that includes Exhibit 1. Exhibit 1 illustrates how Muckroth considers a variety of different risk categories depending on the type of institutional investor.\n\nExhibit 1 Important Risk Categories by Type of Institutional Investor\nRisk Category\tBank\tHedge Fund\tPension Plan\nLiquidity Gap\t√\t---\t√\nVaR\t√\t√\t---\nTracking Error\t---\t√\t√\nLeverage\t√\t√\t---\nScenario Analysis\t√\t---\t√\nKey Rate Duration\t√\t---\t√\nActive Share\t---\t√\t---\nOperational Risk Capital\t√\t---\t√",
+  "questions": [
+   {
+    "n": 49,
+    "q": "Which of the reasons O’Callahan lists in support of VaR is most likely correct?",
+    "options": [
+     "Reason 1",
+     "Reason 2",
+     "Reason 3"
+    ],
+    "answer": "A",
+    "why": "A. Correct because the reliability of VaR can be verified easily and VaR is capable of easily being verified through backtesting. To determine whether a 5% VaR estimate is reliable, one can determine over a historical period of time whether estimated losses were incurred, subject to reasonable statistical variation. | B. Incorrect because VaR fails to take into account liquidity. As a result, if some assets in a portfolio are illiquid, VaR could be understated, even under normal market conditions. | C. Incorrect because VaR underestimates risk during periods of extreme market stress as it is sensitive to rising correlations eroding the diversification benefits that exist during normal conditions."
+   },
+   {
+    "n": 50,
+    "q": "In its current form, the 5% daily parametric VaR estimate for the Muckroth Alpha Fund is closest to:",
+    "options": [
+     "€3.36 million.",
+     "€4.68 million.",
+     "€5.63 million."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because this answer incorrectly neglects to multiply the portfolio standard deviation by 1.65 (5% confidence level). | B. Incorrect because this answer incorrectly uses 365 days when calculating daily return and standard deviation instead of the 250 trading days provided. | C. Correct because in its current form, the daily parametric VaR estimate for the Muckroth Alpha Fund is closest to €5.63 million. To calculate the daily 5% parametric VaR from the data provided, use the following steps: Step 1: Convert annual return to daily = 0.104 / 250 = 0.000416 Step 2: Convert annual standard deviation to daily = 0.1752 / √(250) = 0.01108 Step 3: Multiply the portfolio standard deviation by 1.65 = 0.01108 × 1.65 = 0.018283 Step 4: Absolute value of [expected return - adjusted standard deviation] = 0.000416 – 0.018283 = –0.017867, absolute value = 0.017867 Step 5: Multiply step 4 by the value of the portfolio = €315 million × 0.017867 = €5.628 million"
+   },
+   {
+    "n": 51,
+    "q": "Which extension of VaR would O’Callahan most likely utilize to satisfy Ryan’s request?",
+    "options": [
+     "Relative VaR",
+     "Conditional VaR",
+     "Incremental VaR"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because relative VaR is a measure of the degree to which the performance of a given investment portfolio might deviate from its benchmark. This is used to estimate tracking risk relative to a benchmark. In this case, Ryan is seeking to estimate how the portfolio change would affect VaR, not to understand risk relative to a benchmark, so incremental VaR would be a more appropriate extension. | B. Incorrect because conditional VaR, also referred to as expected tail loss or expected shortfall, is used to determine the average loss that would be incurred if the VaR cutoff is exceeded. Conditional VaR would be used to estimate average losses in an extreme 'tail risk' move, not to model a change in portfolio position sizes. | C. Correct because O’Callahan would utilize incremental VaR to satisfy Ryan’s request. Incremental VaR is used to see how VaR will change if a position size is changed relative to the remaining positions. VaR is recalculated under the proposed allocation and the incremental VaR is the difference between the “before” and “after” VaR."
+   },
+   {
+    "n": 52,
+    "q": "In Exhibit 1 provided to Axiomada, for which institutional investor type does Muckroth most likely accurately list important risk categories?",
+    "options": [
+     "Bank",
+     "Hedge fund",
+     "Pension plan"
+    ],
+    "answer": "A",
+    "why": "A. Correct because the Muckroth team is accurately describing risk considerations facing a bank, which include liquidity gap, VaR, leverage, key rate duration, operational risk capital, and scenario analysis. | B. Incorrect because hedge funds would not be focused on categories such as tracking error or active shares, which are more traditional asset manager metrics, and instead would be focused on categories such as sensitivities, scenario analysis, gross exposure, and drawdown. | C. Incorrect because pension plans are less likely to focus on items such as operational risk capital and would include VaR (surplus at risk), interest rate and curve risk, glide path, and liability hedging exposures instead of return-generating exposures."
+   }
+  ]
+ }
+]
