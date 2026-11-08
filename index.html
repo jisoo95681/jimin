@@ -661,7 +661,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v194 · 2026-11-08";
+  const APP_VERSION = "v195 · 2026-11-08";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1188,7 +1188,10 @@
     app.append(nav("Key notes questions", () => kqHub("back")));
     const d = kqLoad(), rs = KEYQ_SUBJECTS.find(s => s[0] === name)[1], all = KEYQ.filter(q => rs.includes(q.reading));
     const sess = [...new Set(all.map(q => q.sess).filter(Boolean))].sort((a, b) => a - b);
-    app.append(el("h1", { className: "title" }, name), el("p", { className: "sub" }, sess.length
+    const isSp = name === "Special notes", grps = isSp ? [...new Set(all.map(q => q.grp).filter(Boolean))] : [];
+    app.append(el("h1", { className: "title" }, name), el("p", { className: "sub" }, isSp
+      ? "Extra notes grouped by topic. Choose a group, or All to practise every question. 3 right in a row removes a question from its group; it stays in All."
+      : sess.length
       ? "Choose a session (random groups of 20 questions), or All to practise every question. 3 right in a row removes a question from its session; it stays in All."
       : "Choose a reading, or All to practise every question of the topic. 3 right in a row removes a question from its reading list; it stays in All."));
     const add = (title, items, spec) => {
@@ -1199,7 +1202,8 @@
       app.append(b);
     };
     add(`All · ${name}`, all, { title: `All · ${name}`, subject: name, items: all, all: true });
-    if (sess.length) sess.forEach(n => { const items = all.filter(q => q.sess === n); add(`Session ${n}`, items, { title: `${name} · Session ${n}`, subject: name, items, all: false }); });
+    if (isSp) grps.forEach(g => { const items = all.filter(q => q.grp === g); add(g, items, { title: `Special notes · ${g}`, subject: name, items, all: false }); });
+    else if (sess.length) sess.forEach(n => { const items = all.filter(q => q.sess === n); add(`Session ${n}`, items, { title: `${name} · Session ${n}`, subject: name, items, all: false }); });
     else rs.forEach(r => { const items = all.filter(q => q.reading === r); add(`${r} · ${NOTE_READINGS[r]}`, items, { title: `${r} · ${NOTE_READINGS[r]}`, subject: name, items, all: false }); });
     const reset = el("button", { className: "link-btn" }, `Reset progress for ${name}`);
     reset.onclick = () => { if (!confirm(`Reset the right-in-a-row counts for ${name}?`)) return; const dd = kqLoad(); all.forEach(q => delete dd[q.id]); kqSave(dd); kqSubject(name, "back"); };
@@ -1237,7 +1241,7 @@
 
   // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
   // Ethics (readings 40-42) is practised in sessions, so it is not part of the day lists.
-  const kqDayItems = () => KEYQ.filter(q => !(q.reading >= 40 && q.reading <= 42) || q.inDay);
+  const kqDayItems = () => KEYQ.filter(q => q.reading !== 99 && (!(q.reading >= 40 && q.reading <= 42) || q.inDay));
   const kqToday = () => new Date(Date.now() - 2 * 3600 * 1000).toLocaleDateString("en-CA");
   const kqDayLabel = day => {
     const t = new Date(day + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
@@ -1274,7 +1278,7 @@
       const st = kqSt(d0, q), card = el("div", { className: "card kq-card" + (st.streak >= 2 ? " kq-gray" : "") });
       const meta = el("div", { className: "meta" }), dots = el("div", { className: "nt-dots" });
       [0, 1, 2].forEach(k => dots.append(el("i", { className: st.streak > k ? "on" : "" })));
-      meta.append(el("span", {}, `${idx + 1} · ${q.reading} ${NOTE_READINGS[q.reading]} · ${KQ_TYPE[q.type]}`), dots);
+      meta.append(el("span", {}, `${idx + 1} · ${q.reading === 99 ? q.grp : `${q.reading} ${NOTE_READINGS[q.reading]}`} · ${KQ_TYPE[q.type]}`), dots);
       card.append(meta);
       card.append(kqHtml("p", q.q, "q"));
       if (q.fig) { const f = el("div", { className: "kq-figwrap" }); f.innerHTML = KQ_FIGS[q.fig] ? KQ_FIGS[q.fig]() : q.fig; card.append(f); }
@@ -1422,9 +1426,9 @@
 
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Wrong-answer notes, 6 = Key notes questions.
+  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Key notes questions.
   // The menu comes back to the card you last opened, even after the app is closed and reopened.
-  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 7 ? v : 1; } catch { return 1; } })();
+  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 6 ? v : 1; } catch { return 1; } })();
   const saveHomePos = i => { homePos = i; try { localStorage.setItem("cfa-home-pos", String(i)); } catch {} };
   function home(dir = "back") {
     screen(dir);
@@ -1435,7 +1439,6 @@
       { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
       { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() },
       { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() },
-      { cls: "n", kicker: "Review", title: "Wrong-answer notes", info: notesSummary(), open: () => notesHub() },
       { cls: "k", kicker: "Recall", title: "Key notes questions", info: kqSummary(), open: () => kqHub() }
     ];
     const N = cards.length;
