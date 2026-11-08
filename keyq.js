@@ -56,7 +56,8 @@ const KQ_MAIN_TABLES = [
  "Forward or futures mispricing: Q = quoted (market) price, F = fair (model) price",
  "Equity swap: two kinds of question",
  "Option Greek signs",
- "Convenience yield and storage cost"
+ "Convenience yield and storage cost",
+ "Reading investment style from factor sensitivity signs"
 ];
 const KEYQ = [];
 (function () {
@@ -1304,6 +1305,14 @@ const KEYQ = [];
   mc(8, "Which assumption does NOT affect the ABO?", ["Salary growth rate", "Discount rate", "Mortality rate"], 0, "The ABO is based on current salaries.");
   mc(8, "The ABO differs from the PBO because the ABO does not include:", ["Future salary increases", "Past service", "The discount rate"], 0, "");
   mc(8, "Service cost is the:", ["Present value of the benefits earned by employees this year", "Increase in the PBO caused by the passage of time", "Benefits paid to retirees"], 0, "");
+  setDay("2026-11-08");
+  tb(37, "Reading investment style from factor sensitivity signs", ["Factor", "Positive sensitivity (+)", "Negative sensitivity (−)"], [["Market", "Beta > 1: aggressive", "Beta < 1: defensive"], ["Small-Cap (Size)", "Small-cap orientation", "Large-cap orientation"], ["Value", "Value orientation", "Growth orientation"], ["Momentum", "Momentum (trend-following)", "Contrarian (against the trend)"]], "A sensitivity close to 0 means no bias. For style use the portfolio sensitivity sign; for a tilt use portfolio minus benchmark sensitivity.");
+  mc(37, "A portfolio has a Small-Cap sensitivity of +0.5. Its orientation is:", ["Small-cap", "Large-cap", "No size bias"], 0, "");
+  mc(37, "A portfolio has a Value factor sensitivity of −0.6. It has a:", ["Growth bias", "Value bias", "Contrarian bias"], 0, "");
+  mc(37, "A portfolio has a Momentum factor sensitivity of +0.5. The manager follows a:", ["Momentum strategy", "Contrarian strategy", "Value strategy"], 0, "");
+  mc(37, "A portfolio has a Momentum factor sensitivity of −0.4. The manager follows a:", ["Contrarian strategy", "Momentum strategy", "Growth strategy"], 0, "");
+  mc(37, "A portfolio has a Market sensitivity of 0.85. It is:", ["Defensive", "Aggressive", "Market neutral"], 0, "");
+  mc(37, "To describe a manager's investment style from a factor exposure table, use the:", ["Portfolio's factor sensitivity signs", "Portfolio minus benchmark sensitivity", "Factor returns"], 0, "The difference from the benchmark is used for the factor tilt contribution, not for the style label.");
   // Ethics questions are grouped in random sessions of 20. A new Ethics question without a session goes into the last session until it has 20, then into a new one.
   (function () {
     const eth = KEYQ.filter(q => q.reading >= 40 && q.reading <= 42);
