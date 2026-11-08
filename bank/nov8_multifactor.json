@@ -1,0 +1,475 @@
+[
+ {
+  "id": "mf-cheung",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Cheung: macro vs fundamental factor models, tracking error, information ratio",
+  "body": "Hui Cheung, a portfolio manager, asks her assistant, Ronald Lam, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.\n\nThe current macroeconomic factor model has four factors:\n\nRi = ai + bi1FGDP + bi2FCAP + bi3FCON + bi4FUNEM + εi,\nWhere FGDP, FCAP, FCON, and FUNEM represent unanticipated changes in four factors: gross domestic product, manufacturing capacity utilization, consumer spending, and the rate of unemployment, respectively. Lam assumes the error term is equal to zero when using this model.\n\nLam estimates the current model using historical monthly returns for three portfolios for the most recent five years. The inputs used in and estimates derived from the macroeconomic factor model are presented in Exhibit 1. The US Treasury bond rate of 2.5% is used as a proxy for the risk-free rate of interest.\n\nExhibit 1\nInputs for and Estimates from the Current Macroeconomic Model\n \tFactor Sensitivities and Intercept Coefficients\tFactor Surprise (%)\nFactor\tPortfolio 1\tPortfolio 2\tPortfolio 3\tBenchmark\nIntercept (%)\t2.58\t3.20\t4.33\t \t \nFGDP\t0.75\t1.00\t0.24\t0.50\t0.8\nFCAP\t−0.23\t0.00\t−1.45\t−1.00\t0.5\nFCON\t1.23\t0.00\t0.50\t1.10\t2.5\nFUNEM\t−0.14\t0.00\t−0.05\t−0.10\t1.0\nAnnual Returns, Most Recent Year\nReturn (%)\t6.00\t4.00\t5.00\t4.50\t \nLam uses the macroeconomic model to calculate the tracking error and the mean active return for each portfolio. He presents these statistics in Exhibit 2.\n\nExhibit 2\nMacroeconomic Factor Model Tracking Error and Mean Active Return\nPortfolio\tTracking Error\tMean Active Return\nPortfolio 1\t1.50%\t1.50%\nPortfolio 2\t1.30%\t−0.50%\nPortfolio 3\t1.00%\t0.50%\nLam considers a fundamental factor model with four factors:\n\nRi = aj + bj1FLIQ + bj2FLEV + bj3FEGR + bj4FVAR + εj,\nwhere FLIQ, FLEV, FEGR, and FVAR represent liquidity, financial leverage, earnings growth, and the variability of revenues, respectively.\n\nLam and Cheung discuss similarities and differences between macroeconomic factor models and fundamental factor models, and Lam offers a comparison of those models to statistical factor models. Lam makes the following statements.\n\nStatement 1:\nThe factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables.\n\nStatement 2:\nThe factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.\n\nLam also tells Cheung:\n\nAn advantage of statistical factor models is that they make minimal assumptions, and therefore, statistical factor model estimation lends itself to easier interpretation than macroeconomic and fundamental factor models.\n\nLam tells Cheung that multifactor models can be useful in active portfolio management, but not in passive management. Cheung disagrees; she tells Lam that multifactor models can be useful in both active and passive management.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Assuming that the information in Exhibit 1 reflects the analyst's view, the expected return for Portfolio 1 is closest to:",
+    "options": [
+     "2.58%.",
+     "3.42%.",
+     "6.00%."
+    ],
+    "answer": "A",
+    "why": "A is correct. When using a macroeconomic factor model, the expected return is the intercept (when all model factors take on a value of zero). The intercept coefficient for Portfolio 1 in Exhibit 1 is 2.58."
+   },
+   {
+    "n": 10,
+    "q": "Based on Exhibit 1, the active risk for Portfolio 2 is explained by surprises in:",
+    "options": [
+     "GDP.",
+     "consumer spending.",
+     "all four model factors."
+    ],
+    "answer": "C",
+    "why": "C is correct. Active risk, also referred to as tracking risk or tracking error, is the sample standard deviation of the time series of active returns, where the active returns consist of the differences between the portfolio return and the benchmark return. Whereas GDP is the only portfolio non-zero sensitivity for Portfolio 2, the contribution to the portfolio’s active return is the sum of the differences between the portfolio’s and the benchmark’s sensitivities multiplied by the factor return. Because all four of the factor sensitivities of Portfolio 2 are different from the factor sensitivities of the benchmark, all four factors contribute to the portfolio’s active return and, therefore, to its active risk."
+   },
+   {
+    "n": 11,
+    "q": "Based on Exhibit 2, which portfolio has the best information ratio?",
+    "options": [
+     "Portfolio 1",
+     "Portfolio 2",
+     "Portfolio 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. Portfolio 1 has the highest information ratio, 1.0, and thus has the best mean active return per unit of active risk:\n\nIR = \n = \n = 1.00\nThis information ratio exceeds that of Portfolio 2 (−0.38) or Portfolio 3 (0.50)."
+   },
+   {
+    "n": 12,
+    "q": "Which of Lam’s statements regarding macroeconomic factor models and fundamental factor models is correct?",
+    "options": [
+     "Only Statement 1",
+     "Only Statement 2",
+     "Both Statements 1 and 2"
+    ],
+    "answer": "C",
+    "why": "C is correct. In a macroeconomic factor model, the factors are surprises in macroeconomic variables that significantly explain returns. Factor sensitivities are generally specified first in fundamental factor models, whereas factor sensitivities are estimated last in macroeconomic factor models."
+   },
+   {
+    "n": 13,
+    "q": "Is Lam’s comment regarding statistical factor models correct?",
+    "options": [
+     "Yes",
+     "No, because he is incorrect with respect to interpretation of the models’ results",
+     "No, because he is incorrect with respect to the models’ assumptions"
+    ],
+    "answer": "B",
+    "why": "B is correct. An advantage of statistical factor models is that they make minimal assumptions. However, the interpretation of statistical factors is generally more difficult than the interpretation of macroeconomic and fundamental factor models."
+   },
+   {
+    "n": 14,
+    "q": "Whose statement regarding the use of multifactor models in active and passive portfolio management is correct?",
+    "options": [
+     "Lam only",
+     "Cheung only",
+     "Both Lam and Cheung"
+    ],
+    "answer": "B",
+    "why": "B is correct. Analysts can use multifactor models in passively managed portfolios to replicate an index fund’s factor exposures.\n\n15Essay1 / 1 point\nLast year the return on Harry Company stock was 5 percent. The portion of the return on the stock not explained by a two-factor macroeconomic factor model was 3 percent. Using the data given below, calculate Harry Company stock’s expected return.\n\nMacroeconomic Factor Model for Harry Company Stock\nVariable\tActual Value (%)\tExpected Value (%)\tStock’s Factor Sensitivity\nChange in interest rate\t2.0\t0.0\t−1.5\nGrowth in GDP\t1.0\t4.0\t2.0\n-7%\n \nFeedback\nIn a macroeconomic factor model, the surprise in a factor equals actual value minus expected value. For the interest rate factor, the surprise was 2 percent; for the GDP factor, the surprise was −3 percent. The intercept represents expected return in this type of model. The portion of the stock’s return not explained by the factor model is the model’s error term.\n\n5% = Expected return − 1.5(Interest rate surprise) + 2(GDP surprise) + Error term\n = Expected return − 1.5(2%) + 2(−3%) + 3%\n = Expected return − 6%\nRearranging terms, the expected return for Harry Company stock equals 5% + 6% = 11%.\n\n16Essay1 / 1 point\nWhich type of factor model is most directly applicable to an analysis of the style orientation (for example, growth vs. value) of an active equity investment manager? Justify your answer.\n\nFundamental\nFeedback\nA fundamental factor model. Such models typically include many factors related to the company (e.g., earnings) and to valuation that are commonly used indicators of a growth orientation. A macroeconomic factor model may provide relevant information as well, but typically indirectly and in less detail.\n\n17Essay1 / 1 point\nSuppose an active equity manager has earned an active return of 110 basis points, of which 80 basis points is the result of security selection ability. Explain the likely source of the remaining 30 basis points of active return.\n\nEd\nFeedback\nThis remainder of 30 basis points would be attributable to the return from factor tilts. A portfolio manager’s active return is the sum of two components, factor tilts and security selection. Factor tilt is the product of the portfolio manager’s higher or lower factor sensitivities relative to the benchmark’s factor sensitivities and the factor returns. Security selection reflects the manager’s ability to overweight securities that outperform or underweight securities that underperform."
+   }
+  ]
+ },
+ {
+  "id": "mf-low",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Low: Anton/Elicker/Finch funds, factor tilt attribution, information ratio, pure factor portfolio",
+  "body": "Janice Low is an investment consultant and is reviewing the performance of several portfolio managers in order to make allocation recommendations to her clients. \n\nLow speaks with the portfolio manager of the Anton Fund about his portfolio management process. He uses a multifactor model by creating factors whose values are based on differences between expected and observed values of those factors. The expected return on the portfolio is 5.0% if all factor sensitivities are 0. The risk-free rate is 2.5%. Exhibit 1 presents the factor returns and sensitivities of the Anton Fund.\n\nExhibit 1\n \tFactor Return (%)\tFactor Sensitivity\nFactor 1\t4.5\t0.5\nFactor 2\t2.0\t0.4\nFactor 3\t–3.0\t0.1\nLow obtains the most recent report from the Elicker Fund. She notes that the Elicker Fund reported a return of 12.5% while its benchmark had a return of 10.8%. She conducts an attribution analysis from the data provided in Exhibit 2 to determine if the outperformance is due primarily to factor exposures or security selection.\n\nExhibit 2\n \tFactor Sensitivity of:\tFactor\nReturn (%)\nPortfolio\tBenchmark\nFactor 4\t0.5\t1.2\t5.9\nFactor 5\t–1.5\t–0.3\t–2.9\nFactor 6\t0.5\t0.2\t5.0\nLow then reviews the most recent performance of three funds to determine which fund added the most value from making active investment decisions. She collects the information about the funds and their benchmark presented in Exhibit 3.\n\nExhibit 3\nFund\tAverage Return (%)\tStandard Deviation of Returns (%)\tTracking Error (%)\tActive Risk Squared (% Squared)\tFactor Risk (% Squared)\nFinch\t12.0\t18.0\t8.0\t64\t16\nRaven\t9.6\t13.0\t2.0\t4\t2\nMagpie\t11.5\t20.0\t4.0\t16\t12\n  Benchmark\t9.5\t12.0\t \t \t \nOne of Low's institutional clients asks her to assist in reducing an exposure to a risk factor in its portfolio because it has operational risk exposure to that same factor. The client can take both long and short positions. Low decides to use factor models to create a factor portfolio to that exposure and recommend the appropriate position to take in that portfolio.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The return for the Anton Fund is closest to:",
+    "options": [
+     "2.75%.",
+     "5.25%.",
+     "7.75%."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it only computes the returns from the factors and omits the base return; 0.5 × 4.5% + 0.4 × 2.0% + 0.1 × –3.0% = 2.75%. | B. Incorrect because the candidate computes the return using the risk-free rate (RFR) instead of the expected return of 5%; 2.5% (RFR) + 0.5 × 4.5% + 0.4 × 2.0% + 0.1 × –3.0% = 2.5% + 2.75% = 5.25%. | C. Correct because the return is the base return in addition to the sum of the factor returns multiplied by the factor sensitivities. Return = 5.0% + 0.5 × 4.5% + 0.4 × 2.0% + 0.1 × –3.0% = 5.0% + 2.75% = 7.75%."
+   },
+   {
+    "n": 22,
+    "q": "The attribution of the Elicker Fund's active return to factor tilts is:",
+    "options": [
+     "less than the attribution to security selection.",
+     "equal to the attribution to security selection.",
+     "greater than the attribution to security selection."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because if the sensitivities were reversed in the equation (to be benchmark less portfolio), the active return would be the negative of the actual active return, and the return from factor tilts would be less than the return from security selection. The active return for the portfolio is 1.70% (= 12.5% – 10.8%). The return from the factor tilts is the difference between the portfolio and benchmark sensitivities for each factor multiplied by the factor return. Factor tilt return = 5.9% × (1.2 – 0.5) + –2.9% × (–0.3 – –1.5) + 5.0% × (0.2 – 0.5) = 4.13% + –3.48% + –1.50% = –0.85%. Active return from security selection = Active return – Factor tilt return = 1.70% – (–0.85%) = 2.55%, greater than the factor tilt return. | B. Correct because the active return for the portfolio is 1.70% (= 12.5% – 10.8%). The return from the factor tilts is the difference between the portfolio and benchmark sensitivities for each factor multiplied by the factor return. Factor tilt return = 5.9% × (0.5 – 1.2) + –2.9% × (–1.5 – –0.3) + 5.0% × (0.5 – 0.2) = –4.13% + 3.48% + 1.50% = 0.85%. Active return from security selection = Active return – Factor tilt return = 1.70% – 0.85% = 0.85%, the same as the factor tilt return. | C. Incorrect because it computes the factor tilt return to be the sum of the product of each factor sensitivity times its factor return. Factor tilt return = 5.9% × 0.5 + –2.9% × –1.5 + 5.0% × 0.5 = 2.95% + 4.35% + 2.50% = 9.80%. The active return for the portfolio is 1.70% (= 12.5% – 10.8%). Active return from security selection = Active return – Factor tilt return = 1.70% – 9.80% = –8.10%, less than the factor tilt return."
+   },
+   {
+    "n": 23,
+    "q": "Which fund gained the highest active return per unit of active risk taken from its investment decisions?",
+    "options": [
+     "Finch",
+     "Raven",
+     "Magpie"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because it uses the difference between the portfolio standard deviation and the benchmark standard deviation as the measure of active risk. The information ratios for the three funds are: Finch = (12.0% – 9.5%) / (18.0% – 12.0%) = 0.42. Raven = (9.6% – 9.5%) / (13.0% – 12.0%) = 0.10. Magpie = (11.5% – 9.5%) / (20.0% – 12.0%) = 0.25. Alternatively, Finch may also be selected based on the calculation Active return / Standard deviation of returns less Factor risk (as percentage): Finch = (12.0% – 9.5%) / (18.0% – 16.0%) = 1.25. Raven = (9.6% – 9.5%) / (13.0% – 2.0%) = 0.01. Magpie = (11.5% – 9.5%) / (20.0% – 12.0%) = 0.25. Finch therefore has the highest (incorrectly computed) information ratio. | B. Incorrect because it computes the information ratio as (Portfolio return / Benchmark return) – (Portfolio standard deviation / Benchmark standard deviation). The information ratios for the three funds are: Finch = (12.0% / 9.5%) – (18.0% / 12.0%) = –0.237. Raven = (9.6% / 9.5%) – (13.0% / 12.0%) = –0.073. Magpie = (11.5% / 9.5%) – (20.0% / 12.0%) = –0.456. Raven therefore has the highest (incorrectly computed) information ratio. Alternatively, if a candidate computes Average return / Tracking error, Raven's ratio is also the highest: Finch = 12.0% / 8.0% = 1.5. Raven = 9.6% / 2.0% = 4.8. Magpie = 11.5% / 4.0% = 2.875. | C. Correct because the information ratio (Active return / Active risk) measures the active return from taking active risk (making active investment decisions). Tracking error is also known as active risk. The information ratios for the three funds are: Finch = (12.0% – 9.5%) / 8.0% = 0.3125. Raven = (9.6% – 9.5%) / 2.0% = 0.05. Magpie = (11.5% – 9.5%) / 4.0% = 0.50. Magpie is the fund with the highest information ratio and produces the highest return per unit of active risk."
+   },
+   {
+    "n": 24,
+    "q": "The most appropriate recommendation for Low's client is to take a:",
+    "options": [
+     "long position in a pure factor portfolio with an exposure of 0.",
+     "long position in a pure factor portfolio with an exposure of 1.",
+     "short position in a pure factor portfolio with an exposure of 1."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a portfolio with a zero sensitivity to that risk factor is not a pure factor portfolio. It would be a way to build a portfolio from scratch that avoids the exposure, but will not help Low's client reduce or hedge an existing exposure to that risk factor. | B. Incorrect because Low was to create a portfolio with only that risk factor so that it can be hedged. By investing in this pure factor portfolio, it would increase the exposure to the factor, not reduce it. | C. Correct because Low was to create a portfolio with only that risk factor so that it can be hedged. Since the client is already exposed to that risk factor, the most appropriate course of action would be to short the pure factor portfolio, which would offset (or hedge) the existing risk."
+   }
+  ]
+ },
+ {
+  "id": "mf-martinez",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Martinez: intercept, arbitrage A/B/C, active risk squared, Lakemont comparative advantage",
+  "body": "Francesca Martinez is a portfolio manager. She decides to review several fund managers who use macroeconomic multifactor models.\n\nFrom her earlier analysis, she knows the funds in Exhibit 1 are well diversified. She determines the arbitrage opportunity that exists among the three funds.\n\nExhibit 1\nFund\tExpected Return (%)\tFactor Sensitivity\nA\t4.0\t1.5\nB\t8.0\t4.5\nC\t6.0\t2.7\nMartinez next estimates Fund D's sensitivity to time horizon risk and inflation risk. She wants to further understand the drivers of Fund D's risk relative to its benchmark. For this analysis, she calculates the active risk for each factor and assumes that the correlation between the model's factors is negligible. She also assumes a zero value for the error term when working with the selected two-factor model, given in Exhibit 2. The expected return for Fund D is 6.0% and it has a tracking error of 8.0%.\n\nExhibit 2\nRisk Factor\tActual Value (%)\tExpected Value (%)\tFund D's Factor Sensitivity\tActive Factor Risk (% Squared)\nTime horizon risk\t2.6\t2.0\t1.6\t24\nInflation risk\t1.5\t0.8\t–0.4\t16\nMartinez considers whether Fund D would be a suitable investment for Lakemont University's endowment. The endowment has an investment horizon of 30 years. The activities it supports have historically been subject to cost increases running above the average rate of inflation.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "The intercept term in the type of multifactor model used by Martinez represents the:",
+    "options": [
+     "risk-free rate.",
+     "portion of a portfolio's total return not explained by the model's factors.",
+     "expected return of a portfolio with zero sensitivity to all of the model's factors."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because the intercept represents the risk-free rate in the general APT equation. However, in macroeconomic factor models the intercept represents the expected return on a risky portfolio with zero sensitivity to all the factors. | B. Incorrect because it describes the model's error term, not the intercept. In a factor model, εi is an error term with a zero mean that represents the portion of the return not explained by the factor model. | C. Correct because in macroeconomic factor models, if no risk-free asset exists the intercept represents the expected return on a risky portfolio with zero sensitivity to all the factors."
+   },
+   {
+    "n": 26,
+    "q": "How can the arbitrage opportunity between Fund A, Fund B, and Fund C be exploited?",
+    "options": [
+     "Buy €100,000 of Fund C; sell €60,000 of Fund A and €40,000 of Fund B.",
+     "Buy €100,000 of Fund C; sell €50,000 of Fund A and €50,000 of Fund B.",
+     "Sell €100,000 of Fund C; buy €60,000 of Fund A and €40,000 of Fund B."
+    ],
+    "answer": "A",
+    "why": "A. Correct because a portfolio composed of 60% of Fund A and 40% of Fund B (the 60/40 portfolio) has the same factor sensitivity as Fund C, but a lower return. An arbitrage opportunity is an opportunity to conduct an arbitrage—an opportunity to earn an expected positive net profit without risk and with no net investment of money. In this case, an arbitrage opportunity can be exploited by selling short the 60/40 portfolio and by buying Fund C. Let x be the allocation to Fund A; 1.5x + 4.5(1 – x) = 2.7; 3x = 4.5 – 2.7; x = 0.6 or 60%. Thus, a portfolio allocated 60% to Fund A and 40% to Fund B has the same factor sensitivity as Fund C. Expected return of Portfolio 60/40 = (0.60)(0.04) + (0.40)(0.08) = 0.024 + 0.032 = 0.056. This strategy provides an opportunity to earn a riskless return of 0.060 – 0.056 = 0.004 = 0.4%. | B. Incorrect because a portfolio composed of 50% of Fund A and 50% of Fund B (the 50/50 portfolio) has an expected return of 6% (equal to the expected return for Fund C) and a factor sensitivity of 3. Buying Fund C and selling the 50/50 portfolio gives an expected return of zero. Expected return of Portfolio 50/50 = (0.50)(0.04) + (0.50)(0.08) = 0.02 + 0.04 = 0.06. Thus, a portfolio allocated 50% to Fund A and 50% to Fund B has the same return as Fund C. Factor sensitivity of Portfolio 50/50 = (0.5)(1.5) + (0.5)(4.5) = 0.75 + 2.25 = 3. | C. Incorrect because a portfolio composed of 60% of Fund A and 40% of Fund B (the 60/40 portfolio) has the same factor sensitivity as Fund C, but a lower return. This response confuses the long and short positions. Let x be the allocation to Fund A; 1.5x + 4.5(1 – x) = 2.7; 3x = 4.5 – 2.7; x = 0.6 or 60%. Thus, a portfolio allocated 60% to Fund A and 40% to Fund B has the same factor sensitivity as Fund C. Expected return of Portfolio 60/40 = (0.60)(0.04) + (0.40)(0.08) = 0.024 + 0.032 = 0.056. This strategy has a return of 0.056 – 0.060 = –0.004 = –0.4%."
+   },
+   {
+    "n": 27,
+    "q": "The contribution of inflation risk to Fund D's active risk squared is closest to:",
+    "options": [
+     "25%.",
+     "31%.",
+     "40%."
+    ],
+    "answer": "A",
+    "why": "A. Correct because in analyzing risk, it is more convenient to use variances rather than standard deviations because the variances of uncorrelated variables are additive. We refer to the variance of active return as active risk squared: Active risk squared = s2(Rp – RB)\", where Rp is the portfolio return and RB is the benchmark return. Active risk squared is the square of tracking error, i.e. TE = s(Rp – RB). Also, active factor risk is the contribution to active risk squared resulting from the portfolio’s different-from-benchmark exposures relative to factors specified in the risk model. The tracking risk is given as 8%, so the active risk squared is 82 or 64. Therefore, the contribution of inflation risk to Fund D's active risk is calculated as 16/82 = 16/64 = 0.25 = 25%. | B. Incorrect because this is the answer if the candidate squares the active factor risks for time horizon and inflation, adds them, and finds the proportion due to inflation; 162 / (162 + 242) = 256 / (256 + 576) = 256 / 832 = 0.3077 ≈ 31%. | C. Incorrect because it incorrectly calculates the contribution of inflation risk to Fund D's active risk as 16/(16 + 24) = 16/40 = 0.4 = 40%. This calculation ignores the fund's active specific risk that is equal to 82 – 16 – 24 = 24. Active specific risk or security selection risk measures the active non-factor or residual risk assumed by the manager."
+   },
+   {
+    "n": 28,
+    "q": "Based solely on the factor model, is Fund D an appropriate investment for Lakemont University?",
+    "options": [
+     "Yes",
+     "No, because of Fund D's sensitivity to inflation risk",
+     "No, because of Fund D's sensitivity to time horizon risk"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the activities supported by Lakemont University are sensitive to inflation risk. Therefore, Fund D's negative factor sensitivity to inflation risk does not help Lakemont University in reducing its exposure to inflation risk. | B. Correct because Fund D has a positive factor sensitivity to time horizon risk and a negative factor sensitivity to inflation risk. Investors may tilt their strategic asset allocation or investments within an asset class to capture the associated risk premiums for risks that do not much affect them. Lakemont University has an investment time horizon of 30 years and is not much affected by time horizon risk. Therefore, it has a comparative advantage in bearing time horizon risk. However, the activities supported by Lakemont University are sensitive to inflation risk. Therefore, Fund D's negative factor sensitivity to inflation risk does not help Lakemont University in reducing its exposure to inflation risk. | C. Incorrect because Lakemont University has an investment time horizon of 30 years and is not much affected by time horizon risk. Therefore, it has a comparative advantage in bearing time horizon risk."
+   }
+  ]
+ },
+ {
+  "id": "mf-yusuf",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Yusuf (VSLAM): APT, factor model types, expected return, style, attribution, active risk",
+  "body": "Halimah Yusuf is a portfolio manager at VSL Asset Management (VSLAM), based in Singapore. VSLAM provides customized portfolio management and investment consulting services to institutional clients. Yusuf is meeting with new analysts, John Cerra, Eunice Quek, and Inderjit Singh, to review the firm’s portfolio management models and techniques.\n\nYusuf welcomes everyone to the meeting and begins by stating, “We use multifactor models for portfolio construction as well as return and risk attribution.” She asks, “Can anyone tell me how arbitrage pricing theory (APT) is related to these multifactor models?”\nQuek responds, “APT helps us determine the appropriate number of factors to use in a multifactor model; however, it does not specify the identity of those factors.”\n\nYusuf continues, “Multifactor models fall into one of three categories: macroeconomic factor models, fundamental factor models, and statistical factor models. For macroeconomic factor models, the factors are the value, or level, of selected macroeconomic variables. For fundamental factor models, the factors are company share attributes, such as price-to-earnings ratio and market capitalization. Finally, when using statistical factor models, we apply statistical techniques, such as factor analysis or principal component analysis, to derive factors that are portfolios of securities that best explain historical return covariances and variances.”\n\nTo explain the use of multifactor models for portfolio return attribution, Yusuf presents the group with portfolio and benchmark information in Exhibit 1. She also notes the risk-free rate of return is 1.3%.\n\nExhibit 1 Multifactor Model Data\n \tFactor Sensitivity\tFactor\nFactor\tPortfolio\tBenchmark\tReturn\nMarket\t1.05\t1\t3.5%\nSmall-Cap\t0.5\t0.3\t4.7%\nValue\t–0.6\t0.2\t–4.5%\nMomentum\t0.5\t0.1\t5.1%\nYusuf asks the group to use Exhibit 1 to characterize the portfolio manager’s investment style. Cerra responds, “This manager has a large-cap orientation and follows a contrarian strategy with a growth bias.”\n\nYusuf continues, “Based on your review of the information in Exhibit 1 and given that the portfolio manager’s active return from security selection is 1.5%, I would like each of you to identify the factor that contributes the most to the manager’s active return.” The analysts respond as follows:\n\nCerra says, “My calculations suggest that it is the Value factor.”\n\nQuek responds, “I disagree. In my view, it is the Momentum factor.”\n\nSingh states, “No, my analysis indicates that it is the Market factor.”\n\nFinally, Yusuf provides the group with the information in Exhibit 2 and states, “As I previously stated, multifactor models can also be used to identify a portfolio manager’s risk exposures. Please use the information in Exhibit 2 to identify the portfolio with the highest active factor risk related to style factors, relative to active risk.”\n\nExhibit 2 Active Risk Squared Analysis for Selected Portfolios (Entries Are in Percentage Squared)\n \tActive Factor\nPortfolio\tIndustry Factor\tStyle Factor\tTotal Factor\tActive Specific\tActive Risk Squared\nX\t12\t28\t40\t24\t64\nY\t7.2\t14.4\t21.6\t14.4\t36\nZ\t4\t10\t14\t2\t16",
+  "questions": [
+   {
+    "n": 29,
+    "q": "Is Quek’s response to Yusuf most likely correct?",
+    "options": [
+     "Yes",
+     "No, she is incorrect regarding the number of factors",
+     "No, she is incorrect regarding the identity of the factors"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Quek is incorrect in stating that APT specifies the number of factors in a multifactor model but correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity. | B. Correct. Quek is incorrect in stating that APT specifies the number of factors in a multifactor model but is correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity. | C. Incorrect. Quek is correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity."
+   },
+   {
+    "n": 30,
+    "q": "In her statement about the three types of multifactor models, Yusuf is least likely correct with respect to:",
+    "options": [
+     "statistical factor models.",
+     "fundamental factor models.",
+     "macroeconomic factor models."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Statistical models are described accurately. Statistical factor models use factor analysis to produce factors that are portfolios of securities that best explain historical return covariances. Alternatively, they use principal component analysis to derive factors that are portfolios of securities that best explain historical return variances. | B. Incorrect. Fundamental factor models are described correctly; the factors are company share attributes, such as price-to-earnings ratio and market capitalization. | C. Correct. In macroeconomic models, the factors are “surprises” (how much higher or lower than what was expected) in macroeconomic variables, not the level or value of macroeconomic variables."
+   },
+   {
+    "n": 31,
+    "q": "Based on Exhibit 1 and other information provided by Yusuf, the expected return on the portfolio is closest to:",
+    "options": [
+     "8.90%.",
+     "11.28%.",
+     "12.58%."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. This calculation incorrectly neglects to add the Market factor: 0.0890 = 0.013 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 | B. Incorrect. This calculation incorrectly neglects to add the risk-free rate (1.3%): 0.1128 = 1.05 × 0.035 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 | C. Correct. E(Rp) = RF + βp,1Market + βp,2Small-Cap + βp,3Value + βp,4Momentum = 0.013 + 1.05 × 0.035 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 = 0.12575, or 12.58%."
+   },
+   {
+    "n": 32,
+    "q": "In his response to Yusuf, Cerra’s characterization of the portfolio manager’s investment style, using Exhibit 1, is most likely correct with respect to having a:",
+    "options": [
+     "growth bias.",
+     "contrarian strategy.",
+     "large-cap orientation."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Cerra is correct regarding the growth bias. The factor sensitivity for the Value factor is –0.6, which signifies a growth bias. Cerra is incorrect regarding a large-cap orientation and a contrarian strategy. The portfolio factor sensitivity for the Small-Cap factor is 0.5, indicating a small-cap orientation. For the Momentum factor, the factor sensitivity of 0.5 indicates a momentum bias, not a contrarian strategy, which would be true if the factor sensitivity for the Momentum factor were negative and not close to zero. | B. Incorrect. Cerra is incorrect with regard to the contrarian strategy. For the Momentum factor, the factor sensitivity is 0.5, which indicates a momentum bias. | C. Incorrect. Cerra is incorrect with regard to a large-cap orientation. The portfolio factor sensitivity for the Small-Cap factor is 0.5, indicating a small-cap orientation."
+   },
+   {
+    "n": 33,
+    "q": "Which of the following analysts most likely provides the correct answer to Yusuf’s question on the contribution to active return?",
+    "options": [
+     "Quek",
+     "Cerra",
+     "Singh"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Quek is incorrect. The Value factor has the highest contribution to active return. | B. Correct. Cerra is correct. To determine which factor contributes most to active return, note the following: Active return = 6.755% + 1.5% = 8.255% = ∑[(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) + Security selection Return from factor tilts = Sum of the absolute contribution to active return = ∑[(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = 6.755% The proportional contribution to active return for each factor = Return from factor tilts ÷ Active return. The table below shows that the Value factor had the highest contribution to active return, 43.61% (3.6% ÷ 8.255%). Factor Sensitivity\t(1) – (2)\tFactor\tContribution to Active Return Factor\tPortfolio\tBenchmark\tDifference\tReturn\tAbsolute\tProportion (1)\t(2)\t(3)\t(4)\t(3) × (4) Market\t1.05\t1\t0.05\t3.5%\t0.175%\t2.12% Small-Cap\t0.5\t0.3\t0.2\t4.7%\t0.940%\t11.39% Value\t–0.6\t0.2\t–0.8\t–4.5%\t3.600%\t43.61% Momentum\t0.5\t0.1\t0.4\t5.1%\t2.040%\t24.71% Return from factor tilts\t6.755%\t81.83% Security selection\t1.500%\t18.17% Active return\t8.255%\t100.00% | C. Incorrect. Singh is incorrect. The Value factor has the highest contribution to active return."
+   },
+   {
+    "n": 34,
+    "q": "In response to Yusuf, based on the information in Exhibit 2, the portfolio with the highest active factor risk exposure to the style factor is:",
+    "options": [
+     "Portfolio X.",
+     "Portfolio Y.",
+     "Portfolio Z."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Portfolio X active style risk squared ÷ Active risk squared = 28 ÷ 64 = 43.75%. | B. Incorrect. Portfolio Y active style risk squared ÷ Active risk squared = 14.4 ÷ 36 = 40%. | C. Correct. Portfolio Z has the highest active factor risk exposures to the style factor. Portfolio Z active style risk squared ÷ Active risk squared = 10 ÷ 16 = 62.5%. Portfolio X active style risk squared ÷ Active risk squared = 28 ÷ 64 = 43.75%. Portfolio Y active style risk squared ÷ Active risk squared = 14.4 ÷ 36 = 40%."
+   }
+  ]
+ },
+ {
+  "id": "mf-cho",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Cho (Hallasan): APT attributes, fundamental model, expected return, active risk split",
+  "body": "Dea Cho is a senior portfolio manager for Hallasan Capital, an investment management firm located in Gyeongju, South Korea. Hallasan specializes in using multifactor models to build and manage global investment portfolios for institutional clients.\n\nChung-Hee Kwon works for Cho as a research analyst and often is tasked with working on factor models. During a conversation with Cho, Kwon mentions that he has not worked on building models using the arbitrage pricing theory (APT) framework. Cho asks Kwon what he knows about APT. Kwon explains that while both the APT and capital asset pricing model (CAPM) provide an expression of the expected return of an asset, the APT provides an alternative framework to CAPM and cites three key attributes of APT:\n\nAttribute 1: The APT model makes stronger assumptions than the CAPM.\nAttribute 2: APT makes the assumption that investors can form portfolios that eliminate asset-specific risk.\nAttribute 3: APT makes the assumption that arbitrage opportunities exist among well-diversified portfolios.\nHallasan manages a global equity strategy for Gyeongiu Electric, an institutional client. This portfolio is managed to overweight or underweight certain factors. These factors include small minus big (SMB), high minus low book value (HML), and winners minus losers (WML). Exhibit 1 provides information regarding the portfolio sensitivities to these factors, the premiums of these factors, and the return of the value-weighted equity index in excess of the 1-month T-bill rate (RMRF). The risk-free rate is currently 1.5%.\n\nExhibit 1 Portfolio Sensitivities and Factor Premiums\nRisk Factor\tRMRF\tSMB\tHML\tWML\nGyeongiu Electric Portfolio Factor Sensitivity\t1.01\t0.45\t0.95\t0.09\nFactor Premium\t3.11%\t2.11%\t3.75%\t1.56%\nFollowing the conclusion of a performance reporting period, Cho asks Kwon to evaluate the risk attributes and results of two of Hallasan’s institutional portfolios relative to a global equity benchmark over the previous year. Kwon compiles the data in Exhibit 2 and provides the results to Cho for discussion and analysis.\n\nExhibit 2 1-Year Portfolio Performance Data\nPortfolio\tActive Specific Risk (%)\tActive Factor Risk (%)\tActive Risk Squared\tInformation Ratio\nCity of Daegu\t10\t90\t0.38%\t0.70\nGangwon Pension Plan\t75\t25\t0.09%\t0.62\nCho asks Kwon to share observations on how the portfolios have performed. Kwon responds that Daegu’s portfolio appears to have had the largest active return and Gangwon’s portfolio appears to have the highest contribution of active risk from stock selection.",
+  "questions": [
+   {
+    "n": 35,
+    "q": "Which of Kwon’s attributes about APT is most likely correct?",
+    "options": [
+     "Attribute 1",
+     "Attribute 2",
+     "Attribute 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because APT makes less strong assumptions than the CAPM. | B. Correct because APT makes the assumption that investors can form well-diversified portfolios that eliminate asset-specific risk. | C. Incorrect because APT requires that arbitrage opportunities do not exist among well-diversified portfolios."
+   },
+   {
+    "n": 36,
+    "q": "The strategy incorporated in the management of the equity portfolio for Gyeongiu Electric is most likely an example of which type of factor model?",
+    "options": [
+     "Statistical",
+     "Fundamental",
+     "Macroeconomic"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because statistical factor models make minimal assumptions and factors are observed from the returns of securities in a group. There are two primary types of statistical models: (1) factor analysis models in which the factors are the portfolios of securities that best explain historical return covariances, and (2) principal component models in which the factors are portfolios of securities that best explain historical return variances. | B. Correct because the model described is based on company fundamental factors, such as market capitalization and valuation, as well as a company share-related factor to explain cross-sectional differences in stock prices. This is an example of a fundamental factor model. Statistical factor models do not rely on defining the factors up front. Macroeconomic models would represent broader economic factors, such as interest rates, inflation, and credit spread. | C. Incorrect because macroeconomic factor models have factors that represent surprises in macroeconomic variables, such as interest rates, inflation, business cycle, and credit spreads."
+   },
+   {
+    "n": 37,
+    "q": "Assuming an equilibrium with no alpha or no residual, the expected return of the Gyeongiu Electric Portfolio is closest to:",
+    "options": [
+     "7.5%.",
+     "9.0%.",
+     "10.5%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because this return calculation of 7.5% does not include the risk-free rate of 1.5%. E(Rp) = (1.01)(3.11%) + (0.45)(2.11%) + (0.95)(3.75%) + (–0.09)(1.56%) = 7.513% | B. Correct because the formula for determining the expected portfolio return from the information provided is: E(Rp) = RF + ßp,1RMRF + ßp,2SMB + ßp,3HML + ßp,4WML(+error) E(Rp) = 1.5% + (1.01)(3.11%) + (0.45)(2.11%) + (0.95)(3.75%) + (–0.09)(1.56%) + 0 = 9.013% | C. Incorrect because this return calculation does not include the risk-free rate or adjust the returns for the factor sensitivities. E(Rp) = (3.11%) + (2.11%) + (3.75%) + (1.56%) = 10.53%"
+   },
+   {
+    "n": 38,
+    "q": "Is Kwon most likely accurate in his comments regarding how the portfolios have performed?",
+    "options": [
+     "Yes",
+     "No, with regard to his comment on Daegu’s portfolio",
+     "No, with regard to his comment on Gangwon’s portfolio"
+    ],
+    "answer": "A",
+    "why": "A. Correct because Kwon correctly interprets the performance of the various portfolios from the information compiled in Exhibit 2. Kwon is correct that Daegu’s portfolio has the highest active return. The information ratio is defined as active return divided by active risk or tracking error. Daegu has by far the largest active risk, and it has a higher information ratio than Gangwon, its information ratio is 13% higher with an active risk that is 2.1 times larger (square root of Daegu active risk squared divided by square root of Gangwon active risk squared). As a result, understanding the equation for information ratio, Daegu must have the largest active return. Kwon is also correct that Gangwon’s portfolio appears to have the highest contribution of active risk from stock selection; 75% of Gangwon’s active risk comes from active specific risk, which means security specific risk. Even when considering Daegu’s higher active total risk, only 10% of Daegu’s active risk comes from active specific versus active factor sources, indicating the most security specific (stock selection) risk from Gangwon. | B. Incorrect because Kwon is correct that Daegu’s portfolio has the highest active return. The information ratio is defined as active return divided by active risk or tracking error. Daegu has by far the largest active risk, and although it has a lower information ratio than Ulsan, its information ratio is 82% as high with an active risk that is more than three times larger. As a result, Daegu must have the largest active return. | C. Incorrect because Kwon is correct that Gangwon’s portfolio appears to have the highest contribution of active risk from stock selection; 75% of Gangwon’s active risk comes from active specific risk, which means security specific risk. Even when considering Daegu’s higher active total risk, only 10% of Daegu’s active risk comes from active specific versus active factor sources, indicating the most security specific (stock selection) risk from Gangwon."
+   }
+  ]
+ },
+ {
+  "id": "mf-tia",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · TIA (Singh/Park): APT, arbitrage 60/40, use of model, expected return, aggressive manager",
+  "body": "Thoms Investment Advisory (TIA) is an investment management firm focused on health care equities in various global markets. TIA bases its investment process on the belief that common factors affect mean equity returns, and these common factors vary in degrees of importance by region or country.\n\nSenior portfolio manager Thilo Singh is discussing characteristics of the firm’s portfolios with junior analyst Douglas Park. Singh states, “We use factor models when analyzing regional health care index expected returns. In order for our analysts to understand our security selection process, they must first have a working knowledge of factor models.”\n\nPark adds, “Factor models are based on the arbitrage pricing theory (APT), which, similar to the CAPM, is an expression for the expected return of an asset or portfolio. The APT makes three key assumptions:\n\nAssumption 1: A factor model describes asset returns.\nAssumption 2: A well-diversified portfolio can eliminate factor risk.\nAssumption 3: A state of financial market equilibrium exists among well-diversified portfolios.”\nPark continues: “I have examined three of the regional portfolios using our available information, and I have determined that they show sensitivity to a return-on-equity (ROE) factor as shown in Exhibit 1. That implies that an arbitrage opportunity could exist and be exploited by buying the Pacific Rim portfolio while selling short a portfolio composed of 60% of the Eurozone portfolio and 40% of the North America portfolio.”\n\nExhibit 1 Portfolio Sensitivities to ROE Factor\nPortfolio\tExpected Return\tFactor Sensitivity\nEurozone\t11.9%\t0.3\nNorth America\t10.7%\t0.8\nPacific Rim\t13.7%\t0.5\nSingh elaborates, “Our securities analysis is actually based on a three-factor model, which we use to compare the mean expected return of the regional health care index with an individual security’s expected return. Using a risk-free rate of 0.50%, we focus on regional sensitivity to the following three factors, the characteristics of which are shown in Exhibit 2.”\n\nFactor 1: An ROE factor that measures the difference between returns of stocks of firms in the highest quartile of ROE and the returns of firms in the lowest quartile of ROE.\nFactor 2: A sector excess return factor that compares local healthcare sector returns with the entire local equity market (MKT).\nFactor 3: A capital investment factor that is determined by ranking firms according to their level of capital investment and comparing the returns of the firms in the highest quartile with those in the lowest quartile (INV).\nExhibit 2 Panel A: Factor Model and Portfolio Characteristics\nSector Region\tMean Local Index Return\tβROE\tβMKT\tβINV\tInformation Ratio\tTracking Error\nEurozone\t8.5%\t0.3\t0.20\t1.5\t0.971\t3.500%\nNorth America\t6.0%\t0.9\t0.90\t0.4\t1.192\t4.000%\nPacific Rim\t9.0%\t0.6\t0.93\t0.9\t0.509\t9.375%\nJapan\t5.0%\t0.9\t0.88\t0.6\t1.620\t3.000%\n \nPanel B: Factor Values\nRegion\tROE\tMKT\tINV\nEurozone\t0.020\t0.04\t0.070\nNorth America\t0.075\t0.03\t0.033\nPacific Rim\t0.020\t0.02\t0.070\nJapan\t0.031\t0.05\t0.066",
+  "questions": [
+   {
+    "n": 39,
+    "q": "When describing the APT, Park is least likely correct with regard to:",
+    "options": [
+     "Assumption 1.",
+     "Assumption 2.",
+     "Assumption 3."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Assumption 1 is a part of APT. | B. Correct. The assumptions under the APT are as follows: A factor model describes asset returns. There are many assets, so investors can form well-diversified portfolios that eliminate asset-specific risk, not factor risk. No arbitrage opportunities exist among well-diversified portfolios. The absence of an arbitrage opportunity indicates a condition of financial market equilibrium. | C. Incorrect. Assumption 3 is a part of APT."
+   },
+   {
+    "n": 40,
+    "q": "Is Park most likely correct in identifying a possible arbitrage opportunity?",
+    "options": [
+     "Yes",
+     "No, because all three portfolios have different factor sensitivities",
+     "No, because the Pacific Rim portfolio has the highest expected return"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Park is correct in identifying an arbitrage opportunity. The Pacific Rim portfolio has the same factor sensitivity as a portfolio composed of 60% Eurozone and 40% North America [(0.3 × 60%) + (0.8 × 40%) = 0.5], and it has an expected return higher than the average of the combined portfolio [(11.9% × 60%) + (10.7% × 40%) = 11.4%]. Pacific Rim is relatively undervalued, offering a higher expected return. | B. Incorrect. Although all three portfolios have differing factor sensitivities, there is indeed an arbitrage opportunity. | C. Incorrect. The Pacific Rim portfolio is undervalued because of its higher expected return."
+   },
+   {
+    "n": 41,
+    "q": "TIA is most likely applying its three-factor model in:",
+    "options": [
+     "risk attribution.",
+     "return attribution.",
+     "portfolio construction."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. TIA’s model is not being use to analyze risk or return attribution of a portfolio. | B. Incorrect. TIA’s model is not being use to analyze risk or return attribution of a portfolio. | C. Correct. Portfolio construction is the most likely application of TIA’s three-factor model. TIA compares the expected return of a security with the expected return of its respective sector index. When constructing a portfolio, securities with expected returns higher than the benchmark would be included. The model is not being used to attribute the risk or return of a portfolio."
+   },
+   {
+    "n": 42,
+    "q": "According to the data in Exhibit 2, the expected return for the Japan sector portfolio is closest to:",
+    "options": [
+     "11.2%.",
+     "11.7%.",
+     "14.7%."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because it does not include the risk-free rate. | B. Correct. The three-factor model is described in the following equation: E(RP) = βROE + βMKT + βINV + Rf So, (0.9 × 0.031) + (0.88 × 0.05) + (0.6 × 0.066) + 0.005 = 0.1165 or 11.7%. | C. Incorrect because it simply sums up the factor values."
+   },
+   {
+    "n": 43,
+    "q": "TIA’s three-factor model is most likely a:",
+    "options": [
+     "statistical model.",
+     "macroeconomic model.",
+     "fundamental factor model."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. TIA’s 3-factor model uses a fundamental factor model, which includes factors such as return on equity, capital investment, and equity returns. | B. Incorrect. TIA’s 3-factor model uses a fundamental factor model, which includes factors such as return on equity, capital investment, and equity returns. | C. Correct. TIA’s three-factor model is a fundamental factor model because it consider such factors as return on equity, capital investment, and equity returns. Macroeconomic factors (e.g., interest rates, inflation risk, business cycle risk, or credit spreads) and statistical factors (e.g., historical covariances) are not mentioned."
+   },
+   {
+    "n": 44,
+    "q": "According to the data in Exhibit 2, which portfolio most likely exhibits the risk characteristics of an aggressive active equity manager?",
+    "options": [
+     "Japan portfolio",
+     "Eurozone portfolio",
+     "Pacific Rim portfolio"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. The Japan portfolio has the highest information ratio, which is not a measure of high tracking error. | B. Incorrect. The Eurozone portfolio has the lowest excess return over its local index (12.4% vs. 8.5% = excess return of 3.9%). | C. Correct. The Pacific Rim portfolio has the highest tracking error. Tracking error is a synonym for tracking risk or active risk. A well-executed passive investment strategy would achieve the lowest amount of tracking error, whereas an aggressive active equity manager would be expected to have the highest tracking error."
+   }
+  ]
+ },
+ {
+  "id": "mf-wilson",
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (34/50, 68%)",
+  "readings": [
+   37
+  ],
+  "title": "Multifactor · Wilson (Woronora): APT assumptions, arbitrage D/E/F, expected returns, standardized betas, active risk",
+  "body": "Woronora Partners is an investment management firm based in Sydney. The firm manages both domestic and global equity funds for a variety of institutional clients.\n\nAva Wilson is a portfolio manager at Woronora. She engages in security selection for some portfolios and asset allocation and manager selection for others. One of her clients is the Paroo College endowment, for which she manages domestic equities. The endowment’s investment committee is performing a 3-year review of Woronora’s services and asks Wilson to explain the processes she uses to select investments and to evaluate performance.\n\nWilson begins her presentation by explaining that she uses multi-factor models to guide asset selection. She briefly describes this group of models and continues with specific information about one of them, the arbitrage pricing theory (APT). She describes the three key assumptions on which the APT is based:\n\nAssumption 1: A factor model can be used to explain asset returns.\nAssumption 2: A well-diversified portfolio will not contain any arbitrage opportunities.\nAssumption 3: When assets are added to a diversified portfolio, they add to its factor risk and to its specific risk.\nWilson explains that she evaluates a variety of domestic equity funds, seeking evidence of arbitrage opportunities among them. She provides a simple example using a one-factor model that assumes the single factor is the only driver of returns. Exhibit 1 displays the data for this example.\n\nExhibit 1 Portfolio Information for a One-Factor Model\nPortfolio\tExpected Return\tFactor Sensitivity\nA\t5.00%\t0.4\nB\t5.70%\t0.6\nC\t6.80%\t0.8\nD\t7.70%\t1\nE\t8.60%\t1.2\nF\t9.00%\t1.4\nExpanding on this example, Wilson explains that in practice, she uses a four-factor model with factors for the market as a whole (denoted as RMRF), market capitalization (small minus big, or SMB), book value effect (high minus low, or HML), and momentum (winners minus losers, or WML). She has estimated the risk premiums for these factors and estimated factor sensitivities for three portfolios, as shown in Exhibit 2.\n\nExhibit 2 Factor Risk Premiums and Portfolio Sensitivities\nFactor\tFactor Risk Premiums\tPortfolio I Sensitivities\tPortfolio II Sensitivities\tPortfolio III Sensitivities\nRMRF\t7.10%\t0.9\t1.2\t1\nSMB\t2.40%\t1.2\t0.4\t0.8\nHML\t–1.3%\t0.5\t0.8\t1.1\nWML\t0.80%\t1.4\t0.9\t0.7\nWilson observes that this model is best characterized as a fundamental factor model. She tells the investment committee, “I have also considered using macroeconomic factor models, which differ from fundamental factor models in several ways. For example, in contrast to fundamental factor models, the expected effect of each factor on an asset’s return is zero in macroeconomic factor models because the factors in macroeconomic factor models are the surprises in the economic data relative to expectations. Also, standardized betas are used in macroeconomic factor models. A standardized beta is created when an asset’s sensitivity to a factor is adjusted for the average sensitivity of all assets to the factor and the standard deviation of those sensitivities.”\n\nLater in her presentation, Wilson explains that the information ratio of the endowment’s domestic equity portfolio is used to measure its performance. She states, “The information ratio is simply the ratio of the active return of the portfolio divided by the tracking error of its return, with both components measured relative to the performance of the agreed-on benchmark. The active return is the sum of each factor return multiplied by the difference between the portfolio’s sensitivity to that factor and the benchmark’s sensitivity. The tracking error is the standard deviation of active returns over time and can be decomposed into the active factor risk and the active specific risk.”\n\nWilson tells the committee her use of the four-factor model is also helpful in choosing between portfolios that might, at first, appear to offer similar expected performance. She provides an example of three portfolios, each of which has an expected active return of 4% and an expected active risk of 8%. Exhibit 3 provides the information for the example.\n\nExhibit 3 Decomposition of Active Risk\n \tPortfolio X\tPortfolio Y\tPortfolio Z\nRMRF risk\t10%\t35%\t5%\nSMB risk\t20%\t15%\t5%\nHML risk\t5%\t10%\t20%\nWML risk\t25%\t15%\t10%\nTotal factor risk\t60%\t75%\t40%\nActive specific risk\t40%\t25%\t60%\nNote: All figures are a percentage of total active risk.",
+  "questions": [
+   {
+    "n": 45,
+    "q": "Which of Wilson’s assumptions underlying APT is least likely correct?",
+    "options": [
+     "Assumption 1",
+     "Assumption 2",
+     "Assumption 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because Assumption 1 is one of the assumptions underlying the APT. | B. Incorrect because Assumption 2 is one of the assumptions underlying the APT. | C. Correct. APT is based in part on the assumption that as assets are added to a portfolio, the portfolio becomes well diversified and asset-specific risk is eliminated. Therefore, adding assets to a diversified portfolio should decrease, rather than increase, its specific risk."
+   },
+   {
+    "n": 46,
+    "q": "According to the information provided in Exhibit 1, could an arbitrage portfolio most likely be created by some combination of portfolios D, E, and F?",
+    "options": [
+     "No",
+     "Yes, and the portfolio would earn an expected return of 0.25%",
+     "Yes, and the portfolio would earn an expected return of 8.60%"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because there is an arbitrage opportunity. | B. Correct. Portfolio E has a factor sensitivity of 1.2 and an expected return of 8.6%. A 50/50 portfolio created from portfolios D and F would have the same factor risk of 1.2 = (1.0 + 1.4)/2 but an expected return of 8.35% = (7.7% + 9.0%)/2. The arbitrage opportunity is creating by purchasing portfolio E and shorting the 50/50 portfolio of D and F. This portfolio would be expected to earn 8.60% and pay out 8.35%, for a net of 0.25%. | C. Incorrect because this is simply the long expected return minus the short expected return."
+   },
+   {
+    "n": 47,
+    "q": "Based on the data in Exhibit 2, the portfolio with the highest expected return most likely is:",
+    "options": [
+     "Portfolio I.",
+     "Portfolio II.",
+     "Portfolio III."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The expected portfolio return using a four-factor model is E(RP) + RF + β1RMRF + β2SMB + β3HML + β4WML, where the betas are the factor sensitivities and RF is the risk-free rate. The risk-free rate will be the same for all portfolios and, therefore, will not affect which expected return is the highest. The expected return of Portfolio I (exclusive of the risk-free rate) is RF + 0.9 × 7.1% + 1.2 × 2.4% + 0.5 × –1.3% + 1.4 × 0.8% = RF + 9.7%, which is higher than the expected returns of Portfolio II (RF + 9.2%) and Portfolio III (RF + 8.2%). | B. Incorrect because Portfolio II’s expected return is lower than that of Portfolio I. | C. Incorrect because Portfolio III’s expected return is lower than that of Portfolio I."
+   },
+   {
+    "n": 48,
+    "q": "In her comparison of two types of factor models, is Wilson most likely correct regarding macroeconomic factor models?",
+    "options": [
+     "Yes",
+     "No, she is incorrect regarding standardized betas",
+     "No, she is incorrect regarding the expected effect of each factor"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Standardized betas are used in fundamental factor models, not macroeconomic factor models. | B. Correct. Standardized betas are used in fundamental factor models, not macroeconomic factor models. | C. Incorrect because in macroeconomic factor models the expected impact of each factor is zero."
+   },
+   {
+    "n": 49,
+    "q": "In her description of how the endowment portfolio’s performance is measured, Wilson is least likely accurate regarding the:",
+    "options": [
+     "active return.",
+     "tracking error.",
+     "information ratio."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The active return consists of two parts: (1) the sum of each factor return multiplied by the difference between the portfolio’s sensitivity to that factor and the benchmark’s sensitivity and (2) the active return resulting from security selection. Wilson did not include the effect of security selection. | B. Incorrect because she is correct about the decomposition of tracking error. | C. Incorrect because she is correct about the calculation of the information ratio."
+   },
+   {
+    "n": 50,
+    "q": "If Wilson’s goal is to select the most diversified portfolio, then based on the information in Exhibit 3 she would most likely choose:",
+    "options": [
+     "Portfolio X.",
+     "Portfolio Y.",
+     "Portfolio Z."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because Portfolio X does not have the lowest active specific risk. | B. Correct. Diversification reduces a portfolio’s active specific risk; therefore, the portfolio with the lowest active specific risk is likely to be the most diversified. Portfolio Y’s active specific risk is the lowest. | C. Incorrect because Portfolio Z does not have the lowest active specific risk."
+   }
+  ]
+ }
+]

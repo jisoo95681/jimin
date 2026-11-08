@@ -133,5 +133,77 @@
   "n": 56,
   "q": "Which measures of yield curve risk can measure shaping risk?",
   "model_answer": "Key rate durations and measures based on sensitivities to level, slope and curvature movements can address shaping risk; effective duration cannot."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 1,
+  "q": "Compare the assumptions of the arbitrage pricing theory (APT) with those of the capital asset pricing model (CAPM).",
+  "model_answer": "APT and the CAPM both describe the expected return of a risky asset in equilibrium given its risk. The CAPM assumes investors decide using only returns' means, variances and correlations. APT makes three assumptions: (1) a factor model describes asset returns; (2) there are many assets, so investors can form well-diversified portfolios that eliminate asset-specific risk; (3) no arbitrage opportunities exist among well-diversified portfolios."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 2,
+  "q": "One-factor model: E(Rp) = 0.10 + 0.12 × βp,1. Highly diversified portfolios: A expected return 0.196, factor sensitivity 0.80; B 0.156, 1.00; C 0.244, 1.20. Is there an arbitrage opportunity and how can it be exploited?",
+  "model_answer": "Model returns: A 0.20, B 0.22, C 0.24. A and C are priced correctly, B offers too little return for its risk (0.156). Short B and buy a 50/50 mix of A and C (sensitivity 1.0 like B; expected return (0.196 + 0.244)/2 = 0.22). Arbitrage profit per unit shorted: 0.22 − 0.156 (the source solution quotes 0.07 against 0.15)."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 15,
+  "q": "Harry Company stock returned 5%. The part not explained by a two-factor macro model was 3%. Interest rate change: actual 2.0%, expected 0.0%, sensitivity −1.5. GDP growth: actual 1.0%, expected 4.0%, sensitivity 2.0. Calculate the stock's expected return.",
+  "model_answer": "Surprises: interest rate +2%, GDP −3%. 5% = E(R) − 1.5 × 2% + 2 × (−3%) + 3% = E(R) − 6%. E(R) = 5% + 6% = 11%. The intercept is the expected return and the unexplained part is the error term."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 16,
+  "q": "Which type of factor model is most directly applicable to an analysis of the style orientation (growth vs value) of an active equity manager? Justify.",
+  "model_answer": "A fundamental factor model: it has many company and valuation factors (earnings, P/E, size and so on) that are common indicators of growth or value orientation. A macroeconomic model may help only indirectly and in less detail."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 17,
+  "q": "An active equity manager earned an active return of 110 basis points, 80 basis points from security selection. Explain the likely source of the remaining 30 basis points.",
+  "model_answer": "Factor tilts. Active return = return from factor tilts + security selection. Factor tilt return = (portfolio sensitivity − benchmark sensitivity) × factor return, summed across factors."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 18,
+  "q": "What is the information ratio of an index fund that effectively meets its investment objective?",
+  "model_answer": "Zero, because its active return is expected to be zero."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 19,
+  "q": "What are the two types of risk an active manager can assume in seeking to increase the information ratio?",
+  "model_answer": "Active factor risk and active specific (security selection) risk."
+ },
+ {
+  "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
+  "readings": [
+   37
+  ],
+  "n": 20,
+  "q": "A wealthy investor has no other income and her investments are expected to meet all her needs. Her advisor recommends tilting to cyclical stocks and high-yield bonds. Explain in terms of comparative advantage in bearing risk.",
+  "model_answer": "She has a comparative advantage in bearing business cycle risk compared with the average investor, who depends on employment income and is exposed to recession risk. A risk premium should exist for holding recession-sensitive securities. Cyclical stocks and high-yield bonds are very sensitive to recession risk, and recessions do not affect her welfare, so she can tilt to them to capture the premium."
  }
 ]
