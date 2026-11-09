@@ -64,7 +64,7 @@ Statement 2: The EBIT margin of carbonated drinks – Europe is higher than that
 Statement 3: The asset turnover of carbonated drinks – Europe is better than that of AD overall.""",[
  Q("Which balance sheet line item is most appropriate to justify Vos's comment about AD's growth strategy?",["Long-term debt","Property, plant and equipment","Goodwill"],2,
    "Goodwill arises only when a company acquires another business, so a rising goodwill balance is the hallmark of growth by acquisition.\nLong-term debt and PP&E may also rise after acquisitions, but they can change for many other reasons (capital structure changes, organic capital spending)."),
- Q("After Vos's adjustment, AD's net income (in EUR millions) under management's direct control is:",["816.","918.","1,052."],1,
+ Q("After Vos's adjustment, AD's net income (in EUR millions) under management's direct control is:",["918.","816.","1,052."],0,
    "Management controls the subsidiaries in full (including the non-controlling interest share) but not the associates.\nStart from total net income: 1,154.\nRemove income from associates: 1,154 − 236 = 918.\n816 = 1,052 − 236 wrongly also removes the non-controlling interest; 1,052 still includes the associates and excludes the NCI."),
  Q("Which reason best supports Vos's disagreement with his team about AD's overall performance?",["Reason 1","Reason 2","Reason 3"],1,
    "Downward-trending balance-sheet accruals give less room for manipulation: not a concern.\nCorrect: operating income persistently above operating cash flow means earnings are not backed by cash, a warning sign of low earnings quality.\nA steady, low-fluctuation accruals ratio is not a concern; an erratic or rising one would be."),

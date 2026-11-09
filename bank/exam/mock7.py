@@ -70,6 +70,8 @@ VIG=[
  RESKIN['stratton'],
  real('mf-cheung','Portfolio Management',[9,11,12,14]),
 ]
+from mock7_tweak import apply
+apply(VIG)
 MOCK=dict(id="mock7",title="Mock 7",kind="mock",minutes=132,desc="8 new vignettes + 3 re-done (names and numbers changed); scored separately",vignettes=VIG)
 if __name__=='__main__':
     json.dump(MOCK,open('/home/user/jimin/bank/exam/mock7.json','w'),ensure_ascii=False,indent=1)
