@@ -39,7 +39,7 @@ import os
 for mf in ["mock7","mock8"]:
     p=f"/home/user/jimin/bank/exam/{mf}.json"
     if os.path.exists(p): sets.append(json.load(open(p)))
-for st_ in sets: st_['rev']=2
+for st_ in sets: st_['rev']=st_.get('rev',2)
 js="// Exam section data: practice sets built from the notebook key notes (re-skinned vignettes), later mocks.\n// answer = index of the correct option (0 = A). Built by /tmp/gen/exam/build.py.\nconst EXAM_SETS = "+json.dumps(sets,ensure_ascii=False,indent=1)+";\n"
 open('/home/user/jimin/exam.js','w').write(js)
 json.dump(sets,open('/home/user/jimin/bank/exam/practice_sets.json','w'),ensure_ascii=False,indent=1)

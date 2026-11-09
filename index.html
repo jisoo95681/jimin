@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v203 · 2026-11-09";
+  const APP_VERSION = "v204 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1659,6 +1659,7 @@
     // Table rendering was fixed (rev 2): keep saved highlights in the text but show the corrected tables.
     if (set.rev && cur.rev !== set.rev) {
       const TB = /<table[^>]*class=["']ex-tbl["'][^>]*>[\s\S]*?<\/table>/g;
+      (set.resetHl || []).forEach(i => { if (cur.hl) delete cur.hl["v" + i]; }); // vignette text was cut: drop highlights saved on the old text
       Object.keys(cur.hl || {}).forEach(k => {
         if (!/^v\d+$/.test(k)) return;
         const fresh = exBodyHTML(set.vignettes[+k.slice(1)].body), ft = fresh.match(TB) || [], saved = cur.hl[k], stb = saved.match(TB) || [];

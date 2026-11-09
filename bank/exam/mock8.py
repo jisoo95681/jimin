@@ -48,7 +48,19 @@ Accrued interest since last coupon payment | 0.08
 Accrued interest at futures contract expiration | 0.20
 
 '''+b[j:]
-    a=V['m2-11']; b=a['body']
+    # vignette text that pointed at questions not in this mock is cut (Exhibit 3 of Troubadour, yield-curve factors, feature selection, turnover/M-score, fund-of-funds options)
+    b=t['body']; t['body']=b[:b.index('Three months after contract initiation')].rstrip()
+    m=V['em-simmons']; b=m['body']
+    x=" and the government bond curve to change from its currently flat state to an upward sloping state. Simmons believes the future upward slope of the yield curve will be influenced by investor expectations for declining policy rates, increasing inflation premiums for longer dated bonds, and bond risk premiums that are negatively related to consumption hedging benefits."
+    assert x in b; m['body']=b.replace(x,".")
+    q=V['m1-10']; b=q['body']
+    x="she performs feature selection. She wants to remove noise features and only select the tokens that tend to occur more often in a particular class of text."
+    assert x in b; q['body']=b.replace(x,"she turns the listings into text features for a classifier.")
+    c=V['fsa5-coleridge']; b=c['body']
+    x="Next, Thorsell notes that Coleridge's receivables turnover ratio, inventory turnover ratio, and Beneish M-scores have all increased each year during the preceding 3-year period. She also notes that consistent"
+    assert x in b; c['body']=b.replace(x,"Next, Thorsell notes that, consistent")
+    a=V['m2-11']; b=a['body']; a['body']=b[:b.index('Pasco is evaluating the benefits')].rstrip()
+    b=a['body']
     i=b.index('Exhibit 1\n\nCrude Oil'); j=b.index('Spot price | 75.02')
     a['body']=b[:i]+'Exhibit 1\n# Item | Crude oil—Brent ($ per barrel) | Cocoa ($ per metric tonne) | Gold ($ per troy ounce)\n'+b[j:]
 fix_bodies()
@@ -109,7 +121,7 @@ for t in range(20000):
 assert best,'no balanced order'
 for (vi,i),o in best.items(): perm(VIG[vi]['questions'][i],o)
 for v in VIG: v.pop('id',None)
-MOCK=dict(id="mock8",title="Mock 8",kind="mock",minutes=132,desc="9 new vignettes + 2 re-done (names and numbers changed); scored separately",vignettes=VIG)
+MOCK=dict(id="mock8",rev=3,resetHl=[i for i,v in enumerate(VIG) if v['topic'] in ('Derivatives','Economics','Quantitative Methods','Financial Statement Analysis','Alternative Investments')],title="Mock 8",kind="mock",minutes=132,desc="9 new vignettes + 2 re-done (names and numbers changed); scored separately",vignettes=VIG)
 if __name__=='__main__':
     json.dump(MOCK,open('/home/user/jimin/bank/exam/mock8.json','w'),ensure_ascii=False,indent=1)
     k=''.join('ABC'[q['answer']] for v in VIG for q in v['questions'])
