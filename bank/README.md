@@ -51,3 +51,6 @@ Stored in bank/nov9_equity_m1.json (reading 17, 6 vignettes). Wrong (user pick �
 
 ## Equity Module 2 quiz (9 Nov): Discounted Dividend Valuation, 38/60 = 63%
 Stored in bank/nov9_equity_m2.json (reading 18, 11 vignettes; Dobson = app 'charmed', Daniel = app 'tasty', Chau also in nov9_equity_m1). Wrong (pick → answer): Q7 B→C, Q11 B→C, Q12 A→C, Q15 A→C, Q21 C→A, Q24 C→B, Q26 A→C, Q29 B→A, Q30 B→C, Q31 C→A, Q33 A→B, Q35 A→B, Q36 A→C, Q40 B→A, Q45 B→A, Q49 C→B, Q51 C→A, Q54 A→B, Q55 B→A, Q57 C→A, Q58 C→B, Q59 C→B. Themes: delayed-dividend discounting (Q11, Q54), H-model inputs (D0 x (1+gL), H = half) (Q40, Q55), PVGO uses E1 (Q45), terminal value = PV of dividends after stage 1 (Q29), sustainable growth and payout (Q35, Q36, Q51), GGM conditions (r > g, Q24, Q57), growth phases vs nominal GDP (Q58).
+
+## Mock 7 marking (9 Nov, taken in the app)
+Answers BABB BABC ACAB CBAB CBCB BCCB CABB CCBB BBBC BBBC CAAA = 33/44 (75.0%): new vignettes 23/32 (71.9%), re-done 10/12 (83.3%). Wrong: Q12, Q20, Q23, Q30, Q31, Q33, Q38, Q39, Q41, Q43, Q44 (Portfolio Management 1/4, Fixed Income 2/4, Equity 5/8). PDF made (Mock_Paper_7_Wrong_Answer_Notes.pdf).
