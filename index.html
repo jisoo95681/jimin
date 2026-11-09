@@ -746,7 +746,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v197 · 2026-11-09";
+  const APP_VERSION = "v198 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1559,7 +1559,7 @@
         if (!l.trim()) return;
         if (/^Exhibit \d/.test(l)) h += `<div class='ex-tt'>${esc(l)}</div>`;
         else if (/^Note[s]?:/.test(l)) h += `<p class='ex-note'>${esc(l)}</p>`;
-        else if (l.length < 60 && !/[.:;?!"]\s*$/.test(l)) h += `<div class='ex-tt'>${esc(l)}</div>`;
+        else if (l.length < 60 && !/[.:;?!"]\s*$/.test(l) && !/^(Option|Statement|Reason|Measure|Action|Comment|Investment|Policy|Approach)\s*\d/i.test(l)) h += `<div class='ex-tt'>${esc(l)}</div>`;
         else h += `<p>${esc(l)}</p>`;
       });
       flush();
@@ -1854,6 +1854,15 @@
     // Score by topic
     const by = {};
     flat.forEach(it => { const t = it.v.topic || "Other"; by[t] = by[t] || [0, 0]; by[t][1]++; if (last.ans[it.n] === it.q.answer) by[t][0]++; });
+    if (set.vignettes.some(v => v.group)) {
+      const g = { new: [0, 0], redo: [0, 0] };
+      flat.forEach(it => { const k = it.v.group === "redo" ? "redo" : "new"; g[k][1]++; if (last.ans[it.n] === it.q.answer) g[k][0]++; });
+      const gc = el("div", { className: "card" });
+      gc.append(el("b", {}, "New and re-done vignettes"),
+        el("p", {}, `New vignettes: ${g.new[0]} of ${g.new[1]} (${exPct(g.new[0], g.new[1])}%)`),
+        el("p", {}, `Re-done vignettes (names and numbers changed): ${g.redo[0]} of ${g.redo[1]} (${exPct(g.redo[0], g.redo[1])}%)`));
+      app.append(gc);
+    }
     const tc = el("div", { className: "card" });
     tc.append(el("b", {}, "By topic"));
     Object.entries(by).forEach(([t, [a, b]]) => tc.append(el("p", {}, `${t}: ${a} of ${b} (${exPct(a, b)}%)`)));

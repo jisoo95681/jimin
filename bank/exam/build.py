@@ -35,6 +35,10 @@ def build(vs,setid,title,off):
 sets=[]
 for k,(vs,(m,d)) in enumerate(zip(LOADED,SPECS)):
     st=build(vs,f'ps{k+1}',f'Practice set {k+1}',1+500*k); st['desc']=d; sets.append(st)
+import os
+for mf in ["mock7"]:
+    p=f"/home/user/jimin/bank/exam/{mf}.json"
+    if os.path.exists(p): sets.append(json.load(open(p)))
 js="// Exam section data: practice sets built from the notebook key notes (re-skinned vignettes), later mocks.\n// answer = index of the correct option (0 = A). Built by /tmp/gen/exam/build.py.\nconst EXAM_SETS = "+json.dumps(sets,ensure_ascii=False,indent=1)+";\n"
 open('/home/user/jimin/exam.js','w').write(js)
 json.dump(sets,open('/home/user/jimin/bank/exam/practice_sets.json','w'),ensure_ascii=False,indent=1)

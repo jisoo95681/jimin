@@ -40,3 +40,8 @@ Purpose: keep every vignette the user has pasted, with the answer key, so that q
 
 ## Retry Paper 2 marking (9 Nov)
 Answers AACBBACBCABCAACABABBACBACBBCBCCABCCACABCBAAA: 36/44 = 81.8%. Wrong: Q1, Q3, Q4, Q8, Q16, Q27, Q31, Q42. Q42 had a printing error (options B and C were both 11.5; B intended); option C changed to 13.5 in the bank.
+
+## Mock 7 (Exam section in the app, 9 Nov)
+Built by bank/exam/mock7.py (+ mock7_reskin.py); data in bank/exam/mock7.json and exam.js (id mock7). 8 never-used vignettes (eth6-cheng Q9-12, re-wang Q2,4,5,6, castovan Q17,20,23,24, golden-island Q30,31,46,47, d28-pak Q47-50, ca-lebedeva Q24,25,26,30, tb1-smith Q27,28,30,31, mf-cheung Q9,11,12,14) + 3 re-skins of missed vignettes (corp1-larsen, fsa6-dorado, s1a-stratton; names and numbers changed). The app scores new and re-done separately.
+Order: V1 Q1-4 Ethical and Professional Standards (new); V2 Q5-8 Alternative Investments (new); V3 Q9-12 Equity Valuation (new); V4 Q13-16 Corporate Issuers (re-done); V5 Q17-20 Economics (new); V6 Q21-24 Derivatives (new); V7 Q25-28 Financial Statement Analysis (re-done); V8 Q29-32 Fixed Income (new); V9 Q33-36 Quantitative Methods (new); V10 Q37-40 Equity Valuation (re-done); V11 Q41-44 Portfolio Management (new)
+Answer key: ABACCCBCBCACCBABBCCACCBACBBBAACBCBBABCACAACB

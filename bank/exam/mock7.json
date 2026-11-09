@@ -1,0 +1,526 @@
+{
+ "id": "mock7",
+ "title": "Mock 7",
+ "kind": "mock",
+ "minutes": 132,
+ "desc": "8 new vignettes + 3 re-done (names and numbers changed); scored separately",
+ "vignettes": [
+  {
+   "topic": "Ethical and Professional Standards",
+   "group": "new",
+   "body": "Marisa Cheng, CFA, is a portfolio manager with a large full-service investment advisory firm. She has been invited to speak on a podcast with a target audience of recent university graduates entering the investment industry. Cheng decided to focus her talk on her favorite topic: “How to Advance Your Career.” During the podcast, she mentions that most portfolio managers start in the Research Department. She then shares her philosophy that when entering the industry as an entry-level research analyst, you should create a research report at least once a week to prove yourself. This is particularly easy if you are an equity analyst, as the research analysis process should be the same regardless of the security being analyzed.\n\nCheng then offers advice to the audience about the benefits of changing employers, which she believes allows a person to move into higher positions with greater responsibilities. She explains “Based on my experience, younger employees get overlooked when employers are filling middle to senior management positions. By moving to a different firm every three to five years, you can typically join at a more senior level with higher pay. However, when you move to a new firm, you need to be cautious so your employer and client relationships are not harmed.”\n\nCheng recommends the following actions:\n\nAction 1: Notify clients of your new role before changing employers.\nAction 2: Utilize your own viewpoints based on your skills and experiences.\nAction 3: Share policies and processes utilized in past positions.\nThe podcast interviewer asks, “I know this is a bit off today’s topic, but I was wondering, as a CFA® charterholder, how do you ensure you are serving your clients’ interests as required by the CFA Code of Ethics and Standards of Professional Conduct? For instance, what would you do if you learned in a meeting with your client that due to a change in their circumstances, the investment product they have invested in no longer meets their investment goals and constraints outlined in their investment policy statement?”\n\nCheng responds, “Let’s consider three options.”\n\nOption 1: I could immediately reassure them their existing product is still suitable even under their changing circumstances.\nOption 2: I could advise them to shop around to determine whether other investment management firms had a more appropriate product to meet their investment goals and give them a list of questions to ask so they could compare services.\nOption 3: I could advise them to add some of our other investment products to their existing investment portfolio, so their new overall investment return objectives and risk profile could be met given their new circumstances.\nAfter thanking the interviewer for the opportunity to speak, Cheng makes the following final statement:\n\n“I would like to encourage all the listeners who are interested in advancing their careers in the investment industry to become CFA charterholders. The three sequential exams are very tough, as you can be tested on a wide array of curriculum topics, including financial analysis, economics, and derivatives. Becoming a charterholder also demonstrates you are more professional than those without the CFA® charter. By upholding the CFA Code of Ethics and Standards of Professional Conduct, you send a message to the industry that you really care about the interests of your clients and the integrity of the capital markets.”",
+   "questions": [
+    {
+     "q": "Is Cheng’s philosophy regarding an entry-level research analyst role most likely consistent with guidance for Standard V(A) Diligence and Reasonable Basis?",
+     "options": [
+      "No.",
+      "Yes, with regard to weekly research reports.",
+      "Yes, with regard to the equity analysis process."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Cheng’s philosophy regarding an entry-level research analyst’s role – that is, you should create a research report at least once a week and it is particularly easy if you are an equity analyst as the research process is the same regardless of the security – is inconsistent with the guidance for Standard V(A) Diligence and Reasonable Basis. Standard V(A) requires members and candidates to exercise diligence, independence, and thoroughness in analyzing investment, making investment recommendations, and taking investment action. It also requires members and candidates to have a reasonable and adequate basis, supported by appropriate research and investigations for any investment analysis, recommendation, or action. Members and candidates must put forth the necessary effort to support the recommendations they are making. At times, one week may not be enough time to undertake a thorough analysis of an investment, make a recommendation, and determine the suitability of the investment for the clients. When determining the suitability of an investment for the client, the necessary level of research and analysis will differ with the security under review, even if all are equity securities. Each security can vary in its complexity, particularly if the underlying assets are vastly different, are in different geographic locations, and have different business models. In providing an investment service, members and candidates typically use a variety of resources, including company reports, third-party research, and results from quantitative models.\nB. Incorrect. Cheng’s philosophy regarding an entry-level research analyst’s role is inconsistent with the guidance for Standard V(A) Diligence and Reasonable Basis. Standard V(A) requires members and candidates to exercise diligence, independence, and thoroughness in analyzing investment, making investment recommendations, and taking investment action. It also requires members and candidates to have a reasonable and adequate basis, supported by appropriate research and investigations for any investment analysis, recommendation, or action. Members and candidates must put forth the necessary effort to support the recommendations they are making. At times, one week may not be enough time to undertake a thorough analysis of an investment, make a recommendation, and determine the suitability of the investment for the clients. When determining the suitability of an investment for the client, the necessary level of research and analysis will differ with the security under review, even if all are equity securities. Each security can vary in its complexity, particularly if the underlying assets are vastly different, are in different geographic locations, and have different business models. In providing an investment service, members and candidates typically use a variety of resources, including company reports, third-party research, and results from quantitative models.\nC. Incorrect. Cheng’s philosophy regarding an entry-level research analyst’s role is inconsistent with the guidance for Standard V(A) Diligence and Reasonable Basis. Standard V(A) requires members and candidates to exercise diligence, independence, and thoroughness in analyzing investment, making investment recommendations, and taking investment action. It also requires members and candidates to have a reasonable and adequate basis, supported by appropriate research and investigations for any investment analysis, recommendation, or action. Members and candidates must put forth the necessary effort to support the recommendations they are making. At times, one week may not be enough time to undertake a thorough analysis of an investment, make a recommendation, and determine the suitability of the investment for the clients. When determining the suitability of an investment for the client, the necessary level of research and analysis will differ with the security under review, even if all are equity securities. Each security can vary in its complexity, particularly if the underlying assets are vastly different, are in different geographic locations, and have different business models. In providing an investment service, members and candidates typically use a variety of resources, including company reports, third-party research, and results from quantitative models."
+    },
+    {
+     "q": "Given Cheng’s advice regarding changing jobs, which recommended action should an employee most likely take to avoid violating the CFA Standards of Professional Conduct?",
+     "options": [
+      "Action 1",
+      "Action 2",
+      "Action 3"
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Action 1, Notify clients of your new role before changing employers, would violate Standard IV(A) Loyalty. Standard IV(A) requires members and candidates to act for the benefit of their employer and not deprive their employer of the advantage of their skills and abilities, divulge confidential information, or otherwise cause harm to their employer.\nB. Correct. A member or candidate is allowed to utilize their viewpoints based on their skills and the experiences gained from their former employment without violating Standard IV(A) Loyalty. By doing so, they would not potentially harm their former employer. Standard IV(A) Loyalty requires members and candidates to act for the benefit of their employer and not deprive their employer the advantage of their skills and abilities, divulge confidential information, or otherwise cause harm to their employer. By informing their old employer’s clients of their new role before changing employers and sharing policies and processes used at the old employers, they likely would harm their old employer and thus violate Standard IV(A).\nC. Incorrect. Action 2, Share policies and processes utilized in past positions, would violate Standard IV(A) Loyalty. Standard IV(A) requires members and candidates to act for the benefit of their employer and not deprive their employer of the advantage of their skills and abilities, divulge confidential information, or otherwise cause harm to their employer."
+    },
+    {
+     "q": "To avoid violating CFA Standards of Professional Conduct, which of Cheng’s options in response to the interviewer’s question is least appropriate?",
+     "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Option 1, I could immediately reassure them their existing product is still suitable even under their changing circumstances, would not be appropriate. Before giving any investment advice, Cheng should better understand the changing circumstances of the client and determine whether the existing product is still suitable rather than immediately state that it is. By failing to understand their changing circumstances and to reassess their current portfolio, Cheng would be in violation of Standard III(C) Suitability. This standard requires members and candidates to determine whether an investment is suitable for the client’s financial situation and consistent with the client’s written objectives, mandates, and constraints before making an investment recommendation or taking investment action. The steps outlined in Options 2 and 3 would comply with Standard III(C) Suitability – that is, both consider the change in the client’s circumstances.\nB. Incorrect. Option 2, I could advise them to shop around to determine whether other investment management firms had a more appropriate product to meet their investment goals and give them a list of questions to ask so they could compare services, would not violate CFA Standards of Professional Conduct. By doing so, Cheng would be helping the client to determine which investment product is best for them in accordance with Standard III(C) Suitability. Cheng also would be putting the interests of the client before hers or her firms as required by Standard III(A) Loyalty, Prudence, and Care.\nC. Incorrect. Option 3, I could advise them to add some of our other investment products to their existing investment portfolio, so their new overall investment return objectives and risk profile could be met given their new circumstances, could be considered appropriate action if adding some of the firm’s other investment products to the client’s portfolio would result in a better match of the client’s investment objectives and risk profile as required under Standard III(C) Suitability."
+    },
+    {
+     "q": "Which component of Cheng’s final statement most likely causes her to violate CFA Standards of Professional Conduct?",
+     "options": [
+      "The message to the industry",
+      "Comment on testing and curriculum",
+      "A CFA charterholder’s level of professionalism"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Cheng does not misrepresent or exaggerate the meaning of the CFA charter when stating, “By upholding the CFA Code of Ethics and Standards of Professional Conduct you send a message to the industry that you really care about the interests of your clients and the integrity of the capital markets.” Therefore, she did not violate Standard VII(B) Reference to CFA Institute, the CFA designation, and the CFA® Program. Standard VII(B), which requires members and candidates when referring to CFA Institute, CFA Institute memberships, the CFA designation, or candidacy in the CFA Program to not misrepresent or exaggerate the meaning or implications of membership in CFA Institute, holding the CFA designation, or candidacy in the CFA Program.\nB. Incorrect. Cheng does not violate Standard VII(A) Responsibilities as a CFA Institute member or CFA candidate when making the statement that the test is hard and you can be tested on a wide array of curriculum topics (she is not stating what was tested on a specific exam) or examples of the core curriculum covered in the CFA Program. She stated, “While the three sequential exams are very tough, the core curriculum covers a wide array of topics, including financial analysis, economics, and derivatives.” This is not confidential program or exam information in that it is publicly available on the Internet as a part of the CFA Program descriptions. Standard VII(A) Responsibilities as a CFA Institute member or CFA candidate requires members and candidates to not engage in any conduct that compromises the reputation or integrity of CFA Institute or the CFA designation or the integrity, validity, or security of CFA Institute programs. Cheng did not violate the standard when she stated, “By upholding the CFA Code of Ethics and Standards of Professional Conduct you send a message to the industry that you really care about the interests of your clients and the integrity of the capital markets,” as she did not misrepresent or exaggerate the meaning of the CFA charter.\nC. Correct. Cheng’s comment, “Becoming a charterholder also demonstrates you are more professional than those without the CFA charter, violates Standard VII(B) Reference to CFA Institute, the CFA® designation, and the CFA® Program. By making such a claim, she is exaggerating the meaning of the charter. Standard VII(B) requires members and candidates when referring to CFA Institute, CFA Institute memberships, the CFA designation, or candidacy in the CFA Program to not misrepresent or exaggerate the meaning or implications of membership in CFA Institute, holding the CFA designation, or candidacy in the CFA Program. Cheng does not violate Standard VII(A) Responsibilities as a CFA Institute member or CFA candidate when making the statement about what could be tested (she is not stating what was tested on a specific exam), giving curriculum specifics or examples of the core curriculum covered in the CFA Program. This information is publicly available on the CFA Institute website. Cheng does not misrepresent or exaggerate the meaning of the CFA charter when stating, “By upholding the CFA Code of Ethics and Standards of Professional Conduct you send a message to the industry that you really care about the interests of your clients and the integrity of the capital markets.” Therefore, she does not violate Standard VIII(B)."
+    }
+   ]
+  },
+  {
+   "topic": "Alternative Investments",
+   "group": "new",
+   "body": "Tim Wang is a financial adviser specializing in commercial real estate investing. He is meeting with Mark Caudill, a new client who is looking to diversify his investment portfolio by adding real estate investments. Caudill has heard about various investment vehicles related to real estate from his friends and is seeking a more in-depth understanding of these investments from Wang.\n\nWang begins the meeting by advising Caudill of four options that are available when investing in real estate, including the following:\n\nOption 1. Direct ownership in real estate\n\nOption 2. Publicly traded real estate investment trusts\n\nOption 3. Publicly traded real estate operating companies\n\nOption 4. Publicly traded residential mortgage-backed securities\n\nWang next asks Caudill about his investment preferences. Caudill responds by telling Wang that he prefers to invest in equity securities that are highly liquid, provide high income, and are not subject to double taxation.\n\nCaudill asks Wang how the economic performance of REITs and REOCs is evaluated and how their shares are valued. Wang advises Caudill there are multiple measures of economic performance for REITs and REOCs, including the following:\n\nMeasure 1. Net operating income\n\nMeasure 2. Funds from operations\n\nMeasure 3. Adjusted funds from operations\n\nIn response, Caudill asks Wang,\n\n“Which of the three measures is the best measure of a REIT’s current economic return to shareholders?”\n\nTo help Caudill’s understanding of valuation, Wang presents Caudill with data on Baldwin, a health care REIT that primarily invests in independent and assisted senior housing communities in large cities across the United States. Selected financial data on Baldwin for the past two years are provided in Exhibit 1.\n\nExhibit 1\nBaldwin REIT Summarized Income Statement (USD thousands, except per-share data)\n#   | Year Ending 31 December\n  | 2019 |   | 2018\nRental income | 339,009 |   | 296,777\nOther property income | 6,112 |   | 4,033\nTotal income | 345,121 |   | 300,810\nRental expenses |  \nProperty operating expenses | 19,195 |   | 14,273\nProperty taxes | 3,610 |   | 3,327\nTotal property expenses | 22,805 |   | 17,600\nNet operating income | 322,316 |   | 283,210\nOther income (gains on sale of properties) | 2,162 |   | 1,003\nGeneral and administrative expenses | 21,865 |   | 19,899\nDepreciation and amortization | 90,409 |   | 78,583\nNet interest expenses | 70,017 |   | 56,404\nNet income | 142,187 |   | 129,327\nWeighted average shares outstanding | 121,944 |   | 121,863\nEarnings per share | 1.17 |   | 1.06\nDividend per share | 0.93 |   | 0.85\nPrice/FFO, based on year-end stock price | 11.5× |   | 12.7×\nBefore the meeting, Wang had put together some valuation assumptions for Baldwin in anticipation of discussing valuation with Caudill. Wang explains the process of valuing a REIT share using discounted cash flow analysis, and he proceeds to estimate the value of Baldwin on a per-share basis using a two-step dividend discount model using the data provided in Exhibit 2.\n\nExhibit 2\nBaldwin Valuation Projections and Assumptions\nCurrent risk-free rate | 4.0%\nBaldwin beta | 0.90\nMarket risk premium | 5.0%\nAppropriate discount rate (CAPM) | 8.5%\n\nExpected dividend per share, 1 year from today | $1.00\nExpected dividend per share, 2 years from today | $1.06\nLong-term growth rate in dividends, starting in Year 3 | 5.0%",
+   "questions": [
+    {
+     "q": "Relative to Option 2 and Option 3, an advantage of investing in Option 1 is:",
+     "options": [
+      "greater liquidity.",
+      "lower investment requirements.",
+      "greater control over property-level investment decisions."
+     ],
+     "answer": 2,
+     "why": "C is correct. Direct property ownership offers greater control over property-level investment decisions compared with the level of control exhibited by shareholders in REITs and REOCs."
+    },
+    {
+     "q": "The most appropriate response to Caudill’s question is:",
+     "options": [
+      "Measure 1.",
+      "Measure 2.",
+      "Measure 3."
+     ],
+     "answer": 2,
+     "why": "C is correct. Measure 3, adjusted funds from operations, is a refinement of FFO that is designed to be a more accurate measure of current economic income. In essence, FFO is adjusted to remove any non-cash rent and to include a provision for maintenance-type capital expenditures and leasing costs. Maintenance expenses are required for a business to continue as a going concern."
+    },
+    {
+     "q": "Based on Exhibit 1, the 2019 year-end share price of Baldwin was closest to:",
+     "options": [
+      "$13.23.",
+      "$21.73.",
+      "$30.36."
+     ],
+     "answer": 1,
+     "why": "B is correct. Baldwin’s FFO per share in 2019 was $1.89, and the resulting share price was $21.73. First, calculate FFO per share in 2019, and then apply the year-end P/FFO multiple of 11.5×.\n\nFFO = accounting net earnings, excluding (a) depreciation charges on real estate, (b) deferred tax charges, and (c) gains or losses from sales of property and debt restructuring.\n2019 accounting net income: $142,187\n2019 depreciation charges: $90,409\n2019 deferred tax charges: na\n2019 gains on sale of properties (other income): $2,162\n2019 shares outstanding: 121,944\n2019 year-end price/FFO = 11.5×.\n2019 Baldwin FFO per share = ($142,187 + $90,409 – $2,162)/121,944 shares = $1.89. At the given 2019 year-end price/FFO multiple of 11.5×, this results in a share price for Baldwin of $1.89 × 11.5 = $21.73."
+    },
+    {
+     "q": "Based on Exhibit 2, the intrinsic value of the Baldwin REIT on a per share basis using the two-step dividend discount model is closest to:",
+     "options": [
+      "$26.72.",
+      "$27.59.",
+      "$28.76."
+     ],
+     "answer": 2,
+     "why": "C is correct. The estimated value per share for the Baldwin REIT using a two-step dividend discount model is $28.76, calculated as follows:\n\n \tStep 1\t\tStep 2\n \tYear 1\tYear 2\t\tYear 3\nDividends per share\t$1.00\t$1.06\t \t$1.11\nValue of stock at end of Year 2a\t \t$31.71\t \t \n \t \t$32.77\t \t \nDiscount rate: 8.50%\n            Net present value of all dividends:b $28.76\naCalculated as $1.11/(0.085 – 0.05) = $31.71.\nbCalculated as $1.00/(1.085) + $32.77/(1.085)2 = $28.76."
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "group": "new",
+   "body": "Elena Castovan is a junior analyst with Contralith Capital, a long-only equity investment manager. She has been asked to value three stocks on Contralith’s watch list: Portous, Inc. (PTU), SSX Financial (SSX), and Tantechi Ltd. (TTCI).\n\nDuring their weekly meeting, Castovan and her supervisor, Ariana Beckworth, discuss characteristics of residual income models. Castovan tells Beckworth the following.\n\nStatement 1:\nThe present value of the terminal value in RI models is often a larger portion of the total intrinsic value than it is in other DCF valuation models.\n\nStatement 2:\nThe RI model’s use of accounting income assumes that the cost of debt capital is appropriately reflected by interest expense.\n\nStatement 3:\nRI models cannot be readily applied to companies that do not have positive expected near-term free cash flows.\n\nBeckworth asks Castovan why an RI model may be more appropriate for valuing PTU than the dividend discount model or a free cash flow model. Castovan tells Beckworth that, over her five-year forecast horizon, she expects PTU to perform the following actions.\n\nReason 1:\nPay dividends that are unpredictable\n\nReason 2:\nGeneratepositiveand fairly predictable free cash flows\n\nReason 3:\nReport significant amounts of other comprehensive income\n\nAt the conclusion of their meeting, Beckworth asks Castovan to value SSX using RI models. Selected financial information on SSX is presented in Exhibit 1.\n\nExhibit 1\nSSX Financial (SSX) Selected Financial Data\nTotal assets (millions) | €4,000.00\nCapital structure | 60% debt/40% equity\nEBIT (millions) | €700.00\nTax rate | 35.00%\nReturn on equity (ROE) | 23.37%\nPretax cost of debta | 5.20%\nCost of equity | 15.00%\nMarket price per share | €48.80\nPrice-to-book ratio | 2.10\na Interest expense is tax-deductible.\nCastovan’s final assignment is to determine the intrinsic value of TTCI using both a single-stage and a multistage RI model. Selected data and assumptions for TTCI are presented in Exhibit 2.\n\nExhibit 2\nTantechi Ltd. (TTCI) Selected Financial Data and Assumptions\nBook value per share | €45.25\nMarket price per share | €126.05\nConstant long-term ROE | 12.00%\nConstant long-term earnings growth rate | 4.50%\nCost of equity | 8.70%\nFor the multistage model, Castovan forecasts TTCI’s ROE to be higher than its long-term ROE for the first three years. Forecasted earnings per share and dividends per share for TTCI are presented in Exhibit 3. Starting in Year 4, Castovan forecasts TTCI’s ROE to revert to the constant long-term ROE of 12% annually. The terminal value is based on an assumption that residual income per share will be constant from Year 3 into perpetuity.\n\nExhibit 3\nTantechi Ltd. (TTCI) Forecasts of Earnings and Dividends\n#   | Year 1 | Year 2 | Year 3\nEarnings per share (€) | 7.82 | 8.17 | 8.54\nDividends per share (€) | 1.46 | 1.53 | 1.59\nBeckworth questions Castovan’s assumption regarding the implied persistence factor used in the multistage RI valuation. She tells Castovan that she believes that a persistence factor of 0.10 is appropriate for TTCI.",
+   "questions": [
+    {
+     "q": "Which of Castovan’s statements regarding residual income models is correct?",
+     "options": [
+      "Statement 1",
+      "Statement 2",
+      "Statement 3"
+     ],
+     "answer": 1,
+     "why": "B is correct. The residual income model’s use of accounting income assumes that the cost of debt capital is reflected appropriately by interest expense."
+    },
+    {
+     "q": "Based on Exhibit 1, residual income for SSX is closest to:",
+     "options": [
+      "€40.9 million.",
+      "€90.2 million.",
+      "€133.9 million."
+     ],
+     "answer": 2,
+     "why": "C is correct. The residual income can be calculated using net income and the equity charge or using net operating profit after taxes and the total capital charge.\nResidual income = Net income – Equity charge\nCalculation of Net Income (values in millions):\nEBIT\t€700.0\t\nLess Interest expense\t€124.8\t(= €4,000 × 0.60 × 0.052)\nPretax income\t€575.2\t\nLess Income tax expense\t€201.3\t(= €575.20 × 0.35)\nNet income\t€373.9\t\nEquity charge = Total assets × Equity weighting × Cost of equity\nEquity charge = €4,000 million × 0.40 × 0.15 = €240 million\nTherefore, residual income = €373.9 million – €240 million = €133.9 million.\nAlternatively, residual income can be calculated from NOPAT as follows.\nResidual income = NOPAT – Total capital charge\nNOPAT = EBIT × (1 – Tax rate)\nNOPAT = €700 million × (1 – 0.35) = €455 million\nThe total capital charge is as follows.\nEquity charge = Total assets × Equity weighting × Cost of equity\n= €4,000 million × 0.40 × 0.15\n= €240 million\nDebt charge = Total assets × Debt weighting × Pretax cost of debt × (1 – Tax rate)\n= €4,000 million × 0.60 × 0.052(1 – 0.35)\n= €81.1 million\nTotal capital charge = €240 million + €81.1 million\n= €321.1 million\nTherefore, residual income = €455 million – €321.1 million = €133.9 million."
+    },
+    {
+     "q": "Based on Exhibit 2, the justified price-to-book ratio for TTCI is closest to:",
+     "options": [
+      "1.79.",
+      "2.27.",
+      "2.79."
+     ],
+     "answer": 0,
+     "why": "A is correct. The justified price-to-book ratio is calculated as"
+    },
+    {
+     "q": "Based on Exhibits 2 and 3 and the multistage RI model, Castovan should estimate the intrinsic value of TTCI to be closest to:",
+     "options": [
+      "€54.88.",
+      "€83.01.",
+      "€85.71."
+     ],
+     "answer": 2,
+     "why": "C is correct. Residual income per share for the next three years is calculated as follows.\n \tYear 1\tYear 2\tYear 3\nBeginning book value per share\t45.25\t51.61\t58.25\nEarnings per share\t7.82\t8.17\t8.54\nLess dividends per share\t1.46\t1.53\t1.59\nChange in retained earnings\t6.36\t6.64\t6.95\nEnding book value per share\t51.61\t58.25\t65.20\nEarnings per share\t7.82\t8.17\t8.54\nLess per share equity charge*\t3.94\t4.49\t5.07\nResidual income\t3.88\t3.68\t3.47\n* Per share equity charge = Beginning book value per share × Cost of equity\nYear 1 per share equity charge = 45.25 × 0.087 = 3.94\nYear 2 per share equity charge = 51.61 × 0.087 = 4.49\nYear 3 per share equity charge = 58.25 × 0.087 = 5.07\nBecause Castovan forecasts that residual income per share will be constant into perpetuity, equal to Year 3 residual income per share, the present value of the terminal value is calculated using a persistence factor of 1.\nPresent value of terminal value = \n = \n \n= 33.78\nSo, the intrinsic value of TTCI is then calculated as follows.\n\n€\n€"
+    }
+   ]
+  },
+  {
+   "topic": "Corporate Issuers",
+   "group": "redo",
+   "body": "Ingrid Halvorsen is the CFO of Kestrel Yachts (KY), a Swedish manufacturer of sailing yachts. Halvorsen is reviewing KY's dividend policy before recommending a course of action to the Board of Directors on the current year dividend payment.\n\nKY's business is influenced by many factors, including commodity prices, interest rates and general economic conditions.\n\nExhibit 1\n# | Current Year | Prior Year | Two Years Ago\nPre-tax income (SEK millions) | 585 | 415 | 385\nAfter-tax net income (SEK millions) | 410 | 290 | 270\nDividends paid (SEK millions) | --- | 110 | 100\nNumber of shares outstanding (millions) | 5 | 5 | 5\nKY's shares currently trade at SEK 380.\n\nExhibit 1 shows that KY had a very strong year, generating an additional SEK 120 million of net income over the previous year. Halvorsen considers four options, in addition to the regular dividend, to return part of this additional capital to shareholders in the current year:\n\nOption 1: Issue a stock dividend of 15%.\nOption 2: Increase the annual per share dividend by 15% over the prior year.\nOption 3: Maintain the current annual dividend and pay a special dividend of SEK 9 per share.\nOption 4: Repurchase SEK 150 million of shares at a SEK 30 premium to the current share price.",
+   "questions": [
+    {
+     "q": "For KY, Option 1 would most likely:",
+     "options": [
+      "affect its capital structure.",
+      "increase the value of each shareholder's ownership position in the company.",
+      "reduce the volatility of its share price."
+     ],
+     "answer": 2,
+     "why": "A stock dividend has no economic effect on the company, so it does not change the capital structure (a cash dividend would).\nThe increase in shares held is offset by a lower price per share, so each shareholder's ownership value is unchanged.\nCorrect: the stock dividend increases the float, which improves liquidity and dampens share price volatility."
+    },
+    {
+     "q": "Compared to Option 2, Option 3 results in a total current year dividend payment per share that is:",
+     "options": [
+      "lower by SEK 5.70.",
+      "higher by SEK 5.70.",
+      "higher by SEK 9.00."
+     ],
+     "answer": 1,
+     "why": "Prior DPS = 110 ÷ 5 = SEK 22.00.\nOption 2 = 22.00 × 1.15 = SEK 25.30.\nOption 3 = 22.00 + 9.00 = SEK 31.00.\nOption 3 − Option 2 = 31.00 − 25.30 = +SEK 5.70 (higher).\n'Lower by 5.70' reverses the options; 'higher by 9.00' looks only at the special dividend."
+    },
+    {
+     "q": "Based on Exhibit 1, the safety of KY's dividend in the prior year compared with two years ago:",
+     "options": [
+      "decreased.",
+      "remained the same.",
+      "increased."
+     ],
+     "answer": 0,
+     "why": "Dividend coverage = after-tax net income ÷ dividends paid.\nTwo years ago: 270 ÷ 100 = 2.700.\nPrior year: 290 ÷ 110 = 2.636.\nCoverage fell, so the dividend became less safe: decreased."
+    },
+    {
+     "q": "If Option 4 is implemented using surplus cash, which of the following is most likely to decrease? KY's:",
+     "options": [
+      "debt-to-assets ratio.",
+      "total book value.",
+      "debt-to-equity ratio."
+     ],
+     "answer": 1,
+     "why": "A repurchase with surplus cash lowers both assets (cash) and shareholders' equity, so total book value falls.\nDebt is unchanged while assets and equity fall, so debt-to-assets and debt-to-equity both rise.\nWhether book value per share rises or falls depends on the price paid versus BVPS."
+    }
+   ]
+  },
+  {
+   "topic": "Economics",
+   "group": "new",
+   "body": "Golden Island is a flourishing country because of tourism. The island is governed by a Governor General, a parliamentary body of elected legislators, and a couple of agencies to regulate the island’s economic and social environment. Recently, prospectors in the mountain range bordering the southern coast of the island discovered large deposits of gold, silver, and platinum. The government is concerned that development of these deposits will harm the tourist trade. Elena Trippi has been asked to participate in a series of fact-finding sessions conducted jointly by the island’s ministries of finance and tourism. This blue-ribbon fact-finding committee has been meeting weekly for the past two months.\nTrippi began a recent meeting of the committee by presenting a summary of Golden Island’s current financial and economic conditions. Comparing Golden Island with other developing nations, she presents these conditions in Exhibit 1.\nExhibit 1 Current Financial and Economic Conditions\nRelative to other developing nations, Golden Island\n1. has a relatively low level of capital per worker.\n2. does not have competitive financial markets. The island’s single commercial bank also acts as the central bank of Golden Island.\n3. has a relatively low rate of savings and investment.\n4. has a low level of literacy (about half the population is illiterate).\n5. has well-established property rights.\n6. tightly regulates capital flows into and out of the economy.\nTrippi states that these conditions do not necessarily cause great harm to the tourist industry. But the mining and processing of gold, silver, and platinum will require re-examination of economic policies and circumstances. In particular, Trippi is concerned about the issue of tariffs because Golden Island has relatively high tariffs on capital goods.\nTrippi states:\n\"Golden Island will benefit from continuing to protect domestic capital goods by maintaining its relatively high tariff on non-domestic capital goods. High tariffs have little impact on foreign direct investment (FDI), and they generate revenue for the government.\"\nRishi Chatterjee is Golden Island’s Interim Deputy Minister for Tourism. He states that he is not very knowledgeable about the gold business but believes that developing the island’s gold deposits will affect the relative value of its currency, the sona (Sn). The current exchange rate of the sona against the US dollar is Sn8.50/USD. Chatterjee states that increased FDI will cause the sona to strengthen against world currencies. Tourism will be harmed because goods and services priced in sonas will appear more expensive to the non-domestic visitors who make up the bulk of the tourist trade.\nTrippi shows the committee Exhibit 2, which contains data from the currency exchange markets relative to the sona. On the basis of this data, Trippi states that markets currently anticipate that the sona will weaken, not strengthen, against both the dollar and the British pound.\nExhibit 2 Exchange Rates, Interest Rates, and Inflation Rates\n#   | Current Spot Rates | One-Year Interest Rate (%) | One-Year Inflation Rate (%)\nGolden Island | Sn8.50/USD | 6.5 | 3\nUnited Kingdom | GBP0.62/USD | 4.05 | 1.6\nUnited States | --- | 3.5 | 1.3\nGolden Island’s Minister of Finance and president of the Central Bank, Rajiv Sengupta, addresses the issues of potential inflation as the island transitions to greater growth. He assures the committee that Golden Island’s central bank stands ready to use monetary tools to prevent such inflation",
+   "questions": [
+    {
+     "q": "How many of the current financial and economic conditions listed in Exhibit 1 at least partially explain why Golden Island faces limited economic growth?",
+     "options": [
+      "All six are limitations on growth.",
+      "Exactly five of the six are limitations on growth.",
+      "Exactly three of the six are limitations on growth."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. All of the factors except 'well-established property rights' represent limitations to growth hence, exactly 5 factors are limitations.\nB. Correct. All of the factors except 'well-established property rights' represent limitations to growth. Hence, exactly five factors are limitations.\nC. Incorrect. All of the factors except 'well-established property rights' represent limitations to growth hence, exactly 5 factors are limitations."
+    },
+    {
+     "q": "Trippi’s statement regarding tariffs is best described as:",
+     "options": [
+      "correct.",
+      "incorrect, because high tariffs support increases in FDI.",
+      "incorrect, because eliminating high tariffs on manufactured goods will increase Golden Island’s physical capital and contribute to higher productivity."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity.\nB. Incorrect. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity.\nC. Correct. Developing countries could benefit from policies that encourage investment from abroad, such as eliminating high tariffs on foreign imports (especially capital goods). Such free trade policies serve to increase a nation’s capital stock and increase productivity."
+    },
+    {
+     "q": "Based on Exhibit 2, the one-year forward exchange rate of the Sn/GBP is closest to:",
+     "options": [
+      "Sn8.75/GBP.",
+      "Sn13.45/GBP.",
+      "Sn14.03/GBP."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect because it uses the Sn/USD spot rate and the sona over US interest rates: 1.065/1.035 × 8.50 = 8.7464.\nB. Incorrect because it uses the incorrect ratio of rates. It uses the Sn/USD spot rate and the sona over US interest rates: 1.0405/1.065 × 13.70968 = 13.4522.\nC. Correct. First, find the current Sn/GBP exchange rate. Then, find the one-year forward Sn/GBP rate. Sn/GBP = Sn/USD × USD/GBP = 8.50 × 1.6129 = Sn 13.70968/GBP. Note that 1.6129 is the inverse of 0.62, which is the GBP/USD exchange rate given in Exhibit 2. The forward rate equals the spot rate multiplied by the ratio of one plus the sona one-year rate divided by one plus the pound one-year rate. In this case, the forward rate = 13.70968 × 1.065/1.0405 = 14.03249. An alternative approach is to convert USD1 into SN and GBP and determine what an investment in each of those currencies would be worth in one year at the Golden Island and UK interest rates, respectively. The one-year forward rate will then be the number of Sn required to purchase GBP 1 at that time. MAX17024-IS-Fb"
+    },
+    {
+     "q": "Which of the following will Sengupta most likely use to address the monetary issues relating to greater growth of the island’s economy? The central bank will:",
+     "options": [
+      "sell domestic securities to the private sector.",
+      "buy domestic securities from the private sector.",
+      "reduce the interest rate on loans to the private sector."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The threat is inflation. To counter such a threat, the central bank will want to reduce the money supply. The central bank will sell domestic securities to the private sector.\nB. Incorrect. The central bank will sell domestic securities to the private sector.\nC. Incorrect. To reduce the money supply, the central bank would raise rates on loans to the private sector."
+    }
+   ]
+  },
+  {
+   "topic": "Derivatives",
+   "group": "new",
+   "body": "Seo-jun Pak is the CEO of the Nakdong Foundation (“the Foundation”), an organization located in Busan, South Korea, whose mission is to support rural healthcare initiatives. The Foundation has a KRW220 billion portfolio consisting entirely of actively managed South Korean equities. The portfolio manager, Ha-eun Kang, has an excellent 14-year track record of beating the KOSPI 200, an index of the 200 largest firms traded on the Korea Exchange. She is permitted to use derivatives to control risks within the portfolio and to synthetically alter positions without trading the underlying securities, many of which are somewhat illiquid.\n\nKang is meeting with Pak to review a forward position in the portfolio and to discuss two other positions she is considering establishing. Kang explains that six months ago she was concerned the Korean stock market was going to experience a substantial downward price movement in the near term, so she entered into a one-year forward contract to sell KRW180 million times the KOSPI 200, which was at 270.00, at a forward price of 265.07.\n\nPak asks, “Why did you agree to sell the index at a forward price that is less than the price it was trading at that time? Stocks are generally expected to rise in value over time.” Kang responds, “Forward agreements are priced using an arbitrage model that considers the current price of the asset, the level of interest rates, any carry benefits received from owning the asset, and any carry costs associated with owning the asset. Carry benefits can include dividends or coupon payments, while carry costs can include storage, insurance, waste, or interest paid to borrow funds to purchase the asset. The forward price is the future value of the current price plus the future value of the carry costs less the future value of the carry benefits.”\n\nPak notes the KOSPI 200 has risen to 278.50 over the last six months and asks, “How much have we lost on the KRW180 million forward position to date?” Kang responds, “I’ll calculate the loss taking into account the current six-month interest rate of 0.68% and the continuously compounded dividend yield on the KOSPI 200, which is 2.20%.”\n\nKang tells Pak she is considering entering into a currency swap because the Foundation has a number of long-term contracts to purchase supplies and equipment for rural clinics and these contracts are priced in US dollars. She explains, “A fixed-for-fixed currency swap would help reduce the risk from fluctuating USD/KRW exchange rates by providing fixed US dollar payments in exchange for fixed Korean won payments. I’m looking at a five-year swap with annual payments. I’ve done some analysis of this swap based on current Korean and US interest rates and present value factors, which I’m providing to you in Exhibit 1.”\n\nExhibit 1 Korean and US Interest Rates and PV Factors\n# T | Korean Treasury Yield | Present Value KRW1 | US Treasury Yield | Present Value USD1\n1 | 1.82 | 0.9821 | 1.17 | 0.9884\n2 | 2.05 | 0.9602 | 1.23 | 0.9758\n3 | 2.18 | 0.9374 | 1.29 | 0.9623\n4 | 2.26 | 0.9145 | 1.37 | 0.9470\n5 | 2.30 | 0.8925 | 1.55 | 0.9260\nKang also brings up a concern about the portfolio’s 100% allocation to Korean equities. She tells Pak, “The KOSPI 200 has been far more volatile over the past 15 years than other major market indexes. Although I have great confidence in my ability to continue to beat the index, it would be useful to diversify our holdings by using a swap to exchange some of the underlying index return for another return, such as the S&P 500. Assuming no dividends, as is the case for these two indexes, equity-for-equity swaps do not need to be priced. The carry arbitrage model shows that the two parties to the swap must agree to swap the index returns without any adjustment because the swap is equivalent to two equity-for-fixed swaps. The fixed interest payments will be the same and will cancel each other out. The fixed interest rates will also be the same as those for a fixed-for-floating interest rate swap of the same maturity entered into at the same time.”",
+   "questions": [
+    {
+     "q": "Is Kang most likely correct in her description of the pricing of forward contracts?",
+     "options": [
+      "Yes",
+      "No, she is incorrect regarding inputs to the arbitrage model",
+      "No, she is incorrect regarding her examples of carry costs and carry benefits"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Kang is incorrect in the list of potential carry costs because she has included borrowing costs.\nB. Incorrect. Kang is correct in describing the inputs that are used in the arbitrage model to calculate the forward price.\nC. Correct. Kang is incorrect because she has included borrowing costs in the list of potential carry costs of owning the asset. Under the arbitrage model, the future value calculations (of the current price and the carry costs and carry benefits of ownership) use a discount rate that takes into account the cost of borrowing funds to purchase and hold the asset. Including these costs again in the carry costs would be double counting and therefore inaccurate. Kang is correct in her description of carry benefits."
+    },
+    {
+     "q": "Given the information Kang provided in her response to Pak’s question about the equity forward position, the loss on the position is closest to:",
+     "options": [
+      "KRW0.38 billion.",
+      "KRW1.65 billion.",
+      "KRW2.03 billion."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. This is the loss measured as the present value of the difference between the current spot and the new forward price or V 0 = P V ( F 0.5 − S 0.5 ) = 276.39 − 278.50 e 0.0068 × 0.5 = − 2.10 , multiplied by KRW180 million equals a loss on the equity forward position of KRW0.38 billion.\nB. Incorrect. This is the loss that would be measured if no adjustment was made for the half-year maturity of the new (reversing) forward contract or F 0.5 = S 0.5 e ( r c + C C − C B ) = 278.50 e ( 0.0068 + 0 − 0.022 ) = 274.30 and V 0 = P V ( F 0 − F 0.5 ) = 265.07 − 274.30 e 0.0068 = − 9.17 , multiplied by KRW180 million equals a loss on the equity forward position of KRW1.65 billion.\nC. Correct. Given the current spot index value and six-month interest rate, the forward price for a contract initiated today and maturing in six months would be F 0.5 = S 0.5 e ( r c + C C − C B ) T = 278.50 e ( 0.0068 + 0 − 0.022 ) 0.5 = 276.39 . The value of the short (selling) forward position is the present value of the difference between the new forward price (agree to buy to “cancel” exiting contract) and the original forward price (agree to sell at that price) or V 0 = P V ( F 0 − F 0.5 ) = 265.07 − 276.39 e 0.0068 × 0.5 = − 11.28 . The decline in the forward price is multiplied by the contract size of KRW180 million to give a loss on the equity forward position of KRW2.03 billion."
+    },
+    {
+     "q": "Based on the information in Exhibit 1, the interest rate that the Foundation would receive in the proposed currency swap is closest to:",
+     "options": [
+      "1.32%.",
+      "1.54%.",
+      "2.29%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This is the geometric average of the US interest rates.\nB. Correct. The Foundation would receive the US fixed interest rate, which is calculated as [ 1 − P V n , U S ( 1 ) ] [ ∑ i = 1 n P V i , U S ( 1 ) ] = [ 1 − 0.9260 ] [ 0.9884 + 0.9758 + 0.9623 + 0.9470 + 0.9260 ] = 0.074 4.7995 = 0.0154 or 1.54%.\nC. Incorrect. This is the Korean fixed rate, which the Foundation would pay, not receive."
+    },
+    {
+     "q": "Is Kang most likely correct in her description of equity-for-equity swaps?",
+     "options": [
+      "Yes.",
+      "No, she is incorrect regarding the need to price the swap.",
+      "No, she is incorrect regarding the relationship between the pricing of equity swaps and interest rate swaps."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Kang is correct in both descriptions. The carry arbitrage model shows equity-for-equity swaps do not need to be priced because they can be replicated by an equity-for-fixed swap and a fixed-for-equity swap. The fixed rates will be the same for both swaps and will cancel out. Further, the fixed rate will be the same as it would be for a fixed-for-floating interest rate swap with the same maturity entered into at the same time.\nB. Incorrect. Kang is correct that equity-for-equity swaps do not need to be priced.\nC. Incorrect. Kang is correct that the fixed rate for an equity-for-fixed swap would be the same as for a fixed-for-floating interest rate swap of the same maturity entered into at the same time."
+    }
+   ]
+  },
+  {
+   "topic": "Financial Statement Analysis",
+   "group": "redo",
+   "body": "Henrik Vos is an analyst at Northgate Asset Management, which runs a range of investment funds. He analyses the recent performance of Aurelia Drinks AG (AD), a multinational producer of carbonated soft drinks that recently entered the energy drinks market. As a core holding, AD's strong position in Europe gives Northgate geographic diversification, because its funds are mostly invested in North America.\n\nVos reviews AD's balance sheets for the most recent and previous years and comments: \"AD is continuing to follow a growth-by-acquisition strategy.\" He also adjusts AD's most recent income statement to find the company's net income under the direct control of management, using the information (in EUR millions) in Exhibit 1.\n\nExhibit 1\n# | Most Recent Year\nIncome from operations | 1,920\nIncome from investments in associates | 236\nInterest expense | (731)\nTaxes | (271)\nNet income | 1,154\nOf which: |  \nNet income attributable to non-controlling interests | 102\nNet income attributable to shareholders | 1,052\n\nVos and his team assess the quality of AD's overall performance. The team's view is positive, but Vos disagrees for the following reasons:\nReason 1: Balance-sheet-based accruals are trending down relative to total assets.\nReason 2: Income from operations is consistently higher than cash generated from operations.\nReason 3: The cash-flow-based accruals ratio has fluctuated very little over the last five years.\n\nVos and his team note from AD's annual report that the company has four segments. They analyse the segments using the information (in EUR millions) in Exhibit 2.\n\nExhibit 2\n# Segment | Sales (recent) | EBIT (recent) | Assets (recent) | Sales (previous)\nCarbonated drinks – Europe | 3,010 | 1,021 | 13,120 | 2,905\nCarbonated drinks – North America | 2,040 | 586 | 6,240 | 1,850\nCarbonated drinks – Asia Pacific | 590 | 181 | 2,880 | 560\nEnergy drinks | 318 | 19 | 1,330 | 231\nTotal | 5,958 | 1,807 | 23,570 | 5,546\n\nAfter the segment analysis, the team concludes:\nStatement 1: The sales growth rate of carbonated drinks – North America is stronger than that of energy drinks.\nStatement 2: The EBIT margin of carbonated drinks – Europe is higher than that of carbonated drinks – North America.\nStatement 3: The asset turnover of carbonated drinks – Europe is better than that of AD overall.",
+   "questions": [
+    {
+     "q": "Which balance sheet line item is most appropriate to justify Vos's comment about AD's growth strategy?",
+     "options": [
+      "Long-term debt",
+      "Property, plant and equipment",
+      "Goodwill"
+     ],
+     "answer": 2,
+     "why": "Goodwill arises only when a company acquires another business, so a rising goodwill balance is the hallmark of growth by acquisition.\nLong-term debt and PP&E may also rise after acquisitions, but they can change for many other reasons (capital structure changes, organic capital spending)."
+    },
+    {
+     "q": "After Vos's adjustment, AD's net income (in EUR millions) under management's direct control is:",
+     "options": [
+      "816.",
+      "918.",
+      "1,052."
+     ],
+     "answer": 1,
+     "why": "Management controls the subsidiaries in full (including the non-controlling interest share) but not the associates.\nStart from total net income: 1,154.\nRemove income from associates: 1,154 − 236 = 918.\n816 = 1,052 − 236 wrongly also removes the non-controlling interest; 1,052 still includes the associates and excludes the NCI."
+    },
+    {
+     "q": "Which reason best supports Vos's disagreement with his team about AD's overall performance?",
+     "options": [
+      "Reason 1",
+      "Reason 2",
+      "Reason 3"
+     ],
+     "answer": 1,
+     "why": "Downward-trending balance-sheet accruals give less room for manipulation: not a concern.\nCorrect: operating income persistently above operating cash flow means earnings are not backed by cash, a warning sign of low earnings quality.\nA steady, low-fluctuation accruals ratio is not a concern; an erratic or rising one would be."
+    },
+    {
+     "q": "With respect to the segment analysis, which statement is correct?",
+     "options": [
+      "Statement 1",
+      "Statement 2",
+      "Statement 3"
+     ],
+     "answer": 1,
+     "why": "Statement 1: growth North America = 2,040/1,850 − 1 = 10.3%; energy drinks = 318/231 − 1 = 37.7%. North America is weaker: false.\nStatement 2: EBIT margin Europe = 1,021/3,010 = 33.9%; North America = 586/2,040 = 28.7%. Europe is higher: true.\nStatement 3: asset turnover Europe = 3,010/13,120 = 0.229; AD overall = 5,958/23,570 = 0.253. Europe is lower: false."
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "group": "new",
+   "body": "Anna Lebedeva is a fixed-income portfolio manager. Paulina Kowalski, a junior analyst, and Lebedeva meet to review several positions in Lebedeva’s portfolio.\n\nLebedeva begins the meeting by discussing credit rating migration. Kowalski asks Lebedeva about the typical impact of credit rating migration on the expected return on a bond. Lebedeva asks Kowalski to estimate the expected return over the next year on a bond issued by Entre Corp. The BBB rated bond has a yield to maturity of 5.50% and a modified duration of 7.54. Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1. She assumes that market spreads and yields will remain stable over the year.\n\nExhibit 1 One-Year Transition Matrix for BBB Rated Bonds and Credit Spreads\n# Rating | AAA | AA | A | BBB | BB | B | CCC, CC, C\nProbability (%) | 0.02 | 0.30 | 4.80 | 85.73 | 6.95 | 1.75 | 0.45\nCredit spread | 0.60% | 0.90% | 1.10% | 1.50% | 3.40% | 6.50% | 9.50%\n\nLebedeva next asks Kowalski to analyze a three-year bond, issued by VraiRive S.A., using an arbitrage-free framework. The bond’s coupon rate is 5%, with interest paid annually and a par value of 100. In her analysis, she makes the following three assumptions:\nThe annual interest rate volatility is 10%.\nThe recovery rate is one-third of the exposure each period.\nThe annual probability of default each year is 2.00%.\n\nSelected information on benchmark government bonds for the VraiRive bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2 Par Curve Rates for Annual Payment Benchmark Government Bonds\n# Maturity | Coupon Rate | Price | Discount Factor | Spot Rate | Forward Rate\n1 | 3.00% | 100 | 0.970874 | 3.0000% | 3.0000%\n2 | 4.20% | 100 | 0.920560 | 4.2255% | 5.4656%\n3 | 5.00% | 100 | 0.862314 | 5.0618% | 6.7547%\n\nExhibit 3 One-Year Binomial Interest Rate Tree for 10% Volatility (risk-neutral probabilities in parentheses)\nDate 0 rate: 3.00%. Date 1 rates (top to bottom): 6.0139%, 4.9238%. Date 2 rates (top to bottom): 8.1823%, 6.6991%, 5.4848%.\n\nKowalski estimates the value of the VraiRive bond assuming no default (VND) as well as the fair value of the bond. She then estimates the bond’s yield to maturity and the bond’s credit spread over the benchmark in Exhibit 2. Kowalski asks Lebedeva, “What might cause the bond’s credit spread to decrease?”\n\nLebedeva and Kowalski next discuss the drivers of the term structure of credit spreads. Kowalski tells Lebedeva the following:\nStatement 1: The credit term structure for the most highly rated securities tends to be either flat or slightly upward sloping.\nStatement 2: The credit term structure for lower-rated securities is often steeper, and credit spreads widen with expectations of strong economic growth.\n\nNext, Kowalski analyzes the outstanding bonds of DLL Corporation, a high-quality issuer with a strong, competitive position. Her focus is to determine the rationale for a positive-sloped credit spread term structure.\n\nLebedeva ends the meeting by asking Kowalski to recommend a credit analysis approach for a securitized asset-backed security (ABS) held in the portfolio. This non-static asset pool is made up of many medium-term auto loans that are homogeneous, and each loan is small relative to the total value of the pool.",
+   "questions": [
+    {
+     "q": "The most appropriate response to Kowalski’s question regarding credit rating migration is that it has:",
+     "options": [
+      "a negative impact.",
+      "no impact.",
+      "a positive impact."
+     ],
+     "answer": 0,
+     "why": "A is correct. Credit spread migration typically reduces the expected return: rating-change probabilities are skewed toward downgrade, and the spread increase on downgrades is much larger than the spread decrease on upgrades."
+    },
+    {
+     "q": "Based on Exhibit 1, the one-year expected return on the Entre Corp. bond is closest to:",
+     "options": [
+      "3.73%.",
+      "5.50%.",
+      "7.27%."
+     ],
+     "answer": 0,
+     "why": "A is correct. Expected return = YTM + expected % price change from migration. Each transition: −7.54 × (new spread − 1.50%) × probability. Sum = −1.76715%. Expected return = 5.50% − 1.77% = 3.73%."
+    },
+    {
+     "q": "Based on Kowalski’s assumptions and Exhibit 2 and Exhibit 3, the credit spread on the VraiRive bond is closest to:",
+     "options": [
+      "0.6949%.",
+      "0.9388%.",
+      "1.4082%."
+     ],
+     "answer": 2,
+     "why": "C is correct. Step 1: VND from the tree (discount at tree forward rates, risk-neutral probs 0.5) = 100.0000. Step 2: CVA = sum of PV(expected exposure × LGD fraction × POD): exposures 103.0000, 103.3535, 105.0000; LGD = 2/3 of exposure; POD 2%, 1.96%, 1.9208%; discounted at benchmark spot discount factors 0.970874, 0.920560, 0.862314 → 1.3333 + 1.2432 + 1.1594 = 3.7360. Fair value = 100 − 3.7360 = 96.2640. Step 3: YTM from 96.2640 = 6.4082%; spread = 6.4082% − 5.0000% = 1.4082%."
+    },
+    {
+     "q": "Given the description of the asset pool of the ABS, Kowalski should recommend a:",
+     "options": [
+      "loan-by-loan approach.",
+      "portfolio-based approach.",
+      "statistics-based approach."
+     ],
+     "answer": 1,
+     "why": "B is correct. Granular, homogeneous auto loans support a portfolio-based approach. Loan-by-loan suits large heterogeneous discrete loans; a statistics-based approach suits a static book, but this pool is dynamic."
+    }
+   ]
+  },
+  {
+   "topic": "Quantitative Methods",
+   "group": "new",
+   "body": "Housing industry analyst Elaine Smith has been assigned the task of forecasting housing foreclosures. Specifically, Smith is asked to forecast the percentage of outstanding mortgages that will be foreclosed upon in the coming quarter. Smith decides to employ multiple linear regression and time series analysis.\nBesides constructing a forecast for the foreclosure percentage, Smith wants to address the following two questions:\nResearch Question 1: Is the foreclosure percentage significantly affected by short-term interest rates?\nResearch Question 2: Is the foreclosure percentage significantly affected by government intervention policies?\nSmith contends that adjustable rate mortgages often are used by higher risk borrowers and that their homes are at higher risk of foreclosure. Therefore, Smith decides to use short-term interest rates as one of the independent variables to test Research Question 1.\nTo measure the effects of government intervention in Research Question 2, Smith uses a dummy variable that equals 1 whenever the Federal government intervened with a fiscal policy stimulus package that exceeded 2% of the annual Gross Domestic Product. Smith sets the dummy variable equal to 1 for four quarters starting with the quarter in which the policy is enacted and extending through the following 3 quarters. Otherwise, the dummy variable equals zero.\nSmith uses quarterly data over the past 5 years to derive her regression. Smith's regression equation is provided in Exhibit 1:\nExhibit 1: Foreclosure Share Regression Equation\nforeclosure share = b0 + b1(dINT) + b2(STIM) + b3(CRISIS) + e\nwhere: Foreclosure share = the percentage of all outstanding mortgages foreclosed upon during the quarter; dINT = the quarterly change in the 1-year Treasury bill rate (e.g., dINT = 2 for a two percentage point increase in interest rates); STIM = 1 for quarters in which a Federal fiscal stimulus package was in place; CRISIS = 1 for quarters in which the median house price is one standard deviation below its 5-year moving average.\nThe results of Smith's regression are provided in Exhibit 2:\nExhibit 2: Foreclosure Share Regression Results\n# Variable | Coefficient | t-statistic\nIntercept | 3.00 | 2.40\ndINT | 1.00 | 2.22\nSTIM | -2.50 | -2.10\nCRISIS | 4.00 | 2.35\nThe ANOVA results from Smith's regression are provided in Exhibit 3:\nExhibit 3: Foreclosure Share Regression Equation ANOVA Table\n# Source | Degrees of Freedom | Sum of Squares | Mean Sum of Squares\nRegression | 3 | 15 | 5.0000\nError | 16 | 5 | 0.3125\nTotal | 19 | 20\nSmith expresses the following concerns about the test statistics derived in her regression:\nConcern 1: If my regression errors exhibit conditional heteroskedasticity, my t-statistics will be underestimated.\nConcern 2: If my independent variables are correlated with each other, my F-statistic will be overestimated.\nBefore completing her analysis, Smith runs a regression of the changes in foreclosure share on its lagged value. The following regression results and autocorrelations were derived using quarterly data over the past 5 years (Exhibit 4 and Exhibit 5, respectively):\nExhibit 4: Lagged Regression Results\nd foreclosure share_t = 0.05 + 0.25 (d foreclosure share_t-1)\nExhibit 5: Autocorrelation Analysis\n# Lag | Autocorrelation | t-statistic\n1 | 0.05 | 0.22\n2 | -0.35 | -1.53\n3 | 0.25 | 1.09\n4 | 0.10 | 0.44\nExhibit 6 provides critical values for the Student's t-Distribution\nExhibit 6: Critical Values for Student's t-Distribution. Area in Both Tails Combined\nDegrees of Freedom | 20% | 10% | 5% | 1%\n16 | 1.337 | 1.746 | 2.120 | 2.921\n17 | 1.333 | 1.740 | 2.110 | 2.898\n18 | 1.330 | 1.734 | 2.101 | 2.878\n19 | 1.328 | 1.729 | 2.093 | 2.861\n20 | 1.325 | 1.725 | 2.086 | 2.845",
+   "questions": [
+    {
+     "q": "Based on her regression results in Exhibit 2, using a 5% level of significance, Smith should conclude that:",
+     "options": [
+      "both stimulus packages and housing crises have significant effects on foreclosure percentages.",
+      "stimulus packages have significant effects on foreclosure percentages, but housing crises do not have significant effects on foreclosure percentages.",
+      "stimulus packages do not have significant effects on foreclosure percentages, but housing crises do have significant effects on foreclosure percentages."
+     ],
+     "answer": 2,
+     "why": "The t-statistic is -2.10 for STIM and 2.35 for CRISIS. The critical t at the 5% level (16 degrees of freedom) is 2.12. STIM is not significant (|-2.10| < 2.12); CRISIS is significant (2.35 > 2.12)."
+    },
+    {
+     "q": "The standard error of estimate for Smith's regression is closest to:",
+     "options": [
+      "0.16.",
+      "0.56.",
+      "0.53."
+     ],
+     "answer": 1,
+     "why": "SEE = sqrt(SSE/(n - k - 1)) = sqrt(5/16) = 0.56. The SEE equals the standard deviation of the regression residuals; a low SEE implies a high R-squared."
+    },
+    {
+     "q": "The most recent change in foreclosure share was +1 percent. Smith decides to base her analysis on the data and methods provided in Exhibit 4 and Exhibit 5, and determines that the two-step ahead forecast for the change in foreclosure share (in percent) is 0.125, and that the mean reverting value for the change in foreclosure share (in percent) is 0.071. Is Smith correct?",
+     "options": [
+      "Smith is correct on both the forecast and the mean reverting level.",
+      "Smith is correct on the two-step ahead forecast for change in foreclosure share only.",
+      "Smith is correct on the mean-reverting level for forecast of change in foreclosure share only."
+     ],
+     "answer": 1,
+     "why": "One-step: 0.05 + 0.25(1) = 0.30. Two-step: 0.05 + 0.25(0.30) = 0.125. Mean-reverting level = b0/(1 - b1) = 0.05/(1 - 0.25) = 0.067, not 0.071."
+    },
+    {
+     "q": "Assume for this question that Smith finds that the foreclosure share series has a unit root. Under these conditions, she can most reliably regress foreclosure share against the change in interest rates (dINT) if:",
+     "options": [
+      "dINT has unit root and is cointegrated with foreclosure share.",
+      "dINT does not have unit root.",
+      "dINT has unit root and is not cointegrated with foreclosure share."
+     ],
+     "answer": 0,
+     "why": "In the other choices the error terms will be nonstationary, so some regression assumptions are violated and the results are unreliable. If both series are nonstationary (each has a unit root) but cointegrated, the error term is covariance stationary and the regression results are reliable."
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "group": "redo",
+   "body": "The Brookline Club is a small US investment club formed by a group of friends who recently graduated from university. At today's regular bimonthly meeting, two members present new companies for the club to analyse. The club uses a combination of comparables and forecasted fundamentals to make its investment decisions.\n\nNadia Ferro has done preliminary research on Ostler Ltd. (Ostler), a small Ohio-based manufacturer of products, supplies and food for pets. Ferro starts by showing the club a recent news release from Ostler's website (Exhibit 1).\n\nExhibit 1 Ostler Ltd. Press Release: Core EPS Announcement\nWe are pleased to report an increase in Core EPS from $1.09 to $1.44 for the year ended 31 December 2017. The company continues its growth-by-acquisition strategy, acquiring smaller specialty companies in the pet supplies industry. Acquisitions over the past two years have increased our asset base by 22%, and we expect similar opportunities for growth in the next few years.\n# | 31 December 2017 | 31 December 2016\nEPS | $1.12 | $0.95\nCore EPS* | $1.44 | $1.09\n* Core EPS is a non-GAAP measure that excludes acquisition charges of $0.20 and $0.14 in 2017 and 2016, respectively, and $0.12 in 2017 related to the settlement of a lawsuit.\n\nFerro notes that Ostler trades at $12.82. She reminds the club that the company was sued for making pet jackets with the logos of local professional sports teams without permission and settled quickly out of court. Ferro believes the company will not incur such legal costs again, but because its strategy is to grow by acquisition, acquisition costs will continue and are relevant to any analysis. She disagrees with excluding those costs from core EPS and calculates Ostler's trailing P/E on the basis of her beliefs.\n\nUsing NYSE data, Ferro finds the average P/E for the Consumer Goods Index (15.2) and for its Processed and Packaged Goods sector (31.4). She then screens that sector for other small processed and packaged goods producers to build her own index. Partial results are shown in Exhibit 2.\n\nExhibit 2 Partial Results of Market Screen: Ferro's Index\n# Company | Market cap (US$ millions) | P/E\nHale Inc. | 6.40 | 13.4\nRivera Industries Inc. | 24.80 | 11.9\nBooth Brothers Co. | 512.30 | 5.6\nCorbin Foods Ltd. | 735.60 | 20.4\nLinden Delights Inc. | 548.90 | 17.6\n\nFerro observes that Corbin Foods must have both a higher-than-average growth rate and higher-than-average risk to justify its high P/E, and suggests the club look at Corbin at its next meeting.\n\nThe members discuss the wide range of market capitalisations and P/Es in Ferro's index and whether the arithmetic mean is the best value to use. Ferro decides to calculate the weighted harmonic mean of the index and says:\n\n\"The harmonic mean can be used to mitigate the effects of both large and small outliers.\"",
+   "questions": [
+    {
+     "q": "Based on Exhibit 1 and Ferro's beliefs about recurring costs, her trailing P/E for Ostler is closest to:",
+     "options": [
+      "8.90.",
+      "10.34.",
+      "11.45."
+     ],
+     "answer": 1,
+     "why": "Acquisition charges recur, so they stay in EPS; the lawsuit cost does not recur, so it is added back.\nRecurring EPS 2017 = 1.12 + 0.12 = $1.24.\nTrailing P/E = 12.82 ÷ 1.24 = 10.34.\n8.90 uses the company's core EPS (1.44), which wrongly excludes acquisition charges; 11.45 uses GAAP EPS (1.12), which keeps the non-recurring lawsuit cost."
+    },
+    {
+     "q": "Ferro's observation about Corbin Foods' high P/E is best described as:",
+     "options": [
+      "correct.",
+      "incorrect with respect to the growth rate.",
+      "incorrect with respect to the risk."
+     ],
+     "answer": 2,
+     "why": "Higher expected growth justifies a higher P/E: she is right on growth.\nHigher risk raises the required return and justifies a LOWER P/E: she is wrong on risk."
+    },
+    {
+     "q": "The weighted harmonic mean of the P/Es in Ferro's index (Exhibit 2) is closest to:",
+     "options": [
+      "11.3.",
+      "13.8.",
+      "15.3."
+     ],
+     "answer": 0,
+     "why": "Weighted harmonic mean = total market cap ÷ Σ(market cap ÷ P/E).\nTotal cap = 6.40 + 24.80 + 512.30 + 735.60 + 548.90 = 1,828.0.\nΣ(cap ÷ P/E) = 0.48 + 2.08 + 91.48 + 36.06 + 31.19 = 161.29.\n1,828.0 ÷ 161.29 = 11.3.\n13.8 is the simple arithmetic mean; 15.3 is the market-cap weighted arithmetic mean."
+    },
+    {
+     "q": "Ferro's statement supporting the use of the harmonic mean is best described as:",
+     "options": [
+      "correct.",
+      "incorrect with respect to large outliers.",
+      "incorrect with respect to small outliers."
+     ],
+     "answer": 2,
+     "why": "The harmonic mean mitigates the effect of LARGE outliers.\nIt can aggravate the effect of SMALL outliers (although these are bounded by zero), so the statement is wrong about small outliers."
+    }
+   ]
+  },
+  {
+   "topic": "Portfolio Management",
+   "group": "new",
+   "body": "Hui Cheung, a portfolio manager, asks her assistant, Ronald Lam, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.\n\nThe current macroeconomic factor model has four factors:\n\nRi = ai + bi1FGDP + bi2FCAP + bi3FCON + bi4FUNEM + εi,\nWhere FGDP, FCAP, FCON, and FUNEM represent unanticipated changes in four factors: gross domestic product, manufacturing capacity utilization, consumer spending, and the rate of unemployment, respectively. Lam assumes the error term is equal to zero when using this model.\n\nLam estimates the current model using historical monthly returns for three portfolios for the most recent five years. The inputs used in and estimates derived from the macroeconomic factor model are presented in Exhibit 1. The US Treasury bond rate of 2.5% is used as a proxy for the risk-free rate of interest.\n\nExhibit 1\nInputs for and Estimates from the Current Macroeconomic Model\n#   | Factor Sensitivities and Intercept Coefficients | Factor Surprise (%)\nFactor | Portfolio 1 | Portfolio 2 | Portfolio 3 | Benchmark\nIntercept (%) | 2.58 | 3.20 | 4.33\nFGDP | 0.75 | 1.00 | 0.24 | 0.50 | 0.8\nFCAP | −0.23 | 0.00 | −1.45 | −1.00 | 0.5\nFCON | 1.23 | 0.00 | 0.50 | 1.10 | 2.5\nFUNEM | −0.14 | 0.00 | −0.05 | −0.10 | 1.0\nAnnual Returns, Most Recent Year |  \nReturn (%) | 6.00 | 4.00 | 5.00 | 4.50\nLam uses the macroeconomic model to calculate the tracking error and the mean active return for each portfolio. He presents these statistics in Exhibit 2.\n\nExhibit 2\nMacroeconomic Factor Model Tracking Error and Mean Active Return\n# Portfolio | Tracking Error | Mean Active Return\nPortfolio 1 | 1.50% | 1.50%\nPortfolio 2 | 1.30% | −0.50%\nPortfolio 3 | 1.00% | 0.50%\nLam considers a fundamental factor model with four factors:\n\nRi = aj + bj1FLIQ + bj2FLEV + bj3FEGR + bj4FVAR + εj,\nwhere FLIQ, FLEV, FEGR, and FVAR represent liquidity, financial leverage, earnings growth, and the variability of revenues, respectively.\n\nLam and Cheung discuss similarities and differences between macroeconomic factor models and fundamental factor models, and Lam offers a comparison of those models to statistical factor models. Lam makes the following statements.\n\nStatement 1:\nThe factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables.\n\nStatement 2:\nThe factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.\n\nLam also tells Cheung:\n\nAn advantage of statistical factor models is that they make minimal assumptions, and therefore, statistical factor model estimation lends itself to easier interpretation than macroeconomic and fundamental factor models.\n\nLam tells Cheung that multifactor models can be useful in active portfolio management, but not in passive management. Cheung disagrees; she tells Lam that multifactor models can be useful in both active and passive management.",
+   "questions": [
+    {
+     "q": "Assuming that the information in Exhibit 1 reflects the analyst's view, the expected return for Portfolio 1 is closest to:",
+     "options": [
+      "2.58%.",
+      "3.42%.",
+      "6.00%."
+     ],
+     "answer": 0,
+     "why": "A is correct. When using a macroeconomic factor model, the expected return is the intercept (when all model factors take on a value of zero). The intercept coefficient for Portfolio 1 in Exhibit 1 is 2.58."
+    },
+    {
+     "q": "Based on Exhibit 2, which portfolio has the best information ratio?",
+     "options": [
+      "Portfolio 1",
+      "Portfolio 2",
+      "Portfolio 3"
+     ],
+     "answer": 0,
+     "why": "A is correct. Portfolio 1 has the highest information ratio, 1.0, and thus has the best mean active return per unit of active risk:\n\nIR = \n = \n = 1.00\nThis information ratio exceeds that of Portfolio 2 (−0.38) or Portfolio 3 (0.50)."
+    },
+    {
+     "q": "Which of Lam’s statements regarding macroeconomic factor models and fundamental factor models is correct?",
+     "options": [
+      "Only Statement 1",
+      "Only Statement 2",
+      "Both Statements 1 and 2"
+     ],
+     "answer": 2,
+     "why": "C is correct. In a macroeconomic factor model, the factors are surprises in macroeconomic variables that significantly explain returns. Factor sensitivities are generally specified first in fundamental factor models, whereas factor sensitivities are estimated last in macroeconomic factor models."
+    },
+    {
+     "q": "Whose statement regarding the use of multifactor models in active and passive portfolio management is correct?",
+     "options": [
+      "Lam only",
+      "Cheung only",
+      "Both Lam and Cheung"
+     ],
+     "answer": 1,
+     "why": "B is correct. Analysts can use multifactor models in passively managed portfolios to replicate an index fund’s factor exposures.\n\n15Essay1 / 1 point\nLast year the return on Harry Company stock was 5 percent. The portion of the return on the stock not explained by a two-factor macroeconomic factor model was 3 percent. Using the data given below, calculate Harry Company stock’s expected return.\n\nMacroeconomic Factor Model for Harry Company Stock\nVariable\tActual Value (%)\tExpected Value (%)\tStock’s Factor Sensitivity\nChange in interest rate\t2.0\t0.0\t−1.5\nGrowth in GDP\t1.0\t4.0\t2.0\n-7%\n \nFeedback\nIn a macroeconomic factor model, the surprise in a factor equals actual value minus expected value. For the interest rate factor, the surprise was 2 percent; for the GDP factor, the surprise was −3 percent. The intercept represents expected return in this type of model. The portion of the stock’s return not explained by the factor model is the model’s error term.\n\n5% = Expected return − 1.5(Interest rate surprise) + 2(GDP surprise) + Error term\n = Expected return − 1.5(2%) + 2(−3%) + 3%\n = Expected return − 6%\nRearranging terms, the expected return for Harry Company stock equals 5% + 6% = 11%.\n\n16Essay1 / 1 point\nWhich type of factor model is most directly applicable to an analysis of the style orientation (for example, growth vs. value) of an active equity investment manager? Justify your answer.\n\nFundamental\nFeedback\nA fundamental factor model. Such models typically include many factors related to the company (e.g., earnings) and to valuation that are commonly used indicators of a growth orientation. A macroeconomic factor model may provide relevant information as well, but typically indirectly and in less detail.\n\n17Essay1 / 1 point\nSuppose an active equity manager has earned an active return of 110 basis points, of which 80 basis points is the result of security selection ability. Explain the likely source of the remaining 30 basis points of active return.\n\nEd\nFeedback\nThis remainder of 30 basis points would be attributable to the return from factor tilts. A portfolio manager’s active return is the sum of two components, factor tilts and security selection. Factor tilt is the product of the portfolio manager’s higher or lower factor sensitivities relative to the benchmark’s factor sensitivities and the factor returns. Security selection reflects the manager’s ability to overweight securities that outperform or underweight securities that underperform."
+    }
+   ]
+  }
+ ]
+}
