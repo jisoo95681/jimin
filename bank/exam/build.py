@@ -3,8 +3,10 @@ sys.path.insert(0,'/tmp/gen/exam')
 import lib
 def load(mod):
     lib.V.clear(); __import__(mod); return [dict(v) for v in lib.V]
-SPECS=[('spec_a','Derivatives, Quantitative Methods'),('spec_b','Quantitative Methods (ML, Big Data), Fixed Income'),('spec_c','Fixed Income (term structure, embedded options, CDS), Credit Analysis Models'),('spec_d','Financial Statement Analysis'),('spec_e','Portfolio Management'),('spec_f','Corporate Issuers, Equity Valuation, Economics, Alternative Investments')]
-LOADED=[load(m) for m,_ in SPECS]
+import re,mix_practice
+MIX=json.load(open('/home/user/jimin/bank/exam/practice_mix.json'))
+ALLV=dict(mix_practice.load_all())
+ETH={q['id']:q for q in json.load(open('/home/user/jimin/bank/exam/ethics_keyq.json'))}
 def maxrun(k):
     m=c=1
     for a,b in zip(k,k[1:]): c=c+1 if a==b else 1; m=max(m,c)
@@ -32,9 +34,34 @@ def build(vs,setid,title,off):
         out.append(dict(topic=v['topic'],body=v['body'],questions=qq))
     print(setid,len(qs),key,collections.Counter(key))
     return dict(id=setid,title=title,kind="practice",minutes=132,desc="",vignettes=out)
+def fig_body(html):
+    out=[]
+    inner=re.sub(r'<summary>.*?</summary>','',html,flags=re.S)
+    for blk in re.findall(r'<p>(.*?)</p>|<table.*?</table>',inner,flags=re.S):
+        pass
+    for m in re.finditer(r'<p>(.*?)</p>|(<table.*?</table>)',inner,flags=re.S):
+        if m.group(1) is not None:
+            t=re.sub(r'<[^>]+>','',m.group(1)).strip()
+            if t: out.append(t)
+        else:
+            rows=[[re.sub(r'<[^>]+>','',c).strip() for c in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>',r,flags=re.S)] for r in re.findall(r'<tr.*?</tr>',m.group(2),flags=re.S)]
+            out.append('\n'.join(('# ' if i==0 and mix_practice_hdr(r) else '')+' | '.join(r) for i,r in enumerate(rows)))
+    import html as H
+    return H.unescape('\n\n'.join(out))
+def mix_practice_hdr(cells):
+    return not any(re.search(r'\d',c) for c in cells[1:])
+def ethics_vignette(ids,kind):
+    qs=[]
+    for i in ids:
+        q=ETH[i]; o=[q['o'][q['a']]]+[x for k,x in enumerate(q['o']) if k!=q['a']]
+        qs.append(dict(q=q['q'],opts=o,why=q['why'],fixed=False))
+    body=fig_body(ETH[ids[0]]['fig']).replace('listed in Question 4.','listed in the last question of this vignette.') if kind=='vig' else "Ethics: Standards of Professional Conduct\nFour independent questions. Each one can be answered on its own."
+    return dict(topic="Ethical and Professional Standards",body=body,questions=qs)
 sets=[]
-for k,(vs,(m,d)) in enumerate(zip(LOADED,SPECS)):
-    st=build(vs,f'ps{k+1}',f'Practice set {k+1}',1+500*k); st['desc']=d; sets.append(st)
+for k,st_ in enumerate(MIX['sets']):
+    vs=[dict(ALLV[tuple(x)]) for x in st_['vignettes']]
+    vs.insert(st_['ethics_pos'],ethics_vignette(st_['ethics'],st_['ethics_kind']))
+    st=build(vs,f'pr{k+1}',f'Practice set {k+1}',1+500*k); st['desc']='Mixed topics from the key notes, with 4 Ethics questions'; sets.append(st)
 import os
 for mf in ["mock7","mock8"]:
     p=f"/home/user/jimin/bank/exam/{mf}.json"

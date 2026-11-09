@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v204 · 2026-11-09";
+  const APP_VERSION = "v205 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1524,7 +1524,15 @@
   // cur = test in progress { ans, flag, hl, left, page }; last = last finished attempt { ans, date, used, score }.
   const EX_KEY = "cfa-exam";
   const exSets = () => (typeof EXAM_SETS !== "undefined" ? EXAM_SETS : []);
-  function exLoad() { try { return Object.assign({ sets: {}, wrong: {} }, JSON.parse(localStorage.getItem(EX_KEY)) || {}); } catch { return { sets: {}, wrong: {} }; } }
+  function exLoad() {
+    try {
+      const s = Object.assign({ sets: {}, wrong: {} }, JSON.parse(localStorage.getItem(EX_KEY)) || {});
+      // Practice sets 1-6 were rebuilt on 9 Nov (new ids pr1-pr6): drop the saved progress of the old ps1-ps6.
+      ["ps1", "ps2", "ps3", "ps4", "ps5", "ps6"].forEach(id => { delete s.sets[id]; });
+      Object.keys(s.wrong || {}).forEach(k => { if (/^ps[1-6]:/.test(k)) delete s.wrong[k]; });
+      return s;
+    } catch { return { sets: {}, wrong: {} }; }
+  }
   function exSave(s) { try { localStorage.setItem(EX_KEY, JSON.stringify(s)); } catch {} }
   // Flat question list of a set: { n, v (vignette index), q }.
   function exFlat(set) {
