@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 204 vignettes · 272 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 210 vignettes · 278 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -22,7 +22,7 @@ Totals: app 68 vignettes · bank 204 vignettes · 272 in all. Plus 152 standalon
 | 14 | ESG Considerations | 0 | 6 | 6 |
 | 15 | Cost of Capital: Advanced Topics | 0 | 1 | 1 |
 | 16 | Corporate Restructuring | 0 | 3 | 3 |
-| 17 | Equity Valuation: Applications and Processes | 0 | 1 | 1 |
+| 17 | Equity Valuation: Applications and Processes | 0 | 7 | 7 |
 | 18 | Discounted Dividend Valuation | 2 | 1 | 3 |
 | 19 | Free Cash Flow Valuation | 1 | 4 | 5 |
 | 20 | Market-Based Valuation | 3 | 2 | 5 |
@@ -67,7 +67,7 @@ Totals: app 68 vignettes · bank 204 vignettes · 272 in all. Plus 152 standalon
 **14 ESG Considerations**: marker-esg (bank, 4Q); esg31-1 (bank, 6Q); esg31-2 (bank, 4Q); esg31-3 (bank, 4Q); esg31-4 (bank, 4Q); esg31-5 (bank, 4Q)
 **15 Cost of Capital: Advanced Topics**: s1a-costcap (bank, 5Q)
 **16 Corporate Restructuring**: pc-6 (bank, 4Q); corp4-lee (bank, 5Q); jupiter-saturn (bank, 5Q)
-**17 Equity Valuation: Applications and Processes**: pc-8 (bank, 4Q)
+**17 Equity Valuation: Applications and Processes**: pc-8 (bank, 4Q); eq1-globalguardian (bank, 8Q); eq1-santos (bank, 4Q); eq1-dormier (bank, 4Q); eq1-zylkin (bank, 4Q); eq1-davis (bank, 4Q); eq1-chau (bank, 1Q)
 **18 Discounted Dividend Valuation**: charmed (app, 6Q); tasty (app, 6Q); s1b-miller (bank, 4Q)
 **19 Free Cash Flow Valuation**: izzo (app, 7Q); pc-3 (bank, 4Q); leigh-holt (bank, 6Q); singh-fcff (bank, 6Q); m2-8 (bank, 4Q)
 **20 Market-Based Valuation**: cannan (app, 7Q); centralino (app, 6Q); pinho (app, 7Q); m2-2 (bank, 4Q); s1a-stratton (bank, 6Q)

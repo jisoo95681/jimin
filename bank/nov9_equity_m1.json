@@ -1,0 +1,368 @@
+[
+ {
+  "id": "eq1-globalguardian",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Global-Guardian: value definitions, market expectations, model choice",
+  "body": "Global-Guardian Capital is a rapidly growing international investment firm. The firm’s research team is responsible for identifying undervalued and overvalued publicly-traded equities that have a market capitalization greater than $500 million.\n\nDue to the rapid growth of assets under management, Global-Guardian Capital recently hired a new analyst, Jack Richardson, to support the research process. At the new analyst orientation meeting, the director of research made the following statements about equity valuation at the firm:\n\nStatement 1:\n“Analysts at Global-Guardian Capital seek to identify mispricing, relying on price eventually converging to intrinsic value. However, convergence of the market price to an analyst’s estimate of intrinsic value may not happen within the portfolio manager’s investment time horizon. So, besides evidence of mispricing, analysts should look for the presence of a particular market or corporate event—that is, a catalyst—that will cause the marketplace to re-evaluate the subject firm’s prospects.”\n\nStatement 2:\n“An active investment manager attempts to capture positive alpha. But mispricing of assets is not directly observable. It is therefore important that you understand the possible sources of perceived mispricing.”\n\nStatement 3:\n“For its distressed securities fund, Global-Guardian Capital screens its investable universe of securities for companies in financial distress.”\n\nStatement 4:\n“For its core equity fund, Global-Guardian Capital selects financially sound companies that are expected to generate significant positive free cash flow from core business operations within a multiyear forecast horizon.”\n\nStatement 5:\n“Global-Guardian Capital’s research process requires analysts to evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his or her own expectations.”\n\nAfter the orientation meeting, the director of research asks Richardson to evaluate three companies that are retailers of men’s clothing: Diamond Co., Renaissance Clothing, and Deluxe Men’s Wear.\n\nRichardson starts his analysis by evaluating the characteristics of the men’s retail clothing industry. He finds few barriers to new retail entrants, high intra-industry rivalry among retailers, low product substitution costs for customers, and a large number of wholesale clothing suppliers.\n\nWhile conducting his analysis, Richardson discovers that Renaissance Clothing included three non-recurring items in their most recent earnings release: a positive litigation settlement, a one-time tax credit, and the gain on the sale of a non-operating asset.\n\nTo estimate each firm’s intrinsic value, Richardson applies appropriate discount rates to each firm’s estimated free cash flows over a ten-year time horizon and to the estimated value of the firm at the end of the ten-year horizon.\n\nMichelle Lee, a junior technology analyst at Global-Guardian, asks the director of research for advice as to which valuation model to use for VEGA, a fast growing semiconductor company that is rapidly gaining market share.\n\nThe director of research states that “the valuation model selected must be consistent with the characteristics of the company being valued.”\n\nLee tells the director of research that VEGA is not expected to be profitable for several more years. According to management guidance, when the company turns profitable, it will invest in new product development; as a result, it does not expect to initiate a dividend for an extended period of time. Lee also notes that she expects that certain larger competitors will become interested in acquiring VEGA because of its excellent growth prospects. The director of research advises Lee to consider that in her valuation.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Based on Statement 2, which of the following sources of perceived mispricing do active investment managers attempt to exploit? The difference between:",
+    "options": [
+     "intrinsic value and market price.",
+     "estimated intrinsic value and market price.",
+     "intrinsic value and estimated intrinsic value."
+    ],
+    "answer": "B",
+    "why": "B is correct. The difference between the true (real) but unobservable intrinsic value and the observed market price contributes to the abnormal return or alpha, which is the concern of active investment managers.",
+    "user": "B"
+   },
+   {
+    "n": 2,
+    "q": "With respect to Statements 3 and 4, which of the following measures of value would the distressed securities fund’s analyst consider that a core equity fund analyst might ignore?",
+    "options": [
+     "Fair value",
+     "Liquidation value",
+     "Fair market value"
+    ],
+    "answer": "B",
+    "why": "B is correct. The measure of value the distressed securities fund’s analyst would consider that the core equity fund analyst might ignore is liquidation value. The liquidation value of a company is its value if it were dissolved and its assets sold individually.",
+    "user": "B"
+   },
+   {
+    "n": 3,
+    "q": "With respect to Statement 4, which measure of value is most relevant for the analyst of the fund described?",
+    "options": [
+     "Liquidation value",
+     "Investment value",
+     "Going-concern value"
+    ],
+    "answer": "C",
+    "why": "C is correct. For its core equity fund, Global-Guardian Capital screens its investable universe of securities for well-capitalized companies that are expected to generate significant future free cash flow from core business operations. The concern with future free cash flows implies that going-concern value is relevant.",
+    "user": "B"
+   },
+   {
+    "n": 4,
+    "q": "According to Statement 5, analysts are expected to use valuation concepts and models to:",
+    "options": [
+     "value private businesses.",
+     "render fairness opinions.",
+     "extract market expectations."
+    ],
+    "answer": "C",
+    "why": "C is correct. Market prices reflect the expectations of investors about the future performance of companies. The analyst can evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his own expectations. This process assumes a valuation model, as discussed in the text.",
+    "user": "B"
+   },
+   {
+    "n": 5,
+    "q": "Based on Richardson’s industry analysis, which of the following characteristics of men’s retail clothing retailing would positively affect its profitability? That industry’s:",
+    "options": [
+     "entry costs.",
+     "substitution costs.",
+     "number of suppliers."
+    ],
+    "answer": "C",
+    "why": "C is correct. The men’s retail clothing industry is characterized by a large number of wholesale clothing suppliers. When many suppliers of the products needed by industry participants exist, competition among suppliers should limit their ability to raise input prices. Thus, the large number of suppliers is a factor that should positively affect industry profitability.",
+    "user": "C"
+   },
+   {
+    "n": 6,
+    "q": "Which of the following statements about the reported earnings of Renaissance Clothing is most accurate? Relative to sustainable earnings, reported earnings are likely:",
+    "options": [
+     "unbiased.",
+     "upward biased.",
+     "downward biased."
+    ],
+    "answer": "B",
+    "why": "B is correct. The effects of favorable nonrecurring events in reported earnings would tend to bias reported earnings upward relative to sustainable earnings because non-recurring items are by definition not expected to repeat. Renaissance Clothing included three non-recurring items in their most recent earnings release that all led to higher earnings for the current period: a positive litigation settlement, a one-time tax credit, and the gain on the sale of a non-operating asset.",
+    "user": "B"
+   },
+   {
+    "n": 7,
+    "q": "Which valuation model is Richardson applying in his analysis of the retailers?",
+    "options": [
+     "Relative value",
+     "Absolute value",
+     "Sum-of-the-parts"
+    ],
+    "answer": "B",
+    "why": "B is correct. An absolute valuation model is a model that specifies an asset’s intrinsic value. The most important type of absolute equity valuation models are present value models (also referred to as discounted cash flow models), and the model described by Richardson is of that type.",
+    "user": "A"
+   },
+   {
+    "n": 8,
+    "q": "Which valuation model would the director of research most likely recommend Lee use to estimate the value of VEGA?",
+    "options": [
+     "Free cash flow",
+     "Dividend discount",
+     "P/E relative valuation"
+    ],
+    "answer": "A",
+    "why": "A is correct. The broad criteria for model selection are that a valuation model be consistent with the characteristics of the company being valued—that it be appropriate given the availability and quality of the data and consistent with the purpose of the valuation. VEGA currently has negative earnings, making the use of P/E relative valuation difficult if not impossible. As VEGA does not pay a dividend and is not expected to for the foreseeable future, the application of a dividend discount model is problematic. However, the lack of a dividend would not be an obstacle to free cash flow valuation. Furthermore, the director of research has advised that the possibility that competitors may seek to acquire VEGA be taken in to account in valuing VEGA. The reading states that free cash flow valuation can be appropriate in such circumstances. Thus, the director of research would be most likely to recommend free cash flow valuation.",
+    "user": "C"
+   }
+  ]
+ },
+ {
+  "id": "eq1-santos",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Santos: market-implied growth, regression to the mean, bottom-up, pairs trading",
+  "body": "Bruno Santos is an equity analyst with a regional investment bank. Santos reviews the growth prospects and quality of earnings for Phoenix Enterprises, one of the companies he follows. He has developed a stock valuation model for this firm based on its forecasted fundamentals. His revenue growth rate estimate is less than that implied by the market price.\n\nPhoenix’s financial statements over the past five years show strong performance, with above average growth. Santos has decided to use a lower forecasted growth rate in his models, reflecting the effect of “regression to the mean” over time. He notes two reasons for his lower growth rate forecast:\n\nReason 1:\nSuccessful companies tend to draw more competition, putting their high profits under pressure.\n\nReason 2:\nPhoenix’s intellectual property and franchise agreements will be weakening over time.\n\nSantos meets with Walter Hartmann, a newly hired associate in his department. In their conversation, Hartmann states, “Security analysts forecast company performance using both top-down and bottom-up analysis. I can think of three examples:\n\nA restaurant chain forecasts its sales to be its market share times forecast industry sales.\n\nAn electric utility company forecasts that its sales will grow proportional to increases in GDP.\n\nA retail furniture company forecasts next year’s sales by assuming that the sales in its newly built stores will have similar sales per square meter to that of its existing stores.”\n\nHartmann is reviewing some possible trades for three stocks in the health care industry based on a pairs-trading strategy. Hartmann’s evaluations are as follows:\n\nHG Health is 15% overvalued.\n\nCorgent Cell Sciences is 10% overvalued.\n\nJohnson Labs is 15% undervalued.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Based on Santos’s revenue growth rate estimate, the shares of Phoenix are most likely:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "C",
+    "why": "C is correct. If the revenue growth rate inferred by the market price exceeds the growth rate that the firm could reasonably expect, Santos should conclude that the market price is too high and thus that the firm is overvalued.",
+    "user": "C"
+   },
+   {
+    "n": 10,
+    "q": "Which of the reasons given by Santos most likely justifies a reduction in Phoenix’s forecasted growth rate?",
+    "options": [
+     "Reason 1 only",
+     "Reason 2 only",
+     "Both Reason 1 and Reason 2"
+    ],
+    "answer": "C",
+    "why": "C is correct. Increased competition for successful firms can cause a regression to the mean of a company’s growth rate. Expiring and weakening intellectual property and franchise agreements can also reduce potential growth.",
+    "user": "C"
+   },
+   {
+    "n": 11,
+    "q": "Which of Hartmann’s examples of company performance forecasting best describes an example of bottom-up forecasting?",
+    "options": [
+     "Restaurant chain",
+     "Electric utility company",
+     "Retail furniture company"
+    ],
+    "answer": "C",
+    "why": "C is correct. The retail furniture company forecasting sales based on sales per square meter is an example of bottom-up forecasting because it aggregates forecasts at a micro level to larger-scale forecasts.",
+    "user": "C"
+   },
+   {
+    "n": 12,
+    "q": "Based on his trading strategy, which of the following should Hartmann recommend?",
+    "options": [
+     "Short HG Health and Corgent Cell Sciences",
+     "Buy Johnson Labs and Corgent Cell Sciences",
+     "Buy Johnson Labs and short Corgent Cell Sciences"
+    ],
+    "answer": "C",
+    "why": "C is correct. Pairs trading involves buying an undervalued stock and shorting an overvalued stock in the same industry. Hartmann should buy Johnson Labs (15% undervalued) and short Corgent Cell Sciences (10% overvalued).",
+    "user": "C"
+   }
+  ]
+ },
+ {
+  "id": "eq1-dormier",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Dormier: FCFF vs asset-based, sum of the parts, control premium, top-down",
+  "body": "Abby Dormier is a sell-side analyst for a small Wall Street brokerage firm; she covers publicly and actively traded companies with listed equity shares. Dormier is responsible for issuing either a buy, hold, or sell rating for the shares of Company A and Company B. The appropriate valuation model for each company was chosen based on the following characteristics of each company:\n\nCompany A is an employment services firm with no debt and has fixed assets consisting primarily of computers, servers, and commercially available software. Many of the assets are intangible, including human capital. The company has a history of occasionally paying a special cash dividend.\n\nCompany B operates in three unrelated industries with differing rates of growth: tobacco (60% of earnings), shipbuilding (30% of earnings), and aerospace consulting (10% of earnings). The company pays a regular dividend that is solely derived from the earnings produced by the tobacco division.\n\nDormier considers the following development in making any necessary adjustments to the models before assigning ratings:\n\nCompany B has finalized the terms to acquire 70% of the outstanding shares of Company X, an actively traded tobacco company, in an all-stock deal.\n\nDormier assigns ratings to each of the companies and provides a rationale for each rating. The director of research asks Dormier: “How did you arrive at these recommendations? Describe how you used a top-down approach, which is the policy at our company.”\n\nDormier replies, “I arrived at my recommendations through my due diligence process. I have studied all of the public disclosure documents; I have participated in the company conference calls, being careful with my questions in such a public forum; and I have studied the dynamics of the underlying industries. The valuation models are robust and use an extensive set of company-specific quantitative and qualitative inputs.”",
+  "questions": [
+   {
+    "n": 13,
+    "q": "Based on Company A’s characteristics, which of the following absolute valuation models is most appropriate for valuing that company?",
+    "options": [
+     "Asset based",
+     "Dividend discount",
+     "Free cash flow to the firm"
+    ],
+    "answer": "C",
+    "why": "C is correct. The free cash flow to the firm model is the most appropriate of the choices because it can be used whether the company has significant marketable assets or consistently pays a cash dividend. Much of Company A’s assets are intangible, and although the company has a history of paying a dividend, it has been only occasionally and in the form of a special dividend (i.e., not a consistent cash dividend).",
+    "user": "A"
+   },
+   {
+    "n": 14,
+    "q": "Based on Company B’s characteristics, which of the following valuation models is most appropriate for valuing that company?",
+    "options": [
+     "Asset based",
+     "Sum of the parts",
+     "Dividend discount"
+    ],
+    "answer": "B",
+    "why": "B is correct. This valuation model would be consistent with the characteristics of the company. Company B is a conglomerate operating in three unrelated industries with significantly different expected revenue growth rates. The sum-of-the-parts valuation model sums the estimated values of each of the company’s businesses as if each business were an independent going concern. Sum-of-the-parts analysis is most useful when valuing a company with segments in different industries that have different valuation characteristics.",
+    "user": "B"
+   },
+   {
+    "n": 15,
+    "q": "Which of the following is most likely to be appropriate to consider in Company B’s valuation of Company X?",
+    "options": [
+     "Blockage factor",
+     "Control premium",
+     "Lack of marketability discount"
+    ],
+    "answer": "B",
+    "why": "B is correct. A control premium may be reflected in the value of a stock investment that would give an investor a controlling position. Company B acquired 70% of the outstanding stock of Company X; more than 50% is considered a controlling ownership position.",
+    "user": "B"
+   },
+   {
+    "n": 16,
+    "q": "Based on Dormier’s response to the director of research, Dormier’s process could have been more consistent with the firm’s policy by:",
+    "options": [
+     "incorporating additional micro-level inputs into her valuation models.",
+     "evaluating the impact of general economic conditions on each company.",
+     "asking more probing questions during publicly available company conference calls."
+    ],
+    "answer": "B",
+    "why": "B is correct. A top-down forecasting approach moves from macroeconomic forecasts to industry forecasts and then to individual company and asset forecasts. Analysts are expected to understand the general economic conditions before finalizing a research report and making a recommendation. According to Dormier’s response, she did not comment on the general economic conditions—although such considerations would be consistent with the firm’s policy of using a top-down approach.",
+    "user": "B"
+   }
+  ]
+ },
+ {
+  "id": "eq1-zylkin",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Zylkin: Porter strategies, liquidation vs going concern, inferring expectations",
+  "body": "Emily Zylkin is the training coordinator for an actively managed fund and she presents to new interns.\n\nOn the second slide, Zylkin discusses some views about assessing where mispricing can occur. Zylkin states that companies that emphasize the efficient use of assets and employees to reduce costs in all consumer segments are more successful than other companies in the same industry that tailor products and marketing to a specific consumer.\n\nAs an aside, Zylkin states that the fund will implement a short selling strategy on equities without pairs-trading if the value from continuing the business is less than the immediate sale of the company's assets.\n\nOn the third slide, Zylkin states that another technique for determining mispricing is to solve for revenue growth the market price and then make a comparison to projected industry revenue growth and the size of the customer base. The analyst can then determine if the company's revenue growth is realistically achievable.\n\nOn the last slide, Zylkin continues with the topic of pairs-trading. She mentions that stocks with similar P/E ratios within an industry will be grouped for further analysis. Generally, company level projections for revenue and costs will be compared to group aggregated projections and industry-wide projections to determine above and below average performers.",
+  "questions": [
+   {
+    "n": 17,
+    "q": "With respect to the second slide, which of the following strategies best describes the strategy used by more successful companies?",
+    "options": [
+     "Focus",
+     "Differentiation",
+     "Cost leadership"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because focus describes a strategy towards a targeted segment of consumers that can follow either a cost leadership or differentiation strategy within the given segment. The more successful strategy does not separate the consumers into segments with differing strategies.  | B. Incorrect because differentiation describes the less preferred strategy of tailoring products and marketing toward a particular consumer. The more successful strategy with efficiency in the use of assets and employees to reduce costs in all consumer segments is an example of a 'cost leadership' strategy.  | C. Correct because efficiency in the use of assets and employees to reduce costs in all consumer segments is an example of a 'cost leadership' strategy. In general, a company’s value is higher to the extent that it can create and sustain an advantage relative to its competition. Porter identifies several generic corporate strategies for achieving above-average performance: i. Cost leadership—being the lowest cost producer while offering products comparable to those of other companies so that products can be priced at or near the industry average ii. Differentiation—offering unique products or services along some dimensions that are widely valued by buyers so that the company can command premium prices iii. Focus—seeking a competitive advantage within a target segment or segments of the industry based on either cost leadership (cost focus) or differentiation (differentiation focus)",
+    "user": "C"
+   },
+   {
+    "n": 18,
+    "q": "As an aside to the second slide, the short selling strategy Zylkin states is most likely driven by the:",
+    "options": [
+     "intrinsic value greater than going-concern value.",
+     "liquidation value greater than going-concern value.",
+     "orderly liquidation value greater than going-concern value."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the going-concern value is less than the liquidation value causing the short selling strategy. The intrinsic value is not considered in the decision to sell short.  | B. Correct because the going-concern value of a company is its value under a going-concern assumption and going-concern assumption is the assumption that the company will continue its business activities into the foreseeable future. The liquidation value is an alternative to a company’s going-concern value is its value if it were dissolved and its assets sold individually. The going-concern value is less than the liquidation value causing the short selling strategy.  | C. Incorrect because the orderly liquidation value is the value of assets sold during a longer period of time (i.e., in an 'orderly' fashion) which is higher than the liquidation value. The going-concern value is less than the liquidation value causing the short selling strategy. ",
+    "user": "A"
+   },
+   {
+    "n": 19,
+    "q": "The technique described in the third slide is most likely an example of:",
+    "options": [
+     "sensitivity analysis.",
+     "solving for a catalyst.",
+     "inferring a market expectation."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a sensitivity analysis is when a model parameter is changed to assess its influence on the valuation determined by the model. In a sensitivity analysis, the manager can choose which variables to change and by how much to determine the effect on the valuation. The technique Zylkin states does not involve changing input variables.  | B. Incorrect because a catalyst is a particular market or corporate event that will cause the marketplace to re-evaluate a company’s prospects. The technique Zylkin states does not involve looking for a catalyst.  | C. Correct because solving for a valuation model parameter based on market information is an example of inferring a market expectation. Inferring a market expectation evaluates the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to own expectations and the market’s expectations for a fundamental characteristic of one company may be useful as a benchmark or comparison value of the same characteristic for another company. ",
+    "user": "C"
+   },
+   {
+    "n": 20,
+    "q": "The analysis in the last slide is best described as a:",
+    "options": [
+     "relative valuation.",
+     "top-down analysis.",
+     "sum-of-the-parts valuation."
+    ],
+    "answer": "A",
+    "why": "A. Correct because for the purpose of pairs trading, the comparison of companies based on their P/E ratios is a relative valuation type of analysis. A relative valuation model estimates an asset’s value relative to that of another asset. The idea underlying relative valuation is that similar assets should sell at similar prices. Relative valuation is typically implemented using price multiples and a stock selling at a P/E that is low relative to the P/E of another closely comparable stock is relatively undervalued relative to the comparison stock.  | B. Incorrect because the use of company level data is indicative of a bottom-up analysis, not top-down analysis. A top-down forecasting approach moves from international and national macroeconomic forecasts to industry forecasts and then to individual company and asset forecasts. A bottom-up forecasting approach aggregates forecasts at a micro level to larger scale forecasts, under specific assumptions.  | C. Incorrect because a sum-of-the-parts valuation sums the estimated values of each of the company’s businesses as if each business were an independent going concern and it is most useful when valuing a company with segments in different industries that have different valuation characteristics. There is no indication of this type of valuation process. ",
+    "user": "A"
+   }
+  ]
+ },
+ {
+  "id": "eq1-davis",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Davis spas: liquidation value, relative valuation, competitive strategy, earnings quality",
+  "body": "Sasha Davis, a successful entrepreneur, is preparing for retirement and considering selling off her businesses. She is meeting with Erle Goldsman, an independent valuation consultant, to discuss the process and her options.\n\nDavis owns 100% of two chains of spas and wellness centers. The spa market can be divided into two segments:\n\nSmaller operations, typically in urban settings. Clients usually book only one or two services at a time and spend an hour or two at the outlet. Outlets compete on location, price and reputation. \nLarger full-service facilities, that operate in more rural settings. These offer more services than the urban spas and clients typically spend a full day at the facility. Providing good customer service and products are key to success in this market.\nDavis explains: \"I initially owned and operated two full-service spas as a chain under the banner of Davis Spa Days (DSD). The outlets have done well since established ten years ago and the company has a good reputation in the area. I believe in offering an exceptional customer experience supported by a full complement of well-trained staff. Five years ago, a chain of four urban spas became available for sale. Although the chain appeared able to survive for the next 12 months, it was undercapitalized and in financial distress, so I was able to acquire it at a good price. By converting those spas to the Davis banner and adding my management skills I was able to quickly offer, and keep offering, good quality services at industry average prices while keeping costs lower than competitors in this segment.\n\nGoldsman explains that spas and personal service businesses are usually valued using a multiple of gross revenue model. He makes the following note for his file: Due to the competitive strategies of the two chains, I will be able to apply a higher multiple than the industry average to value both businesses.\n\nBefore calculating a value for the chain of full-service spas, Goldsman asks Davis about that company's financial performance. \"It seems like the most recent year was very successful, revenue is up 20% but your operating costs are generally the same or lower, can you explain that discrepancy to me?\"\n\nDavis gives three explanations:\n\nPeople buy a lot of spa packages as gifts, but not all packages get used on a timely basis, so we changed to recording them as revenue when we are paid.\nSome of the costs we incur maintaining and growing our customer base are really investments in the future, therefore, we started recording one-half of our marketing costs as customer acquisition assets.\nWe did not record any depreciation expense this past year for some of our smaller assets because they are already fully depreciated.",
+  "questions": [
+   {
+    "n": 21,
+    "q": "The price Davis paid for the chain of four urban spas was most likely based on its:",
+    "options": [
+     "liquidation value.",
+     "fair market value.",
+     "going-concern value."
+    ],
+    "answer": "A",
+    "why": "A. Correct because the group was in financial distress and seemed to be lacking the value added by assets working together and by human capital. Davis was able to add that value after she took over, via her management skills and by converting to the Davis banner. Therefore, the valuation was most likely based on a liquidation value.  | B. Incorrect because FMV is the price at which an asset (or liability) would change hands between a willing buyer and a willing seller when the former is not under any compulsion to buy and the latter is not under any compulsion to sell. Because the urban group was in financial distress it is likely the seller was not completely willing and potentially was under a compulsion to sell.  | C. Incorrect because a going concern assumption may not be appropriate for a company in financial distress as the chain of urban spas was at that time. Also, the chain should be able to survive for the next 12 months which does not constitute a going concern issue. In estimating value, a going-concern assumption is the assumption that the company will continue its business activities into the foreseeable future. ",
+    "user": "A"
+   },
+   {
+    "n": 22,
+    "q": "The model Goldsman suggests for valuing spas and personal service businesses is best described as:",
+    "options": [
+     "an income model.",
+     "a relative valuation model.",
+     "an absolute valuation model."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because an income model is a type of absolute valuation model which includes present value models or discounted cash flow models. The model Goldsman has suggested for spas and personal service businesses (a multiple of gross revenue) is a relative model. A present value model or discounted cash flow model applied to equity valuation derives the value of common stock as the present or discounted value of its expected future cash flows (such models are known as income models of valuation in private business appraisals).  | B. Correct because a relative valuation is typically implemented using price multiples (ratios of stock price to a fundamental, such as cash flow per share) or enterprise multiples. The model Goldsman suggested for spas and personal service businesses uses a multiple of gross revenue.  | C. Incorrect because absolute valuation models include present value models or discounted cash flow models. The model Goldsman has suggested for spas and personal service businesses (a multiple of gross revenue) is a relative model. ",
+    "user": "B"
+   },
+   {
+    "n": 23,
+    "q": "Is Goldsman correct in his decision to apply a higher multiple to the two spa businesses?",
+    "options": [
+     "Yes",
+     "No, because it should be applied to the DSD chain only",
+     "No, because it should be applied to the urban chain only"
+    ],
+    "answer": "A",
+    "why": "A. Correct because the higher multiple should be applied to both spa chains. Both have been able to create and sustain an advantage relative to their competitors. In general, a company’s value is higher to the extent that it can create and sustain an advantage relative to its competition. Porter identifies several generic corporate strategies for achieving above-average performance: i. Cost leadership ii. Differentiation iii. Focus Even though the spas follow different competitive strategies, both have been able to create and sustain an advantage relative to their competitors. The DSD chain follows a differentiation strategy (good reputation, offers exceptional service, has highly trained staff) while the urban chain follows a cost leadership strategy (products priced at or near industry average while keeping costs lower than competitors in the segment). | B. Incorrect because both spas have been able to create and sustain an advantage relative to their competitors so a higher multiple can be applied to both. The urban chain has successfully implemented and sustained a cost leadership strategy (products priced at or near industry average while keeping costs lower than competitors in the segment).  | C. Incorrect because both spas have been able to create and sustain an advantage relative to their competitors so a higher multiple can be applied to both. The DSD chain has successfully implemented and sustained a differentiation strategy (good reputation, offers exceptional service, has highly trained staff). ",
+    "user": "A"
+   },
+   {
+    "n": 24,
+    "q": "In response to Goldsman's question about financial performance, which of Davis' explanations is least likely a quality of earnings issue?",
+    "options": [
+     "Gift packages",
+     "Depreciation expense",
+     "Customer acquisition cost"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because recognizing gift packages (or gift cards) when customers paid, and not when the service is provided, would result in early revenue recognition and is an indicator of lower quality of earnings. This is not in accordance with accounting standards (IFRS and US GAAP).  | B. Correct because although the fully depreciated status of the assets might indicate poor matching of the expense in prior years, the estimate of the useful life on the shorter side, not the longer side which would typically be an indication of lower quality earnings. In addition, the assets are smaller indicating the understatement of depreciation expense is less material and there is no evidence of a pattern of misstating depreciation for other more significant assets. Therefore, the lower depreciation expense is not an indicator of lower quality of earnings.  | C. Incorrect because deferral of expenses by capitalizing expenditures as an asset, for example: customer acquisition costs would be an indicator of lower quality of earnings. ",
+    "user": "B"
+   }
+  ]
+ },
+ {
+  "id": "eq1-chau",
+  "source": "9 Nov Equity Module 1 quiz, Equity Valuation: Applications and Processes (19/25, 76%)",
+  "readings": [
+   17
+  ],
+  "title": "Chau SMGI: cost leadership",
+  "body": "Ellen Chau, an analyst with a regional investment broker, is researching Strongsville Metal & Glass Industries (SMGI). The company specializes in preparing scrap metal and glass for recycling. It buys surplus metal and glass from equipment manufacturers, construction companies, and a local network of individual suppliers. The company sorts and shreds the metals and crushes the glass and then packages the materials for resale.\n\nChau presents the following company analysis (Exhibit 1) to Robert Simms, her immediate supervisor. Chau is bullish on SMGI, but Simms is not convinced and asks her to do some additional work on the report. \n\nExhibit 1 Excerpt from Draft Report on SMGI\nChau's Operational Analysis of SMGI\nFollowing more than a decade of mediocre financial results, SMGI has benefited from the improved economic environment in recent years. Scrap metal and glass is, well, scrap metal and glass. There is nothing particularly unique about it. Therefore, rather than emphasizing marketing, the company has taken strong preemptive steps to contain its costs of operations, introducing fuel hedging as well as the acquisition of more efficient machinery, both of which are improving its profitability. These actions should allow SMGI to price its products at or near the industry averages.\nExhibits 2 and 3 detail selected financial and market information for SMGI and its industry. \n\nExhibit 2 SMGI and Industry Average Selected Financial Information for the Fiscal Year Ended 30 June 2014\n \tSMGI\tIndustry Average\nReturn on assets\t10.60%\t11.00%\nReturn on equity\t18.40%\t16.00%\nNet profit margin\t4.30%\t4.10%\nEarnings per share (EPS) 2014\t$2.45\tn/a*\nForecast EPS for fiscal year ended June 2015\t$2.84\tn/a*\n* n/a indicates not applicable\n \nExhibit 3 Market Data for SMGI and Industry Average, 30 June 2014\n \tSMGI\tIndustry Average\nMarket price\t$29.64\tn/a*\nBeta (relative to S&P 500)\t1.35\t1.1\nRequired return on equity (CAPM)\t14.60%\t12.1%\nRisk-free rate\t5.00%\n* n/a = not applicable\nChau sums up her case for recommending a “Buy” rating on SMGI shares by noting three of the company’s strengths:\n\nSMGI uses less financial leverage than the average company in its industry.\nSMGI uses assets more efficiently than the average company in its industry.\nSMGI’s return on equity (ROE) exceeds the required return on equity calculated using the capital asset pricing model (CAPM).\nSimms is not convinced and prepares some alternate assumptions relating SMGI’s valuation. He believes that SMGI’s current price builds in overly optimistic expectations regarding its growth prospects. He agrees with Chau’s 2014 EPS number (see Exhibit 2) but disagrees with her earnings forecast for 2015 and later years. Simms believes that earnings growth in 2015 and 2016 will be 20% each year and then will drop sharply as a result of intense industry rivalry. Simms expects earnings growth beyond 2016 to be only 2% per year. Simms also assumes that SMGI will have a dividend payout ratio of 40% for the foreseeable future. Finally, using a different determination of beta than Chau, he estimates that the required rate of return on the company’s equity is 16.0%.",
+  "questions": [
+   {
+    "n": 25,
+    "q": "Chau’s operational analysis of SMGI indicates that the company’s competitive strategy is best described as:",
+    "options": [
+     "focus.",
+     "differentiation.",
+     "cost leadership."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. SMGI does not pursue a “target segment” approach.  | B. Incorrect. The recycling business does not offer unique products or services.  | C. Correct. SMGI’s competitive strategy is best described as cost leadership. A successfully executed cost leadership strategy will lower costs and raise profit margins while allowing products to be priced at or near the industry average. Differentiation is not feasible in the scrap glass and metal industry. SMGI has not adopted a focus, such as a particular type of glass or metal. ",
+    "user": "C"
+   }
+  ]
+ }
+]
