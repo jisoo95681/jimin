@@ -60,3 +60,17 @@ def make():
     return drop
 if __name__=='__main__':
     d=make(); print('dropped',d)
+
+def remake48():
+    """9 Nov, second version: nothing is dropped, 44 notebook + 4 Ethics = 48 per set (same Ethics units as before)."""
+    old=json.load(open('/home/user/jimin/bank/exam/practice_mix.json'))
+    allv=load_all(); size={k:len(v['questions']) for k,v in allv}; topic={k:v['topic'] for k,v in allv}
+    parts=partition([(k,size[k]) for k,_ in allv],6,44,R); assert parts
+    sets=[]
+    for b,p in enumerate(parts):
+        for _ in range(500):
+            R.shuffle(p)
+            if all(topic[a]!=topic[c] for a,c in zip(p,p[1:])): break
+        o=old['sets'][b]
+        sets.append(dict(vignettes=[list(k) for k in p],ethics_pos=R.randrange(len(p)+1),ethics_kind=o['ethics_kind'],ethics=o['ethics']))
+    json.dump(dict(dropped=[],sets=sets),open('/home/user/jimin/bank/exam/practice_mix.json','w'))

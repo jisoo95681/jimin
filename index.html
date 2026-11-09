@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v205 · 2026-11-09";
+  const APP_VERSION = "v206 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1527,9 +1527,9 @@
   function exLoad() {
     try {
       const s = Object.assign({ sets: {}, wrong: {} }, JSON.parse(localStorage.getItem(EX_KEY)) || {});
-      // Practice sets 1-6 were rebuilt on 9 Nov (new ids pr1-pr6): drop the saved progress of the old ps1-ps6.
-      ["ps1", "ps2", "ps3", "ps4", "ps5", "ps6"].forEach(id => { delete s.sets[id]; });
-      Object.keys(s.wrong || {}).forEach(k => { if (/^ps[1-6]:/.test(k)) delete s.wrong[k]; });
+      // Practice sets 1-6 were rebuilt on 9 Nov (new ids pq1-pq6): drop the saved progress of the old ps1-ps6 and pr1-pr6.
+      ["ps1", "ps2", "ps3", "ps4", "ps5", "ps6", "pr1", "pr2", "pr3", "pr4", "pr5", "pr6"].forEach(id => { delete s.sets[id]; });
+      Object.keys(s.wrong || {}).forEach(k => { if (/^p[sr][1-6]:/.test(k)) delete s.wrong[k]; });
       return s;
     } catch { return { sets: {}, wrong: {} }; }
   }
@@ -1590,7 +1590,7 @@
     backTo = () => examHub("back");
     app.append(nav("Menu", () => home("back")));
     app.append(el("h1", { className: "title" }, "Exam"),
-      el("p", { className: "sub" }, "Exam-style sets: vignette on the left, question on the right, a 2 h 12 min clock, flags and highlights. Everything is marked when you press Finish Test."));
+      el("p", { className: "sub" }, "Exam-style sets: vignette on the left, question on the right, a clock (3 minutes per question), flags and highlights. Everything is marked when you press Finish Test."));
     const st = exLoad();
     const group = (label, kind) => {
       const sets = exSets().filter(s => s.kind === kind);

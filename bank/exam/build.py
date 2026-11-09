@@ -33,7 +33,7 @@ def build(vs,setid,title,off):
             qq.append(dict(q=q['q'],options=new,answer=t,why=q['why']))
         out.append(dict(topic=v['topic'],body=v['body'],questions=qq))
     print(setid,len(qs),key,collections.Counter(key))
-    return dict(id=setid,title=title,kind="practice",minutes=132,desc="",vignettes=out)
+    return dict(id=setid,title=title,kind="practice",minutes=144,desc="",vignettes=out)
 def fig_body(html):
     out=[]
     inner=re.sub(r'<summary>.*?</summary>','',html,flags=re.S)
@@ -61,7 +61,7 @@ sets=[]
 for k,st_ in enumerate(MIX['sets']):
     vs=[dict(ALLV[tuple(x)]) for x in st_['vignettes']]
     vs.insert(st_['ethics_pos'],ethics_vignette(st_['ethics'],st_['ethics_kind']))
-    st=build(vs,f'pr{k+1}',f'Practice set {k+1}',1+500*k); st['desc']='Mixed topics from the key notes, with 4 Ethics questions'; sets.append(st)
+    st=build(vs,f'pq{k+1}',f'Practice set {k+1}',1+500*k); st['desc']='Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)'; sets.append(st)
 import os
 for mf in ["mock7","mock8"]:
     p=f"/home/user/jimin/bank/exam/{mf}.json"
