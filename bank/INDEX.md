@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 210 vignettes · 278 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 221 vignettes · 289 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -23,7 +23,7 @@ Totals: app 68 vignettes · bank 210 vignettes · 278 in all. Plus 152 standalon
 | 15 | Cost of Capital: Advanced Topics | 0 | 1 | 1 |
 | 16 | Corporate Restructuring | 0 | 3 | 3 |
 | 17 | Equity Valuation: Applications and Processes | 0 | 7 | 7 |
-| 18 | Discounted Dividend Valuation | 2 | 1 | 3 |
+| 18 | Discounted Dividend Valuation | 2 | 12 | 14 |
 | 19 | Free Cash Flow Valuation | 1 | 4 | 5 |
 | 20 | Market-Based Valuation | 3 | 2 | 5 |
 | 21 | Residual Income Valuation | 0 | 4 | 4 |
@@ -68,7 +68,7 @@ Totals: app 68 vignettes · bank 210 vignettes · 278 in all. Plus 152 standalon
 **15 Cost of Capital: Advanced Topics**: s1a-costcap (bank, 5Q)
 **16 Corporate Restructuring**: pc-6 (bank, 4Q); corp4-lee (bank, 5Q); jupiter-saturn (bank, 5Q)
 **17 Equity Valuation: Applications and Processes**: pc-8 (bank, 4Q); eq1-globalguardian (bank, 8Q); eq1-santos (bank, 4Q); eq1-dormier (bank, 4Q); eq1-zylkin (bank, 4Q); eq1-davis (bank, 4Q); eq1-chau (bank, 1Q)
-**18 Discounted Dividend Valuation**: charmed (app, 6Q); tasty (app, 6Q); s1b-miller (bank, 4Q)
+**18 Discounted Dividend Valuation**: charmed (app, 6Q); tasty (app, 6Q); eq2-dobson (bank, 6Q); eq2-peters (bank, 9Q); eq2-daniel (bank, 6Q); eq2-kwaza (bank, 7Q); eq2-withers (bank, 10Q); eq2-miller (bank, 4Q); eq2-tian (bank, 4Q); eq2-chau (bank, 3Q); eq2-armishaw (bank, 3Q); eq2-jackson (bank, 4Q); eq2-barton (bank, 4Q); s1b-miller (bank, 4Q)
 **19 Free Cash Flow Valuation**: izzo (app, 7Q); pc-3 (bank, 4Q); leigh-holt (bank, 6Q); singh-fcff (bank, 6Q); m2-8 (bank, 4Q)
 **20 Market-Based Valuation**: cannan (app, 7Q); centralino (app, 6Q); pinho (app, 7Q); m2-2 (bank, 4Q); s1a-stratton (bank, 6Q)
 **21 Residual Income Valuation**: m1-7 (bank, 4Q); nkomo (bank, 8Q); castovan (bank, 10Q); s1a-kim (bank, 5Q)
