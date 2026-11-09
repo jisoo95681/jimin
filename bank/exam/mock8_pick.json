@@ -1,0 +1,92 @@
+[
+ {
+  "id": "eq2-jackson",
+  "topic": "Equity",
+  "ns": [
+   53,
+   54,
+   55,
+   56
+  ]
+ },
+ {
+  "id": "eq1-dormier",
+  "topic": "Equity",
+  "ns": [
+   13,
+   14,
+   15,
+   16
+  ]
+ },
+ {
+  "id": "fsa5-coleridge",
+  "topic": "FSA",
+  "ns": [
+   19,
+   20,
+   21,
+   22
+  ]
+ },
+ {
+  "id": "m2-11",
+  "topic": "Alt",
+  "ns": [
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ {
+  "id": "m1-10",
+  "topic": "Quant",
+  "ns": [
+   37,
+   38,
+   39,
+   40
+  ]
+ },
+ {
+  "id": "s2a-oconnor",
+  "topic": "Ethics",
+  "ns": [
+   17,
+   18,
+   19,
+   20
+  ]
+ },
+ {
+  "id": "esg31-3",
+  "topic": "Corp",
+  "ns": [
+   11,
+   12,
+   13,
+   14
+  ]
+ },
+ {
+  "id": "em-simmons",
+  "topic": "Econ",
+  "ns": [
+   33,
+   34,
+   35,
+   36
+  ]
+ },
+ {
+  "id": "d28-troubadour",
+  "topic": "Deriv",
+  "ns": [
+   7,
+   8,
+   9,
+   10
+  ]
+ }
+]

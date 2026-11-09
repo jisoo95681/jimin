@@ -36,7 +36,7 @@ sets=[]
 for k,(vs,(m,d)) in enumerate(zip(LOADED,SPECS)):
     st=build(vs,f'ps{k+1}',f'Practice set {k+1}',1+500*k); st['desc']=d; sets.append(st)
 import os
-for mf in ["mock7"]:
+for mf in ["mock7","mock8"]:
     p=f"/home/user/jimin/bank/exam/{mf}.json"
     if os.path.exists(p): sets.append(json.load(open(p)))
 for st_ in sets: st_['rev']=2
