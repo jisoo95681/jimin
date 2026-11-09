@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v206 · 2026-11-09";
+  const APP_VERSION = "v207 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1217,8 +1217,8 @@
     return st;
   }
   function kqSummary() {
-    const d = kqLoad(), m = KEYQ.filter(q => kqSt(d, q).streak >= 3).length;
-    return `${plural(KEYQ.length, "question")} · ${m} mastered`;
+    const d = kqLoad(), ks = KEYQ.filter(q => q.reading !== 98), m = ks.filter(q => kqSt(d, q).streak >= 3).length;
+    return `${plural(ks.length, "question")} · ${m} mastered`;
   }
   // Plain text with [[a|b]] fractions, ^powers and _{subscripts} turned into HTML (the text is escaped first).
   function kqFmt(s) {
@@ -1336,7 +1336,7 @@
 
   // A day runs until 2:00 the next morning, so a question added at 1:00 belongs to the day before.
   // Ethics (readings 40-42) is practised in sessions, so it is not part of the day lists.
-  const kqDayItems = () => KEYQ.filter(q => q.reading !== 99 && (!(q.reading >= 40 && q.reading <= 42) || q.inDay));
+  const kqDayItems = () => KEYQ.filter(q => q.reading < 98 && (!(q.reading >= 40 && q.reading <= 42) || q.inDay));
   const kqToday = () => new Date(Date.now() - 2 * 3600 * 1000).toLocaleDateString("en-CA");
   const kqDayLabel = day => {
     const t = new Date(day + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
@@ -1373,7 +1373,7 @@
       const st = kqSt(d0, q), card = el("div", { className: "card kq-card" + (st.streak >= 2 ? " kq-gray" : "") });
       const meta = el("div", { className: "meta" }), dots = el("div", { className: "nt-dots" });
       [0, 1, 2].forEach(k => dots.append(el("i", { className: st.streak > k ? "on" : "" })));
-      meta.append(el("span", {}, `${idx + 1} · ${q.reading === 99 ? q.grp : `${q.reading} ${NOTE_READINGS[q.reading]}`} · ${KQ_TYPE[q.type]}`), dots);
+      meta.append(el("span", {}, `${idx + 1} · ${q.reading >= 98 ? q.grp : `${q.reading} ${NOTE_READINGS[q.reading]}`} · ${KQ_TYPE[q.type]}`), dots);
       card.append(meta);
       card.append(kqHtml("p", q.q, "q"));
       if (q.fig) { const f = el("div", { className: "kq-figwrap" }); f.innerHTML = KQ_FIGS[q.fig] ? KQ_FIGS[q.fig]() : q.fig; card.append(f); }
@@ -1591,6 +1591,11 @@
     app.append(nav("Menu", () => home("back")));
     app.append(el("h1", { className: "title" }, "Exam"),
       el("p", { className: "sub" }, "Exam-style sets: vignette on the left, question on the right, a clock (3 minutes per question), flags and highlights. Everything is marked when you press Finish Test."));
+    const qd = kqLoad(), qq = KEYQ.filter(q => q.reading === 98), qm = qq.filter(q => kqSt(qd, q).streak >= 3).length;
+    const qb = el("button", { className: "nt-item" + (qq.length ? "" : " absorbed") });
+    qb.append(el("b", {}, "Quick questions"), el("span", {}, qq.length ? `${plural(qq.length, "question")} · main ideas behind questions you missed · ${qm} mastered` : "No questions yet"));
+    qb.onclick = () => { if (qq.length) exQuick(); };
+    app.append(qb);
     const st = exLoad();
     const group = (label, kind) => {
       const sets = exSets().filter(s => s.kind === kind);
@@ -1622,6 +1627,28 @@
       app.append(b);
     });
     if (!any) app.append(el("p", { className: "sub" }, "Questions you get wrong in a finished set are collected here, set by set."));
+  }
+
+  // Quick questions: the main ideas and formulas to use behind questions missed in papers (no calculations), grouped by paper.
+  function exQuick(dir = "fwd") {
+    screen(dir);
+    backTo = () => exQuick("back");
+    app.append(nav("Exam", () => examHub("back")));
+    const d = kqLoad(), all = KEYQ.filter(q => q.reading === 98), grps = [...new Set(all.map(q => q.grp).filter(Boolean))];
+    app.append(el("h1", { className: "title" }, "Quick questions"),
+      el("p", { className: "sub" }, "Main ideas and formulas to use behind the questions you missed in papers, with no calculations. Choose a paper, or All. 3 right in a row removes a question from its paper; it stays in All."));
+    const add = (title, items, spec) => {
+      const m = items.filter(q => kqSt(d, q).streak >= 3).length, left = items.length - m;
+      const b = el("button", { className: "nt-item" + (items.length ? "" : " absorbed") });
+      b.append(el("b", {}, title), el("span", {}, items.length ? `${plural(items.length, "question")} · ${left} to practise · ${m} mastered` : "No questions yet"));
+      b.onclick = () => { if (items.length) kqPage(Object.assign({ navLabel: "Quick questions", back: () => exQuick("back") }, spec)); };
+      app.append(b);
+    };
+    add("All · Quick questions", all, { title: "Quick questions · All", items: all, all: true });
+    grps.forEach(g => { const items = all.filter(q => q.grp === g); add(g, items, { title: `Quick questions · ${g}`, items, all: false }); });
+    const reset = el("button", { className: "link-btn" }, "Reset progress for Quick questions");
+    reset.onclick = () => { if (!confirm("Reset the right-in-a-row counts for Quick questions?")) return; const dd = kqLoad(); all.forEach(q => { dd[q.id] = undefined; }); kqSave(JSON.parse(JSON.stringify(dd))); exQuick("back"); };
+    app.append(el("div", { className: "row" }, ""), reset);
   }
 
   function examSetMenu(id, dir = "fwd") {

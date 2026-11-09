@@ -67,3 +67,6 @@ Mock 8 clean-up (9 Nov, v204): text that belonged to questions not in the mock w
 
 ## Practice sets 1-6 rebuilt (9 Nov, v205)
 Final version (v206): ids pq1-pq6, 48 Q each (44 notebook + 4 Ethics, nothing dropped), 144 min, topics mixed, drawn at random (bank/exam/practice_mix.json). The first version (pr1-pr6, 44 Q, 8 vignettes dropped) was replaced the same day because the user wanted all topics. Ethics units: pr1 kq41-139..142 (Vass vignette), pr2 kq41-224/175/252/194, pr3 kq41-221/261/09/233, pr4 kq41-32/218/177/148, pr5 kq41-119..122 (vignette), pr6 kq41-217/27/146/57. Saved progress of the old ps1-ps6 was reset (user chose start fresh).
+
+## Quick questions (9 Nov, v207)
+Exam hub > Quick questions: 52 concept multiple-choice questions without calculations (reading 98 in keyq.js, groups "Retry Paper 2" 18 and "Mock 7" 34) built from the misses of Retry Paper 2 (Q1, Q3, Q4, Q8, Q16, Q27, Q31, Q42) and Mock 7 (Q12, Q20, Q23, Q30, Q31, Q33, Q38, Q39, Q41, Q43, Q44).
