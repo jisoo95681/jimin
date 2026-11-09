@@ -665,7 +665,11 @@
   .ex-tbl th { background: #eef0f2; font-weight: 700; border-bottom: 2px solid #9aa1a8; }
   .ex-tbl td.tx { text-align: left; }
   .ex-note { font-size: .88rem; color: #444; }
-  .ex-qn { font-weight: 700; margin-bottom: 8px; color: #333; }
+  .ex-qn { font-weight: 700; margin-bottom: 8px; color: #333; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .ex-qblock { padding-bottom: 22px; margin-bottom: 22px; border-bottom: 2px solid #d7dbe0; }
+  .ex-qblock:last-child { border-bottom: 0; }
+  .ex-qflag { background: #f1f2f4; border: 1px solid #c8cdd2; border-radius: 4px; padding: 5px 10px; font-weight: 600; color: #555; }
+  .ex-qflag.on { background: #fff4cc; border-color: #e0b400; color: #7a5b00; }
   .ex-stem { font-weight: 600; margin-bottom: 16px; }
   .ex-opt { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; background: #fff; border: 1px solid #c8cdd2; border-radius: 4px; padding: 12px 14px; margin-bottom: 10px; cursor: pointer; color: #111; line-height: 1.45; }
   .ex-opt .rd { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #777; margin-top: 1px; display: grid; place-items: center; }
@@ -746,7 +750,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v199 · 2026-11-09";
+  const APP_VERSION = "v200 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1670,45 +1674,63 @@
     const vpane = $(".vpane"), qpane = $(".qpane"), hlb = $(".ex-hlb");
     let shownV = -1;
 
-    function render() {
-      const it = flat[cur.page];
-      $(".pgn").textContent = `${cur.page + 1} of ${N}`;
+    // One screen per vignette: all of its questions are stacked on the right and scrolled; Next/Back move between vignettes.
+    const NV = set.vignettes.length, firstQ = vi => flat.findIndex(x => x.vi === vi);
+    function paintOpt(n) {
+      qpane.querySelectorAll(`.ex-opt[data-n="${n}"]`).forEach(b => b.classList.toggle("sel", cur.ans[n] === +b.dataset.k));
       const done = Object.keys(cur.ans).length;
       $(".ex-prog i").style.width = exPct(done, N) + "%";
       $(".pp").textContent = `Progress ${exPct(done, N)}%`;
-      $(".vlab").textContent = exVTitle(set, it.vi);
-      if (shownV !== it.vi) {
-        shownV = it.vi;
-        const key = "v" + it.vi;
-        vpane.innerHTML = `<h3>Vignette ${it.vi + 1}</h3><div class="vq">${exVTitle(set, it.vi).split(" · ")[1]}</div><div class="hlz" data-k="${key}">${cur.hl[key] || exBodyHTML(it.v.body)}</div>`;
+    }
+    function render(scrollTo) {
+      const vi = flat[cur.page].vi, items = flat.filter(x => x.vi === vi);
+      $(".pgn").textContent = `Vignette ${vi + 1} of ${NV} (Q${items[0].n}–${items[items.length - 1].n})`;
+      $(".vlab").textContent = exVTitle(set, vi);
+      if (shownV !== vi) {
+        shownV = vi;
+        const key = "v" + vi;
+        vpane.innerHTML = `<h3>Vignette ${vi + 1}</h3><div class="vq">${exVTitle(set, vi).split(" · ")[1]}</div><div class="hlz" data-k="${key}">${cur.hl[key] || exBodyHTML(items[0].v.body)}</div>`;
         vpane.scrollTop = 0;
+        qpane.innerHTML = "";
+        items.forEach(it => {
+          const blk = el("div", { className: "ex-qblock", id: "exq" + it.n });
+          const hd = el("div", { className: "ex-qn" });
+          hd.append(el("span", {}, `Question ${it.n}`));
+          const fb = el("button", { className: "ex-qflag" + (cur.flag[it.n] ? " on" : "") }, cur.flag[it.n] ? "⚑ Flagged" : "⚐ Flag");
+          fb.onclick = () => { if (cur.flag[it.n]) delete cur.flag[it.n]; else cur.flag[it.n] = 1; save(); fb.className = "ex-qflag" + (cur.flag[it.n] ? " on" : ""); fb.textContent = cur.flag[it.n] ? "⚑ Flagged" : "⚐ Flag"; };
+          hd.append(fb); blk.append(hd);
+          const sk = "q" + it.n, stem = el("div", { className: "ex-stem hlz" });
+          stem.dataset.k = sk;
+          if (cur.hl[sk]) stem.innerHTML = cur.hl[sk]; else stem.textContent = it.q.q;
+          blk.append(stem);
+          it.q.options.forEach((o, k) => {
+            const ob = el("button", { className: "ex-opt" });
+            ob.dataset.n = it.n; ob.dataset.k = k;
+            ob.append(el("span", { className: "rd" }), el("span", {}, `${LETTERS[k]}. ${o}`));
+            ob.onclick = () => { if (cur.ans[it.n] === k) delete cur.ans[it.n]; else cur.ans[it.n] = k; save(); paintOpt(it.n); };
+            blk.append(ob);
+          });
+          qpane.append(blk);
+        });
+        qpane.scrollTop = 0;
       }
-      const sk = "q" + it.n;
-      qpane.innerHTML = `<div class="ex-qn">Question ${it.n}${cur.flag[it.n] ? " ⚑" : ""}</div><div class="ex-stem hlz" data-k="${sk}"></div>`;
-      const stem = qpane.querySelector(".ex-stem");
-      if (cur.hl[sk]) stem.innerHTML = cur.hl[sk]; else stem.textContent = it.q.q;
-      it.q.options.forEach((o, k) => {
-        const b = el("button", { className: "ex-opt" + (cur.ans[it.n] === k ? " sel" : "") });
-        b.append(el("span", { className: "rd" }), el("span", {}, `${LETTERS[k]}. ${o}`));
-        b.onclick = () => { if (cur.ans[it.n] === k) delete cur.ans[it.n]; else cur.ans[it.n] = k; save(); render(); };
-        qpane.append(b);
-      });
-      qpane.scrollTop = 0;
-      $(".flg").classList.toggle("on", !!cur.flag[it.n]);
-      $(".bk").disabled = cur.page === 0;
-      $(".nx").disabled = cur.page === N - 1;
+      items.forEach(it => paintOpt(it.n));
+      if (scrollTo) { const t = root.querySelector("#exq" + scrollTo); if (t) t.scrollIntoView({ block: "start" }); }
+      $(".bk").disabled = vi === 0;
+      $(".nx").disabled = vi === NV - 1;
       clock();
     }
-    function go(p) { cur.page = Math.max(0, Math.min(N - 1, p)); save(); render(); }
+    function go(p) { cur.page = Math.max(0, Math.min(N - 1, p)); save(); render(flat[cur.page].n); }
+    function goV(d) { const vi = Math.max(0, Math.min(NV - 1, flat[cur.page].vi + d)); cur.page = firstQ(vi); save(); render(); }
     function clock() {
       $(".tm").textContent = cur.hide ? "Hidden (tap to show)" : exHms(cur.left);
       const m = cur.left / 60;
       $(".al").textContent = m <= 5 ? "5 minutes remain" : m <= 15 ? "15 minutes remain" : m <= 30 ? "30 minutes remain" : "";
     }
     $(".ex-clock").onclick = () => { cur.hide = !cur.hide; save(); clock(); };
-    $(".bk").onclick = () => go(cur.page - 1);
-    $(".nx").onclick = () => go(cur.page + 1);
-    $(".flg").onclick = () => { const n = flat[cur.page].n; if (cur.flag[n]) delete cur.flag[n]; else cur.flag[n] = 1; save(); render(); };
+    $(".bk").onclick = () => goV(-1);
+    $(".nx").onclick = () => goV(1);
+    $(".flg").style.display = "none";
     $(".ext").onclick = () => { stop(); save(); examSetMenu(id, "back"); };
     $(".rev").onclick = review;
     $(".ex-fin").onclick = () => {
@@ -1738,7 +1760,7 @@
         flat.forEach(it => {
           const a = cur.ans[it.n] !== undefined, fl = !!cur.flag[it.n];
           if ((f.u || f.a || f.f) && !((f.u && !a) || (f.a && a) || (f.f && fl))) return;
-          const b = el("button", { className: (a ? "att" : "") + (fl ? " fl" : "") + (it.n - 1 === cur.page ? " cur" : "") }, String(it.n));
+          const b = el("button", { className: (a ? "att" : "") + (fl ? " fl" : "") + (it.vi === flat[cur.page].vi ? " cur" : "") }, String(it.n));
           b.onclick = () => { ov.remove(); go(it.n - 1); };
           grid.append(b);
         });
