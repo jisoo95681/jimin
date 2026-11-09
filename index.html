@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v201 · 2026-11-09";
+  const APP_VERSION = "v202 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1905,6 +1905,11 @@
     tc.append(el("b", {}, "By topic"));
     Object.entries(by).forEach(([t, [a, b]]) => tc.append(el("p", {}, `${t}: ${a} of ${b} (${exPct(a, b)}%)`)));
     app.append(tc);
+    const ansStr = flat.map(it => last.ans[it.n] === undefined ? "-" : LETTERS[last.ans[it.n]]).join("");
+    const ac = el("div", { className: "card" });
+    ac.append(el("b", {}, "Your answers (send this string to Claude for the wrong-answer PDF)"),
+      el("p", { style: "font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;letter-spacing:.06em;user-select:all;-webkit-user-select:all;word-break:break-all" }, ansStr.replace(/(.{4})/g, "$1 ").trim()));
+    app.append(ac);
     const fl = el("div", { className: "ex-filter" }), list = el("div");
     const show = mode => {
       list.innerHTML = "";
