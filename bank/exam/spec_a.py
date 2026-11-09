@@ -248,5 +248,5 @@ Model Z: Weber wants to classify stocks as "buy" or "sell". The relationships be
    "LASSO (least absolute shrinkage and selection operator) is a penalised regression: it adds a penalty on the size of coefficients, shrinking some to zero and so selecting features. It is supervised."),
  Q("The algorithm best suited to Model Y is a:","support vector machine",["hierarchical clustering algorithm","deep learning network with unlabelled data"],
    "SVM = linear classification algorithm that separates the data into one of two classes with the widest margin. Logit/probit models are also classification models for two classes."),
- Q("The algorithm best suited to Model Z is:","classification and regression tree (CART)",["LASSO","simple linear regression"],
+ Q("The algorithm best suited to Model Z is:","classification and regression tree (CART)",["LASSO (least absolute shrinkage and selection operator)","principal components analysis (PCA)"],
    "Two classes (buy/sell) with non-linear relationships and interactions between features → CART.")])

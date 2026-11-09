@@ -533,8 +533,8 @@
      {
       "q": "The algorithm best suited to Model Z is:",
       "options": [
-       "LASSO",
-       "simple linear regression",
+       "LASSO (least absolute shrinkage and selection operator)",
+       "principal components analysis (PCA)",
        "classification and regression tree (CART)"
       ],
       "answer": 2,
@@ -942,8 +942,8 @@
      {
       "q": "If Brightwater pays a dividend above the threshold, the conversion ratio most likely:",
       "options": [
-       "decreases, so the conversion price rises",
-       "stays the same, but the straight value rises",
+       "decreases, so the conversion price rises and the conversion value falls",
+       "stays the same, but the straight value of the bond rises to compensate holders",
        "increases, so the conversion price falls and the conversion value rises"
       ],
       "answer": 2,
@@ -1035,8 +1035,8 @@
       "q": "The junior analyst's statement is:",
       "options": [
        "incorrect, because the rates in the tree are not forecasts but stochastic paths consistent with the volatility assumption and current prices",
-       "correct, because each node gives the most likely rate at that date",
-       "correct, because the tree is calibrated to expected future rates"
+       "correct, because each node gives the most likely rate at that date, based on the volatility assumption and economic forecasts",
+       "correct, because the tree is calibrated to the expected future short-term rates implied by analysts' forecasts"
       ],
       "answer": 0,
       "why": "The binomial tree's interest rate movements are not predictions: they are random (stochastic) paths calibrated to today's par curve and an assumed volatility, so the tree is arbitrage-free."
@@ -1066,6 +1066,2174 @@
       ],
       "answer": 2,
       "why": "A cap limits the coupon the issuer pays when rates rise, so it benefits the issuer; the investor is short the cap.\nCap value = straight floater − capped floater = 100 − 99.72 = 0.28\nA floor (minimum coupon) would benefit the investor."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ps3",
+  "title": "Practice set 3",
+  "kind": "practice",
+  "minutes": 132,
+  "desc": "Fixed Income (term structure, embedded options, CDS), Credit Analysis Models",
+  "vignettes": [
+   {
+    "topic": "Fixed Income",
+    "body": "Bettina Kral teaches a term structure workshop at Danube Fixed Income. She describes four models of the short-term interest rate r:\n\nModel 1 (Cox–Ingersoll–Ross): dr = a(b − r)dt + σ√r dz\nModel 2 (Vasicek): dr = a(b − r)dt + σ dz\nModel 3 (Ho–Lee): dr = θ(t)dt + σ dz\nModel 4 (Kalotay–Williams–Fabozzi): d ln(r) = θ(t)dt + σ dz\n\nA participant asks which models are calibrated so that they reproduce current market prices of benchmark bonds.",
+    "questions": [
+     {
+      "q": "Which of Models 1 and 2 can produce negative interest rates?",
+      "options": [
+       "Model 1 only",
+       "Model 2 only",
+       "Both Model 1 and Model 2"
+      ],
+      "answer": 1,
+      "why": "In CIR, volatility is σ√r, so it shrinks to zero as r approaches zero: rates cannot become negative.\nIn Vasicek, volatility σ is constant and does not depend on r, so rates can become negative."
+     },
+     {
+      "q": "In which model does interest rate volatility increase as the level of rates rises?",
+      "options": [
+       "Model 1",
+       "Model 2",
+       "Model 3"
+      ],
+      "answer": 0,
+      "why": "CIR: the volatility term σ√r grows with r. Vasicek and Ho–Lee have constant volatility σ."
+     },
+     {
+      "q": "Models 3 and 4 are best described as:",
+      "options": [
+       "equilibrium models that allow rates to drift to a long-run level b",
+       "arbitrage-free models, which take current bond prices as given and assume they are correctly priced",
+       "equilibrium models, which are built from macroeconomic assumptions and need fewer parameters"
+      ],
+      "answer": 1,
+      "why": "Arbitrage-free models (Ho–Lee, KWF) use a time-dependent drift θ(t) calibrated to market prices, assuming those bonds are correctly priced.\nEquilibrium models (CIR, Vasicek) describe the economy, mean-revert to b and need fewer parameters to estimate."
+     },
+     {
+      "q": "Compared with Model 3, a key feature of Model 4 is that:",
+      "options": [
+       "rates cannot become negative, because the model describes the logarithm of r",
+       "the model is an equilibrium model with mean reversion",
+       "volatility rises with the level of rates through √r"
+      ],
+      "answer": 0,
+      "why": "KWF models ln(r), so r = e^(ln r) is always positive (log-normal rates). Ho–Lee models r itself with constant volatility, so rates can go negative."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Kral gives the class a two-asset example. Both assets are risk free and mature at time 1.\n\nExhibit 1: Two Risk-Free Assets\n# Asset | Price today | Payoff at time 1\nA | 500 | 520\nB | 1,000 | 1,060",
+    "questions": [
+     {
+      "q": "Based on the dominance principle, the arbitrage strategy and its profit at time 1 are:",
+      "options": [
+       "short sell two units of A, buy one unit of B: profit of 20",
+       "buy one unit of A, short sell one unit of B: profit of 60",
+       "buy two units of A, short sell one unit of B: profit of 20"
+      ],
+      "answer": 0,
+      "why": "Price per 1 of payoff: A = 500/520 = 0.9615; B = 1,000/1,060 = 0.9434. B is cheaper.\nBuy the cheap asset, sell the expensive one at zero net cost: short 2 A (+1,000), buy 1 B (−1,000).\nTime 1: receive 1,060 from B, pay 2 × 520 = 1,040 on A → profit 20."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Kral then shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are 2.0% (time 0 to 1), 3.1% (time 1 to 2), 3.8% (time 2 to 3) and 4.4% (time 3 to 4).\n\nShe values a three-year, 4% annual-coupon, option-free bond along this path using the pathwise method.",
+    "questions": [
+     {
+      "q": "The value of the bond along this path is closest to:",
+      "options": [
+       "103.00",
+       "102.65",
+       "100.68"
+      ],
+      "answer": 0,
+      "why": "Pathwise: discount each cash flow by the product of the one-year rates along the path (not by spot rates).\n4/1.020 + 4/(1.020 × 1.031) + 104/(1.020 × 1.031 × 1.038) = 103.00\nA three-year bond needs only the first three rates; the 4.4% rate (time 3 to 4) is not used.\n100.68 wrongly treats the path rates as spot rates."
+     },
+     {
+      "q": "For an option-free bond, the value found by discounting at spot rates compared with the value from a calibrated binomial tree is:",
+      "options": [
+       "lower when the assumed volatility is higher",
+       "the same, whatever volatility is assumed",
+       "higher when the assumed volatility is higher"
+      ],
+      "answer": 1,
+      "why": "A calibrated tree reprices the benchmark bonds, so an option-free bond has the same value from the tree as from spot rates, regardless of the volatility used. Volatility matters only for bonds with embedded options."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Before valuing callable bonds, Danube's analysts calibrate a binomial interest rate tree. A trainee lists the inputs he thinks are needed:\n\nInput 1: An assumed interest rate volatility.\nInput 2: An interest rate model, such as a log-normal model.\nInput 3: The observed market values of benchmark bonds.\nInput 4: Analysts' forecasts of future interest rates.",
+    "questions": [
+     {
+      "q": "Which inputs are needed to calibrate the tree?",
+      "options": [
+       "Inputs 1 and 4 only",
+       "Inputs 1, 2, 3 and 4",
+       "Inputs 1, 2 and 3 only"
+      ],
+      "answer": 2,
+      "why": "Calibration needs volatility, an interest rate model (for example log-normal rates) and the market values of benchmark bonds. Rates in the tree are not forecasts; they are random (stochastic) paths consistent with today's prices."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Marta Quiroga, an analyst at Solaris Bank, writes a note for clients on yields and spreads.\n\nStatement 1: \"A bond's yield to maturity is the return an investor earns only if the bond is held to maturity, there is no default, and all coupons are reinvested at the yield to maturity.\"\nStatement 2: \"In countries where government bonds trade with low liquidity, the swap curve is often a better benchmark than the government curve.\"\nStatement 3: \"The TED spread and the MRR–OIS spread both measure liquidity and credit risk in the banking system.\"\n\nQuiroga also describes a measure of the spread that, when added to each spot rate on the benchmark curve, makes the present value of a bond's cash flows equal to its market price. She notes that SOFR is a secured overnight rate based on the repo market.",
+    "questions": [
+     {
+      "q": "If the coupons of a bond held to maturity are reinvested at a rate below its yield to maturity, the realised return will be:",
+      "options": [
+       "below the yield to maturity",
+       "equal to the yield to maturity",
+       "above the yield to maturity"
+      ],
+      "answer": 0,
+      "why": "One YTM assumption is that coupons are reinvested at the YTM. A lower reinvestment rate gives a realised return below the YTM."
+     },
+     {
+      "q": "Which of Quiroga's statements are correct?",
+      "options": [
+       "Statements 1 and 2 only",
+       "Statements 1, 2 and 3",
+       "Statement 3 only"
+      ],
+      "answer": 1,
+      "why": "All three are correct. TED = three-month MRR − T-bill yield; MRR–OIS = MRR − overnight indexed swap rate; both reflect bank credit and liquidity risk. Where government bonds are illiquid, swap curves are a superior benchmark."
+     },
+     {
+      "q": "The spread measure Quiroga describes is the:",
+      "options": [
+       "swap spread",
+       "I-spread",
+       "Z-spread"
+      ],
+      "answer": 2,
+      "why": "Z-spread: constant spread added to each benchmark spot rate so that PV of cash flows = market price.\nI-spread = bond yield − swap rate of the same maturity.\nSwap spread = swap rate − government bond yield."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Quiroga needs the swap spread for a corporate bond that matures in 3.40 years. Exhibit 1 gives the data she has.\n\nExhibit 1: Yields and Swap Rates (%)\n# | 3 years | 4 years\nOff-the-run government yield | 0.70 | 0.86\nOn-the-run government yield | 0.62 | 0.78\nSwap rate | 1.38 | 1.51",
+    "questions": [
+     {
+      "q": "Using linear interpolation, the swap spread for 3.40 years is closest to:",
+      "options": [
+       "75 bps",
+       "143 bps",
+       "67 bps"
+      ],
+      "answer": 0,
+      "why": "Swap spread = swap rate − on-the-run government yield, both interpolated to 3.40 years.\nSwap rate = 1.38 + 0.40 × (1.51 − 1.38) = 1.432%\nOn-the-run = 0.62 + 0.40 × (0.78 − 0.62) = 0.684%\nSpread = 1.432 − 0.684 = 0.748% ≈ 75 bps\n67 bps uses the off-the-run yield; 143 bps is the swap rate, not the spread."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Quiroga's colleague, Diego Navas, computes forward prices. The three-year forward rate two years from now, f(2,3), is 3.2% (annual compounding).\n\nNavas also comments on interest rate volatility: \"Volatility of short-term rates is driven mainly by monetary policy, while volatility of long-term rates is driven mainly by expectations for the economy and inflation.\"",
+    "questions": [
+     {
+      "q": "The forward price, two years from now, of a zero-coupon bond paying 1 at year 5 is closest to:",
+      "options": [
+       "0.8543",
+       "0.9098",
+       "0.9690"
+      ],
+      "answer": 1,
+      "why": "Forward price F(j,k) = 1 / (1 + f(j,k))^k = 1 / 1.032³ = 0.9098\nThe exponent is k (the 3-year length of the forward period), not j or j + k."
+     },
+     {
+      "q": "Regarding Navas's comment, short-term rates are generally:",
+      "options": [
+       "more volatile than long-term rates, and the drivers he names are correct",
+       "less volatile than long-term rates, because monetary policy is predictable",
+       "equally volatile, and the drivers he names are reversed"
+      ],
+      "answer": 0,
+      "why": "Short-term volatility comes from monetary policy and is usually higher; long-term volatility reflects the economy and inflation expectations."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Navas considers rolling down the yield curve. He would buy a five-year zero-coupon government bond and sell it after two years. The five-year spot rate is 3.0% and the three-year spot rate is 2.4%. He assumes the yield curve stays stable.\n\nNavas also compares his projected spot curve with the current forward curve. For a two-year bond, he expects future spot rates to be below the current forward rates.",
+    "questions": [
+     {
+      "q": "Navas's annualised return from rolling down the curve is closest to:",
+      "options": [
+       "3.00%",
+       "7.97%",
+       "3.91%"
+      ],
+      "answer": 2,
+      "why": "Buy price = 100 / 1.030⁵ = 86.2609\nSell price after 2 years (now a 3-year bond) = 100 / 1.024³ = 93.1323\nAnnualised return = (sell / buy)^(1/H) − 1 with H = 2 = (93.1323/86.2609)^(1/2) − 1 = 3.91%\n7.97% is the two-year total return, not annualised."
+     },
+     {
+      "q": "If the projected spot curve is below the current forward curve, the bond is:",
+      "options": [
+       "fairly valued, because forward rates are unbiased",
+       "undervalued, so Navas should buy it",
+       "overvalued, so Navas should sell it"
+      ],
+      "answer": 1,
+      "why": "Projected spot below forward → future prices higher than the forward prices imply → bond undervalued → buy.\nProjected spot above forward → overvalued → sell."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Ilse Brandt, a portfolio strategist, describes three past changes in the yield curve.\n\nEpisode 1: Short-term yields fell much more than long-term yields during a recession.\nEpisode 2: During an economic expansion, short-term yields rose more than long-term yields as the central bank tightened.\nEpisode 3: During a market panic, long-term yields fell much more than short-term yields as investors rushed into long-dated government bonds.",
+    "questions": [
+     {
+      "q": "Episode 1 is best described as a:",
+      "options": [
+       "bearish flattening",
+       "bullish flattening",
+       "bullish steepening"
+      ],
+      "answer": 2,
+      "why": "Bullish = yields fall (prices rise). Short yields fall more → curve steepens → bullish steepening (typical in recessions when the central bank cuts)."
+     },
+     {
+      "q": "Episode 2 is best described as a:",
+      "options": [
+       "bearish steepening",
+       "bullish flattening",
+       "bearish flattening"
+      ],
+      "answer": 2,
+      "why": "Bearish = yields rise. Short yields rise more than long → curve flattens → bearish flattening (expansion, tightening)."
+     },
+     {
+      "q": "Episode 3 is a bullish flattening, also called a flight to quality. A manager who expected it should have:",
+      "options": [
+       "extended duration and used a barbell",
+       "shortened duration and used a bullet",
+       "bought short-term bills only"
+      ],
+      "answer": 0,
+      "why": "Long yields fall most → long bonds gain most → extend duration, using a barbell with long bonds."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Brandt summarises theories of the term structure for clients.\n\nTheory A: Long-term rates are the average of expected future short-term rates; there is no risk premium. It applies only to risk-free assets.\nTheory B: Over short holding periods all bonds earn the same return, but long holding periods include a risk premium.\nTheory C: Investors demand a premium for holding longer maturities, and the premium rises with maturity.\nTheory D: Investors and borrowers stay in their own maturity segments and never move to other maturities.\nTheory E: Investors prefer certain maturities but will move to another maturity if the extra yield is large enough.",
+    "questions": [
+     {
+      "q": "Theory B is best described as the:",
+      "options": [
+       "liquidity preference theory",
+       "unbiased (pure) expectations theory",
+       "local expectations theory"
+      ],
+      "answer": 2,
+      "why": "Local expectations: short-term holding returns are the same for all bonds (the risk-free rate); a risk premium appears only over longer holding periods. Theory A is the unbiased (pure) expectations theory."
+     },
+     {
+      "q": "Theory C is best described as the:",
+      "options": [
+       "preferred habitat theory",
+       "liquidity preference theory",
+       "segmented markets theory"
+      ],
+      "answer": 1,
+      "why": "Liquidity preference: a liquidity (term) premium that increases with maturity."
+     },
+     {
+      "q": "Which theory says investors leave their preferred maturity when they are paid enough to do so?",
+      "options": [
+       "Theory D, the segmented markets theory",
+       "Theory E, the preferred habitat theory",
+       "Theory A, the pure expectations theory"
+      ],
+      "answer": 1,
+      "why": "Preferred habitat: investors have favourite maturities but move if compensated. Segmented markets: they never move."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Yusuf Demir measures the interest rate risk of three bonds with the same issuer and maturity: Bond X (option free), Bond Y (callable, with the call option near the money) and Bond Z (putable, with the put option near the money). He computes one-sided durations (up = rates rise, down = rates fall) and key rate durations.",
+    "questions": [
+     {
+      "q": "Which statement about one-sided durations is most accurate?",
+      "options": [
+       "For Bond Y the down-duration is greater than the up-duration; for Bond Z it is the reverse",
+       "For Bond Y the one-sided up-duration is greater than the down-duration; for Bond Z it is the reverse",
+       "For all three bonds the up- and down-durations are equal"
+      ],
+      "answer": 1,
+      "why": "Callable near the money: when rates fall the call caps the price, so down-duration is small → up > down.\nPutable near the money: when rates rise the put floors the price, so up-duration is small → up < down.\nOption-free: up ≈ down."
+     },
+     {
+      "q": "Compared with Bond X, the one-sided down-duration of Bond Y is most likely:",
+      "options": [
+       "lower",
+       "higher",
+       "the same"
+      ],
+      "answer": 0,
+      "why": "When the call is at or near the money, a fall in rates barely raises the callable bond's price, so its down-duration is lower than that of the comparable option-free bond."
+     },
+     {
+      "q": "For Bond X, the key rate duration is most likely highest at:",
+      "options": [
+       "the first coupon date",
+       "the bond's maturity",
+       "the one-year key rate"
+      ],
+      "answer": 1,
+      "why": "An option-free bond's largest key rate duration is at its maturity, where the principal is paid. For a callable or putable bond, the key rate near the likely exercise date can be the largest."
+     },
+     {
+      "q": "The effective durations of Bonds Y and Z compared with Bond X are:",
+      "options": [
+       "less than or equal to that of Bond X",
+       "greater than or equal to that of Bond X",
+       "greater for Bond Y and less for Bond Z"
+      ],
+      "answer": 0,
+      "why": "Both embedded options shorten the effective duration: effective duration of a callable or putable bond ≤ effective duration of the option-free bond."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Demir also analyses a callable, putable convertible bond issued by Ostrava Motors. The conversion price is well above Ostrava's current share price. Over the next month Ostrava's share price rises 6% but remains below the conversion price.",
+    "questions": [
+     {
+      "q": "The value of the callable, putable convertible bond is best expressed as:",
+      "options": [
+       "straight bond − call option on the stock − call option on the bond + put option on the bond",
+       "straight bond + call option on the stock + call option on the bond − put option on the bond",
+       "straight bond + call option on the stock − call option on the bond + put option on the bond"
+      ],
+      "answer": 2,
+      "why": "Investor owns the conversion option (call on stock) and the put on the bond, and is short the issuer's call on the bond:\nstraight + call(stock) − call(bond) + put(bond)."
+     },
+     {
+      "q": "After the 6% rise in Ostrava's share price, the convertible's price most likely:",
+      "options": [
+       "rises by about 6%, because it tracks the share price",
+       "falls, because the issuer is more likely to call the bond",
+       "rises only slightly, because the conversion option is still out of the money"
+      ],
+      "answer": 2,
+      "why": "With the share price below the conversion price the bond behaves like a straight bond, so share price moves pass through only weakly. Only when the share price exceeds the conversion price does the bond start to track the stock."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Ana Petrova trades standardised CDS contracts at Vistula Bank. The Lark Corp. CDS has a standard coupon of 1%, and its current spread is 1.8%. The Mosel Inc. CDS has a standard coupon of 5%, and its current spread is 3.6%.",
+    "questions": [
+     {
+      "q": "If Petrova buys protection on Lark Corp., at initiation she will most likely:",
+      "options": [
+       "receive an upfront premium from the protection seller",
+       "pay an upfront premium to the protection seller",
+       "pay nothing upfront, because standard contracts trade at par"
+      ],
+      "answer": 1,
+      "why": "Spread > coupon → the coupon is too low for the risk → the protection buyer pays the difference upfront (CDS price below 100)."
+     },
+     {
+      "q": "If Petrova sells protection on Mosel Inc., at initiation she will most likely:",
+      "options": [
+       "receive an upfront premium from the protection buyer",
+       "pay an upfront premium to the protection buyer",
+       "receive the full 5% coupon in advance"
+      ],
+      "answer": 1,
+      "why": "Spread < coupon → the buyer pays a coupon that is too high → the protection seller pays the buyer upfront (CDS price above 100)."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Lukas Brenner, a credit analyst at Alder Bank, values short-term debt of Fenwick Ltd. A one-year Fenwick zero-coupon bond trades at 95.80 per 100 of par. The one-year risk-free rate is 2.0%, and the recovery rate if Fenwick defaults is 40%.\n\nBrenner also values a Fenwick bond that matures in one year and pays a final coupon of 5 with the principal of 100. He estimates the hazard rate for the year at 3% and the same 40% recovery rate on the amount owed.",
+    "questions": [
+     {
+      "q": "The risk-neutral probability of default implied by the zero-coupon bond is closest to:",
+      "options": [
+       "2.28%",
+       "4.20%",
+       "3.81%"
+      ],
+      "answer": 2,
+      "why": "100-par bond: 95.8 = [100 × (1 − p) + 40 × p] / 1.02\n95.8 × 1.02 = 97.716 = 100 − 60p\np = 2.284 / 60 = 3.81%"
+     },
+     {
+      "q": "The expected value at maturity of the coupon bond is closest to:",
+      "options": [
+       "105.00",
+       "103.11",
+       "101.85"
+      ],
+      "answer": 1,
+      "why": "Expected value = (principal + coupon) × (1 − hazard rate) + (principal + coupon) × recovery rate × hazard rate\n= 105 × 0.97 + 105 × 0.40 × 0.03 = 101.85 + 1.26 = 103.11"
+     },
+     {
+      "q": "If the risk-neutral probability of default on Fenwick debt falls, Fenwick's credit spread will most likely:",
+      "options": [
+       "not change, because the spread includes only liquidity risk",
+       "increase",
+       "decrease"
+      ],
+      "answer": 2,
+      "why": "A lower risk-neutral PD means lower expected loss, so the credit spread falls. In practice, the observed spread over the risk-free yield also includes liquidity and tax effects, not only credit risk."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Brenner models default risk for two issuers over three years.\n\nIssuer 1 has a constant annual hazard rate of 2.0%.\nIssuer 2 has hazard rates of 1.5% in year 1, 2.5% in year 2 and 3.5% in year 3. Brenner notes that hazard rates that change every year are more realistic.",
+    "questions": [
+     {
+      "q": "For Issuer 1, the probability of default in year 3 (PD3) is closest to:",
+      "options": [
+       "2.000%",
+       "5.881%",
+       "1.921%"
+      ],
+      "answer": 2,
+      "why": "PD_t = PS_(t−1) × hazard rate, with PS_t = (1 − h)^t\nPS2 = 0.98² = 0.9604\nPD3 = 0.9604 × 0.02 = 1.921%\n5.881% is the cumulative PD over three years."
+     },
+     {
+      "q": "For Issuer 2, the probability of survival to the end of year 3 is closest to:",
+      "options": [
+       "89.86%",
+       "92.68%",
+       "92.50%"
+      ],
+      "answer": 1,
+      "why": "Varying hazard rates: PS_t = (1 − h1)(1 − h2)…(1 − ht)\nPS3 = 0.985 × 0.975 × 0.965 = 92.68%\n(PD3 = PS2 × h3 = 0.9604 × 0.035 = 3.361%)"
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Brenner values a three-year, 4% annual-coupon bond issued by Harrow Logistics. The value of the bond assuming no default (VND), using the benchmark government spot curve, is 104.20. His credit valuation adjustment (CVA), computed with risk-neutral probabilities of default, is 3.10. The bond trades at 102.40.",
+    "questions": [
+     {
+      "q": "Based on Brenner's analysis, the Harrow bond is:",
+      "options": [
+       "overvalued, because its price is above VND − CVA",
+       "fairly valued, because the CVA uses risk-neutral probabilities",
+       "undervalued, because its price is below VND"
+      ],
+      "answer": 0,
+      "why": "Fair value = VND − CVA = 104.2 − 3.1 = 101.10\nPrice 102.4 > 101.10 → overvalued (sell).\nPrice < VND − CVA would mean undervalued."
+     },
+     {
+      "q": "The credit spread on the Harrow bond implied by Brenner's fair value is closest to:",
+      "options": [
+       "108 bps",
+       "361 bps",
+       "62 bps"
+      ],
+      "answer": 0,
+      "why": "Credit spread = YTM of the credit-risky bond − YTM of the benchmark.\nBenchmark YTM: N = 3, PMT = 4, FV = 100, PV = −104.2 (use VND, not the market price) → 2.529%\nRisky YTM: PV = −101.10 → 3.607%\nSpread = 108 bps. 62 bps uses the market price instead of the fair value."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Sanne de Vries compares credit models at Kestrel Bank.\n\nModel M treats a company's equity as a long call option on the company's assets, and its debt as a riskless bond plus a short put option on the assets. It uses balance sheet data and option pricing.\nModel N uses historical variables, financial ratios and macroeconomic data. Its key input is the default intensity: the probability of default over the next period, estimated with regression.",
+    "questions": [
+     {
+      "q": "A strength of Model M is that it:",
+      "options": [
+       "provides an economic explanation of why default happens",
+       "allows default intensity to change with the economy",
+       "does not require the company's assets to be traded"
+      ],
+      "answer": 0,
+      "why": "Structural model strengths: economic rationale for default; uses option pricing to value risky debt.\nWeaknesses: assumes assets are traded, hard for complex balance sheets, burdensome to implement, default barrier hard to measure."
+     },
+     {
+      "q": "A weakness of Model N is that it:",
+      "options": [
+       "assumes the company's assets trade in the market",
+       "cannot use macroeconomic variables",
+       "does not explain why default happens and treats default as a random event"
+      ],
+      "answer": 2,
+      "why": "Reduced-form strengths: no need for traded assets; default intensity can vary with company fundamentals and the economy.\nWeaknesses: does not explain the cause of default; treats it as a surprise."
+     },
+     {
+      "q": "In Model M, the value of risky debt equals:",
+      "options": [
+       "the value of riskless debt minus the value of a put option on the company's assets",
+       "the value of the company's assets plus a put option",
+       "the value of riskless debt plus a call option on the company's assets"
+      ],
+      "answer": 0,
+      "why": "Debt = riskless bond − put on assets (bondholders are short the put). Equity = call on assets."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "De Vries also reviews retail and securitised credit.\n\nApplicant 1 has a long credit history, no late payments, low use of available credit, few recent credit enquiries and uses many types of credit.\nBond 2 is a subordinated bond of a company whose senior unsecured debt is rated A.\nPool 3 is a large pool of short-term, homogeneous and granular credit card receivables.\nPool 4 is a pool of medium-term, homogeneous and granular auto loans.",
+    "questions": [
+     {
+      "q": "Applicant 1 most likely has a high credit score, and Bond 2 is most likely rated:",
+      "options": [
+       "above A, because subordinated bonds pay higher coupons",
+       "A, because all debt of an issuer has the same rating",
+       "below A, because ratings are notched down for lower-priority debt"
+      ],
+      "answer": 2,
+      "why": "Credit scores rise with long histories, no delinquencies, low utilisation, few enquiries and a wide variety of credit.\nRatings apply to senior unsecured debt; other classes are notched (lower priority → higher loss given default → lower rating)."
+     },
+     {
+      "q": "The most appropriate approaches to analyse Pools 3 and 4 are, respectively:",
+      "options": [
+       "statistical and portfolio approaches",
+       "loan-by-loan analysis for both",
+       "portfolio and statistical approaches"
+      ],
+      "answer": 0,
+      "why": "Short-term, homogeneous and granular (e.g. credit cards) → statistical approach.\nMedium-term, homogeneous and granular (e.g. auto loans) → portfolio approach.\nNon-granular pools need loan-by-loan analysis."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Brenner builds a two-year binomial tree to compute the CVA of a 3% annual-coupon corporate bond. At the end of year 2 the tree has three nodes with bond values (before the coupon) of 101.40, 103.10 and 104.60, reached with probabilities of 25%, 50% and 25%. The coupon of 3 is paid at every node at the end of year 2.\n\nBrenner's manager remarks that when the expected return of a bond is adjusted for possible rating changes over the year, the adjustment is usually negative.",
+    "questions": [
+     {
+      "q": "The expected exposure at the end of year 2 is closest to:",
+      "options": [
+       "106.03",
+       "103.05",
+       "106.05"
+      ],
+      "answer": 2,
+      "why": "Expected exposure = Σ (node value × node probability) + coupon\n= 0.25 × 101.40 + 0.50 × 103.10 + 0.25 × 104.60 + 3 = 103.05 + 3 = 106.05\nUse the node probabilities, not a simple average."
+     },
+     {
+      "q": "The manager's remark is best explained by the fact that:",
+      "options": [
+       "upgrades are more likely than downgrades, but have smaller price effects",
+       "modified duration rises after a downgrade, which always lowers the coupon",
+       "rating changes are skewed toward downgrades, and spreads widen far more on downgrades than they narrow on upgrades"
+      ],
+      "answer": 2,
+      "why": "Credit migration typically reduces expected returns because (1) the transition distribution is skewed toward downgrades and (2) the spread increase for a downgrade is much larger than the spread decrease for an upgrade."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ps4",
+  "title": "Practice set 4",
+  "kind": "practice",
+  "minutes": 132,
+  "desc": "Financial Statement Analysis",
+  "vignettes": [
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Clara Weiss, CFA, analyses the investments of Montclair Holdings, which reports under IFRS.\n\nInvestment 1: On 1 January, Montclair bought 12% of Pell Foods for $66 million and classified it at fair value through profit or loss (FVPL). On 31 December, the fair value of 100% of Pell's equity was $610 million. Pell reported net income of $45 million and paid dividends of $25 million during the year.\n\nInvestment 2: On 1 January, Montclair bought 30% of Rosen AG for €360 million and uses the equity method. Rosen's book value of net assets was €900 million. The fair value of Rosen's plant and equipment exceeded its book value by €100 million; the plant has a remaining life of 10 years (straight line). Any remaining excess is goodwill. Rosen reported net income of €120 million and paid dividends of €50 million.\n\nDuring the year Rosen also sold inventory to Montclair at a profit; half of that inventory was still held by Montclair at year-end.",
+    "questions": [
+     {
+      "q": "The pre-tax income Montclair reports from Investment 1 is closest to:",
+      "options": [
+       "$7.2 million",
+       "$10.2 million",
+       "$3.0 million"
+      ],
+      "answer": 1,
+      "why": "FVPL: income = holding gain + dividends received.\nYear-end value = 12% × 610 = $73.2m → holding gain = 73.2 − 66 = $7.2m\nDividends = 12% × 25 = $3.0m\nPre-tax income = 7.2 + 3.0 = $10.2m (Pell's net income is not recognised under FVPL)."
+     },
+     {
+      "q": "The goodwill included in Investment 2 is closest to:",
+      "options": [
+       "€0",
+       "€90 million",
+       "€60 million"
+      ],
+      "answer": 2,
+      "why": "Goodwill = purchase price − % × book value of net assets − % × (FV − BV) of identifiable assets\n= 360 − 0.30 × 900 − 0.30 × 100 = 360 − 270 − 30 = €60m."
+     },
+     {
+      "q": "The carrying value of Investment 2 at 31 December is closest to:",
+      "options": [
+       "€396 million",
+       "€381 million",
+       "€378 million"
+      ],
+      "answer": 2,
+      "why": "Investment account = purchase price + % × net income − % × dividends − amortisation of excess purchase price\n= 360 + 0.30 × 120 − 0.30 × 50 − (0.30 × 100)/10\n= 360 + 36 − 15 − 3 = €378m."
+     },
+     {
+      "q": "Montclair's equity income from Rosen (contribution to net earnings), before any adjustment for the inventory sale, is closest to:",
+      "options": [
+       "€18 million",
+       "€36 million",
+       "€33 million"
+      ],
+      "answer": 2,
+      "why": "Contribution to earnings = % × net income − amortisation of the excess = 36 − 3 = €33m.\nDividends reduce the investment account but are not part of earnings."
+     },
+     {
+      "q": "Regarding Rosen's sale of inventory to Montclair, Montclair should:",
+      "options": [
+       "recognise its full share of the profit immediately, because the sale is upstream",
+       "defer its share of the unrealised profit on the inventory still held until it is sold to third parties",
+       "eliminate 100% of the profit, because the companies are under common control"
+      ],
+      "answer": 1,
+      "why": "Under the equity method, the investor's share of unrealised profits on intercompany (upstream or downstream) sales is deferred until the goods are sold to outside parties."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Montclair later acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.\n\nThe analyst also considers a different deal in which the entire excess of the purchase price over book value is allocated to identifiable assets.",
+    "questions": [
+     {
+      "q": "Goodwill under the full goodwill method is closest to:",
+      "options": [
+       "€150 million",
+       "€50 million",
+       "€120 million"
+      ],
+      "answer": 0,
+      "why": "Full goodwill = purchase price / % owned − FV of identifiable net assets = 800/0.80 − 850 = 1,000 − 850 = €150m."
+     },
+     {
+      "q": "Under the partial goodwill method, goodwill and the non-controlling interest are closest to:",
+      "options": [
+       "€120 million and €200 million",
+       "€120 million and €170 million",
+       "€150 million and €200 million"
+      ],
+      "answer": 1,
+      "why": "Partial goodwill = 800 − 0.80 × 850 = €120m.\nNCI (partial) = % not owned × identifiable net assets = 0.20 × 850 = €170m.\n(Full method: NCI = 0.20 × 1,000 = €200m.)"
+     },
+     {
+      "q": "Compared with the full goodwill method, the partial goodwill method most likely reports:",
+      "options": [
+       "higher ROE and higher ROA",
+       "the same ROE and ROA",
+       "lower ROE and lower ROA"
+      ],
+      "answer": 0,
+      "why": "Partial goodwill gives smaller goodwill (lower assets) and smaller NCI (lower equity), with the same net income → higher ROA and ROE."
+     },
+     {
+      "q": "In the deal where the entire excess is allocated to identifiable assets, goodwill is:",
+      "options": [
+       "zero under both the full and partial goodwill methods",
+       "equal to the excess of fair value over book value",
+       "positive under the full method only"
+      ],
+      "answer": 0,
+      "why": "If all of the excess goes to identifiable assets, nothing is left for goodwill under either method."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Montclair and Quint Corp. each own 50% of a joint venture. Montclair's analyst compares reporting the joint venture with the equity method and with proportionate consolidation, and then compares these with the acquisition method used for a controlled subsidiary.",
+    "questions": [
+     {
+      "q": "Compared with the equity method, proportionate consolidation of the joint venture reports:",
+      "options": [
+       "the same revenue, but higher net income",
+       "higher revenue and assets, but the same net income and equity",
+       "higher revenue, net income and equity"
+      ],
+      "answer": 1,
+      "why": "Proportionate consolidation adds the venturer's share of revenues, expenses, assets and liabilities line by line. Net income and equity are the same as under the equity method."
+     },
+     {
+      "q": "Ranking the three methods for total assets, liabilities and revenue gives:",
+      "options": [
+       "equity method > proportionate consolidation > acquisition",
+       "acquisition > proportionate consolidation > equity method",
+       "proportionate consolidation > acquisition > equity method"
+      ],
+      "answer": 1,
+      "why": "Acquisition adds 100% of the subsidiary; proportionate adds only the owned share; the equity method adds one line (investment) and one income line. Net income (to the parent) is the same under all three."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Montclair creates a special purpose entity (SPE) and sells it $200 million of receivables. The SPE pays for the receivables with money borrowed from an outside bank. Montclair absorbs the SPE's losses, so it must consolidate the SPE.\n\nMontclair also holds bonds classified at amortised cost and equity securities at fair value through OCI. Management plans to change its business model for the bonds and asks whether they can be reclassified.",
+    "questions": [
+     {
+      "q": "Because Montclair consolidates the SPE, the sale of receivables most likely:",
+      "options": [
+       "reduces consolidated debt",
+       "leaves consolidated cash unchanged, because intercompany sales are eliminated",
+       "increases consolidated cash, because the money came from outside the group"
+      ],
+      "answer": 2,
+      "why": "The intercompany sale is eliminated, but the bank loan is new money from outside the group: consolidated cash and debt both rise. If the SPE had been funded by Montclair itself, consolidated cash would be unchanged."
+     },
+     {
+      "q": "Which statement about IFRS 9 and the reclassification is most accurate?",
+      "options": [
+       "FVPL securities are carried at amortised cost; reclassification of financial assets is never allowed under IFRS 9",
+       "Amortised-cost securities are carried at historical cost; reclassification is allowed after a significant change in the business model and prior statements are not restated",
+       "FVOCI securities are carried at historical cost; reclassification is allowed at any time but requires restating prior periods"
+      ],
+      "answer": 1,
+      "why": "FVPL and FVOCI → carried at fair (market) value; amortised cost → historical cost.\nReclassification of debt securities is allowed only when the business model changes significantly; it applies prospectively, with no restatement."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate.\n\nDuring the year 30,000 RSUs vested. Their grant-date fair value was $24 per RSU and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the expense previously recognised for them is reversed this year.\n\nKiruna also grants stock options. Aalto considers how changes in valuation inputs affect the options' fair value and Kiruna's reported earnings.",
+    "questions": [
+     {
+      "q": "Kiruna's RSU compensation expense for the year is closest to:",
+      "options": [
+       "$676,000",
+       "$930,000",
+       "$720,000"
+      ],
+      "answer": 0,
+      "why": "RSU expense = vested × grant-date FV − forfeited × their FV = 30,000 × 24 − 2,000 × 22 = 720,000 − 44,000 = $676,000.\nThe vesting-date price ($31) does not affect the expense."
+     },
+     {
+      "q": "The tax effect of the RSU vesting and its accounting under US GAAP is closest to:",
+      "options": [
+       "a $52,500 windfall recorded in equity",
+       "a $52,500 windfall that reduces income tax expense",
+       "a $52,500 shortfall that increases income tax expense"
+      ],
+      "answer": 1,
+      "why": "Tax effect = units vested × (settlement price − grant-date value) × tax rate = 30,000 × (31 − 24) × 25% = $52,500.\nPositive → windfall. US GAAP: through the income statement (lower tax expense). IFRS: excess goes to equity."
+     },
+     {
+      "q": "Because of the windfall, Kiruna's effective tax rate under US GAAP compared with what it would be under IFRS is:",
+      "options": [
+       "the same",
+       "higher",
+       "lower"
+      ],
+      "answer": 2,
+      "why": "US GAAP: the windfall reduces income tax expense → lower effective tax rate. IFRS: excess goes to equity → no effect on the rate, so IFRS shows a higher rate for a windfall (and a lower one for a shortfall)."
+     },
+     {
+      "q": "The vesting of the RSUs increases Kiruna's basic shares outstanding by:",
+      "options": [
+       "28,000 shares",
+       "30,000 shares",
+       "0 shares, because RSUs are only potentially dilutive"
+      ],
+      "answer": 1,
+      "why": "Once RSUs vest they become common shares: basic shares rise by the number vested (30,000). Unvested RSUs are potentially dilutive."
+     },
+     {
+      "q": "Holding other inputs constant, which change in the option valuation inputs would increase Kiruna's reported net income?",
+      "options": [
+       "A longer expected option life",
+       "A higher risk-free rate",
+       "A higher expected dividend yield"
+      ],
+      "answer": 2,
+      "why": "Option value ↑ with higher risk-free rate, longer life and higher volatility → higher compensation expense → lower net income (bad for the company).\nHigher dividend yield → lower call value → lower expense → higher net income."
+     },
+     {
+      "q": "If expected share price volatility rises, the fair value of RSUs and of stock options at grant will most likely:",
+      "options": [
+       "increase for RSUs and stay the same for options",
+       "increase for both",
+       "stay the same for RSUs and increase for options"
+      ],
+      "answer": 2,
+      "why": "RSU fair value = share price at grant, not affected by volatility. Option value rises with volatility → higher expense and lower net income."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Aalto computes Kiruna's diluted shares. Basic weighted-average shares are 5,000,000 and the average share price is $30.\n\nExhibit 1: Potentially Dilutive Securities\n# Security | Number | Exercise price | Average unrecognised compensation expense\nStock options | 200,000 | $18 | $600,000\nUnvested RSUs | 60,000 | – | $900,000\n\nAverage unrecognised expense is the average of the beginning and ending unrecognised compensation expense.",
+    "questions": [
+     {
+      "q": "Kiruna's diluted shares are closest to:",
+      "options": [
+       "5,120,000",
+       "5,260,000",
+       "5,090,000"
+      ],
+      "answer": 2,
+      "why": "Treasury stock method: dilutive shares = number − (cash proceeds + average unrecognised expense) / average price\nOptions: 200,000 − (200,000 × 18 + 600,000)/30 = 200,000 − 140,000 = 60,000\nRSUs (no cash proceeds): 60,000 − 900,000/30 = 30,000\nDiluted = 5,000,000 + 60,000 + 30,000 = 5,090,000"
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Aalto then reviews Kiruna's defined benefit pension plan. Exhibit 1 shows plan data for the year (in $ millions).\n\nExhibit 1: Pension Plan Data\n# Item | Amount\nBeginning PBO | 500.0\nBeginning plan assets | 440.0\nCurrent service cost | 30.0\nPast service cost (plan amendment this year) | 10.0\nDiscount rate | 4.5%\nExpected return on plan assets | 6.0%\nActual return on plan assets | 20.0\nActuarial loss | 8.0\nEmployer contributions | 35.0\nBenefits paid | 25.0\n\nAalto notes that employer contributions are cash outflows from operating activities. He also asks which assumption change would most reduce Kiruna's pension cost under US GAAP.",
+    "questions": [
+     {
+      "q": "The interest cost under US GAAP and the net interest expense under IFRS are closest to:",
+      "options": [
+       "$22.5 million and $2.7 million",
+       "$22.5 million and $22.5 million",
+       "$2.7 million and $19.8 million"
+      ],
+      "answer": 0,
+      "why": "US GAAP interest cost = beginning PBO × r = 500 × 4.5% = 22.5\nIFRS net interest = beginning funded status × r = (440 − 500) × 4.5% = −2.7 → net interest expense of 2.7"
+     },
+     {
+      "q": "Pension cost reported in profit or loss under IFRS is closest to:",
+      "options": [
+       "$32.7 million",
+       "$26.1 million",
+       "$42.7 million"
+      ],
+      "answer": 2,
+      "why": "IFRS P&L: service cost (current + past) + net interest = 30 + 10 + 2.7 = 42.7.\n(US GAAP P&L: current service cost + interest cost − expected return = 30 + 22.5 − 26.4 = 26.1, with past service cost amortised from OCI.)"
+     },
+     {
+      "q": "Kiruna's net pension liability at year-end is closest to:",
+      "options": [
+       "$75.5 million",
+       "$65.5 million",
+       "$60.0 million"
+      ],
+      "answer": 0,
+      "why": "Ending PBO = 500 + 30 + 10 + 22.5 + 8 − 25 = 545.5\nEnding plan assets = 440 + 35 + 20 − 25 = 470\nNet pension liability = 545.5 − 470 = 75.5"
+     },
+     {
+      "q": "Which change in assumptions would most likely reduce Kiruna's pension cost under US GAAP?",
+      "options": [
+       "A decrease in the estimated rate of future salary increases",
+       "A decrease in the expected return on plan assets",
+       "A decrease in the discount rate"
+      ],
+      "answer": 0,
+      "why": "Lower salary growth → lower PBO and service cost → lower pension cost.\nA lower discount rate usually raises PBO and service cost; a lower expected return raises US GAAP pension cost."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Hector Ruiz analyses Atlas Industrial, a US company, and its subsidiary in Mexico.\n\nTransaction: On 1 November, Atlas sold goods to a German customer on credit for €1,000,000, when the exchange rate was $1.10/€. On 31 December, the rate was $1.15/€ and the receivable was still outstanding.\n\nSubsidiary: The Mexican subsidiary earns all of its revenue in Mexican pesos, buys most of its materials in US dollars, and borrows in euros.",
+    "questions": [
+     {
+      "q": "Atlas's foreign currency transaction gain or loss at 31 December is closest to:",
+      "options": [
+       "a gain of $1,150,000",
+       "a loss of $50,000",
+       "a gain of $50,000"
+      ],
+      "answer": 2,
+      "why": "Gain = foreign currency amount × (year-end rate − transaction-date rate) = 1,000,000 × (1.15 − 1.10) = $50,000.\nA receivable in a currency that appreciates gives a gain (a payable would give a loss)."
+     },
+     {
+      "q": "The functional currency of the Mexican subsidiary is most likely the:",
+      "options": [
+       "US dollar",
+       "euro",
+       "Mexican peso"
+      ],
+      "answer": 2,
+      "why": "The primary indicators are ranked: (1) currency of revenues, (2) currency of operating costs, (3) currency of financing. Revenue is all in pesos → peso is the functional currency."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Ruiz compares two foreign subsidiaries of Atlas. Both have net monetary liabilities and positive net assets.\n\nSubsidiary A's functional currency is the US dollar (the parent's presentation currency), so it is remeasured with the temporal method.\nSubsidiary B's functional currency is its local currency, so it is translated with the current rate method.\n\nDuring the year both local currencies appreciate against the dollar. Prices in both countries are rising, and Subsidiary B uses FIFO.\n\nRuiz notes that in both cases the translated balance sheet does not balance until a plug figure is added. He also wants to reduce Atlas's balance sheet translation exposure for Subsidiary B.",
+    "questions": [
+     {
+      "q": "Which statement about the plug figure is most accurate?",
+      "options": [
+       "For A the plug is the cumulative translation adjustment; for B it is a gain or loss in net income",
+       "For both subsidiaries the plug is recorded in net income",
+       "For A the plug is translation gain or loss in net income; for B it is the cumulative translation adjustment in equity"
+      ],
+      "answer": 2,
+      "why": "Temporal method: remeasurement gain/loss goes to net income (and so to retained earnings).\nCurrent rate method: the translation adjustment goes to OCI as the CTA in equity. Both are the balancing (plug) figures."
+     },
+     {
+      "q": "Because the local currency appreciated, Subsidiary A's remeasurement result and Subsidiary B's CTA are most likely:",
+      "options": [
+       "a gain in income for A and a negative CTA for B",
+       "a loss in income for A and a positive CTA for B",
+       "a loss for both"
+      ],
+      "answer": 1,
+      "why": "A: exposure = net monetary liabilities; foreign currency ↑ → liabilities worth more in dollars → loss in net income.\nB: exposure = net assets (positive); foreign currency ↑ → positive translation adjustment (CTA ↑)."
+     },
+     {
+      "q": "For a subsidiary with an appreciating local currency and rising prices, which choices give the higher translated gross margin?",
+      "options": [
+       "Temporal method and LIFO",
+       "Temporal method and FIFO",
+       "Current rate method and LIFO"
+      ],
+      "answer": 1,
+      "why": "Temporal method: COGS at older (lower) historical rates while sales are at the average rate → higher margin when the foreign currency appreciates (current rate method is better when it depreciates).\nRising prices: FIFO uses older, cheaper costs → higher margin (LIFO when prices fall)."
+     },
+     {
+      "q": "To reduce the balance sheet exposure of Subsidiary B, Atlas should most likely:",
+      "options": [
+       "convert B's local currency borrowings into equity issued to the parent, reducing its local liabilities",
+       "reduce B's assets translated at the current rate, for example by using local cash to pay down local liabilities",
+       "increase B's local currency receivables, for example by extending longer credit terms to local customers"
+      ],
+      "answer": 1,
+      "why": "Find the net exposure under the method used, then choose the action that moves it toward zero. B's exposure is net assets (positive), so reduce exposed assets or increase exposed liabilities. Converting debt to equity would increase net assets."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Leah Morgan, a bank analyst, compares two banks. Exhibit 1 shows selected ratios for the last two years.\n\nExhibit 1: Selected Ratios\n# Ratio | Bank X last year | Bank X this year | Bank Y last year | Bank Y this year\nAllowance for loan losses / net charge-offs | 2.8 | 3.4 | 2.6 | 2.1\nProvision for loan losses / net charge-offs | 1.0 | 1.3 | 1.0 | 0.8\nAllowance for loan losses / nonperforming loans | 1.1 | 1.3 | 1.2 | 0.9\nLiquid assets / total assets | 0.18 | 0.21 | 0.20 | 0.17\nLoans / total assets | 0.62 | 0.60 | 0.61 | 0.66\nTrading revenue / total revenue | 0.08 | 0.07 | 0.15 | 0.24\n\nBank X funds itself mainly with long-term consumer deposits; Bank Y relies on short-term interbank borrowing. Morgan expects the yield curve to invert next year.",
+    "questions": [
+     {
+      "q": "Based on the loan loss ratios, which bank is accounting more conservatively and building a larger cushion?",
+      "options": [
+       "Bank X",
+       "Neither, because both provision ratios equal 1 last year",
+       "Bank Y"
+      ],
+      "answer": 0,
+      "why": "Allowance/charge-offs rising → bigger cushion. Provision/charge-offs > 1 → conservative; = 1 → flat allowance; < 1 → aggressive. Allowance/NPLs rising → sufficient provisioning. All three improve for Bank X and worsen for Bank Y."
+     },
+     {
+      "q": "Based on asset quality and earnings quality, which statement is most accurate?",
+      "options": [
+       "Bank X is better: higher liquid assets, lower loans to assets and a smaller share of volatile trading revenue",
+       "Bank Y is better, because higher trading revenue means more diversified earnings",
+       "Bank Y is better, because a higher loans-to-assets ratio means more interest income"
+      ],
+      "answer": 0,
+      "why": "Liquid assets/total assets ↑ = good; loans/total assets ↑ = more credit risk (bad). Trading revenue is volatile and not sustainable, so a lower share of revenue is better."
+     },
+     {
+      "q": "Which bank has the more stable funding, and what effect would an inverted yield curve most likely have on bank net interest revenue?",
+      "options": [
+       "Bank X; net interest revenue would rise",
+       "Bank Y; net interest revenue would rise",
+       "Bank X; net interest revenue would fall"
+      ],
+      "answer": 2,
+      "why": "Stable funding: longer-term and consumer (retail) deposits are stickier than short-term interbank funding.\nBanks borrow short and lend long (maturity transformation). An inverted curve raises short-term funding costs relative to long-term lending rates → lower net interest revenue."
+     },
+     {
+      "q": "Which item is included in Common Equity Tier 1 capital?",
+      "options": [
+       "Preferred stock with discretionary dividends",
+       "Subordinated convertible bonds",
+       "Retained earnings"
+      ],
+      "answer": 2,
+      "why": "CET1: common stock, additional paid-in capital, retained earnings, OCI, less intangibles and deferred tax assets.\nOther Tier 1: preferred stock with discretionary dividends. Tier 2: subordinated debt such as convertible bonds."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Morgan also analyses Harbour Mutual, a property and casualty (P&C) insurer, for the year (in $ millions).\n\nExhibit 1: Harbour Mutual Underwriting Data\n# Item | Amount\nNet premiums written | 1,250\nNet premiums earned | 1,200\nClaims paid | 690\nIncrease in loss reserves | 90\nUnderwriting expenses, including commissions | 350\n\nMorgan notes that after several years of intense competition and weak pricing, many P&C insurers have lost capital and some have left the market.",
+    "questions": [
+     {
+      "q": "Harbour's loss ratio and expense ratio are closest to:",
+      "options": [
+       "57.5% and 29.2%",
+       "65.0% and 28.0%",
+       "62.4% and 28.0%"
+      ],
+      "answer": 1,
+      "why": "Loss ratio = (claims paid + increase in loss reserves) / net premiums earned = (690 + 90)/1,200 = 65.0% (efficiency of underwriting standards).\nExpense ratio = underwriting expenses incl. commissions / net premiums written = 350/1,250 = 28.0% (efficiency of operations)."
+     },
+     {
+      "q": "Based on Morgan's note, the P&C cycle is most likely moving into a:",
+      "options": [
+       "hard market, with reduced competition and higher premiums",
+       "soft market, with more competition and lower premiums",
+       "soft market, because capital is shrinking"
+      ],
+      "answer": 0,
+      "why": "Cycle: soft market (high competition, weak prices) → capital shrinks and firms exit → reduced competition and higher prices (hard market) → higher profits attract new entrants → soft market again."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Nora Lindahl screens companies for earnings quality.\n\nCompany P: revenue growth well above peers; receivables growing faster than revenue; a rising share of revenue booked in the fourth quarter; net income greater than cash flow from operations for three years. Its receivables turnover has fallen, and Lindahl suspects bill-and-hold sales and channel stuffing.\nCompany Q: an Altman Z-score of 3.4 and a Beneish M-score of −2.6.\nCompany R: a Beneish M-score of −1.2 and a high level of accruals. Lindahl separates accruals into normal accruals explained by a regression on business activity, and the residual.\n\nCompany S reports under IFRS and classifies interest paid in financing activities. To compare it with peers, Lindahl reclassifies interest paid into operating activities.",
+    "questions": [
+     {
+      "q": "Company P's pattern is most consistent with:",
+      "options": [
+       "high-quality earnings that are well supported by operating cash flow",
+       "aggressive revenue recognition that inflates receivables",
+       "conservative accounting that defers revenue to later periods"
+      ],
+      "answer": 1,
+      "why": "Warning signs: revenue growth above peers, receivables growing faster than revenue, high share of revenue in the final quarter, net income > CFO. Bill-and-hold and channel stuffing raise receivables and lower receivables turnover."
+     },
+     {
+      "q": "Which company is most likely to be manipulating earnings?",
+      "options": [
+       "Company R",
+       "Neither, because both M-scores are negative",
+       "Company Q"
+      ],
+      "answer": 0,
+      "why": "M-score above −1.78 → higher probability of manipulation: R (−1.2) is above, Q (−2.6) below. A higher Altman Z-score means lower bankruptcy risk."
+     },
+     {
+      "q": "The residual from Lindahl's accruals regression represents:",
+      "options": [
+       "non-discretionary accruals, which arise from normal operations",
+       "cash earnings",
+       "discretionary accruals, which may signal earnings manipulation"
+      ],
+      "answer": 2,
+      "why": "Non-discretionary accruals come from normal business activity (explained by the regression). Discretionary accruals (the residual) come from unusual choices and can signal manipulation; high accruals mean lower earnings quality."
+     },
+     {
+      "q": "After Lindahl's reclassification, Company S's CFO and CFF will be, respectively:",
+      "options": [
+       "unchanged and lower",
+       "lower and higher",
+       "higher and lower"
+      ],
+      "answer": 1,
+      "why": "Interest paid is a cash outflow. Moving it from CFF to CFO lowers CFO and raises (makes less negative) CFF."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Jonas Berg compares Norvik AB with its industry. Exhibit 1 gives selected data (in SEK millions).\n\nExhibit 1: Norvik Financial Data\n# Item | Amount\nRevenue | 4,800\nEBIT | 720\nEarnings before tax (EBT) | 600\nNet income | 450\nAverage total assets | 6,000\nAverage equity | 2,500\n\nBerg also notes:\nNote 1: Norvik's ratio of operating cash flow before interest and taxes to operating income is well above 1.\nNote 2: The Nordic segment accounts for 30% of total assets and 45% of total capital expenditures.\nNote 3: Norvik's depreciable lives for PP&E are 20% longer than the industry average.",
+    "questions": [
+     {
+      "q": "Using the five-step DuPont analysis, Norvik's interest burden and ROE are closest to:",
+      "options": [
+       "0.833 and 18.0%",
+       "0.833 and 7.5%",
+       "0.750 and 18.0%"
+      ],
+      "answer": 0,
+      "why": "Tax burden = NI/EBT = 450/600 = 0.75\nInterest burden = EBT/EBIT = 600/720 = 0.833\nEBIT margin = 720/4,800 = 0.15\nAsset turnover = 4,800/6,000 = 0.80\nLeverage = 6,000/2,500 = 2.40\nROE = 0.75 × 0.833 × 0.15 × 0.80 × 2.40 = 18.0% (= 450/2,500)"
+     },
+     {
+      "q": "Note 1 most likely indicates that Norvik's earnings:",
+      "options": [
+       "are backed by cash flow",
+       "include large one-time gains",
+       "are inflated by accruals"
+      ],
+      "answer": 0,
+      "why": "Operating cash flow before interest and taxes ÷ operating income well above 1 → earnings are supported by cash (higher quality). When computing it, adjust for where interest and taxes paid are classified (IFRS allows CFO or CFF/CFI)."
+     },
+     {
+      "q": "Based on Note 2, the Nordic segment is most likely:",
+      "options": [
+       "growing, because its capex share is greater than its asset share",
+       "shrinking, because it holds only 30% of assets",
+       "being run for cash"
+      ],
+      "answer": 0,
+      "why": "Segment capex % ÷ segment asset % = 45/30 = 1.5 > 1 → the company is investing more there: growing. Below 1 → being reduced."
+     },
+     {
+      "q": "If Berg adjusts Norvik's depreciation to the industry's shorter lives, Norvik's debt-to-equity ratio will most likely:",
+      "options": [
+       "decrease",
+       "increase",
+       "stay the same"
+      ],
+      "answer": 1,
+      "why": "Shorter lives → higher depreciation → lower net income → lower retained earnings and equity → higher D/E.\n(If a company's figure is above the market's, adjust it down; if below, adjust it up.)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ps5",
+  "title": "Practice set 5",
+  "kind": "practice",
+  "minutes": 132,
+  "desc": "Portfolio Management",
+  "vignettes": [
+   {
+    "topic": "Portfolio Management",
+    "body": "Ingrid Solheim, risk manager at Fjordline Asset Management, estimates parametric VaR for a $50 million equity portfolio. The portfolio's expected annual return is 9% and its annual standard deviation is 18%. She assumes 250 trading days a year and uses the one-tailed z-values in Exhibit 1.\n\nExhibit 1: One-Tailed z-Values\n# Probability in the tail | z\n10% | 1.28\n5% | 1.65\n2.5% | 1.96\n1% | 2.33\n\nSolheim also notes that the portfolio's returns have high kurtosis.",
+    "questions": [
+     {
+      "q": "The 5% annual VaR of the portfolio is closest to:",
+      "options": [
+       "$19.35 million",
+       "$10.35 million",
+       "$14.85 million"
+      ],
+      "answer": 1,
+      "why": "Annual VaR = (z × σ_annual − μ_annual) × portfolio value = (1.65 × 0.18 − 0.09) × 50m = 0.207 × 50m = $10.35m\nThe expected return is subtracted, not added."
+     },
+     {
+      "q": "The 1% daily VaR of the portfolio is closest to:",
+      "options": [
+       "$1.042 million",
+       "$0.066 million",
+       "$1.308 million"
+      ],
+      "answer": 2,
+      "why": "Daily VaR = (z × σ_annual/√250 − μ_annual/250) × value = (2.33 × 0.18/15.811 − 0.09/250) × 50m = $1.308m\nVolatility scales with √250; the mean scales with 250."
+     },
+     {
+      "q": "Because of the high kurtosis, a VaR based on the normal distribution most likely:",
+      "options": [
+       "overstates the risk of extreme losses",
+       "is unaffected, because VaR uses only the mean and standard deviation",
+       "understates the risk of extreme losses"
+      ],
+      "answer": 2,
+      "why": "High kurtosis = fat tails → extreme downside losses are more likely than the normal distribution implies, so normal VaR understates tail risk. Low kurtosis → lower extreme downside risk."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Emil Varga trains analysts at Corvus Partners on multifactor models.\n\nModel 1 uses surprises in GDP growth, inflation and credit spreads as factors.\nModel 2 uses company attributes such as P/E, market capitalisation and leverage as factors.\nModel 3 uses principal components analysis to find the factors that best explain historical return covariances.\n\nVarga notes that arbitrage pricing theory (APT) assumes that returns are generated by a factor model, that asset-specific risk can be diversified away in a portfolio, and that no arbitrage opportunities exist.",
+    "questions": [
+     {
+      "q": "Which statement about APT is most accurate?",
+      "options": [
+       "APT requires a market portfolio factor, like the CAPM",
+       "APT assumes investors hold the market portfolio",
+       "APT does not specify the number or the identity of the factors"
+      ],
+      "answer": 2,
+      "why": "APT says returns follow a factor model but does not say how many factors there are or what they are."
+     },
+     {
+      "q": "Which statement about how the models are estimated is most accurate?",
+      "options": [
+       "In Model 2 the factor sensitivities (standardised attributes) are specified first and factor returns are estimated; in Model 1 the factor surprises are specified first and sensitivities are estimated",
+       "In both models the factor sensitivities are estimated first by time-series regression, and the factor returns are then observed directly",
+       "In Model 1 the factor sensitivities are specified first from company data; in Model 2 the sensitivities are estimated last by regression"
+      ],
+      "answer": 0,
+      "why": "Fundamental models: sensitivities come first (from attributes), factor returns are estimated by cross-sectional regression.\nMacroeconomic models: factor surprises are observed first, sensitivities are estimated by time-series regression."
+     },
+     {
+      "q": "Compared with Models 1 and 2, Model 3 most likely:",
+      "options": [
+       "makes minimal assumptions, but its factors are hard to interpret",
+       "is the model most used by active equity managers",
+       "has factors that are easy to interpret economically"
+      ],
+      "answer": 0,
+      "why": "Statistical factor models: advantage = minimal assumptions; disadvantage = factors (principal components) are hard to interpret, harder than fundamental or macro factors.\nActive equity managers mostly use fundamental models."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Varga gives the class a two-factor model for Stock K:\nR(K) = a(K) + b1 F1 + b2 F2 + e(K)\nwhere F1 and F2 are surprises in the two factors (expected value zero).\n\nHe also gives an APT-type equation for Portfolio M: the risk-free rate is 3%, the portfolio's sensitivities to factors 1 and 2 are 1.2 and −0.4, and the factor risk premiums are 4% and 2%.",
+    "questions": [
+     {
+      "q": "The expected return of Stock K equals:",
+      "options": [
+       "a(K) + b1 + b2",
+       "b1 F1 + b2 F2",
+       "a(K) only"
+      ],
+      "answer": 2,
+      "why": "With factors measured as surprises, E(F1) = E(F2) = 0, so E(R) = a(K). a(K) is the expected return only because the other terms have zero expected value."
+     },
+     {
+      "q": "The expected return of Portfolio M is closest to:",
+      "options": [
+       "5.4%",
+       "8.6%",
+       "7.0%"
+      ],
+      "answer": 2,
+      "why": "E(R) = Rf + β1 λ1 + β2 λ2 = 3% + 1.2 × 4% + (−0.4) × 2% = 3% + 4.8% − 0.8% = 7.0%"
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Ravi Kapoor evaluates the Orion Equity Fund against its benchmark using a three-factor model. Last year the fund returned 11.2% and the benchmark returned 8.1%.\n\nExhibit 1: Factor Sensitivities and Factor Returns\n# Factor | Fund sensitivity | Benchmark sensitivity | Factor return\nMarket | 1.15 | 1.00 | 6.0%\nSize | 0.40 | 0.10 | 2.0%\nValue | -0.10 | 0.20 | 4.0%",
+    "questions": [
+     {
+      "q": "The fund's return from factor tilts is closest to:",
+      "options": [
+       "0.30%",
+       "3.10%",
+       "7.30%"
+      ],
+      "answer": 0,
+      "why": "Factor tilt = Σ (fund sensitivity − benchmark sensitivity) × factor return\nMarket: 0.15 × 6% = 0.90%\nSize: 0.30 × 2% = 0.60%\nValue: −0.30 × 4% = -1.20%\nTotal = 0.30%"
+     },
+     {
+      "q": "The fund's return from security selection is closest to:",
+      "options": [
+       "3.40%",
+       "2.80%",
+       "3.10%"
+      ],
+      "answer": 1,
+      "why": "Active return = 11.2% − 8.1% = 3.1%\nSecurity selection = active return − factor tilt = 3.1% − (0.30%) = 2.80%"
+     },
+     {
+      "q": "Which factor tilt added the most to the fund's active return?",
+      "options": [
+       "Market",
+       "Value",
+       "Size"
+      ],
+      "answer": 0,
+      "why": "Compare the tilt contributions: market 0.90%, size 0.60%, value -1.20%. Market is the largest; value detracted."
+     },
+     {
+      "q": "Based on its sensitivities, the fund's style relative to the benchmark is best described as:",
+      "options": [
+       "low beta, large-cap and value",
+       "high beta, small-cap and growth",
+       "high beta, large-cap and value"
+      ],
+      "answer": 1,
+      "why": "Positive active market sensitivity → beta > benchmark; positive size → small-cap tilt; negative value → growth tilt. (Momentum: positive = momentum, negative = contrarian.)"
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Kapoor decomposes Orion's active risk. Orion's active risk (tracking error) is 4.0%, so active risk squared is 16.0 (%²). Exhibit 1 shows the active factor risk attributed to each factor and the active specific risk.\n\nExhibit 1: Active Risk Decomposition (%²)\n# Source | Contribution\nMarket | 3.2\nSize | 5.6\nValue | 2.4\nActive specific risk | 4.8\nTotal | 16.0",
+    "questions": [
+     {
+      "q": "The size factor's share of active risk squared is closest to:",
+      "options": [
+       "5.6%",
+       "47%",
+       "35%"
+      ],
+      "answer": 2,
+      "why": "Contribution to active risk squared = factor's active risk (%²) / active risk squared = 5.6 / 16.0 = 35%."
+     },
+     {
+      "q": "Active factor risk as a share of active risk squared is closest to:",
+      "options": [
+       "30%",
+       "80%",
+       "70%"
+      ],
+      "answer": 2,
+      "why": "Active factor risk = 3.2 + 5.6 + 2.4 = 11.2 → 11.2/16.0 = 70%. Active specific risk = 4.8/16 = 30%."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Mei Tanaka analyses the record of a quantitative manager who makes 100 independent-looking stock decisions a year.\n\nFact 1: The manager's forecasts of whether stocks outperform are correct 56% of the time.\nFact 2: The decisions are not truly independent: the average correlation between decisions is 0.05 because of cross-sectional and time-series dependency.\nFact 3: Each decision has an active risk of 3%.\n\nTanaka also analyses a sector rotation strategy that switches between two sectors X and Y each month. The monthly standard deviations are 5.0% for X and 4.0% for Y, and their correlation is 0.80.",
+    "questions": [
+     {
+      "q": "The manager's information coefficient is closest to:",
+      "options": [
+       "0.12",
+       "0.56",
+       "0.44"
+      ],
+      "answer": 0,
+      "why": "IC = 2 × (% correct) − 1 = 2 × 0.56 − 1 = 0.12"
+     },
+     {
+      "q": "The manager's effective breadth is closest to:",
+      "options": [
+       "95.0",
+       "100",
+       "16.8"
+      ],
+      "answer": 2,
+      "why": "With correlated decisions: BR = N / [1 + (N − 1) r] = 100 / (1 + 99 × 0.05) = 100 / 5.95 = 16.8"
+     },
+     {
+      "q": "Using the effective breadth, the manager's expected annual active return is closest to:",
+      "options": [
+       "36.00%",
+       "6.05%",
+       "1.48%"
+      ],
+      "answer": 1,
+      "why": "Annualised active risk σA = σ per decision × √BR = 3% × √16.81 = 12.30%\nE(RA) = IC × √BR × σA = 0.12 × 4.100 × 12.30% = 6.05%"
+     },
+     {
+      "q": "The monthly active risk of the sector rotation strategy is closest to:",
+      "options": [
+       "6.40%",
+       "3.00%",
+       "1.00%"
+      ],
+      "answer": 1,
+      "why": "σC = [σX² − 2 σX σY r + σY²]^½ = [0.0025 − 2 × 0.05 × 0.04 × 0.80 + 0.0016]^½ = 3.00%"
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Tanaka compares unconstrained and constrained versions of a strategy. The unconstrained information ratio is 0.40. Long-only constraints give a transfer coefficient of 0.6. The benchmark has a Sharpe ratio of 0.35 and a standard deviation of 16%.",
+    "questions": [
+     {
+      "q": "The optimal amount of active risk for the constrained portfolio is closest to:",
+      "options": [
+       "10.97%",
+       "6.58%",
+       "18.29%"
+      ],
+      "answer": 0,
+      "why": "Unconstrained: σA* = IR/SR_B × σ_B. Constrained: σA* = TC × (IR/SR_B) × σ_B (IR here = IC√BR)\n= 0.6 × (0.40/0.35) × 16% = 10.97%"
+     },
+     {
+      "q": "The maximum Sharpe ratio of the constrained portfolio is closest to:",
+      "options": [
+       "0.590",
+       "0.532",
+       "0.424"
+      ],
+      "answer": 2,
+      "why": "Constrained: SR_P = √[SR_B² + TC² × IR²] = √[0.35² + 0.6² × 0.40²] = 0.424\nUnconstrained would be √(SR_B² + IR²) = 0.532."
+     },
+     {
+      "q": "If the optimal active risk is 9.6% and the active portfolio's active risk is 12%, the weight in the active portfolio (the rest in the benchmark) is:",
+      "options": [
+       "20%, with 80% in the benchmark",
+       "80%, with 20% in the benchmark",
+       "125%, borrowing 25% from the benchmark"
+      ],
+      "answer": 1,
+      "why": "Optimal weight in active portfolio = optimal active risk / active risk of the portfolio = 9.6/12 = 0.80; benchmark weight = 1 − 0.80 = 0.20."
+     },
+     {
+      "q": "The transfer coefficient best measures:",
+      "options": [
+       "how well the manager's anticipated risk-adjusted returns are translated into risk-adjusted active weights",
+       "the number of independent active decisions the manager makes per year on different securities",
+       "the manager's ability to forecast returns, measured as the correlation between forecast and actual active returns"
+      ],
+      "answer": 0,
+      "why": "TC = correlation between forecast (risk-adjusted) returns and risk-weighted active weights; constraints lower it. IC = forecasting skill; BR = number of independent decisions."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Felix Arnaud reviews three managers for Sienne Pension Fund.\n\nExhibit 1: Manager Results\n# Manager | Portfolio return | Benchmark return | Active risk\nA | 8.80% | 8.75% | 3.06%\nB | 9.40% | 8.75% | 3.32%\nC | 10.50% | 8.75% | 9.46%\n\nManager D runs a balanced fund: 70% fixed income (return 10%, benchmark 8%) and 30% equity (return 12%, benchmark 10.5%). The benchmark weights are 60% fixed income and 40% equity.\n\nArnaud adds: (1) \"Manager A has very low active risk, a Sharpe ratio close to the benchmark's and an indeterminate information ratio, like a closet index fund.\" (2) \"If Manager B doubled all active weights, its information ratio would not change.\" (3) \"Changing the benchmark would change the managers' Sharpe ratios.\"",
+    "questions": [
+     {
+      "q": "Which manager has the highest information ratio?",
+      "options": [
+       "Manager C",
+       "Manager A",
+       "Manager B"
+      ],
+      "answer": 2,
+      "why": "IR = active return / active risk.\nA: 0.05/3.06 = 0.016; B: 0.65/3.32 = 0.196; C: 1.75/9.46 = 0.185 → B."
+     },
+     {
+      "q": "Manager D's return from security selection is closest to:",
+      "options": [
+       "0.50%",
+       "1.85%",
+       "2.15%"
+      ],
+      "answer": 1,
+      "why": "Security selection = Σ portfolio weight × (portfolio return − benchmark return) = 0.7 × (10 − 8) + 0.3 × (12 − 10.5) = 1.40 + 0.45 = 1.85%.\n(Asset allocation = Σ benchmark return × (portfolio weight − benchmark weight) = 8 × 0.10 + 10.5 × (−0.10) = −0.25%.)"
+     },
+     {
+      "q": "Which of Arnaud's statements is incorrect?",
+      "options": [
+       "Statement 3",
+       "Statement 2",
+       "Statement 1"
+      ],
+      "answer": 0,
+      "why": "The Sharpe ratio (Rp − Rf)/σp does not involve the benchmark, so the benchmark choice affects the IR but not the Sharpe ratio.\nScaling active weights (aggressiveness) does not change the IR. Closet index funds have low active risk, Sharpe near the benchmark and an indeterminate IR."
+     },
+     {
+      "q": "Active return is most accurately described as:",
+      "options": [
+       "the portfolio return minus the benchmark return, which is not the same as alpha",
+       "the return from security selection only, after removing the effect of asset allocation",
+       "the same as alpha in all cases, because both measure the return above the benchmark"
+      ],
+      "answer": 0,
+      "why": "Active return = Rp − RB. Alpha is the return beyond what the portfolio's risk exposures explain (for example, beyond beta × market premium), so the two are not the same unless the portfolio's beta equals the benchmark's."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Arnaud lists limitations of the fundamental law of active management:\n\nLimitation 1: If decisions are correlated (for example in fixed-income portfolios driven by a few rate factors), the number of decisions overstates breadth.\nLimitation 2: An ex ante IC that turns out to be poor gives poor ex post results.\n\nHe also notes that adding cash to an active portfolio leaves its Sharpe ratio unchanged.",
+    "questions": [
+     {
+      "q": "Adding cash to an active portfolio most likely:",
+      "options": [
+       "changes neither ratio",
+       "leaves the Sharpe ratio unchanged but changes the information ratio",
+       "changes the Sharpe ratio but leaves the information ratio unchanged"
+      ],
+      "answer": 1,
+      "why": "Mixing with cash scales excess return and risk equally → Sharpe ratio unchanged. But the cash creates active weights against the benchmark, changing active return and active risk, so the IR changes (falls)."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Hana Novak explains exchange-traded funds (ETFs) to clients of Tatra Wealth.\n\nPoint 1: The Tatra Europe ETF has a NAV of €24.80 per share and trades at €25.10.\nPoint 2: Novak measures the ETF's tracking error as the standard deviation of the differences between the daily returns of the ETF and its index.\nPoint 3: Compared with mutual funds, ETFs distribute fewer capital gains, because creation and redemption in kind are not taxable, and ETFs can be sold short.\nPoint 4: Novak lists components of an ETF's bid–ask spread: creation/redemption fees and other direct costs; the bid–ask spread of the underlying securities; compensation for the risk of hedging or carrying positions for the rest of the day; the market maker's desired profit; and a discount for the chance of receiving an offsetting order soon.\nPoint 5: A client plans to buy €100,000 of the ETF and hold it for 9 months. The round-trip commission is 0.10%, the bid–ask spread is 0.12% and the annual management fee is 0.20%.",
+    "questions": [
+     {
+      "q": "Based on Point 1, authorised participants are most likely to:",
+      "options": [
+       "do nothing, because the difference is within the ETF's bid–ask spread and cannot be arbitraged",
+       "create ETF shares by delivering the underlying securities, then sell the ETF shares",
+       "buy ETF shares in the market and redeem them for the underlying securities, then sell those securities"
+      ],
+      "answer": 1,
+      "why": "ETF price > NAV → premium → authorised participants (market makers) buy the basket, create ETF shares and sell them, pushing the price down. Price < NAV → redemption."
+     },
+     {
+      "q": "For a highly liquid ETF, which components of the spread in Point 4 matter least?",
+      "options": [
+       "The market maker's profit and the offsetting-order discount",
+       "All components matter equally",
+       "The first three: direct costs, the underlying spread and hedging compensation"
+      ],
+      "answer": 2,
+      "why": "For very liquid ETFs, market makers rarely need to create/redeem or hedge, so the first three components hardly affect the spread; it reflects mainly the market maker's profit less the discount for offsetting orders. The ETF spread is at most the sum of these components."
+     },
+     {
+      "q": "The client's total expected holding cost in Point 5 is closest to:",
+      "options": [
+       "0.42%",
+       "0.22%",
+       "0.37%"
+      ],
+      "answer": 2,
+      "why": "Total cost = round-trip commission + spread + management fee × (months/12) = 0.10% + 0.12% + 0.20% × 9/12 = 0.10 + 0.12 + 0.15 = 0.37%."
+     },
+     {
+      "q": "Which statement about ETF types and risks is most accurate?",
+      "options": [
+       "Synthetic ETFs and ETNs carry counterparty risk; leveraged and inverse ETFs aim to deliver their multiple only over very short periods",
+       "ETNs have no counterparty risk because they hold physical assets; synthetic ETFs carry only settlement risk",
+       "Synthetic ETFs carry no counterparty risk; leveraged and inverse ETFs deliver their stated multiple over any holding period"
+      ],
+      "answer": 0,
+      "why": "Synthetic ETFs use swaps → counterparty risk. ETNs are unsecured notes of the issuer → counterparty risk (no settlement/tracking of a basket). Leveraged/inverse funds reset daily, so long-horizon returns differ from the multiple. Other risks: expectation-related risk (investors misunderstanding the ETF) and fund closure risk (regulation, competition, corporate actions)."
+     },
+     {
+      "q": "A manager uses an ETF to keep market exposure while a new sub-manager is being hired for an asset class. This use is best described as:",
+      "options": [
+       "portfolio liquidity management",
+       "portfolio completion",
+       "portfolio rebalancing"
+      ],
+      "answer": 1,
+      "why": "Liquidity management: equitise cash quickly. Rebalancing: move back to target asset-class weights cost-efficiently (ETFs can also be shorted). Completion: fill temporary gaps in allocation, such as during a manager transition."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Lucia Ferrante, an economist at Banca Orsini, explains the links between the economy and asset prices.\n\nPoint 1: The price of an asset equals E(CF) / (1 + Rf + π + θ + φ), where π is expected inflation, θ is the premium for inflation uncertainty and φ is the premium for other risks such as default and illiquidity.\nPoint 2: A one-year default-free zero-coupon bond with par of 100 trades at 95.77. The real risk-free rate is 1.5% and expected inflation over the next year is 2.5%.\nPoint 3: Country 1 has nominal GDP growth of 8.5% and inflation of 3.0%, with low volatility of growth. Country 2 has nominal GDP growth of 6.0% and inflation of 0.5%, with high volatility of growth.\nPoint 4: The inter-temporal rate of substitution (ITRS) is the marginal utility of consuming one unit in the future divided by the marginal utility of consuming one unit now.",
+    "questions": [
+     {
+      "q": "Based on Point 2, the inflation uncertainty premium is closest to:",
+      "options": [
+       "0.42%",
+       "0.00%",
+       "4.42%"
+      ],
+      "answer": 0,
+      "why": "θ = E(CF)/Price − 1 − Rf − π = 100/95.77 − 1 − 0.015 − 0.025 = 0.42%"
+     },
+     {
+      "q": "Based on Point 3, real interest rates are most likely higher in:",
+      "options": [
+       "Country 1, because nominal growth is higher",
+       "neither country, because real growth is the same",
+       "Country 2, because real growth is the same but growth is more volatile"
+      ],
+      "answer": 2,
+      "why": "Real GDP growth = nominal − inflation: Country 1 = 8.5 − 3.0 = 5.5%; Country 2 = 6.0 − 0.5 = 5.5%. Equal real growth, so compare volatility: higher volatility → investors demand higher real rates."
+     },
+     {
+      "q": "If investors expect to be much better off in the future, the ITRS and real interest rates most likely:",
+      "options": [
+       "both rise",
+       "rise and fall, respectively",
+       "fall and rise, respectively"
+      ],
+      "answer": 2,
+      "why": "Better off later → future consumption worth less at the margin (numerator falls) → ITRS falls → investors save less → real rates rise. If they expect to be worse off, ITRS rises and real rates fall."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Ferrante adds further observations.\n\nObservation 1: The economy has a positive output gap.\nObservation 2: In the last recession, prices of AAA corporate bonds fell less than equity prices, because equity investors demand a higher equity risk premium in recessions.\nObservation 3: Credit spreads between government and corporate bonds, and between higher- and lower-rated corporate bonds, are narrowing.\nObservation 4: The bond spreads of cyclical businesses are more sensitive to the business cycle, and makers of durable goods have more volatile earnings.\nObservation 5: Corporate profitability is a leading indicator of the business cycle, and understanding the cycle matters most for short-term earnings forecasts.\nObservation 6: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.",
+    "questions": [
+     {
+      "q": "Observation 1 most likely means that:",
+      "options": [
+       "actual GDP is below potential GDP, with high unemployment",
+       "actual GDP is above potential GDP, with rising inflation pressure and low unemployment",
+       "the economy is growing at its sustainable rate"
+      ],
+      "answer": 1,
+      "why": "Positive output gap: producing beyond sustainable capacity → high inflation and low unemployment."
+     },
+     {
+      "q": "Based on Observation 3, which is most likely to perform best?",
+      "options": [
+       "Lower-rated corporate bonds",
+       "Government bonds",
+       "Higher-rated corporate bonds"
+      ],
+      "answer": 0,
+      "why": "Narrowing spreads: corporate bonds beat government bonds, and lower-rated bonds beat higher-rated bonds (their spreads fall most)."
+     },
+     {
+      "q": "For Observation 6, the commercial building's rental income should most likely be discounted at:",
+      "options": [
+       "a higher rate, because it includes a credit risk premium for the tenants",
+       "a lower rate, because commercial rents rise faster",
+       "the same rate, because both include inflation and inflation uncertainty premiums"
+      ],
+      "answer": 0,
+      "why": "Value = net rental income / (1 + r)^t, where net rental income = rental payments − rental expenses. Both rates include inflation (π) and inflation uncertainty (θ); the commercial lease also includes a credit risk premium (φ), so its discount rate is higher."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Kapoor finishes with three notes for the investment committee.\n\nNote 1: Orion's active specific risk has risen sharply this year.\nNote 2: A comparison table of macroeconomic and fundamental factor models.\nNote 3: The risk team's VaR model, and a backtest that needs a covariance matrix for 12 factors.",
+    "questions": [
+     {
+      "q": "Note 1 most likely indicates that:",
+      "options": [
+       "Orion has become more diversified across individual securities",
+       "a larger share of Orion's active risk now comes from stock selection",
+       "Orion's factor tilts relative to the benchmark have grown"
+      ],
+      "answer": 1,
+      "why": "Active specific risk = security-specific risk. Higher → more active risk from stock selection; low active specific risk suggests a well-diversified portfolio."
+     },
+     {
+      "q": "Which statement in Note 2 is most accurate?",
+      "options": [
+       "In a macroeconomic model the intercept is the stock's expected return when all factor surprises are zero; in a fundamental model the intercept has no economic meaning",
+       "In a fundamental model the sensitivities are regression slope estimates, and the intercept is the expected return when factors are zero",
+       "In a macroeconomic model the factors are estimated from cross-sectional regressions, and the intercept has no economic meaning"
+      ],
+      "answer": 0,
+      "why": "Macroeconomic: sensitivities = regression slopes; factors = surprises in macro variables; intercept = expected return.\nFundamental: sensitivities calculated directly from data (standardised attributes); factor returns estimated from multiple regression; intercept has no meaning."
+     },
+     {
+      "q": "Regarding Note 3, which statement is most accurate?",
+      "options": [
+       "VaR does not capture liquidity risk, and the covariance matrix has 132 distinct covariances",
+       "VaR fully captures liquidity risk, and the covariance matrix has 144 distinct covariances",
+       "VaR does not capture liquidity risk, and the covariance matrix has 66 distinct covariances"
+      ],
+      "answer": 2,
+      "why": "VaR ignores liquidity risk (it assumes positions can be sold at market prices).\nDistinct covariances = n(n − 1)/2 = 12 × 11/2 = 66."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Arnaud gives the committee three final points on active management.\n\nPoint 1: An index fund that meets its objective exactly.\nPoint 2: A manager with a very low information coefficient.\nPoint 3: An increase in the volatility of a manager's portfolio returns.",
+    "questions": [
+     {
+      "q": "The information ratio of the index fund in Point 1 is most likely:",
+      "options": [
+       "indeterminate but positive",
+       "zero",
+       "equal to its Sharpe ratio"
+      ],
+      "answer": 1,
+      "why": "An index fund that tracks its benchmark exactly has zero active return, so its IR is zero."
+     },
+     {
+      "q": "For the manager in Point 2, it will most likely be:",
+      "options": [
+       "irrelevant, because IR depends only on breadth",
+       "hard to add value, even with many independent decisions or a high transfer coefficient",
+       "easy to add value if the manager overweights the securities with the best forecasts"
+      ],
+      "answer": 1,
+      "why": "IR = TC × IC × √BR: a low IC (poor forecasting) makes it hard to add value. Managers should overweight securities with the best forecast relative returns, but this helps only if the forecasts are good."
+     },
+     {
+      "q": "The change in Point 3 most likely affects:",
+      "options": [
+       "both the Sharpe ratio and the information ratio",
+       "the information ratio only, because the Sharpe ratio uses the benchmark",
+       "the Sharpe ratio only, because active risk does not change"
+      ],
+      "answer": 0,
+      "why": "Total portfolio volatility enters the Sharpe ratio (σp) and, through active risk, the information ratio, so both are affected. (The benchmark choice, in contrast, affects only the IR.)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ps6",
+  "title": "Practice set 6",
+  "kind": "practice",
+  "minutes": 132,
+  "desc": "Corporate Issuers, Equity Valuation, Economics, Alternative Investments",
+  "vignettes": [
+   {
+    "topic": "Corporate Issuers",
+    "body": "Petra Lindgren, CFO of Halvard Industries, reviews payout policy. Halvard's net income is SEK 900 million, its share price is SEK 120 and its EPS is SEK 9. It has 100 million shares and total equity of SEK 4,800 million.\n\nProposal 1: Borrow SEK 1,200 million at an after-tax cost of 5% and use it to repurchase shares at the market price.\nProposal 2: Pay a 10% stock dividend instead of cash.\nProposal 3: Raise the cash dividend from SEK 3.00 to SEK 3.60 per share.\n\nA board member says Halvard's payout ratio is low because the company has high growth prospects, high flotation costs on new equity and shareholders face high tax rates on dividends.",
+    "questions": [
+     {
+      "q": "Based on Proposal 1, the debt-financed repurchase will most likely:",
+      "options": [
+       "increase EPS, because the earnings yield is higher than the after-tax cost of debt",
+       "leave EPS unchanged, because shareholder wealth is unchanged",
+       "decrease EPS, because the earnings yield is lower than the after-tax cost of debt"
+      ],
+      "answer": 0,
+      "why": "Earnings yield = E/P = 9/120 = 7.5% (or 1 ÷ P/E). 7.5% > 5% after-tax cost of debt → EPS rises.\nCheck: new EPS = (900 − 0.05 × 1,200)/90 = 840/90 = 9.33 > 9.00. If earnings yield < cost of debt, EPS falls."
+     },
+     {
+      "q": "After the repurchase in Proposal 1, Halvard's book value per share is closest to:",
+      "options": [
+       "SEK 54.55",
+       "SEK 40.00",
+       "SEK 48.00"
+      ],
+      "answer": 1,
+      "why": "Shares bought = 1,200/120 = 10 million → 90 million left.\nEquity = 4,800 − 1,200 = 3,600\nBVPS = equity ÷ shares = 3,600/90 = SEK 40.00 (it falls because the price paid, 120, is above BVPS of 48)."
+     },
+     {
+      "q": "After the stock dividend in Proposal 2, Halvard's share price is most likely closest to:",
+      "options": [
+       "SEK 109.09",
+       "SEK 120.00",
+       "SEK 108.00"
+      ],
+      "answer": 0,
+      "why": "New price = old price / (1 + stock dividend %) = 120/1.10 = SEK 109.09. A scrip (stock) dividend does not change shareholder wealth."
+     },
+     {
+      "q": "The market will most likely interpret Proposal 3 as:",
+      "options": [
+       "no signal, because dividend policy is irrelevant to firm value",
+       "a positive signal, because managers raise dividends only when they expect to sustain them",
+       "a negative signal, because cash leaves the company instead of funding growth"
+      ],
+      "answer": 1,
+      "why": "Initiating or increasing a dividend → positive signal; cutting or omitting → negative signal. Firms avoid raising dividends they cannot maintain."
+     },
+     {
+      "q": "Which of the board member's reasons is consistent with a low payout ratio?",
+      "options": [
+       "All three",
+       "High growth prospects only",
+       "High tax rates on dividends only"
+      ],
+      "answer": 0,
+      "why": "Low payout is consistent with high growth opportunities, high flotation costs of new issues and high taxes on dividends."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Lindgren compares dividend policies and repurchase methods.\n\nCompany A pays a dividend of SEK 2.00 per share every year, whatever its earnings.\nCompany B pays out 40% of earnings every year.\n\nMethod 1: Buy shares in the open market over time.\nMethod 2: A fixed-price tender offer or Dutch auction.\nMethod 3: A direct negotiation with a large shareholder.\n\nA hedge fund has bought a large stake in Halvard and threatens a takeover unless Halvard buys its shares back at a premium.",
+    "questions": [
+     {
+      "q": "The dividend policies of Companies A and B are, respectively:",
+      "options": [
+       "residual and stable",
+       "stable and constant payout",
+       "constant payout and stable"
+      ],
+      "answer": 1,
+      "why": "Stable dividend: the amount stays the same (or grows smoothly). Constant payout: the percentage of earnings stays the same (sometimes a target range)."
+     },
+     {
+      "q": "Which statement about the repurchase methods is most accurate?",
+      "options": [
+       "Method 1 usually buys at a premium; Method 2 is the most flexible; Method 3 is always done at a premium",
+       "Method 1 is the least flexible; Method 2 always buys at a discount; Method 3 is done at the market price",
+       "Method 1 is the most flexible; Methods 2 usually buy at a premium; Method 3 may be done at a discount"
+      ],
+      "answer": 2,
+      "why": "Open market = flexible. Fixed-price tender / Dutch auction → premium to market. Negotiated (direct) → can be at a discount, or at a premium in greenmail."
+     },
+     {
+      "q": "The hedge fund's demand is best described as:",
+      "options": [
+       "a liquidating dividend",
+       "a Dutch auction",
+       "greenmail"
+      ],
+      "answer": 2,
+      "why": "Greenmail = buying back a hostile bidder's shares at a premium to stop a takeover."
+     },
+     {
+      "q": "Compared with paying the same amount as a cash dividend, a share repurchase leaves shareholder wealth:",
+      "options": [
+       "lower, because the shares are bought at market price",
+       "higher, because the share count falls",
+       "the same, unless taxes or signalling differ"
+      ],
+      "answer": 2,
+      "why": "With equal amounts and no taxes or signalling effects, shareholders' wealth is the same under a repurchase and a cash dividend."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Oskar Brandt reviews governance and ESG for Fennica Group.\n\nFact 1: Fennica and Saarinen Oy each own 10% of the other's shares.\nFact 2: Fennica's parent controls it through a chain of majority holdings.\nFact 3: Fennica's CEO sits on Saarinen's board, and Saarinen's CEO sits on Fennica's board.\nFact 4: Fennica's controlling family owns 25% of the shares but holds 60% of the votes through dual-class shares.\nFact 5: Brandt uses ESG ratings from a data vendor and Fennica's own sustainability report.\nFact 6: Fennica's green bond trades at a lower spread than a conventional Fennica bond with the same rating and maturity.",
+    "questions": [
+     {
+      "q": "Facts 1, 2 and 3 describe, respectively:",
+      "options": [
+       "a vertical structure, a horizontal structure and a voting cap",
+       "a horizontal (cross-holding) structure, a vertical structure and interlocking directorships",
+       "interlocking directorships, a pyramid and a cross-holding"
+      ],
+      "answer": 1,
+      "why": "Cross-holdings between companies → horizontal structure. One company controlling another down a chain → vertical (pyramid) structure. Executives on each other's boards → interlocking directorships (a governance issue)."
+     },
+     {
+      "q": "Fact 4 most likely creates which governance problem, and what is one remedy?",
+      "options": [
+       "A principal–principal conflict between controlling and minority shareholders; a voting cap",
+       "A principal–agent conflict; more independent directors only",
+       "A principal–agent conflict between managers and shareholders; a voting cap"
+      ],
+      "answer": 0,
+      "why": "Dispersed ownership and voting → principal–agent problem. Concentrated voting power (votes > ownership) → principal–principal problem. A voting cap limits how much any holder can vote."
+     },
+     {
+      "q": "Regarding Fact 5, which statement is most accurate?",
+      "options": [
+       "Company-reported data are audited and standardised across firms; vendor data are based only on public filings",
+       "Vendor data are objective and fully comparable across vendors; company-reported data are mandatory",
+       "Vendor data involve subjective analysis of sources and rankings; company-reported data can be inconsistent and voluntary"
+      ],
+      "answer": 2,
+      "why": "ESG data vendors: subjective methods and rankings. Company-reported data (10-K, annual and sustainability reports, proprietary methods): inconsistent and voluntary."
+     },
+     {
+      "q": "The tighter spread on the green bond in Fact 6 is best explained by:",
+      "options": [
+       "lower credit risk, because green projects never default",
+       "shorter duration",
+       "strong investor demand, which raises the price and lowers the yield"
+      ],
+      "answer": 2,
+      "why": "Same issuer, rating and maturity → the difference comes from demand: more buyers → higher price → lower yield → tighter spread."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Mara Kovacs, an analyst at Danubia Capital, estimates the cost of capital for several projects.\n\nProject 1: A private domestic company. Kovacs uses an expanded CAPM with size and company-specific premiums.\nProject 2: A subsidiary in an emerging market. She adds a country risk premium using an extended CAPM with global and country factors.\nProject 3: She needs a pre-tax cost of debt for a company with no traded bonds, rated BBB, and with debt maturing in 7 years. Comparable BBB bonds yield 4.2% at 5 years and 5.1% at 10 years.\nProject 4: A multinational. Kovacs uses an international CAPM: risk-free rate 2.5%, global market premium 5.0%, global beta 1.1, foreign currency risk premium 1.5% and currency beta 0.4.\n\nKovacs also notes that the equity risk premium is higher in developing countries and in recessions.",
+    "questions": [
+     {
+      "q": "For Project 3, the interpolated pre-tax cost of debt is closest to:",
+      "options": [
+       "5.10%",
+       "4.56%",
+       "4.65%"
+      ],
+      "answer": 1,
+      "why": "YTM = YTM_S + (YTM_L − YTM_S)/(M_L − M_S) × (M_i − M_S) = 4.2% + (5.1% − 4.2%)/5 × 2 = 4.56%"
+     },
+     {
+      "q": "For Project 4, the cost of equity is closest to:",
+      "options": [
+       "8.6%",
+       "8.0%",
+       "9.1%"
+      ],
+      "answer": 0,
+      "why": "ICAPM: E(Re) = Rf + βG[E(RGM) − Rf] + βC[E(RC) − Rf] = 2.5% + 1.1 × 5.0% + 0.4 × 1.5% = 2.5 + 5.5 + 0.6 = 8.6%"
+     },
+     {
+      "q": "Which matching of models to projects is most appropriate?",
+      "options": [
+       "International CAPM for Project 1; expanded CAPM for Project 4",
+       "Expanded CAPM for Project 1; extended CAPM with a country risk premium for Project 2",
+       "Extended CAPM for Project 1; expanded CAPM for Project 2"
+      ],
+      "answer": 1,
+      "why": "Expanded CAPM (size and company-specific premiums) → domestic private companies. Country risk premium / extended CAPM (global and country) → foreign operations in riskier countries."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Kovacs evaluates a merger between Danubia's client Velkor and a competitor. Velkor expects (1) revenue gains from cross-selling, (2) cost savings from closing duplicate offices, (3) some customers leaving because of overlap and (4) one-time integration costs.\n\nTo value the competitor she gathers the P/E ratios of five comparable companies: 14, 16, 18, 21 and 31. The competitor's EPS is €2.50.",
+    "questions": [
+     {
+      "q": "Which items increase the combined company's operating income?",
+      "options": [
+       "Items 3 and 4 only",
+       "Items 1, 2 and 3",
+       "Items 1 and 2 only"
+      ],
+      "answer": 2,
+      "why": "Revenue synergies and cost synergies raise operating income. Revenue dis-synergies (lost customers), cost dis-synergies and one-time integration costs reduce it. Think of where each hits operating income."
+     },
+     {
+      "q": "Using comparable companies, the competitor's value per share is closest to:",
+      "options": [
+       "€52.50",
+       "€45.00",
+       "€50.00"
+      ],
+      "answer": 1,
+      "why": "Use the median P/E, not the mean: median of 14, 16, 18, 21, 31 = 18. Value = 18 × 2.50 = €45.00. (Mean = 20 → €50; the outlier 31 distorts it.)"
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Tobias Weller values Grünwald AG with free cash flow models. Exhibit 1 shows data for the year (in € millions).\n\nExhibit 1: Grünwald AG Data\n# Item | Amount\nNet income | 420\nDepreciation | 150\nFixed capital investment | 310\nIncrease in current assets (including a €30 million increase in cash) | 110\nIncrease in current liabilities | 40\nTarget debt ratio | 40%\n\nGrünwald pays dividends that are far below its FCFE, and its dividends have little relation to its ability to pay.",
+    "questions": [
+     {
+      "q": "The investment in working capital used to calculate FCFE is closest to:",
+      "options": [
+       "€150 million",
+       "€70 million",
+       "€40 million"
+      ],
+      "answer": 2,
+      "why": "ΔWC = Δ current assets (excluding cash and cash equivalents) − Δ current liabilities = (110 − 30) − 40 = €40m."
+     },
+     {
+      "q": "Grünwald's FCFE, assuming investment is financed at the target debt ratio, is closest to:",
+      "options": [
+       "€236 million",
+       "€300 million",
+       "€260 million"
+      ],
+      "answer": 1,
+      "why": "FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv)\n= 420 − 0.60 × (310 − 150) − 0.60 × 40 = 420 − 96 − 24 = €300m"
+     },
+     {
+      "q": "Weller should most likely value Grünwald with:",
+      "options": [
+       "an FCFE model, because dividends differ greatly from the capacity to pay them",
+       "a residual income model, because FCFE is positive",
+       "a dividend discount model, because Grünwald pays dividends"
+      ],
+      "answer": 0,
+      "why": "Use FCFE instead of DDM when dividends differ significantly from FCFE (dividend-paying capacity), when the company pays no dividends, or when an investor takes a control perspective."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Weller also values the preferred shares and estimates growth for Ostmark AG.\n\nOstmark's non-callable, non-convertible perpetual preferred shares pay €4.50 a year. The risk-free rate is 3.0% and the equity risk premium applicable to the preferred shares is 4.5%.\n\nOstmark expects EPS of €6.00 next year with a target payout of 45%. Its most recent dividend was €2.40, and it expects to move to the target payout over three years in equal annual steps.\n\nOstmark's ROE is 12% and its retention ratio is 55%.",
+    "questions": [
+     {
+      "q": "The value of Ostmark's preferred shares is closest to:",
+      "options": [
+       "€60.00",
+       "€100.00",
+       "€150.00"
+      ],
+      "answer": 0,
+      "why": "Preferred value = D / r, with r = Rf + ERP = 3.0% + 4.5% = 7.5% (check whether you are given r or only the ERP).\nValue = 4.50 / 0.075 = €60.00. (€100 uses only the ERP; €150 uses only Rf.)"
+     },
+     {
+      "q": "Next year's expected dividend is closest to:",
+      "options": [
+       "€2.50",
+       "€2.70",
+       "€2.40"
+      ],
+      "answer": 0,
+      "why": "Expected growth in dividend = [(expected EPS × target payout) − previous dividend] / n = (6.00 × 0.45 − 2.40)/3 = (2.70 − 2.40)/3 = 0.10\nNext dividend = 2.40 + 0.10 = €2.50"
+     },
+     {
+      "q": "Ostmark's sustainable growth rate is closest to:",
+      "options": [
+       "5.4%",
+       "12.0%",
+       "6.6%"
+      ],
+      "answer": 2,
+      "why": "g = b × ROE = 0.55 × 12% = 6.6%, where b = retention ratio = 1 − payout ratio (payout = DPS/EPS)."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Weller values a small private company, Hallberg GmbH, for a minority investor. A controlling interest would command a control premium of 25%, and the discount for lack of marketability is 20%.\n\nWeller also computes the residual income for a public company with net income of €80 million, beginning equity of €600 million, ending equity of €640 million and a cost of equity of 10%.",
+    "questions": [
+     {
+      "q": "The total discount applied to a controlling value to value Hallberg's minority, non-marketable stake is closest to:",
+      "options": [
+       "45%",
+       "36%",
+       "40%"
+      ],
+      "answer": 1,
+      "why": "DLOC = 1 − 1/(1 + control premium) = 1 − 1/1.25 = 20%.\nTotal discount = 1 − (1 − DLOC)(1 − DLOM) = 1 − 0.80 × 0.80 = 36% (the discounts multiply, they are not added)."
+     },
+     {
+      "q": "Residual income for the year is closest to:",
+      "options": [
+       "€20 million",
+       "€16 million",
+       "€18 million"
+      ],
+      "answer": 0,
+      "why": "RI = NI − r × beginning book value of equity = 80 − 0.10 × 600 = €20m. Use beginning equity, not ending or average."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Sofia Marin, a currency strategist at Iberia Capital, reviews FX positions.\n\nPosition 1: Three months ago Iberia sold EUR 10 million forward against USD for six months at USD 1.1050/EUR. Today the three-month forward rate is USD 1.0950/EUR and the three-month USD interest rate is 4.0% (annualised).\nPosition 2: A client wants a one-year forward on USD/MXN. Spot is 17.20 MXN/USD and the dealer quotes forward points of +850 (in units of 0.0001).\n\nMarin notes that interbank FX liquidity is highest when the London and New York trading hours overlap.",
+    "questions": [
+     {
+      "q": "The mark-to-market value of Position 1 to Iberia is closest to:",
+      "options": [
+       "USD 99,010 gain",
+       "USD 100,000 gain",
+       "USD 99,010 loss"
+      ],
+      "answer": 0,
+      "why": "Iberia sold EUR forward at 1.1050. To close, it buys EUR forward at 1.0950: gain = (1.1050 − 1.0950) × 10m = USD 100,000 at settlement.\nDiscount for 3 months: 100,000 / (1 + 0.04 × 90/360) = 100,000 / 1.01 = USD 99,010."
+     },
+     {
+      "q": "The all-in one-year forward rate for Position 2 is closest to:",
+      "options": [
+       "17.2850 MXN/USD",
+       "18.0500 MXN/USD",
+       "17.1150 MXN/USD"
+      ],
+      "answer": 0,
+      "why": "All-in forward = spot + forward points/10,000 = 17.2000 + 0.0850 = 17.2850 MXN/USD."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Marin explains growth theory to junior staff.\n\nCountry A: real GDP growth 4.5%, labour force growth 1.2%, capital deepening slowing.\nStatement 1: \"In the neoclassical model, in the steady state, growth of output per worker equals the rate of technological progress divided by labour's share, and total output grows at that rate plus labour force growth.\"\nStatement 2: \"In the steady state, the marginal product of capital equals the real interest rate, and MPK = α × Y/K.\"\nStatement 3: \"Capital deepening raises output per worker but runs into diminishing returns, so it cannot raise growth permanently.\"\nStatement 4: \"In the neoclassical model, capital flows from rich to poor countries, helping convergence.\"",
+    "questions": [
+     {
+      "q": "Which of Marin's statements are correct?",
+      "options": [
+       "Statements 2 and 4 only",
+       "Statements 1 and 3 only",
+       "All four"
+      ],
+      "answer": 2,
+      "why": "Neoclassical steady state: growth per capita = θ/(1 − α); total output growth = θ/(1 − α) + labour force growth. Steady state: MPK = r = αY/K. Capital deepening has diminishing returns. Open-economy neoclassical model: capital flows to poorer, capital-scarce countries with higher returns → convergence."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Marin turns to exchange rates and capital flows.\n\nFact 1: The Canadian dollar has depreciated against the US dollar.\nFact 2: Over the past decade, inflation in Country X averaged 6% and in Country Y 2%. Over the past quarter, the X/Y exchange rate barely moved.\nFact 3: New Zealand's one-year rate is 5.5% and the euro area's is 3.0%. Spot is 0.5500 EUR/NZD.\nFact 4: A fund borrows in yen at 0.2% and invests in euro deposits at 3.0%.\nFact 5: Country Z has a large current account deficit, falling foreign reserves, a sharply appreciated real exchange rate, rapid credit growth and rising M2 relative to reserves.",
+    "questions": [
+     {
+      "q": "Based on Fact 1, the USD/CAD quote (USD per CAD) has most likely:",
+      "options": [
+       "risen",
+       "fallen",
+       "not changed"
+      ],
+      "answer": 1,
+      "why": "USD/CAD = USD per 1 CAD. If CAD depreciates, one CAD buys fewer USD → USD/CAD falls."
+     },
+     {
+      "q": "Fact 2 is most consistent with:",
+      "options": [
+       "relative PPP failing in the long run but holding in the short run",
+       "absolute PPP holding in the short run but not in the long run",
+       "relative PPP holding in the long run but not in the short run"
+      ],
+      "answer": 2,
+      "why": "Relative PPP: currency of the higher-inflation country depreciates by the inflation difference. It works poorly in the short run but reasonably over long periods."
+     },
+     {
+      "q": "Under uncovered interest rate parity, the expected EUR/NZD spot rate in one year is closest to:",
+      "options": [
+       "0.5370",
+       "0.5634",
+       "0.5500"
+      ],
+      "answer": 0,
+      "why": "Expected spot (EUR per NZD) = 0.5500 × (1 + i_EUR)/(1 + i_NZD) = 0.5500 × 1.030/1.055 = 0.5370. The high-yield currency (NZD) is expected to depreciate by the rate difference."
+     },
+     {
+      "q": "The strategy in Fact 4 is best described as a:",
+      "options": [
+       "carry trade, which profits only if the yen appreciates against the euro",
+       "carry trade, which profits if the yen does not appreciate by more than the rate difference",
+       "covered interest arbitrage, which locks in a riskless profit from the rate difference"
+      ],
+      "answer": 1,
+      "why": "Carry trade: borrow the low-yield currency (JPY), invest in the high-yield currency (EUR). It earns the rate difference unless the funding currency appreciates enough, i.e. it bets that UIRP fails."
+     },
+     {
+      "q": "Fact 5 most likely signals:",
+      "options": [
+       "a low risk of crisis, because credit growth supports the economy",
+       "a current account surplus",
+       "a high risk of a currency crisis"
+      ],
+      "answer": 2,
+      "why": "Warning signs of currency crises: large current account deficit, falling reserves, overvalued (appreciated) real exchange rate, rapid credit growth, rising M2 relative to reserves, and capital inflows that reverse."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Marin compares exchange rate models and policy mixes.\n\nModel 1: The pure monetary approach, in which PPP holds at all times.\nModel 2: The Dornbusch model, in which prices are sticky in the short run.\nModel 3: The portfolio balance approach, which focuses on long-run fiscal policy and government debt.\n\nCountry H has high capital mobility and adopts an expansionary monetary policy with a restrictive fiscal policy.",
+    "questions": [
+     {
+      "q": "After an unexpected monetary expansion, which model predicts that the domestic currency first depreciates by more than its long-run amount?",
+      "options": [
+       "Model 1",
+       "Model 3",
+       "Model 2"
+      ],
+      "answer": 2,
+      "why": "Dornbusch overshooting: with sticky prices, the currency initially depreciates more than PPP implies, then partly recovers. In the pure monetary approach, it depreciates in line with prices at once."
+     },
+     {
+      "q": "Under the Mundell–Fleming model, Country H's currency will most likely:",
+      "options": [
+       "appreciate",
+       "be unaffected",
+       "depreciate"
+      ],
+      "answer": 2,
+      "why": "High capital mobility: expansionary monetary policy → lower rates → depreciation; restrictive fiscal policy → lower rates → depreciation. Both push the same way."
+     },
+     {
+      "q": "Under Model 3, sustained fiscal deficits financed by rising government debt most likely cause the currency to:",
+      "options": [
+       "depreciate in the long run, as investors demand a lower price or a higher return to hold more of the country's debt",
+       "stay unchanged, because in the long run only monetary policy affects the exchange rate",
+       "appreciate permanently, because higher interest rates keep attracting foreign capital"
+      ],
+      "answer": 0,
+      "why": "Portfolio balance: short run, fiscal expansion may raise rates and the currency (Mundell–Fleming); long run, continuous deficits raise the supply of the country's bonds and investors require compensation → currency depreciates."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Rhea Castell, an alternatives analyst at Lucerne Advisors, reviews three strategies.\n\nStrategy 1: A fund that is always net short, with little or no long exposure.\nStrategy 2: A fund that has a short bias but holds some long positions, usually 30–60% net short.\nStrategy 3: A fund that buys life insurance policies from policyholders (life settlements).",
+    "questions": [
+     {
+      "q": "Strategies 1 and 2 are best described as, respectively:",
+      "options": [
+       "equity market neutral and short-biased",
+       "dedicated short bias and short-biased",
+       "short-biased and dedicated short bias"
+      ],
+      "answer": 1,
+      "why": "Dedicated short: mostly 60–120% short, little long exposure. Short-biased: net short but with some long positions (roughly 30–60% net short)."
+     },
+     {
+      "q": "Strategy 3 is most attractive when the policy has:",
+      "options": [
+       "a high surrender value, low ongoing premiums and an insured person likely to live longer than expected",
+       "a low surrender value, low ongoing premiums and an insured person likely to die sooner than the insurer expects",
+       "a high surrender value, high ongoing premiums and an insured person likely to live longer than expected"
+      ],
+      "answer": 1,
+      "why": "The fund pays the premiums and receives the death benefit. It looks for low surrender value (cheap to buy), low premiums and earlier-than-expected death."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Castell values Alpenhaus REIT. Next year's net operating income is CHF 32 million and the market capitalisation rate for similar properties is 6.4%. Alpenhaus also holds CHF 18 million of cash and other tangible assets, and has CHF 290 million of debt. It has 10 million shares.\n\nCastell notes that Alpenhaus is highly leveraged and trades at a large discount to NAVPS, and that its debt matures next year.",
+    "questions": [
+     {
+      "q": "Alpenhaus's NAVPS is closest to:",
+      "options": [
+       "CHF 51.80",
+       "CHF 50.00",
+       "CHF 22.80"
+      ],
+      "answer": 2,
+      "why": "Property value by direct capitalisation (not depreciated book cost) = NOI / cap rate = 32.0/0.064 = CHF 500.0m\nNAV = 500.0 + 18 − 290 = 228.0m\nNAVPS = 228.0/10 = CHF 22.80"
+     },
+     {
+      "q": "Castell's concern about Alpenhaus most likely relates to:",
+      "options": [
+       "refinancing risk, because a highly leveraged REIT trading below NAVPS may struggle to raise new capital",
+       "an advantage, because the discount to NAVPS makes it cheap to issue new equity",
+       "inflation risk, because its long leases have fixed rents that do not rise with prices"
+      ],
+      "answer": 0,
+      "why": "High leverage plus a deep discount to NAVPS signals market concern; issuing equity below NAV is dilutive and lenders are cautious, so refinancing maturing debt is hard."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Castell analyses commodity futures. The spot price of crude oil is $82.00 per barrel. Storage costs are $2.50 per barrel for the period, and the convenience yield is $4.00 per barrel (expressed in the same terms). Ignore financing costs.",
+    "questions": [
+     {
+      "q": "The futures price is closest to:",
+      "options": [
+       "$83.50",
+       "$88.50",
+       "$80.50"
+      ],
+      "answer": 2,
+      "why": "Futures price = spot + storage costs − convenience yield = 82.0 + 2.5 − 4.0 = $80.50"
+     },
+     {
+      "q": "The oil futures market is most likely in:",
+      "options": [
+       "backwardation, because the convenience yield exceeds storage costs",
+       "contango, because storage costs are positive",
+       "contango, because the convenience yield is high"
+      ],
+      "answer": 0,
+      "why": "Convenience yield > storage cost (low inventories) → futures below spot → backwardation. Storage costs > convenience yield (ample inventories) → contango."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Castell compares a REIT with a real estate operating company (REOC) for a client.",
+    "questions": [
+     {
+      "q": "Compared with a REOC, a REIT most likely:",
+      "options": [
+       "can freely reinvest earnings and develop properties for sale, but pays corporate tax",
+       "must distribute most of its taxable income and is exempt from corporate income tax, which limits its ability to reinvest",
+       "has more flexible capital structure and lower dividend yields"
+      ],
+      "answer": 1,
+      "why": "REIT: tax exempt if it distributes most income → high dividend yield, less retained capital, limits on development. REOC: ordinary taxable company, more freedom to reinvest, develop and use leverage; lower yield."
      }
     ]
    }

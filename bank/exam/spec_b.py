@@ -155,7 +155,7 @@ add("Fixed Income","""Osei continues his analysis of the Brightwater convertible
 Osei also notes that over the past month Brightwater's share price fell 12%, while the convertible's price fell only 4%.""",[
  Q("Because the conversion price is above the current share price, the convertible's risk and return are most likely driven by:","interest rates and credit spreads, like a straight bond",["the share price, like the common stock","neither, because the bond is a hybrid"],
    "Conversion price > share price (option out of the money) → behaves like a bond: interest rate and credit spread risk.\nConversion price < share price → behaves like the stock.\nRoughly equal → hybrid."),
- Q("If Brightwater pays a dividend above the threshold, the conversion ratio most likely:","increases, so the conversion price falls and the conversion value rises",["decreases, so the conversion price rises","stays the same, but the straight value rises"],
+ Q("If Brightwater pays a dividend above the threshold, the conversion ratio most likely:","increases, so the conversion price falls and the conversion value rises",["decreases, so the conversion price rises and the conversion value falls","stays the same, but the straight value of the bond rises to compensate holders"],
    "Dividends above the threshold → conversion ratio rises to compensate holders.\nConversion price = par / conversion ratio → falls.\nConversion value = share price × conversion ratio → rises."),
  Q("The convertible fell less than the share price mainly because:","its straight value sets a floor under its price",["its conversion ratio rose when the share price fell","the call option on the shares gained value as the share price fell"],
    "Convertible = straight bond + call option on the stock. As the share price falls, the bond's straight value (the floor) limits the decline, so the convertible falls by a smaller percentage than the stock.")])
@@ -182,7 +182,7 @@ add("Fixed Income","""Silva compares two option-adjusted spreads (OAS) calculate
 A junior analyst states: "The rates in the binomial tree are our forecasts of future interest rates." """,[
  Q("Based on the OAS, Silva should conclude that:","Bond T is cheaper than Bond U",["Bond U is cheaper than Bond T","the OAS cannot be compared because the bonds are callable"],
    "OAS can be compared only for bonds with the same credit rating (and the same tree). A larger OAS means the bond is cheaper (underpriced), so buy Bond T."),
- Q("The junior analyst's statement is:","incorrect, because the rates in the tree are not forecasts but stochastic paths consistent with the volatility assumption and current prices",["correct, because the tree is calibrated to expected future rates","correct, because each node gives the most likely rate at that date"],
+ Q("The junior analyst's statement is:","incorrect, because the rates in the tree are not forecasts but stochastic paths consistent with the volatility assumption and current prices",["correct, because the tree is calibrated to the expected future short-term rates implied by analysts' forecasts","correct, because each node gives the most likely rate at that date, based on the volatility assumption and economic forecasts"],
    "The binomial tree's interest rate movements are not predictions: they are random (stochastic) paths calibrated to today's par curve and an assumed volatility, so the tree is arbitrage-free.")])
 
 r0=0.032; hi=0.054; lo=0.038; cap=0.048

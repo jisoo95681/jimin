@@ -3,7 +3,8 @@ sys.path.insert(0,'/tmp/gen/exam')
 import lib
 def load(mod):
     lib.V.clear(); __import__(mod); return [dict(v) for v in lib.V]
-A=load('spec_a'); B=load('spec_b')
+SPECS=[('spec_a','Derivatives, Quantitative Methods'),('spec_b','Quantitative Methods (ML, Big Data), Fixed Income'),('spec_c','Fixed Income (term structure, embedded options, CDS), Credit Analysis Models'),('spec_d','Financial Statement Analysis'),('spec_e','Portfolio Management'),('spec_f','Corporate Issuers, Equity Valuation, Economics, Alternative Investments')]
+LOADED=[load(m) for m,_ in SPECS]
 def maxrun(k):
     m=c=1
     for a,b in zip(k,k[1:]): c=c+1 if a==b else 1; m=max(m,c)
@@ -31,9 +32,9 @@ def build(vs,setid,title,off):
         out.append(dict(topic=v['topic'],body=v['body'],questions=qq))
     print(setid,len(qs),key,collections.Counter(key))
     return dict(id=setid,title=title,kind="practice",minutes=132,desc="",vignettes=out)
-sets=[build(A,"ps1","Practice set 1",1),build(B,"ps2","Practice set 2",501)]
-sets[0]['desc']="Derivatives, Quantitative Methods"
-sets[1]['desc']="Quantitative Methods (ML, Big Data), Fixed Income"
+sets=[]
+for k,(vs,(m,d)) in enumerate(zip(LOADED,SPECS)):
+    st=build(vs,f'ps{k+1}',f'Practice set {k+1}',1+500*k); st['desc']=d; sets.append(st)
 js="// Exam section data: practice sets built from the notebook key notes (re-skinned vignettes), later mocks.\n// answer = index of the correct option (0 = A). Built by /tmp/gen/exam/build.py.\nconst EXAM_SETS = "+json.dumps(sets,ensure_ascii=False,indent=1)+";\n"
 open('/home/user/jimin/exam.js','w').write(js)
 json.dump(sets,open('/home/user/jimin/bank/exam/practice_sets.json','w'),ensure_ascii=False,indent=1)
