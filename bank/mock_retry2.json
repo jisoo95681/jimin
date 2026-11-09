@@ -696,10 +696,10 @@
     "options": [
      "14.7.",
      "11.5.",
-     "11.5."
+     "13.5."
     ],
     "answer": "B",
-    "why": "Weighted harmonic mean = 1 ÷ Σ(weight ÷ P/E), with market cap weights = 1,649.90 ÷ Σ(cap ÷ P/E) = 1,649.90 ÷ 143.58 = 11.5. 11.5 is the simple (unweighted) harmonic mean; 14.7 is the market-cap weighted arithmetic mean."
+    "why": "Weighted harmonic mean = 1 ÷ Σ(weight ÷ P/E), with market cap weights = 1,649.90 ÷ Σ(cap ÷ P/E) = 1,649.90 ÷ 143.58 = 11.5. 13.5 is the simple arithmetic mean; (the simple harmonic mean, 11.51, is almost the same as the answer here); 14.7 is the market-cap weighted arithmetic mean. Note: the printed paper showed 11.5 twice (B and C); B was the intended answer."
    }
   ]
  },
