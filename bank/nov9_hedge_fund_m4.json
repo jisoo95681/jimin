@@ -1,0 +1,412 @@
+[
+ {
+  "id": "hf4-xu",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · Xu: strategy statements, opportunistic strategies, merger arbitrage payoff, equity strategies, convertible arbitrage, life settlements",
+  "body": "Lynet Xu is the Chief Investment Officer for the North University Endowment Fund (the Fund), which is based in Europe. The Fund’s investment committee recently made the decision to add hedge funds to the Fund’s portfolio to increase diversification. Xu meets with Yolanda Anderson, a junior analyst, to discuss various hedge fund strategies that might be suitable for the Fund. Anderson tells Xu the following:\n\nStatement 1:\nRelative value strategies tend to use minimal leverage.\n\nStatement 2:\nLong/short equity strategies are typically not exposed to equity market beta risk.\n\nStatement 3:\nGlobal macro strategies come with naturally higher volatility in the return profiles typically delivered.\n\nXu tells Anderson that while she is open to using all hedge fund strategies, she is particularly interested in opportunistic hedge fund strategies. Xu states that she prefers opportunistic hedge fund strategies that use high leverage, have high liquidity, and exhibit right-tail skewness.\n\nXu asks Anderson to research an event-driven strategy involving a potential merger between Aqua Company and Taurus, Inc. Aqua has offered to buy Taurus in a stock-for-stock deal: The offer ratio is two shares of Aqua for three shares of Taurus. Aqua was trading at €50 per share prior to the merger announcement, and it fell to €45 per share after the merger announcement. Taurus was trading at €15 per share prior to the announcement, and it rose to €20 per share in anticipation of the merger deal receiving required approvals and closing successfully. Xu decides to enter into a merger arbitrage trade: She buys 22,500 shares of Taurus at €20 per share and sells short 15,000 shares of Aqua at €45 per share.\n\nXu and Anderson discuss an equity strategy involving two large European car companies, ZMD and Tarreras. Anderson recently attended a trade show where she inspected ZMD’s newest model car. Based on information from the trade show and other analysis conducted by Anderson, Xu concludes that ZMD will not meet its revenue expectations. Current valuation metrics indicate that ZMD shares are overvalued relative to shares of Tarreras. Xu decides to take a short position in ZMD and a long position in Tarreras with equal beta-weighted exposure.\n\nXu next reviews a convertible arbitrage strategy and analyzes a trade involving the euro-denominated stock and convertible bonds of AVC Corporation, a European utility company. Anderson gathers selected data for AVC Corporation, which is presented in Exhibit 1.\n\nExhibit 1\nSelected Data for AVC Corporation\nAVC Convertible Bond\tAVC Stock\nPrice (% of par)\t115\tCurrent price (per share)\t€28\nCoupon (%)\t6\tP/E\t25\nRemaining maturity (years)\t2\tP/BV\t2.25\nConversion ratio\t50\tP/CF\t15\nBased on comparisons with industry ratios, Xu believes that AVC’s shares are overvalued in relative terms and the convertible bonds are undervalued. Anderson analyzes the potential profit outcomes of a long position in the convertible bond combined with a short stock position, assuming small changes in the share price and ignoring dividends and borrowing costs. She offers the following conclusion to Xu:\n\n“The profit earned on the convertible arbitrage trade will be the same regardless of whether the share price of AVC decreases or increases.”\n\nFinally, Xu and Anderson consider a hedge fund that specializes in reinsurance and life settlements. Xu tells Anderson about three characteristics that hedge fund managers look for when investing in life settlements:\n\nCharacteristic 1:\nThe surrender value offered to the insured individual is relatively high.\n\nCharacteristic 2:\nThe ongoing premium payments to keep the policy active are relatively low.\n\nCharacteristic 3:\nThere is a high probability that the designated insured person is likely to die within the period predicted by standard actuarial methods.",
+  "questions": [
+   {
+    "n": 10,
+    "q": "Which of Anderson’s three statements regarding hedge fund strategies is correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. Global macro investing may introduce natural benefits of asset class and investment approach diversification, but they come with naturally higher volatility in the return profiles typically delivered. The exposures selected in any global macro strategy may not react to the global risks as expected because of either unforeseen contrary factors or global risks that simply do not materialize; thus, macro managers tend to produce somewhat lumpier and more uneven return streams than other hedge fund strategies.\nA is incorrect because relative value hedge fund strategies tend to use significant leverage that can be dangerous to limited partner investors, especially during periods of market stress. During normal market conditions, successful relative value strategies can earn credit, liquidity, or volatility premiums over time. However, in crisis periods when excessive leverage, deteriorating credit quality, illiquidity, and volatility spikes come to fruition, relative value strategies can result in losses.\nB is incorrect because long/short equity strategies tend to be exposed to some natural equity market beta risk but have less beta exposure than simple long-only beta allocations. Given that equity markets tend to rise over the long run, most long/short equity managers typically hold net long equity positions with some managers maintaining their short positions as a hedge against unexpected market downturns."
+   },
+   {
+    "n": 11,
+    "q": "Which opportunistic hedge fund strategy meets Xu’s preferences?",
+    "options": [
+     "Only global macro",
+     "Only managed futures",
+     "Both global macro and managed futures"
+    ],
+    "answer": "C",
+    "why": "C is correct. Xu states that she prefers opportunistic hedge fund strategies that use high leverage, have high liquidity, and exhibit right-tail skewness. The two most common opportunistic hedge fund strategies are global macro and managed futures. Both global macro and managed futures are highly liquid. Further, returns of managed futures strategies typically exhibit positive right-tail skewness in periods of market stress, whereas global macro strategies have delivered similar diversification in such stress periods but with more heterogeneous outcomes. Global macro and managed futures strategies can also use high leverage, either through the use of futures contracts, in which high leverage is embedded, or through the active use of options, which adds natural elements of leverage and positive convexity.\nA and B are incorrect because both global macro and managed futures strategies can offer the three characteristics that Xu seeks in an opportunistic hedge fund strategy."
+   },
+   {
+    "n": 12,
+    "q": "Assuming the merger between Aqua and Taurus successfully closes, the payoff on Xu’s merger arbitrage trade will be:",
+    "options": [
+     "–€187,500.",
+     "€225,000.",
+     "€412,500."
+    ],
+    "answer": "B",
+    "why": "B is correct. Xu bought 22,500 shares of Taurus at €20 per share for a total cost of €450,000 and sold short 15,000 shares of Aqua at €45 per share for a total cost of €675,000. Given the offer ratio of two shares of Aqua for three shares of Taurus, the 22,500 shares of Taurus are economically equivalent to 15,000 shares of Aqua. Thus, assuming the deal closes, the payoff to Xu’s trade is €675,000 – €450,000 = €225,000.\nA is incorrect because –€187,500 is the payoff if the merger fails and both companies’ share prices revert back to their pre-merger prices. Xu bought 22,500 shares of Taurus at €20 per share for a total cost of €450,000 and sold short 15,000 shares of Aqua at €45 per share for a total cost of €675,000. If the merger fails and the share prices revert back to pre-announcement levels, Xu will have to sell 22,500 shares of Taurus at €15 per share for proceeds of €337,500, resulting in a loss on the Taurus stock of –€112,500 (€337,500 – €450,000). Xu will also have to close the short position by purchasing 15,000 shares of Aqua at €50 per share for a total cost of €750,000. This will result in a loss on Aqua of –€75,000 (€675,000 – €750,000). The total loss is –€112,500 + –€75,000 = –€187,500.\nC is incorrect because the initial pre-merger prices are used to compute the payoff: 22,500 shares of Taurus are bought for €15 per share for a total of €337,500, and 15,000 shares of Aqua are sold short at €50 per share for a total of €750,000. The payoff is €750,000 – €337,500 = €412,500."
+   },
+   {
+    "n": 13,
+    "q": "Which equity hedge fund strategy best describes the ZMD and Tarreras positions taken by Xu?",
+    "options": [
+     "Short bias",
+     "Long/short equity",
+     "Equity market neutral"
+    ],
+    "answer": "C",
+    "why": "C is correct. Xu’s decision to short ZMD and take a long position in Tarreras with equal beta-weighted exposure is an example of a pairs trade or an equity-market-neutral strategy. Xu is neutralizing market risk by constructing a strategy where the expected portfolio beta is zero. Since her strategy does not take beta risk and attempts to neutralize many other factor risks, Xu must apply leverage to the long and short positions to achieve a meaningful expected return from the stock selection.\nA is incorrect because in a short-biased hedge fund strategy, the manager aims to sell expensively priced equities but may balance the short exposure with some modest long exposure. Xu, however, has entered into an equity-market-neutral pairs trade that takes opposite long and short positions in an attempt to eliminate market exposure. Her positions do not have a short bias.\nB is incorrect because long/short equity managers buy equities of companies they expect will rise and sell short equities of companies they believe will fall in value. When long and short positions are placed together into a portfolio, the market exposure is the net of the beta-adjusted long and short exposures; however, the target beta is typically not zero. Xu is neutralizing market risk by constructing a strategy where the expected portfolio beta is zero."
+   },
+   {
+    "n": 14,
+    "q": "Anderson’s conclusion about the profitability of the AVC convertible arbitrage trade is:",
+    "options": [
+     "correct.",
+     "incorrect, because the profit will be higher if the share price decreases.",
+     "incorrect, because the profit will be higher if the share price increases."
+    ],
+    "answer": "A",
+    "why": "A is correct. The classic convertible bond arbitrage strategy is to buy the relatively undervalued convertible bond and take a short position in the relatively overvalued underlying stock. If the convertible bond’s current price is near the conversion value, then the combination of a long convertible and short equity delta exposure will create a situation where for small changes in the share price and ignoring dividends and borrowing costs, the profit/loss will be the same.\nThe current conversion price of the AVC convertible bond is €1,000 × (115/100)/50 = €23, and the current AVC share price is €28. Thus, by purchasing the convertible bond, selling short the shares, exercising the conversion option, and selling the shares at the current market price, a profit of €5 can be locked in regardless of changes in the share price. The following table demonstrates this result by showing the same trade profit of €5 for three different stock prices:\nProfit on:\t\nAVC New Share Price\tLong Stock via Convertible Bond at $23/Sh.\tShort Stock at $28/Sh.\t Total Profit\n€26\t€3\t€2\t€5\n€28\t€5\t€0\t€5\n€34\t€11\t–€6\t€5\nwhere\nLong stock via convertible bond profit = New share price – Current conversion price\nShort stock profit = Current share price – New share price\nTotal profit = Long stock via convertible bond profit + Short stock profit\nThus, regardless of the share price, the total profit on the convertible arbitrage trade is €5.\nB is incorrect because if the convertible bond’s current price is near the conversion value, then the combination of a long convertible and short equity delta exposure will create a situation where the profit/loss will be the same (not higher if the share price decreases).\nC is incorrect because if the convertible bond’s current price is near the conversion value, then the combination of a long convertible and short equity delta exposure will create a situation where for small changes in equity price, the profit/loss will be the same (not higher if the share price increases)."
+   },
+   {
+    "n": 15,
+    "q": "Which of the three characteristics of life settlements noted by Anderson is correct?",
+    "options": [
+     "Characteristic 1",
+     "Characteristic 2",
+     "Characteristic 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Hedge funds look for policies in which the ongoing premium payments to keep the policy active are relatively low, so Characteristic 2 is correct. Hedge funds also look for life settlements where the surrender value offered to the insured individual is also relatively low and the probability that the designated insured person is likely to die earlier than predicted by standard actuarial methods is relatively high.\nA is incorrect because hedge funds look for policies in which the surrender value offered to the insured individual is relatively low (not high) in order to enhance return by purchasing at a lower price.\nC is incorrect because hedge funds look for settlements in which the probability that the designated insured person is likely to die earlier than predicted by standard actuarial methods is relatively high. This means the hedge fund’s cash outflows to pay the ongoing premium will be less than predicted, which will enhance return."
+   }
+  ]
+ },
+ {
+  "id": "hf4-chang",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · Chang: linear factor model, Fund A, life settlements, multi-strategy vs fund of funds",
+  "body": "Andy Chang is a senior analyst at First Ocean Associates. First Ocean is a global multistrategy and fund-of-funds hedge fund manager serving institutional clients.\nDuring the construction and monitoring of First Ocean’s strategies, Chang and the other analysts use a linear factor model to understand risk exposures. Chang constructs the model using the following macro-risk factors: equity risk, interest rate risk, commodity risk, credit risk, and volatility risk. In explaining the model to his peers, Chang states that the portion of hedge fund returns not explained by these risk factors is attributable to either manager alpha or random error. The credit risk and volatility risk factors are exhibiting high degrees of correlation. To solve for the multicollinearity problem, Chang excludes the volatility risk factor because the model has a higher R2 when including the credit risk rather than the volatility risk.\nFirst Ocean’s fund-of-funds offering, Diversified Alpha Plus, is invested in 12 different hedge fund strategies. The factor sensitivities for Fund A during normal conditions and crisis conditions are highlighted in Exhibit 1. All exposures are significant at the 5% level.\nExhibit 1 Fund A Coefficients\n \tCoefficient When Market Conditions Are\nFactor\tNormal\tCrisis\nS&P 500\t–0.02–0.48\nInterest Rate\t0.08\t0.11\nCommodity\t–0.03\t–0.06\nCredit\t0.08\t–0.14\nVolatility Index (VIX)\t0.14\t0.46\nChang is discussing Fund A with First Ocean’s Investment Committee and makes the following observations about its role in the portfolio:\n\nObservation 1:\tFund A has a dedicated short bias, which helps offset beta exposure from the long–short managers in the fund.\nObservation 2:\tThe sensitivity to volatility is indicative of selling puts against some of its short positions.\nObservation 3:\t\nThe manager has demonstrated the ability to hold long positions in deep out-of-the-money puts during periods of market stress.\nFund B, a hedge fund recently added to the Diversified Alpha Plus Fund, focuses on life settlements. In explaining this strategy to the Investment Committee, Chang states the following: “This manager is very experienced in the life settlement space and has generated strong risk-adjusted returns. Fund B is an attractive addition because it has exposures uncorrelated with many of the other strategies being used. I believe the manager looks for policies with the following traits: The surrender value being offered to the individual is relatively high, the ongoing premium payments are relatively low, and there is a high probability the insured will die sooner than what is predicted by actuarial methods.\n\nVictor Lee works in the investment office for a university endowment and meets with Chang to compare First Ocean’s fund-of-funds strategy with its multistrategy fund, First Ocean Multi-Strat. Lee is seeking steady, low-volatility returns. Before discussing the specifics of First Ocean’s offerings, Lee asks Chang about the differences between multistrategy and fund-of-funds approaches. Chang states that on the basis of Lee’s objectives, multistrategy funds generally will be a better fit than the fund-of-funds structure. The reasons he gives are as follows:\n\nlower levels of variance,\nlower levels of leverage,\nimproved fee structure,\nincreased transparency,\nfaster reaction time, and\na more diverse mix of investment strategies.",
+  "questions": [
+   {
+    "n": 24,
+    "q": "Is Chang most likely correct in his construction and conclusion of the linear factor model?",
+    "options": [
+     "Yes, he is correct",
+     "No, he is incorrect with regard to attributing unexplained returns",
+     "No, he is incorrect with regard to dropping volatility as a risk factor"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Chang was wrong in his conclusion regarding unexplained returns. \nB. Correct. Chang concludes unexplained returns are attributable to alpha or random error and neglects to recognize that omitted risk factors also contribute to unexplained returns. For example, other risk factors, such as currency, are not included in this model, which could help explain returns and further increase R2. \nC. Incorrect. Chang was correct to drop the volatility risk factor because of the multicollinearity problem, and including credit risk results in a higher R2 for the model."
+   },
+   {
+    "n": 25,
+    "q": "Which of Chang’s observations about Fund A is most likely accurate?",
+    "options": [
+     "Observation 1",
+     "Observation 2",
+     "Observation 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Fund A does not likely have a dedicated short bias strategy because the sensitivity to equity markets is essentially zero except for during times of crisis. \nB. Incorrect. Fund A has a positive exposure to volatility through the VIX, especially during periods of market stress. This is not indicative of a manager selling puts against short positions. \nC. Correct. For Fund A, adding deep out-of-the-money puts during periods of market stress would explain why the correlation with equity markets is relatively neutral in normal markets but is significantly negative during periods of crisis. It also is supported by a large increase in positive correlation with volatility during periods of crisis."
+   },
+   {
+    "n": 26,
+    "q": "Chang’s explanation to the Investment Committee regarding Fund B is least likely accurate with respect to:",
+    "options": [
+     "life expectancy.",
+     "surrender value.",
+     "premium payments."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Chang is correct that life settlement strategies focus on policies for which the probability is high that the insured will die sooner than predicted by actuarial methods. \nB. Correct. Life settlement strategies focus on policies with relatively low, not high, surrender values. Chang is correct regarding life expectancy and premium payments. \nC. Incorrect. Chang is correct that life settlement strategies focus on policies with relatively low premium payments."
+   },
+   {
+    "n": 27,
+    "q": "Chang’s comments to Lee are most likely accurate regarding:",
+    "options": [
+     "variance and leverage.",
+     "fee structure and transparency.",
+     "reaction time and diversification."
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Multistrategy funds typically use more leverage and have more volatile return profiles than funds of funds. \nB. Correct. Multistrategy funds typically have more favorable fee structures for investors than funds of funds and also offer increased transparency. \nC. Incorrect. Although multistrategy funds have faster reaction times for tactical allocation changes, funds of funds potentially offer a more diverse mix of strategies."
+   }
+  ]
+ },
+ {
+  "id": "hf4-rivas",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · Rivas: short biased, merger arbitrage, convertible arbitrage, volatility trading",
+  "body": "Arturo Rivas is the research manager for alternative investments at the Raritan Bay Endowment Fund. He is a attending a conference where hedge fund managers are presenting a broad spectrum of investment strategies. He will take this opportunity to review their presentations, offering memorandums (OMs), and limited partnership agreements and engage in one-on-one meetings. The due diligence will allow him to recommend hedge fund managers and strategies to the endowment’s investment committee.\nRivas reads the OM for the Gemini Fund to evaluate its strategy and performance. He notices the following points in the OM:\nGemini specializes in the fundamental analysis of global companies in order to establish equity positions for its funds. We believe we have a particular advantage in valuing and actively shorting European companies in the technology, media, and communication sectors. Market timing does not play a role in our investment process. Our style is to take concentrated bets and use leverage to express our convictions. The primary focus is to have our analysts uncover irregularities in the financial reporting of companies and to exploit the potential impact on valuations when the irregularities become known. Our performance goal is to achieve returns that beat the equity market index return with 50% lower volatility. In order to diversify the portfolio, we also maintain value-oriented long positions. On average, the fund is 30%–60% net short the market.\nRivas reviews managers that focus on event-driven strategies. In particular, the Pegasus Fund focuses on situations where a company has made a cash-for-stock or stock-for-stock offer for a target company. Its strategy takes a view that the merger will fail or that it can succeed, depending on Pegasus’s analysis. The range of returns using a modest degree of leverage is between 5% and 10% per deal if successful. Equities are the primary securities used in the merger arbitrage strategy, but Pegasus also uses convertible bonds, options, and senior and junior debt. A common trade is to take a long position in the target company and a short position in the acquirer. Despite the modest return targets, an attraction for investors is the high Sharpe ratio associated with the strategy.\nRivas evaluates the Orion Fund, a convertible bond strategy. Orion’s OM provides various examples of trades that its manager uses to generate alpha. Rivas reviews one of the many strategies Orion’s manager uses frequently, because he believes this is the best way to understand the fund’s investment style. The OM provides the data in Exhibit 1 from a trade the manager recently entered into.\nExhibit 1 Orion Fund Convertible Bond Arbitrage Position\nSecurity/Position Description\tTrade Direction\tRationale\n3% Convertible Bond due 6/1/2050\tLong\tPurchase new issue\nCommon Stock\tShort\tDelta-adjusted position\nCredit Default Swap\tShort\tHedge credit risk\nInterest Rate Swap\tShort\tDuration-neutral hedge\nPut Option on Stock\tLong\tOnly in place of delta hedging\nLeverage\tLong/Short\tTypically 300% long vs. 200% short\nRivas moves on to a specialist hedge fund strategy that focuses exclusively on volatility trading. Adding this fund to an investor’s portfolio strives to hedge long equity positions. The Taurus Fund typically implements the following three trades in its strategy:\n\nTrade 1: Sell exchange-traded and over-the-counter equity call options on a market index. Selection of the options depends on the volatility smile and skew.\nTrade 2: Sell VIX futures to capture the volatility premium and roll-down payoff.\nTrade 3: Purchase a receiver volatility swap with an at-inception fair value of zero.",
+  "questions": [
+   {
+    "n": 28,
+    "q": "The description of the Gemini Fund strategy in its OM suggests the fund’s style most likely is:",
+    "options": [
+     "short biased.",
+     "activist short selling.",
+     "dedicated short selling."
+    ],
+    "answer": "A",
+    "why": "A. Correct. The key focus of the Gemini Fund is to short securities it believes will decline in price. The fund has many of the characteristics of a short-biased hedge fund. Gemini is on average net short. Activist short-selling funds take short positions and publicly share their negative fundamental views. Dedicated short-selling funds take only short positions. Gemini maintains modest long positions to offset a bull market drag on performance. \nB. Incorrect. Activist short-selling funds take short positions and publicly share their negative fundamental views. \nC. Incorrect. Dedicated short-selling funds take only short positions, whereas Gemini also maintains value-oriented long positions."
+   },
+   {
+    "n": 29,
+    "q": "What would the rationale most likely be for an institutional investor to include the Pegasus Fund in its portfolio?",
+    "options": [
+     "Uncorrelated source of alpha",
+     "Capital structure arbitrage of valuation divergence",
+     "Earn the illiquidity premium associated with the strategy"
+    ],
+    "answer": "A",
+    "why": "A. Correct. Merger arbitrage is a good uncorrelated source of alpha. Diversifying across a variety of mergers, deals, and industries can further help hedge the risk of any one deal failing. Merger arbitrage does not exploit capital structure divergence in a single company and is a relatively liquid strategy. \nB. Incorrect because capital structure arbitrage involves taking long and short positions in the debt and equity of individual companies to extract misvaluations, and it would not be a rationale for inclusion in the portfolio. This generally falls under distressed security strategies. \nC. Incorrect because merger arbitrage is a liquid strategy."
+   },
+   {
+    "n": 30,
+    "q": "Based on the data in Exhibit 1, what strategy is the Orion portfolio manager most likely implementing?",
+    "options": [
+     "Taking advantage of option mispricing",
+     "Profiting from extreme market volatility",
+     "Going long a put on the equity net of hedging"
+    ],
+    "answer": "A",
+    "why": "A. Correct. To access and extract the relatively cheap embedded optionality of the convertible, the manager hedges away other risks that are embedded in the convertible security. These include interest rate risk, credit risk, and market risk. These risks can be hedged using a combination of interest rate derivatives, credit default swaps, and short sales of an appropriate delta-adjusted amount of the underlying stock or, alternatively, the purchase of put options. \nB. Incorrect because the convertible arbitrage strategy performs best when there is modest volatility. Heightened volatility would suggest a period of illiquidity and widening credit spreads. \nC. Incorrect because buying a convertible bond and delta hedging the position does not equate to a long put position."
+   },
+   {
+    "n": 31,
+    "q": "Which of the trades undertaken by the Taurus Fund is most likely to accomplish the objective that Rivas sets as the reason for considering the strategy?",
+    "options": [
+     "Trade 1",
+     "Trade 2",
+     "Trade 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. A short volatility position will not hedge the equity position since a long volatility position is needed. \nB. Incorrect. Trade 2 is a short position in volatility; the intent is to collect a premium for selling volatility. This trade will sell off at the same time as equities are selling off and, therefore, does not provide a hedge. \nC. Correct. Equities and volatility are negatively correlated. In order to hedge the equity exposure in the portfolio, a long volatility position is necessary. Trade 1, a short volatility position, will not hedge the equity position since a long volatility position is needed. Trade 2 is also a short position in volatility; the intent is to collect a premium for selling volatility. This trade will sell off at the same time as equities are selling off and, therefore, provide a hedge. Trade 3 is an outright purchase of volatility via a swap, which provides a pure long exposure and would hedge the existing equity exposure in the portfolio."
+   }
+  ]
+ },
+ {
+  "id": "hf4-pukitis",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · Pukitis: characteristics, categories, equity-related statements, strategy selection",
+  "body": "Alise Pukitis works as an analyst for Winter Stone Associates. Winter Stone is a hedge fund consulting specialist that provides analysis and access to hedge funds for family offices and high-net-worth investment advisers. Amy Chu is a senior wealth adviser with Brownstein Legacy Associates who has engaged Winter Stone to educate the firm on current investment opportunities within the hedge fund universe.\n\nIn an initial meeting with Chu, Pukitis provides a summary of the hedge fund landscape. Brownstein has historically invested in traditional long-only investment strategies in public markets for its clients. Pukitis tells Chu to expect the following characteristics when reviewing the hedge fund universe:\n\nCharacteristic 1:\tLess regulatory oversight and a relatively narrow investment universe.\nCharacteristic 2:\tLess aggressive investment styles and increased use of leverage.\nCharacteristic 3:\tInvestor-aligned fee structures and typically higher returns from privately placed versus liquid alternative strategies.\nPukitis explains that hedge funds are categorized and tracked by type. Exhibit 1 shows the six broad hedge fund categories tracked by Winter Stone.\n\nExhibit 1 Hedge Fund Categories Tracked by Winter Stone\nHedge Fund Category\tIncluded Hedge Fund Strategies\nEquity related\tLong-short equity, dedicated short bias, equity market neutral\nEvent-driven strategies\tMerger arbitrage, distressed securities\nRelative value\tFixed-income arbitrage, convertible bond arbitrage\nOpportunistic\tGlobal macro, managed futures, reinsurance\nSpecialist\tVolatility strategies involving options\nMultimanager\tMultistrategy, funds of hedge funds\nAfter reviewing the information, Chu tells Pukitis that she would like to receive more information on equity-related strategies. Pukitis makes the following statements to Chu regarding equity-related hedge fund managers:\n\nStatement 1:\tThe most attractive feature of long–short equity managers is the lower beta sensitivity to equity markets than long-only equity managers.\nStatement 2:\tDedicated short-bias managers typically benefit from higher levels of leverage and more frequent use of leverage than long–short or equity market neutral strategies.\nStatement 3:\tEquity market–neutral managers are likely to have high levels of diversification and turnover ratios.\nBrownstein’s investment committee has identified the following characteristics it is seeking in the selection of a hedge fund manager: low to moderate levels of leverage, idiosyncratic alpha, long biased, and no concerns about investing in an illiquid strategy. Chu reviews a number of strategies on Winter Stone’s recommended list but is having a difficult time determining which strategy will meet the needs of Brownstein’s investment committee. She reaches out to Pukitis for help identifying the appropriate strategy to bring to the committee for approval.",
+  "questions": [
+   {
+    "n": 32,
+    "q": "Which of the characteristics that Pukitis describes to Chu regarding hedge funds is most likely accurate?",
+    "options": [
+     "Characteristic 1",
+     "Characteristic 2",
+     "Characteristic 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Hedge funds do have less regulatory oversight, but this answer is incorrect because the investment universe is broad, not narrow. \nB. Incorrect. Hedge funds do use more direct and implied leverage, but this answer is incorrect because hedge funds frequently involve more, not less, aggressive investment styles, because of specialized concentrated strategies and frequent use of leverage. \nC. Correct. Hedge funds typically have higher fees, but the fee structures are typically aligned with investors."
+   },
+   {
+    "n": 33,
+    "q": "In Exhibit 1, which of the hedge fund categories tracked by Winter Stone is least likely accurate with regard to strategy classification?",
+    "options": [
+     "Event driven",
+     "Opportunistic",
+     "Relative value"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Winter Stone is using the correct classification for event-driven strategies. \nB. Correct. Winter Stone incorrectly includes reinsurance as an opportunistic strategy even though reinsurance is considered a specialist strategy. \nC. Incorrect. Winter Stone is using the correct classification for relative value strategies."
+   },
+   {
+    "n": 34,
+    "q": "Which of Pukitis statement’s to Chu regarding equity-related hedge fund managers is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Although a lower beta to equity markets is a characteristic of long–short managers, it is not one of the attractive features of long–short strategies. If an investor wishes to have exposure to a strategy with lower equity beta, there are cheaper long-only approaches to accomplish this goal. \nB. Incorrect. Dedicated short-bias managers typically have low levels of leverage. \nC. Correct. Pukitis correctly states that equity market–neutral managers are likely to have high levels of diversification and turnover ratios."
+   },
+   {
+    "n": 35,
+    "q": "Based on the characteristics identified by Brownstein’s investment committee, which of the following hedge fund strategies would Chu most likely recommend?",
+    "options": [
+     "Managed futures",
+     "Distressed securities",
+     "Convertible bond arbitrage"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Managed futures strategies often contain a lot of embedded leverage, can be long or short biased, and typically are liquid. \nB. Correct. Brownstein’s investment committee is seeking a hedge fund with the following characteristics: low to moderate levels of leverage, idiosyncratic alpha, long biased, and no concerns about liquidity. Of the strategies listed, the distressed securities strategy meets these desired characteristics most closely. \nC. Incorrect. Convertible bond arbitrage strategies frequently use high levels of leverage and are net neutral."
+   }
+  ]
+ },
+ {
+  "id": "hf4-sa1",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · stand-alone set 1: illiquidity premium, merger arbitrage trade, duration neutral, global macro vs managed futures",
+  "body": "The following four questions are independent of each other (stand-alone hedge fund strategy questions grouped into one set).",
+  "questions": [
+   {
+    "n": 36,
+    "q": "Which of the following investments is most likely to offer an illiquidity premium?",
+    "options": [
+     "REITs",
+     "Mutual funds",
+     "Traditional hedge funds"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because REITs are publicly traded and offer daily liquidity. While the underlying holdings may generate an illiquidity premium, the REIT itself does not. \nB. Incorrect because a mutual fund needs to ensure daily liquidity and offers no illiquidity premium. Further, the underlying holdings of a mutual fund are publicly traded stocks, which themselves offer no illiquidity premium. \nC. Correct because hedge funds appear to benefit from an illiquidity premium, despite the fact that their underlying holdings may be publicly traded and offer no illiquidity premium. Empirical evidence shows that liquid alts significantly underperform similar strategy hedge funds, which suggests that traditional hedge funds may be benefiting from an illiquidity premium phenomenon that cannot be easily transported into a mutual fund format."
+   },
+   {
+    "n": 37,
+    "q": "Company A announces a stock-for-stock takeover proposal of Company T. An event-driven hedge fund looking to profit from the possible acquisition completion is most likely to:",
+    "options": [
+     "sell Company T shares only.",
+     "sell Company T shares and buy Company A shares.",
+     "buy Company T shares and sell Company A shares."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because a fund would be more likely to buy Company T shares, not sell them. In a stock-for-stock deal, the fund manager typically buys T (the target company) and sells the acquiring company (A) in the same ratio as the offer, hoping to earn the spread on successful deal completion. \nB. Incorrect because selling Company T shares and buying Company A shares describes the opposite actions of a profit-motivated investor. In a stock-for-stock deal, the fund manager typically buys T (the target company) and sells the acquiring company (A) in the same ratio as the offer, hoping to earn the spread on successful deal completion. \nC. Correct because, in a stock-for-stock deal, the fund manager typically buys T (the target company) and sells the acquiring company (A) in the same ratio as the offer, hoping to earn the spread on successful deal completion."
+   },
+   {
+    "n": 38,
+    "q": "A fixed-income arbitrage fund implementing a duration-neutral strategy is most likely hedged against:",
+    "options": [
+     "large yield changes.",
+     "a steepening yield curve.",
+     "small shifts in the yield curve."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because duration neutrality will not provide a hedge against large yield changes. Duration neutrality provides a hedge against only small shifts in the yield curve. To hedge against large yield changes, the manager might employ a range of fixed-income derivatives, including futures, forwards, swaps, and swaptions (i.e., options on a swap). \nB. Incorrect because duration neutrality will not provide a hedge against a steepening yield curve as a steepening yield curve is a non-parallel shift in the yield curve. Duration neutrality provides a hedge against only small shifts in the yield curve. To hedge against non-parallel yield curve movements (i.e., steepening or flattening), the manager might employ a range of fixed-income derivatives, including futures, forwards, swaps, and swaptions (i.e., options on a swap). \nC. Correct because duration neutrality provides a hedge against only small shifts in the yield curve. Unless trading a price discrepancy directly involves establishing a desired yield curve exposure, fixed-income arbitrageurs will typically immunize their strategies, which involve both long and short positions, from interest rate risk by taking duration-neutral positions."
+   },
+   {
+    "n": 39,
+    "q": "Compared to managed futures funds, global macro funds are more likely to:",
+    "options": [
+     "be a consistent source of alpha.",
+     "take a systematic approach to implementation.",
+     "be early and overly anticipatory in their positioning."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because managed futures funds tend to be a more dependable source of alpha than global macro funds. Global macro funds are not as consistently dependable as a source of short alpha when compared to pure systematic, trend-following managed futures funds that typically attempt to capture any significant market trend. \nB. Incorrect because, compared to managed futures managers, global macro managers are not likely to take a systematic approach to implementation. Typically, managed futures managers tend to take a more systematic approach to implementation than global macro managers, who are generally more discretionary in their application of models and tools. \nC. Correct because, compared to managed futures managers, global macro managers can be early and overly anticipatory in their positioning. Global macro managers tend to be anticipatory and sometimes contrarian in setting their strategies. Some macro managers may try to extract carry gains or ride momentum waves, but most have a tendency to be early in their positioning and then benefit when some rationality eventually returns to relative market pricing. Finally, global macro managers tend to be more anticipatory (compared to managed futures managers), which can be a useful attribute."
+   }
+  ]
+ },
+ {
+  "id": "hf4-sa2",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · stand-alone set 2: fund of funds, factor exposures, equity market neutral leverage, blended portfolios",
+  "body": "The following four questions are independent of each other (stand-alone hedge fund strategy questions grouped into one set).",
+  "questions": [
+   {
+    "n": 40,
+    "q": "In contrast to a multi-strategy fund, a fund-of-funds:",
+    "options": [
+     "has less operational risk.",
+     "absorbs netting risk on behalf of its investors.",
+     "can reallocate capital more quickly into different strategy areas."
+    ],
+    "answer": "A",
+    "why": "A. Correct because, since all the operational processes are consolidated at a multi-strategy hedge fund, there is greater operational risk than with a FOF. The operational risks of a multi-strategy firm, by definition, are not well diversified because all operational processes are performed under the same fund structure. Multi-strategy funds offer potentially faster tactical asset allocation and improved fee structure (netting risk handled at strategy level) but with higher manager-specific operational risks. FoFs offer a potentially more diverse strategy mix but with less transparency and slower tactical reaction time. \nB. Incorrect because investors in FOFs face netting risk where, in contrast, investors in multi-strategy funds are protected from netting risk by the GP (general partner). Conceptually, the FoF investor always faces netting risk, whereby he/she is responsible for paying performance (i.e., incentive) fees due to winning underlying funds while suffering return drag from the performance of losing underlying funds. Even if the FoF’s overall performance (aggregated across all funds) is flat or down, FoF investors must still pay incentive fees due to the managers of the winning underlying funds. The fee structure is more investor-friendly at multi-strategy hedge funds where the general partner absorbs the netting risk arising from the divergent performances of his/her fund's different strategy teams. This is an attractive outcome for the multi-strategy fund investor because the GP is responsible for netting risk. \nC. Incorrect because a multi-strategy manager can reallocate capital into different strategy areas more quickly and efficiently than would be possible by the FoF manager."
+   },
+   {
+    "n": 41,
+    "q": "Which of the following factor model exposures is most likely to benefit from the stated market trend?",
+    "options": [
+     "Positive exposure to USD when USD is depreciating",
+     "Negative exposure to volatility when volatility is increasing",
+     "Negative exposure to credit when credit spreads are widening"
+    ],
+    "answer": "C",
+    "why": "A. Incorrect because one would want to have negative (not positive) exposure in order to benefit when USD is depreciating. The desired factor exposure to USD, when USD is flat or depreciating, is to go short or take on a negative exposure. \nB. Incorrect because one would want to have positive (not negative) exposure to volatility in order to benefit when volatility is increasing, based on the typical negative correlation between volatility and equities. The desired factor exposure to volatility when volatility is increasing is to go long or take on a positive exposure. \nC. Correct because one would want to have negative exposure to credit in order to benefit from a widening in credit spreads. The desired factor exposure to credit when spreads are widening is to go short or take on a negative exposure, aiming to reduce risk."
+   },
+   {
+    "n": 42,
+    "q": "Which of the following equity hedge fund strategies is most likely to employ substantial leverage?",
+    "options": [
+     "Long/short equity",
+     "Equity market neutral",
+     "Dedicated short selling"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because, although long/short strategies can employ leverage, the more market-neutral or quantitative the strategy approach, the more levered the strategy application tends to be to achieve a meaningful return profile. \nB. Correct because, as many beta risks (e.g., market, sector) are hedged away, it is generally deemed acceptable for EMN (equity market-neutral) managers to apply higher levels of leverage while striving for meaningful return targets. \nC. Incorrect because there is typically sufficient natural volatility that short-selling managers do not need to add much leverage."
+   },
+   {
+    "n": 43,
+    "q": "An analyst gathers the following information about a traditional stock/bond portfolio and blended portfolios that combine this traditional portfolio with an equal allocation to one of three different hedge funds:\nStandard Deviation\tSharpe Ratio\tSortino Ratio\tMaximum Drawdown\nTraditional Portfolio\t7.1%\t0.85\t0.90\t12%\nTraditional Portfolio + Hedge Fund 1\t7.0%\t0.95\t1.00\t10%\nTraditional Portfolio + Hedge Fund 2\t6.8%\t0.90\t1.10\t10%\nTraditional Portfolio + Hedge Fund 3\t6.9%\t0.85\t1.10\t14%\nWhich blended portfolio is most suitable for an investor concerned with limiting volatility and downside risk?",
+    "options": [
+     "Traditional Portfolio + Hedge Fund 1",
+     "Traditional Portfolio + Hedge Fund 2",
+     "Traditional Portfolio + Hedge Fund 3"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect because the Sharpe ratio is higher, but so is volatility, which means this portfolio does not satisfy the desire for volatility limitation as well as the blended portfolio with Hedge Fund 2. The Sortino ratio is also lower while the maximum drawdown is the same, meaning downside risk is more pronounced.\nB. Correct because this portfolio has the lowest standard deviation of returns, which deals with the desire for volatility limitation, even though the Sharpe ratio is not the highest. As far as limiting downside risk is concerned, the Sortino ratio is the highest: The Sortino ratio replaces standard deviation in the Sharpe ratio with downside deviation, so it concentrates on returns below a specified threshold. For example, if the threshold return is zero, then the Sortino ratio uses downside deviation based on losses. Finally, this portfolio has the smallest maximum drawdown: Drawdown is the difference between a portfolio's highest value (i.e., high-water mark) for a period and any subsequent low point until a new high-water mark is reached. Maximum drawdown is the largest difference between a high-water mark and a subsequent low point.\nC. Incorrect because volatility is higher and the Sharpe ratio is lower, meaning volatility limitation is likely not as effective in this portfolio as in the blended portfolio with Hedge Fund 2. Further, the Sortino ratio is the same while the maximum drawdown is larger, meaning downside risk is also not as limited in this portfolio compared to the blended portfolio with Hedge Fund 2."
+   }
+  ]
+ },
+ {
+  "id": "hf4-sa3",
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (4/44, 9%: opened only to copy the questions)",
+  "readings": [
+   33
+  ],
+  "title": "Hedge funds · stand-alone set 3: volatility trading, distressed securities, managed futures, fixed-income arbitrage (Q45-47 written from the one-page overview)",
+  "body": "The following four questions are independent of each other (stand-alone hedge fund strategy questions grouped into one set).",
+  "questions": [
+   {
+    "n": 44,
+    "q": "Which of the following statements about volatility trading is most accurate?",
+    "options": [
+     "Selling volatility provides a volatility risk premium",
+     "Long volatility positioning exhibits negative convexity",
+     "Volatility levels tend to decrease when equity markets fall in value"
+    ],
+    "answer": "A",
+    "why": "A. Correct because selling volatility provides a volatility risk premium or compensation for taking on the risk of providing insurance against crises for holders of equities and other securities. \nB. Incorrect because long volatility positioning exhibits positive (not negative) convexity, which can be particularly useful for hedging purposes. \nC. Incorrect because volatility levels tend to go up (not down) when equity markets fall, with options pricing skew reflecting such a tendency. Clearly, this makes the long volatility strategy a useful potential diversifier for long equity investments, albeit at the cost to the option premium paid by the volatility buyer."
+   },
+   {
+    "n": 45,
+    "q": "Which description best fits a distressed securities hedge fund strategy?",
+    "options": [
+     "High leverage of 300%–500% and a liquid portfolio",
+     "Low leverage, moderately high illiquidity and long lock-ups",
+     "Significant leverage in Treasuries and daily liquidity"
+    ],
+    "answer": "B",
+    "why": "A. Incorrect. Leverage of 300%–500% is typical of merger arbitrage, not distressed securities.\nB. Correct. Distressed securities funds buy securities of firms in or near bankruptcy at depressed prices; leverage is low and liquidity is moderately illiquid, with long lock-ups (often two years).\nC. Incorrect. Significant leverage and liquid Treasuries describe fixed-income arbitrage.",
+    "created": true
+   },
+   {
+    "n": 46,
+    "q": "Which statement about managed futures funds is most accurate?",
+    "options": [
+     "They are extremely liquid, and their returns tend to be right-skewed in market stress.",
+     "They are mostly discretionary funds that forecast inflation, currencies and central bank policy.",
+     "They use little leverage because futures positions must be fully funded in cash."
+    ],
+    "answer": "A",
+    "why": "A. Correct. Managed futures funds trade liquid futures, forwards and options on futures, mostly with systematic trend-following signals; returns are right-skewed in market stress and correlation to other assets is very low.\nB. Incorrect. That describes global macro, which is mostly discretionary and top-down.\nC. Incorrect. Futures need only about one-eighth of capital as collateral, so leverage is high, not low.",
+    "created": true
+   },
+   {
+    "n": 47,
+    "q": "The return profile of a fixed-income arbitrage strategy is most similar to:",
+    "options": [
+     "buying call options: limited loss and a large upside.",
+     "a long volatility position with positive convexity.",
+     "writing put options: steady income and a large loss if spreads widen."
+    ],
+    "answer": "C",
+    "why": "A. Incorrect. Fixed-income arbitrage does not have a limited-loss, large-upside payoff.\nB. Incorrect. Positive convexity from long volatility belongs to a volatility buyer; fixed-income arbitrage is exposed to spread widening with leverage.\nC. Correct. Fixed-income arbitrage earns a steady spread and carry (liquidity, credit and volatility premiums) like writing puts, and loses heavily when spreads widen, especially with leverage and margin calls (1998).",
+    "created": true
+   }
+  ]
+ }
+]

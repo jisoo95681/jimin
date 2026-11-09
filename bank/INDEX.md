@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 221 vignettes · 289 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 228 vignettes · 296 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@ Totals: app 68 vignettes · bank 221 vignettes · 289 in all. Plus 152 standalon
 | 30 | Commodities and Commodity Derivatives | 0 | 2 | 2 |
 | 31 | Types of Real Estate Investment | 0 | 6 | 6 |
 | 32 | Real Estate through Publicly Traded Securities | 0 | 6 | 6 |
-| 33 | Hedge Fund Strategies | 2 | 1 | 3 |
+| 33 | Hedge Fund Strategies | 2 | 8 | 10 |
 | 34 | Economics and Investment Markets | 1 | 6 | 7 |
 | 35 | Analysis of Active Portfolio Management | 1 | 11 | 12 |
 | 36 | Exchange-Traded Funds | 0 | 8 | 8 |
@@ -83,7 +83,7 @@ Totals: app 68 vignettes · bank 221 vignettes · 289 in all. Plus 152 standalon
 **30 Commodities and Commodity Derivatives**: musicale-apex (bank, 8Q); m2-11 (bank, 4Q)
 **31 Types of Real Estate Investment**: pc-5 (bank, 4Q); re-eastland (bank, 5Q); re-delphinus1 (bank, 5Q); re-delphinus2 (bank, 5Q); re-rossi (bank, 4Q); s2a-ferguson (bank, 4Q)
 **32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q); re-rossi (bank, 4Q); re-bay (bank, 4Q); re-hui-lin (bank, 6Q); re-wang (bank, 6Q); re-rosse (bank, 4Q)
-**33 Hedge Fund Strategies**: pwpf (app, 8Q); ctrf (app, 9Q); m2-11 (bank, 4Q)
+**33 Hedge Fund Strategies**: pwpf (app, 8Q); ctrf (app, 9Q); hf4-xu (bank, 6Q); hf4-chang (bank, 4Q); hf4-rivas (bank, 4Q); hf4-pukitis (bank, 4Q); hf4-sa1 (bank, 4Q); hf4-sa2 (bank, 4Q); hf4-sa3 (bank, 4Q); m2-11 (bank, 4Q)
 **34 Economics and Investment Markets**: carlisle (app, 7Q); em-simmons (bank, 4Q); em-gera (bank, 4Q); em-gosser (bank, 4Q); em-rutherford (bank, 4Q); m1-8 (bank, 4Q); s2a-ferguson (bank, 4Q)
 **35 Analysis of Active Portfolio Management**: frazee (app, 7Q); ap-managers (bank, 2Q); ap-robbin (bank, 6Q); ap-martinez (bank, 4Q); ap-indigo (bank, 2Q); ap-smith (bank, 4Q); ap-bauer (bank, 4Q); ap-mackie (bank, 4Q); ap-spencer (bank, 6Q); ap-barolo (bank, 4Q); m1-3 (bank, 4Q); m1-8 (bank, 4Q)
 **36 Exchange-Traded Funds**: etf-rutledge (bank, 6Q); etf-provident (bank, 4Q); etf-set1 (bank, 4Q); etf-set2 (bank, 4Q); etf-set3 (bank, 4Q); etf-set4 (bank, 4Q); m1-3 (bank, 4Q); s1b-beaumont (bank, 4Q)

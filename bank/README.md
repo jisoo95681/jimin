@@ -54,3 +54,6 @@ Stored in bank/nov9_equity_m2.json (reading 18, 11 vignettes; Dobson = app 'char
 
 ## Mock 7 marking (9 Nov, taken in the app)
 Answers BABB BABC ACAB CBAB CBCB BCCB CABB CCBB BBBC BBBC CAAA = 33/44 (75.0%): new vignettes 23/32 (71.9%), re-done 10/12 (83.3%). Wrong: Q12, Q20, Q23, Q30, Q31, Q33, Q38, Q39, Q41, Q43, Q44 (Portfolio Management 1/4, Fixed Income 2/4, Equity 5/8). PDF made (Mock_Paper_7_Wrong_Answer_Notes.pdf).
+
+## Hedge Fund Strategies Module 4 quiz (9 Nov, 44 questions, user scored 4/44: opened only to copy it)
+Already in the app: Mukilteo / PWPF vignette = `pwpf` (Q2-9). New in `bank/nov9_hedge_fund_m4.json` (reading 33): `hf4-xu` (Q10-15, 6 Q), `hf4-chang` (Q24-27), `hf4-rivas` (Q28-31), `hf4-pukitis` (Q32-35), and the 9 stand-alone multiple-choice questions Q36-44 grouped in fours: `hf4-sa1` (Q36-39), `hf4-sa2` (Q40-43), `hf4-sa3` (Q44 + 3 questions Q45-47 written from the one-page Hedge Fund overview: distressed leverage/liquidity, managed futures, fixed-income arbitrage payoff; field `created`). The 9 essays (Q1, 16-23) are in `bank/standalone_essays_ts.json` (reading 33, field `group` hf4-E1..E3; Q16/17/21/22 carry their vignette text). No app change, no PDF (nothing to mark).

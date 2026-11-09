@@ -6,7 +6,8 @@
   ],
   "n": 1,
   "q": "Given spot rates for one-, two-, and three-year zero coupon bonds, how many forward rates can be calculated?",
-  "model_answer": "Three: f1,1 (from z1 and z2), f2,1 (from z2 and z3) and f1,2 (from z1 and z3). E.g. [1 + z3]³ = [1 + z2]²[1 + f2,1]; [1 + z3]³ = [1 + z1][1 + f1,2]²."
+  "model_answer": "Three: f1,1 (from z1 and z2), f2,1 (from z2 and z3) and f1,2 (from z1 and z3). E.g. [1 + z3]³ = [1 + z2]²[1 + f2,1]; [1 + z3]³ = [1 + z1][1 + f1,2]².",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -15,7 +16,8 @@
   ],
   "n": 2,
   "q": "Give two interpretations for the following forward rate: The two-year forward rate one year from now is 2%.",
-  "model_answer": "(1) 2% is the rate that makes an investor indifferent between buying a three-year zero-coupon bond or investing in a one-year zero and, when it matures, reinvesting in a two-year zero. (2) 2% is the rate that can be locked in today by buying the three-year zero rather than rolling a one-year zero into a two-year zero."
+  "model_answer": "(1) 2% is the rate that makes an investor indifferent between buying a three-year zero-coupon bond or investing in a one-year zero and, when it matures, reinvesting in a two-year zero. (2) 2% is the rate that can be locked in today by buying the three-year zero rather than rolling a one-year zero into a two-year zero.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -24,7 +26,8 @@
   ],
   "n": 3,
   "q": "Describe the relationship between forward rates and spot rates if the yield curve is flat.",
-  "model_answer": "A flat curve means all spot rates are equal; the forward rate model then shows all forward rates equal the spot rate."
+  "model_answer": "A flat curve means all spot rates are equal; the forward rate model then shows all forward rates equal the spot rate.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -33,7 +36,8 @@
   ],
   "n": 41,
   "q": "Define the yield-to-maturity for a coupon bond.",
-  "model_answer": "The expected rate of return on a bond if it is held to maturity, there is no default, and the bond and all coupons are reinvested at the original yield-to-maturity."
+  "model_answer": "The expected rate of return on a bond if it is held to maturity, there is no default, and the bond and all coupons are reinvested at the original yield-to-maturity.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -42,7 +46,8 @@
   ],
   "n": 42,
   "q": "Is it possible for a coupon bond to earn less than the yield-to-maturity if held to maturity?",
-  "model_answer": "Yes: if coupons are reinvested at rates lower than the initial YTM, realized returns are lower."
+  "model_answer": "Yes: if coupons are reinvested at rates lower than the initial YTM, realized returns are lower.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -51,7 +56,8 @@
   ],
   "n": 43,
   "q": "If a bond trader believes that current forward rates overstate future spot rates, how might she profit from that conclusion?",
-  "model_answer": "If forward rates exceed expected future spot rates, the market price is below intrinsic value (discounting at too high a rate): buy the undervalued bond; if the expected spot rates are realized, the price rises."
+  "model_answer": "If forward rates exceed expected future spot rates, the market price is below intrinsic value (discounting at too high a rate): buy the undervalued bond; if the expected spot rates are realized, the price rises.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -60,7 +66,8 @@
   ],
   "n": 44,
   "q": "Explain the strategy of rolling down the yield curve.",
-  "model_answer": "Buy a bond with maturity beyond the investment horizon when the curve is upward sloping. If the curve does not change level or shape, the bond rolls down the curve, is priced at successively lower yields, and is sold at a gain, giving a higher return than a maturity-matched bond."
+  "model_answer": "Buy a bond with maturity beyond the investment horizon when the curve is upward sloping. If the curve does not change level or shape, the bond rolls down the curve, is priced at successively lower yields, and is sold at a gain, giving a higher return than a maturity-matched bond.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -69,7 +76,8 @@
   ],
   "n": 45,
   "q": "What are the advantages of using the swap curve as a benchmark of interest rates relative to a government bond yield curve?",
-  "model_answer": "Some countries have no liquid government bond market at all maturities but an active swap market with more points available to build a curve, so the swap curve may be the better benchmark."
+  "model_answer": "Some countries have no liquid government bond market at all maturities but an active swap market with more points available to build a curve, so the swap curve may be the better benchmark.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -78,7 +86,8 @@
   ],
   "n": 46,
   "q": "What is the TED spread, and what type of risk does it measure?",
-  "model_answer": "The difference between MRR and the US T-bill rate of matching maturity. An indicator of perceived credit and liquidity risk; it reflects counterparty risk in the banking sector."
+  "model_answer": "The difference between MRR and the US T-bill rate of matching maturity. An indicator of perceived credit and liquidity risk; it reflects counterparty risk in the banking sector.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -87,7 +96,8 @@
   ],
   "n": 47,
   "q": "What is the SOFR rate, and which market conditions does it reflect?",
-  "model_answer": "The secured overnight financing rate: overnight cash borrowing collateralized by US Treasuries, a volume-weighted index of qualified repo transactions; it reflects supply and demand in secured funding (repo) markets."
+  "model_answer": "The secured overnight financing rate: overnight cash borrowing collateralized by US Treasuries, a volume-weighted index of qualified repo transactions; it reflects supply and demand in secured funding (repo) markets.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -96,7 +106,8 @@
   ],
   "n": 52,
   "q": "According to the local expectations theory, what would be the difference in the one-month total return if an investor purchased a five-year zero-coupon bond versus a two-year zero-coupon bond?",
-  "model_answer": "None: the total return over a one-month horizon is the same for both (expected return equals the risk-free rate over the short period)."
+  "model_answer": "None: the total return over a one-month horizon is the same for both (expected return equals the risk-free rate over the short period).",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -105,7 +116,8 @@
   ],
   "n": 53,
   "q": "Compare the segmented market and the preferred habitat term structure theories.",
-  "model_answer": "Both explain the curve through supply and demand by maturity. In segmented markets, participants are limited to maturities matching their liabilities. In preferred habitat, participants prefer a maturity but will deviate if other maturities offer sufficient compensation."
+  "model_answer": "Both explain the curve through supply and demand by maturity. In segmented markets, participants are limited to maturities matching their liabilities. In preferred habitat, participants prefer a maturity but will deviate if other maturities offer sufficient compensation.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -114,7 +126,8 @@
   ],
   "n": 54,
   "q": "List the three factors that have empirically been observed to affect Treasury security returns and explain how each of these factors affects returns on Treasury securities.",
-  "model_answer": "Level (parallel shifts: an upward shift lowers returns on all maturities), slope/steepness (a steeper curve raises short-maturity and lowers long-maturity returns), and curvature (e.g. rates falling at the short and long ends while rising at intermediate maturities lifts short- and long-maturity returns and lowers intermediate ones)."
+  "model_answer": "Level (parallel shifts: an upward shift lowers returns on all maturities), slope/steepness (a steeper curve raises short-maturity and lowers long-maturity returns), and curvature (e.g. rates falling at the short and long ends while rising at intermediate maturities lifts short- and long-maturity returns and lowers intermediate ones).",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -123,7 +136,8 @@
   ],
   "n": 55,
   "q": "What has been observed to be the most important factor in affecting Treasury returns?",
-  "model_answer": "The change in the level of interest rates."
+  "model_answer": "The change in the level of interest rates.",
+  "group": null
  },
  {
   "source": "4 Nov, Module 1 term structure quiz (essay)",
@@ -132,7 +146,8 @@
   ],
   "n": 56,
   "q": "Which measures of yield curve risk can measure shaping risk?",
-  "model_answer": "Key rate durations and measures based on sensitivities to level, slope and curvature movements can address shaping risk; effective duration cannot."
+  "model_answer": "Key rate durations and measures based on sensitivities to level, slope and curvature movements can address shaping risk; effective duration cannot.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -141,7 +156,8 @@
   ],
   "n": 1,
   "q": "Compare the assumptions of the arbitrage pricing theory (APT) with those of the capital asset pricing model (CAPM).",
-  "model_answer": "APT and the CAPM both describe the expected return of a risky asset in equilibrium given its risk. The CAPM assumes investors decide using only returns' means, variances and correlations. APT makes three assumptions: (1) a factor model describes asset returns; (2) there are many assets, so investors can form well-diversified portfolios that eliminate asset-specific risk; (3) no arbitrage opportunities exist among well-diversified portfolios."
+  "model_answer": "APT and the CAPM both describe the expected return of a risky asset in equilibrium given its risk. The CAPM assumes investors decide using only returns' means, variances and correlations. APT makes three assumptions: (1) a factor model describes asset returns; (2) there are many assets, so investors can form well-diversified portfolios that eliminate asset-specific risk; (3) no arbitrage opportunities exist among well-diversified portfolios.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -150,7 +166,8 @@
   ],
   "n": 2,
   "q": "One-factor model: E(Rp) = 0.10 + 0.12 × βp,1. Highly diversified portfolios: A expected return 0.196, factor sensitivity 0.80; B 0.156, 1.00; C 0.244, 1.20. Is there an arbitrage opportunity and how can it be exploited?",
-  "model_answer": "Model returns: A 0.20, B 0.22, C 0.24. A and C are priced correctly, B offers too little return for its risk (0.156). Short B and buy a 50/50 mix of A and C (sensitivity 1.0 like B; expected return (0.196 + 0.244)/2 = 0.22). Arbitrage profit per unit shorted: 0.22 − 0.156 (the source solution quotes 0.07 against 0.15)."
+  "model_answer": "Model returns: A 0.20, B 0.22, C 0.24. A and C are priced correctly, B offers too little return for its risk (0.156). Short B and buy a 50/50 mix of A and C (sensitivity 1.0 like B; expected return (0.196 + 0.244)/2 = 0.22). Arbitrage profit per unit shorted: 0.22 − 0.156 (the source solution quotes 0.07 against 0.15).",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -159,7 +176,8 @@
   ],
   "n": 15,
   "q": "Harry Company stock returned 5%. The part not explained by a two-factor macro model was 3%. Interest rate change: actual 2.0%, expected 0.0%, sensitivity −1.5. GDP growth: actual 1.0%, expected 4.0%, sensitivity 2.0. Calculate the stock's expected return.",
-  "model_answer": "Surprises: interest rate +2%, GDP −3%. 5% = E(R) − 1.5 × 2% + 2 × (−3%) + 3% = E(R) − 6%. E(R) = 5% + 6% = 11%. The intercept is the expected return and the unexplained part is the error term."
+  "model_answer": "Surprises: interest rate +2%, GDP −3%. 5% = E(R) − 1.5 × 2% + 2 × (−3%) + 3% = E(R) − 6%. E(R) = 5% + 6% = 11%. The intercept is the expected return and the unexplained part is the error term.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -168,7 +186,8 @@
   ],
   "n": 16,
   "q": "Which type of factor model is most directly applicable to an analysis of the style orientation (growth vs value) of an active equity manager? Justify.",
-  "model_answer": "A fundamental factor model: it has many company and valuation factors (earnings, P/E, size and so on) that are common indicators of growth or value orientation. A macroeconomic model may help only indirectly and in less detail."
+  "model_answer": "A fundamental factor model: it has many company and valuation factors (earnings, P/E, size and so on) that are common indicators of growth or value orientation. A macroeconomic model may help only indirectly and in less detail.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -177,7 +196,8 @@
   ],
   "n": 17,
   "q": "An active equity manager earned an active return of 110 basis points, 80 basis points from security selection. Explain the likely source of the remaining 30 basis points.",
-  "model_answer": "Factor tilts. Active return = return from factor tilts + security selection. Factor tilt return = (portfolio sensitivity − benchmark sensitivity) × factor return, summed across factors."
+  "model_answer": "Factor tilts. Active return = return from factor tilts + security selection. Factor tilt return = (portfolio sensitivity − benchmark sensitivity) × factor return, summed across factors.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -186,7 +206,8 @@
   ],
   "n": 18,
   "q": "What is the information ratio of an index fund that effectively meets its investment objective?",
-  "model_answer": "Zero, because its active return is expected to be zero."
+  "model_answer": "Zero, because its active return is expected to be zero.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -195,7 +216,8 @@
   ],
   "n": 19,
   "q": "What are the two types of risk an active manager can assume in seeking to increase the information ratio?",
-  "model_answer": "Active factor risk and active specific (security selection) risk."
+  "model_answer": "Active factor risk and active specific (security selection) risk.",
+  "group": null
  },
  {
   "source": "8 Nov Module 4 Using Multifactor Models quiz (essay)",
@@ -204,6 +226,97 @@
   ],
   "n": 20,
   "q": "A wealthy investor has no other income and her investments are expected to meet all her needs. Her advisor recommends tilting to cyclical stocks and high-yield bonds. Explain in terms of comparative advantage in bearing risk.",
-  "model_answer": "She has a comparative advantage in bearing business cycle risk compared with the average investor, who depends on employment income and is exposed to recession risk. A risk premium should exist for holding recession-sensitive securities. Cyclical stocks and high-yield bonds are very sensitive to recession risk, and recessions do not affect her welfare, so she can tilt to them to capture the premium."
+  "model_answer": "She has a comparative advantage in bearing business cycle risk compared with the average investor, who depends on employment income and is exposed to recession risk. A risk premium should exist for holding recession-sensitive securities. Cyclical stocks and high-yield bonds are very sensitive to recession risk, and recessions do not affect her welfare, so she can tilt to them to capture the premium.",
+  "group": null
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 1,
+  "q": "Bern Zang is the chief investment officer of the Janson University Endowment Investment Office. The Janson University Endowment Fund (the “Fund”) is based in the United States and has current assets under management of $10 billion, with minimal exposure to alternative investments. Zang currently seeks to increase the Fund’s allocation to hedge funds and considers four strategies: dedicated short bias, merger arbitrage, convertible bond arbitrage, and global macro.\n\nAt a meeting with the Fund’s board of directors, the board mandates Zang to invest only in event-driven and relative value hedge fund strategies.\n\nDetermine, among the four strategies under consideration by Zang, the two that are permitted given the board’s mandate. Justify your response.\n\nDedicated short bias\n\nMerger arbitrage\n\nConvertible bond arbitrage\n\nGlobal macro\n\nDetermine, among the four strategies under consideration by Zang, the two that are permitted given the board’s mandate. (circle two)\tJustify your response.\nDedicated short bias\t             \nMerger arbitrage\t             \nConvertible bond arbitrage\t \nGlobal macro strategies",
+  "model_answer": "Determine, among the four strategies under consideration by Zang, the two that are permitted given the board’s mandate. (circle two)\tJustify your response.\nDedicated short bias\tA dedicated short bias hedge fund strategy is an example of an equity hedge fund strategy, not an event-driven or relative value strategy. Equity hedge fund strategies focus primarily on the equity markets, and the majority of their risk profiles contain equity-oriented risk. Dedicated short bias managers look for possible short selling targets among companies that are overvalued, that are experiencing declining revenues and/or earnings, or that have internal management conflicts, weak corporate governance, or even potential accounting frauds.\nMerger arbitrage\tA merger arbitrage hedge fund strategy is an example of an event-driven strategy, which is permitted under the board’s mandate. Event-driven hedge fund strategies focus on corporate events, such as governance events, mergers and acquisitions, bankruptcy, and other key events for corporations. Merger arbitrage involves simultaneously purchasing and selling the stocks of two merging companies to create “riskless” profits.\nConvertible bond arbitrage\tA convertible bond arbitrage hedge fund strategy is an example of a relative value strategy, which is permitted under the board’s mandate. Relative value hedge fund strategies focus on the relative valuation between two or more securities. Relative value strategies are often exposed to credit and liquidity risks because the valuation differences from which these strategies seek to benefit are often due to differences in credit quality and/or liquidity across different securities. A classic convertible bond arbitrage strategy is to buy the relatively undervalued convertible bond and take a short position in the relatively overvalued underlying stock.\nGlobal macro\tA global macro hedge fund strategy is an example of an opportunistic hedge fund strategy, not an event-driven or relative value strategy. Opportunistic hedge fund strategies take a top-down approach, focus on a multi-asset opportunity set, and include global macro strategies. Global macro managers use both fundamental and technical analysis to value markets as well as discretionary and systematic modes of implementation.",
+  "group": "hf4-E1"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 16,
+  "q": "Jane Shaindy is the chief investment officer of a large pension fund. The pension fund is based in the United States and currently has minimal exposure to hedge funds. The pension fund’s board has recently approved an additional investment in a long/short equity strategy. As part of Shaindy’s due diligence on a hedge fund that implements a long/short equity strategy, she uses a conditional linear factor model to uncover and analyze the hedge fund’s risk exposures. She is interested in analyzing several risk factors, but she is specifically concerned about whether the hedge fund’s long (positive) exposure to equities increases during turbulent market periods.\n\nDescribe how the conditional linear factor model can be used to address Shaindy’s concern.",
+  "model_answer": "A linear factor model can provide insights into the intrinsic characteristics and risks in a hedge fund investment. Since hedge fund strategies are dynamic, a conditional model allows for the analysis in a specific market environment to determine whether hedge fund strategies are exposed to certain risks under abnormal market conditions. A conditional model can show whether hedge fund risk exposures to equities that are insignificant during calm periods become significant during turbulent market periods. During normal periods when equities are rising, the desired exposure to equities (S&P 500 Index) should be long (positive) to benefit from higher expected returns. However, during crisis periods when equities are falling sharply, the desired exposure to equities should be short (negative).",
+  "group": "hf4-E1"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 17,
+  "q": "Jane Shaindy is the chief investment officer of a large pension fund. The pension fund is based in the United States and currently has minimal exposure to hedge funds. The pension fund’s board has recently approved an additional investment in a long/short equity strategy. As part of Shaindy’s due diligence on a hedge fund that implements a long/short equity strategy, she uses a conditional linear factor model to uncover and analyze the hedge fund’s risk exposures. She is interested in analyzing several risk factors, but she is specifically concerned about whether the hedge fund’s long (positive) exposure to equities increases during turbulent market periods.\n\nDuring a monthly board meeting, Shaindy discusses her updated market forecast for equity markets. Due to a recent large increase in interest rates and geopolitical tensions, her forecast has changed from one of modestly rising equities to several periods of non-trending markets. Given this new market view, Shaindy concludes that a long/short strategy will not be optimal at this time and seeks another equity-related strategy. The Fund has the capacity to use a substantial amount of leverage.\n\nDetermine the most appropriate equity-related hedge fund strategy that Shaindy should employ. Justify your response.",
+  "model_answer": "Shaindy should employ an equity market-neutral (EMN) equity strategy. Overall, EMN managers are more useful for portfolio allocation during periods of non-trending or declining markets. EMN hedge fund strategies take opposite (long and short) positions in similar or related equities having divergent valuations while attempting to maintain a near net zero portfolio exposure to the market. EMN managers neutralize market risk by constructing their portfolios such that the expected portfolio beta is approximately equal to zero. Moreover, EMN managers often choose to set the betas for sectors or industries as well as for common risk factors (e.g., market size, price-to-earnings ratio, and book-to-market ratio) equal to zero. Since these portfolios do not take beta risk and attempt to neutralize many other factor risks, they typically must apply leverage to the long and short positions to achieve a meaningful return profile from their individual stock selections.\n\nEMN strategies typically deliver return profiles that are steadier and less volatile than those of many other hedge strategy areas. Over time, their conservative and constrained approach typically results in a less dynamic overall return profile than those of managers who accept beta exposure. Despite the use of substantial leverage and because of their more standard and overall steady risk/return profiles, equity market-neutral managers are often a preferred replacement for fixed-income managers during periods when fixed-income returns are unattractively low.",
+  "group": "hf4-E1"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 18,
+  "q": "Gunnar Patel is an event-driven hedge fund manager for Senson Fund, which focuses on merger arbitrage strategies. Patel has been monitoring the potential acquisition of Meura Inc. by Sellshom, Inc. Sellshom has offered to buy Meura in a stock-for-stock deal. Sellshom was trading at $60 per share just prior to the announcement of the acquisition, and Meura was trading at $18 per share.\n\nThe offer ratio is 1 share of Sellshom in exchange for 2 shares of Meura. Soon after the announcement, Meura’s share price jumps to $22 while Sellshom’s falls to $55 in anticipation of the merger receiving required approvals and the deal closing successfully.\n\nAt the current share prices of $55 for Sellshom and $22 for Meura, Patel attempts to profit from the merger announcement. He buys 40,000 shares of Meura and sells short 20,000 shares of Sellshom.\n\nCalculate the payoffs of the merger arbitrage under the following two scenarios:\n\nThe merger is successfully completed.\n\nThe merger fails.",
+  "model_answer": "At the current share prices of $55 for Sellshom and $22 for Meura, Patel would receive $1,100,000 from short selling 20,000 shares of Sellshom and would pay $880,000 to buy 40,000 shares of Meura. This provides a net spread of $220,000 to Patel if the merger is successfully completed.\n\nIf the merger fails, then prices should revert back to their pre-merger announcement levels of $18 per share for Meura and $60 per share for Sellshom. The manager would need to buy back 20,000 shares of Sellshom at $60 per share, for a total of $1,200,000, to close the short position. Patel would then sell the long position of 40,000 shares of Meura at $18 per share for a total of $720,000. This net loss would be $260,000, calculated as: (Sellshom: $1,100,000 – $1,200,000 = –$100,000) + (Meura: –$880,000 + $720,000 = –$160,000).",
+  "group": "hf4-E1"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 19,
+  "q": "Yankel Stein is the chief investment officer of a large charitable foundation based in the United States. Although the foundation has significant exposure to alternative investments and hedge funds, Stein proposes to increase the foundation’s exposure to relative value hedge fund strategies. As part of Stein’s due diligence on a hedge fund engaging in convertible bond arbitrage, Stein asks his investment analyst to summarize different risks associated with the strategy.\n\nDescribe how each of the following circumstances can create concerns for Stein’s proposed hedge fund strategy:\n\nShort selling\n\nCredit issues\n\nTime decay of call option\n\nExtreme market volatility\n\n \tDescribe how each of the following circumstances can create concerns for Stein’s proposed hedge fund strategy:\nShort selling\t \nCredit issues\t \nTime decay of call option\t \nExtreme market volatility",
+  "model_answer": "Describe how each of the following circumstances can create concerns for Stein’s proposed hedge fund strategy:\nShort selling\tSince Hedge Fund 1 employs a convertible arbitrage strategy, the fund buys the convertible bond and takes a short position in the underlying security. When short selling, shares must be located and borrowed; as a result, the stock owner may want his/her shares returned at a potentially inopportune time, such as during stock price run-ups or when supply for the stock is low or demand for the stock is high. This situation, particularly a short squeeze, can lead to substantial losses and a suddenly unbalanced exposure if borrowing the underlying equity shares becomes too difficult or too costly for the arbitrageur.\nCredit issues\tCredit issues may complicate valuation since bonds have exposure to credit risk. When credit spreads widen or narrow, there would be a mismatch in the values of the stock and convertible bond positions that the convertible manager may or may not have attempted to hedge away.\nTime decay of call option\tThe convertible bond arbitrage strategy can lose money due to time decay of the convertible bond’s embedded call option during periods of reduced realized equity volatility and/or due to a general compression of market implied volatility levels.\nExtreme market volatility\tConvertible arbitrage strategies have performed best when convertible issuance is high (implying a wider choice among convertible securities as well as downward price pressure and cheaper prices), general market volatility levels are moderate, and the liquidity to trade and adjust positions is sufficient. Extreme market volatility typically implies heightened credit risks. Convertibles are naturally less-liquid securities, so convertible managers generally do not fare well during such periods. Because hedge funds have become the natural market makers for convertibles and typically face significant redemption pressures from investors during crises, the strategy may have further unattractive left-tail risk attributes during periods of market stress.",
+  "group": "hf4-E2"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 20,
+  "q": "John Puten is the chief investment officer of the Markus University Endowment Investment Office. Puten seeks to increase the diversification of the endowment by investing in hedge funds. He recently met with several hedge fund managers that employ different investment strategies. In selecting a hedge fund manager, Puten prefers to hire a manager that uses the following:\n\nFundamental and technical analysis to value markets\n\nDiscretionary and systematic modes of implementation\n\nTop-down strategies\n\nA range of macroeconomic and fundamental models to express a view regarding the direction or relative value of a particular asset\n\nPuten’s staff prepares a brief summary of two potential hedge fund investments:\n\nHedge Fund 1: A relative value strategy fund focusing only on convertible arbitrage.\n\nHedge Fund 2: An opportunistic strategy fund focusing only on global macro strategies.\n\nDetermine which hedge fund would be most appropriate for Puten. Justify your response.",
+  "model_answer": "Hedge Fund 2 would be most appropriate for Puten because it follows a global macro strategy, which is consistent with Puten’s preferences. Global macro managers use both fundamental and technical analysis to value markets, and they use discretionary and systematic modes of implementation. The key source of returns in global macro strategies revolves around correctly discerning and capitalizing on trends in global markets.\n\nGlobal macro strategies are typically top-down and employ a range of macroeconomic and fundamental models to express a view regarding the direction or relative value of a particular asset or asset class. Positions may comprise a mix of individual securities, baskets of securities, index futures, foreign exchange futures/forwards, fixed-income products or futures, and derivatives or options on any of the above. If the hedge fund manager is making a directional bet, then directional models will use fundamental data regarding a specific market or asset to determine if it is undervalued or overvalued relative to history and the expected macro-trend.\n\nHedge Fund 1 follows a relative value strategy with a focus on convertible arbitrage, which is not aligned with Puten’s preferences. In a convertible bond arbitrage strategy, the manager strives to extract “cheap” implied volatility by buying the relatively undervalued convertible bond and taking a short position in the relatively overvalued common stock. Convertible arbitrage managers are typically neither using fundamental and technical analysis to value markets nor employing top-down strategies to express a view regarding the direction or relative value of an asset.",
+  "group": "hf4-E2"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 21,
+  "q": "Sushil Wallace is the chief investment officer of a large pension fund. Wallace wants to increase the pension fund’s allocation to hedge funds and recently met with three hedge fund managers. These hedge funds focus on the following strategies:\n\nHedge Fund A: Specialist—Follows relative value volatility arbitrage\n\nHedge Fund B: Multi-Manager—Multi-strategy fund\n\nHedge Fund C: Multi-Manager—Fund-of-funds\n\nDescribe three paths for implementing the strategy of Hedge Fund A.",
+  "model_answer": "Hedge Fund A’s volatility trading strategy can be implemented by following multiple paths. One path is through simple exchange-traded options. The maturity of such options typically extends to no more than two years. In terms of expiry, the longer-dated options will have more absolute exposure to volatility levels than shorter-dated options, but the shorter-dated options will exhibit more delta sensitivity to price changes.\n\nA second, similar path is to implement the volatility trading strategy using OTC options. In this case, the tenor and strike prices of the options can be customized. The tenor of expiry dates can then be extended beyond what is available with exchange-traded options.\n\nA third path is to use VIX futures or options on VIX futures as a way to more explicitly express a pure volatility view without the need for constant delta hedging of an equity put or call for isolating the volatility exposure.\n\nA fourth path for implementing a volatility trading strategy would be to purchase an OTC volatility swap or a variance swap from a creditworthy counterparty. A volatility swap is a forward contract on future realized price volatility. Similarly, a variance swap is a forward contract on future realized price variance, where variance is the square of volatility. Both volatility and variance swaps provide “pure” exposure to volatility alone, unlike standardized options in which the volatility exposure depends on the price of the underlying asset and must be isolated and extracted via delta hedging.",
+  "group": "hf4-E2"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 22,
+  "q": "Sushil Wallace is the chief investment officer of a large pension fund. Wallace wants to increase the pension fund’s allocation to hedge funds and recently met with three hedge fund managers. These hedge funds focus on the following strategies:\n\nHedge Fund A: Specialist—Follows relative value volatility arbitrage\n\nHedge Fund B: Multi-Manager—Multi-strategy fund\n\nHedge Fund C: Multi-Manager—Fund-of-funds\n\nAfter a significant amount of internal discussion, Wallace concludes that the pension fund should invest in either Hedge Fund B or C for the diversification benefits from the different strategies employed. However, after final due diligence is completed, Wallace recommends investing only in Hedge Fund B, noting its many advantages over Hedge Fund C.\n\nDiscuss two advantages of Hedge Fund B relative to Hedge Fund C with respect to investment characteristics.",
+  "model_answer": "Multi-strategy managers like Hedge Fund B can reallocate capital into different strategy areas more quickly and efficiently than would be possible by a fund-of-funds (FoF) manager like Hedge Fund C. The multi-strategy manager has full transparency and a better picture of the interactions of the different teams’ portfolio risks than would ever be possible for FoF managers to achieve. Consequently, the multi-strategy manager can react faster to different real-time market impacts—for example, by rapidly increasing or decreasing leverage within different strategies depending upon the perceived riskiness of available opportunities.\n\nThe fees paid by investors in a multi-strategy fund can be structured in a number of ways, some of which can be very attractive when compared to the FoFs’ added fee layering and netting risk attributes. Conceptually, FoF investors always face netting risk, whereby they are responsible for paying performance fees due to winning underlying funds while suffering return drag from the performance of losing underlying funds. Even if the FoF’s overall performance is flat or down, FoF investors must still pay incentive fees due to the managers of winning funds.",
+  "group": "hf4-E2"
+ },
+ {
+  "source": "9 Nov Module 4 Hedge Fund Strategies quiz (essays)",
+  "readings": [
+   33
+  ],
+  "n": 23,
+  "q": "Kloss Investments is an investment adviser whose clients are small institutional investors. Muskogh Charitable Foundation (the “Foundation”) is a client with $70 million of assets under management. The Foundation has a traditional asset allocation of 65% stocks/35% bonds. Risk and return characteristics for the Foundation’s current portfolio are presented in Panel A of Exhibit 1.\n\nKloss’ CIO, Christine Singh, recommends to Muskogh’s investment committee that it should add a 10% allocation to hedge funds. The investment committee indicates to Singh that Muskogh’s primary considerations for the Foundation’s portfolio are that any hedge fund strategy allocation should: a) limit volatility, b) maximize risk-adjusted returns, and c) limit downside risk.\n\nSingh’s associate prepares expected risk and return characteristics for three portfolios that have allocations of 60% stocks, 30% bonds, and 10% hedge funds, where the 10% hedge fund allocation follows either an equity market-neutral, global macro, or convertible arbitrage strategy. The risk and return characteristics of the three portfolios are presented in Panel B of Exhibit 1.\n\nExhibit 1\nHedge Fund Strategy\tSD (%)\tSharpe Ratio\tSortino Ratio\tMaximum Drawdown (%)\nPanel A: Current Portfolio\nN/A\t8.75\t0.82\t1.25\t16.2\nPanel B: Three Potential Portfolios with a 10% Hedge Fund Allocation\nEquity market neutral\t8.72\t0.80\t1.21\t15.1\nGlobal macro\t8.55\t0.95\t1.35\t15.0\nConvertible arbitrage\t8.98\t0.83\t1.27\t20.2\nDiscuss which hedge fund strategy Singh should view as most suitable for meeting the considerations expressed by Muskogh’s investment committee.",
+  "model_answer": "Based on the investment committee’s considerations, Singh should view a 10% allocation to the global macro hedge fund strategy as most suitable for the Foundation. Such an allocation would result in a decrease in standard deviation (volatility) and significant increases in the combined portfolio’s Sharpe and Sortino ratios (these are the highest such ratios among the strategies presented). In addition, the lower maximum drawdown (15.0%) indicates less downside risk in the combined portfolio than with any of the other strategy choices.",
+  "group": "hf4-E3"
  }
 ]
