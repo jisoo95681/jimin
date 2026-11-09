@@ -32,6 +32,7 @@ def convert(body):
             if k=='x': res.append(l.strip()); prev='x'; continue
             cells=[c.strip() for c in l.split('\t')] if k=='t' else [l.strip(),'']
             if k=='t' and cells and cells[0]=='' and len(cells)>1 and prev=='x': pass
+            if len(cells)>=3: cells=[c for k,c in enumerate(cells) if c or k==0]
             row=' | '.join(c if c else ' ' for c in cells)
             if ' | ' not in row: row+=' |  '
             if prev=='x' and k=='t' and is_header(cells): row='# '+row
@@ -70,6 +71,20 @@ VIG=[
  RESKIN['stratton'],
  real('mf-cheung','Portfolio Management',[9,11,12,14]),
 ]
+def fix_tables(V):
+    pm=V[10]; b=pm['body']
+    i=b.index('#   | Factor Sensitivities'); j=b.index('Return (%) | 6.00 | 4.00 | 5.00 | 4.50')+len('Return (%) | 6.00 | 4.00 | 5.00 | 4.50')
+    new='''# Factor | Portfolio 1 | Portfolio 2 | Portfolio 3 | Benchmark | Factor surprise (%)
+Intercept (%) | 2.58 | 3.20 | 4.33 | --- | ---
+FGDP | 0.75 | 1.00 | 0.24 | 0.50 | 0.8
+FCAP | −0.23 | 0.00 | −1.45 | −1.00 | 0.5
+FCON | 1.23 | 0.00 | 0.50 | 1.10 | 2.5
+FUNEM | −0.14 | 0.00 | −0.05 | −0.10 | 1.0
+Annual returns, most recent year |  
+Return (%) | 6.00 | 4.00 | 5.00 | 4.50 | ---'''
+    pm['body']=b[:i]+new+b[j:]
+    rb=V[1]; rb['body']=rb['body'].replace('#   | Year Ending 31 December\n  | 2019 | 2018','# Year ending 31 December | 2019 | 2018')
+fix_tables(VIG)
 from mock7_tweak import apply
 apply(VIG)
 MOCK=dict(id="mock7",title="Mock 7",kind="mock",minutes=132,desc="8 new vignettes + 3 re-done (names and numbers changed); scored separately",vignettes=VIG)
