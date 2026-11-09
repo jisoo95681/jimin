@@ -634,6 +634,90 @@
   .kq-self .btn { flex: 1; }
   .kq-submit { margin: 18px 0 6px; }
   .kq-submit .btn { width: 100%; }
+  /* Exam section: practice sets and mocks in an exam-software look (vignette left, question right). */
+  .cc.x { background: #9bc45a; color: #20321a; }
+  .cc.x .kicker { color: #34521f; }
+  .ex-item.done b::after { content: " ✓"; color: #4f8a24; }
+  .ex-sec { margin: 22px 0 6px; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .exroot { position: fixed; inset: 0; z-index: 900; display: flex; flex-direction: column; background: #e9ecef; color: #111; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .exroot button { font: inherit; }
+  .ex-top { display: flex; align-items: center; gap: 14px; background: #474747; color: #fff; padding: 8px 14px; padding-top: max(8px, env(safe-area-inset-top)); }
+  .ex-top .pg { line-height: 1.25; font-size: .95rem; min-width: 150px; }
+  .ex-top .pg b { font-weight: 700; }
+  .ex-clock { display: flex; align-items: center; gap: 8px; margin: 0 auto; background: none; border: 0; color: #fff; cursor: pointer; text-align: left; line-height: 1.2; }
+  .ex-clock svg { width: 30px; height: 30px; flex: none; }
+  .ex-clock .al { display: block; color: #ffd75e; font-size: .8rem; font-weight: 700; }
+  .ex-prog { width: 150px; text-align: center; font-size: .85rem; }
+  .ex-prog .bar { height: 12px; border-radius: 6px; background: #ddd; overflow: hidden; margin-bottom: 3px; }
+  .ex-prog .bar i { display: block; height: 100%; background: #9bc45a; }
+  .ex-fin { background: #c9c3b4; color: #333; border: 0; border-radius: 3px; padding: 10px 18px; font-weight: 700; cursor: pointer; }
+  .ex-green { display: flex; justify-content: space-between; gap: 10px; background: #9bc45a; color: #fff; font-weight: 700; padding: 5px 14px; font-size: .95rem; }
+  .ex-main { flex: 1; display: flex; min-height: 0; gap: 0; padding: 8px; }
+  .ex-pane { flex: 1 1 50%; overflow-y: auto; -webkit-overflow-scrolling: touch; background: #fff; border: 1px solid #b9bec4; padding: 18px 20px 40px; line-height: 1.55; font-size: 1rem; }
+  .ex-pane + .ex-pane { margin-left: 8px; }
+  .ex-pane h3 { margin: 0 0 4px; font-size: 1.15rem; }
+  .ex-pane .vq { color: #555; font-size: .9rem; margin-bottom: 12px; }
+  .ex-pane p { margin: 0 0 12px; }
+  .ex-tt { font-weight: 700; margin: 16px 0 6px; }
+  .ex-tbl { border-collapse: collapse; width: 100%; margin: 0 0 14px; font-size: .93rem; }
+  .ex-tbl th, .ex-tbl td { padding: 7px 8px; border-bottom: 1px solid #d7dbe0; text-align: right; vertical-align: top; }
+  .ex-tbl th:first-child, .ex-tbl td:first-child { text-align: left; }
+  .ex-tbl th { background: #eef0f2; font-weight: 700; border-bottom: 2px solid #9aa1a8; }
+  .ex-tbl td.tx { text-align: left; }
+  .ex-note { font-size: .88rem; color: #444; }
+  .ex-qn { font-weight: 700; margin-bottom: 8px; color: #333; }
+  .ex-stem { font-weight: 600; margin-bottom: 16px; }
+  .ex-opt { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; background: #fff; border: 1px solid #c8cdd2; border-radius: 4px; padding: 12px 14px; margin-bottom: 10px; cursor: pointer; color: #111; line-height: 1.45; }
+  .ex-opt .rd { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #777; margin-top: 1px; display: grid; place-items: center; }
+  .ex-opt.sel { border-color: #4f7d22; background: #f1f7e8; }
+  .ex-opt.sel .rd { border-color: #4f7d22; }
+  .ex-opt.sel .rd::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #4f7d22; }
+  .ex-opt.ok { border-color: #2e8b3a; background: #e5f4e6; }
+  .ex-opt.bad { border-color: #c0392b; background: #fbe7e4; }
+  .ex-opt .tag { margin-left: auto; font-size: .8rem; font-weight: 700; white-space: nowrap; }
+  mark.hl { background: #fff36b; color: inherit; padding: 0; }
+  .ex-bot { display: flex; align-items: center; gap: 10px; background: #474747; padding: 8px 14px; padding-bottom: max(8px, env(safe-area-inset-bottom)); border-top: 4px solid #9bc45a; }
+  .ex-bot .sp { flex: 1; }
+  .ex-ic { background: none; border: 0; color: #fff; cursor: pointer; padding: 4px 6px; display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: .9rem; -webkit-user-select: none; user-select: none; }
+  .ex-ic svg { width: 30px; height: 30px; }
+  .ex-ic.on { color: #ffd75e; }
+  .ex-ic[disabled] { opacity: .4; }
+  .ex-btn { background: #9bc45a; color: #fff; border: 0; border-radius: 3px; padding: 11px 20px; font-weight: 700; cursor: pointer; -webkit-user-select: none; user-select: none; }
+  .ex-btn[disabled] { opacity: .5; }
+  .ex-hlb { background: #fff36b; color: #333; border: 0; border-radius: 3px; padding: 10px 14px; font-weight: 700; -webkit-user-select: none; user-select: none; }
+  .ex-hlb[disabled] { background: #777; color: #ccc; }
+  .ex-ov { position: absolute; inset: 0; background: rgba(0,0,0,.35); display: flex; align-items: flex-end; justify-content: flex-start; padding: 0 14px 70px; z-index: 5; }
+  .ex-rev { background: #fff; width: min(440px, 100%); border-radius: 4px; overflow: hidden; box-shadow: 0 6px 30px rgba(0,0,0,.3); max-height: 80%; display: flex; flex-direction: column; }
+  .ex-rev .hd { background: #474747; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; font-weight: 600; }
+  .ex-rev .hd button { background: #9bc45a; color: #fff; border: 0; border-radius: 50%; width: 34px; height: 34px; font-size: 1.1rem; }
+  .ex-rev .flt { background: #d9dde2; padding: 10px 14px; display: flex; gap: 14px; flex-wrap: wrap; font-weight: 600; color: #555; }
+  .ex-rev .flt label { display: flex; align-items: center; gap: 6px; }
+  .ex-rev .flt input { width: 20px; height: 20px; }
+  .ex-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; padding: 14px; overflow-y: auto; }
+  .ex-grid button { background: #9bc45a; color: #fff; border: 0; border-radius: 3px; padding: 9px 0; font-weight: 700; position: relative; }
+  .ex-grid button.att { background: #3b3b3b; }
+  .ex-grid button.cur { outline: 3px solid #f0b400; }
+  .ex-grid button.fl::after { content: "⚑"; position: absolute; right: 3px; top: 0; font-size: .75rem; color: #ffd75e; }
+  .ex-modal { position: absolute; inset: 0; background: rgba(0,0,0,.4); display: grid; place-items: center; z-index: 6; padding: 16px; }
+  .ex-modal > div { background: #fff; border-radius: 4px; max-width: 460px; width: 100%; padding: 22px; box-shadow: 0 6px 30px rgba(0,0,0,.3); }
+  .ex-modal h3 { margin: 0 0 10px; }
+  .ex-modal .row2 { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
+  .ex-modal .no { background: #fff; color: #333; border: 1px solid #999; border-radius: 3px; padding: 11px 20px; font-weight: 700; }
+  @media (max-width: 760px) {
+    .ex-main { flex-direction: column; }
+    .ex-pane + .ex-pane { margin-left: 0; margin-top: 8px; }
+    .ex-top .pg { min-width: 0; font-size: .85rem; }
+    .ex-prog { width: 90px; }
+    .ex-ic span { display: none; }
+  }
+  .ex-res-score { font-size: 3rem; font-weight: 800; margin: 6px 0 0; }
+  .ex-rq { margin: 14px 0; }
+  .ex-rq .why { white-space: pre-line; margin-top: 10px; padding: 10px 12px; background: var(--aqua-pale); border-radius: 10px; line-height: 1.5; font-size: .95rem; }
+  .ex-rq details { margin: 8px 0; }
+  .ex-rq details summary { cursor: pointer; font-weight: 600; color: var(--blue); }
+  .ex-rq .vbox { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-top: 8px; line-height: 1.5; font-size: .93rem; color: #111; }
+  .ex-filter { display: flex; gap: 8px; margin: 10px 0; }
+  .ex-filter button { flex: 1; }
 </style>
 </head>
 <body class="loading">
@@ -656,12 +740,13 @@
 <script src="notes.js"></script>
 <script src="keyq.js"></script>
 <script src="garden.js"></script>
+<script src="exam.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v195 · 2026-11-08";
+  const APP_VERSION = "v196 · 2026-11-09";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1180,6 +1265,11 @@
       b.onclick = () => { if (items.length) kqSubject(name); };
       app.append(b);
     });
+    const wr = exWrongItems(), wst = exLoad(), wm = wr.filter(it => (wst.wrong[it.id].streak || 0) >= 3).length;
+    const wb = el("button", { className: "nt-item" + (wr.length ? "" : " absorbed") });
+    wb.append(el("b", {}, "Incorrect questions"), el("span", {}, wr.length ? `${plural(wr.length, "question")} from the Exam section · ${wm} mastered` : "Exam questions you get wrong will appear here"));
+    wb.onclick = () => { if (wr.length) exWrongScreen(null, () => kqHub("back"), "Key notes questions"); };
+    app.append(wb);
   }
 
   function kqSubject(name, dir = "fwd") {
@@ -1424,11 +1514,405 @@
     sub.append(go); app.append(sub);
   }
 
+  // ---------- Exam section: practice sets and mocks in an exam-software look ----------
+  // State on this device: { sets: { id: { cur, last } }, wrong: { qid: { streak } } }.
+  // cur = test in progress { ans, flag, hl, left, page }; last = last finished attempt { ans, date, used, score }.
+  const EX_KEY = "cfa-exam";
+  const exSets = () => (typeof EXAM_SETS !== "undefined" ? EXAM_SETS : []);
+  function exLoad() { try { return Object.assign({ sets: {}, wrong: {} }, JSON.parse(localStorage.getItem(EX_KEY)) || {}); } catch { return { sets: {}, wrong: {} }; } }
+  function exSave(s) { try { localStorage.setItem(EX_KEY, JSON.stringify(s)); } catch {} }
+  // Flat question list of a set: { n, v (vignette index), q }.
+  function exFlat(set) {
+    const out = [];
+    set.vignettes.forEach((v, vi) => v.questions.forEach(q => out.push({ n: out.length + 1, vi, v, q, id: `${set.id}:${out.length + 1}` })));
+    return out;
+  }
+  const exHms = s => { s = Math.max(0, Math.round(s)); const p = n => String(n).padStart(2, "0"); return `${p(Math.floor(s / 3600))}:${p(Math.floor(s % 3600 / 60))}:${p(s % 60)}`; };
+  const exPct = (a, b) => b ? Math.round(100 * a / b) : 0;
+  function exWrongItems(setId) {
+    const st = exLoad(), out = [];
+    exSets().forEach(set => { if (setId && set.id !== setId) return; exFlat(set).forEach(it => { if (st.wrong[it.id]) out.push(Object.assign({ set }, it)); }); });
+    return out;
+  }
+
+  // Vignette text: blank lines split paragraphs; "Exhibit ..." lines are bold titles;
+  // lines with " | " are table rows (a row starting with "# " is the header row); "Note:" lines are small print.
+  function exBodyHTML(body) {
+    const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const isN = t => /^[(–−+-]*[$€£¥]?[\d,.]+%?\)?[A-Za-z]{0,3}$/.test(t.trim()) || t.trim() === "" || t.trim() === "–";
+    let h = "";
+    body.split(/\n\s*\n/).forEach(par => {
+      const lines = par.split("\n");
+      let rows = [];
+      const flush = () => {
+        if (!rows.length) return;
+        h += "<table class='ex-tbl'>";
+        rows.forEach(r => {
+          const head = r.startsWith("# "), cells = (head ? r.slice(2) : r).split(" | ");
+          h += "<tr>" + cells.map((c, k) => head ? `<th>${esc(c)}</th>` : `<td${k && !isN(c) ? " class='tx'" : ""}>${esc(c)}</td>`).join("") + "</tr>";
+        });
+        h += "</table>"; rows = [];
+      };
+      lines.forEach(l => {
+        if (l.includes(" | ")) { rows.push(l); return; }
+        flush();
+        if (!l.trim()) return;
+        if (/^Exhibit \d/.test(l)) h += `<div class='ex-tt'>${esc(l)}</div>`;
+        else if (/^Note[s]?:/.test(l)) h += `<p class='ex-note'>${esc(l)}</p>`;
+        else if (l.length < 60 && !/[.:;?!"]\s*$/.test(l)) h += `<div class='ex-tt'>${esc(l)}</div>`;
+        else h += `<p>${esc(l)}</p>`;
+      });
+      flush();
+    });
+    return h;
+  }
+  const exVTitle = (set, vi) => { let a = 1; for (let k = 0; k < vi; k++) a += set.vignettes[k].questions.length; const n = set.vignettes[vi].questions.length; return `Vignette ${vi + 1} · Question${n > 1 ? "s" : ""} ${a}${n > 1 ? "–" + (a + n - 1) : ""}`; };
+
+  function examHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => examHub("back");
+    app.append(nav("Menu", () => home("back")));
+    app.append(el("h1", { className: "title" }, "Exam"),
+      el("p", { className: "sub" }, "Exam-style sets: vignette on the left, question on the right, a 2 h 12 min clock, flags and highlights. Everything is marked when you press Finish Test."));
+    const st = exLoad();
+    const group = (label, kind) => {
+      const sets = exSets().filter(s => s.kind === kind);
+      app.append(el("div", { className: "ex-sec" }, label));
+      if (!sets.length) { app.append(el("p", { className: "sub" }, kind === "mock" ? "Mocks you ask for (Mock 7, 8, ...) will appear here." : "No sets yet.")); return; }
+      sets.forEach(set => {
+        const s = st.sets[set.id] || {}, nq = exFlat(set).length;
+        let info = `${nq} questions · ${set.vignettes.length} vignettes`;
+        if (s.cur) info += ` · in progress, ${exHms(s.cur.left)} left`;
+        else if (s.last) info += ` · last score ${s.last.score}%`;
+        const b = el("button", { className: "nt-item ex-item" + (s.last ? " done" : "") });
+        b.append(el("b", {}, set.title), el("span", {}, info));
+        b.onclick = () => examSetMenu(set.id);
+        app.append(b);
+      });
+    };
+    group("Key questions by topics", "practice");
+    group("Mocks", "mock");
+    app.append(el("div", { className: "ex-sec" }, "Incorrect questions"));
+    let any = false;
+    exSets().forEach(set => {
+      const items = exWrongItems(set.id);
+      if (!items.length) return;
+      any = true;
+      const m = items.filter(it => (st.wrong[it.id].streak || 0) >= 3).length;
+      const b = el("button", { className: "nt-item" });
+      b.append(el("b", {}, `${set.title}: incorrect questions`), el("span", {}, `${plural(items.length, "question")} · ${m} mastered`));
+      b.onclick = () => exWrongScreen(set.id, () => examHub("back"), "Exam");
+      app.append(b);
+    });
+    if (!any) app.append(el("p", { className: "sub" }, "Questions you get wrong in a finished set are collected here, set by set."));
+  }
+
+  function examSetMenu(id, dir = "fwd") {
+    const set = exSets().find(s => s.id === id);
+    screen(dir);
+    backTo = () => examSetMenu(id, "back");
+    app.append(nav("Exam", () => examHub("back")));
+    const st = exLoad(), s = st.sets[id] || {}, nq = exFlat(set).length;
+    app.append(el("h1", { className: "title" }, set.title), el("p", { className: "sub" }, `${nq} questions · ${set.vignettes.length} vignettes · ${exHms(set.minutes * 60)} · ${set.desc || ""}`));
+    const card = el("div", { className: "card" });
+    if (s.cur) {
+      const answered = Object.keys(s.cur.ans || {}).length;
+      card.append(el("p", {}, `In progress: ${answered} of ${nq} answered, ${exHms(s.cur.left)} left.`));
+      const r = el("button", { className: "btn" }, "Resume test"); r.onclick = () => examRun(id);
+      const x = el("button", { className: "btn ghost" }, "Start over");
+      x.onclick = () => { if (confirm("Throw away this attempt and start again?")) { const t = exLoad(); delete t.sets[id].cur; exSave(t); examRun(id); } };
+      card.append(r, x);
+    } else {
+      card.append(el("p", {}, s.last ? `Last attempt ${s.last.date}: ${s.last.score}% (${s.last.right} of ${nq}).` : "Not started yet."));
+      const b = el("button", { className: "btn" }, s.last ? "Take it again" : "Start the test"); b.onclick = () => examRun(id);
+      card.append(b);
+    }
+    if (s.last) { const r = el("button", { className: "btn ghost" }, "Review last result"); r.onclick = () => examResult(id); card.append(r); }
+    const w = exWrongItems(id).length;
+    if (w) { const b = el("button", { className: "btn ghost" }, `Incorrect questions (${w})`); b.onclick = () => exWrongScreen(id, () => examSetMenu(id, "back"), set.title); card.append(b); }
+    app.append(card);
+  }
+
+  const EX_SVG = {
+    clock: "<svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2.6'><circle cx='16' cy='16' r='13'/><path d='M16 8v8l5 4'/></svg>",
+    grid: "<svg viewBox='0 0 32 32' fill='currentColor'><rect x='3' y='5' width='7' height='5' rx='1.5'/><rect x='12.5' y='5' width='7' height='5' rx='1.5'/><rect x='22' y='5' width='7' height='5' rx='1.5'/><rect x='3' y='13.5' width='7' height='5' rx='1.5'/><rect x='12.5' y='13.5' width='7' height='5' rx='1.5'/><rect x='22' y='13.5' width='7' height='5' rx='1.5'/><rect x='3' y='22' width='7' height='5' rx='1.5'/><rect x='12.5' y='22' width='7' height='5' rx='1.5'/><rect x='22' y='22' width='7' height='5' rx='1.5'/></svg>",
+    flag: "<svg viewBox='0 0 32 32' fill='currentColor'><path d='M7 4h2v25H7z'/><path d='M10 5h15l-4 6 4 6H10z'/></svg>",
+    exit: "<svg viewBox='0 0 32 32' fill='none' stroke='currentColor' stroke-width='2.6'><path d='M13 6H6v20h7M20 10l6 6-6 6M26 16H12'/></svg>"
+  };
+
+  let exTick = null;
+  function examRun(id) {
+    const set = exSets().find(s => s.id === id), flat = exFlat(set), N = flat.length;
+    const st = exLoad();
+    st.sets[id] = st.sets[id] || {};
+    if (!st.sets[id].cur) st.sets[id].cur = { ans: {}, flag: {}, hl: {}, left: set.minutes * 60, page: 0, hide: false };
+    const cur = st.sets[id].cur;
+    const save = () => { const t = exLoad(); t.sets[id] = t.sets[id] || {}; t.sets[id].cur = cur; exSave(t); };
+    screen("up");
+    backTo = () => examSetMenu(id, "back");
+    const root = el("div", { className: "exroot" });
+    root.innerHTML = `
+      <div class="ex-top"><div class="pg"><b>Page:</b> <span class="pgn"></span><br><b>Section:</b> ${set.title}</div>
+        <button class="ex-clock">${EX_SVG.clock}<span><span class="lbl">Section Time Remaining</span><br><span class="tm"></span><span class="al"></span></span></button>
+        <div class="ex-prog"><div class="bar"><i></i></div><span class="pp"></span></div>
+        <button class="ex-fin">Finish Test</button></div>
+      <div class="ex-green"><span>Test: CFA Level II · ${set.title}</span><span class="vlab"></span></div>
+      <div class="ex-main"><div class="ex-pane vpane"></div><div class="ex-pane qpane"></div></div>
+      <div class="ex-bot">
+        <button class="ex-ic rev" title="Section Review">${EX_SVG.grid}<span>Review</span></button>
+        <button class="ex-ic flg" title="Flag">${EX_SVG.flag}<span>Flag</span></button>
+        <button class="ex-hlb" disabled>Highlight</button>
+        <button class="ex-ic ext" title="Save and leave">${EX_SVG.exit}<span>Save &amp; exit</span></button>
+        <span class="sp"></span>
+        <button class="ex-btn bk">‹ Back</button><button class="ex-btn nx">Next ›</button></div>`;
+    document.body.append(root);
+    const $ = s => root.querySelector(s);
+    const vpane = $(".vpane"), qpane = $(".qpane"), hlb = $(".ex-hlb");
+    let shownV = -1;
+
+    function render() {
+      const it = flat[cur.page];
+      $(".pgn").textContent = `${cur.page + 1} of ${N}`;
+      const done = Object.keys(cur.ans).length;
+      $(".ex-prog i").style.width = exPct(done, N) + "%";
+      $(".pp").textContent = `Progress ${exPct(done, N)}%`;
+      $(".vlab").textContent = exVTitle(set, it.vi);
+      if (shownV !== it.vi) {
+        shownV = it.vi;
+        const key = "v" + it.vi;
+        vpane.innerHTML = `<h3>Vignette ${it.vi + 1}</h3><div class="vq">${exVTitle(set, it.vi).split(" · ")[1]}</div><div class="hlz" data-k="${key}">${cur.hl[key] || exBodyHTML(it.v.body)}</div>`;
+        vpane.scrollTop = 0;
+      }
+      const sk = "q" + it.n;
+      qpane.innerHTML = `<div class="ex-qn">Question ${it.n}${cur.flag[it.n] ? " ⚑" : ""}</div><div class="ex-stem hlz" data-k="${sk}"></div>`;
+      const stem = qpane.querySelector(".ex-stem");
+      if (cur.hl[sk]) stem.innerHTML = cur.hl[sk]; else stem.textContent = it.q.q;
+      it.q.options.forEach((o, k) => {
+        const b = el("button", { className: "ex-opt" + (cur.ans[it.n] === k ? " sel" : "") });
+        b.append(el("span", { className: "rd" }), el("span", {}, `${LETTERS[k]}. ${o}`));
+        b.onclick = () => { if (cur.ans[it.n] === k) delete cur.ans[it.n]; else cur.ans[it.n] = k; save(); render(); };
+        qpane.append(b);
+      });
+      qpane.scrollTop = 0;
+      $(".flg").classList.toggle("on", !!cur.flag[it.n]);
+      $(".bk").disabled = cur.page === 0;
+      $(".nx").disabled = cur.page === N - 1;
+      clock();
+    }
+    function go(p) { cur.page = Math.max(0, Math.min(N - 1, p)); save(); render(); }
+    function clock() {
+      $(".tm").textContent = cur.hide ? "Hidden (tap to show)" : exHms(cur.left);
+      const m = cur.left / 60;
+      $(".al").textContent = m <= 5 ? "5 minutes remain" : m <= 15 ? "15 minutes remain" : m <= 30 ? "30 minutes remain" : "";
+    }
+    $(".ex-clock").onclick = () => { cur.hide = !cur.hide; save(); clock(); };
+    $(".bk").onclick = () => go(cur.page - 1);
+    $(".nx").onclick = () => go(cur.page + 1);
+    $(".flg").onclick = () => { const n = flat[cur.page].n; if (cur.flag[n]) delete cur.flag[n]; else cur.flag[n] = 1; save(); render(); };
+    $(".ext").onclick = () => { stop(); save(); examSetMenu(id, "back"); };
+    $(".rev").onclick = review;
+    $(".ex-fin").onclick = () => {
+      const left = N - Object.keys(cur.ans).length;
+      modal("Finish the test?", `${left ? `You have ${left} unanswered question${left > 1 ? "s" : ""}; they count as wrong. ` : ""}Once you finish you cannot return to the questions.`, "Finish", () => finish());
+    };
+    function modal(title, text, yes, onYes) {
+      const m = el("div", { className: "ex-modal" }), box = el("div");
+      box.append(el("h3", {}, title), el("p", {}, text));
+      const row = el("div", { className: "row2" }), no = el("button", { className: "no" }, "No"), ok = el("button", { className: "ex-btn" }, yes);
+      no.onclick = () => m.remove(); ok.onclick = () => { m.remove(); onYes(); };
+      row.append(no, ok); box.append(row); m.append(box); root.append(m);
+    }
+    function review() {
+      const ov = el("div", { className: "ex-ov" }), box = el("div", { className: "ex-rev" });
+      const hd = el("div", { className: "hd" }); hd.append(el("span", {}, "Section Review"));
+      const x = el("button", {}, "✕"); x.onclick = () => ov.remove(); hd.append(x);
+      const flt = el("div", { className: "flt" }), grid = el("div", { className: "ex-grid" });
+      const f = { u: false, a: false, f: false };
+      [["u", "Unattempted"], ["a", "Attempted"], ["f", "Flagged"]].forEach(([k, l]) => {
+        const lab = el("label"), cb = el("input", { type: "checkbox" });
+        cb.onchange = () => { f[k] = cb.checked; draw(); };
+        lab.append(cb, document.createTextNode(l)); flt.append(lab);
+      });
+      function draw() {
+        grid.innerHTML = "";
+        flat.forEach(it => {
+          const a = cur.ans[it.n] !== undefined, fl = !!cur.flag[it.n];
+          if ((f.u || f.a || f.f) && !((f.u && !a) || (f.a && a) || (f.f && fl))) return;
+          const b = el("button", { className: (a ? "att" : "") + (fl ? " fl" : "") + (it.n - 1 === cur.page ? " cur" : "") }, String(it.n));
+          b.onclick = () => { ov.remove(); go(it.n - 1); };
+          grid.append(b);
+        });
+      }
+      draw();
+      box.append(hd, flt, grid); ov.append(box);
+      ov.onclick = e => { if (e.target === ov) ov.remove(); };
+      root.append(ov);
+    }
+    // Highlight: select text with your finger (vignette or question), then tap Highlight. Tap a highlight, then tap Remove highlight.
+    let range = null, target = null;
+    const zoneOf = n => { while (n && n !== root) { if (n.classList && n.classList.contains("hlz")) return n; n = n.parentNode; } return null; };
+    function hlState() {
+      hlb.disabled = !(range || target);
+      hlb.textContent = target ? "Remove highlight" : "Highlight";
+    }
+    const onSel = () => {
+      const s = document.getSelection();
+      if (s && s.rangeCount && !s.isCollapsed && zoneOf(s.anchorNode) && zoneOf(s.anchorNode) === zoneOf(s.focusNode)) { range = s.getRangeAt(0).cloneRange(); target = null; }
+      else if (s && s.isCollapsed) range = null;
+      hlState();
+    };
+    document.addEventListener("selectionchange", onSel);
+    root.addEventListener("click", e => {
+      const m = e.target.closest && e.target.closest("mark.hl");
+      if (m) { target = m; range = null; hlState(); }
+      else if (!e.target.closest(".ex-hlb")) { target = null; hlState(); }
+    });
+    hlb.addEventListener("pointerdown", e => e.preventDefault());
+    hlb.addEventListener("mousedown", e => e.preventDefault());
+    hlb.onclick = () => {
+      let zone;
+      if (target) {
+        zone = zoneOf(target);
+        const p = target.parentNode; while (target.firstChild) p.insertBefore(target.firstChild, target); p.removeChild(target); p.normalize();
+        target = null;
+      } else if (range) {
+        zone = zoneOf(range.commonAncestorContainer);
+        if (!zone) return;
+        const walker = document.createTreeWalker(range.commonAncestorContainer.nodeType === 3 ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) { const t = walker.currentNode; if (range.intersectsNode(t) && t.textContent.trim() && !(t.parentNode.closest && t.parentNode.closest("mark.hl"))) nodes.push(t); }
+        nodes.forEach(t => {
+          let s0 = 0, e0 = t.length;
+          if (t === range.startContainer) s0 = range.startOffset;
+          if (t === range.endContainer) e0 = range.endOffset;
+          if (e0 <= s0) return;
+          const mid = t.splitText(s0); mid.splitText(e0 - s0);
+          const mk = document.createElement("mark"); mk.className = "hl";
+          mid.parentNode.insertBefore(mk, mid); mk.append(mid);
+        });
+        range = null;
+        try { document.getSelection().removeAllRanges(); } catch {}
+      }
+      if (zone) { cur.hl[zone.dataset.k] = zone.innerHTML; save(); }
+      hlState();
+    };
+    function stop() { clearInterval(exTick); exTick = null; document.removeEventListener("selectionchange", onSel); root.remove(); }
+    function finish() {
+      stop();
+      let right = 0;
+      flat.forEach(it => { if (cur.ans[it.n] === it.q.answer) right++; });
+      const t = exLoad();
+      t.sets[id] = t.sets[id] || {};
+      t.sets[id].last = { ans: cur.ans, flag: cur.flag, date: today(), used: set.minutes * 60 - cur.left, right, score: exPct(right, N) };
+      delete t.sets[id].cur;
+      flat.forEach(it => { if (cur.ans[it.n] !== it.q.answer) t.wrong[it.id] = { streak: 0 }; });
+      exSave(t);
+      examResult(id, "up");
+    }
+    clearInterval(exTick);
+    document.querySelectorAll(".exroot").forEach(n => { if (n !== root) n.remove(); });
+    let lastSave = Date.now(), lastT = Date.now();
+    exTick = setInterval(() => {
+      if (!document.body.contains(root)) { stop(); return; }
+      const now = Date.now();
+      cur.left -= (now - lastT) / 1000; lastT = now;
+      if (cur.left <= 0) { cur.left = 0; save(); finish(); return; }
+      clock();
+      if (now - lastSave > 5000) { lastSave = now; save(); }
+    }, 500);
+    render();
+  }
+
+  // One question with its answer marked: used by the result screen.
+  function exQuestionCard(set, it, chosen) {
+    const c = el("div", { className: "card ex-rq" });
+    const ok = chosen === it.q.answer;
+    c.append(el("div", { className: "meta" }, `Q${it.n} · ${it.v.topic || ""} · ${chosen === undefined ? "not answered" : ok ? "correct" : "wrong"}`));
+    const det = el("details"), sm = el("summary", {}, exVTitle(set, it.vi)), vb = el("div", { className: "vbox" });
+    vb.innerHTML = exBodyHTML(it.v.body);
+    det.append(sm, vb); c.append(det);
+    c.append(el("p", { className: "q" }, it.q.q));
+    it.q.options.forEach((o, k) => {
+      const b = el("div", { className: "ex-opt" + (k === it.q.answer ? " ok" : k === chosen ? " bad" : "") });
+      b.append(el("span", {}, `${LETTERS[k]}. ${o}`));
+      if (k === it.q.answer) b.append(el("span", { className: "tag" }, "Correct answer"));
+      else if (k === chosen) b.append(el("span", { className: "tag" }, "Your answer"));
+      c.append(b);
+    });
+    c.append(el("div", { className: "why" }, it.q.why || ""));
+    return c;
+  }
+
+  function examResult(id, dir = "fwd") {
+    const set = exSets().find(s => s.id === id), flat = exFlat(set), last = (exLoad().sets[id] || {}).last;
+    screen(dir);
+    backTo = () => examResult(id, "back");
+    app.append(nav(set.title, () => examSetMenu(id, "back")));
+    if (!last) return;
+    app.append(el("p", { className: "ex-res-score" }, `${last.score}%`),
+      el("p", { className: "sub" }, `${last.right} of ${flat.length} correct · time used ${exHms(last.used)} · ${last.date}`));
+    // Score by topic
+    const by = {};
+    flat.forEach(it => { const t = it.v.topic || "Other"; by[t] = by[t] || [0, 0]; by[t][1]++; if (last.ans[it.n] === it.q.answer) by[t][0]++; });
+    const tc = el("div", { className: "card" });
+    tc.append(el("b", {}, "By topic"));
+    Object.entries(by).forEach(([t, [a, b]]) => tc.append(el("p", {}, `${t}: ${a} of ${b} (${exPct(a, b)}%)`)));
+    app.append(tc);
+    const fl = el("div", { className: "ex-filter" }), list = el("div");
+    const show = mode => {
+      list.innerHTML = "";
+      flat.forEach(it => { if (mode === "wrong" && last.ans[it.n] === it.q.answer) return; list.append(exQuestionCard(set, it, last.ans[it.n])); });
+      fA.className = "btn small" + (mode === "all" ? "" : " ghost"); fW.className = "btn small" + (mode === "wrong" ? "" : " ghost");
+    };
+    const fA = el("button", {}, "All questions"), fW = el("button", {}, "Incorrect only");
+    fA.onclick = () => show("all"); fW.onclick = () => show("wrong");
+    fl.append(fA, fW); app.append(fl, list);
+    show("wrong");
+  }
+
+  // Incorrect questions: answer them again; 3 right in a row greys a question out (it stays in the list).
+  function exWrongScreen(setId, back, backLabel, dir = "fwd") {
+    screen(dir);
+    backTo = () => exWrongScreen(setId, back, backLabel, "back");
+    app.append(nav(backLabel, back));
+    const items = exWrongItems(setId);
+    app.append(el("h1", { className: "title" }, setId ? `${exSets().find(s => s.id === setId).title}: incorrect questions` : "Incorrect questions"),
+      el("p", { className: "sub" }, `${plural(items.length, "question")} you got wrong in the Exam section. Tap an answer to check it. 3 right in a row greys a question out.`));
+    let lastSet = null;
+    items.forEach(it => {
+      if (!setId && it.set !== lastSet) { lastSet = it.set; app.append(el("div", { className: "ex-sec" }, it.set.title)); }
+      const st = exLoad(), w = st.wrong[it.id] || { streak: 0 };
+      const c = el("div", { className: "card ex-rq kq-card" + (w.streak >= 3 ? " kq-gray" : "") });
+      c.append(el("div", { className: "meta" }, `Q${it.n} · ${it.v.topic || ""} · ${w.streak >= 3 ? "mastered" : `${w.streak || 0} right in a row`}`));
+      const det = el("details"), vb = el("div", { className: "vbox" });
+      vb.innerHTML = exBodyHTML(it.v.body);
+      det.append(el("summary", {}, "Vignette"), vb); c.append(det);
+      c.append(el("p", { className: "q" }, it.q.q));
+      const why = el("div", { className: "why" }); why.style.display = "none"; why.textContent = it.q.why || "";
+      let done = false;
+      const opts = it.q.options.map((o, k) => {
+        const b = el("button", { className: "ex-opt" });
+        b.append(el("span", {}, `${LETTERS[k]}. ${o}`));
+        b.onclick = () => {
+          if (done) return; done = true;
+          const ok = k === it.q.answer;
+          opts[it.q.answer].classList.add("ok"); if (!ok) b.classList.add("bad");
+          why.style.display = "";
+          const t = exLoad(); t.wrong[it.id] = { streak: ok ? (w.streak || 0) + 1 : 0 }; exSave(t);
+        };
+        c.append(b);
+        return b;
+      });
+      c.append(why);
+      app.append(c);
+    });
+  }
+
   // ---------- Menu screens ----------
   // Front page: swipe or tap between Questions, Timer, Calendar and Garden. Timer starts in the middle.
-  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Key notes questions.
+  // 0 = Questions, 1 = Timer, 2 = Calendar, 3 = Garden, 4 = Progression tracker, 5 = Key notes questions, 6 = Exam.
   // The menu comes back to the card you last opened, even after the app is closed and reopened.
-  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 6 ? v : 1; } catch { return 1; } })();
+  let homePos = (() => { try { const v = parseInt(localStorage.getItem("cfa-home-pos"), 10); return v >= 0 && v < 7 ? v : 1; } catch { return 1; } })();
   const saveHomePos = i => { homePos = i; try { localStorage.setItem("cfa-home-pos", String(i)); } catch {} };
   function home(dir = "back") {
     screen(dir);
@@ -1439,7 +1923,8 @@
       { cls: "c", kicker: "Plan", title: "Calendar", id: "home-dday", open: () => calendar() },
       { cls: "g", kicker: "Grow", title: "Garden", id: "home-garden", open: () => gardenScreen() },
       { cls: "p", kicker: "Track", title: "Progression tracker", info: ptSummary(), open: () => tracker() },
-      { cls: "k", kicker: "Recall", title: "Key notes questions", info: kqSummary(), open: () => kqHub() }
+      { cls: "k", kicker: "Recall", title: "Key notes questions", info: kqSummary(), open: () => kqHub() },
+      { cls: "x", kicker: "Test", title: "Exam", info: `${plural(exSets().length, "set")} · exam software look`, open: () => examHub() }
     ];
     const N = cards.length;
     const wrap = el("div", { className: "carousel" });
