@@ -663,7 +663,7 @@
   .ex-tbl th, .ex-tbl td { padding: 7px 8px; border-bottom: 1px solid #d7dbe0; text-align: right; vertical-align: top; }
   .ex-tbl th:first-child, .ex-tbl td:first-child { text-align: left; }
   .ex-tbl th { background: #eef0f2; font-weight: 700; border-bottom: 2px solid #9aa1a8; }
-  .ex-tbl td.tx { text-align: left; }
+  .ex-tbl td.tx, .ex-tbl th.tx { text-align: left; }
   .ex-tbl tr.sub td { text-align: left; font-weight: 700; background: #f6f7f8; padding-top: 10px; }
   .ex-note { font-size: .88rem; color: #444; }
   .ex-qn { font-weight: 700; margin-bottom: 8px; color: #333; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
@@ -751,7 +751,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v208 · 2026-11-10";
+  const APP_VERSION = "v209 · 2026-11-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1552,7 +1552,7 @@
   // lines with " | " are table rows (a row starting with "# " is the header row); "Note:" lines are small print.
   function exBodyHTML(body) {
     const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const isN = t => /^[(–−+-]*[$€£¥]?[\d,.]+%?\)?[A-Za-z]{0,3}$/.test(t.trim()) || t.trim() === "" || /^[-–—]+$/.test(t.trim());
+    const isN = t => /^[(–−+-]*[$€£¥]?[\d,.]+\s?%?\)?(\s?[A-Za-z%]{1,6})?$/.test(t.trim()) || t.trim() === "" || /^[-–—]+$/.test(t.trim());
     let h = "";
     body.split(/\n\s*\n/).forEach(par => {
       const lines = par.split("\n");
@@ -1562,11 +1562,13 @@
         const parsed = rows.map(r => { const head = /^#\s/.test(r); return { head, cells: (head ? r.replace(/^#\s/, "") : r).split("|").map(c => c.trim()) }; });
         const nc = Math.max(...parsed.map(p => p.cells.length));
         h += "<table class='ex-tbl'>";
+        const numCol = []; // a column is numeric if every body cell in it is a number: header and cells then align the same way
+        for (let k = 1; k < nc; k++) { const v = parsed.filter(p => !p.head && (p.cells[k] || "").trim() !== ""); numCol[k] = v.length > 0 && v.every(p => isN(p.cells[k])); }
         parsed.forEach(p => {
           const c = p.cells;
           if (!p.head && c[0] && c.slice(1).every(x => x === "")) { h += `<tr class='sub'><td colspan='${nc}'>${esc(c[0])}</td></tr>`; return; }
           while (c.length < nc) c.push("");
-          h += "<tr>" + c.map((x, k) => p.head ? `<th>${esc(x)}</th>` : `<td${k && !isN(x) ? " class='tx'" : ""}>${esc(x)}</td>`).join("") + "</tr>";
+          h += "<tr>" + c.map((x, k) => { const cl = k && !numCol[k] ? " class='tx'" : ""; return p.head ? `<th${cl}>${esc(x)}</th>` : `<td${cl}>${esc(x)}</td>`; }).join("") + "</tr>";
         });
         h += "</table>"; rows = [];
       };
