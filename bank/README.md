@@ -78,6 +78,9 @@ Mock 8 clean-up (9 Nov, v204): text that belonged to questions not in the mock w
 - The 22 essay problems were rewritten as multiple choice (created=true, ids fcf-mcq-*): firm (Shimotsuke + BCC, Q1-6), laforge (Q16-20), phaneuf (Phaneuf + Sundanci, Q21, 22, 30-32), values (PHB + NewMarket, Q39-41), effects (Q29 split into six questions, ns 29, 129, ..., 529), mackinac (Q42-44), sens (McInish + KMobile, Q45-48 plus one extra), stages (NYL, Bron, QuickChange, Gothenburg, Q49-52). Every number was recomputed.
 - User's wrong multiple-choice answers in this quiz: Q7, 11, 13, 23, 34, 38, 55, 61 (Q63 unanswered). The app was NOT updated and no wrong-answer PDF was made (ask if wanted).
 
+## Practice set 7 (10 Nov, v212)
+See CLAUDE.md ("Practice set 7"). Source bank/exam/spec_g.py; answer key printed by build.py (A 16, B 16, C 16): AAABCABCCAAACBACACBABBABBABACACBCCBBBCCCBCACCABB. Not sent to the user.
+
 ## Practice sets 1-6 rebuilt (9 Nov, v205)
 Final version (v206): ids pq1-pq6, 48 Q each (44 notebook + 4 Ethics, nothing dropped), 144 min, topics mixed, drawn at random (bank/exam/practice_mix.json). The first version (pr1-pr6, 44 Q, 8 vignettes dropped) was replaced the same day because the user wanted all topics. Ethics units: pr1 kq41-139..142 (Vass vignette), pr2 kq41-224/175/252/194, pr3 kq41-221/261/09/233, pr4 kq41-32/218/177/148, pr5 kq41-119..122 (vignette), pr6 kq41-217/27/146/57. Saved progress of the old ps1-ps6 was reset (user chose start fresh).
 

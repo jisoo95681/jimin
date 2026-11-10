@@ -3558,6 +3558,574 @@ const EXAM_SETS = [
   ]
  },
  {
+  "id": "pq7",
+  "title": "Practice set 7",
+  "kind": "practice",
+  "minutes": 144,
+  "desc": "Relationships from the main tables, theory questions and earlier mistakes (48 questions, 2 h 24 min)",
+  "vignettes": [
+   {
+    "topic": "Fixed Income",
+    "body": "Bettina Kral, a fixed-income analyst at Danube Capital, presents two short-rate models, which she writes with r as the short rate and dz as the random term:\n\nModel 1: dr = a(b − r)dt + σ√r dz\nModel 2: dr = θ dt + σ dz\n\nShe also values an option-free bond on a binomial tree calibrated to the current benchmark curve, studies a callable bond, and reads a quoted spread between the money market rate and the T-bill rate for the same maturity.",
+    "questions": [
+     {
+      "q": "Which statement about the two models is correct?",
+      "options": [
+       "Model 1 has volatility that rises with the level of rates and cannot produce negative rates; Model 2 has constant volatility and no mean reversion.",
+       "Both models have constant volatility and mean reversion.",
+       "Model 1 has constant volatility and can produce negative rates; Model 2 has volatility that rises with the level of rates."
+      ],
+      "answer": 0,
+      "why": "Model 1 is Cox–Ingersoll–Ross: volatility σ√r rises with the rate, rates cannot be negative. Model 2 is Ho–Lee: constant volatility, no mean reversion (θ is time-dependent)."
+     },
+     {
+      "q": "If interest rates fall sharply, compared with the straight bond, the callable bond's effective duration will most likely:",
+      "options": [
+       "fall, and its convexity can turn negative.",
+       "rise, and its convexity stays positive.",
+       "stay the same as the straight bond's duration."
+      ],
+      "answer": 0,
+      "why": "Callable bond when rates fall: the call is likely to be exercised, so duration is lower than the straight bond's and convexity falls (can turn negative). When rates rise, it behaves like the straight bond."
+     },
+     {
+      "q": "The spread between the money market rate and the T-bill rate for the same maturity is the:",
+      "options": [
+       "TED spread, which shows liquidity and credit risk of the banking sector.",
+       "Z-spread, which shows the constant spread added to each spot rate.",
+       "I-spread, which shows how much a credit-risky bond yield exceeds the swap rate."
+      ],
+      "answer": 0,
+      "why": "TED spread = MRR − T-bill rate (same maturity): liquidity and credit risk of the banking sector, an economy-wide measure rather than one government bond."
+     },
+     {
+      "q": "If Kral raises the volatility assumption of the calibrated tree, the value of the option-free bond will:",
+      "options": [
+       "fall.",
+       "stay the same.",
+       "rise."
+      ],
+      "answer": 1,
+      "why": "A calibrated tree reprices the benchmark bonds, so an option-free bond has the same value whatever volatility is assumed. Volatility matters only for bonds with embedded options."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Anja Lindqvist, an analyst at Fjell Research, answers three questions.\n\nOstmark Glass pays dividends that are far below its FCFE, and its dividends have little relation to its ability to pay. Lindqvist must choose a valuation model.\n\nA colleague says that Corbin Foods must have both a higher-than-average growth rate and a higher-than-average risk to justify its high P/E.\n\nLindqvist also screens Company R for earnings quality. She separates its accruals into normal accruals, explained by a regression on business activity, and the residual.",
+    "questions": [
+     {
+      "q": "Lindqvist should most likely value Ostmark Glass with:",
+      "options": [
+       "a dividend discount model, because Ostmark pays dividends.",
+       "a residual income model, because FCFE is positive.",
+       "an FCFE model, because dividends differ greatly from the capacity to pay them."
+      ],
+      "answer": 2,
+      "why": "Use FCFE instead of a DDM when dividends differ significantly from FCFE (the capacity to pay), when there are no dividends, or from a control perspective. A residual income model is chosen when free cash flow is negative or hard to forecast."
+     },
+     {
+      "q": "The colleague's statement about Corbin Foods is:",
+      "options": [
+       "incorrect with respect to risk, because higher risk lowers the justified P/E.",
+       "correct, because a high P/E needs both higher growth and higher risk.",
+       "incorrect with respect to growth, because higher growth lowers the justified P/E."
+      ],
+      "answer": 0,
+      "why": "Higher expected growth justifies a higher P/E; higher risk (a higher required return) justifies a lower P/E."
+     },
+     {
+      "q": "The residual of Lindqvist's accruals regression represents:",
+      "options": [
+       "cash earnings.",
+       "discretionary accruals, which may signal earnings manipulation.",
+       "non-discretionary accruals, which arise from normal operations."
+      ],
+      "answer": 1,
+      "why": "The part explained by the regression is normal (non-discretionary) accruals. The residual comes from unusual choices: discretionary accruals, a warning sign of manipulation."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Yuna Park, an analyst at Seabright Funds, tests three regression models that explain monthly fund returns. Exhibit 1 summarises what she sees in each model.\n\nExhibit 1: Diagnostics for Three Models\n# Model | What Park observes\nModel A | R² is large and the F-statistic is significant, but no slope t-statistic is significant and the standard errors are inflated\nModel B | The variance of the residuals rises with the size of the fund's assets\nModel C | The Durbin–Watson statistic is 1.12; the lower limit is 1.35 and the upper limit is 1.59\n\nPark wants to name each problem and decide on a test and a fix.",
+    "questions": [
+     {
+      "q": "Model A most likely suffers from:",
+      "options": [
+       "heteroskedasticity.",
+       "serial correlation.",
+       "multicollinearity."
+      ],
+      "answer": 2,
+      "why": "Signals of multicollinearity: R² large, F-statistic significant, t-statistics low or insignificant, standard errors inflated. All four are in Model A."
+     },
+     {
+      "q": "For the problem in Model A, the main danger in the t-tests is:",
+      "options": [
+       "Type I errors, because the standard errors are too low; the F-test is unreliable.",
+       "Type I errors, because the standard errors are too low; the F-test is too high.",
+       "Type II errors (failing to reject a false null), because the standard errors are too high; the F-test is not affected."
+      ],
+      "answer": 2,
+      "why": "Multicollinearity: standard errors High, t-test Low (Type II error), F-test not affected."
+     },
+     {
+      "q": "Model B is best handled by:",
+      "options": [
+       "testing with Breusch–Pagan and using robust (White) standard errors.",
+       "testing with the VIF and dropping a variable.",
+       "testing with Breusch–Godfrey and using Newey–West standard errors."
+      ],
+      "answer": 0,
+      "why": "Heteroskedasticity (variance of the residuals changes with a variable): test = Breusch–Pagan, fix = robust (White) standard errors, error type = Type I. The VIF is for multicollinearity; Breusch–Godfrey and Newey–West are for serial correlation."
+     },
+     {
+      "q": "Model C's Durbin–Watson statistic most likely indicates:",
+      "options": [
+       "positive serial correlation, with standard errors too low and t-tests and the F-test too high.",
+       "an inconclusive result, because the statistic lies between the limits.",
+       "negative serial correlation, with standard errors too high and t-tests too low."
+      ],
+      "answer": 0,
+      "why": "1.12 is below the lower limit of 1.35, so reject: positive serial correlation. Serial correlation: standard errors Low, t-test High, F-test High (Type I errors)."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Elias Brandt, an economist at Northwind Capital, summarises three views presented at a seminar on long-run growth.\n\nView 1: Population rises when income is high and pushes income per person back down to subsistence.\nView 2: Capital has diminishing returns, technology comes from outside the model and income per person reaches a steady state.\nView 3: Investment in human capital and research has no diminishing returns, so income per person keeps growing.\n\nBrandt also studies Tarland, where strong growth raises the threat of inflation. The central bank says it will use its monetary tools to prevent the inflation.",
+    "questions": [
+     {
+      "q": "The three views correspond to which growth theories?",
+      "options": [
+       "View 1 classical, View 2 neoclassical, View 3 endogenous.",
+       "View 1 neoclassical, View 2 endogenous, View 3 classical.",
+       "View 1 endogenous, View 2 classical, View 3 neoclassical."
+      ],
+      "answer": 0,
+      "why": "Classical: population growth pushes income per capita back to subsistence. Neoclassical: diminishing returns to capital, exogenous technology, steady state. Endogenous: no diminishing returns (human capital, R&D), income per capita grows permanently."
+     },
+     {
+      "q": "According to the theory in View 2, a permanent increase in the saving rate most likely:",
+      "options": [
+       "raises the long-run growth rate of income per person permanently.",
+       "has no effect, because technology comes from outside the model.",
+       "raises the level of income per person in the steady state but not its long-run growth rate."
+      ],
+      "answer": 2,
+      "why": "Neoclassical: capital has diminishing returns, so more saving gives only a temporary boost to growth; income per capita reaches a new, higher steady-state level, while long-run growth is set by technology."
+     },
+     {
+      "q": "A policy that subsidises research and education is most consistent with:",
+      "options": [
+       "the theory in View 1, because it raises income per person permanently.",
+       "the theory in View 3, because it can raise long-run growth permanently.",
+       "the theory in View 2, because technology is determined inside the model."
+      ],
+      "answer": 1,
+      "why": "Endogenous growth: investment in human capital and R&D is not subject to diminishing returns, so such policies can permanently raise the growth rate. Classical and neoclassical theories do not give that result."
+     },
+     {
+      "q": "To prevent the inflation, Tarland's central bank will most likely:",
+      "options": [
+       "sell securities to the private sector.",
+       "buy securities from the private sector.",
+       "lower its policy rate."
+      ],
+      "answer": 0,
+      "why": "To fight inflation, reduce the money supply: sell securities (money out), raise the policy rate, raise reserve requirements. Buying securities or lowering the rate adds money and fuels inflation."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Naoko Ebisu, an analyst at Quill Analytics, prepares text from 20,000 broker reports for a sentiment model. Her raw text contains HTML tags, punctuation, numbers and extra white space.\n\nEbisu also compares two candidate regression models of fund flows in Exhibit 1.\n\nExhibit 1: Candidate Models\n# Model | AIC | BIC\nModel 1 | 412 | 431\nModel 2 | 405 | 438\n\nFinally, she tests a price series for a unit root, and the Dickey–Fuller test does not reject its null hypothesis.",
+    "questions": [
+     {
+      "q": "Removing HTML tags, punctuation, numbers and extra white space from the raw text is part of:",
+      "options": [
+       "text wrangling (preprocessing).",
+       "text exploration.",
+       "text cleansing."
+      ],
+      "answer": 2,
+      "why": "Cleansing removes noise from the raw text: HTML tags, punctuation, numbers, white space. Wrangling works on tokens (lowercasing, stop words, stemming, lemmatisation). Exploration (bag of words, DF, MI) comes after."
+     },
+     {
+      "q": "Which statement about choosing between the two models is correct?",
+      "options": [
+       "Model 2 is better for forecasting (lower AIC) and Model 1 is better for goodness of fit (lower BIC).",
+       "Model 1 is better for forecasting (lower AIC) and Model 2 is better for goodness of fit (lower BIC).",
+       "Model 2 is better for both purposes because its AIC is lower."
+      ],
+      "answer": 0,
+      "why": "AIC: better forecast; BIC: better goodness of fit. Lower is better for both. Model 2 has the lower AIC (405 vs 412); Model 1 has the lower BIC (431 vs 438)."
+     },
+     {
+      "q": "Because the Dickey–Fuller test does not reject its null hypothesis, the price series:",
+      "options": [
+       "is covariance stationary and can be modelled directly with an AR(1) model.",
+       "has no unit root, so adding a second lag will remove the trend.",
+       "has a unit root, is not covariance stationary and should be first-differenced before an autoregressive model is used."
+      ],
+      "answer": 2,
+      "why": "The Dickey–Fuller null hypothesis is that the series has a unit root. Failing to reject means a unit root: not covariance stationary, so transform it (usually first differences)."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Dev Menon, a portfolio manager at Meridian Wealth, evaluates the Titan Equity Fund with a three-factor model. Exhibit 1 shows the fund's factor sensitivities.\n\nExhibit 1: Titan Equity Fund Factor Sensitivities\n# Factor | Fund sensitivity\nMarket | 1.15\nSize | 0.40\nValue | −0.10\n\nMenon's assistant, Lena Voss, uses a macroeconomic factor model whose factors are surprises with an expected value of zero. For Portfolio 1 the intercept is 2.58% and last year's return was 6.00%.\n\nVoss compares fundamental and macroeconomic factor models, and Menon asks about an index fund that meets its investment objective exactly.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the fund's style is best described as:",
+      "options": [
+       "aggressive (beta above 1), large-cap and value.",
+       "aggressive (beta above 1), small-cap and growth.",
+       "defensive (beta below 1), large-cap and value."
+      ],
+      "answer": 1,
+      "why": "Market 1.15 > 1: aggressive. Size positive: small-cap orientation. Value negative: growth orientation."
+     },
+     {
+      "q": "In Voss's macroeconomic factor model, the expected return of Portfolio 1 is:",
+      "options": [
+       "2.58%, the intercept.",
+       "3.42%, the part of last year's return explained by the surprises.",
+       "6.00%, last year's return."
+      ],
+      "answer": 0,
+      "why": "In a macroeconomic factor model the factors are surprises with an expected value of zero, so the expected return is the intercept. Last year's 6.00% is an actual return that includes the factor surprises."
+     },
+     {
+      "q": "In which type of model are the factor sensitivities estimated last?",
+      "options": [
+       "the fundamental factor model (in the macroeconomic model they are determined first).",
+       "the macroeconomic factor model (in the fundamental model they are determined first).",
+       "both, because sensitivities are always estimated by regression."
+      ],
+      "answer": 1,
+      "why": "Fundamental model: sensitivities (company attributes) are determined first, then factor returns are estimated. Macroeconomic model: the surprises are given and the sensitivities are estimated last by regression."
+     },
+     {
+      "q": "The information ratio of an index fund that meets its objective exactly is most likely:",
+      "options": [
+       "positive but indeterminate.",
+       "zero.",
+       "equal to its Sharpe ratio."
+      ],
+      "answer": 1,
+      "why": "An index fund that tracks its benchmark exactly has zero active return, so the information ratio (active return ÷ active risk) is zero."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Sol Park, a credit analyst at Hanover Credit Partners, reviews a risky corporate bond and the CDS market.\n\nPark compares two credit models. Model X relies on the company's balance sheet and option pricing. Model Y relies on macroeconomic and company-specific data to estimate a default intensity with a regression.\n\nExhibit 1: Five-Year Market Data for the Company\n# Item | Spread over the benchmark\nBond | 240 bps\nCDS | 210 bps\n\nPark expects the economy to improve and considers trades on a high-yield index and an investment-grade index. A client sold protection on the company last year, when its CDS spread was 150 bps, and asks about the position today.",
+    "questions": [
+     {
+      "q": "A weakness of Model Y compared with Model X is that Model Y:",
+      "options": [
+       "does not explain why default happens and treats default as a random surprise.",
+       "assumes the company's assets are traded in the market.",
+       "is burdensome because of complex balance sheets."
+      ],
+      "answer": 0,
+      "why": "Reduced-form model (Y): disadvantages: does not explain why default happens; default is treated as a random event. Strengths: does not assume assets trade, default intensity changes with fundamentals. The structural model (X) has the weaknesses in the other two options."
+     },
+     {
+      "q": "Given the spreads in Exhibit 1, the arbitrage trade is most likely to:",
+      "options": [
+       "buy the bond and sell protection through the CDS.",
+       "buy the bond and buy protection through the CDS.",
+       "sell the bond and sell protection through the CDS."
+      ],
+      "answer": 1,
+      "why": "Bond spread (240) > CDS spread (210): buy the bond and buy the CDS (protection). If the bond spread were below the CDS spread: sell both."
+     },
+     {
+      "q": "Expecting the economy to improve, Park should most likely:",
+      "options": [
+       "buy protection on the high-yield index and sell protection on the investment-grade index.",
+       "sell protection on the high-yield index and buy protection on the investment-grade index.",
+       "sell protection on both indexes."
+      ],
+      "answer": 1,
+      "why": "Economy improves: high yield → sell protection; investment grade → buy protection."
+     },
+     {
+      "q": "Compared with the original spread, the client's position today most likely shows:",
+      "options": [
+       "a loss, because the spread has widened.",
+       "a gain, because the spread is above the coupon.",
+       "a gain, because the spread has widened."
+      ],
+      "answer": 0,
+      "why": "Protection seller: spread narrows → gain; spread widens → loss. Today's spread (210 bps) is above the original 150 bps, so the seller has a loss. Gain or loss compares the current spread with the ORIGINAL spread."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Mateo Ruiz, an analyst at Granite Research, studies Corvane Systems, which grants stock options and restricted stock units (RSUs) and sponsors a defined benefit pension plan. Corvane reports under US GAAP; its closest peer reports under IFRS.\n\nCorvane's advisor says that expected share price volatility at the grant date has risen. Ruiz also compares how the two frameworks treat the expected return on plan assets. Finally, employees recently exercised options when the share price was well above the grant-date fair value.",
+    "questions": [
+     {
+      "q": "Higher expected volatility at the grant date will most likely:",
+      "options": [
+       "lower the fair value and expense of the options and raise net income.",
+       "raise the fair value and expense of the options and lower net income, with no effect on the RSUs.",
+       "raise the fair value of the options and of the RSUs, and lower net income."
+      ],
+      "answer": 1,
+      "why": "Higher volatility: stock option fair value ↑, operating expense ↑, net income ↓. RSU fair value, expense and net income are the same."
+     },
+     {
+      "q": "Which statement about the expected return on plan assets is correct?",
+      "options": [
+       "Under US GAAP it is deducted in the pension cost; under IFRS it is not deducted separately.",
+       "It is deducted under both frameworks.",
+       "Under IFRS it is deducted in the pension cost; under US GAAP it is not deducted separately."
+      ],
+      "answer": 0,
+      "why": "Pension cost: US GAAP deducts the expected return on plan assets; IFRS does not deduct it separately (interest cost on the funded status instead)."
+     },
+     {
+      "q": "The recent option exercises at a share price well above the grant-date fair value are most likely to:",
+      "options": [
+       "raise the effective tax rate under US GAAP and lower it under IFRS.",
+       "lower the effective tax rate under both frameworks.",
+       "lower Corvane's effective tax rate under US GAAP, but not under IFRS."
+      ],
+      "answer": 2,
+      "why": "Windfall (settlement-date price higher than grant-date value): larger tax deduction, tax lower than expected. US GAAP: effective tax rate ↓. IFRS: the windfall goes straight to equity, so the rate is not affected."
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "After spending years employed as a research analyst covering Asian exchanges at an investment management firm based in Singapore and then undertaking further training, Vishram Mehta, CFA, recently launched a new career as an independent asset consultant. His first client is Montfill Tech (“Montfill”), a small software development company with offices in Singapore and India. Montfill is struggling to retain top developers for more than two years. Consequently, the company feels it is not able to fully capitalize on the investments it has made in employee training and development. Montfill is considering introducing a retirement benefit plan to supplement the statutory government-sponsored individual employee defined contribution (DC) plans. It feels the extra benefit designed with no risk to the employee will help with retention. Mehta’s assignment is to design a defined benefit (DB) package that includes an Investment Policy Statement and asset allocation.\n\nTo begin the assignment, Mehta researches the rules and regulations concerning pension plans in Singapore and India. Mehta initially thinks the pension plan regulations are tougher in India than in Singapore. Given the extensive regulations, however, he realizes he needs some help and thus considers speaking with an expert in global pension plan regulations. Subsequently, during a short conversation with a manager working in the Human Resources (HR) department of a multinational, Mehta asks the manager to outline the prominent features of their pension plan. Mehta contemplates what his next step should be based on the information he has received so far.\n\nTo start determining an asset allocation for Montfill’s DB plan, Mehta reviews the answers he captured during his initial conversations with management to help him assess Montfill’s investment profile, including return objectives, risk tolerances, previous investment history, and current and projected financial status. He has yet to receive the detailed answers to the questionnaire he sent to Montfill’s HR department about employee demographics. While he is awaiting the questionnaire responses, he drafts an asset allocation based on his understanding of the client’s needs.\n\nBefore Mehta begins to draft the Investment Policy Statement, he recalls the earlier conversation he had with the HR manager. The HR manager advised him to have a consultation with Risner Employee Benefits Law, a global legal firm with a stellar reputation in over 150 countries. The HR manager also mentioned Mehta might want to offer his services as a pension trustee or consultant to the client given all his years of experience in Asia. Mehta remembers his remarks: “Those are great ideas, particularly as I have direct work experience in all the countries where my client operates. I think I might also recommend that Risner draft the needed legal documents if I find their services are appropriate after my conversation and due diligence. But I’ll work out a referral fee arrangement first and include those details in my recommendation to the client.”\n\nMehta wants to include the following items in the Investment Policy Statement:\n\nAs previously disclosed in the contract between us:\n\nItem 1: In lieu of evaluating new providers of third-party economic research needed to help determine asset class return forecasts, I hired those used by my former employer. The fees I pay them are part of normal operating expenses so are not directly expensed back to the client.\n\nItem 2: As an independent asset consultant, there may be times when I am working on similar projects concurrently. These assignments may be for clients within the same industry (i.e., competitors). Systems and processes are in place to protect the privacy and data of all clients.\n\nItem 3: Each assignment is undertaken with the best interests of the client in mind to meet their overall objectives as defined in our contract. It is up to each client to seek outside legal counsel and implement only the recommendations they deem fit.",
+    "questions": [
+     {
+      "q": "What should Mehta’s next step most likely be to avoid violating the CFA Institute Standards of Professional Conduct?",
+      "options": [
+       "Consult with a legal specialist.",
+       "Limit his research to India.",
+       "Replicate the multinational firm’s pension plan."
+      ],
+      "answer": 0,
+      "why": "To avoid violating Standard I(A): Knowledge of the Law, Mehta should consult with legal specialists who understand the pension regulations in both Singapore and India. He has recognized he needs help after his initial desktop research. If he limited his desktop research to India, he would likely be violating Standard I(A): Knowledge of the Law in that he would not take into consideration Singaporean regulations."
+     },
+     {
+      "q": "Will Mehta’s draft asset allocation recommendation most likely conform to Standard III(C): Suitability?",
+      "options": [
+       "No, with regard to Montfill’s profile",
+       "Yes",
+       "No, with regard to the HR department request"
+      ],
+      "answer": 2,
+      "why": "Mehta’s draft asset allocation will most likely violate Standard III(C) given he has not received responses to the questionnaire addressing employee demographics. To understand liquidity needs of the funds, it is critical to understand the age profile of the client’s labor force, any planned early retirements due to known medical conditions, etc."
+     },
+     {
+      "q": "If Mehta proposes Risner’s and his services to his client (Montfill), which component of the CFA Institute Standards of Professional Conduct will least likely be violated?",
+      "options": [
+       "Misconduct",
+       "Referral fees",
+       "Misrepresentation"
+      ],
+      "answer": 1,
+      "why": "Mehta would least likely violate Standard VI(C): Referral Fees as he noted he will include any referral fee arrangements in the proposal to Montfill. Standard VI(C): Referral Fees requires Members and Candidates to disclose to their employer, clients, and prospective clients, as appropriate, any compensation, consideration, or benefit received from or paid to others for the recommendation of products or services."
+     },
+     {
+      "q": "Which of the items Mehta wants to include in the Investment Policy Statement most likely reflects a violation of the CFA Institute Standards of Professional Conduct?",
+      "options": [
+       "Item 2",
+       "Item 3",
+       "Item 1"
+      ],
+      "answer": 2,
+      "why": "Item 1 most likely reflects a violation of the CFA Institute Standards of Professional Conduct. Mehta is using economic data from third-party providers to help determine expected asset class returns to formulate his asset class recommendations to clients."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Tomas Berg, a derivatives analyst at Oslo Capital, answers four questions.\n\nLakeshore Utilities has issued fixed-rate bonds. Its CFO says: \"I want our debt to behave like floating-rate debt so that the market value of our liabilities is less sensitive to changes in interest rates.\"\n\nA three-month forward contract on a stock is quoted in the market at 52.40, while the carry model gives a fair forward price of 51.10.\n\nA client sells a call option on an index.\n\nA commodity has a convenience yield that is higher than its storage cost.",
+    "questions": [
+     {
+      "q": "To meet the CFO's objective, Lakeshore should enter into a swap in which it:",
+      "options": [
+       "pays fixed and receives an equity return.",
+       "pays fixed and receives floating.",
+       "pays floating and receives fixed."
+      ],
+      "answer": 2,
+      "why": "Lakeshore already pays fixed on its bonds. Receiving fixed and paying floating cancels the fixed payments and leaves floating-rate debt, whose value is much less sensitive to rates."
+     },
+     {
+      "q": "The forward contract is most likely:",
+      "options": [
+       "cheap, so the arbitrage is to buy the forward, short the stock and lend.",
+       "expensive, so the arbitrage is to sell the forward, borrow and buy the stock (cash-and-carry).",
+       "fairly priced, so there is no arbitrage."
+      ],
+      "answer": 1,
+      "why": "Quoted price (Q = 52.40) above the model price (F = 51.10): the forward is expensive → Sell forward, Borrow, Buy the asset (cash-and-carry). Q below F: Buy forward, Short, Lend."
+     },
+     {
+      "q": "The signs of the Greeks of the call option the client sold are most likely:",
+      "options": [
+       "positive gamma and positive vega, with negative theta.",
+       "negative gamma and negative vega, with positive theta.",
+       "negative gamma and positive vega, with positive theta."
+      ],
+      "answer": 1,
+      "why": "Long call: delta +, gamma +, vega +, theta −, rho +. Short call: all signs reversed: delta −, gamma −, vega −, theta +, rho −."
+     },
+     {
+      "q": "The commodity's futures curve is most likely in:",
+      "options": [
+       "contango, with inventories rising.",
+       "backwardation, with inventories falling.",
+       "backwardation, with inventories rising."
+      ],
+      "answer": 1,
+      "why": "Convenience yield > storage cost: backwardation and inventory falls. Convenience yield < storage cost: contango and inventory rises."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Nadia Corsi, an analyst at Lakeview Partners, analyses Brightmill Foods, which owns 50% of a joint venture and two foreign subsidiaries. The joint venture is reported under the equity method; Corsi wants to see the effect of proportionate consolidation.\n\nSubsidiary A is in Mexico and uses the Mexican peso as its functional currency. Brightmill's presentation currency is the US dollar, and Subsidiary A has a net asset exposure. The peso is depreciating.\n\nSubsidiary B is in Poland and uses the US dollar as its functional currency, with a net monetary liability exposure in zloty. The zloty is appreciating.",
+    "questions": [
+     {
+      "q": "Compared with the equity method, proportionate consolidation of the joint venture will most likely:",
+      "options": [
+       "increase total assets only, leaving revenue unchanged.",
+       "increase revenue, total assets and net income.",
+       "increase revenue and total assets, with the same net income and equity."
+      ],
+      "answer": 2,
+      "why": "Equity method: revenue unchanged, assets unchanged. Proportionate: revenue and assets increase. Net income and equity increase by the same amount under both methods."
+     },
+     {
+      "q": "Because the peso is depreciating, Subsidiary A's translation adjustment (CTA) in equity most likely:",
+      "options": [
+       "increases.",
+       "is not affected, because translation gains and losses go to net income.",
+       "decreases."
+      ],
+      "answer": 2,
+      "why": "Local functional currency → current rate method. With a net asset exposure, a depreciating foreign currency makes CTA decrease (and an appreciating one makes it increase)."
+     },
+     {
+      "q": "For Subsidiary B, the zloty's appreciation most likely causes:",
+      "options": [
+       "a decrease in CTA.",
+       "a gain in other comprehensive income.",
+       "a remeasurement loss that reduces net income."
+      ],
+      "answer": 2,
+      "why": "Presentation currency as functional currency → temporal method, where the remeasurement gain or loss goes to net income (the plug). With a net monetary liability, an appreciating foreign currency produces a loss."
+     },
+     {
+      "q": "Because the peso is depreciating, the higher gross margin for the Mexican subsidiary is reported under:",
+      "options": [
+       "either method, because the margins are equal.",
+       "the current rate method.",
+       "the temporal method."
+      ],
+      "answer": 1,
+      "why": "Foreign currency appreciating → temporal gives the higher margin. Foreign currency depreciating → current rate gives the higher margin."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Gabriela Silva, a portfolio manager at Tamsin Fixed Income, compares a callable bond, a putable bond and a convertible bond. The callable and putable bonds have the same issuer, maturity and coupon as a straight bond. She prices them on a binomial tree and computes their option-adjusted spreads (OAS) with the same volatility assumption.\n\nSilva expects interest rate volatility to rise. The convertible bond's conversion price is well above the current share price of the issuer.",
+    "questions": [
+     {
+      "q": "If interest rate volatility rises, the value of the callable bond will most likely:",
+      "options": [
+       "rise and the value of the putable bond will fall.",
+       "fall and the value of the putable bond will fall.",
+       "fall and the value of the putable bond will rise."
+      ],
+      "answer": 2,
+      "why": "Callable bond = straight bond − call; putable bond = straight bond + put. Higher volatility raises the value of the option: callable ↓, putable ↑."
+     },
+     {
+      "q": "If Silva raises the volatility assumption in the tree, the OAS of the callable bond will most likely:",
+      "options": [
+       "fall and the OAS of the putable bond will rise.",
+       "rise and the OAS of the putable bond will fall.",
+       "fall and the OAS of the putable bond will fall."
+      ],
+      "answer": 0,
+      "why": "Higher volatility raises the value of the call, so the callable bond's model value falls below its market price; to match the market price the OAS must fall. For the putable bond the put is worth more, the model value rises and the OAS must rise. Volatility ↑: OAS of the callable ↓, OAS of the putable ↑."
+     },
+     {
+      "q": "The risk and return of the convertible bond most likely resemble those of:",
+      "options": [
+       "a hybrid of a bond and a stock.",
+       "a stock, driven by the share price.",
+       "a bond, driven by interest rates and the credit spread."
+      ],
+      "answer": 2,
+      "why": "Conversion price above the share price: the bond-like case: interest rate and credit spread risk. Conversion price below the share price: stock-like. Equal: hybrid."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Ingrid Solberg, an economist at Fjord Capital, reviews the emerging country of Maravia, whose government opened its capital market.\n\nExhibit 1: Maravia Indicators over the Past Two Years\n# Indicator | Change\nCapital inflows | Surged\nOfficial reserves | Fell\nReal exchange rate | Overvalued\nInflation | Rose\nBanking stress | Rose\nM2 to reserves | Increased quickly\n\nSolberg also considers a carry trade. A euro-based investor borrows euros, converts them into yen at today's rate S0 (yen per euro), invests in yen and converts back at maturity at S1 (yen per euro).\n\nMaravia has low capital mobility and is thinking of tightening both monetary and fiscal policy. A developed country with high capital mobility is expanding monetary policy while restricting fiscal policy.",
+    "questions": [
+     {
+      "q": "The indicators in Exhibit 1 are most consistent with:",
+      "options": [
+       "a currency that is about to appreciate because of tight policy.",
+       "an economy with improving fundamentals and a stable currency.",
+       "a rising risk of a currency crisis."
+      ],
+      "answer": 2,
+      "why": "Currency crisis signals (CRRIB M2): Capital inflows up, Reserves down, Real exchange rate overvalued, Inflation up, Banking stress up, M2/reserves increasing quickly. All six are in Exhibit 1."
+     },
+     {
+      "q": "In euro terms, the return of the carry trade is most likely reduced by:",
+      "options": [
+       "the yen depreciating against the euro (S1 rises).",
+       "a fall in the euro borrowing rate.",
+       "the yen appreciating against the euro (S1 falls)."
+      ],
+      "answer": 0,
+      "why": "EUR terms: return = S0 × (1 + R_JPY) × 1/S1 − 1 − R_EUR. A higher S1 (more yen per euro, so a weaker yen) lowers the return. A lower euro rate raises the return and a yen appreciation raises it."
+     },
+     {
+      "q": "Using the Mundell–Fleming relationships, Maravia's planned policy mix most likely leads its currency to:",
+      "options": [
+       "have an ambiguous effect.",
+       "appreciate.",
+       "depreciate."
+      ],
+      "answer": 1,
+      "why": "Restrictive monetary / restrictive fiscal with low capital mobility (emerging): Appreciation. (With high mobility the mix is ambiguous.)"
+     },
+     {
+      "q": "For the developed country, the policy mix most likely leads its currency to:",
+      "options": [
+       "appreciate.",
+       "depreciate.",
+       "have an ambiguous effect."
+      ],
+      "answer": 1,
+      "why": "Expansionary monetary / restrictive fiscal with high capital mobility (developed): Depreciation. (With low mobility it is ambiguous.)"
+     }
+    ]
+   }
+  ],
+  "rev": 2
+ },
+ {
   "id": "mock7",
   "title": "Mock 7",
   "kind": "mock",
