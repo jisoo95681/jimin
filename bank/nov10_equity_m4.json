@@ -1,0 +1,365 @@
+[
+ {
+  "id": "eq4-cannan",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%; essays left blank)",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Cannan (Delite Beverage, You Fix It): forward P/E, P/S, normalized EPS, PEG, harmonic mean",
+  "body": "Mark Cannan is updating research reports on two well-established consumer companies before first quarter 2021 earnings reports are released. His supervisor, Sharolyn Ritter, has asked Cannan to use market-based valuations when updating the reports.\n\nDelite Beverage is a manufacturer and distributor of soft drinks and recently acquired a major water bottling company in order to offer a broader product line. The acquisition will have a significant impact on Delite’s future results.\n\nYou Fix It is a US retail distributor of products for home improvement, primarily for those consumers who choose to do the work themselves. The home improvement industry is cyclical; the industry was adversely affected by the recent downturn in the economy, the level of foreclosures, and slow home sales. Although sales and earnings at You Fix It weakened, same store sales are beginning to improve as consumers undertake more home improvement projects. Poor performing stores were closed, resulting in significant restructuring charges in 2020.\n\nBefore approving Cannan’s work, Ritter wants to discuss the calculations and choices of ratios used in the valuation of Delite and You Fix It. The data used by Cannan in his analysis are summarized in Exhibit 1.\n\nExhibit 1\nSelect Financial Data for Delite Beverage and You Fix It\n\tDelite Beverage\tYou Fix It\n2020 earnings per share (EPS)\t$3.44\t$1.77\n2021 estimated EPS\t$3.50\t$1.99\nBook value per share end of year\t$62.05\t$11.64\nCurrent share price\t$65.50\t$37.23\nSales (billions)\t$32.13\t$67.44\nFree cash flow per share\t$2.68\t$0.21\nShares outstanding end of year\t2,322,034,000\t1,638,821,000\nCannan advises Ritter that he is considering three different approaches to value the shares of You Fix It:\n\nApproach 1:\nPrice-to-book ratio (P/B)\n\nApproach 2:\nPrice-to-earnings ratio (P/E) using trailing earnings\n\nApproach 3:\nPrice-to-earnings ratio using normalized earnings\n\nCannan tells Ritter that he calculated the price-to-sales ratio (P/S) for You Fix It but chose not to use it in the valuation of the shares. Cannan states to Ritter that it is more appropriate to use the P/E than the P/S because\n\nReason 1:\nEarnings are more stable than sales.\n\nReason 2:\nEarnings are less easily manipulated than sales.\n\nReason 3:\nThe P/E reflects financial leverage, whereas the P/S does not.\n\nCannan also informs Ritter that he did not use a price-to-cash-flow multiple in valuing the shares of Delite or You Fix It. The reason is that he could not identify a cash flow measure that would both account for working capital and noncash revenues and be after interest expense and thus not be mismatched with share price. Ritter advises Cannan that such a cash flow measure does exist.\n\nRitter provides Cannan with financial data on three close competitors as well as the overall beverage sector, which includes other competitors, in Exhibit 2. She asks Cannan to determine, based on the P/E-to-growth (PEG) ratio, whether Delite shares are overvalued, fairly valued, or undervalued.\n\nExhibit 2\nBeverage Sector Data\n\tForward P/E\tEarnings Growth\nDelite\t—\t12.41%\nFresh Iced Tea Company\t16.59\t9.52%\nNonutter Soda\t15.64\t11.94%\nTasty Root Beer\t44.10\t20%\nBeverage sector average\t16.40\t10.80%\nAfter providing Ritter his answer, Cannan is concerned about the inclusion of Tasty Root Beer in the comparables analysis. Specifically, Cannan says to Ritter:\n\n“I feel we should mitigate the effect of large outliers but not the impact of small outliers (i.e., those close to zero) when calculating the beverage sector P/E. What measure of central tendency would you suggest we use to address this concern?”\n\nRitter requests that Cannan incorporate their discussion points before submitting the reports for final approval.",
+  "questions": [
+   {
+    "n": 10,
+    "q": "Based on the information in Exhibit 1, the most appropriate price-to-earnings ratio to use in the valuation of Delite is closest to:",
+    "options": [
+     "18.71.",
+     "19.04.",
+     "24.44."
+    ],
+    "answer": "A",
+    "why": "A is correct. The forward P/E should be used given the recent significant acquisition of the water bottling company: $65.50 / $3.50 = 18.71."
+   },
+   {
+    "n": 11,
+    "q": "Based on the information in Exhibit 1, the price-to-sales ratio for You Fix It is closest to:",
+    "options": [
+     "0.28.",
+     "0.55.",
+     "0.90."
+    ],
+    "answer": "C",
+    "why": "C is correct. Sales per share = $67.44 billion / 1.638821 billion shares = $41.15; P/S = $37.23 / $41.15 = 0.90."
+   },
+   {
+    "n": 12,
+    "q": "Which valuation approach would be most appropriate in valuing shares of You Fix It?",
+    "options": [
+     "Approach 1",
+     "Approach 2",
+     "Approach 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. You Fix It is in a cyclical industry; normalized earnings estimate the EPS the company could achieve under mid-cyclical conditions."
+   },
+   {
+    "n": 13,
+    "q": "Cannan’s preference to use the P/E over the P/S is best supported by:",
+    "options": [
+     "Reason 1.",
+     "Reason 2.",
+     "Reason 3."
+    ],
+    "answer": "C",
+    "why": "C is correct. Sales is a pre-financing measure and ignores the impact of debt in the capital structure; earnings reflect operating and financial leverage, so the P/E incorporates it."
+   },
+   {
+    "n": 14,
+    "q": "The cash flow measure that Ritter would most likely recommend to address Cannan’s concern is:",
+    "options": [
+     "free cash flow to equity.",
+     "earnings plus noncash charges.",
+     "earnings before interest, tax, depreciation, and amortization."
+    ],
+    "answer": "A",
+    "why": "A is correct. FCFE is after interest, working capital and noncash revenue."
+   },
+   {
+    "n": 15,
+    "q": "Based on the information in Exhibits 1 and 2, Cannan would most likely conclude that Delite’s shares are:",
+    "options": [
+     "overvalued.",
+     "undervalued.",
+     "fairly valued."
+    ],
+    "answer": "C",
+    "why": "C is correct. Delite PEG = 18.71 / 12.41 = 1.51 against 1.74 (Fresh Iced Tea), 1.31 (Nonutter) and 1.52 (sector average): in the middle of the range and very close to the average, so fairly valued."
+   },
+   {
+    "n": 16,
+    "q": "The measure of central tendency that Ritter will most likely recommend is the:",
+    "options": [
+     "median.",
+     "harmonic mean.",
+     "arithmetic mean."
+    ],
+    "answer": "B",
+    "why": "B is correct. The harmonic mean reduces the impact of large outliers but not of small outliers (close to zero); the arithmetic mean has the large-outlier problem."
+   }
+  ]
+ },
+ {
+  "id": "eq4-risso",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%; essays left blank)",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Risso (Centralino): trailing P/E, justified forward P/E, P/B, EV/sales, harmonic mean, normalized EPS",
+  "body": "Andrea Risso is a junior analyst with AquistareFianco, an independent equity research firm. Risso’s supervisor asks her to update, as of 1 January 2020, a quarterly research report for Centralino S.p.A., a telecommunications company headquartered in Italy. On that date, Centralino’s common share price is €50 and its preferred shares trade for €5.25 per share.\n\nRisso gathers information on Centralino. Exhibit 1 presents earnings and dividend data, and Exhibit 2 presents balance sheet data. Net sales were €3.182 billion in 2019. Risso estimates a required return of 15% for Centralino and forecasts growth in dividends of 6% into perpetuity.\n\nExhibit 1\nEarnings and Dividends for Centralino, 2016–2020\n\t2016\t2017\t2018\t2019\t2020(E)\nEarnings per share (EPS, €)\t4.93\t5.25\t4.46\t5.64\t6.00\nDividends per share (DPS, €)\t2.45\t2.60\t2.60\t2.75\t2.91\nReturn on equity (ROE)\t13.01%\t13.71%\t11.58%\t14.21%\t14.96%\nNote: The data for 2016–2019 are actual and for 2020 are estimated.\nExhibit 2\nSummary Balance Sheet for Centralino, Year Ended 31 December 2019\nAssets (€ millions)\t\tLiabilities and Shareholders’ Equity (€ millions)\t\nCash and cash equivalents\t102\tCurrent liabilities\t259\nAccounts receivable\t305\tLong-term debt\t367\nInventory\t333\tTotal liabilities\t626\nTotal current assets\t740\tPreferred shares\t80\nProperty and equipment, net\t913\tCommon shares\t826\nTotal assets\t1,653\tRetained earnings\t121\n\t\tTotal shareholders’ equity\t1,027\n\t\tTotal liabilities and shareholders’ equity\t1,653\nNotes: The market value of long-term debt is equal to its book value. Shares outstanding are 41.94 million common shares and 16.00 million preferred shares.\nExhibit 3 presents forward price-to-earnings ratios (P/Es) for Centralino’s peer group. Risso assumes no differences in fundamentals among the peer-group companies.\n\nExhibit 3\nPeer Group Forward P/Es\nCompany\tForward P/E\nBrinaregalo\t5.9\nCamporio\t8.3\nEsperto\t3.0\nFornodissione\t15.0\nRadoresto\t4.6\nRisso also wants to calculate normalized EPS using the average return on equity method. She determines that the 2016–19 time period in Exhibit 1 represents a full business cycle for Centralino.",
+  "questions": [
+   {
+    "n": 17,
+    "q": "Based on Exhibit 1, the trailing P/E for Centralino as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
+    "options": [
+     "8.3.",
+     "8.9.",
+     "9.9."
+    ],
+    "answer": "B",
+    "why": "B is correct. Trailing P/E = €50 / €5.64 = 8.9."
+   },
+   {
+    "n": 18,
+    "q": "Based on Exhibit 1 and Risso’s estimates of return and dividend growth, Centralino’s justified forward P/E based on the Gordon growth dividend discount model is closest to:",
+    "options": [
+     "5.4.",
+     "5.7.",
+     "8.3."
+    ],
+    "answer": "A",
+    "why": "A is correct. Justified forward P/E = payout ratio / (r − g) = (2.91 / 6.00) / (0.15 − 0.06) = 0.485 / 0.09 = 5.4. Using 1 − 0.485 as payout is the common slip."
+   },
+   {
+    "n": 19,
+    "q": "Based on Exhibit 2, the price-to-book multiple for Centralino is closest to:",
+    "options": [
+     "2.0.",
+     "2.2.",
+     "2.5."
+    ],
+    "answer": "B",
+    "why": "B is correct. Common equity = €1,027 − €80 = €947 million; BVPS = €947 / 41.94 = €22.58; P/B = €50 / €22.58 = 2.2."
+   },
+   {
+    "n": 20,
+    "q": "Based on Exhibit 2, the multiple of enterprise value to sales for Centralino as of 31 December 2019 is closest to:",
+    "options": [
+     "0.67.",
+     "0.74.",
+     "0.77."
+    ],
+    "answer": "C",
+    "why": "C is correct. EV = (€50 × 41.94) + (€5.25 × 16.00) + €367 − €102 = €2,446 million; EV/sales = 2.446 / 3.182 = 0.77."
+   },
+   {
+    "n": 21,
+    "q": "Based on Exhibit 1 and using the harmonic mean of the peer group forward P/Es shown in Exhibit 3 as a valuation indicator, the common shares of Centralino are:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "C",
+    "why": "C is correct. Harmonic mean = 5 / (1/5.9 + 1/8.3 + 1/3.0 + 1/15.0 + 1/4.6) = 5.5. Centralino forward P/E = €50 / €6.00 = 8.3 is higher, so overvalued."
+   },
+   {
+    "n": 22,
+    "q": "Based on Exhibits 1 and 2, the normalized earnings per share for Centralino as calculated by Risso should be closest to:",
+    "options": [
+     "€2.96.",
+     "€3.21.",
+     "€5.07."
+    ],
+    "answer": "A",
+    "why": "A is correct. Normalized EPS = average ROE of the full cycle (about 13.1%) × current BVPS (€22.58) = €2.96."
+   }
+  ]
+ },
+ {
+  "id": "eq4-silveira",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%; essays left blank)",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Silveira (Adesivo, Enviado, Gesticular): E/P, underlying EPS, PEG, P/S, Fed and Yardeni, EV/EBITDA, momentum",
+  "body": "Cátia Pinho is a supervisor in the equity research division of Suite Securities. Pinho asks Flávia Silveira, a junior analyst, to complete an analysis of Adesivo S.A., Enviado S.A., and Gesticular S.A.\n\nPinho directs Silveira to use a valuation metric that would allow for a meaningful ranking of relative value of the three companies’ shares. Exhibit 1 provides selected financial information for the three companies.\n\nExhibit 1\nSelected Financial Information for Adesivo, Enviado, and Gesticular (Brazilian Real, BRL)\n\tAdesivo\tEnviado\tGesticular\nStock’s current price\t14.72\t72.20\t132.16\nDiluted EPS (last four quarters)\t0.81\t2.92\t–0.05\nDiluted EPS (next four quarters)\t0.91\t3.10\t2.85\nDividend rate (annualized most recent dividend)\t0.44\t1.24\t0.00\nSilveira reviews underlying trailing EPS for Adesivo. Adesivo has basic trailing EPS of BRL0.84. Silveira finds the following note in Adesivo’s financial statements:\n\n“On a per share basis, Adesivo incurred in the last four quarters\n\ni. from a lawsuit, a nonrecurring gain of BRL0.04; and\n\nii. from factory integration, a nonrecurring cost of BRL0.03 and a recurring cost of BRL0.01 in increased depreciation.”\n\nSilveira notes that Adesivo is forecasted to pay semiannual dividends of BRL0.24 next year. Silveira estimates five-year earnings growth rates for the three companies, which are presented in Exhibit 2.\n\nExhibit 2\nEarnings Growth Rate Estimates over Five Years\nCompany\tEarnings Growth Rate Estimate (%)\nAdesivo\t16.67\nEnviado\t21.91\nGesticular\t32.33\nPinho asks Silveira about the possible use of the price-to-sales ratio (P/S) in assessing the relative value of the three companies. Silveira tells Pinho:\n\nStatement 1:\nThe P/S is not affected by revenue recognition practices.\n\nStatement 2:\nThe P/S is less subject to distortion from expense accounting than is the P/E.\n\nPinho asks Silveira about using the Fed and Yardeni models to assess the value of the equity market. Silveira states:\n\nStatement 3:\nThe Fed model concludes that the market is undervalued when the market’s current earnings yield is greater than the 10-year Treasury bond yield.\n\nStatement 4:\nThe Yardeni model includes the consensus five-year earnings growth rate forecast for the market index.\n\nSilveira also analyzes the three companies using the enterprising value (EV)-to-EBITDA multiple. Silveira notes that the EBITDA for Gesticular for the most recent year is BRL560 million and gathers other selected information on Gesticular, which is presented in Exhibit 3.\n\nExhibit 3\nSelected Information on Gesticular at Year End (BRL Millions)\nMarket Value of Debt\tMarket Value of Common Equity\tMarket Value of Preferred Equity\tCash\tShort-Term Investments\n1,733\t6,766\t275\t581\t495\nPinho asks Silveira about the use of momentum indicators in assessing the shares of the three companies. Silveira states:\n\nStatement 5:\nRelative-strength indicators compare an equity’s performance during a period with the performance of some group of equities or its own past performance.\n\nStatement 6:\nIn the calculation of standardized unexpected earnings (SUE), the magnitude of unexpected earnings is typically scaled by the standard deviation of analysts’ earnings forecasts.",
+  "questions": [
+   {
+    "n": 23,
+    "q": "Based on Pinho’s directive and the data from the last four quarters presented in Exhibit 1, the valuation metric that Silveira should use is the:",
+    "options": [
+     "price-to-earnings ratio (P/E).",
+     "production-to-demand ratio (P/D).",
+     "earnings-to-price ratio (E/P)."
+    ],
+    "answer": "C",
+    "why": "C is correct. E/P puts Gesticular’s negative EPS in the numerator, so the ranking is meaningful."
+   },
+   {
+    "n": 24,
+    "q": "Based on Exhibit 1 and the note to Adesivo’s financial statements, the trailing P/E for Adesivo using underlying EPS is closest to:",
+    "options": [
+     "17.7.",
+     "18.2.",
+     "18.4."
+    ],
+    "answer": "C",
+    "why": "C is correct. Underlying EPS = 0.81 − 0.04 (nonrecurring gain) + 0.03 (nonrecurring cost) = BRL0.80; the recurring 0.01 is not adjusted. P/E = 14.72 / 0.80 = 18.4."
+   },
+   {
+    "n": 25,
+    "q": "Based on Exhibit 1 and Exhibit 2, which company’s shares are the most attractively priced based on the five-year forward P/E-to-growth (PEG) ratio?",
+    "options": [
+     "Adesivo",
+     "Enviado",
+     "Gesticular"
+    ],
+    "answer": "A",
+    "why": "A is correct. Forward PEG: Adesivo 16.18 / 16.67 = 0.97; Enviado 23.29 / 21.91 = 1.06; Gesticular 46.37 / 32.33 = 1.43. Lowest PEG = most attractive."
+   },
+   {
+    "n": 26,
+    "q": "Which of Silveira’s statements concerning the use of the P/S is correct?",
+    "options": [
+     "Statement 1 only",
+     "Statement 2 only",
+     "Both Statement 1 and Statement 2"
+    ],
+    "answer": "B",
+    "why": "B is correct. Sales are less subject to distortion than earnings (Statement 2), but revenue recognition practices can still distort sales (Statement 1 is wrong)."
+   },
+   {
+    "n": 27,
+    "q": "Which of Silveira’s statements concerning the Fed and Yardeni models is correct?",
+    "options": [
+     "Statement 3 only",
+     "Statement 4 only",
+     "Both Statement 3 and Statement 4"
+    ],
+    "answer": "C",
+    "why": "C is correct. Fed model: undervalued when the earnings yield exceeds the 10-year Treasury yield. Yardeni adds the consensus five-year earnings growth forecast."
+   },
+   {
+    "n": 28,
+    "q": "Based on Exhibit 3, Gesticular’s EV/EBITDA multiple is closest to:",
+    "options": [
+     "11.4.",
+     "13.7.",
+     "14.6."
+    ],
+    "answer": "B",
+    "why": "B is correct. EV = 1,733 + 6,766 + 275 − 581 − 495 = 7,698; EV/EBITDA = 7,698 / 560 = 13.7."
+   },
+   {
+    "n": 29,
+    "q": "Which of Silveira’s statements concerning momentum indicators is correct?",
+    "options": [
+     "Statement 5 only",
+     "Statement 6 only",
+     "Both Statement 5 and Statement 6"
+    ],
+    "answer": "A",
+    "why": "A is correct. SUE is scaled by the standard deviation of past unexpected earnings, not of analysts’ forecasts (that is the scaled earnings surprise)."
+   }
+  ]
+ },
+ {
+  "id": "eq4-anwar",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%; essays left blank)",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Anwar (Bentley & Matias): justified forward P/E, earnings yield, terminal value by comparables, momentum statements",
+  "body": "Wesley Anwar recently accepted a position as an assistant research analyst for B&N Securities (BNS), a large global brokerage firm. Anwar's first two weeks with the firm is spent in training which is being trained in equity valuation by several of the firm's senior analysts.\n\nOne of the analysts discusses Price/Earnings multiples and introduces a company under her coverage, Bentley & Matias (BAM), a large multinational in the consumer staples industry. She presents the information in Exhibit 1 below.\n\nExhibit 1\nBentley & Matias (BAM)\tSelect Information\nMost Recent Earnings\t$3.00/share\nMost Recent Dividend\t$1.20/share\nExpected Earnings Growth Rate\t4.0%\nRequired Rate of Return\t6.4%\nFollowing a discussion about dividend yield, Anwar asks the analyst how she deals with extremely low, zero or negative earnings. She replies, \"When I am interested in ranking securities that include those types of earnings I use the inverse price ratio or the earnings yield. When I rank securities from highest to lowest earnings yield the securities are correctly ranked from cheapest to most costly. I can also use normalized EPS, expected or trailing EPS in the calculation.  Additionally, earnings yield helps me deal with non-recurring items and business cycle influences.\n\nThe analyst moves on to review the determination of terminal value and displays the information for Evan Myers a large manufacturer under her coverage in Exhibit 2 below.\n\nExhibit 2\nEvan Myers\tSelect Information\nYear 3 Earnings\t$2.90\nDividend Payout\t60.0%\nAverage Industry P/E\t14.0x\nAverage Industry ROE\t13.0%\nRequired Rate of Return\t7.0%\nThe final topic on the agenda involves a discussion of momentum. The analyst makes the following statements regarding momentum indicators:\n\nStatement 1:\nThey relate either price or a fundamental, to a time series of their own past values.\n\nStatement 2:\nThe indicators demonstrate how positive surprises may be associated with persistent positive returns.\n\nStatement 3:\nThey indicate when the market price will converge with its estimated intrinsic value.",
+  "questions": [
+   {
+    "n": 60,
+    "q": "Based on Exhibit 1, the justified forward P/E for BAM is closest to:",
+    "options": [
+     "6.3.",
+     "16.7.",
+     "25.0."
+    ],
+    "answer": "B",
+    "why": "B is correct. Retention b = (3.00 − 1.20)/3.00 = 0.60; payout = 0.40. P0/E1 = 0.40 / (0.064 − 0.04) = 16.7. A forgets to subtract g; C uses b = 0.40."
+   },
+   {
+    "n": 61,
+    "q": "Is the analyst's response to Anwar's question about extremely low, zero or negative earnings accurate?",
+    "options": [
+     "Yes",
+     "No with regard to ranking securities and earnings",
+     "No with regard to non-recurring items and business cycles influences"
+    ],
+    "answer": "C",
+    "why": "C is correct. Earnings yield ranks securities consistently, but it does not deal with non-recurring items or business-cycle effects; normalizing EPS does."
+   },
+   {
+    "n": 62,
+    "q": "Using Exhibit 2, the terminal value based on comparables for Evan Myers is closest to:",
+    "options": [
+     "$33.18.",
+     "$40.60.",
+     "$101.67."
+    ],
+    "answer": "B",
+    "why": "B is correct. Vn = benchmark P/E × En = 14.0 × $2.90 = $40.60. C is the Gordon growth (fundamentals) estimate; A wrongly discounts earnings."
+   },
+   {
+    "n": 63,
+    "q": "Which of the analyst's statement regarding momentum indicators is most likely accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. Momentum indicators relate price or a fundamental to a time series of its own past values. Statement 2 omits abnormal returns (alpha); Statement 3 overstates: they only provide a clue when price may converge."
+   }
+  ]
+ },
+ {
+  "id": "eq4-thomas",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%; essays left blank)",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Thomas: justified P/B, P/CF drawbacks, terminal value by comparables, SUE",
+  "body": "Sarah Thomas is the head of research for an asset management company. Thomas presents the firm’s valuation process at an industry conference and the presentation is concentrated on the market-based valuation.\n\nIn her presentation, Thomas links justified price multiples to discounted cash flow models by assuming the Gordon growth model and the sustainable growth rate. She shows a numerical example on justified P/B using the following details: a firm’s ROE is 11.5%, its required rate of return is 9.5%, and its expected growth rate is 6.5%.\n\nThomas also suggests price to cash flow is a widely reported valuation indicator. She stresses that using price to cash flow can address the issue of differences in accounting conservatism between companies. While responding to a question on possible drawbacks to using price to cash flow, she mentions the following points:\n\nPoint 1: Cash flow is less subject to manipulation by management than earnings.\n\nPoint 2: Free cash flow to equity (FCFE) is more volatile than cash flow for many businesses.\n\nPoint 3: US GAAP allows more flexibility than IFRS, in classification of interest paid, interest received, and dividends received.\n\nThomas’ presentation includes a calculation example to show terminal value in a multistage discounted cash flow (DCF) model by using price multiples. Based on the following data and estimates, she uses the estimated industry average P/E as the benchmark and calculates the terminal value based on comparables:\n\nYear at which the final stage begins = 5\n\nEarnings in Year 5 = $4.00\n\nRequired rate of return = 15%\n\nIndustry average ROE = 20%\n\nIndustry average P/E = 9.00\n\nMarket average dividend payout rate for mature companies = 45%\n\nThomas points out that positive earnings surprises may be associated with persistent positive abnormal returns and describes popular momentum indicators used in valuation. While demonstrating the calculation of standardized unexpected earnings (SUE), she states “In SUE, the magnitude of unexpected earnings is scaled by a variability measure.” In response to a question on what measure can be used for the calculation, she mentions the following possible measures:\n\nMeasure 1: The standard deviation of analysts’ earnings forecasts.\n\nMeasure 2: The standard deviation in past industry average earnings surprise.\n\nMeasure 3: The standard deviation in past unexpected earnings over some period.",
+  "questions": [
+   {
+    "n": 64,
+    "q": "Based on the information given, the justified P/B presented by Thomas is closest to:",
+    "options": [
+     "1.21.",
+     "1.67.",
+     "1.78."
+    ],
+    "answer": "B",
+    "why": "B is correct. P/B = (ROE − g)/(r − g) = (0.115 − 0.065)/(0.095 − 0.065) = 1.67. A = ROE/r (no growth); C multiplies by (1 + g)."
+   },
+   {
+    "n": 65,
+    "q": "Which of the following is most likely a drawback of using price to cash flow?",
+    "options": [
+     "Point 1",
+     "Point 2",
+     "Point 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. FCFE is more volatile (and more often negative) than cash flow. Point 1 is a rationale for P/CF; Point 3 is reversed (US GAAP allows LESS flexibility than IFRS)."
+   },
+   {
+    "n": 66,
+    "q": "Based on the information given, the terminal price multiple calculated by Thomas is closest to:",
+    "options": [
+     "$36.",
+     "$45.",
+     "$50."
+    ],
+    "answer": "A",
+    "why": "A is correct. Terminal value based on comparables = industry P/E × En = 9.00 × $4.00 = $36. $45 and $50 are Gordon-growth (fundamental) values."
+   },
+   {
+    "n": 67,
+    "q": "Which of the following measures mentioned by Thomas is most likely to be used in calculating standardized unexpected earnings?",
+    "options": [
+     "Measure 1",
+     "Measure 2",
+     "Measure 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. SUE scales unexpected earnings by the standard deviation of past unexpected earnings. Measure 1 belongs to the scaled earnings surprise."
+   }
+  ]
+ }
+]

@@ -1,0 +1,445 @@
+[
+ {
+  "id": "eq6-schwalke1",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Schwalke (private equity analyst): private vs public, DLOM, normalizing, WACC bias, control premium",
+  "body": "Ulrich Schwalke has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years. Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies.\n\nBefore starting his new position, Schwalke meets with a former classmate who works as an associate focused on private company valuations in order to resolve legal disputes. During the meeting, Schwalke’s classmate mentions that private business valuation often requires normalizing certain expense items on a company’s income statement before taking next steps.\n\nOn his first assignment, Schwalke is asked to estimate a WACC for a potential private target company. The partner has commented that the private target has a far lower debt ratio than would be considered optimal.\n\nSchwalke’s firm recently announced plans to buy one of the private companies that Schwalke has valued. Schwalke spent considerable time assessing the validity of different control premiums in analyzing a possible offer price.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Which valuation feature will Schwalke find different in valuing private companies versus public companies?",
+    "options": [
+     "Using FCFF to value companies",
+     "Using market multiples to value companies",
+     "Assessing discounts to account for illiquidity"
+    ],
+    "answer": "C",
+    "why": "C is correct. Private company values need a downward adjustment for lack of liquidity; FCFF and multiples are used for both."
+   },
+   {
+    "n": 2,
+    "q": "During Schwalke’s meeting with his former classmate, they discuss how their approaches to private company valuation vary given the different uses of their analysis. Which of the following best characterizes how Schwalke’s approach differs from that of his former classmate?",
+    "options": [
+     "Schwalke usually incorporates a DLOM.",
+     "Schwalke usually adjusts the investment value as a minority interest.",
+     "Schwalke’s approach usually considers a synergistic control premium."
+    ],
+    "answer": "C",
+    "why": "C is correct. His firm buys and restructures companies (control, strategic buyer), so a control premium is considered; DLOM and minority adjustments fit the classmate's dispute-resolution work."
+   },
+   {
+    "n": 3,
+    "q": "Which of the following statements best describes the meaning of “normalizing earnings” in the context of private business valuation?",
+    "options": [
+     "Adjustments to revenues and/or costs necessary to allow comparison of private company financial results to comparable public companies",
+     "Adjustments to offset the cyclicality of revenues and/or costs for private companies",
+     "Adjustments that allow comparisons due to the lack of marketability for private companies"
+    ],
+    "answer": "A",
+    "why": "A is correct. Normalizing removes distortions such as non-market owner compensation; cyclicality is a separate issue and marketability does not affect earnings."
+   },
+   {
+    "n": 4,
+    "q": "Which statement best describes a possible bias in the WACC of the private target with a suboptimal debt ratio?",
+    "options": [
+     "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt.",
+     "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on equity.",
+     "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt."
+    ],
+    "answer": "B",
+    "why": "B is correct. Equity costs more than debt, so a lower debt weight and higher equity weight push WACC above the optimal level."
+   },
+   {
+    "n": 5,
+    "q": "Schwalke learns that his firm intends to combine the new target company with an existing portfolio company prior to taking it public. Should Schwalke apply a financial or synergistic control premium, and how does this level of control premium compare to the other?",
+    "options": [
+     "Financial; higher",
+     "Financial; lower",
+     "Synergistic; higher"
+    ],
+    "answer": "C",
+    "why": "C is correct. A combination to realize synergies points to a synergistic premium, which exceeds that of a financial buyer."
+   }
+  ]
+ },
+ {
+  "id": "eq6-schwalke2",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Schwalke (JNK Corporation): discount rate bias, CAPM, beta, terminal value methods, DLOM from put options",
+  "body": "Ulrich Schwalke continues his work in valuing private companies, taking specific interest in transactions involving public companies buying private company targets. As he has seen in his work, private company discount rates are often biased because private firms typically have less access to debt capital.\n\nWhile Schwalke has experience using CAPM for public companies, he has rarely used it for private firms, instead relying on the expanded CAPM or a build-up approach to estimate required return on equity. When using the expanded CAPM for a private company, JNK Corporation, Schwalke gathered beta estimates from publicly traded comparable companies. On a recent engagement, he found the average beta from public comparables of 1.20. The average debt ratio of the public comparables exceeded that of JNK, while tax rates were equal between the public comparables and JNK.\n\nContinuing in his role, Schwalke completed many private company valuations for entire businesses. As a result, certain methods of calculating terminal values seemed to be more useful for his work than other methods.\n\nSchwalke had initially struggled with applying discounts in private company valuation but became more comfortable with different estimation methods. In particular, he finds an option-based approach to quantifying the lack of marketability quite useful. In his recent work on valuing JNK, he estimated the value of three put options with three months until expiration on the most similar public comparable company to JNK. The public comparable was trading at a stock price of EUR 29.70. The three-month risk-free rate is 4%. The put option valuation results are summarized as follows:\n\nJNK Put Option Exercise Prices and Values\nExercise price\tPut option value\nEUR 25\tEUR 1.25\nEUR 30\tEUR 3.75\nEUR 35\tEUR 6.95",
+  "questions": [
+   {
+    "n": 6,
+    "q": "Which statement best reflects how discount rate biases may affect offer prices in transactions involving public company buyers and private company targets?",
+    "options": [
+     "Public company buyers pay offer prices for private firms that reflect improvements the buyer will make after a successful acquisition.",
+     "Public company buyers pay offer prices for private firms that reflect the higher discount rates that apply to private companies.",
+     "Public company buyers pay offer prices for private companies that do not reflect any control premium."
+    ],
+    "answer": "A",
+    "why": "A is correct. Offer prices reflect improvements the buyer will make (e.g. lower expenses), not the higher private discount rates; a control premium is usually paid."
+   },
+   {
+    "n": 7,
+    "q": "Which statement best explains why the CAPM may be inappropriate for estimating required return on equity for private firms?",
+    "options": [
+     "The CAPM was only designed for publicly traded stocks.",
+     "The CAPM does not utilize a company-specific risk premium.",
+     "The CAPM assumes investors are well diversified."
+    ],
+    "answer": "C",
+    "why": "C is correct. Private owners are rarely diversified and bear total risk; CAPM prices only market risk."
+   },
+   {
+    "n": 8,
+    "q": "Which statement is most correct regarding Schwalke’s estimation of JNK’s beta?",
+    "options": [
+     "Schwalke estimates JNK’s beta to be less than 1.20.",
+     "Schwalke estimates JNK’s beta to be 1.20.",
+     "Schwalke estimates JNK’s beta to be greater than 1.20."
+    ],
+    "answer": "A",
+    "why": "A is correct. Unlever the comparables' beta (higher debt ratio than JNK) and re-lever at JNK's lower debt ratio: the result is below 1.20."
+   },
+   {
+    "n": 9,
+    "q": "Which terminal value estimation method is least useful for Schwalke?",
+    "options": [
+     "CCM",
+     "EEM",
+     "Market multiple method"
+    ],
+    "answer": "B",
+    "why": "B is correct. He values entire businesses; the excess earnings method (several discount rates) is mainly used for intangible assets, while CCM and market multiples suit whole businesses."
+   },
+   {
+    "n": 10,
+    "q": "Which amount most closely estimates the DLOM for JNK?",
+    "options": [
+     "12.4%",
+     "12.6%",
+     "12.5%"
+    ],
+    "answer": "B",
+    "why": "B is correct. Use the at-the-money put at the forward price: 29.70 × e^(0.25 × 0.04) = 30, so the EUR 30 put: 3.75 / 29.70 = 12.6%."
+   }
+  ]
+ },
+ {
+  "id": "eq6-lpe",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Schwalke (LPE, Lapiere family): normalized EBITDA, build-up vs expanded CAPM, CCM, EV/Sales, total discount",
+  "body": "Schwalke is currently valuing LPE, a private furniture manufacturing company based in France. The company is owned entirely by the Lapiere family, with several family members employed as senior company managers. Jean Lapiere is the current CEO and owns 25% of LPE stock. LPE’s most recent income statement as part of its reviewed financial statements is as follows:\n\nAs of 31 December (in EUR)\tAs Reported\nRevenues\t30,000,000\nCost of goods sold\t18,000,000\nGross profit\t12,000,000\nSG&A expenses\t8,000,000\nEBITDA\t4,000,000\nDepreciation and amortization\t2,400,000\nEarnings before interest and taxes\t1,600,000\nPro forma taxes (at 25%)\t400,000\nOperating income after taxes\t1,200,000\nAs Schwalke reviews compensation expenses, he learns that Jean Lapiere’s annual compensation is EUR 300,000 and that CEOs of similarly sized consumer durable goods companies earn EUR 600,000 on average.\n\nTo estimate LPE’s required return on equity, Schwalke gathers betas from public furniture manufacturing companies, and after making appropriate adjustments, estimates LPE’s beta at 0.80. He uses an equity risk premium of 6%, a small-cap stock premium of 2%, a company-specific stock premium of 1.5%, and an industry risk premium of 1%.\n\nAfter making other normalizing assumptions to LPE’s income statement and deducting the change in long-term assets of EUR 600,000 (equal to EUR 3,000,000 in capital expenditures less EUR 2,400,000 in depreciation), Schwalke estimates FCFF for the base year to be EUR 600,000. He decides to use the CCM in his income approach to valuing LPE with a WACC of 8% and perpetual growth of 4%.\n\nGiven the availability of similar publicly traded furniture manufacturing companies, Schwalke also uses a market approach to value LPE. He finds an average EV/Sales multiple of 0.60 from these public comparable companies. Schwalke notes that LPE’s debt is currently EUR 6 million.\n\nJean Lapiere is seeking an estimate of the value of his LPE ownership stake. In the course of discussing the ownership structure, Schwalke concludes that none of the family members, including Jean, has a controlling interest in the company. Schwalke estimates discounts for lack of control and lack of marketability as 20% and 15%, respectively.",
+  "questions": [
+   {
+    "n": 11,
+    "q": "Which amount is closest to LPE’s normalized EBITDA after considering Jean Lapiere’s compensation?",
+    "options": [
+     "EUR 3.7 million",
+     "EUR 4.0 million",
+     "EUR 4.3 million"
+    ],
+    "answer": "A",
+    "why": "A is correct. Jean is paid EUR 0.3 million less than market, so normalized EBITDA = 4.0 − 0.3 = EUR 3.7 million."
+   },
+   {
+    "n": 12,
+    "q": "Which amount most accurately reflects the difference between Schwalke’s estimates of LPE’s required return on equity using the build-up approach versus the expanded CAPM?",
+    "options": [
+     "1.0% (build-up > expanded CAPM).",
+     "1.2% (build-up > expanded CAPM).",
+     "2.2% (build-up > expanded CAPM)."
+    ],
+    "answer": "C",
+    "why": "C is correct. Build-up = 6% + 2% + 1.5% + 1% = 10.5%; expanded CAPM = 0.8 × 6% + 2% + 1.5% = 8.3%; difference 2.2%."
+   },
+   {
+    "n": 13,
+    "q": "Which of the following is closest to the proper calculation of LPE’s EV using the CCM?",
+    "options": [
+     "EUR 15 million",
+     "EUR 30 million",
+     "EUR 15.6 million"
+    ],
+    "answer": "C",
+    "why": "C is correct. EV = FCFF0 × (1 + g)/(WACC − g) = 0.6 × 1.04/(0.08 − 0.04) = EUR 15.6 million."
+   },
+   {
+    "n": 14,
+    "q": "Which of the following is closest to the proper calculation of LPE’s equity value using the EV/Sales multiple?",
+    "options": [
+     "EUR 18 million",
+     "EUR 12 million",
+     "EUR 24 million"
+    ],
+    "answer": "B",
+    "why": "B is correct. EV = 0.60 × 30 = EUR 18 million; less debt of 6 = EUR 12 million."
+   },
+   {
+    "n": 15,
+    "q": "Which of the following is closest to the size of the total discount taken in calculating the value of Jean Lapiere’s equity stake?",
+    "options": [
+     "35.0%",
+     "32.0%",
+     "29.2%"
+    ],
+    "answer": "B",
+    "why": "B is correct. Total discount = 1 − (1 − 0.20)(1 − 0.15) = 32.0%; the discounts are not additive."
+   }
+  ]
+ },
+ {
+  "id": "eq6-aaron",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Aaron (consulting firm): market approach, normalizing comments, discount rate statements, build-up",
+  "body": "Ian Aaron owns a small consulting firm that specializes in private company valuation. He is asked to make a presentation at a local university about his company's role in the investment industry, which he agrees to do.\n\nAaron opens by explaining how valuation approaches for private companies are conceptually similar to those used for public companies. He talks about how his firm uses the various methodologies available but that the method most frequently employed provides a direct comparisons to public companies. This method values an asset based on pricing multiples from sales of assets that are viewed as similar and relies on data generated in actual transactions. He stresses that a stable, mature company, where the sales and cash flows are more predictable, might be best valued utilizing this method.\n\nAaron describes how private company earnings can potentially require significant adjustments in order to estimate the company’s normalized earnings. It may be necessary to adjust for non-recurring, non-economic, or other unusual items to eliminate anomalies and facilitate comparisons. A member of the audience asks about a new business his family recently started and comments:\n\nComment 1:\tRevenues are limited, family members working for the business have deferred their compensation.\nComment 2:\tThe business operates in a building that is currently owned by a family member.\nComment 3:\tThe few employees the business does have are paid similar to other start-ups in our area.\nAaron next discusses how standard ways of determining an appropriate discount rate are not applicable to private firm valuation. He points out that several adjustments may be necessary to incorporate the real risk of the investment. He states the following may affect the selection of an appropriate discount rate:\n\nStatement 1:\tDue to its ease of access and liquidity, private companies tend to rely on bank financing.\nStatement 2:\tIn evaluating an acquisition the buyer’s cost of capital is irrelevant.\nStatement 3:\tAn adjustment for managerial experience is rarely necessary.\nHe concludes on his discussion regarding the discount rate by talking about the various methods available to estimate a required rate of return for valuing a private company. Aaron explains that his firm typically uses the method that was used to determine the discount rate as a set of premia added to the risk-free rate. He explains that the premia are typically based on factors such as size and company risk. This model is often used when guideline public companies are unavailable and excludes the application of beta to the equity risk premium. He also indicates an  industry risk adjustment may need to be made.",
+  "questions": [
+   {
+    "n": 16,
+    "q": "Which private company valuation approach does Aaron's firm most frequently employ?",
+    "options": [
+     "Income approach",
+     "Market approach",
+     "Asset-based approach"
+    ],
+    "answer": "B",
+    "why": "B is correct. Pricing multiples from sales of similar assets and direct comparison to public companies = market approach."
+   },
+   {
+    "n": 17,
+    "q": "Which of the audience member's comments would least likely require an adjustment to normalize earnings?",
+    "options": [
+     "Comment 1",
+     "Comment 2",
+     "Comment 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. Employees paid market-level compensation need no adjustment. Deferred family compensation (1) and a possibly below-market related-party building (2) do."
+   },
+   {
+    "n": 18,
+    "q": "Which of Aaron's statements regarding the selection of an appropriate discount rate is accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. In an acquisition the target's capital structure and risk matter, not the buyer's cost of capital. Private firms have LESS access to debt, and managerial inexperience can require an adjustment."
+   },
+   {
+    "n": 19,
+    "q": "When valuing small private companies, which method does Aaron's firm most frequently use to estimate the required rate of return?",
+    "options": [
+     "CAPM",
+     "Build-Up",
+     "Expanded CAPM"
+    ],
+    "answer": "B",
+    "why": "B is correct. A set of premia added to the risk-free rate without beta = build-up method (with an industry risk adjustment)."
+   }
+  ]
+ },
+ {
+  "id": "eq6-brady",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Brady (Hillside, Ajacks): valuation approach, total discount, normalized income, expanded CAPM",
+  "body": "Dan Brady is a partner at a firm that facilitates investments and sales of interests in privately-held firms. He is reviewing several firms that are seeking investors or purchasers.\n\nHILLSIDE COMPANY\n\nTed Samant founded Hillside Company 23 years ago and wants to retire. Knowing the importance of sound financial practices, Samant has audited financial statements for Hillside for each of the past 10 years. Hillside operates in a declining growth segment of its industry. The firm's plant is located in a busy and growing industrial area and may be attractive to nearby businesses seeking to expand. Many of its fixed assets, including machinery and equipment, can be used in other businesses. There are two large multinational publicly-held firms that are in the same industry as Hillside and private market transactions of firms in the industry occur once every 1-2 years.  After collecting information from Samant, Brady considers what method he should use for valuing Hillside and the type of transaction he would need to identify to obtain maximum value for Hillside.\n\nThe following month, Samant contacts Brady to tell him that his oldest daughter is willing to leave her position with a public firm and become CEO of Hillside. As part of the arrangement, the daughter wants Brady to find minority investors to provide capital for various plant upgrades and for developing new markets.  Brady estimates investors in a private firm such as Hillside will require a 15% discount for lack of control and a 20% discount for lack of marketability.\n\nAJACKS COMPANY\n\nAjacks is a family-owned firm that the family wishes to sell in order to set up a charitable foundation. The father, mother, and son all participate in the business. Brady reviews their financial statements and comes to these conclusions:\n\nCompensation, which is part of SG&A, was $800,000 higher per year for family members than is typical for firms of comparable size and sales revenue.\nThe top officers of the firm had annual “strategic planning retreats” at various resort locations with annual expenses (part of SG&A) averaging $50,000. Brady thought this was unnecessary and excessive for this type of firm.\nThe firm owns a private plane, book value of $180,000 with annual operating expenses of $14,000  and annual depreciation expense of $30,000. Given their business, owning such an asset is unusual as annual business air travel would cost approximately $4,000.\nThe parents own a 500,000 square foot warehouse which they rent to Ajacks at a cost of $8 a square foot annually.  Market-based leases for this type of facility average $6 a square foot.  This would affect reported SG&A expense.\nExhibit 1 shows selected financial data from Ajacks. Brady computes the firm's normalized operating income after taxes.\n\nExhibit 1\n\tAs reported\nRevenues\t$40,000,000\nCosts of goods sold\t$25,500,000\nGross profit\t14,500,000\nSG&A expense\t$6,800,000\nEBITDA\t$7,700,000\nDepreciation\t$1,750,000\nEBIT\t$5,950,000\nPro forma taxes (35%)\t$2,082,500\nOperating income after taxes\t$3,867,500\nBrady also collects the following estimates to compute a discount rate and estimated firm value for Ajacks:\n\nNominal risk-free rate: 3%\nExpected inflation rate: 2%\nEquity risk premium: 5.5%\nBeta for similar firms, adjusted for capital structure differences: 1.2\nSmall stock premium: 3.5%\nIndustry risk premium: 0%\nCompany-specific risk adjustment: 1%",
+  "questions": [
+   {
+    "n": 20,
+    "q": "Based on the information initially collected from Samant about his firm, the appropriate method for valuing Hillside is:",
+    "options": [
+     "asset-based approach.",
+     "guideline transactions method.",
+     "guideline public company method."
+    ],
+    "answer": "A",
+    "why": "A is correct. Hillside's assets can be repurposed and its site is attractive; there are few, infrequent private transactions and only two large public comparables."
+   },
+   {
+    "n": 21,
+    "q": "If Samant's daughter becomes Hillside's CEO, the valuation discount for additional equity investors will be closest to:",
+    "options": [
+     "32%.",
+     "35%.",
+     "38%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Total discount = 1 − (1 − 0.15)(1 − 0.20) = 32%. B adds the discounts; C compounds upward."
+   },
+   {
+    "n": 22,
+    "q": "The normalized operating income after taxes for Ajacks is closest to:",
+    "options": [
+     "$5,076,500.",
+     "$5,096,000.",
+     "$5,079,100."
+    ],
+    "answer": "B",
+    "why": "B is correct. Remove excess compensation 800,000, retreats 50,000, excess air travel 10,000 (14,000 − 4,000) and excess warehouse rent 1,000,000 (500,000 × $2); remove the plane's 30,000 depreciation: EBIT 7,840,000, tax 2,744,000, after tax $5,096,000. A and C miss the depreciation adjustment (or the 10,000)."
+   },
+   {
+    "n": 23,
+    "q": "Brady's estimate for the required return on equity for Ajacks using the expanded CAPM is closest to:",
+    "options": [
+     "13.0%.",
+     "14.1%.",
+     "16.1%."
+    ],
+    "answer": "B",
+    "why": "B is correct. 3% + 1.2 × 5.5% + 3.5% + 1% = 14.1%. A is the build-up method; C wrongly adds inflation."
+   }
+  ]
+ },
+ {
+  "id": "eq6-rrbl",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · Metev (Rila Rakia & Beer): build-up WACC, capitalization rate, EEM, discount for lack of control, EV/EBITDA, income approach",
+  "body": "Rila Rakia & Beer Ltd. (RRBL), a small privately owned company, produces high quality rakia (a high-potency hard liquor), vino (wine), and bira (beer) in Bulgaria. After Bulgaria joined the European Union in 2007, international demand for the country’s liquor, wine, and beer increased substantially. Most firms in the industry, including RRBL, have been reporting double-digit sales growth on a year-over-year basis.\n\nMetiu Metev, a portfolio strategist at a major German investment consulting firm, inherited RRBL from his grandparents. Frankfurter Destillerie & LiqueurFabrik (FDLF), a German distillery interested in entering the Bulgarian market, has made a cash offer of BGN900 million for the company’s equity (BGN = Bulgarian Lev; EUR1 = BGN1.95586, pegged rate). FDLF will assume RRBL’s entire outstanding debt, including both current liabilities and long-term debt. If Metev does not want to sell a controlling interest, FDLF’s minimum equity stake will be 40%, with an appropriate discount for lack of control.\n\nMetev starts by evaluating the company himself using the capitalized cash flow method (CCM) and taking the following steps:\n\nUsing the build-up method to estimate the required rate of return on equity\nComputing the firm’s weighted average cost of capital (WACC) using the book values of debt and considering the current weight of total debt in capital structure to be optimal\nExhibits 1A, 1B, 2, and 3 contain RRBL’s financial data and other inputs that Metev uses.\n\nBefore responding to FDLF’s offer, however, Metev meets with Vasil Nenkov, his colleague and a senior equity analyst covering the wine and beer industry in the Balkan region. After reviewing the data and Metev’s valuation analysis, Nenkov suggests that 11% would be a more reasonable estimate of RRBL’s WACC based on an analysis of industry peers. Metev decides to use this rate to calculate the value of RRBL’s equity.\n\nNenkov also makes the following comments:\n\nCCM is most often used for the valuation of large public companies, and it is less valid for valuing private companies such as RRBL.\nThe excess earnings method is preferable because it provides an estimate of the value of intangible assets by capitalizing future earnings in excess of the estimated return requirements associated with working capital and fixed assets.\nNenkov also suggests that the enterprise value (EV) multiple approach should work well for valuing RRBL. After searching his database, Nenkov finds that Rhodopi Wineries PLC, a publicly traded company and a close competitor of RRBL, is currently valued at an EV/EBITDA (earnings before interest, taxes, depreciation, and amortization) multiple of 7.2. Nenkov further suggests two adjustments:\n\nRRBL should command an upward adjustment of 25% in the EV/EBITDA multiple reflecting its lower risk and higher growth relative to Rhodopi Wineries.\nForward-looking EBITDA should be used to determine RRBL’s value.\nOn a cautionary note, Nenkov makes two statements regarding the use of EV/EBITDA approach to valuation.\n\nIt is more appropriate than the P/E for comparing companies with different financial leverage.\nEBITDA underestimates cash flow from operations if working capital is growing.\nFinally, Metev recalls FDLF’s willingness to purchase a non-controlling ownership interest at a discount for lack of control. Nenkov responds by saying that a control premium of 30% is typically applied for purchase transactions of small privately owned firms similar to RRBL and that proper adjustment for lack of control should be made if the transaction involves a non-controlling interest. Metev thanks Nenkov for his help and goes back to his desk to revise his valuations.\n\nExhibit 1A RRBL EBITDA and Other Data (BGN millions)\n\tFY2012 (Actual)\tFY2013 (Pro Forma)\nRevenues\t248.5\t300.6\nCost of goods sold\t–132.3\t–172.5\nGross profit\t116.2\t128.1\nSelling, general, and administrative expenses\t–19.2\t–23.0\nEBITDA\t97\t105.1\nOther Data\nCapital expenditures\t2.5\t4\nInterest expense\t2.7\t3.6\nDepreciation and amortization\t5\t6.4\nIncrease in working capital\t0.8\t1\nExhibit 1B Additional Information for RRBL\nPre-tax cost of debt\t10.00%\nWeight of total debt in capital structure\t30%\nTax rate\t25%\nExhibit 2 RRBL Balance Sheet for FY2012 (BGN millions)\nAssets\t\tLiabilities and Equity\t\nCash and short-term investment\t50\tAccounts payable\t10\nReceivables and inventory\t40\tNotes payable\t8\nNet fixed assets\t50\tLong-term debt\t30\nPatents and trademarks\t20\tCommon equity\t112\nTotal assets\t100\tTotal liabilities and equity\t160\nExhibit 3 Other Data and Inputs\nBulgarian government’s 10-year bond yield\t3.90%\nBeta of publicly traded firms in the industry\t0.75\nEquity risk premium\t6.00%\nSmall stock risk premium\t2.50%\nIndustry risk premium\t0.00%\nRRBL’s company-specific risk premium\t1.50%\nLong-term growth rate beyond FY2013\t5.00%",
+  "questions": [
+   {
+    "n": 29,
+    "q": "According to the method used by Metev for computing the cost of equity and data in Exhibits 1B and 3, RRBL’s WACC is closest to:",
+    "options": [
+     "9.2%.",
+     "10.9%.",
+     "12.0%."
+    ],
+    "answer": "C",
+    "why": "C is correct. Build-up cost of equity = 3.9 + 6.0 + 2.5 + 0.0 + 1.5 = 13.9%; WACC = 10% × (1 − 0.25) × 0.3 + 13.9% × 0.7 = 11.98%. A uses CAPM and B the expanded CAPM."
+   },
+   {
+    "n": 30,
+    "q": "According to the revised method used by Metev, the WACC suggested by Nenkov, and the data provided in Exhibit 3, RRBL’s capitalization rate is closest to:",
+    "options": [
+     "6.0%.",
+     "8.5%.",
+     "11.0%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Capitalization rate = WACC − g = 11.0% − 5.0% = 6.0%."
+   },
+   {
+    "n": 31,
+    "q": "Regarding the two comments that Nenkov made after reviewing Metev’s valuation analysis, he is most accurate with respect to:",
+    "options": [
+     "Comment 1 only.",
+     "Comment 2 only.",
+     "both Comments 1 and 2."
+    ],
+    "answer": "B",
+    "why": "B is correct. The CCM is rarely used for large public companies and suits private companies (Comment 1 wrong); the excess earnings method values intangibles from earnings above the returns on working capital and fixed assets (Comment 2 right)."
+   },
+   {
+    "n": 32,
+    "q": "The discount for lack of control, given the typical control premium indicated by Nenkov, is closest to:",
+    "options": [
+     "12%.",
+     "23%.",
+     "30%."
+    ],
+    "answer": "B",
+    "why": "B is correct. DLOC = 1 − 1/(1 + control premium) = 1 − 1/1.30 = 23.1%."
+   },
+   {
+    "n": 69,
+    "q": "Using Nenkov’s findings from his search of the database, his suggestions regarding appropriate adjustments, the information in Exhibits 1A and 2, and the EV/EBITDA multiples approach, RRBL’s value of equity is closest to:",
+    "options": [
+     "BGN916 million.",
+     "BGN946 million.",
+     "BGN966 million."
+    ],
+    "answer": "C",
+    "why": "C is correct. Multiple = 7.2 × 1.25 = 9.0; EV = forward EBITDA 105.1 × 9.0 = 945.9; equity = EV + cash 50 − long-term debt 30 = BGN 965.9 million."
+   },
+   {
+    "n": 70,
+    "q": "Regarding Nenkov’s two cautionary statements concerning the use of the enterprise value method of valuation, he is most likely correct with respect to:",
+    "options": [
+     "Statement 1 only.",
+     "Statement 2 only.",
+     "both Statements 1 and 2."
+    ],
+    "answer": "A",
+    "why": "A is correct. EBITDA is pre-interest, so EV/EBITDA is independent of leverage (Statement 1). EBITDA OVERestimates cash flow from operations when working capital grows (Statement 2 wrong)."
+   }
+  ],
+  "note": "Questions 69-70 come from Module 4, 29-32 from Module 6; Q33 (income approach = DCF) is a stand-alone item in eq6-sa."
+ },
+ {
+  "id": "eq6-sa",
+  "source": "10 Nov Equity Module 6 Private Company Valuation quiz (13/36, 36%)",
+  "readings": [
+   22
+  ],
+  "title": "Private company valuation · stand-alone items (income approach, market approach with minority discounts, discount rate statement, DLOC from control premium)",
+  "body": "Four independent questions on private company valuation. Each one can be answered on its own.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "Which of the following approaches to private company valuation corresponds to discounted cash flow models?",
+    "options": [
+     "Income approach",
+     "Market approach",
+     "Asset-based approach"
+    ],
+    "answer": "A",
+    "why": "A is correct. The income approach corresponds to what public equity analysts call discounted cash flow or present value models."
+   },
+   {
+    "n": 34,
+    "q": "Using a market approach, an analyst seeks to estimate the enterprise value of a privately held company from the perspective of a minority shareholder. Revenue mix and public comparable EV/Sales multiples: Toys 60% at 8.3, Apparel 30% at 5.2, Grocery 10% at 1.5. If the total discount for lack of marketability and control is 25% and the company has total revenues of $65,000,000, its enterprise value is closest to:",
+    "options": [
+     "$243,750,000.",
+     "$326,137,500.",
+     "$434,850,000."
+    ],
+    "answer": "B",
+    "why": "B is correct. Composite multiple = 0.6 × 8.3 + 0.3 × 5.2 + 0.1 × 1.5 = 6.69; 6.69 × 65,000,000 = 434,850,000; × (1 − 0.25) = $326,137,500. A uses an equally weighted multiple; C skips the discount."
+   },
+   {
+    "n": 35,
+    "q": "Which of the following statements about private company discount rates is most accurate?",
+    "options": [
+     "Limited access to debt leads a private company to rely more on equity financing, which would decrease its WACC",
+     "Size premium estimates from financially distressed small capitalization public companies are added to the discount rate",
+     "Lack of information about a private company's operations introduces greater uncertainty in projections, resulting in a higher discount rate"
+    ],
+    "answer": "C",
+    "why": "C is correct. Less information means more uncertain projections and a higher required return. Limited debt access RAISES WACC; distressed-company size premiums may not apply."
+   },
+   {
+    "n": 36,
+    "q": "An analyst values a private company using the income approach from the perspective of a non-controlling shareholder. FCFF (base year) is $25,000,000, WACC is 18%, growth is 8% for the first 2 years and 2% perpetually, market value of outstanding debt is $12,000,000, and the total discount for lack of marketability and control is 25%. The non-marketable equity value of the firm is closest to:",
+    "options": [
+     "$123,998,000.",
+     "$132,998,000.",
+     "$165,331,000."
+    ],
+    "answer": "A",
+    "why": "A is correct. FCFF1 = 27.0m, FCFF2 = 29.16m; terminal value = 29.16 × 1.02/(0.18 − 0.02) = 185.9m; EV = 177.33m; less debt = 165.33m equity; × (1 − 0.25) = $123,998,000. B discounts the whole firm value, C skips the discount."
+   }
+  ],
+  "created": true,
+  "note": "Q33-36 are stand-alone multiple-choice items from Module 6 grouped into one vignette; the one-line intro was written for the grouping."
+ }
+]

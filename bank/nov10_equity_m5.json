@@ -1,0 +1,222 @@
+[
+ {
+  "id": "eq5-paramount",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%)",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Ahmed (Paramount Industries): single-stage RI, MVA, multistage RI, book value adjustments",
+  "body": "Ryan Ahmed is an analyst at a Malaysian asset management company. He is researching Paramount Industries, a palm oil producer that reports its earnings in Malaysian ringgit (MYR).\n\nAhmed's initial approach uses a single-stage residual income model to value Paramount's stock based on the information in Exhibit 1. Ahmed assumes a long-term ROE of 10% and a long-term growth rate of 3%. He considers a stock to be fairly valued if its current price is within 2.5% of its intrinsic value.\n\nExhibit 1\nBook value per share\tMYR 60\nCurrent price per share\tMYR 86\nNumber of shares outstanding\t10 million\nCost of equity\t7%\nBook value of debt\tMYR 600 million\nMarket value of debt\tMYR 690 million\nAhmed's supervisor raises a concern about the initial valuation. He believes that the palm oil industry in Malaysia will be much more competitive than Ahmed has forecast. Ahmed reassesses his assumptions and recalculates Paramount's intrinsic value using a multistage residual income model. For this revised valuation, Ahmed makes the following three adjustments:\n\nAdjustment 1:\tAssets and liabilities are adjusted to their fair values\nAdjustment 2:\tAssets and liabilities are adjusted to include operating leases\nAdjustment 3:\tNon-recurring gains and losses are excluded from the calculation of residual income\nAs a result of these adjustments, Ahmed uses the following inputs for his multistage model:\n\nRevised current book value per share of MYR 58\nResidual income per share of MYR 3 for each of the next four years\nEstimated book value per share of MYR 90 and market price per share of MYR 108 at the end of Year 4\nCost of equity of 7%",
+  "questions": [
+   {
+    "n": 49,
+    "q": "Based on Ahmed's initial valuation approach, Paramount's stock is:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 60 + 60 × (0.10 − 0.07)/(0.07 − 0.03) = MYR 105; fair range ±2.5% = 102.375 to 107.625. The price of MYR 86 is below it: undervalued."
+   },
+   {
+    "n": 50,
+    "q": "Based on Exhibit 1, the market value added of Paramount is closest to:",
+    "options": [
+     "MYR 260 million.",
+     "MYR 350 million.",
+     "MYR 450 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. MVA = (86 × 10 + 690) − (60 × 10 + 600) = 1,550 − 1,200 = MYR 350 million. A leaves out debt."
+   },
+   {
+    "n": 51,
+    "q": "Based on the multistage residual income model, Paramount's intrinsic value per share is closest to:",
+    "options": [
+     "MYR 82.",
+     "MYR 86.",
+     "MYR 93."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 58 + PV of four RI of 3 at 7% (10.16) + (108 − 90)/1.07^4 (13.73) = MYR 81.89. B does not discount the terminal premium; C ignores book value."
+   },
+   {
+    "n": 52,
+    "q": "The change in Paramount's book value per share under Ahmed's revised valuation was most likely driven by:",
+    "options": [
+     "Adjustment 1.",
+     "Adjustment 2.",
+     "Adjustment 3."
+    ],
+    "answer": "A",
+    "why": "A is correct. Fair-value adjustments change book value. Operating leases add offsetting assets and liabilities (no equity effect); non-recurring items are already in the value of assets in place."
+   }
+  ]
+ },
+ {
+  "id": "eq5-khan",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%)",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Khan (Alpha, Beta): RI model statements, residual income, implied growth, multistage value",
+  "body": "Farhan Khan, an analyst at an asset management company, is new to the concepts of residual income valuation. In response to some questions from his supervisor, Richard Smith, Khan makes the following statements about the residual income model:\n\nStatement 1: The residual income model has a clear relationship to other valuation models, such as the dividend discount models.\n\nStatement 2:  The intrinsic value based on a residual income model is not affected by dividend payments by the company.\n\nStatement 3: The intrinsic value based on a residual income model will be at least equal to the book value if the company remains profitable.\n\nSmith asks Khan to calculate the residual income of Alpha Company based on the information in Exhibit 1.\n\nExhibit 1\nEarnings before interest and taxes\t$165 million\nInterest expense (tax deductible)\t$65 million\nTax rate\t20%\nEquity charge\t$45 million\nSmith also asks Khan to calculate the justified P/B ratio of Beta Company. Khan assumes a long-term ROE of 8% and a required rate of return of 7% for calculating the justified P/B ratio of Beta. Based on a single-stage residual income model, he calculates the justified P/B ratio of 1.5.\n\nSmith believes the justified P/B ratio of 1.5 is too low for Beta and asks Khan to calculate its intrinsic value using a multistage residual income model. Khan uses the following assumptions and estimates for the calculation:\n\nBeginning book value per share is $12.00\nPresent value of four years' residual income per share is $7.50\nAt the end of four years, book value per share will be $15.00\nAt the end of four years, market value per share will be $21.00\nThe required rate of return is 7%",
+  "questions": [
+   {
+    "n": 53,
+    "q": "Which of Khan's statements about residual income models is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. The RI model is derived from and consistent with the DDM. Dividends reduce future book value, so they affect RI value (Statement 2 wrong); a profitable company with negative RI is worth less than book value (Statement 3 wrong)."
+   },
+   {
+    "n": 54,
+    "q": "Based on the information in Exhibit 1, the residual income of Alpha is closest to:",
+    "options": [
+     "$35 million.",
+     "$55 million.",
+     "$80 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. Pretax income = 165 − 65 = 100; net income = 100 × 0.8 = 80; residual income = 80 − 45 = $35 million. $80 million is net income."
+   },
+   {
+    "n": 55,
+    "q": "What is the implied long-term growth rate Khan uses in calculating Beta's justified P/B ratio?",
+    "options": [
+     "5.0%",
+     "6.0%",
+     "7.5%"
+    ],
+    "answer": "A",
+    "why": "A is correct. P/B = 1 + (ROE − r)/(r − g): 1.5 = 1 + 0.01/(0.07 − g), so g = 5%."
+   },
+   {
+    "n": 56,
+    "q": "Based on the multistage residual income model, Beta's intrinsic value per share is closest to:",
+    "options": [
+     "$24.08.",
+     "$30.94.",
+     "$35.52."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 12.00 + 7.50 + (21 − 15)/1.07^4 = $24.08. B discounts book value (15) and C discounts the market value (21) instead of the premium over book."
+   }
+  ]
+ },
+ {
+  "id": "eq5-parker",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%)",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Parker (Companies A-D): residual income, single-stage value, persistence, comparison with DDM, two-stage RI",
+  "body": "Lisa Parker is a junior analyst with a long-only equity investment manager. Parker is asked to value several stocks on a watch list. During a weekly meeting to discuss her approach, Parker and Russell Stark, the firm's director of research, review the residual income model and its characteristics. Stark begins by explaining how to calculate the intrinsic value of Company A's common stock using the residual income model. Stark provides Parker with the following data to calculate Company A's residual income for the year.\n\nBeginning book value per share is $10.00.\nExpected net income per share is $2.00.\nExpected dividends per share is $0.40.\nRequired rate of return on equity is 10%.\nStark asks Parker to calculate the intrinsic value of Company B's common stock using a single-stage residual income model. Parker assumes that Company B has a constant ROE and a constant earnings growth rate through time. For her analysis, Parker uses the following inputs.\n\nCurrent book value per share is $10.00.\nExpected long-term ROE is 6.5%.\nExpected long-term growth rate is 4%.\nCost of equity is 5%.\nStark asks Parker to calculate the intrinsic value of Company C's common stock using a multi-stage residual income model. Parker wants to assume that company’s ROE will regress toward its industry’s ROE over time and asks Stark how to incorporate this assumption into estimating continuing residual income at the forecast horizon. Stark advises Parker to use a persistence parameter. For her analysis, Parker assumes the following:\n\nBeginning book value per share is $100.00.\nAt the end of the year, expected book value per share will be $120.00.\nAt the end of the year, expected earnings per share will be $20.00.\nRequired rate of return is 10%.\nPersistence parameter is 0.6.\nStark asks Parker to compare residual income models to dividend discount models and free cash flow models. Parker recognizes that valuation models based on discounting dividends or discounting free cash flows are as theoretically sound as the residual income model. While investigating the relationship of the residual income model to other valuation models, Parker makes the following statements.\n\nStatement 1: Residual income valuations recognize value later than different present value approaches.\n\nStatement 2: In theory, residual income valuations are mutually consistent with other present value approaches.\n\nStark asks Parker to evaluate whether the common stock of Company D is undervalued, fairly valued, or overvalued based on a residual income model. Parker uses the two-stage residual income model to value Company D’s share. For her analysis, she assumes the following:\n\nCurrent market price is $24.00.\nBeginning book value per share is $20.00.\nEarnings per share will be 32% of beginning book value for the next year.\nCash dividends will be 50% of earnings per share for the next year.\nAt the end of the year, the stock's P/B ratio will be 1.1.\nRequired rate of return on equity is 10%.",
+  "questions": [
+   {
+    "n": 57,
+    "q": "Based on the information given, the residual income of Company A’s common shares is closest to:",
+    "options": [
+     "$0.60.",
+     "$0.84.",
+     "$1.00."
+    ],
+    "answer": "C",
+    "why": "C is correct. Equity charge = 10 × 10% = $1; residual income = net income − equity charge = 2.00 − 1.00 = $1.00 (use beginning book value and net income, not retained earnings)."
+   },
+   {
+    "n": 58,
+    "q": "Based on the given information, the intrinsic value of Company B's stock is closest to:",
+    "options": [
+     "$10.3.",
+     "$15.0.",
+     "$25.0."
+    ],
+    "answer": "C",
+    "why": "C is correct. V0 = B0 + B0 × (ROE − r)/(r − g) = 10 + 10 × (0.065 − 0.05)/(0.05 − 0.04) = $25.0."
+   },
+   {
+    "n": 59,
+    "q": "Are Parker's statements comparing residual income models with different present value approaches both correct?",
+    "options": [
+     "Yes",
+     "No, only statement 1 is correct",
+     "No, only statement 2 is correct"
+    ],
+    "answer": "C",
+    "why": "C is correct. RI models recognize value EARLIER, not later (Statement 1 wrong); in theory they are mutually consistent with other approaches (Statement 2 correct)."
+   },
+   {
+    "n": 60,
+    "q": "Based on the information given, Parker should conclude that Company D’s share is:",
+    "options": [
+     "undervalued.",
+     "fairly valued.",
+     "overvalued."
+    ],
+    "answer": "A",
+    "why": "A is correct. NI = 6.40; dividends 3.20; ending book 23.20; RI = 6.40 − 2.00 = 4.40, PV 4.00; terminal (1.1 − 1) × 23.20 = 2.32, PV 2.11. V0 = 20 + 4.00 + 2.11 = $26.11 > $24: undervalued."
+   }
+  ]
+ },
+ {
+  "id": "eq5-sparrow",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%)",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Park and Sonberg (Sparrow Telecom): RI vs DDM statements, residual income, single-stage value, EVA",
+  "body": "Woojae Park and Shelly Sonberg, junior analysts at Felix & Danick are valuing Sparrow Telecom Company (Sparrow) a regional telecom provider. Their supervisor instructed them to use residual income models for the valuation.\n\nSonberg starts the meeting by saying she wants to be sure Park understands the difference between the residual income approach and the dividend discount approach and makes the following statements:\n\nStatement 1:\tIf there is clean surplus accounting, the residual income model and the dividend discount model will yield the same results.\nStatement 2:\tThe residual income model has more of its value determined in the current time period, whereas the dividend discount model has more of its value determined in later periods.\nStatement 3:\tThe residual income model makes assumptions about future earnings and dividend growth, whereas the dividend discount model makes assumptions only about dividend growth.\nTo start their analysis, the analysts gather the information in Exhibit 1 for Sparrow and calculate the forecasted residual income for the current fiscal year ending 31 August.\n\nExhibit 1 Forecasted Residual Income\n\tPer share\nBook value per share 31 August previous year\t$47.50\nForecasted earnings for year-end 31 August current year\t$7.58\nForecasted dividends for current fiscal year\t$2.10\nBook value per share 31 August current fiscal year\t$52.98\nRequired rate of return = re\t13%\nLong-term growth rate\t6%\nReturn on equity (ROE)\t15%\nThey continue by selecting the single-stage residual income model to calculate the intrinsic value of the Sparrow.\n\nNext, the analysts decide to calculate the economic value added (EVA) for Sparrow and gather some additional data (Exhibit 2):\n\nExhibit 2 Sparrow Telecom Company Additional Information (US$, thousands)\nTotal debt, 31 August previous fiscal year\t$4,391,600\nTotal equity, 31 August previous fiscal year\t$2,151,750\nEarnings before interest and taxes\t$616,000\nTax rate\t20%\nWeighted average cost of capital (WACC)\t7.0%\nCost of equity re\t13%",
+  "questions": [
+   {
+    "n": 69,
+    "q": "In Sonberg’s comparison of the residual income and dividend discount models, which of her statements is least accurate?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. The RI model does NOT make separate assumptions about future earnings and dividend growth. Statements 1 and 2 are accurate."
+   },
+   {
+    "n": 70,
+    "q": "Using Exhibit 1, the forecasted residual income per share for current fiscal year is closest to:",
+    "options": [
+     "$0.69.",
+     "$1.41.",
+     "$6.18."
+    ],
+    "answer": "B",
+    "why": "B is correct. Equity charge = beginning book value 47.50 × 13% = 6.18; RI = 7.58 − 6.18 = $1.41. A uses ending book value; C is only the equity charge."
+   },
+   {
+    "n": 71,
+    "q": "Using Exhibit 1 and the single-stage residual income model, the intrinsic value of Sparrow is closest to:",
+    "options": [
+     "$61.07.",
+     "$77.50.",
+     "$108.57."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 47.50 + 47.50 × (0.15 − 0.13)/(0.13 − 0.06) = $61.07. C subtracts g from ROE in the numerator."
+   },
+   {
+    "n": 72,
+    "q": "Using Exhibit 2, the EVA for Sparrow is closest to:",
+    "options": [
+     "$34,765.",
+     "$157,965.",
+     "$213,072."
+    ],
+    "answer": "A",
+    "why": "A is correct. NOPAT = 616,000 × 0.8 = 492,800; total capital = 4,391,600 + 2,151,750 = 6,543,350; EVA = 492,800 − 7.0% × 6,543,350 = $34,765. B uses pre-tax EBIT."
+   }
+  ]
+ }
+]
