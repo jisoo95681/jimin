@@ -123,12 +123,7 @@ Arnaud adds: (1) "Manager A has very low active risk, a Sharpe ratio close to th
  Q("Active return is most accurately described as:","the portfolio return minus the benchmark return, which is not the same as alpha",["the same as alpha in all cases, because both measure the return above the benchmark","the return from security selection only, after removing the effect of asset allocation"],
    "Active return = Rp − RB. Alpha is the return beyond what the portfolio's risk exposures explain (for example, beyond beta × market premium), so the two are not the same unless the portfolio's beta equals the benchmark's.")])
 
-add("Portfolio Management","""Arnaud lists limitations of the fundamental law of active management:
-
-Limitation 1: If decisions are correlated (for example in fixed-income portfolios driven by a few rate factors), the number of decisions overstates breadth.
-Limitation 2: An ex ante IC that turns out to be poor gives poor ex post results.
-
-He also notes that adding cash to an active portfolio leaves its Sharpe ratio unchanged.""",[
+add("Portfolio Management","""Felix Arnaud examines an active equity portfolio to which the manager adds cash.""",[
  Q("Adding cash to an active portfolio most likely:","leaves the Sharpe ratio unchanged but changes the information ratio",["changes the Sharpe ratio but leaves the information ratio unchanged","changes neither ratio"],
    "Mixing with cash scales excess return and risk equally → Sharpe ratio unchanged. But the cash creates active weights against the benchmark, changing active return and active risk, so the IR changes (falls).")])
 
@@ -136,15 +131,13 @@ nav=24.80; mp=25.10
 add("Portfolio Management",f"""Hana Novak explains exchange-traded funds (ETFs) to clients of Tatra Wealth.
 
 Point 1: The Tatra Europe ETF has a NAV of €{nav:.2f} per share and trades at €{mp:.2f}.
-Point 2: Novak measures the ETF's tracking error as the standard deviation of the differences between the daily returns of the ETF and its index.
-Point 3: Compared with mutual funds, ETFs distribute fewer capital gains, because creation and redemption in kind are not taxable, and ETFs can be sold short.
-Point 4: Novak lists components of an ETF's bid–ask spread: creation/redemption fees and other direct costs; the bid–ask spread of the underlying securities; compensation for the risk of hedging or carrying positions for the rest of the day; the market maker's desired profit; and a discount for the chance of receiving an offsetting order soon.
-Point 5: A client plans to buy €100,000 of the ETF and hold it for 9 months. The round-trip commission is 0.10%, the bid–ask spread is 0.12% and the annual management fee is 0.20%.""",[
+Point 2: Novak lists components of an ETF's bid–ask spread: creation/redemption fees and other direct costs; the bid–ask spread of the underlying securities; compensation for the risk of hedging or carrying positions for the rest of the day; the market maker's desired profit; and a discount for the chance of receiving an offsetting order soon.
+Point 3: A client plans to buy €100,000 of the ETF and hold it for 9 months. The round-trip commission is 0.10%, the bid–ask spread is 0.12% and the annual management fee is 0.20%.""",[
  Q("Based on Point 1, authorised participants are most likely to:","create ETF shares by delivering the underlying securities, then sell the ETF shares",["buy ETF shares in the market and redeem them for the underlying securities, then sell those securities","do nothing, because the difference is within the ETF's bid–ask spread and cannot be arbitraged"],
    "ETF price > NAV → premium → authorised participants (market makers) buy the basket, create ETF shares and sell them, pushing the price down. Price < NAV → redemption."),
- Q("For a highly liquid ETF, which components of the spread in Point 4 matter least?","The first three: direct costs, the underlying spread and hedging compensation",["The market maker's profit and the offsetting-order discount","All components matter equally"],
+ Q("For a highly liquid ETF, which components of the spread in Point 2 matter least?","The first three: direct costs, the underlying spread and hedging compensation",["The market maker's profit and the offsetting-order discount","All components matter equally"],
    "For very liquid ETFs, market makers rarely need to create/redeem or hedge, so the first three components hardly affect the spread; it reflects mainly the market maker's profit less the discount for offsetting orders. The ETF spread is at most the sum of these components."),
- Q("The client's total expected holding cost in Point 5 is closest to:","0.37%",["0.42%","0.22%"],
+ Q("The client's total expected holding cost in Point 3 is closest to:","0.37%",["0.42%","0.22%"],
    "Total cost = round-trip commission + spread + management fee × (months/12) = 0.10% + 0.12% + 0.20% × 9/12 = 0.10 + 0.12 + 0.15 = 0.37%."),
  Q("Which statement about ETF types and risks is most accurate?","Synthetic ETFs and ETNs carry counterparty risk; leveraged and inverse ETFs aim to deliver their multiple only over very short periods",["ETNs have no counterparty risk because they hold physical assets; synthetic ETFs carry only settlement risk","Synthetic ETFs carry no counterparty risk; leveraged and inverse ETFs deliver their stated multiple over any holding period"],
    "Synthetic ETFs use swaps → counterparty risk. ETNs are unsecured notes of the issuer → counterparty risk (no settlement/tracking of a basket). Leveraged/inverse funds reset daily, so long-horizon returns differ from the multiple. Other risks: expectation-related risk (investors misunderstanding the ETF) and fund closure risk (regulation, competition, corporate actions)."),
@@ -166,22 +159,19 @@ Point 4: The inter-temporal rate of substitution (ITRS) is the marginal utility 
  Q("If investors expect to be much better off in the future, the ITRS and real interest rates most likely:","fall and rise, respectively",["rise and fall, respectively","both rise"],
    "Better off later → future consumption worth less at the margin (numerator falls) → ITRS falls → investors save less → real rates rise. If they expect to be worse off, ITRS rises and real rates fall.")])
 
-add("Portfolio Management","""Ferrante adds further observations.
+add("Portfolio Management","""Lucia Ferrante makes three further observations.
 
 Observation 1: The economy has a positive output gap.
-Observation 2: In the last recession, prices of AAA corporate bonds fell less than equity prices, because equity investors demand a higher equity risk premium in recessions.
-Observation 3: Credit spreads between government and corporate bonds, and between higher- and lower-rated corporate bonds, are narrowing.
-Observation 4: The bond spreads of cyclical businesses are more sensitive to the business cycle, and makers of durable goods have more volatile earnings.
-Observation 5: Corporate profitability is a leading indicator of the business cycle, and understanding the cycle matters most for short-term earnings forecasts.
-Observation 6: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.""",[
+Observation 2: Credit spreads between government and corporate bonds, and between higher- and lower-rated corporate bonds, are narrowing.
+Observation 3: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.""",[
  Q("Observation 1 most likely means that:","actual GDP is above potential GDP, with rising inflation pressure and low unemployment",["actual GDP is below potential GDP, with high unemployment","the economy is growing at its sustainable rate"],
    "Positive output gap: producing beyond sustainable capacity → high inflation and low unemployment."),
- Q("Based on Observation 3, which is most likely to perform best?","Lower-rated corporate bonds",["Government bonds","Higher-rated corporate bonds"],
+ Q("Based on Observation 2, which is most likely to perform best?","Lower-rated corporate bonds",["Government bonds","Higher-rated corporate bonds"],
    "Narrowing spreads: corporate bonds beat government bonds, and lower-rated bonds beat higher-rated bonds (their spreads fall most)."),
- Q("For Observation 6, the commercial building's rental income should most likely be discounted at:","a higher rate, because it includes a credit risk premium for the tenants",["the same rate, because both include inflation and inflation uncertainty premiums","a lower rate, because commercial rents rise faster"],
+ Q("For Observation 3, the commercial building's rental income should most likely be discounted at:","a higher rate, because it includes a credit risk premium for the tenants",["the same rate, because both include inflation and inflation uncertainty premiums","a lower rate, because commercial rents rise faster"],
    "Value = net rental income / (1 + r)^t, where net rental income = rental payments − rental expenses. Both rates include inflation (π) and inflation uncertainty (θ); the commercial lease also includes a credit risk premium (φ), so its discount rate is higher.")])
 
-add("Portfolio Management","""Kapoor finishes with three notes for the investment committee.
+add("Portfolio Management","""Ravi Kapoor, a portfolio analyst, gives the investment committee three notes on the Orion Equity Fund.
 
 Note 1: Orion's active specific risk has risen sharply this year.
 Note 2: A comparison table of macroeconomic and fundamental factor models.
@@ -193,14 +183,14 @@ Note 3: The risk team's VaR model, and a backtest that needs a covariance matrix
  Q("Regarding Note 3, which statement is most accurate?","VaR does not capture liquidity risk, and the covariance matrix has 66 distinct covariances",["VaR fully captures liquidity risk, and the covariance matrix has 144 distinct covariances","VaR does not capture liquidity risk, and the covariance matrix has 132 distinct covariances"],
    "VaR ignores liquidity risk (it assumes positions can be sold at market prices).\nDistinct covariances = n(n − 1)/2 = 12 × 11/2 = 66.")])
 
-add("Portfolio Management","""Arnaud gives the committee three final points on active management.
+add("Portfolio Management","""Felix Arnaud gives the investment committee three points on active management.
 
 Point 1: An index fund that meets its objective exactly.
 Point 2: A manager with a very low information coefficient.
-Point 3: An increase in the volatility of a manager's portfolio returns.""",[
+Point 3: A change of the manager's benchmark to an index with a different risk profile.""",[
  Q("The information ratio of the index fund in Point 1 is most likely:","zero",["equal to its Sharpe ratio","indeterminate but positive"],
    "An index fund that tracks its benchmark exactly has zero active return, so its IR is zero."),
  Q("For the manager in Point 2, it will most likely be:","hard to add value, even with many independent decisions or a high transfer coefficient",["easy to add value if the manager overweights the securities with the best forecasts","irrelevant, because IR depends only on breadth"],
    "IR = TC × IC × √BR: a low IC (poor forecasting) makes it hard to add value. Managers should overweight securities with the best forecast relative returns, but this helps only if the forecasts are good."),
- Q("The change in Point 3 most likely affects:","both the Sharpe ratio and the information ratio",["the Sharpe ratio only, because active risk does not change","the information ratio only, because the Sharpe ratio uses the benchmark"],
-   "Total portfolio volatility enters the Sharpe ratio (σp) and, through active risk, the information ratio, so both are affected. (The benchmark choice, in contrast, affects only the IR.)")])
+ Q("The change in Point 3 most likely affects:","the information ratio only, because the Sharpe ratio does not use the benchmark",["both the Sharpe ratio and the information ratio","the Sharpe ratio only, because active risk does not change"],
+   "The Sharpe ratio, (Rp − Rf) ÷ σp, does not involve the benchmark, while the information ratio is built on active return and active risk measured against the benchmark. Changing the benchmark therefore changes the IR but not the Sharpe ratio.")])

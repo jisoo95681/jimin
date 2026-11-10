@@ -70,3 +70,6 @@ Final version (v206): ids pq1-pq6, 48 Q each (44 notebook + 4 Ethics, nothing dr
 
 ## Quick questions (9 Nov, v207)
 Exam hub > Quick questions: 52 concept multiple-choice questions without calculations (reading 98 in keyq.js, groups "Retry Paper 2" 18 and "Mock 7" 34) built from the misses of Retry Paper 2 (Q1, Q3, Q4, Q8, Q16, Q27, Q31, Q42) and Mock 7 (Q12, Q20, Q23, Q30, Q31, Q33, Q38, Q39, Q41, Q43, Q44).
+
+## Practice set audit (10 Nov, v208)
+pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.md "Practice set audit". Answer keys of the sets did not change (positions kept), so saved answers stay aligned; saved highlights of the changed vignettes were reset (`resetHl`).

@@ -62,9 +62,7 @@ add("Corporate Issuers",f"""Mara Kovacs, an analyst at Danubia Capital, estimate
 Project 1: A private domestic company. Kovacs uses an expanded CAPM with size and company-specific premiums.
 Project 2: A subsidiary in an emerging market. She adds a country risk premium using an extended CAPM with global and country factors.
 Project 3: She needs a pre-tax cost of debt for a company with no traded bonds, rated BBB, and with debt maturing in {mi} years. Comparable BBB bonds yield {ys*100:.1f}% at {ms} years and {yl*100:.1f}% at {ml} years.
-Project 4: A multinational. Kovacs uses an international CAPM: risk-free rate 2.5%, global market premium 5.0%, global beta 1.1, foreign currency risk premium 1.5% and currency beta 0.4.
-
-Kovacs also notes that the equity risk premium is higher in developing countries and in recessions.""",[
+Project 4: A multinational. Kovacs uses an international CAPM: risk-free rate 2.5%, global market premium 5.0%, global beta 1.1, foreign currency risk premium 1.5% and currency beta 0.4.""",[
  Q("For Project 3, the interpolated pre-tax cost of debt is closest to:",pct(ymid),[pct((ys+yl)/2),pct(yl)],
    f"YTM = YTM_S + (YTM_L − YTM_S)/(M_L − M_S) × (M_i − M_S) = 4.2% + (5.1% − 4.2%)/5 × 2 = {ymid*100:.2f}%"),
  Q("For Project 4, the cost of equity is closest to:","8.6%",["8.0%","9.1%"],
@@ -100,7 +98,7 @@ Grünwald pays dividends that are far below its FCFE, and its dividends have lit
  Q("Weller should most likely value Grünwald with:","an FCFE model, because dividends differ greatly from the capacity to pay them",["a dividend discount model, because Grünwald pays dividends","a residual income model, because FCFE is positive"],
    "Use FCFE instead of DDM when dividends differ significantly from FCFE (dividend-paying capacity), when the company pays no dividends, or when an investor takes a control perspective.")])
 
-add("Equity Valuation","""Weller also values the preferred shares and estimates growth for Ostmark AG.
+add("Equity Valuation","""Tobias Weller values the preferred shares and estimates growth for Ostmark AG.
 
 Ostmark's non-callable, non-convertible perpetual preferred shares pay €4.50 a year. The risk-free rate is 3.0% and the equity risk premium applicable to the preferred shares is 4.5%.
 
@@ -126,9 +124,7 @@ Weller also computes the residual income for a public company with net income of
 add("Economics","""Sofia Marin, a currency strategist at Iberia Capital, reviews FX positions.
 
 Position 1: Three months ago Iberia sold EUR 10 million forward against USD for six months at USD 1.1050/EUR. Today the three-month forward rate is USD 1.0950/EUR and the three-month USD interest rate is 4.0% (annualised).
-Position 2: A client wants a one-year forward on USD/MXN. Spot is 17.20 MXN/USD and the dealer quotes forward points of +850 (in units of 0.0001).
-
-Marin notes that interbank FX liquidity is highest when the London and New York trading hours overlap.""",[
+Position 2: A client wants a one-year forward on USD/MXN. Spot is 17.20 MXN/USD and the dealer quotes forward points of +850 (in units of 0.0001).""",[
  Q("The mark-to-market value of Position 1 to Iberia is closest to:","USD 99,010 gain",["USD 100,000 gain","USD 99,010 loss"],
    "Iberia sold EUR forward at 1.1050. To close, it buys EUR forward at 1.0950: gain = (1.1050 − 1.0950) × 10m = USD 100,000 at settlement.\nDiscount for 3 months: 100,000 / (1 + 0.04 × 90/360) = 100,000 / 1.01 = USD 99,010."),
  Q("The all-in one-year forward rate for Position 2 is closest to:","17.2850 MXN/USD",["18.0500 MXN/USD","17.1150 MXN/USD"],
@@ -136,7 +132,6 @@ Marin notes that interbank FX liquidity is highest when the London and New York 
 
 add("Economics","""Marin explains growth theory to junior staff.
 
-Country A: real GDP growth 4.5%, labour force growth 1.2%, capital deepening slowing.
 Statement 1: "In the neoclassical model, in the steady state, growth of output per worker equals the rate of technological progress divided by labour's share, and total output grows at that rate plus labour force growth."
 Statement 2: "In the steady state, the marginal product of capital equals the real interest rate, and MPK = α × Y/K."
 Statement 3: "Capital deepening raises output per worker but runs into diminishing returns, so it cannot raise growth permanently."

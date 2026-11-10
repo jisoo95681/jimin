@@ -57,11 +57,16 @@ def ethics_vignette(ids,kind):
         qs.append(dict(q=q['q'],opts=o,why=q['why'],fixed=False))
     body=fig_body(ETH[ids[0]]['fig']).replace('listed in Question 4.','listed in the last question of this vignette.') if kind=='vig' else "Ethics: Standards of Professional Conduct\nFour independent questions. Each one can be answered on its own."
     return dict(topic="Ethical and Professional Standards",body=body,questions=qs)
+import os
+PREV=json.load(open('/home/user/jimin/bank/exam/practice_rev.json')) if os.path.exists('/home/user/jimin/bank/exam/practice_rev.json') else {}
 sets=[]
 for k,st_ in enumerate(MIX['sets']):
     vs=[dict(ALLV[tuple(x)]) for x in st_['vignettes']]
     vs.insert(st_['ethics_pos'],ethics_vignette(st_['ethics'],st_['ethics_kind']))
-    st=build(vs,f'pq{k+1}',f'Practice set {k+1}',1+500*k); st['desc']='Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)'; sets.append(st)
+    st=build(vs,f'pq{k+1}',f'Practice set {k+1}',1+500*k)
+    rv=PREV.get(f'pq{k+1}')
+    if rv: st['rev']=3; st['resetHl']=rv
+    st['desc']='Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)'; sets.append(st)
 import os
 for mf in ["mock7","mock8"]:
     p=f"/home/user/jimin/bank/exam/{mf}.json"

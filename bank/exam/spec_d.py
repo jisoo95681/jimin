@@ -18,7 +18,7 @@ During the year Rosen also sold inventory to Montclair at a profit; half of that
  Q("Regarding Rosen's sale of inventory to Montclair, Montclair should:","defer its share of the unrealised profit on the inventory still held until it is sold to third parties",["recognise its full share of the profit immediately, because the sale is upstream","eliminate 100% of the profit, because the companies are under common control"],
    "Under the equity method, the investor's share of unrealised profits on intercompany (upstream or downstream) sales is deferred until the goods are sold to outside parties.")])
 
-add("Financial Statement Analysis","""Montclair later acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.
+add("Financial Statement Analysis","""Montclair Holdings acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.
 
 The analyst also considers a different deal in which the entire excess of the purchase price over book value is allocated to identifiable assets.""",[
  Q("Goodwill under the full goodwill method is closest to:","€150 million",["€120 million","€50 million"],
@@ -47,7 +47,7 @@ Montclair also holds bonds classified at amortised cost and equity securities at
 # ---------------- EMPLOYEE COMPENSATION ----------------
 add("Financial Statement Analysis","""Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate.
 
-During the year 30,000 RSUs vested. Their grant-date fair value was $24 per RSU and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the expense previously recognised for them is reversed this year.
+During the year 30,000 RSUs vested. They were granted at the start of the year with a grant-date fair value of $24 per RSU, and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the full expense previously recognised for them ($22 per RSU) is reversed this year.
 
 Kiruna also grants stock options. Aalto considers how changes in valuation inputs affect the options' fair value and Kiruna's reported earnings.""",[
  Q("Kiruna's RSU compensation expense for the year is closest to:","$676,000",["$720,000","$930,000"],
@@ -75,7 +75,7 @@ Average unrecognised expense is the average of the beginning and ending unrecogn
  Q("Kiruna's diluted shares are closest to:",f"{5000000+ops+rsu:,.0f}",[f"{5000000+ops+60000:,.0f}",f"{5000000+200000+60000:,.0f}"],
    f"Treasury stock method: dilutive shares = number − (cash proceeds + average unrecognised expense) / average price\nOptions: 200,000 − (200,000 × 18 + 600,000)/30 = 200,000 − 140,000 = {ops:,.0f}\nRSUs (no cash proceeds): 60,000 − 900,000/30 = {rsu:,.0f}\nDiluted = 5,000,000 + {ops:,.0f} + {rsu:,.0f} = {5000000+ops+rsu:,.0f}")])
 
-add("Financial Statement Analysis","""Aalto then reviews Kiruna's defined benefit pension plan. Exhibit 1 shows plan data for the year (in $ millions).
+add("Financial Statement Analysis","""Sven Aalto reviews the defined benefit pension plan of Kiruna Tech. Exhibit 1 shows plan data for the year (in $ millions).
 
 Exhibit 1: Pension Plan Data
 # Item | Amount
@@ -90,7 +90,7 @@ Actuarial loss | 8.0
 Employer contributions | 35.0
 Benefits paid | 25.0
 
-Aalto notes that employer contributions are cash outflows from operating activities. He also asks which assumption change would most reduce Kiruna's pension cost under US GAAP.""",[
+Aalto asks which assumption change would most reduce Kiruna's pension cost under US GAAP.""",[
  Q("The interest cost under US GAAP and the net interest expense under IFRS are closest to:","$22.5 million and $2.7 million",["$22.5 million and $22.5 million","$2.7 million and $19.8 million"],
    "US GAAP interest cost = beginning PBO × r = 500 × 4.5% = 22.5\nIFRS net interest = beginning funded status × r = (440 − 500) × 4.5% = −2.7 → net interest expense of 2.7"),
  Q("Pension cost reported in profit or loss under IFRS is closest to:","$42.7 million",["$26.1 million","$32.7 million"],
@@ -105,11 +105,11 @@ add("Financial Statement Analysis","""Hector Ruiz analyses Atlas Industrial, a U
 
 Transaction: On 1 November, Atlas sold goods to a German customer on credit for €1,000,000, when the exchange rate was $1.10/€. On 31 December, the rate was $1.15/€ and the receivable was still outstanding.
 
-Subsidiary: The Mexican subsidiary earns all of its revenue in Mexican pesos, buys most of its materials in US dollars, and borrows in euros.""",[
+Subsidiary: The Mexican subsidiary earns all of its revenue and incurs most of its costs in Mexican pesos, buys some materials in US dollars and borrows in euros.""",[
  Q("Atlas's foreign currency transaction gain or loss at 31 December is closest to:","a gain of $50,000",["a loss of $50,000","a gain of $1,150,000"],
    "Gain = foreign currency amount × (year-end rate − transaction-date rate) = 1,000,000 × (1.15 − 1.10) = $50,000.\nA receivable in a currency that appreciates gives a gain (a payable would give a loss)."),
  Q("The functional currency of the Mexican subsidiary is most likely the:","Mexican peso",["US dollar","euro"],
-   "The primary indicators are ranked: (1) currency of revenues, (2) currency of operating costs, (3) currency of financing. Revenue is all in pesos → peso is the functional currency.")])
+   "The primary indicators are the currency of revenues and the currency of operating costs; financing is a secondary indicator. Revenue and most costs are in pesos → peso is the functional currency.")])
 
 add("Financial Statement Analysis","""Ruiz compares two foreign subsidiaries of Atlas. Both have net monetary liabilities and positive net assets.
 
@@ -125,8 +125,8 @@ Ruiz notes that in both cases the translated balance sheet does not balance unti
    "A: exposure = net monetary liabilities; foreign currency ↑ → liabilities worth more in dollars → loss in net income.\nB: exposure = net assets (positive); foreign currency ↑ → positive translation adjustment (CTA ↑)."),
  Q("For a subsidiary with an appreciating local currency and rising prices, which choices give the higher translated gross margin?","Temporal method and FIFO",["Current rate method and LIFO","Temporal method and LIFO"],
    "Temporal method: COGS at older (lower) historical rates while sales are at the average rate → higher margin when the foreign currency appreciates (current rate method is better when it depreciates).\nRising prices: FIFO uses older, cheaper costs → higher margin (LIFO when prices fall)."),
- Q("To reduce the balance sheet exposure of Subsidiary B, Atlas should most likely:","reduce B's assets translated at the current rate, for example by using local cash to pay down local liabilities",["increase B's local currency receivables, for example by extending longer credit terms to local customers","convert B's local currency borrowings into equity issued to the parent, reducing its local liabilities"],
-   "Find the net exposure under the method used, then choose the action that moves it toward zero. B's exposure is net assets (positive), so reduce exposed assets or increase exposed liabilities. Converting debt to equity would increase net assets.")])
+ Q("To reduce the balance sheet exposure of Subsidiary B, Atlas should most likely:","reduce B's net assets, for example by paying B's local cash to the parent as a dividend",["increase B's local currency receivables, for example by extending longer credit terms to local customers","convert B's local currency borrowings into equity issued to the parent, reducing its local liabilities"],
+   "Find the net exposure under the method used, then choose the action that moves it toward zero. B's exposure is net assets (positive), so reduce exposed assets without reducing liabilities (for example a dividend paid out of local cash) or increase exposed liabilities. Paying down local liabilities with local cash leaves net assets unchanged, and converting debt to equity would increase net assets.")])
 
 # ---------------- FINANCIAL INSTITUTIONS ----------------
 add("Financial Statement Analysis","""Leah Morgan, a bank analyst, compares two banks. Exhibit 1 shows selected ratios for the last two years.
@@ -150,7 +150,7 @@ Bank X funds itself mainly with long-term consumer deposits; Bank Y relies on sh
  Q("Which item is included in Common Equity Tier 1 capital?","Retained earnings",["Preferred stock with discretionary dividends","Subordinated convertible bonds"],
    "CET1: common stock, additional paid-in capital, retained earnings, OCI, less intangibles and deferred tax assets.\nOther Tier 1: preferred stock with discretionary dividends. Tier 2: subordinated debt such as convertible bonds.")])
 
-add("Financial Statement Analysis","""Morgan also analyses Harbour Mutual, a property and casualty (P&C) insurer, for the year (in $ millions).
+add("Financial Statement Analysis","""Leah Morgan, an insurance analyst, analyses Harbour Mutual, a property and casualty (P&C) insurer, for the year (in $ millions).
 
 Exhibit 1: Harbour Mutual Underwriting Data
 # Item | Amount

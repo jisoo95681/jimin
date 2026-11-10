@@ -46,7 +46,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Financial Statement Analysis",
-    "body": "Hector Ruiz analyses Atlas Industrial, a US company, and its subsidiary in Mexico.\n\nTransaction: On 1 November, Atlas sold goods to a German customer on credit for €1,000,000, when the exchange rate was $1.10/€. On 31 December, the rate was $1.15/€ and the receivable was still outstanding.\n\nSubsidiary: The Mexican subsidiary earns all of its revenue in Mexican pesos, buys most of its materials in US dollars, and borrows in euros.",
+    "body": "Hector Ruiz analyses Atlas Industrial, a US company, and its subsidiary in Mexico.\n\nTransaction: On 1 November, Atlas sold goods to a German customer on credit for €1,000,000, when the exchange rate was $1.10/€. On 31 December, the rate was $1.15/€ and the receivable was still outstanding.\n\nSubsidiary: The Mexican subsidiary earns all of its revenue and incurs most of its costs in Mexican pesos, buys some materials in US dollars and borrows in euros.",
     "questions": [
      {
       "q": "Atlas's foreign currency transaction gain or loss at 31 December is closest to:",
@@ -66,7 +66,7 @@ const EXAM_SETS = [
        "US dollar"
       ],
       "answer": 0,
-      "why": "The primary indicators are ranked: (1) currency of revenues, (2) currency of operating costs, (3) currency of financing. Revenue is all in pesos → peso is the functional currency."
+      "why": "The primary indicators are the currency of revenues and the currency of operating costs; financing is a secondary indicator. Revenue and most costs are in pesos → peso is the functional currency."
      }
     ]
    },
@@ -416,7 +416,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Quiroga's colleague, Diego Navas, computes forward prices. The three-year forward rate two years from now, f(2,3), is 3.2% (annual compounding).\n\nNavas also comments on interest rate volatility: \"Volatility of short-term rates is driven mainly by monetary policy, while volatility of long-term rates is driven mainly by expectations for the economy and inflation.\"",
+    "body": "Diego Navas, a fixed-income analyst, computes forward prices. The three-year forward rate two years from now, f(2,3), is 3.2% (annual compounding).\n\nNavas also comments on interest rate volatility: \"Volatility of short-term rates is driven mainly by monetary policy, while volatility of long-term rates is driven mainly by expectations for the economy and inflation.\"",
     "questions": [
      {
       "q": "The forward price, two years from now, of a zero-coupon bond paying 1 at year 5 is closest to:",
@@ -591,7 +591,11 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   1,
+   11
+  ]
  },
  {
   "id": "pq2",
@@ -832,7 +836,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Kral then shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are 2.0% (time 0 to 1), 3.1% (time 1 to 2), 3.8% (time 2 to 3) and 4.4% (time 3 to 4).\n\nShe values a three-year, 4% annual-coupon, option-free bond along this path using the pathwise method.",
+    "body": "Bettina Kral, a fixed-income analyst, shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are 2.0% (time 0 to 1), 3.1% (time 1 to 2), 3.8% (time 2 to 3) and 4.4% (time 3 to 4).\n\nShe values a three-year, 4% annual-coupon, option-free bond along this path using the pathwise method.",
     "questions": [
      {
       "q": "The value of the bond along this path is closest to:",
@@ -966,7 +970,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Financial Statement Analysis",
-    "body": "Morgan also analyses Harbour Mutual, a property and casualty (P&C) insurer, for the year (in $ millions).\n\nExhibit 1: Harbour Mutual Underwriting Data\n# Item | Amount\nNet premiums written | 1,250\nNet premiums earned | 1,200\nClaims paid | 690\nIncrease in loss reserves | 90\nUnderwriting expenses, including commissions | 350\n\nMorgan notes that after several years of intense competition and weak pricing, many P&C insurers have lost capital and some have left the market.",
+    "body": "Leah Morgan, an insurance analyst, analyses Harbour Mutual, a property and casualty (P&C) insurer, for the year (in $ millions).\n\nExhibit 1: Harbour Mutual Underwriting Data\n# Item | Amount\nNet premiums written | 1,250\nNet premiums earned | 1,200\nClaims paid | 690\nIncrease in loss reserves | 90\nUnderwriting expenses, including commissions | 350\n\nMorgan notes that after several years of intense competition and weak pricing, many P&C insurers have lost capital and some have left the market.",
     "questions": [
      {
       "q": "Harbour's loss ratio and expense ratio are closest to:",
@@ -992,7 +996,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Portfolio Management",
-    "body": "Arnaud gives the committee three final points on active management.\n\nPoint 1: An index fund that meets its objective exactly.\nPoint 2: A manager with a very low information coefficient.\nPoint 3: An increase in the volatility of a manager's portfolio returns.",
+    "body": "Felix Arnaud gives the investment committee three points on active management.\n\nPoint 1: An index fund that meets its objective exactly.\nPoint 2: A manager with a very low information coefficient.\nPoint 3: A change of the manager's benchmark to an index with a different risk profile.",
     "questions": [
      {
       "q": "The information ratio of the index fund in Point 1 is most likely:",
@@ -1017,12 +1021,12 @@ const EXAM_SETS = [
      {
       "q": "The change in Point 3 most likely affects:",
       "options": [
+       "the information ratio only, because the Sharpe ratio does not use the benchmark",
        "both the Sharpe ratio and the information ratio",
-       "the Sharpe ratio only, because active risk does not change",
-       "the information ratio only, because the Sharpe ratio uses the benchmark"
+       "the Sharpe ratio only, because active risk does not change"
       ],
       "answer": 0,
-      "why": "Total portfolio volatility enters the Sharpe ratio (σp) and, through active risk, the information ratio, so both are affected. (The benchmark choice, in contrast, affects only the IR.)"
+      "why": "The Sharpe ratio, (Rp − Rf) ÷ σp, does not involve the benchmark, while the information ratio is built on active return and active risk measured against the benchmark. Changing the benchmark therefore changes the IR but not the Sharpe ratio."
      }
     ]
    },
@@ -1177,7 +1181,12 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   5,
+   9,
+   10
+  ]
  },
  {
   "id": "pq3",
@@ -1364,7 +1373,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Economics",
-    "body": "Marin explains growth theory to junior staff.\n\nCountry A: real GDP growth 4.5%, labour force growth 1.2%, capital deepening slowing.\nStatement 1: \"In the neoclassical model, in the steady state, growth of output per worker equals the rate of technological progress divided by labour's share, and total output grows at that rate plus labour force growth.\"\nStatement 2: \"In the steady state, the marginal product of capital equals the real interest rate, and MPK = α × Y/K.\"\nStatement 3: \"Capital deepening raises output per worker but runs into diminishing returns, so it cannot raise growth permanently.\"\nStatement 4: \"In the neoclassical model, capital flows from rich to poor countries, helping convergence.\"",
+    "body": "Marin explains growth theory to junior staff.\n\nStatement 1: \"In the neoclassical model, in the steady state, growth of output per worker equals the rate of technological progress divided by labour's share, and total output grows at that rate plus labour force growth.\"\nStatement 2: \"In the steady state, the marginal product of capital equals the real interest rate, and MPK = α × Y/K.\"\nStatement 3: \"Capital deepening raises output per worker but runs into diminishing returns, so it cannot raise growth permanently.\"\nStatement 4: \"In the neoclassical model, capital flows from rich to poor countries, helping convergence.\"",
     "questions": [
      {
       "q": "Which of Marin's statements are correct?",
@@ -1462,7 +1471,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "De Vries also reviews retail and securitised credit.\n\nApplicant 1 has a long credit history, no late payments, low use of available credit, few recent credit enquiries and uses many types of credit.\nBond 2 is a subordinated bond of a company whose senior unsecured debt is rated A.\nPool 3 is a large pool of short-term, homogeneous and granular credit card receivables.\nPool 4 is a pool of medium-term, homogeneous and granular auto loans.",
+    "body": "Sanne de Vries, a credit analyst, reviews retail and securitised credit.\n\nApplicant 1 has a long credit history, no late payments, low use of available credit, few recent credit enquiries and uses many types of credit.\nBond 2 is a subordinated bond of a company whose senior unsecured debt is rated A.\nPool 3 is a large pool of short-term, homogeneous and granular credit card receivables.\nPool 4 is a pool of medium-term, homogeneous and granular auto loans.",
     "questions": [
      {
       "q": "Applicant 1 most likely has a high credit score, and Bond 2 is most likely rated:",
@@ -1534,7 +1543,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Portfolio Management",
-    "body": "Arnaud lists limitations of the fundamental law of active management:\n\nLimitation 1: If decisions are correlated (for example in fixed-income portfolios driven by a few rate factors), the number of decisions overstates breadth.\nLimitation 2: An ex ante IC that turns out to be poor gives poor ex post results.\n\nHe also notes that adding cash to an active portfolio leaves its Sharpe ratio unchanged.",
+    "body": "Felix Arnaud examines an active equity portfolio to which the manager adds cash.",
     "questions": [
      {
       "q": "Adding cash to an active portfolio most likely:",
@@ -1684,7 +1693,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Portfolio Management",
-    "body": "Ferrante adds further observations.\n\nObservation 1: The economy has a positive output gap.\nObservation 2: In the last recession, prices of AAA corporate bonds fell less than equity prices, because equity investors demand a higher equity risk premium in recessions.\nObservation 3: Credit spreads between government and corporate bonds, and between higher- and lower-rated corporate bonds, are narrowing.\nObservation 4: The bond spreads of cyclical businesses are more sensitive to the business cycle, and makers of durable goods have more volatile earnings.\nObservation 5: Corporate profitability is a leading indicator of the business cycle, and understanding the cycle matters most for short-term earnings forecasts.\nObservation 6: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.",
+    "body": "Lucia Ferrante makes three further observations.\n\nObservation 1: The economy has a positive output gap.\nObservation 2: Credit spreads between government and corporate bonds, and between higher- and lower-rated corporate bonds, are narrowing.\nObservation 3: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.",
     "questions": [
      {
       "q": "Observation 1 most likely means that:",
@@ -1697,7 +1706,7 @@ const EXAM_SETS = [
       "why": "Positive output gap: producing beyond sustainable capacity → high inflation and low unemployment."
      },
      {
-      "q": "Based on Observation 3, which is most likely to perform best?",
+      "q": "Based on Observation 2, which is most likely to perform best?",
       "options": [
        "Lower-rated corporate bonds",
        "Government bonds",
@@ -1707,7 +1716,7 @@ const EXAM_SETS = [
       "why": "Narrowing spreads: corporate bonds beat government bonds, and lower-rated bonds beat higher-rated bonds (their spreads fall most)."
      },
      {
-      "q": "For Observation 6, the commercial building's rental income should most likely be discounted at:",
+      "q": "For Observation 3, the commercial building's rental income should most likely be discounted at:",
       "options": [
        "a higher rate, because it includes a credit risk premium for the tenants",
        "the same rate, because both include inflation and inflation uncertainty premiums",
@@ -1781,7 +1790,13 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   6,
+   9,
+   11,
+   16
+  ]
  },
  {
   "id": "pq4",
@@ -1874,7 +1889,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Equity Valuation",
-    "body": "Weller also values the preferred shares and estimates growth for Ostmark AG.\n\nOstmark's non-callable, non-convertible perpetual preferred shares pay €4.50 a year. The risk-free rate is 3.0% and the equity risk premium applicable to the preferred shares is 4.5%.\n\nOstmark expects EPS of €6.00 next year with a target payout of 45%. Its most recent dividend was €2.40, and it expects to move to the target payout over three years in equal annual steps.\n\nOstmark's ROE is 12% and its retention ratio is 55%.",
+    "body": "Tobias Weller values the preferred shares and estimates growth for Ostmark AG.\n\nOstmark's non-callable, non-convertible perpetual preferred shares pay €4.50 a year. The risk-free rate is 3.0% and the equity risk premium applicable to the preferred shares is 4.5%.\n\nOstmark expects EPS of €6.00 next year with a target payout of 45%. Its most recent dividend was €2.40, and it expects to move to the target payout over three years in equal annual steps.\n\nOstmark's ROE is 12% and its retention ratio is 55%.",
     "questions": [
      {
       "q": "The value of Ostmark's preferred shares is closest to:",
@@ -1936,7 +1951,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Financial Statement Analysis",
-    "body": "Montclair later acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.\n\nThe analyst also considers a different deal in which the entire excess of the purchase price over book value is allocated to identifiable assets.",
+    "body": "Montclair Holdings acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.\n\nThe analyst also considers a different deal in which the entire excess of the purchase price over book value is allocated to identifiable assets.",
     "questions": [
      {
       "q": "Goodwill under the full goodwill method is closest to:",
@@ -2018,7 +2033,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Kral gives the class a two-asset example. Both assets are risk free and mature at time 1.\n\nExhibit 1: Two Risk-Free Assets\n# Asset | Price today | Payoff at time 1\nA | 500 | 520\nB | 1,000 | 1,060",
+    "body": "Bettina Kral, a fixed-income analyst, gives the class a two-asset example. Both assets are risk free and mature at time 1.\n\nExhibit 1: Two Risk-Free Assets\n# Asset | Price today | Payoff at time 1\nA | 500 | 520\nB | 1,000 | 1,060",
     "questions": [
      {
       "q": "Based on the dominance principle, the arbitrage strategy and its profit at time 1 are:",
@@ -2034,7 +2049,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Financial Statement Analysis",
-    "body": "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate.\n\nDuring the year 30,000 RSUs vested. Their grant-date fair value was $24 per RSU and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the expense previously recognised for them is reversed this year.\n\nKiruna also grants stock options. Aalto considers how changes in valuation inputs affect the options' fair value and Kiruna's reported earnings.",
+    "body": "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate.\n\nDuring the year 30,000 RSUs vested. They were granted at the start of the year with a grant-date fair value of $24 per RSU, and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the full expense previously recognised for them ($22 per RSU) is reversed this year.\n\nKiruna also grants stock options. Aalto considers how changes in valuation inputs affect the options' fair value and Kiruna's reported earnings.",
     "questions": [
      {
       "q": "Kiruna's RSU compensation expense for the year is closest to:",
@@ -2188,7 +2203,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Portfolio Management",
-    "body": "Kapoor finishes with three notes for the investment committee.\n\nNote 1: Orion's active specific risk has risen sharply this year.\nNote 2: A comparison table of macroeconomic and fundamental factor models.\nNote 3: The risk team's VaR model, and a backtest that needs a covariance matrix for 12 factors.",
+    "body": "Ravi Kapoor, a portfolio analyst, gives the investment committee three notes on the Orion Equity Fund.\n\nNote 1: Orion's active specific risk has risen sharply this year.\nNote 2: A comparison table of macroeconomic and fundamental factor models.\nNote 3: The risk team's VaR model, and a backtest that needs a covariance matrix for 12 factors.",
     "questions": [
      {
       "q": "Note 1 most likely indicates that:",
@@ -2224,7 +2239,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Demir also analyses a callable, putable convertible bond issued by Ostrava Motors. The conversion price is well above Ostrava's current share price. Over the next month Ostrava's share price rises 6% but remains below the conversion price.",
+    "body": "Yusuf Demir analyses a callable, putable convertible bond issued by Ostrava Motors. The conversion price is well above Ostrava's current share price. Over the next month Ostrava's share price rises 6% but remains below the conversion price.",
     "questions": [
      {
       "q": "The value of the callable, putable convertible bond is best expressed as:",
@@ -2286,11 +2301,11 @@ const EXAM_SETS = [
       "q": "To reduce the balance sheet exposure of Subsidiary B, Atlas should most likely:",
       "options": [
        "increase B's local currency receivables, for example by extending longer credit terms to local customers",
-       "reduce B's assets translated at the current rate, for example by using local cash to pay down local liabilities",
+       "reduce B's net assets, for example by paying B's local cash to the parent as a dividend",
        "convert B's local currency borrowings into equity issued to the parent, reducing its local liabilities"
       ],
       "answer": 1,
-      "why": "Find the net exposure under the method used, then choose the action that moves it toward zero. B's exposure is net assets (positive), so reduce exposed assets or increase exposed liabilities. Converting debt to equity would increase net assets."
+      "why": "Find the net exposure under the method used, then choose the action that moves it toward zero. B's exposure is net assets (positive), so reduce exposed assets without reducing liabilities (for example a dividend paid out of local cash) or increase exposed liabilities. Paying down local liabilities with local cash leaves net assets unchanged, and converting debt to equity would increase net assets."
      }
     ]
    },
@@ -2367,7 +2382,15 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   2,
+   4,
+   6,
+   7,
+   11,
+   12
+  ]
  },
  {
   "id": "pq5",
@@ -2634,7 +2657,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Economics",
-    "body": "Sofia Marin, a currency strategist at Iberia Capital, reviews FX positions.\n\nPosition 1: Three months ago Iberia sold EUR 10 million forward against USD for six months at USD 1.1050/EUR. Today the three-month forward rate is USD 1.0950/EUR and the three-month USD interest rate is 4.0% (annualised).\nPosition 2: A client wants a one-year forward on USD/MXN. Spot is 17.20 MXN/USD and the dealer quotes forward points of +850 (in units of 0.0001).\n\nMarin notes that interbank FX liquidity is highest when the London and New York trading hours overlap.",
+    "body": "Sofia Marin, a currency strategist at Iberia Capital, reviews FX positions.\n\nPosition 1: Three months ago Iberia sold EUR 10 million forward against USD for six months at USD 1.1050/EUR. Today the three-month forward rate is USD 1.0950/EUR and the three-month USD interest rate is 4.0% (annualised).\nPosition 2: A client wants a one-year forward on USD/MXN. Spot is 17.20 MXN/USD and the dealer quotes forward points of +850 (in units of 0.0001).",
     "questions": [
      {
       "q": "The mark-to-market value of Position 1 to Iberia is closest to:",
@@ -2660,7 +2683,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Portfolio Management",
-    "body": "Hana Novak explains exchange-traded funds (ETFs) to clients of Tatra Wealth.\n\nPoint 1: The Tatra Europe ETF has a NAV of €24.80 per share and trades at €25.10.\nPoint 2: Novak measures the ETF's tracking error as the standard deviation of the differences between the daily returns of the ETF and its index.\nPoint 3: Compared with mutual funds, ETFs distribute fewer capital gains, because creation and redemption in kind are not taxable, and ETFs can be sold short.\nPoint 4: Novak lists components of an ETF's bid–ask spread: creation/redemption fees and other direct costs; the bid–ask spread of the underlying securities; compensation for the risk of hedging or carrying positions for the rest of the day; the market maker's desired profit; and a discount for the chance of receiving an offsetting order soon.\nPoint 5: A client plans to buy €100,000 of the ETF and hold it for 9 months. The round-trip commission is 0.10%, the bid–ask spread is 0.12% and the annual management fee is 0.20%.",
+    "body": "Hana Novak explains exchange-traded funds (ETFs) to clients of Tatra Wealth.\n\nPoint 1: The Tatra Europe ETF has a NAV of €24.80 per share and trades at €25.10.\nPoint 2: Novak lists components of an ETF's bid–ask spread: creation/redemption fees and other direct costs; the bid–ask spread of the underlying securities; compensation for the risk of hedging or carrying positions for the rest of the day; the market maker's desired profit; and a discount for the chance of receiving an offsetting order soon.\nPoint 3: A client plans to buy €100,000 of the ETF and hold it for 9 months. The round-trip commission is 0.10%, the bid–ask spread is 0.12% and the annual management fee is 0.20%.",
     "questions": [
      {
       "q": "Based on Point 1, authorised participants are most likely to:",
@@ -2673,7 +2696,7 @@ const EXAM_SETS = [
       "why": "ETF price > NAV → premium → authorised participants (market makers) buy the basket, create ETF shares and sell them, pushing the price down. Price < NAV → redemption."
      },
      {
-      "q": "For a highly liquid ETF, which components of the spread in Point 4 matter least?",
+      "q": "For a highly liquid ETF, which components of the spread in Point 2 matter least?",
       "options": [
        "The first three: direct costs, the underlying spread and hedging compensation",
        "All components matter equally",
@@ -2683,7 +2706,7 @@ const EXAM_SETS = [
       "why": "For very liquid ETFs, market makers rarely need to create/redeem or hedge, so the first three components hardly affect the spread; it reflects mainly the market maker's profit less the discount for offsetting orders. The ETF spread is at most the sum of these components."
      },
      {
-      "q": "The client's total expected holding cost in Point 5 is closest to:",
+      "q": "The client's total expected holding cost in Point 3 is closest to:",
       "options": [
        "0.37%",
        "0.22%",
@@ -2911,7 +2934,7 @@ const EXAM_SETS = [
      {
       "q": "After Novak and the two regulators found a table, who most likely violated CFA Standards of Professional Conduct?",
       "options": [
-       "Merin",
+       "Marin",
        "Novak",
        "Kovi"
       ],
@@ -2941,7 +2964,11 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   6,
+   7
+  ]
  },
  {
   "id": "pq6",
@@ -2952,7 +2979,7 @@ const EXAM_SETS = [
   "vignettes": [
    {
     "topic": "Derivatives",
-    "body": "Liang Wu, a portfolio manager at Corwen Asset Management, enters a one-year equity swap with quarterly settlement on a notional of $40 million. Corwen receives the total return on the Meridian 500 index and pays a fixed rate. No fixed rate is quoted, so Wu must set it at initiation from the present value factors in Exhibit 1 (90-day periods, 360-day year).\n\nExhibit 1: Present Value Factors at Initiation\n# Days | Present value factor\n90 | 0.9950\n180 | 0.9896\n270 | 0.9838\n360 | 0.9775\n\nDuring the first quarter the Meridian 500 total return is −1.6%.\n\nSixty days after initiation (before the first settlement) the index has risen from 1,000 to 1,025. Exhibit 2 shows present value factors at that date.\n\nExhibit 2: Present Value Factors 60 Days After Initiation\n# Days | Present value factor\n30 | 0.9985\n120 | 0.9930\n210 | 0.9870\n300 | 0.9805",
+    "body": "Liang Wu, a portfolio manager at Corwen Asset Management, enters a one-year equity swap with quarterly settlement on a notional of $40 million. Corwen receives the total return on the Meridian 500 index and pays a fixed rate. No fixed rate is quoted, so Wu must set it at initiation from the present value factors in Exhibit 1 (90-day periods, 360-day year).\n\nExhibit 1: Present Value Factors at Initiation\n# Days | Present value factor\n90 | 0.9950\n180 | 0.9896\n270 | 0.9838\n360 | 0.9775\n\nDuring the first quarter the Meridian 500 total return is −1.6%.\n\nSeparately, suppose that sixty days after initiation (before the first settlement) the index has risen from 1,000 to 1,025. Exhibit 2 shows present value factors at that date.\n\nExhibit 2: Present Value Factors 60 Days After Initiation\n# Days | Present value factor\n30 | 0.9985\n120 | 0.9930\n210 | 0.9870\n300 | 0.9805",
     "questions": [
      {
       "q": "The annualised fixed rate on the equity swap is closest to:",
@@ -2988,7 +3015,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Marta Quiroga, an analyst at Solaris Bank, writes a note for clients on yields and spreads.\n\nStatement 1: \"A bond's yield to maturity is the return an investor earns only if the bond is held to maturity, there is no default, and all coupons are reinvested at the yield to maturity.\"\nStatement 2: \"In countries where government bonds trade with low liquidity, the swap curve is often a better benchmark than the government curve.\"\nStatement 3: \"The TED spread and the MRR–OIS spread both measure liquidity and credit risk in the banking system.\"\n\nQuiroga also describes a measure of the spread that, when added to each spot rate on the benchmark curve, makes the present value of a bond's cash flows equal to its market price. She notes that SOFR is a secured overnight rate based on the repo market.",
+    "body": "Marta Quiroga, an analyst at Solaris Bank, writes a note for clients on yields and spreads.\n\nStatement 1: \"A bond's yield to maturity is the return an investor earns only if the bond is held to maturity, there is no default, and all coupons are reinvested at the yield to maturity.\"\nStatement 2: \"In countries where government bonds trade with low liquidity, the swap curve is often a better benchmark than the government curve.\"\nStatement 3: \"The TED spread and the MRR–OIS spread both measure liquidity and credit risk in the banking system.\"\n\nQuiroga also describes a measure of the spread that, when added to each spot rate on the benchmark curve, makes the present value of a bond's cash flows equal to its market price.",
     "questions": [
      {
       "q": "If the coupons of a bond held to maturity are reinvested at a rate below its yield to maturity, the realised return will be:",
@@ -3214,7 +3241,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Corporate Issuers",
-    "body": "Mara Kovacs, an analyst at Danubia Capital, estimates the cost of capital for several projects.\n\nProject 1: A private domestic company. Kovacs uses an expanded CAPM with size and company-specific premiums.\nProject 2: A subsidiary in an emerging market. She adds a country risk premium using an extended CAPM with global and country factors.\nProject 3: She needs a pre-tax cost of debt for a company with no traded bonds, rated BBB, and with debt maturing in 7 years. Comparable BBB bonds yield 4.2% at 5 years and 5.1% at 10 years.\nProject 4: A multinational. Kovacs uses an international CAPM: risk-free rate 2.5%, global market premium 5.0%, global beta 1.1, foreign currency risk premium 1.5% and currency beta 0.4.\n\nKovacs also notes that the equity risk premium is higher in developing countries and in recessions.",
+    "body": "Mara Kovacs, an analyst at Danubia Capital, estimates the cost of capital for several projects.\n\nProject 1: A private domestic company. Kovacs uses an expanded CAPM with size and company-specific premiums.\nProject 2: A subsidiary in an emerging market. She adds a country risk premium using an extended CAPM with global and country factors.\nProject 3: She needs a pre-tax cost of debt for a company with no traded bonds, rated BBB, and with debt maturing in 7 years. Comparable BBB bonds yield 4.2% at 5 years and 5.1% at 10 years.\nProject 4: A multinational. Kovacs uses an international CAPM: risk-free rate 2.5%, global market premium 5.0%, global beta 1.1, foreign currency risk premium 1.5% and currency beta 0.4.",
     "questions": [
      {
       "q": "For Project 3, the interpolated pre-tax cost of debt is closest to:",
@@ -3250,7 +3277,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Financial Statement Analysis",
-    "body": "Aalto then reviews Kiruna's defined benefit pension plan. Exhibit 1 shows plan data for the year (in $ millions).\n\nExhibit 1: Pension Plan Data\n# Item | Amount\nBeginning PBO | 500.0\nBeginning plan assets | 440.0\nCurrent service cost | 30.0\nPast service cost (plan amendment this year) | 10.0\nDiscount rate | 4.5%\nExpected return on plan assets | 6.0%\nActual return on plan assets | 20.0\nActuarial loss | 8.0\nEmployer contributions | 35.0\nBenefits paid | 25.0\n\nAalto notes that employer contributions are cash outflows from operating activities. He also asks which assumption change would most reduce Kiruna's pension cost under US GAAP.",
+    "body": "Sven Aalto reviews the defined benefit pension plan of Kiruna Tech. Exhibit 1 shows plan data for the year (in $ millions).\n\nExhibit 1: Pension Plan Data\n# Item | Amount\nBeginning PBO | 500.0\nBeginning plan assets | 440.0\nCurrent service cost | 30.0\nPast service cost (plan amendment this year) | 10.0\nDiscount rate | 4.5%\nExpected return on plan assets | 6.0%\nActual return on plan assets | 20.0\nActuarial loss | 8.0\nEmployer contributions | 35.0\nBenefits paid | 25.0\n\nAalto asks which assumption change would most reduce Kiruna's pension cost under US GAAP.",
     "questions": [
      {
       "q": "The interest cost under US GAAP and the net interest expense under IFRS are closest to:",
@@ -3322,7 +3349,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Osei continues his analysis of the Brightwater convertible. The conversion price is above Brightwater's current share price. The bond's terms include a threshold dividend: if Brightwater pays dividends above the threshold, the conversion ratio is adjusted.\n\nOsei also notes that over the past month Brightwater's share price fell 12%, while the convertible's price fell only 4%.",
+    "body": "Osei analyses a convertible bond issued by Brightwater Energy. The conversion price is above Brightwater's current share price. The bond's terms include a threshold dividend: if Brightwater pays dividends above the threshold, the conversion ratio is adjusted.\n\nOsei also notes that over the past month Brightwater's share price fell 12%, while the convertible's price fell only 4%.",
     "questions": [
      {
       "q": "Because the conversion price is above the current share price, the convertible's risk and return are most likely driven by:",
@@ -3433,7 +3460,7 @@ const EXAM_SETS = [
       "why": "Possible sanctions are not officialised until the process ends, so there is nothing to disclose yet."
      },
      {
-      "q": "Carter works for Invest Today, a local asset management firm. A broker that provides Carter with proprietary research through client brokerage arrangements is offering a new trading service. The broker is offering low-fee, execution-only trades to complement its traditional full-service execution-and-research trades. To entice Carter and other asset managers to send additional business its way, the broker will apply the commissions paid on the new service toward satisfying the brokerage commitment of the prior full-service arrangements. Carter has always been satisfied with the execution provided on the full-service trades, and the fees of the new low-fee trades are comparable to those of other brokers currently used for the accounts that prohibit soft dollar arrangements.",
+      "q": "Carter works for Invest Today, a local asset management firm. A broker that provides Carter with proprietary research through client brokerage arrangements is offering a new trading service. The broker is offering low-fee, execution-only trades to complement its traditional full-service execution-and-research trades. To entice Carter and other asset managers to send additional business its way, the broker will apply the commissions paid on the new service toward satisfying the brokerage commitment of the prior full-service arrangements. Carter has always been satisfied with the execution provided on the full-service trades, and the fees of the new low-fee trades are comparable to those of other brokers currently used for the accounts that prohibit soft dollar arrangements. Which of the following is most appropriate for Carter?",
       "options": [
        "Carter can trade for his accounts that prohibit soft dollar arrangements under the new low-fee trading scheme.",
        "Carter cannot use the new trading scheme because the commissions are prohibited by the soft dollar restrictions of the accounts.",
@@ -3521,7 +3548,14 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 2
+  "rev": 3,
+  "resetHl": [
+   0,
+   1,
+   7,
+   8,
+   10
+  ]
  },
  {
   "id": "mock7",

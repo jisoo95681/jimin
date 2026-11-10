@@ -104,7 +104,7 @@ Exhibit 1: Present Value Factors at Initiation
 
 During the first quarter the Meridian 500 total return is −1.6%.
 
-Sixty days after initiation (before the first settlement) the index has risen from 1,000 to 1,025. Exhibit 2 shows present value factors at that date.
+Separately, suppose that sixty days after initiation (before the first settlement) the index has risen from 1,000 to 1,025. Exhibit 2 shows present value factors at that date.
 
 Exhibit 2: Present Value Factors 60 Days After Initiation
 # Days | Present value factor

@@ -18,7 +18,7 @@ A participant asks which models are calibrated so that they reproduce current ma
  Q("Compared with Model 3, a key feature of Model 4 is that:","rates cannot become negative, because the model describes the logarithm of r",["volatility rises with the level of rates through √r","the model is an equilibrium model with mean reversion"],
    "KWF models ln(r), so r = e^(ln r) is always positive (log-normal rates). Ho–Lee models r itself with constant volatility, so rates can go negative.")])
 
-add("Fixed Income","""Kral gives the class a two-asset example. Both assets are risk free and mature at time 1.
+add("Fixed Income","""Bettina Kral, a fixed-income analyst, gives the class a two-asset example. Both assets are risk free and mature at time 1.
 
 Exhibit 1: Two Risk-Free Assets
 # Asset | Price today | Payoff at time 1
@@ -30,7 +30,7 @@ B | 1,000 | 1,060""",[
 r1,r2,r3=0.020,0.031,0.038
 pv=4/(1+r1)+4/((1+r1)*(1+r2))+104/((1+r1)*(1+r2)*(1+r3))
 pvw=4/(1+r1)+4/(1+r2)**2+104/(1+r3)**3
-add("Fixed Income",f"""Kral then shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are {r1*100:.1f}% (time 0 to 1), {r2*100:.1f}% (time 1 to 2), {r3*100:.1f}% (time 2 to 3) and 4.4% (time 3 to 4).
+add("Fixed Income",f"""Bettina Kral, a fixed-income analyst, shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are {r1*100:.1f}% (time 0 to 1), {r2*100:.1f}% (time 1 to 2), {r3*100:.1f}% (time 2 to 3) and 4.4% (time 3 to 4).
 
 She values a three-year, 4% annual-coupon, option-free bond along this path using the pathwise method.""",[
  Q("The value of the bond along this path is closest to:",f"{pv:.2f}",[f"{pvw:.2f}",f"{4/(1+r1)+4/((1+r1)*(1+r2))+4/((1+r1)*(1+r2)*(1+r3))+104/((1+r1)*(1+r2)*(1+r3)*1.044):.2f}"],
@@ -53,7 +53,7 @@ Statement 1: "A bond's yield to maturity is the return an investor earns only if
 Statement 2: "In countries where government bonds trade with low liquidity, the swap curve is often a better benchmark than the government curve."
 Statement 3: "The TED spread and the MRR–OIS spread both measure liquidity and credit risk in the banking system."
 
-Quiroga also describes a measure of the spread that, when added to each spot rate on the benchmark curve, makes the present value of a bond's cash flows equal to its market price. She notes that SOFR is a secured overnight rate based on the repo market.""",[
+Quiroga also describes a measure of the spread that, when added to each spot rate on the benchmark curve, makes the present value of a bond's cash flows equal to its market price.""",[
  Q("If the coupons of a bond held to maturity are reinvested at a rate below its yield to maturity, the realised return will be:","below the yield to maturity",["equal to the yield to maturity","above the yield to maturity"],
    "One YTM assumption is that coupons are reinvested at the YTM. A lower reinvestment rate gives a realised return below the YTM."),
  Q("Which of Quiroga's statements are correct?","Statements 1, 2 and 3",["Statements 1 and 2 only","Statement 3 only"],
@@ -74,7 +74,7 @@ Swap rate | {s3:.2f} | {s4:.2f}""",[
    f"Swap spread = swap rate − on-the-run government yield, both interpolated to 3.40 years.\nSwap rate = {s3} + 0.40 × ({s4} − {s3}) = {sw:.3f}%\nOn-the-run = {o3} + 0.40 × ({o4} − {o3}) = {on:.3f}%\nSpread = {sw:.3f} − {on:.3f} = {sw-on:.3f}% ≈ {(sw-on)*100:.0f} bps\n{(sw-of)*100:.0f} bps uses the off-the-run yield; {sw*100:.0f} bps is the swap rate, not the spread.")])
 
 f=0.032; fp=1/(1+f)**3
-add("Fixed Income",f"""Quiroga's colleague, Diego Navas, computes forward prices. The three-year forward rate two years from now, f(2,3), is {f*100:.1f}% (annual compounding).
+add("Fixed Income",f"""Diego Navas, a fixed-income analyst, computes forward prices. The three-year forward rate two years from now, f(2,3), is {f*100:.1f}% (annual compounding).
 
 Navas also comments on interest rate volatility: "Volatility of short-term rates is driven mainly by monetary policy, while volatility of long-term rates is driven mainly by expectations for the economy and inflation." """,[
  Q("The forward price, two years from now, of a zero-coupon bond paying 1 at year 5 is closest to:",f"{fp:.4f}",[f"{1/(1+f):.4f}",f"{1/(1+f)**5:.4f}"],
@@ -127,7 +127,7 @@ add("Fixed Income","""Yusuf Demir measures the interest rate risk of three bonds
  Q("The effective durations of Bonds Y and Z compared with Bond X are:","less than or equal to that of Bond X",["greater than or equal to that of Bond X","greater for Bond Y and less for Bond Z"],
    "Both embedded options shorten the effective duration: effective duration of a callable or putable bond ≤ effective duration of the option-free bond.")])
 
-add("Fixed Income","""Demir also analyses a callable, putable convertible bond issued by Ostrava Motors. The conversion price is well above Ostrava's current share price. Over the next month Ostrava's share price rises 6% but remains below the conversion price.""",[
+add("Fixed Income","""Yusuf Demir analyses a callable, putable convertible bond issued by Ostrava Motors. The conversion price is well above Ostrava's current share price. Over the next month Ostrava's share price rises 6% but remains below the conversion price.""",[
  Q("The value of the callable, putable convertible bond is best expressed as:","straight bond + call option on the stock − call option on the bond + put option on the bond",["straight bond + call option on the stock + call option on the bond − put option on the bond","straight bond − call option on the stock − call option on the bond + put option on the bond"],
    "Investor owns the conversion option (call on stock) and the put on the bond, and is short the issuer's call on the bond:\nstraight + call(stock) − call(bond) + put(bond)."),
  Q("After the 6% rise in Ostrava's share price, the convertible's price most likely:","rises only slightly, because the conversion option is still out of the money",["rises by about 6%, because it tracks the share price","falls, because the issuer is more likely to call the bond"],
@@ -187,7 +187,7 @@ Model N uses historical variables, financial ratios and macroeconomic data. Its 
  Q("In Model M, the value of risky debt equals:","the value of riskless debt minus the value of a put option on the company's assets",["the value of riskless debt plus a call option on the company's assets","the value of the company's assets plus a put option"],
    "Debt = riskless bond − put on assets (bondholders are short the put). Equity = call on assets.")])
 
-add("Fixed Income","""De Vries also reviews retail and securitised credit.
+add("Fixed Income","""Sanne de Vries, a credit analyst, reviews retail and securitised credit.
 
 Applicant 1 has a long credit history, no late payments, low use of available credit, few recent credit enquiries and uses many types of credit.
 Bond 2 is a subordinated bond of a company whose senior unsecured debt is rated A.

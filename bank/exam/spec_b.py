@@ -150,7 +150,7 @@ add("Fixed Income",f"""Ferdinand Osei analyses a convertible bond issued by Brig
  Q("The premium over straight value is closest to:",pct(prc/sv-1),[pct((prc/cr-S0)/S0),pct((prc-sv)/prc)],
    f"Premium over straight value = (market price of convertible / straight value) − 1 = {prc}/{sv} − 1 = {pct(prc/sv-1)}")])
 
-add("Fixed Income","""Osei continues his analysis of the Brightwater convertible. The conversion price is above Brightwater's current share price. The bond's terms include a threshold dividend: if Brightwater pays dividends above the threshold, the conversion ratio is adjusted.
+add("Fixed Income","""Osei analyses a convertible bond issued by Brightwater Energy. The conversion price is above Brightwater's current share price. The bond's terms include a threshold dividend: if Brightwater pays dividends above the threshold, the conversion ratio is adjusted.
 
 Osei also notes that over the past month Brightwater's share price fell 12%, while the convertible's price fell only 4%.""",[
  Q("Because the conversion price is above the current share price, the convertible's risk and return are most likely driven by:","interest rates and credit spreads, like a straight bond",["the share price, like the common stock","neither, because the bond is a hybrid"],
