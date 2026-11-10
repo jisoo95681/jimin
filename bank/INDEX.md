@@ -2,7 +2,7 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 246 vignettes · 314 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 260 vignettes · 328 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
@@ -24,10 +24,10 @@ Totals: app 68 vignettes · bank 246 vignettes · 314 in all. Plus 152 standalon
 | 16 | Corporate Restructuring | 0 | 3 | 3 |
 | 17 | Equity Valuation: Applications and Processes | 0 | 7 | 7 |
 | 18 | Discounted Dividend Valuation | 2 | 12 | 14 |
-| 19 | Free Cash Flow Valuation | 1 | 4 | 5 |
+| 19 | Free Cash Flow Valuation | 1 | 18 | 19 |
 | 20 | Market-Based Valuation | 3 | 2 | 5 |
 | 21 | Residual Income Valuation | 0 | 4 | 4 |
-| 22 | Private Company Valuation | 2 | 1 | 3 |
+| 22 | Private Company Valuation | 2 | 3 | 5 |
 | 23 | Term Structure and Interest Rate Dynamics | 0 | 11 | 11 |
 | 24 | Arbitrage-Free Valuation Framework | 1 | 11 | 12 |
 | 25 | Bonds with Embedded Options | 1 | 3 | 4 |
@@ -69,10 +69,10 @@ Totals: app 68 vignettes · bank 246 vignettes · 314 in all. Plus 152 standalon
 **16 Corporate Restructuring**: pc-6 (bank, 4Q); corp4-lee (bank, 5Q); jupiter-saturn (bank, 5Q)
 **17 Equity Valuation: Applications and Processes**: pc-8 (bank, 4Q); eq1-globalguardian (bank, 8Q); eq1-santos (bank, 4Q); eq1-dormier (bank, 4Q); eq1-zylkin (bank, 4Q); eq1-davis (bank, 4Q); eq1-chau (bank, 1Q)
 **18 Discounted Dividend Valuation**: charmed (app, 6Q); tasty (app, 6Q); eq2-dobson (bank, 6Q); eq2-peters (bank, 9Q); eq2-daniel (bank, 6Q); eq2-kwaza (bank, 7Q); eq2-withers (bank, 10Q); eq2-miller (bank, 4Q); eq2-tian (bank, 4Q); eq2-chau (bank, 3Q); eq2-armishaw (bank, 3Q); eq2-jackson (bank, 4Q); eq2-barton (bank, 4Q); s1b-miller (bank, 4Q)
-**19 Free Cash Flow Valuation**: izzo (app, 7Q); pc-3 (bank, 4Q); leigh-holt (bank, 6Q); singh-fcff (bank, 6Q); m2-8 (bank, 4Q)
+**19 Free Cash Flow Valuation**: izzo (app, 7Q); pc-3 (bank, 4Q); fcf-porto (bank, 4Q); fcf-nilsen (bank, 4Q); fcf-pegham (bank, 2Q); fcf-hester (bank, 1Q); fcf-yee (bank, 6Q); fcf-baker (bank, 4Q); fcf-mcq-firm (bank, 6Q); fcf-mcq-laforge (bank, 5Q); fcf-mcq-phaneuf (bank, 5Q); fcf-mcq-values (bank, 3Q); fcf-mcq-effects (bank, 6Q); fcf-mcq-mackinac (bank, 3Q); fcf-mcq-sens (bank, 5Q); fcf-mcq-stages (bank, 4Q); leigh-holt (bank, 6Q); singh-fcff (bank, 6Q); m2-8 (bank, 4Q)
 **20 Market-Based Valuation**: cannan (app, 7Q); centralino (app, 6Q); pinho (app, 7Q); m2-2 (bank, 4Q); s1a-stratton (bank, 6Q)
 **21 Residual Income Valuation**: m1-7 (bank, 4Q); nkomo (bank, 8Q); castovan (bank, 10Q); s1a-kim (bank, 5Q)
-**22 Private Company Valuation**: schwalke (app, 5Q); schwalke2 (app, 5Q); pc-4 (bank, 4Q)
+**22 Private Company Valuation**: schwalke (app, 5Q); schwalke2 (app, 5Q); pc-4 (bank, 4Q); fcf-pegham (bank, 2Q); fcf-hester (bank, 1Q)
 **23 Term Structure and Interest Rate Dynamics**: s2a-akron (bank, 6Q); ts-fwd-4-5-6 (bank, 4Q); ts-madison (bank, 4Q); ts-brown (bank, 4Q); ts-scai (bank, 4Q); ts-gfc (bank, 4Q); ts-halstead (bank, 4Q); s2a-tyo (bank, 11Q); m1-9 (bank, 4Q); nguyen (bank, 7Q); s2a-mathews (bank, 5Q)
 **24 Arbitrage-Free Valuation Framework**: sam (app, 4Q); pc-7 (bank, 4Q); s2a-akron (bank, 6Q); af-black (bank, 6Q); af-alvarez (bank, 8Q); af-jones (bank, 3Q); af-fujioka (bank, 6Q); af-zhang (bank, 4Q); af-wenger (bank, 6Q); af-annisquam (bank, 6Q); s2a-tyo (bank, 11Q); s2a-mathews (bank, 5Q)
 **25 Bonds with Embedded Options**: prostar (app, 10Q); eo-bianchi (bank, 9Q); eo-smith-carter (bank, 8Q); m2-1 (bank, 4Q)
