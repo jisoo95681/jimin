@@ -1,0 +1,876 @@
+[
+ {
+  "id": "ts-busse",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Busse: random walk, unit root, Dickey–Fuller, seasonal lag, ARCH, cointegration",
+  "body": "Max Busse is an analyst in the research department of a large hedge fund. He was recently asked to develop a model to predict the future exchange rate between two currencies. Busse gathers monthly exchange rate data from the most recent 10-year period and runs a regression based on the following AR(1) model specification:\n\nRegression 1: xt = b0 + b1xt−1 + εt, where xt is the exchange rate at time t.\n\nBased on his analysis of the time series and the regression results, Busse reaches the following conclusions:\n\nConclusion 1: The variance of xt increases over time.\nConclusion 2: The mean-reverting level is undefined.\nConclusion 3: b0 does not appear to be significantly different from 0.\n\nBusse decides to do additional analysis by first-differencing the data and running a new regression.\n\nRegression 2: yt = b0 + b1yt−1 + εt, where yt = xt − xt−1.\n\nExhibit 1 shows the regression results.\n\nExhibit 1\nFirst-Differenced Exchange Rate AR(1) Model: Month-End Observations, Last 10 Years\nRegression Statistics\nR2\t0.0017 |\nStandard error\t7.3336 |\nObservations\t118 |\nDurbin–Watson\t1.9937 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t−0.8803\t0.6792\t−1.2960\nxt−1 − xt−2\t0.0412\t0.0915\t0.4504\nAutocorrelations of the Residual\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.0028\t0.0921\t0.0300\n2\t0.0205\t0.0921\t0.2223\n3\t0.0707\t0.0921\t0.7684\n4\t0.0485\t0.0921\t0.5271\nNote: The critical t-statistic at the 5% significance level is 1.98.\n\nBusse decides that he will need to test the data for nonstationarity using a Dickey–Fuller test. To do so, he knows he must model a transformed version of Regression 1.\n\nBusse's next assignment is to develop a model to predict future quarterly sales for PoweredUP, Inc., a major electronics retailer. He begins by running the following regression:\n\nRegression 3: ln Salest − ln Salest−1 = b0 + b1(ln Salest−1 − ln Salest−2) + εt.\n\nExhibit 2 presents the results of this regression.\n\nExhibit 2\nLog Differenced Sales AR(1) Model: PoweredUP, Inc., Last 10 Years of Quarterly Sales\nRegression Statistics\nR2\t0.2011 |\nStandard error\t0.0651 |\nObservations\t38 |\nDurbin–Watson\t1.9677 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t0.0408\t0.0112\t3.6406\nln Salest−1 − ln Salest−2\t−0.4311\t0.1432\t−3.0099\nAutocorrelations of the Residual\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.0146\t0.1622\t0.0903\n2\t−0.1317\t0.1622\t−0.8119\n3\t−0.1123\t0.1622\t−0.6922\n4\t0.6994\t0.1622\t4.3111\nNote: The critical t-statistic at the 5% significance level is 2.02.\n\nBecause the regression output from Exhibit 2 raises some concerns, Busse runs a different regression. These regression results, along with quarterly sales data for the past five quarters, are presented in Exhibit 3 and Exhibit 4, respectively.\n\nExhibit 3\nLog Differenced Sales AR(1) Model with Seasonal Lag: PoweredUP, Inc., Last 10 Years of Quarterly Sales\nRegression Statistics\nR2\t0.6788 |\nStandard error\t0.0424 |\nObservations\t35 |\nDurbin–Watson\t1.8799 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t0.0092\t0.0087\t1.0582\nln Salest−1 − ln Salest−2\t−0.1279\t0.1137\t−1.1252\nln Salest−4 − ln Salest−5\t0.7239\t0.1093\t6.6209\nAutocorrelations of the Residual\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.0574\t0.1690\t0.3396\n2\t0.0440\t0.1690\t0.2604\n3\t0.1923\t0.1690\t1.1379\n4\t−0.1054\t0.1690\t−0.6237\nNote: The critical t-statistic at the 5% significance level is 2.03.\n\nExhibit 4\nMost Recent Quarterly Sales Data (in billions)\nDec 2015 (Salest−1)\t$3.868\nSep 2015 (Salest−2)\t$3.780\nJune 2015 (Salest−3)\t$3.692\nMar 2015 (Salest−4)\t$3.836\nDec 2014 (Salest−5)\t$3.418\n\nAfter completing his work on PoweredUP, Busse is asked to analyze the relationship of oil prices and the stock prices of three transportation companies. His firm wants to know whether the stock prices can be predicted by the price of oil. Exhibit 5 shows selected information from the results of his analysis.\n\nExhibit 5\nAnalysis Summary of Stock Prices for Three Transportation Stocks and the Price of Oil\n\tUnit Root?\tLinear or Exponential Trend?\tSerial Correlation of Residuals in Trend Model?\tARCH(1)?\tComments\nCompany 1\tYes\tExponential\tYes\tYes\tNot cointegrated with oil price\nCompany 2\tYes\tLinear\tYes\tNo\tCointegrated with oil price\nCompany 3\tNo\tExponential\tYes\tNo\tNot cointegrated with oil price\nOil Price\tYes\t\t\t |\n\nTo assess the relationship between oil prices and stock prices, Busse runs three regressions using the time series of each company's stock prices as the dependent variable and the time series of oil prices as the independent variable.",
+  "questions": [
+   {
+    "n": 27,
+    "q": "Which of Busse's conclusions regarding the exchange rate time series is consistent with both the properties of a covariance-stationary time series and the properties of a random walk?",
+    "options": [
+     "Conclusion 1",
+     "Conclusion 2",
+     "Conclusion 3"
+    ],
+    "answer": "C",
+    "why": "C is correct. A random walk is xt = b0 + b1xt−1 + εt with b0 = 0 and b1 = 1, so b0 = 0 is a property of a random walk. b0 = 0 does not break any of the three requirements of covariance stationarity (constant finite mean, constant finite variance, constant finite covariance with its own lags), so it is consistent with both."
+   },
+   {
+    "n": 28,
+    "q": "Based on the regression output in Exhibit 1, the first-differenced series used to run Regression 2 is consistent with:",
+    "options": [
+     "a random walk.",
+     "covariance stationarity.",
+     "a random walk with drift."
+    ],
+    "answer": "B",
+    "why": "B is correct. At the 5% level (critical t = 1.98) neither the intercept nor the slope differs significantly from zero, and the residual autocorrelations do not differ from zero. Regression 2 reduces to yt = εt with mean-reverting level b0/(1 − b1) = 0 and constant variance σ², so yt is covariance stationary."
+   },
+   {
+    "n": 29,
+    "q": "Based on the regression results in Exhibit 1, the original time series of exchange rates:",
+    "options": [
+     "has a unit root.",
+     "exhibits stationarity.",
+     "can be modeled using linear regression."
+    ],
+    "answer": "A",
+    "why": "A is correct. If the exchange rate is a random walk, the first-differenced series gives b0 = 0 and b1 = 0 with uncorrelated errors. Exhibit 1 shows exactly that (all t-statistics are below 1.98), so the original series has a unit root. All random walks have unit roots."
+   },
+   {
+    "n": 30,
+    "q": "In order to perform the nonstationarity test, Busse should transform the Regression 1 equation by:",
+    "options": [
+     "adding the second lag to the equation.",
+     "changing the regression's independent variable.",
+     "subtracting the independent variable from both sides of the equation."
+    ],
+    "answer": "C",
+    "why": "C is correct. The Dickey–Fuller test subtracts xt−1 from both sides: xt − xt−1 = b0 + (b1 − 1)xt−1 + εt. The dependent variable changes (xt − xt−1) and the slope becomes b1 − 1, but the independent variable does not change."
+   },
+   {
+    "n": 31,
+    "q": "Based on the regression output in Exhibit 2, what should lead Busse to conclude that the Regression 3 equation is not correctly specified?",
+    "options": [
+     "The Durbin–Watson statistic",
+     "The t-statistic for the slope coefficient",
+     "The t-statistics for the autocorrelations of the residual"
+    ],
+    "answer": "C",
+    "why": "C is correct. The fourth residual autocorrelation is 0.6994 with t = 4.3111, above the critical value 2.02, so the null of no autocorrelation is rejected. This is strong seasonal autocorrelation: Regression 3 is misspecified."
+   },
+   {
+    "n": 32,
+    "q": "Based on the regression output in Exhibit 3 and sales data in Exhibit 4, the forecasted value of quarterly sales for March 2016 for PoweredUP is closest to:",
+    "options": [
+     "$4.193 billion.",
+     "$4.205 billion.",
+     "$4.231 billion."
+    ],
+    "answer": "C",
+    "why": "C is correct. ln Salest − ln 3.868 = 0.0092 − 0.1279(ln 3.868 − ln 3.780) + 0.7239(ln 3.836 − ln 3.418) = 0.0092 − 0.1279(0.02301) + 0.7239(0.11538). So ln Salest = 1.35274 + 0.0092 − 0.00294 + 0.08352 = 1.44251 and Salest = e^1.44251 = 4.231."
+   },
+   {
+    "n": 33,
+    "q": "Based on Exhibit 5, Busse should conclude that the variance of the error terms for Company 1:",
+    "options": [
+     "is constant.",
+     "can be predicted.",
+     "is homoskedastic."
+    ],
+    "answer": "B",
+    "why": "B is correct. Company 1 is ARCH(1), i.e. heteroskedastic: the variance of the error in one period depends on the variance in the previous period, so the variance of the error in t + 1 can be predicted in period t."
+   },
+   {
+    "n": 34,
+    "q": "Based on Exhibit 5, for which company would the regression of stock prices on oil prices be expected to yield valid coefficients that could be used to estimate the long-term relationship between stock price and oil price?",
+    "options": [
+     "Company 1",
+     "Company 2",
+     "Company 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. When two series both have a unit root and are cointegrated, the regression error is covariance stationary, so the coefficients and standard errors are consistent. Company 2 and the oil price both have a unit root and are cointegrated. Company 1 is not cointegrated and Company 3 has no unit root."
+   },
+   {
+    "n": 35,
+    "q": "Based on Exhibit 5, which single time-series model would most likely be appropriate for Busse to use in predicting the future stock price of Company 3?",
+    "options": [
+     "Log-linear trend model",
+     "First-differenced AR(2) model",
+     "First-differenced log AR(1) model"
+    ],
+    "answer": "C",
+    "why": "C is correct. Company 3 has an exponential trend, so take the natural log and first-difference it. The residuals of the trend model are serially correlated, so a more complex model such as an autoregressive model is needed."
+   }
+  ]
+ },
+ {
+  "id": "ts-namibia",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Namibia GDP (New Markets): log-linear trend, three-step AR check, mean reversion, seasonality (Q48 units flawed in the portal)",
+  "body": "New Markets Inc. is an investment firm focusing on frontier developing market investments for institutional clients seeking opportunities in high-growth economies. Portfolio manager, Jan Haag is meeting with the firm's junior analyst, Peer Olsen, who is studying the Gross Domestic Product (GDP) of countries in Africa. Haag is interested in identifying countries, which could profit from rising agricultural prices and increased demand for precious metals in the next 3 to 5 years. He believes increasing rates of future GDP growth will also indicate attractive investment opportunities.\n\nHe has asked Olsen to share the results of his preliminary analysis of the GDP of Namibia. Olsen explains to Haag some of the results of his analysis citing where he is still uncertain whether his model is correctly specified:\n\n\"My model uses quarterly data from the last 3 years. My first attempt to estimate an equation for predicting the size of the Namibian GDP each quarter produced the following equation ignoring the error term:\n\nyt = b0 + b1t\n\nwhere:\n\nyt = the size of GDP in Namibia in USD billions at time t\nb0 = the intercept coefficient\nb1 = the trend coefficient\n\nIn plotting the results of the equation from this model, I made the following three observations:\n\nObservation 1: The level of GDP in USD is constantly growing over time\nObservation 2: The residuals from successive periods do not appear to be correlated\nObservation 3: The trend from the model alternates between periods when it is persistently above or persistently below GDP\n\nI then decided a log-linear trend regression model would be more appropriate for predicting the quarterly GDP level for Namibia in USD. Exhibit 1 shows regression statistics from estimating this equation.\"\n\nExhibit 1\nR2\t.967 |\nStandard error\t.129 |\nObservations\t12 |\nDurbin-Watson\t.274 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t8.9673\t.3754\t206.80\nT (Trend)\t0.0851\t.0019\t35.875\n\nHaag comments: \"A key assumption in time-series analysis is that the time series must be covariance stationary and one of your Observations indicates to me that this is not the case. I think your current model will also show that the USD level of GDP in one quarter is related to the level in the previous quarter. Therefore, I think you should consider focusing on the annualized growth rate of GDP from quarter to quarter and use an autoregressive model for this time series.\"\n\nOlsen replies: \"I can develop an AR model focusing on the growth rate of GDP, using the following three step method:\"\n\nStep 1: Estimate a specific autoregressive model\nStep 2: Compute the correlations of the series with its own past values\nStep 3: Test to ensure that the autocorrelations differ significantly from 0 using the Durbin-Watson statistic\n\nHaag points out to Olsen: \"Since you are analyzing the quarterly rate of GDP growth, please also test for mean reversion and seasonality.\"\n\nOlsen states: \"I have presented some of the results in my estimating AR(1) this model in Exhibit 2.\"\n\nExhibit 2\nR2\t.934 |\nStandard error\t.158 |\nObservations\t12 |\nDurbin-Watson\t0.37 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t.0778\t.0586\t2.8039\nT (Trend)\t0.00551\t.3731\t7.875\nAutocorrelations of the Residual\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.0845\t.1790\t1.2365\n2\t–0.1389\t.1790\t–2.3143\n3\t–0.1253\t.1790\t–1.5498\n4\t0.7849\t.1790\t5.9730",
+  "questions": [
+   {
+    "n": 48,
+    "q": "Based on the data in Exhibit 1, Olsen's model predicts the value of Namibia's GDP at t = 13 will be closest to:",
+    "options": [
+     "USD 8.54 billion.",
+     "USD 12.43 billion.",
+     "USD 23.71 billion."
+    ],
+    "answer": "C",
+    "why": "C is correct (portal key). In a log-linear trend model the predicted value is e^(b0 + b1t) = e^(8.9673 + 0.0851 × 13). Note: the vignette's units are inconsistent (the formula gives about 23,709 in the units of the series); the portal's key is 23.71. Do not use this question in a mock."
+   },
+   {
+    "n": 49,
+    "q": "In organizing his three-step method to determine whether his AR model is correctly specified, Olsen is least likely correct about:",
+    "options": [
+     "Step 1.",
+     "Step 2.",
+     "Step 3."
+    ],
+    "answer": "C",
+    "why": "C is correct. The method is: 1) estimate an autoregressive model, 2) compute the autocorrelations of the residuals, 3) test whether the residual autocorrelations differ significantly from 0. If they do, the model is misspecified. Step 3 as stated (use the Durbin–Watson statistic, ensure autocorrelations differ from 0) is wrong: Durbin–Watson is not valid for an AR model."
+   },
+   {
+    "n": 50,
+    "q": "Based on the data in Exhibit 2, the mean-reverting GDP growth rate Olsen calculates would be closest to:",
+    "options": [
+     "7.74%.",
+     "7.82%.",
+     "8.33%."
+    ],
+    "answer": "B",
+    "why": "B is correct. In an AR(1) model the mean-reverting level is b0/(1 − b1) = 0.0778/(1 − 0.00551) = 0.0782. A (0.0778/(1 + 0.00551)) uses a plus sign; C (0.0778 + 0.00551) adds the coefficients."
+   },
+   {
+    "n": 51,
+    "q": "If Olsen's new equation makes an adjustment for seasonality it would most likely include the:",
+    "options": [
+     "second quarter lag variable.",
+     "third quarter lag variable.",
+     "fourth quarter lag variable."
+    ],
+    "answer": "C",
+    "why": "C is correct. With quarterly data the seasonal lag is the fourth. The fourth residual autocorrelation in Exhibit 2 is strongly positive (0.7849, t = 5.97), so a fourth-lag variable should be added."
+   }
+  ]
+ },
+ {
+  "id": "ts-rudall",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Rudall Hardware (Knight): log-linear trend, Durbin–Watson, AR(1) forecast, seasonal lag, RMSE",
+  "body": "Thomas Knight, an analyst with Wanjarri Investment Management, is tasked with forecasting future sales for Rudall Hardware, a publicly traded retail business specializing in home improvements. Using 25 quarters of sales data ending with the most recent quarter-end date, Knight estimates a log-linear trend with an intercept of 9.464 million and a trend coefficient of 0.003 million. Based on this model, he creates a forecast of sales for the next four quarters to discuss with his supervisor, Rory Johnson.\n\nJohnson reviews Knight's forecast and states:\n\nStatement 1) As long as the R2 is high, we can be comfortable that the model is a good fit for our analysis.\nStatement 2) A statistically meaningful low Durbin-Watson statistic indicates that the errors in the model may exhibit positive serial correlation.\nStatement 3) If Rudall Hardware's sales are growing at a constant rate, a linear trend model may be a better fit than a log-linear model.\n\nNext, Johnson asks Knight to forecast Rudall Hardware's net margin (net income/sales) for the next four quarters. Knight agrees and explains that he will use a first-order autoregressive model since each quarter's net margin appears related to the prior quarter's net margin. Knight also mentions that he will use an intercept of 0.0415 and a coefficient on the first lag of the net margin of 0.8295.\n\nWhen applying the first-order autoregressive model, Knight wants to conduct some tests to ensure the model is producing meaningful results. In order to do this, Knight comments that he must test whether the:\n\nTest 1: Durbin-Watson statistic differs significantly from 2.\nTest 2: residual autocorrelations differ significantly from 0.\nTest 3: intercept and coefficient on the first lag differ significantly from 0.\n\nIn reviewing the quarterly net margin forecast, Johnson points out that the autocorrelation of the residuals for the 4th lag is significantly different than 0, while lags 1 through 3 are not significantly different than 0, indicating an issue with seasonality. Johnson asks Knight to build a first-order autoregressive model to forecast earnings per share for the next four quarters, but to account for seasonality in this model.\n\nKnight reviews the company's earnings per share data and determines that he can create a first-order autoregressive model to account for the seasonality using the information in Exhibit 1.\n\nExhibit 1\nIntercept\t0.2360\n1 Quarter Lag Coefficient\t0.4264\n4 Quarter Lag Coefficient\t0.6285\nEarnings Per Share Last Quarter\t$3.75\nEarnings Per Share 4 Quarters Prior\t$3.15\n\nAfter the models Knight created are in use for several quarters, Johnson asks Knight to put together a report assessing the accuracy of the models in forecasting out-of-sample forecasts. Knight reports to Johnson that the root mean squared error for each model is:\n\nExhibit 2\nModel\tAverage Squared Error\tRoot Mean Squared Error\tDurbin-Watson\nSales Model\t1.6626\t1.2894\t2.0225\nNet Margin Model\t1.7575\t1.3257\t2.0030\nEarnings Per Share Model\t1.3851\t1.1769\t2.0187",
+  "questions": [
+   {
+    "n": 52,
+    "q": "Which of Johnson's statements relating to Knight's forecasted future sales for Rudall Hardware is most likely correct?",
+    "options": [
+     "Statement 1",
+     "Statement 2",
+     "Statement 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. A statistically significant low Durbin–Watson statistic indicates the errors may have positive serial correlation. Statement 1 is wrong: a high R² does not help if the errors are serially correlated. Statement 3 is wrong: constant dollar growth fits a linear trend, constant rate of growth fits a log-linear model."
+   },
+   {
+    "n": 53,
+    "q": "If Rudall Hardware's net margin is 15% this quarter, Knight's first-order autoregressive model will predict the net margin two quarters from now to be closest to:",
+    "options": [
+     "15.88%.",
+     "17.91%.",
+     "20.74%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Apply the model twice: 0.0415 + 0.8295 × 0.15 = 16.59%, then 0.0415 + 0.8295 × 0.1659 = 17.91%. A adds the margin to the intercept before multiplying; C adds the intercept twice."
+   },
+   {
+    "n": 54,
+    "q": "Of the three tests Knight indicates he would like to conduct for the first-order autoregressive model, which is most likely appropriate to test for serial correlation in the model?",
+    "options": [
+     "Test 1",
+     "Test 2",
+     "Test 3"
+    ],
+    "answer": "B",
+    "why": "B is correct. Serial correlation in an autoregressive model is tested through the residual autocorrelations. Test 1 is invalid because the Durbin–Watson statistic cannot be used when a lagged dependent variable is an independent variable. Test 3 tests the coefficients, not the residuals."
+   },
+   {
+    "n": 55,
+    "q": "Once adjusted for seasonality, based on data in Exhibit 1, the forecasted earnings per share for the current quarter is closest to:",
+    "options": [
+     "$3.58.",
+     "$3.81.",
+     "$3.94."
+    ],
+    "answer": "B",
+    "why": "B is correct. 0.2360 + 0.4264 × 3.75 + 0.6285 × 3.15 = $3.81. A leaves out the intercept; C matches the coefficients with the wrong lags."
+   }
+  ]
+ },
+ {
+  "id": "ts-taylor",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Taylor (Maclaurin): log-linear forecast, mean reversion, Dickey–Fuller transformation, random walk with drift",
+  "body": "Xyrees Taylor is an equity analyst evaluating the stock of Maclaurin Corporation. Taylor undertakes quantitative analysis to get a better understanding of how relevant valuation parameters have changed over time.\n\nFirst, Taylor examines the quarterly sales (in $ millions) of the company for the past six years (24 observations) to forecast sales for the current quarter. Taylor uses Model A, a log-linear model (ln yt = b0 + b1t + εt) where yt represents quarterly sales for quarter t. The regression estimates for the intercept and the trend coefficient are 5.74820 and 0.03795, respectively.\n\nMaclaurin's earnings are substantially export-driven. To understand the impact of foreign exchange rates on earnings, Taylor builds Model B, an autoregressive AR(1) model, for the exchange rate between Maclaurin's domestic currency and that of its primary export market. The regression estimates for the intercept and the coefficient of the first lag are 0.3000 and 0.9093, respectively.\n\nTaylor builds another AR(1) model (Model C) for the exchange rate between Maclaurin's domestic currency and that of its secondary export market. Taylor suspects that the time series used for Model C may have a unit root and he runs a Dickey–Fuller test.\n\nBefore making his recommendation on the stock, Taylor also wants to model the movement of Maclaurin's share price (in natural logs). He uses an AR(1) model (Model D). After performing the relevant necessary transformations and reviewing the regression statistics, Taylor concludes that the intercept is 0.25 and the coefficient of the first lag is 1.",
+  "questions": [
+   {
+    "n": 56,
+    "q": "Based on Model A, the predicted value of Maclaurin's sales for the current quarter is closest to:",
+    "options": [
+     "$326 million.",
+     "$780 million.",
+     "$810 million."
+    ],
+    "answer": "C",
+    "why": "C is correct. Six years = 24 observations, so the current quarter is t = 25: exp(5.74820 + 0.03795 × 25) = 809.93, about $810 million. A uses t = 1 (326); B uses t = 24 (780)."
+   },
+   {
+    "n": 57,
+    "q": "For Model B, the mean-reverting level is closest to:",
+    "options": [
+     "1.30.",
+     "3.03.",
+     "3.31."
+    ],
+    "answer": "C",
+    "why": "C is correct. Mean-reverting level = b0/(1 − b1) = 0.3000/(1 − 0.9093) = 3.31. A swaps the coefficients (b1/(1 − b0)); B uses b1/b0."
+   },
+   {
+    "n": 58,
+    "q": "In order to run his test on Model C, Taylor should:",
+    "options": [
+     "take the first difference of the time series.",
+     "subtract the first lag of the time series from both sides of the model equation.",
+     "take the natural logarithms of both the independent and dependent variables."
+    ],
+    "answer": "B",
+    "why": "B is correct. The Dickey–Fuller test subtracts xt−1 from both sides of the AR(1) model: xt − xt−1 = b0 + (b1 − 1)xt−1 + εt, i.e. g1 = b1 − 1, and a unit root means g1 = 0. First-differencing the series would introduce a second lag instead."
+   },
+   {
+    "n": 59,
+    "q": "Taylor's regression estimates for Model D indicate that the time series of Maclaurin's share price (in natural logs) is most likely:",
+    "options": [
+     "covariance stationary.",
+     "a simple random walk.",
+     "a random walk with drift."
+    ],
+    "answer": "C",
+    "why": "C is correct. b1 = 1 means a unit root (undefined mean reversion, not covariance stationary), and b0 = 0.25 ≠ 0, so it is a random walk with drift. A simple random walk has b0 = 0."
+   }
+  ]
+ },
+ {
+  "id": "ts-sumner",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Sumner (UK house prices): first differences, AR(1) forecast, mean reversion, cointegration tests",
+  "body": "Janice Sumner is an analyst at a UK-based investment management firm that focuses on alternative asset classes. Sumner is analyzing a number of real estate investments and wants to develop a time-series model to understand recent house price dynamics and to forecast price movements.\n\nSumner collects 10 years of quarterly data of a UK House Price Index (HPI, scaled to be 100 in the first quarter). After her initial analysis of the data, Sumner makes the following observations:\n\nObservation 1: Each consecutive value in the time series appears to increase by approximately the same positive amount, irrespective of the level of the index.\nObservation 2: A plot of the first-difference of the index shows roughly the same variance over time.\n\nGiven these observations, Sumner decides to compute the difference in the HPI over each quarter, denoted ΔHPI, and proposes Model 1, an AR(1) model:\n\nModel 1: ΔHPIt = b0 + b1ΔHPIt–1 + εt\n\nThe results from estimating Model 1 are summarized in Exhibit 1.\n\nExhibit 1\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t0.7457\t0.2069\t3.6032\nΔHPIt–1\t0.5369\t0.1327\t4.0466\n\nThe HPI was 156.26 two quarters ago, 158.07 one quarter ago, and it currently stands at 160.23. Sumner wants to forecast next quarter's HPI.\n\nLastly, Sumner wants to investigate the relationship between UK house prices and the UK Consumer Price Index (CPI). To do so, she plans to regress the quarterly values of the HPI on a time series of quarterly values of the CPI for the same period. Before doing so, she performs the following preliminary statistical tests:\n\nTest 1: A Dickey–Fuller test on the times series of HPI;\nTest 2: A Dickey–Fuller test on the times series of CPI;\nTest 3: An (Engle–Granger) Dickey–Fuller test on the error term when regressing HPI on CPI.",
+  "questions": [
+   {
+    "n": 60,
+    "q": "Observations 1 and 2 most likely indicate that the first difference of the time series:",
+    "options": [
+     "has a unit root.",
+     "is covariance stationary.",
+     "is a random walk with drift."
+    ],
+    "answer": "B",
+    "why": "B is correct. Observation 1 (the index rises by about the same amount each quarter, a linear trend) means the first-differenced series has a constant mean; Observation 2 says its variance is constant. So the first difference is covariance stationary, and cannot have a unit root."
+   },
+   {
+    "n": 61,
+    "q": "The mean-reverting level for ΔHPI implied by Model 1 is closest to:",
+    "options": [
+     "0.75.",
+     "1.61.",
+     "2.11."
+    ],
+    "answer": "B",
+    "why": "B is correct. Mean-reverting level = b0/(1 − b1) = 0.7457/(1 − 0.5369) = 1.61. A is just the intercept; C swaps the coefficients."
+   },
+   {
+    "n": 62,
+    "q": "Based on Model 1, the next-quarter forecast for the HPI is closest to:",
+    "options": [
+     "161.51.",
+     "161.95.",
+     "162.14."
+    ],
+    "answer": "C",
+    "why": "C is correct. The latest change is 160.23 − 158.07 = 2.16, so ΔHPIt+1 = 0.7457 + 0.5369 × 2.16 = 1.9054 and the forecast is 160.23 + 1.9054 = 162.14. A adds the two coefficients; B uses the change of one quarter earlier (1.81)."
+   },
+   {
+    "n": 63,
+    "q": "The results of regressing HPI on CPI are most likely valid if the null hypothesis is rejected in:",
+    "options": [
+     "Test 1 only.",
+     "Test 2 only.",
+     "Test 3 only."
+    ],
+    "answer": "C",
+    "why": "C is correct. If neither null of a unit root is rejected in Tests 1 and 2, both series have a unit root. The regression is then valid only if they are cointegrated, i.e. the Engle–Granger test (Test 3) rejects a unit root in the error term, so the error is covariance stationary."
+   }
+  ]
+ },
+ {
+  "id": "ts-hall",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · Hall (copper and gold): covariance stationarity, linear trend forecast, misspecification, Dickey–Fuller",
+  "body": "John Hall is examining the time series behavior of copper and gold prices over the last year. Hall knows that, to make a valid statistical inference, the time series needs to be covariance stationary. He lists three requirements that he believes are necessary for a time series to be stationary.\n\nRequirement 1: The mean must be zero and finite in all periods.\nRequirement 2: The variance must be constant and finite in all periods.\nRequirement 3: The covariance of the time series with its lagged values must be constant and finite in all periods.\n\nHall plots weekly copper prices (in $ per pound) over a year (52 observations) and notices an apparent upward trend. He runs Model A, a linear trend model, by regressing copper prices against a trend, with results reported in Exhibit 1. He then uses the results to forecast future copper prices.\n\nExhibit 1\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t2.5768\t0.0417\t61.83\nt (Trend)\t0.0383\t0.0014\t27.99\n\nNext, Hall uses Model B, a first-order autoregressive model, AR(1), for the gold price series. He determines that the coefficient of the first lag of the original weekly gold price series is significantly different from zero. He also calculates the autocorrelations of the residuals up to four lags and determines that only the residual autocorrelation at the third lag is significantly different from zero.\n\nHall then conducts a Dickey–Fuller test for the gold price series using the regression equation Pt − Pt–1 = b0 + g1Pt–1 + εt, where Pt denotes the gold price at time t. The results are shown in Exhibit 2.\n\nExhibit 2\n\tCoefficient\tStandard Error\tt-Statistic\tp-Value\nIntercept\t9.3724\t48.2508\t0.1942\t0.8467\nPt–1\t0.0003\t0.0332\t0.0093\t0.9926",
+  "questions": [
+   {
+    "n": 64,
+    "q": "Which requirement listed by Hall is not necessary for a time series to be stationary?",
+    "options": [
+     "Requirement 1",
+     "Requirement 2",
+     "Requirement 3"
+    ],
+    "answer": "A",
+    "why": "A is correct. A zero mean is not required: the expected value must be constant and finite in all periods, the variance must be constant and finite, and the covariance with its own lags must be constant and finite."
+   },
+   {
+    "n": 65,
+    "q": "Based on Model A, the predicted (out-of-sample) price of copper five weeks ahead is closest to:",
+    "options": [
+     "$2.18.",
+     "$2.77.",
+     "$4.76."
+    ],
+    "answer": "C",
+    "why": "C is correct. 52 observations in the sample, so five weeks ahead is t = 57: 2.5768 + 0.0383 × 57 = $4.76. A leaves out the intercept; B uses t = 5."
+   },
+   {
+    "n": 66,
+    "q": "Model B is most likely:",
+    "options": [
+     "correctly specified.",
+     "misspecified based on the statistical results observed in the model's residuals.",
+     "misspecified based on the coefficient of the first lag of the original weekly gold price series."
+    ],
+    "answer": "B",
+    "why": "B is correct. A correctly specified model has residual autocorrelations not different from zero. The third-lag autocorrelation is significant, so the AR(1) model is misspecified. A significant first-lag coefficient is expected in an AR(1) process."
+   },
+   {
+    "n": 67,
+    "q": "Based on Exhibit 2, the test that Hall conducts for the gold price series:",
+    "options": [
+     "is inconclusive.",
+     "indicates that the series is stationary.",
+     "indicates that the series exhibits a unit root."
+    ],
+    "answer": "C",
+    "why": "C is correct. The Dickey–Fuller null hypothesis is g1 = 0 (unit root, nonstationary) against g1 < 0. The t-statistic for g1 is 0.0093 and its p-value is 0.9926, so the null is not rejected: the gold price series has a unit root."
+   }
+  ]
+ },
+ {
+  "id": "ts-demolay",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz (9/73: answers mostly not given, opened to copy the questions)",
+  "readings": [
+   2
+  ],
+  "title": "Time series · DeMolay and Kamini (P/E): random walk, ARCH(1), generalized least squares, unit roots and cointegration",
+  "body": "Eduardo DeMolay, a research analyst at Mumbai Securities, is studying the time-series behavior of price-to-earnings ratios (P/Es) computed with trailing 12-month earnings (Etrailing). He and his assistant, Deepa Kamini, are reviewing the results of the ordinary least squares time series regression shown in Exhibit 1.\n\nExhibit 1\nResults of Regression of P/E on Lagged P/E (P/Et = b0 + b1P/Et–1 + εt)\n\tCoefficient\tStandard Error\tt\tSignificance of t\nConstant (b0)\t0.143\t0.153\t0.935\t0.176\nLagged P/E (b1)\t0.991\t0.003\t292.958\t0\nR2\tStandard Error of the Estimate\tDurbin–Watson\tF\tSignificance of F\n0.075\t1.48978\t2.094\t130.066\t0\n\nDeMolay states: \"This regression is a special case of a first-order autoregressive [AR(1)] model in which the value for b0 is close to zero and the value of b1 is close to 1. These values suggest that the time series is a random walk.\"\n\nKamini replies: \"I'm convinced the P/E series based on trailing earnings truly is a random walk.\"\n\nKamini and DeMolay next examine the behavior of P/Es calculated using forward 12-month earnings (Eforward). Kamini estimates another AR(1) model but uses the forward P/E values this time. She denotes the errors from this second regression as ηt. She states: \"The presence of first-order autoregressive conditional heteroskedasticity [ARCH(1)] errors in this regression is highly likely given the results reported in Exhibit 2.\"\n\nExhibit 2\nResults of Regression of Squared Residuals, ηt², on Lagged Squared Residuals, ηt−1² (ηt² = c0 + c1ηt−1² + ut)\n\tCoefficient\tStandard Error\tt\tSignificance of t\nConstant (c0)\t0.339\t0.039\t8.768\t0\nLag 1 (c1)\t0.273\t0.024\t11.405\t0\nR2\tStandard Error of the Estimate\tDurbin–Watson\tF\tSignificance of F\n0.075\t1.48978\t2.094\t130.066\t0\n\nAfter further discussion, DeMolay proposes that he and Kamini incorporate more variables into the analysis. He suggests they use a variation of the Fed model, in which the earnings-to-price ratio (E/P) is regressed on long-term interest rates.\n\nDeMolay cautions Kamini: \"Remember that when we analyze two time series in regression analysis, we need to ensure that:\n\nCondition 1: neither the dependent variable series nor the independent variable series has a unit root, or\nCondition 2: both series have a unit root and are not cointegrated.\n\nUnless Condition 1 or Condition 2 holds, we cannot rely on the validity of the estimated regression coefficients.\"",
+  "questions": [
+   {
+    "n": 68,
+    "q": "DeMolay's statement that the coefficients depicted in Exhibit 1 are consistent with a random walk is most likely:",
+    "options": [
+     "correct.",
+     "incorrect because b1 should be close to 0.",
+     "incorrect because b0 should be close to 1."
+    ],
+    "answer": "A",
+    "why": "A is correct. A random walk estimated as an AR(1) has an intercept near zero and a slope on the first lag near 1."
+   },
+   {
+    "n": 69,
+    "q": "If Kamini is correct regarding the trailing P/E time series, the best forecast of next period's trailing P/E is most likely to be the:",
+    "options": [
+     "current period's trailing P/E.",
+     "average P/E of the time series.",
+     "forecast derived from applying the AR(1) model depicted in Exhibit 1 to the data."
+    ],
+    "answer": "A",
+    "why": "A is correct. For a random walk the best forecast of xt made in t − 1 is xt−1. A random walk has no mean-reverting level, and it is not covariance stationary, so an AR(1) model is not appropriate."
+   },
+   {
+    "n": 70,
+    "q": "The results depicted in Exhibit 2 are best described as consistent with a regression that has ARCH(1) errors because:",
+    "options": [
+     "c1 is significantly different from 0.",
+     "c1 is significantly different from 1.",
+     "c0 is significantly different from 0."
+    ],
+    "answer": "A",
+    "why": "A is correct. ARCH(1) is tested by regressing the squared residuals on one lag of the squared residuals; if the slope c1 is significantly different from 0, the series is ARCH(1)."
+   },
+   {
+    "n": 71,
+    "q": "Based on the results depicted in Exhibit 2, DeMolay and Kamini should most likely model the forward P/E data using a(n):",
+    "options": [
+     "AR(1) model.",
+     "random walk model.",
+     "generalized least squares model."
+    ],
+    "answer": "C",
+    "why": "C is correct. If ARCH exists, the standard errors of the regression parameters are not correct, so generalized least squares (or another method that corrects for heteroskedasticity) is needed."
+   },
+   {
+    "n": 72,
+    "q": "DeMolay's caution given in Condition 1 is best described as:",
+    "options": [
+     "correct.",
+     "incorrect because only the independent variable series needs to be tested for the absence of a unit root.",
+     "incorrect because only the dependent variable series needs to be tested for the absence of a unit root."
+    ],
+    "answer": "A",
+    "why": "A is correct. Both series must be tested for a unit root; if neither has one, linear regression can be used safely. If only one has a unit root, regression is not valid."
+   },
+   {
+    "n": 73,
+    "q": "DeMolay's caution given in Condition 2 is best described as:",
+    "options": [
+     "correct.",
+     "incorrect because the regression results are valid whether cointegration exists or does not exist.",
+     "incorrect because if both series have unit roots, they must exhibit cointegration for the results of the regression to be valid."
+    ],
+    "answer": "C",
+    "why": "C is correct. If both series have a unit root, the regression results are consistent only if the two series are cointegrated, so Condition 2 (not cointegrated) is wrong."
+   }
+  ]
+ },
+ {
+  "id": "ts-mcq-vehicles",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz: essay problems rewritten as multiple choice by the assistant (essays Q8, 12, 16, 17, 36, 37)",
+  "readings": [
+   2
+  ],
+  "created": true,
+  "title": "Time series · Lightweight vehicle sales: constant growth, unit root and differencing, residual autocorrelations, next model step",
+  "body": "You have been assigned to analyze automobile manufacturers, and as a first step in your analysis, you model monthly sales of lightweight vehicles to determine sales growth in that part of the industry. The data are monthly, January 1992 to December 2000 (108 observations).\n\nExhibit 1\nDescription of the plot of lightweight vehicle sales (annualized millions of units): sales rise unevenly over the nine years, from about 12.5 in 1992 to about 18 in 2000, with zigzags along the way. The pattern suggests that the growth rate of monthly sales is relatively constant.\n\nExhibit 2\nDescription of the plot of ln(Salest): the natural log of sales trends steadily upward over time, from about 2.5 in 1992 to about 2.9 in 2000, with small declines (for example around 1995).\n\nExhibit 3\nDescription of the plot of the first difference of the log of sales, Δln(Salest) = ln(Salest) − ln(Salest−1): the series moves back and forth around zero (between about −0.20 and +0.15), with no visible trend and with roughly the same size of swings throughout the period.\n\nAn AR(1) model Δln(Salest) = b0 + b1Δln(Salest−1) + εt is estimated on the differenced series. Exhibit 4 gives the autocorrelations of its residuals.\n\nExhibit 4\nAutocorrelations of the Residuals of the AR(1) Model\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.9358\t0.0962\t9.7247\n2\t0.8565\t0.0962\t8.9005\n3\t0.8083\t0.0962\t8.4001\n4\t0.7723\t0.0962\t8.0257\n5\t0.7476\t0.0962\t7.7696\n6\t0.7326\t0.0962\t7.6137\n7\t0.6941\t0.0962\t7.2138\n8\t0.6353\t0.0962\t6.6025\n9\t0.5867\t0.0962\t6.0968\n10\t0.5378\t0.0962\t5.5892\n11\t0.4745\t0.0962\t4.9315\n12\t0.4217\t0.0962\t4.3827",
+  "questions": [
+   {
+    "n": 8,
+    "q": "Using Exhibit 1, the simplest time-series model for Salest that is consistent with a relatively constant growth rate is:",
+    "options": [
+     "Salest = b0 + b1t + εt.",
+     "ln(Salest) = b0 + b1t + εt.",
+     "Salest = b0 + b1Salest−1 + εt."
+    ],
+    "answer": "B",
+    "why": "B is correct. A log-linear trend model, ln(Salest) = b0 + b1t + εt, captures growth at a constant rate. A linear trend (A) is for constant growth in amount. The regression assumptions would still have to be checked before accepting the model."
+   },
+   {
+    "n": 36,
+    "q": "Using Exhibit 2, the specification ln(Salest) = b0 + b1 ln(Salest−1) + εt is most likely:",
+    "options": [
+     "appropriate, because taking logs removes any trend.",
+     "not appropriate, because a series that trends upward over time often has a unit root and is not covariance stationary.",
+     "appropriate, because an AR(1) model can always capture a trend."
+    ],
+    "answer": "B",
+    "why": "B is correct. A series that trends upward or downward often has a unit root and is not covariance stationary, so an AR(1) regression on the undifferenced series is probably not correct. In practice the regression statistics should confirm the visual impression."
+   },
+   {
+    "n": 37,
+    "q": "An appropriate transformation of the ln(Salest) series is to:",
+    "options": [
+     "take the first difference: Δln(Salest) = ln(Salest) − ln(Salest−1).",
+     "take the natural log of the series a second time.",
+     "add a seasonal lag, ln(Salest−12), to the equation."
+    ],
+    "answer": "A",
+    "why": "A is correct. The most common way to turn a series with a unit root into a covariance-stationary series is to difference it."
+   },
+   {
+    "n": 12,
+    "q": "Based on Exhibit 3, the differenced series Δln(Salest) is most likely:",
+    "options": [
+     "covariance stationary, because it fluctuates around a constant mean with constant volatility.",
+     "not covariance stationary, because its mean trends upward.",
+     "a random walk, because it changes every month."
+    ],
+    "answer": "A",
+    "why": "A is correct. The plot fluctuates around a constant mean and its volatility seems constant throughout the period, so differencing appears to have made the series covariance stationary."
+   },
+   {
+    "n": 16,
+    "q": "Using Exhibit 4, the AR(1) specification is most likely:",
+    "options": [
+     "appropriate, because all the autocorrelations are positive.",
+     "inappropriate, because the residual autocorrelations are significantly different from zero (every t-statistic is far above the critical value).",
+     "impossible to assess without a Durbin–Watson statistic."
+    ],
+    "answer": "B",
+    "why": "B is correct. In a correctly specified model the residuals must be serially uncorrelated. With 108 observations the standard error is 1/√108 = 0.0962, and each t-statistic is significant even at the 0.01 level, so the model specification must be changed. A Durbin–Watson statistic cannot be used for an autoregressive model."
+   },
+   {
+    "n": 17,
+    "q": "Because the AR(1) residuals are serially correlated, the best next step is to:",
+    "options": [
+     "estimate an AR(2) model and test its residuals for serial correlation, then test for seasonality and ARCH once the residuals are uncorrelated.",
+     "test for ARCH immediately and ignore the serial correlation.",
+     "add a seasonal lag at once and stop."
+    ],
+    "answer": "A",
+    "why": "A is correct. Keep adding lags (AR(2), AR(3), ...) until the residuals are serially uncorrelated; only then test for seasonality and ARCH behavior."
+   }
+  ]
+ },
+ {
+  "id": "ts-mcq-uer",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz: essay problems rewritten as multiple choice by the assistant (essays Q9, 10, 11, 13, 26)",
+  "readings": [
+   2
+  ],
+  "created": true,
+  "title": "Time series · Civilian unemployment rate: linear trend forecast, Durbin–Watson, graph of the errors, differencing, length of the data",
+  "body": "The civilian unemployment rate (UER) is an important component of many economic models. Exhibit 1 gives regression statistics from estimating a linear trend model of the unemployment rate, UERt = b0 + b1t + εt, with monthly observations from January 2013 to August 2019.\n\nExhibit 1\nEstimating a Linear Trend in the Civilian Unemployment Rate\nRegression Statistics\nR2\t0.9316 |\nStandard error\t0.3227 |\nObservations\t80 |\nDurbin–Watson\t0.1878 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t7.2237\t0.0728\t99.1704\nTrend\t−0.0510\t0.0016\t−32.6136\n\nNote: For the Durbin–Watson test with one independent variable and 80 observations, the lower critical value at the 5% significance level is dl = 1.55.\n\nExhibit 2\nDescription of the plot of the actual unemployment rate (UER) and the rate predicted by the linear trend (PRED), 2013 to 2019: the actual rate falls from about 8 in 2013 to about 5 in 2016 and about 4 in 2019, while the predicted straight line falls from about 7 to about 3. The actual rate is above the line at first, below the line from 2014 until 2017, and above the line again after 2017.\n\nExhibit 3\nDescription of the plot of the first difference of the unemployment rate, ΔUERt = UERt − UERt−1, January 2013 to August 2019: the changes fluctuate around zero (between about −0.5 and +0.2) with no trend, and the size of the swings looks similar through the period.",
+  "questions": [
+   {
+    "n": 9,
+    "q": "Using Exhibit 1, the model's prediction of the unemployment rate for July 2013 (the data begin in January 2013) is closest to:",
+    "options": [
+     "6.82%.",
+     "6.87%.",
+     "7.17%."
+    ],
+    "answer": "B",
+    "why": "B is correct. July 2013 is period 7: UER7 = 7.2237 − 0.0510 × 7 = 6.8667, about 6.9%. A uses t = 8 (August); C uses t = 1."
+   },
+   {
+    "n": 10,
+    "q": "The Durbin–Watson statistic in Exhibit 1 most likely indicates that:",
+    "options": [
+     "there is no serial correlation, because the statistic is positive.",
+     "positive serial correlation is present, and the standard errors are biased downward so t-tests on the coefficients cannot be relied on.",
+     "positive serial correlation is present, but the coefficient estimates and t-statistics remain fully valid."
+    ],
+    "answer": "B",
+    "why": "B is correct. Under the null of no positive serial correlation the statistic is about 2.0. 0.1878 is clearly below dl = 1.55, so the null is rejected. Serial correlation violates a regression assumption and biases the standard errors downward, so hypothesis tests on the coefficients are not valid."
+   },
+   {
+    "n": 11,
+    "q": "Based on Exhibit 2, the linear trend model is:",
+    "options": [
+     "appropriate, because the errors are randomly distributed around the regression line.",
+     "not appropriate, because the forecast errors are persistent, which suggests positive serial correlation.",
+     "appropriate, because the R² is high."
+    ],
+    "answer": "B",
+    "why": "B is correct. In a well-specified model the forecast errors are randomly distributed around the line with constant variance. Here the errors stay above the line, then below, then above again, so they are persistent: positively serially correlated. A high R² does not fix that."
+   },
+   {
+    "n": 13,
+    "q": "Based on Exhibit 3, differencing the unemployment rate has most likely made the new series ΔUERt:",
+    "options": [
+     "covariance stationary, because it fluctuates around a constant mean with constant volatility.",
+     "non-stationary, because the changes are sometimes negative.",
+     "a unit root process, because it changes every month."
+    ],
+    "answer": "A",
+    "why": "A is correct. The plot of ΔUERt fluctuates around a constant mean and its volatility appears constant, so the differenced series is judged to be covariance stationary."
+   },
+   {
+    "n": 26,
+    "q": "For estimating a predictive equation, a drawback of using 30 years of unemployment data instead of only 5 years is that:",
+    "options": [
+     "the longer the sample, the higher the risk that the series has more than one regime, which can make even the differenced series nonstationary.",
+     "a longer sample always lowers the number of observations in the regression.",
+     "the Durbin–Watson statistic can no longer be calculated."
+    ],
+    "answer": "A",
+    "why": "A is correct. As we go further back, the series is more likely to have more than one regime (true model), and fitting one model to all of it would be incorrect. (If a series is known to be stationary, a longer sample is generally desirable.)"
+   }
+  ]
+ },
+ {
+  "id": "ts-mcq-duer",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz: essay problems rewritten as multiple choice by the assistant (essays Q14, 15, 18, 19, 20, 21, 25, 44)",
+  "readings": [
+   2
+  ],
+  "created": true,
+  "title": "Time series · Changes in the unemployment rate: AR(1) steps, Durbin–Watson, mean reversion, chain rule forecast, long horizon, ARCH test",
+  "body": "The change in the civilian unemployment rate, ΔUERt, appears to be covariance stationary, and the following AR(1) model is estimated on it with monthly data from February 2013 to August 2019.\n\nExhibit 1\nEstimating an AR(1) Model of Changes in the Civilian Unemployment Rate\nRegression Statistics\nR2\t0.0546 |\nStandard error\t0.1309 |\nObservations\t79 |\nDurbin–Watson\t2.0756 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t−0.0668\t0.0158\t−4.2278\nΔUERt–1\t−0.2320\t0.1100\t−2.191\n\nThe estimated model is ΔUERt = −0.0668 − 0.2320ΔUERt−1. The most recent change in the unemployment rate is 0.0300. Assume that changes in the unemployment rate are covariance stationary and that this AR(1) model describes them well.",
+  "questions": [
+   {
+    "n": 14,
+    "q": "To determine the appropriate autoregressive specification for ΔUERt, the analyst should:",
+    "options": [
+     "start with an AR(1) model, test the residuals for serial correlation, and add lags only until the residuals are uncorrelated.",
+     "start with a high-order AR model and drop lags until the Durbin–Watson statistic equals 2.",
+     "use the first estimated AR(1) model without testing, because the series is stationary."
+    ],
+    "answer": "A",
+    "why": "A is correct. Estimate an AR(1) and test whether its residuals have significant serial correlation. If they do, try AR(2), and so on, until the errors of the final AR(p) are serially uncorrelated."
+   },
+   {
+    "n": 15,
+    "q": "The Durbin–Watson statistic of 2.0756 in Exhibit 1 should be interpreted as:",
+    "options": [
+     "evidence of no serial correlation in the errors, because it is close to 2.",
+     "not valid for this regression, because the model has a lagged dependent variable; serial correlation must be tested with the residual autocorrelations.",
+     "evidence of ARCH, because it is above 2."
+    ],
+    "answer": "B",
+    "why": "B is correct. The Durbin–Watson statistic cannot be used for a regression that has a lagged value of the dependent variable as an explanatory variable. Examine the autocorrelations of the residuals instead."
+   },
+   {
+    "n": 18,
+    "q": "The mean-reverting level to which changes in the unemployment rate converge in this model is closest to:",
+    "options": [
+     "−0.0542.",
+     "−0.0870.",
+     "−0.0668."
+    ],
+    "answer": "A",
+    "why": "A is correct. At the mean-reverting level ΔUERt = ΔUERt−1, so x = b0/(1 − b1) = −0.0668/(1 + 0.2320) = −0.0542. B uses (1 − 0.2320) in the denominator; C is just the intercept."
+   },
+   {
+    "n": 19,
+    "q": "Using the model and the most recent change of 0.0300, the best prediction of the next change is closest to:",
+    "options": [
+     "−0.0598.",
+     "−0.0738.",
+     "−0.2988."
+    ],
+    "answer": "B",
+    "why": "B is correct. −0.0668 − 0.2320 × 0.0300 = −0.0738. A uses a plus sign on the slope term; C adds the intercept and slope without multiplying by 0.03."
+   },
+   {
+    "n": 20,
+    "q": "The prediction of the change following the next change (two periods ahead) is closest to:",
+    "options": [
+     "−0.0738.",
+     "−0.0497.",
+     "−0.0598."
+    ],
+    "answer": "B",
+    "why": "B is correct. Chain rule: use the one-step forecast (−0.0738), not an actual value, as the input: −0.0668 − 0.2320 × (−0.0738) = −0.0497. A is just the one-step forecast; C comes from a plus sign on the slope term."
+   },
+   {
+    "n": 21,
+    "q": "The two-period forecast of −0.0497 is close to the mean-reverting level of −0.0542 because:",
+    "options": [
+     "a covariance-stationary series moves toward its mean-reverting level, although it may need many periods to reach it.",
+     "the residuals of the model are zero in every period.",
+     "the Durbin–Watson statistic is close to 2."
+    ],
+    "answer": "A",
+    "why": "A is correct. A stationary time series tends toward its equilibrium (mean-reverting) level, which can take many periods."
+   },
+   {
+    "n": 25,
+    "q": "A drawback of using this AR(1) model to predict changes in the unemployment rate 12 months or more ahead, compared with 1 month ahead, is that:",
+    "options": [
+     "long-range forecasts can be nonsensical, for example predicting a falling unemployment rate for ever, so the model suits short-term forecasting.",
+     "the longer forecast has a smaller standard error.",
+     "the intercept must be set to zero for long horizons."
+    ],
+    "answer": "A",
+    "why": "A is correct. Predictions too far ahead can be implausible: unemployment cannot fall below 0% and probably not below frictional unemployment. Such models are designed for short-term forecasting."
+   },
+   {
+    "n": 44,
+    "q": "To test for autoregressive conditional heteroskedasticity (ARCH) in the residuals of this AR(1) regression, the analyst should:",
+    "options": [
+     "regress the squared residuals on a constant and the lagged squared residuals, and test whether the slope is significantly different from zero.",
+     "regress the residuals on their own lag and test the intercept.",
+     "calculate the Durbin–Watson statistic and compare it with 2."
+    ],
+    "answer": "A",
+    "why": "A is correct. Save the residuals, square them, regress the squared residuals on their lag (ε²t = a0 + a1ε²t−1 + ut) and test whether a1 differs from 0."
+   }
+  ]
+ },
+ {
+  "id": "ts-mcq-cisco",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz: essay problems rewritten as multiple choice by the assistant (essays Q22, 23, 24, 45, 46, 47)",
+  "readings": [
+   2
+  ],
+  "created": true,
+  "title": "Time series · Cisco quarterly sales: trend, mean reversion, chain-rule forecasts of sales, RMSE out of sample",
+  "body": "Part 1. An analyst studies the quarterly sales of Cisco Systems from the third quarter of 1991 to the fourth quarter of 2000.\n\nExhibit 1\nDescription of the plot of quarterly sales (millions of dollars): sales rise slowly at first and then faster and faster, from close to zero in 1991 to about 2,000 in 1998, 4,000 in 2000 and about 6,000 by the end of the period. The rise looks like steady exponential growth.\n\nExhibit 2 gives the regression statistics from estimating the model Δln(Salest) = b0 + b1Δln(Salest−1) + εt on the data of Exhibit 1.\n\nExhibit 2\nChange in the Natural Log of Sales for Cisco, Quarterly Observations, 3Q 1991–4Q 2000\nRegression Statistics\nR2\t0.2899 |\nStandard error\t0.0408 |\nObservations\t38 |\nDurbin–Watson\t1.5707 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t0.0661\t0.0175\t3.7840\nΔln(Salest–1)\t0.4698\t0.1225\t3.8339\n\nPart 2. A second model, estimated on quarterly data from 1Q 2001 to 4Q 2018, is Δln(Salest) = 0.0068 + 0.2633Δln(Salest−1). The observations after the fourth quarter of 2018 are out of sample. Exhibit 3 shows the actual sales of Cisco for 2019 and Exhibit 4 compares the actual change in the log of sales with the forecast.\n\nExhibit 3\nDate\tActual Sales ($ millions)\tLog of Sales\tChange in Log of Sales\n1Q 2019\t13,072\t9.4782\t0.0176\n2Q 2019\t12,446\t9.4292\t−0.0491\n3Q 2019\t12,958\t9.4695\t0.0403\n4Q 2019\t13,428\t9.5051\t0.0356\n\nExhibit 4\nDate\tActual Change in Log of Sales\tForecast Change in Log of Sales\n1Q 2019\t0.0176\t0.0147\n2Q 2019\t−0.0491\t0.0107\n3Q 2019\t0.0403\t0.0096\n4Q 2019\t0.0356\t0.0093",
+  "questions": [
+   {
+    "n": 45,
+    "q": "Based on Exhibit 1, the salient feature of the quarterly sales series is:",
+    "options": [
+     "a steady upward trend of growth that looks exponential, which suggests taking the natural log and differencing the data.",
+     "a repeating annual cycle, which calls for a seasonal lag.",
+     "a series that fluctuates around a constant level, which is already covariance stationary."
+    ],
+    "answer": "A",
+    "why": "A is correct. Steady exponential growth calls for the natural-log transformation and then first differencing."
+   },
+   {
+    "n": 46,
+    "q": "To determine whether the AR(1) specification in Exhibit 2 is correct, the analyst should first:",
+    "options": [
+     "test whether the residuals are serially uncorrelated; if they are not, try AR(2) and so on, then look for seasonality and finally ARCH.",
+     "test for ARCH first and, if it is absent, conclude that the model is correct.",
+     "check that R² is above 50%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Check the residual autocorrelations; if serially correlated, try AR(2), and continue until the residuals are uncorrelated. Then look for seasonality (add a seasonal lag if present) and test for ARCH. If ARCH is absent the model is correctly specified."
+   },
+   {
+    "n": 47,
+    "q": "Assuming the model in Exhibit 2 is correctly specified, the long-run change in the log of sales toward which the series will converge is closest to:",
+    "options": [
+     "0.0450.",
+     "0.1247.",
+     "0.1407."
+    ],
+    "answer": "B",
+    "why": "B is correct. If the model is correct, Δln(Salest) is covariance stationary and tends to b0/(1 − b1) = 0.0661/(1 − 0.4698) = 0.1247. A uses (1 + b1); C is b0/b1."
+   },
+   {
+    "n": 22,
+    "q": "Using the Part 2 model and Exhibit 3, the forecast of first-quarter 2020 sales is closest to:",
+    "options": [
+     "$13,520 million.",
+     "$13,647 million.",
+     "$13,915 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. Δln(Salest) = 0.0068 + 0.2633 × 0.0356 = 0.0162, so the log of sales = 9.5051 + 0.0162 = 9.5213 and sales = e^9.5213 = 13,647. A uses only the intercept (0.0068); C repeats last quarter's change of 0.0356."
+   },
+   {
+    "n": 122,
+    "q": "Using the same model, the forecast of second-quarter 2020 sales is closest to:",
+    "options": [
+     "$13,612 million.",
+     "$13,800 million.",
+     "$14,419 million."
+    ],
+    "answer": "B",
+    "why": "B is correct. Beyond the sample, use the forecast (0.0162), not an actual value: Δln(Salest) = 0.0068 + 0.2633 × 0.0162 = 0.0111, so the log of sales = 9.5213 + 0.0111 = 9.5324 and sales = e^9.5324 = 13,800."
+   },
+   {
+    "n": 23,
+    "q": "The root mean squared error (RMSE) of the out-of-sample forecasts in Exhibit 4 is closest to:",
+    "options": [
+     "0.13%.",
+     "3.6%.",
+     "5.2%."
+    ],
+    "answer": "B",
+    "why": "B is correct. Errors (actual − forecast): 0.0029, −0.0598, 0.0307, 0.0263. Squared errors sum to 0.0052; the mean is 0.0013; the square root is 0.036, i.e. 3.6%. A stops at the mean squared error; C uses the sum of squared errors."
+   },
+   {
+    "n": 24,
+    "q": "Another model has an out-of-sample RMSE of 2%. Compared with the model in Part 2 (RMSE 3.6%), its forecasting accuracy is:",
+    "options": [
+     "greater, because a lower RMSE means more accurate forecasts.",
+     "lower, because a lower RMSE means a worse fit.",
+     "the same, because RMSE cannot be compared across models."
+    ],
+    "answer": "A",
+    "why": "A is correct. The lower the out-of-sample RMSE, the more accurate the forecasts, so the 2% model is the better forecaster."
+   }
+  ]
+ },
+ {
+  "id": "ts-mcq-season",
+  "source": "10 Nov Module 5 Time-Series Analysis quiz: essay problems rewritten as multiple choice by the assistant (essays Q38, 39, 40, 41, 42, 43)",
+  "readings": [
+   2
+  ],
+  "created": true,
+  "title": "Time series · Seasonality (Avon, Home Depot, Johnson & Johnson) and a regression of one T-bill yield on another",
+  "body": "Part 1. Quarterly sales of Avon Products from 1Q 1992 to 2Q 2002.\nExhibit 1\nDescription of the plot of Avon quarterly sales (millions of dollars): sales rise from about 800 in 1992 to about 1,700 in 2001, but the line goes up and down in the same inverted-V shape every year, with a peak in the same quarter of each year.\n\nPart 2. Home Depot. Exhibit 2 shows the autocorrelations of the residuals from an AR(1) model fit to the changes in the gross profit margin, ΔGPMt = 0.0006 − 0.3330ΔGPMt–1 + εt, 1Q 1992–4Q 2001 (40 observations). Exhibit 3 shows the output after the specification was changed.\n\nExhibit 2\nAutocorrelations of the Residuals\nLag\tAutocorrelation\n1\t−0.1106\n2\t−0.5981\n3\t−0.1525\n4\t0.8496\n5\t−0.1099\n\nExhibit 3\nChange in Gross Profit Margin for Home Depot, 1Q 1992–4Q 2001\nRegression Statistics\nR2\t0.9155 |\nStandard error\t0.0057 |\nObservations\t40 |\nDurbin–Watson\t2.6464 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t−0.0001\t0.0009\t−0.0610\nΔGPMt−1\t−0.0608\t0.0687\t−0.8850\nΔGPMt−4\t0.8720\t0.0678\t12.8683\n\nPart 3. Johnson & Johnson. Because of seasonal autocorrelation, an AR model with a seasonal lag is estimated on quarterly data: (ln Salest − ln Salest−1) = b0 + b1(ln Salest−1 − ln Salest−2) + b2(ln Salest−4 − ln Salest−5) + εt.\n\nExhibit 4\nLog Differenced Sales: AR(1) Model with Seasonal Lag, Johnson & Johnson, Quarterly Observations, January 1985–December 2001\nRegression Statistics\nR2\t0.4220 |\nStandard error\t0.0318 |\nObservations\t68 |\nDurbin–Watson\t1.8784 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t0.0121\t0.0053\t2.3055\nLag 1\t−0.0839\t0.0958\t−0.8757\nLag 4\t0.6292\t0.0958\t6.5693\nAutocorrelations of the Residual\nLag\tAutocorrelation\tStandard Error\tt-Statistic\n1\t0.0572\t0.1213\t0.4720\n2\t−0.0700\t0.1213\t−0.5771\n3\t0.0065\t0.1213\t−0.0532\n4\t−0.0368\t0.1213\t−0.3033\nNote: the critical t-statistic at the 5% significance level is about 2.0.\n\nPart 4. An analyst wants to predict the annualized return of the five-year T-bill from the annualized return of the three-month T-bill, using monthly observations from January 1993 to December 2002.\n\nExhibit 5\nRegression with the Three-Month T-Bill as the Independent Variable and the Five-Year T-Bill as the Dependent Variable\nRegression Statistics\nR2\t0.5829 |\nStandard error\t0.6598 |\nObservations\t120 |\nDurbin–Watson\t0.1130 |\n\tCoefficient\tStandard Error\tt-Statistic\nIntercept\t3.0530\t0.2060\t14.8181\nThree-month\t0.5722\t0.0446\t12.8408",
+  "questions": [
+   {
+    "n": 39,
+    "q": "The salient features of the Avon sales series in Exhibit 1 are:",
+    "options": [
+     "an upward trend and a clear seasonal pattern.",
+     "an upward trend only.",
+     "no trend and a seasonal pattern."
+    ],
+    "answer": "A",
+    "why": "A is correct. Sales trend upward and repeat the same regular cycle every year, which indicates seasonality."
+   },
+   {
+    "n": 40,
+    "q": "Comparing Exhibit 3 with the AR(1) model of Exhibit 2, the change made to the regression model was to:",
+    "options": [
+     "add a second explanatory variable, ΔGPMt−4.",
+     "drop the intercept.",
+     "replace ΔGPMt−1 with ΔGPMt−2."
+    ],
+    "answer": "A",
+    "why": "A is correct. The model was augmented with a second explanatory variable, the change in gross profit margin lagged four quarters (ΔGPMt−4)."
+   },
+   {
+    "n": 41,
+    "q": "The rationale for the change is most likely that:",
+    "options": [
+     "the fourth-lag residual autocorrelation (0.8496, t = 5.37) is significant, which indicates seasonality in quarterly data.",
+     "the second-lag residual autocorrelation (−0.5981) is the largest in absolute value.",
+     "the Durbin–Watson statistic of the AR(1) model was below 2."
+    ],
+    "answer": "A",
+    "why": "A is correct. The standard error of an autocorrelation is 1/√40 = 0.1581, so t = 0.8496/0.1581 = 5.37 at lag 4: with quarterly data a significant fourth-lag autocorrelation signals seasonality, so ΔGPMt−4 was added. (The second lag is also significant, but the seasonal fourth lag is the key one.)"
+   },
+   {
+    "n": 42,
+    "q": "Using Exhibit 4, the Johnson & Johnson model with the seasonal lag is most likely:",
+    "options": [
+     "correctly specified, because none of the residual autocorrelations is significantly different from zero.",
+     "misspecified, because the lag 1 coefficient is not significant.",
+     "misspecified, because the Durbin–Watson statistic is not 2."
+    ],
+    "answer": "A",
+    "why": "A is correct. With 65 degrees of freedom the critical t is about 2.0 and every residual autocorrelation has an absolute t-statistic below 0.6, so the null of no serial correlation cannot be rejected: the model is correctly specified."
+   },
+   {
+    "n": 43,
+    "q": "If sales grew by 1% last quarter and by 2% four quarters ago, the Johnson & Johnson model predicts sales growth this quarter closest to:",
+    "options": [
+     "1.2%.",
+     "1.7%.",
+     "2.4%."
+    ],
+    "answer": "C",
+    "why": "C is correct. 0.0121 − 0.0839 × ln(1.01) + 0.6292 × ln(1.02) = 0.02372, so growth = e^0.02372 − 1 = 2.40%. A leaves out the intercept; B swaps the two growth rates."
+   },
+   {
+    "n": 38,
+    "q": "Based on Exhibit 5, can the analyst rely on the regression to produce meaningful predictions?",
+    "options": [
+     "Yes, because the R² is 0.58 and the t-statistics are large.",
+     "No, because the series must first be tested for unit roots: if both have a unit root, they must also be cointegrated; the very low Durbin–Watson statistic is a warning.",
+     "No, because a regression of one interest rate on another is never valid."
+    ],
+    "answer": "B",
+    "why": "B is correct. Before regressing one time series on another, test each for a unit root. If neither has one, regression is fine; if both have a unit root, the results are valid only if they are cointegrated; if only one has a unit root, the results are not valid. The very low Durbin–Watson statistic (0.113) hints at a spurious regression."
+   }
+  ]
+ }
+]

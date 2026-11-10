@@ -2,12 +2,12 @@
 
 Two stores: **app** = `vignettes.js` (68 curated vignettes) and **bank** = `bank/*.json` (pasted vignettes with answer keys). Rebuild this file with `python3 bank/index.py`.
 
-Totals: app 68 vignettes · bank 228 vignettes · 296 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
+Totals: app 68 vignettes · bank 246 vignettes · 314 in all. Plus 152 standalone questions (no vignette text) in `bank/standalone_questions.json`.
 
 | # | Reading | App | Bank | Total |
 |---|---|---|---|---|
 | 1 | Multiple Regression | 6 | 6 | 12 |
-| 2 | Time-Series Analysis | 0 | 3 | 3 |
+| 2 | Time-Series Analysis | 0 | 15 | 15 |
 | 3 | Machine Learning | 5 | 1 | 6 |
 | 4 | Big Data Projects | 4 | 1 | 5 |
 | 5 | Currency Exchange Rates | 2 | 11 | 13 |
@@ -34,7 +34,7 @@ Totals: app 68 vignettes · bank 228 vignettes · 296 in all. Plus 152 standalon
 | 26 | Credit Analysis Models | 1 | 6 | 7 |
 | 27 | Credit Default Swaps | 0 | 7 | 7 |
 | 28 | Pricing and Valuation of Forward Commitments | 4 | 18 | 22 |
-| 29 | Valuation of Contingent Claims | 5 | 2 | 7 |
+| 29 | Valuation of Contingent Claims | 5 | 8 | 13 |
 | 30 | Commodities and Commodity Derivatives | 0 | 2 | 2 |
 | 31 | Types of Real Estate Investment | 0 | 6 | 6 |
 | 32 | Real Estate through Publicly Traded Securities | 0 | 6 | 6 |
@@ -52,7 +52,7 @@ Totals: app 68 vignettes · bank 228 vignettes · 296 in all. Plus 152 standalon
 ## Where each vignette is
 
 **1 Multiple Regression**: factor-models (app, 5Q); reg-diagnostics (app, 5Q); cpsr (app, 1Q); markham (app, 3Q); misspec (app, 4Q); elite-rivera (app, 4Q); pc-1 (bank, 4Q); pc-2 (bank, 4Q); tb1-hu (bank, 4Q); tb1-brent (bank, 5Q); tb1-williams (bank, 5Q); tb1-smith (bank, 6Q)
-**2 Time-Series Analysis**: m1-10 (bank, 4Q); tb1-smith (bank, 6Q); s1a-martinez (bank, 7Q)
+**2 Time-Series Analysis**: ts-busse (bank, 9Q); ts-namibia (bank, 4Q); ts-rudall (bank, 4Q); ts-taylor (bank, 4Q); ts-sumner (bank, 4Q); ts-hall (bank, 4Q); ts-demolay (bank, 6Q); ts-mcq-vehicles (bank, 6Q); ts-mcq-uer (bank, 5Q); ts-mcq-duer (bank, 8Q); ts-mcq-cisco (bank, 7Q); ts-mcq-season (bank, 6Q); m1-10 (bank, 4Q); tb1-smith (bank, 6Q); s1a-martinez (bank, 7Q)
 **3 Machine Learning**: jubilacion (app, 4Q); alef (app, 10Q); stigwood (app, 4Q); safegrowth (app, 4Q); ebdc (app, 3Q); tb1-hu (bank, 4Q)
 **4 Big Data Projects**: aries-bigdata (app, 15Q); voxkor (app, 9Q); ganymede (app, 7Q); quinn (app, 4Q); m1-10 (bank, 4Q)
 **5 Currency Exchange Rates**: smith-fx (app, 5Q); goldsworthy (app, 8Q); golden-island (bank, 5Q); tremblay-growth (bank, 6Q); fx29-wagener (bank, 7Q); fx29-beauregard (bank, 6Q); fx29-lopez (bank, 4Q); fx29-kaur (bank, 4Q); fx29-gupta (bank, 4Q); fx29-carlisle (bank, 8Q); m2-5 (bank, 4Q); s1a-hollingsworth (bank, 4Q); s1a-daltonia (bank, 6Q)
@@ -79,7 +79,7 @@ Totals: app 68 vignettes · bank 228 vignettes · 296 in all. Plus 152 standalon
 **26 Credit Analysis Models**: liecken (app, 8Q); ca-cromwell (bank, 6Q); ca-lebedeva (bank, 7Q); ca-wong (bank, 4Q); m1-1 (bank, 4Q); cds-5 (bank, 6Q); s1a-suess (bank, 4Q)
 **27 Credit Default Swaps**: m1-1 (bank, 4Q); cds-1 (bank, 6Q); cds-2 (bank, 8Q); cds-3 (bank, 4Q); cds-4 (bank, 4Q); cds-5 (bank, 6Q); cds-6 (bank, 6Q)
 **28 Pricing and Valuation of Forward Commitments**: crestpoint (app, 6Q); meridian (app, 5Q); fabc (app, 4Q); troubadour (app, 5Q); pD-1 (bank, 5Q); pD-2 (bank, 5Q); pD-3 (bank, 9Q); pD-4 (bank, 4Q); pD-5 (bank, 4Q); pD-6 (bank, 4Q); pD-7 (bank, 2Q); d28-doyle (bank, 6Q); d28-troubadour (bank, 5Q); d28-johnson (bank, 9Q); d28-torres (bank, 4Q); d28-pak (bank, 4Q); m2-7 (bank, 4Q); s2a-talbot (bank, 4Q); s1b-whitney (bank, 6Q); d28-mafadi (bank, 4Q); d28-stoneridge (bank, 4Q); d28-megaarb (bank, 4Q)
-**29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); hamilton-nevis (bank, 4Q); m1-5 (bank, 4Q)
+**29 Valuation of Contingent Claims**: sousa (app, 9Q); trident (app, 8Q); princeton (app, 4Q); highstreet (app, 4Q); eagle (app, 4Q); opt-athena (bank, 6Q); opt-ist (bank, 5Q); opt-set1 (bank, 4Q); opt-set2 (bank, 4Q); opt-set3 (bank, 4Q); opt-set4 (bank, 3Q); hamilton-nevis (bank, 4Q); m1-5 (bank, 4Q)
 **30 Commodities and Commodity Derivatives**: musicale-apex (bank, 8Q); m2-11 (bank, 4Q)
 **31 Types of Real Estate Investment**: pc-5 (bank, 4Q); re-eastland (bank, 5Q); re-delphinus1 (bank, 5Q); re-delphinus2 (bank, 5Q); re-rossi (bank, 4Q); s2a-ferguson (bank, 4Q)
 **32 Real Estate through Publicly Traded Securities**: pc-5 (bank, 4Q); re-rossi (bank, 4Q); re-bay (bank, 4Q); re-hui-lin (bank, 6Q); re-wang (bank, 6Q); re-rosse (bank, 4Q)
