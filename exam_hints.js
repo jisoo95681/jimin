@@ -407,15 +407,15 @@ const EXAM_HINTS = {
  },
  "mock9:2": {
   "hl": [
-   "2013 FCFF will be $600 million",
-   "FCFF will grow in perpetuity at 4% annually"
+   "2013 FCFF will be $520 million",
+   "FCFF will grow in perpetuity at 3.5% annually"
   ],
   "rule": "FCFF value = FCFF1 ÷ (WACC − g); subtract debt for equity, divide by shares."
  },
  "mock9:3": {
   "hl": [
-   "EPS will grow forever at 6% annually",
-   "Of future investments, 60% will be financed with equity and 40% will be financed with debt"
+   "EPS will grow forever at 5% annually",
+   "Of future investments, 65% will be financed with equity and 35% will be financed with debt"
   ],
   "rule": "FCFE = EPS − (1 − DR)(net capex + WCInv); value = FCFE1 ÷ (r − g)."
  },
@@ -454,20 +454,20 @@ const EXAM_HINTS = {
   "hl": [
    "pursue a separation of all its owned assets",
    "speculative-grade credit rating",
-   "retire approximately USD600 million of debt"
+   "retire approximately USD700 million of debt"
   ],
   "rule": "Less debt → better credit rating → lower cost of capital; real estate is a non-core business for a grocer."
  },
  "mock9:10": {
   "hl": [
-   "average capitalization rate of 5.50%",
-   "5.00%, 5.50%, and 6.00%"
+   "average capitalization rate of 5.40%",
+   "4.90%, 5.40%, and 5.90%"
   ],
   "rule": "Cap rate equal to the median of comparables = supported by the market."
  },
  "mock9:11": {
   "hl": [
-   "multiples of 19, 17, and 13"
+   "multiples of 18, 15, and 12"
   ],
   "rule": "Sum of the parts: each segment's EBITDA × its own peer median multiple."
  },
@@ -479,7 +479,7 @@ const EXAM_HINTS = {
  },
  "mock9:13": {
   "hl": [
-   "Xita's profits are cyclical"
+   "Zorin's profits are cyclical"
   ],
   "rule": "Cyclical profits → use normalized (mid-cycle) EPS, e.g. average ROE × current BVPS."
  },
@@ -542,7 +542,7 @@ const EXAM_HINTS = {
  },
  "mock9:27": {
   "hl": [
-   "calculate YH’s combined ratio"
+   "calculate KH’s combined ratio"
   ],
   "rule": "Combined ratio = loss & LAE ÷ net premiums earned + underwriting expense ÷ net premiums written."
  },
@@ -561,7 +561,7 @@ const EXAM_HINTS = {
  "mock9:30": {
   "hl": [
    "entered into one year ago as the pay-fixed (receive-floating) party",
-   "current equilibrium two-year fixed swap rate is 1.12%"
+   "current equilibrium two-year fixed swap rate is 1.80%"
   ],
   "rule": "Swap value = (old fixed rate − current fixed rate) × sum of the remaining PV factors × notional; the pay-fixed party loses when the old rate is above the current rate."
  },
@@ -580,8 +580,8 @@ const EXAM_HINTS = {
  },
  "mock9:33": {
   "hl": [
-   "increase the independent variable by $1.6 million",
-   "sales will equal $12.6 million if all independent variables are equal to zero"
+   "increase the independent variable by $2.1 million",
+   "sales will equal $9.8 million if all independent variables are equal to zero"
   ],
   "rule": "Slope: change in the DEPENDENT variable per unit of the independent variable; intercept: dependent variable when all independent variables are zero."
  },
@@ -651,7 +651,7 @@ const EXAM_HINTS = {
  },
  "mock9:44": {
   "hl": [
-   "5-day, 1% VaR limit of $10 million",
+   "5-day, 1% VaR limit of $12 million",
    "limit fund losses to 2% of assets with a 99% level of confidence"
   ],
   "rule": "VaR = minimum loss at a confidence level, not a loss limit."

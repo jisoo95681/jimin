@@ -251,6 +251,162 @@ add("Economics",b,[
   ["Opening an economy to trade and financial flows"],"Open economy: larger markets and idea flow → more R&D and human capital investment.",True),
 ])
 
+# ---------------- reskin (10 Nov, user request): names and numbers changed in every vignette, calculations recomputed ----------------
+def walk(v,pairs,regex=()):
+    def f(s):
+        for a,b in pairs:
+            s=s.replace(a,b)
+        for a,b in regex: s=re.sub(a,b,s)
+        return s
+    v['body']=f(v['body'])
+    for q in v['questions']:
+        q['q']=f(q['q']); q['options']=[f(o) for o in q['options']]; q['why']=f(q['why'])
+        h=q['hint']; h['hl']=[f(x) for x in h['hl']]; h['rule']=f(h['rule'])
+def body_sub(v,pairs):
+    for a,b in pairs:
+        assert a in v['body'],a[:70]; v['body']=v['body'].replace(a,b)
+def put(correct,wrongs,idx):
+    o=wrongs[:]; o.insert(idx,correct); return o
+def newq(v,i,q,opts,ans,whys,hl,rule):
+    nq=mkq(q,opts,ans,whys,hl,rule,True); old=v['questions'][i]
+    v['questions'][i]=nq
+    for h in hl:
+        if not h.startswith('@row:'): assert h in v['body'] or h in q,('hint',h)
+def f2(x): return f"{x:.2f}"
+# ===== 0 Derivatives (Menon) =====
+v=V[0]
+sp=[0.0150,0.0180,0.0210]; DF=[round(1/(1+s)**(i+1),6) for i,s in enumerate(sp)]
+Sm=sum(DF); swap=(1-DF[2])/Sm
+fx=0.0275; N=40_000_000; eq=round((1-DF[1])/(DF[0]+DF[1]),4)
+S2=DF[0]+DF[1]; val=(fx-eq)*S2*N
+body_sub(v,[('0.990099',f"{DF[0]:.6f}"),('0.977876',f"{DF[1]:.6f}"),('0.965136',f"{DF[2]:.6f}"),('$50,000,000','$40,000,000'),('Fixed swap rate (since initiation) | 3.00%','Fixed swap rate (since initiation) | 2.75%'),('two-year fixed swap rate is 1.12%',f"two-year fixed swap rate is {eq*100:.2f}%"),
+ ('90 | 0.05%','90 | 0.08%'),('180 | 0.10%','180 | 0.14%'),('270 | 0.15%','270 | 0.20%'),('360 | 0.25%','360 | 0.30%'),
+ ('30-day MRR | 0.75%','30-day MRR | 0.78%'),('60-day MRR | 0.82%','60-day MRR | 0.85%'),('90-day MRR | 0.90%','90-day MRR | 0.92%'),('120-day MRR | 0.92%','120-day MRR | 0.95%'),('150-day MRR | 0.94%','150-day MRR | 0.98%'),('180-day MRR | 0.95%','180-day MRR | 1.00%'),('210-day MRR | 0.97%','210-day MRR | 1.02%'),('270-day MRR | 1.00%','270-day MRR | 1.06%')])
+walk(v,[('Sonal Johnson','Priya Menon'),('Johnson','Menon')])
+s3=(1/DF[2])**(1/3)-1
+Ax=(1-DF[2])/(DF[0]+DF[1]); Bx=1-DF[2]
+newq(v,0,v['questions'][0]['q'],put(f"{swap*100:.2f}%.",[f"{Ax*100:.2f}%.",f"{Bx*100:.2f}%."],0),0,
+ [f"Fixed swap rate = (1 − final-year PV factor) ÷ (sum of the PV factors) = (1 − {DF[2]:.6f}) ÷ ({DF[0]:.6f} + {DF[1]:.6f} + {DF[2]:.6f}) = {1-DF[2]:.6f} ÷ {Sm:.6f} = {swap*100:.2f}%.",f"It leaves the final-year PV factor out of the denominator: {1-DF[2]:.6f} ÷ ({DF[0]:.6f} + {DF[1]:.6f}) = {Ax*100:.2f}%.",f"It does not divide by the sum of the PV factors: 1 − {DF[2]:.6f} = {Bx*100:.2f}%."],
+ ["three-year MRR-based interest rate swap with annual resets"],"Fixed swap rate = (1 − last PV factor) ÷ sum of the PV factors.")
+# order: A,B wrong, C correct -> reorder so wrong options ascending
+o=v['questions'][0]; 
+Ai=(1-DF[2])/3; 
+A=-(fx-eq)*2*N; C=-(fx-eq)*(Sm)*N; B=-val
+opts=[f"${abs(round(val)):,.0f}.",f"–${abs(round(val)):,.0f}.",f"–${abs(round(C)):,.0f}."]
+newq(v,1,v['questions'][1]['q'],opts,1,
+ [f"The size is right but the sign is wrong: ${abs(round(val)):,.0f} would be the value to the receive-fixed party.",f"Two years remain, so the sum of the PV factors is {DF[0]:.6f} + {DF[1]:.6f} = {S2:.6f}. For the receive-fixed party the value is ({fx*100:.2f}% − {eq*100:.2f}%) × {S2:.6f} × $40,000,000 = ${abs(round(val)):,.0f}. The bank pays fixed, and the fixed rate it pays is above today's equilibrium rate, so its value is −${abs(round(val)):,.0f}.",f"It uses all three PV factors (sum {Sm:.6f}), but only two years remain: ${abs(round(C)):,.0f}."],
+ ["entered into one year ago as the pay-fixed (receive-floating) party",f"current equilibrium two-year fixed swap rate is {eq*100:.2f}%"],"Swap value = (old fixed rate − current fixed rate) × sum of the remaining PV factors × notional; the pay-fixed party loses when the old rate is above the current rate.")
+# fix ordering of options ascending in magnitude: A smaller? keep as built
+yr=[0.0008,0.0014,0.0020,0.0030]; days=[90,180,270,360]
+pv=[1/(1+r*d/360) for r,d in zip(yr,days)]; per=(1-pv[3])/sum(pv); ann=per*4
+newq(v,2,v['questions'][2]['q'],[f"{per*100:.4f}%.",f"{sum(yr)/4*100:.4f}%.",f"{ann*100:.4f}%."],2,
+ [f"{per*100:.4f}% is the quarterly (periodic) rate, not the annualized rate.",f"{sum(yr)/4*100:.4f}% is just the average of the yen spot rates, not a swap rate.",f"Yen PV factors = 1 ÷ [1 + rate × (days ÷ 360)]: {pv[0]:.6f}, {pv[1]:.6f}, {pv[2]:.6f}, {pv[3]:.6f} (sum {sum(pv):.6f}). Periodic rate = (1 − {pv[3]:.6f}) ÷ {sum(pv):.6f} = {per*100:.4f}%. Annualized = {per*100:.4f}% × (360 ÷ 90) = {ann*100:.4f}%."],
+ ["one-year fixed-for-fixed currency swap involving yen and US dollars","with a quarterly reset"],"Currency swap fixed rate for one currency: PV factors from that currency's spot rates, periodic rate = (1 − last PV) ÷ sum of PV, then multiply by 4 for quarterly resets.")
+L60,L150=0.0085,0.0098
+r=((1+L150*150/360)/(1+L60*60/360)-1)
+fra=r/(90/360); fA=r/(150/360); fC=r/(60/360)
+newq(v,3,v['questions'][3]['q'],[f"{fA*100:.2f}%.",f"{fra*100:.2f}%.",f"{fC*100:.2f}%."],1,
+ [f"It divides by 150/360 instead of the 90-day FRA period: {fA*100:.2f}%.",f"FRA rate = {{[1 + L150 × (150/360)] ÷ [1 + L60 × (60/360)] − 1}} ÷ (90/360) = {{{1+L150*150/360:.6f} ÷ {1+L60*60/360:.6f} − 1}} × 4 = {fra*100:.2f}%, using the 60-day MRR of 0.85% and the 150-day MRR of 0.98%.",f"It divides by 60/360 instead of the 90-day FRA period: {fC*100:.2f}%."],
+ ["a new position in a 2 × 5 FRA"],"2 × 5 FRA: use the 60-day and 150-day rates: [(1 + L150 × 150/360) ÷ (1 + L60 × 60/360) − 1] ÷ (90/360).")
+print('DERIV',swap,val,ann,fra)
+# ===== 1 Takahashi (Ishikawa) =====
+v=V[1]
+body_sub(v,[('38,467','41,208'),('62,939','58,420'),('49,241','52,130'),('23,960','21,874')])
+walk(v,[('Aiko Takahashi','Mariko Ishikawa'),('Takahashi','Ishikawa'),('Haruto Suzuki','Kenji Mori'),('Suzuki','Mori'),('Yatabe Holdings','Kitano Holdings')],[(r'\bYH\b','KH')])
+lr=41208/58420; er=21874/52130; cr=lr+er; lrw=41208/52130
+newq(v,2,"Based on Exhibit 1, KH's combined ratio is closest to:",[f"{lr*100:.1f}%.",f"{cr*100:.1f}%.",f"{(lrw+er)*100:.1f}%."],1,
+ [f"{lr*100:.1f}% is only the loss ratio (41,208 ÷ 58,420).",f"Combined ratio = loss ratio + underwriting expense ratio = 41,208 ÷ 58,420 + 21,874 ÷ 52,130 = {lr*100:.1f}% + {er*100:.1f}% = {cr*100:.1f}% (loss expense is divided by net premiums earned, underwriting expense by net premiums written).",f"{(lrw+er)*100:.1f}% uses net premiums written for the loss ratio too ({lrw*100:.1f}% + {er*100:.1f}%)."],
+ ["calculate KH’s combined ratio"],"Combined ratio = loss & LAE ÷ net premiums earned + underwriting expense ÷ net premiums written.")
+print('FSA',cr)
+# ===== 2 Albertson (Ashworth) =====
+v=V[2]
+body_sub(v,[('$3.19 | $2.21 | $0.37 | $2.56','$2.84 | $1.96 | $0.52 | $2.31'),('$10.90 | $12.50 | $12.60 | $13.30','$11.40 | $12.20 | $12.90 | $13.60'),('from $27.95 to $31.05','from $24.60 to $28.35'),('$1.24 per share','$1.10 per share'),('550.40 to 602.21','488.30 to 521.90'),('3.4%','3.1%')])
+walk(v,[('David Albertson','Daniel Ashworth'),('Albertson','Ashworth'),('Xita','Zorin'),('Garc','Harlan')])
+E=[2.84,1.96,0.52,2.31]; B=[11.40,12.20,12.90,13.60]; roe=[e/b for e,b in zip(E,B)]; ar=sum(roe)/4; ne=ar*B[3]; avgE=sum(E)/4; ne2=ar*sum(B)/4
+newq(v,1,v['questions'][1]['q'].replace('Xita','Zorin'),[f"${avgE:.2f}.",f"${ne2:.2f}.",f"${ne:.2f}."],2,
+ [f"${avgE:.2f} is the average EPS of Years 1 to 4.",f"${ne2:.2f} multiplies the average ROE ({ar*100:.1f}%) by the AVERAGE book value per share (${sum(B)/4:.3f}) instead of the current one.",f"ROE by year: {roe[0]*100:.1f}%, {roe[1]*100:.1f}%, {roe[2]*100:.1f}% and {roe[3]*100:.1f}%, average {ar*100:.1f}%. Normalized EPS = average ROE × current (Year 4) book value per share = {ar:.4f} × $13.60 = ${ne:.2f}."],
+ ["average ROE method","Year 1 through Year 4 (the most recent year) constitutes a full business cycle"],"Normalized EPS = average ROE of a full cycle × CURRENT book value per share.")
+g0,g1,i0,i1=24.60,28.35,488.30,521.90; rs=(g1/i1)/(g0/i0); idx_tr=i1/i0+0.031; Bq=(g1/g0)/idx_tr; Cq=((g1+1.10)/g0)/idx_tr
+newq(v,3,v['questions'][3]['q'].replace('Garc','Harlan'),[f"{rs:.4f}.",f"{Bq:.4f}.",f"{Cq:.4f}."],0,
+ [f"Relative strength = (Harlan price ÷ index) at the end divided by the same ratio at the start = ({g1} ÷ {i1}) ÷ ({g0} ÷ {i0}) = {g1/i1:.6f} ÷ {g0/i0:.6f} = {rs:.4f}. Dividends are not included.",f"{Bq:.4f} compares Harlan's price return with the index's total return (price change plus the 3.1% yield); relative strength uses prices only.",f"{Cq:.4f} compares total returns (adds Harlan's $1.10 dividend and the index yield); relative strength uses prices only."],
+ ["relative strength"],"Relative strength = (stock ÷ index) now ÷ (stock ÷ index) at the start; price only, no dividends.")
+print('EQ',ne,rs,Bq,Cq)
+# ===== 3 Yee (Voss) =====
+v=V[3]
+body_sub(v,[('Revenues | $6,456','Revenues | $6,102'),('| 1,349','| 1,262'),('Depreciation expense | 243','Depreciation expense | 231'),('Operating income | 1,106','Operating income | 1,031'),('Interest expense | 186','Interest expense | 172'),('Pretax income | 920','Pretax income | 859'),('Income tax (32%) | 294','Income tax (32%) | 275'),('Net income | $626','Net income | $584'),('(millions) | 411','(millions) | 395'),('earnings per share | $1.52','earnings per share | $1.48'),('dividends paid (millions) | 148','dividends paid (millions) | 142'),('capital investment (millions) | 535','capital investment (millions) | 502'),('Cost of equity | 12.0%','Cost of equity | 11.5%'),('(WACC) | 9.0%','(WACC) | 8.5%'),
+ ('Cash and cash equivalents | $32 | $21','Cash and cash equivalents | $28 | $19'),('Accounts receivable | 413 | 417','Accounts receivable | 398 | 404'),('Inventories | 709 | 638','Inventories | 655 | 601'),('Other current assets | 136 | 123','Other current assets | 129 | 117'),('Total current assets | $1,290 | $1,199','Total current assets | $1,210 | $1,141'),('Current liabilities | $2,783 | $2,678','Current liabilities | $2,640 | $2,545'),('Long-term debt | 2,249 | 2,449','Long-term debt | 2,105 | 2,305'),("equity | 1,072 | 594","equity | 1,008 | 566"),('Total liabilities and stockholders\' equity | $6,104 | $5,721','Total liabilities and stockholders\' equity | $5,753 | $5,416'),
+ ('2013 FCFF will be $600 million.','2013 FCFF will be $520 million.'),('grow in perpetuity at 4% annually','grow in perpetuity at 3.5% annually'),('2013 earnings per share (EPS) will be $1.80.','2013 earnings per share (EPS) will be $1.65.'),('EPS will grow forever at 6% annually','EPS will grow forever at 5% annually'),('will be 30% of EPS','will be 35% of EPS'),('will be 10% of EPS','will be 15% of EPS'),('60% will be financed with equity and 40% will be financed with debt','65% will be financed with equity and 35% will be financed with debt')])
+walk(v,[('Chan Mei Yee','Lena Voss'),('Yee','Voss'),('McLaughlin','Hartwell'),('Melissa Nicosia','Greta Lindqvist'),('Nicosia','Lindqvist')])
+fc=584+231+172*0.68-502+35; fcA=584+231+172*0.32-502+35; fcB=584+231+172*0.68-502
+newq(v,0,v['questions'][0]['q'].replace('McLaughlin','Hartwell'),[f"${fcA:.0f}.",f"${fcB:.0f}.",f"${fc:.0f}."],2,
+ [f"It uses the tax rate instead of (1 − tax rate) on interest.","It ignores the working capital investment.",f"Working capital (current assets excluding cash − current liabilities) went from −1,423 to −1,458, so WCInv = −35 (an inflow). FCFF = 584 + 231 + 172 × (1 − 0.32) − 502 − (−35) = {fc:.0f}."],
+ ["free cash flow to the firm (FCFF)"],"FCFF = NI + NCC + Int(1 − t) − FCInv − WCInv; working capital excludes cash.")
+firm=520/(0.085-0.035); eqv=firm-2105; ps=eqv/395; psA=(520/(0.115-0.035)-2105)/395; psC=firm/395
+newq(v,1,v['questions'][1]['q'].replace('McLaughlin','Hartwell'),[f"${psA:.2f}.",f"${ps:.2f}.",f"${psC:.2f}."],1,
+ ["It discounts at the cost of equity instead of the WACC.",f"Firm value = 520 ÷ (0.085 − 0.035) = {firm:,.0f}. Equity = {firm:,.0f} − 2,105 (debt) = {eqv:,.0f}. Per share = {eqv:,.0f} ÷ 395 = ${ps:.2f}.","It does not deduct the debt."],
+ ["2013 FCFF will be $520 million","FCFF will grow in perpetuity at 3.5% annually"],"FCFF value = FCFF1 ÷ (WACC − g); subtract debt for equity, divide by shares.")
+fe=1.65-0.65*0.35*1.65-0.65*0.15*1.65; fv=fe/(0.115-0.05); fA3=(1.65-0.35*1.65-0.15*1.65)/0.065; fC3=fv*1.05
+newq(v,2,v['questions'][2]['q'].replace('McLaughlin','Hartwell'),[f"${fA3:.2f}.",f"${fv:.2f}.",f"${fC3:.2f}."],1,
+ [f"It is the FCFF-style calculation: 1.65 − 0.5775 − 0.2475 = {1.65-0.5775-0.2475:.3f} ÷ 0.065.",f"FCFE1 = EPS − (1 − DR) × net capex − (1 − DR) × WCInv = 1.65 − 0.65 × 0.5775 − 0.65 × 0.2475 = {fe:.5f}. Value = {fe:.5f} ÷ (0.115 − 0.05) = ${fv:.2f}.","It grows FCFE1 again by (1 + g)."],
+ ["EPS will grow forever at 5% annually","Of future investments, 65% will be financed with equity and 35% will be financed with debt"],"FCFE = EPS − (1 − DR)(net capex + WCInv); value = FCFE1 ÷ (r − g).")
+print('YEE',fc,ps,fv)
+# ===== 4 Jupiter/Saturn (Mercury/Neptune) =====
+v=V[4]
+body_sub(v,[('2,800 physical','3,100 physical'),('associated with 100 physical','associated with 120 physical'),('sell its 100 owned','sell its 120 owned'),('15-year terms','20-year terms'),('USD44 million','USD54 million'),('USD800 million','USD1,000 million'),('USD600 million of debt','USD700 million of debt'),('repurchase 4 million','repurchase 5 million'),('value the 100 assets','value the 120 assets'),('5.00%, 5.50%, and 6.00%','4.90%, 5.40%, and 5.90%'),('5.50%','5.40%'),
+ ('Upstream | 14,400','Upstream | 12,600'),('Midstream | 5,760','Midstream | 4,200'),('Downstream | 3,840','Downstream | 2,800'),('Consolidated | 24,000','Consolidated | 19,600'),('USD408,000 million, or an EV/EBITDA multiple of 17','USD313,600 million, or an EV/EBITDA multiple of 16'),('multiples of 19, 17, and 13','multiples of 18, 15, and 12')])
+walk(v,[('Jane Chang','Helen Marsh'),('Chang','Marsh'),('Alpha Fund','Beacon Fund'),('Jupiter','Mercury'),('Saturn','Neptune'),('USD600 million of debt','USD700 million of debt'),('average capitalization rate of 5.50%','average capitalization rate of 5.40%'),('5.00%, 5.50%, and 6.00%','4.90%, 5.40%, and 5.90%'),('5.00%, 5.50%, 6.00%','4.90%, 5.40%, 5.90%'),('5.50%','5.40%'),('5.00% ','4.90% ')])
+sop=12600*18+4200*15+2800*12
+newq(v,2,v['questions'][2]['q'].replace('Saturn','Neptune'),[f"USD{19600*15:,} million.","USD313,600 million.",f"USD{sop:,} million."],2,
+ ["It uses the average of the peer multiples (15) for every segment.","USD313,600 million is Neptune's current enterprise value, not the estimate.",f"Sum of the parts: Upstream 12,600 × 18 = {12600*18:,}; Midstream 4,200 × 15 = {4200*15:,}; Downstream 2,800 × 12 = {2800*12:,}; total {sop:,}."],
+ ["multiples of 18, 15, and 12"],"Sum of the parts: each segment's EBITDA × its own peer median multiple.")
+print('CORP',sop)
+# ===== 5 Brown (Fischer) =====
+v=V[5]
+s=[0.025,0.034,0.043]; f1=(1+s[1])**2/(1+s[0])-1; f2=(1+s[2])**3/(1+s[1])**2-1
+body_sub(v,[('3.00% | 4.00% | 5.00%',f"{s[0]*100:.2f}% | {s[1]*100:.2f}% | {s[2]*100:.2f}%"),('f0,1 = 3.00% | f1,1 = 5.01% | f2,1 = 7.03%',f"f0,1 = {s[0]*100:.2f}% | f1,1 = {f1*100:.2f}% | f2,1 = {f2*100:.2f}%"),('4 bps | 6 bps | 9 bps','7 bps | 9 bps | 12 bps')])
+walk(v,[('Tony Brown','Leon Fischer'),('Brown','Fischer'),('Institutional Investments','Summit Asset Partners')])
+newq(v,2,v['questions'][2]['q'],["5 bps.","14 bps.","19 bps."],1,
+ ["It subtracts the T-bill rate from the MRR–OIS spread (12 − 7).","3-month MRR = OIS + (MRR − OIS spread) = 9 + 12 = 21 bps. TED spread = MRR − T-bill rate = 21 − 7 = 14 bps.","It adds the T-bill rate to the MRR–OIS spread (12 + 7)."],
+ ["3-month TED spread"],"TED = MRR − T-bill; MRR = OIS + (MRR − OIS spread).")
+# ===== 6 Brent (Dunn) =====
+v=V[6]
+body_sub(v,[('12.6 + 1.6 (Marketing Expenditures) + 1.2 (# of Salespeople)','9.8 + 2.1 (Marketing Expenditures) + 0.9 (# of Salespeople)'),('by $1.6 million','by $2.1 million'),('equal $12.6 million','equal $9.8 million')])
+walk(v,[('William Brent','Walter Dunn'),('Brent','Dunn'),('David Johnson','David Larsen'),('Johnson','Larsen'),('Mega Flowers','Green Valley Nurseries'),('$1.6 million','$2.1 million'),('equal $12.6 million','equal $9.8 million'),('12.6 is the intercept','9.8 is the intercept'),('coefficient of 1.6','coefficient of 2.1')])
+pr=9.8+2.1*2.8+0.9*6
+newq(v,2,"Assuming that next year's marketing expenditures are $2,800,000 and there are six salespeople, predicted sales for Green Valley Nurseries should be:",[f"${(9.8+2.1*2.8+0)*1e6:,.0f}.".replace(f"{(9.8+2.1*2.8)*1e6:,.0f}","15,680,000"),"$11,280,000.",f"${pr*1e6:,.0f}."],2,
+ ["It leaves out the salespeople term: 9.8 + 2.1 × 2.8 = 15.68, i.e. $15,680,000.","It leaves out the intercept: 2.1 × 2.8 + 0.9 × 6 = 11.28, i.e. $11,280,000.",f"The equation is in millions of dollars: 9.8 + 2.1 × 2.8 + 0.9 × 6 = {pr:.2f}, i.e. ${pr*1e6:,.0f}."],
+ ["stated in millions of dollars"],"Plug the values into the equation and keep the units (millions).")
+v['questions'][2]['options']=["$11,280,000.","$15,680,000.",f"${pr*1e6:,.0f}."]; 
+v['questions'][2]['why']=f"A. Incorrect. It leaves out the intercept: 2.1 × 2.8 + 0.9 × 6 = 11.28, i.e. $11,280,000.\nB. Incorrect. It leaves out the salespeople term: 9.8 + 2.1 × 2.8 = 15.68, i.e. $15,680,000.\nC. Correct. The equation is in millions of dollars: 9.8 + 2.1 × 2.8 + 0.9 × 6 = {pr:.2f}, i.e. ${pr*1e6:,.0f}."
+# ===== 7 Citadel (Sterling) =====
+v=V[7]
+body_sub(v,[('Portfolio value | $500 million','Portfolio value | $800 million'),('Daily expected return | 0.04%','Daily expected return | 0.05%'),('Daily expected volatility | 1.30%','Daily expected volatility | 1.10%'),('$500 million multi-asset fund','$600 million multi-asset fund'),('VaR limit of $10 million and a cumulative 30-day loss limit of $15 million','VaR limit of $12 million and a cumulative 30-day loss limit of $18 million')])
+walk(v,[('Citadel Investment Partners','Sterling Investment Partners'),('Citadel','Sterling'),('Simon Alexander','Victor Almeida'),('Alexander','Almeida'),('Jennifer Woolridge','Joanna Whitfield'),('Woolridge','Whitfield'),('Sandra Patterson','Sandra Hollis'),('Patterson','Hollis'),('VaR limit of $10 million','VaR limit of $12 million'),('$10 million on $500 million is 2%, and $15 million is 3%','$12 million on $600 million is 2%, and $18 million is 3%')])
+var=(1.65*0.011-0.0005)*800; varA=800*0.011; varC=(2.33*0.011-0.0005)*800
+newq(v,1,v['questions'][1]['q'],[f"${varA:.1f} million.",f"${var:.1f} million.",f"${varC:.1f} million."],1,
+ [f"It multiplies the portfolio value by the daily volatility only ($800 million × 1.1%).",f"Parametric 5% VaR: 1.65 × 1.10% = 1.815%; subtract the expected return of 0.05%: 1.765%; × $800 million = about ${var:.1f} million.",f"It uses the 1% z-score (2.33) instead of the 5% z-score (1.65): (2.33 × 1.10% − 0.05%) × $800 million = ${varC:.1f} million."],
+ ["parametric method (assuming normal distribution)"],"Parametric VaR = (z × volatility − expected return) × portfolio value; 5% → z = 1.65.")
+print('PM',var,varC)
+# ===== 8 Lin (Kwon) =====
+v=V[8]
+body_sub(v,[('$350,000 | $267,000','$420,000 | $295,000'),('$316,965 | $290,612','$388,420 | $301,880'),('$308,700 | $230,850','$275,300 | $214,300'),('$205,800 | $282,150','$188,600 | $301,700'),('$2,014,000 | $2,013,500','$2,386,000 | $2,097,000'),('$25,991 | $24,702','$31,204 | $27,015'),('$63,769 | $60,852','$72,415 | $58,430'),('56,100 | 67,900','63,800 | 71,200'),('Assumed cap rate | 7.0%','Assumed cap rate | 6.5%'),('multiple | 18.3×','multiple | 16.8×')])
+walk(v,[('Hui Lin','Daniel Kwon'),('Lin','Kwon'),('Maria Nowak','Elena Varga'),('Nowak','Varga')])
+cs=420000/0.065; nav=cs+275300+188600-2386000; navps=nav/63800; navA=(cs-2386000)/63800; navC=(cs+275300+188600)/63800
+newq(v,1,v['questions'][1]['q'],[f"${navA:.2f}.",f"${navps:.2f}.",f"${navC:.2f}."],1,
+ [f"It leaves out cash and receivables: ({cs:,.0f} − 2,386,000) ÷ 63,800 = ${navA:.2f}.",f"NAV: operating real estate = 420,000 ÷ 0.065 = {cs:,.0f}; plus cash and receivables 463,900; less debt and other liabilities 2,386,000 = {nav:,.0f}; ÷ 63,800 shares = ${navps:.2f}.",f"It does not deduct the debt and other liabilities: ({cs:,.0f} + 463,900) ÷ 63,800 = ${navC:.2f}."],
+ ["Net asset value","Assumed cap rate"],"NAV per share = (cash NOI ÷ cap rate + cash + receivables − liabilities) ÷ shares.")
+aff=388420-31204-72415; ap=aff/63800; val1=ap*16.8; v1A=(388420-31204)/63800*16.8; v1C=388420/63800*16.8
+newq(v,2,v['questions'][2]['q'],[f"${val1:.2f}.",f"${v1A:.2f}.",f"${v1C:.2f}."],0,
+ [f"AFFO = FFO − non-cash rents − recurring maintenance-type capex = 388,420 − 31,204 − 72,415 = {aff:,}. AFFO per share = {aff:,} ÷ 63,800 = ${ap:.2f}. Value = ${ap:.2f} × 16.8 = ${val1:.2f}.",f"It forgets to deduct the recurring maintenance-type capex: (388,420 − 31,204) ÷ 63,800 × 16.8 = ${v1A:.2f}.",f"It applies the multiple to FFO per share instead of AFFO per share: 388,420 ÷ 63,800 × 16.8 = ${v1C:.2f}."],
+ ["P/AFFO multiple","Non-cash rents"],"AFFO = FFO − non-cash rents − recurring capex; value = AFFO per share × P/AFFO multiple.")
+print('ALT',navps,val1)
+# ===== 9 Sagara (Marovia) =====
+v=V[9]
+walk(v,[('Fatima N’Diarra','Aminata Camara'),('N’Diarra','Camara'),("N'Diarra",'Camara'),('Benjamin Banantoumou','Emmanuel Kessogo'),('Banantoumou','Kessogo'),('Sagara','Marovia')])
+for vv in V:
+    for q in vv['questions']:
+        assert len(set(q['options']))==3,q['options']
+
 # ---------------- order, balance, write ----------------
 rng=random.Random(9)
 while True:

@@ -414,7 +414,7 @@
       "higher."
      ],
      "answer": 0,
-     "why": "A. Correct. Scoring (1 point for each good-governance feature): independent directors 12 ÷ 19 = 63% is a majority for ChemiKa (1) but 4 ÷ 8 = 50% is not for PlastiKa (0); two-tiered board: ChemiKa no (0), PlastiKa yes (1); CEO duality: ChemiKa yes (0), PlastiKa no (1); average board tenure: ChemiKa 8 years (1), PlastiKa 14 years (0); audit committee: ChemiKa yes (1), PlastiKa no (0); compensation committee: both yes (1 each); director selection committee: ChemiKa no (0), PlastiKa yes (1). Ownership, voting power and the number of directors are not scored. Each company totals 4 points, so they rank the same.\nB. Incorrect. Both companies score 4 points.\nC. Incorrect. Both companies score 4 points."
+     "why": "A. Correct. Scoring (1 point each): board independence: PlastiKa has a two-tiered board (1); ChemiKa's one-tiered board needs 60% independent directors and has 12 ÷ 19 = 63% (1); CEO duality absent: ChemiKa no (0), PlastiKa yes (1); average tenure below ten years: ChemiKa 8 years (1), PlastiKa 14 years (0); audit committee: ChemiKa yes (1), PlastiKa no (0); compensation committee: both yes (1 each); director selection committee: ChemiKa no (0), PlastiKa yes (1). Ownership, voting power and the number of directors are not scored. Each company totals 4 points, so they rank the same.\nB. Incorrect. Both companies score 4 points.\nC. Incorrect. Both companies score 4 points."
     },
     {
      "q": "The market pricing of ChemiKa's bonds that Tyler notices is most likely due to:",
