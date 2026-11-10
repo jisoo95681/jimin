@@ -1192,8 +1192,8 @@ const EXAM_SETS = [
   "id": "pq3",
   "title": "Practice set 3",
   "kind": "practice",
-  "minutes": 144,
-  "desc": "Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)",
+  "minutes": 156,
+  "desc": "Mixed topics from the key notes, with 4 Ethics questions (52 questions, 2 h 36 min)",
   "vignettes": [
    {
     "topic": "Derivatives",
@@ -1786,6 +1786,52 @@ const EXAM_SETS = [
       ],
       "answer": 2,
       "why": "Long yields fall most → long bonds gain most → extend duration, using a barbell with long bonds."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Sofia Marangoni is a fixed-income portfolio manager. Tomasz Brandt, a junior analyst, and Marangoni meet to review several positions in Marangoni's portfolio.\n\nMarangoni begins the meeting by discussing credit rating migration. Marangoni asks Brandt to estimate the expected return over the next year on a bond issued by Veldor Group. The BBB rated bond has a yield to maturity of 4.80% and a modified duration of 6.92. Brandt calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1. Brandt assumes that market spreads and yields will remain stable over the year.\n\nExhibit 1\nOne-Year Transition Matrix for BBB Rated Bonds and Credit Spreads\n# Rating | AAA | AA | A | BBB | BB | B | CCC, CC, C\nProbability (%) | 0.03 | 0.45 | 5.60 | 84.87 | 6.80 | 1.90 | 0.35\nCredit spread | 0.50% | 0.80% | 1.00% | 1.35% | 3.10% | 6.00% | 9.00%\n\nMarangoni next asks Brandt to analyze a three-year bond, issued by Norvalle S.A., using an arbitrage-free framework. The bond's coupon rate is 4%, with interest paid annually and a par value of 100. In the analysis, Brandt makes the following three assumptions:\nThe annual interest rate volatility is 15%.\nThe recovery rate is one-quarter of the exposure each period.\nThe annual probability of default each year is 1.50%.\n\nSelected information on benchmark government bonds for the Norvalle bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2\nPar Curve Rates for Annual Payment Benchmark Government Bonds\n# Maturity | Coupon rate | Price | Discount factor | Spot rate | Forward rate\n1 | 2.50% | 100 | 0.975610 | 2.5000% | 2.5000%\n2 | 3.30% | 100 | 0.936888 | 3.3133% | 4.1331%\n3 | 4.00% | 100 | 0.887981 | 4.0396% | 5.5076%\n\nExhibit 3\nOne-Year Binomial Interest Rate Tree for 15% Volatility (risk-neutral probability of 50% on each branch)\n# Date | 0 | 1 (top) | 1 (bottom) | 2 (top) | 2 (middle) | 2 (bottom)\nRate | 2.5000% | 4.7526% | 3.5208% | 7.2932% | 5.4029% | 4.0026%\n\nBrandt estimates the value of the Norvalle bond assuming no default (VND) as well as the fair value of the bond. Brandt then estimates the bond's yield to maturity and the bond's credit spread over the benchmark in Exhibit 2. Brandt asks Marangoni, \"What might cause the bond's credit spread to decrease?\"\n\nMarangoni and Brandt next discuss the drivers of the term structure of credit spreads. Brandt tells Marangoni the following:\n\nStatement 1:\nThe credit term structure for lower-rated securities is often steeper, and credit spreads widen with expectations of strong economic growth.\n\nStatement 2:\nThe credit term structure for the most highly rated securities tends to be either flat or slightly upward sloping.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the one-year expected return on the Veldor Group bond is closest to:",
+      "options": [
+       "3.33%.",
+       "4.80%.",
+       "6.27%."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Expected return = YTM + expected percentage price change from migration. For each rating the price change = −modified duration × (new spread − 1.35%) × probability:\nAAA: −6.92 × (0.50% − 1.35%) × 0.03% = +0.0018%\nAA: −6.92 × (0.80% − 1.35%) × 0.45% = +0.0171%\nA: −6.92 × (1.00% − 1.35%) × 5.60% = +0.1356%\nBBB: no change = 0\nBB: −6.92 × (3.10% − 1.35%) × 6.80% = −0.8235%\nB: −6.92 × (6.00% − 1.35%) × 1.90% = −0.6114%\nCCC, CC, C: −6.92 × (9.00% − 1.35%) × 0.35% = −0.1853%\nSum = −1.4656%. Expected return = 4.80% − 1.47% = 3.33%.\nB. Incorrect. 4.80% is the yield to maturity only; it ignores the negative effect of migration.\nC. Incorrect. 6.27% adds the absolute size of the migration effect (4.80% + 1.47%), treating it as a gain; downgrades have a larger price effect than upgrades, so migration lowers the expected return."
+     },
+     {
+      "q": "Based on Brandt's assumptions and Exhibits 2 and 3, the credit spread on the Norvalle bond is closest to:",
+      "options": [
+       "0.7796%.",
+       "1.1782%.",
+       "1.5828%."
+      ],
+      "answer": 1,
+      "why": "B. Correct. Step 1: VND from the tree (discount at the tree rates, probability 0.5 on each branch, coupon 4) = 100.0000.\nStep 2: CVA = sum of DF × probability of default × LGD × expected exposure. Expected exposures 102.5000, 102.5665, 104.0000; LGD = 3/4 of exposure (recovery one-quarter); probabilities of default in each year 1.5000%, 1.4775%, 1.4553%; benchmark discount factors 0.975610, 0.936888, 0.887981. CVA = 1.1250 + 1.0648 + 1.0080 = 3.1978.\nStep 3: Fair value = 100 − 3.1978 = 96.8022. The yield to maturity that prices the bond at 96.8022 is 5.1782%.\nStep 4: Credit spread = 5.1782% − 4.0000% (3-year benchmark coupon) = 1.1782%.\nA. Incorrect. 0.7796% results from using a loss given default of 50% of exposure instead of 75%.\nC. Incorrect. 1.5828% results from assuming no recovery (loss given default of 100%)."
+     },
+     {
+      "q": "The most appropriate response to Brandt's question relating to the credit spread is:",
+      "options": [
+       "an increase in the loss given default.",
+       "an increase in the probability of default.",
+       "a decrease in the risk-neutral probability of default."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. A higher loss given default raises the CVA and widens the credit spread.\nB. Incorrect. A higher probability of default raises the CVA, lowers the fair value and widens the credit spread.\nC. Correct. A lower risk-neutral probability of default lowers the CVA, raises the fair value and lowers the yield and the credit spread."
+     },
+     {
+      "q": "Which of Brandt's statements regarding the term structure of credit spreads is correct?",
+      "options": [
+       "Only Statement 1",
+       "Only Statement 2",
+       "Both Statements 1 and 2"
+      ],
+      "answer": 1,
+      "why": "B. Correct. For the highest-rated issuers spreads are very low (with a floor at zero), so the credit term structure is flat or slightly upward sloping (Statement 2 is correct).\nA. Incorrect. Lower-rated issuers are more sensitive to the credit cycle, but their credit spreads narrow (not widen) with expectations of strong economic growth, so Statement 1 is incorrect.\nC. Incorrect. Statement 1 is incorrect."
      }
     ]
    }

@@ -58,3 +58,11 @@ O={
 'mock10:37':['must absorb considerable unreimbursed operating expenses','@row:Expense reimbursement revenue','@row:Effective gross income','@row:Property management fees','@row:Other operating expenses'],
 'mock10:43':['@row:Credit spread','@row:Duration','@row:Coupon rate'],
 }
+
+# practice set 3, vignette appended 11 Nov (Mock 8 credit-spread vignette): key -> (highlight phrases, rule)
+O3={
+'pq3:49':(['yield to maturity of 4.80% and a modified duration of 6.92','Brandt assumes that market spreads and yields will remain stable over the year','@row:Probability (%)','@row:Credit spread'],'Expected return ≈ YTM − Σ probability × modified duration × (new spread − current spread): downgrades cost more than upgrades gain.'),
+'pq3:50':(['The recovery rate is one-quarter of the exposure each period.','The annual probability of default each year is 1.50%.','the relevant binomial interest rate tree is presented in Exhibit 3','@row:Rate'],'Recovery of one-quarter means LGD = 75%. Value the bond on the tree (VND), CVA = Σ DF × PD × LGD × expected exposure, fair value = VND − CVA, spread = YTM(fair value) − benchmark yield.'),
+'pq3:51':(["What might cause the bond's credit spread to decrease?"],'Spread falls when the CVA falls: lower probability of default or lower loss given default.'),
+'pq3:52':(['credit spreads widen with expectations of strong economic growth','tends to be either flat or slightly upward sloping'],'Credit curves: lower ratings steeper, spreads narrow in good times; the most highly rated curves are flat or slightly upward sloping.'),
+}
