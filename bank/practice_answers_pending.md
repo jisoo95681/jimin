@@ -1,7 +1,7 @@
-# User answers held for later marking (do not mark until the user sends set 2 answers)
+# User answers for practice sets (marked 10 Nov)
 
-Practice set 1 (pq1), 48 answers, sent 10 Nov:
-ACAA ABAB BCCC BCCC BAAC ABBC BBCB AAAA CBAB CBAA CBBA CCBC
-
-Plan: when the user sends set 2 answers, mark both sets and make the wrong-answer PDF
-(verbatim vignette part, one question per page, Trigger box).
+Set 1 (pq1): ACAA ABAB BCCC BCCC BAAC ABBC BBCB AAAA CBAB CBAA CBBA CCBC -> 40/48
+Wrong: Q16, 17, 21, 30, 33, 35, 37, 42
+Set 2 (pq2): BACB CBAB CBBC BACB ABCA CBAC BABA CACA AABA CABC CBCB CBCB -> 41/48
+Wrong: Q10, 12, 16, 22, 29, 34, 42
+Wrong-answer PDF: bank/Practice_sets_1_2_wrong_answers.pdf (builder in /tmp/gen/pq12/build.py + pdf.mjs, not kept in repo)
