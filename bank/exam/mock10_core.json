@@ -1,0 +1,742 @@
+{
+ "id": "mock10",
+ "rev": 2,
+ "resetHl": [],
+ "title": "Mock 10",
+ "kind": "mock",
+ "minutes": 132,
+ "desc": "10 new vignettes from sub-topics different from Mocks 8 and 9, plus 1 Ethics vignette",
+ "vignettes": [
+  {
+   "topic": "Financial Statement Analysis",
+   "group": "new",
+   "body": "Greta Walsh is a financial analyst who is examining the most recent annual report of Westbrook Inc., a US-based company that complies with US GAAP. Walsh wants to determine Westbrook's ROE as well as the trend in its ROE components by using DuPont analysis. Data used for this purpose is presented in Exhibit 1.\nExhibit 1\n#   | Most Recent Year | Previous Year | Two Years Ago\nRevenue (USD million) | 820 | 740 | 660\nTotal liabilities (USD million) | 270 | 245 | 220\nTotal asset turnover ratio | 1.40 | 1.35 | 1.30\nWalsh also wants to evaluate Westbrook's three geographic operating segments to assess their ROI and growth during the most recent year. For this purpose, she prepares the data presented in Exhibit 2 for the most recent year.\nExhibit 2\n#   | Europe | Asia | Americas\nSegment EBIT margin % | 11.9 | 12.6 | 13.4\nSegment % of total assets | 27.1 | 30.5 | 42.4\nSegment % of total capital expenditures | 24.8 | 37.4 | 37.8\nNext, while reading the notes to the financial statements in the annual report, Walsh observes that Westbrook's property, plant and equipment have depreciable lives that are 25% longer than its industry competitors' average. For comparison purposes, Walsh adjusts the financial statements to determine the effect of the difference on the company's financial ratios and information.\nFinally, in order to assess Westbrook's accruals and earnings quality, Walsh calculates the balance-sheet-based accruals ratio presented in Exhibit 3.\nExhibit 3\n#   | Most Recent Year | Previous Year | Two Years Ago\nBalance-sheet-based accruals ratio (%) | 8.4 | 5.2 | 3.6",
+   "questions": [
+    {
+     "q": "Based on the 3 years of data provided for DuPont analysis, Westbrook's financial leverage has been:",
+     "options": [
+      "stable.",
+      "trending higher.",
+      "trending lower."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. The ratio is clearly moving in one direction, so it is not stable.\nB. Correct. Total assets = revenue ÷ asset turnover: 820/1.40 = 585.7; 740/1.35 = 548.1; 660/1.30 = 507.7. Equity = assets − liabilities: 315.7; 303.1; 287.7. Financial leverage = assets ÷ equity: 1.855; 1.808; 1.765: trending higher.\nC. Incorrect. The ratio rises over the three years, so it is not trending lower.",
+     "hint": {
+      "hl": [
+       "Total asset turnover ratio",
+       "Total liabilities"
+      ],
+      "rule": "Financial leverage = total assets ÷ equity; assets = revenue ÷ asset turnover, equity = assets − liabilities."
+     }
+    },
+    {
+     "q": "Based on the segment information, Westbrook is growing its business the most in:",
+     "options": [
+      "Europe.",
+      "Asia.",
+      "Americas."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Europe: capital expenditures % ÷ assets % = 24.8/27.1 = 0.92, below 1.\nB. Correct. Asia has the highest ratio of capital expenditures % to total assets %: 37.4/30.5 = 1.23. A ratio above 1 means the segment receives more investment than its share of assets, a sign of growth.\nC. Incorrect. Americas: 37.8/42.4 = 0.89, below 1.",
+     "hint": {
+      "hl": [
+       "Segment % of total capital expenditures",
+       "Segment % of total assets"
+      ],
+      "rule": "Segment growth = capital expenditures % ÷ total assets %; highest ratio = fastest growing, not the highest EBIT margin."
+     }
+    },
+    {
+     "q": "After Walsh makes the adjustment for Westbrook's treatment of its property, plant and equipment, which of the following will increase?",
+     "options": [
+      "Debt-to-equity ratio",
+      "Book value per share",
+      "Operating profit margin"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Shareholders' equity falls while total debt is unchanged, so the debt-to-equity ratio increases.\nB. Incorrect. Longer depreciable lives mean lower depreciation than peers; adjusting to peer lives raises depreciation, lowers net income and equity, so book value per share decreases.\nC. Incorrect. The adjustment raises depreciation expense, so operating profit margin decreases.",
+     "hint": {
+      "hl": [
+       "depreciable lives that are 25% longer than its industry competitors' average"
+      ],
+      "rule": "Depreciation raised to peer lives → lower income, lower equity: D/E and leverage up; BVPS and margins down."
+     }
+    },
+    {
+     "q": "Based on Walsh's calculations, Westbrook's balance-sheet-based accruals ratio is:",
+     "options": [
+      "trending higher and deteriorating.",
+      "trending lower and deteriorating.",
+      "trending lower and improving."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The ratio increases over the three years, which means accruals are an increasing factor in earnings: deteriorating earnings quality.\nB. Incorrect. The ratio is rising, not falling.\nC. Incorrect. The ratio rises (3.6, 5.2, 8.4), it does not fall.",
+     "hint": {
+      "hl": [
+       "balance-sheet-based accruals ratio"
+      ],
+      "rule": "Rising accruals ratio = more of earnings from accruals (not cash) = deteriorating earnings quality."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Economics",
+   "group": "new",
+   "body": "Clara Weston is a currency trader for a US-based hedge fund. She reviews interbank bid-offer quotes in Exhibit 1 (USD/EUR is the number of USD per 1 EUR; JPY/USD is the number of JPY per 1 USD). Weston determines if an arbitrage profit is possible for the fund based on a dealer's bid/offer rate quote of 161.30/161.34 in JPY/EUR.\nExhibit 1\n# Currency Pair | Interbank Bid | Interbank Offer\nUSD/EUR | 1.0860 | 1.0866\nJPY/USD | 148.20 | 148.28\nThe hedge fund considers hedging a New Zealand dollar (NZD) 1,000,000 coupon payment it will receive in six months. Weston calculates the 6-month forward USD/NZD (number of USD per 1 NZD) exchange rate implied by covered interest rate parity. Note that MRR is the market reference rate.\n6-month annualized MRR in the US is 1.20%\n6-month annualized MRR in New Zealand is 2.40%\nThe spot mid-market currency quote for USD/NZD is 0.6214\nWeston next considers a 1-year carry trade that involves borrowing the USD and investing in the Brazilian real (BRL). She computes the all-in return (measured in USD terms) of the carry trade using the following information:\nSpot mid-market quote for the BRL/USD is 5.0200\n1-year MRR in the US is 1.50%\n1-year MRR in Brazil is 10.25%\nThe BRL/USD exchange rate in one year is 5.1000\nFinally, Weston is concerned about a currency crisis in emerging market Country K. She notes the following conditions about the country:\nCondition 1: A sizable decline in the ratio of foreign exchange (FX) reserve holdings to average daily FX turnover in their domestic currency\nCondition 2: A slight decline of foreign investment in its equity market\nCondition 3: Broad money growth and a decline in the ratio of M2 (a measure of money supply) to bank reserves",
+   "questions": [
+    {
+     "q": "Based on the dealer's JPY/EUR quote, is there an arbitrage opportunity for the hedge fund?",
+     "options": [
+      "Yes, by purchasing EUR from the dealer and selling EUR in the interbank market",
+      "Yes, by purchasing EUR in the interbank market and selling EUR to the dealer",
+      "No"
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. The dealer sells EUR at JPY161.34, above the interbank bid (160.95), so buying from the dealer loses money; the arbitrage runs the opposite way.\nB. Correct. Implied interbank JPY/EUR: bid 1.0860 × 148.20 = 160.95; offer 1.0866 × 148.28 = 161.12. The dealer's bid (161.30) is above the interbank offer (161.12), so buy EUR in the interbank market at 161.12 and sell them to the dealer at 161.30.\nC. Incorrect. The dealer's bid is above the implied interbank offer, so there is an arbitrage opportunity.",
+     "hint": {
+      "hl": [
+       "dealer's bid/offer rate quote"
+      ],
+      "rule": "Cross rate: JPY/EUR = USD/EUR × JPY/USD (bid × bid, offer × offer). Arbitrage when the dealer's bid is above the interbank offer or the dealer's offer is below the interbank bid."
+     }
+    },
+    {
+     "q": "Based on covered interest rate parity, the 6-month forward USD/NZD exchange rate is closest to:",
+     "options": [
+      "0.6141.",
+      "0.6177.",
+      "0.6251."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It uses the annual rates instead of the 6-month rates: 0.6214 × (1 + 0.012) ÷ (1 + 0.024) = 0.6141.\nB. Correct. F = S0 × (1 + r_US/2) ÷ (1 + r_NZD/2) = 0.6214 × (1 + 0.0060) ÷ (1 + 0.0120) = 0.6177.\nC. Incorrect. The ratio of interest rates is inverted: 0.6214 × (1 + 0.0120) ÷ (1 + 0.0060) = 0.6251.",
+     "hint": {
+      "hl": [
+       "6-month forward USD/NZD",
+       "covered interest rate parity"
+      ],
+      "rule": "F(price/base) = S × (1 + r_price)/(1 + r_base), with the rates for the actual period (6 months = half the annual rate). Higher-rate currency trades at a forward discount."
+     }
+    },
+    {
+     "q": "The all-in return for the carry trade, measured in USD terms, is closest to:",
+     "options": [
+      "7.02%.",
+      "8.52%.",
+      "10.25%."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Borrow $1,000 at 1.50%: owe $1,015. Convert at 5.0200: BRL 5,020. Invest at 10.25%: BRL 5,534.55. Convert at 5.1000: $1,085.21. Net = 1,085.21 − 1,015.00 = $70.21, or 7.02%.\nB. Incorrect. It does not deduct the cost of borrowing USD: (1,085.21 − 1,000) ÷ 1,000 = 8.52%.\nC. Incorrect. 10.25% is only the Brazilian interest rate; it ignores the currency move and the USD borrowing cost.",
+     "hint": {
+      "hl": [
+       "borrowing the USD and investing in the Brazilian real"
+      ],
+      "rule": "Carry trade return in the funding currency = (end value of the foreign investment converted back) − (loan with interest)."
+     }
+    },
+    {
+     "q": "Which of the following conditions would most likely be a warning sign of a currency crisis in Country K?",
+     "options": [
+      "Condition 3",
+      "Condition 2",
+      "Condition 1"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Broad money growth and the ratio of M2 to bank reserves tend to RISE before a crisis; here they declined, which is not a warning.\nB. Incorrect. A large inflow of foreign capital typically precedes a crisis; a slight decline of foreign investment is not the warning sign.\nC. Correct. Foreign exchange reserves tend to fall sharply as a crisis approaches; Condition 1 describes exactly that, and the vignette says it applies to Country K.",
+     "hint": {
+      "hl": [
+       "sizable decline in the ratio of foreign exchange (FX) reserve holdings"
+      ],
+      "rule": "Crisis warnings: FX reserves falling, M2/reserves rising, strong prior capital inflows and credit growth, overvalued currency."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Quantitative Methods",
+   "group": "new",
+   "body": "Rafael Duarte, a research analyst at Lisbon Securities, is studying the time-series behavior of price-to-earnings ratios (P/Es) computed with trailing 12-month earnings (Etrailing). He and his assistant, Priya Nair, are reviewing the results of the ordinary least squares time series regression shown in Exhibit 1.\n\nExhibit 1\nResults of Regression of P/E on Lagged P/E (P/Et = b0 + b1P/Et–1 + εt)\n#   | Coefficient | Standard Error | t | Significance of t\nConstant (b0) | 0.118 | 0.162 | 0.728 | 0.234\nLagged P/E (b1) | 0.994 | 0.003 | 331.333 | 0\nR2 | Standard Error of the Estimate | Durbin–Watson | F | Significance of F\n0.082 | 1.51204 | 2.067 | 142.410 | 0\n\nDuarte states: \"This regression is a special case of a first-order autoregressive [AR(1)] model in which the value for b0 is close to zero and the value of b1 is close to 1. These values suggest that the time series is a random walk.\"\n\nNair replies: \"I'm convinced the P/E series based on trailing earnings truly is a random walk.\"\n\nNair and Duarte next examine the behavior of P/Es calculated using forward 12-month earnings (Eforward). Nair estimates another AR(1) model but uses the forward P/E values this time. She denotes the errors from this second regression as ηt. She states: \"The presence of first-order autoregressive conditional heteroskedasticity [ARCH(1)] errors in this regression is highly likely given the results reported in Exhibit 2.\"\n\nExhibit 2\nResults of Regression of Squared Residuals, ηt², on Lagged Squared Residuals, ηt−1² (ηt² = c0 + c1ηt−1² + ut)\n#   | Coefficient | Standard Error | t | Significance of t\nConstant (c0) | 0.312 | 0.041 | 7.610 | 0\nLag 1 (c1) | 0.241 | 0.025 | 9.640 | 0\nR2 | Standard Error of the Estimate | Durbin–Watson | F | Significance of F\n0.058 | 1.51204 | 2.067 | 92.930 | 0\n\nAfter further discussion, Duarte proposes that he and Nair incorporate more variables into the analysis. He suggests they use a variation of the Fed model, in which the earnings-to-price ratio (E/P) is regressed on long-term interest rates.\n\nDuarte cautions Nair: \"Remember that when we analyze two time series in regression analysis, we need to ensure that:\n\nCondition 1: both series have a unit root and are not cointegrated, or\nCondition 2: neither the dependent variable series nor the independent variable series has a unit root.\n\nUnless Condition 1 or Condition 2 holds, we cannot rely on the validity of the estimated regression coefficients.\"",
+   "questions": [
+    {
+     "q": "Duarte's statement that the coefficients depicted in Exhibit 1 are consistent with a random walk is most likely:",
+     "options": [
+      "correct.",
+      "incorrect because b0 should be close to 1.",
+      "incorrect because b1 should be close to 0."
+     ],
+     "answer": 0,
+     "why": "A. Correct. A random walk estimated as an AR(1) has an intercept near zero and a slope near 1; b0 = 0.118 and b1 = 0.994 fit.\nB. Incorrect. For a random walk the intercept is near 0, not 1.\nC. Incorrect. For a random walk, the slope on the lagged value is close to 1, not 0.",
+     "hint": {
+      "hl": [
+       "value for b0 is close to zero and the value of b1 is close to 1"
+      ],
+      "rule": "Random walk as AR(1): b0 ≈ 0, b1 ≈ 1."
+     }
+    },
+    {
+     "q": "If Nair is correct regarding the trailing P/E time series, the best forecast of next period's trailing P/E is most likely to be the:",
+     "options": [
+      "current period's trailing P/E.",
+      "forecast derived from applying the AR(1) model depicted in Exhibit 1 to the data.",
+      "average P/E of the time series."
+     ],
+     "answer": 0,
+     "why": "A. Correct. For a random walk, the best forecast of the next value is the current value.\nB. Incorrect. A random walk is not covariance stationary, so an AR(1) forecast is not appropriate.\nC. Incorrect. A random walk has no mean-reverting level, so the average is not the best forecast.",
+     "hint": {
+      "hl": [
+       "truly is a random walk"
+      ],
+      "rule": "Random walk: best forecast of x(t+1) = x(t); no mean reversion, not covariance stationary."
+     }
+    },
+    {
+     "q": "The results depicted in Exhibit 2 are best described as consistent with a regression that has ARCH(1) errors because:",
+     "options": [
+      "c1 is significantly different from 1.",
+      "c0 is significantly different from 0.",
+      "c1 is significantly different from 0."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The ARCH test checks whether c1 differs from 0, not 1.\nB. Incorrect. The intercept's significance does not test ARCH.\nC. Correct. ARCH(1) is tested by regressing squared residuals on their own lag; if the slope c1 is significantly different from 0, ARCH(1) errors are present (t = 9.64).",
+     "hint": {
+      "hl": [
+       "Regression of Squared Residuals"
+      ],
+      "rule": "ARCH(1) test: squared residuals on lagged squared residuals; slope significantly different from 0 → ARCH."
+     }
+    },
+    {
+     "q": "Duarte's caution given in Condition 1 is best described as:",
+     "options": [
+      "correct.",
+      "incorrect because if both series have unit roots, they must exhibit cointegration for the results of the regression to be valid.",
+      "incorrect because the regression results are valid whether cointegration exists or does not exist."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. If both series have a unit root, the regression is valid only when they are cointegrated, so 'not cointegrated' is wrong.\nB. Correct. Both series with unit roots must be cointegrated for the regression to be valid; Condition 1 says they are not cointegrated, which is the invalid case.\nC. Incorrect. Validity depends on cointegration when both series have unit roots.",
+     "hint": {
+      "hl": [
+       "both series have a unit root and are not cointegrated"
+      ],
+      "rule": "Two time series in a regression: both stationary (no unit root), or both unit roots AND cointegrated. Unit roots without cointegration = spurious regression."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "group": "new",
+   "body": "Rebecca Hale is an analyst for a global equity mutual fund. The fund is well-diversified and holds both dividend-paying and non-dividend-paying shares. She is evaluating three of the fund's holdings.\n\nOne holding is Canada-based Brisa, a profitable non-dividend-paying company that is viewed by the market as an acquisition target. Hale expects Brisa's level of corporate debt to change significantly over time. Because Brisa reports a number of items through other comprehensive income, its net income does not always fully reflect underlying economic conditions. Hale considers the type of model she should use to value Brisa.\n\nA second holding, UK-based Orlin, currently pays an annual dividend of £1.80 per share. Dividends are initially expected to grow at an annual rate of 9%, but then decline linearly during a 10-year period to a final and perpetual annual growth rate of 4%. Orlin's required return on equity is 8.50%. Hale uses the H-model to value Orlin.\n\nA third holding, France-based Tamsen, is in a mature growth phase. Tamsen has a dividend payout ratio of 40%, a return on assets of 6.00%, and an equity multiplier of 1.50. Upon further analysis, Hale concludes that Tamsen is over valued.",
+   "questions": [
+    {
+     "q": "Which of the following is the most appropriate model for Hale to use in valuing Brisa?",
+     "options": [
+      "Free cash flow to the firm",
+      "Residual income",
+      "Free cash flow to equity"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Brisa is profitable, non-dividend-paying and an acquisition target (a control perspective), and its debt will change significantly: FCFF is the most appropriate model.\nB. Incorrect. Residual income is less appropriate here because Brisa reports a number of items through other comprehensive income, which distorts reported net income.\nC. Incorrect. FCFE suits a stable capital structure; Brisa's debt level is expected to change significantly, which makes FCFF the better choice.",
+     "hint": {
+      "hl": [
+       "viewed by the market as an acquisition target",
+       "level of corporate debt to change significantly"
+      ],
+      "rule": "Control perspective + changing leverage → FCFF; residual income is distorted by OCI items."
+     }
+    },
+    {
+     "q": "Based on the H-model, Orlin's value per share is closest to:",
+     "options": [
+      "£41.60.",
+      "£51.60.",
+      "£61.60."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It is only the first term, the value if dividends grew at 4% forever: 1.80 × 1.04 ÷ (0.0850 − 0.04) = £41.60. The extra value from the high-growth years is missing.\nB. Correct. V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), with H = 10 ÷ 2 = 5: 1.80 × 1.04 ÷ 0.045 + 1.80 × 5 × 0.05 ÷ 0.045 = 41.60 + 10.00 = £51.60.\nC. Incorrect. It uses the full 10-year period as H instead of half of it (5): 41.60 + 1.80 × 10 × 0.05 ÷ 0.045 = £61.60.",
+     "hint": {
+      "hl": [
+       "decline linearly during a 10-year period",
+       "uses the H-model"
+      ],
+      "rule": "H-model: V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), where H is HALF the length of the transition."
+     }
+    },
+    {
+     "q": "Tamsen's sustainable dividend growth rate is closest to:",
+     "options": [
+      "2.4%.",
+      "3.6%.",
+      "5.4%."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The equity multiplier was divided into ROA instead of multiplied: 6.0% ÷ 1.50 = 4.0%, then × 0.60 = 2.4%.\nB. Incorrect. It uses the payout ratio instead of the retention ratio: 0.40 × 9.0% = 3.6%.\nC. Correct. ROE = ROA × equity multiplier = 6.00% × 1.50 = 9.0%. Retention ratio = 1 − 0.40 = 0.60. g = 0.60 × 9.0% = 5.4%.",
+     "hint": {
+      "hl": [
+       "dividend payout ratio of 40%",
+       "equity multiplier of 1.50"
+      ],
+      "rule": "g = retention ratio × ROE, with ROE = ROA × equity multiplier."
+     }
+    },
+    {
+     "q": "Based on Hale's analysis, the share price of Tamsen would be expected to grow at:",
+     "options": [
+      "a faster rate than its dividends.",
+      "the same rate as its dividends.",
+      "a slower rate than its dividends."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. A faster rate would correct an undervaluation, not an overvaluation.\nB. Incorrect. The price grows at the dividend growth rate only when it equals its value; Tamsen is overvalued, not fairly valued.\nC. Correct. An overvaluation is corrected by the price growing more slowly than dividends.",
+     "hint": {
+      "hl": [
+       "Tamsen is over valued"
+      ],
+      "rule": "Mispricing is corrected through the growth rate: overvalued → price grows slower than dividends; undervalued → faster."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Derivatives",
+   "group": "new",
+   "body": "Karen Liu is a US-based hedge fund manager. To value the options in her fund, Liu uses both the Black–Scholes–Merton (BSM) and binomial option pricing models.\nLiu sells 12 call option contracts on a non-dividend-paying stock, Hillcrest Corporation, at the value determined by the BSM model, and considers delta-hedging the position using Hillcrest shares. Each call option contract is for 100 shares. Liu collects the information in Exhibit 1 for a call option on Hillcrest.\nExhibit 1\nCurrent share price of Hillcrest | $62\nExercise price of Hillcrest call option | $60\nd1 | 0.231\nd2 | 0.082\nN(d1) | 0.591\nN(d2) | 0.533\nGamma | 0.041\nTheta (daily) | –0.021\nBSM call value | $4.512\nLiu next considers an American-style put option on Marlow Corporation that matures in two years. She values it with a two-period binomial option pricing model and collects the relevant information in Exhibit 2. Marlow does not pay dividends.\n\nExhibit 2\nCurrent share price of Marlow | $80\nExercise price of Marlow put option | $84\nRisk-free rate (compounded annually) | 4%\nUp factor (u) | 1.25\nDown factor (d) | 0.80\nStock prices in one year | S+ = $100, S- = $64\nStock prices in two years | S++ = $125, S+- = $80, S-- = $51.2",
+   "questions": [
+    {
+     "q": "To delta hedge her call option position on Hillcrest, how many shares of Hillcrest should Liu buy?",
+     "options": [
+      "491",
+      "640",
+      "709"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. This is based on 1 − N(d1) = 0.409: 0.409 × 100 × 12 = 491 shares.\nB. Incorrect. This is based on N(d2) = 0.533 instead of N(d1): 0.533 × 100 × 12 = 640 shares.\nC. Correct. For a non-dividend-paying stock the number of shares per option sold is N(d1) = 0.591: 0.591 × 100 × 12 = 709.2, about 709 shares.",
+     "hint": {
+      "hl": [
+       "delta-hedging the position",
+       "Each call option contract is for 100 shares"
+      ],
+      "rule": "Delta hedge of a short call = buy N(d1) shares per option; scale by 100 shares per contract and the number of contracts."
+     }
+    },
+    {
+     "q": "The gamma of Liu's delta-hedged position would be:",
+     "options": [
+      "zero.",
+      "negative.",
+      "positive."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. The stock has zero gamma, but the short call does not.\nB. Correct. The long stock has zero gamma and the short call has negative gamma (a long call has positive gamma), so the overall position has negative gamma.\nC. Incorrect. The position is short the call; short options have negative gamma.",
+     "hint": {
+      "hl": [
+       "sells 12 call option contracts"
+      ],
+      "rule": "Delta-hedged short call: stock gamma = 0, short call gamma < 0 → negative gamma."
+     }
+    },
+    {
+     "q": "Holding all else constant, the value of the call on Hillcrest one day after Liu's sale will be closest to:",
+     "options": [
+      "$4.471.",
+      "$4.491.",
+      "$4.533."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It uses gamma in place of theta: 4.512 − 0.041 = $4.471.\nB. Correct. Daily theta = -0.021: the value after one day = 4.512 − 0.021 = $4.491.\nC. Incorrect. It adds the theta instead of subtracting it: 4.512 + 0.021 = $4.533.",
+     "hint": {
+      "hl": [
+       "Theta (daily)",
+       "BSM call value"
+      ],
+      "rule": "Time decay: value tomorrow = value today + theta (theta is negative for a long call)."
+     }
+    },
+    {
+     "q": "Using the two-period binomial option pricing model, the value of the American put on Marlow Corporation is closest to:",
+     "options": [
+      "$8.45.",
+      "$9.89.",
+      "$10.48."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This is the European put price: 8.45 (no early exercise at the down node).\nB. Correct. Risk-neutral probability = (1 + r − d) ÷ (u − d) = 0.5333. Puts at T = 2: Puu = 0, Pud = 4, Pdd = 32.8. At T = 1: P+ = 1.7949; down node: the binomial value is 16.7692, but early exercise gives 84 − 64 = 20, so P− = 20. P0 = [0.5333 × 1.7949 + 0.4667 × 20] ÷ 1.04 = $9.89.\nC. Incorrect. It uses risk-neutral probabilities of 0.5 instead of 0.5333: $10.48.",
+     "hint": {
+      "hl": [
+       "American-style put option",
+       "two-period binomial option pricing model"
+      ],
+      "rule": "American put: at each node take the larger of the binomial (continuation) value and the exercise value K − S."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Corporate Issuers",
+   "group": "new",
+   "body": "Nina Ferrara is a financial adviser to high-net-worth individuals. She is currently reviewing the equity portfolio of a client and is considering adding new securities to it, as the client has indicated a preference for more income-producing securities. With this in mind, Ferrara takes a closer look at Belmont Corporation (“Belmont”), a chain of Canadian boutiques that has recently registered unusually high sales, resulting in large increases in the company’s cash balance. Belmont’s current stock price is C$52.10. Exhibit 1 shows earnings and dividends for the preceding four years.\n\nExhibit 1 Belmont Corporation Earnings and Dividend History\n#   | 2013 | 2014 | 2015 | 2016\nEPS | C$1.52 | C$1.55 | C$1.49 | C$1.58\nDPS | C$0.30 | C$0.32 | C$0.32 | C$0.32\nFerrara reviews analysts’ reports. She notes the significant change in cash due to the high sales volume and wonders whether that will prompt a dividend increase. However, most analysts have stated that because the industry is cyclical, the increase in sales is believed to be temporary.\n\nFerrara asks her assistant, Tom Reyes, to investigate whether Belmont might use its surplus cash for a share repurchase rather than for dividends. Reyes believes that looking at other companies that have completed share repurchases could be helpful to his analysis. He looks at the history of RapidServ Inc. (“RapidServ”), a US-based industrial services company whose business depends heavily on the petroleum exploration and production sector. RapidServ made its first share repurchase in early 2017 using surplus cash. RapidServ’s selected financial information just prior to the repurchase is shown in Exhibit 2.\n\nExhibit 2 RapidServ, Inc. Selected Financial Information as of Year-End 2016\nNet income | $150 million\nEPS | $1.50\nShares outstanding | 100 million\nDetails of shares repurchase |\nCash available for repurchase | $720 million\nShare price at the time of repurchase | $30.00\nPremium over current share price for repurchase | 12.0%\nReyes returns to Ferrara to continue the discussion. Ferrara explains to Reyes that a complete analysis of the impact of a share repurchase should also include an evaluation of the effects on leverage. She points out that Belmont’s most recent bond issue includes a covenant that limits the company’s debt-to-equity ratio to 35%. She asks Reyes to prepare an analysis for Belmont, using the information in Exhibit 3, to see if the debt covenant will be violated if the company repurchases shares.\n\nExhibit 3 Belmont Corporation Selected Financial Information as of Year-End 2016\n# Book value of equity | C$4,200 million\nCash available for repurchase | C$210 million\nDebt-to-equity ratio | 30.0%",
+   "questions": [
+    {
+     "q": "Based on Exhibit 1, Belmont’s current dividend policy is best described as a:",
+     "options": [
+      "constant dividend payout ratio policy.",
+      "residual dividend policy.",
+      "stable dividend policy."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. A constant payout ratio would make the dividend rise and fall with EPS.\nB. Incorrect. A residual policy pays out whatever is left after capital spending and leads to volatile dividends; Belmont's dividend is not volatile.\nC. Correct. The dividend has been held at C$0.32 for three years although EPS moved up and down: a stable dividend policy.",
+     "hint": {
+      "hl": [
+       "Exhibit 1 shows earnings and dividends"
+      ],
+      "rule": "Dividend flat while earnings vary = stable policy; dividend moving with earnings = constant payout; dividend = leftover cash = residual."
+     }
+    },
+    {
+     "q": "If the analysts’ beliefs about the increase in sales are correct, the change in dividend policy that Belmont would most likely make would be to:",
+     "options": [
+      "cut the quarterly dividend in anticipation of next year’s sales forecast.",
+      "declare a special dividend.",
+      "increase the quarterly dividend amount."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Cutting the dividend would signal weakness; the company has surplus cash.\nB. Correct. A temporary increase in cash is best handled with a special (extra) dividend, especially in a cyclical industry.\nC. Incorrect. Companies avoid raising the regular dividend unless they can keep paying at or above that level, and the sales increase is temporary.",
+     "hint": {
+      "hl": [
+       "the increase in sales is believed to be temporary"
+      ],
+      "rule": "Temporary extra cash → special dividend or repurchase, not a higher regular dividend."
+     }
+    },
+    {
+     "q": "If RapidServ had used all of its surplus cash to repurchase its shares, based on Exhibit 2, the percentage increase in EPS would have been closest to:",
+     "options": [
+      "12%.",
+      "27%.",
+      "32%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It applies the price premium (12%) to EPS.\nB. Correct. Repurchase price = $30.00 × 1.12 = $33.60; shares repurchased = $720 million ÷ $33.60 = 21.43 million; shares after = 78.57 million; EPS after = $150 million ÷ 78.57 million = $1.91; increase = 1.91 ÷ 1.50 − 1 = 27%.\nC. Incorrect. It ignores the repurchase premium (buys at $30.00): 24.00 million shares, EPS $1.97, +32%.",
+     "hint": {
+      "hl": [
+       "Premium over current share price for repurchase",
+       "Cash available for repurchase"
+      ],
+      "rule": "Repurchase price = price × (1 + premium); shares retired = cash ÷ repurchase price; new EPS = net income ÷ remaining shares."
+     }
+    },
+    {
+     "q": "The best answer to Ferrara’s question about the potential violation of the debt covenants is that the covenant:",
+     "options": [
+      "is not violated if Belmont repurchases shares.",
+      "will be violated if Belmont uses surplus cash to finance the repurchase.",
+      "will be violated if Belmont uses debt to finance the repurchase."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The covenant is violated when the repurchase is financed with debt.\nB. Incorrect. With cash, D/E = C$1,260 ÷ (C$4,200 − C$210) = 31.6%, below the 35% limit.\nC. Correct. Debt = 30% × C$4,200 = C$1,260 million. With a debt-financed repurchase D/E = (C$1,260 + C$210) ÷ (C$4,200 − C$210) = 36.8%, above 35%: violated.",
+     "hint": {
+      "hl": [
+       "limits the company’s debt-to-equity ratio to 35%"
+      ],
+      "rule": "Cash repurchase: debt unchanged, equity falls. Debt-financed repurchase: debt rises and equity falls, so D/E rises more."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Portfolio Management",
+   "group": "new",
+   "body": "Marcus Pryce is a senior portfolio strategist for an endowment fund. Pryce meets with recently hired junior analyst Peter Lind to review the fund’s holdings.\n\nLind is evaluating three ETFs for potential investment. He notes that the ETFs have different portfolio characteristics that are likely to affect each ETF’s tracking error. A summary of the characteristics for the ETFs is presented in Exhibit 1.\n\nExhibit 1\nETF Characteristics Affecting Tracking Error\n#   | ETF 1 | ETF 2 | ETF 3\nPortfolio Construction Approach | Representative Sampling | Full Replication | Full Replication\nType of Foreign Holdings | ADRs* | Local shares | ADRs*\nEngagement in Securities Lending | Yes | Yes | No\n*ADRs are American Depositary Receipts.\nPryce and Lind discuss the factors that influence ETF bid–ask spreads. Lind tells Pryce that quoted bid–ask spreads for a particular transaction size are (1) positively related to the costs and risks for the ETF liquidity provider, (2) positively related to the amount of competition among market makers for the ETF, and (3) negatively related to the amount of the ongoing order flow in the ETF.\n\nAs ETF shares may trade at prices that are different from the NAV, Pryce examines selected data in Exhibit 2 for three ETFs that might have this problem.\n\nExhibit 2\nSelected Data on ETFs\n#   | ETF 4 | ETF 5 | ETF 6\nPercentage of Foreign Holdings | 85% | 45% | 15%\nTrading Frequency | Low | Low | High\nPryce considers a new ETF investment for the fund. He plans to own the ETF for 7 months. The ETF has the following trading costs and management fees:\n\nAnnual management fee of 0.40%\n\nRound-trip trading commissions of 0.16%\n\nBid–offer spread of 0.08% on purchase and sale\n\nPryce asks Lind to compute the expected total holding period cost for investing in the ETF.",
+   "questions": [
+    {
+     "q": "Which ETF in Exhibit 1 is most likely to have the lowest tracking error?",
+     "options": [
+      "ETF 2",
+      "ETF 1",
+      "ETF 3"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Full replication, local shares (no trading-hour mismatch with ADRs) and securities lending income that offsets part of the fund expenses give ETF 2 the lowest expected tracking error.\nB. Incorrect. Representative sampling and ADRs both add tracking error.\nC. Incorrect. ETF 3 uses full replication but holds ADRs, whose different trading hours create discrepancies, and it earns no lending income.",
+     "hint": {
+      "hl": [
+       "Full Replication",
+       "Local shares"
+      ],
+      "rule": "Lower tracking error: full replication, local shares instead of ADRs, securities lending income."
+     }
+    },
+    {
+     "q": "Lind’s statement about quoted bid–ask spreads is incorrect with respect to the:",
+     "options": [
+      "costs and risks for the ETF liquidity providers.",
+      "amount of the ongoing order flow in the ETF.",
+      "amount of competition among market makers for the ETF."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Higher costs and risks for the liquidity provider widen the spread (positive relation); Lind is right.\nB. Incorrect. More order flow lowers spreads (negative relation); Lind is right.\nC. Correct. More competition among market makers narrows the spread: the relation is NEGATIVE, so Lind's statement (2) is incorrect.",
+     "hint": {
+      "hl": [
+       "(2) positively related to the amount of competition among market makers for the ETF"
+      ],
+      "rule": "Bid–ask spread: negative with order flow, negative with competition among market makers, positive with the liquidity provider's costs and risks."
+     }
+    },
+    {
+     "q": "Which ETF in Exhibit 2 is most likely to trade at the largest premium or discount relative to NAV?",
+     "options": [
+      "ETF 4",
+      "ETF 6",
+      "ETF 5"
+     ],
+     "answer": 0,
+     "why": "A. Correct. ETF 4 trades infrequently and has the highest percentage of foreign holdings, so NAV is stale and mismatched with the ETF's trading hours: the largest premium or discount.\nB. Incorrect. ETF 6 trades frequently and has the lowest share of foreign holdings.\nC. Incorrect. ETF 5 has low trading frequency but a smaller share of foreign holdings than ETF 4.",
+     "hint": {
+      "hl": [
+       "Percentage of Foreign Holdings",
+       "Trading Frequency"
+      ],
+      "rule": "Premium/discount to NAV is larger for infrequently traded ETFs and ETFs with many foreign holdings (closing-time differences)."
+     }
+    },
+    {
+     "q": "Excluding the compounding effect, the expected total holding period cost for investing in the ETF over a seven-month holding period is closest to:",
+     "options": [
+      "0.47%.",
+      "0.55%.",
+      "0.64%."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Total cost = (7/12) × 0.40% + 0.16% + 0.08% = 0.2333% + 0.16% + 0.08% = 0.47%.\nB. Incorrect. It counts the bid–offer spread twice (0.16%): 0.2333% + 0.16% + 0.16% = 0.55%.\nC. Incorrect. It does not prorate the annual management fee for 7 months: 0.40% + 0.16% + 0.08% = 0.64%.",
+     "hint": {
+      "hl": [
+       "Annual management fee of 0.40%",
+       "Round-trip trading commissions of 0.16%"
+      ],
+      "rule": "Holding cost = (months ÷ 12) × annual fee + round-trip commissions + bid–offer spread (the round-trip spread already covers purchase and sale)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "group": "new",
+   "body": "Alina Moretti, an equity analyst, is reviewing preliminary research reports developed by her team for two wireless telecommunications companies: WaveLink and NetSphere.\nWaveLink\nAfter reviewing the preliminary report for WaveLink, Moretti decides to revise it slightly. She notes that interest expense is tax-deductible and collects the selected financial data for WaveLink shown in Exhibit 1.\nExhibit 1\nBook value of total assets at beginning of the year (millions) | €4,800\nBook value of total debt at beginning of the year (millions) | €2,400\nEBIT (millions) | €650\nCorporate tax rate | 20.0%\nROE | 17.7%\nCost of equity | 12.5%\nPretax cost of debt | 5.0%\nMarket price per share | €62.00\nP/B ratio | 1.60\nAssuming the clean surplus relation holds, Moretti uses the data in Exhibit 1 to calculate residual income for the year and then estimates the implied growth rate of earnings for WaveLink based on the current market price.\nNetSphere\nMoretti first notes that the team's preliminary report on NetSphere uses a multistage residual income model with a persistence factor of 0.18, one-third of the industry average of 0.54.\nMoretti next assumes the clean surplus relation holds, and uses the data in Exhibit 2 to update the report based on a finite-horizon multistage residual income model.\nExhibit 2\nCurrent book value per share | €21.40\nPresent value of residual income per share for Year 1 | €2.60\nPresent value of residual income per share for Year 2 | €2.30\nForecasted book value per share at end of Year 2 | €27.10\nForecasted market price per share at end of Year 2 | €30.20\nCost of equity | 11.5%\nWACC | 7.0%",
+   "questions": [
+    {
+     "q": "The residual income for WaveLink is closest to:",
+     "options": [
+      "€24 million.",
+      "€124 million.",
+      "€244 million."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It does not follow from either residual income method.\nB. Correct. Net income = (EBIT − interest) × (1 − t) = (650 − 120) × 0.80 = 424. Equity = 4,800 − 2,400 = 2,400; equity charge = 2,400 × 0.125 = 300. Residual income = 424 − 300 = €124 million.\nC. Incorrect. It does not follow from either residual income method.",
+     "hint": {
+      "hl": [
+       "calculate residual income for the year"
+      ],
+      "rule": "Residual income = net income − equity charge (cost of equity × beginning book value of equity)."
+     }
+    },
+    {
+     "q": "Based on the single-stage residual income model, the implied growth rate of earnings for WaveLink is closest to:",
+     "options": [
+      "5.2%.",
+      "3.9%.",
+      "12.5%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. 5.2% is only the difference between ROE and the cost of equity.\nB. Correct. Book value per share B0 = 62.00 ÷ 1.60 = 38.75. Solving V0 = B0 + B0(ROE − r)/(r − g) for g: g = r − [(ROE − r) × B0] ÷ (V0 − B0) = 0.125 − [(0.1767 − 0.125) × 38.75] ÷ (62.00 − 38.75) = 3.9%.\nC. Incorrect. 12.5% is the cost of equity; growth must be below it.",
+     "hint": {
+      "hl": [
+       "implied growth rate of earnings"
+      ],
+      "rule": "Implied g from the single-stage RI model: g = r − [(ROE − r) × B0] ÷ (V0 − B0)."
+     }
+    },
+    {
+     "q": "Relative to the industry, the persistence factor used in the preliminary report on NetSphere is most consistent with the firm having:",
+     "options": [
+      "lower levels of accounting returns.",
+      "lower levels of dividend payouts.",
+      "higher levels of accounting accruals."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. High or extreme accounting returns (ROE) are associated with lower persistence; low returns are not.\nB. Incorrect. Low dividend payout is associated with HIGHER residual income persistence.\nC. Correct. A persistence factor below the industry average is consistent with high or extreme accounting accruals.",
+     "hint": {
+      "hl": [
+       "persistence factor of 0.18",
+       "industry average of 0.54"
+      ],
+      "rule": "Low persistence: extreme ROE, high accruals, high dividend payout; high persistence: low payout, stable accounting returns."
+     }
+    },
+    {
+     "q": "Based on the finite-horizon multistage residual income model, NetSphere's intrinsic value per share is closest to:",
+     "options": [
+      "€28.79.",
+      "€29.01.",
+      "€29.40."
+     ],
+     "answer": 0,
+     "why": "A. Correct. V0 = B0 + PV(RI1) + PV(RI2) + (PT − BT) ÷ (1 + r)² = 21.40 + 2.60 + 2.30 + (30.20 − 27.10) ÷ 1.115² = €28.79.\nB. Incorrect. It discounts the premium over book value at the WACC (7.0%) instead of the cost of equity: €29.01.\nC. Incorrect. It does not discount the terminal premium over book value: €29.40.",
+     "hint": {
+      "hl": [
+       "finite-horizon multistage residual income model",
+       "Cost of equity"
+      ],
+      "rule": "Finite-horizon RI: V0 = B0 + PV of residual incomes + PV of (terminal price − terminal book value), all discounted at the cost of equity."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Alternative Investments",
+   "group": "new",
+   "body": "Sofia Martins is an alternative investment analyst for a US investment management firm, Orion Brothers. Orion's chief investment officer, Daniel Cho, has informed Martins that he wants to reduce the amount invested in traditional asset classes and gain exposure to the real estate sector by acquiring commercial property in the United States. Martins is asked to analyze potential commercial real estate investments for Orion Brothers. Selected data on three commercial real estate properties are shown in Exhibit 1.\n\nExhibit 1\nSelected Property Data\n# Property | Property 1 | Property 2 | Property 3\nProperty type | Downtown Office | Grocery-Anchored Retail Center | Multi-Family Building\nLocation | New York City | Miami | Boston\nAge | 10 years | 7 years | 5 years\nOccupancy | 88.00% | 94.00% | 96.00%\nGross potential rental income | $4,400,000 | $1,950,000 | $3,300,000\nLoss to lease | ($220,000) | ($80,000) | ($165,000)\nGross rental income | $4,180,000 | $1,870,000 | $3,135,000\nVacancy loss | ($501,600) | ($112,200) | ($125,400)\nNet rental income | $3,678,400 | $1,757,800 | $3,009,600\nExpense reimbursement revenue | $290,000 | $462,000 | $0\nOther income (includes % rent) | $410,000 | $20,000 | $52,000\nEffective gross income | $4,378,400 | $2,239,800 | $3,061,600\nProperty management fees | ($175,136) | ($84,000) | ($122,464)\nOther operating expenses | ($1,720,000) | ($378,000) | ($1,240,000)\nNet operating income | $2,483,264 | $1,777,800 | $1,699,136\nMartins asks Cho about the relative magnitudes of operating expenses in determining property NOI. Cho explains that the retail center in Miami is able to be fully reimbursed for its operating expenses but that the office property in New York City and the multi-family property in Boston must absorb considerable unreimbursed operating expenses.\n\nCho comments to Martins that these three properties may be in different phases of the real estate cycle. He specifically cites the differences between gross potential rental income and gross rental income in making his argument. In response to Cho’s comments, Martins makes the two following statements about the office building in New York City:\n\nStatement 1:\nI believe that the high vacancy rates indicate that the net operating income of the office building has the potential to improve within two years.\n\nStatement 2:\nI believe that the office market in New York City is likely to enter the recovery stage of the real estate cycle within two years.\n\nCho continues the conversation by commenting about the relative riskiness of various types of real estate given such developments as the COVID-19 pandemic, the movement toward remote working, and the evolution of internet-based retail.\n\nMartins asks Cho about the appropriateness of various valuation methods on these three properties. Cho suggests that the sales comparison approach is likely to be useful, but he is particularly interested in seeing the valuation results from an income approach for each of the three properties.",
+   "questions": [
+    {
+     "q": "Which of the following statements is most accurate regarding the effect of unreimbursed operating expenses on the NOI of the New York City and Boston properties?",
+     "options": [
+      "The NOI of the office property in New York City is more negatively affected by unreimbursed operating expenses than is the NOI of the multi-family property in Boston.",
+      "The NOI of the multi-family property in Boston is more negatively affected by unreimbursed operating expenses than is the NOI of the office property in New York City.",
+      "The NOIs of both properties are affected similarly by unreimbursed operating expenses."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. The New York City property has larger expenses in dollars, but it also has a larger income base: ($1,895,136 − $290,000) ÷ $4,378,400 = 36.7%.\nB. Correct. Unreimbursed expenses as a share of effective gross income: Boston ($1,362,464 − 0) ÷ $3,061,600 = 44.5%, against 36.7% for New York City, so Boston is hit harder.\nC. Incorrect. The two ratios are clearly different.",
+     "hint": {
+      "hl": [
+       "must absorb considerable unreimbursed operating expenses"
+      ],
+      "rule": "Compare unreimbursed expenses (total expenses minus reimbursement revenue) as a share of effective gross income, not in dollars."
+     }
+    },
+    {
+     "q": "Which of the following responses is most accurate regarding Martins’s Statement 1 and Statement 2?",
+     "options": [
+      "Statement 1 is more accurate than Statement 2.",
+      "Statements 1 and 2 are both accurate statements.",
+      "Statement 2 is more accurate than Statement 1."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Statement 1 says NOI can improve within two years, which implies a move into the expansion phase. High vacancy points to oversupply or recession, so a short recession followed by recovery (Statement 2) is the consistent reading.\nB. Incorrect. The statements are inconsistent in terms of the real estate cycle phase they imply, so they cannot both be accurate.\nC. Correct. High vacancy likely means the office market is in the oversupply or recession phase. Statement 2 (recovery within two years) is consistent with that; Statement 1 (NOI already improving, expansion) skips the recovery stage.",
+     "hint": {
+      "hl": [
+       "high vacancy rates indicate",
+       "recovery stage of the real estate cycle within two years"
+      ],
+      "rule": "High vacancy = oversupply/recession; recovery comes before expansion, so a recovery call is more accurate than an expanding-NOI call."
+     }
+    },
+    {
+     "q": "Which of the three property types faces the lowest level of relative risk factors associated with structural and technological changes in the real estate market?",
+     "options": [
+      "Office property in New York City",
+      "Retail center in Miami",
+      "Multi-family property in Boston"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Office properties are hurt by the structural shift toward remote working.\nB. Incorrect. Retail centers face difficulties from technological change and the rise of internet-based retail.\nC. Correct. Residential housing is more of a necessity than the other two types, so the multi-family property has the lowest risk from these structural changes.",
+     "hint": {
+      "hl": [
+       "remote working",
+       "internet-based retail"
+      ],
+      "rule": "Structural change hurts office (remote work) and retail (e-commerce) most; residential is a necessity."
+     }
+    },
+    {
+     "q": "Given Martins’s comment in Statement 2 about the office property in New York City, which of the following approaches to estimating property value is most appropriate?",
+     "options": [
+      "Direct capitalization method using a normalized NOI forecast",
+      "Sales comparison approach",
+      "Direct capitalization method using last year’s NOI"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Direct capitalization uses a single-period cash flow, so a property with short-term NOI disruption from the cycle needs a normalized NOI (or a DCF).\nB. Incorrect. The sales comparison approach is less appropriate while a market recovery is still expected.\nC. Incorrect. Last year’s NOI is not a normalized NOI when NOI is being disrupted by the real estate cycle.",
+     "hint": {
+      "hl": [
+       "recovery stage of the real estate cycle within two years",
+       "income approach"
+      ],
+      "rule": "Direct capitalization = one period of NOI: normalize NOI when the property is in a cycle disruption (or use DCF)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "group": "new",
+   "body": "Diana Hart is the chief investment officer at Pace Advisors, and Ben Cole is a derivatives analyst at the firm.\n\nVORN Corporation\nCole makes the following statement on the credit quality of VORN Corporation, whose debt Pace Advisors holds: “There is severe near-term stress in the financial markets, and VORN’s credit curve clearly reflects the difficult environment.”\n\nOn 1 July 20X3, VORN fails to make a scheduled interest payment on the outstanding subordinated unsecured obligation after a grace period; however, the company does not file for bankruptcy. Hart asks Cole to determine if VORN experienced a credit event and, if so, to recommend a settlement preference.\n\nJorvik Corporation\nHart is considering purchasing protection on Jorvik Corporation debt to hedge the portfolio’s position in Jorvik. She instructs Cole to determine if an upfront payment would be required and, if so, the amount of the premium. Cole presents the information for the CDS in Exhibit 1.\n\nExhibit 1\nSummary Data for 10-year CDS on Jorvik Corporation\nCredit spread | 650 bps\nDuration | 6 years\nCoupon rate | 5%\nHart purchases 10-year protection on Jorvik Corporation debt. Two months later the credit spread for Jorvik Corporation has increased by 200 bps. Hart asks Cole to close out the firm’s CDS position on Jorvik Corporation by entering into a new, offsetting contract.",
+   "questions": [
+    {
+     "q": "According to Cole’s statement, the shape of VORN’s credit curve is most likely:",
+     "options": [
+      "flat.",
+      "upward-sloping.",
+      "downward-sloping."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. A flat curve implies a constant hazard rate.\nB. Incorrect. An upward-sloping curve implies greater default probability in later years, the normal shape in calm markets.\nC. Correct. Severe near-term stress means the default probability is greatest in the early years: a downward-sloping credit curve.",
+     "hint": {
+      "hl": [
+       "severe near-term stress in the financial markets"
+      ],
+      "rule": "Near-term stress → downward-sloping (inverted) credit curve; calm markets → upward-sloping; constant hazard rate → flat."
+     }
+    },
+    {
+     "q": "Should Cole conclude that VORN experienced a credit event?",
+     "options": [
+      "Yes",
+      "No, because VORN did not file for bankruptcy",
+      "No, because the failure to pay occurred on a subordinated unsecured bond"
+     ],
+     "answer": 0,
+     "why": "A. Correct. A failure to make a scheduled interest payment after the grace period is a credit event even without a bankruptcy filing.\nB. Incorrect. The three common credit events are bankruptcy, failure to pay and restructuring; bankruptcy is not required.\nC. Incorrect. Failure to pay on any outstanding obligation counts, whatever its seniority.",
+     "hint": {
+      "hl": [
+       "fails to make a scheduled interest payment",
+       "does not file for bankruptcy"
+      ],
+      "rule": "Credit events: bankruptcy, failure to pay (after the grace period), restructuring; any one of them is enough."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1, the upfront premium as a percent of the notional for the CDS protection on Jorvik Corporation would be closest to:",
+     "options": [
+      "1.5%.",
+      "7.8%.",
+      "9.0%."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. It is the simple difference between spread and coupon (650 − 500 = 150 bps = 1.5%), ignoring the duration.\nB. Incorrect. It divides the spread by the coupon and multiplies by the duration: (650/500) × 6 = 7.8%.\nC. Correct. Upfront premium ≈ (credit spread − fixed coupon) × duration = (650 − 500) × 6 = 900 bps = 9.0% of the notional.",
+     "hint": {
+      "hl": [
+       "Credit spread",
+       "Coupon rate"
+      ],
+      "rule": "Upfront premium ≈ (CDS spread − standard coupon) × duration; the protection buyer pays it when the spread exceeds the coupon."
+     }
+    },
+    {
+     "q": "If Pace Advisors enters into a new offsetting contract two months after purchasing protection on Jorvik Corporation, this action will most likely result in:",
+     "options": [
+      "neither a loss nor a profit on the CDS position.",
+      "a loss on the CDS position.",
+      "a profit on the CDS position."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The protection buyer benefits from a spread increase, so it does not break even.\nB. Incorrect. A fall (not a rise) in the spread would cause a loss to the protection buyer.\nC. Correct. The protection buyer is economically short credit; the spread rose by 200 bps, so closing out by selling protection at the higher premium locks in a profit.",
+     "hint": {
+      "hl": [
+       "increased by 200 bps",
+       "offsetting contract"
+      ],
+      "rule": "Buying protection = short credit: profit when the spread widens, loss when it narrows."
+     }
+    }
+   ]
+  }
+ ]
+}

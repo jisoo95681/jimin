@@ -655,5 +655,266 @@ const EXAM_HINTS = {
    "limit fund losses to 2% of assets with a 99% level of confidence"
   ],
   "rule": "VaR = minimum loss at a confidence level, not a loss limit."
+ },
+ "mock10:1": {
+  "hl": [
+   "Total asset turnover ratio",
+   "Total liabilities"
+  ],
+  "rule": "Financial leverage = total assets ÷ equity; assets = revenue ÷ asset turnover, equity = assets − liabilities."
+ },
+ "mock10:2": {
+  "hl": [
+   "Segment % of total capital expenditures",
+   "Segment % of total assets"
+  ],
+  "rule": "Segment growth = capital expenditures % ÷ total assets %; highest ratio = fastest growing, not the highest EBIT margin."
+ },
+ "mock10:3": {
+  "hl": [
+   "depreciable lives that are 25% longer than its industry competitors' average"
+  ],
+  "rule": "Depreciation raised to peer lives → lower income, lower equity: D/E and leverage up; BVPS and margins down."
+ },
+ "mock10:4": {
+  "hl": [
+   "balance-sheet-based accruals ratio"
+  ],
+  "rule": "Rising accruals ratio = more of earnings from accruals (not cash) = deteriorating earnings quality."
+ },
+ "mock10:5": {
+  "hl": [
+   "dealer's bid/offer rate quote"
+  ],
+  "rule": "Cross rate: JPY/EUR = USD/EUR × JPY/USD (bid × bid, offer × offer). Arbitrage when the dealer's bid is above the interbank offer or the dealer's offer is below the interbank bid."
+ },
+ "mock10:6": {
+  "hl": [
+   "6-month forward USD/NZD",
+   "covered interest rate parity"
+  ],
+  "rule": "F(price/base) = S × (1 + r_price)/(1 + r_base), with the rates for the actual period (6 months = half the annual rate). Higher-rate currency trades at a forward discount."
+ },
+ "mock10:7": {
+  "hl": [
+   "borrowing the USD and investing in the Brazilian real"
+  ],
+  "rule": "Carry trade return in the funding currency = (end value of the foreign investment converted back) − (loan with interest)."
+ },
+ "mock10:8": {
+  "hl": [
+   "sizable decline in the ratio of foreign exchange (FX) reserve holdings"
+  ],
+  "rule": "Crisis warnings: FX reserves falling, M2/reserves rising, strong prior capital inflows and credit growth, overvalued currency."
+ },
+ "mock10:13": {
+  "hl": [
+   "value for b0 is close to zero and the value of b1 is close to 1"
+  ],
+  "rule": "Random walk as AR(1): b0 ≈ 0, b1 ≈ 1."
+ },
+ "mock10:14": {
+  "hl": [
+   "truly is a random walk"
+  ],
+  "rule": "Random walk: best forecast of x(t+1) = x(t); no mean reversion, not covariance stationary."
+ },
+ "mock10:15": {
+  "hl": [
+   "Regression of Squared Residuals"
+  ],
+  "rule": "ARCH(1) test: squared residuals on lagged squared residuals; slope significantly different from 0 → ARCH."
+ },
+ "mock10:16": {
+  "hl": [
+   "both series have a unit root and are not cointegrated"
+  ],
+  "rule": "Two time series in a regression: both stationary (no unit root), or both unit roots AND cointegrated. Unit roots without cointegration = spurious regression."
+ },
+ "mock10:17": {
+  "hl": [
+   "viewed by the market as an acquisition target",
+   "level of corporate debt to change significantly"
+  ],
+  "rule": "Control perspective + changing leverage → FCFF; residual income is distorted by OCI items."
+ },
+ "mock10:18": {
+  "hl": [
+   "decline linearly during a 10-year period",
+   "uses the H-model"
+  ],
+  "rule": "H-model: V0 = D0(1 + gL)/(r − gL) + D0 × H × (gS − gL)/(r − gL), where H is HALF the length of the transition."
+ },
+ "mock10:19": {
+  "hl": [
+   "dividend payout ratio of 40%",
+   "equity multiplier of 1.50"
+  ],
+  "rule": "g = retention ratio × ROE, with ROE = ROA × equity multiplier."
+ },
+ "mock10:20": {
+  "hl": [
+   "Tamsen is over valued"
+  ],
+  "rule": "Mispricing is corrected through the growth rate: overvalued → price grows slower than dividends; undervalued → faster."
+ },
+ "mock10:21": {
+  "hl": [
+   "delta-hedging the position",
+   "Each call option contract is for 100 shares"
+  ],
+  "rule": "Delta hedge of a short call = buy N(d1) shares per option; scale by 100 shares per contract and the number of contracts."
+ },
+ "mock10:22": {
+  "hl": [
+   "sells 12 call option contracts"
+  ],
+  "rule": "Delta-hedged short call: stock gamma = 0, short call gamma < 0 → negative gamma."
+ },
+ "mock10:23": {
+  "hl": [
+   "Theta (daily)",
+   "BSM call value"
+  ],
+  "rule": "Time decay: value tomorrow = value today + theta (theta is negative for a long call)."
+ },
+ "mock10:24": {
+  "hl": [
+   "American-style put option",
+   "two-period binomial option pricing model"
+  ],
+  "rule": "American put: at each node take the larger of the binomial (continuation) value and the exercise value K − S."
+ },
+ "mock10:25": {
+  "hl": [
+   "Exhibit 1 shows earnings and dividends"
+  ],
+  "rule": "Dividend flat while earnings vary = stable policy; dividend moving with earnings = constant payout; dividend = leftover cash = residual."
+ },
+ "mock10:26": {
+  "hl": [
+   "the increase in sales is believed to be temporary"
+  ],
+  "rule": "Temporary extra cash → special dividend or repurchase, not a higher regular dividend."
+ },
+ "mock10:27": {
+  "hl": [
+   "Premium over current share price for repurchase",
+   "Cash available for repurchase"
+  ],
+  "rule": "Repurchase price = price × (1 + premium); shares retired = cash ÷ repurchase price; new EPS = net income ÷ remaining shares."
+ },
+ "mock10:28": {
+  "hl": [
+   "limits the company’s debt-to-equity ratio to 35%"
+  ],
+  "rule": "Cash repurchase: debt unchanged, equity falls. Debt-financed repurchase: debt rises and equity falls, so D/E rises more."
+ },
+ "mock10:29": {
+  "hl": [
+   "Full Replication",
+   "Local shares"
+  ],
+  "rule": "Lower tracking error: full replication, local shares instead of ADRs, securities lending income."
+ },
+ "mock10:30": {
+  "hl": [
+   "(2) positively related to the amount of competition among market makers for the ETF"
+  ],
+  "rule": "Bid–ask spread: negative with order flow, negative with competition among market makers, positive with the liquidity provider's costs and risks."
+ },
+ "mock10:31": {
+  "hl": [
+   "Percentage of Foreign Holdings",
+   "Trading Frequency"
+  ],
+  "rule": "Premium/discount to NAV is larger for infrequently traded ETFs and ETFs with many foreign holdings (closing-time differences)."
+ },
+ "mock10:32": {
+  "hl": [
+   "Annual management fee of 0.40%",
+   "Round-trip trading commissions of 0.16%"
+  ],
+  "rule": "Holding cost = (months ÷ 12) × annual fee + round-trip commissions + bid–offer spread (the round-trip spread already covers purchase and sale)."
+ },
+ "mock10:33": {
+  "hl": [
+   "calculate residual income for the year"
+  ],
+  "rule": "Residual income = net income − equity charge (cost of equity × beginning book value of equity)."
+ },
+ "mock10:34": {
+  "hl": [
+   "implied growth rate of earnings"
+  ],
+  "rule": "Implied g from the single-stage RI model: g = r − [(ROE − r) × B0] ÷ (V0 − B0)."
+ },
+ "mock10:35": {
+  "hl": [
+   "persistence factor of 0.18",
+   "industry average of 0.54"
+  ],
+  "rule": "Low persistence: extreme ROE, high accruals, high dividend payout; high persistence: low payout, stable accounting returns."
+ },
+ "mock10:36": {
+  "hl": [
+   "finite-horizon multistage residual income model",
+   "Cost of equity"
+  ],
+  "rule": "Finite-horizon RI: V0 = B0 + PV of residual incomes + PV of (terminal price − terminal book value), all discounted at the cost of equity."
+ },
+ "mock10:37": {
+  "hl": [
+   "must absorb considerable unreimbursed operating expenses"
+  ],
+  "rule": "Compare unreimbursed expenses (total expenses minus reimbursement revenue) as a share of effective gross income, not in dollars."
+ },
+ "mock10:38": {
+  "hl": [
+   "high vacancy rates indicate",
+   "recovery stage of the real estate cycle within two years"
+  ],
+  "rule": "High vacancy = oversupply/recession; recovery comes before expansion, so a recovery call is more accurate than an expanding-NOI call."
+ },
+ "mock10:39": {
+  "hl": [
+   "remote working",
+   "internet-based retail"
+  ],
+  "rule": "Structural change hurts office (remote work) and retail (e-commerce) most; residential is a necessity."
+ },
+ "mock10:40": {
+  "hl": [
+   "recovery stage of the real estate cycle within two years",
+   "income approach"
+  ],
+  "rule": "Direct capitalization = one period of NOI: normalize NOI when the property is in a cycle disruption (or use DCF)."
+ },
+ "mock10:41": {
+  "hl": [
+   "severe near-term stress in the financial markets"
+  ],
+  "rule": "Near-term stress → downward-sloping (inverted) credit curve; calm markets → upward-sloping; constant hazard rate → flat."
+ },
+ "mock10:42": {
+  "hl": [
+   "fails to make a scheduled interest payment",
+   "does not file for bankruptcy"
+  ],
+  "rule": "Credit events: bankruptcy, failure to pay (after the grace period), restructuring; any one of them is enough."
+ },
+ "mock10:43": {
+  "hl": [
+   "Credit spread",
+   "Coupon rate"
+  ],
+  "rule": "Upfront premium ≈ (CDS spread − standard coupon) × duration; the protection buyer pays it when the spread exceeds the coupon."
+ },
+ "mock10:44": {
+  "hl": [
+   "increased by 200 bps",
+   "offsetting contract"
+  ],
+  "rule": "Buying protection = short credit: profit when the spread widens, loss when it narrows."
  }
 };

@@ -1,0 +1,112 @@
+[
+ {
+  "id": "re-delphinus1",
+  "topic": "Alt",
+  "reading": 31,
+  "ns": [
+   1,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "eq2-miller",
+  "topic": "Equity",
+  "reading": 18,
+  "ns": [
+   39,
+   40,
+   41,
+   42
+  ]
+ },
+ {
+  "id": "m2-5",
+  "topic": "Econ",
+  "reading": 5,
+  "ns": [
+   17,
+   18,
+   19,
+   20
+  ]
+ },
+ {
+  "id": "etf-rutledge",
+  "topic": "PM",
+  "reading": 36,
+  "ns": [
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "corp1-carlyle",
+  "topic": "Corp",
+  "reading": 13,
+  "ns": [
+   30,
+   31,
+   33,
+   35
+  ]
+ },
+ {
+  "id": "fsa6-eastview",
+  "topic": "FSA",
+  "reading": 12,
+  "ns": [
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "m1-7",
+  "topic": "Equity",
+  "reading": 21,
+  "ns": [
+   25,
+   26,
+   27,
+   28
+  ]
+ },
+ {
+  "id": "ts-demolay",
+  "topic": "Quant",
+  "reading": 2,
+  "ns": [
+   68,
+   69,
+   70,
+   73
+  ]
+ },
+ {
+  "id": "m1-5",
+  "topic": "Deriv",
+  "reading": 29,
+  "ns": [
+   17,
+   18,
+   19,
+   20
+  ]
+ },
+ {
+  "id": "cds-1",
+  "topic": "FI",
+  "reading": 27,
+  "ns": [
+   2,
+   3,
+   4,
+   5
+  ]
+ }
+]
