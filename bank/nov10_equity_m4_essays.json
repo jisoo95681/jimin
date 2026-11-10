@@ -1,0 +1,443 @@
+[
+ {
+  "id": "eq4e-jonash",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Jonash (normalized EPS) and Hand/Somersault (negative EPS, E/P)",
+  "body": "Jonash International\nAs of February 2020, you are researching Jonash International, a hypothetical company subject to cyclical demand for its services. Jonash shares closed at $57.98 on 2 February 2019. You believe the 2015–18 period reasonably captures average profitability:\n\nMeasure\t2019\t2018\t2017\t2016\t2015\nEPS\tE$3.03\t$1.45\t$0.23\t$2.13\t$2.55\nBV per share\tE$19.20\t$16.21\t$14.52\t$13.17\t$11.84\nROE\tE16.0%\t8.9%\t1.6%\t16.3%\t21.8%\n\nHand and Somersault\nAn analyst plans to use P/E and the method of comparables as a basis for recommending purchasing shares of one of two peer-group companies in the business of manufacturing personal digital assistants. Neither company has been profitable to date, and neither is expected to have positive EPS over the next year. Data on the companies’ prices, trailing EPS, and expected growth rates in sales (five-year compounded rates) are given in the following table:\n\nCompany\tPrice\tTrailing EPS\tP/E\tExpected Growth (Sales)\nHand\t$22\t–$2.20\tNMF\t45%\nSomersault\t$10\t–$1.25\tNMF\t40%\nUnfortunately, because the earnings for both companies have been negative, their P/Es are not meaningful.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Normalized EPS is best defined as the:",
+    "options": [
+     "EPS adjusted only for nonrecurring items.",
+     "level of EPS the company could currently achieve under mid-cyclical conditions.",
+     "EPS expected for the next four quarters."
+    ],
+    "answer": "B",
+    "why": "B is correct. Normalized EPS removes the business-cycle influence by estimating mid-cycle earnings."
+   },
+   {
+    "n": 2,
+    "q": "Based on the method of historical average EPS (2015–18), Jonash’s normalized EPS and the P/E based on it are closest to:",
+    "options": [
+     "$1.59 and 36.5.",
+     "$2.33 and 24.9.",
+     "$1.59 and 24.9."
+    ],
+    "answer": "A",
+    "why": "A is correct. (2.55 + 2.13 + 0.23 + 1.45)/4 = $1.59; P/E = 57.98/1.59 = 36.5."
+   },
+   {
+    "n": 3,
+    "q": "Based on the method of average ROE (2015–18), Jonash’s normalized EPS and the P/E based on it are closest to:",
+    "options": [
+     "$1.97 and 29.4.",
+     "$2.33 and 24.9.",
+     "$1.59 and 36.5."
+    ],
+    "answer": "B",
+    "why": "B is correct. Average ROE = (0.218 + 0.163 + 0.016 + 0.089)/4 = 12.15%; × current BVPS $19.20 = $2.33; P/E = 57.98/2.33 = 24.9. A uses last year’s book value (16.21) instead of the current estimate."
+   },
+   {
+    "n": 4,
+    "q": "For the analyst’s relative valuation of Hand and Somersault, the most appropriate approach is to:",
+    "options": [
+     "use normalized EPS or forward P/E, because both companies have a history of profitability.",
+     "rank the stocks by earnings yield (E/P), which is meaningful even when EPS is negative.",
+     "skip the comparison because P/Es are not meaningful."
+    ],
+    "answer": "B",
+    "why": "B is correct. A lower (more negative) E/P means a richer valuation. Neither company has a profitable history, and next year’s earnings are also negative, so normalized EPS and forward P/E do not help."
+   },
+   {
+    "n": 5,
+    "q": "Based on the data, the analyst should recommend:",
+    "options": [
+     "Hand, because its E/P of –0.100 is higher than Somersault’s –0.125.",
+     "Somersault, because its sales growth is lower.",
+     "neither stock, because both have negative earnings."
+    ],
+    "answer": "A",
+    "why": "A is correct. Hand appears relatively undervalued (higher E/P) and its expected sales growth is also higher, so the difference is not explained by growth."
+   }
+  ]
+ },
+ {
+  "id": "eq4e-rufpe",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Hallwhite and Ruffany (forward vs trailing, diluted EPS) and a food-processing P/E benchmark",
+  "body": "Hallwhite Stores and Ruffany\nMay Stewart, CFA, a retail analyst, is performing a P/E-based comparison of two hypothetical jewelry stores as of early 2020. She has the following data for Hallwhite Stores (HS) and Ruffany (RUF).\n\nHS is priced at $44. RUF is priced at $22.50.\n\nHS has a simple capital structure, earned $2.00 per share (basic and diluted) in 2019, and is expected to earn $2.20 (basic and diluted) in 2020.\n\nRUF has a complex capital structure as a result of its outstanding stock options. Moreover, it had several unusual items that reduced its basic EPS in 2019 to $0.50 (versus the $0.75 that it earned in 2018).\n\nFor 2020, Stewart expects RUF to achieve net income of $30 million. RUF has 30 million shares outstanding and options outstanding for an additional 3,333,333 shares.\n\nFood-processing industry\nYou are researching the valuation of the stock of a company in the food-processing industry. Suppose you intend to use the mean value of the forward P/Es for the food-processing industry stocks as the benchmark value of the multiple. This mean P/E is 18.0. The forward or expected EPS for the next year for the stock you are studying is $2.00. You calculate 18.0 × $2.00 = $36, which you take to be the intrinsic value of the stock based only on the information given here. Comparing $36 with the stock’s current market price of $30, you conclude the stock is undervalued.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 6,
+    "q": "Which P/E should Stewart use to compare the two companies’ valuation?",
+    "options": [
+     "Trailing P/E, because it uses actual earnings.",
+     "Forward P/E, because RUF had unusual items in 2019 and forecasts are available.",
+     "Trailing P/E on 2018 EPS, because it is the cleaner year."
+    ],
+    "answer": "B",
+    "why": "B is correct. Investing looks to the future; RUF’s 2019 EPS is distorted by unusual items and the data to adjust it are not given."
+   },
+   {
+    "n": 7,
+    "q": "Which of the two stocks is relatively more attractive on the basis of forward P/Es?",
+    "options": [
+     "HS, with a P/E of 20 against 25 for RUF.",
+     "RUF, with a P/E of 25 against 20 for HS.",
+     "Neither; the two P/Es are equal on diluted EPS."
+    ],
+    "answer": "A",
+    "why": "A is correct. RUF has a complex capital structure, so diluted EPS must be used: 30,000,000 / 33,333,333 = $0.90; P/E = 22.50/0.90 = 25. HS: 44/2.20 = 20."
+   },
+   {
+    "n": 8,
+    "q": "Which of the following is a valid reason the conclusion that the food-processing stock is undervalued may be in error?",
+    "options": [
+     "The peer-group stocks may themselves be overvalued, or the stock’s growth and risk may differ from the industry mean so it deserves a lower P/E.",
+     "Forward P/Es are always higher than trailing P/Es.",
+     "Market price cannot be compared with intrinsic value."
+    ],
+    "answer": "A",
+    "why": "A is correct. The mean P/E may be too high, fundamentals may differ (lower growth, higher risk), and the mean can be distorted by outliers."
+   },
+   {
+    "n": 9,
+    "q": "Which additional evidence would best support the original conclusion that the stock is undervalued?",
+    "options": [
+     "Evidence that peer stocks are on average fairly valued and that the stock’s fundamentals do not differ from the industry average.",
+     "Evidence that peer stocks are on average overvalued.",
+     "Evidence that the stock’s risk is higher than the industry mean."
+    ],
+    "answer": "A",
+    "why": "A is correct. The benchmark must be reliable and the stock comparable; the other two items argue against undervaluation."
+   }
+  ]
+ },
+ {
+  "id": "eq4e-sundanci",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Sundanci (justified P/E, fundamental factors, index as comparison) and Smithfield (terminal value, P/B uses)",
+  "body": "Sundanci\nChristie Johnson, CFA, has been assigned to analyze Sundanci. Johnson assumes that Sundanci’s earnings and dividends will grow at a constant rate of 13%. Exhibits 1 and 2 provide financial statements for the most recent two years (2020 and 2021) and other information for Sundanci.\n\nExhibit 1\nSundanci Actual 2020 and 2021 Financial Statements for Fiscal Years Ending 31 May (in Millions except Per-Share Data)\nIncome Statement\t2020\t2021\nRevenue\t$474\t$598\nDepreciation\t20\t23\nOther operating costs\t368\t460\nIncome before taxes\t86\t115\nTaxes\t26\t35\nNet income\t60\t80\nDividends\t18\t24\nEarnings per share\t$0.714\t$0.952\nDividends per share\t$0.214\t$0.286\nCommon shares outstanding\t84.0\t84.0\n\nExhibit 2\nSelected Financial Information\nRequired rate of return\t14%\nGrowth rate of industry\t13%\nIndustry P/E\t26\n\nSmithfield\nTom Smithfield is valuing the stock of a food-processing business. He feels confident explicitly projecting earnings and dividends to three years (to t = 3). Other information and estimates are as follows: required rate of return = 0.09; average dividend payout rate for mature companies in the market = 0.45; industry average ROE = 0.10; E3 = $3.00; industry average P/E = 12.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 30,
+    "q": "Based on Exhibits 1 and 2 and Johnson’s assumptions, Sundanci’s justified trailing and forward P/Es are closest to:",
+    "options": [
+     "trailing 33.9 and forward 30.0.",
+     "trailing 30.0 and forward 33.9.",
+     "trailing 26.0 and forward 26.0."
+    ],
+    "answer": "A",
+    "why": "A is correct. Payout = 18/60 = 24/80 = 0.30. Forward P/E = 0.30/(0.14 − 0.13) = 30.0; trailing P/E = 0.30 × 1.13/(0.14 − 0.13) = 33.9."
+   },
+   {
+    "n": 31,
+    "q": "In the constant dividend growth model, the effect on Sundanci’s P/E of (1) a substantial increase in beta, (2) a higher expected growth rate and (3) a higher equity risk premium is, respectively:",
+    "options": [
+     "decrease, increase, decrease.",
+     "decrease, increase, increase.",
+     "increase, increase, decrease."
+    ],
+    "answer": "A",
+    "why": "A is correct. P/E falls with risk and with the required return (beta or ERP up) and rises with the growth rate."
+   },
+   {
+    "n": 32,
+    "q": "If an analyst uses an equity index as the comparison asset, which price multiples raise concern about potential overvaluation of the index?",
+    "options": [
+     "Only the P/E.",
+     "Any price multiple.",
+     "Only P/B and P/S."
+    ],
+    "answer": "B",
+    "why": "B is correct. If the market is overvalued, a stock that looks fairly or even undervalued against the index on any multiple may also be overvalued."
+   },
+   {
+    "n": 33,
+    "q": "Based on comparables, Smithfield’s terminal value V3 is closest to:",
+    "options": [
+     "$36.00.",
+     "$40.69.",
+     "$27.00."
+    ],
+    "answer": "A",
+    "why": "A is correct. Vn = benchmark P/E × En = 12 × $3.00 = $36.00."
+   },
+   {
+    "n": 34,
+    "q": "The terminal value from the Gordon growth model (g = retention × ROE) compared with the comparables estimate is:",
+    "options": [
+     "$40.69, higher than the comparables estimate.",
+     "$33.10, lower than the comparables estimate.",
+     "$36.00, the same as the comparables estimate."
+    ],
+    "answer": "A",
+    "why": "A is correct. g = 0.55 × 0.10 = 5.5%; V3 = 3.00 × 0.45 × 1.055/(0.09 − 0.055) = $40.69. The Gordon growth model is sensitive to its inputs."
+   },
+   {
+    "n": 35,
+    "q": "P/B can appropriately be used in valuation when:",
+    "options": [
+     "the company is not a going concern, is mainly composed of liquid assets (financial institutions), or has highly variable or negative EPS.",
+     "the company has mostly internally generated intangible assets and stable earnings.",
+     "the company has high growth and large off-balance-sheet assets."
+    ],
+    "answer": "A",
+    "why": "A is correct. Liquidation value, liquid-asset companies and variable or negative EPS are the classic uses; intangibles and off-balance-sheet assets weaken book value."
+   }
+  ]
+ },
+ {
+  "id": "eq4e-gg",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · Aratatech/Trymye (P/S) and GG Growing AG (justified multiples)",
+  "body": "Aratatech and Trymye\nAratatech is a multinational distributor of semiconductor chips and related products to businesses. Its leading competitor around the world is Trymye Electronics. Aratatech has a current market price of $10.00, 20 million shares outstanding, annual sales of $1 billion, and a 5% profit margin. Trymye has a market price of $20.00, 30 million shares outstanding, annual sales of $1.6 billion, and a profit margin of 4.9%.\n\nGN Growing AG\nGN Growing AG (GG) is currently selling for €24, with TTM EPS and dividends per share of €1.5 and €0.9, respectively. The company’s trailing P/E is 16.0, P/B is 3.2. P/Sales based on forecast sales, is 1.5. ROE is 20%, and for the profit margin on sales is 10.0%. The Treasury bond rate is 4.9%, the equity risk premium is 5.5%, and GG’s beta is 1.2. Assume that the dividend and earnings growth rates are 8%.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 36,
+    "q": "Which of the two companies has the more attractive valuation based on P/S?",
+    "options": [
+     "Aratatech, with P/S of 0.2 against 0.375.",
+     "Trymye, with P/S of 0.375 against 0.2.",
+     "Neither; their P/S ratios are equal."
+    ],
+    "answer": "A",
+    "why": "A is correct. Aratatech: 10/(1,000m/20m) = 0.2; Trymye: 20/(1,600m/30m) = 0.375. Lower P/S with a comparable margin is more attractive."
+   },
+   {
+    "n": 37,
+    "q": "One advantage of P/S over P/E is that:",
+    "options": [
+     "sales are less affected by accounting discretion than earnings and are almost always positive.",
+     "P/S reflects financial leverage.",
+     "P/S captures differences in cost structure."
+    ],
+    "answer": "A",
+    "why": "A is correct. P/E and P/S differ because earnings reflect cost structure and leverage while sales do not (so B and C are not advantages)."
+   },
+   {
+    "n": 38,
+    "q": "GG’s required rate of return based on the CAPM is closest to:",
+    "options": [
+     "11.5%.",
+     "9.5%.",
+     "6.6%."
+    ],
+    "answer": "A",
+    "why": "A is correct. 4.9% + 1.2 × 5.5% = 11.5%."
+   },
+   {
+    "n": 39,
+    "q": "With growth of 8% and the current payout ratio and ROE, the justified trailing P/E and P/B for GG are closest to:",
+    "options": [
+     "P/E 18.5 and P/B 3.4.",
+     "P/E 17.1 and P/B 3.2.",
+     "P/E 16.0 and P/B 3.2."
+    ],
+    "answer": "A",
+    "why": "A is correct. Payout = 0.9/1.5 = 0.6. P/E = 0.6 × 1.08/(0.115 − 0.08) = 18.5; P/B = (ROE − g)/(r − g) = (0.20 − 0.08)/0.035 = 3.4."
+   },
+   {
+    "n": 40,
+    "q": "The justified P/Sales for GG based on the forward margin of 10% and the current payout is closest to:",
+    "options": [
+     "1.7.",
+     "1.9.",
+     "17.1."
+    ],
+    "answer": "A",
+    "why": "A is correct. P/S = margin × payout/(r − g) = 0.10 × 0.6/0.035 = 1.7."
+   },
+   {
+    "n": 41,
+    "q": "Given that the assumptions and constant growth model are appropriate, GG appears:",
+    "options": [
+     "slightly undervalued.",
+     "slightly overvalued.",
+     "fairly valued."
+    ],
+    "answer": "A",
+    "why": "A is correct. Justified trailing P/E 18.5 > 16.0, justified P/B 3.4 > 3.2, justified P/S 1.7 > 1.5: all three point to slight undervaluation."
+   }
+  ]
+ },
+ {
+  "id": "eq4e-cashflow",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · cash flow multiples (DriveMed, MAT Technology) and EV/EBITDA (NCI, RGI)",
+  "body": "Cash flow concepts\nData for two hypothetical companies in the pharmaceutical industry, DriveMed and MAT Technology, are given in the following table. For both companies, expenditures on fixed capital and working capital during the previous year reflect anticipated average expenditures over the foreseeable horizon.\n\nMeasure\tDriveMed\tMAT Technology\nCurrent price\t$46.00\t$78.00\nTrailing CF per share\t$3.60\t$6.00\nP/CF\t12.8\t13.0\nTrailing FCFE per share\t$1.00\t$5.00\nP/FCFE\t46.0\t15.6\nConsensus five-year growth forecast\t15%\t20%\nBeta\t1.25\t1.25\n\nNCI and RGI\nJorge Zaldys, CFA, is researching the relative valuation of two companies in the aerospace/defense industry, NCI Heavy Industries (NCI) and Relay Group International (RGI). He has gathered relevant information on the companies in the following table.\n\nEBITDA Comparisons (in € Millions except Per-Share and Share-Count Data)\nCompany\tRGI\tNCI\nPrice per share\t150\t100\nShares outstanding\t5 million\t2 million\nMarket value of debt\t50\t100\nBook value of debt\t52\t112\nCash and investments\t5\t2\nNet income\t49.5\t12\nNet income from continuing operations\t49.5\t8\nInterest expense\t3\t5\nDepreciation and amortization\t8\t4\nTaxes\t2\t3",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 42,
+    "q": "Which pairing of cash flow concept and a limitation is correct?",
+    "options": [
+     "CFO: not a free cash flow concept; FCFE: more variable and more often negative than other cash flow concepts.",
+     "FCFE: ignores working capital changes; EBITDA: not directly linked to theory.",
+     "EPS plus depreciation: after interest, so it matches the share price; EBITDA: always positive."
+    ],
+    "answer": "A",
+    "why": "A is correct. EPS plus per-share D&A and EBITDA ignore working capital and noncash revenue (EBITDA is also pre-interest, mismatched with a share price); CFO is not a free cash flow concept; FCFE is more variable and more often negative."
+   },
+   {
+    "n": 43,
+    "q": "On the basis of the information supplied, MAT Technology compared with DriveMed is:",
+    "options": [
+     "relatively undervalued on P/FCFE (15.6 against 46.0).",
+     "relatively overvalued on P/FCFE.",
+     "equally valued, because P/CF is about equal (12.8 against 13.0)."
+    ],
+    "answer": "A",
+    "why": "A is correct. FCFE is better grounded in theory than CF, and the capital expenditures were representative, so P/FCFE decides: MAT’s multiple is 34% of DriveMed’s."
+   },
+   {
+    "n": 44,
+    "q": "P/EBITDA for RGI and NCI is closest to:",
+    "options": [
+     "RGI 12.0 and NCI 10.0.",
+     "RGI 12.7 and NCI 14.9.",
+     "RGI 10.0 and NCI 12.0."
+    ],
+    "answer": "A",
+    "why": "A is correct. EBITDA RGI = 49.5 + 3 + 2 + 8 = €62.5m (€12.5 per share, P/EBITDA 12); NCI = 8 + 5 + 3 + 4 = €20m (€10 per share, P/EBITDA 10)."
+   },
+   {
+    "n": 45,
+    "q": "EV/EBITDA for RGI and NCI is closest to:",
+    "options": [
+     "RGI 12.7 and NCI 14.9.",
+     "RGI 12.0 and NCI 10.0.",
+     "RGI 14.9 and NCI 12.7."
+    ],
+    "answer": "A",
+    "why": "A is correct. RGI EV = 750 + 50 − 5 = 795; 795/62.5 = 12.72. NCI EV = 200 + 100 − 2 = 298; 298/20 = 14.9."
+   },
+   {
+    "n": 46,
+    "q": "Which company should Zaldys recommend as relatively undervalued?",
+    "options": [
+     "RGI, because it has the lower EV/EBITDA and EV/EBITDA is preferred when leverage differs.",
+     "NCI, because it has the lower P/EBITDA.",
+     "Neither; the two ratios conflict and cannot be reconciled."
+    ],
+    "answer": "A",
+    "why": "A is correct. EBITDA is a pre-interest flow, so EV/EBITDA is the better multiple, especially because NCI uses much more debt."
+   }
+  ]
+ },
+ {
+  "id": "eq4e-screens",
+  "source": "10 Nov Equity Module 4 Market-Based Valuation quiz (17/70, 24%): essay questions turned into multiple choice",
+  "readings": [
+   20
+  ],
+  "title": "Market-based valuation · food companies (P/E and EV/S), industry valuation ratio, momentum versus multiples, screens",
+  "body": "Four food companies\nWilhelm Müller, CFA, has organized the selected data on four food companies that appear below (TTM stands for trailing 12-month):\n\nMeasure\tHoppelli Foods\tTelli Foods\tDrisket Co.\tWhiteline Foods\nStock price\t€25.70\t€11.77\t€23.65\t€24.61\nEnterprise value (€ millions)\t3,779\t4,056\t3,846\t4,258\nSales (€ millions)\t4,124\t10,751\t17,388\t6,354\nOperating profit margin\t6.91%\t1.26%\t1.07%\t6.23%\nTTM EPS\t€1.30\t€0.40\t€1.14\t€2.43\n\nPeninsular Research\nJohn Jones, CFA, is head of the research department at Peninsular Research. Peninsular has a client who has inquired about the valuation method best suited for comparing companies in an industry with the following characteristics: principal competitors within the industry are located in the United States, France, Japan, and Brazil, and the industry is currently operating at a cyclical low, with many companies reporting losses. Jones recommends that the client consider P/E, P/B and EV/S.\n\nHitech Clothing International\nYour value-oriented investment management firm recently hired a new analyst, Bob Westard, because of his expertise in the life sciences and biotechnology areas. Westard recommends Hitech Clothing International (HCI). He bases his recommendation on two considerations. First, HCI has pending patent applications but a P/E that he judges to be low in light of the potential earnings from the patented products. Second, HCI has had high relative strength versus the S&P 500 over the past month.\n\nKruse screen\nKirstin Kruse, a portfolio manager, has a client who wants to add stocks trading in the United States (including ADRs) from the consumer staples sector, which are large cap, have a dividend yield of at least 4.0%, and have a forward P/E no greater than 15. The screen run in June 2019 produced three stocks (Altria Group, Inc.; British American Tobacco PLC (the company’s ADR); and Kraft Heinz Co.) out of 424 consumer staples stocks.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback).",
+  "questions": [
+   {
+    "n": 47,
+    "q": "The trailing P/E of Hoppelli, Telli, Drisket and Whiteline are closest to:",
+    "options": [
+     "19.8, 29.4, 20.7 and 10.1.",
+     "19.8, 10.1, 20.7 and 29.4.",
+     "25.7, 11.8, 23.7 and 24.6."
+    ],
+    "answer": "A",
+    "why": "A is correct. 25.70/1.30 = 19.8; 11.77/0.40 = 29.4; 23.65/1.14 = 20.7; 24.61/2.43 = 10.1. C lists prices."
+   },
+   {
+    "n": 48,
+    "q": "The differences in EV/S (Hoppelli 0.916, Whiteline 0.670, Telli 0.377, Drisket 0.221) are best explained by differences in:",
+    "options": [
+     "operating profit margin (6.91%, 6.23%, 1.26%, 1.07%), a pre-interest measure of cost structure.",
+     "return on equity.",
+     "net profit margin."
+    ],
+    "answer": "A",
+    "why": "A is correct. EV includes debt and equity, so it should be compared with a pre-interest profitability measure: the ranking of EV/S matches the ranking of operating margin."
+   },
+   {
+    "n": 49,
+    "q": "For companies in Jones’s industry, the most appropriate ratio and its reason are:",
+    "options": [
+     "EV/S: usable with negative earnings, comparable across countries with different accounting standards and less open to manipulation.",
+     "P/E: it is the most widely used ratio.",
+     "P/B: book value is unaffected by the cycle."
+    ],
+    "answer": "A",
+    "why": "A is correct. P/E is not meaningful when earnings are negative, and EV/S is better for companies in different countries."
+   },
+   {
+    "n": 50,
+    "q": "The difference between Westard’s price multiple approach and the relative-strength approach is that:",
+    "options": [
+     "relative strength is based strictly on price movement (technical), while multiples relate current price to a measure of value such as EPS or book value.",
+     "relative strength relates price to fundamentals, while multiples use only past prices.",
+     "both relate price to earnings."
+    ],
+    "answer": "A",
+    "why": "A is correct. Relative strength compares returns of HCI with the S&P 500; multiples relate current price to fundamentals."
+   },
+   {
+    "n": 51,
+    "q": "Which basis of Westard’s recommendation is consistent with a value orientation?",
+    "options": [
+     "Only the low P/E in relation to the patents.",
+     "Only the high relative strength.",
+     "Both."
+    ],
+    "answer": "A",
+    "why": "A is correct. High relative strength fits a growth or momentum style."
+   },
+   {
+    "n": 52,
+    "q": "A principal weakness in the construction of Kruse’s screen is that it:",
+    "options": [
+     "has a maximum P/E but no requirement of positive earnings, and focuses on value measures without growth, risk or financial strength criteria.",
+     "uses too many criteria.",
+     "includes ADRs."
+    ],
+    "answer": "A",
+    "why": "A is correct. Without positive earnings the screen could select negative P/Es, and it ignores growth, required return, risk and financial strength."
+   },
+   {
+    "n": 53,
+    "q": "Do the screen’s criteria identify appropriate additions to this client’s diversified portfolio?",
+    "options": [
+     "No, the screen leaves only three stocks, two of them tobacco companies, which gives a very concentrated result.",
+     "Yes, because all three have high dividend yields.",
+     "Yes, because ADRs add diversification."
+    ],
+    "answer": "A",
+    "why": "A is correct. The result is a very concentrated holding with little diversification."
+   }
+  ]
+ }
+]

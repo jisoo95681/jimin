@@ -1,0 +1,401 @@
+[
+ {
+  "id": "eq5e-ri1",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · four independent calculations (VIM, NMP, SWI, EVA)",
+  "body": "Four independent questions on residual income and EVA. Each question gives its own data.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Vertically Integrated Manufacturing (VIM) has total assets of $3,000,000, financed with twice as much debt as equity. Pretax cost of debt is 6% and cost of equity is 10%. EBIT is $300,000 and the tax rate is 40%. Using the equity charge method, VIM’s residual income is closest to:",
+    "options": [
+     "–$8,000.",
+     "$8,000.",
+     "$108,000."
+    ],
+    "answer": "B",
+    "why": "B is correct. Interest = 2,000,000 × 6% = 120,000; net income = (300,000 − 120,000) × 0.6 = 108,000; equity charge = 1,000,000 × 10% = 100,000; RI = $8,000. C is net income."
+   },
+   {
+    "n": 2,
+    "q": "New Market Products (NMP) has total assets of $450,000,000, 90% financed with debt (8% pretax), cost of equity 12%, pretax income of $5.1 million (after interest) and a tax rate of 40%. NMP’s residual income is closest to:",
+    "options": [
+     "–$2,340,000.",
+     "$3,060,000.",
+     "–$5,400,000."
+    ],
+    "answer": "A",
+    "why": "A is correct. Net income = 5.1 × 0.6 = 3.06m; equity charge = 45m × 12% = 5.4m; RI = −$2.34 million. Interest is already deducted in pretax income."
+   },
+   {
+    "n": 3,
+    "q": "Smithson–Williams Industries (SWI) earned NOPAT of €10 million on total assets of €100 million. Half the assets are debt (9% pretax), cost of equity is 12% and the tax rate is 40%. SWI’s residual income is closest to:",
+    "options": [
+     "€1.3 million (positive).",
+     "–€1.3 million (negative).",
+     "€4.0 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. WACC = 0.5 × 0.09 × 0.6 + 0.5 × 0.12 = 8.7% < NOPAT/assets of 10%; RI = (10% − 8.7%) × 100m = €1.3 million."
+   },
+   {
+    "n": 4,
+    "q": "NOPAT is $100, beginning book value of debt is $200, beginning book value of equity is $300 and WACC is 11%. EVA is closest to:",
+    "options": [
+     "$45.",
+     "$67.",
+     "$100."
+    ],
+    "answer": "A",
+    "why": "A is correct. EVA = 100 − 11% × (200 + 300) = $45."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-ri2",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · four independent calculations (net income, ROE, EVA and MVA of Sundanci)",
+  "body": "Four independent questions on residual income, EVA and MVA. Each question gives its own data.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 5,
+    "q": "Net income is €5.00 per share, dividends are €1.00, beginning book value of equity is €30.00 and the required return on equity is 11%. Residual income per share is closest to:",
+    "options": [
+     "€1.70.",
+     "€4.00.",
+     "€2.00."
+    ],
+    "answer": "A",
+    "why": "A is correct. RI = net income − equity charge = 5.00 − 0.11 × 30.00 = €1.70; dividends are irrelevant."
+   },
+   {
+    "n": 6,
+    "q": "Return on equity is 18%, the required return on equity is 12% and beginning book value of equity is €30.00. Residual income per share is closest to:",
+    "options": [
+     "€1.80.",
+     "€5.40.",
+     "€3.60."
+    ],
+    "answer": "A",
+    "why": "A is correct. RI = (ROE − r) × B0 = (0.18 − 0.12) × 30 = €1.80."
+   },
+   {
+    "n": 7,
+    "q": "Sundanci’s adjusted NOPAT for fiscal 2020 is $100 million, total capital is $700 million (no debt) and the cost of equity is 14%. EVA is closest to:",
+    "options": [
+     "$2 million.",
+     "$98 million.",
+     "$7 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. EVA = 100 − 14% × 700 = $2 million; with no debt the only capital cost is the cost of equity."
+   },
+   {
+    "n": 8,
+    "q": "Sundanci’s closing share price is $26, 84 million shares are outstanding and total capital is $700 million. Market value added is closest to:",
+    "options": [
+     "$1,484 million.",
+     "$2,184 million.",
+     "$784 million."
+    ],
+    "answer": "A",
+    "why": "A is correct. MVA = market value of capital − total capital = 26 × 84 = 2,184 − 700 = $1,484 million ($17.67 per share)."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-ri3",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · intrinsic value examples (VIM, Palmetto Steel, Protected Steel, Notable Books)",
+  "body": "Four independent questions on residual income models. Each question gives its own data.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 27,
+    "q": "VIM has total assets of $3,000,000 (twice as much debt as equity), pretax cost of debt 6%, cost of equity 10%, EBIT of $300,000 expected indefinitely, tax rate 40%, book value per share $20 and 50,000 shares. The residual income model value per share is closest to:",
+    "options": [
+     "$21.60.",
+     "$20.16.",
+     "$22.50."
+    ],
+    "answer": "A",
+    "why": "A is correct. RI = $8,000 or $0.16 per share forever; PV = 0.16/0.10 = $1.60; value = 20 + 1.60 = $21.60."
+   },
+   {
+    "n": 28,
+    "q": "Palmetto Steel pays out 80% of earnings, has ROE of 15%, required return 12% and long-term growth 3%. The justified P/B consistent with the residual income model is closest to:",
+    "options": [
+     "1.33.",
+     "1.25.",
+     "0.75."
+    ],
+    "answer": "A",
+    "why": "A is correct. g = 0.20 × 0.15 = 3%; P/B = (ROE − g)/(r − g) = 0.12/0.09 = 1.33."
+   },
+   {
+    "n": 30,
+    "q": "Protected Steel has a book value of $6 per share, earns $0.60 per share forever, pays out all earnings and has a required return of 12%. Its value per share is:",
+    "options": [
+     "$5.00 under both the dividend discount model and the residual income model.",
+     "$5.00 under the DDM and $6.00 under the residual income model.",
+     "$6.00 under both models."
+    ],
+    "answer": "A",
+    "why": "A is correct. DDM: 0.60/0.12 = $5. RI = 0.60 − 0.12 × 6 = −0.12; PV = −1.00; value = 6.00 − 1.00 = $5.00. The two models agree."
+   },
+   {
+    "n": 32,
+    "q": "Notable Books has a book value of $10 per share, earns $2.00 per share forever, pays out all earnings and has a required return of 12.5%. Its value per share is:",
+    "options": [
+     "$16 under both the DDM and the residual income model.",
+     "$10 under the residual income model and $16 under the DDM.",
+     "$12.50 under both models."
+    ],
+    "answer": "A",
+    "why": "A is correct. DDM: 2.00/0.125 = $16. RI = 2.00 − 0.125 × 10 = 0.75; PV = 6; value = 10 + 6 = $16."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-siti",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Simonson Investment Trust and Foodsco",
+  "body": "Simonson Investment Trust International (SITI) is expected to earn $4.00, $5.00, and $8.00 per share for the next three years. SITI will pay annual dividends of $2.00, $2.50, and $20.50 in each of these years. The last dividend includes a liquidating payment to shareholders at the end of Year 3 when the trust terminates. SITI’s book value is $8 per share and its required return on equity is 10%.\n\nFoodsco Incorporated (FI), a leading distributor of food products and materials to restaurants and other institutions, has a remarkably steady track record in terms of both return on equity and growth. At year-end 2017, FI had a book value of $30 per share. For the foreseeable future, the company is expected to achieve a ROE of 15% (on trailing book value) and to pay out one-third of its earnings in dividends. The required return is 12%.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 33,
+    "q": "The current value per share of SITI according to the dividend discount model is closest to:",
+    "options": [
+     "$19.29.",
+     "$16.00.",
+     "$8.00."
+    ],
+    "answer": "A",
+    "why": "A is correct. 2/1.10 + 2.50/1.10² + 20.50/1.10³ = 1.818 + 2.066 + 15.402 = $19.286."
+   },
+   {
+    "n": 34,
+    "q": "Using book values and residual incomes (3.20, 4.00, 6.75), the residual income model value of SITI is closest to:",
+    "options": [
+     "$19.29.",
+     "$11.29.",
+     "$24.00."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 8.00 + 3.20/1.1 + 4.00/1.1² + 6.75/1.1³ = 8.00 + 2.909 + 3.306 + 5.071 = $19.286, identical to the DDM."
+   },
+   {
+    "n": 35,
+    "q": "SITI’s returns on equity for Years 1 to 3 (net income / beginning book value) are closest to:",
+    "options": [
+     "50%, 50% and 64%.",
+     "50%, 50% and 100%.",
+     "40%, 40% and 54%."
+    ],
+    "answer": "A",
+    "why": "A is correct. 4.00/8.00 = 50%; 5.00/10.00 = 50%; 8.00/12.50 = 64%. (ROE − r) of 40%, 40% and 54% gives the same residual incomes."
+   },
+   {
+    "n": 36,
+    "q": "Foodsco’s residual income for the year ending 31 December 2022 is closest to:",
+    "options": [
+     "$1.32.",
+     "$0.90.",
+     "$6.59."
+    ],
+    "answer": "A",
+    "why": "A is correct. g = 0.15 × (1 − 1/3) = 10%; RI in 2018 = 30 × (0.15 − 0.12) = $0.90 grows 10% a year: 0.90 × 1.1⁴ = $1.32."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-thales",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Thales (justified P/B inputs) and Hottest Topic Stores",
+  "body": "Thales S.A. (Paris: HO.PA) has a current stock price of €98.73. It also has book value per share of €26.83 and a P/B of 3.68. Assume that the single-stage growth model is appropriate for valuing the company. Thales S.A.’s adjusted beta is 0.68, the risk-free rate is 4.46%, and the equity risk premium is 5.50%.\n\nRetail fund manager Seymour Simms is considering the purchase of shares in upstart retailer Hottest Topic Stores (HTR). The current book value of HTS is $20 per share, and its market price is $35. Simms expects long-term ROE to be 18%, long-term growth to be 10%, and cost of equity to be 14%.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 37,
+    "q": "If the growth rate is 5.50% and the ROE is 20%, the justified P/B for Thales is closest to:",
+    "options": [
+     "5.37.",
+     "3.68.",
+     "2.48."
+    ],
+    "answer": "A",
+    "why": "A is correct. r = 4.46% + 0.68 × 5.5% = 8.2%; P/B = 1 + (0.20 − 0.082)/(0.082 − 0.055) = 5.37."
+   },
+   {
+    "n": 38,
+    "q": "If the growth rate is 5.50%, the ROE required to yield Thales’s current P/B of 3.68 is closest to:",
+    "options": [
+     "15.4%.",
+     "20.0%.",
+     "12.0%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Solving 3.68 = 1 + (ROE − 0.082)/(0.082 − 0.055) gives ROE = 15.4%."
+   },
+   {
+    "n": 39,
+    "q": "If the ROE is 20%, the growth rate required for Thales to have its current P/B of 3.68 is closest to:",
+    "options": [
+     "3.8%.",
+     "5.5%.",
+     "8.2%."
+    ],
+    "answer": "A",
+    "why": "A is correct. Solving 3.68 = 1 + (0.20 − 0.082)/(0.082 − g) gives g = 3.8%."
+   },
+   {
+    "n": 40,
+    "q": "Using a single-stage residual income model, Simms would most likely conclude that HTR’s shares are:",
+    "options": [
+     "somewhat undervalued (value $40 against a price of $35).",
+     "somewhat overvalued (value $30 against a price of $35).",
+     "fairly valued."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 20 + 20 × (0.18 − 0.14)/(0.14 − 0.10) = $40 > $35."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-dmh",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · four independent items (DMH, Southern Trust, Industrias Gómez, Lendex OCI)",
+  "body": "Four independent questions on residual income valuation. Each question gives its own data.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 41,
+    "q": "Dayton Manufactured Homes (DMH) is expected to maintain a ROE of 15% and growth of 10%. It has a book value of $30 per share and a required return on equity of 12%. The single-stage residual income value per share is closest to:",
+    "options": [
+     "$75.",
+     "$60.",
+     "$45."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 30 + 30 × (0.15 − 0.12)/(0.12 − 0.10) = $75."
+   },
+   {
+    "n": 42,
+    "q": "Southern Trust Bank has B0 = $10 per share, ROE of 15% for the next five years with all earnings reinvested (10% thereafter), cost of equity of 10% and a 20% premium over book value at the end of five years (ending book value $20.14). The finite-horizon residual income value per share is closest to:",
+    "options": [
+     "$15.01.",
+     "$12.51.",
+     "$17.51."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 10 + 2.51 (PV of five residual incomes) + 0.20 × 20.14/1.10⁵ (2.50) = $15.01."
+   },
+   {
+    "n": 47,
+    "q": "Industrias Gómez has a current book value of €20.00 per share, expected EPS of €1.50, 2.50, 3.50, 4.50 and 5.50, dividends of €1.00 for three years and €2.00 for two years, a terminal price of 14× trailing earnings and a required return of 9%. The value per share is closest to:",
+    "options": [
+     "€55.29 under both the residual income model and the dividend discount model.",
+     "€30.22 under the residual income model and €50.05 under the DDM.",
+     "€20.00 under both models."
+    ],
+    "answer": "A",
+    "why": "A is correct. Residual incomes: −0.300, 0.655, 1.520, 2.295, 3.070 (PV 5.071); terminal premium 77.00 − 30.50 = 46.50 (PV 30.22); 20.00 + 5.071 + 30.222 = €55.293. The DDM gives the same value."
+   },
+   {
+    "n": 48,
+    "q": "Lendex Electronics has had negative other comprehensive income from available-for-sale securities in each of the past five years. Kent should most likely:",
+    "options": [
+     "adjust income downward by the other comprehensive income losses, lowering ROE; book value is not misstated.",
+     "leave income as reported because the losses bypass the income statement.",
+     "add the losses back to book value."
+    ],
+    "answer": "A",
+    "why": "A is correct. Persistently negative OCI that bypasses the income statement is a recurring cost; book value already reflects it through accumulated other comprehensive income."
+   }
+  ]
+ },
+ {
+  "id": "eq5e-pg",
+  "source": "10 Nov Equity Module 5 Residual Income Valuation quiz (30/72, 42%): essay questions turned into multiple choice",
+  "readings": [
+   21
+  ],
+  "title": "Residual income · Procter & Gamble (Kobayashi): eight-year RI valuation and DDM",
+  "body": "Shunichi Kobayashi is valuing Procter & Gamble Company (NYSE: PG). Kobayashi has made the following assumptions:\n\nBook value per share is estimated at $21.30 on 31 March 2019.\n\nEPS will be 18% of the beginning book value per share for the next eight years.\n\nCash dividends paid will be 70% of EPS.\n\nAt the end of the eight-year period, the market price per share will be four times the book value per share.\n\nThe beta for PG is 0.50, the risk-free rate is 2.0%, and the equity risk premium is 6.2%.\n\nThe current market price of PG is $107.50, which indicates a current P/B of 5.05.",
+  "created": true,
+  "note": "Essay questions converted to multiple choice (options written from the quiz feedback); intro lines written for grouping.",
+  "questions": [
+   {
+    "n": 43,
+    "q": "The ending book value per share at the end of Year 8 is closest to:",
+    "options": [
+     "$32.44.",
+     "$30.78.",
+     "$27.71."
+    ],
+    "answer": "A",
+    "why": "A is correct. Each year book value grows by 18% × (1 − 0.70) = 5.4%; $21.30 × 1.054⁸ = $32.44 (Year 1: 21.30 + 3.834 − 2.684 = 22.45)."
+   },
+   {
+    "n": 44,
+    "q": "The Year 1 residual income per share is closest to:",
+    "options": [
+     "$2.75.",
+     "$3.83.",
+     "$1.09."
+    ],
+    "answer": "A",
+    "why": "A is correct. r = 2% + 0.5 × 6.2% = 5.1%; RI = 3.834 − 5.1% × 21.30 = $2.748."
+   },
+   {
+    "n": 45,
+    "q": "The value per share of PG using the residual income model is closest to:",
+    "options": [
+     "$107.80.",
+     "$86.43.",
+     "$65.37."
+    ],
+    "answer": "A",
+    "why": "A is correct. V0 = 21.30 + 21.125 (PV of eight residual incomes) + (129.767 − 32.442)/1.051⁸ (65.374) = $107.80."
+   },
+   {
+    "n": 46,
+    "q": "The value per share of PG using the dividend discount model compared with the residual income estimate is:",
+    "options": [
+     "identical ($107.80).",
+     "lower, because dividends are paid later.",
+     "higher, because dividends are not discounted."
+    ],
+    "answer": "A",
+    "why": "A is correct. PV of eight dividends 20.634 + PV of terminal price 129.767 (87.165) = $107.80. With the same assumptions the two models agree even though they recognize value at different times."
+   }
+  ]
+ }
+]
