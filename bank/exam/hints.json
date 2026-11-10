@@ -1,0 +1,112 @@
+{
+ "pq1:16": {
+  "hl": [
+   "@row:Increase in current assets",
+   "@row:Target debt ratio",
+   "target debt ratio"
+  ],
+  "rule": "Cash is not working capital: take it out of the current assets increase. Then multiply BOTH the net fixed investment and the working capital investment by (1 − DR)."
+ },
+ "pq1:17": {
+  "hl": [
+   "far below its FCFE",
+   "little relation to its ability to pay"
+  ],
+  "rule": "Dividends far from FCFE and unrelated to capacity: use FCFE, not a dividend discount model."
+ },
+ "pq1:21": {
+  "hl": [
+   "brochure for new clients",
+   "Standard VII(B)"
+  ],
+  "rule": "You may say you hold the designation. You may not link it to better returns or to being a better analyst."
+ },
+ "pq1:30": {
+  "hl": [
+   "forward price of €88.40",
+   "four months remain until expiration",
+   "pays no dividends"
+  ],
+  "rule": "Long forward value = S₀ − F₀ ÷ (1 + r)^(T − t), using the time left (4/12). The result is a value today, so the forward price is discounted."
+ },
+ "pq1:33": {
+  "hl": [
+   "normal accruals explained by a regression on business activity, and the residual"
+  ],
+  "rule": "Explained by the regression = normal (non-discretionary). Residual = unusual (discretionary), the warning sign of manipulation."
+ },
+ "pq1:35": {
+  "hl": [
+   "three-year forward rate two years from now, f(2,3)",
+   "zero-coupon bond paying 1 at year 5"
+  ],
+  "rule": "F(j,k) = 1 ÷ (1 + f(j,k))^k. The exponent is k, the 3 years the bond still has after the forward date."
+ },
+ "pq1:37": {
+  "hl": [
+   "behave like floating-rate debt",
+   "fixed-rate bonds"
+  ],
+  "rule": "The bonds already make Harlow PAY fixed. To end up floating, the swap must RECEIVE fixed (cancels the bond coupon) and pay floating."
+ },
+ "pq1:42": {
+  "hl": [
+   "control premium of 25%",
+   "discount for lack of marketability is 20%"
+  ],
+  "rule": "The 25% is a control PREMIUM. Convert it: DLOC = 1 − 1/1.25 = 20%. Then total = 1 − (1 − DLOC)(1 − DLOM)."
+ },
+ "pq2:10": {
+  "hl": [
+   "@row:Market",
+   "@row:Size",
+   "@row:Value",
+   "Fund sensitivity",
+   "Benchmark sensitivity"
+  ],
+  "rule": "Style = fund sensitivity minus benchmark sensitivity: market +0.15 (high beta), size +0.30 (small cap), value −0.30 (growth)."
+ },
+ "pq2:12": {
+  "hl": [
+   "Bond Q is callable",
+   "interest rates fall sharply"
+  ],
+  "rule": "Rates fall + callable = the call will be exercised: duration shortens, convexity turns negative (price compression)."
+ },
+ "pq2:16": {
+  "hl": [
+   "HTML tags, punctuation, numbers and extra white space",
+   "cleansed tokens"
+  ],
+  "rule": "Removing HTML tags, punctuation, numbers and white space = cleansing. Lowercasing, stop words, stemming and lemmatisation = wrangling."
+ },
+ "pq2:22": {
+  "hl": [
+   "calibrated binomial tree",
+   "option-free"
+  ],
+  "rule": "A calibrated tree reprices the benchmark bonds, so an option-free bond is worth the same as with spot rates. Volatility only matters for embedded options."
+ },
+ "pq2:29": {
+  "hl": [
+   "dirty price of 105.20",
+   "quoted futures price is 136.00",
+   "conversion factor is 0.7550"
+  ],
+  "rule": "Market 136.00 < model ≈ 138.76: the futures is cheap. Cheap futures = buy futures, short the note, lend (reverse cash-and-carry)."
+ },
+ "pq2:34": {
+  "hl": [
+   "An index fund that meets its objective exactly"
+  ],
+  "rule": "Meets its objective exactly = tracks the benchmark: active return 0, so the information ratio is 0."
+ },
+ "pq2:42": {
+  "hl": [
+   "@row:Stock options",
+   "@row:Unvested RSUs",
+   "Average unrecognised compensation expense"
+  ],
+  "rule": "RSUs have no exercise price, but the unrecognised expense still counts as proceeds: dilutive shares = 60,000 − 900,000 ÷ 30 = 30,000."
+ }
+}

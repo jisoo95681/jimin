@@ -680,6 +680,21 @@
   .ex-opt.ok { border-color: #2e8b3a; background: #e5f4e6; }
   .ex-opt.bad { border-color: #c0392b; background: #fbe7e4; }
   .ex-opt .tag { margin-left: auto; font-size: .8rem; font-weight: 700; white-space: nowrap; }
+  mark.trg { background: #ffd54a; color: inherit; padding: 1px 2px; border-radius: 2px; box-shadow: 0 0 0 1px #e0a800; }
+  tr.trg-row td, tr.trg-row th { background: #fff0a8 !important; }
+  .auto-hl { background: #e8f1fd; outline: 1px dashed #6a9bd8; outline-offset: 2px; }
+  .ex-qblock.rv { cursor: pointer; border-left: 5px solid transparent; padding-left: 12px; margin-left: -4px; }
+  .ex-qblock.rv.active { border-left-color: #f0b400; background: #fffdf3; }
+  .rv-badge { font-size: .8rem; font-weight: 700; padding: 3px 9px; border-radius: 10px; white-space: nowrap; }
+  .rv-badge.ok { background: #e5f4e6; color: #1f6b2a; } .rv-badge.bad { background: #fbe7e4; color: #a3271b; } .rv-badge.skip { background: #eceff1; color: #555; }
+  .rv-line { font-size: .92rem; margin: -6px 0 12px; color: #333; } .rv-line b.ok { color: #1f6b2a; } .rv-line b.bad { color: #a3271b; }
+  .rv-fb { margin-top: 12px; display: none; } .ex-qblock.rv.active .rv-fb { display: block; }
+  .rv-why { background: #f4f6f8; border-left: 4px solid #5b6670; padding: 9px 12px; white-space: pre-line; font-size: .95rem; }
+  .rv-trig { margin-top: 10px; background: #fff7e0; border: 1px solid #e3c766; border-left: 4px solid #d9a400; border-radius: 4px; padding: 9px 12px; font-size: .95rem; }
+  .rv-trig b { color: #8a6500; } .rv-trig .auto { color: #3a5f8f; }
+  .rv-hint { font-size: .8rem; color: #6a7580; margin: 0 0 10px; }
+  .rv-ans { font-family: ui-monospace, Menlo, monospace; font-size: 1.2rem; letter-spacing: .08em; user-select: all; -webkit-user-select: all; margin: 10px 0 14px; }
+  .ex-ov.mid { align-items: center; justify-content: center; padding: 16px; }
   mark.hl { background: #fff36b; color: inherit; padding: 0; }
   .ex-bot { display: flex; align-items: center; gap: 10px; background: #474747; padding: 8px 14px; padding-bottom: max(8px, env(safe-area-inset-bottom)); border-top: 4px solid #9bc45a; }
   .ex-bot .sp { flex: 1; }
@@ -746,12 +761,13 @@
 <script src="keyq.js"></script>
 <script src="garden.js"></script>
 <script src="exam.js"></script>
+<script src="exam_hints.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v209 · 2026-11-10";
+  const APP_VERSION = "v210 · 2026-11-10";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1927,6 +1943,9 @@
     if (!last) return;
     app.append(el("p", { className: "ex-res-score" }, `${last.score}%`),
       el("p", { className: "sub" }, `${last.right} of ${flat.length} correct · time used ${exHms(last.used)} · ${last.date}`));
+    const rvb = el("button", { className: "btn", style: "width:100%;margin:10px 0 4px" }, "Review all questions in test view (feedback and highlights)");
+    rvb.onclick = () => examReview(id);
+    app.append(rvb);
     // Score by topic
     const by = {};
     flat.forEach(it => { const t = it.v.topic || "Other"; by[t] = by[t] || [0, 0]; by[t][1]++; if (last.ans[it.n] === it.q.answer) by[t][0]++; });
@@ -1947,17 +1966,175 @@
     const ac = el("div", { className: "card" });
     ac.append(el("b", {}, "Your answers (send this string to Claude for the wrong-answer PDF)"),
       el("p", { style: "font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;letter-spacing:.06em;user-select:all;-webkit-user-select:all;word-break:break-all" }, ansStr.replace(/(.{4})/g, "$1 ").trim()));
+    const cpb = el("button", { className: "btn small" }, "Copy answers"); cpb.onclick = () => exCopy(ansStr, cpb); ac.append(cpb);
     app.append(ac);
     const fl = el("div", { className: "ex-filter" }), list = el("div");
     const show = mode => {
       list.innerHTML = "";
-      flat.forEach(it => { if (mode === "wrong" && last.ans[it.n] === it.q.answer) return; list.append(exQuestionCard(set, it, last.ans[it.n])); });
+      flat.forEach(it => { if (mode === "wrong" && last.ans[it.n] === it.q.answer) return; const card = exQuestionCard(set, it, last.ans[it.n]); const gb = el("button", { className: "btn small ghost", style: "margin-top:8px" }, "Open in test view"); gb.onclick = () => examReview(id, it.n); card.append(gb); list.append(card); });
       fA.className = "btn small" + (mode === "all" ? "" : " ghost"); fW.className = "btn small" + (mode === "wrong" ? "" : " ghost");
     };
     const fA = el("button", {}, "All questions"), fW = el("button", {}, "Incorrect only");
     fA.onclick = () => show("all"); fW.onclick = () => show("wrong");
     fl.append(fA, fW); app.append(fl, list);
     show("wrong");
+  }
+
+  // ---------- Review in test view (after Finish Test) ----------
+  // Same two panes as the test. Tap a question: its feedback opens and the parts of the vignette that point to the answer are highlighted.
+  // Trigger phrases come from EXAM_HINTS (exam_hints.js, keyed "setId:questionNumber"); questions without them get sentences picked by word overlap.
+  const exHints = id => (typeof EXAM_HINTS !== "undefined" && EXAM_HINTS[id]) || null;
+  function exUnmark(zone) {
+    zone.querySelectorAll("mark.trg").forEach(m => { const p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); });
+    zone.querySelectorAll(".trg-row").forEach(r => r.classList.remove("trg-row"));
+    zone.querySelectorAll(".auto-hl").forEach(r => r.classList.remove("auto-hl"));
+  }
+  function exMark(zone, phrases) {
+    let first = null;
+    phrases.forEach(ph => {
+      if (ph.startsWith("@row:")) {
+        const t = ph.slice(5).toLowerCase();
+        zone.querySelectorAll("tr").forEach(r => { const c = r.cells[0]; if (c && c.textContent.trim().toLowerCase().startsWith(t)) { r.classList.add("trg-row"); first = first || r; } });
+        return;
+      }
+      const w = document.createTreeWalker(zone, NodeFilter.SHOW_TEXT), nodes = [];
+      while (w.nextNode()) nodes.push(w.currentNode);
+      for (const t of nodes) {
+        const i = t.data.indexOf(ph);
+        if (i < 0 || (t.parentNode.closest && t.parentNode.closest("mark.trg"))) continue;
+        const mid = t.splitText(i); mid.splitText(ph.length);
+        const mk = document.createElement("mark"); mk.className = "trg";
+        mid.parentNode.insertBefore(mk, mid); mk.append(mid);
+        first = first || mk; break;
+      }
+    });
+    return first;
+  }
+  const EX_STOP = new Set("which following closest most likely would should their there these those about after before because based being between under over other than that this with from have has into only same such what when where while your best described".split(" "));
+  function exAuto(zone, q) {
+    const words = new Set(((q.q + " " + q.options.join(" ")).toLowerCase().match(/[a-z0-9.%€$]{4,}/g)) || []);
+    EX_STOP.forEach(w => words.delete(w));
+    const els = [...zone.querySelectorAll("p, tr")];
+    const sc = els.map(e => { const t = (e.textContent || "").toLowerCase(); let n = 0; words.forEach(w => { if (t.includes(w)) n++; }); return n; });
+    const idx = sc.map((n, i) => [n, i]).filter(x => x[0] >= 2).sort((a, b) => b[0] - a[0]).slice(0, 2).map(x => x[1]);
+    idx.forEach(i => els[i].classList.add("auto-hl"));
+    return idx.length ? els[idx[0]] : null;
+  }
+  function exAnsString(set, last) { return exFlat(set).map(it => last.ans[it.n] === undefined ? "-" : LETTERS[last.ans[it.n]]).join(""); }
+  function exCopy(text, btn) {
+    const done = () => { const o = btn.textContent; btn.textContent = "Copied"; setTimeout(() => { btn.textContent = o; }, 1500); };
+    try { navigator.clipboard.writeText(text).then(done, () => {}); } catch {}
+  }
+
+  function examReview(id, startN) {
+    const set = exSets().find(s => s.id === id), flat = exFlat(set), last = (exLoad().sets[id] || {}).last;
+    if (!last) return;
+    document.querySelectorAll(".exroot").forEach(n => n.remove());
+    const root = el("div", { className: "exroot" });
+    root.innerHTML = `
+      <div class="ex-top"><div class="pg"><b>Review:</b> <span class="pgn"></span><br><b>Section:</b> ${set.title}</div>
+        <div class="ex-clock" style="cursor:default"><span><span class="lbl">Score</span><br><span class="tm">${last.right} / ${flat.length} · ${last.score}%</span></span></div>
+        <button class="ex-fin">Exit review</button></div>
+      <div class="ex-green"><span>Test: CFA Level II · ${set.title} · feedback</span><span class="vlab"></span></div>
+      <div class="ex-main"><div class="ex-pane vpane"></div><div class="ex-pane qpane"></div></div>
+      <div class="ex-bot">
+        <button class="ex-ic rev" title="All questions">${EX_SVG.grid}<span>All questions</span></button>
+        <button class="ex-ic flt"><span>Show: all</span></button>
+        <button class="ex-ic ans"><span>My answers</span></button>
+        <span class="sp"></span>
+        <button class="ex-btn bk">‹ Back</button><button class="ex-btn nx">Next ›</button></div>`;
+    document.body.append(root);
+    const $ = s => root.querySelector(s), vpane = $(".vpane"), qpane = $(".qpane");
+    const NV = set.vignettes.length;
+    let onlyWrong = false, vi = 0, active = null;
+    const isOk = it => last.ans[it.n] === it.q.answer;
+    const vlist = () => { const l = []; for (let v = 0; v < NV; v++) if (!onlyWrong || flat.some(it => it.vi === v && !isOk(it))) l.push(v); return l; };
+    function activate(n, scroll) {
+      active = n;
+      const it = flat[n - 1];
+      qpane.querySelectorAll(".ex-qblock").forEach(b => b.classList.toggle("active", +b.dataset.n === n));
+      // vignette without marks, then the marks of this question
+      vpane.querySelector(".vbody").innerHTML = exBodyHTML(it.v.body);
+      const vb = vpane.querySelector(".vbody"), stem = qpane.querySelector(`#rvq${n} .ex-stem`);
+      exUnmark(stem); stem.textContent = it.q.q;
+      const hint = exHints(it.id); let first = null;
+      if (hint && hint.hl && hint.hl.length) { first = exMark(vb, hint.hl); exMark(stem, hint.hl); }
+      else first = exAuto(vb, it.q);
+      const fb = qpane.querySelector(`#rvq${n} .rv-trig`);
+      if (fb) fb.innerHTML = hint && hint.rule
+        ? `<b>Trigger</b> ${(hint.hl || []).filter(x => !x.startsWith("@row:")).map(x => "“" + x.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "”").join(" · ")}<div style="margin-top:4px"><b>Rule next time:</b> ${hint.rule.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</div>`
+        : `<span class="auto">No hand-written trigger for this question yet. The shaded lines in the vignette were picked automatically by matching words with the question.</span>`;
+      if (scroll !== false && first) setTimeout(() => { try { first.scrollIntoView({ block: "center", behavior: "smooth" }); } catch {} }, 30);
+    }
+    function render(focus) {
+      const vl = vlist();
+      if (!vl.length) { vpane.innerHTML = "<p>No incorrect questions: everything was right.</p>"; qpane.innerHTML = ""; return; }
+      if (!vl.includes(vi)) vi = vl.find(v => v >= vi) ?? vl[vl.length - 1];
+      const items = flat.filter(it => it.vi === vi && (!onlyWrong || !isOk(it)));
+      const all = flat.filter(it => it.vi === vi);
+      $(".pgn").textContent = `Vignette ${vi + 1} of ${NV} (Q${all[0].n}–${all[all.length - 1].n})`;
+      $(".vlab").textContent = exVTitle(set, vi);
+      vpane.innerHTML = `<h3>Vignette ${vi + 1}</h3><div class="vq">${exVTitle(set, vi).split(" · ")[1]}</div><p class="rv-hint">Tap a question on the right: the words in the vignette that point to its answer are highlighted.</p><div class="vbody"></div>`;
+      vpane.querySelector(".vbody").innerHTML = exBodyHTML(all[0].v.body);
+      qpane.innerHTML = "";
+      items.forEach(it => {
+        const ch = last.ans[it.n], ok = ch === it.q.answer;
+        const blk = el("div", { className: "ex-qblock rv", id: "rvq" + it.n }); blk.dataset.n = it.n;
+        const hd = el("div", { className: "ex-qn" });
+        hd.append(el("span", {}, `Question ${it.n}`), el("span", { className: "rv-badge " + (ch === undefined ? "skip" : ok ? "ok" : "bad") }, ch === undefined ? "Not answered" : ok ? "✓ Correct" : "✗ Incorrect"));
+        blk.append(hd, el("div", { className: "ex-stem" }, it.q.q));
+        const ln = el("div", { className: "rv-line" });
+        ln.innerHTML = `Your answer: <b class="${ok ? "ok" : "bad"}">${ch === undefined ? "none" : LETTERS[ch]}</b>${ok ? "" : ` · Correct answer: <b class="ok">${LETTERS[it.q.answer]}</b>`}`;
+        blk.append(ln);
+        it.q.options.forEach((o, k) => {
+          const b = el("div", { className: "ex-opt" + (k === it.q.answer ? " ok" : k === ch ? " bad" : "") });
+          b.append(el("span", {}, `${LETTERS[k]}. ${o}`));
+          if (k === it.q.answer && k === ch) b.append(el("span", { className: "tag" }, "Your answer · Correct"));
+          else if (k === it.q.answer) b.append(el("span", { className: "tag" }, "Correct answer"));
+          else if (k === ch) b.append(el("span", { className: "tag" }, "Your answer"));
+          blk.append(b);
+        });
+        const fb = el("div", { className: "rv-fb" });
+        fb.append(el("div", { className: "rv-why" }, it.q.why || ""), el("div", { className: "rv-trig" }));
+        blk.append(fb);
+        blk.onclick = () => { if (active !== it.n) activate(it.n); };
+        qpane.append(blk);
+      });
+      const pick = focus && items.some(x => x.n === focus) ? focus : (items.find(x => !isOk(x)) || items[0]).n;
+      activate(pick, true);
+      if (focus) { const t = qpane.querySelector("#rvq" + focus); if (t) t.scrollIntoView({ block: "start" }); }
+      const pos = vl.indexOf(vi); $(".bk").disabled = pos <= 0; $(".nx").disabled = pos >= vl.length - 1;
+    }
+    $(".bk").onclick = () => { const vl = vlist(), p = vl.indexOf(vi); if (p > 0) { vi = vl[p - 1]; render(); } };
+    $(".nx").onclick = () => { const vl = vlist(), p = vl.indexOf(vi); if (p < vl.length - 1) { vi = vl[p + 1]; render(); } };
+    $(".ex-fin").onclick = () => root.remove();
+    $(".flt").onclick = e => { onlyWrong = !onlyWrong; e.currentTarget.firstChild.textContent = onlyWrong ? "Show: incorrect only" : "Show: all"; render(); };
+    $(".rev").onclick = () => {
+      const ov = el("div", { className: "ex-ov" }), box = el("div", { className: "ex-rev" }), hd = el("div", { className: "hd" });
+      hd.append(el("span", {}, "All questions (green = correct, red = incorrect)"));
+      const x = el("button", {}, "✕"); x.onclick = () => ov.remove(); hd.append(x);
+      const grid = el("div", { className: "ex-grid" });
+      flat.forEach(it => {
+        const ch = last.ans[it.n], ok = ch === it.q.answer;
+        const b = el("button", {}, String(it.n));
+        b.style.background = ch === undefined ? "#8a8f95" : ok ? "#3f9a4a" : "#c0392b";
+        b.onclick = () => { ov.remove(); vi = it.vi; render(it.n); };
+        grid.append(b);
+      });
+      box.append(hd, grid); ov.append(box); ov.onclick = e => { if (e.target === ov) ov.remove(); }; root.append(ov);
+    };
+    $(".ans").onclick = () => {
+      const str = exAnsString(set, last), ov = el("div", { className: "ex-ov mid" }), box = el("div", { className: "ex-rev" }), hd = el("div", { className: "hd" });
+      hd.append(el("span", {}, `Your ${flat.length} answers`));
+      const x = el("button", {}, "✕"); x.onclick = () => ov.remove(); hd.append(x);
+      const body = el("div", { style: "padding:14px" });
+      body.append(el("div", { className: "rv-ans" }, str.replace(/(.{4})/g, "$1 ").trim()));
+      const cp = el("button", { className: "ex-btn" }, "Copy"); cp.onclick = () => exCopy(str, cp);
+      body.append(cp, el("p", { className: "rv-hint", style: "margin-top:10px" }, "Send this to Claude for the wrong-answer PDF."));
+      box.append(hd, body); ov.append(box); ov.onclick = e => { if (e.target === ov) ov.remove(); }; root.append(ov);
+    };
+    if (startN) vi = flat[startN - 1].vi;
+    render(startN);
   }
 
   // Incorrect questions: answer them again; 3 right in a row greys a question out (it stays in the list).
