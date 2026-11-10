@@ -1,0 +1,112 @@
+[
+ {
+  "id": "d28-johnson",
+  "topic": "Deriv",
+  "reading": 28,
+  "ns": [
+   12,
+   13,
+   14,
+   19
+  ]
+ },
+ {
+  "id": "fsa4-takahashi",
+  "topic": "FSA",
+  "reading": 10,
+  "ns": [
+   29,
+   30,
+   31,
+   32
+  ]
+ },
+ {
+  "id": "m2-2",
+  "topic": "Equity",
+  "reading": 20,
+  "ns": [
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "fcf-yee",
+  "topic": "Equity",
+  "reading": 19,
+  "ns": [
+   64,
+   66,
+   67,
+   69
+  ]
+ },
+ {
+  "id": "jupiter-saturn",
+  "topic": "Corp",
+  "reading": 16,
+  "ns": [
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "ts-brown",
+  "topic": "FI",
+  "reading": 23,
+  "ns": [
+   63,
+   64,
+   65,
+   66
+  ]
+ },
+ {
+  "id": "tb1-brent",
+  "topic": "Quant",
+  "reading": 1,
+  "ns": [
+   16,
+   18,
+   19,
+   20
+  ]
+ },
+ {
+  "id": "mr-citadel",
+  "topic": "PM",
+  "reading": 38,
+  "ns": [
+   37,
+   38,
+   40,
+   42
+  ]
+ },
+ {
+  "id": "re-hui-lin",
+  "topic": "Alt",
+  "reading": 32,
+  "ns": [
+   1,
+   2,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "eg29-sagara",
+  "topic": "Econ",
+  "reading": 6,
+  "ns": [
+   37,
+   38,
+   39,
+   41
+  ]
+ }
+]

@@ -396,5 +396,262 @@
    "expanding monetary policy while restricting fiscal policy"
   ],
   "rule": "E/R: high mobility depreciation, low mobility ambiguous."
+ },
+ "mock9:1": {
+  "hl": [
+   "free cash flow to the firm (FCFF)"
+  ],
+  "rule": "FCFF = NI + NCC + Int(1 − t) − FCInv − WCInv; working capital excludes cash."
+ },
+ "mock9:2": {
+  "hl": [
+   "2013 FCFF will be $600 million",
+   "FCFF will grow in perpetuity at 4% annually"
+  ],
+  "rule": "FCFF value = FCFF1 ÷ (WACC − g); subtract debt for equity, divide by shares."
+ },
+ "mock9:3": {
+  "hl": [
+   "EPS will grow forever at 6% annually",
+   "Of future investments, 60% will be financed with equity and 40% will be financed with debt"
+  ],
+  "rule": "FCFE = EPS − (1 − DR)(net capex + WCInv); value = FCFE1 ÷ (r − g)."
+ },
+ "mock9:4": {
+  "hl": [
+   "capital structure seems unstable",
+   "change in control"
+  ],
+  "rule": "Unstable capital structure → FCFF; dividends unrelated to FCFE or change of control → free cash flow, not DDM."
+ },
+ "mock9:5": {
+  "hl": [
+   "spot curve one year from today will reflect the current forward curve"
+  ],
+  "rule": "Spot curve evolves as the forward curve implies → every bond earns the one-year spot rate."
+ },
+ "mock9:6": {
+  "hl": [
+   "spot curve one year from today will reflect the current forward curve"
+  ],
+  "rule": "Future spot = today's forward rates is the pure expectations theory."
+ },
+ "mock9:7": {
+  "hl": [
+   "3-month TED spread"
+  ],
+  "rule": "TED = MRR − T-bill; MRR = OIS + (MRR − OIS spread)."
+ },
+ "mock9:8": {
+  "hl": [
+   "flight to quality and a bullish flattening of the yield curve"
+  ],
+  "rule": "Yields fall (flight to quality) → extend duration; bullish flattening → barbell."
+ },
+ "mock9:9": {
+  "hl": [
+   "pursue a separation of all its owned assets",
+   "speculative-grade credit rating",
+   "retire approximately USD600 million of debt"
+  ],
+  "rule": "Less debt → better credit rating → lower cost of capital; real estate is a non-core business for a grocer."
+ },
+ "mock9:10": {
+  "hl": [
+   "average capitalization rate of 5.50%",
+   "5.00%, 5.50%, and 6.00%"
+  ],
+  "rule": "Cap rate equal to the median of comparables = supported by the market."
+ },
+ "mock9:11": {
+  "hl": [
+   "multiples of 19, 17, and 13"
+  ],
+  "rule": "Sum of the parts: each segment's EBITDA × its own peer median multiple."
+ },
+ "mock9:12": {
+  "hl": [
+   "A spin off of the Downstream segment"
+  ],
+  "rule": "Spin-off = shares distributed to existing shareholders, no cash; carve-out = IPO of a minority stake; divestiture = sale."
+ },
+ "mock9:13": {
+  "hl": [
+   "Xita's profits are cyclical"
+  ],
+  "rule": "Cyclical profits → use normalized (mid-cycle) EPS, e.g. average ROE × current BVPS."
+ },
+ "mock9:14": {
+  "hl": [
+   "average ROE method",
+   "Year 1 through Year 4 (the most recent year) constitutes a full business cycle"
+  ],
+  "rule": "Normalized EPS = average ROE of a full cycle × CURRENT book value per share."
+ },
+ "mock9:15": {
+  "hl": [
+   "debt-to-equity ratio is significantly higher than the average of its competitors",
+   "spent heavily on advertising to create and maintain its brand"
+  ],
+  "rule": "High leverage + valuable internal brand → enterprise value to sales, not P/B or dividend yield."
+ },
+ "mock9:16": {
+  "hl": [
+   "relative strength"
+  ],
+  "rule": "Relative strength = (stock ÷ index) now ÷ (stock ÷ index) at the start; price only, no dividends."
+ },
+ "mock9:17": {
+  "hl": [
+   "gains in per capita GDP are temporary",
+   "steady state rate of growth is achieved"
+  ],
+  "rule": "Classical = temporary gains (population); neoclassical = steady state, diminishing returns; endogenous = no diminishing returns."
+ },
+ "mock9:18": {
+  "hl": [
+   "enforcement of substantive laws, restrictions on imports, and low rates of saving"
+  ],
+  "rule": "Growth helped by savings, open trade and capital flows, entrepreneurship; hurt by import restrictions and weak law enforcement."
+ },
+ "mock9:19": {
+  "hl": [
+   "when trade barriers are removed"
+  ],
+  "rule": "Neoclassical + open economy: capital flows to the poor country → faster convergence."
+ },
+ "mock9:20": {
+  "hl": [
+   "Opening an economy to trade and financial flows"
+  ],
+  "rule": "Open economy: larger markets and idea flow → more R&D and human capital investment."
+ },
+ "mock9:25": {
+  "hl": [
+   "Basel III"
+  ],
+  "rule": "Basel III: more equity against risk-weighted assets (less leverage), stable funding from consumer deposits."
+ },
+ "mock9:26": {
+  "hl": [
+   "“hard” phase for a few years now"
+  ],
+  "rule": "Hard market: high premiums and profits → new competitors → soft market: lower premiums, weaker underwriting standards, capital harder to maintain."
+ },
+ "mock9:27": {
+  "hl": [
+   "calculate YH’s combined ratio"
+  ],
+  "rule": "Combined ratio = loss & LAE ÷ net premiums earned + underwriting expense ÷ net premiums written."
+ },
+ "mock9:28": {
+  "hl": [
+   "combined ratio"
+  ],
+  "rule": "Combined ratio > 100% = underwriting loss (covered only by investment income)."
+ },
+ "mock9:29": {
+  "hl": [
+   "three-year MRR-based interest rate swap with annual resets"
+  ],
+  "rule": "Fixed swap rate = (1 − last PV factor) ÷ sum of the PV factors."
+ },
+ "mock9:30": {
+  "hl": [
+   "entered into one year ago as the pay-fixed (receive-floating) party",
+   "current equilibrium two-year fixed swap rate is 1.12%"
+  ],
+  "rule": "Swap value = (old fixed rate − current fixed rate) × sum of the remaining PV factors × notional; the pay-fixed party loses when the old rate is above the current rate."
+ },
+ "mock9:31": {
+  "hl": [
+   "one-year fixed-for-fixed currency swap involving yen and US dollars",
+   "with a quarterly reset"
+  ],
+  "rule": "Currency swap fixed rate for one currency: PV factors from that currency's spot rates, periodic rate = (1 − last PV) ÷ sum of PV, then multiply by 4 for quarterly resets."
+ },
+ "mock9:32": {
+  "hl": [
+   "a new position in a 2 × 5 FRA"
+  ],
+  "rule": "2 × 5 FRA: use the 60-day and 150-day rates: [(1 + L150 × 150/360) ÷ (1 + L60 × 60/360) − 1] ÷ (90/360)."
+ },
+ "mock9:33": {
+  "hl": [
+   "increase the independent variable by $1.6 million",
+   "sales will equal $12.6 million if all independent variables are equal to zero"
+  ],
+  "rule": "Slope: change in the DEPENDENT variable per unit of the independent variable; intercept: dependent variable when all independent variables are zero."
+ },
+ "mock9:34": {
+  "hl": [
+   "standard error of estimate (SEE)"
+  ],
+  "rule": "SEE = standard deviation of the residuals (dependent variable); small SEE = strong fit; violations of assumptions affect it."
+ },
+ "mock9:35": {
+  "hl": [
+   "stated in millions of dollars"
+  ],
+  "rule": "Plug the values into the equation and keep the units (millions)."
+ },
+ "mock9:36": {
+  "hl": [
+   "revenues have been flat",
+   "marketing expenditures increased slightly"
+  ],
+  "rule": "One coefficient → t-test; all coefficients together (at least one ≠ 0) → F-test."
+ },
+ "mock9:37": {
+  "hl": [
+   "preference for investing in public REITs in taxable accounts"
+  ],
+  "rule": "REIT: tax-advantaged (no double taxation); REOC: operating flexibility, no payout requirement."
+ },
+ "mock9:38": {
+  "hl": [
+   "Net asset value",
+   "Assumed cap rate"
+  ],
+  "rule": "NAV per share = (cash NOI ÷ cap rate + cash + receivables − liabilities) ÷ shares."
+ },
+ "mock9:39": {
+  "hl": [
+   "P/AFFO multiple",
+   "Non-cash rents"
+  ],
+  "rule": "AFFO = FFO − non-cash rents − recurring capex; value = AFFO per share × P/AFFO multiple."
+ },
+ "mock9:40": {
+  "hl": [
+   "@row:Property subsector"
+  ],
+  "rule": "Match the property subsector to its main risk: storage = new competitive facilities (easy entry)."
+ },
+ "mock9:41": {
+  "hl": [
+   "advantages of using VaR",
+   "can be used for performance evaluation"
+  ],
+  "rule": "VaR: useful for risk-adjusted performance; subjective inputs; NOT a worst case."
+ },
+ "mock9:42": {
+  "hl": [
+   "parametric method (assuming normal distribution)"
+  ],
+  "rule": "Parametric VaR = (z × volatility − expected return) × portfolio value; 5% → z = 1.65."
+ },
+ "mock9:43": {
+  "hl": [
+   "parametric method (assuming normal distribution)"
+  ],
+  "rule": "Parametric = normal distribution assumption (weak for fat tails and options); historical = past data; Monte Carlo = random scenarios."
+ },
+ "mock9:44": {
+  "hl": [
+   "5-day, 1% VaR limit of $10 million",
+   "limit fund losses to 2% of assets with a 99% level of confidence"
+  ],
+  "rule": "VaR = minimum loss at a confidence level, not a loss limit."
  }
 }

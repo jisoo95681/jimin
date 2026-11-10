@@ -1,0 +1,738 @@
+{
+ "id": "mock9",
+ "rev": 2,
+ "resetHl": [],
+ "title": "Mock 9",
+ "kind": "mock",
+ "minutes": 132,
+ "desc": "10 new vignettes from sub-topics different from Mock 8, plus 1 Ethics vignette",
+ "vignettes": [
+  {
+   "topic": "Equity Valuation",
+   "group": "new",
+   "body": "Chan Mei Yee is valuing McLaughlin Corporation common shares using a free cash flow approach. Yee gathered information about McLaughlin from several sources. She begins her analysis by determining free cash flow to the firm (FCFF) and free cash flow to equity (FCFE) for the 2012 fiscal year, using the financial statements in Exhibits 1 and 2. McLaughlin's fiscal year ends 31 December.\n\nExhibit 1\nMcLaughlin Corporation Selected Financial Data ($ millions, except per share amounts)\n# For Year Ending 31 December | 2012\nRevenues | $6,456\nEarnings before interest, taxes, depreciation, and amortization (EBITDA) | 1,349\nDepreciation expense | 243\nOperating income | 1,106\nInterest expense | 186\nPretax income | 920\nIncome tax (32%) | 294\nNet income | $626\nNumber of outstanding shares (millions) | 411\n2012 earnings per share | $1.52\n2012 dividends paid (millions) | 148\n2012 dividends per share | 0.36\n2012 fixed capital investment (millions) | 535\nCost of equity | 12.0%\nWeighted average cost of capital (WACC) | 9.0%\n\nExhibit 2\nMcLaughlin Corporation Consolidated Balance Sheets ($ millions)\n#   | 2012 | 2011\nCash and cash equivalents | $32 | $21\nAccounts receivable | 413 | 417\nInventories | 709 | 638\nOther current assets | 136 | 123\nTotal current assets | $1,290 | $1,199\nCurrent liabilities | $2,783 | $2,678\nLong-term debt | 2,249 | 2,449\nCommon stockholders' equity | 1,072 | 594\nTotal liabilities and stockholders' equity | $6,104 | $5,721\n\nYee plans to perform two different valuations of McLaughlin, which she calls the \"base case\" valuation and the \"alternative\" valuation. Critical assumptions for each are given in the following lists.\n\nBase case valuation\n\n2013 FCFF will be $600 million.\nBeyond 2013, FCFF will grow in perpetuity at 4% annually.\nThe market value and book value of McLaughlin's long-term debt are approximately equal.\n\nAlternative valuation\n\n2013 earnings per share (EPS) will be $1.80.\nEPS will grow forever at 6% annually.\nFor 2013 and beyond: Net capital expenditures (fixed capital expenditures minus depreciation) will be 30% of EPS. Investments in working capital will be 10% of EPS. Of future investments, 60% will be financed with equity and 40% will be financed with debt.\n\nMelissa Nicosia, Yee's supervisor, reviews McLaughlin's valuations. Specifically, Nicosia makes the following three statements:\n\nStatement 1: Because the company's capital structure seems unstable, the FCFE valuation approach is superior to the FCFF valuation approach.\nStatement 2: If there is a change in control at McLaughlin, the discounted dividend valuation approach would be superior to a free cash flow valuation approach.\nStatement 3: The free cash flow valuation approach is superior to the discounted dividend valuation approach because the company's dividends have been substantially different from its FCFE.",
+   "questions": [
+    {
+     "q": "McLaughlin's FCFF ($ millions) for 2012 is closest to:",
+     "options": [
+      "$418.",
+      "$460.",
+      "$485."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. It uses the tax rate instead of (1 − tax rate) on interest.\nB. Incorrect. It ignores the working capital investment.\nC. Correct. Working capital (current assets excluding cash − current liabilities) went from −1,500 to −1,525, so WCInv = −25 (an inflow). FCFF = 626 + 243 + 186 × (1 − 0.32) − 535 − (−25) = 485.",
+     "hint": {
+      "hl": [
+       "free cash flow to the firm (FCFF)"
+      ],
+      "rule": "FCFF = NI + NCC + Int(1 − t) − FCInv − WCInv; working capital excludes cash."
+     }
+    },
+    {
+     "q": "Using Yee's base case valuation assumptions and the FCFF valuation approach, the year-end 2012 value per share of McLaughlin common stock is closest to:",
+     "options": [
+      "$12.78.",
+      "$23.73.",
+      "$29.20."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It discounts at the cost of equity instead of the WACC.\nB. Correct. Firm value = 600 ÷ (0.09 − 0.04) = 12,000. Equity = 12,000 − 2,249 (debt) = 9,751. Per share = 9,751 ÷ 411 = $23.73.\nC. Incorrect. It does not deduct the debt.",
+     "hint": {
+      "hl": [
+       "2013 FCFF will be $600 million",
+       "FCFF will grow in perpetuity at 4% annually"
+      ],
+      "rule": "FCFF value = FCFF1 ÷ (WACC − g); subtract debt for equity, divide by shares."
+     }
+    },
+    {
+     "q": "Using Yee's alternative valuation assumptions and the FCFE valuation approach, the year-end 2012 value per share of McLaughlin's common stock is closest to:",
+     "options": [
+      "$18.00.",
+      "$22.80.",
+      "$24.17."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It is the FCFF-style calculation: 1.80 − 0.54 − 0.18 = 1.08 ÷ 0.06.\nB. Correct. FCFE1 = EPS − (1 − DR) × net capex − (1 − DR) × WCInv = 1.80 − 0.6 × 0.54 − 0.6 × 0.18 = 1.368. Value = 1.368 ÷ (0.12 − 0.06) = $22.80.\nC. Incorrect. It grows FCFE1 again by (1 + g).",
+     "hint": {
+      "hl": [
+       "EPS will grow forever at 6% annually",
+       "Of future investments, 60% will be financed with equity and 40% will be financed with debt"
+      ],
+      "rule": "FCFE = EPS − (1 − DR)(net capex + WCInv); value = FCFE1 ÷ (r − g)."
+     }
+    },
+    {
+     "q": "Which of Nicosia's three statements pertaining to McLaughlin's valuation is the most accurate? Statement:",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. FCFF, not FCFE, is preferred when the capital structure is unstable or changing.\nB. Incorrect. With a change in control, the new owner has discretion over free cash flow and can change the dividend, so a free cash flow approach is superior to a dividend approach.\nC. Correct. FCFE or FCFF is preferred to the dividend approach when dividends differ significantly from the capacity to pay them (and when control may change).",
+     "hint": {
+      "hl": [
+       "capital structure seems unstable",
+       "change in control"
+      ],
+      "rule": "Unstable capital structure → FCFF; dividends unrelated to FCFE or change of control → free cash flow, not DDM."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "group": "new",
+   "body": "Tony Brown is a fund manager with Institutional Investments, a fixed-income asset management firm. He actively manages his fund's holdings, duration, and yield curve exposure.\n\nBrown's fund currently has a large position in two option-free and default-risk-free zero-coupon bonds. The first bond has a 1-year maturity and the other bond has a 10-year maturity. Brown's view is that the spot curve one year from today will reflect the current forward curve. Interest rate information for option-free and default-risk-free zero-coupon bonds is contained in Exhibit 1.\n\nExhibit 1\nMaturity (years) | 1 | 2 | 3\nSpot rate | 3.00% | 4.00% | 5.00%\n1-year forward rate | f0,1 = 3.00% | f1,1 = 5.01% | f2,1 = 7.03%\n\nBrown next focuses his attention on the short end of the yield curve. He observes the US Treasury bill rate, the overnight indexed swap rate (OIS), and the secured overnight transactions market reference rate (MRR). He collects the current rate and spread information in Exhibit 2 and uses it to calculate the 3-month TED spread.\n\nExhibit 2\n# 3-Month US Treasury Bill Rate | 3-Month OIS Rate | 3-Month MRR – 3-Month OIS Spread\n4 bps | 6 bps | 9 bps\n\nLater in the day, Brown meets with another analyst to discuss the current fixed-income environment. This second analyst believes fixed-income markets are about to enter a period of high uncertainty. This analyst also expects a flight to quality and a bullish flattening of the yield curve. He recommends Brown adjust the fund's exposure through the purchase and sale of option-free default-risk-free bonds.",
+   "questions": [
+    {
+     "q": "If Brown's view of spot rates one year from today is accurate, the 1-year total return of the 10-year bond will be:",
+     "options": [
+      "equal to the total return of the 1-year bond.",
+      "greater than the total return of the 1-year bond.",
+      "less than the total return of the 1-year bond."
+     ],
+     "answer": 0,
+     "why": "A. Correct. If spot rates evolve as the current forward curve implies, bonds of every maturity earn the one-year (risk-free) rate over the year.\nB. Incorrect. It would be higher only if spot rates fell below those implied by the forward curve.\nC. Incorrect. It would be lower only if spot rates rose above those implied by the forward curve.",
+     "hint": {
+      "hl": [
+       "spot curve one year from today will reflect the current forward curve"
+      ],
+      "rule": "Spot curve evolves as the forward curve implies → every bond earns the one-year spot rate."
+     }
+    },
+    {
+     "q": "Brown's view that the spot curve one year from today will reflect the current forward curve is most consistent with:",
+     "options": [
+      "the liquidity preference theory.",
+      "the pure expectations theory.",
+      "the segmented markets theory."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Liquidity preference adds a premium for longer maturities, so forward rates overstate expected future spot rates.\nB. Correct. Pure expectations: forward rates are unbiased predictors of future spot rates, so the future spot curve equals today's forward curve.\nC. Incorrect. Segmented markets: each maturity is priced by its own supply and demand; forward rates are not forecasts.",
+     "hint": {
+      "hl": [
+       "spot curve one year from today will reflect the current forward curve"
+      ],
+      "rule": "Future spot = today's forward rates is the pure expectations theory."
+     }
+    },
+    {
+     "q": "The 3-month TED spread that Brown calculates should equal:",
+     "options": [
+      "5 bps.",
+      "11 bps.",
+      "13 bps."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It subtracts the T-bill rate from the MRR–OIS spread (9 − 4).\nB. Correct. 3-month MRR = OIS + (MRR − OIS spread) = 6 + 9 = 15 bps. TED spread = MRR − T-bill rate = 15 − 4 = 11 bps.\nC. Incorrect. It adds the T-bill rate to the MRR–OIS spread (9 + 4).",
+     "hint": {
+      "hl": [
+       "3-month TED spread"
+      ],
+      "rule": "TED = MRR − T-bill; MRR = OIS + (MRR − OIS spread)."
+     }
+    },
+    {
+     "q": "The strategy best suited to exploit the second analyst's expected changes to the current fixed-income environment is to:",
+     "options": [
+      "extend duration and construct a barbell portfolio.",
+      "extend duration and construct a bullet portfolio.",
+      "keep duration constant and construct a barbell portfolio."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Flight to quality: government yields fall, so extend duration. Bullish flattening: long rates fall more than short rates, so shift from a bullet to a barbell.\nB. Incorrect. Extending duration is right (flight to quality lowers yields) but a bullet suits a parallel shift or a steepening, not a bullish flattening.\nC. Incorrect. Duration should be extended when yields are expected to fall.",
+     "hint": {
+      "hl": [
+       "flight to quality and a bullish flattening of the yield curve"
+      ],
+      "rule": "Yields fall (flight to quality) → extend duration; bullish flattening → barbell."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Corporate Issuers",
+   "group": "new",
+   "body": "Jane Chang is an analyst at Alpha Fund covering the real estate and energy sectors. She and her colleague are analyzing two companies that are currently held by the fund.\n\nThe first company is Jupiter Corp., a publicly traded, national retail grocery store chain that has 2,800 physical stores. Jupiter leases most of its grocery stores and all five of its office locations that help the company achieve its core business of operating 50,000 square foot stores in all markets of the United States. Jupiter also owns the real estate (land and building) associated with 100 physical store locations. Jupiter recently announced that its board of directors approved a strategic real estate plan to pursue a separation of all its owned assets. The company currently has a speculative-grade credit rating.\n\nThe separation would be achieved through a series of sale-leaseback transactions with real estate investment trusts (REITs) that specialize in owning retail properties. Under the plan, Jupiter will sell its 100 owned grocery stores and lease them for 15-year terms with a combined annual rent expense of USD44 million. Jupiter expects to receive cash proceeds of approximately USD800 million from the property sales, which will be used to retire approximately USD600 million of debt and repurchase 4 million common shares.\n\nJupiter believes the pro forma capital structure following the transactions will enable it to receive an investment-grade credit rating. The sale-leaseback transactions value the 100 assets at an average capitalization rate of 5.50%. Based on Chang’s colleague’s research, the 25th, 50th, and 75th percentile cap rates for sale transactions for similarly situated properties and similar lease terms in the last three years were 5.00%, 5.50%, and 6.00%, respectively.\n\nThe second company is Saturn Corp., a publicly traded US energy company. Chang has been asked to assess the valuation of a potential spin off for this company. Saturn operates and reports three segments: Upstream, Midstream, and Downstream. In the last 12 months, the company reported the financial results shown in Exhibit 1.\n\nExhibit 1\n# Segment | EBITDA (USD millions)\nUpstream | 14,400\nMidstream | 5,760\nDownstream | 3,840\nConsolidated | 24,000\nSaturn is currently trading at an enterprise value of USD408,000 million, or an EV/EBITDA multiple of 17. A spin off of the Downstream segment has long been rumored because it has been under-invested in by the current management team, resulting in slower revenue growth than its peers. Chang finds that the median Upstream, Midstream, and Downstream peers are trading at enterprise value-to-EBITDA multiples of 19, 17, and 13, respectively.",
+   "questions": [
+    {
+     "q": "Which of the following statements about Jupiter's motivations for the strategic real estate plan is incorrect?",
+     "options": [
+      "The transactions will allow Jupiter to unlock the value of its real estate assets.",
+      "The expected change in Jupiter's credit rating after the transactions will increase the firm's costs of capital.",
+      "The transactions will enable Jupiter to sell a non-core business."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Sale-leasebacks unlock the value in the real estate: Jupiter receives cash and records a lease liability.\nB. Correct. Retiring debt should improve the credit rating, which lowers (not raises) the cost of capital, so this statement is incorrect.\nC. Incorrect. Real estate ownership is not Jupiter's core business (operating grocery stores), so this statement is correct.",
+     "hint": {
+      "hl": [
+       "pursue a separation of all its owned assets",
+       "speculative-grade credit rating",
+       "retire approximately USD600 million of debt"
+      ],
+      "rule": "Less debt → better credit rating → lower cost of capital; real estate is a non-core business for a grocer."
+     }
+    },
+    {
+     "q": "Which of the following statements best describes Jupiter's average capitalization rate for the sale-leaseback transactions? Jupiter's average capitalization rate:",
+     "options": [
+      "is supported by the comparable transactions.",
+      "compares favorably to the comparable transactions.",
+      "compares unfavorably to the comparable transactions."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The average cap rate of 5.50% equals the median (50th percentile) of comparable transactions (5.00%, 5.50%, 6.00%), so it is supported.\nB. Incorrect. 5.50% is not better than the median of comparable transactions.\nC. Incorrect. 5.50% is not worse than the median of comparable transactions.",
+     "hint": {
+      "hl": [
+       "average capitalization rate of 5.50%",
+       "5.00%, 5.50%, and 6.00%"
+      ],
+      "rule": "Cap rate equal to the median of comparables = supported by the market."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and the peer median EV/EBITDA multiples, Saturn's estimated enterprise value is closest to:",
+     "options": [
+      "USD392,000 million.",
+      "USD408,000 million.",
+      "USD421,440 million."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. It uses the average of the peer multiples (16.33) for every segment.\nB. Incorrect. USD408,000 million is Saturn's current enterprise value, not the estimate.\nC. Correct. Sum of the parts: Upstream 14,400 × 19 = 273,600; Midstream 5,760 × 17 = 97,920; Downstream 3,840 × 13 = 49,920; total 421,440.",
+     "hint": {
+      "hl": [
+       "multiples of 19, 17, and 13"
+      ],
+      "rule": "Sum of the parts: each segment's EBITDA × its own peer median multiple."
+     }
+    },
+    {
+     "q": "A spin-off of the Downstream segment would most likely:",
+     "options": [
+      "sell shares of the Downstream business to new investors in a public offering, giving Saturn cash.",
+      "sell the Downstream segment to another company for cash.",
+      "distribute shares of the Downstream business to Saturn's existing shareholders."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. That describes an equity carve-out, which raises cash for the parent.\nB. Incorrect. That describes a divestiture (sale) of the segment, not a spin-off.\nC. Correct. In a spin-off the parent distributes the shares of the subsidiary pro rata to its own shareholders; no cash is raised.",
+     "hint": {
+      "hl": [
+       "A spin off of the Downstream segment"
+      ],
+      "rule": "Spin-off = shares distributed to existing shareholders, no cash; carve-out = IPO of a minority stake; divestiture = sale."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "group": "new",
+   "body": "David Albertson is an equity analyst at an investment bank. He is preparing updated research reports on two companies, Xita Incorporated and Garc Company.\nXita Incorporated\nAlbertson indicates in his updated report that Xita's profits are cyclical. Using the data for the past four years in Exhibit 1, he computes Xita's normalized EPS based on the average ROE method. He determines that Year 1 through Year 4 (the most recent year) constitutes a full business cycle.\nExhibit 1\n#   | Year 1 | Year 2 | Year 3 | Year 4\nEPS | $3.19 | $2.21 | $0.37 | $2.56\nBook value per share | $10.90 | $12.50 | $12.60 | $13.30\nGarc Company\nAlbertson next reviews Garc, which operates in a previously mature industry that now has high growth potential due to a recent technological innovation. Garc's debt-to-equity ratio is significantly higher than the average of its competitors. Garc spent heavily on advertising to create and maintain its brand, which is an important asset. The company is favored by many investors because its dividend payout ratio is the highest in its industry. Albertson considers several potential metrics to use in valuing Garc.\nDuring the past year, Garc's share price rose from $27.95 to $31.05 per share and the company paid an annual dividend of $1.24 per share. Over the same period, the market index rose from 550.40 to 602.21 and had an average dividend yield of 3.4%. Albertson computes Garc's relative strength compared to the index, which is a common technical indicator.",
+   "questions": [
+    {
+     "q": "Albertson finds that Xita's profits are cyclical. Compared with the latest reported EPS, normalized EPS is used because it:",
+     "options": [
+      "estimates the earnings Xita would earn at mid-cycle, removing the effect of the business cycle.",
+      "uses forecast earnings, which are always available for cyclical companies.",
+      "adjusts reported earnings for the effect of share repurchases."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Normalized EPS removes the influence of the business cycle by estimating mid-cycle earnings (here average ROE over a full cycle times current book value per share).\nB. Incorrect. Forecast earnings give a forward P/E; normalized earnings are an estimate of average earnings over a full cycle.\nC. Incorrect. Share repurchases are not what normalizing is for.",
+     "hint": {
+      "hl": [
+       "Xita's profits are cyclical"
+      ],
+      "rule": "Cyclical profits → use normalized (mid-cycle) EPS, e.g. average ROE × current BVPS."
+     }
+    },
+    {
+     "q": "Xita's normalized EPS based on the average ROE method is closest to:",
+     "options": [
+      "$2.08.",
+      "$2.13.",
+      "$2.30."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. $2.08 is the average EPS of Years 1 to 4.\nB. Incorrect. $2.13 multiplies the average ROE (17.3%) by the AVERAGE book value per share ($12.325) instead of the current one.\nC. Correct. ROE by year: 29.3%, 17.7%, 2.9% and 19.2%, average 17.3%. Normalized EPS = average ROE × current (Year 4) book value per share = 0.1728 × $13.30 = $2.30.",
+     "hint": {
+      "hl": [
+       "average ROE method",
+       "Year 1 through Year 4 (the most recent year) constitutes a full business cycle"
+      ],
+      "rule": "Normalized EPS = average ROE of a full cycle × CURRENT book value per share."
+     }
+    },
+    {
+     "q": "Which of the following is the most appropriate metric for Albertson to use in valuing Garc?",
+     "options": [
+      "Price to book ratio",
+      "Dividend yield",
+      "Enterprise value to sales ratio"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Book value ignores Garc's brand, an internally generated intangible asset built by advertising that is not on the balance sheet.\nB. Incorrect. Dividend yield ignores capital gains, which are likely important with the industry's growth potential, and the highest payout in the industry may not be safe.\nC. Correct. EV/sales uses the total value of debt and equity, so it suits Garc's high debt-to-equity ratio and diverse capital structures; sales are stable and hard to manipulate.",
+     "hint": {
+      "hl": [
+       "debt-to-equity ratio is significantly higher than the average of its competitors",
+       "spent heavily on advertising to create and maintain its brand"
+      ],
+      "rule": "High leverage + valuable internal brand → enterprise value to sales, not P/B or dividend yield."
+     }
+    },
+    {
+     "q": "Garc's relative strength compared to the market index over the past year is closest to:",
+     "options": [
+      "1.0153.",
+      "1.0168.",
+      "1.0241."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Relative strength = (Garc price ÷ index) at the end divided by the same ratio at the start = (31.05 ÷ 602.21) ÷ (27.95 ÷ 550.40) = 0.051560 ÷ 0.050781 = 1.0153. Dividends are not included.\nB. Incorrect. It does not follow from the relative strength calculation (dividends are not part of it).\nC. Incorrect. It does not follow from the relative strength calculation (dividends are not part of it).",
+     "hint": {
+      "hl": [
+       "relative strength"
+      ],
+      "rule": "Relative strength = (stock ÷ index) now ÷ (stock ÷ index) at the start; price only, no dividends."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Economics",
+   "group": "new",
+   "body": "Sagara, a resource-abundant West African country, has a developing economy with low capital per worker available. Although the majority of its population is impoverished, Sagara has a long history of advanced education and is committed to technological progress. President Benjamin Banantoumou recently appointed Fatima N’Diarra, PhD, as Economic Development Secretary. He asks her to help him develop economic policies to promote growth.\n\nLast year, Banantoumou attended a summit of international leaders, where he learned that developing countries typically face several factors that affect their growth prospects, such as enforcement of substantive laws, restrictions on imports, and low rates of saving.\n\nBanantoumou believes that the Sagara economy relies too heavily on the export of natural rubber. He is convinced that significant industrial capital investment will persuade foreign direct investors that he is serious about economic development. He announces that the Sagara government will construct a large tire factory to take advantage of the country’s rubber resources. Banantoumou expects that as a result of this investment, per capita productivity will rise rapidly driving rapid growth in GDP.\n\nN’Diarra believes that according to the classical growth theory, gains in per capita GDP are temporary because the resulting population explosion will lower per capita GDP to subsistence real wage levels. She considers endogenous growth theory to be more realistic, believing that (1) investments, such as the new tire factory, will increase the rate of per capita output growth until the steady state rate of growth is achieved; and (2) investment in research and development will boost growth even further, thus extending the abnormal growth period before diminishing marginal returns eventually set in.",
+   "questions": [
+    {
+     "q": "N'Diarra's understanding of the two growth theories is most accurate with regard to:",
+     "options": [
+      "classical growth theory.",
+      "endogenous growth theory.",
+      "both classical growth theory and endogenous growth theory."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Her view of classical theory is right: gains in per capita GDP are temporary because the resulting population growth pushes income back to subsistence.\nB. Incorrect. Her description of endogenous theory is wrong: a steady state of growth and diminishing marginal returns are features of neoclassical theory; endogenous theory has no diminishing returns to capital (R&D, human capital).\nC. Incorrect. Her understanding of endogenous growth theory is incorrect.",
+     "hint": {
+      "hl": [
+       "gains in per capita GDP are temporary",
+       "steady state rate of growth is achieved"
+      ],
+      "rule": "Classical = temporary gains (population); neoclassical = steady state, diminishing returns; endogenous = no diminishing returns."
+     }
+    },
+    {
+     "q": "Which of the following factors favors economic growth?",
+     "options": [
+      "Limited regulations in order to encourage entrepreneurial activity",
+      "Limited foreign capital and trade flows",
+      "Low rates of saving"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Limited regulation encourages new companies, which are strongly correlated with higher productivity.\nB. Incorrect. Foreign investment and trade can raise the capital stock, productivity, employment and wages.\nC. Incorrect. Low saving and investment limit growth.",
+     "hint": {
+      "hl": [
+       "enforcement of substantive laws, restrictions on imports, and low rates of saving"
+      ],
+      "rule": "Growth helped by savings, open trade and capital flows, entrepreneurship; hurt by import restrictions and weak law enforcement."
+     }
+    },
+    {
+     "q": "According to the neoclassical growth model, when trade barriers are removed, convergence of per capita income levels between developed and developing countries should:",
+     "options": [
+      "occur more slowly.",
+      "remain unaffected.",
+      "occur more quickly."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Opening up speeds up, not slows down, convergence.\nB. Incorrect. Opening up affects the rate of growth and convergence.\nC. Correct. With open trade and capital flows, capital moves to poorer countries and their capital-to-labor ratios rise faster, so productivity and per capita incomes converge more quickly.",
+     "hint": {
+      "hl": [
+       "when trade barriers are removed"
+      ],
+      "rule": "Neoclassical + open economy: capital flows to the poor country → faster convergence."
+     }
+    },
+    {
+     "q": "Opening an economy to trade and financial flows will most likely:",
+     "options": [
+      "discourage domestic spending on research and development.",
+      "not impact domestic spending on research and development.",
+      "encourage domestic spending on research and development."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Open trade encourages, not discourages, R&D spending.\nB. Incorrect. Open trade affects innovation by encouraging R&D and human capital spending.\nC. Correct. Open trade gives access to larger markets and a greater flow of ideas, so firms invest more in R&D and human capital, raising the return on new investment and growth (though small, lagging countries can lose domestic innovation).",
+     "hint": {
+      "hl": [
+       "Opening an economy to trade and financial flows"
+      ],
+      "rule": "Open economy: larger markets and idea flow → more R&D and human capital investment."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Financial Statement Analysis",
+   "group": "new",
+   "body": "Aiko Takahashi works as a senior examiner for the Financial Institutions Agency (FIA), and Haruto Suzuki is one of the analysts who reports to her. Suzuki is a new hire who previously worked at an investment firm that specialized in manufacturing companies. His first two weeks at the FIA were spent in training sessions focused on the Basel III regulatory framework for banks to prepare him for his new analyst role.\n\nAt today’s weekly meeting, Takahashi and her analysts are conducting a preliminary review of some of their assigned insurance institutions. Suzuki arrives early, so Takahashi takes the opportunity to ask him to explain his understanding of the Basel III framework. Suzuki describes three enhancements that Basel III incorporated as part of its transition from the previous iteration:\n\nEnhancement 1: More stringent capital requirements that prevent banks from taking on excessive financial leverage.\nEnhancement 2: Increased funding stability by giving preference to interbank deposits over those from consumers.\nEnhancement 3: Additional measures to ensure sufficient earnings quality, thereby strengthening banks’ regulatory capital.\nThe other analysts arrive, and the meeting gets underway. The group is scheduled to review an insurance company, Yatabe Holdings (YH), a property and casualty insurer. Takahashi notes that the property and casualty market has been in a “hard” phase for a few years now, and she wonders whether the results will show the beginning of a cyclical shift.\n\nThe group reviews YH’s profitability information that Suzuki has provided in Exhibit 1. Takahashi asks Suzuki to calculate YH’s combined ratio:\n\nExhibit 1 Excerpts from YH’s Financial Statements\n(¥ billions)\nLoss expense and loss adjustment expense | 38,467\nNet premiums earned | 62,939\nNet premiums written | 49,241\nUnderwriting expense | 23,960",
+   "questions": [
+    {
+     "q": "Which of the enhancements Suzuki describes regarding the Basel III regulatory framework is most accurate?",
+     "options": [
+      "Enhancement 1",
+      "Enhancement 2",
+      "Enhancement 3"
+     ],
+     "answer": 0,
+     "why": "A. Correct. After the 2008 crisis, Basel III raised the required equity funding of banks' risk-weighted assets, which prevents banks from taking on excessive financial leverage.\nB. Incorrect. Basel III did increase requirements for stable funding, but consumer deposits are considered more stable than interbank deposits, so the preference is for consumer deposits.\nC. Incorrect. Earnings quality was not a focus of Basel III, although its changes will likely improve earnings quality.",
+     "hint": {
+      "hl": [
+       "Basel III"
+      ],
+      "rule": "Basel III: more equity against risk-weighted assets (less leverage), stable funding from consumer deposits."
+     }
+    },
+    {
+     "q": "If Takahashi's interpretation of the current phase of the property and casualty market is correct, a cyclical shift is most likely to result in:",
+     "options": [
+      "a tightening of underwriting standards.",
+      "additional competitors entering the market.",
+      "capital adequacy being easier to achieve."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. In a hard market underwriting standards are already high; as the market softens they drop, not tighten.\nB. Correct. In a hard market premiums, profits and underwriting standards are high; this attracts competitors that offer lower premiums, which softens the market and weakens underwriting standards.\nC. Incorrect. Hard markets help insurers maintain adequate capital; capital depletes as the market softens, making capital adequacy harder to achieve.",
+     "hint": {
+      "hl": [
+       "“hard” phase for a few years now"
+      ],
+      "rule": "Hard market: high premiums and profits → new competitors → soft market: lower premiums, weaker underwriting standards, capital harder to maintain."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1, YH's combined ratio is closest to:",
+     "options": [
+      "61.1%.",
+      "109.8%.",
+      "126.8%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. 61.1% is only the loss ratio (38,467 ÷ 62,939).\nB. Correct. Combined ratio = loss ratio + underwriting expense ratio = 38,467 ÷ 62,939 + 23,960 ÷ 49,241 = 61.1% + 48.7% = 109.8% (loss expense is divided by net premiums earned, underwriting expense by net premiums written).\nC. Incorrect. 126.8% uses net premiums written for the loss ratio too (78.1% + 48.7%).",
+     "hint": {
+      "hl": [
+       "calculate YH’s combined ratio"
+      ],
+      "rule": "Combined ratio = loss & LAE ÷ net premiums earned + underwriting expense ÷ net premiums written."
+     }
+    },
+    {
+     "q": "YH's combined ratio indicates that its underwriting business, before investment income, is:",
+     "options": [
+      "unprofitable, because claims and expenses exceed the premiums earned.",
+      "break-even, because the combined ratio is measured on net premiums written.",
+      "profitable, because the loss ratio is below 100%."
+     ],
+     "answer": 0,
+     "why": "A. Correct. A combined ratio above 100% means claims, loss adjustment expenses and underwriting expenses exceed the premiums, so the underwriting is a loss that investment income must cover.\nB. Incorrect. The combined ratio is not defined on net premiums written alone.\nC. Incorrect. The loss ratio alone ignores the underwriting expense ratio; the combined ratio adds both.",
+     "hint": {
+      "hl": [
+       "combined ratio"
+      ],
+      "rule": "Combined ratio > 100% = underwriting loss (covered only by investment income)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Derivatives",
+   "group": "new",
+   "body": "Sonal Johnson is a risk manager for a bank. She manages the bank’s risks using a combination of swaps and forward rate agreements (FRAs).\n\nJohnson prices a three-year MRR-based interest rate swap with annual resets using the present value factors presented in Exhibit 1.\n\nExhibit 1\nPresent Value Factors\n# Maturity (years) | Present Value Factors\n1 | 0.990099\n2 | 0.977876\n3 | 0.965136\nJohnson also uses the present value factors in Exhibit 1 to value an interest rate swap that the bank entered into one year ago as the pay-fixed (receive-floating) party. Selected data for the swap are presented in Exhibit 2. Johnson notes that the current equilibrium two-year fixed swap rate is 1.12%.\n\nExhibit 2\nSelected Data on Fixed for Floating Interest Rate Swap\nSwap notional amount | $50,000,000\nOriginal swap term | Three years, with annual resets\nFixed swap rate (since initiation) | 3.00%\nOne of the bank’s investments is exposed to movements in the Japanese yen, and Johnson desires to hedge the currency exposure. She prices a one-year fixed-for-fixed currency swap involving yen and US dollars, with a quarterly reset. Johnson uses the interest rate data presented in Exhibit 3 to price the currency swap.\n\nExhibit 3\nSelected Japanese Interest Rate Data\n# Days to Maturity | Yen Spot Interest Rates\n90 | 0.05%\n180 | 0.10%\n270 | 0.15%\n360 | 0.25%\nJohnson reviews current MRR data in Exhibit 4. Based on her interest rate forecast, Johnson also considers whether the bank should enter into a new position in a 2 × 5 FRA.\n\nExhibit 4\nCurrent MRR (Market Reference Rate)\n30-day MRR | 0.75%\n60-day MRR | 0.82%\n90-day MRR | 0.90%\n120-day MRR | 0.92%\n150-day MRR | 0.94%\n180-day MRR | 0.95%\n210-day MRR | 0.97%\n270-day MRR | 1.00%",
+   "questions": [
+    {
+     "q": "Based on Exhibit 1, Johnson should price the three-year MRR-based interest rate swap at a fixed rate closest to:",
+     "options": [
+      "0.34%.",
+      "1.16%.",
+      "1.19%."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. It does not follow from the swap pricing formula.\nB. Incorrect. It does not follow from the swap pricing formula.\nC. Correct. Fixed swap rate = (1 − final-year PV factor) ÷ (sum of the PV factors) = (1 − 0.965136) ÷ (0.990099 + 0.977876 + 0.965136) = 0.034864 ÷ 2.933111 = 1.19%.",
+     "hint": {
+      "hl": [
+       "three-year MRR-based interest rate swap with annual resets"
+      ],
+      "rule": "Fixed swap rate = (1 − last PV factor) ÷ sum of the PV factors."
+     }
+    },
+    {
+     "q": "From the bank's perspective, using data from Exhibit 1, the current value of the swap described in Exhibit 2 is closest to:",
+     "options": [
+      "–$2,951,963.",
+      "–$1,849,897.",
+      "–$1,943,000."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It does not follow from the swap valuation formula.\nB. Correct. Two years remain, so the sum of the PV factors is 0.990099 + 0.977876 = 1.967975. For the receive-fixed party the value is (0.0300 − 0.0112) × 1.967975 × $50,000,000 = $1,849,897. The bank pays fixed, and the fixed rate it pays is above today's equilibrium rate, so its value is −$1,849,897.\nC. Incorrect. It does not follow from the swap valuation formula.",
+     "hint": {
+      "hl": [
+       "entered into one year ago as the pay-fixed (receive-floating) party",
+       "current equilibrium two-year fixed swap rate is 1.12%"
+      ],
+      "rule": "Swap value = (old fixed rate − current fixed rate) × sum of the remaining PV factors × notional; the pay-fixed party loses when the old rate is above the current rate."
+     }
+    },
+    {
+     "q": "Based on Exhibit 3, Johnson should determine that the annualized equilibrium fixed swap rate for Japanese yen is closest to:",
+     "options": [
+      "0.0624%.",
+      "0.1375%.",
+      "0.2496%."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. 0.0624% is the quarterly (periodic) rate, not the annualized rate.\nB. Incorrect. It does not follow from the swap pricing formula.\nC. Correct. Yen PV factors = 1 ÷ [1 + rate × (days ÷ 360)]: 0.999875, 0.999500, 0.998876, 0.997506 (sum 3.995757). Periodic rate = (1 − 0.997506) ÷ 3.995757 = 0.0624%. Annualized = 0.0624% × (360 ÷ 90) = 0.2496%.",
+     "hint": {
+      "hl": [
+       "one-year fixed-for-fixed currency swap involving yen and US dollars",
+       "with a quarterly reset"
+      ],
+      "rule": "Currency swap fixed rate for one currency: PV factors from that currency's spot rates, periodic rate = (1 − last PV) ÷ sum of PV, then multiply by 4 for quarterly resets."
+     }
+    },
+    {
+     "q": "Based on Exhibit 4, the fixed rate on a new 2 × 5 FRA is closest to:",
+     "options": [
+      "0.61%.",
+      "1.02%.",
+      "1.71%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It does not follow from the FRA pricing formula.\nB. Correct. FRA rate = {[1 + L150 × (150/360)] ÷ [1 + L60 × (60/360)] − 1} ÷ (90/360) = {1.003917 ÷ 1.001367 − 1} × 4 = 1.02%, using the 60-day MRR of 0.82% and the 150-day MRR of 0.94%.\nC. Incorrect. It does not follow from the FRA pricing formula.",
+     "hint": {
+      "hl": [
+       "a new position in a 2 × 5 FRA"
+      ],
+      "rule": "2 × 5 FRA: use the 60-day and 150-day rates: [(1 + L150 × 150/360) ÷ (1 + L60 × 60/360) − 1] ÷ (90/360)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Quantitative Methods",
+   "group": "new",
+   "body": "William Brent, CFA, is the chief financial officer for Mega Flowers, one of the largest producers of flowers and bedding plants in the Western United States. Mega Flowers grows its plants in three large nursery facilities located in California. Its products are sold in its company-owned retail nurseries as well as in large, home and garden \"super centers\". For its retail stores, Mega Flowers has designed and implemented marketing plans each season that are aimed at its consumers in order to generate additional sales for certain high-margin products. To fully implement the marketing plan, additional contract salespeople are seasonally employed.\nFor the past several years, these marketing plans seemed to be successful, providing a significant boost in sales to those specific products highlighted by the marketing efforts. However, for the past year, revenues have been flat, even though marketing expenditures increased slightly. Brent is concerned that the expensive seasonal marketing campaigns are simply no longer generating the desired returns, and should either be significantly modified or eliminated altogether. He proposes that the company hire additional, permanent salespeople to focus on selling Mega Flowers' high-margin products all year long. The chief operating officer, David Johnson, disagrees with Brent. He believes that although last year's results were disappointing, the marketing campaign has demonstrated impressive results for the past five years, and should be continued. His belief is that the prior years' performance can be used as a gauge for future results, and that a simple increase in the sales force will not bring about the desired results.\nBrent gathers information regarding quarterly sales revenue and marketing expenditures for the past five years. Based upon historical data, Brent derives the following regression equation for Mega Flowers (stated in millions of dollars):\nExpected Sales = 12.6 + 1.6 (Marketing Expenditures) + 1.2 (# of Salespeople)\nBrent shows the equation to Johnson and tells him, \"This equation shows that a $1 million increase in marketing expenditures will increase the independent variable by $1.6 million, all other factors being equal.\" Johnson replies, \"It also appears that sales will equal $12.6 million if all independent variables are equal to zero.\"",
+   "questions": [
+    {
+     "q": "In regard to their conversation about the regression equation:",
+     "options": [
+      "Brent's statement is correct; Johnson's statement is correct.",
+      "Brent's statement is correct; Johnson's statement is incorrect.",
+      "Brent's statement is incorrect; Johnson's statement is correct."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Brent says the independent variable rises by $1.6 million, but expected sales is the dependent variable, so he is wrong.\nB. Incorrect. Brent is wrong because expected sales is the dependent variable.\nC. Correct. Johnson is right: 12.6 is the intercept, the expected sales (in millions) when all independent variables are zero.",
+     "hint": {
+      "hl": [
+       "increase the independent variable by $1.6 million",
+       "sales will equal $12.6 million if all independent variables are equal to zero"
+      ],
+      "rule": "Slope: change in the DEPENDENT variable per unit of the independent variable; intercept: dependent variable when all independent variables are zero."
+     }
+    },
+    {
+     "q": "Brent explains the standard error of estimate (SEE) to Johnson with three points. Point 1: If there is a strong relationship between the variables and the SEE is small, the individual estimation errors will also be small. Point 2: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable. Point 3: Any violation of the basic assumptions of a multiple regression model is going to affect the SEE. How many of Brent's points are most accurate?",
+     "options": [
+      "All 3 of Brent's points are correct.",
+      "2 of Brent's points are correct.",
+      "1 of Brent's points is correct."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Point 2 is incorrect, so not all three are correct.\nB. Correct. Point 2 is wrong: the SEE measures differences between estimated and actual values of the DEPENDENT variable. Points 1 and 3 are correct, so two points are correct.\nC. Incorrect. Points 1 and 3 are also correct, so more than one point is correct.",
+     "hint": {
+      "hl": [
+       "standard error of estimate (SEE)"
+      ],
+      "rule": "SEE = standard deviation of the residuals (dependent variable); small SEE = strong fit; violations of assumptions affect it."
+     }
+    },
+    {
+     "q": "Assuming that next year's marketing expenditures are $3,500,000 and there are five salespeople, predicted sales for Mega Flowers should be:",
+     "options": [
+      "$24,200,000.",
+      "$11,600,000.",
+      "$24,000,000."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The equation is in millions of dollars: 12.6 + 1.6 × 3.5 + 1.2 × 5 = 24.2, i.e. $24,200,000.\nB. Incorrect. It does not follow from the equation (it leaves out the intercept).\nC. Incorrect. It does not follow from the equation.",
+     "hint": {
+      "hl": [
+       "stated in millions of dollars"
+      ],
+      "rule": "Plug the values into the equation and keep the units (millions)."
+     }
+    },
+    {
+     "q": "Brent wants to test whether the marketing coefficient of 1.6 is still significantly different from zero after a year of flat revenues. He should compare:",
+     "options": [
+      "the t-statistic (the coefficient divided by its standard error) with the critical t-value.",
+      "the R² of the regression with the SEE.",
+      "the F-statistic of the whole regression with the critical F-value."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The significance of one slope coefficient is tested with a t-test.\nB. Incorrect. R² and the SEE describe fit, they do not test a single coefficient.\nC. Incorrect. The F-test checks whether at least one independent variable explains a significant part of the variation, not one specific coefficient.",
+     "hint": {
+      "hl": [
+       "revenues have been flat",
+       "marketing expenditures increased slightly"
+      ],
+      "rule": "One coefficient → t-test; all coefficients together (at least one ≠ 0) → F-test."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Alternative Investments",
+   "group": "new",
+   "body": "Hui Lin, CFA, is an investment manager looking to diversify his portfolio by adding equity real estate investments. Lin and his investment analyst, Maria Nowak, are discussing whether they should invest in publicly traded real estate investment trusts or public real estate operating companies. Nowak expresses a strong preference for investing in public REITs in taxable accounts.\n\nLin schedules a meeting to discuss this matter, and for the meeting, Lin asks Nowak to gather data on two specific REITs and come prepared to explain her preference for public REITs over public REOCs. At the meeting, Lin asks Nowak,\n\n“Why do you prefer to invest in public REITs over public REOCs for taxable accounts?”\n\nNowak provides Lin with an explanation for her preference of public REITs and provides Lin with data on the two REITs shown in Exhibit 1 and Exhibit 2.\n\nThe meeting concludes with Lin directing Nowak to identify the key investment characteristics along with the principal risks of each REIT and to investigate the valuation of the two REITs. Specifically, Lin asks Nowak to value REIT A using two different methodologies:\n\nValuation Method 1: Relative valuation using property subsector average P/AFFO multiple\nValuation Method 2: Net asset value\n\nExhibit 1\nSelect REIT Financial Information\n# | REIT A | REIT B\nProperty subsector | Office | Storage\nEstimated 12-month cash net operating income | $350,000 | $267,000\nFunds from operations | $316,965 | $290,612\nCash and equivalents | $308,700 | $230,850\nAccounts receivable | $205,800 | $282,150\nDebt and other liabilities | $2,014,000 | $2,013,500\nNon-cash rents | $25,991 | $24,702\nRecurring maintenance–type capital expenditures | $63,769 | $60,852\nShares outstanding | 56,100 | 67,900\n\nExhibit 2\nREIT A Assumptions and Average Price Multiple\nAssumed cap rate | 7.0%\nProperty subsector average P/AFFO multiple | 18.3×",
+   "questions": [
+    {
+     "q": "Nowak's most likely response to Lin's question is that the type of real estate security she prefers:",
+     "options": [
+      "provides dividend income that is exempt from double taxation.",
+      "has below-average correlations with overall stock market returns.",
+      "offers a high degree of operating flexibility."
+     ],
+     "answer": 0,
+     "why": "A. Correct. REITs are tax-advantaged entities: in jurisdictions such as the United States they avoid the double taxation of income (corporate level and again on dividends), while REOCs are not typically tax-advantaged.\nB. Incorrect. REITs do not have below-average correlation with the stock market; that is not the reason for the preference in taxable accounts.\nC. Incorrect. Operating flexibility is an advantage of REOCs, not REITs (REITs have restrictions on their activities).",
+     "hint": {
+      "hl": [
+       "preference for investing in public REITs in taxable accounts"
+      ],
+      "rule": "REIT: tax-advantaged (no double taxation); REOC: operating flexibility, no payout requirement."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and Exhibit 2, the value per share for REIT A using valuation Method 2 is closest to:",
+     "options": [
+      "$51.26.",
+      "$62.40.",
+      "$98.30."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It does not follow from the NAV steps.\nB. Correct. NAV: operating real estate = 350,000 ÷ 0.07 = 5,000,000; plus cash and receivables 514,500; less debt and other liabilities 2,014,000 = 3,500,500; ÷ 56,100 shares = $62.40.\nC. Incorrect. It does not follow from the NAV steps.",
+     "hint": {
+      "hl": [
+       "Net asset value",
+       "Assumed cap rate"
+      ],
+      "rule": "NAV per share = (cash NOI ÷ cap rate + cash + receivables − liabilities) ÷ shares."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and Exhibit 2, the value per share of REIT A using valuation Method 1 is closest to:",
+     "options": [
+      "$58.32.",
+      "$74.12.",
+      "$103.40."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It does not follow from the P/AFFO steps.\nB. Correct. AFFO = FFO − non-cash rents − recurring maintenance-type capex = 316,965 − 25,991 − 63,769 = 227,205. AFFO per share = 227,205 ÷ 56,100 = $4.05. Value = 4.05 × 18.3 = $74.12.\nC. Incorrect. It does not follow from the P/AFFO steps.",
+     "hint": {
+      "hl": [
+       "P/AFFO multiple",
+       "Non-cash rents"
+      ],
+      "rule": "AFFO = FFO − non-cash rents − recurring capex; value = AFFO per share × P/AFFO multiple."
+     }
+    },
+    {
+     "q": "The risk factor most likely to adversely affect an investment in REIT B is:",
+     "options": [
+      "tenants' sales per square foot.",
+      "obsolescence of existing space.",
+      "new competitive facilities."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Tenants' sales per square foot is a risk measure for retail (shopping center) REITs.\nB. Incorrect. Obsolescence of existing space is a typical concern for office REITs.\nC. Correct. REIT B is a storage REIT; entry into self-storage is easy, so overbuilding and new competing facilities are the main risk.",
+     "hint": {
+      "hl": [
+       "@row:Property subsector"
+      ],
+      "rule": "Match the property subsector to its main risk: storage = new competitive facilities (easy entry)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Portfolio Management",
+   "group": "new",
+   "body": "Citadel Investment Partners is a global asset management firm offering a wide variety of mutual funds to both institutional and individual investors. Simon Alexander, Citadel’s chief risk officer, is responsible for risk oversight across the firm’s many strategies, as well as communication of any risk issues to the portfolio management, compliance, and executive teams. Alexander oversees a team of six analysts who are responsible for the ongoing calculation and assessment of portfolio risk. Citadel uses a variety of methods when estimating risk, including value at risk (VaR), sensitivity risk measures, and scenario risk measures.\n\nJennifer Woolridge just joined Citadel as a risk analyst, and Alexander is familiarizing her with how the firm measures portfolio risk. In a conversation with Woolridge, Alexander asks her what she has learned regarding the advantages of using VaR as a risk management tool. Woolridge responds, “The advantages of VaR are that it (1) provides an estimate of downside exposure during a worst-case scenario, (2) avoids subjectivity, and (3) can be used for performance evaluation.”\n\nLater that day, Woolridge receives an email from Alexander asking her to estimate the dollar VaR at the 5% level for the firm’s developing market equity fund. Woolridge estimates VaR using the parametric method (assuming normal distribution) with the inputs in Exhibit 1.\n\nExhibit 1 Data for Developing Market Equity Fund\nPortfolio value | $500 million\nDaily expected return | 0.04%\nDaily expected volatility | 1.30%\nAlexander receives a call from Sandra Patterson, Citadel’s CEO. Patterson expresses her concern that the firm’s $500 million multi-asset fund has failed to protect investors during a recent market decline. Alexander drafts an updated risk management policy to present to the investment committee. The goal of this policy is to ensure that the fund limits the likelihood of severe downside losses for investors. The new policy reads as follows:\n\n“The multi-asset fund has a 5-day, 1% VaR limit of $10 million and a cumulative 30-day loss limit of $15 million.”\n\nFollowing the investment committee’s approval, Patterson references the updated risk management policy in her quarterly letter to investors. She states, “At Citadel, we take risk management very seriously. In response to recent investor concerns about volatility in our multi-asset fund, we have implemented a new policy. We limit fund losses to 2% of assets with a 99% level of confidence, with additional measures to limit total losses to 3% over a rolling 30-day period.”",
+   "questions": [
+    {
+     "q": "Woolridge's comments on the advantages of VaR are most likely correct regarding:",
+     "options": [
+      "subjectivity.",
+      "downside exposure.",
+      "performance evaluation."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. VaR relies on subjective inputs: the confidence level, the time horizon and the estimation method.\nB. Incorrect. VaR is not a worst-case scenario; losses can and will exceed VaR.\nC. Correct. VaR can be the basis for risk adjustment of returns, which is needed in performance evaluation.",
+     "hint": {
+      "hl": [
+       "advantages of using VaR",
+       "can be used for performance evaluation"
+      ],
+      "rule": "VaR: useful for risk-adjusted performance; subjective inputs; NOT a worst case."
+     }
+    },
+    {
+     "q": "Using the inputs in Exhibit 1, Woolridge's estimate of VaR is most likely closest to:",
+     "options": [
+      "$6.5 million.",
+      "$10.5 million.",
+      "$18.9 million."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It multiplies the portfolio value by the daily volatility only ($500 million × 1.3%).\nB. Correct. Parametric 5% VaR: 1.65 × 1.30% = 2.145%; subtract the expected return of 0.04%: 2.105% (about 2.11%); × $500 million = about $10.5 million.\nC. Incorrect. It uses 4% instead of 0.04% for the expected return.",
+     "hint": {
+      "hl": [
+       "parametric method (assuming normal distribution)"
+      ],
+      "rule": "Parametric VaR = (z × volatility − expected return) × portfolio value; 5% → z = 1.65."
+     }
+    },
+    {
+     "q": "A limitation of the parametric method that Woolridge used to estimate VaR is that it:",
+     "options": [
+      "assumes returns are normally distributed, which fits poorly with fat tails and options.",
+      "requires a large number of random scenarios to be generated.",
+      "uses actual past returns, so it cannot capture new risks."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The parametric method assumes a normal distribution, which understates tail risk and does not suit portfolios with options.\nB. Incorrect. Generating random scenarios describes Monte Carlo simulation.\nC. Incorrect. Using actual past returns describes the historical simulation method.",
+     "hint": {
+      "hl": [
+       "parametric method (assuming normal distribution)"
+      ],
+      "rule": "Parametric = normal distribution assumption (weak for fat tails and options); historical = past data; Monte Carlo = random scenarios."
+     }
+    },
+    {
+     "q": "Patterson's comments to Citadel's investors are least likely accurate with regard to her:",
+     "options": [
+      "use of confidence levels.",
+      "discussion of limiting losses.",
+      "implied percentage declines from dollar VaR limits."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. A 1% VaR is appropriately a 99% level of confidence.\nB. Correct. VaR is a minimum loss for a given confidence level; it does not limit losses (the loss can be the whole portfolio value), so she is wrong to say the fund limits losses.\nC. Incorrect. VaR can be expressed in percentages: $10 million on $500 million is 2%, and $15 million is 3%.",
+     "hint": {
+      "hl": [
+       "5-day, 1% VaR limit of $10 million",
+       "limit fund losses to 2% of assets with a 99% level of confidence"
+      ],
+      "rule": "VaR = minimum loss at a confidence level, not a loss limit."
+     }
+    }
+   ]
+  }
+ ]
+}
