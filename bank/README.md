@@ -124,3 +124,5 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - 11 Nov: Equity Module 5 quiz re-pasted (38/72, 53%). Unanswered vignettes are listed in bank/unsolved_priority.json (use first in mocks). Practice set 4 extended to 54 questions: Q49-50 VIM residual income re-skin (Orchard Packaging Group; RI $41,800, value $24.50), Q51-54 Parker vignette (Company C paragraph cut because its question is not in the bank). Keys: Q49 B, Q50 C, Q51 C, Q52 C, Q53 C, Q54 A.
 
 - 11 Nov plan: Mock 11 will contain eq6-brady (Equity Module 6 Q20-23) re-skinned with new names and numbers (kept in memory only, not built yet).
+
+- 11 Nov: practice set 6 extended to 52 questions (156 min): Q49-52 short normalized-earnings vignettes (bank/exam/pq6_extra.py; re-skins of Module 6 Q3 definition, LPE Q11, Aaron Q17, Brady Q22 with new names and numbers). Keys: Q49 B, Q50 C, Q51 A, Q52 B. The eq6-brady vignette itself stays reserved for Mock 11.

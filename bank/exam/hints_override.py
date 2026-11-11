@@ -76,3 +76,11 @@ O4={
 'pq4:53':(['Residual income valuations recognize value later than different present value approaches.'],'RI models recognize value EARLIER (large book value up front); in theory RI and DDM give the same value.'),
 'pq4:54':(['Earnings per share will be 32% of beginning book value for the next year.','Cash dividends will be 50% of earnings per share for the next year.',"At the end of the year, the stock's P/B ratio will be 1.1."],'Two-stage RI: V0 = B0 + PV(RI) + PV[(P/B − 1) × ending book value]; compare with the market price.'),
 }
+
+# practice set 6, Q49-52 appended 11 Nov (normalized earnings): key -> (highlight phrases, rule)
+O6={
+'pq6:49':(['normalizes them'],'Normalizing = adjusting revenues and costs (non-market owner pay, personal or non-recurring items) so the private company can be compared with public companies. Not cyclicality, not marketability.'),
+'pq6:50':(['reported EBITDA is EUR 5.20 million','is paid EUR 250,000 a year','earn EUR 520,000 on average'],'Owner paid LESS than market: costs are too low, so normalized EBITDA is LOWER by the gap. Owner paid more than market: add the excess back.'),
+'pq6:51':(['employees are paid about the same as employees of other bakeries in the area','takes no salary','at a rent well below market rates'],'Adjust only what is not at market level (unpaid family work, below- or above-market related-party rent). Items already at market need no adjustment.'),
+'pq6:52':(['is $600,000 a year higher than is typical','costs $40,000','annual operating expenses of $12,000 and annual depreciation of $25,000','at $9 a square foot a year','Market rents for similar space are $7 a square foot'],'Adjust EBIT for each non-market item (include the removed asset\'s depreciation), then apply the tax rate: normalized EBIT × (1 − t).'),
+}
