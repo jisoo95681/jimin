@@ -598,17 +598,20 @@
   .kq-figwrap { margin: 4px 0 10px; text-align: center; }
   .kq-fig { width: 100%; max-width: 360px; height: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--white); }
   .kq-fig text { font: 11px -apple-system, "Segoe UI", sans-serif; fill: var(--navy); }
-  .fc-card { cursor: pointer; padding: 18px 16px 20px; min-height: 52vh; -webkit-tap-highlight-color: transparent; user-select: none; }
-  .fc-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted, #6b7785); margin-bottom: 10px; }
-  .fc-chip { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--aqua-pale); color: var(--navy); }
-  .fc-chip.wrong { background: #fde8e6; color: #b3261e; } .fc-chip.unsure { background: #fff4d6; color: #8a6500; }
-  .fc-q { font-size: 1.12rem; font-weight: 600; line-height: 1.5; margin: 6px 0 14px; }
-  .fc-tap { color: var(--muted, #6b7785); font-size: .92rem; margin-top: 18px; text-align: center; }
-  .fc-sec { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--aqua-pale); line-height: 1.5; }
-  .fc-sec b { display: block; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 3px; color: var(--navy); }
-  .fc-sec.bad { background: #fdf0ef; } .fc-sec.good { background: #eaf6ee; } .fc-sec pre { margin: 0; white-space: pre-wrap; font: inherit; }
-  .fc-bar { height: 5px; border-radius: 3px; background: var(--border); margin: 0 0 10px; overflow: hidden; } .fc-bar i { display: block; height: 100%; background: var(--navy); }
-  .fc-tbl { overflow-x: auto; }
+  .fc-card { cursor: pointer; padding: 16px 16px 18px; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .fc-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .82rem; color: var(--muted, #6b7785); margin-bottom: 12px; }
+  .fc-chip { display: inline-block; padding: 3px 11px; border-radius: 999px; font-size: .8rem; font-weight: 700; }
+  .fc-h { font-size: 1.42rem; font-weight: 800; line-height: 1.28; margin: 2px 0 14px; }
+  .fc-sec { margin: 10px 0 0; padding: 10px 13px; border-radius: 10px; line-height: 1.5; }
+  .fc-sec b { display: block; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; opacity: .75; }
+  .fc-sec pre { margin: 0; white-space: pre-wrap; font: inherit; }
+  .fc-sec.fx { background: #fff8e1; border-left: 5px solid #f2b705; font-size: 1.02rem; font-weight: 600; }
+  .fc-sec.rule { background: #eaf2fb; border-left: 5px solid #3b7dd8; }
+  .fc-sec.tb { background: var(--aqua-pale); border-left: 5px solid #2a9d8f; overflow-x: auto; }
+  .fc-ex { margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: .88rem; color: var(--muted, #5b6672); line-height: 1.45; }
+  .fc-a { color: #1b7a3a; font-weight: 700; margin-top: 4px; } .fc-w { color: #b3261e; margin-top: 3px; }
+  .fc-tap { color: var(--muted, #6b7785); font-size: .88rem; margin-top: 14px; text-align: center; }
+  .fc-bar { height: 5px; border-radius: 3px; background: var(--border); margin: 0 0 10px; overflow: hidden; } .fc-bar i { display: block; height: 100%; }
   .fc-ctl { display: flex; gap: 8px; margin: 12px 0 0; flex-wrap: wrap; }
   .kq-table { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-size: .92rem; }
   .kq-table th, .kq-table td { border: 1px solid var(--border); padding: 8px 9px; text-align: left; vertical-align: top; }
@@ -780,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v231 · 2026-11-12";
+  const APP_VERSION = "v232 · 2026-11-12";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1628,7 +1631,7 @@
     qb.onclick = () => { if (qq.length) exQuick(); };
     app.append(qb);
     const fb = el("button", { className: "nt-item" });
-    fb.append(el("b", {}, "Flash cards"), el("span", {}, `${plural(FLASH.length, "card")} · mistakes from Mock 6-10 and Practice sets 1-4 · by subject, tap to flip`));
+    fb.append(el("b", {}, "Flash cards"), el("span", {}, `${plural(FLASH.length, "card")} · mistakes from Mock 6-10 and Practice sets 1-4 · one rule per card, tap for the next`));
     fb.onclick = () => exFlashHub();
     app.append(fb);
     const st = exLoad();
@@ -1703,7 +1706,7 @@
     backTo = () => exFlashHub("back");
     app.append(nav("Exam", () => examHub("back")));
     app.append(el("h1", { className: "title" }, "Flash cards"),
-      el("p", { className: "sub" }, "One card per screen. Read the question, try to recall why you got it wrong and which rule fixes it, then tap to check. Tap again for the next card. Tables from your notes appear when the topic has one."));
+      el("p", { className: "sub" }, "One card per screen with the rule, the formula and the notes table already shown: glance, remember, tap for the next card. Each subject has its own colour."));
     const subs = [...new Set(FLASH.map(c => c.s))];
     const add = (title, list) => {
       const b = el("button", { className: "nt-item" });
@@ -1714,10 +1717,11 @@
     add("All subjects", FLASH);
     subs.forEach(s => add(s, FLASH.filter(c => c.s === s)));
   }
-  function exFlashRun(list, title, shuffled, i = 0, shown = false) {
+  const FC_COL = { "Ethics": "#7b5ea7", "FSA": "#1f77b4", "Equity": "#2a9d8f", "Fixed Income": "#e07a1f", "Derivatives": "#c0392b", "Quant": "#4c6ef5", "Portfolio Management": "#2e7d32", "Economics": "#b8860b", "Corporate Issuers": "#8d5524", "Alternative Investments": "#d6336c" };
+  function exFlashRun(list, title, shuffled, i = 0) {
     let cards = list.slice();
     if (shuffled) for (let k = cards.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [cards[k], cards[j]] = [cards[j], cards[k]]; }
-    const state = { i, shown };
+    const state = { i };
     const draw = () => {
       screen("fwd");
       backTo = () => exFlashHub("back");
@@ -1725,34 +1729,33 @@
       if (state.i >= cards.length) {
         app.append(el("h1", { className: "title" }, "Done"), el("p", { className: "sub" }, `${plural(cards.length, "card")} in ${title}.`));
         const again = el("button", { className: "btn" }, "Go again"), shuf = el("button", { className: "btn" }, "Shuffle and go again");
-        again.onclick = () => { state.i = 0; state.shown = false; draw(); };
+        again.onclick = () => { state.i = 0; draw(); };
         shuf.onclick = () => exFlashRun(list, title, true);
         const r = el("div", { className: "row" }); r.append(again, shuf); app.append(r);
         return;
       }
-      const c = cards[state.i];
-      app.append(el("div", { className: "sub" }, `${title} · card ${state.i + 1} of ${cards.length}`));
-      const bar = el("div", { className: "fc-bar" }); bar.append(el("i", { style: `width:${Math.round((state.i + 1) / cards.length * 100)}%` })); app.append(bar);
-      const card = el("div", { className: "card fc-card" });
+      const c = cards[state.i], col = FC_COL[c.s] || "#1f4e79";
+      app.append(el("div", { className: "sub" }, `${title} · ${state.i + 1} / ${cards.length}`));
+      const bar = el("div", { className: "fc-bar" }); bar.append(el("i", { style: `width:${Math.round((state.i + 1) / cards.length * 100)}%;background:${col}` })); app.append(bar);
+      const card = el("div", { className: "card fc-card", style: `border-top:6px solid ${col}` });
       const meta = el("div", { className: "fc-meta" });
-      meta.append(el("span", {}, `${c.tag} · ${c.s}`), el("span", { className: "fc-chip " + (c.pick === c.key ? "unsure" : "wrong") }, c.pick === c.key ? "right, unsure" : `I chose ${c.pick}, answer ${c.key}`));
-      card.append(meta, el("div", { className: "fc-q" }, c.q));
-      if (!state.shown) {
-        card.append(el("div", { className: "fc-tap" }, "Why did it go wrong, and what rule fixes it? Tap to check"));
-      } else {
-        const sec = (cls, label, text) => { if (!text) return; const d = el("div", { className: "fc-sec " + cls }); d.append(el("b", {}, label)); const p = el("pre", {}); p.textContent = text; d.append(p); card.append(d); };
-        sec("good", "Correct answer", c.ans);
-        sec("bad", c.pick === c.key ? "Why I was unsure" : "Why I got it wrong", c.mis);
-        sec("", "Fix / rule to keep", c.fix);
-        sec("", "Formula", c.fx);
-        (c.tb || []).forEach(t => { const q = KEYQ.find(x => x.type === "table" && x.q === t); if (q) { const d = el("div", { className: "fc-sec" }); d.append(el("b", {}, "From your notes"), kqTableEl(q)); card.append(d); } });
-        card.append(el("div", { className: "fc-tap" }, state.i + 1 < cards.length ? "Tap for the next card" : "Tap to finish"));
-      }
-      card.onclick = () => { if (!state.shown) state.shown = true; else { state.i++; state.shown = false; } draw(); window.scrollTo(0, 0); };
+      const chip = el("span", { className: "fc-chip", style: `background:${col};color:#fff` }, c.s);
+      meta.append(chip, el("span", {}, c.tag + (c.pick === c.key ? " · right, unsure" : " · missed")));
+      card.append(meta, el("div", { className: "fc-h", style: `color:${col}` }, c.h || c.fix));
+      const sec = (cls, label, text) => { if (!text) return; const d = el("div", { className: "fc-sec " + cls }); d.append(el("b", {}, label)); const p = el("pre", {}); p.textContent = text; d.append(p); card.append(d); };
+      sec("fx", "Formula", c.fx);
+      sec("rule", "Rule", c.fix);
+      (c.tb || []).forEach(t => { const q = KEYQ.find(x => x.type === "table" && x.q === t); if (q) { const d = el("div", { className: "fc-sec tb" }); d.append(el("b", {}, "From your notes"), kqTableEl(q)); card.append(d); } });
+      const ex = el("div", { className: "fc-ex" });
+      ex.append(el("div", {}, c.q), el("div", { className: "fc-a" }, "✓ " + c.ans));
+      if (c.pick !== c.key) ex.append(el("div", { className: "fc-w" }, "✗ " + c.mis)); 
+      card.append(ex);
+      card.append(el("div", { className: "fc-tap" }, state.i + 1 < cards.length ? "Tap for the next card" : "Tap to finish"));
+      card.onclick = () => { state.i++; draw(); window.scrollTo(0, 0); };
       app.append(card);
       const ctl = el("div", { className: "fc-ctl" });
       const prev = el("button", { className: "btn" }, "‹ Previous"); prev.disabled = state.i === 0;
-      prev.onclick = () => { state.i--; state.shown = false; draw(); window.scrollTo(0, 0); };
+      prev.onclick = () => { state.i--; draw(); window.scrollTo(0, 0); };
       const shuf = el("button", { className: "btn" }, "Shuffle"); shuf.onclick = () => exFlashRun(list, title, true);
       ctl.append(prev, shuf); app.append(ctl);
     };

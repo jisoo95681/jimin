@@ -1,7 +1,8 @@
 // Flash cards: wrong questions of Mock 6-10 and Practice sets 1-4 (built by bank/flash_src/build.py).
-// s = subject, q = question, ans = correct answer, mis = why it went wrong, fix = rule, fx = formula, tb = titles of tables in the key notes (KEYQ type "table").
+// h = headline, s = subject, q = question, ans = correct answer, mis = why it went wrong, fix = rule, fx = formula, tb = titles of tables in the key notes (KEYQ type "table").
 const FLASH = [
  {
+  "h": "Standard VII(B): state the designation, never imply superiority or promise results",
   "s": "Ethics",
   "tag": "Set 1 Q21",
   "q": "Which statement in Vass's brochure complies with Standard VII(B): Reference to CFA Institute, the CFA Designation and the CFA Program?",
@@ -14,6 +15,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Standard V(B): separate fact from opinion, and say how uncertain a forecast is",
   "s": "Ethics",
   "tag": "Set 3 Q9",
   "q": "Scott works for a regional brokerage firm. He estimates that Walkton Industries will increase its dividend by US$1.50 a share during the next year. He realizes that this increase is contingent on pending legislation that would, if enacted, give Walkton a substantial tax break. The US representative for Walkton’s home district has told Scott that, although she is lobbying hard for the bill and prospects for its passage are favorable, concern of the US Congress over the federal deficit could cause the tax bill to be voted down. Walkton Industries has not made any statements about a change in dividend policy. Scott writes in his research report, “We expect Walkton’s stock price to rise by at least US$8.00 a share by the end of the year because the dividend will increase by US$1.50 a share. Investors buying the stock at the current time should expect to realize a total return of at least 15% on the stock.” According to the Standards:",
@@ -26,6 +28,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Least-likely-violated: mark every Standard, pick the clean one",
   "s": "Ethics",
   "tag": "Mock 6 Q43",
   "q": "In relation to Kowalski’s handling of the Talkwave stock recommendation, which of the following CFA Institute Standards of Professional Conduct did he least likely violate?",
@@ -38,6 +41,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "VI(C) referral fees: notify clients at least QUARTERLY",
   "s": "Ethics",
   "tag": "Mock 8 Q39",
   "q": "Given O’Connor’s second statement to Jensen, which further action should O’Connor least likely take to comply with required or recommended procedures for the CFA Institute Standards of Professional Conduct?",
@@ -50,6 +54,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "I(B): no paid travel; only token gifts",
   "s": "Ethics",
   "tag": "Mock 10 Q9",
   "q": "Does Darko violate the Standards regarding the Bloom conference?",
@@ -62,6 +67,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Accruals regression: the residual is the discretionary part",
   "s": "FSA",
   "tag": "Set 1 Q33",
   "q": "The residual from Lindahl's accruals regression represents:",
@@ -76,6 +82,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Diluted shares: options AND RSUs use the treasury stock method with unrecognised expense",
   "s": "FSA",
   "tag": "Set 2 Q42",
   "q": "Kiruna's diluted shares are closest to:",
@@ -88,6 +95,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Bank funding and an inverted yield curve: banks borrow short and lend long",
   "s": "FSA",
   "tag": "Set 4 Q6",
   "q": "Which bank has the more stable funding, and what effect would an inverted yield curve most likely have on bank net interest revenue?",
@@ -102,6 +110,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Partial goodwill: goodwill = price − your % × FV of net assets; NCI = their % × FV of net assets",
   "s": "FSA",
   "tag": "Set 4 Q14",
   "q": "Under the partial goodwill method, goodwill and the non-controlling interest are closest to:",
@@ -114,6 +123,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "RSU expense = grant-date fair value × RSUs vested, less the reversal for forfeitures",
   "s": "FSA",
   "tag": "Set 4 Q21",
   "q": "Kiruna's RSU compensation expense for the year is closest to:",
@@ -129,6 +139,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Vested RSUs are common shares (basic count); only unvested RSUs are potentially dilutive",
   "s": "FSA",
   "tag": "Set 4 Q24",
   "q": "The vesting of the RSUs increases Kiruna's basic shares outstanding by:",
@@ -141,6 +152,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Remeasurement and translation: net monetary liabilities lose when the foreign currency rises; net assets gain",
   "s": "FSA",
   "tag": "Set 4 Q40",
   "q": "Because the local currency appreciated, Subsidiary A's remeasurement result and Subsidiary B's CTA are most likely:",
@@ -155,6 +167,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Temporal method with a rising foreign currency and rising prices: FIFO gives the highest gross margin",
   "s": "FSA",
   "tag": "Set 4 Q41",
   "q": "For a subsidiary with an appreciating local currency and rising prices, which choices give the higher translated gross margin?",
@@ -169,6 +182,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Earnings quality red flag: CFO persistently below operating income",
   "s": "FSA",
   "tag": "Mock 6 Q23",
   "q": "Which of the following reasons best supports Wexford's disagreement with her team about DB's overall performance?",
@@ -184,6 +198,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Pension discount rate above peers = aggressive",
   "s": "FSA",
   "tag": "Mock 8 Q30",
   "q": "Compared with its industry competitors, Coleridge's pension discount rate assumption is most likely:",
@@ -198,6 +213,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Recurring losses on asset sales = understated depreciation",
   "s": "FSA",
   "tag": "Mock 8 Q31",
   "q": "With respect to the sale of its long-term assets, Coleridge most likely displays:",
@@ -210,6 +226,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Lower pension discount rate → liabilities ↑, equity ↓, D/E ↑",
   "s": "FSA",
   "tag": "Mock 8 Q32",
   "q": "With respect to the defined benefit pension plan assumption, which of the following will decrease after Thorsell's adjustment?",
@@ -225,6 +242,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Basel III: more equity vs RWA and stable funding, not earnings quality",
   "s": "FSA",
   "tag": "Mock 9 Q25",
   "q": "Which of the enhancements Mori describes regarding the Basel III regulatory framework is most accurate?",
@@ -239,6 +257,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "P&C hard market → new entrants → softer market",
   "s": "FSA",
   "tag": "Mock 9 Q26",
   "q": "If Ishikawa's interpretation of the current phase of the property and casualty market is correct, a cyclical shift is most likely to result in:",
@@ -253,6 +272,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Combined ratio = loss ratio + expense ratio (> 100% = underwriting loss)",
   "s": "FSA",
   "tag": "Mock 9 Q28",
   "q": "KH's combined ratio indicates that its underwriting business, before investment income, is:",
@@ -267,6 +287,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "DuPont: check the column order, rebuild assets and equity",
   "s": "FSA",
   "tag": "Mock 10 Q1",
   "q": "Based on the 3 years of data provided for DuPont analysis, Westbrook's financial leverage has been:",
@@ -279,6 +300,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "FCFE: working capital excludes cash, and both investment terms use (1 − debt ratio)",
   "s": "Equity",
   "tag": "Set 1 Q16",
   "q": "Grünwald's FCFE, assuming investment is financed at the target debt ratio, is closest to:",
@@ -293,6 +315,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Model choice: FCFE when dividends do not reflect the ability to pay",
   "s": "Equity",
   "tag": "Set 1 Q17",
   "q": "Weller should most likely value Grünwald with:",
@@ -307,6 +330,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "DLOC and DLOM: convert the control premium, then multiply the discounts",
   "s": "Equity",
   "tag": "Set 1 Q42",
   "q": "The total discount applied to a controlling value to value Hallberg's minority, non-marketable stake is closest to:",
@@ -321,6 +345,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Residual income = net income − equity charge (cost of equity × beginning equity)",
   "s": "Equity",
   "tag": "Set 4 Q49",
   "q": "Using the method that deducts an equity charge, OPG's residual income is closest to:",
@@ -333,6 +358,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Perpetual residual income: value = book value per share + RI per share ÷ r",
   "s": "Equity",
   "tag": "Set 4 Q50",
   "q": "Using the residual income model, with the residual income expected to continue indefinitely, OPG's intrinsic value per share is closest to:",
@@ -345,6 +371,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Residual income recognises value EARLIER; in theory it gives the same value as DDM and FCF",
   "s": "Equity",
   "tag": "Set 4 Q53",
   "q": "Are Parker's statements comparing residual income models with different present value approaches both correct?",
@@ -357,6 +384,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Two-stage residual income with a P/B terminal value",
   "s": "Equity",
   "tag": "Set 4 Q54",
   "q": "Based on the information given, Parker should conclude that Company D’s share is:",
@@ -369,6 +397,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "MVA = market value of the whole firm − book value of capital",
   "s": "Equity",
   "tag": "Mock 6 Q25",
   "q": "Based on the information in Exhibit 1, the market value added of the hypothetical firm is closest to:",
@@ -381,6 +410,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Intrinsic value > book value → PV of future RI is positive",
   "s": "Equity",
   "tag": "Mock 6 Q26",
   "q": "The most appropriate response to Ncube’s Question 1 would be that the present value of future residual earnings is expected to be:",
@@ -393,6 +423,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Multistage RI: B0 + PV(RI) + PV(continuing RI)",
   "s": "Equity",
   "tag": "Mock 7 Q12",
   "q": "Based on Exhibits 2 and 3 and the multistage RI model, Castovan should estimate the intrinsic value of TTCI to be closest to:",
@@ -405,6 +436,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "High growth ↑ P/E, high risk ↓ P/E",
   "s": "Equity",
   "tag": "Mock 7 Q38",
   "q": "Ferro's observation about Corbin Foods' high P/E is best described as:",
@@ -417,6 +449,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Index P/E = weighted harmonic mean",
   "s": "Equity",
   "tag": "Mock 7 Q39",
   "q": "The weighted harmonic mean of the P/Es in Ferro's index (Exhibit 2) is closest to:",
@@ -429,6 +462,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "H-model: linear fade only; long or large growth gap → multistage",
   "s": "Equity",
   "tag": "Mock 8 Q20",
   "q": "Jackson’s understanding of when he would switch from an H-model to a spreadsheet model is best described as:",
@@ -441,6 +475,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "FCFF for intangible-heavy firms with only special dividends",
   "s": "Equity",
   "tag": "Mock 8 Q25",
   "q": "Based on Company A’s characteristics, which of the following absolute valuation models is most appropriate for valuing that company?",
@@ -453,6 +488,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "High leverage + brand intangibles → EV/sales",
   "s": "Equity",
   "tag": "Mock 9 Q15",
   "q": "Which of the following is the most appropriate metric for Ashworth to use in valuing Harlan?",
@@ -465,6 +501,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Forward price of a zero-coupon bond: exponent = length of the forward period",
   "s": "Fixed Income",
   "tag": "Set 1 Q35",
   "q": "The forward price, two years from now, of a zero-coupon bond paying 1 at year 5 is closest to:",
@@ -477,6 +514,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Callable bond when rates fall: duration falls and convexity turns negative",
   "s": "Fixed Income",
   "tag": "Set 2 Q12",
   "q": "If interest rates fall sharply, compared with Bond S, Bond Q's effective duration most likely:",
@@ -491,6 +529,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Calibrated tree: an option-free bond has the same value whatever the volatility",
   "s": "Fixed Income",
   "tag": "Set 2 Q22",
   "q": "For an option-free bond, the value found by discounting at spot rates compared with the value from a calibrated binomial tree is:",
@@ -503,6 +542,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Capped floater on a binomial tree: cap the coupon at each node, then work backward",
   "s": "Fixed Income",
   "tag": "Set 4 Q47",
   "q": "The value of the capped floater is closest to:",
@@ -515,6 +555,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Tree calibration inputs: volatility, rate model, benchmark bonds (not the bond itself)",
   "s": "Fixed Income",
   "tag": "Mock 6 Q40",
   "q": "When describing calibrating the interest rate tree, Hollis is least likely correct with respect to the:",
@@ -527,6 +568,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Credit migration: E(R) = YTM + Σ p × (−MD × Δspread)",
   "s": "Fixed Income",
   "tag": "Mock 7 Q30",
   "q": "Based on Exhibit 1, the one-year expected return on the Entre Corp. bond is closest to:",
@@ -541,6 +583,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Credit spread via CVA: VND → CVA → YTM(VND − CVA) − benchmark",
   "s": "Fixed Income",
   "tag": "Mock 7 Q31",
   "q": "Based on Kowalski’s assumptions and Exhibit 2 and Exhibit 3, the credit spread on the VraiRive bond is closest to:",
@@ -556,6 +599,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "LGD = 1 − recovery; spread = YTM(VND − CVA) − benchmark",
   "s": "Fixed Income",
   "tag": "Mock 8 Q10",
   "q": "Based on Brandt's assumptions and Exhibits 2 and 3, the credit spread on the Norvalle bond is closest to:",
@@ -571,6 +615,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Risk-neutral PD ↓ → CVA ↓ → credit spread ↓",
   "s": "Fixed Income",
   "tag": "Mock 8 Q11",
   "q": "The most appropriate response to Brandt's question relating to the credit spread is:",
@@ -585,6 +630,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Pure expectations: forward rates = expected future spot rates",
   "s": "Fixed Income",
   "tag": "Mock 9 Q6",
   "q": "Fischer's view that the spot curve one year from today will reflect the current forward curve is most consistent with:",
@@ -599,6 +645,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Flight to quality + bullish flattening: extend duration, barbell",
   "s": "Fixed Income",
   "tag": "Mock 9 Q8",
   "q": "The strategy best suited to exploit the second analyst's expected changes to the current fixed-income environment is to:",
@@ -613,6 +660,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Forward contract value after initiation: discount to today",
   "s": "Derivatives",
   "tag": "Set 1 Q30",
   "q": "The current value of Bellini's forward position is closest to:",
@@ -627,6 +675,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Turning fixed-rate debt into floating: receive fixed, pay floating",
   "s": "Derivatives",
   "tag": "Set 1 Q37",
   "q": "To meet Brandt's objective, Harlow should enter into a swap in which it:",
@@ -639,6 +688,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Futures arbitrage: compare market price with the model price first",
   "s": "Derivatives",
   "tag": "Set 2 Q29",
   "q": "Based on the equilibrium price, the arbitrage strategy for the ten-year note futures is to:",
@@ -653,6 +703,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Option Greeks: for a long put delta and rho are negative; gamma and vega are positive",
   "s": "Derivatives",
   "tag": "Set 4 Q19",
   "q": "Which Greeks are negative for a long put?",
@@ -667,6 +718,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Long FRA settled in advance: (MRR − FRA rate) × days/360 × notional, then discount at MRR",
   "s": "Derivatives",
   "tag": "Set 4 Q28",
   "q": "In Situation 2, the settlement amount Mori receives at FRA expiration is closest to:",
@@ -679,6 +731,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Implied vol comes from market prices; the surface spans strikes AND maturities",
   "s": "Derivatives",
   "tag": "Mock 6 Q36",
   "q": "Whose comment regarding implied volatility is most likely correct?",
@@ -693,6 +746,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Currency swap: each fixed rate from its own country's PV factors",
   "s": "Derivatives",
   "tag": "Mock 7 Q23",
   "q": "Based on the information in Exhibit 1, the interest rate that the Foundation would receive in the proposed currency swap is closest to:",
@@ -707,6 +761,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Bond futures arbitrage: carry the bond forward, compare with CF × futures + AI",
   "s": "Derivatives",
   "tag": "Mock 8 Q1",
   "q": "Based on Exhibit 1 and assuming annual compounding, the arbitrage profit on the bond futures contract is closest to:",
@@ -721,6 +776,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Option value tomorrow = today + theta",
   "s": "Derivatives",
   "tag": "Mock 10 Q23",
   "q": "Holding all else constant, the value of the call on Hillcrest one day after Liu's sale will be closest to:",
@@ -735,6 +791,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "American option: take max(continuation, exercise) at EVERY node",
   "s": "Derivatives",
   "tag": "Mock 10 Q24",
   "q": "Using the two-period binomial option pricing model, the value of the American put on Marlow Corporation is closest to:",
@@ -747,6 +804,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Text cleansing removes noise; wrangling works on the tokens",
   "s": "Quant",
   "tag": "Set 2 Q16",
   "q": "Removing HTML tags, punctuation, numbers and white space is part of:",
@@ -759,6 +817,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "AIC is for forecasting, BIC for goodness of fit; for both the LOWER value is better",
   "s": "Quant",
   "tag": "Set 3 Q39",
   "q": "Based on AIC and BIC, which model is preferred for forecasting and which for goodness of fit?",
@@ -773,6 +832,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Significance: |t| vs the critical t (n − k − 1 df)",
   "s": "Quant",
   "tag": "Mock 7 Q33",
   "q": "Based on her regression results in Exhibit 2, using a 5% level of significance, Smith should conclude that:",
@@ -787,6 +847,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "ARCH test: squared residuals on lagged squared residuals",
   "s": "Quant",
   "tag": "Mock 8 Q15",
   "q": "Do the estimates of the residual regression parameters indicate that the AR(1) model on Δln(PUBLt) is misspecified?",
@@ -799,6 +860,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "SEE = std dev of errors of the DEPENDENT variable",
   "s": "Quant",
   "tag": "Mock 9 Q34",
   "q": "Dunn explains the standard error of estimate (SEE) to Larsen with three points. Point 1: If there is a strong relationship between the variables and the SEE is small, the individual estimation errors will also be small. Point 2: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable. Point 3: Any violation of the basic assumptions of a multiple regression model is going to affect the SEE. How many of Dunn's points are most accurate?",
@@ -811,6 +873,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "One slope → t-test; all slopes → F-test",
   "s": "Quant",
   "tag": "Mock 9 Q36",
   "q": "Dunn wants to test whether the marketing coefficient of 2.1 is still significantly different from zero after a year of flat revenues. He should compare:",
@@ -825,6 +888,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Random walk as AR(1): b0 ≈ 0, b1 ≈ 1",
   "s": "Quant",
   "tag": "Mock 10 Q13",
   "q": "Duarte's statement that the coefficients depicted in Exhibit 1 are consistent with a random walk is most likely:",
@@ -839,6 +903,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Random walk: best forecast = the current value",
   "s": "Quant",
   "tag": "Mock 10 Q14",
   "q": "If Nair is correct regarding the trailing P/E time series, the best forecast of next period's trailing P/E is most likely to be the:",
@@ -853,6 +918,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "ARCH(1): slope c1 significantly different from 0",
   "s": "Quant",
   "tag": "Mock 10 Q15",
   "q": "The results depicted in Exhibit 2 are best described as consistent with a regression that has ARCH(1) errors because:",
@@ -865,6 +931,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Style from active sensitivities (fund − benchmark): positive size = small cap, negative value = growth",
   "s": "Portfolio Management",
   "tag": "Set 2 Q10",
   "q": "Based on its sensitivities, the fund's style relative to the benchmark is best described as:",
@@ -879,6 +946,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Index fund that meets its objective: active return 0, so IR = 0",
   "s": "Portfolio Management",
   "tag": "Set 2 Q34",
   "q": "The information ratio of the index fund in Point 1 is most likely:",
@@ -891,6 +959,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Real rates follow REAL growth and its volatility, not nominal growth",
   "s": "Portfolio Management",
   "tag": "Set 3 Q34",
   "q": "Based on Point 3, real interest rates are most likely higher in:",
@@ -903,6 +972,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Discount rate for rents: tenant credit risk is in the discount rate; faster rent growth is in the cash flow",
   "s": "Portfolio Management",
   "tag": "Set 3 Q43",
   "q": "For Observation 3, the commercial building's rental income should most likely be discounted at:",
@@ -917,6 +987,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "ETF completion = fill a gap in benchmark exposure",
   "s": "Portfolio Management",
   "tag": "Mock 6 Q31",
   "q": "Sorensen’s explanation of benchmark exposure most likely describes portfolio:",
@@ -932,6 +1003,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Macro factor model: expected return = intercept (surprises = 0)",
   "s": "Portfolio Management",
   "tag": "Mock 7 Q41",
   "q": "Assuming that the information in Exhibit 1 reflects the analyst's view, the expected return for Portfolio 1 is closest to:",
@@ -946,6 +1018,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Macro model: surprises, sensitivities last. Fundamental: attributes, sensitivities first",
   "s": "Portfolio Management",
   "tag": "Mock 7 Q43",
   "q": "Which of Lam’s statements regarding macroeconomic factor models and fundamental factor models is correct?",
@@ -960,6 +1033,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Multifactor models serve active AND passive management",
   "s": "Portfolio Management",
   "tag": "Mock 7 Q44",
   "q": "Whose statement regarding the use of multifactor models in active and passive portfolio management is correct?",
@@ -974,6 +1048,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "VaR advantage: performance evaluation (not a worst case)",
   "s": "Portfolio Management",
   "tag": "Mock 9 Q41",
   "q": "Whitfield's comments on the advantages of VaR are most likely correct regarding:",
@@ -988,6 +1063,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Parametric VaR assumes normality: weak for fat tails and options",
   "s": "Portfolio Management",
   "tag": "Mock 9 Q43",
   "q": "A limitation of the parametric method that Whitfield used to estimate VaR is that it:",
@@ -1002,6 +1078,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Growth channels: capital deepening and technology, not a cheap currency",
   "s": "Economics",
   "tag": "Mock 6 Q19",
   "q": "The channel that is least likely to help India overcome its challenge of lacking significant natural resources is:",
@@ -1016,6 +1093,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Inflation threat → central bank SELLS securities, raises rates",
   "s": "Economics",
   "tag": "Mock 7 Q20",
   "q": "Which of the following will Sengupta most likely use to address the monetary issues relating to greater growth of the island’s economy? The central bank will:",
@@ -1028,6 +1106,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Break-even inflation = nominal − real yield; more uncertainty → higher BEI",
   "s": "Economics",
   "tag": "Mock 8 Q6",
   "q": "Which of Simmons’ statements concerning inflation-linked bonds is most likely correct?",
@@ -1040,6 +1119,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Spreads narrow → weaker credits improve most",
   "s": "Economics",
   "tag": "Mock 8 Q8",
   "q": "Which of Redfield’s comments regarding the Australian corporate bonds in Exhibit 2 is most likely correct?",
@@ -1054,6 +1134,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Poor governance and social risk → wider credit spread",
   "s": "Corporate Issuers",
   "tag": "Mock 6 Q16",
   "q": "After integrating the ESG factors, the credit spread on KT Hotels’ bonds is most likely to:",
@@ -1066,6 +1147,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "ESG scoring: score every feature, then add",
   "s": "Corporate Issuers",
   "tag": "Mock 8 Q34",
   "q": "Based on the ESG data analysis firm's scoring system and Exhibit 1, compared to PlastiKa, ChemiKa most likely ranks:",
@@ -1078,6 +1160,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Retiring debt → better rating → LOWER cost of capital",
   "s": "Corporate Issuers",
   "tag": "Mock 9 Q9",
   "q": "Which of the following statements about Mercury's motivations for the strategic real estate plan is incorrect?",
@@ -1090,6 +1173,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Spin-off = shares to existing holders, no cash raised",
   "s": "Corporate Issuers",
   "tag": "Mock 9 Q12",
   "q": "A spin-off of the Downstream segment would most likely:",
@@ -1102,6 +1186,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "NAVPS: capitalise NOI, then add other assets and subtract debt",
   "s": "Alternative Investments",
   "tag": "Set 3 Q21",
   "q": "Alpenhaus's NAVPS is closest to:",
@@ -1114,6 +1199,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "REIT = pass-through (no double tax); REOC = taxable company",
   "s": "Alternative Investments",
   "tag": "Mock 6 Q2",
   "q": "Compared to Investment 1 recommended by Ricci, Investment 2 most likely:",
@@ -1128,6 +1214,7 @@ const FLASH = [
   ]
  },
  {
+  "h": "Merger arbitrage gain = short proceeds − cost of the target shares",
   "s": "Alternative Investments",
   "tag": "Mock 8 Q43",
   "q": "If the merger between AC and TC closes successfully, Fund 2's merger arbitrage trade will result in a gain closest to:",
@@ -1140,6 +1227,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Merger arbitrage main risk = the deal fails",
   "s": "Alternative Investments",
   "tag": "Mock 8 Q44",
   "q": "The main risk of Fund 2's merger arbitrage trade is that:",
@@ -1152,6 +1240,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Storage REIT risk = new competing facilities",
   "s": "Alternative Investments",
   "tag": "Mock 9 Q40",
   "q": "The risk factor most likely to adversely affect an investment in REIT B is:",
@@ -1164,6 +1253,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Unreimbursed expenses as a % of EGI",
   "s": "Alternative Investments",
   "tag": "Mock 10 Q37",
   "q": "Which of the following statements is most accurate regarding the effect of unreimbursed operating expenses on the NOI of the New York City and Boston properties?",
@@ -1176,6 +1266,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "High vacancy = oversupply / recession phase",
   "s": "Alternative Investments",
   "tag": "Mock 10 Q38",
   "q": "Which of the following responses is most accurate regarding Martins’s Statement 1 and Statement 2?",
@@ -1188,6 +1279,7 @@ const FLASH = [
   "tb": []
  },
  {
+  "h": "Direct cap uses a normalized NOI when NOI is disrupted",
   "s": "Alternative Investments",
   "tag": "Mock 10 Q40",
   "q": "Given Martins’s comment in Statement 2 about the office property in New York City, which of the following approaches to estimating property value is most appropriate?",
