@@ -13,7 +13,7 @@ h1{font-size:19pt;margin:0 0 2mm}
 .sub{color:#555;font-size:9.5pt;margin:0 0 4mm}
 .box{border:1px solid #bbb;border-radius:4px;padding:3mm 4mm;margin:0 0 5mm;font-size:9.6pt;background:#f7f8fa}
 .sec{break-inside:avoid-column}
-h2{font-size:12.5pt;margin:0 0 2mm;padding:1.2mm 2.5mm;background:#1f4e79;color:#fff;border-radius:3px;break-after:avoid;column-span:none}
+h2{font-size:15pt;margin:0 0 2mm;padding:1.2mm 2.5mm;background:#1f4e79;color:#fff;border-radius:3px;break-after:avoid;column-span:none}
 .cols{column-count:2;column-gap:9mm}
 .q{break-inside:avoid;margin:0 0 3.2mm;display:flex;gap:2mm}
 .q .n{font-weight:bold;color:#1f4e79;min-width:12mm;white-space:nowrap}
@@ -24,8 +24,8 @@ h2{font-size:12.5pt;margin:0 0 2mm;padding:1.2mm 2.5mm;background:#1f4e79;color:
 .a b{color:#1f4e79}
 .pb{break-before:page}
 """
-def qsec(s,items):
-    h=f"<h2>{s} ({len(items)})</h2><div class='cols'>"
+def qsec(s,items,first=False):
+    h=f"<h2 class='{'' if first else 'pb'}'>{s} ({len(items)} questions)</h2><div class='cols'>"
     for i,(ss,q,a,st) in enumerate(items,1):
         h+=f"<div class='q'><div class='n'>{ABBR[s]} {i}</div><div class='t'>{'<span class=star>★</span> ' if st else ''}{esc(q)}</div></div>"
     return h+"</div>"
@@ -40,8 +40,8 @@ doc=f"""<!doctype html><html><head><meta charset='utf-8'><title>Concept quiz</ti
 <p class="sub">CFA Level II · {total} one-sentence questions · answers are on the last pages</p>
 <div class="box"><b>How to use:</b> read a question, answer it in your head, then check the answer pages (cover them while you read). Mark the box if you got it right. <span class="star">★</span> = a concept you missed in practice sets 1-3 or Mock 10 ({stars} questions): review these first.</div>
 """
-for s,items in by.items():
-    doc+=qsec(s,items)
+for k,(s,items) in enumerate(by.items()):
+    doc+=qsec(s,items,first=(k==0))
 doc+="<div class='pb'></div><h1>Answers</h1><p class='sub'>Same numbering as the questions. ★ = concept missed before.</p>"
 for s,items in by.items():
     doc+=asec(s,items)
