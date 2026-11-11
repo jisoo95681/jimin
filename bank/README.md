@@ -141,3 +141,5 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - Draw: bank/exam/mock1112_pick.py; build: bank/exam/mock1112.py (names, numbers, answers recomputed; core files mock11_core.json, mock12_core.json) + build.py (3 Ethics units from key notes in mock1112_ethics.json, hints for every non-Ethics question, answer balance). Brady re-skin (Equity private company valuation) is in Mock 11; unsolved residual-income vignette used first.
 
 - 12 Nov: Practice set 4 marked: BABBAAAACACACCCCAACCBBACCCBACBBBCBABBAABABBCCCCCACCCBA = 43/54 (79.6%). Wrong: Q6, 14, 19, 21, 24, 28, 40, 41, 47, 49, 53 (+ right but unsure Q50, Q54 added). PDF: bank/Practice4_wrong_answers.pdf (builder /tmp/gen/pq4/build.py + pdf.mjs; one card per page, subject label top right).
+
+- 12 Nov: Mock 6-10 error notes PDF (user request: summary notes "mistake → fix", formulas for calculation questions, grouped by subject like the concept quiz): bank/Mock6-10_error_notes.pdf, 59 notes (Mock 6: 10, Mock 7: 11, Mock 8: 15, Mock 9: 13, Mock 10: 10; right-but-unsure included). Source bank/notes_src/ (content.py, build.py, pdf.mjs).
