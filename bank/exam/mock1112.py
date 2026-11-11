@@ -440,3 +440,197 @@ add('M11','Financial Statement Analysis',body,[
   [f"Under IFRS the impairment loss is the carrying value of the cash-generating unit minus its recoverable amount: 16,300 − 15,950 = ${ifrs} million (below the goodwill of 700, so it can be fully absorbed by goodwill).",f"This is carrying value minus the fair value of the reporting unit (16,300 − 15,900 = {us}), a US GAAP-style measure.",f"This is goodwill minus implied goodwill (700 − (15,900 − 15,400) = {impl}), also not the IFRS measure."],
   ["@row:Carrying value of cash-generating unit/reporting unit","@row:Recoverable amount of cash-generating unit/reporting unit"],"IFRS: impairment loss = carrying value of the CGU − recoverable amount (allocated first to goodwill).",True),
 ])
+# ===================== M12 Fixed Income: Reeves (bonds with embedded options, readings 24-25; re-skin of the Smith vignette) =====================
+z1,z2,z3=0.8000,1.1017,1.4057; f12,f23=1.4042,2.0164; cp=1.65
+Vs=cp/(1+z1/100)+cp/(1+z2/100)**2+(100+cp)/(1+z3/100)**3; opt=Vs-100
+flat=cp/(1+z1/100)+cp/(1+z1/100)**2+(100+cp)/(1+z1/100)**3-100
+assert [round(opt,4),round(flat,4)]==[0.7322,2.5097]
+body=f"""Paul Reeves, an investment adviser, meets with Helen Fischer to discuss her pending retirement and potential changes to her investment portfolio. Domestic economic activity has been weakening recently, and Reeves's outlook is that equity market values will be lower during the next year. He would like Fischer to consider reducing her equity exposure in favor of adding more fixed-income securities to the portfolio.
+
+Government yields have remained low for an extended period, and Reeves suggests considering investment-grade corporate bonds to provide additional yield above government debt issues. Domestic inflation has accelerated, however, and the consensus forecast among economists is that the central bank, at its next meeting this month, will take actions that will lead to higher interest rates.
+
+Reeves and Fischer review par, spot, and one-year forward rates (Exhibit 1) and four fixed-rate investment-grade bonds issued by Orion Corporation that are being considered for investment (Exhibit 2).
+
+Exhibit 1: Par, Spot, and One-Year Forward Rates (annual coupon payments)
+# Maturity (Years) | Par Rate (%) | Spot Rate (%) | One-Year Forward (%)
+1 | 0.8000 | {z1:.4f} | {z1:.4f}
+2 | 1.1000 | {z2:.4f} | {f12:.4f}
+3 | 1.4000 | {z3:.4f} | {f23:.4f}
+
+Exhibit 2: Selected Fixed-Rate Bonds of Orion Corporation
+# Bond | Annual Coupon | Type of Bond
+Bond 1 | {cp:.4f}% | Straight bond
+Bond 2 | {cp:.4f}% | Convertible bond: currently trading out of the money
+Bond 3 | {cp:.4f}% | Putable bond: putable at par one year and two years from now
+Bond 4 | {cp:.4f}% | Callable bond: callable at par without any protection periods
+Note: All bonds in Exhibit 2 have remaining maturities of exactly three years.
+
+Reeves also states that he recently read a report issued by Hale and Company forecasting that the yield curve could invert within the next six months.
+
+Fischer asks Reeves about the possibility of analyzing bonds that have lower credit ratings than the investment-grade Orion bonds. Reeves discusses four other corporate bonds with Fischer. Exhibit 3 presents selected data on the four bonds.
+
+Exhibit 3: Selected Information on Fixed-Rate Bonds for Argon, Boron, Cobalt, and Neon Corporations
+# Bond | Issuer | Bond Features | Credit Rating
+Bond 5 | Argon Corporation | Coupon 1.70%; Callable in Year 2; OAS of 50 bps | B
+Bond 6 | Boron Corporation | Coupon 1.70%; Callable in Year 2; OAS of 75 bps | B
+Bond 7 | Cobalt Corporation | Coupon 1.70%; Callable in Year 2; OAS of 100 bps | BB
+Bond 8 | Neon Corporation | Coupon 1.70%; Callable in Year 2; OAS of 90 bps | B
+Notes: All bonds have remaining maturities of three years. OAS stands for option-adjusted spread."""
+add('M12','Fixed Income',body,[
+ mkq("Based on Exhibit 2, and assuming that the forecast for interest rates and Reeves's outlook for equity returns are validated, which bond's option is most likely to be exercised?",["Bond 2","Bond 3","Bond 4"],1,
+  ["Lower equity values keep the convertible further out of the money, so the conversion option is not exercised.","Higher interest rates push the price of the putable bond below par, so the put (at par, in one or two years) is likely to be exercised.","The call on Bond 4 is valuable when rates fall (the issuer refinances cheaply); with rates rising, the issuer will not call the bond."],
+  ["will take actions that will lead to higher interest rates","Putable bond: putable at par one year and two years from now","equity market values will be lower"],"Rates up → putable bond worth less than par → put exercised; rates down → callable bond is called; share price down → convertible stays out of the money."),
+ mkq("Based on the information in Exhibit 1 and Exhibit 2, the value of the embedded option in Bond 4 is closest to:",["0.0000.",f"{opt:.4f}.",f"{flat:.4f}."],1,
+  ["A callable bond with no call protection can be called immediately; a nil option value would imply the straight bond is worth exactly par, but its coupon (1.65%) exceeds the 3-year par rate (1.40%).",f"Straight bond value using the spot rates = 1.65 ÷ 1.0080 + 1.65 ÷ 1.011017² + 101.65 ÷ 1.014057³ = {Vs:.4f}. A callable bond with no protection cannot be worth more than its call price of 100, so the call value = {Vs:.4f} − 100 = {opt:.4f}.",f"This discounts all the cash flows at the one-year spot rate (0.80%) instead of at the matching spot rates: {flat:.4f}."],
+  ["callable at par without any protection periods","@row:3"],"Callable bond value = straight bond value (spot-rate discounting) − call value; with no protection the price is capped at the call price (100), so call value = straight value − 100.",True),
+ mkq("If the Hale and Company forecast comes true, which of the following is most likely to occur? The value of the embedded option in:",["Bond 3 decreases.","Bond 4 decreases.","both Bond 3 and Bond 4 increases."],0,
+  ["As the yield curve goes from upward sloping to flat to inverted, forward rates fall relative to spot rates: the put option value decreases and the call option value increases.","The call option value increases (not decreases) as the curve flattens and inverts.","The put option value decreases while the call option value increases, so they do not both increase."],
+  ["forecasting that the yield curve could invert within the next six months"],"Flatter or inverted curve → call value ↑ and put value ↓ (callable bond falls, putable bond falls too relative to a steep curve)."),
+ mkq("Which of the following conclusions regarding the bonds in Exhibit 3 is correct?",["Bond 5 is relatively cheaper than Bond 6.","Bond 6 is relatively cheaper than Bond 5.","Bond 7 is relatively cheaper than Bond 8."],1,
+  ["For bonds of similar credit quality, a larger OAS means the bond is cheaper: Bond 5 (50 bps) has a smaller OAS than Bond 6 (75 bps), so it is relatively richer, not cheaper.","Bond 5 and Bond 6 have the same credit rating (B) and the same features, so their OAS can be compared: Bond 6 (75 bps) has the larger OAS, so it is relatively cheaper.","Bond 7 is rated BB and Bond 8 is rated B, so their OAS cannot be compared directly even though Bond 7 has the larger OAS."],
+  ["@row:Bond 5","@row:Bond 6","@row:Bond 7"],"OAS comparisons are valid only for bonds of the same credit quality (same tree): the larger OAS is the cheaper bond."),
+])
+# ===================== M12 Fixed Income: Ashby (credit analysis models, reading 26; re-skin of the Cromwell vignette) =====================
+cpn_m,dur_m,s_a,s_bbbp=4.50,5.8,1.00,1.30
+er=cpn_m-dur_m*(s_bbbp-s_a); er_nc=-dur_m*(s_bbbp-s_a); er_pos=cpn_m+dur_m*(s_bbbp-s_a)
+assert [round(er_nc,2),round(er,2),round(er_pos,2)]==[-1.74,2.76,6.24]
+body="""Gordon Ashby is the director of quantitative research at Westmere Asset Advisers, a fixed-income firm located in London. Rhea Vance recently joined Ashby's analyst team supporting credit analysis and credit risk modeling. After a brief orientation on the firm and its investment process, Ashby instructs Vance to develop a model that derives the credit valuation adjustment (CVA). Ashby makes the following comments regarding credit modeling.
+
+Comment 1: The observed credit spread may also be higher than required for credit risk to compensate for a liquidity premium and tax considerations.
+Comment 2: The factors to consider in modeling credit risk are the expected exposure to default loss, the risk-neutral probability of default, and the loss given default.
+Comment 3: The use of an actual default rate in the model may overstate the observed value for a corporate bond because it includes a default risk premium associated with uncertainty over the timing of possible default loss.
+
+Vance reminds Ashby that her model assumes zero interest rate volatility and a flat government yield curve. Ashby responds that Vance should relax these unrealistic assumptions. Vance outlines the steps to take in valuing risky bonds under this scenario in Exhibit 1.
+
+Exhibit 1: Steps in Valuing Risky Bonds, Arbitrage-Free Framework
+Step 1: • Determine the value for the corporate bond assuming no default (VND). • Calculate the CVA. • Calculate the fair value of the bond as the VND minus the CVA.
+Step 2: • Build the binomial interest rate tree under the assumption of no arbitrage. • Apply an assumption of interest rate volatility. • Using the spot curve, derive implied zero-coupon rates, discount factors, and forward rates.
+Step 3: • Use the risk-neutral probability of default as determined by a credit model. • Assign a recovery rate based on the company's credit rating. • Calculate the present value of the product of the loss given default and the probability of default.
+
+Ashby explains that the migration of a company's ratings can have an impact on the total return of a bond holding. As an example, he selects an 8-year maturity, 4.5% coupon bond currently trading at par and rated A by Standard & Poor's. He asks Vance to calculate the expected total return over a one-year horizon assuming the bond is downgraded by two notches and to determine why the year-end duration for the bond is 5.8. The average G-spread for corporate bonds across the credit spectrum is shown in Exhibit 2.
+
+Exhibit 2: Bond Market G-Spread by Credit Rating
+# S&P Rating | G-Spread (%)
+AA | 0.60
+AA– | 0.70
+A+ | 0.85
+A | 1.00
+A– | 1.10
+BBB+ | 1.30
+BBB | 1.45
+BBB– | 1.60
+
+Ashby and Vance get into a discussion on structural models of credit risk. Ashby is a proponent of these models and tells Vance, "Structural models are dependent on the structure of the company's balance sheet. Equity is analogous to a purchased call option on the assets of the company whereby the strike price equals the face value of the debt. Strengths of these models are that they aim to explain why default occurs and that they use option pricing theory. Weaknesses are that the models assume default comes as a surprise at any time and do not explain the reason for default." """
+add('M12','Fixed Income',body,[
+ mkq("Ashby is least likely correct with regard to which point regarding credit modeling?",["Comment 1","Comment 2","Comment 3"],2,
+  ["Comment 1 is correct: the observed credit spread can include a liquidity premium and tax effects beyond credit risk.","Comment 2 is correct: the factors are the expected exposure, the risk-neutral probability of default and the loss given default.","Comment 3 is wrong. The comment is wrong because an actual default rate does not include the default risk premium for timing uncertainty, so using it overstates the value of the bond (understates the spread); the risk-neutral probability of default includes the premium."],
+  ["The use of an actual default rate in the model"],"Actual (historical) default rates exclude the risk premium that the risk-neutral probability of default includes; the observed spread also contains liquidity and tax components."),
+ mkq("Which step in Exhibit 1 regarding valuing risky bonds has Vance most likely outlined correctly?",["Step 1","Step 2","Step 3"],0,
+  ["Step 1 is correct: VND, then CVA, then fair value = VND − CVA.","In Step 2 the third point is wrong: implied zero-coupon rates, discount factors and forward rates are derived from the par curve (bonds priced at par), not from the spot curve.","In Step 3 the second point is wrong: the recovery rate is not based on the company's credit rating; it should reflect the seniority of the debt issue and the nature of the issuer's assets."],
+  ["Using the spot curve, derive implied zero-coupon rates","Assign a recovery rate based on the company's credit rating"],"Risky bond valuation steps: tree from the PAR curve, then PD × LGD × exposure for CVA (recovery by seniority, not rating), then fair value = VND − CVA."),
+ mkq("Assuming no change in market conditions and a flat yield curve and using Exhibit 2, the expected return on Ashby's sample bond over a one-year horizon is closest to:",[f"{er_nc:.2f}%.".replace('-','–'),f"{er:.2f}%.",f"{er_pos:.2f}%."],1,
+  [f"This omits the coupon: −5.8 × (1.30% − 1.00%) = {er_nc:.2f}%.".replace('-','–',1),f"Downgrade by two notches: A to A– to BBB+, so the G-spread widens from 1.00% to 1.30%. Expected return = coupon − duration × change in spread = 4.50% − 5.8 × (1.30% − 1.00%) = 4.50% − 1.74% = {er:.2f}%.",f"This uses +5.8 instead of −5.8 for the spread widening: 4.50% + 1.74% = {er_pos:.2f}%."],
+  ["rated A by Standard & Poor's","downgraded by two notches","@row:A","@row:BBB+"],"Expected return ≈ coupon − duration × Δspread (a downgrade widens the spread and lowers the price). Count the notches along the rating scale in the exhibit.",True),
+ mkq("Ashby is least likely correct with regard to which aspect of structural models?",["The strengths","The description","The weaknesses"],2,
+  ["The strengths are correct: structural models aim to explain why default occurs and use option pricing theory.","The description is correct: equity is analogous to a purchased call option on the company's assets, with a strike price equal to the face value of the debt.","The weaknesses are wrong. They are weaknesses of reduced-form models (default as a surprise, no explanation of why default occurs). Weaknesses of structural models: they can be burdensome to implement, assets are assumed to trade, and the default barrier is hard to measure."],
+  ["Weaknesses are that the models assume default comes as a surprise","Equity is analogous to a purchased call option on the assets of the company"],"Structural: explains WHY default occurs (call option on assets) but is burdensome and needs tradable assets; reduced-form: default is a surprise, no explanation."),
+])
+# ===================== M12 FSA: Lindgren / Alpina (segment analysis, liquidity, earnings quality, reading 6-12; re-skin of the Rhine vignette) =====================
+DV={'KA':dict(rev=(1305.4,1362.0),gp=(312.9,348.1),op=(83.7,131.4),ta=(1402.6,1375.0),cx=(20.0,31.0)),
+    'GE':dict(rev=(1121.9,1012.6),gp=(262.4,239.6),op=(95.0,71.3),ta=(1051.3,1036.8),cx=(14.5,12.2)),
+    'LI':dict(rev=(704.5,683.8),gp=(96.8,100.3),op=(41.0,44.6),ta=(292.4,309.8),cx=(2.4,4.0))}
+T={k:[round(sum(DV[d][k][i] for d in DV),1) for i in (0,1)] for k in ('rev','gp','op','ta','cx')}
+def pct(d,k,i): return DV[d][k][i]/T[k][i]*100
+ratios={d:pct(d,'cx',0)/pct(d,'ta',0) for d in DV}
+assert [d for d in DV if ratios[d]<1]==['LI'] and abs(ratios['LI']-0.611)<0.001
+pm_prior=DV['KA']['op'][1]/DV['KA']['rev'][1]; op_adj=T['op'][0]-DV['KA']['op'][0]+DV['KA']['rev'][0]*pm_prior
+m_adj=op_adj/T['rev'][0]*100; m_prior=T['op'][1]/T['rev'][1]*100; m_cur=T['op'][0]/T['rev'][0]*100
+assert round(m_adj,2)==8.36 and round(m_prior,2)==8.09 and m_adj>m_prior and m_cur<m_prior
+TO={'cur':(5.00,3.90,5.60),'prior':(5.40,4.00,5.55),'two':(6.10,4.15,5.50)}
+def days(k): a,i,p=TO[k]; return 365/a,365/i,365/p
+ccc={k:sum(days(k)[:2])-days(k)[2] for k in TO}
+dch=[days('cur')[j]-days('two')[j] for j in range(3)]
+assert [round(x) for x in ccc.values()]==[101,93,81] and round(dch[0],1)==13.2 and round(dch[1],1)==5.6 and round(dch[2],1)==-1.2
+f1=lambda x:f"{x:,.1f}"
+rows=[("Revenues",'rev'),("Gross profit",'gp'),("Operating profit",'op'),("Total assets",'ta'),("Capital expenditures",'cx')]
+hdr="# | Total for Three Divisions | | Kitchen Appliances | | Garden Equipment | | Lighting |\n | Current Year | Prior Year | Current Year | Prior Year | Current Year | Prior Year | Current Year | Prior Year"
+def line(lbl,k): return f"{lbl} | "+" | ".join(f1(x) for x in (T[k][0],T[k][1],DV['KA'][k][0],DV['KA'][k][1],DV['GE'][k][0],DV['GE'][k][1],DV['LI'][k][0],DV['LI'][k][1]))
+def pline(lbl,k): return f"{lbl} | 100% | 100% | "+" | ".join(f"{pct(d,k,i):.1f}%" for d in DV for i in (0,1))
+body=f"""Anders Lindgren, a pension fund equity analyst, is preparing an analysis of Alpina AG for the upcoming quarterly fund meeting. Alpina is a Switzerland-based manufacturer that operates three distinct divisions: kitchen appliances, garden equipment, and lighting. All three divisions sell through retail outlets around the world.
+
+The company has been pursuing an aggressive growth strategy, achieved through both foreign acquisitions and organic growth. Lindgren is interested in determining how well Alpina is allocating its resources between the three divisions. Exhibit 1 summarizes selected divisional and corporate data for the current year and the prior year.
+
+Exhibit 1: Alpina AG Selected Divisional and Corporate Data (CHF millions)
+{hdr}
+""" + "\n".join(line(l,k) for l,k in rows) + "\n" + pline("Proportion of capital expenditures",'cx') + "\n" + pline("Proportion of total assets",'ta') + f"""
+
+Lindgren's preferred method to determine which division is becoming less significant over time is to review the relationship between capital expenditures and total assets by operating division. He plans to base his conclusion on the assumption that the current year's investment behavior is representative of future investment patterns.
+
+Lindgren knows that revenues in the kitchen appliances division have suffered because of weaker consumer demand, but he believes that if Alpina can maintain the operating margin for this division then overall company profitability should not be affected.
+
+Lindgren finally examines the company's liquidity ratios, which are shown in Exhibit 2. Even though the company's current and quick ratio have improved, his interpretation of the changes in the company's cash conversion cycle is that the company's liquidity position has deteriorated.
+
+Exhibit 2: Alpina AG Selected Ratios
+# Ratio | Current Year | Prior Year | 2 Years Prior
+Current ratio | 2.24 | 2.10 | 1.21
+Quick ratio | 1.02 | 0.91 | 0.58
+Accounts receivable turnover | {TO['cur'][0]:.2f} | {TO['prior'][0]:.2f} | {TO['two'][0]:.2f}
+Inventory turnover | {TO['cur'][1]:.2f} | {TO['prior'][1]:.2f} | {TO['two'][1]:.2f}
+Accounts payable turnover | {TO['cur'][2]:.2f} | {TO['prior'][2]:.2f} | {TO['two'][2]:.2f}
+Cash conversion cycle | {ccc['cur']:.0f} days | {ccc['prior']:.0f} days | {ccc['two']:.0f} days
+
+Worried that the balance sheet-based and cash flow-based accruals ratios (not shown) raise some concerns about the possible use of accruals to manage earnings, Lindgren asks Karin Holm, another analyst with the fund, for advice on what further type of analysis he should do as a follow-up on this issue."""
+add('M12','Financial Statement Analysis',body,[
+ mkq("Using Lindgren's preferred method and current year divisional data, the best conclusion Lindgren can make about which division will potentially become less significant in the future is that it will be:",["kitchen appliances.","garden equipment.","lighting."],2,
+  [f"The ratio of the capital expenditure proportion to the total asset proportion for kitchen appliances is {ratios['KA']:.2f} (54.2% ÷ 51.1%), above 1: it receives more capital expenditure than its share of assets.",f"For garden equipment the ratio is {ratios['GE']:.2f} (39.3% ÷ 38.3%), above 1.",f"Lighting receives {pct('LI','cx',0):.1f}% of capital expenditures against {pct('LI','ta',0):.1f}% of total assets: the ratio is {ratios['LI']:.2f}, below 1. If this pattern continues, lighting will become less significant over time."],
+  ["relationship between capital expenditures and total assets by operating division","@row:Proportion of capital expenditures","@row:Proportion of total assets"],"Capex share ÷ asset share: above 1 → the division is being grown; below 1 → it is being run down and will shrink in importance.",True),
+ mkq("If the kitchen appliances division had been able to maintain its prior year operating margin in the current year, the company's overall operating margin in the current year, compared with the prior year, would have been:",["lower.","the same.","higher."],2,
+  ["Restoring the prior year margin adds about 42.2 to the company's operating profit, enough to lift the overall margin above (not below) the prior year's.","The adjusted margin (8.36%) differs from the prior year's (8.09%).",f"Prior year margin of kitchen appliances = 131.4 ÷ 1,362.0 = {pm_prior*100:.1f}%. Applied to current revenues: 0.0965 × 1,305.4 = {DV['KA']['rev'][0]*pm_prior:.1f}. Adjusted company operating profit = {T['op'][0]:.1f} − 83.7 + {DV['KA']['rev'][0]*pm_prior:.1f} = {op_adj:.1f}; adjusted margin = {op_adj:.1f} ÷ {T['rev'][0]:,.1f} = {m_adj:.2f}%, compared with {m_prior:.2f}% in the prior year (219.7 ÷ 3,131.8 = {m_cur:.2f}% actual): higher."],
+  ["maintain the operating margin for this division","@row:Revenues","@row:Operating profit"],"Re-apply the prior year margin to the division's current revenues, recompute the company's operating profit and margin, then compare with the prior year.",True),
+ mkq("Compared with 2 years prior, the change in which working capital account most likely had the largest effect on Lindgren's observed deterioration in liquidity?",["Inventory","Accounts payable","Accounts receivable"],2,
+  [f"Inventory days rose from {days('two')[1]:.1f} to {days('cur')[1]:.1f} (365 ÷ 4.15 and 365 ÷ 3.90), an increase of {dch[1]:.1f} days, smaller than the receivable change.",f"Payables days fell from {days('two')[2]:.1f} to {days('cur')[2]:.1f} ({dch[2]:.1f} days), which lengthens the cycle by only {abs(dch[2]):.1f} days.",f"The cash conversion cycle rose from {ccc['two']:.0f} to {ccc['cur']:.0f} days. Receivable days rose from {days('two')[0]:.1f} to {days('cur')[0]:.1f} (365 ÷ 6.10 and 365 ÷ 5.00), an increase of {dch[0]:.1f} days, the largest of the three effects."],
+  ["@row:Accounts receivable turnover","@row:Inventory turnover","@row:Accounts payable turnover","@row:Cash conversion cycle"],"CCC = days receivable + days inventory − days payable, each = 365 ÷ turnover; compare the change in each account's days."),
+ mkq("Holm's best answer to Lindgren's question about further analysis is that he should conduct a:",["DuPont analysis.","cash flow ratio analysis.","discounted cash flow analysis."],1,
+  ["DuPont analysis decomposes ROE but would not detect earnings management.","Concerns about earnings manipulation through accruals are best addressed by cash flow ratios, such as operating cash flow before interest and taxes to operating income.","Discounted cash flow analysis values the company; it does not test earnings quality."],
+  ["possible use of accruals to manage earnings"],"Accruals-based earnings-quality worries → compare earnings with cash flow (e.g. CFO before interest and taxes ÷ operating income)."),
+])
+# ===================== M12 FSA: Soto / Brisa (foreign currency, reading 9; re-skin of the Romano / Celeste vignette) =====================
+r15,r31,ravg,rinv=905.00,880.00,915.00,930.00; usd=4
+tg=usd*(r31-r15); tg_avg=usd*(r31-ravg)
+assert tg==-100 and tg_avg==-140
+rev,cos=90,52
+gp_ok=(rev-cos)*ravg; gp_inv=rev*ravg-cos*rinv; gp_ye=(rev-cos)*r31
+assert [gp_ok,gp_inv,gp_ye]==[34770,33990,33440]
+body=f"""Valeria Soto is a financial analyst reviewing Brisa S.A., a Chilean corporation. Brisa reports under IFRS, its reporting currency is the Chilean Peso (CLP), and its financial year end is 31 December.
+
+Soto uses the following CLP/USD (number of CLP per 1 USD) exchange rate information for the most recent year.
+
+Exhibit 1: Exchange Rates
+# Date | Exchange Rate CLP/USD
+15 November | {r15:.2f}
+31 December | {r31:.2f}
+Average for the year | {ravg:.2f}
+
+On 15 November of the most recent year, Brisa exported goods for USD {usd} million to an unaffiliated US customer on credit. The total amount remained outstanding as of 31 December.
+
+Arica Corp. and Bosque Corp. are two wholly owned subsidiaries of Brisa that are located in the US. There are no intercompany transactions. In both subsidiaries, the only non-monetary assets are inventory and fixed assets, and all liabilities are monetary.
+
+Brisa translates Arica's financial statements using the current rate method. In the most recent year, Arica's revenue was USD {rev} million and cost of sales was USD {cos} million. The average exchange rate for inventory purchases was {rinv:.2f} CLP/USD.
+
+Brisa uses the temporal method to translate Bosque's financial statements. Soto evaluates the effect on Brisa's total shareholders' equity if Bosque's financial statements had been translated using the same method as Arica.
+
+Brisa has recently acquired a new subsidiary that operates in a country with a highly inflationary economy. In compliance with IFRS, the subsidiary prepares financial statements restated for inflation in the local currency. At the end of the current reporting period, Brisa will prepare consolidated financial statements using the new subsidiary's financial statements, and translate them using the average exchange rate for the period."""
+add('M12','Financial Statement Analysis',body,[
+ mkq("The foreign currency transaction gain or loss (in CLP millions) on exported goods reported by Brisa in the most recent year is closest to:",["a loss of 140.0.","a loss of 100.0.","a gain of 100.0."],1,
+  ["This uses the average rate for the year instead of the transaction-date rate: USD 4 million × (880 − 915) = −140. The receivable is remeasured against the rate on the date of the transaction.","Brisa holds a USD receivable and the USD fell against the CLP, so it records a loss: USD 4 million × (880.00 − 905.00) = CLP −100 million.","This has the sign reversed: a foreign currency receivable loses value when the foreign currency depreciates."],
+  ["exported goods for USD 4 million","@row:15 November","@row:31 December"],"Foreign currency receivable: gain (loss) = amount × (closing rate − transaction-date rate), in domestic currency per foreign unit; a depreciating foreign currency gives a loss on a receivable.",True),
+ mkq("Arica's contribution to Brisa's consolidated gross profit (in CLP millions) in the most recent year is closest to:",[f"{gp_ye:,.0f}.",f"{gp_inv:,.0f}.",f"{gp_ok:,.0f}."],2,
+  [f"This translates the gross profit at the year-end rate: (90 − 52) × 880.00 = {gp_ye:,.0f}, the rate for balance sheet items.",f"This translates cost of sales at the average rate for inventory purchases (930.00), as the temporal method would: 90 × 915.00 − 52 × 930.00 = {gp_inv:,.0f}.",f"Brisa uses the current rate method for Arica, so revenues and expenses are translated at the rate when the transaction took place or an average rate. Gross profit = (90 − 52) × 915.00 = {gp_ok:,.0f}."],
+  ["translates Arica's financial statements using the current rate method","Average for the year"],"Current rate method: income statement items at the average rate (all of them); temporal method: cost of sales at the historical inventory rate."),
+ mkq("If Bosque's results had been translated using the current rate method, its total shareholders' equity would have been:",["lower.","the same.","higher."],0,
+  ["Bosque's only non-monetary assets are inventory and fixed assets and all its liabilities are monetary, so under the temporal method it has a net monetary liability exposure. The USD depreciated against the CLP (905.00 to 880.00), so the temporal method produced a remeasurement gain in net income. Under the current rate method all assets are translated at the lower year-end rate, giving a negative translation adjustment: total shareholders' equity would have been lower.","Equity is not the same: the two methods put the exchange effect in different places (net income under the temporal method, OCI under the current rate method) and measure different exposures.","Equity would have been higher only if the USD had appreciated against the CLP."],
+  ["only non-monetary assets are inventory and fixed assets, and all liabilities are monetary","@row:31 December"],"Temporal: exposure = net monetary assets (liabilities); current rate: exposure = net assets. Foreign currency depreciates: net liability → gain (temporal), net assets → negative CTA (current rate)."),
+ mkq("Is Soto correct about the method that Brisa should use to translate the new subsidiary's financial statements?",["Yes","No, because Brisa should use the temporal method","No, because Brisa should use the exchange rate at the reporting period end"],2,
+  ["IFRS does not allow the average exchange rate for a subsidiary in a highly inflationary economy.","IFRS does not call for the temporal method here: the foreign entity's statements are first restated for local inflation (IAS 29).","When a foreign entity operates in a highly inflationary economy, IFRS requires that its financial statements first be restated for local inflation (IAS 29) and then translated into the parent's presentation currency at the exchange rate at the reporting period end (the current rate)."],
+  ["highly inflationary economy","translate them using the average exchange rate for the period"],"IFRS, hyperinflationary subsidiary: restate for local inflation (IAS 29), then translate everything at the closing (current) rate."),
+])
