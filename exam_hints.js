@@ -1517,5 +1517,557 @@ const EXAM_HINTS = {
    "@row:Property prices"
   ],
   "rule": "Vacancy at its high, negative rents, halted construction, tightening credit and falling prices = recession."
+ },
+ "mock11:1": {
+  "hl": [
+   "Many of its fixed assets, including machinery and equipment, can be used in other businesses",
+   "private market transactions of firms in the industry occur once every 1-2 years",
+   "declining growth segment"
+  ],
+  "rule": "Asset-based approach: assets with alternative uses and an attractive site, few comparables and few transactions, low growth."
+ },
+ "mock11:2": {
+  "hl": [
+   "18% discount for lack of control and a 22% discount for lack of marketability"
+  ],
+  "rule": "Combine discounts multiplicatively: 1 − (1 − DLOC)(1 − DLOM)."
+ },
+ "mock11:3": {
+  "hl": [
+   "was $650,000 higher per year",
+   "averaging $45,000",
+   "annual operating expenses of $16,000 and annual depreciation expense of $34,000",
+   "at a cost of $7.50 a square foot annually",
+   "@row:EBIT"
+  ],
+  "rule": "Normalize EBIT for each non-market item (include the removed plane's depreciation), then tax: normalized EBIT × (1 − t)."
+ },
+ "mock11:4": {
+  "hl": [
+   "Beta for similar firms, adjusted for capital structure differences",
+   "Small stock premium",
+   "Nominal risk-free rate"
+  ],
+  "rule": "Expanded CAPM keeps beta × ERP and adds size, industry and company-specific premiums; the build-up method has no beta. The nominal risk-free rate already includes inflation."
+ },
+ "mock11:5": {
+  "hl": [
+   "The larger the size of the transaction the wider the spread",
+   "well known currency pairs have wider spreads",
+   "credit risk is the most important factor"
+  ],
+  "rule": "Bid-offer spreads: tighter for major, liquid pairs; wider for larger transactions and for higher client credit risk (but credit risk is not the most important factor for spot)."
+ },
+ "mock11:6": {
+  "hl": [
+   "bid-offer rate of 2.0090/2.0161 in NZD/GBP",
+   "@row:NZD/CAD",
+   "@row:GBP/CAD"
+  ],
+  "rule": "Triangular arbitrage: build the interbank cross (bid = bid ÷ offer of the other pair), then buy where it is cheap (dealer offer) and sell where it is dear (interbank bid)."
+ },
+ "mock11:7": {
+  "hl": [
+   "@row:New Zealand",
+   "@row:Canada",
+   "forward premium or discount for a 360-day NZD/CAD forward contract"
+  ],
+  "rule": "Forward premium = S × [(1 + R_price) ÷ (1 + R_base) − 1]; use the midpoint spot rate."
+ },
+ "mock11:8": {
+  "hl": [
+   "equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels"
+  ],
+  "rule": "Absolute PPP: exchange rate = ratio of price levels. Relative PPP: % change in the exchange rate = inflation differential. Ex ante PPP: expected inflation differential."
+ },
+ "mock11:9": {
+  "hl": [
+   "Proposal #3: Issue a 10% stock dividend."
+  ],
+  "rule": "Stock dividend: no cash paid, no tax, same proportionate ownership, total cost basis unchanged."
+ },
+ "mock11:10": {
+  "hl": [
+   "Repurchase US$36 million in shares using surplus cash",
+   "@row:Book value per share",
+   "@row:Share price"
+  ],
+  "rule": "Buyback: equity falls by the amount paid and shares fall by amount ÷ price; BVPS = (equity − repurchase) ÷ remaining shares."
+ },
+ "mock11:11": {
+  "hl": [
+   "after-tax cost of borrowing of 8.60%",
+   "@row:Earnings per share",
+   "@row:Share price"
+  ],
+  "rule": "Debt-financed repurchase: EPS rises if the earnings yield (EPS ÷ price) > after-tax cost of debt, falls if it is lower."
+ },
+ "mock11:12": {
+  "hl": [
+   "target capital structure of 40% debt and 60% equity",
+   "Initiate a regular cash dividend"
+  ],
+  "rule": "Dividends move cash from the company to shareholders: lower cushion for bondholders (more default risk), less free cash for managers to waste."
+ },
+ "mock11:13": {
+  "hl": [
+   "declined at a 1.8% annualized rate",
+   "market expectations of a 0.9% decline"
+  ],
+  "rule": "Only the surprise relative to consensus moves prices: better than expected → spreads narrow; worse than expected → spreads widen."
+ },
+ "mock11:14": {
+  "hl": [
+   "same long-term real GDP growth rate",
+   "volatility expected to be significantly higher than that of Country B"
+  ],
+  "rule": "Real rates rise with expected real growth and with the volatility of real growth: highest growth and highest volatility → highest rates."
+ },
+ "mock11:15": {
+  "hl": [
+   "Durable goods manufacturers have much more volatile earnings profiles"
+  ],
+  "rule": "Durable goods: more cyclical, more volatile earnings. Profits lead the cycle; the cycle matters most for short-term earnings forecasts."
+ },
+ "mock11:16": {
+  "hl": [
+   "above-consensus growth"
+  ],
+  "rule": "Growth above consensus → spreads narrow → cyclical, lower-rated bonds outperform stable (staples) bonds."
+ },
+ "mock11:17": {
+  "hl": [
+   "@row:1 month ago",
+   "@row:6 months ago",
+   "@row:12 months ago"
+  ],
+  "rule": "Swap spread = swap rate − government bond yield of the same maturity; a lower spread means lower credit and liquidity risk."
+ },
+ "mock11:18": {
+  "hl": [
+   "I expect a reversal in the slope of the current yield curve, so that it will slope downward",
+   "@row:Five years"
+  ],
+  "rule": "Upward-sloping spot curve → forward curve above it; downward-sloping spot curve → forward curve below it. Apply the expected slope AFTER the reversal."
+ },
+ "mock11:19": {
+  "hl": [
+   "Assuming investors require liquidity premiums",
+   "require compensation for holding longer-term bonds"
+  ],
+  "rule": "Liquidity premium that rises with maturity → liquidity preference theory."
+ },
+ "mock11:20": {
+  "hl": [
+   "forward rate for a two-year Country C loan beginning in three years",
+   "@row:Five years",
+   "@row:Three years"
+  ],
+  "rule": "Forward rate f(j,k): (1 + z_{j+k})^(j+k) = (1 + z_j)^j × (1 + f(j,k))^k; for a two-year loan starting in three years use the 3-year and 5-year spot rates."
+ },
+ "mock11:21": {
+  "hl": [
+   "meaningful ranking of relative value",
+   "@row:Diluted EPS (last four quarters)"
+  ],
+  "rule": "Negative earnings: use E/P (earnings in the numerator), not P/E."
+ },
+ "mock11:22": {
+  "hl": [
+   "nonrecurring gain of MXN0.06",
+   "nonrecurring cost of MXN0.02 and a recurring cost of MXN0.01",
+   "@row:Stock's current price"
+  ],
+  "rule": "Underlying EPS: remove nonrecurring gains and add back nonrecurring costs; leave recurring items in."
+ },
+ "mock11:23": {
+  "hl": [
+   "@row:Diluted EPS (next four quarters)",
+   "Earnings Growth Rate Estimate (%)"
+  ],
+  "rule": "Forward PEG = (price ÷ forward EPS) ÷ growth rate; the lowest PEG is the cheapest per unit of growth."
+ },
+ "mock11:24": {
+  "hl": [
+   "EBITDA for Valle for the most recent year is MXN640 million",
+   "Short-Term Investments"
+  ],
+  "rule": "EV = market value of debt + common + preferred − cash and short-term investments; then divide by EBITDA."
+ },
+ "mock11:29": {
+  "hl": [
+   "pays interest every 180 days",
+   "expiring in 360 days",
+   "price of the bond with accrued interest is US$1,087.60"
+  ],
+  "rule": "Forward on a coupon bond = (spot price incl. accrued interest − PV of coupons paid before expiry) × (1 + r)^T."
+ },
+ "mock11:30": {
+  "hl": [
+   "pay-fixed 3 × 6 forward rate agreement",
+   "two-month MRR is 1.5% and the five-month MRR is 2.5%"
+  ],
+  "rule": "FRA value = (new FRA rate − contract rate) × (m/360) × notional, discounted over the days to the end of the underlying period; the pay-fixed side gains when rates rise."
+ },
+ "mock11:31": {
+  "hl": [
+   "swap into euros",
+   "Euro Present Value Factors"
+  ],
+  "rule": "Swap fixed rate = (1 − final PV factor) ÷ sum of PV factors for the currency of that leg; annualize with periods per year. Rao pays the euro leg."
+ },
+ "mock11:32": {
+  "hl": [
+   "receive the return on the S&P/ASX 200 Financials Index and pay a fixed annual interest rate of 5.2%",
+   "the value of the index was 2,850",
+   "Today, the value of the index is 3,135"
+  ],
+  "rule": "Equity swap value (receive equity, pay fixed) = notional × (S_t ÷ S_0 − PV of the fixed-rate bond per 1 of notional)."
+ },
+ "mock11:37": {
+  "hl": [
+   "borrow $60 million",
+   "@row:Total assets"
+  ],
+  "rule": "Consolidating an SPE funded by outside debt: assets and liabilities both rise by the amount borrowed from outside; intercompany sales and the parent's investment are eliminated."
+ },
+ "mock11:38": {
+  "hl": [
+   "30% equity interest",
+   "@row:Plant and equipment",
+   "@row:Net assets"
+  ],
+  "rule": "Equity-method goodwill = price − share of fair value of identifiable net assets (= excess over book value − share of fair-value adjustments)."
+ },
+ "mock11:39": {
+  "hl": [
+   "Calder reported net income of $400 million and paid dividends of $240 million",
+   "depreciated on a straight-line basis and have 10 years of remaining life"
+  ],
+  "rule": "Equity method: cost + share of net income − share of dividends − amortization of the fair value excess."
+ },
+ "mock11:40": {
+  "hl": [
+   "@row:Carrying value of cash-generating unit/reporting unit",
+   "@row:Recoverable amount of cash-generating unit/reporting unit"
+  ],
+  "rule": "IFRS: impairment loss = carrying value of the CGU − recoverable amount (allocated first to goodwill)."
+ },
+ "mock11:41": {
+  "hl": [
+   "Log-linear trend model: ln Pricet = b0 + b1t + et.",
+   "Month 181",
+   "@row:t (Trend)"
+  ],
+  "rule": "Log-linear trend: ln(price) = b0 + b1·t; use t of the forecast month (first out-of-sample month = last observation + 1) and take e^ of the result."
+ },
+ "mock11:42": {
+  "hl": [
+   "lower critical value for the Durbin–Watson test statistic is 1.75",
+   "@row:Durbin–Watson"
+  ],
+  "rule": "Durbin–Watson below the lower critical value → reject no positive serial correlation; above it → no evidence of positive serial correlation."
+ },
+ "mock11:43": {
+  "hl": [
+   "AR(2) model: Pricet = b0 + b1Pricet−1 + b2Pricet−2 + et.",
+   "was $4.35 in July 2018 and $3.92 in August 2018"
+  ],
+  "rule": "AR(2) one-step forecast = b0 + b1 × (latest price) + b2 × (price one month earlier)."
+ },
+ "mock11:44": {
+  "hl": [
+   "AR(1) model: Pricet = b0 + b1Pricet−1 + et.",
+   "@row:Intercept",
+   "@row:Pricet−1"
+  ],
+  "rule": "AR(1): price above the mean-reverting level b0 ÷ (1 − b1) → expected to fall; below it → expected to rise."
+ },
+ "mock12:1": {
+  "hl": [
+   "using the true probabilities of the underlying rate moves",
+   "discounting at the risk-free periodic rate"
+  ],
+  "rule": "Option value = PV (at the risk-free rate) of expected payoffs under RISK-NEUTRAL probabilities."
+ },
+ "mock12:2": {
+  "hl": [
+   "The swaption, used to hedge against rising interest rates, can be evaluated as the bond component minus the swap component"
+  ],
+  "rule": "Payer swaption (hedge rising rates) = swap component − bond component; receiver swaption (hedge falling rates) = bond component − swap component."
+ },
+ "mock12:3": {
+  "hl": [
+   "150,000 shares of Pelham Group (PG) stock",
+   "@row:Delta call",
+   "@row:Delta put"
+  ],
+  "rule": "Delta hedge with options: number of options = shares ÷ option delta (sell calls, or buy puts with the put's absolute delta)."
+ },
+ "mock12:4": {
+  "hl": [
+   "moves farther away from the $62 strike price"
+  ],
+  "rule": "Vega and |theta| are largest at the money: moving toward the strike raises them, moving away lowers them."
+ },
+ "mock12:5": {
+  "hl": [
+   "exported goods for USD 4 million",
+   "@row:15 November",
+   "@row:31 December"
+  ],
+  "rule": "Foreign currency receivable: gain (loss) = amount × (closing rate − transaction-date rate), in domestic currency per foreign unit; a depreciating foreign currency gives a loss on a receivable."
+ },
+ "mock12:6": {
+  "hl": [
+   "translates Arica's financial statements using the current rate method",
+   "Average for the year"
+  ],
+  "rule": "Current rate method: income statement items at the average rate (all of them); temporal method: cost of sales at the historical inventory rate."
+ },
+ "mock12:7": {
+  "hl": [
+   "only non-monetary assets are inventory and fixed assets, and all liabilities are monetary",
+   "@row:31 December"
+  ],
+  "rule": "Temporal: exposure = net monetary assets (liabilities); current rate: exposure = net assets. Foreign currency depreciates: net liability → gain (temporal), net assets → negative CTA (current rate)."
+ },
+ "mock12:8": {
+  "hl": [
+   "highly inflationary economy",
+   "translate them using the average exchange rate for the period"
+  ],
+  "rule": "IFRS, hyperinflationary subsidiary: restate for local inflation (IAS 29), then translate everything at the closing (current) rate."
+ },
+ "mock12:9": {
+  "hl": [
+   "@row:July",
+   "@row:December"
+  ],
+  "rule": "Backwardation: near-term futures price > longer-term price (downward-sloping curve); contango: near-term < longer-term; flat: equal."
+ },
+ "mock12:10": {
+  "hl": [
+   "global harvest that was greater than expected",
+   "balanced between producers and consumers"
+  ],
+  "rule": "Contango with ample inventories → theory of storage; backwardation with producer hedging pressure → insurance theory; balanced hedgers → no hedging-pressure effect."
+ },
+ "mock12:11": {
+  "hl": [
+   "fully collateralized long futures position",
+   "near-term futures price was 626.0 and the farther-term futures price was 632.0",
+   "collateral earned an annualized rate of 0.80%"
+  ],
+  "rule": "Commodity futures total return = price return + roll return + collateral return; roll return = (near − far) ÷ near (negative in contango); collateral return = annual rate × months ÷ 12."
+ },
+ "mock12:12": {
+  "hl": [
+   "monthly resets",
+   "@row:May",
+   "@row:June"
+  ],
+  "rule": "Total return swap with monthly resets: payment = notional × (index this month ÷ index last month − 1); index up → the long party receives, down → pays."
+ },
+ "mock12:13": {
+  "hl": [
+   "relationship between capital expenditures and total assets by operating division",
+   "@row:Proportion of capital expenditures",
+   "@row:Proportion of total assets"
+  ],
+  "rule": "Capex share ÷ asset share: above 1 → the division is being grown; below 1 → it is being run down and will shrink in importance."
+ },
+ "mock12:14": {
+  "hl": [
+   "maintain the operating margin for this division",
+   "@row:Revenues",
+   "@row:Operating profit"
+  ],
+  "rule": "Re-apply the prior year margin to the division's current revenues, recompute the company's operating profit and margin, then compare with the prior year."
+ },
+ "mock12:15": {
+  "hl": [
+   "@row:Accounts receivable turnover",
+   "@row:Inventory turnover",
+   "@row:Accounts payable turnover",
+   "@row:Cash conversion cycle"
+  ],
+  "rule": "CCC = days receivable + days inventory − days payable, each = 365 ÷ turnover; compare the change in each account's days."
+ },
+ "mock12:16": {
+  "hl": [
+   "possible use of accruals to manage earnings"
+  ],
+  "rule": "Accruals-based earnings-quality worries → compare earnings with cash flow (e.g. CFO before interest and taxes ÷ operating income)."
+ },
+ "mock12:17": {
+  "hl": [
+   "performance-based compensation for the top four senior managers",
+   "the managers now own a combined 8% of the equity"
+  ],
+  "rule": "Family-owned business issues: transparency, interlocking directorships, attracting quality management. Equity or performance pay for managers → attracting quality management."
+ },
+ "mock12:18": {
+  "hl": [
+   "retain voting control of the company through the issuance of multi-voting ordinary (common) shares"
+  ],
+  "rule": "Controlling shareholders vs minority shareholders (dual class, cross holdings) → principal–principal; dispersed owners vs managers → principal–agent."
+ },
+ "mock12:19": {
+  "hl": [
+   "uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups"
+  ],
+  "rule": "Own analysts + company data + news and NGO sources → proprietary methods; purchased ratings → data providers; frameworks from non-profits → not-for-profit initiatives."
+ },
+ "mock12:20": {
+  "hl": [
+   "expects the change to reduce shipping, packaging, and handling costs"
+  ],
+  "rule": "ESG integration: quantify the effect on cash flows or the discount rate; lower costs → higher cash flow → higher value."
+ },
+ "mock12:21": {
+  "hl": [
+   "the single-stage growth model is appropriate",
+   "equity risk premium is 5.00%"
+  ],
+  "rule": "Justified P/B (single stage) = 1 + (ROE − r) ÷ (r − g), with r = rf + beta × ERP."
+ },
+ "mock12:22": {
+  "hl": [
+   "current P/B of 3.25",
+   "the ROE required"
+  ],
+  "rule": "Rearrange P/B = 1 + (ROE − r) ÷ (r − g): ROE = r + (P/B − 1) × (r − g)."
+ },
+ "mock12:23": {
+  "hl": [
+   "current P/B of 3.25",
+   "the growth rate required"
+  ],
+  "rule": "Rearrange P/B = 1 + (ROE − r) ÷ (r − g): g = r − (ROE − r) ÷ (P/B − 1)."
+ },
+ "mock12:24": {
+  "hl": [
+   "long-term ROE to be 17%",
+   "cost of equity to be 13%"
+  ],
+  "rule": "Single-stage RI: V0 = B0 + B0 × (ROE − r) ÷ (r − g); compare with price."
+ },
+ "mock12:29": {
+  "hl": [
+   "The use of an actual default rate in the model"
+  ],
+  "rule": "Actual (historical) default rates exclude the risk premium that the risk-neutral probability of default includes; the observed spread also contains liquidity and tax components."
+ },
+ "mock12:30": {
+  "hl": [
+   "Using the spot curve, derive implied zero-coupon rates",
+   "Assign a recovery rate based on the company's credit rating"
+  ],
+  "rule": "Risky bond valuation steps: tree from the PAR curve, then PD × LGD × exposure for CVA (recovery by seniority, not rating), then fair value = VND − CVA."
+ },
+ "mock12:31": {
+  "hl": [
+   "rated A by Standard & Poor's",
+   "downgraded by two notches",
+   "@row:A",
+   "@row:BBB+"
+  ],
+  "rule": "Expected return ≈ coupon − duration × Δspread (a downgrade widens the spread and lowers the price). Count the notches along the rating scale in the exhibit."
+ },
+ "mock12:32": {
+  "hl": [
+   "Weaknesses are that the models assume default comes as a surprise",
+   "Equity is analogous to a purchased call option on the assets of the company"
+  ],
+  "rule": "Structural: explains WHY default occurs (call option on assets) but is burdensome and needs tradable assets; reduced-form: default is a surprise, no explanation."
+ },
+ "mock12:33": {
+  "hl": [
+   "@row:SGD/GBP bid (spot)",
+   "@row:One-year MRR (GBP)",
+   "@row:One-year MRR (SGD)"
+  ],
+  "rule": "Forward / expected spot (UIRP) = S × (1 + i_price currency) ÷ (1 + i_base currency); use the midpoint spot."
+ },
+ "mock12:34": {
+  "hl": [
+   "forward position at a forward price of USD1.1290/EUR",
+   "@row:Spot USD/EUR",
+   "@row:Six-month forward points"
+  ],
+  "rule": "Mark to market: take the offsetting forward at today's all-in rate (buying the base currency pays the offer and offer points), find the difference at settlement, discount at the price-currency MRR."
+ },
+ "mock12:35": {
+  "hl": [
+   "Morlundan has a floating exchange rate, and capital flows are highly mobile",
+   "an expansionary monetary policy with an expansionary fiscal policy"
+  ],
+  "rule": "Mundell–Fleming, high capital mobility: expansionary monetary → currency down; expansionary fiscal → currency up; opposite policy directions → ambiguous; same direction → clear."
+ },
+ "mock12:36": {
+  "hl": [
+   "external debt owed to foreign investors has risen sharply relative to GDP",
+   "judge the US external debt to be unsustainable"
+  ],
+  "rule": "Upper limit on persistent deficits / unsustainable external debt → debt sustainability; wealth and asset-preference shifts → portfolio balance; trade payment flows → flow supply/demand."
+ },
+ "mock12:37": {
+  "hl": [
+   "will take actions that will lead to higher interest rates",
+   "Putable bond: putable at par one year and two years from now",
+   "equity market values will be lower"
+  ],
+  "rule": "Rates up → putable bond worth less than par → put exercised; rates down → callable bond is called; share price down → convertible stays out of the money."
+ },
+ "mock12:38": {
+  "hl": [
+   "callable at par without any protection periods",
+   "@row:3"
+  ],
+  "rule": "Callable bond value = straight bond value (spot-rate discounting) − call value; with no protection the price is capped at the call price (100), so call value = straight value − 100."
+ },
+ "mock12:39": {
+  "hl": [
+   "forecasting that the yield curve could invert within the next six months"
+  ],
+  "rule": "Flatter or inverted curve → call value ↑ and put value ↓ (callable bond falls, putable bond falls too relative to a steep curve)."
+ },
+ "mock12:40": {
+  "hl": [
+   "@row:Bond 5",
+   "@row:Bond 6",
+   "@row:Bond 7"
+  ],
+  "rule": "OAS comparisons are valid only for bonds of the same credit quality (same tree): the larger OAS is the cheaper bond."
+ },
+ "mock12:41": {
+  "hl": [
+   "temperature in New York City will be 4 degrees below normal",
+   "housing starts will be 5% below average",
+   "The mean number of degrees the temperature is below normal"
+  ],
+  "rule": "Plug each variable in with the sign it is DEFINED with (temperature = degrees below normal, so 4 below normal = +4; housing starts below average = negative)."
+ },
+ "mock12:42": {
+  "hl": [
+   "@row:Regression",
+   "@row:Error",
+   "@row:20"
+  ],
+  "rule": "Joint F-test: F = MSR ÷ MSE (df = k and n − k − 1); F above the critical value → at least one slope differs from 0; below → none is significant."
+ },
+ "mock12:43": {
+  "hl": [
+   "@row:Regression",
+   "@row:Total"
+  ],
+  "rule": "Unadjusted R² = RSS ÷ SST; adjusted R² = 1 − [(n − 1) ÷ (n − k − 1)] × (1 − R²) is smaller when k > 1."
+ },
+ "mock12:44": {
+  "hl": [
+   "regresses the deviation of sales from the historical average"
+  ],
+  "rule": "Multiple regression assumptions: linear in the parameters, no exact linear relationship among independent variables, normal and homoscedastic errors, no serial correlation."
  }
 };

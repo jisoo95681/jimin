@@ -134,3 +134,8 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - 11 Nov: one-sentence concept quiz PDF (A4, 249 questions, English terms, answers at the back) built from practice sets 1-8: bank/Concept_quiz_practice1-8.pdf; source bank/quiz_src/ (content.py, build.py, pdf.mjs). Stars mark concepts the user missed.
 
 - 11 Nov: two questions each on four concepts from the user's notebook added at the end of practice sets 5 and 7. pq5 (54 Q, 162 min): Q51-52 DSCR/LTV maximum loan (key: Q51 C $17.75m, Q52 A 1.18), Q53-54 US GAAP and IFRS impairment loss (Q53 B $50m, Q54 C $30m). pq7 (52 Q, 156 min): Q49-50 pension corridor (Q49 B $2.75m, Q50 C IFRS: OCI, no amortization), Q51-52 real estate cycle (Q51 B hyper-supply, Q52 C recession). Source: bank/exam/pq5_extra.py, pq7_extra.py (numbers asserted in code).
+
+## Mock 11 + Mock 12 (built 11 Nov, v229; one 88-question exam, two sessions of 44 Q / 132 min, to be taken back to back on 12 Nov; not yet taken)
+- Keys (do not send unless asked): Mock 11 ABBBABCCCBBCACACCACBCBBABABCBBACAACABBBACCBA ; Mock 12 CABABBAAACBBCCAABACCABCAACABACBBABAAABCCBCBB
+- Combined topics (88 Q): Ethics 12, FSA 12, Equity 12, Fixed Income 12, Quant 8, Econ 8, Corp 8, Derivatives 8, Alt 4, PM 4 (Alt and PM 4.5%, 0.5 pt under 5%, because whole 4-question vignettes cannot do better).
+- Draw: bank/exam/mock1112_pick.py; build: bank/exam/mock1112.py (names, numbers, answers recomputed; core files mock11_core.json, mock12_core.json) + build.py (3 Ethics units from key notes in mock1112_ethics.json, hints for every non-Ethics question, answer balance). Brady re-skin (Equity private company valuation) is in Mock 11; unsolved residual-income vignette used first.

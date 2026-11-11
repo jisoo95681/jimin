@@ -634,3 +634,257 @@ add('M12','Financial Statement Analysis',body,[
   ["IFRS does not allow the average exchange rate for a subsidiary in a highly inflationary economy.","IFRS does not call for the temporal method here: the foreign entity's statements are first restated for local inflation (IAS 29).","When a foreign entity operates in a highly inflationary economy, IFRS requires that its financial statements first be restated for local inflation (IAS 29) and then translated into the parent's presentation currency at the exchange rate at the reporting period end (the current rate)."],
   ["highly inflationary economy","translate them using the average exchange rate for the period"],"IFRS, hyperinflationary subsidiary: restate for local inflation (IAS 29), then translate everything at the closing (current) rate."),
 ])
+# ===================== M12 Alternative Investments: Marchetti (commodities, reading 30; re-skin of the Musicale / Apex vignette) =====================
+p0,pn,pf=612.0,626.0,632.0; coll=0.0080
+pr=(pn-p0)/p0*100; rr=(pn-pf)/pn*100; cr=coll*100*3/12
+tot=pr+rr+cr; tot_nr=pr+cr; tot_sw=pr-rr+cr
+assert [round(tot,2),round(tot_nr,2),round(tot_sw,2)]==[1.53,2.49,3.45]
+NPs=30_000_000; ia,im,ij=3115.60,3189.40,3254.85
+pay=(ij/im-1)*NPs; pay_init=(ij/ia-1)*NPs
+assert abs(pay-615_633.03)<0.01 and abs(pay_init-1_340_833.23)<0.01,(pay,pay_init)
+body=f"""Elio Marchetti is the portfolio manager for a defined benefit pension plan. He meets with Tessa Quinn, market strategist with Corvin Bank, to discuss possible investment opportunities. The investment committee for the pension plan has recently approved expanding the plan's permitted asset mix to include alternative asset classes.
+
+Quinn proposes the Summit Commodity Fund (Summit Fund) offered by Corvin Bank as a potentially suitable investment for the pension plan. Quinn shares selected futures contract data for three markets in which the Summit Fund invests. The futures data are presented in Exhibit 1.
+
+Exhibit 1: Selected Commodity Futures Data*
+# Month | Gold Price | Coffee Price | Heating Oil Price
+July | 1,274.8 | 0.9850 | 2.4105
+September | 1,274.8 | 1.0030 | 2.3552
+December | 1,274.8 | 1.0290 | 2.1980
+* Gold: US$/troy ounce; coffee: US$/pound; heating oil: US$/gallon.
+
+Corvin Bank recently released a report on the coffee market. Quinn shares the key conclusion from the report with Marchetti: "The coffee market had a global harvest that was greater than expected. Despite the large harvest, coffee futures trading activity is balanced between producers and consumers. This balanced condition is not expected to change over the next year."
+
+Quinn shows Marchetti the total return of a recent trade executed by the Summit Fund. Quinn explains that the Summit Fund took a fully collateralized long futures position in nearby wheat futures contracts at the quoted futures price of {p0:.1f} (US cents/bushel). Three months later, the entire futures position was rolled when the near-term futures price was {pn:.1f} and the farther-term futures price was {pf:.1f}. During the three-month period between the time that the initial long position was taken and the rolling of the contract, the collateral earned an annualized rate of 0.80%.
+
+Quinn tells Marchetti that the pension fund could alternatively gain long exposure to commodities using the swap market. Quinn and Marchetti analyze the performance of a long position in an S&P GSCI total return swap having monthly resets and a notional amount of $30 million. Selected data on the S&P GSCI are presented in Exhibit 2.
+
+Exhibit 2: Selected S&P GSCI Data
+# Reference Date | Index Level
+April (swap initiation) | {ia:,.2f}
+May | {im:,.2f}
+June | {ij:,.2f}"""
+add('M12','Alternative Investments',body,[
+ mkq("Which futures market in Exhibit 1 is in backwardation?",["Gold","Coffee","Heating oil"],2,
+  ["Gold's futures prices are equal in July, September and December, so the market is flat, not in backwardation.","Coffee's longer-term futures prices are higher than the near-term price (0.9850 < 1.0030 < 1.0290): contango.","Backwardation means the near-term futures price is higher than the longer-term price. Heating oil is the only market in which the near-term price ($2.4105) is higher than the longer-term prices ($2.3552 and $2.1980)."],
+  ["@row:July","@row:December"],"Backwardation: near-term futures price > longer-term price (downward-sloping curve); contango: near-term < longer-term; flat: equal."),
+ mkq("Based on the key conclusion from the Corvin Bank coffee market report, the shape of the coffee futures curve in Exhibit 1 is most consistent with the:",["insurance theory.","theory of storage.","hedging pressure hypothesis."],1,
+  ["The insurance theory says producers hedge by selling futures at a discount to the expected spot price (backwardation); it does not fit an upward-sloping curve with balanced trading.","The theory of storage focuses on the level of inventories and the state of supply and demand. A large harvest means high inventories, and a regularly stored commodity should have a higher price in the future (contango) to cover storage costs. Coffee's upward-sloping curve is consistent with it.","The hedging pressure hypothesis explains the curve through net hedging positions; the report says trading is balanced between producers and consumers, so there is no hedging pressure."],
+  ["global harvest that was greater than expected","balanced between producers and consumers"],"Contango with ample inventories → theory of storage; backwardation with producer hedging pressure → insurance theory; balanced hedgers → no hedging-pressure effect."),
+ mkq("The Summit Fund's three-month total return on the wheat futures trade is closest to:",[f"{tot_nr:.2f}%.",f"{tot:.2f}%.",f"{tot_sw:.2f}%."],1,
+  [f"This leaves out the roll return: {pr:.3f}% + {cr:.2f}% = {tot_nr:.2f}%.",f"Total return = price return + roll return + collateral return. Price return = (626.0 − 612.0) ÷ 612.0 = {pr:.3f}%. Roll return = (near − farther) ÷ near = (626.0 − 632.0) ÷ 626.0 = {rr:.3f}%. Collateral return = 0.80% × 3/12 = {cr:.2f}%. Total = {pr:.3f}% {rr:.3f}% + {cr:.2f}% = {tot:.2f}%.",f"This adds the roll return with the wrong sign (the market is in contango, so the roll return is negative): {pr:.3f}% + {-rr:.3f}% + {cr:.2f}% = {tot_sw:.2f}%."],
+  ["fully collateralized long futures position","near-term futures price was 626.0 and the farther-term futures price was 632.0","collateral earned an annualized rate of 0.80%"],"Commodity futures total return = price return + roll return + collateral return; roll return = (near − far) ÷ near (negative in contango); collateral return = annual rate × months ÷ 12.",True),
+ mkq("Based on Exhibit 2, on the June settlement date, the party that is long the S&P GSCI total return swap will:",[f"owe a payment of ${pay:,.2f}.",f"receive a payment of ${pay:,.2f}.",f"receive a payment of ${pay_init:,.2f}."],1,
+  [f"This has the sign reversed: the index rose between May and June, so the long party receives a payment.",f"The swap resets monthly, so the June settlement compares June with May: ({ij:,.2f} ÷ {im:,.2f} − 1) × $30,000,000 = {(ij/im-1)*100:.4f}% × $30,000,000 = ${pay:,.2f}. The index increased, so the long position receives the payment.",f"This measures the change from the April initiation level ({ij:,.2f} ÷ {ia:,.2f} − 1), but the swap was reset in May: ${pay_init:,.2f}."],
+  ["monthly resets","@row:May","@row:June"],"Total return swap with monthly resets: payment = notional × (index this month ÷ index last month − 1); index up → the long party receives, down → pays.",True),
+])
+# ===================== M12 Derivatives: Halvorsen / Ridgemont (options, reading 29; re-skin of the IST vignette) =====================
+sh_n=150_000; dc,dp=0.6217,-0.3783
+calls=sh_n/dc; puts=sh_n/(-dp); w1=sh_n*(-dp); w2=sh_n*dc
+assert [round(calls),round(puts),round(w1),round(w2)]==[241_274,396_511,56_745,93_255],(calls,puts,w1,w2)
+body="""Delta Risk Advisory (DRA) provides institutional financial risk management advisory and brokerage services. Clients seek DRA's services when evaluating whether to hedge interest rate, currency, or equity market risks. Martin Halvorsen, senior adviser at DRA, is discussing a new client with analyst Lena Ortiz.
+
+Halvorsen states: "Ridgemont University plans a laboratory renovation for its science center and has engaged DRA to implement options strategies in order to manage the risk of rising interest rates. The renovation is to be completed in 12 months, in time for the start of the school year. To minimize disruption to its academic schedule, however, Ridgemont will not begin the work until six months from now. State funding will not be received until the beginning of the next school year, so a six-month variable interest rate loan will finance the renovation."
+
+Ortiz comments: "I think six-month call options on the six-month forward rate would probably be the cheapest solution. The price of the European-style option can be evaluated as the present value of the expected terminal option payoffs, using the true probabilities of the underlying rate moves and discounting at the risk-free periodic rate."
+
+Halvorsen comments: "We can also consider options on swaps, which the Black model views as having a bond component and a swap component. The swaption, used to hedge against rising interest rates, can be evaluated as the bond component minus the swap component."
+
+Ridgemont has an endowment that helps support the university financially. The university has learned the endowment will be receiving a gift of 150,000 shares of Pelham Group (PG) stock in one month. DRA recommends the use of a one-month options position to hedge against a material price decline on the stock during this period. Exhibit 1 lists the relevant PG stock and option characteristics.
+
+Exhibit 1: PG Stock and Option Information
+# Item | Value
+Stock price | $64
+Call and put options strike price | $62
+Delta call | 0.6217
+Delta put | –0.3783"""
+add('M12','Derivatives',body,[
+ mkq("Ortiz's understanding of the valuation of the European-style six-month call option is most likely:",["correct with respect to the payoffs and the discount rate.","correct with respect to the payoffs but incorrect about the discount rate.","incorrect with respect to the payoffs but correct about the discount rate."],2,
+  ["The expected payoffs must use risk-neutral probabilities, not the true probabilities of the underlying.","The risk-free periodic rate is the correct discount rate, so Ortiz is not wrong about the discount rate.","In the expectations approach the option value is the present value of the expected terminal payoffs computed with risk-neutral probabilities (not the true probabilities), discounted at the risk-free rate. Ortiz uses the wrong probabilities but the right discount rate."],
+  ["using the true probabilities of the underlying rate moves","discounting at the risk-free periodic rate"],"Option value = PV (at the risk-free rate) of expected payoffs under RISK-NEUTRAL probabilities."),
+ mkq("Is Halvorsen's description of the swaption used for the hedge most likely correct?",["Yes","No, because the swaption used to hedge against rising rates is a receiver swaption.","No, because a swaption used to hedge against rising rates would be evaluated as the swap component minus the bond component."],2,
+  ["A swaption that hedges against rising interest rates is a payer swaption, whose Black-model value is the swap component minus the bond component, so the description is not correct.","A swaption that hedges against rising rates is a payer swaption, not a receiver swaption (the receiver swaption hedges against falling rates).","A payer swaption hedges against rising rates and, in the Black model, is evaluated as the swap component minus the bond component. A receiver swaption hedges against falling rates and is evaluated as the bond component minus the swap component. Halvorsen reverses the components."],
+  ["The swaption, used to hedge against rising interest rates, can be evaluated as the bond component minus the swap component"],"Payer swaption (hedge rising rates) = swap component − bond component; receiver swaption (hedge falling rates) = bond component − swap component."),
+ mkq("Assuming one option per share, an appropriate delta hedge for the PG stock would most likely be to:",[f"buy {w1:,.0f} puts.",f"sell {calls:,.0f} calls.",f"sell {w2:,.0f} calls."],1,
+  [f"This multiplies the shares by the absolute put delta (150,000 × 0.3783 = {w1:,.0f}). The number of puts to buy would be shares ÷ the absolute put delta, not shares × the delta.",f"The stock position has delta +1 per share, so the number of calls to sell is 150,000 ÷ 0.6217 = {calls:,.0f}.",f"This multiplies the shares by the call delta (150,000 × 0.6217 = {w2:,.0f}) instead of dividing."],
+  ["150,000 shares of Pelham Group (PG) stock","@row:Delta call","@row:Delta put"],"Delta hedge with options: number of options = shares ÷ option delta (sell calls, or buy puts with the put's absolute delta).",True),
+ mkq("If the price of PG stock moves farther away from the $62 strike price over the next 30 days, which of the following changes in option parameter measures will most likely be observed?",["Decreases in vega and the absolute value of theta","Increases in vega and the absolute value of theta","A decrease in vega and an increase in the absolute value of theta"],0,
+  ["Vega is highest when the option is at or near the money, and theta's absolute value is largest at the money. As the stock moves away from the strike, the option moves in or out of the money, so both decrease.","Vega and the absolute value of theta increase when the stock moves toward the strike (at the money), not away from it.","Theta's absolute value increases only as the option gets closer to the money; moving away reduces it."],
+  ["moves farther away from the $62 strike price"],"Vega and |theta| are largest at the money: moving toward the strike raises them, moving away lowers them."),
+])
+# ===================== M12 Economics: Keller / Veltron (FX, reading 5; re-skin of the Carlisle / Nexran vignette) =====================
+sb,so=1.7312,1.7318; mid2=(sb+so)/2; i_sgd,i_gbp=0.0060,0.0145
+F_ok=mid2*(1+i_sgd)/(1+i_gbp); F_inv=mid2*(1+i_gbp)/(1+i_sgd); F_base=mid2*(1+i_gbp)
+assert [round(F_ok,4),round(F_inv,4),round(F_base,4)]==[1.7170,1.7461,1.7566],(F_ok,F_inv,F_base)
+eur=25_000_000; K0=1.1290; spb,spo=1.1305,1.1307; pb,po=0.0042,0.0044; imm=0.0070
+off=spo+po; mtm=(K0-off)*eur; mtm_d=mtm/(1+imm*180/360); mtm_nodisc=mtm
+bidc=(K0-(spb+pb))*eur/(1+imm*180/360)
+assert abs(off-1.1351)<1e-9 and round(mtm)==-152_500 and round(mtm_d)==-151_968 and round(bidc)==-142_003,(mtm,mtm_d,bidc)
+body=f"""Cyrus Dalton was recently hired as an associate analyst in the corporate finance department by Veltron Enterprises. Veltron is a US manufacturer of heavy industrial equipment that sells its products globally. Dalton assists finance director Naomi Keller in managing Veltron's foreign currency risk. As part of the training process concerning the complexities of the foreign exchange (FX) markets, Keller provides Dalton with Exhibit 1 and asks him to demonstrate his familiarity with some calculations, such as expected future spot rates. A few days later, Keller and Dalton meet to discuss the results of his work.
+
+Exhibit 1: Interbank Currency Quote and One-Year MRR Rates
+# Item | Value
+SGD/GBP bid (spot) | {sb:.4f}
+SGD/GBP offer (spot) | {so:.4f}
+One-year MRR (GBP) | {i_gbp*100:.2f}%
+One-year MRR (SGD) | {i_sgd*100:.2f}%
+
+The conversation then moves to a discussion of some recent Veltron transactions. Six months ago, a European customer placed an order for EUR 25 million of oil field construction equipment with delivery and payment scheduled to take place one year later. Veltron hedged all of its exposure to the euro by entering into a forward position at a forward price of USD{K0:.4f}/EUR.
+
+Veltron has just been informed by the customer that because of the collapse in oil prices, it is canceling the order. Keller tells Dalton to mark the forward position to market to facilitate exiting the currency hedge. Exhibit 2 provides information about current FX rates and interest rates.
+
+Exhibit 2: Current Spot, Six-Month Forward Points and MRR
+# Item | Value
+Spot USD/EUR (bid/offer) | {spb:.4f}/{spo:.4f}
+Six-month forward points (USD/EUR) | 42/44
+MRR (USD) | 0.70% (annualized)
+
+The next transaction considered is a recently signed multiyear contract with a customer located in the country of Morlundan. Veltron will sell 25 pieces of equipment per year at a fixed price, with the sale priced in the Morlundan pound. Morlundan has a floating exchange rate, and capital flows are highly mobile. Morlundan also has an expansionary monetary policy with an expansionary fiscal policy. Keller asks Dalton to determine the appropriate action Veltron should take to manage its Morlundan currency risk based on that country's economic policies.
+
+As a final item, Keller explains the impact of the balance of payment flows on exchange rates. She notes that the United States has run large and persistent current account deficits for years and that its external debt owed to foreign investors has risen sharply relative to GDP. Veltron's sales to Cardovia are expected to be a major component of the company's future total sales. Consequently, Keller believes Veltron should hedge against a potential decline in the USD relative to the Cardovian currency because she is concerned that foreign investors may soon judge the US external debt to be unsustainable."""
+add('M12','Economics',body,[
+ mkq("Using the bid–offer quote midpoint in Exhibit 1 as the current spot rate and assuming uncovered interest rate parity holds, the projected one-year spot rate for the SGD/GBP currency pair is closest to:",[f"{F_ok:.4f}.",f"{F_inv:.4f}.",f"{F_base:.4f}."],0,
+  [f"If uncovered interest rate parity holds, the expected spot rate in one year equals the one-year forward rate: F = S × (1 + i_price) ÷ (1 + i_base) = {mid2:.4f} × (1.0060 ÷ 1.0145) = {F_ok:.4f}. SGD is the price currency and GBP the base currency.",f"This inverts the interest rate ratio: {mid2:.4f} × (1.0145 ÷ 1.0060) = {F_inv:.4f}.",f"This multiplies the spot rate by the base-currency interest factor only: {mid2:.4f} × 1.0145 = {F_base:.4f}."],
+  ["@row:SGD/GBP bid (spot)","@row:One-year MRR (GBP)","@row:One-year MRR (SGD)"],"Forward / expected spot (UIRP) = S × (1 + i_price currency) ÷ (1 + i_base currency); use the midpoint spot.",True),
+ mkq("Based on the data in Exhibits 1 and 2, the mark-to-market value for Veltron's forward position related to the oil field construction equipment order is closest to:",[f"a loss of USD{-mtm_nodisc:,.0f}.",f"a loss of USD{-mtm_d:,.0f}.",f"a loss of USD{-bidc:,.0f}."],1,
+  [f"This does not discount the gain or loss to the current date: (1.1290 − 1.1351) × 25,000,000 = −USD152,500, which arises at settlement six months from now.",f"Veltron sold EUR 25 million forward at 1.1290. To mark to market it offsets by buying EUR forward, which means paying the offer for both the spot rate and the forward points: 1.1307 + 0.0044 = 1.1351. At settlement the position loses (1.1290 − 1.1351) × 25,000,000 = −USD152,500. Discounting six months at the USD MRR: −152,500 ÷ (1 + 0.0070 × 180/360) = −USD{-mtm_d:,.0f}.",f"This uses the bid for the spot rate and the bid for the points (1.1305 + 0.0042 = 1.1347) instead of the offers, which a buyer of EUR cannot get: −USD{-bidc:,.0f}."],
+  ["forward position at a forward price of USD1.1290/EUR","@row:Spot USD/EUR","@row:Six-month forward points"],"Mark to market: take the offsetting forward at today's all-in rate (buying the base currency pays the offer and offer points), find the difference at settlement, discount at the price-currency MRR.",True),
+ mkq("Given Morlundan's economic policies, which of the following actions would be most appropriate regarding currency risk on the multiyear contract in Morlundan?",["Veltron should hedge against appreciation of the Morlundan pound.","Veltron should hedge against depreciation of the Morlundan pound.","Veltron should not enter into a hedge because the exchange rate change is ambiguous."],2,
+  ["Veltron will be paid in pounds, so appreciation would help it; and in any case the mix of policies does not give a clear direction.","With high capital mobility, an expansionary monetary policy lowers interest rates and pushes the currency down, but an expansionary fiscal policy raises interest rates and pushes it up. The two effects offset each other, so a one-sided hedge is not supported.","In the Mundell–Fleming model with high capital mobility, expansionary monetary policy is bearish for the currency while expansionary fiscal policy is bullish for it. The combination has an ambiguous effect on the exchange rate, so there is no basis for a one-directional hedge."],
+  ["Morlundan has a floating exchange rate, and capital flows are highly mobile","an expansionary monetary policy with an expansionary fiscal policy"],"Mundell–Fleming, high capital mobility: expansionary monetary → currency down; expansionary fiscal → currency up; opposite policy directions → ambiguous; same direction → clear."),
+ mkq("Keller's belief that Veltron should hedge against a decline in the dollar is best described as being based on which of the following exchange rate adjustment mechanisms?",["Portfolio balance","Debt sustainability","Flow supply/demand"],1,
+  ["The portfolio balance channel is about current account imbalances shifting financial wealth and global asset preferences; Keller's concern is that the external debt level itself becomes unsustainable.","The debt sustainability channel says there is an upper limit on how large and persistent a current account deficit can be. If external debt owed to foreign investors rises to unsustainable levels, investors expect a major depreciation of the deficit country's currency to narrow the deficit and stabilize the debt. This is Keller's argument.","The flow supply/demand channel is about the payment flows for traded goods and services: surplus countries' currencies appreciate and deficit countries' currencies depreciate; Keller is not arguing from trade flows."],
+  ["external debt owed to foreign investors has risen sharply relative to GDP","judge the US external debt to be unsustainable"],"Upper limit on persistent deficits / unsustainable external debt → debt sustainability; wealth and asset-preference shifts → portfolio balance; trade payment flows → flow supply/demand."),
+])
+# ===================== M12 Quant: Marsh (multiple regression, reading 1; re-skin of the Williams vignette) =====================
+n_obs,kk=25,4; coef=dict(Intercept=4.00,Gas=1.50,Temp=2.00,Snow=6.00,Housing=4.00)
+fc=coef['Intercept']+coef['Gas']*0.20+coef['Temp']*4+coef['Snow']*2+coef['Housing']*(-5)
+fc_h=coef['Intercept']+coef['Gas']*0.20+coef['Temp']*4+coef['Snow']*2+coef['Housing']*5
+fc_t=coef['Intercept']+coef['Gas']*0.20-coef['Temp']*4+coef['Snow']*2+coef['Housing']*(-5)
+assert [round(fc,1),round(fc_h,1),round(fc_t,1)]==[4.3,44.3,-11.7]
+SSR,SSE=214.0,700.0; SST=SSR+SSE; MSR=SSR/kk; MSE=SSE/(n_obs-kk-1); Fst=MSR/MSE; Fcrit=2.8661
+R2=SSR/SST; adj=1-(n_obs-1)/(n_obs-kk-1)*(1-R2)
+assert round(MSR,2)==53.50 and round(MSE,2)==35.00 and round(Fst,4)==1.5286 and Fst<Fcrit and round(R2,3)==0.234 and round(adj,3)==0.081
+body=f"""Elena Marsh, CFA, has determined that heat pump sales in the Northeast U.S. for Aldrin Company are a function of several factors in each area: the cost of natural gas, the temperature, snowfall, and housing starts. Using data for the most currently available year, she runs a cross-sectional regression where she regresses the deviation of sales from the historical average in each area on the deviation of each explanatory variable from the historical average of that variable for that location. She feels this is the most appropriate method since each geographic area will have different average values for the inputs, and the model can explain how current conditions explain how heat pump sales are higher or lower from the historical average in each area. In summary, she regresses current sales for each area minus its respective historical average on the following variables for each area:
+- The difference between the retail price of natural gas and its historical average.
+- The mean number of degrees the temperature is below normal in New York City.
+- The amount of snowfall above the average.
+- The percentage of housing starts above the average.
+
+Marsh used a sample of {n_obs} observations obtained from {n_obs} metropolitan areas in the Northeast U.S. The results are in the tables below. The dependent variable is in sales of heat pumps in millions of dollars.
+
+Coefficient Estimates Table
+# Variable | Estimated Coefficient
+Intercept | {coef['Intercept']:.2f}
+$ Natural Gas | {coef['Gas']:.2f}
+Low Temperature | {coef['Temp']:.2f}
+Snowfall | {coef['Snow']:.2f}
+Housing Starts | {coef['Housing']:.2f}
+
+Analysis of Variance Table (ANOVA)
+# Source | Degrees of Freedom | Sum of Squares | Mean Square
+Regression | {kk} | {SSR:.2f} | {MSR:.2f}
+Error | {n_obs-kk-1} | {SSE:.2f} | {MSE:.2f}
+Total | {n_obs-1} | {SST:.2f} |
+
+Table of the F-Distribution. Critical values for right-hand tail area equal to 0.05. Numerator: df1 and Denominator: df2
+# df2 \\ df1 | 1 | 2 | 4 | 10 | 20
+1 | 161.45 | 199.50 | 224.58 | 241.88 | 248.01
+2 | 18.513 | 19.000 | 19.247 | 19.396 | 19.446
+4 | 7.7086 | 6.9443 | 6.3882 | 5.9644 | 5.8025
+10 | 4.9646 | 4.1028 | 3.4780 | 2.9782 | 2.7740
+20 | 4.3512 | 3.4928 | 2.8661 | 2.3479 | 2.1242
+
+One of her goals is to forecast the sales of the New York City metropolitan area next year. For that area and for the upcoming year, Marsh obtains the following projections: natural gas prices will be $0.20 above average, the temperature in New York City will be 4 degrees below normal, snowfall will be 2 inches above average, and housing starts will be 5% below average."""
+add('M12','Quantitative Methods',body,[
+ mkq("According to the model and the data for the New York City metropolitan area, the forecast of heat pump sales is:",[f"${fc_h:.1f} million above average.",f"${fc:.1f} million above the average.",f"${-fc_t:.1f} million below average."],1,
+  [f"This enters housing starts 5% below average as +5 instead of −5: [4 + 1.5 × 0.20 + 2 × 4 + 6 × 2 + 4 × (+5)] = ${fc_h:.1f} million.",f"Forecast = 4.00 + (1.50 × 0.20) + (2.00 × 4) + (6.00 × 2) + (4.00 × (−5)) = 4 + 0.3 + 8 + 12 − 20 = ${fc:.1f} million above the average. The temperature 4 degrees below normal enters as +4 and housing starts 5% below average as −5.",f"This enters the temperature as −4 (it is measured as degrees BELOW normal, so a cold year is +4): ${fc_t:.1f} million."],
+  ["temperature in New York City will be 4 degrees below normal","housing starts will be 5% below average","The mean number of degrees the temperature is below normal"],"Plug each variable in with the sign it is DEFINED with (temperature = degrees below normal, so 4 below normal = +4; housing starts below average = negative).",True),
+ mkq("Marsh proceeds to test the hypothesis that none of the independent variables has significant explanatory power. Using the joint F-test for the significance of all slope coefficients, at a 5% level of significance:",["all of the independent variables have explanatory power.","at least one of the independent variables has explanatory power.","none of the independent variables has explanatory power."],2,
+  ["The F-test cannot show that all variables are significant, only that at least one is.","At least one variable would have explanatory power only if the F-statistic exceeded the critical value; it does not.",f"F = mean square regression ÷ mean square error = {MSR:.2f} ÷ {MSE:.2f} = {Fst:.3f}. The critical F value for 4 numerator and 20 denominator degrees of freedom is 2.8661. Since {Fst:.3f} < 2.8661, we cannot reject the null hypothesis that all slope coefficients are zero: none of the independent variables has significant explanatory power."],
+  ["@row:Regression","@row:Error","@row:20"],"Joint F-test: F = MSR ÷ MSE (df = k and n − k − 1); F above the critical value → at least one slope differs from 0; below → none is significant.",True),
+ mkq("When Marsh ran the model, the computer said the R-squared is 0.234. She examines the other output and concludes that this is the:",["adjusted R-squared value.","unadjusted R-squared value.","neither the unadjusted nor adjusted R-squared value, nor the coefficient of correlation."],1,
+  [f"Adjusted R-squared = 1 − [(25 − 1) ÷ (25 − 4 − 1)] × (1 − 0.234) = {adj:.3f}, not 0.234.",f"Unadjusted R-squared = regression sum of squares ÷ total sum of squares = {SSR:.0f} ÷ {SST:.0f} = {R2:.3f}, so the reported value is the unadjusted R-squared.",f"0.234 matches the unadjusted R-squared ({SSR:.0f} ÷ {SST:.0f}), so it is not 'neither'."],
+  ["@row:Regression","@row:Total"],"Unadjusted R² = RSS ÷ SST; adjusted R² = 1 − [(n − 1) ÷ (n − k − 1)] × (1 − R²) is smaller when k > 1.",True),
+ mkq("In preparing and using this model, Marsh has least likely relied on which of the following assumptions?",["The disturbance or error term is normally distributed.","The residuals are homoscedastic.","There is a linear relationship between the independent variables."],2,
+  ["Normally distributed errors are an assumption of multiple regression.","Homoscedastic residuals (constant error variance) are an assumption of multiple regression.","Multiple regression assumes there is NO exact linear relationship between two or more of the independent variables (no perfect multicollinearity), so Marsh has least likely relied on a linear relationship among them."],
+  ["regresses the deviation of sales from the historical average"],"Multiple regression assumptions: linear in the parameters, no exact linear relationship among independent variables, normal and homoscedastic errors, no serial correlation."),
+])
+# ===================== M12 Equity: Ibarra / Brightleaf (justified P/B, single-stage RI; re-skin of eq5e-thales, readings 21) =====================
+bvps,pb=31.20,3.25; px=round(bvps*pb,2); beta,rf,erp=0.80,3.90,5.00; r=rf+beta*erp
+g1,roe1=4.50,18.0
+pb1=1+(roe1-r)/(r-g1)
+roe2=r+(pb-1)*(r-g1)
+g3=r-(roe1-r)/(pb-1)
+assert px==101.40 and abs(r-7.9)<1e-9 and round(pb1,2)==3.97 and round(roe2,2)==15.55 and round(g3,2)==3.41,(px,r,pb1,roe2,g3)
+hb,hp,hroe,hg,hr=24.0,42.0,17.0,9.0,13.0
+hv=hb+hb*(hroe-hr)/(hr-hg); assert hv==48.0
+body=f"""Ibarra Electronics S.A. (Madrid: IBE.MC) has a current stock price of €{px:.2f}. It also has book value per share of €{bvps:.2f} and a P/B of {pb:.2f}. Assume that the single-stage growth model is appropriate for valuing the company. Ibarra's adjusted beta is {beta:.2f}, the risk-free rate is {rf:.2f}%, and the equity risk premium is {erp:.2f}%.
+
+Retail fund manager Tobias Renner is considering the purchase of shares in upstart retailer Brightleaf Stores (BLS). The current book value of BLS is ${hb:.0f} per share, and its market price is ${hp:.0f}. Renner expects long-term ROE to be {hroe:.0f}%, long-term growth to be {hg:.0f}%, and cost of equity to be {hr:.0f}%."""
+add('M12','Equity Valuation',body,[
+ mkq(f"If the growth rate is {g1:.2f}% and the ROE is {roe1:.0f}%, the justified P/B for Ibarra is closest to:",[f"{pb1:.2f}.",f"{pb:.2f}.",f"{1+(roe1-r)/(r):.2f}."],0,
+  [f"Required return = {rf:.2f}% + {beta:.2f} × {erp:.2f}% = {r:.1f}%. Justified P/B = 1 + (ROE − r) ÷ (r − g) = 1 + ({roe1/100:.3f} − {r/100:.3f}) ÷ ({r/100:.3f} − {g1/100:.3f}) = {pb1:.2f}.",f"{pb:.2f} is the current P/B, not the justified P/B for the new inputs.",f"This divides by r instead of (r − g): 1 + (0.18 − 0.079) ÷ 0.079 = {1+(roe1-r)/(r):.2f}."],
+  ["is the single-stage growth model","@x"][:1] and ["the single-stage growth model is appropriate",f"equity risk premium is {erp:.2f}%"],"Justified P/B (single stage) = 1 + (ROE − r) ÷ (r − g), with r = rf + beta × ERP.",True),
+ mkq(f"If the growth rate is {g1:.2f}%, the ROE required to yield Ibarra's current P/B of {pb:.2f} is closest to:",[f"{roe1:.1f}%.",f"{roe2:.1f}%.",f"{r:.1f}%."],1,
+  [f"{roe1:.0f}% is just the ROE given in the previous question; it gives a justified P/B of {pb1:.2f}, not {pb:.2f}.",f"Solve {pb:.2f} = 1 + (ROE − 0.079) ÷ (0.079 − 0.045): ROE = 0.079 + ({pb:.2f} − 1) × 0.034 = {roe2:.1f}%.",f"At ROE equal to the required return ({r:.1f}%), the justified P/B would be exactly 1.0."],
+  [f"current P/B of {pb:.2f}","the ROE required"],"Rearrange P/B = 1 + (ROE − r) ÷ (r − g): ROE = r + (P/B − 1) × (r − g).",True),
+ mkq(f"If the ROE is {roe1:.0f}%, the growth rate required for Ibarra to have its current P/B of {pb:.2f} is closest to:",[f"{g1:.1f}%.",f"{r:.1f}%.",f"{g3:.1f}%."],2,
+  [f"{g1:.1f}% gives a justified P/B of {pb1:.2f}, not {pb:.2f}.",f"A growth rate equal to the required return makes the single-stage value infinite and is not feasible.",f"Solve {pb:.2f} = 1 + (0.18 − 0.079) ÷ (0.079 − g): 0.079 − g = 0.101 ÷ {pb-1:.2f}, so g = {g3:.1f}%."],
+  [f"current P/B of {pb:.2f}","the growth rate required"],"Rearrange P/B = 1 + (ROE − r) ÷ (r − g): g = r − (ROE − r) ÷ (P/B − 1).",True),
+ mkq("Using a single-stage residual income model, Renner would most likely conclude that BLS's shares are:",[f"somewhat undervalued (value ${hv:.0f} against a price of ${hp:.0f}).",f"somewhat overvalued (value $36 against a price of ${hp:.0f}).","fairly valued."],0,
+  [f"V0 = B0 + B0 × (ROE − r) ÷ (r − g) = {hb:.0f} + {hb:.0f} × ({hroe/100:.2f} − {hr/100:.2f}) ÷ ({hr/100:.2f} − {hg/100:.2f}) = ${hv:.0f}, which is above the market price of ${hp:.0f}.",f"The value is above, not below, the market price, because ROE ({hroe:.0f}%) exceeds the cost of equity ({hr:.0f}%).",f"Value (${hv:.0f}) differs from the market price (${hp:.0f}), so the shares are not fairly valued."],
+  [f"long-term ROE to be {hroe:.0f}%",f"cost of equity to be {hr:.0f}%"],"Single-stage RI: V0 = B0 + B0 × (ROE − r) ÷ (r − g); compare with price.",True),
+])
+# ===================== M12 Corporate Issuers: Halden / ESG and governance (re-skin of esg31-5) =====================
+body="""Halden Ltd, based in England, is a private company that produces and retails candles and home fragrances. Marian Pryce and her brother co-founded the company 12 years ago because of their shared interest in developing products from recycled and plant-based materials. Initially the two siblings owned all the shares, but three years ago they implemented performance-based compensation for the top four senior managers, and as part of this process, the managers now own a combined 8% of the equity.
+
+The company is looking to expand its equity base to help fund a new workshop and support growth plans. Pryce, who is responsible for the company's financial management, is meeting with Anil Rao, a financial consultant, to explore Halden's equity financing options. Pryce asks if they were to go public, could they have a share structure similar to a company like Snap, where the co-founders could retain voting control of the company through the issuance of multi-voting ordinary (common) shares. Rao tells her that before Halden considers going public, there are other options available, and suggests they look for private equity investment. He mentions being familiar with a private equity fund that runs a socially responsible investment (SRI) pool that could potentially be interested in Halden.
+
+Pryce is very interested in being associated with an SRI fund and asks how the fund would assess whether Halden qualifies for the investment. Rao explains that the private equity fund he is thinking of uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups.
+
+Pryce explains to Rao that Halden is implementing a new initiative to reduce the packaging associated with their products. The company will stock the majority of its refill fragrance oils in bulk containers in its retail outlets. Customers will purchase reusable glass bottles, available in two different sizes, to be used for future purchases. This change will attract customers interested in reducing their plastic footprint. The company also expects the change to reduce shipping, packaging, and handling costs, both at the distribution centers and in the retail stores. The numerous individual bottles that would have been packaged for shipping and then unpacked and shelved at the stores will be replaced with larger bulk containers. Rao notes that when announced, analysts will use this information in their valuation of Halden."""
+add('M12','Corporate Issuers',body,[
+ mkq("The change in ownership structure that occurred three years ago most likely addressed which of the following issues associated with family-owned businesses?",["Poor transparency.","Interlocking directorships.","Ability to attract quality management."],2,
+  ["Family-owned businesses often suffer from a lack of transparency, but giving some equity to managers does not improve it while the founders remain the majority owners.","Interlocking directorships arise when a corporate group controls several corporations; nothing in the vignette mentions them.","Granting senior managers an equity stake with performance-based pay helps a family-owned business attract and keep quality management, which is the issue addressed."],
+  ["performance-based compensation for the top four senior managers","the managers now own a combined 8% of the equity"],"Family-owned business issues: transparency, interlocking directorships, attracting quality management. Equity or performance pay for managers → attracting quality management."),
+ mkq("If Halden were to go public with the share structure similar to Snap that Pryce asked about, which governance issue would most likely arise?",["Voting cap restrictions.","Principal–agent problem.","Principal–principal problem."],2,
+  ["Voting caps are legal restrictions on the voting rights of large share positions, usually meant to stop foreign investors from gaining control; they are not what multi-voting shares create.","The principal–agent problem arises when ownership and voting power are both dispersed, which makes shareholders weak and managers strong; here the founders keep control.","With multi-voting shares the founders keep voting control with a small economic stake, so the conflict is between the controlling shareholders and the minority shareholders: a principal–principal problem."],
+  ["retain voting control of the company through the issuance of multi-voting ordinary (common) shares"],"Controlling shareholders vs minority shareholders (dual class, cross holdings) → principal–principal; dispersed owners vs managers → principal–agent."),
+ mkq("Which of the following approaches to identifying a company's ESG factors best describes the one used by the private equity fund that Rao mentions?",["ESG data providers.","Proprietary methods.","Not-for-profit initiatives."],1,
+  ["ESG data providers are independent organizations, such as MSCI or Sustainalytics, from which the fund would purchase ready-made ratings; the fund here collects the information itself.","Proprietary methods mean the analysts use their own judgment on information from corporate reports, industry organizations, news and environmental groups, which is what the fund does.","Not-for-profit initiatives are standards or frameworks created by non-profit bodies (for example the PRI or GRI); none is mentioned."],
+  ["uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups"],"Own analysts + company data + news and NGO sources → proprietary methods; purchased ratings → data providers; frameworks from non-profits → not-for-profit initiatives."),
+ mkq("Analysts interested in incorporating ESG factors into their analysis will most likely adjust for the announcement of the changes arising from Halden's new packaging initiative by:",["increasing the risk premium.","increasing the company's fair value.","modifying only the qualitative ESG analysis."],1,
+  ["Lower shipping, packaging and handling costs raise margins and cash flows, which, if anything, would reduce, not increase, the risk premium.","The initiative is expected to reduce costs, which increases operating margins and cash flows, and it also appeals to customers. Analysts would therefore raise their cash-flow forecasts and the company's fair value.","The initiative has measurable cost effects, so analysts would change the quantitative valuation inputs too, not only the qualitative ESG assessment."],
+  ["expects the change to reduce shipping, packaging, and handling costs"],"ESG integration: quantify the effect on cash flows or the discount rate; lower costs → higher cash flow → higher value."),
+])
+# ---------------- order, balance, write (core = non-Ethics vignettes; build.py adds the Ethics units, hints and answer balance) ----------------
+PERMS=[p for p in itertools.permutations(range(3)) if p!=(0,1,2)]
+def maxrun(k):
+    m_=c=1
+    for a,b in zip(k,k[1:]): c=c+1 if a==b else 1; m_=max(m_,c)
+    return m_
+def finish(paper,lo,hi,seed):
+    Vp=[v for v in V if v.get('paper')==paper]
+    rng=random.Random(seed)
+    while True:
+        rng.shuffle(Vp)
+        if all(a['topic']!=b['topic'] for a,b in zip(Vp,Vp[1:])): break
+    free=[(vi,i) for vi,v in enumerate(Vp) for i,q in enumerate(v['questions']) if not q['_fixed']]
+    base=[copy.deepcopy(Vp[vi]['questions'][i]) for vi,i in free]
+    for t in range(60000):
+        r=random.Random(t); ch=[list(r.choice(PERMS)) for _ in free]
+        for (vi,i),b0,o in zip(free,base,ch):
+            q=copy.deepcopy(b0); perm(q,o); Vp[vi]['questions'][i]=q
+        k=''.join('ABC'[q['answer']] for v in Vp for q in v['questions']); c=collections.Counter(k)
+        if maxrun(k)<=3 and all(lo<=c[x]<=hi for x in 'ABC'): break
+    else: raise SystemExit('no balance '+paper)
+    for v in Vp:
+        v.pop('paper')
+        for q in v['questions']: q.pop('_fixed',None)
+    return Vp,k
+if __name__=='__main__':
+    for paper,lo,hi in (('M11',9,15),('M12',10,16)):
+        Vp,k=finish(paper,lo,hi,11)
+        json.dump(dict(vignettes=Vp),open(f'/home/user/jimin/bank/exam/mock{paper[1:]}_core.json','w'),ensure_ascii=False,indent=1)
+        print(paper,len(k),k,collections.Counter(k),[v['topic'][:8] for v in Vp])

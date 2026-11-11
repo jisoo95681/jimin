@@ -1,0 +1,751 @@
+{
+ "vignettes": [
+  {
+   "topic": "Derivatives",
+   "body": "Delta Risk Advisory (DRA) provides institutional financial risk management advisory and brokerage services. Clients seek DRA's services when evaluating whether to hedge interest rate, currency, or equity market risks. Martin Halvorsen, senior adviser at DRA, is discussing a new client with analyst Lena Ortiz.\n\nHalvorsen states: \"Ridgemont University plans a laboratory renovation for its science center and has engaged DRA to implement options strategies in order to manage the risk of rising interest rates. The renovation is to be completed in 12 months, in time for the start of the school year. To minimize disruption to its academic schedule, however, Ridgemont will not begin the work until six months from now. State funding will not be received until the beginning of the next school year, so a six-month variable interest rate loan will finance the renovation.\"\n\nOrtiz comments: \"I think six-month call options on the six-month forward rate would probably be the cheapest solution. The price of the European-style option can be evaluated as the present value of the expected terminal option payoffs, using the true probabilities of the underlying rate moves and discounting at the risk-free periodic rate.\"\n\nHalvorsen comments: \"We can also consider options on swaps, which the Black model views as having a bond component and a swap component. The swaption, used to hedge against rising interest rates, can be evaluated as the bond component minus the swap component.\"\n\nRidgemont has an endowment that helps support the university financially. The university has learned the endowment will be receiving a gift of 150,000 shares of Pelham Group (PG) stock in one month. DRA recommends the use of a one-month options position to hedge against a material price decline on the stock during this period. Exhibit 1 lists the relevant PG stock and option characteristics.\n\nExhibit 1: PG Stock and Option Information\n# Item | Value\nStock price | $64\nCall and put options strike price | $62\nDelta call | 0.6217\nDelta put | –0.3783",
+   "questions": [
+    {
+     "q": "Ortiz's understanding of the valuation of the European-style six-month call option is most likely:",
+     "options": [
+      "correct with respect to the payoffs but incorrect about the discount rate.",
+      "correct with respect to the payoffs and the discount rate.",
+      "incorrect with respect to the payoffs but correct about the discount rate."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The risk-free periodic rate is the correct discount rate, so Ortiz is not wrong about the discount rate.\nB. Incorrect. The expected payoffs must use risk-neutral probabilities, not the true probabilities of the underlying.\nC. Correct. In the expectations approach the option value is the present value of the expected terminal payoffs computed with risk-neutral probabilities (not the true probabilities), discounted at the risk-free rate. Ortiz uses the wrong probabilities but the right discount rate.",
+     "hint": {
+      "hl": [
+       "using the true probabilities of the underlying rate moves",
+       "discounting at the risk-free periodic rate"
+      ],
+      "rule": "Option value = PV (at the risk-free rate) of expected payoffs under RISK-NEUTRAL probabilities."
+     }
+    },
+    {
+     "q": "Is Halvorsen's description of the swaption used for the hedge most likely correct?",
+     "options": [
+      "No, because a swaption used to hedge against rising rates would be evaluated as the swap component minus the bond component.",
+      "No, because the swaption used to hedge against rising rates is a receiver swaption.",
+      "Yes"
+     ],
+     "answer": 0,
+     "why": "A. Correct. A payer swaption hedges against rising rates and, in the Black model, is evaluated as the swap component minus the bond component. A receiver swaption hedges against falling rates and is evaluated as the bond component minus the swap component. Halvorsen reverses the components.\nB. Incorrect. A swaption that hedges against rising rates is a payer swaption, not a receiver swaption (the receiver swaption hedges against falling rates).\nC. Incorrect. A swaption that hedges against rising interest rates is a payer swaption, whose Black-model value is the swap component minus the bond component, so the description is not correct.",
+     "hint": {
+      "hl": [
+       "The swaption, used to hedge against rising interest rates, can be evaluated as the bond component minus the swap component"
+      ],
+      "rule": "Payer swaption (hedge rising rates) = swap component − bond component; receiver swaption (hedge falling rates) = bond component − swap component."
+     }
+    },
+    {
+     "q": "Assuming one option per share, an appropriate delta hedge for the PG stock would most likely be to:",
+     "options": [
+      "buy 56,745 puts.",
+      "sell 241,274 calls.",
+      "sell 93,255 calls."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This multiplies the shares by the absolute put delta (150,000 × 0.3783 = 56,745). The number of puts to buy would be shares ÷ the absolute put delta, not shares × the delta.\nB. Correct. The stock position has delta +1 per share, so the number of calls to sell is 150,000 ÷ 0.6217 = 241,274.\nC. Incorrect. This multiplies the shares by the call delta (150,000 × 0.6217 = 93,255) instead of dividing.",
+     "hint": {
+      "hl": [
+       "150,000 shares of Pelham Group (PG) stock",
+       "@row:Delta call",
+       "@row:Delta put"
+      ],
+      "rule": "Delta hedge with options: number of options = shares ÷ option delta (sell calls, or buy puts with the put's absolute delta)."
+     }
+    },
+    {
+     "q": "If the price of PG stock moves farther away from the $62 strike price over the next 30 days, which of the following changes in option parameter measures will most likely be observed?",
+     "options": [
+      "Decreases in vega and the absolute value of theta",
+      "A decrease in vega and an increase in the absolute value of theta",
+      "Increases in vega and the absolute value of theta"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Vega is highest when the option is at or near the money, and theta's absolute value is largest at the money. As the stock moves away from the strike, the option moves in or out of the money, so both decrease.\nB. Incorrect. Theta's absolute value increases only as the option gets closer to the money; moving away reduces it.\nC. Incorrect. Vega and the absolute value of theta increase when the stock moves toward the strike (at the money), not away from it.",
+     "hint": {
+      "hl": [
+       "moves farther away from the $62 strike price"
+      ],
+      "rule": "Vega and |theta| are largest at the money: moving toward the strike raises them, moving away lowers them."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Financial Statement Analysis",
+   "body": "Valeria Soto is a financial analyst reviewing Brisa S.A., a Chilean corporation. Brisa reports under IFRS, its reporting currency is the Chilean Peso (CLP), and its financial year end is 31 December.\n\nSoto uses the following CLP/USD (number of CLP per 1 USD) exchange rate information for the most recent year.\n\nExhibit 1: Exchange Rates\n# Date | Exchange Rate CLP/USD\n15 November | 905.00\n31 December | 880.00\nAverage for the year | 915.00\n\nOn 15 November of the most recent year, Brisa exported goods for USD 4 million to an unaffiliated US customer on credit. The total amount remained outstanding as of 31 December.\n\nArica Corp. and Bosque Corp. are two wholly owned subsidiaries of Brisa that are located in the US. There are no intercompany transactions. In both subsidiaries, the only non-monetary assets are inventory and fixed assets, and all liabilities are monetary.\n\nBrisa translates Arica's financial statements using the current rate method. In the most recent year, Arica's revenue was USD 90 million and cost of sales was USD 52 million. The average exchange rate for inventory purchases was 930.00 CLP/USD.\n\nBrisa uses the temporal method to translate Bosque's financial statements. Soto evaluates the effect on Brisa's total shareholders' equity if Bosque's financial statements had been translated using the same method as Arica.\n\nBrisa has recently acquired a new subsidiary that operates in a country with a highly inflationary economy. In compliance with IFRS, the subsidiary prepares financial statements restated for inflation in the local currency. At the end of the current reporting period, Brisa will prepare consolidated financial statements using the new subsidiary's financial statements, and translate them using the average exchange rate for the period.",
+   "questions": [
+    {
+     "q": "The foreign currency transaction gain or loss (in CLP millions) on exported goods reported by Brisa in the most recent year is closest to:",
+     "options": [
+      "a loss of 140.0.",
+      "a loss of 100.0.",
+      "a gain of 100.0."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This uses the average rate for the year instead of the transaction-date rate: USD 4 million × (880 − 915) = −140. The receivable is remeasured against the rate on the date of the transaction.\nB. Correct. Brisa holds a USD receivable and the USD fell against the CLP, so it records a loss: USD 4 million × (880.00 − 905.00) = CLP −100 million.\nC. Incorrect. This has the sign reversed: a foreign currency receivable loses value when the foreign currency depreciates.",
+     "hint": {
+      "hl": [
+       "exported goods for USD 4 million",
+       "@row:15 November",
+       "@row:31 December"
+      ],
+      "rule": "Foreign currency receivable: gain (loss) = amount × (closing rate − transaction-date rate), in domestic currency per foreign unit; a depreciating foreign currency gives a loss on a receivable."
+     }
+    },
+    {
+     "q": "Arica's contribution to Brisa's consolidated gross profit (in CLP millions) in the most recent year is closest to:",
+     "options": [
+      "33,990.",
+      "34,770.",
+      "33,440."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This translates cost of sales at the average rate for inventory purchases (930.00), as the temporal method would: 90 × 915.00 − 52 × 930.00 = 33,990.\nB. Correct. Brisa uses the current rate method for Arica, so revenues and expenses are translated at the rate when the transaction took place or an average rate. Gross profit = (90 − 52) × 915.00 = 34,770.\nC. Incorrect. This translates the gross profit at the year-end rate: (90 − 52) × 880.00 = 33,440, the rate for balance sheet items.",
+     "hint": {
+      "hl": [
+       "translates Arica's financial statements using the current rate method",
+       "Average for the year"
+      ],
+      "rule": "Current rate method: income statement items at the average rate (all of them); temporal method: cost of sales at the historical inventory rate."
+     }
+    },
+    {
+     "q": "If Bosque's results had been translated using the current rate method, its total shareholders' equity would have been:",
+     "options": [
+      "lower.",
+      "higher.",
+      "the same."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Bosque's only non-monetary assets are inventory and fixed assets and all its liabilities are monetary, so under the temporal method it has a net monetary liability exposure. The USD depreciated against the CLP (905.00 to 880.00), so the temporal method produced a remeasurement gain in net income. Under the current rate method all assets are translated at the lower year-end rate, giving a negative translation adjustment: total shareholders' equity would have been lower.\nB. Incorrect. Equity would have been higher only if the USD had appreciated against the CLP.\nC. Incorrect. Equity is not the same: the two methods put the exchange effect in different places (net income under the temporal method, OCI under the current rate method) and measure different exposures.",
+     "hint": {
+      "hl": [
+       "only non-monetary assets are inventory and fixed assets, and all liabilities are monetary",
+       "@row:31 December"
+      ],
+      "rule": "Temporal: exposure = net monetary assets (liabilities); current rate: exposure = net assets. Foreign currency depreciates: net liability → gain (temporal), net assets → negative CTA (current rate)."
+     }
+    },
+    {
+     "q": "Is Soto correct about the method that Brisa should use to translate the new subsidiary's financial statements?",
+     "options": [
+      "No, because Brisa should use the exchange rate at the reporting period end",
+      "Yes",
+      "No, because Brisa should use the temporal method"
+     ],
+     "answer": 0,
+     "why": "A. Correct. When a foreign entity operates in a highly inflationary economy, IFRS requires that its financial statements first be restated for local inflation (IAS 29) and then translated into the parent's presentation currency at the exchange rate at the reporting period end (the current rate).\nB. Incorrect. IFRS does not allow the average exchange rate for a subsidiary in a highly inflationary economy.\nC. Incorrect. IFRS does not call for the temporal method here: the foreign entity's statements are first restated for local inflation (IAS 29).",
+     "hint": {
+      "hl": [
+       "highly inflationary economy",
+       "translate them using the average exchange rate for the period"
+      ],
+      "rule": "IFRS, hyperinflationary subsidiary: restate for local inflation (IAS 29), then translate everything at the closing (current) rate."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Alternative Investments",
+   "body": "Elio Marchetti is the portfolio manager for a defined benefit pension plan. He meets with Tessa Quinn, market strategist with Corvin Bank, to discuss possible investment opportunities. The investment committee for the pension plan has recently approved expanding the plan's permitted asset mix to include alternative asset classes.\n\nQuinn proposes the Summit Commodity Fund (Summit Fund) offered by Corvin Bank as a potentially suitable investment for the pension plan. Quinn shares selected futures contract data for three markets in which the Summit Fund invests. The futures data are presented in Exhibit 1.\n\nExhibit 1: Selected Commodity Futures Data*\n# Month | Gold Price | Coffee Price | Heating Oil Price\nJuly | 1,274.8 | 0.9850 | 2.4105\nSeptember | 1,274.8 | 1.0030 | 2.3552\nDecember | 1,274.8 | 1.0290 | 2.1980\n* Gold: US$/troy ounce; coffee: US$/pound; heating oil: US$/gallon.\n\nCorvin Bank recently released a report on the coffee market. Quinn shares the key conclusion from the report with Marchetti: \"The coffee market had a global harvest that was greater than expected. Despite the large harvest, coffee futures trading activity is balanced between producers and consumers. This balanced condition is not expected to change over the next year.\"\n\nQuinn shows Marchetti the total return of a recent trade executed by the Summit Fund. Quinn explains that the Summit Fund took a fully collateralized long futures position in nearby wheat futures contracts at the quoted futures price of 612.0 (US cents/bushel). Three months later, the entire futures position was rolled when the near-term futures price was 626.0 and the farther-term futures price was 632.0. During the three-month period between the time that the initial long position was taken and the rolling of the contract, the collateral earned an annualized rate of 0.80%.\n\nQuinn tells Marchetti that the pension fund could alternatively gain long exposure to commodities using the swap market. Quinn and Marchetti analyze the performance of a long position in an S&P GSCI total return swap having monthly resets and a notional amount of $30 million. Selected data on the S&P GSCI are presented in Exhibit 2.\n\nExhibit 2: Selected S&P GSCI Data\n# Reference Date | Index Level\nApril (swap initiation) | 3,115.60\nMay | 3,189.40\nJune | 3,254.85",
+   "questions": [
+    {
+     "q": "Which futures market in Exhibit 1 is in backwardation?",
+     "options": [
+      "Heating oil",
+      "Gold",
+      "Coffee"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Backwardation means the near-term futures price is higher than the longer-term price. Heating oil is the only market in which the near-term price ($2.4105) is higher than the longer-term prices ($2.3552 and $2.1980).\nB. Incorrect. Gold's futures prices are equal in July, September and December, so the market is flat, not in backwardation.\nC. Incorrect. Coffee's longer-term futures prices are higher than the near-term price (0.9850 < 1.0030 < 1.0290): contango.",
+     "hint": {
+      "hl": [
+       "@row:July",
+       "@row:December"
+      ],
+      "rule": "Backwardation: near-term futures price > longer-term price (downward-sloping curve); contango: near-term < longer-term; flat: equal."
+     }
+    },
+    {
+     "q": "Based on the key conclusion from the Corvin Bank coffee market report, the shape of the coffee futures curve in Exhibit 1 is most consistent with the:",
+     "options": [
+      "hedging pressure hypothesis.",
+      "insurance theory.",
+      "theory of storage."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The hedging pressure hypothesis explains the curve through net hedging positions; the report says trading is balanced between producers and consumers, so there is no hedging pressure.\nB. Incorrect. The insurance theory says producers hedge by selling futures at a discount to the expected spot price (backwardation); it does not fit an upward-sloping curve with balanced trading.\nC. Correct. The theory of storage focuses on the level of inventories and the state of supply and demand. A large harvest means high inventories, and a regularly stored commodity should have a higher price in the future (contango) to cover storage costs. Coffee's upward-sloping curve is consistent with it.",
+     "hint": {
+      "hl": [
+       "global harvest that was greater than expected",
+       "balanced between producers and consumers"
+      ],
+      "rule": "Contango with ample inventories → theory of storage; backwardation with producer hedging pressure → insurance theory; balanced hedgers → no hedging-pressure effect."
+     }
+    },
+    {
+     "q": "The Summit Fund's three-month total return on the wheat futures trade is closest to:",
+     "options": [
+      "2.49%.",
+      "1.53%.",
+      "3.45%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This leaves out the roll return: 2.288% + 0.20% = 2.49%.\nB. Correct. Total return = price return + roll return + collateral return. Price return = (626.0 − 612.0) ÷ 612.0 = 2.288%. Roll return = (near − farther) ÷ near = (626.0 − 632.0) ÷ 626.0 = -0.958%. Collateral return = 0.80% × 3/12 = 0.20%. Total = 2.288% -0.958% + 0.20% = 1.53%.\nC. Incorrect. This adds the roll return with the wrong sign (the market is in contango, so the roll return is negative): 2.288% + 0.958% + 0.20% = 3.45%.",
+     "hint": {
+      "hl": [
+       "fully collateralized long futures position",
+       "near-term futures price was 626.0 and the farther-term futures price was 632.0",
+       "collateral earned an annualized rate of 0.80%"
+      ],
+      "rule": "Commodity futures total return = price return + roll return + collateral return; roll return = (near − far) ÷ near (negative in contango); collateral return = annual rate × months ÷ 12."
+     }
+    },
+    {
+     "q": "Based on Exhibit 2, on the June settlement date, the party that is long the S&P GSCI total return swap will:",
+     "options": [
+      "owe a payment of $615,633.03.",
+      "receive a payment of $615,633.03.",
+      "receive a payment of $1,340,833.23."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This has the sign reversed: the index rose between May and June, so the long party receives a payment.\nB. Correct. The swap resets monthly, so the June settlement compares June with May: (3,254.85 ÷ 3,189.40 − 1) × $30,000,000 = 2.0521% × $30,000,000 = $615,633.03. The index increased, so the long position receives the payment.\nC. Incorrect. This measures the change from the April initiation level (3,254.85 ÷ 3,115.60 − 1), but the swap was reset in May: $1,340,833.23.",
+     "hint": {
+      "hl": [
+       "monthly resets",
+       "@row:May",
+       "@row:June"
+      ],
+      "rule": "Total return swap with monthly resets: payment = notional × (index this month ÷ index last month − 1); index up → the long party receives, down → pays."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Financial Statement Analysis",
+   "body": "Anders Lindgren, a pension fund equity analyst, is preparing an analysis of Alpina AG for the upcoming quarterly fund meeting. Alpina is a Switzerland-based manufacturer that operates three distinct divisions: kitchen appliances, garden equipment, and lighting. All three divisions sell through retail outlets around the world.\n\nThe company has been pursuing an aggressive growth strategy, achieved through both foreign acquisitions and organic growth. Lindgren is interested in determining how well Alpina is allocating its resources between the three divisions. Exhibit 1 summarizes selected divisional and corporate data for the current year and the prior year.\n\nExhibit 1: Alpina AG Selected Divisional and Corporate Data (CHF millions)\n# | Total for Three Divisions | | Kitchen Appliances | | Garden Equipment | | Lighting |\n | Current Year | Prior Year | Current Year | Prior Year | Current Year | Prior Year | Current Year | Prior Year\nRevenues | 3,131.8 | 3,058.4 | 1,305.4 | 1,362.0 | 1,121.9 | 1,012.6 | 704.5 | 683.8\nGross profit | 672.1 | 688.0 | 312.9 | 348.1 | 262.4 | 239.6 | 96.8 | 100.3\nOperating profit | 219.7 | 247.3 | 83.7 | 131.4 | 95.0 | 71.3 | 41.0 | 44.6\nTotal assets | 2,746.3 | 2,721.6 | 1,402.6 | 1,375.0 | 1,051.3 | 1,036.8 | 292.4 | 309.8\nCapital expenditures | 36.9 | 47.2 | 20.0 | 31.0 | 14.5 | 12.2 | 2.4 | 4.0\nProportion of capital expenditures | 100% | 100% | 54.2% | 65.7% | 39.3% | 25.8% | 6.5% | 8.5%\nProportion of total assets | 100% | 100% | 51.1% | 50.5% | 38.3% | 38.1% | 10.6% | 11.4%\n\nLindgren's preferred method to determine which division is becoming less significant over time is to review the relationship between capital expenditures and total assets by operating division. He plans to base his conclusion on the assumption that the current year's investment behavior is representative of future investment patterns.\n\nLindgren knows that revenues in the kitchen appliances division have suffered because of weaker consumer demand, but he believes that if Alpina can maintain the operating margin for this division then overall company profitability should not be affected.\n\nLindgren finally examines the company's liquidity ratios, which are shown in Exhibit 2. Even though the company's current and quick ratio have improved, his interpretation of the changes in the company's cash conversion cycle is that the company's liquidity position has deteriorated.\n\nExhibit 2: Alpina AG Selected Ratios\n# Ratio | Current Year | Prior Year | 2 Years Prior\nCurrent ratio | 2.24 | 2.10 | 1.21\nQuick ratio | 1.02 | 0.91 | 0.58\nAccounts receivable turnover | 5.00 | 5.40 | 6.10\nInventory turnover | 3.90 | 4.00 | 4.15\nAccounts payable turnover | 5.60 | 5.55 | 5.50\nCash conversion cycle | 101 days | 93 days | 81 days\n\nWorried that the balance sheet-based and cash flow-based accruals ratios (not shown) raise some concerns about the possible use of accruals to manage earnings, Lindgren asks Karin Holm, another analyst with the fund, for advice on what further type of analysis he should do as a follow-up on this issue.",
+   "questions": [
+    {
+     "q": "Using Lindgren's preferred method and current year divisional data, the best conclusion Lindgren can make about which division will potentially become less significant in the future is that it will be:",
+     "options": [
+      "kitchen appliances.",
+      "garden equipment.",
+      "lighting."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The ratio of the capital expenditure proportion to the total asset proportion for kitchen appliances is 1.06 (54.2% ÷ 51.1%), above 1: it receives more capital expenditure than its share of assets.\nB. Incorrect. For garden equipment the ratio is 1.03 (39.3% ÷ 38.3%), above 1.\nC. Correct. Lighting receives 6.5% of capital expenditures against 10.6% of total assets: the ratio is 0.61, below 1. If this pattern continues, lighting will become less significant over time.",
+     "hint": {
+      "hl": [
+       "relationship between capital expenditures and total assets by operating division",
+       "@row:Proportion of capital expenditures",
+       "@row:Proportion of total assets"
+      ],
+      "rule": "Capex share ÷ asset share: above 1 → the division is being grown; below 1 → it is being run down and will shrink in importance."
+     }
+    },
+    {
+     "q": "If the kitchen appliances division had been able to maintain its prior year operating margin in the current year, the company's overall operating margin in the current year, compared with the prior year, would have been:",
+     "options": [
+      "lower.",
+      "the same.",
+      "higher."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Restoring the prior year margin adds about 42.2 to the company's operating profit, enough to lift the overall margin above (not below) the prior year's.\nB. Incorrect. The adjusted margin (8.36%) differs from the prior year's (8.09%).\nC. Correct. Prior year margin of kitchen appliances = 131.4 ÷ 1,362.0 = 9.6%. Applied to current revenues: 0.0965 × 1,305.4 = 125.9. Adjusted company operating profit = 219.7 − 83.7 + 125.9 = 261.9; adjusted margin = 261.9 ÷ 3,131.8 = 8.36%, compared with 8.09% in the prior year (219.7 ÷ 3,131.8 = 7.02% actual): higher.",
+     "hint": {
+      "hl": [
+       "maintain the operating margin for this division",
+       "@row:Revenues",
+       "@row:Operating profit"
+      ],
+      "rule": "Re-apply the prior year margin to the division's current revenues, recompute the company's operating profit and margin, then compare with the prior year."
+     }
+    },
+    {
+     "q": "Compared with 2 years prior, the change in which working capital account most likely had the largest effect on Lindgren's observed deterioration in liquidity?",
+     "options": [
+      "Accounts receivable",
+      "Inventory",
+      "Accounts payable"
+     ],
+     "answer": 0,
+     "why": "A. Correct. The cash conversion cycle rose from 81 to 101 days. Receivable days rose from 59.8 to 73.0 (365 ÷ 6.10 and 365 ÷ 5.00), an increase of 13.2 days, the largest of the three effects.\nB. Incorrect. Inventory days rose from 88.0 to 93.6 (365 ÷ 4.15 and 365 ÷ 3.90), an increase of 5.6 days, smaller than the receivable change.\nC. Incorrect. Payables days fell from 66.4 to 65.2 (-1.2 days), which lengthens the cycle by only 1.2 days.",
+     "hint": {
+      "hl": [
+       "@row:Accounts receivable turnover",
+       "@row:Inventory turnover",
+       "@row:Accounts payable turnover",
+       "@row:Cash conversion cycle"
+      ],
+      "rule": "CCC = days receivable + days inventory − days payable, each = 365 ÷ turnover; compare the change in each account's days."
+     }
+    },
+    {
+     "q": "Holm's best answer to Lindgren's question about further analysis is that he should conduct a:",
+     "options": [
+      "cash flow ratio analysis.",
+      "DuPont analysis.",
+      "discounted cash flow analysis."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Concerns about earnings manipulation through accruals are best addressed by cash flow ratios, such as operating cash flow before interest and taxes to operating income.\nB. Incorrect. DuPont analysis decomposes ROE but would not detect earnings management.\nC. Incorrect. Discounted cash flow analysis values the company; it does not test earnings quality.",
+     "hint": {
+      "hl": [
+       "possible use of accruals to manage earnings"
+      ],
+      "rule": "Accruals-based earnings-quality worries → compare earnings with cash flow (e.g. CFO before interest and taxes ÷ operating income)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Corporate Issuers",
+   "body": "Halden Ltd, based in England, is a private company that produces and retails candles and home fragrances. Marian Pryce and her brother co-founded the company 12 years ago because of their shared interest in developing products from recycled and plant-based materials. Initially the two siblings owned all the shares, but three years ago they implemented performance-based compensation for the top four senior managers, and as part of this process, the managers now own a combined 8% of the equity.\n\nThe company is looking to expand its equity base to help fund a new workshop and support growth plans. Pryce, who is responsible for the company's financial management, is meeting with Anil Rao, a financial consultant, to explore Halden's equity financing options. Pryce asks if they were to go public, could they have a share structure similar to a company like Snap, where the co-founders could retain voting control of the company through the issuance of multi-voting ordinary (common) shares. Rao tells her that before Halden considers going public, there are other options available, and suggests they look for private equity investment. He mentions being familiar with a private equity fund that runs a socially responsible investment (SRI) pool that could potentially be interested in Halden.\n\nPryce is very interested in being associated with an SRI fund and asks how the fund would assess whether Halden qualifies for the investment. Rao explains that the private equity fund he is thinking of uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups.\n\nPryce explains to Rao that Halden is implementing a new initiative to reduce the packaging associated with their products. The company will stock the majority of its refill fragrance oils in bulk containers in its retail outlets. Customers will purchase reusable glass bottles, available in two different sizes, to be used for future purchases. This change will attract customers interested in reducing their plastic footprint. The company also expects the change to reduce shipping, packaging, and handling costs, both at the distribution centers and in the retail stores. The numerous individual bottles that would have been packaged for shipping and then unpacked and shelved at the stores will be replaced with larger bulk containers. Rao notes that when announced, analysts will use this information in their valuation of Halden.",
+   "questions": [
+    {
+     "q": "The change in ownership structure that occurred three years ago most likely addressed which of the following issues associated with family-owned businesses?",
+     "options": [
+      "Poor transparency.",
+      "Ability to attract quality management.",
+      "Interlocking directorships."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Family-owned businesses often suffer from a lack of transparency, but giving some equity to managers does not improve it while the founders remain the majority owners.\nB. Correct. Granting senior managers an equity stake with performance-based pay helps a family-owned business attract and keep quality management, which is the issue addressed.\nC. Incorrect. Interlocking directorships arise when a corporate group controls several corporations; nothing in the vignette mentions them.",
+     "hint": {
+      "hl": [
+       "performance-based compensation for the top four senior managers",
+       "the managers now own a combined 8% of the equity"
+      ],
+      "rule": "Family-owned business issues: transparency, interlocking directorships, attracting quality management. Equity or performance pay for managers → attracting quality management."
+     }
+    },
+    {
+     "q": "If Halden were to go public with the share structure similar to Snap that Pryce asked about, which governance issue would most likely arise?",
+     "options": [
+      "Principal–principal problem.",
+      "Voting cap restrictions.",
+      "Principal–agent problem."
+     ],
+     "answer": 0,
+     "why": "A. Correct. With multi-voting shares the founders keep voting control with a small economic stake, so the conflict is between the controlling shareholders and the minority shareholders: a principal–principal problem.\nB. Incorrect. Voting caps are legal restrictions on the voting rights of large share positions, usually meant to stop foreign investors from gaining control; they are not what multi-voting shares create.\nC. Incorrect. The principal–agent problem arises when ownership and voting power are both dispersed, which makes shareholders weak and managers strong; here the founders keep control.",
+     "hint": {
+      "hl": [
+       "retain voting control of the company through the issuance of multi-voting ordinary (common) shares"
+      ],
+      "rule": "Controlling shareholders vs minority shareholders (dual class, cross holdings) → principal–principal; dispersed owners vs managers → principal–agent."
+     }
+    },
+    {
+     "q": "Which of the following approaches to identifying a company's ESG factors best describes the one used by the private equity fund that Rao mentions?",
+     "options": [
+      "ESG data providers.",
+      "Not-for-profit initiatives.",
+      "Proprietary methods."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. ESG data providers are independent organizations, such as MSCI or Sustainalytics, from which the fund would purchase ready-made ratings; the fund here collects the information itself.\nB. Incorrect. Not-for-profit initiatives are standards or frameworks created by non-profit bodies (for example the PRI or GRI); none is mentioned.\nC. Correct. Proprietary methods mean the analysts use their own judgment on information from corporate reports, industry organizations, news and environmental groups, which is what the fund does.",
+     "hint": {
+      "hl": [
+       "uses data provided by the company and looks for other information from industry organizations, news reports, and environmental groups"
+      ],
+      "rule": "Own analysts + company data + news and NGO sources → proprietary methods; purchased ratings → data providers; frameworks from non-profits → not-for-profit initiatives."
+     }
+    },
+    {
+     "q": "Analysts interested in incorporating ESG factors into their analysis will most likely adjust for the announcement of the changes arising from Halden's new packaging initiative by:",
+     "options": [
+      "modifying only the qualitative ESG analysis.",
+      "increasing the risk premium.",
+      "increasing the company's fair value."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The initiative has measurable cost effects, so analysts would change the quantitative valuation inputs too, not only the qualitative ESG assessment.\nB. Incorrect. Lower shipping, packaging and handling costs raise margins and cash flows, which, if anything, would reduce, not increase, the risk premium.\nC. Correct. The initiative is expected to reduce costs, which increases operating margins and cash flows, and it also appeals to customers. Analysts would therefore raise their cash-flow forecasts and the company's fair value.",
+     "hint": {
+      "hl": [
+       "expects the change to reduce shipping, packaging, and handling costs"
+      ],
+      "rule": "ESG integration: quantify the effect on cash flows or the discount rate; lower costs → higher cash flow → higher value."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "body": "Ibarra Electronics S.A. (Madrid: IBE.MC) has a current stock price of €101.40. It also has book value per share of €31.20 and a P/B of 3.25. Assume that the single-stage growth model is appropriate for valuing the company. Ibarra's adjusted beta is 0.80, the risk-free rate is 3.90%, and the equity risk premium is 5.00%.\n\nRetail fund manager Tobias Renner is considering the purchase of shares in upstart retailer Brightleaf Stores (BLS). The current book value of BLS is $24 per share, and its market price is $42. Renner expects long-term ROE to be 17%, long-term growth to be 9%, and cost of equity to be 13%.",
+   "questions": [
+    {
+     "q": "If the growth rate is 4.50% and the ROE is 18%, the justified P/B for Ibarra is closest to:",
+     "options": [
+      "3.97.",
+      "3.25.",
+      "2.28."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Required return = 3.90% + 0.80 × 5.00% = 7.9%. Justified P/B = 1 + (ROE − r) ÷ (r − g) = 1 + (0.180 − 0.079) ÷ (0.079 − 0.045) = 3.97.\nB. Incorrect. 3.25 is the current P/B, not the justified P/B for the new inputs.\nC. Incorrect. This divides by r instead of (r − g): 1 + (0.18 − 0.079) ÷ 0.079 = 2.28.",
+     "hint": {
+      "hl": [
+       "the single-stage growth model is appropriate",
+       "equity risk premium is 5.00%"
+      ],
+      "rule": "Justified P/B (single stage) = 1 + (ROE − r) ÷ (r − g), with r = rf + beta × ERP."
+     }
+    },
+    {
+     "q": "If the growth rate is 4.50%, the ROE required to yield Ibarra's current P/B of 3.25 is closest to:",
+     "options": [
+      "18.0%.",
+      "15.6%.",
+      "7.9%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. 18% is just the ROE given in the previous question; it gives a justified P/B of 3.97, not 3.25.\nB. Correct. Solve 3.25 = 1 + (ROE − 0.079) ÷ (0.079 − 0.045): ROE = 0.079 + (3.25 − 1) × 0.034 = 15.6%.\nC. Incorrect. At ROE equal to the required return (7.9%), the justified P/B would be exactly 1.0.",
+     "hint": {
+      "hl": [
+       "current P/B of 3.25",
+       "the ROE required"
+      ],
+      "rule": "Rearrange P/B = 1 + (ROE − r) ÷ (r − g): ROE = r + (P/B − 1) × (r − g)."
+     }
+    },
+    {
+     "q": "If the ROE is 18%, the growth rate required for Ibarra to have its current P/B of 3.25 is closest to:",
+     "options": [
+      "4.5%.",
+      "7.9%.",
+      "3.4%."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. 4.5% gives a justified P/B of 3.97, not 3.25.\nB. Incorrect. A growth rate equal to the required return makes the single-stage value infinite and is not feasible.\nC. Correct. Solve 3.25 = 1 + (0.18 − 0.079) ÷ (0.079 − g): 0.079 − g = 0.101 ÷ 2.25, so g = 3.4%.",
+     "hint": {
+      "hl": [
+       "current P/B of 3.25",
+       "the growth rate required"
+      ],
+      "rule": "Rearrange P/B = 1 + (ROE − r) ÷ (r − g): g = r − (ROE − r) ÷ (P/B − 1)."
+     }
+    },
+    {
+     "q": "Using a single-stage residual income model, Renner would most likely conclude that BLS's shares are:",
+     "options": [
+      "somewhat undervalued (value $48 against a price of $42).",
+      "somewhat overvalued (value $36 against a price of $42).",
+      "fairly valued."
+     ],
+     "answer": 0,
+     "why": "A. Correct. V0 = B0 + B0 × (ROE − r) ÷ (r − g) = 24 + 24 × (0.17 − 0.13) ÷ (0.13 − 0.09) = $48, which is above the market price of $42.\nB. Incorrect. The value is above, not below, the market price, because ROE (17%) exceeds the cost of equity (13%).\nC. Incorrect. Value ($48) differs from the market price ($42), so the shares are not fairly valued.",
+     "hint": {
+      "hl": [
+       "long-term ROE to be 17%",
+       "cost of equity to be 13%"
+      ],
+      "rule": "Single-stage RI: V0 = B0 + B0 × (ROE − r) ÷ (r − g); compare with price."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "body": "Gordon Ashby is the director of quantitative research at Westmere Asset Advisers, a fixed-income firm located in London. Rhea Vance recently joined Ashby's analyst team supporting credit analysis and credit risk modeling. After a brief orientation on the firm and its investment process, Ashby instructs Vance to develop a model that derives the credit valuation adjustment (CVA). Ashby makes the following comments regarding credit modeling.\n\nComment 1: The observed credit spread may also be higher than required for credit risk to compensate for a liquidity premium and tax considerations.\nComment 2: The factors to consider in modeling credit risk are the expected exposure to default loss, the risk-neutral probability of default, and the loss given default.\nComment 3: The use of an actual default rate in the model may overstate the observed value for a corporate bond because it includes a default risk premium associated with uncertainty over the timing of possible default loss.\n\nVance reminds Ashby that her model assumes zero interest rate volatility and a flat government yield curve. Ashby responds that Vance should relax these unrealistic assumptions. Vance outlines the steps to take in valuing risky bonds under this scenario in Exhibit 1.\n\nExhibit 1: Steps in Valuing Risky Bonds, Arbitrage-Free Framework\nStep 1: • Determine the value for the corporate bond assuming no default (VND). • Calculate the CVA. • Calculate the fair value of the bond as the VND minus the CVA.\nStep 2: • Build the binomial interest rate tree under the assumption of no arbitrage. • Apply an assumption of interest rate volatility. • Using the spot curve, derive implied zero-coupon rates, discount factors, and forward rates.\nStep 3: • Use the risk-neutral probability of default as determined by a credit model. • Assign a recovery rate based on the company's credit rating. • Calculate the present value of the product of the loss given default and the probability of default.\n\nAshby explains that the migration of a company's ratings can have an impact on the total return of a bond holding. As an example, he selects an 8-year maturity, 4.5% coupon bond currently trading at par and rated A by Standard & Poor's. He asks Vance to calculate the expected total return over a one-year horizon assuming the bond is downgraded by two notches and to determine why the year-end duration for the bond is 5.8. The average G-spread for corporate bonds across the credit spectrum is shown in Exhibit 2.\n\nExhibit 2: Bond Market G-Spread by Credit Rating\n# S&P Rating | G-Spread (%)\nAA | 0.60\nAA– | 0.70\nA+ | 0.85\nA | 1.00\nA– | 1.10\nBBB+ | 1.30\nBBB | 1.45\nBBB– | 1.60\n\nAshby and Vance get into a discussion on structural models of credit risk. Ashby is a proponent of these models and tells Vance, \"Structural models are dependent on the structure of the company's balance sheet. Equity is analogous to a purchased call option on the assets of the company whereby the strike price equals the face value of the debt. Strengths of these models are that they aim to explain why default occurs and that they use option pricing theory. Weaknesses are that the models assume default comes as a surprise at any time and do not explain the reason for default.\"",
+   "questions": [
+    {
+     "q": "Ashby is least likely correct with regard to which point regarding credit modeling?",
+     "options": [
+      "Comment 3",
+      "Comment 1",
+      "Comment 2"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Comment 3 is wrong. The comment is wrong because an actual default rate does not include the default risk premium for timing uncertainty, so using it overstates the value of the bond (understates the spread); the risk-neutral probability of default includes the premium.\nB. Incorrect. Comment 1 is correct: the observed credit spread can include a liquidity premium and tax effects beyond credit risk.\nC. Incorrect. Comment 2 is correct: the factors are the expected exposure, the risk-neutral probability of default and the loss given default.",
+     "hint": {
+      "hl": [
+       "The use of an actual default rate in the model"
+      ],
+      "rule": "Actual (historical) default rates exclude the risk premium that the risk-neutral probability of default includes; the observed spread also contains liquidity and tax components."
+     }
+    },
+    {
+     "q": "Which step in Exhibit 1 regarding valuing risky bonds has Vance most likely outlined correctly?",
+     "options": [
+      "Step 3",
+      "Step 2",
+      "Step 1"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. In Step 3 the second point is wrong: the recovery rate is not based on the company's credit rating; it should reflect the seniority of the debt issue and the nature of the issuer's assets.\nB. Incorrect. In Step 2 the third point is wrong: implied zero-coupon rates, discount factors and forward rates are derived from the par curve (bonds priced at par), not from the spot curve.\nC. Correct. Step 1 is correct: VND, then CVA, then fair value = VND − CVA.",
+     "hint": {
+      "hl": [
+       "Using the spot curve, derive implied zero-coupon rates",
+       "Assign a recovery rate based on the company's credit rating"
+      ],
+      "rule": "Risky bond valuation steps: tree from the PAR curve, then PD × LGD × exposure for CVA (recovery by seniority, not rating), then fair value = VND − CVA."
+     }
+    },
+    {
+     "q": "Assuming no change in market conditions and a flat yield curve and using Exhibit 2, the expected return on Ashby's sample bond over a one-year horizon is closest to:",
+     "options": [
+      "–1.74%.",
+      "2.76%.",
+      "6.24%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This omits the coupon: −5.8 × (1.30% − 1.00%) = –1.74%.\nB. Correct. Downgrade by two notches: A to A– to BBB+, so the G-spread widens from 1.00% to 1.30%. Expected return = coupon − duration × change in spread = 4.50% − 5.8 × (1.30% − 1.00%) = 4.50% − 1.74% = 2.76%.\nC. Incorrect. This uses +5.8 instead of −5.8 for the spread widening: 4.50% + 1.74% = 6.24%.",
+     "hint": {
+      "hl": [
+       "rated A by Standard & Poor's",
+       "downgraded by two notches",
+       "@row:A",
+       "@row:BBB+"
+      ],
+      "rule": "Expected return ≈ coupon − duration × Δspread (a downgrade widens the spread and lowers the price). Count the notches along the rating scale in the exhibit."
+     }
+    },
+    {
+     "q": "Ashby is least likely correct with regard to which aspect of structural models?",
+     "options": [
+      "The strengths",
+      "The weaknesses",
+      "The description"
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. The strengths are correct: structural models aim to explain why default occurs and use option pricing theory.\nB. Correct. The weaknesses are wrong. They are weaknesses of reduced-form models (default as a surprise, no explanation of why default occurs). Weaknesses of structural models: they can be burdensome to implement, assets are assumed to trade, and the default barrier is hard to measure.\nC. Incorrect. The description is correct: equity is analogous to a purchased call option on the company's assets, with a strike price equal to the face value of the debt.",
+     "hint": {
+      "hl": [
+       "Weaknesses are that the models assume default comes as a surprise",
+       "Equity is analogous to a purchased call option on the assets of the company"
+      ],
+      "rule": "Structural: explains WHY default occurs (call option on assets) but is burdensome and needs tradable assets; reduced-form: default is a surprise, no explanation."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Economics",
+   "body": "Cyrus Dalton was recently hired as an associate analyst in the corporate finance department by Veltron Enterprises. Veltron is a US manufacturer of heavy industrial equipment that sells its products globally. Dalton assists finance director Naomi Keller in managing Veltron's foreign currency risk. As part of the training process concerning the complexities of the foreign exchange (FX) markets, Keller provides Dalton with Exhibit 1 and asks him to demonstrate his familiarity with some calculations, such as expected future spot rates. A few days later, Keller and Dalton meet to discuss the results of his work.\n\nExhibit 1: Interbank Currency Quote and One-Year MRR Rates\n# Item | Value\nSGD/GBP bid (spot) | 1.7312\nSGD/GBP offer (spot) | 1.7318\nOne-year MRR (GBP) | 1.45%\nOne-year MRR (SGD) | 0.60%\n\nThe conversation then moves to a discussion of some recent Veltron transactions. Six months ago, a European customer placed an order for EUR 25 million of oil field construction equipment with delivery and payment scheduled to take place one year later. Veltron hedged all of its exposure to the euro by entering into a forward position at a forward price of USD1.1290/EUR.\n\nVeltron has just been informed by the customer that because of the collapse in oil prices, it is canceling the order. Keller tells Dalton to mark the forward position to market to facilitate exiting the currency hedge. Exhibit 2 provides information about current FX rates and interest rates.\n\nExhibit 2: Current Spot, Six-Month Forward Points and MRR\n# Item | Value\nSpot USD/EUR (bid/offer) | 1.1305/1.1307\nSix-month forward points (USD/EUR) | 42/44\nMRR (USD) | 0.70% (annualized)\n\nThe next transaction considered is a recently signed multiyear contract with a customer located in the country of Morlundan. Veltron will sell 25 pieces of equipment per year at a fixed price, with the sale priced in the Morlundan pound. Morlundan has a floating exchange rate, and capital flows are highly mobile. Morlundan also has an expansionary monetary policy with an expansionary fiscal policy. Keller asks Dalton to determine the appropriate action Veltron should take to manage its Morlundan currency risk based on that country's economic policies.\n\nAs a final item, Keller explains the impact of the balance of payment flows on exchange rates. She notes that the United States has run large and persistent current account deficits for years and that its external debt owed to foreign investors has risen sharply relative to GDP. Veltron's sales to Cardovia are expected to be a major component of the company's future total sales. Consequently, Keller believes Veltron should hedge against a potential decline in the USD relative to the Cardovian currency because she is concerned that foreign investors may soon judge the US external debt to be unsustainable.",
+   "questions": [
+    {
+     "q": "Using the bid–offer quote midpoint in Exhibit 1 as the current spot rate and assuming uncovered interest rate parity holds, the projected one-year spot rate for the SGD/GBP currency pair is closest to:",
+     "options": [
+      "1.7170.",
+      "1.7461.",
+      "1.7566."
+     ],
+     "answer": 0,
+     "why": "A. Correct. If uncovered interest rate parity holds, the expected spot rate in one year equals the one-year forward rate: F = S × (1 + i_price) ÷ (1 + i_base) = 1.7315 × (1.0060 ÷ 1.0145) = 1.7170. SGD is the price currency and GBP the base currency.\nB. Incorrect. This inverts the interest rate ratio: 1.7315 × (1.0145 ÷ 1.0060) = 1.7461.\nC. Incorrect. This multiplies the spot rate by the base-currency interest factor only: 1.7315 × 1.0145 = 1.7566.",
+     "hint": {
+      "hl": [
+       "@row:SGD/GBP bid (spot)",
+       "@row:One-year MRR (GBP)",
+       "@row:One-year MRR (SGD)"
+      ],
+      "rule": "Forward / expected spot (UIRP) = S × (1 + i_price currency) ÷ (1 + i_base currency); use the midpoint spot."
+     }
+    },
+    {
+     "q": "Based on the data in Exhibits 1 and 2, the mark-to-market value for Veltron's forward position related to the oil field construction equipment order is closest to:",
+     "options": [
+      "a loss of USD152,500.",
+      "a loss of USD151,968.",
+      "a loss of USD142,003."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This does not discount the gain or loss to the current date: (1.1290 − 1.1351) × 25,000,000 = −USD152,500, which arises at settlement six months from now.\nB. Correct. Veltron sold EUR 25 million forward at 1.1290. To mark to market it offsets by buying EUR forward, which means paying the offer for both the spot rate and the forward points: 1.1307 + 0.0044 = 1.1351. At settlement the position loses (1.1290 − 1.1351) × 25,000,000 = −USD152,500. Discounting six months at the USD MRR: −152,500 ÷ (1 + 0.0070 × 180/360) = −USD151,968.\nC. Incorrect. This uses the bid for the spot rate and the bid for the points (1.1305 + 0.0042 = 1.1347) instead of the offers, which a buyer of EUR cannot get: −USD142,003.",
+     "hint": {
+      "hl": [
+       "forward position at a forward price of USD1.1290/EUR",
+       "@row:Spot USD/EUR",
+       "@row:Six-month forward points"
+      ],
+      "rule": "Mark to market: take the offsetting forward at today's all-in rate (buying the base currency pays the offer and offer points), find the difference at settlement, discount at the price-currency MRR."
+     }
+    },
+    {
+     "q": "Given Morlundan's economic policies, which of the following actions would be most appropriate regarding currency risk on the multiyear contract in Morlundan?",
+     "options": [
+      "Veltron should not enter into a hedge because the exchange rate change is ambiguous.",
+      "Veltron should hedge against appreciation of the Morlundan pound.",
+      "Veltron should hedge against depreciation of the Morlundan pound."
+     ],
+     "answer": 0,
+     "why": "A. Correct. In the Mundell–Fleming model with high capital mobility, expansionary monetary policy is bearish for the currency while expansionary fiscal policy is bullish for it. The combination has an ambiguous effect on the exchange rate, so there is no basis for a one-directional hedge.\nB. Incorrect. Veltron will be paid in pounds, so appreciation would help it; and in any case the mix of policies does not give a clear direction.\nC. Incorrect. With high capital mobility, an expansionary monetary policy lowers interest rates and pushes the currency down, but an expansionary fiscal policy raises interest rates and pushes it up. The two effects offset each other, so a one-sided hedge is not supported.",
+     "hint": {
+      "hl": [
+       "Morlundan has a floating exchange rate, and capital flows are highly mobile",
+       "an expansionary monetary policy with an expansionary fiscal policy"
+      ],
+      "rule": "Mundell–Fleming, high capital mobility: expansionary monetary → currency down; expansionary fiscal → currency up; opposite policy directions → ambiguous; same direction → clear."
+     }
+    },
+    {
+     "q": "Keller's belief that Veltron should hedge against a decline in the dollar is best described as being based on which of the following exchange rate adjustment mechanisms?",
+     "options": [
+      "Debt sustainability",
+      "Flow supply/demand",
+      "Portfolio balance"
+     ],
+     "answer": 0,
+     "why": "A. Correct. The debt sustainability channel says there is an upper limit on how large and persistent a current account deficit can be. If external debt owed to foreign investors rises to unsustainable levels, investors expect a major depreciation of the deficit country's currency to narrow the deficit and stabilize the debt. This is Keller's argument.\nB. Incorrect. The flow supply/demand channel is about the payment flows for traded goods and services: surplus countries' currencies appreciate and deficit countries' currencies depreciate; Keller is not arguing from trade flows.\nC. Incorrect. The portfolio balance channel is about current account imbalances shifting financial wealth and global asset preferences; Keller's concern is that the external debt level itself becomes unsustainable.",
+     "hint": {
+      "hl": [
+       "external debt owed to foreign investors has risen sharply relative to GDP",
+       "judge the US external debt to be unsustainable"
+      ],
+      "rule": "Upper limit on persistent deficits / unsustainable external debt → debt sustainability; wealth and asset-preference shifts → portfolio balance; trade payment flows → flow supply/demand."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "body": "Paul Reeves, an investment adviser, meets with Helen Fischer to discuss her pending retirement and potential changes to her investment portfolio. Domestic economic activity has been weakening recently, and Reeves's outlook is that equity market values will be lower during the next year. He would like Fischer to consider reducing her equity exposure in favor of adding more fixed-income securities to the portfolio.\n\nGovernment yields have remained low for an extended period, and Reeves suggests considering investment-grade corporate bonds to provide additional yield above government debt issues. Domestic inflation has accelerated, however, and the consensus forecast among economists is that the central bank, at its next meeting this month, will take actions that will lead to higher interest rates.\n\nReeves and Fischer review par, spot, and one-year forward rates (Exhibit 1) and four fixed-rate investment-grade bonds issued by Orion Corporation that are being considered for investment (Exhibit 2).\n\nExhibit 1: Par, Spot, and One-Year Forward Rates (annual coupon payments)\n# Maturity (Years) | Par Rate (%) | Spot Rate (%) | One-Year Forward (%)\n1 | 0.8000 | 0.8000 | 0.8000\n2 | 1.1000 | 1.1017 | 1.4042\n3 | 1.4000 | 1.4057 | 2.0164\n\nExhibit 2: Selected Fixed-Rate Bonds of Orion Corporation\n# Bond | Annual Coupon | Type of Bond\nBond 1 | 1.6500% | Straight bond\nBond 2 | 1.6500% | Convertible bond: currently trading out of the money\nBond 3 | 1.6500% | Putable bond: putable at par one year and two years from now\nBond 4 | 1.6500% | Callable bond: callable at par without any protection periods\nNote: All bonds in Exhibit 2 have remaining maturities of exactly three years.\n\nReeves also states that he recently read a report issued by Hale and Company forecasting that the yield curve could invert within the next six months.\n\nFischer asks Reeves about the possibility of analyzing bonds that have lower credit ratings than the investment-grade Orion bonds. Reeves discusses four other corporate bonds with Fischer. Exhibit 3 presents selected data on the four bonds.\n\nExhibit 3: Selected Information on Fixed-Rate Bonds for Argon, Boron, Cobalt, and Neon Corporations\n# Bond | Issuer | Bond Features | Credit Rating\nBond 5 | Argon Corporation | Coupon 1.70%; Callable in Year 2; OAS of 50 bps | B\nBond 6 | Boron Corporation | Coupon 1.70%; Callable in Year 2; OAS of 75 bps | B\nBond 7 | Cobalt Corporation | Coupon 1.70%; Callable in Year 2; OAS of 100 bps | BB\nBond 8 | Neon Corporation | Coupon 1.70%; Callable in Year 2; OAS of 90 bps | B\nNotes: All bonds have remaining maturities of three years. OAS stands for option-adjusted spread.",
+   "questions": [
+    {
+     "q": "Based on Exhibit 2, and assuming that the forecast for interest rates and Reeves's outlook for equity returns are validated, which bond's option is most likely to be exercised?",
+     "options": [
+      "Bond 3",
+      "Bond 2",
+      "Bond 4"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Higher interest rates push the price of the putable bond below par, so the put (at par, in one or two years) is likely to be exercised.\nB. Incorrect. Lower equity values keep the convertible further out of the money, so the conversion option is not exercised.\nC. Incorrect. The call on Bond 4 is valuable when rates fall (the issuer refinances cheaply); with rates rising, the issuer will not call the bond.",
+     "hint": {
+      "hl": [
+       "will take actions that will lead to higher interest rates",
+       "Putable bond: putable at par one year and two years from now",
+       "equity market values will be lower"
+      ],
+      "rule": "Rates up → putable bond worth less than par → put exercised; rates down → callable bond is called; share price down → convertible stays out of the money."
+     }
+    },
+    {
+     "q": "Based on the information in Exhibit 1 and Exhibit 2, the value of the embedded option in Bond 4 is closest to:",
+     "options": [
+      "0.0000.",
+      "0.7322.",
+      "2.5097."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. A callable bond with no call protection can be called immediately; a nil option value would imply the straight bond is worth exactly par, but its coupon (1.65%) exceeds the 3-year par rate (1.40%).\nB. Correct. Straight bond value using the spot rates = 1.65 ÷ 1.0080 + 1.65 ÷ 1.011017² + 101.65 ÷ 1.014057³ = 100.7322. A callable bond with no protection cannot be worth more than its call price of 100, so the call value = 100.7322 − 100 = 0.7322.\nC. Incorrect. This discounts all the cash flows at the one-year spot rate (0.80%) instead of at the matching spot rates: 2.5097.",
+     "hint": {
+      "hl": [
+       "callable at par without any protection periods",
+       "@row:3"
+      ],
+      "rule": "Callable bond value = straight bond value (spot-rate discounting) − call value; with no protection the price is capped at the call price (100), so call value = straight value − 100."
+     }
+    },
+    {
+     "q": "If the Hale and Company forecast comes true, which of the following is most likely to occur? The value of the embedded option in:",
+     "options": [
+      "both Bond 3 and Bond 4 increases.",
+      "Bond 4 decreases.",
+      "Bond 3 decreases."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The put option value decreases while the call option value increases, so they do not both increase.\nB. Incorrect. The call option value increases (not decreases) as the curve flattens and inverts.\nC. Correct. As the yield curve goes from upward sloping to flat to inverted, forward rates fall relative to spot rates: the put option value decreases and the call option value increases.",
+     "hint": {
+      "hl": [
+       "forecasting that the yield curve could invert within the next six months"
+      ],
+      "rule": "Flatter or inverted curve → call value ↑ and put value ↓ (callable bond falls, putable bond falls too relative to a steep curve)."
+     }
+    },
+    {
+     "q": "Which of the following conclusions regarding the bonds in Exhibit 3 is correct?",
+     "options": [
+      "Bond 5 is relatively cheaper than Bond 6.",
+      "Bond 7 is relatively cheaper than Bond 8.",
+      "Bond 6 is relatively cheaper than Bond 5."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. For bonds of similar credit quality, a larger OAS means the bond is cheaper: Bond 5 (50 bps) has a smaller OAS than Bond 6 (75 bps), so it is relatively richer, not cheaper.\nB. Incorrect. Bond 7 is rated BB and Bond 8 is rated B, so their OAS cannot be compared directly even though Bond 7 has the larger OAS.\nC. Correct. Bond 5 and Bond 6 have the same credit rating (B) and the same features, so their OAS can be compared: Bond 6 (75 bps) has the larger OAS, so it is relatively cheaper.",
+     "hint": {
+      "hl": [
+       "@row:Bond 5",
+       "@row:Bond 6",
+       "@row:Bond 7"
+      ],
+      "rule": "OAS comparisons are valid only for bonds of the same credit quality (same tree): the larger OAS is the cheaper bond."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Quantitative Methods",
+   "body": "Elena Marsh, CFA, has determined that heat pump sales in the Northeast U.S. for Aldrin Company are a function of several factors in each area: the cost of natural gas, the temperature, snowfall, and housing starts. Using data for the most currently available year, she runs a cross-sectional regression where she regresses the deviation of sales from the historical average in each area on the deviation of each explanatory variable from the historical average of that variable for that location. She feels this is the most appropriate method since each geographic area will have different average values for the inputs, and the model can explain how current conditions explain how heat pump sales are higher or lower from the historical average in each area. In summary, she regresses current sales for each area minus its respective historical average on the following variables for each area:\n- The difference between the retail price of natural gas and its historical average.\n- The mean number of degrees the temperature is below normal in New York City.\n- The amount of snowfall above the average.\n- The percentage of housing starts above the average.\n\nMarsh used a sample of 25 observations obtained from 25 metropolitan areas in the Northeast U.S. The results are in the tables below. The dependent variable is in sales of heat pumps in millions of dollars.\n\nCoefficient Estimates Table\n# Variable | Estimated Coefficient\nIntercept | 4.00\n$ Natural Gas | 1.50\nLow Temperature | 2.00\nSnowfall | 6.00\nHousing Starts | 4.00\n\nAnalysis of Variance Table (ANOVA)\n# Source | Degrees of Freedom | Sum of Squares | Mean Square\nRegression | 4 | 214.00 | 53.50\nError | 20 | 700.00 | 35.00\nTotal | 24 | 914.00 |\n\nTable of the F-Distribution. Critical values for right-hand tail area equal to 0.05. Numerator: df1 and Denominator: df2\n# df2 \\ df1 | 1 | 2 | 4 | 10 | 20\n1 | 161.45 | 199.50 | 224.58 | 241.88 | 248.01\n2 | 18.513 | 19.000 | 19.247 | 19.396 | 19.446\n4 | 7.7086 | 6.9443 | 6.3882 | 5.9644 | 5.8025\n10 | 4.9646 | 4.1028 | 3.4780 | 2.9782 | 2.7740\n20 | 4.3512 | 3.4928 | 2.8661 | 2.3479 | 2.1242\n\nOne of her goals is to forecast the sales of the New York City metropolitan area next year. For that area and for the upcoming year, Marsh obtains the following projections: natural gas prices will be $0.20 above average, the temperature in New York City will be 4 degrees below normal, snowfall will be 2 inches above average, and housing starts will be 5% below average.",
+   "questions": [
+    {
+     "q": "According to the model and the data for the New York City metropolitan area, the forecast of heat pump sales is:",
+     "options": [
+      "$44.3 million above average.",
+      "$4.3 million above the average.",
+      "$11.7 million below average."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This enters housing starts 5% below average as +5 instead of −5: [4 + 1.5 × 0.20 + 2 × 4 + 6 × 2 + 4 × (+5)] = $44.3 million.\nB. Correct. Forecast = 4.00 + (1.50 × 0.20) + (2.00 × 4) + (6.00 × 2) + (4.00 × (−5)) = 4 + 0.3 + 8 + 12 − 20 = $4.3 million above the average. The temperature 4 degrees below normal enters as +4 and housing starts 5% below average as −5.\nC. Incorrect. This enters the temperature as −4 (it is measured as degrees BELOW normal, so a cold year is +4): $-11.7 million.",
+     "hint": {
+      "hl": [
+       "temperature in New York City will be 4 degrees below normal",
+       "housing starts will be 5% below average",
+       "The mean number of degrees the temperature is below normal"
+      ],
+      "rule": "Plug each variable in with the sign it is DEFINED with (temperature = degrees below normal, so 4 below normal = +4; housing starts below average = negative)."
+     }
+    },
+    {
+     "q": "Marsh proceeds to test the hypothesis that none of the independent variables has significant explanatory power. Using the joint F-test for the significance of all slope coefficients, at a 5% level of significance:",
+     "options": [
+      "all of the independent variables have explanatory power.",
+      "at least one of the independent variables has explanatory power.",
+      "none of the independent variables has explanatory power."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The F-test cannot show that all variables are significant, only that at least one is.\nB. Incorrect. At least one variable would have explanatory power only if the F-statistic exceeded the critical value; it does not.\nC. Correct. F = mean square regression ÷ mean square error = 53.50 ÷ 35.00 = 1.529. The critical F value for 4 numerator and 20 denominator degrees of freedom is 2.8661. Since 1.529 < 2.8661, we cannot reject the null hypothesis that all slope coefficients are zero: none of the independent variables has significant explanatory power.",
+     "hint": {
+      "hl": [
+       "@row:Regression",
+       "@row:Error",
+       "@row:20"
+      ],
+      "rule": "Joint F-test: F = MSR ÷ MSE (df = k and n − k − 1); F above the critical value → at least one slope differs from 0; below → none is significant."
+     }
+    },
+    {
+     "q": "When Marsh ran the model, the computer said the R-squared is 0.234. She examines the other output and concludes that this is the:",
+     "options": [
+      "adjusted R-squared value.",
+      "unadjusted R-squared value.",
+      "neither the unadjusted nor adjusted R-squared value, nor the coefficient of correlation."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Adjusted R-squared = 1 − [(25 − 1) ÷ (25 − 4 − 1)] × (1 − 0.234) = 0.081, not 0.234.\nB. Correct. Unadjusted R-squared = regression sum of squares ÷ total sum of squares = 214 ÷ 914 = 0.234, so the reported value is the unadjusted R-squared.\nC. Incorrect. 0.234 matches the unadjusted R-squared (214 ÷ 914), so it is not 'neither'.",
+     "hint": {
+      "hl": [
+       "@row:Regression",
+       "@row:Total"
+      ],
+      "rule": "Unadjusted R² = RSS ÷ SST; adjusted R² = 1 − [(n − 1) ÷ (n − k − 1)] × (1 − R²) is smaller when k > 1."
+     }
+    },
+    {
+     "q": "In preparing and using this model, Marsh has least likely relied on which of the following assumptions?",
+     "options": [
+      "The residuals are homoscedastic.",
+      "There is a linear relationship between the independent variables.",
+      "The disturbance or error term is normally distributed."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Homoscedastic residuals (constant error variance) are an assumption of multiple regression.\nB. Correct. Multiple regression assumes there is NO exact linear relationship between two or more of the independent variables (no perfect multicollinearity), so Marsh has least likely relied on a linear relationship among them.\nC. Incorrect. Normally distributed errors are an assumption of multiple regression.",
+     "hint": {
+      "hl": [
+       "regresses the deviation of sales from the historical average"
+      ],
+      "rule": "Multiple regression assumptions: linear in the parameters, no exact linear relationship among independent variables, normal and homoscedastic errors, no serial correlation."
+     }
+    }
+   ]
+  }
+ ]
+}

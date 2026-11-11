@@ -1,0 +1,683 @@
+{
+ "vignettes": [
+  {
+   "topic": "Equity Valuation",
+   "body": "Owen Kessler is a partner at a firm that facilitates investments and sales of interests in privately-held firms. He is reviewing several firms that are seeking investors or purchasers.\n\nPINECREST COMPANY\n\nGil Mercer founded Pinecrest Company 24 years ago and wants to retire. Knowing the importance of sound financial practices, Mercer has audited financial statements for Pinecrest for each of the past 10 years. Pinecrest operates in a declining growth segment of its industry. The firm's plant is located in a busy and growing industrial area and may be attractive to nearby businesses seeking to expand. Many of its fixed assets, including machinery and equipment, can be used in other businesses. There are two large multinational publicly-held firms that are in the same industry as Pinecrest and private market transactions of firms in the industry occur once every 1-2 years. After collecting information from Mercer, Kessler considers what method he should use for valuing Pinecrest.\n\nThe following month, Mercer contacts Kessler to tell him that his older son is willing to leave his position with a public firm and become CEO of Pinecrest. As part of the arrangement, the son wants Kessler to find minority investors to provide capital for various plant upgrades and for developing new markets. Kessler estimates investors in a private firm such as Pinecrest will require an 18% discount for lack of control and a 22% discount for lack of marketability.\n\nDUNMERE COMPANY\n\nDunmere is a family-owned firm that the family wishes to sell in order to set up a charitable foundation. The father, mother, and daughter all participate in the business. Kessler reviews their financial statements and comes to these conclusions:\n\nCompensation, which is part of SG&A, was $650,000 higher per year for family members than is typical for firms of comparable size and sales revenue.\nThe top officers of the firm had annual \"strategic planning retreats\" at various resort locations with annual expenses (part of SG&A) averaging $45,000. Kessler thought this was unnecessary and excessive for this type of firm.\nThe firm owns a private plane, book value of $220,000 with annual operating expenses of $16,000 and annual depreciation expense of $34,000. Given their business, owning such an asset is unusual as annual business air travel would cost approximately $5,000.\nThe parents own a 420,000 square foot warehouse which they rent to Dunmere at a cost of $7.50 a square foot annually. Market-based leases for this type of facility average $6.00 a square foot. This would affect reported SG&A expense.\nExhibit 1 shows selected financial data from Dunmere. Kessler computes the firm's normalized operating income after taxes.\n\nExhibit 1\n# | As reported\nRevenues | $36,000,000\nCosts of goods sold | $22,600,000\nGross profit | 13,400,000\nSG&A expense | $6,100,000\nEBITDA | 7,300,000\nDepreciation | $1,820,000\nEBIT | 5,480,000\nPro forma taxes (30%) | $1,644,000\nOperating income after taxes | $3,836,000\n\nKessler also collects the following estimates to compute a discount rate for Dunmere:\n\nNominal risk-free rate: 3.5%\nExpected inflation rate: 2.0%\nEquity risk premium: 5.0%\nBeta for similar firms, adjusted for capital structure differences: 1.1\nSmall stock premium: 3.0%\nIndustry risk premium: 0%\nCompany-specific risk adjustment: 1.5%",
+   "questions": [
+    {
+     "q": "Based on the information initially collected from Mercer about his firm, the appropriate method for valuing Pinecrest is:",
+     "options": [
+      "the asset-based approach.",
+      "the guideline transactions method.",
+      "the guideline public company method."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Pinecrest's fixed assets can be used in other businesses and its site is attractive to nearby businesses, so asset value is a meaningful floor and measure of value; with a declining growth segment, income-based measures are less reliable.\nB. Incorrect. Private transactions occur only once every 1-2 years, so there are too few recent transactions for the guideline transactions method.\nC. Incorrect. Only two large multinational public firms exist in the industry, which is too few (and too different in size) for the guideline public company method.",
+     "hint": {
+      "hl": [
+       "Many of its fixed assets, including machinery and equipment, can be used in other businesses",
+       "private market transactions of firms in the industry occur once every 1-2 years",
+       "declining growth segment"
+      ],
+      "rule": "Asset-based approach: assets with alternative uses and an attractive site, few comparables and few transactions, low growth."
+     }
+    },
+    {
+     "q": "If Mercer's son becomes Pinecrest's CEO, the valuation discount for the additional equity investors will be closest to:",
+     "options": [
+      "40.0%.",
+      "36.0%.",
+      "44.0%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This adds the two discounts (18% + 22%); they do not add.\nB. Correct. Total discount = 1 − (1 − DLOC)(1 − DLOM) = 1 − (1 − 0.18)(1 − 0.22) = 36.0%.\nC. Incorrect. This compounds the discounts upward: (1 + 0.18)(1 + 0.22) − 1 = 44.0%.",
+     "hint": {
+      "hl": [
+       "18% discount for lack of control and a 22% discount for lack of marketability"
+      ],
+      "rule": "Combine discounts multiplicatively: 1 − (1 − DLOC)(1 − DLOM)."
+     }
+    },
+    {
+     "q": "The normalized operating income after taxes for Dunmere is closest to:",
+     "options": [
+      "$4,771,200.",
+      "$4,795,000.",
+      "$4,787,300."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This misses the plane's 34,000 depreciation: (6,850,000 − 34,000) × (1 − 0.30) = $4,771,200.\nB. Correct. Remove excess compensation 650,000, retreats 45,000, excess air travel 11,000 (16,000 − 5,000) and excess warehouse rent 630,000 (420,000 × $1.50); remove the plane's 34,000 depreciation: EBIT 6,850,000, tax 2,055,000, after tax $4,795,000.\nC. Incorrect. This misses the 11,000 excess air travel cost: (6,850,000 − 11,000) × (1 − 0.30) = $4,787,300.",
+     "hint": {
+      "hl": [
+       "was $650,000 higher per year",
+       "averaging $45,000",
+       "annual operating expenses of $16,000 and annual depreciation expense of $34,000",
+       "at a cost of $7.50 a square foot annually",
+       "@row:EBIT"
+      ],
+      "rule": "Normalize EBIT for each non-market item (include the removed plane's depreciation), then tax: normalized EBIT × (1 − t)."
+     }
+    },
+    {
+     "q": "Kessler's estimate for the required return on equity for Dunmere using the expanded CAPM is closest to:",
+     "options": [
+      "13.0%.",
+      "13.5%.",
+      "15.5%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This is the build-up method: 3.5% + 5.0% + 3.0% + 0% + 1.5% = 13.0%.\nB. Correct. Expanded CAPM = risk-free rate + beta × equity risk premium + small stock premium + industry premium + company-specific premium = 3.5% + 1.1 × 5.0% + 3.0% + 0% + 1.5% = 13.5%.\nC. Incorrect. This wrongly adds the expected inflation rate to the nominal risk-free rate: 13.5% + 2.0% = 15.5%.",
+     "hint": {
+      "hl": [
+       "Beta for similar firms, adjusted for capital structure differences",
+       "Small stock premium",
+       "Nominal risk-free rate"
+      ],
+      "rule": "Expanded CAPM keeps beta × ERP and adds size, industry and company-specific premiums; the build-up method has no beta. The nominal risk-free rate already includes inflation."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Economics",
+   "body": "Marisol Vega is a director in a firm that specializes in providing foreign currency advisory services. Vega is meeting with analyst Tomas Eriksen to discuss and identify foreign currency strategies and trades to recommend to clients.\n\nVega begins the meeting by asking Eriksen for his views on factors that affect the bid-offer spread on a currency quotation in the interbank market.\n\nEriksen responds, \"Currency pairings are an important factor, but quotes for well known currency pairs have wider spreads in interbank markets than quotes for lesser known currency pairings. A client's credit risk is the most important factor impacting the spread. Clients with higher credit risk are quoted wider spreads for spot currency rates. The size of the transaction also impacts the spread. The larger the size of the transaction the wider the spread in the interbank markets.\"\n\nVega presents information on spot exchange rates and 360-day market reference rates (MRR) in Exhibit 1 and Exhibit 2 below and states, \"one of our Canada-based clients has asked for recommendations on currency trades. A dealer has quoted a bid-offer rate of 2.0090/2.0161 in NZD/GBP; can you determine if there is a profitable currency trade? This client also wants to hedge exposure to the New Zealand dollar and wants to know the cost of the hedge, specifically, the forward premium or discount for a 360-day NZD/CAD forward contract.\"\n\nExhibit 1: Interbank Spot Exchange Rates\n# Currency Pair (Price/Base) | Bid | Offer | Midpoint\nNZD/CAD | 1.1860 | 1.1898 | 1.1879\nGBP/CAD | 0.5862 | 0.5866 | 0.5864\n\nExhibit 2: 360-Day Market Reference Rates\n# Country | 360-day MRR\nNew Zealand | 1.10%\nCanada | 0.45%\n\nThe discussion then moves to the determination of the equilibrium value of exchange rates and Vega states, \"there are a number of international parity conditions that jointly determine long-run movements in exchange rates. One of the parity conditions, purchasing power parity (PPP), can be used to assess the long-run equilibrium value of nominal exchange rates. In particular, one version of PPP states that the equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels.\"",
+   "questions": [
+    {
+     "q": "Eriksen's response on factors affecting interbank bid-offer spreads is most likely correct with respect to:",
+     "options": [
+      "transaction size.",
+      "currency pair.",
+      "credit risk."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Larger transactions are quoted wider spreads in the interbank market, because a larger position is harder for the dealer to offset. This part of the response is correct.\nB. Incorrect. Spreads are tighter (not wider) for well known, liquid currency pairs and wider for lesser known pairs.\nC. Incorrect. Given the short settlement cycle of spot foreign currency transactions (typically two business days), credit risk is not the most important factor in determining a client's spread.",
+     "hint": {
+      "hl": [
+       "The larger the size of the transaction the wider the spread",
+       "well known currency pairs have wider spreads",
+       "credit risk is the most important factor"
+      ],
+      "rule": "Bid-offer spreads: tighter for major, liquid pairs; wider for larger transactions and for higher client credit risk (but credit risk is not the most important factor for spot)."
+     }
+    },
+    {
+     "q": "Based on the dealer quote and the information in Exhibit 1, is it possible to generate a profit with a triangular arbitrage trade?",
+     "options": [
+      "No",
+      "Yes, for a profit of 0.0057 NZD per GBP",
+      "Yes, for a profit of 0.0136 NZD per GBP"
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. It is possible: buy GBP from the dealer at 2.0161 and sell it in the interbank market at 2.0218 for a profit.\nB. Correct. Interbank cross NZD/GBP = NZD/CAD ÷ GBP/CAD. Bid = 1.1860 ÷ 0.5866 = 2.0218; offer = 1.1898 ÷ 0.5862 = 2.0297. The dealer sells GBP at 2.0161, below the interbank bid of 2.0218: buy GBP at 2.0161 and sell at 2.0218 for a profit of 0.0057 NZD per GBP.\nC. Incorrect. This sells the GBP at the interbank offer (2.0297), which a seller cannot get: the seller receives the bid (2.0218).",
+     "hint": {
+      "hl": [
+       "bid-offer rate of 2.0090/2.0161 in NZD/GBP",
+       "@row:NZD/CAD",
+       "@row:GBP/CAD"
+      ],
+      "rule": "Triangular arbitrage: build the interbank cross (bid = bid ÷ offer of the other pair), then buy where it is cheap (dealer offer) and sell where it is dear (interbank bid)."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and Exhibit 2, the forward premium (discount) for a 360-day NZD/CAD forward contract is closest to:",
+     "options": [
+      "–0.00764.",
+      "0.00650.",
+      "0.00769."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. This inverts the interest rate ratio: 1.1879 × [(1 + 0.0045) ÷ (1 + 0.0110) − 1] = -0.00764, the wrong sign.\nB. Incorrect. This is just the interest rate difference (0.0110 − 0.0045 = 0.0065); it is not scaled by the spot rate or the base-currency interest factor.\nC. Correct. CAD is the base currency and NZD is the price currency. F − S = S × [(1 + R_NZD) ÷ (1 + R_CAD) − 1] = 1.1879 × [(1.0110) ÷ (1.0045) − 1] = 0.00769 (a forward premium).",
+     "hint": {
+      "hl": [
+       "@row:New Zealand",
+       "@row:Canada",
+       "forward premium or discount for a 360-day NZD/CAD forward contract"
+      ],
+      "rule": "Forward premium = S × [(1 + R_price) ÷ (1 + R_base) − 1]; use the midpoint spot rate."
+     }
+    },
+    {
+     "q": "In her statement about PPP, Vega is most likely referring to the:",
+     "options": [
+      "ex ante version of PPP.",
+      "relative version of PPP.",
+      "absolute version of PPP."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The ex ante version of PPP uses expected (not actual) inflation differences to forecast changes in the exchange rate; Vega does not mention expected inflation.\nB. Incorrect. The relative version of PPP says the percentage change in the spot rate is determined by the difference between foreign and domestic inflation rates, which Vega does not describe.\nC. Correct. The absolute version of PPP asserts that the equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels, which is what Vega describes.",
+     "hint": {
+      "hl": [
+       "equilibrium exchange rate between two countries is determined entirely by the ratio of their national price levels"
+      ],
+      "rule": "Absolute PPP: exchange rate = ratio of price levels. Relative PPP: % change in the exchange rate = inflation differential. Ex ante PPP: expected inflation differential."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Corporate Issuers",
+   "body": "Marek Dvorak is an analyst in the research department of an international securities firm. Dvorak is currently analyzing Karsa Products, a publicly traded global consumer goods company located in the United States. Selected data for Karsa are presented in Exhibit 1.\n\nExhibit 1\nSelected Financial Data for Karsa Products\n# Item | Value\nEarnings per share (most recent fiscal year) | US$1.92\nShares outstanding | 80 million\nBook value per share | US$31.50\nShare price | US$24.00\nKarsa currently does not pay a dividend, and the company operates with a target capital structure of 40% debt and 60% equity. However, on a recent conference call, Karsa's management indicated that they are considering four payout proposals:\n\nProposal #1: Repurchase US$36 million in shares using surplus cash.\n\nProposal #2: Initiate a regular cash dividend.\n\nProposal #3: Issue a 10% stock dividend.\n\nProposal #4: Repurchase US$36 million in shares by borrowing US$36 million at an after-tax cost of borrowing of 8.60%.",
+   "questions": [
+    {
+     "q": "The implementation of Proposal #3 would generally lead to shareholders:",
+     "options": [
+      "experiencing a decrease in the total cost basis of their shares.",
+      "having to pay tax on the dividend received.",
+      "having the same proportionate ownership as before implementation."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The total cost basis does not change; it is merely spread over more shares, so the cost basis per share decreases.\nB. Incorrect. Stock dividends are generally not taxable to shareholders.\nC. Correct. A stock dividend gives every shareholder the same proportionate increase in shares, so proportionate ownership does not change. Stock dividends are generally not taxable and the total cost basis is unchanged (only the cost basis per share falls).",
+     "hint": {
+      "hl": [
+       "Proposal #3: Issue a 10% stock dividend."
+      ],
+      "rule": "Stock dividend: no cash paid, no tax, same proportionate ownership, total cost basis unchanged."
+     }
+    },
+    {
+     "q": "If Karsa's management implemented Proposal #1 at the current share price shown in Exhibit 1, Karsa's book value per share after implementation would be closest to:",
+     "options": [
+      "US$31.05.",
+      "US$31.64.",
+      "US$32.10."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This subtracts the repurchase from total book value but divides by the original 80 million shares: (2,520 − 36) ÷ 80 = US$31.05.\nB. Correct. Total book value = 31.5 × 80 = US$2,520 million. Shares repurchased = 36 ÷ 24 = 1.5 million, leaving 78.5 million shares. Book value after the buyback = (2,520 − 36) ÷ 78.5 = US$31.64.\nC. Incorrect. This reduces the share count but not the book value: 2,520 ÷ 78.5 = US$32.10.",
+     "hint": {
+      "hl": [
+       "Repurchase US$36 million in shares using surplus cash",
+       "@row:Book value per share",
+       "@row:Share price"
+      ],
+      "rule": "Buyback: equity falls by the amount paid and shares fall by amount ÷ price; BVPS = (equity − repurchase) ÷ remaining shares."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1, if Karsa's management implemented Proposal #4 at the current share price, earnings per share would:",
+     "options": [
+      "increase.",
+      "decrease.",
+      "remain unchanged."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. EPS would increase only if the earnings yield (8.00%) exceeded the after-tax cost of borrowing (8.60%); it does not.\nB. Correct. EPS rises when the earnings yield exceeds the after-tax cost of borrowing. Karsa's earnings yield is 8.00% (= US$1.92 ÷ US$24.00), which is below the after-tax cost of borrowing of 8.60%, so EPS decreases.\nC. Incorrect. EPS is unchanged only if the earnings yield equals the after-tax cost of borrowing; 8.00% does not equal 8.60%.",
+     "hint": {
+      "hl": [
+       "after-tax cost of borrowing of 8.60%",
+       "@row:Earnings per share",
+       "@row:Share price"
+      ],
+      "rule": "Debt-financed repurchase: EPS rises if the earnings yield (EPS ÷ price) > after-tax cost of debt, falls if it is lower."
+     }
+    },
+    {
+     "q": "Based on Karsa's target capital structure, Proposal #2 will most likely:",
+     "options": [
+      "decrease the agency conflict between Karsa's shareholders and bondholders.",
+      "increase the agency conflict between Karsa's shareholders and managers.",
+      "increase the default risk of Karsa's debt."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Dividends increase (not decrease) the conflict between shareholders and bondholders.\nB. Incorrect. Paying out free cash decreases (not increases) the agency conflict between shareholders and managers.\nC. Correct. Karsa is financed by both debt and equity, so paying dividends can increase the agency conflict between shareholders and bondholders: dividends reduce the cash cushion available for the fixed payments to bondholders, and all else equal they increase the default risk of the debt.",
+     "hint": {
+      "hl": [
+       "target capital structure of 40% debt and 60% equity",
+       "Initiate a regular cash dividend"
+      ],
+      "rule": "Dividends move cash from the company to shareholders: lower cushion for bondholders (more default risk), less free cash for managers to waste."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Portfolio Management",
+   "body": "Elias Varga and Noel Fischer are analysts at Northbridge Economic Research (NER), an economic research firm. NER focuses on providing research and investment recommendations to the global asset management community. Varga and Fischer are reviewing Countries A, B, and C for possible investment.\n\nThey discuss the role that economic news has in adjusting market valuations. Varga provides the example of economic data that were recently released on Country B's economy. The most recent report showed that quarterly GDP declined at a 1.8% annualized rate. This was relative to market expectations of a 0.9% decline. Varga discusses the immediate impact of the release of Country B's GDP report on the credit spreads of Country B's government bonds.\n\nNER forecasts that Country B and Country C will experience the same long-term real GDP growth rate, which is significantly higher than the growth rate estimate for Country A. NER's expectations are that Country C and Country A will have similar levels of volatility of real GDP growth, with volatility expected to be significantly higher than that of Country B.\n\nIrene Kovac is an equity strategist at NER. Kovac believes it is important to study the relationships between economic cycles and corporate earnings, and she has made the following observations:\n\nObservation 1: Durable goods manufacturers have much more volatile earnings profiles than non-durable goods manufacturers because of the dramatic shifts in economic cycle-related demand.\nObservation 2: An understanding of the business cycle is more important for making earnings projections over the long term than the short term.\nObservation 3: Corporate profitability tends to be a lagging indicator of the business cycle and improvements are not typically evident until a recovery is well underway.\n\nNER also offers a corporate bond research service designed to identify attractive industries for fixed-income investment based on economic cycles. NER is currently forecasting a period of above-consensus growth.",
+   "questions": [
+    {
+     "q": "Following the GDP release, the credit spreads of Country B's government bonds are most likely to:",
+     "options": [
+      "widen.",
+      "narrow.",
+      "remain unchanged."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Market news changes valuations only when it differs from consensus expectations. A 1.8% decline against an expected 0.9% decline is an unexpected negative surprise, so spreads should widen, all else being equal.\nB. Incorrect. Country B posted a GDP number that was worse than expectations; an unexpected negative surprise widens (not narrows) spreads.\nC. Incorrect. Market news matters when it differs from the consensus, which is already priced in. This was a negative surprise, so spreads do not stay unchanged.",
+     "hint": {
+      "hl": [
+       "declined at a 1.8% annualized rate",
+       "market expectations of a 0.9% decline"
+      ],
+      "rule": "Only the surprise relative to consensus moves prices: better than expected → spreads narrow; worse than expected → spreads widen."
+     }
+    },
+    {
+     "q": "Based on NER's GDP growth forecasts, which country will most likely have the highest short-term interest rates, all else being equal?",
+     "options": [
+      "Country B",
+      "Country A",
+      "Country C"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Country B has the highest growth (tied with Country C) but the lowest volatility of real GDP growth, so it ranks behind Country C.\nB. Incorrect. Country A is expected to have the lowest real GDP growth by a significant amount. Real default-free interest rates are positively correlated with both real GDP growth and its volatility.\nC. Correct. Country C has the highest real GDP growth (tied with Country B) and also high volatility of real GDP growth, and real default-free interest rates are positively correlated with both.",
+     "hint": {
+      "hl": [
+       "same long-term real GDP growth rate",
+       "volatility expected to be significantly higher than that of Country B"
+      ],
+      "rule": "Real rates rise with expected real growth and with the volatility of real growth: highest growth and highest volatility → highest rates."
+     }
+    },
+    {
+     "q": "Which of Kovac's observations regarding economic cycles and corporate earnings is most accurate?",
+     "options": [
+      "Observation 1",
+      "Observation 3",
+      "Observation 2"
+     ],
+     "answer": 0,
+     "why": "A. Correct. Durable goods manufacturers do have more volatile earnings than non-durable goods manufacturers because of the dramatic shifts in cycle-related demand.\nB. Incorrect. Corporate profitability is a leading, not lagging, indicator of the business cycle; improvements are often evident before a recovery is underway.\nC. Incorrect. An understanding of the business cycle is crucial for earnings projections, particularly in the short term, not mainly the long term.",
+     "hint": {
+      "hl": [
+       "Durable goods manufacturers have much more volatile earnings profiles"
+      ],
+      "rule": "Durable goods: more cyclical, more volatile earnings. Profits lead the cycle; the cycle matters most for short-term earnings forecasts."
+     }
+    },
+    {
+     "q": "Based on NER's global economic forecast, which of the following industries is most appropriate for NER's corporate bond research service to recommend?",
+     "options": [
+      "Tobacco industry",
+      "Household products industry",
+      "Automobile industry"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Tobacco is a stable consumer staples industry, which tends to lag in times of narrowing spreads.\nB. Incorrect. Household products is a stable consumer staples industry, which tends to lag in times of narrowing spreads.\nC. Correct. In a period of above-consensus growth, spreads narrow and lower-rated, more economically sensitive bonds outperform bonds in more stable industries. Automobile bonds are more economically sensitive than consumer staples bonds.",
+     "hint": {
+      "hl": [
+       "above-consensus growth"
+      ],
+      "rule": "Growth above consensus → spreads narrow → cyclical, lower-rated bonds outperform stable (staples) bonds."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Fixed Income",
+   "body": "Nina Torres is a fund manager for an actively managed global fixed-income fund that buys bonds issued in Countries A, B, and C. She and her assistant are preparing the quarterly markets update. Torres begins the meeting by distributing the daily rates sheet, which includes the current government spot rates for Countries A, B, and C as shown in Exhibit 1.\n\nExhibit 1: Today's Government Spot Rates\n# Maturity | Country A | Country B | Country C\nOne year | 0.55% | 1.30% | 1.90%\nTwo years | 0.90% | 1.05% | 2.20%\nThree years | 1.25% | 0.85% | 2.60%\nFour years | 1.55% | 0.60% | 2.85%\nFive years | 1.80% | 0.50% | 3.10%\n\nTorres says, \"We also look at risk in terms of the swap spread. We considered historical three-year swap spreads for Country B, which reflect that market's credit and liquidity risks, at three different points in time.\" Torres provides the information in Exhibit 2.\n\nExhibit 2: Selected Historical Three-Year Rates for Country B\n# Period | Government Bond Yield (%) | Fixed-for-Floating MRR Swap (%)\n1 month ago | -0.12 | 0.18\n6 months ago | -0.10 | 0.35\n12 months ago | -0.09 | 0.02\n\nShe moves on to present her market views on the respective yield curves for a five-year investment horizon.\n\nCountry A: \"The government yield curve has changed little in terms of its level and shape during the last few years, and I expect this trend to continue.\"\n\nCountry B: \"Because of recent economic trends, I expect a reversal in the slope of the current yield curve, so that it will slope upward at all maturities.\"\n\nCountry C: \"Because of recent economic trends, I expect a reversal in the slope of the current yield curve, so that it will slope downward at all maturities.\"\n\nTorres's assistant asks, \"Assuming investors require liquidity premiums, how can a yield curve slope downward? What does this imply about forward rates?\"\n\nTorres answers, \"Even if investors require compensation for holding longer-term bonds, the yield curve can slope downward—for example, if there is an expectation of severe deflation. Regarding forward rates, it can be helpful to understand yield curve dynamics by calculating implied forward rates. To see what I mean, we can use Exhibit 1 to calculate the forward rate for a two-year Country C loan beginning in three years.\"",
+   "questions": [
+    {
+     "q": "Based on Exhibit 2, the implied credit and liquidity risks as indicated by the historical three-year swap spreads for Country B were the lowest:",
+     "options": [
+      "1 month ago.",
+      "6 months ago.",
+      "12 months ago."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Swap spread = swap rate − government yield. 1 month ago: 0.18 − (−0.12) = 0.30%, which is not the lowest.\nB. Incorrect. 6 months ago: 0.35 − (−0.10) = 0.45%, the highest of the three.\nC. Correct. 12 months ago: 0.02 − (−0.09) = 0.11%, the lowest spread, so credit and liquidity risks were lowest then.",
+     "hint": {
+      "hl": [
+       "@row:1 month ago",
+       "@row:6 months ago",
+       "@row:12 months ago"
+      ],
+      "rule": "Swap spread = swap rate − government bond yield of the same maturity; a lower spread means lower credit and liquidity risk."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and assuming Torres's market views on yield curve changes are realized, the forward curve of which country will lie below its spot curve?",
+     "options": [
+      "Country C",
+      "Country B",
+      "Country A"
+     ],
+     "answer": 0,
+     "why": "A. Correct. The forward curve lies below the spot curve when the spot curve slopes downward. Country C's upward-sloping curve is expected to reverse into a downward slope, so its forward curve will lie below its spot curve.\nB. Incorrect. Country B's downward-sloping curve is expected to reverse into an upward slope, so its forward curve will lie above its spot curve.\nC. Incorrect. Country A stays upward sloping, so its forward curve lies above its spot curve.",
+     "hint": {
+      "hl": [
+       "I expect a reversal in the slope of the current yield curve, so that it will slope downward",
+       "@row:Five years"
+      ],
+      "rule": "Upward-sloping spot curve → forward curve above it; downward-sloping spot curve → forward curve below it. Apply the expected slope AFTER the reversal."
+     }
+    },
+    {
+     "q": "With respect to their discussion of yield curves, Torres and her assistant are most likely discussing which term structure theory?",
+     "options": [
+      "Local expectations theory",
+      "Pure expectations theory",
+      "Liquidity preference theory"
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Local expectations theory says returns over short holding periods are the same for all bonds; it does not describe liquidity premiums that grow with maturity.\nB. Incorrect. Pure expectations theory has no liquidity premium: forward rates are unbiased predictions of future spot rates.\nC. Correct. Liquidity preference theory says liquidity premiums compensate investors for the added interest rate risk of lending long term and increase with maturity. Torres and her assistant assume investors require liquidity premiums.",
+     "hint": {
+      "hl": [
+       "Assuming investors require liquidity premiums",
+       "require compensation for holding longer-term bonds"
+      ],
+      "rule": "Liquidity premium that rises with maturity → liquidity preference theory."
+     }
+    },
+    {
+     "q": "Torres's assistant should calculate a forward rate closest to:",
+     "options": [
+      "3.70%.",
+      "3.85%.",
+      "4.11%."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This is the three-year rate starting in two years: ((1.031)^5 ÷ (1.022)^2)^(1/3) − 1 = 3.70%.\nB. Correct. (1 + z5)^5 = (1 + z3)^3 × (1 + f3,2)^2 → (1.0310)^5 = (1.0260)^3 × (1 + f3,2)^2 → f3,2 = 3.85%.\nC. Incorrect. This is the one-year rate starting in four years: (1.0310)^5 ÷ (1.0285)^4 − 1 = 4.11%.",
+     "hint": {
+      "hl": [
+       "forward rate for a two-year Country C loan beginning in three years",
+       "@row:Five years",
+       "@row:Three years"
+      ],
+      "rule": "Forward rate f(j,k): (1 + z_{j+k})^(j+k) = (1 + z_j)^j × (1 + f(j,k))^k; for a two-year loan starting in three years use the 3-year and 5-year spot rates."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Equity Valuation",
+   "body": "Rita Alves is a supervisor in the equity research division of Meridian Securities. Alves asks Tiago Ramos, a junior analyst, to complete an analysis of Norte S.A., Costa S.A., and Valle S.A.\n\nAlves directs Ramos to use a valuation metric that would allow for a meaningful ranking of relative value of the three companies' shares. Exhibit 1 provides selected financial information for the three companies.\n\nExhibit 1: Selected Financial Information for Norte, Costa, and Valle (Mexican Peso, MXN)\n# | Norte | Costa | Valle\nStock's current price | 18.60 | 64.80 | 118.30\nDiluted EPS (last four quarters) | 0.95 | 3.35 | -0.12\nDiluted EPS (next four quarters) | 1.05 | 2.70 | 2.35\n\nRamos reviews underlying trailing EPS for Norte. Ramos finds the following note in Norte's financial statements:\n\n\"On a per share basis, Norte incurred in the last four quarters\n\ni. from a lawsuit, a nonrecurring gain of MXN0.06; and\n\nii. from a plant restructuring, a nonrecurring cost of MXN0.02 and a recurring cost of MXN0.01 in increased depreciation.\"\n\nRamos estimates five-year earnings growth rates for the three companies, which are presented in Exhibit 2.\n\nExhibit 2: Earnings Growth Rate Estimates over Five Years\n# Company | Earnings Growth Rate Estimate (%)\nNorte | 15.40\nCosta | 24.50\nValle | 28.60\n\nRamos also analyzes the three companies using the enterprise value (EV)-to-EBITDA multiple. Ramos notes that the EBITDA for Valle for the most recent year is MXN640 million and gathers other selected information on Valle, which is presented in Exhibit 3.\n\nExhibit 3: Selected Information on Valle at Year End (MXN Millions)\n# Market Value of Debt | Market Value of Common Equity | Market Value of Preferred Equity | Cash | Short-Term Investments\n1,950 | 7,240 | 310 | 625 | 540",
+   "questions": [
+    {
+     "q": "Based on Alves's directive and the data from the last four quarters presented in Exhibit 1, the valuation metric that Ramos should use is the:",
+     "options": [
+      "price-to-earnings ratio (P/E).",
+      "P/E-to-growth ratio (PEG).",
+      "earnings-to-price ratio (E/P)."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. Valle's negative trailing EPS makes its P/E negative and meaningless for ranking.\nB. Incorrect. The PEG ratio is built on the P/E, so it has the same problem with negative earnings (and it needs a growth estimate).\nC. Correct. The E/P ratio puts Valle's negative EPS in the numerator, so a ranking is still meaningful (a lower or negative E/P ranks as less attractive).",
+     "hint": {
+      "hl": [
+       "meaningful ranking of relative value",
+       "@row:Diluted EPS (last four quarters)"
+      ],
+      "rule": "Negative earnings: use E/P (earnings in the numerator), not P/E."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and the note to Norte's financial statements, the trailing P/E for Norte using underlying EPS is closest to:",
+     "options": [
+      "19.6.",
+      "20.4.",
+      "20.7."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This uses reported EPS of 0.95 with no adjustment: 18.60 ÷ 0.95 = 19.6.\nB. Correct. Underlying EPS = 0.95 − 0.06 (nonrecurring gain) + 0.02 (nonrecurring cost) = MXN0.91; the recurring 0.01 is not adjusted. P/E = 18.60 ÷ 0.91 = 20.4.\nC. Incorrect. This also removes the recurring depreciation cost (0.90): 18.60 ÷ 0.90 = 20.7.",
+     "hint": {
+      "hl": [
+       "nonrecurring gain of MXN0.06",
+       "nonrecurring cost of MXN0.02 and a recurring cost of MXN0.01",
+       "@row:Stock's current price"
+      ],
+      "rule": "Underlying EPS: remove nonrecurring gains and add back nonrecurring costs; leave recurring items in."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1 and Exhibit 2, which company's shares are the most attractively priced based on the five-year forward P/E-to-growth (PEG) ratio?",
+     "options": [
+      "Norte",
+      "Costa",
+      "Valle"
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. Forward PEG for Norte = (18.60 ÷ 1.05) ÷ 15.40 = 1.15, higher than Costa's.\nB. Correct. Forward PEG: Norte 1.15; Costa (64.80 ÷ 2.70 = 24.00) ÷ 24.50 = 0.98; Valle (118.30 ÷ 2.35 = 50.34) ÷ 28.60 = 1.76. The lowest PEG is the most attractive: Costa.\nC. Incorrect. Valle has the highest PEG (1.76), the least attractive.",
+     "hint": {
+      "hl": [
+       "@row:Diluted EPS (next four quarters)",
+       "Earnings Growth Rate Estimate (%)"
+      ],
+      "rule": "Forward PEG = (price ÷ forward EPS) ÷ growth rate; the lowest PEG is the cheapest per unit of growth."
+     }
+    },
+    {
+     "q": "Based on Exhibit 3, Valle's EV/EBITDA multiple is closest to:",
+     "options": [
+      "13.0.",
+      "13.9.",
+      "14.8."
+     ],
+     "answer": 0,
+     "why": "A. Correct. EV = debt + common equity + preferred equity − cash − short-term investments = 1,950 + 7,240 + 310 − 625 − 540 = 8,335; EV ÷ EBITDA = 8,335 ÷ 640 = 13.0.\nB. Incorrect. This subtracts cash but not short-term investments: 8,875 ÷ 640 = 13.9.\nC. Incorrect. This subtracts neither cash nor short-term investments: 9,500 ÷ 640 = 14.8.",
+     "hint": {
+      "hl": [
+       "EBITDA for Valle for the most recent year is MXN640 million",
+       "Short-Term Investments"
+      ],
+      "rule": "EV = market value of debt + common + preferred − cash and short-term investments; then divide by EBITDA."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Derivatives",
+   "body": "Leon Fischer is a managing director in the Derivatives Group at Redstone Capital Partners (RCP). Fischer specializes in advising clients on the use of derivatives to manage portfolio management strategies. Fischer is preparing to meet with four of the firm's clients: Hana Ito, Dana Wells, Arjun Rao, and Peter Lindqvist.\n\nThree months ago (90 days), Ito purchased a bond with a 4% annual coupon and a maturity date of eight years from the date of purchase. The bond has a face value of US$1,000 and pays interest every 180 days from the date of issue. Ito is concerned about a potential increase in interest rates over the next year and has approached Fischer for advice on how to use forward contracts to manage this risk. Fischer advises Ito to enter into a short position in a fixed-income forward contract expiring in 360 days. The annualized risk-free rate now is 1.8% per year and the price of the bond with accrued interest is US$1,087.60.\n\nOne month ago (30 days), Wells entered a pay-fixed 3 × 6 forward rate agreement (FRA) at a rate of 2.40% with a notional amount of US$5,000,000. Now, 30 days after entering the FRA, the two-month MRR is 1.5% and the five-month MRR is 2.5%.\n\nRao, who is based in Hong Kong SAR, requires a one-year bridge loan in euros to fund operations in Germany. He wants to fund this loan at a competitive rate. Fischer advises Rao to borrow HK dollars domestically and then enter into a one-year foreign currency swap to swap into euros. Exhibit 1 below provides Hong Kong and euro spot interest rates and present value factors.\n\nExhibit 1: Hong Kong and Euro Spot Interest Rates\n# Days to Maturity | HK Dollars Spot Interest Rates (%) | HK Dollars Present Value Factors | Euro Spot Interest Rates (%) | Euro Present Value Factors\n90 | 0.620 | 0.9985 | 0.355 | 0.9991\n180 | 0.780 | 0.9961 | 0.405 | 0.9980\n270 | 0.860 | 0.9936 | 0.440 | 0.9967\n360 | 0.950 | 0.9906 | 0.470 | 0.9953\n\nPeter Lindqvist is based in Australia and entered into a one-year equity swap 30 days ago. Under the terms of the swap, he would receive the return on the S&P/ASX 200 Financials Index and pay a fixed annual interest rate of 5.2% on a notional amount of AUD60,000,000. The swap payments are quarterly. At the time the swap was initiated 30 days ago, the value of the index was 2,850. Today, the value of the index is 3,135. Exhibit 2 provides present value factors based on the current Australian term structure of interest rates.\n\nExhibit 2: Present Value Factors Based on Current Australian Term Structure\n# Days to Maturity | Present Value Factors\n60 | 0.9984\n150 | 0.9954\n240 | 0.9914\n330 | 0.9869",
+   "questions": [
+    {
+     "q": "Based on a 360-day year, the price of the forward contract on the bond purchased by Ito is closest to:",
+     "options": [
+      "US$1,057.",
+      "US$1,067.",
+      "US$1,107."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This compounds the bond price net of coupons for only 180 days: (1,087.60 − 39.645) × 1.018^(180/360) = US$1,057.\nB. Correct. Time 0 is the forward initiation date, 90 days after the purchase, and T is 360 days. PV of coupons = 20 ÷ 1.018^(90/360) + 20 ÷ 1.018^(270/360) = 19.911 + 19.734 = US$39.645. F0(T) = (1,087.60 − 39.645) × 1.018^(360/360) = US$1,067.\nC. Incorrect. This does not deduct the PV of the coupons: 1,087.60 × 1.018 = US$1,107.",
+     "hint": {
+      "hl": [
+       "pays interest every 180 days",
+       "expiring in 360 days",
+       "price of the bond with accrued interest is US$1,087.60"
+      ],
+      "rule": "Forward on a coupon bond = (spot price incl. accrued interest − PV of coupons paid before expiry) × (1 + r)^T."
+     }
+    },
+    {
+     "q": "The current value of Wells's FRA is closest to:",
+     "options": [
+      "US$9,485.",
+      "US$9,387.",
+      "US$9,426."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This leaves the settlement undiscounted: 3.159% − 2.40% = 0.759%; × 90/360 × 5,000,000 = US$9,485.\nB. Correct. The new 2 × 5 rate = [(1 + 0.025 × 150/360) ÷ (1 + 0.015 × 60/360) − 1] × 360/90 = 3.159%. For the pay-fixed side, V = (FRA now − FRA contract) × (90/360) × notional ÷ (1 + 0.025 × 150/360) = US$9,387.\nC. Incorrect. This discounts over 90 days instead of the 150 days to the end of the underlying period: US$9,426.",
+     "hint": {
+      "hl": [
+       "pay-fixed 3 × 6 forward rate agreement",
+       "two-month MRR is 1.5% and the five-month MRR is 2.5%"
+      ],
+      "rule": "FRA value = (new FRA rate − contract rate) × (m/360) × notional, discounted over the days to the end of the underlying period; the pay-fixed side gains when rates rise."
+     }
+    },
+    {
+     "q": "Based on the information in Exhibit 1, the annual fixed swap rate Rao would pay is closest to:",
+     "options": [
+      "0.47%.",
+      "0.95%.",
+      "1.89%."
+     ],
+     "answer": 0,
+     "why": "A. Correct. The euro fixed rate Rao pays: (1 − 0.9953) ÷ (0.9991 + 0.9980 + 0.9967 + 0.9953) = 0.1178% per quarter; annualized × 4 = 0.47%.\nB. Incorrect. This is the fixed rate for HK dollars, which Rao would receive: (1 − 0.9906) ÷ 3.9788 × 4 = 0.95%.\nC. Incorrect. This divides by the last factor instead of the sum of the factors: (1 − 0.9953) ÷ 0.9953 × 4 = 1.89%.",
+     "hint": {
+      "hl": [
+       "swap into euros",
+       "Euro Present Value Factors"
+      ],
+      "rule": "Swap fixed rate = (1 − final PV factor) ÷ sum of PV factors for the currency of that leg; annualize with periods per year. Rao pays the euro leg."
+     }
+    },
+    {
+     "q": "Based on the information in Exhibit 2, the market value of Lindqvist's equity swap is closest to:",
+     "options": [
+      "AUD 2,880,000.",
+      "AUD 2,901,762.",
+      "AUD 3,687,762."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. This multiplies the index return less the fixed rate by the notional: (0.1000 − 0.052) × 60,000,000 = AUD 2,880,000.\nB. Incorrect. This discounts only the coupons and treats the fixed bond's par as 1 (not its present value): AUD 2,901,762.\nC. Correct. Receive-equity, pay-fixed swap: MV = notional × [S_t ÷ S_0 − fixed-rate bond value]. S_t ÷ S_0 = 3,135 ÷ 2,850 = 1.1000. Quarterly coupon = 5.2% ÷ 4 = 1.3%; fixed-rate bond = 0.013 × (3.9721) + 0.9869 = 1.0385. MV = 60,000,000 × (1.1000 − 1.0385) = AUD 3,687,762.",
+     "hint": {
+      "hl": [
+       "receive the return on the S&P/ASX 200 Financials Index and pay a fixed annual interest rate of 5.2%",
+       "the value of the index was 2,850",
+       "Today, the value of the index is 3,135"
+      ],
+      "rule": "Equity swap value (receive equity, pay fixed) = notional × (S_t ÷ S_0 − PV of the fixed-rate bond per 1 of notional)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Financial Statement Analysis",
+   "body": "Alan Thornton is an analyst in the research department of an international securities firm. Thornton is preparing a research report on Veridian, Inc., a publicly-traded company that complies with IFRS. Thornton reviews recent transactions relating to Meridas Co. and Calder Co.\n\nMeridas Co.\n\nMeridas Co. plans to raise $60 million in capital by borrowing against its financial receivables. Meridas plans to create a special purpose entity (SPE), invest $15 million in the SPE, have the SPE borrow $60 million, and then use the total funds to purchase $75 million of receivables from Meridas. Meridas meets the definition of control and plans to consolidate the SPE. Meridas's current balance sheet is presented in Exhibit 1.\n\nExhibit 1: Meridas Co. Balance Sheet at 31 December 2016 ($ millions)\n# Assets | Amount | Liabilities and equity | Amount\nCash | 30 | Current liabilities | 35\nAccounts receivable | 90 | Noncurrent liabilities | 45\nOther assets | 40 | Shareholders' equity | 80\nTotal assets | 160 | Total liabilities and equity | 160\n\nInvestment in Calder Co.\n\nOn 1 January 2016, Veridian acquired a 30% equity interest in Calder Co. for $620 million. Exhibit 2 presents selected financial information for Calder on the acquisition date. Thornton notes that the plant and equipment are depreciated on a straight-line basis and have 10 years of remaining life.\n\nExhibit 2: Selected Financial Data for Calder Co., 1 January 2016 (Acquisition Date) ($ millions)\n# | Book Value | Fair Value\nCurrent assets | 300 | 300\nPlant and equipment | 3,100 | 3,400\nTotal assets | 3,400 | 3,700\nLiabilities | 1,900 | 1,900\nNet assets | 1,500 | 1,800\n\nThornton notes that, for fiscal year 2016, Calder reported net income of $400 million and paid dividends of $240 million.\n\nThornton is concerned about possible goodwill impairment for Veridian due to expected changes in the industry effective at the end of 2017. He calculates the impairment loss based on selected data from the projected consolidated balance sheet data presented in Exhibit 3, assuming that the cash-generating unit and reporting unit of Veridian are the same.\n\nExhibit 3: Selected Financial Data for Veridian, Inc., Estimated Year Ending 31 December 2017 ($ millions)\n# Item | Amount\nCarrying value of cash-generating unit/reporting unit | 16,300\nRecoverable amount of cash-generating unit/reporting unit | 15,950\nFair value of reporting unit | 15,900\nIdentifiable net assets | 15,400\nGoodwill | 700",
+   "questions": [
+    {
+     "q": "Based on Exhibit 1 and Meridas's plans to borrow against its financial receivables, the new consolidated balance sheet will show total assets of:",
+     "options": [
+      "$160 million.",
+      "$220 million.",
+      "$235 million."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This ignores the new borrowing: the consolidated balance sheet grows by the $60 million the SPE borrows from outside the group.\nB. Correct. The SPE will hold receivables of $75 million, long-term debt of $60 million and equity of $15 million. On consolidation, Meridas's cash rises by 75 − 15 = $60 million (the $60 million borrowed from outside) while the receivables stay on the balance sheet, and noncurrent liabilities rise by $60 million. Total assets = 160 + 60 = $220 million.\nC. Incorrect. This adds the $75 million of receivables on top of the existing balance sheet, double counting them: the intercompany sale and the $15 million investment are eliminated on consolidation.",
+     "hint": {
+      "hl": [
+       "borrow $60 million",
+       "@row:Total assets"
+      ],
+      "rule": "Consolidating an SPE funded by outside debt: assets and liabilities both rise by the amount borrowed from outside; intercompany sales and the parent's investment are eliminated."
+     }
+    },
+    {
+     "q": "Based on Exhibit 2, Veridian's investment in Calder resulted in goodwill of:",
+     "options": [
+      "$90 million.",
+      "$80 million.",
+      "$170 million."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This is only the part of the excess purchase price attributable to plant and equipment: 30% × (3,400 − 3,100) = $90 million.\nB. Correct. Purchase price $620 million − 30% of book value of net assets (0.30 × 1,500 = 450) = excess purchase price of $170 million. Attributable to plant and equipment: 0.30 × (3,400 − 3,100) = 90. Goodwill (residual) = 170 − 90 = $80 million.\nC. Incorrect. This is the whole excess over book value ($170 million), without allocating any of it to the plant and equipment fair value adjustment.",
+     "hint": {
+      "hl": [
+       "30% equity interest",
+       "@row:Plant and equipment",
+       "@row:Net assets"
+      ],
+      "rule": "Equity-method goodwill = price − share of fair value of identifiable net assets (= excess over book value − share of fair-value adjustments)."
+     }
+    },
+    {
+     "q": "Using only the information from Exhibit 2 and the 2016 results, the carrying value of Veridian's investment in Calder at the end of 2016 is closest to:",
+     "options": [
+      "$668 million.",
+      "$659 million.",
+      "$731 million."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This leaves out the amortization of the excess purchase price attributable to plant and equipment (0.30 × 300 ÷ 10 = 9): $668 million.\nB. Correct. Purchase price 620 + share of net income (0.30 × 400 = 120) − dividends received (0.30 × 240 = 72) − amortization of the excess attributable to plant and equipment (0.30 × (3,400 − 3,100) ÷ 10 = 9) = $659 million.\nC. Incorrect. This does not deduct the dividends received (72), which reduce the investment account under the equity method: $731 million.",
+     "hint": {
+      "hl": [
+       "Calder reported net income of $400 million and paid dividends of $240 million",
+       "depreciated on a straight-line basis and have 10 years of remaining life"
+      ],
+      "rule": "Equity method: cost + share of net income − share of dividends − amortization of the fair value excess."
+     }
+    },
+    {
+     "q": "Based on Exhibit 3, Veridian's impairment loss under IFRS is:",
+     "options": [
+      "$350 million.",
+      "$400 million.",
+      "$200 million."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Under IFRS the impairment loss is the carrying value of the cash-generating unit minus its recoverable amount: 16,300 − 15,950 = $350 million (below the goodwill of 700, so it can be fully absorbed by goodwill).\nB. Incorrect. This is carrying value minus the fair value of the reporting unit (16,300 − 15,900 = 400), a US GAAP-style measure.\nC. Incorrect. This is goodwill minus implied goodwill (700 − (15,900 − 15,400) = 200), also not the IFRS measure.",
+     "hint": {
+      "hl": [
+       "@row:Carrying value of cash-generating unit/reporting unit",
+       "@row:Recoverable amount of cash-generating unit/reporting unit"
+      ],
+      "rule": "IFRS: impairment loss = carrying value of the CGU − recoverable amount (allocated first to goodwill)."
+     }
+    }
+   ]
+  },
+  {
+   "topic": "Quantitative Methods",
+   "body": "Dara Okafor, an energy sector analyst at an investment bank, is concerned about the future level of natural gas prices and how it might affect portfolio values. She is considering whether to recommend a hedge for the bank portfolio's exposure to changes in natural gas prices. Okafor examines Henry Hub natural gas monthly price data, expressed in US dollars per MMBtu, for the 181-month period from August 2003 through August 2018. The end-of-month price was $4.35 in July 2018 and $3.92 in August 2018 (Month 181).\n\nAfter reviewing the time-series data, Okafor runs the following regressions using the price data.\n* Linear trend model: Pricet = b0 + b1t + et.\n* Log-linear trend model: ln Pricet = b0 + b1t + et.\n* AR(1) model: Pricet = b0 + b1Pricet−1 + et.\n* AR(2) model: Pricet = b0 + b1Pricet−1 + b2Pricet−2 + et.\n\nExhibit 1 presents selected data from the four regressions. At the 5% significance level, the lower critical value for the Durbin–Watson test statistic is 1.75 for both the linear and log-linear regressions.\n\nExhibit 1: Natural Gas Price per MMBtu, August 2003–August 2018\n# | Linear | Log-Linear | AR(1) | AR(2)\nIntercept | – | 0.9800 | 0.2800 | 1.2000\nt (Trend) | – | 0.0042 | – | –\nPricet−1 | – | – | 0.9100 | 1.3200\nPricet−2 | – | – | – | -0.3800\nDurbin–Watson | 0.14 | 1.82 | – | –",
+   "questions": [
+    {
+     "q": "Based on Exhibit 1, the predicted natural gas price for September 2018 using the log-linear trend model is closest to:",
+     "options": [
+      "$1.74.",
+      "$2.66.",
+      "$5.72."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. This is the predicted value of ln(price), 0.9800 + 0.0042 × 182 = 1.7444, which has not been converted back to a price.\nB. Incorrect. This leaves out the trend term: e^0.9800 = $2.66.\nC. Correct. September 2018 is the first month out of sample, so t = 182. ln(price) = 0.9800 + 0.0042 × 182 = 1.7444; price = e^1.7444 = $5.72.",
+     "hint": {
+      "hl": [
+       "Log-linear trend model: ln Pricet = b0 + b1t + et.",
+       "Month 181",
+       "@row:t (Trend)"
+      ],
+      "rule": "Log-linear trend: ln(price) = b0 + b1·t; use t of the forecast month (first out-of-sample month = last observation + 1) and take e^ of the result."
+     }
+    },
+    {
+     "q": "Based on the regression output in Exhibit 1, there is evidence of positive serial correlation in the errors in:",
+     "options": [
+      "neither the linear trend model nor the log-linear trend model.",
+      "both the linear trend model and the log-linear trend model.",
+      "the linear trend model but not the log-linear trend model."
+     ],
+     "answer": 2,
+     "why": "A. Incorrect. The linear trend model's Durbin–Watson statistic (0.14) is far below 1.75, so there is evidence of positive serial correlation in the linear model.\nB. Incorrect. The log-linear model's Durbin–Watson statistic (1.82) is above the lower critical value of 1.75, so there is no evidence of positive serial correlation in that model.\nC. Correct. The Durbin–Watson statistic of the linear trend model is 0.14, below the lower critical value of 1.75, so we reject the null of no positive serial correlation. The log-linear model's statistic of 1.82 is above 1.75, so there is no evidence of positive serial correlation there.",
+     "hint": {
+      "hl": [
+       "lower critical value for the Durbin–Watson test statistic is 1.75",
+       "@row:Durbin–Watson"
+      ],
+      "rule": "Durbin–Watson below the lower critical value → reject no positive serial correlation; above it → no evidence of positive serial correlation."
+     }
+    },
+    {
+     "q": "Based on Exhibit 1, the forecasted natural gas price in September 2018 based on the AR(2) model is closest to:",
+     "options": [
+      "$3.52.",
+      "$4.72.",
+      "$5.45."
+     ],
+     "answer": 1,
+     "why": "A. Incorrect. This leaves out the intercept: 1.3200 × 3.92 − 0.3800 × 4.35 = $3.52.\nB. Correct. September 2018 is a one-period-ahead forecast. The last two observations are July 2018 ($4.35) and August 2018 ($3.92). Forecast = 1.2000 + 1.3200 × 3.92 − 0.3800 × 4.35 = $4.72.\nC. Incorrect. This swaps the lags (the more recent price must carry b1): 1.2000 + 1.3200 × 4.35 − 0.3800 × 3.92 = $5.45.",
+     "hint": {
+      "hl": [
+       "AR(2) model: Pricet = b0 + b1Pricet−1 + b2Pricet−2 + et.",
+       "was $4.35 in July 2018 and $3.92 in August 2018"
+      ],
+      "rule": "AR(2) one-step forecast = b0 + b1 × (latest price) + b2 × (price one month earlier)."
+     }
+    },
+    {
+     "q": "Based on the mean-reverting level implied by the AR(1) model regression output in Exhibit 1, the forecasted natural gas price for September 2018 is most likely to be:",
+     "options": [
+      "less than $3.92.",
+      "greater than $3.92.",
+      "equal to $3.92."
+     ],
+     "answer": 0,
+     "why": "A. Correct. Mean-reverting level = b0 ÷ (1 − b1) = 0.2800 ÷ (1 − 0.9100) = $3.11. The August price of $3.92 is above this level, so the model predicts a fall: the AR(1) forecast is 0.2800 + 0.9100 × 3.92 = $3.85, less than $3.92.\nB. Incorrect. The price would rise only if it were below the mean-reverting level; $3.92 is above $3.11.\nC. Incorrect. The price equals its mean-reverting level only if it already sits at $3.11; it does not.",
+     "hint": {
+      "hl": [
+       "AR(1) model: Pricet = b0 + b1Pricet−1 + et.",
+       "@row:Intercept",
+       "@row:Pricet−1"
+      ],
+      "rule": "AR(1): price above the mean-reverting level b0 ÷ (1 − b1) → expected to fall; below it → expected to rise."
+     }
+    }
+   ]
+  }
+ ]
+}
