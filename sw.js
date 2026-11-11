@@ -1,7 +1,7 @@
 // Offline support: serve from the network when online (so new questions show up),
 // fall back to the cached copy when offline.
-const CACHE = "cfa-quiz-v230";
-const FILES = ["./", "index.html", "questions.js", "vignettes.js", "notes.js", "keyq.js", "garden.js", "exam.js", "exam_hints.js", "vendor/three.min.js", "manifest.json", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
+const CACHE = "cfa-quiz-v231";
+const FILES = ["./", "index.html", "questions.js", "vignettes.js", "notes.js", "keyq.js", "garden.js", "exam.js", "exam_hints.js", "flash.js", "vendor/three.min.js", "manifest.json", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));

@@ -598,6 +598,18 @@
   .kq-figwrap { margin: 4px 0 10px; text-align: center; }
   .kq-fig { width: 100%; max-width: 360px; height: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--white); }
   .kq-fig text { font: 11px -apple-system, "Segoe UI", sans-serif; fill: var(--navy); }
+  .fc-card { cursor: pointer; padding: 18px 16px 20px; min-height: 52vh; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .fc-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted, #6b7785); margin-bottom: 10px; }
+  .fc-chip { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .78rem; font-weight: 700; background: var(--aqua-pale); color: var(--navy); }
+  .fc-chip.wrong { background: #fde8e6; color: #b3261e; } .fc-chip.unsure { background: #fff4d6; color: #8a6500; }
+  .fc-q { font-size: 1.12rem; font-weight: 600; line-height: 1.5; margin: 6px 0 14px; }
+  .fc-tap { color: var(--muted, #6b7785); font-size: .92rem; margin-top: 18px; text-align: center; }
+  .fc-sec { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--aqua-pale); line-height: 1.5; }
+  .fc-sec b { display: block; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 3px; color: var(--navy); }
+  .fc-sec.bad { background: #fdf0ef; } .fc-sec.good { background: #eaf6ee; } .fc-sec pre { margin: 0; white-space: pre-wrap; font: inherit; }
+  .fc-bar { height: 5px; border-radius: 3px; background: var(--border); margin: 0 0 10px; overflow: hidden; } .fc-bar i { display: block; height: 100%; background: var(--navy); }
+  .fc-tbl { overflow-x: auto; }
+  .fc-ctl { display: flex; gap: 8px; margin: 12px 0 0; flex-wrap: wrap; }
   .kq-table { width: 100%; border-collapse: collapse; margin: 4px 0 10px; font-size: .92rem; }
   .kq-table th, .kq-table td { border: 1px solid var(--border); padding: 8px 9px; text-align: left; vertical-align: top; }
   .kq-table thead th, .kq-table tbody th { color: var(--navy); }
@@ -762,12 +774,13 @@
 <script src="garden.js"></script>
 <script src="exam.js"></script>
 <script src="exam_hints.js"></script>
+<script src="flash.js"></script>
 <script>
   const app = document.getElementById("app");
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v230 · 2026-11-12";
+  const APP_VERSION = "v231 · 2026-11-12";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1614,6 +1627,10 @@
     qb.append(el("b", {}, "Quick questions"), el("span", {}, qq.length ? `${plural(qq.length, "question")} · main ideas behind questions you missed · ${qm} mastered` : "No questions yet"));
     qb.onclick = () => { if (qq.length) exQuick(); };
     app.append(qb);
+    const fb = el("button", { className: "nt-item" });
+    fb.append(el("b", {}, "Flash cards"), el("span", {}, `${plural(FLASH.length, "card")} · mistakes from Mock 6-10 and Practice sets 1-4 · by subject, tap to flip`));
+    fb.onclick = () => exFlashHub();
+    app.append(fb);
     const st = exLoad();
     const group = (label, kind) => {
       const sets = exSets().filter(s => s.kind === kind);
@@ -1667,6 +1684,79 @@
     const reset = el("button", { className: "link-btn" }, "Reset progress for Quick questions");
     reset.onclick = () => { if (!confirm("Reset the right-in-a-row counts for Quick questions?")) return; const dd = kqLoad(); all.forEach(q => { dd[q.id] = undefined; }); kqSave(JSON.parse(JSON.stringify(dd))); exQuick("back"); };
     app.append(el("div", { className: "row" }, ""), reset);
+  }
+
+  // Flash cards: every question missed in Mock 6-10 and Practice sets 1-4, one card per screen. Tap to reveal why it went wrong, the rule and the notes tables, tap again for the next card.
+  const kqTableEl = q => {
+    const wrap = el("div", { className: "fc-tbl" });
+    wrap.append(kqHtml("p", q.q, "q"));
+    const tbl = el("table", { className: "kq-table" }), thead = el("thead"), tr0 = el("tr"), tbody = el("tbody");
+    q.head.forEach(x => tr0.append(kqHtml("th", x || " ")));
+    thead.append(tr0);
+    q.rows.forEach(r => { const tr = el("tr"); tr.append(kqHtml("th", r[0])); r.slice(1).forEach(c => tr.append(kqHtml("td", c))); tbody.append(tr); });
+    tbl.append(thead, tbody); wrap.append(tbl);
+    if (q.note) wrap.append(kqHtml("p", q.note, "kq-note"));
+    return wrap;
+  };
+  function exFlashHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => exFlashHub("back");
+    app.append(nav("Exam", () => examHub("back")));
+    app.append(el("h1", { className: "title" }, "Flash cards"),
+      el("p", { className: "sub" }, "One card per screen. Read the question, try to recall why you got it wrong and which rule fixes it, then tap to check. Tap again for the next card. Tables from your notes appear when the topic has one."));
+    const subs = [...new Set(FLASH.map(c => c.s))];
+    const add = (title, list) => {
+      const b = el("button", { className: "nt-item" });
+      b.append(el("b", {}, title), el("span", {}, plural(list.length, "card")));
+      b.onclick = () => exFlashRun(list, title, false);
+      app.append(b);
+    };
+    add("All subjects", FLASH);
+    subs.forEach(s => add(s, FLASH.filter(c => c.s === s)));
+  }
+  function exFlashRun(list, title, shuffled, i = 0, shown = false) {
+    let cards = list.slice();
+    if (shuffled) for (let k = cards.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [cards[k], cards[j]] = [cards[j], cards[k]]; }
+    const state = { i, shown };
+    const draw = () => {
+      screen("fwd");
+      backTo = () => exFlashHub("back");
+      app.append(nav("Flash cards", () => exFlashHub("back")));
+      if (state.i >= cards.length) {
+        app.append(el("h1", { className: "title" }, "Done"), el("p", { className: "sub" }, `${plural(cards.length, "card")} in ${title}.`));
+        const again = el("button", { className: "btn" }, "Go again"), shuf = el("button", { className: "btn" }, "Shuffle and go again");
+        again.onclick = () => { state.i = 0; state.shown = false; draw(); };
+        shuf.onclick = () => exFlashRun(list, title, true);
+        const r = el("div", { className: "row" }); r.append(again, shuf); app.append(r);
+        return;
+      }
+      const c = cards[state.i];
+      app.append(el("div", { className: "sub" }, `${title} · card ${state.i + 1} of ${cards.length}`));
+      const bar = el("div", { className: "fc-bar" }); bar.append(el("i", { style: `width:${Math.round((state.i + 1) / cards.length * 100)}%` })); app.append(bar);
+      const card = el("div", { className: "card fc-card" });
+      const meta = el("div", { className: "fc-meta" });
+      meta.append(el("span", {}, `${c.tag} · ${c.s}`), el("span", { className: "fc-chip " + (c.pick === c.key ? "unsure" : "wrong") }, c.pick === c.key ? "right, unsure" : `I chose ${c.pick}, answer ${c.key}`));
+      card.append(meta, el("div", { className: "fc-q" }, c.q));
+      if (!state.shown) {
+        card.append(el("div", { className: "fc-tap" }, "Why did it go wrong, and what rule fixes it? Tap to check"));
+      } else {
+        const sec = (cls, label, text) => { if (!text) return; const d = el("div", { className: "fc-sec " + cls }); d.append(el("b", {}, label)); const p = el("pre", {}); p.textContent = text; d.append(p); card.append(d); };
+        sec("good", "Correct answer", c.ans);
+        sec("bad", c.pick === c.key ? "Why I was unsure" : "Why I got it wrong", c.mis);
+        sec("", "Fix / rule to keep", c.fix);
+        sec("", "Formula", c.fx);
+        (c.tb || []).forEach(t => { const q = KEYQ.find(x => x.type === "table" && x.q === t); if (q) { const d = el("div", { className: "fc-sec" }); d.append(el("b", {}, "From your notes"), kqTableEl(q)); card.append(d); } });
+        card.append(el("div", { className: "fc-tap" }, state.i + 1 < cards.length ? "Tap for the next card" : "Tap to finish"));
+      }
+      card.onclick = () => { if (!state.shown) state.shown = true; else { state.i++; state.shown = false; } draw(); window.scrollTo(0, 0); };
+      app.append(card);
+      const ctl = el("div", { className: "fc-ctl" });
+      const prev = el("button", { className: "btn" }, "‹ Previous"); prev.disabled = state.i === 0;
+      prev.onclick = () => { state.i--; state.shown = false; draw(); window.scrollTo(0, 0); };
+      const shuf = el("button", { className: "btn" }, "Shuffle"); shuf.onclick = () => exFlashRun(list, title, true);
+      ctl.append(prev, shuf); app.append(ctl);
+    };
+    draw();
   }
 
   function examSetMenu(id, dir = "fwd") {
