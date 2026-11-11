@@ -88,5 +88,17 @@ O6={
 # practice set 5, Q49-50 appended 11 Nov (American options on a binomial tree): key -> (highlight phrases, rule)
 O5={
 'pq5:49':(['American-style call option','The shares pay no dividends','Exercise price of the call option'],'American option: at EVERY node take the larger of the continuation value and the exercise value. A call on a non-dividend-paying stock is never exercised early, so it equals the European call.'),
+'pq5:51':(['minimum debt service coverage ratio (DSCR) of 1.30','The loan would be interest only, with an annual interest rate of 6.5%','Net operating income (NOI)'],'Max debt service = NOI ÷ minimum DSCR; interest-only loan = debt service ÷ interest rate. The maximum loan is the LOWER of the DSCR-based and LTV-based amounts.'),
+'pq5:52':(['maximum loan-to-value (LTV) ratio of 70%','Appraised value','Net operating income (NOI)'],'LTV loan = LTV × appraised value; DSCR = NOI ÷ debt service. If the DSCR of the LTV loan is below the minimum, the DSCR constraint binds.'),
+'pq5:53':(['undiscounted future cash flows of $225 million','The fair value of the line is $190 million','under US GAAP'],'US GAAP: step 1 carrying amount > UNDISCOUNTED cash flows = impaired; step 2 loss = carrying amount − fair value.'),
+'pq5:54':(['present value (value in use) of $210 million','the costs to sell it would be $5 million','under IFRS'],'IFRS: recoverable amount = higher of (fair value less costs to sell, value in use); loss = carrying amount − recoverable amount.'),
 'pq5:50':(['American-style put option','Exercise price of the put option','Calder pays no dividends'],'American put: at every node take the larger of the continuation value and K − S; early exercise shows up at the low-price (down) node. Do not start from the one-year payoffs: start at maturity and work backwards.'),
+}
+
+# practice set 7, Q49-52 appended 11 Nov (pension corridor, real estate cycle): key -> (highlight phrases, rule)
+O7={
+'pq7:49':(['projected benefit obligation (PBO) was $620 million','accumulated unrecognized net actuarial loss at the beginning of the year was $95 million','average remaining service life of the active employees is 12 years'],'Corridor = 10% × the greater of beginning PBO and beginning plan assets; amortization = (accumulated loss − corridor) ÷ average remaining service life.'),
+'pq7:50':(['Valtor amortizes actuarial gains and losses with the corridor approach','a peer company reports under IFRS'],'Corridor approach: US GAAP only. IFRS: remeasurements go to OCI and are never amortized into profit or loss.'),
+'pq7:51':(['@row:Vacancy rate','@row:Rent growth','@row:New construction'],'Cycle: recovery → expansion → hyper-supply → recession. Construction still delivering while vacancy rises and rent growth slows = hyper-supply.'),
+'pq7:52':(['@row:Vacancy rate','@row:New construction','@row:Lenders','@row:Property prices'],'Vacancy at its high, negative rents, halted construction, tightening credit and falling prices = recession.'),
 }

@@ -1451,5 +1451,69 @@
    "Calder pays no dividends"
   ],
   "rule": "American put: at every node take the larger of the continuation value and K − S; early exercise shows up at the low-price (down) node. Do not start from the one-year payoffs: start at maturity and work backwards."
+ },
+ "pq5:51": {
+  "hl": [
+   "minimum debt service coverage ratio (DSCR) of 1.30",
+   "The loan would be interest only, with an annual interest rate of 6.5%",
+   "Net operating income (NOI)"
+  ],
+  "rule": "Max debt service = NOI ÷ minimum DSCR; interest-only loan = debt service ÷ interest rate. The maximum loan is the LOWER of the DSCR-based and LTV-based amounts."
+ },
+ "pq5:52": {
+  "hl": [
+   "maximum loan-to-value (LTV) ratio of 70%",
+   "Appraised value",
+   "Net operating income (NOI)"
+  ],
+  "rule": "LTV loan = LTV × appraised value; DSCR = NOI ÷ debt service. If the DSCR of the LTV loan is below the minimum, the DSCR constraint binds."
+ },
+ "pq5:53": {
+  "hl": [
+   "undiscounted future cash flows of $225 million",
+   "The fair value of the line is $190 million",
+   "under US GAAP"
+  ],
+  "rule": "US GAAP: step 1 carrying amount > UNDISCOUNTED cash flows = impaired; step 2 loss = carrying amount − fair value."
+ },
+ "pq5:54": {
+  "hl": [
+   "present value (value in use) of $210 million",
+   "the costs to sell it would be $5 million",
+   "under IFRS"
+  ],
+  "rule": "IFRS: recoverable amount = higher of (fair value less costs to sell, value in use); loss = carrying amount − recoverable amount."
+ },
+ "pq7:49": {
+  "hl": [
+   "projected benefit obligation (PBO) was $620 million",
+   "accumulated unrecognized net actuarial loss at the beginning of the year was $95 million",
+   "average remaining service life of the active employees is 12 years"
+  ],
+  "rule": "Corridor = 10% × the greater of beginning PBO and beginning plan assets; amortization = (accumulated loss − corridor) ÷ average remaining service life."
+ },
+ "pq7:50": {
+  "hl": [
+   "Valtor amortizes actuarial gains and losses with the corridor approach",
+   "a peer company reports under IFRS"
+  ],
+  "rule": "Corridor approach: US GAAP only. IFRS: remeasurements go to OCI and are never amortized into profit or loss."
+ },
+ "pq7:51": {
+  "hl": [
+   "@row:Vacancy rate",
+   "@row:Rent growth",
+   "@row:New construction"
+  ],
+  "rule": "Cycle: recovery → expansion → hyper-supply → recession. Construction still delivering while vacancy rises and rent growth slows = hyper-supply."
+ },
+ "pq7:52": {
+  "hl": [
+   "@row:Vacancy rate",
+   "@row:New construction",
+   "@row:Lenders",
+   "@row:Property prices"
+  ],
+  "rule": "Vacancy at its high, negative rents, halted construction, tightening credit and falling prices = recession."
  }
 }

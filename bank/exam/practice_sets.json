@@ -2520,8 +2520,8 @@
   "id": "pq5",
   "title": "Practice set 5",
   "kind": "practice",
-  "minutes": 150,
-  "desc": "Mixed topics from the key notes, with 4 Ethics questions (50 questions, 2 h 30 min)",
+  "minutes": 162,
+  "desc": "Mixed topics from the key notes, with 4 Ethics questions (54 questions, 2 h 42 min)",
   "vignettes": [
    {
     "topic": "Fixed Income",
@@ -3116,6 +3116,58 @@
       ],
       "answer": 0,
       "why": "Risk-neutral probability of an up move q = (1 + r − d) ÷ (u − d) = (1.03 − 0.85) ÷ (1.20 − 0.85) = 0.5143.\nPrices at the end of period 2: 86.40, 61.20 and 43.35. Put values there: 0, 3.80 and 21.65.\nUp node (S = 72): continuation value = (0.4857 × 3.80) ÷ 1.03 = 1.79; exercise value = 0. The node value is 1.79.\nDown node (S = 51): continuation value = (0.5143 × 3.80 + 0.4857 × 21.65) ÷ 1.03 = 12.11; exercise value = 65 − 51 = 14.00. The larger value is 14.00: early exercise.\nToday: (0.5143 × 1.79 + 0.4857 × 14.00) ÷ 1.03 = $7.50; exercising now is worth only 65 − 60 = 5.00.\n$6.60 is the European put value (no early exercise at the down node). $7.89 reverses the probabilities (uses 0.4857 for the up move)."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Rosa Almeida, a real estate analyst at Kestrel Bank, sets the maximum loan on an office building. Almeida's bank requires a minimum debt service coverage ratio (DSCR) of 1.30 and a maximum loan-to-value (LTV) ratio of 70%. The loan would be interest only, with an annual interest rate of 6.5%. Exhibit 1 shows the property data.\n\nExhibit 1: Property Data\n# Item | Value\nNet operating income (NOI) | $1,500,000\nAppraised value | $28,000,000",
+    "questions": [
+     {
+      "q": "The maximum loan allowed by the DSCR requirement is closest to:",
+      "options": [
+       "$19.60 million.",
+       "$23.08 million.",
+       "$17.75 million."
+      ],
+      "answer": 2,
+      "why": "DSCR = NOI ÷ debt service, so the maximum debt service = NOI ÷ minimum DSCR = 1,500,000 ÷ 1.30 = $1,153,846.\nFor an interest-only loan, loan amount = debt service ÷ interest rate = 1,153,846 ÷ 0.065 = $17.75 million.\n$19.60 million is the LTV-based loan (70% × 28,000,000), which ignores the DSCR. $23.08 million = NOI ÷ interest rate leaves out the DSCR requirement. The maximum loan is the lower of the DSCR-based and LTV-based amounts, here the DSCR-based $17.75 million."
+     },
+     {
+      "q": "If the bank instead made the maximum loan allowed by the LTV limit, the DSCR would be closest to:",
+      "options": [
+       "1.18.",
+       "0.85.",
+       "1.30."
+      ],
+      "answer": 0,
+      "why": "Maximum LTV loan = 70% × 28,000,000 = $19,600,000. Interest-only debt service = 19,600,000 × 6.5% = $1,274,000.\nDSCR = NOI ÷ debt service = 1,500,000 ÷ 1,274,000 = 1.18, which is below the required 1.30. The LTV loan is therefore too large: the DSCR constraint binds.\n0.85 turns the ratio upside down (debt service ÷ NOI). 1.30 is the lender's minimum, not the result."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Karel Novak, an analyst at Brenner Research, reviews a production line that Aldor Packaging holds for use. The production line has a carrying amount of $240 million. Aldor expects the line to generate undiscounted future cash flows of $225 million, which have a present value (value in use) of $210 million. The fair value of the line is $190 million, and the costs to sell it would be $5 million. Novak first computes the impairment loss under US GAAP and then, for comparison, under IFRS.",
+    "questions": [
+     {
+      "q": "The impairment loss under US GAAP is closest to:",
+      "options": [
+       "$15 million.",
+       "$50 million.",
+       "$30 million."
+      ],
+      "answer": 1,
+      "why": "US GAAP step 1 (recoverability): carrying amount $240 million > undiscounted future cash flows $225 million, so the asset is impaired.\nStep 2: impairment loss = carrying amount − fair value = 240 − 190 = $50 million.\n$15 million = 240 − 225 uses the undiscounted cash flows as the measure; they are only the test, not the measure. $30 million is the IFRS answer."
+     },
+     {
+      "q": "The impairment loss under IFRS is closest to:",
+      "options": [
+       "$55 million.",
+       "$50 million.",
+       "$30 million."
+      ],
+      "answer": 2,
+      "why": "IFRS: recoverable amount = higher of fair value less costs to sell (190 − 5 = 185) and value in use (210) = $210 million.\nImpairment loss = carrying amount − recoverable amount = 240 − 210 = $30 million (the carrying amount exceeds the recoverable amount).\n$55 million uses fair value less costs to sell (240 − 185) instead of the higher value in use. $50 million is the US GAAP answer."
      }
     ]
    }
@@ -3781,8 +3833,8 @@
   "id": "pq7",
   "title": "Practice set 7",
   "kind": "practice",
-  "minutes": 144,
-  "desc": "Relationships from the main tables, theory questions and earlier mistakes (48 questions, 2 h 24 min)",
+  "minutes": 156,
+  "desc": "Relationships from the main tables, theory questions and earlier mistakes (52 questions, 2 h 36 min)",
   "vignettes": [
    {
     "topic": "Fixed Income",
@@ -4339,6 +4391,58 @@
       ],
       "answer": 1,
       "why": "Expansionary monetary / restrictive fiscal with high capital mobility (developed): Depreciation. (With low mobility it is ambiguous.)"
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Lena Hartmann, an analyst at Corvin Research, studies the defined benefit pension plan of Valtor Industries, which reports under US GAAP. At the beginning of the year the projected benefit obligation (PBO) was $620 million and the fair value of plan assets was $560 million. The accumulated unrecognized net actuarial loss at the beginning of the year was $95 million, and the average remaining service life of the active employees is 12 years. Valtor amortizes actuarial gains and losses with the corridor approach. Hartmann also notes that a peer company reports under IFRS.",
+    "questions": [
+     {
+      "q": "The amortization of the actuarial loss included in Valtor's pension cost for the year is closest to:",
+      "options": [
+       "$3.25 million.",
+       "$2.75 million.",
+       "$7.92 million."
+      ],
+      "answer": 1,
+      "why": "Corridor = 10% × the greater of beginning PBO and beginning plan assets = 10% × 620 = $62 million.\nThe accumulated loss of $95 million exceeds the corridor by 95 − 62 = $33 million; only this excess is amortized.\nAmortization = 33 ÷ 12 = $2.75 million.\n$7.92 million = 95 ÷ 12 ignores the corridor. $3.25 million uses plan assets for the corridor (10% × 560 = 56) although the PBO is the greater amount."
+     },
+     {
+      "q": "Which statement about the corridor approach and the peer company's IFRS reporting is most accurate?",
+      "options": [
+       "The corridor approach is required under IFRS and optional under US GAAP.",
+       "Under IFRS, actuarial gains and losses are recognized in profit or loss immediately.",
+       "The corridor approach is a US GAAP method; under IFRS the remeasurements go to OCI and are not amortized into profit or loss."
+      ],
+      "answer": 2,
+      "why": "The corridor approach (amortizing only the part of the accumulated actuarial gains and losses outside the corridor) is a US GAAP method.\nUnder IFRS, remeasurements of the net defined benefit liability (including actuarial gains and losses) are recognized in OCI and are not amortized into profit or loss later.\nThe other two statements reverse or misstate the treatment."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Priya Rao, a real estate analyst at Norden Capital, compares two office markets with the observations in Exhibit 1.\n\nExhibit 1: Office Market Observations\n# Observation | Market A | Market B\nVacancy rate | Rising | Near its cyclical high\nRent growth | Slowing but still positive | Negative\nNew construction | Projects started earlier are still being completed | Halted\nLenders | Still willing to finance projects | Tightening credit\nProperty prices | Flat | Falling",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, Market A is most likely in the:",
+      "options": [
+       "expansion phase.",
+       "hyper-supply (oversupply) phase.",
+       "recession phase."
+      ],
+      "answer": 1,
+      "why": "Cycle order: recovery → expansion → hyper-supply → recession.\nMarket A: construction started earlier is still delivering new space while vacancy rises and rent growth slows: supply is running ahead of demand, which is the hyper-supply (oversupply) phase.\nExpansion would show falling vacancy and rising rents. Recession shows negative rent growth, halted construction and falling prices."
+     },
+     {
+      "q": "Based on Exhibit 1, Market B is most likely in the:",
+      "options": [
+       "hyper-supply (oversupply) phase.",
+       "recovery phase.",
+       "recession phase."
+      ],
+      "answer": 2,
+      "why": "Market B: vacancy near its cyclical high, negative rent growth, halted construction, tightening credit and falling property prices are the signs of a recession.\nHyper-supply still has construction being completed and flat to slowing rents. Recovery follows the recession, with little new construction but stabilizing vacancy and rents, not falling prices."
      }
     ]
    }

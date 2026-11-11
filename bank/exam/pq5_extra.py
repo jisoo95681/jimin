@@ -43,4 +43,41 @@ def put_vig():
          f"Today: (0.5143 × {_r(t['cont1'][1])} + 0.4857 × 14.00) ÷ 1.03 = ${_r(t['V0'])}; exercising now is worth only 65 − 60 = 5.00.\n"
          f"$6.60 is the European put value (no early exercise at the down node). $7.89 reverses the probabilities (uses 0.4857 for the up move).")
     return dict(topic="Derivatives",body=body,questions=[dict(q="The value of the American put option on Calder Industries is closest to:",options=["$7.50.","$6.60.","$7.89."],answer=0,why=why)])
-def vigs(): return [call_vig(),put_vig()]
+
+def dscr_vig():
+    NOI=1_500_000; DSCR_MIN=1.30; LTV_MAX=0.70; V=28_000_000; r=0.065
+    ds_max=NOI/DSCR_MIN; loan_dscr=ds_max/r; loan_ltv=LTV_MAX*V
+    assert abs(loan_dscr-17_751_479.3)<1 and abs(loan_ltv-19_600_000)<1e-6 and loan_dscr<loan_ltv   # DSCR binds
+    noi_only=NOI/r; ds_ltv=loan_ltv*r; dscr_ltv=NOI/ds_ltv
+    assert abs(noi_only-23_076_923.08)<1 and abs(ds_ltv-1_274_000)<1e-6 and round(dscr_ltv,2)==1.18 and round(ds_ltv/NOI,2)==0.85 and dscr_ltv<DSCR_MIN
+    body=("Rosa Almeida, a real estate analyst at Kestrel Bank, sets the maximum loan on an office building. Almeida's bank requires a minimum debt service coverage ratio (DSCR) of 1.30 and a maximum loan-to-value (LTV) ratio of 70%. The loan would be interest only, with an annual interest rate of 6.5%. Exhibit 1 shows the property data.\n\n"
+          "Exhibit 1: Property Data\n# Item | Value\nNet operating income (NOI) | $1,500,000\nAppraised value | $28,000,000")
+    q1=dict(q="The maximum loan allowed by the DSCR requirement is closest to:",options=["$19.60 million.","$23.08 million.","$17.75 million."],answer=2,
+        why=("DSCR = NOI ÷ debt service, so the maximum debt service = NOI ÷ minimum DSCR = 1,500,000 ÷ 1.30 = $1,153,846.\n"
+             "For an interest-only loan, loan amount = debt service ÷ interest rate = 1,153,846 ÷ 0.065 = $17.75 million.\n"
+             "$19.60 million is the LTV-based loan (70% × 28,000,000), which ignores the DSCR. $23.08 million = NOI ÷ interest rate leaves out the DSCR requirement. "
+             "The maximum loan is the lower of the DSCR-based and LTV-based amounts, here the DSCR-based $17.75 million."))
+    q2=dict(q="If the bank instead made the maximum loan allowed by the LTV limit, the DSCR would be closest to:",options=["1.18.","0.85.","1.30."],answer=0,
+        why=("Maximum LTV loan = 70% × 28,000,000 = $19,600,000. Interest-only debt service = 19,600,000 × 6.5% = $1,274,000.\n"
+             "DSCR = NOI ÷ debt service = 1,500,000 ÷ 1,274,000 = 1.18, which is below the required 1.30. The LTV loan is therefore too large: the DSCR constraint binds.\n"
+             "0.85 turns the ratio upside down (debt service ÷ NOI). 1.30 is the lender's minimum, not the result."))
+    return dict(topic="Alternative Investments",body=body,questions=[q1,q2])
+def impair_vig():
+    CA=240; UCF=225; FV=190; COST=5; VIU=210
+    assert CA>UCF                                  # US GAAP step 1: impaired
+    us=CA-FV; fvlcts=FV-COST; ra=max(fvlcts,VIU); ifrs=CA-ra
+    assert us==50 and CA-UCF==15 and fvlcts==185 and ra==210 and ifrs==30 and CA-fvlcts==55
+    body=("Karel Novak, an analyst at Brenner Research, reviews a production line that Aldor Packaging holds for use. The production line has a carrying amount of $240 million. "
+          "Aldor expects the line to generate undiscounted future cash flows of $225 million, which have a present value (value in use) of $210 million. "
+          "The fair value of the line is $190 million, and the costs to sell it would be $5 million. "
+          "Novak first computes the impairment loss under US GAAP and then, for comparison, under IFRS.")
+    q1=dict(q="The impairment loss under US GAAP is closest to:",options=["$15 million.","$50 million.","$30 million."],answer=1,
+        why=("US GAAP step 1 (recoverability): carrying amount $240 million > undiscounted future cash flows $225 million, so the asset is impaired.\n"
+             "Step 2: impairment loss = carrying amount − fair value = 240 − 190 = $50 million.\n"
+             "$15 million = 240 − 225 uses the undiscounted cash flows as the measure; they are only the test, not the measure. $30 million is the IFRS answer."))
+    q2=dict(q="The impairment loss under IFRS is closest to:",options=["$55 million.","$50 million.","$30 million."],answer=2,
+        why=("IFRS: recoverable amount = higher of fair value less costs to sell (190 − 5 = 185) and value in use (210) = $210 million.\n"
+             "Impairment loss = carrying amount − recoverable amount = 240 − 210 = $30 million (the carrying amount exceeds the recoverable amount).\n"
+             "$55 million uses fair value less costs to sell (240 − 185) instead of the higher value in use. $50 million is the US GAAP answer."))
+    return dict(topic="Financial Statement Analysis",body=body,questions=[q1,q2])
+def vigs(): return [call_vig(),put_vig(),dscr_vig(),impair_vig()]
