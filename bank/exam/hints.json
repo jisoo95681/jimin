@@ -1058,5 +1058,305 @@
    "tends to be either flat or slightly upward sloping"
   ],
   "rule": "Credit curves: lower ratings steeper, spreads narrow in good times; the most highly rated curves are flat or slightly upward sloping."
+ },
+ "pq8:1": {
+  "hl": [
+   "stays at its last forecast level forever",
+   "fades quickly"
+  ],
+  "rule": "Persistence factor: 1 = RI stays forever; 0 = RI disappears right after the horizon. Extreme ROE or high accruals → low persistence."
+ },
+ "pq8:2": {
+  "hl": [
+   "credit migration"
+  ],
+  "rule": "Credit migration lowers the expected return below the YTM."
+ },
+ "pq8:3": {
+  "hl": [
+   "value without default (VND) is reduced by the credit valuation adjustment (CVA)"
+  ],
+  "rule": "Credit spread = YTM(VND − CVA) − benchmark YTM."
+ },
+ "pq8:4": {
+  "hl": [
+   "recovery rate of the bond is one-quarter of the exposure"
+  ],
+  "rule": "LGD = 1 − recovery rate; expected loss = PD × LGD."
+ },
+ "pq8:5": {
+  "hl": [
+   "real estate operating company (REOC)",
+   "real estate investment trust (REIT)"
+  ],
+  "rule": "REIT: tax-advantaged, high payout. REOC: flexibility (development), but taxed at the company level."
+ },
+ "pq8:6": {
+  "hl": [
+   "A two-tiered board is favorable",
+   "independent directors must make up at least 60%"
+  ],
+  "rule": "Independence point: two-tiered, or one-tiered with ≥ 60% independent directors."
+ },
+ "pq8:7": {
+  "hl": [
+   "avoids subjectivity",
+   "worst-case scenario"
+  ],
+  "rule": "VaR: subjective inputs; not a worst case; useful for risk-adjusted performance."
+ },
+ "pq8:8": {
+  "hl": [
+   "assumes a normal distribution"
+  ],
+  "rule": "Parametric = normal assumption; historical = past data; Monte Carlo = simulated scenarios."
+ },
+ "pq8:9": {
+  "hl": [
+   "cost of holding the bond until the futures expiry"
+  ],
+  "rule": "Carry the bond cost forward to expiry, compare, then discount the profit."
+ },
+ "pq8:10": {
+  "hl": [
+   "Entry into self-storage is easy"
+  ],
+  "rule": "Storage → new competing facilities; office → obsolescence; retail → tenants' sales."
+ },
+ "pq8:11": {
+  "hl": [
+   "retire debt",
+   "investment-grade rating"
+  ],
+  "rule": "Better rating → lower cost of capital."
+ },
+ "pq8:12": {
+  "hl": [
+   "spot curve one year from today will reflect the current forward curve"
+  ],
+  "rule": "Future spot = forward → pure expectations."
+ },
+ "pq8:13": {
+  "hl": [
+   "20 observations and 3 independent variables",
+   "critical t-value"
+  ],
+  "rule": "|t| > critical t(df = n − k − 1) ⇒ significant."
+ },
+ "pq8:14": {
+  "hl": [
+   "lowered its estimated future salary increases",
+   "its expected long-term return on plan assets",
+   "its discount rate"
+  ],
+  "rule": "Pension cost down: lower salary growth, higher expected return, higher discount rate."
+ },
+ "pq8:15": {
+  "hl": [
+   "raised its inflation estimate",
+   "lowered its estimated future salary increases"
+  ],
+  "rule": "Inflation ↑ ⇒ salary growth ↑ (positive relationship); discount rate and expected return move together."
+ },
+ "pq8:16": {
+  "hl": [
+   "pays won and receives dollars",
+   "needs US dollars"
+  ],
+  "rule": "Fixed swap rate = (1 − final-year factor) ÷ sum of factors, using the factors of the currency of that leg."
+ },
+ "pq8:17": {
+  "hl": [
+   "only 1 independent member out of 15",
+   "only 20% of its members have hotel industry experience"
+  ],
+  "rule": "Worse ESG/governance → higher credit risk → wider spread."
+ },
+ "pq8:18": {
+  "hl": [
+   "trending downward"
+  ],
+  "rule": "Rising accruals ratio = lower earnings quality; falling accruals ratio = fewer opportunities to manipulate."
+ },
+ "pq8:19": {
+  "hl": [
+   "across exercise prices and maturities",
+   "computed from historical volatility"
+  ],
+  "rule": "Implied volatility: from market prices, forward-looking; surface = strike × maturity."
+ },
+ "pq8:20": {
+  "hl": [
+   "parts of the benchmark that the portfolio does not hold"
+  ],
+  "rule": "Completion = fill benchmark gaps; rebalancing = back to target weights; liquidity management = stay invested with cash."
+ },
+ "pq8:21": {
+  "hl": [
+   "last four quarters",
+   "ignoring any business-cycle influence"
+  ],
+  "rule": "Trailing = last four quarters; forward = next four quarters; normalized = cycle average."
+ },
+ "pq8:22": {
+  "hl": [
+   "bid EUR/AUD cross rate",
+   "AUD/USD"
+  ],
+  "rule": "Bid cross: sell the base currency at the bid, then buy the other leg at its offer: bid × (1 ÷ offer)."
+ },
+ "pq8:23": {
+  "hl": [
+   "credit spreads narrow",
+   "recovery"
+  ],
+  "rule": "Recession: spreads widen, more for low quality. Recovery: spreads narrow, more for low quality."
+ },
+ "pq8:24": {
+  "hl": [
+   "probability of default times its recovery rate"
+  ],
+  "rule": "Expected loss = PD × (1 − RR)."
+ },
+ "pq8:25": {
+  "hl": [
+   "uncertainty about future inflation",
+   "same maturity"
+  ],
+  "rule": "Break-even = nominal yield − real yield; includes the inflation risk premium."
+ },
+ "pq8:26": {
+  "hl": [
+   "higher expected growth and higher risk both raise a high P/E"
+  ],
+  "rule": "Growth ↑ → P/E ↑; risk ↑ (r ↑) → P/E ↓."
+ },
+ "pq8:27": {
+  "hl": [
+   "weighted harmonic mean"
+  ],
+  "rule": "Harmonic < geometric < arithmetic mean; harmonic limits large outliers but not small ones."
+ },
+ "pq8:28": {
+  "hl": [
+   "expects yields to rise by 50 bp",
+   "between 40% and 60%"
+  ],
+  "rule": "Expect yields to rise → shorten duration, but stay inside the mandate limits."
+ },
+ "pq8:29": {
+  "hl": [
+   "0.5% higher than its industry competitors'",
+   "lowers the estimated pension obligation"
+  ],
+  "rule": "Discount rate ↑ → PBO ↓, expense ↓, deficit looks smaller (aggressive)."
+ },
+ "pq8:30": {
+  "hl": [
+   "lowers the discount rate to the peers' level"
+  ],
+  "rule": "Lower discount rate: obligation ↑, equity ↓, BVPS ↓, D/E ↑, leverage ↑."
+ },
+ "pq8:31": {
+  "hl": [
+   "debt-to-equity ratio is much higher",
+   "brand that is not on the balance sheet"
+  ],
+  "rule": "High leverage and off-balance-sheet intangibles → EV/sales."
+ },
+ "pq8:32": {
+  "hl": [
+   "factors are surprises in economic variables",
+   "expected value of zero"
+  ],
+  "rule": "Macro model: E(R) = intercept."
+ },
+ "pq8:33": {
+  "hl": [
+   "sensitivities come from company attributes"
+  ],
+  "rule": "Fundamental = sensitivities first; macro = sensitivities last."
+ },
+ "pq8:34": {
+  "hl": [
+   "but not for passive management"
+  ],
+  "rule": "Factor models serve active and passive portfolios (risk and attribution)."
+ },
+ "pq8:35": {
+  "hl": [
+   "keeping the currency low to support export demand"
+  ],
+  "rule": "Supply-side growth: capital, labor quality, technology. Export demand policies are demand-side."
+ },
+ "pq8:36": {
+  "hl": [
+   "intrinsic value per share of R22",
+   "book value per share of R20"
+  ],
+  "rule": "V0 > B0 ⇒ PV(RI) > 0; V0 = B0 ⇒ ROE = r; V0 < B0 ⇒ PV(RI) < 0."
+ },
+ "pq8:37": {
+  "hl": [
+   "market value added",
+   "market value and book value of its capital"
+  ],
+  "rule": "MVA = market value of capital (debt + equity) − book value of capital."
+ },
+ "pq8:38": {
+  "hl": [
+   "stop the inflation"
+  ],
+  "rule": "Inflation: tighten (sell, raise rate, raise reserves). Recession: ease (buy, cut rate, lower reserves)."
+ },
+ "pq8:39": {
+  "hl": [
+   "Basel III"
+  ],
+  "rule": "Basel III: higher capital (less leverage), stable consumer funding."
+ },
+ "pq8:40": {
+  "hl": [
+   "hard phase for a few years"
+  ],
+  "rule": "Hard market → entry → soft market."
+ },
+ "pq8:41": {
+  "hl": [
+   "combined ratio is above 100%"
+  ],
+  "rule": "Combined ratio > 100% = underwriting loss."
+ },
+ "pq8:42": {
+  "hl": [
+   "observed market prices of benchmark bonds"
+  ],
+  "rule": "Calibrate the tree on benchmark bonds first, then value the bond on it."
+ },
+ "pq8:43": {
+  "hl": [
+   "estimated values for the independent variables"
+  ],
+  "rule": "SEE concerns the dependent variable's residuals."
+ },
+ "pq8:44": {
+  "hl": [
+   "one-time special dividend",
+   "raising its regular dividend permanently"
+  ],
+  "rule": "Special dividend = one-time cash; regular dividend increase = permanent commitment."
+ },
+ "pq8:45": {
+  "hl": [
+   "repurchasing shares with the surplus cash"
+  ],
+  "rule": "Buyback with cash: assets ↓, equity ↓, leverage ratios ↑."
+ },
+ "pq8:46": {
+  "hl": [
+   "debt sustainability channel",
+   "LONG-run equilibrium value of an exchange rate"
+  ],
+  "rule": "Short run: flows; medium run: portfolio balance; long run: debt sustainability."
  }
 }

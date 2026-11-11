@@ -4172,6 +4172,674 @@ const EXAM_SETS = [
   "rev": 2
  },
  {
+  "id": "pq8",
+  "title": "Practice set 8",
+  "kind": "practice",
+  "minutes": 90,
+  "desc": "Wrong questions of Mocks 5-9 as short key-point vignettes, no calculations (46 questions, 1 h 30 min)",
+  "vignettes": [
+   {
+    "topic": "Equity Valuation",
+    "body": "Ines Moreau values a stock with a multistage residual income model. She assumes residual income stays at its last forecast level forever. Her supervisor suggests that residual income fades quickly because the firm has extreme accounting returns.",
+    "questions": [
+     {
+      "q": "Compared with Moreau's assumption, a persistence factor close to zero gives an estimate of the stock's value that is:",
+      "options": [
+       "the same, because the persistence factor only affects book value.",
+       "lower, because residual income vanishes soon after the forecast horizon.",
+       "higher, because residual income grows faster."
+      ],
+      "answer": 1,
+      "why": "Constant residual income forever means a persistence factor of 1. A factor near zero means residual income fades at once, so the terminal value and the stock value are lower."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Ana Costa studies a BBB bond. Expected return over the next year must include credit migration. A second bond is valued on a binomial tree: the value without default (VND) is reduced by the credit valuation adjustment (CVA) to get the fair value, whose yield exceeds the benchmark yield. The recovery rate of the bond is one-quarter of the exposure.",
+    "questions": [
+     {
+      "q": "Including credit migration, the expected one-year return of the BBB bond is:",
+      "options": [
+       "equal to its yield to maturity if spreads stay stable.",
+       "higher than its yield to maturity, because upgrades and downgrades cancel out.",
+       "lower than its yield to maturity, because downgrades cost more than upgrades gain."
+      ],
+      "answer": 2,
+      "why": "Expected return ≈ YTM − Σ probability × modified duration × (change in spread). Downgrades widen spreads (larger price loss) and are more likely to matter than upgrades."
+     },
+     {
+      "q": "The credit spread of the second bond is the:",
+      "options": [
+       "CVA divided by the VND.",
+       "yield on the bond valued at VND minus the benchmark yield.",
+       "yield on the bond valued at VND − CVA minus the benchmark yield."
+      ],
+      "answer": 2,
+      "why": "Fair value = VND − CVA; its yield is higher than the benchmark yield by the credit spread. The yield at VND is the benchmark yield itself."
+     },
+     {
+      "q": "With a recovery rate of one-quarter of the exposure, the loss given default used in the CVA is:",
+      "options": [
+       "75% of the exposure.",
+       "50% of the exposure.",
+       "25% of the exposure."
+      ],
+      "answer": 0,
+      "why": "LGD = 1 − recovery rate. Using the recovery rate (or 50%) as the loss understates the CVA and the spread."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Marta Ricci compares Investment 1, a real estate operating company (REOC), with Investment 2, a real estate investment trust (REIT), for a taxable client.",
+    "questions": [
+     {
+      "q": "Compared with the REOC, the REIT most likely:",
+      "options": [
+       "requires less expertise in real estate investing.",
+       "avoids double taxation of the income received by investors.",
+       "is better able to hold properties under development."
+      ],
+      "answer": 1,
+      "why": "REITs are tax-advantaged pass-through structures: no corporate income tax, only the investor pays tax on dividends. REOCs are ordinary taxable companies and have more operating flexibility (development, no payout requirement)."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "An ESG data firm gives one point for each favorable governance feature. A two-tiered board is favorable. In a one-tiered board, which is considered unfavorable, independent directors must make up at least 60% to be favorable. CEO duality absent, average board tenure below ten years, and each independent committee (audit, compensation, director selection) are one point each.",
+    "questions": [
+     {
+      "q": "Under this scoring system, a board structure earns the independence point when:",
+      "options": [
+       "the board has fewer than ten directors with an average tenure above ten years.",
+       "the board is one-tiered with a simple majority of independent directors, the general rule.",
+       "the board is two-tiered, or it is one-tiered with at least 60% independent directors."
+      ],
+      "answer": 2,
+      "why": "Two-tiered is favorable by structure; a one-tiered board needs the higher 60% threshold because that structure is considered unfavorable."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Joanna Whitfield says the advantages of VaR are that it estimates the downside exposure in a worst-case scenario, avoids subjectivity and can be used for performance evaluation. She estimates VaR with the parametric method, which assumes a normal distribution.",
+    "questions": [
+     {
+      "q": "Of Whitfield's three claims, the correct one is that VaR:",
+      "options": [
+       "estimates the downside exposure in a worst-case scenario.",
+       "avoids subjectivity.",
+       "can be used for performance evaluation (risk-adjusted returns)."
+      ],
+      "answer": 2,
+      "why": "VaR needs subjective inputs (confidence level, horizon, method) and is a minimum loss at a given confidence level, not a worst case; losses can exceed it."
+     },
+     {
+      "q": "A limitation of the parametric VaR method is that it:",
+      "options": [
+       "assumes normally distributed returns, a poor fit for fat tails and options.",
+       "uses actual past returns, so it cannot capture risks that are new.",
+       "requires a very large number of random scenarios generated by a model."
+      ],
+      "answer": 0,
+      "why": "Historical simulation uses past returns; Monte Carlo generates random scenarios. Parametric assumes a normal distribution."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Peter Marlow explains forward pricing. A bond futures contract is compared with the underlying bond. The cost of holding the bond until the futures expiry must be considered, and the futures-side price must include the accrued interest at expiry.",
+    "questions": [
+     {
+      "q": "To find the no-arbitrage price of the bond futures, the bond price plus accrued interest today is:",
+      "options": [
+       "left unchanged, because the bond pays coupons.",
+       "carried forward to the expiry date at the risk-free rate.",
+       "discounted back from the expiry date at the risk-free rate."
+      ],
+      "answer": 1,
+      "why": "No-arbitrage futures price = (bond price + accrued interest) × (1 + r)^T (less the future value of coupons). Only the final profit is discounted to today."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Daniel Kwon reviews a storage REIT and an office REIT. Entry into self-storage is easy, while office buildings can become obsolete. Retail REITs depend on their tenants' sales per square foot.",
+    "questions": [
+     {
+      "q": "The risk factor most likely to hurt an investment in the storage REIT is:",
+      "options": [
+       "obsolescence of existing space.",
+       "the tenants' sales per square foot.",
+       "new competing facilities."
+      ],
+      "answer": 2,
+      "why": "Match the risk to the sub-sector: storage = overbuilding and new competing facilities (easy entry); office = obsolescence and remote work; retail = tenants' sales per square foot."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Helen Marsh explains a sale-leaseback plan of Mercury Corp.: the company sells its real estate, rents it back and uses the cash to retire debt. It expects an investment-grade rating after the transactions.",
+    "questions": [
+     {
+      "q": "Which statement about Mercury's motivations is INCORRECT?",
+      "options": [
+       "The transactions allow the company to sell a business that is not its core business.",
+       "The expected credit rating upgrade will increase the cost of capital.",
+       "The transactions unlock the value of the company's real estate assets."
+      ],
+      "answer": 1,
+      "why": "Less debt and a better rating lower, not raise, the cost of capital. Sale-leasebacks unlock real estate value and real estate is not a grocer's core business."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Leon Fischer believes that the spot curve one year from today will reflect the current forward curve. He also expects a flight to quality and a bullish flattening of the yield curve.",
+    "questions": [
+     {
+      "q": "Fischer's view that the future spot curve equals the current forward curve is most consistent with:",
+      "options": [
+       "the pure expectations theory.",
+       "the liquidity preference theory.",
+       "the segmented markets theory."
+      ],
+      "answer": 0,
+      "why": "Pure expectations: forward rates are unbiased predictors of future spot rates, no premium. Liquidity preference adds a premium; segmented markets price each maturity separately."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Leo Park tests a regression with 20 observations and 3 independent variables. He compares the t-statistics of two slope coefficients with the critical t-value at the 5% level.",
+    "questions": [
+     {
+      "q": "A slope coefficient is statistically significant when:",
+      "options": [
+       "its t-statistic is positive.",
+       "its t-statistic exceeds 1.96, whatever the sample size.",
+       "the absolute value of its t-statistic exceeds the critical t-value."
+      ],
+      "answer": 2,
+      "why": "Reject H0 (coefficient = 0) when |t| > critical t, with df = n − k − 1 = 20 − 3 − 1 = 16. The sign does not matter and the critical value for a small sample is larger than 1.96."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Tierra Dorada reports a defined benefit plan. From 20X2 to 20X3 it lowered its estimated future salary increases, its expected long-term return on plan assets and its discount rate, and it raised its inflation estimate.",
+    "questions": [
+     {
+      "q": "Which change most favorably affects 20X3 pension cost and earnings?",
+      "options": [
+       "the lower expected long-term return on plan assets.",
+       "the lower discount rate.",
+       "the lower estimated future salary increases."
+      ],
+      "answer": 2,
+      "why": "Lower salary growth reduces the service cost. A lower expected return on assets raises the periodic cost; a lower discount rate raises the obligation and usually the interest cost."
+     },
+     {
+      "q": "Which pair of 20X3 assumptions is most likely internally inconsistent?",
+      "options": [
+       "a higher inflation estimate with lower estimated salary increases.",
+       "a lower discount rate with a lower expected return on plan assets.",
+       "a lower discount rate with lower estimated salary increases."
+      ],
+      "answer": 0,
+      "why": "Salary increases normally move with inflation (positive relation). The discount rate and the expected return on assets both depend on market rates and move in the same direction."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "A foundation needs US dollars for its supply contracts. It enters a fixed-for-fixed currency swap in which it pays won and receives dollars. Present value factors are given for both currencies.",
+    "questions": [
+     {
+      "q": "The fixed rate the foundation RECEIVES on the swap is calculated with:",
+      "options": [
+       "the won present value factors, because it pays won.",
+       "the average of the dollar and won factors.",
+       "the US dollar present value factors."
+      ],
+      "answer": 2,
+      "why": "Each leg is priced with its own currency's factors. The foundation receives dollars, so the rate it receives comes from the dollar factors; the won rate is the one it pays."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Karl Voss integrates ESG factors into the credit analysis of KT Hotels. The board has only 1 independent member out of 15, only 2 women among its members, and only 20% of its members have hotel industry experience.",
+    "questions": [
+     {
+      "q": "After integrating the ESG factors, the credit spread on KT Hotels' bonds is most likely to:",
+      "options": [
+       "increase.",
+       "remain unchanged.",
+       "decrease."
+      ],
+      "answer": 0,
+      "why": "Weak governance (few independent directors, little diversity, little industry experience) and social risk raise the credit risk, so investors ask for a higher spread."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Anna Wexford reviews the earnings quality of DB. The balance-sheet accruals relative to operating assets are small and trending downward over the last years.",
+    "questions": [
+     {
+      "q": "Which accruals trend would most strongly raise a concern that management manipulates reported performance?",
+      "options": [
+       "accruals that trend upward relative to operating assets.",
+       "a small absolute level of accruals.",
+       "accruals that trend downward relative to operating assets."
+      ],
+      "answer": 0,
+      "why": "Upward-trending accruals give management room to manipulate earnings; downward-trending accruals leave less room, which supports DB's performance."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Three analysts comment on implied volatility. Maddox says the volatility surface shows implied volatility across exercise prices and maturities. Jeffries says the skew keeps the same shape whatever the demand for hedging is. Birch says implied volatility is computed from historical volatility.",
+    "questions": [
+     {
+      "q": "Whose comment is most likely correct?",
+      "options": [
+       "Maddox's.",
+       "Jeffries's.",
+       "Birch's."
+      ],
+      "answer": 0,
+      "why": "The surface plots implied volatility against both strike and maturity. The skew steepens when hedging demand rises. Implied volatility is backed out of market option prices and reflects expected future volatility, not historical volatility."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Nils Sorensen explains how an investor uses ETFs to obtain exposure to parts of the benchmark that the portfolio does not hold, so that the whole portfolio matches the benchmark.",
+    "questions": [
+     {
+      "q": "Sorensen's explanation of benchmark exposure describes:",
+      "options": [
+       "liquidity management.",
+       "completion strategies.",
+       "portfolio rebalancing."
+      ],
+      "answer": 1,
+      "why": "Completion: ETFs fill the gaps so that overall exposures match the benchmark. Rebalancing restores target weights after market moves; liquidity management uses ETFs to stay invested while holding cash needs."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Rosa Varela values Aldeia S.A. on 1 January. She has the price, the earnings per share of the last four quarters, the analysts' EPS forecast for the next four quarters, and the average EPS of the last full business cycle.",
+    "questions": [
+     {
+      "q": "Aldeia's trailing P/E, ignoring any business-cycle influence, is the price divided by:",
+      "options": [
+       "the EPS of the last four quarters.",
+       "the analysts' EPS forecast for the next four quarters.",
+       "the average EPS of the last full business cycle."
+      ],
+      "answer": 0,
+      "why": "Trailing P/E = price ÷ EPS of the most recent four quarters. Forward (leading) P/E uses expected EPS; the cycle average gives a normalized P/E."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Henrik Dahl needs the bid EUR/AUD cross rate. The interbank market quotes EUR/USD and AUD/USD with bid and offer prices.",
+    "questions": [
+     {
+      "q": "The bid EUR/AUD cross rate is obtained by:",
+      "options": [
+       "multiplying the offer EUR/USD by the inverse of the bid AUD/USD.",
+       "multiplying the bid EUR/USD by the inverse of the offer AUD/USD.",
+       "multiplying the bid EUR/USD by the bid AUD/USD."
+      ],
+      "answer": 1,
+      "why": "Selling EUR for AUD means: sell EUR for USD (bid EUR/USD), then sell USD to buy AUD, which uses the AUD/USD OFFER (1/offer). Multiplying the two bids is the common mistake."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Chloe Brandt ranks three bonds. In a recession that is turning into a recovery, credit spreads narrow. One of her colleagues states that the expected loss of a bond equals the probability of default times its recovery rate.",
+    "questions": [
+     {
+      "q": "When credit spreads narrow in an economic recovery, the improvement is likely to be greatest for:",
+      "options": [
+       "the bonds with the highest credit rating and the narrowest spread.",
+       "the bonds with the lowest credit rating and the widest spread.",
+       "all bonds equally, whatever their rating."
+      ],
+      "answer": 1,
+      "why": "Weaker credits have more spread to give back; in a recession the good credits outperform and spreads between low and high quality widen."
+     },
+     {
+      "q": "The expected loss of a bond is the probability of default times:",
+      "options": [
+       "one plus the recovery rate of the bond.",
+       "the loss given default (1 minus the recovery rate).",
+       "the recovery rate of the bond."
+      ],
+      "answer": 1,
+      "why": "Expected loss = PD × LGD = PD × (1 − recovery rate). Multiplying by the recovery rate is the colleague's mistake."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Lisa Park explains inflation-linked bonds. The break-even inflation rate is the difference between the yields of nominal and inflation-linked bonds of the same maturity. Investors are uncertain about future inflation.",
+    "questions": [
+     {
+      "q": "An increase in the uncertainty about future inflation is associated with:",
+      "options": [
+       "no change, because the break-even rate reflects only expected inflation.",
+       "a lower break-even inflation rate.",
+       "a higher break-even inflation rate."
+      ],
+      "answer": 2,
+      "why": "Break-even inflation = expected inflation + a premium for inflation uncertainty (inflation risk premium); more uncertainty raises it."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Greta Lund compares price multiples. She states that higher expected growth and higher risk both raise a high P/E. She also averages P/Es of an index with market-cap weights, using the weighted harmonic mean.",
+    "questions": [
+     {
+      "q": "According to the constant growth model, a justified P/E is:",
+      "options": [
+       "lower for higher expected growth and lower for higher risk (a lower required return).",
+       "higher for higher expected growth and lower for higher risk (a higher required return).",
+       "higher for higher expected growth and also higher for higher risk (a higher required return)."
+      ],
+      "answer": 1,
+      "why": "P/E = payout ÷ (r − g): growth g up raises it, risk (r) up lowers it."
+     },
+     {
+      "q": "Compared with the weighted arithmetic mean, the weighted harmonic mean of the P/Es is:",
+      "options": [
+       "higher, because it gives more weight to the high P/Es.",
+       "lower, because it gives more weight to the low P/Es.",
+       "the same, because both use the same weights."
+      ],
+      "answer": 1,
+      "why": "The harmonic mean averages the E/P (inverse) values, so it reduces the effect of large outliers and is below the arithmetic mean."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Lucas Mendes manages a government bond portfolio split into a short bucket and a long bucket. The mandate keeps each bucket between 40% and 60% of the portfolio. He expects yields to rise by 50 bp at all points along the yield curve.",
+    "questions": [
+     {
+      "q": "To minimize his risk, Mendes should most likely:",
+      "options": [
+       "move money out of the long bucket into short maturities, but only until the long bucket reaches its 40% minimum.",
+       "move all of the long bucket into three-year bonds to avoid every rate risk, even below the 40% minimum.",
+       "lengthen the duration of both buckets, because higher yields raise the income on longer bonds."
+      ],
+      "answer": 0,
+      "why": "Yields rising means prices fall, so shorten duration. The 40%–60% limit per bucket still has to be respected, so the shift stops at the limit."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Alex Thorne adjusts the financial statements of Coleridge Ltd. Its pension discount rate is 0.5% higher than its industry competitors' discount rates, and a higher discount rate lowers the estimated pension obligation. Thorne lowers the discount rate to the peers' level.",
+    "questions": [
+     {
+      "q": "Compared with its peers, Coleridge's higher pension discount rate is:",
+      "options": [
+       "neutral, because the plan is underfunded in any case, so the assumption does not matter.",
+       "aggressive, because it lowers the reported pension obligation and expense.",
+       "conservative, because it raises the reported pension expense and obligation."
+      ],
+      "answer": 1,
+      "why": "PBO is the present value of future benefits, so a higher discount rate means a smaller PBO and a smaller deficit. Higher than peers = aggressive."
+     },
+     {
+      "q": "After Thorne lowers the discount rate to the peers' level, which ratio DECREASES?",
+      "options": [
+       "book value per share.",
+       "the financial leverage ratio.",
+       "the debt-to-equity ratio."
+      ],
+      "answer": 0,
+      "why": "The obligation rises, the deficit grows, shareholders' equity falls (through accumulated other comprehensive income). Equity falls, so BVPS falls while debt-to-equity and leverage rise."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Daniel Ashworth chooses a valuation metric for Harlan Company: its debt-to-equity ratio is much higher than its competitors', and it spent heavily on advertising to build a brand that is not on the balance sheet.",
+    "questions": [
+     {
+      "q": "The most appropriate metric for Harlan is:",
+      "options": [
+       "dividend yield.",
+       "price to book.",
+       "enterprise value to sales."
+      ],
+      "answer": 2,
+      "why": "Very different leverage → use an enterprise value multiple. An internally generated brand is missing from book value, so price to book is poor. Dividend yield ignores growth."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Ben Lam uses factor models. In a macroeconomic factor model the factors are surprises in economic variables and have an expected value of zero. In fundamental models the sensitivities come from company attributes. Lam claims that multifactor models are useful for active management but not for passive management.",
+    "questions": [
+     {
+      "q": "In a macroeconomic factor model with surprise factors, a stock's expected return equals:",
+      "options": [
+       "the intercept of the model.",
+       "the intercept plus the average of the factor sensitivities.",
+       "the actual return of the last year."
+      ],
+      "answer": 0,
+      "why": "Every surprise has an expected value of zero, so E(R) = a (the intercept). Actual return minus the intercept is the effect of the surprises."
+     },
+     {
+      "q": "Which statement about estimating factor sensitivities is correct?",
+      "options": [
+       "In fundamental models the sensitivities come first from company attributes; in macroeconomic models they are estimated last.",
+       "In both models the sensitivities are estimated last by regression of the returns on the factors.",
+       "In macroeconomic models the sensitivities come first from company attributes; in fundamental models they are estimated last."
+      ],
+      "answer": 0,
+      "why": "Fundamental: attributes give the sensitivities, factor returns are estimated. Macroeconomic: surprises are the factors, the sensitivities come from the regression."
+     },
+     {
+      "q": "Lam's claim about multifactor models is:",
+      "options": [
+       "correct: passive managers replicate an index and do not need factor exposures.",
+       "incorrect: they are useful for both active and passive management.",
+       "incorrect: they are useful only for passive management, where tracking error is controlled."
+      ],
+      "answer": 1,
+      "why": "Active: factor tilts and active risk analysis. Passive: replicating an index's factor exposures and controlling tracking error."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Priya Nair studies how a country with few natural resources can raise its potential growth. Channel 1 is investment in human capital, Channel 2 is adopting leading technology, Channel 3 is keeping the currency low to support export demand.",
+    "questions": [
+     {
+      "q": "The channel least likely to raise the growth rate of aggregate SUPPLY is:",
+      "options": [
+       "Channel 1: human capital.",
+       "Channel 3: keeping the currency low.",
+       "Channel 2: leading technology."
+      ],
+      "answer": 1,
+      "why": "Human capital and technology raise potential output directly. A low exchange rate is a demand-side policy for exports; it affects supply only indirectly."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Thabo Ndlovu analyses a firm with book value per share of R20 and intrinsic value per share of R22 from a residual income model. He also computes market value added using the market value and book value of its capital.",
+    "questions": [
+     {
+      "q": "The intrinsic value of R22 against a book value of R20 means that the present value of future residual income is:",
+      "options": [
+       "negative.",
+       "zero.",
+       "positive."
+      ],
+      "answer": 2,
+      "why": "Intrinsic value = book value per share + PV of future residual income. 22 > 20, so the PV of residual income is positive."
+     },
+     {
+      "q": "Market value added is the difference between:",
+      "options": [
+       "the intrinsic value and the market price of the shares, as an estimate of mispricing.",
+       "the market value of equity only and the book value of equity, leaving debt out of both.",
+       "the market value of the firm (equity plus debt) and the book value of its total capital."
+      ],
+      "answer": 2,
+      "why": "MVA = market value of the company (equity + debt) − accounting book value of total capital (equity + debt). Leaving debt out is the common trap."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "The central bank of Golden Island says it will use monetary tools to stop the inflation that comes from faster growth.",
+    "questions": [
+     {
+      "q": "To fight the inflation, the central bank will most likely:",
+      "options": [
+       "lower the interest rate on loans to banks.",
+       "sell securities to the private sector.",
+       "buy securities from the private sector."
+      ],
+      "answer": 1,
+      "why": "Fighting inflation means tightening: reduce the money supply by selling securities, raising the policy rate or raising reserve requirements. Buying securities or cutting rates adds money."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Aiko Ishikawa reviews KH, a property and casualty insurer, and Basel III for banks. The P&C market has been in a hard phase for a few years. KH's loss ratio is below 100%, but its combined ratio is above 100%.",
+    "questions": [
+     {
+      "q": "Which statement about Basel III is most accurate?",
+      "options": [
+       "It raised the equity capital required against risk-weighted assets.",
+       "It aims mainly at improving the earnings quality of banks' reported profits.",
+       "It prefers interbank deposits to consumer deposits as a source of stable funding."
+      ],
+      "answer": 0,
+      "why": "Basel III: more and better capital against risk-weighted assets, plus liquidity and stable funding requirements where consumer deposits are considered MORE stable than interbank funding."
+     },
+     {
+      "q": "After a long hard phase in the P&C market, a cyclical shift most likely brings:",
+      "options": [
+       "new competitors entering and weaker underwriting standards.",
+       "tighter underwriting standards and fewer competitors.",
+       "capital adequacy that becomes easier to achieve as premiums rise."
+      ],
+      "answer": 0,
+      "why": "Hard market: high premiums and profits attract competitors; premiums fall and standards weaken (soft market); capital is depleted."
+     },
+     {
+      "q": "A combined ratio above 100% means that the insurer's underwriting is:",
+      "options": [
+       "profitable, because the loss ratio is below 100%.",
+       "unprofitable: claims and expenses exceed the premiums.",
+       "break-even, because the combined ratio uses premiums written."
+      ],
+      "answer": 1,
+      "why": "Combined ratio = loss ratio + expense ratio. Above 100% = underwriting loss; below 100% = underwriting profit. Judging on the loss ratio alone ignores the expense ratio."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Sam Hollis describes calibrating a binomial interest rate tree: it uses a volatility assumption, a log-normal interest rate model and the observed market prices of benchmark bonds.",
+    "questions": [
+     {
+      "q": "Which of the following is NOT an input to the calibration of the tree?",
+      "options": [
+       "the value of the bond being evaluated.",
+       "the assumption of log-normality.",
+       "the volatility assumption."
+      ],
+      "answer": 0,
+      "why": "The tree is calibrated to benchmark bonds so that it reproduces their market prices. The bond being valued is priced afterwards on the calibrated tree."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Walter Dunn explains the standard error of estimate (SEE) of a regression. He says the SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable. A strong relationship gives a small SEE, and violations of the model assumptions affect it.",
+    "questions": [
+     {
+      "q": "The SEE is the standard deviation of the differences between:",
+      "options": [
+       "the mean and the actual values of the independent variable.",
+       "the estimated and the actual values of the independent variables.",
+       "the estimated and the actual values of the DEPENDENT variable."
+      ],
+      "answer": 2,
+      "why": "SEE = standard deviation of the regression residuals (actual minus predicted dependent variable). A small SEE means a close fit."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Fjord Mining has surplus cash. It compares paying its usual dividend plus a one-time special dividend with raising its regular dividend permanently. It is also thinking about repurchasing shares with the surplus cash.",
+    "questions": [
+     {
+      "q": "A special dividend differs from a higher regular dividend because it:",
+      "options": [
+       "is a stock dividend that leaves total cash paid unchanged.",
+       "is paid every quarter at a permanently higher level once earnings improve.",
+       "is a one-time payment and does not commit the company to a higher dividend in the future."
+      ],
+      "answer": 2,
+      "why": "A special (extra) dividend is paid once, usually after unusually good earnings, so the regular dividend is not raised. A stock dividend pays no cash."
+     },
+     {
+      "q": "If Fjord repurchases shares with surplus cash, which item most likely DECREASES?",
+      "options": [
+       "the debt-to-assets ratio.",
+       "the debt-to-equity ratio.",
+       "total book value."
+      ],
+      "answer": 2,
+      "why": "Cash is paid out, so assets and shareholders' equity fall; debt is unchanged, so the leverage ratios (debt-to-assets, debt-to-equity) rise."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Anke Thiessen reviews three ways in which current account and capital flows can move exchange rates: the flow supply/demand channel, the portfolio balance channel and the debt sustainability channel.",
+    "questions": [
+     {
+      "q": "The mechanism that best explains the LONG-run equilibrium value of an exchange rate is the:",
+      "options": [
+       "flow supply/demand channel: the current flow of currency supply and demand sets the long-run equilibrium value.",
+       "debt sustainability channel: a deficit financed by growing external debt forces the currency to adjust.",
+       "portfolio balance channel: shifts in global asset preferences move the exchange rate until the current account balances."
+      ],
+      "answer": 1,
+      "why": "Flow supply/demand is a short-term effect; the portfolio balance channel works through medium-term wealth shifts; the debt sustainability channel drives the long-run equilibrium because external debt cannot grow without limit."
+     }
+    ]
+   }
+  ],
+  "rev": 2
+ },
+ {
   "id": "mock7",
   "title": "Mock 7",
   "kind": "mock",
