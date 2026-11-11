@@ -206,4 +206,4 @@ Note 3: Norvik's depreciable lives for PP&E are 20% longer than the industry ave
  Q("Based on Note 2, the Nordic segment is most likely:","growing, because its capex share is greater than its asset share",["shrinking, because it holds only 30% of assets","being run for cash"],
    "Segment capex % ÷ segment asset % = 45/30 = 1.5 > 1 → the company is investing more there: growing. Below 1 → being reduced."),
  Q("If Berg adjusts Norvik's depreciation to the industry's shorter lives, Norvik's debt-to-equity ratio will most likely:","increase",["decrease","stay the same"],
-   "Shorter lives → higher depreciation → lower net income → lower retained earnings and equity → higher D/E.\n(If a company's figure is above the market's, adjust it down; if below, adjust it up.)")])
+   "Shorter lives → higher depreciation → lower net income → lower retained earnings and equity → higher D/E.")])

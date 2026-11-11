@@ -172,7 +172,7 @@
        "increase"
       ],
       "answer": 2,
-      "why": "Shorter lives → higher depreciation → lower net income → lower retained earnings and equity → higher D/E.\n(If a company's figure is above the market's, adjust it down; if below, adjust it up.)"
+      "why": "Shorter lives → higher depreciation → lower net income → lower retained earnings and equity → higher D/E."
      }
     ]
    },
@@ -4204,7 +4204,7 @@
        "lower than its yield to maturity, because downgrades cost more than upgrades gain."
       ],
       "answer": 2,
-      "why": "Expected return ≈ YTM − Σ probability × modified duration × (change in spread). Downgrades widen spreads (larger price loss) and are more likely to matter than upgrades."
+      "why": "Expected return ≈ YTM − Σ probability × modified duration × (change in spread). Spreads widen more on a downgrade than they narrow on an upgrade, and downgrades are the larger part of the migration risk, so the net effect lowers the expected return."
      },
      {
       "q": "The credit spread of the second bond is the:",
@@ -4214,7 +4214,7 @@
        "yield on the bond valued at VND − CVA minus the benchmark yield."
       ],
       "answer": 2,
-      "why": "Fair value = VND − CVA; its yield is higher than the benchmark yield by the credit spread. The yield at VND is the benchmark yield itself."
+      "why": "The credit spread is the yield of the credit-risky bond minus the benchmark yield. The risky bond's value is VND − CVA (the fair value, lower than VND), and the yield at that lower price exceeds the benchmark yield. Discounting at VND gives only the benchmark yield (a spread of zero)."
      },
      {
       "q": "With a recovery rate of one-quarter of the exposure, the loss given default used in the CVA is:",
@@ -4272,7 +4272,7 @@
        "can be used for performance evaluation (risk-adjusted returns)."
       ],
       "answer": 2,
-      "why": "VaR needs subjective inputs (confidence level, horizon, method) and is a minimum loss at a given confidence level, not a worst case; losses can exceed it."
+      "why": "Performance evaluation is correct: VaR can be used to compare risk-adjusted returns across managers or units. The other two claims are wrong: VaR needs subjective inputs (confidence level, horizon, method), and it is the minimum loss at a given confidence level, not a worst case; losses can exceed it."
      },
      {
       "q": "A limitation of the parametric VaR method is that it:",

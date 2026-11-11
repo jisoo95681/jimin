@@ -143,12 +143,12 @@ add("Derivatives", """A foundation needs US dollars for its supply contracts. It
 add("Fixed Income", """Ana Costa studies a BBB bond. Expected return over the next year must include credit migration. A second bond is valued on a binomial tree: the value without default (VND) is reduced by the credit valuation adjustment (CVA) to get the fair value, whose yield exceeds the benchmark yield. The recovery rate of the bond is one-quarter of the exposure.""", [
  Qh("Including credit migration, the expected one-year return of the BBB bond is:", "lower than its yield to maturity, because downgrades cost more than upgrades gain.",
     ["higher than its yield to maturity, because upgrades and downgrades cancel out.", "equal to its yield to maturity if spreads stay stable."],
-    "Expected return ≈ YTM − Σ probability × modified duration × (change in spread). Downgrades widen spreads (larger price loss) and are more likely to matter than upgrades.",
+    "Expected return ≈ YTM − Σ probability × modified duration × (change in spread). Spreads widen more on a downgrade than they narrow on an upgrade, and downgrades are the larger part of the migration risk, so the net effect lowers the expected return.",
     ["credit migration"],
     "Credit migration lowers the expected return below the YTM."),
  Qh("The credit spread of the second bond is the:", "yield on the bond valued at VND − CVA minus the benchmark yield.",
     ["yield on the bond valued at VND minus the benchmark yield.", "CVA divided by the VND."],
-    "Fair value = VND − CVA; its yield is higher than the benchmark yield by the credit spread. The yield at VND is the benchmark yield itself.",
+    "The credit spread is the yield of the credit-risky bond minus the benchmark yield. The risky bond's value is VND − CVA (the fair value, lower than VND), and the yield at that lower price exceeds the benchmark yield. Discounting at VND gives only the benchmark yield (a spread of zero).",
     ["value without default (VND) is reduced by the credit valuation adjustment (CVA)"],
     "Credit spread = YTM(VND − CVA) − benchmark YTM."),
  Qh("With a recovery rate of one-quarter of the exposure, the loss given default used in the CVA is:", "75% of the exposure.",
@@ -272,7 +272,7 @@ add("Alternative Investments", """Daniel Kwon reviews a storage REIT and an offi
 add("Portfolio Management", """Joanna Whitfield says the advantages of VaR are that it estimates the downside exposure in a worst-case scenario, avoids subjectivity and can be used for performance evaluation. She estimates VaR with the parametric method, which assumes a normal distribution.""", [
  Qh("Of Whitfield's three claims, the correct one is that VaR:", "can be used for performance evaluation (risk-adjusted returns).",
     ["avoids subjectivity.", "estimates the downside exposure in a worst-case scenario."],
-    "VaR needs subjective inputs (confidence level, horizon, method) and is a minimum loss at a given confidence level, not a worst case; losses can exceed it.",
+    "Performance evaluation is correct: VaR can be used to compare risk-adjusted returns across managers or units. The other two claims are wrong: VaR needs subjective inputs (confidence level, horizon, method), and it is the minimum loss at a given confidence level, not a worst case; losses can exceed it.",
     ["avoids subjectivity", "worst-case scenario"],
     "VaR: subjective inputs; not a worst case; useful for risk-adjusted performance."),
  Qh("A limitation of the parametric VaR method is that it:", "assumes normally distributed returns, a poor fit for fat tails and options.",
