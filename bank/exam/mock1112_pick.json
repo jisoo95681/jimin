@@ -1,0 +1,101 @@
+{
+ "M11": [
+  {
+   "id": "corp1-ladan",
+   "subject": "Corp",
+   "reading": 13
+  },
+  {
+   "id": "em-gera",
+   "subject": "PM",
+   "reading": 34
+  },
+  {
+   "id": "eq6-brady",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "d28-stoneridge",
+   "subject": "Deriv",
+   "reading": 28
+  },
+  {
+   "id": "eq4-silveira",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "s2a-tyo",
+   "subject": "FI",
+   "reading": 23
+  },
+  {
+   "id": "fx29-lopez",
+   "subject": "Econ",
+   "reading": 5
+  },
+  {
+   "id": "s1a-martinez",
+   "subject": "Quant",
+   "reading": 2
+  },
+  {
+   "id": "ic1-5",
+   "subject": "FSA",
+   "reading": 7
+  }
+ ],
+ "M12": [
+  {
+   "id": "eo-smith-carter",
+   "subject": "FI",
+   "reading": 25
+  },
+  {
+   "id": "fsa6-rhine",
+   "subject": "FSA",
+   "reading": 12
+  },
+  {
+   "id": "musicale-apex",
+   "subject": "Alt",
+   "reading": 30
+  },
+  {
+   "id": "opt-ist",
+   "subject": "Deriv",
+   "reading": 29
+  },
+  {
+   "id": "fx29-carlisle",
+   "subject": "Econ",
+   "reading": 5
+  },
+  {
+   "id": "tb1-williams",
+   "subject": "Quant",
+   "reading": 1
+  },
+  {
+   "id": "ca-cromwell",
+   "subject": "FI",
+   "reading": 26
+  },
+  {
+   "id": "m1-2",
+   "subject": "FSA",
+   "reading": 9
+  },
+  {
+   "id": "eq5e-thales",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "esg31-5",
+   "subject": "Corp",
+   "reading": 14
+  }
+ ]
+}
