@@ -2067,5 +2067,548 @@
    "regresses the deviation of sales from the historical average"
   ],
   "rule": "Multiple regression assumptions: linear in the parameters, no exact linear relationship among independent variables, normal and homoscedastic errors, no serial correlation."
+ },
+ "rq1:1": {
+  "hl": [
+   "normal accruals explained by a regression on business activity, and the residual"
+  ],
+  "rule": "Explained by the regression = normal (non-discretionary). Residual = unusual (discretionary), the warning sign of manipulation."
+ },
+ "rq1:2": {
+  "hl": [
+   "@row:Stock options",
+   "@row:Unvested RSUs",
+   "Average unrecognised compensation expense"
+  ],
+  "rule": "RSUs have no exercise price, but the unrecognised expense still counts as proceeds: dilutive shares = 60,000 − 900,000 ÷ 30 = 30,000."
+ },
+ "rq1:3": {
+  "hl": [
+   "Bank X funds itself mainly with long-term consumer deposits; Bank Y relies on short-term interbank borrowing.",
+   "Morgan expects the yield curve to invert next year."
+  ],
+  "rule": "Stable funding: longer-term and consumer (retail) deposits are stickier than short-term interbank funding."
+ },
+ "rq1:4": {
+  "hl": [
+   "trend in its ROE components by using DuPont analysis",
+   "@row:Revenue",
+   "@row:Total liabilities",
+   "@row:Total asset turnover ratio"
+  ],
+  "rule": "Financial leverage = total assets ÷ equity; assets = revenue ÷ asset turnover, equity = assets − liabilities."
+ },
+ "rq1:5": {
+  "hl": [
+   "Montclair's analyst compares the full goodwill and partial goodwill methods.",
+   "Montclair Holdings acquires 80% of Tessaro SpA for €800 million in cash."
+  ],
+  "rule": "Partial goodwill = 800 − 0.80 × 850 = €120m."
+ },
+ "rq1:6": {
+  "hl": [
+   "Thorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates.",
+   "Maxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS."
+  ],
+  "rule": "A higher discount rate than peers lowers the present value of the pension obligation (and the reported expense), so the underfunding is understated: the assumption is aggressive."
+ },
+ "rq1:7": {
+  "hl": [
+   "Thorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates.",
+   "Maxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS."
+  ],
+  "rule": "Lower discount rate → larger obligation → liabilities ↑, equity ↓ (via AOCI), assets unchanged. So D/E ↑, financial leverage ↑ and book value per share ↓."
+ },
+ "rq1:8": {
+  "hl": [
+   "In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the full expense previously recognised for them ($22 per RSU) is reversed this year.",
+   "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate."
+  ],
+  "rule": "RSU expense = vested × grant-date FV − forfeited × their FV = 30,000 × 24 − 2,000 × 22 = 720,000 − 44,000 = $676,000."
+ },
+ "rq1:9": {
+  "hl": [
+   "They were granted at the start of the year with a grant-date fair value of $24 per RSU, and Kiruna's share price on the vesting date was $31.",
+   "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate."
+  ],
+  "rule": "Once RSUs vest they become common shares: basic shares rise by the number vested (30,000). Unvested RSUs are potentially dilutive."
+ },
+ "rq1:10": {
+  "hl": [
+   "Both have net monetary liabilities and positive net assets.",
+   "Subsidiary B's functional currency is its local currency, so it is translated with the current rate method."
+  ],
+  "rule": "A: exposure = net monetary liabilities; foreign currency ↑ → liabilities worth more in dollars → loss in net income."
+ },
+ "rq1:11": {
+  "hl": [
+   "Subsidiary B's functional currency is its local currency, so it is translated with the current rate method.",
+   "Subsidiary A's functional currency is the US dollar (the parent's presentation currency), so it is remeasured with the temporal method."
+  ],
+  "rule": "Temporal method: COGS at older (lower) historical rates while sales are at the average rate → higher margin when the foreign currency appreciates (current rate method is better when it depreciates)."
+ },
+ "rq1:12": {
+  "hl": [
+   "Reason 2: Balance-sheet-based accruals are trending down relative to total assets.",
+   "Reason 3: Income from operations is consistently higher than cash generated from operations."
+  ],
+  "rule": "Red flags are: accruals ratio trending UP or erratic, and operating income consistently ABOVE cash from operations (Reason 3). Steady or falling accruals are not a concern."
+ },
+ "rq1:13": {
+  "hl": [
+   "Enhancement 1: More stringent capital requirements that prevent banks from taking on excessive financial leverage",
+   "Enhancement 2: Increased funding stability by giving preference to interbank deposits over those from consumers",
+   "Enhancement 3: Additional measures to ensure sufficient earnings quality"
+  ],
+  "rule": "Basel III: more equity against risk-weighted assets (less leverage), stable funding from consumer deposits."
+ },
+ "rq1:14": {
+  "hl": [
+   "has been in a “hard” phase for a few years now"
+  ],
+  "rule": "Hard market: high premiums and profits → new competitors → soft market: lower premiums, weaker underwriting standards, capital harder to maintain."
+ },
+ "rq1:15": {
+  "hl": [
+   "before investment income",
+   "underwriting business"
+  ],
+  "rule": "Combined ratio > 100% = underwriting loss (covered only by investment income)."
+ },
+ "rq1:16": {
+  "hl": [
+   "financed with three times as much debt capital as equity capital",
+   "pretax cost of debt is 7% and its cost of equity capital is 11%",
+   "EBIT of $280,000 and was taxed at a rate of 30%"
+  ],
+  "rule": "Residual income = net income − equity charge. Net income is AFTER interest and tax; equity charge = equity capital × cost of equity."
+ },
+ "rq1:17": {
+  "hl": [
+   "Residual income valuations recognize value later than different present value approaches."
+  ],
+  "rule": "RI models recognize value EARLIER (large book value up front); in theory RI and DDM give the same value."
+ },
+ "rq1:18": {
+  "hl": [
+   "@row:Increase in current assets",
+   "@row:Target debt ratio",
+   "target debt ratio"
+  ],
+  "rule": "Cash is not working capital: take it out of the current assets increase. Then multiply BOTH the net fixed investment and the working capital investment by (1 − DR)."
+ },
+ "rq1:19": {
+  "hl": [
+   "far below its FCFE",
+   "little relation to its ability to pay"
+  ],
+  "rule": "Dividends far from FCFE and unrelated to capacity: use FCFE, not a dividend discount model."
+ },
+ "rq1:20": {
+  "hl": [
+   "debt-to-equity ratio is significantly higher than the average of its competitors",
+   "spent heavily on advertising to create and maintain its brand"
+  ],
+  "rule": "High leverage + valuable internal brand → enterprise value to sales, not P/B or dividend yield."
+ },
+ "rq1:21": {
+  "hl": [
+   "Ferro observes that Corbin Foods must have both a higher-than-average growth rate and higher-than-average risk to justify its high P/E, and suggests the club look at Corbin at its next meeting.",
+   "Using NYSE data, Ferro finds the average P/E for the Consumer Goods Index (15.2) and for its Processed and Packaged Goods sector (31.4)."
+  ],
+  "rule": "Higher expected growth justifies a higher P/E: she is right on growth."
+ },
+ "rq1:22": {
+  "hl": [
+   "Exhibit 2 Partial Results of Market Screen: Ferro's Index",
+   "Ferro decides to calculate the weighted harmonic mean of the index and says:"
+  ],
+  "rule": "Weighted harmonic mean = total market cap ÷ Σ(market cap ÷ P/E)."
+ },
+ "rq1:23": {
+  "hl": [
+   "control premium of 25%",
+   "discount for lack of marketability is 20%"
+  ],
+  "rule": "The 25% is a control PREMIUM. Convert it: DLOC = 1 − 1/1.25 = 20%. Then total = 1 − (1 − DLOC)(1 − DLOM)."
+ },
+ "rq1:24": {
+  "hl": [
+   "Ncube asks Maseko to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.",
+   "Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share."
+  ],
+  "rule": "Market value added equals the market value of firm minus total accounting book value of total capital."
+ },
+ "rq1:25": {
+  "hl": [
+   "Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share.",
+   "What conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?"
+  ],
+  "rule": "The intrinsic value of R22.00 is greater than the current book value of R20.00. The residual income model states that the intrinsic value of a stock is its book value per share plus the present value "
+ },
+ "rq1:26": {
+  "hl": [
+   "Castovan’s final assignment is to determine the intrinsic value of TTCI using both a single-stage and a multistage RI model.",
+   "For the multistage model, Castovan forecasts TTCI’s ROE to be higher than its long-term ROE for the first three years."
+  ],
+  "rule": "Residual income per share for the next three years is calculated as follows."
+ },
+ "rq1:27": {
+  "hl": [
+   "The US representative for Walkton’s home district has told Scott that, although she is lobbying hard for the bill and prospects for its passage are favorable, concern of the US Congress over the federal deficit could cause the tax bill to be voted down.",
+   "Scott writes in his research report, “We expect Walkton’s stock price to rise by at least US$8.00 a share by the end of the year because the dividend will increase by US$1.50 a share."
+  ],
+  "rule": "This question relates to Standard V(B) Communication with Clients and Prospective Clients. Scott has issued a research report stating that he expects the price of Walkton Industries stock to rise by U"
+ },
+ "rq1:28": {
+  "hl": [
+   "The general partner of the Fund has asked O’Connor to meet with Elise Jensen, CFA, a pension asset consultant, to find out whether Jensen will pitch the Fund to her institutional clients looking for an environmental, social, and governance (ESG) approach.",
+   "Jensen specializes in working with continental European–based pension funds, many of which are Swiss pension funds required by Swiss pension regulations to undertake an ESG assessment prior to making an investment."
+  ],
+  "rule": "O’Connor should least likely notify clients of the finder’s fee policy on a semiannual basis. Recommended procedures to implement Standard VI(C): Referral Fees are to notify clients at least quarterly"
+ },
+ "rq1:29": {
+  "hl": [
+   "Standard VII(B)"
+  ],
+  "rule": "You may say you hold the designation. You may not link it to better returns or to being a better analyst."
+ },
+ "rq1:30": {
+  "hl": [
+   "However, Kowalski tells all his clients simultaneously they should sell their shares because he believes Talkwave is overvalued and the stock price will fall soon.",
+   "Kowalski tells his clients the multifactor valuation model used by Harlan shows Talkwave stock is still undervalued."
+  ],
+  "rule": "Mark every option violated / not violated first, then pick the one not violated. Here Fair Dealing was the one not breached; V(B) (fact vs opinion, disclose the process) and VI(B) (clients before own trades) were."
+ },
+ "rq1:31": {
+  "hl": [
+   "Darko is invited to an analyst conference hosted by Bloom Data Centers, a company covered by Darko.",
+   "Bloom arranges to pay for the commercial flights for all analysts attending the conference."
+  ],
+  "rule": "I(B) Independence and Objectivity: always use commercial transport at your own or your firm's expense. A token gift is fine; paid travel is the violation (the appearance of compromise counts). Exception: remote site with no commercial transport."
+ },
+ "rq1:32": {
+  "hl": [
+   "its core business of operating 50,000 square foot stores",
+   "retire approximately USD700 million of debt",
+   "will enable it to receive an investment-grade credit rating"
+  ],
+  "rule": "Less debt → better credit rating → lower cost of capital; real estate is a non-core business for a grocer."
+ },
+ "rq1:33": {
+  "hl": [
+   "Marlowe and her supervisor discuss how KT Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits.",
+   "The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry."
+  ],
+  "rule": "KT Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 "
+ },
+ "rq1:34": {
+  "hl": [
+   "Independent committees for audit, compensation and director selection are present (1 point for the presence of each independent committee).",
+   "However, in a one-tiered board which is considered unfavorable, a 60% majority of independent directors is the favorable threshold."
+  ],
+  "rule": "Scoring (1 point for each good-governance feature): independent directors 12 ÷ 19 = 63% is a majority for ChemiKa (1) but 4 ÷ 8 = 50% is not for PlastiKa (0); two-tiered board: ChemiKa no (0), PlastiK"
+ },
+ "rq1:35": {
+  "hl": [
+   "Golden Island’s Minister of Finance and president of the Central Bank, Rajiv Sengupta, addresses the issues of potential inflation as the island transitions to greater growth.",
+   "He assures the committee that Golden Island’s central bank stands ready to use monetary tools to prevent such inflation"
+  ],
+  "rule": "The threat is inflation. To counter such a threat, the central bank will want to reduce the money supply. The central bank will sell domestic securities to the private sector."
+ },
+ "rq1:36": {
+  "hl": [
+   "Statement 3: “The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about the quantity of goods and services investors will be able to consume in the future.”",
+   "Statement 2: “The break-even inflation rate incorporates the yield difference between longer dated and shorter dated inflation-linked bonds.”"
+  ],
+  "rule": "Since Simmons makes her statements while looking at the yield difference between nominal and inflation-linked bonds, Statement 3 (The difference in yields reflects the uncertainty about the quantity o"
+ },
+ "rq1:37": {
+  "hl": [
+   "Comment 2: Based on your economic forecasts, in 6–12 months overall credit spreads should narrow and the rate of improvement will likely be greatest for bond C.",
+   "Based on this information, Redfield makes the following comments to Simmons regarding the Australian bonds:"
+  ],
+  "rule": "Comment 2 is correct. When credit spreads are generally narrowing, the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Bond C ha"
+ },
+ "rq1:38": {
+  "hl": [
+   "Although Menon recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:",
+   "Menon responds that for India, capital deepening will be more effective, and she has proposed the following ideas: building a group of auto and textile factories in the southern states, developing a north–south and east–west highway network, and sponsoring a patent initiative."
+  ],
+  "rule": "Maintaining a low currency exchange rate is a policy aimed at maintaining demand for the country’s exports. It would have little direct impact on the potential growth rate of aggregate supply. It migh"
+ },
+ "rq2:1": {
+  "hl": [
+   "(1) provides an estimate of downside exposure during a worst-case scenario",
+   "(2) avoids subjectivity",
+   "(3) can be used for performance evaluation"
+  ],
+  "rule": "VaR: useful for risk-adjusted performance; subjective inputs; NOT a worst case."
+ },
+ "rq2:2": {
+  "hl": [
+   "parametric method (assuming normal distribution)"
+  ],
+  "rule": "Parametric = normal distribution assumption (weak for fat tails and options); historical = past data; Monte Carlo = random scenarios."
+ },
+ "rq2:3": {
+  "hl": [
+   "Observation 3: An investor compares a building leased to a government agency with a similar building leased to commercial tenants."
+  ],
+  "rule": "Value = net rental income / (1 + r)^t, where net rental income = rental payments − rental expenses. Both rates include inflation (π) and inflation uncertainty (θ); the commercial lease also includes a"
+ },
+ "rq2:4": {
+  "hl": [
+   "@row:Market",
+   "@row:Size",
+   "@row:Value",
+   "Fund sensitivity",
+   "Benchmark sensitivity"
+  ],
+  "rule": "Style = fund sensitivity minus benchmark sensitivity: market +0.15 (high beta), size +0.30 (small cap), value −0.30 (growth)."
+ },
+ "rq2:5": {
+  "hl": [
+   "Point 3: Country 1 has nominal GDP growth of 8.5% and inflation of 3.0%, with low volatility of growth.",
+   "Country 2 has nominal GDP growth of 6.0% and inflation of 0.5%, with high volatility of growth."
+  ],
+  "rule": "Real GDP growth = nominal − inflation: Country 1 = 8.5 − 3.0 = 5.5%; Country 2 = 6.0 − 0.5 = 5.5%. Equal real growth, so compare volatility: higher volatility → investors demand higher real rates."
+ },
+ "rq2:6": {
+  "hl": [
+   "An index fund that meets its objective exactly"
+  ],
+  "rule": "Meets its objective exactly = tracks the benchmark: active return 0, so the information ratio is 0."
+ },
+ "rq2:7": {
+  "hl": [
+   "For Marlow’s portfolio, Sorensen plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings.",
+   "Passive ETFs will enable Sorensen to maintain benchmark exposure while not necessarily replacing an active ETF manager."
+  ],
+  "rule": "ETF uses: completion = fill a gap in benchmark exposure; rebalancing = return to target weights after market moves; liquidity management = equitize cash for inflows and outflows."
+ },
+ "rq2:8": {
+  "hl": [
+   "Hui Cheung, a portfolio manager, asks her assistant, Ronald Lam, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.",
+   "The current macroeconomic factor model has four factors:"
+  ],
+  "rule": "When using a macroeconomic factor model, the expected return is the intercept (when all model factors take on a value of zero). The intercept coefficient for Portfolio 1 in Exhibit 1 is 2.58."
+ },
+ "rq2:9": {
+  "hl": [
+   "The factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.",
+   "The factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables."
+  ],
+  "rule": "In a macroeconomic factor model, the factors are surprises in macroeconomic variables that significantly explain returns. Factor sensitivities are generally specified first in fundamental factor model"
+ },
+ "rq2:10": {
+  "hl": [
+   "Lam tells Cheung that multifactor models can be useful in active portfolio management, but not in passive management.",
+   "Cheung disagrees; she tells Lam that multifactor models can be useful in both active and passive management."
+  ],
+  "rule": "Analysts can use multifactor models in passively managed portfolios to replicate an index fund’s factor exposures."
+ },
+ "rq2:11": {
+  "hl": [
+   "behave like floating-rate debt",
+   "fixed-rate bonds"
+  ],
+  "rule": "The bonds already make Harlow PAY fixed. To end up floating, the swap must RECEIVE fixed (cancels the bond coupon) and pay floating."
+ },
+ "rq2:12": {
+  "hl": [
+   "Ruth Okafor supervises the options desk at Tellis Securities.",
+   "She reviews four positions: a long call, a short call, a long put and a short put, all on Ardent Mining shares."
+  ],
+  "rule": "Long put signs: delta −, gamma +, vega +, theta −, rho −."
+ },
+ "rq2:13": {
+  "hl": [
+   "I’ve done some analysis of this swap based on current Korean and US interest rates and present value factors, which I’m providing to you in Exhibit 1.”",
+   "She explains, “A fixed-for-fixed currency swap would help reduce the risk from fluctuating USD/KRW exchange rates by providing fixed US dollar payments in exchange for fixed Korean won payments."
+  ],
+  "rule": "The Foundation would receive the US fixed interest rate, which is calculated as [ 1 − P V n , U S ( 1 ) ] [ ∑ i = 1 n P V i , U S ( 1 ) ] = [ 1 − 0.9260 ] [ 0.9884 + 0.9758 + 0.9623 + 0.9470 + 0.9260 "
+ },
+ "rq2:14": {
+  "hl": [
+   "forward price of €88.40",
+   "four months remain until expiration",
+   "pays no dividends"
+  ],
+  "rule": "Long forward value = S₀ − F₀ ÷ (1 + r)^(T − t), using the time left (4/12). The result is a value today, so the forward price is discounted."
+ },
+ "rq2:15": {
+  "hl": [
+   "With respect to other call options on Weston stock, Maddox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity.",
+   "Birch adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price."
+  ],
+  "rule": "Maddox is right: the volatility surface shows implied volatility across both exercise prices and maturities. C is wrong: implied volatility is backed out from MARKET option prices and reflects expecte"
+ },
+ "rq2:16": {
+  "hl": [
+   "The FRA is settled in advance: the settlement amount is paid at FRA expiration, discounted at the three-month MRR.",
+   "Situation 2: At FRA expiration (month 6), three-month MRR is 2.85%."
+  ],
+  "rule": "Interest difference paid at T (month 9) = (2.85% − 2.40%) × 90/360 × 25,000,000 = €28,125"
+ },
+ "rq2:17": {
+  "hl": [
+   "@row:Exercise price of Marlow put option",
+   "@row:Risk-free rate",
+   "@row:Up factor",
+   "@row:Down factor",
+   "American-style put option on Marlow Corporation that matures in two years"
+  ],
+  "rule": "American put: at each node take the larger of the binomial (continuation) value and the exercise value K − S."
+ },
+ "rq2:18": {
+  "hl": [
+   "dirty price of 105.20",
+   "quoted futures price is 136.00",
+   "conversion factor is 0.7550"
+  ],
+  "rule": "Market 136.00 < model ≈ 138.76: the futures is cheap. Cheap futures = buy futures, short the note, lend (reverse cash-and-carry)."
+ },
+ "rq2:19": {
+  "hl": [
+   "Troubadour identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond.",
+   "Current data on the futures contract and underlying bond are presented in Exhibit 1."
+  ],
+  "rule": "Carry the bond price plus accrued interest forward to expiry. Futures side = CF × futures price + accrued interest at expiry. Discount only the final difference."
+ },
+ "rq2:20": {
+  "hl": [
+   "Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1.",
+   "Kowalski asks Lebedeva about the typical impact of credit rating migration on the expected return on a bond."
+  ],
+  "rule": "Expected return = YTM + expected % price change from migration. Each transition: −7.54 × (new spread − 1.50%) × probability. Sum = −1.76715%. Expected return = 5.50% − 1.77% = 3.73%."
+ },
+ "rq2:21": {
+  "hl": [
+   "Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1.",
+   "She then estimates the bond’s yield to maturity and the bond’s credit spread over the benchmark in Exhibit 2."
+  ],
+  "rule": "Step 1: VND from the tree (discount at tree forward rates, risk-neutral probs 0.5) = 100.0000. Step 2: CVA = sum of PV(expected exposure × LGD fraction × POD): exposures 103.0000, 103.3535, 105.0000; "
+ },
+ "rq2:22": {
+  "hl": [
+   "spot curve one year from today will reflect the current forward curve"
+  ],
+  "rule": "Future spot = today's forward rates is the pure expectations theory."
+ },
+ "rq2:23": {
+  "hl": [
+   "calibrated binomial tree",
+   "option-free"
+  ],
+  "rule": "A calibrated tree reprices the benchmark bonds, so an option-free bond is worth the same as with spot rates. Volatility only matters for embedded options."
+ },
+ "rq2:24": {
+  "hl": [
+   "The coupon is capped at 4.8%.",
+   "Silva values a two-year floating-rate note with an annual coupon equal to the one-year reference rate set at the start of each year, paid at the end of the year."
+  ],
+  "rule": "Time 1 upper: rate 5.40% > cap → coupon 4.8: value = 104.80/1.054 = 99.4307"
+ },
+ "rq2:25": {
+  "hl": [
+   "three-year forward rate two years from now, f(2,3)",
+   "zero-coupon bond paying 1 at year 5"
+  ],
+  "rule": "F(j,k) = 1 ÷ (1 + f(j,k))^k. The exponent is k, the 3 years the bond still has after the forward date."
+ },
+ "rq2:26": {
+  "hl": [
+   "Brandt then estimates the bond's yield to maturity and the bond's credit spread over the benchmark in Exhibit 2.",
+   "Brandt asks Marangoni, \"What might cause the bond's credit spread to decrease?\""
+  ],
+  "rule": "Step 1: VND from the tree (discount at the tree rates, probability 0.5 on each branch, coupon 4) = 100.0000."
+ },
+ "rq2:27": {
+  "hl": [
+   "Bond Q is callable",
+   "interest rates fall sharply"
+  ],
+  "rule": "Rates fall + callable = the call will be exercised: duration shortens, convexity turns negative (price compression)."
+ },
+ "rq2:28": {
+  "hl": [
+   "The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
+   "Zhou adds: “While your example represents good practice, we also need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates."
+  ],
+  "rule": "Calibration depends on a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds, not the bond being evaluated."
+ },
+ "rq2:29": {
+  "hl": [
+   "Based on Shah's investment objectives, Ricci recommends the following types of investments:",
+   "Marco Ricci is a financial adviser specializing in commercial real estate investing."
+  ],
+  "rule": "REIT is a pass-through (no corporate tax, no double taxation). A REOC is taxed as a company and can hold properties under development."
+ },
+ "rq2:30": {
+  "hl": [
+   "@row:Property subsector",
+   "risk factor most likely to adversely affect an investment in REIT B"
+  ],
+  "rule": "Match the property subsector to its main risk: storage = new competitive facilities (easy entry)."
+ },
+ "rq2:31": {
+  "hl": [
+   "must absorb considerable unreimbursed operating expenses",
+   "@row:Expense reimbursement revenue",
+   "@row:Effective gross income",
+   "@row:Property management fees",
+   "@row:Other operating expenses"
+  ],
+  "rule": "Compare unreimbursed expenses (total expenses minus reimbursement revenue) as a share of effective gross income, not in dollars."
+ },
+ "rq2:32": {
+  "hl": [
+   "high vacancy rates indicate",
+   "recovery stage of the real estate cycle within two years"
+  ],
+  "rule": "High vacancy = oversupply/recession; recovery comes before expansion, so a recovery call is more accurate than an expanding-NOI call."
+ },
+ "rq2:33": {
+  "hl": [
+   "Castell values Alpenhaus REIT.",
+   "Next year's net operating income is CHF 32 million and the market capitalisation rate for similar properties is 6.4%."
+  ],
+  "rule": "Property value by direct capitalisation (not depreciated book cost) = NOI / cap rate = 32.0/0.064 = CHF 500.0m"
+ },
+ "rq2:34": {
+  "hl": [
+   "The results of Smith's regression are provided in Exhibit 2:",
+   "Exhibit 2: Foreclosure Share Regression Results"
+  ],
+  "rule": "The t-statistic is -2.10 for STIM and 2.35 for CRISIS. The critical t at the 5% level (16 degrees of freedom) is 2.12. STIM is not significant (|-2.10| < 2.12); CRISIS is significant (2.35 > 2.12)."
+ },
+ "rq2:35": {
+  "hl": [
+   "differences between the estimated values for the independent variables and the actual observations for the independent variable"
+  ],
+  "rule": "SEE = standard deviation of the residuals (dependent variable); small SEE = strong fit; violations of assumptions affect it."
+ },
+ "rq2:36": {
+  "hl": [
+   "Model A has AIC −310 and BIC −298.",
+   "Model B has AIC −314 and BIC −296."
+  ],
+  "rule": "Lower is better for both."
+ },
+ "rq2:37": {
+  "hl": [
+   "value for b0 is close to zero and the value of b1 is close to 1",
+   "@row:Constant (b0)",
+   "@row:Lagged P/E (b1)"
+  ],
+  "rule": "Random walk as AR(1): b0 ≈ 0, b1 ≈ 1."
+ },
+ "rq2:38": {
+  "hl": [
+   "HTML tags, punctuation, numbers and extra white space",
+   "cleansed tokens"
+  ],
+  "rule": "Removing HTML tags, punctuation, numbers and white space = cleansing. Lowercasing, stop words, stemming and lemmatisation = wrangling."
  }
 }

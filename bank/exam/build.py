@@ -307,6 +307,17 @@ def make_m1112_set(setid,n,title,units,positions,desc):
     return st
 sets.append(make_m1112_set('mock11',11,'Mock 11',M1112['m11'],M1112['pos11'],'First half of the 88-question exam (Mock 11 + Mock 12, taken back to back): 11 vignettes, 44 questions, 2 h 12 min'))
 sets.append(make_m1112_set('mock12',12,'Mock 12',M1112['m12'],[M1112['pos12']],'Second half of the 88-question exam (Mock 11 + Mock 12): 11 vignettes, 44 questions, 2 h 12 min'))
+# ---- Incorrect-question sets rq1, rq2 (12 Nov): built by retry_sets.py (wrong questions of Mocks 6-10 and Practice sets 1-4, relevant vignette parts only) ----
+for _sid in ('rq1','rq2'):
+    _d=json.load(open(f'/home/user/jimin/bank/exam/{_sid}.json')); _st=_d['set']; _n=0
+    for _v in _st['vignettes']:
+        for _q in _v['questions']:
+            _n+=1; _h=_d['hints'][f'{_sid}:{_n}']
+            for _ph in _h['hl']:
+                if _ph.startswith('@row:'): continue
+                assert _ph in _v['body'] or _ph in _q['q'],(_sid,_n,_ph)
+            assert len(set(_q['options']))==3 and 0<=_q['answer']<3,(_sid,_n)
+    HH.update(_d['hints']); sets.append(_st); print(_sid,_n)
 # ---- hint overrides (11 Nov): only decisive words/rows are highlighted; the rule text of the old hint is kept ----
 import importlib.util as _iu
 _sp=_iu.spec_from_file_location('hints_override','/home/user/jimin/bank/exam/hints_override.py'); _hm=_iu.module_from_spec(_sp); _sp.loader.exec_module(_hm)

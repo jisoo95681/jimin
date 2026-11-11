@@ -1,0 +1,871 @@
+{
+ "set": {
+  "id": "rq2",
+  "rev": 2,
+  "resetHl": [],
+  "title": "Incorrect questions 2",
+  "kind": "practice",
+  "minutes": 114,
+  "desc": "Questions you got wrong in Mocks 6-10 and Practice sets 1-4 (Portfolio Management, Derivatives, Fixed Income, Alternatives, Quantitative Methods), relevant vignette parts only (38 questions)",
+  "vignettes": [
+   {
+    "topic": "Portfolio Management",
+    "body": "Part 1\nSterling Investment Partners is a global asset management firm offering a wide variety of mutual funds to both institutional and individual investors. Victor Almeida, Sterling’s chief risk officer, is responsible for risk oversight across the firm’s many strategies, as well as communication of any risk issues to the portfolio management, compliance, and executive teams. Almeida oversees a team of six analysts who are responsible for the ongoing calculation and assessment of portfolio risk. Sterling uses a variety of methods when estimating risk, including value at risk (VaR), sensitivity risk measures, and scenario risk measures.\n\nJoanna Whitfield just joined Sterling as a risk analyst, and Almeida is familiarizing her with how the firm measures portfolio risk. In a conversation with Whitfield, Almeida asks her what she has learned regarding the advantages of using VaR as a risk management tool. Whitfield responds, “The advantages of VaR are that it (1) provides an estimate of downside exposure during a worst-case scenario, (2) avoids subjectivity, and (3) can be used for performance evaluation.”\n\nLater that day, Whitfield receives an email from Almeida asking her to estimate the dollar VaR at the 5% level for the firm’s developing market equity fund. Whitfield estimates VaR using the parametric method (assuming normal distribution) with the inputs in Exhibit 1.\n\nExhibit 1 Data for Developing Market Equity Fund\nPortfolio value | $800 million\nDaily expected return | 0.05%\nDaily expected volatility | 1.10%\n\nPart 2\nObservation 3: An investor compares a building leased to a government agency with a similar building leased to commercial tenants.\n\nPart 3\nRavi Kapoor evaluates the Orion Equity Fund against its benchmark using a three-factor model. Last year the fund returned 11.2% and the benchmark returned 8.1%.\n\nExhibit 2: Factor Sensitivities and Factor Returns\n# Factor | Fund sensitivity | Benchmark sensitivity | Factor return\nMarket | 1.15 | 1.00 | 6.0%\nSize | 0.40 | 0.10 | 2.0%\nValue | -0.10 | 0.20 | 4.0%\n\nPart 4\nLucia Ferrante, an economist at Banca Orsini, explains the links between the economy and asset prices.\n\nPoint 3: Country 1 has nominal GDP growth of 8.5% and inflation of 3.0%, with low volatility of growth. Country 2 has nominal GDP growth of 6.0% and inflation of 0.5%, with high volatility of growth.",
+    "questions": [
+     {
+      "q": "Whitfield's comments on the advantages of VaR are most likely correct regarding:",
+      "options": [
+       "performance evaluation.",
+       "subjectivity.",
+       "downside exposure."
+      ],
+      "answer": 0,
+      "why": "A. Correct. VaR can be the basis for risk adjustment of returns, which is needed in performance evaluation.\nB. Incorrect. VaR relies on subjective inputs: the confidence level, the time horizon and the estimation method.\nC. Incorrect. VaR is not a worst-case scenario; losses can and will exceed VaR."
+     },
+     {
+      "q": "A limitation of the parametric method that Whitfield used to estimate VaR is that it:",
+      "options": [
+       "assumes returns are normally distributed, which fits poorly with fat tails and options.",
+       "requires a large number of random scenarios to be generated.",
+       "uses actual past returns, so it cannot capture new risks."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The parametric method assumes a normal distribution, which understates tail risk and does not suit portfolios with options.\nB. Incorrect. Generating random scenarios describes Monte Carlo simulation.\nC. Incorrect. Using actual past returns describes the historical simulation method."
+     },
+     {
+      "q": "For Observation 3, the commercial building's rental income should most likely be discounted at:",
+      "options": [
+       "a lower rate, because commercial rents rise faster",
+       "the same rate, because both include inflation and inflation uncertainty premiums",
+       "a higher rate, because it includes a credit risk premium for the tenants"
+      ],
+      "answer": 2,
+      "why": "Value = net rental income / (1 + r)^t, where net rental income = rental payments − rental expenses. Both rates include inflation (π) and inflation uncertainty (θ); the commercial lease also includes a credit risk premium (φ), so its discount rate is higher."
+     },
+     {
+      "q": "Based on its sensitivities, the fund's style relative to the benchmark is best described as:",
+      "options": [
+       "high beta, small-cap and growth",
+       "low beta, large-cap and value",
+       "high beta, large-cap and value"
+      ],
+      "answer": 0,
+      "why": "Positive active market sensitivity → beta > benchmark; positive size → small-cap tilt; negative value → growth tilt. (Momentum: positive = momentum, negative = contrarian.)"
+     },
+     {
+      "q": "Based on Point 3, real interest rates are most likely higher in:",
+      "options": [
+       "Country 2, because real growth is the same but growth is more volatile",
+       "neither country, because real growth is the same",
+       "Country 1, because nominal growth is higher"
+      ],
+      "answer": 0,
+      "why": "Real GDP growth = nominal − inflation: Country 1 = 8.5 − 3.0 = 5.5%; Country 2 = 6.0 − 0.5 = 5.5%. Equal real growth, so compare volatility: higher volatility → investors demand higher real rates."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Part 1\nFelix Arnaud gives the investment committee three points on active management.\n\nPoint 1: An index fund that meets its objective exactly.\n\nPart 2\nPrudent Advisers is a registered investment advisory firm that uses exchange-traded funds (ETFs) for its clients’ investment portfolios. Tom Sorensen is CEO and chief investment officer of Prudent. Steve Marlow, a prospective client, is a high-net-worth individual who is considering transforming his actively managed portfolio of individual stocks and bonds into actively managed and passive ETFs. Marlow is considering this strategy because of the advice of his accountant, Andrew Holt. Sorensen, Marlow, and Holt are meeting to discuss ETFs and their growing use in the construction of investment portfolios.\n\nMarlow wants to maintain the current blended stock and bond benchmark allocations following his portfolio’s transition from individual stocks and bonds to active and passive ETFs. Sorensen states that whenever active ETF managers implement active views, gaps with respect to desired market exposures may result. For Marlow’s portfolio, Sorensen plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings. Passive ETFs will enable Sorensen to maintain benchmark exposure while not necessarily replacing an active ETF manager.\n\nPart 3\nHui Cheung, a portfolio manager, asks her assistant, Ronald Lam, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.\n\nThe current macroeconomic factor model has four factors:\n\nRi = ai + bi1FGDP + bi2FCAP + bi3FCON + bi4FUNEM + εi,\nWhere FGDP, FCAP, FCON, and FUNEM represent unanticipated changes in four factors: gross domestic product, manufacturing capacity utilization, consumer spending, and the rate of unemployment, respectively. Lam assumes the error term is equal to zero when using this model.\n\nLam estimates the current model using historical monthly returns for three portfolios for the most recent five years. The inputs used in and estimates derived from the macroeconomic factor model are presented in Exhibit 1. The US Treasury bond rate of 2.5% is used as a proxy for the risk-free rate of interest.\n\nExhibit 1\nInputs for and Estimates from the Current Macroeconomic Model\n# Factor | Portfolio 1 | Portfolio 2 | Portfolio 3 | Benchmark | Factor surprise (%)\nIntercept (%) | 2.58 | 3.20 | 4.33 | --- | ---\nFGDP | 0.75 | 1.00 | 0.24 | 0.50 | 0.8\nFCAP | −0.23 | 0.00 | −1.45 | −1.00 | 0.5\nFCON | 1.23 | 0.00 | 0.50 | 1.10 | 2.5\nFUNEM | −0.14 | 0.00 | −0.05 | −0.10 | 1.0\n\nLam and Cheung discuss similarities and differences between macroeconomic factor models and fundamental factor models, and Lam offers a comparison of those models to statistical factor models. Lam makes the following statements.\n\nStatement 1:\nThe factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.\n\nStatement 2:\nThe factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables.\n\nLam tells Cheung that multifactor models can be useful in active portfolio management, but not in passive management. Cheung disagrees; she tells Lam that multifactor models can be useful in both active and passive management.",
+    "questions": [
+     {
+      "q": "The information ratio of the index fund in Point 1 is most likely:",
+      "options": [
+       "equal to its Sharpe ratio",
+       "zero",
+       "indeterminate but positive"
+      ],
+      "answer": 1,
+      "why": "An index fund that tracks its benchmark exactly has zero active return, so its IR is zero."
+     },
+     {
+      "q": "Sorensen’s explanation of benchmark exposure most likely describes portfolio:",
+      "options": [
+       "liquidity management.",
+       "completion strategies.",
+       "rebalancing."
+      ],
+      "answer": 1,
+      "why": "C. Incorrect. Sorensen’s explanation describes completion strategies, not portfolio rebalancing. Portfolio rebalancing describes how ETFs are used by investors to remain fully invested according to target weights whenever changes in market values cause a portfolio’s segments to deviate from target weights. | B. Correct. Sorensen’s explanation of benchmark exposure describes portfolio completion. ETFs can be used to fill a temporary gap in exposure to an asset class. Gaps may arise whenever an active manager transitions a portfolio away from a desired market exposure (for example, the portfolio’s benchmark). An investor may use a passive ETF to maintain the exposure while retaining the manager. | C. Incorrect. Sorensen’s explanation describes completion strategies, not portfolio liquidity management. Portfolio liquidity management describes how ETFs are used by investors to efficiently invest excess cash balances, which reduces a portfolio’s cash drag."
+     },
+     {
+      "q": "Assuming that the information in Exhibit 1 reflects the analyst's view, the expected return for Portfolio 1 is closest to:",
+      "options": [
+       "2.58%.",
+       "3.42%.",
+       "6.00%."
+      ],
+      "answer": 0,
+      "why": "A is correct. When using a macroeconomic factor model, the expected return is the intercept (when all model factors take on a value of zero). The intercept coefficient for Portfolio 1 in Exhibit 1 is 2.58."
+     },
+     {
+      "q": "Which of Lam’s statements regarding macroeconomic factor models and fundamental factor models is correct?",
+      "options": [
+       "Only Statement 1",
+       "Only Statement 2",
+       "Both Statements 1 and 2"
+      ],
+      "answer": 2,
+      "why": "C is correct. In a macroeconomic factor model, the factors are surprises in macroeconomic variables that significantly explain returns. Factor sensitivities are generally specified first in fundamental factor models, whereas factor sensitivities are estimated last in macroeconomic factor models."
+     },
+     {
+      "q": "Whose statement regarding the use of multifactor models in active and passive portfolio management is correct?",
+      "options": [
+       "Both Lam and Cheung",
+       "Lam only",
+       "Cheung only"
+      ],
+      "answer": 2,
+      "why": "C is correct. Analysts can use multifactor models in passively managed portfolios to replicate an index fund’s factor exposures."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Part 1\nHarlow Utilities has issued fixed-rate bonds. Its CFO, Lena Brandt, says: \"I want our debt to behave like floating-rate debt so that the market value of our liabilities is less sensitive to changes in interest rates.\"\n\nPart 2\nRuth Okafor supervises the options desk at Tellis Securities. She reviews four positions: a long call, a short call, a long put and a short put, all on Ardent Mining shares. A client who owns 50,000 Ardent shares asks Okafor how buying put options on Ardent would change the risk of the client's position.\n\nPart 3\nSeo-jun Pak is the CEO of the Nakdong Foundation (“the Foundation”), an organization located in Busan, South Korea, whose mission is to support rural healthcare initiatives. The Foundation has a KRW220 billion portfolio consisting entirely of actively managed South Korean equities. The portfolio manager, Ha-eun Kang, has an excellent 14-year track record of beating the KOSPI 200, an index of the 200 largest firms traded on the Korea Exchange. She is permitted to use derivatives to control risks within the portfolio and to synthetically alter positions without trading the underlying securities, many of which are somewhat illiquid.\n\nKang tells Pak she is considering entering into a currency swap because the Foundation has a number of long-term contracts to purchase supplies and equipment for rural clinics and these contracts are priced in US dollars. She explains, “A fixed-for-fixed currency swap would help reduce the risk from fluctuating USD/KRW exchange rates by providing fixed US dollar payments in exchange for fixed Korean won payments. I’m looking at a five-year swap with annual payments. I’ve done some analysis of this swap based on current Korean and US interest rates and present value factors, which I’m providing to you in Exhibit 1.”\n\nExhibit 1 Korean and US Interest Rates and PV Factors\n# T | Korean Treasury Yield | Present Value KRW1 | US Treasury Yield | Present Value USD1\n1 | 1.82 | 0.9821 | 1.17 | 0.9884\n2 | 2.05 | 0.9602 | 1.23 | 0.9758\n3 | 2.18 | 0.9374 | 1.29 | 0.9623\n4 | 2.26 | 0.9145 | 1.37 | 0.9470\n5 | 2.30 | 0.8925 | 1.55 | 0.9260\n\nPart 4\nTen months ago, Marco Bellini entered a long 14-month forward contract on one share of Lumen Foods, a stock that pays no dividends, at a forward price of €88.40. Today Lumen's share price is €94.10, so four months remain until expiration. The risk-free rate is 2.2% a year with annual compounding.\n\nPart 5\nArnold Birch is CEO and chief investment officer of Plymouth Capital, a registered investment advisory firm. He is working with Tom Jeffries, head trader, and Jim Maddox, a new analyst. They meet to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.\n\nMaddox notes that the implied volatility for the Weston call option outlined in Exhibit 2 is 30%. With respect to other call options on Weston stock, Maddox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Birch adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Jeffries concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising.",
+    "questions": [
+     {
+      "q": "To meet Brandt's objective, Harlow should enter into a swap in which it:",
+      "options": [
+       "pays fixed and receives floating",
+       "pays floating and receives fixed",
+       "pays fixed and receives an equity return"
+      ],
+      "answer": 1,
+      "why": "Harlow pays fixed on its bonds. Receiving fixed and paying floating on a swap cancels the fixed payments and leaves floating-rate debt, whose value is much less sensitive to rate changes.\nTo reduce interest rate risk of fixed-rate debt: pay-floating interest rate swap."
+     },
+     {
+      "q": "Which Greeks are negative for a long put?",
+      "options": [
+       "Delta and gamma",
+       "Gamma and vega",
+       "Delta and rho"
+      ],
+      "answer": 2,
+      "why": "Long put signs: delta −, gamma +, vega +, theta −, rho −.\nHigher rates lower put values, so rho is negative."
+     },
+     {
+      "q": "Based on the information in Exhibit 1, the interest rate that the Foundation would receive in the proposed currency swap is closest to:",
+      "options": [
+       "1.32%.",
+       "1.54%.",
+       "2.29%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the geometric average of the US interest rates.\nB. Correct. The Foundation would receive the US fixed interest rate, which is calculated as [ 1 − P V n , U S ( 1 ) ] [ ∑ i = 1 n P V i , U S ( 1 ) ] = [ 1 − 0.9260 ] [ 0.9884 + 0.9758 + 0.9623 + 0.9470 + 0.9260 ] = 0.074 4.7995 = 0.0154 or 1.54%.\nC. Incorrect. This is the Korean fixed rate, which the Foundation would pay, not receive."
+     },
+     {
+      "q": "The current value of Bellini's forward position is closest to:",
+      "options": [
+       "€6.39",
+       "€5.70",
+       "€6.34"
+      ],
+      "answer": 2,
+      "why": "Value (long) = (FPt − FP0) / (1 + r)^(T−t), with T − t = 4/12.\nFPt = 94.10 × 1.022^(4/12) = 94.7851\nValue = (94.7851 − 88.40) / 1.022^(4/12) = 6.34\nEquivalently S − F0/(1+r)^(T−t). €5.70 forgets discounting F0; €6.39 is not discounted to today."
+     },
+     {
+      "q": "Whose comment regarding implied volatility is most likely correct?",
+      "options": [
+       "Maddox’s",
+       "Birch’s",
+       "Jeffries’s"
+      ],
+      "answer": 0,
+      "why": "Maddox is right: the volatility surface shows implied volatility across both exercise prices and maturities. C is wrong: implied volatility is backed out from MARKET option prices and reflects expected FUTURE volatility; it is not calculated from historical volatility. A is wrong: when demand for hedging rises, the skew steepens, so its shape differs from the smile; they don't become identical."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Part 1\nKaito Mori, a treasury analyst at Shirane Bank, entered a long 6 × 9 FRA (pay fixed, receive three-month MRR) on a notional of €25 million at an FRA rate of 2.40%. The FRA is settled in advance: the settlement amount is paid at FRA expiration, discounted at the three-month MRR.\n\nSituation 2: At FRA expiration (month 6), three-month MRR is 2.85%.\n\nPart 2\nKaren Liu is a US-based hedge fund manager. To value the options in her fund, Liu uses both the Black–Scholes–Merton (BSM) and binomial option pricing models.\n\nLiu next considers an American-style put option on Marlow Corporation that matures in two years. She values it with a two-period binomial option pricing model and collects the relevant information in Exhibit 2. Marlow does not pay dividends.\n\nExhibit 2\nCurrent share price of Marlow | $80\nExercise price of Marlow put option | $84\nRisk-free rate (compounded annually) | 4%\nUp factor (u) | 1.25\nDown factor (d) | 0.80\nStock prices in one year | S+ = $100, S- = $64\nStock prices in two years | S++ = $125, S+- = $80, S-- = $51.2\n\nPart 3\nAnika Feld is a fixed-income derivatives trader at Rhinebeck Capital. She and her colleague Tomas Lindgren review two Treasury note futures contracts.\n\nThe underlying 2.5% semi-annual Treasury note has a dirty price of 105.20. It has been 40 days since the last coupon payment, and the futures contract expires in 90 days. No coupon is paid before expiration. The quoted futures price is 136.00, the annualised three-month risk-free rate is 1.80%, and the conversion factor is 0.7550.\n\nPart 4\nDonald Troubadour is a derivatives trader for Southern Shores Investments. The firm seeks arbitrage opportunities in the forward and futures markets using the carry arbitrage model.\n\nTroubadour identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond. Current data on the futures contract and underlying bond are presented in Exhibit 1. The current annual compounded risk-free rate is 0.30%.\n\nExhibit 1\nCurrent Data for Futures and Underlying Bond\nFutures contract |  \nQuoted futures price | 125.00\nConversion factor | 0.90\nTime remaining to contract expiration | Three months\nAccrued interest over life of futures contract | 0.00\nUnderlying bond |  \nQuoted bond price | 112.00\nAccrued interest since last coupon payment | 0.08\nAccrued interest at futures contract expiration | 0.20",
+    "questions": [
+     {
+      "q": "In Situation 2, the settlement amount Mori receives at FRA expiration is closest to:",
+      "options": [
+       "€28,125",
+       "€112,500",
+       "€27,926"
+      ],
+      "answer": 2,
+      "why": "Interest difference paid at T (month 9) = (2.85% − 2.40%) × 90/360 × 25,000,000 = €28,125\nSettled at month 6, so discount for 90 days at MRR: 28,125 / (1 + 0.0285 × 90/360) = €27,926"
+     },
+     {
+      "q": "Using the two-period binomial option pricing model, the value of the American put on Marlow Corporation is closest to:",
+      "options": [
+       "$8.45.",
+       "$9.89.",
+       "$10.48."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the European put price: 8.45 (no early exercise at the down node).\nB. Correct. Risk-neutral probability = (1 + r − d) ÷ (u − d) = 0.5333. Puts at T = 2: Puu = 0, Pud = 4, Pdd = 32.8. At T = 1: P+ = 1.7949; down node: the binomial value is 16.7692, but early exercise gives 84 − 64 = 20, so P− = 20. P0 = [0.5333 × 1.7949 + 0.4667 × 20] ÷ 1.04 = $9.89.\nC. Incorrect. It uses risk-neutral probabilities of 0.5 instead of 0.5333: $10.48."
+     },
+     {
+      "q": "Based on the equilibrium price, the arbitrage strategy for the ten-year note futures is to:",
+      "options": [
+       "buy the futures, short sell the note and lend the proceeds",
+       "take no position, because the contract is fairly priced",
+       "sell the futures, buy the note with borrowed funds"
+      ],
+      "answer": 0,
+      "why": "Market price 136.00 < model price 138.76, so the futures is undervalued.\nUndervalued → reverse cash-and-carry: Buy futures, Short the bond, Lend (BSL).\nOvervalued (market > model) would be cash-and-carry: Sell futures, Buy bond, Borrow (SBB)."
+     },
+     {
+      "q": "Based on Exhibit 1 and assuming annual compounding, the arbitrage profit on the bond futures contract is closest to:",
+      "options": [
+       "0.4158.",
+       "0.5356.",
+       "0.6195."
+      ],
+      "answer": 1,
+      "why": "B is correct.\n\nThe no-arbitrage futures price is equal to the following:\n\nF0 = FV[B0 + AI0 – PVCI]\nF0 = (1 + 0.003)0.25(112.00 + 0.08 – 0) = 112.1640.\nThe adjusted price of the futures contract is equal to the conversion factor multiplied by the quoted futures price:\n\nF0 = CF × Q0\nF0 = (0.90)(125) = 112.50.\nAdding the accrued interest of 0.20 in three months (futures contract expiration) to the adjusted price of the futures contract gives a total price of 112.70.\n\nThis difference means that the futures contract is overpriced by 112.70 – 112.1640 = 0.5360. The available arbitrage profit is the present value of this difference: 0.5360/(1.003)0.25 = 0.5356."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Part 1\nAnna Lebedeva is a fixed-income portfolio manager. Paulina Kowalski, a junior analyst, and Lebedeva meet to review several positions in Lebedeva’s portfolio.\n\nLebedeva begins the meeting by discussing credit rating migration. Kowalski asks Lebedeva about the typical impact of credit rating migration on the expected return on a bond. Lebedeva asks Kowalski to estimate the expected return over the next year on a bond issued by Entre Corp. The BBB rated bond has a yield to maturity of 5.50% and a modified duration of 7.54. Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1. She assumes that market spreads and yields will remain stable over the year.\n\nExhibit 1 One-Year Transition Matrix for BBB Rated Bonds and Credit Spreads\n# Rating | AAA | AA | A | BBB | BB | B | CCC, CC, C\nProbability (%) | 0.02 | 0.30 | 4.80 | 85.73 | 6.95 | 1.75 | 0.45\nCredit spread | 0.60% | 0.90% | 1.10% | 1.50% | 3.40% | 6.50% | 9.50%\n\nLebedeva next asks Kowalski to analyze a three-year bond, issued by VraiRive S.A., using an arbitrage-free framework. The bond’s coupon rate is 5%, with interest paid annually and a par value of 100. In her analysis, she makes the following three assumptions:\nThe annual interest rate volatility is 10%.\nThe recovery rate is one-third of the exposure each period.\nThe annual probability of default each year is 2.00%.\n\nSelected information on benchmark government bonds for the VraiRive bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2 Par Curve Rates for Annual Payment Benchmark Government Bonds\n# Maturity | Coupon Rate | Price | Discount Factor | Spot Rate | Forward Rate\n1 | 3.00% | 100 | 0.970874 | 3.0000% | 3.0000%\n2 | 4.20% | 100 | 0.920560 | 4.2255% | 5.4656%\n3 | 5.00% | 100 | 0.862314 | 5.0618% | 6.7547%\n\nExhibit 3 One-Year Binomial Interest Rate Tree for 10% Volatility (risk-neutral probabilities in parentheses)\nDate 0 rate: 3.00%. Date 1 rates (top to bottom): 6.0139%, 4.9238%. Date 2 rates (top to bottom): 8.1823%, 6.6991%, 5.4848%.\n\nKowalski estimates the value of the VraiRive bond assuming no default (VND) as well as the fair value of the bond. She then estimates the bond’s yield to maturity and the bond’s credit spread over the benchmark in Exhibit 2. Kowalski asks Lebedeva, “What might cause the bond’s credit spread to decrease?”\n\nPart 2\nLeon Fischer is a fund manager with Summit Asset Partners, a fixed-income asset management firm. He actively manages his fund's holdings, duration, and yield curve exposure.\n\nFischer's fund currently has a large position in two option-free and default-risk-free zero-coupon bonds. The first bond has a 1-year maturity and the other bond has a 10-year maturity. Fischer's view is that the spot curve one year from today will reflect the current forward curve. Interest rate information for option-free and default-risk-free zero-coupon bonds is contained in Exhibit 4.\n\nExhibit 4\nMaturity (years) | 1 | 2 | 3\nSpot rate | 2.50% | 3.40% | 4.30%\n1-year forward rate | f0,1 = 2.50% | f1,1 = 4.31% | f2,1 = 6.12%\n\nPart 3\nBettina Kral, a fixed-income analyst, shows one interest rate path generated from a calibrated binomial tree. The tree has nodes at times 0, 1, 2 and 3. Along the path the one-year rates are 2.0% (time 0 to 1), 3.1% (time 1 to 2), 3.8% (time 2 to 3) and 4.4% (time 3 to 4).\n\nShe values a three-year, 4% annual-coupon, option-free bond along this path using the pathwise method.\n\nPart 4\nSilva values a two-year floating-rate note with an annual coupon equal to the one-year reference rate set at the start of each year, paid at the end of the year. The coupon is capped at 4.8%. Exhibit 5 shows the calibrated binomial interest rate tree (equal probabilities).\n\nExhibit 5: One-Year Rates\n# Node | Rate\nTime 0 | 3.20%\nTime 1, upper node | 5.40%\nTime 1, lower node | 3.80%",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the one-year expected return on the Entre Corp. bond is closest to:",
+      "options": [
+       "3.73%.",
+       "5.50%.",
+       "7.27%."
+      ],
+      "answer": 0,
+      "why": "A is correct. Expected return = YTM + expected % price change from migration. Each transition: −7.54 × (new spread − 1.50%) × probability. Sum = −1.76715%. Expected return = 5.50% − 1.77% = 3.73%."
+     },
+     {
+      "q": "Based on Kowalski’s assumptions and Exhibit 2 and Exhibit 3, the credit spread on the VraiRive bond is closest to:",
+      "options": [
+       "0.6949%.",
+       "0.9388%.",
+       "1.4082%."
+      ],
+      "answer": 2,
+      "why": "C is correct. Step 1: VND from the tree (discount at tree forward rates, risk-neutral probs 0.5) = 100.0000. Step 2: CVA = sum of PV(expected exposure × LGD fraction × POD): exposures 103.0000, 103.3535, 105.0000; LGD = 2/3 of exposure; POD 2%, 1.96%, 1.9208%; discounted at benchmark spot discount factors 0.970874, 0.920560, 0.862314 → 1.3333 + 1.2432 + 1.1594 = 3.7360. Fair value = 100 − 3.7360 = 96.2640. Step 3: YTM from 96.2640 = 6.4082%; spread = 6.4082% − 5.0000% = 1.4082%."
+     },
+     {
+      "q": "Fischer's view that the spot curve one year from today will reflect the current forward curve is most consistent with:",
+      "options": [
+       "the liquidity preference theory.",
+       "the pure expectations theory.",
+       "the segmented markets theory."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Liquidity preference adds a premium for longer maturities, so forward rates overstate expected future spot rates.\nB. Correct. Pure expectations: forward rates are unbiased predictors of future spot rates, so the future spot curve equals today's forward curve.\nC. Incorrect. Segmented markets: each maturity is priced by its own supply and demand; forward rates are not forecasts."
+     },
+     {
+      "q": "For an option-free bond, the value found by discounting at spot rates compared with the value from a calibrated binomial tree is:",
+      "options": [
+       "higher when the assumed volatility is higher",
+       "lower when the assumed volatility is higher",
+       "the same, whatever volatility is assumed"
+      ],
+      "answer": 2,
+      "why": "A calibrated tree reprices the benchmark bonds, so an option-free bond has the same value from the tree as from spot rates, regardless of the volatility used. Volatility matters only for bonds with embedded options."
+     },
+     {
+      "q": "The value of the capped floater is closest to:",
+      "options": [
+       "99.72",
+       "99.43",
+       "100.00"
+      ],
+      "answer": 0,
+      "why": "Time 1 upper: rate 5.40% > cap → coupon 4.8: value = 104.80/1.054 = 99.4307\nTime 1 lower: coupon = rate 3.80%: value = 103.80/1.038 = 100.0000\nTime 0: coupon 3.20 (below cap): value = [0.5 × (99.4307 + 3.20) + 0.5 × (100.0000 + 3.20)] / 1.032 = 99.72\nAn uncapped floater would be worth 100."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Part 1\nDiego Navas, a fixed-income analyst, computes forward prices. The three-year forward rate two years from now, f(2,3), is 3.2% (annual compounding).\n\nPart 2\nSofia Marangoni is a fixed-income portfolio manager. Tomasz Brandt, a junior analyst, and Marangoni meet to review several positions in Marangoni's portfolio.\n\nMarangoni next asks Brandt to analyze a three-year bond, issued by Norvalle S.A., using an arbitrage-free framework. The bond's coupon rate is 4%, with interest paid annually and a par value of 100. In the analysis, Brandt makes the following three assumptions:\nThe annual interest rate volatility is 15%.\nThe recovery rate is one-quarter of the exposure each period.\nThe annual probability of default each year is 1.50%.\n\nSelected information on benchmark government bonds for the Norvalle bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2\nPar Curve Rates for Annual Payment Benchmark Government Bonds\n# Maturity | Coupon rate | Price | Discount factor | Spot rate | Forward rate\n1 | 2.50% | 100 | 0.975610 | 2.5000% | 2.5000%\n2 | 3.30% | 100 | 0.936888 | 3.3133% | 4.1331%\n3 | 4.00% | 100 | 0.887981 | 4.0396% | 5.5076%\n\nExhibit 3\nOne-Year Binomial Interest Rate Tree for 15% Volatility (risk-neutral probability of 50% on each branch)\n# Date | 0 | 1 (top) | 1 (bottom) | 2 (top) | 2 (middle) | 2 (bottom)\nRate | 2.5000% | 4.7526% | 3.5208% | 7.2932% | 5.4029% | 4.0026%\n\nBrandt estimates the value of the Norvalle bond assuming no default (VND) as well as the fair value of the bond. Brandt then estimates the bond's yield to maturity and the bond's credit spread over the benchmark in Exhibit 2. Brandt asks Marangoni, \"What might cause the bond's credit spread to decrease?\"\n\nPart 3\nGabriela Silva, a portfolio manager at Tamsin Fixed Income, compares bonds with embedded options. All bonds have the same issuer, maturity and coupon unless stated otherwise.\n\nBond P is a floating-rate note whose coupon resets once a year; the next reset is in one year.\nBond Q is callable, Bond R is putable and Bond S is an option-free (straight) bond.\n\nPart 4\nDennis Zhou is a fixed-income analyst at Equilibrium Partners, a hedge fund focusing on global macro arbitrage opportunities. The fixed-income team focuses on securities issued in developing markets that trade in multiple world financial centers. Zhou is conducting a training session for a new analyst, John Hollis.\n\nZhou adds: “While your example represents good practice, we also need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates. We typically construct an interest rate tree as a visual representation of the paths of future interest rates, with the average of possible future values being centered on the current yield curve. The following three steps can be employed to construct an interest rate tree for valuing a particular bond:\n\nStep 1: Using prices of the benchmark bonds, determine the current par curve.\nStep 2: Estimate interest rate volatility, and calculate the potential paths of future rates.\nStep 3: Starting with the current market price, calculate each successive node’s value.\n\nThe interest rate tree must then be calibrated to fit the actual yield curve while being consistent with an underlying interest rate model.”\n\nHollis states: “I believe the iterative process must involve a trial-and-error search to determine the higher and lower rates subsequent to each node in the tree, which branches out from an average yield centered on the forward rate curve. The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
+    "questions": [
+     {
+      "q": "The forward price, two years from now, of a zero-coupon bond paying 1 at year 5 is closest to:",
+      "options": [
+       "0.8543",
+       "0.9690",
+       "0.9098"
+      ],
+      "answer": 2,
+      "why": "Forward price F(j,k) = 1 / (1 + f(j,k))^k = 1 / 1.032³ = 0.9098\nThe exponent is k (the 3-year length of the forward period), not j or j + k."
+     },
+     {
+      "q": "Based on Brandt's assumptions and Exhibits 2 and 3, the credit spread on the Norvalle bond is closest to:",
+      "options": [
+       "0.7796%.",
+       "1.1782%.",
+       "1.5828%."
+      ],
+      "answer": 1,
+      "why": "B. Correct. Step 1: VND from the tree (discount at the tree rates, probability 0.5 on each branch, coupon 4) = 100.0000.\nStep 2: CVA = sum of DF × probability of default × LGD × expected exposure. Expected exposures 102.5000, 102.5665, 104.0000; LGD = 3/4 of exposure (recovery one-quarter); probabilities of default in each year 1.5000%, 1.4775%, 1.4553%; benchmark discount factors 0.975610, 0.936888, 0.887981. CVA = 1.1250 + 1.0648 + 1.0080 = 3.1978.\nStep 3: Fair value = 100 − 3.1978 = 96.8022. The yield to maturity that prices the bond at 96.8022 is 5.1782%.\nStep 4: Credit spread = 5.1782% − 4.0000% (3-year benchmark coupon) = 1.1782%.\nA. Incorrect. 0.7796% results from using a loss given default of 50% of exposure instead of 75%.\nC. Incorrect. 1.5828% results from assuming no recovery (loss given default of 100%)."
+     },
+     {
+      "q": "If interest rates fall sharply, compared with Bond S, Bond Q's effective duration most likely:",
+      "options": [
+       "falls and its convexity becomes negative",
+       "rises and its convexity stays positive",
+       "stays the same as Bond S's duration"
+      ],
+      "answer": 0,
+      "why": "Callable bond when rates fall: the call is likely to be exercised, so duration falls below that of the straight bond and convexity becomes negative (price compression).\nWhen rates rise, the callable behaves like the straight bond."
+     },
+     {
+      "q": "When describing calibrating the interest rate tree, Hollis is least likely correct with respect to the:",
+      "options": [
+       "volatility assumption.",
+       "value of the bond being evaluated.",
+       "assumption of log-normality."
+      ],
+      "answer": 1,
+      "why": "Calibration depends on a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds, not the bond being evaluated."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Part 1\nMarco Ricci is a financial adviser specializing in commercial real estate investing. He meets with Anita Shah, a new client, who wants to diversify her portfolio by adding real estate investments to it.\n\nUsing data from an appraisal-based index, Ricci discusses real estate return and risk statistics with Shah and compares them to the return and risk of Shah's current portfolio of stocks and bonds. Based on Shah's investment objectives, Ricci recommends the following types of investments: \n\nInvestment 1: A real estate operating company (REOC);\nΙnvestment 2: An equity real estate investment trust (REIT).\n\nPart 2\nDaniel Kwon, CFA, is an investment manager looking to diversify his portfolio by adding equity real estate investments. Kwon and his investment analyst, Elena Varga, are discussing whether they should invest in publicly traded real estate investment trusts or public real estate operating companies. Varga expresses a strong preference for investing in public REITs in taxable accounts.\n\nKwon schedules a meeting to discuss this matter, and for the meeting, Kwon asks Varga to gather data on two specific REITs and come prepared to explain her preference for public REITs over public REOCs. At the meeting, Kwon asks Varga,\n\n“Why do you prefer to invest in public REITs over public REOCs for taxable accounts?”\n\nVarga provides Kwon with an explanation for her preference of public REITs and provides Kwon with data on the two REITs shown in Exhibit 1 and Exhibit 2.\n\nExhibit 1\nSelect REIT Financial Information\n# | REIT A | REIT B\nProperty subsector | Office | Storage\nEstimated 12-month cash net operating income | $420,000 | $295,000\nFunds from operations | $388,420 | $301,880\nCash and equivalents | $275,300 | $214,300\nAccounts receivable | $188,600 | $301,700\nDebt and other liabilities | $2,386,000 | $2,097,000\nNon-cash rents | $31,204 | $27,015\nRecurring maintenance–type capital expenditures | $72,415 | $58,430\nShares outstanding | 63,800 | 71,200\n\nPart 3\nSofia Martins is an alternative investment analyst for a US investment management firm, Orion Brothers. Orion's chief investment officer, Daniel Cho, has informed Martins that he wants to reduce the amount invested in traditional asset classes and gain exposure to the real estate sector by acquiring commercial property in the United States. Martins is asked to analyze potential commercial real estate investments for Orion Brothers. Selected data on three commercial real estate properties are shown in Exhibit 3.\n\nExhibit 3\nSelected Property Data\n# Property | Property 1 | Property 2 | Property 3\nProperty type | Downtown Office | Grocery-Anchored Retail Center | Multi-Family Building\nLocation | New York City | Miami | Boston\nAge | 10 years | 7 years | 5 years\nOccupancy | 88.00% | 94.00% | 96.00%\nGross potential rental income | $4,400,000 | $1,950,000 | $3,300,000\nLoss to lease | ($220,000) | ($80,000) | ($165,000)\nGross rental income | $4,180,000 | $1,870,000 | $3,135,000\nVacancy loss | ($501,600) | ($112,200) | ($125,400)\nNet rental income | $3,678,400 | $1,757,800 | $3,009,600\nExpense reimbursement revenue | $290,000 | $462,000 | $0\nOther income (includes % rent) | $410,000 | $20,000 | $52,000\nEffective gross income | $4,378,400 | $2,239,800 | $3,061,600\nProperty management fees | ($175,136) | ($84,000) | ($122,464)\nOther operating expenses | ($1,720,000) | ($378,000) | ($1,240,000)\nNet operating income | $2,483,264 | $1,777,800 | $1,699,136\nMartins asks Cho about the relative magnitudes of operating expenses in determining property NOI. Cho explains that the retail center in Miami is able to be fully reimbursed for its operating expenses but that the office property in New York City and the multi-family property in Boston must absorb considerable unreimbursed operating expenses.\n\nCho comments to Martins that these three properties may be in different phases of the real estate cycle. He specifically cites the differences between gross potential rental income and gross rental income in making his argument. In response to Cho’s comments, Martins makes the two following statements about the office building in New York City:\n\nStatement 1:\nI believe that the high vacancy rates indicate that the net operating income of the office building has the potential to improve within two years.\n\nStatement 2:\nI believe that the office market in New York City is likely to enter the recovery stage of the real estate cycle within two years.\n\nPart 4\nCastell values Alpenhaus REIT. Next year's net operating income is CHF 32 million and the market capitalisation rate for similar properties is 6.4%. Alpenhaus also holds CHF 18 million of cash and other tangible assets, and has CHF 290 million of debt. It has 10 million shares.",
+    "questions": [
+     {
+      "q": "Compared to Investment 1 recommended by Ricci, Investment 2 most likely:",
+      "options": [
+       "requires less expertise in real estate investing.",
+       "avoids double taxation on dividends received by investors.",
+       "is better able to hold properties under development."
+      ],
+      "answer": 1,
+      "why": "B. Correct because REIT and passthrough structures avoid corporate income taxation, leaving only the investor to pay taxes on dividends received. On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs, if they are located in countries that do not have a tax-advantaged REIT regime in place, if they engage to a large extent in the development of for-sale real estate properties, or if they offer other non-qualifying services, such as brokerage and third-party property management. Incorrect answer: (no answer) Correct Answer: avoids double taxation on dividends received by investors. | B. Incorrect because the relatively low rates of income retention that are required to maintain a REIT’s tax-free status can detract from income growth potential. In most countries, REITs are required to distribute 90%–100% of their otherwise taxable earnings, invest at least 75% of their assets in real estate, and derive at least 75% of income from real estate rental income or interest on mortgages. To engage in non-REIT-qualifying activities, such as merchant development, REITs form taxable REIT subsidiaries (TRS). On the other hand, real estate operating companies are ordinary taxable real estate ownership companies. Businesses are organized as REOCs, as opposed to REITs if they engage to a large extent in the development of for-sale real estate properties. | C. Incorrect because investment in publicly traded equity investments (in REITs or REOCs) requires much less expertise than private equity investments because investors benefit from having their property interests actively managed on their behalf by professional managers and from having their business interests overseen and guided by boards of directors, as in the case of all public corporations. Therefore, both types of investment provide access to professional management, limiting the required investor qualifications to equity investing generally."
+     },
+     {
+      "q": "The risk factor most likely to adversely affect an investment in REIT B is:",
+      "options": [
+       "obsolescence of existing space.",
+       "tenants' sales per square foot.",
+       "new competitive facilities."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Obsolescence of existing space is a typical concern for office REITs.\nB. Incorrect. Tenants' sales per square foot is a risk measure for retail (shopping center) REITs.\nC. Correct. REIT B is a storage REIT; entry into self-storage is easy, so overbuilding and new competing facilities are the main risk."
+     },
+     {
+      "q": "Which of the following statements is most accurate regarding the effect of unreimbursed operating expenses on the NOI of the New York City and Boston properties?",
+      "options": [
+       "The NOI of the multi-family property in Boston is more negatively affected by unreimbursed operating expenses than is the NOI of the office property in New York City.",
+       "The NOI of the office property in New York City is more negatively affected by unreimbursed operating expenses than is the NOI of the multi-family property in Boston.",
+       "The NOIs of both properties are affected similarly by unreimbursed operating expenses."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Unreimbursed expenses as a share of effective gross income: Boston ($1,362,464 − 0) ÷ $3,061,600 = 44.5%, against 36.7% for New York City, so Boston is hit harder.\nB. Incorrect. The New York City property has larger expenses in dollars, but it also has a larger income base: ($1,895,136 − $290,000) ÷ $4,378,400 = 36.7%.\nC. Incorrect. The two ratios are clearly different."
+     },
+     {
+      "q": "Which of the following responses is most accurate regarding Martins’s Statement 1 and Statement 2?",
+      "options": [
+       "Statement 1 is more accurate than Statement 2.",
+       "Statements 1 and 2 are both accurate statements.",
+       "Statement 2 is more accurate than Statement 1."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Statement 1 says NOI can improve within two years, which implies a move into the expansion phase. High vacancy points to oversupply or recession, so a short recession followed by recovery (Statement 2) is the consistent reading.\nB. Incorrect. The statements are inconsistent in terms of the real estate cycle phase they imply, so they cannot both be accurate.\nC. Correct. High vacancy likely means the office market is in the oversupply or recession phase. Statement 2 (recovery within two years) is consistent with that; Statement 1 (NOI already improving, expansion) skips the recovery stage."
+     },
+     {
+      "q": "Alpenhaus's NAVPS is closest to:",
+      "options": [
+       "CHF 50.00",
+       "CHF 22.80",
+       "CHF 51.80"
+      ],
+      "answer": 1,
+      "why": "Property value by direct capitalisation (not depreciated book cost) = NOI / cap rate = 32.0/0.064 = CHF 500.0m\nNAV = 500.0 + 18 − 290 = 228.0m\nNAVPS = 228.0/10 = CHF 22.80"
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Part 1\nHousing industry analyst Elaine Smith has been assigned the task of forecasting housing foreclosures. Specifically, Smith is asked to forecast the percentage of outstanding mortgages that will be foreclosed upon in the coming quarter. Smith decides to employ multiple linear regression and time series analysis.\n\nResearch Question 2: Is the foreclosure percentage significantly affected by government intervention policies?\n\nTo measure the effects of government intervention in Research Question 2, Smith uses a dummy variable that equals 1 whenever the Federal government intervened with a fiscal policy stimulus package that exceeded 2% of the annual Gross Domestic Product. Smith sets the dummy variable equal to 1 for four quarters starting with the quarter in which the policy is enacted and extending through the following 3 quarters. Otherwise, the dummy variable equals zero.\nSmith uses quarterly data over the past 5 years to derive her regression. Smith's regression equation is provided in Exhibit 1:\nExhibit 1: Foreclosure Share Regression Equation\nforeclosure share = b0 + b1(dINT) + b2(STIM) + b3(CRISIS) + e\nwhere: Foreclosure share = the percentage of all outstanding mortgages foreclosed upon during the quarter; dINT = the quarterly change in the 1-year Treasury bill rate (e.g., dINT = 2 for a two percentage point increase in interest rates); STIM = 1 for quarters in which a Federal fiscal stimulus package was in place; CRISIS = 1 for quarters in which the median house price is one standard deviation below its 5-year moving average.\nThe results of Smith's regression are provided in Exhibit 2:\nExhibit 2: Foreclosure Share Regression Results\n# Variable | Coefficient | t-statistic\nIntercept | 3.00 | 2.40\ndINT | 1.00 | 2.22\nSTIM | -2.50 | -2.10\nCRISIS | 4.00 | 2.35\nThe ANOVA results from Smith's regression are provided in Exhibit 3:\nExhibit 3: Foreclosure Share Regression Equation ANOVA Table\n# Source | Degrees of Freedom | Sum of Squares | Mean Sum of Squares\nRegression | 3 | 15 | 5.0000\nError | 16 | 5 | 0.3125\nTotal | 19 | 20\n\nExhibit 6 provides critical values for the Student's t-Distribution\nExhibit 6: Critical Values for Student's t-Distribution. Area in Both Tails Combined\nDegrees of Freedom | 20% | 10% | 5% | 1%\n16 | 1.337 | 1.746 | 2.120 | 2.921\n17 | 1.333 | 1.740 | 2.110 | 2.898\n18 | 1.330 | 1.734 | 2.101 | 2.878\n19 | 1.328 | 1.729 | 2.093 | 2.861\n20 | 1.325 | 1.725 | 2.086 | 2.845\n\nPart 2\nWalter Dunn, CFA, is the chief financial officer for Green Valley Nurseries, one of the largest producers of flowers and bedding plants in the Western United States. Green Valley Nurseries grows its plants in three large nursery facilities located in California. Its products are sold in its company-owned retail nurseries as well as in large, home and garden \"super centers\". For its retail stores, Green Valley Nurseries has designed and implemented marketing plans each season that are aimed at its consumers in order to generate additional sales for certain high-margin products. To fully implement the marketing plan, additional contract salespeople are seasonally employed.\n\nDunn gathers information regarding quarterly sales revenue and marketing expenditures for the past five years. Based upon historical data, Dunn derives the following regression equation for Green Valley Nurseries (stated in millions of dollars):\nExpected Sales = 9.8 + 2.1 (Marketing Expenditures) + 0.9 (# of Salespeople)\nDunn shows the equation to Larsen and tells him, \"This equation shows that a $1 million increase in marketing expenditures will increase the independent variable by $2.1 million, all other factors being equal.\" Larsen replies, \"It also appears that sales will equal $9.8 million if all independent variables are equal to zero.\"\n\nPart 3\nSofia Greco, an analyst at Aurelio Research, regresses the monthly excess return of a consumer-goods portfolio on three factors (market, size and value) using 60 monthly observations.\n\nGreco also compares two candidate models. Model A has AIC −310 and BIC −298. Model B has AIC −314 and BIC −296.\n\nPart 4\nRafael Duarte, a research analyst at Lisbon Securities, is studying the time-series behavior of price-to-earnings ratios (P/Es) computed with trailing 12-month earnings (Etrailing). He and his assistant, Priya Nair, are reviewing the results of the ordinary least squares time series regression shown in Exhibit 7.\n\nExhibit 7\nResults of Regression of P/E on Lagged P/E (P/Et = b0 + b1P/Et–1 + εt)\n#   | Coefficient | Standard Error | t | Significance of t\nConstant (b0) | 0.118 | 0.162 | 0.728 | 0.234\nLagged P/E (b1) | 0.994 | 0.003 | 331.333 | 0\nR2 | Standard Error of the Estimate | Durbin–Watson | F | Significance of F\n0.082 | 1.51204 | 2.067 | 142.410 | 0\n\nDuarte states: \"This regression is a special case of a first-order autoregressive [AR(1)] model in which the value for b0 is close to zero and the value of b1 is close to 1. These values suggest that the time series is a random walk.\"\n\nNair replies: \"I'm convinced the P/E series based on trailing earnings truly is a random walk.\"\n\nPart 5\nKenji Arai is building a sentiment model from 50,000 web news articles at Okubo Advisors. The steps of a text project are text problem formulation, data curation, text preparation and wrangling, text exploration, and model training.\n\nArai's raw text contains HTML tags, punctuation, numbers and extra white space. He then applies four wrangling steps to the cleansed tokens: converting to lower case, removing words such as \"the\" and \"is\", reducing \"integrated\", \"integrating\" and \"integration\" to \"integr\", and converting \"better\" to \"good\" using a dictionary.",
+    "questions": [
+     {
+      "q": "Based on her regression results in Exhibit 2, using a 5% level of significance, Smith should conclude that:",
+      "options": [
+       "stimulus packages have significant effects on foreclosure percentages, but housing crises do not have significant effects on foreclosure percentages.",
+       "both stimulus packages and housing crises have significant effects on foreclosure percentages.",
+       "stimulus packages do not have significant effects on foreclosure percentages, but housing crises do have significant effects on foreclosure percentages."
+      ],
+      "answer": 2,
+      "why": "The t-statistic is -2.10 for STIM and 2.35 for CRISIS. The critical t at the 5% level (16 degrees of freedom) is 2.12. STIM is not significant (|-2.10| < 2.12); CRISIS is significant (2.35 > 2.12)."
+     },
+     {
+      "q": "Dunn explains the standard error of estimate (SEE) to Larsen with three points. Point 1: If there is a strong relationship between the variables and the SEE is small, the individual estimation errors will also be small. Point 2: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable. Point 3: Any violation of the basic assumptions of a multiple regression model is going to affect the SEE. How many of Dunn's points are most accurate?",
+      "options": [
+       "2 of Dunn's points are correct.",
+       "1 of Dunn's points is correct.",
+       "All 3 of Dunn's points are correct."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Point 2 is wrong: the SEE measures differences between estimated and actual values of the DEPENDENT variable. Points 1 and 3 are correct, so two points are correct.\nB. Incorrect. Points 1 and 3 are also correct, so more than one point is correct.\nC. Incorrect. Point 2 is incorrect, so not all three are correct."
+     },
+     {
+      "q": "Based on AIC and BIC, which model is preferred for forecasting and which for goodness of fit?",
+      "options": [
+       "Model B for both",
+       "Model A for forecasting; Model B for goodness of fit",
+       "Model B for forecasting; Model A for goodness of fit"
+      ],
+      "answer": 2,
+      "why": "Lower is better for both.\nAIC (better forecast): Model B (−314 < −310).\nBIC (better goodness of fit, heavier penalty for extra variables): Model A (−298 < −296)."
+     },
+     {
+      "q": "Duarte's statement that the coefficients depicted in Exhibit 7 are consistent with a random walk is most likely:",
+      "options": [
+       "incorrect because b1 should be close to 0.",
+       "correct.",
+       "incorrect because b0 should be close to 1."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. For a random walk, the slope on the lagged value is close to 1, not 0.\nB. Correct. A random walk estimated as an AR(1) has an intercept near zero and a slope near 1; b0 = 0.118 and b1 = 0.994 fit.\nC. Incorrect. For a random walk the intercept is near 0, not 1."
+     },
+     {
+      "q": "Removing HTML tags, punctuation, numbers and white space is part of:",
+      "options": [
+       "text exploration",
+       "text cleansing",
+       "text wrangling (preprocessing)"
+      ],
+      "answer": 1,
+      "why": "Text cleansing: remove HTML tags, punctuation (keeping meaningful symbols such as % or $, replaced with tokens), numbers and white spaces.\nText wrangling (preprocessing) then works on tokens: lowercasing, stop-word removal, stemming, lemmatisation."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {
+  "rq2:1": {
+   "hl": [
+    "(1) provides an estimate of downside exposure during a worst-case scenario",
+    "(2) avoids subjectivity",
+    "(3) can be used for performance evaluation"
+   ],
+   "rule": "VaR: useful for risk-adjusted performance; subjective inputs; NOT a worst case."
+  },
+  "rq2:2": {
+   "hl": [
+    "parametric method (assuming normal distribution)"
+   ],
+   "rule": "Parametric = normal distribution assumption (weak for fat tails and options); historical = past data; Monte Carlo = random scenarios."
+  },
+  "rq2:3": {
+   "hl": [
+    "Observation 3: An investor compares a building leased to a government agency with a similar building leased to commercial tenants."
+   ],
+   "rule": "Value = net rental income / (1 + r)^t, where net rental income = rental payments − rental expenses. Both rates include inflation (π) and inflation uncertainty (θ); the commercial lease also includes a"
+  },
+  "rq2:4": {
+   "hl": [
+    "@row:Market",
+    "@row:Size",
+    "@row:Value",
+    "Fund sensitivity",
+    "Benchmark sensitivity"
+   ],
+   "rule": "Style = fund sensitivity minus benchmark sensitivity: market +0.15 (high beta), size +0.30 (small cap), value −0.30 (growth)."
+  },
+  "rq2:5": {
+   "hl": [
+    "Point 3: Country 1 has nominal GDP growth of 8.5% and inflation of 3.0%, with low volatility of growth.",
+    "Country 2 has nominal GDP growth of 6.0% and inflation of 0.5%, with high volatility of growth."
+   ],
+   "rule": "Real GDP growth = nominal − inflation: Country 1 = 8.5 − 3.0 = 5.5%; Country 2 = 6.0 − 0.5 = 5.5%. Equal real growth, so compare volatility: higher volatility → investors demand higher real rates."
+  },
+  "rq2:6": {
+   "hl": [
+    "An index fund that meets its objective exactly"
+   ],
+   "rule": "Meets its objective exactly = tracks the benchmark: active return 0, so the information ratio is 0."
+  },
+  "rq2:7": {
+   "hl": [
+    "For Marlow’s portfolio, Sorensen plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio’s industry sector weightings.",
+    "Passive ETFs will enable Sorensen to maintain benchmark exposure while not necessarily replacing an active ETF manager."
+   ],
+   "rule": "ETF uses: completion = fill a gap in benchmark exposure; rebalancing = return to target weights after market moves; liquidity management = equitize cash for inflows and outflows."
+  },
+  "rq2:8": {
+   "hl": [
+    "Hui Cheung, a portfolio manager, asks her assistant, Ronald Lam, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.",
+    "The current macroeconomic factor model has four factors:"
+   ],
+   "rule": "When using a macroeconomic factor model, the expected return is the intercept (when all model factors take on a value of zero). The intercept coefficient for Portfolio 1 in Exhibit 1 is 2.58."
+  },
+  "rq2:9": {
+   "hl": [
+    "The factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.",
+    "The factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables."
+   ],
+   "rule": "In a macroeconomic factor model, the factors are surprises in macroeconomic variables that significantly explain returns. Factor sensitivities are generally specified first in fundamental factor model"
+  },
+  "rq2:10": {
+   "hl": [
+    "Lam tells Cheung that multifactor models can be useful in active portfolio management, but not in passive management.",
+    "Cheung disagrees; she tells Lam that multifactor models can be useful in both active and passive management."
+   ],
+   "rule": "Analysts can use multifactor models in passively managed portfolios to replicate an index fund’s factor exposures."
+  },
+  "rq2:11": {
+   "hl": [
+    "behave like floating-rate debt",
+    "fixed-rate bonds"
+   ],
+   "rule": "The bonds already make Harlow PAY fixed. To end up floating, the swap must RECEIVE fixed (cancels the bond coupon) and pay floating."
+  },
+  "rq2:12": {
+   "hl": [
+    "Ruth Okafor supervises the options desk at Tellis Securities.",
+    "She reviews four positions: a long call, a short call, a long put and a short put, all on Ardent Mining shares."
+   ],
+   "rule": "Long put signs: delta −, gamma +, vega +, theta −, rho −."
+  },
+  "rq2:13": {
+   "hl": [
+    "I’ve done some analysis of this swap based on current Korean and US interest rates and present value factors, which I’m providing to you in Exhibit 1.”",
+    "She explains, “A fixed-for-fixed currency swap would help reduce the risk from fluctuating USD/KRW exchange rates by providing fixed US dollar payments in exchange for fixed Korean won payments."
+   ],
+   "rule": "The Foundation would receive the US fixed interest rate, which is calculated as [ 1 − P V n , U S ( 1 ) ] [ ∑ i = 1 n P V i , U S ( 1 ) ] = [ 1 − 0.9260 ] [ 0.9884 + 0.9758 + 0.9623 + 0.9470 + 0.9260 "
+  },
+  "rq2:14": {
+   "hl": [
+    "forward price of €88.40",
+    "four months remain until expiration",
+    "pays no dividends"
+   ],
+   "rule": "Long forward value = S₀ − F₀ ÷ (1 + r)^(T − t), using the time left (4/12). The result is a value today, so the forward price is discounted."
+  },
+  "rq2:15": {
+   "hl": [
+    "With respect to other call options on Weston stock, Maddox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity.",
+    "Birch adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price."
+   ],
+   "rule": "Maddox is right: the volatility surface shows implied volatility across both exercise prices and maturities. C is wrong: implied volatility is backed out from MARKET option prices and reflects expecte"
+  },
+  "rq2:16": {
+   "hl": [
+    "The FRA is settled in advance: the settlement amount is paid at FRA expiration, discounted at the three-month MRR.",
+    "Situation 2: At FRA expiration (month 6), three-month MRR is 2.85%."
+   ],
+   "rule": "Interest difference paid at T (month 9) = (2.85% − 2.40%) × 90/360 × 25,000,000 = €28,125"
+  },
+  "rq2:17": {
+   "hl": [
+    "@row:Exercise price of Marlow put option",
+    "@row:Risk-free rate",
+    "@row:Up factor",
+    "@row:Down factor",
+    "American-style put option on Marlow Corporation that matures in two years"
+   ],
+   "rule": "American put: at each node take the larger of the binomial (continuation) value and the exercise value K − S."
+  },
+  "rq2:18": {
+   "hl": [
+    "dirty price of 105.20",
+    "quoted futures price is 136.00",
+    "conversion factor is 0.7550"
+   ],
+   "rule": "Market 136.00 < model ≈ 138.76: the futures is cheap. Cheap futures = buy futures, short the note, lend (reverse cash-and-carry)."
+  },
+  "rq2:19": {
+   "hl": [
+    "Troubadour identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond.",
+    "Current data on the futures contract and underlying bond are presented in Exhibit 1."
+   ],
+   "rule": "Carry the bond price plus accrued interest forward to expiry. Futures side = CF × futures price + accrued interest at expiry. Discount only the final difference."
+  },
+  "rq2:20": {
+   "hl": [
+    "Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1.",
+    "Kowalski asks Lebedeva about the typical impact of credit rating migration on the expected return on a bond."
+   ],
+   "rule": "Expected return = YTM + expected % price change from migration. Each transition: −7.54 × (new spread − 1.50%) × probability. Sum = −1.76715%. Expected return = 5.50% − 1.77% = 3.73%."
+  },
+  "rq2:21": {
+   "hl": [
+    "Kowalski calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1.",
+    "She then estimates the bond’s yield to maturity and the bond’s credit spread over the benchmark in Exhibit 2."
+   ],
+   "rule": "Step 1: VND from the tree (discount at tree forward rates, risk-neutral probs 0.5) = 100.0000. Step 2: CVA = sum of PV(expected exposure × LGD fraction × POD): exposures 103.0000, 103.3535, 105.0000; "
+  },
+  "rq2:22": {
+   "hl": [
+    "spot curve one year from today will reflect the current forward curve"
+   ],
+   "rule": "Future spot = today's forward rates is the pure expectations theory."
+  },
+  "rq2:23": {
+   "hl": [
+    "calibrated binomial tree",
+    "option-free"
+   ],
+   "rule": "A calibrated tree reprices the benchmark bonds, so an option-free bond is worth the same as with spot rates. Volatility only matters for embedded options."
+  },
+  "rq2:24": {
+   "hl": [
+    "The coupon is capped at 4.8%.",
+    "Silva values a two-year floating-rate note with an annual coupon equal to the one-year reference rate set at the start of each year, paid at the end of the year."
+   ],
+   "rule": "Time 1 upper: rate 5.40% > cap → coupon 4.8: value = 104.80/1.054 = 99.4307"
+  },
+  "rq2:25": {
+   "hl": [
+    "three-year forward rate two years from now, f(2,3)",
+    "zero-coupon bond paying 1 at year 5"
+   ],
+   "rule": "F(j,k) = 1 ÷ (1 + f(j,k))^k. The exponent is k, the 3 years the bond still has after the forward date."
+  },
+  "rq2:26": {
+   "hl": [
+    "Brandt then estimates the bond's yield to maturity and the bond's credit spread over the benchmark in Exhibit 2.",
+    "Brandt asks Marangoni, \"What might cause the bond's credit spread to decrease?\""
+   ],
+   "rule": "Step 1: VND from the tree (discount at the tree rates, probability 0.5 on each branch, coupon 4) = 100.0000."
+  },
+  "rq2:27": {
+   "hl": [
+    "Bond Q is callable",
+    "interest rates fall sharply"
+   ],
+   "rule": "Rates fall + callable = the call will be exercised: duration shortens, convexity turns negative (price compression)."
+  },
+  "rq2:28": {
+   "hl": [
+    "The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.”",
+    "Zhou adds: “While your example represents good practice, we also need to be able to value bonds with embedded options where expected cash flows of bonds with options change depending on the path of future interest rates."
+   ],
+   "rule": "Calibration depends on a volatility assumption, an interest rate model (here log-normality) and the observed market values of the benchmark bonds, not the bond being evaluated."
+  },
+  "rq2:29": {
+   "hl": [
+    "Based on Shah's investment objectives, Ricci recommends the following types of investments:",
+    "Marco Ricci is a financial adviser specializing in commercial real estate investing."
+   ],
+   "rule": "REIT is a pass-through (no corporate tax, no double taxation). A REOC is taxed as a company and can hold properties under development."
+  },
+  "rq2:30": {
+   "hl": [
+    "@row:Property subsector",
+    "risk factor most likely to adversely affect an investment in REIT B"
+   ],
+   "rule": "Match the property subsector to its main risk: storage = new competitive facilities (easy entry)."
+  },
+  "rq2:31": {
+   "hl": [
+    "must absorb considerable unreimbursed operating expenses",
+    "@row:Expense reimbursement revenue",
+    "@row:Effective gross income",
+    "@row:Property management fees",
+    "@row:Other operating expenses"
+   ],
+   "rule": "Compare unreimbursed expenses (total expenses minus reimbursement revenue) as a share of effective gross income, not in dollars."
+  },
+  "rq2:32": {
+   "hl": [
+    "high vacancy rates indicate",
+    "recovery stage of the real estate cycle within two years"
+   ],
+   "rule": "High vacancy = oversupply/recession; recovery comes before expansion, so a recovery call is more accurate than an expanding-NOI call."
+  },
+  "rq2:33": {
+   "hl": [
+    "Castell values Alpenhaus REIT.",
+    "Next year's net operating income is CHF 32 million and the market capitalisation rate for similar properties is 6.4%."
+   ],
+   "rule": "Property value by direct capitalisation (not depreciated book cost) = NOI / cap rate = 32.0/0.064 = CHF 500.0m"
+  },
+  "rq2:34": {
+   "hl": [
+    "The results of Smith's regression are provided in Exhibit 2:",
+    "Exhibit 2: Foreclosure Share Regression Results"
+   ],
+   "rule": "The t-statistic is -2.10 for STIM and 2.35 for CRISIS. The critical t at the 5% level (16 degrees of freedom) is 2.12. STIM is not significant (|-2.10| < 2.12); CRISIS is significant (2.35 > 2.12)."
+  },
+  "rq2:35": {
+   "hl": [
+    "differences between the estimated values for the independent variables and the actual observations for the independent variable"
+   ],
+   "rule": "SEE = standard deviation of the residuals (dependent variable); small SEE = strong fit; violations of assumptions affect it."
+  },
+  "rq2:36": {
+   "hl": [
+    "Model A has AIC −310 and BIC −298.",
+    "Model B has AIC −314 and BIC −296."
+   ],
+   "rule": "Lower is better for both."
+  },
+  "rq2:37": {
+   "hl": [
+    "value for b0 is close to zero and the value of b1 is close to 1",
+    "@row:Constant (b0)",
+    "@row:Lagged P/E (b1)"
+   ],
+   "rule": "Random walk as AR(1): b0 ≈ 0, b1 ≈ 1."
+  },
+  "rq2:38": {
+   "hl": [
+    "HTML tags, punctuation, numbers and extra white space",
+    "cleansed tokens"
+   ],
+   "rule": "Removing HTML tags, punctuation, numbers and white space = cleansing. Lowercasing, stop words, stemming and lemmatisation = wrangling."
+  }
+ },
+ "srcmap": {
+  "1": [
+   "mock9",
+   41
+  ],
+  "2": [
+   "mock9",
+   43
+  ],
+  "3": [
+   "pq3",
+   43
+  ],
+  "4": [
+   "pq2",
+   10
+  ],
+  "5": [
+   "pq3",
+   34
+  ],
+  "6": [
+   "pq2",
+   34
+  ],
+  "7": [
+   "mock6",
+   31
+  ],
+  "8": [
+   "mock7",
+   41
+  ],
+  "9": [
+   "mock7",
+   43
+  ],
+  "10": [
+   "mock7",
+   44
+  ],
+  "11": [
+   "pq1",
+   37
+  ],
+  "12": [
+   "pq4",
+   19
+  ],
+  "13": [
+   "mock7",
+   23
+  ],
+  "14": [
+   "pq1",
+   30
+  ],
+  "15": [
+   "mock6",
+   36
+  ],
+  "16": [
+   "pq4",
+   28
+  ],
+  "17": [
+   "mock10",
+   24
+  ],
+  "18": [
+   "pq2",
+   29
+  ],
+  "19": [
+   "mock8",
+   1
+  ],
+  "20": [
+   "mock7",
+   30
+  ],
+  "21": [
+   "mock7",
+   31
+  ],
+  "22": [
+   "mock9",
+   6
+  ],
+  "23": [
+   "pq2",
+   22
+  ],
+  "24": [
+   "pq4",
+   47
+  ],
+  "25": [
+   "pq1",
+   35
+  ],
+  "26": [
+   "mock8",
+   10
+  ],
+  "27": [
+   "pq2",
+   12
+  ],
+  "28": [
+   "mock6",
+   40
+  ],
+  "29": [
+   "mock6",
+   2
+  ],
+  "30": [
+   "mock9",
+   40
+  ],
+  "31": [
+   "mock10",
+   37
+  ],
+  "32": [
+   "mock10",
+   38
+  ],
+  "33": [
+   "pq3",
+   21
+  ],
+  "34": [
+   "mock7",
+   33
+  ],
+  "35": [
+   "mock9",
+   34
+  ],
+  "36": [
+   "pq3",
+   39
+  ],
+  "37": [
+   "mock10",
+   13
+  ],
+  "38": [
+   "pq2",
+   16
+  ]
+ }
+}

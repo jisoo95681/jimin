@@ -1,0 +1,878 @@
+{
+ "set": {
+  "id": "rq1",
+  "rev": 2,
+  "resetHl": [],
+  "title": "Incorrect questions 1",
+  "kind": "practice",
+  "minutes": 114,
+  "desc": "Questions you got wrong in Mocks 6-10 and Practice sets 1-4 (Financial Statement Analysis, Equity, Ethics, Corporate Issuers, Economics), relevant vignette parts only (38 questions)",
+  "vignettes": [
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nNora Lindahl screens companies for earnings quality.\n\nCompany R: a Beneish M-score of −1.2 and a high level of accruals. Lindahl separates accruals into normal accruals explained by a regression on business activity, and the residual.\n\nPart 2\nAalto computes Kiruna's diluted shares. Basic weighted-average shares are 5,000,000 and the average share price is $30.\n\nExhibit 1: Potentially Dilutive Securities\n# Security | Number | Exercise price | Average unrecognised compensation expense\nStock options | 200,000 | $18 | $600,000\nUnvested RSUs | 60,000 | – | $900,000\n\nAverage unrecognised expense is the average of the beginning and ending unrecognised compensation expense.\n\nPart 3\nBank X funds itself mainly with long-term consumer deposits; Bank Y relies on short-term interbank borrowing. Morgan expects the yield curve to invert next year.\n\nPart 4\nGreta Walsh is a financial analyst who is examining the most recent annual report of Westbrook Inc., a US-based company that complies with US GAAP. Walsh wants to determine Westbrook's ROE as well as the trend in its ROE components by using DuPont analysis. Data used for this purpose is presented in Exhibit 2.\nExhibit 2\n#   | Most Recent Year | Previous Year | Two Years Ago\nRevenue (USD million) | 820 | 740 | 660\nTotal liabilities (USD million) | 270 | 245 | 220\nTotal asset turnover ratio | 1.40 | 1.35 | 1.30",
+    "questions": [
+     {
+      "q": "The residual from Lindahl's accruals regression represents:",
+      "options": [
+       "non-discretionary accruals, which arise from normal operations",
+       "discretionary accruals, which may signal earnings manipulation",
+       "cash earnings"
+      ],
+      "answer": 1,
+      "why": "Non-discretionary accruals come from normal business activity (explained by the regression). Discretionary accruals (the residual) come from unusual choices and can signal manipulation; high accruals mean lower earnings quality."
+     },
+     {
+      "q": "Kiruna's diluted shares are closest to:",
+      "options": [
+       "5,090,000",
+       "5,120,000",
+       "5,260,000"
+      ],
+      "answer": 0,
+      "why": "Treasury stock method: dilutive shares = number − (cash proceeds + average unrecognised expense) / average price\nOptions: 200,000 − (200,000 × 18 + 600,000)/30 = 200,000 − 140,000 = 60,000\nRSUs (no cash proceeds): 60,000 − 900,000/30 = 30,000\nDiluted = 5,000,000 + 60,000 + 30,000 = 5,090,000"
+     },
+     {
+      "q": "Which bank has the more stable funding, and what effect would an inverted yield curve most likely have on bank net interest revenue?",
+      "options": [
+       "Bank Y; net interest revenue would rise",
+       "Bank X; net interest revenue would fall",
+       "Bank X; net interest revenue would rise"
+      ],
+      "answer": 1,
+      "why": "Stable funding: longer-term and consumer (retail) deposits are stickier than short-term interbank funding.\nBanks borrow short and lend long (maturity transformation). An inverted curve raises short-term funding costs relative to long-term lending rates → lower net interest revenue."
+     },
+     {
+      "q": "Based on the 3 years of data provided for DuPont analysis, Westbrook's financial leverage has been:",
+      "options": [
+       "trending lower.",
+       "trending higher.",
+       "stable."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. The ratio rises over the three years, so it is not trending lower.\nB. Correct. Total assets = revenue ÷ asset turnover: 820/1.40 = 585.7; 740/1.35 = 548.1; 660/1.30 = 507.7. Equity = assets − liabilities: 315.7; 303.1; 287.7. Financial leverage = assets ÷ equity: 1.855; 1.808; 1.765: trending higher.\nC. Incorrect. The ratio is clearly moving in one direction, so it is not stable."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nMontclair Holdings acquires 80% of Tessaro SpA for €800 million in cash. The fair value of Tessaro's identifiable net assets is €850 million. Montclair's analyst compares the full goodwill and partial goodwill methods.\n\nPart 2\nMaxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS. Thorsell wants to evaluate the quality of the company's financial reports for the purpose of making an investment recommendation to her firm.\n\nThorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates. For comparison purposes, Thorsell adjusts Coleridge's financial statements before computing the company's financial ratios.",
+    "questions": [
+     {
+      "q": "Under the partial goodwill method, goodwill and the non-controlling interest are closest to:",
+      "options": [
+       "€120 million and €170 million",
+       "€150 million and €200 million",
+       "€120 million and €200 million"
+      ],
+      "answer": 0,
+      "why": "Partial goodwill = 800 − 0.80 × 850 = €120m.\nNCI (partial) = % not owned × identifiable net assets = 0.20 × 850 = €170m.\n(Full method: NCI = 0.20 × 1,000 = €200m.)"
+     },
+     {
+      "q": "Compared with its industry competitors, Coleridge's pension discount rate assumption is most likely:",
+      "options": [
+       "conservative, because it raises the reported pension expense.",
+       "aggressive, because it lowers the reported pension obligation.",
+       "neutral, because the plan is underfunded in any case."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. A higher discount rate lowers, not raises, the reported obligation and expense.\nB. Correct. A higher discount rate than peers lowers the present value of the pension obligation (and the reported expense), so the underfunding is understated: the assumption is aggressive.\nC. Incorrect. The assumption changes the measured size of the deficit, so the plan being underfunded does not make it neutral."
+     },
+     {
+      "q": "With respect to the defined benefit pension plan assumption, which of the following will decrease after Thorsell's adjustment?",
+      "options": [
+       "Debt-to-equity ratio",
+       "Financial leverage ratio",
+       "Book value per share"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because the debt-to-equity ratio (total debt ÷ total shareholders' equity) will increase since total debt will increase and total stockholders' equity will decrease after Thorsell makes the pension discount rate adjustment by reducing the discount rate by 0.5%.\nB. Incorrect because the financial leverage ratio (average total assets ÷ average shareholders' equity) will increase since total assets will remain unchanged and total shareholders' equity will decrease after Thorsell makes the pension discount rate adjustment by reducing the discount rate by 0.5%. Total shareholders' equity (via accumulated other comprehensive income) will decrease.\nC. Correct because the book value per share (common stockholders' equity ÷ total number of common shares outstanding) will decrease once Thorsell makes the pension discount rate adjustment. After reducing the discount rate by 0.5%, (a higher discount rate assumption results in a lower estimated pension obligation) the underfunded plan obligation will increase (that is, become even more underfunded) and total shareholders' equity (via accumulated other comprehensive income) will decrease. The number of common shares outstanding is not affected."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nSven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate.\n\nDuring the year 30,000 RSUs vested. They were granted at the start of the year with a grant-date fair value of $24 per RSU, and Kiruna's share price on the vesting date was $31. In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the full expense previously recognised for them ($22 per RSU) is reversed this year.\n\nPart 2\nRuiz compares two foreign subsidiaries of Atlas. Both have net monetary liabilities and positive net assets.\n\nSubsidiary A's functional currency is the US dollar (the parent's presentation currency), so it is remeasured with the temporal method.\nSubsidiary B's functional currency is its local currency, so it is translated with the current rate method.\n\nDuring the year both local currencies appreciate against the dollar. Prices in both countries are rising, and Subsidiary B uses FIFO.",
+    "questions": [
+     {
+      "q": "Kiruna's RSU compensation expense for the year is closest to:",
+      "options": [
+       "$676,000",
+       "$930,000",
+       "$720,000"
+      ],
+      "answer": 0,
+      "why": "RSU expense = vested × grant-date FV − forfeited × their FV = 30,000 × 24 − 2,000 × 22 = 720,000 − 44,000 = $676,000.\nThe vesting-date price ($31) does not affect the expense."
+     },
+     {
+      "q": "The vesting of the RSUs increases Kiruna's basic shares outstanding by:",
+      "options": [
+       "28,000 shares",
+       "30,000 shares",
+       "0 shares, because RSUs are only potentially dilutive"
+      ],
+      "answer": 1,
+      "why": "Once RSUs vest they become common shares: basic shares rise by the number vested (30,000). Unvested RSUs are potentially dilutive."
+     },
+     {
+      "q": "Because the local currency appreciated, Subsidiary A's remeasurement result and Subsidiary B's CTA are most likely:",
+      "options": [
+       "a loss in income for A and a positive CTA for B",
+       "a loss for both",
+       "a gain in income for A and a negative CTA for B"
+      ],
+      "answer": 0,
+      "why": "A: exposure = net monetary liabilities; foreign currency ↑ → liabilities worth more in dollars → loss in net income.\nB: exposure = net assets (positive); foreign currency ↑ → positive translation adjustment (CTA ↑)."
+     },
+     {
+      "q": "For a subsidiary with an appreciating local currency and rising prices, which choices give the higher translated gross margin?",
+      "options": [
+       "Temporal method and FIFO",
+       "Temporal method and LIFO",
+       "Current rate method and LIFO"
+      ],
+      "answer": 0,
+      "why": "Temporal method: COGS at older (lower) historical rates while sales are at the average rate → higher margin when the foreign currency appreciates (current rate method is better when it depreciates).\nRising prices: FIFO uses older, cheaper costs → higher margin (LIFO when prices fall)."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nNatalie Wexford is an analyst working for Bright Impact Investments (HII), which manages a variety of investment funds. She analyzes the recent performance of Azulejo Beverages SA (DB), a multinational brewer of carbonated beverages that recently entered the energy drinks market. As a core holding, DB's prominence in Europe provides geographic diversification for HII which tends to be North-America-centric. \n\nWexford and her team assess the quality of DB's overall performance. The consensus is positive, but Wexford disagrees with her team for the following reasons:\nReason 1: The rate of fluctuation in the cash-flow-based accruals ratio is low.\nReason 2: Balance-sheet-based accruals are trending down relative to total assets.\nReason 3: Income from operations is consistently higher than cash generated from operations.\n\nPart 2\nMariko Ishikawa works as a senior examiner for the Financial Institutions Agency (FIA), and Kenji Mori is one of the analysts who reports to her. Mori is a new hire who previously worked at an investment firm that specialized in manufacturing companies. His first two weeks at the FIA were spent in training sessions focused on the Basel III regulatory framework for banks to prepare him for his new analyst role.\n\nAt today’s weekly meeting, Ishikawa and her analysts are conducting a preliminary review of some of their assigned insurance institutions. Mori arrives early, so Ishikawa takes the opportunity to ask him to explain his understanding of the Basel III framework. Mori describes three enhancements that Basel III incorporated as part of its transition from the previous iteration:\n\nEnhancement 1: More stringent capital requirements that prevent banks from taking on excessive financial leverage.\nEnhancement 2: Increased funding stability by giving preference to interbank deposits over those from consumers.\nEnhancement 3: Additional measures to ensure sufficient earnings quality, thereby strengthening banks’ regulatory capital.\nThe other analysts arrive, and the meeting gets underway. The group is scheduled to review an insurance company, Kitano Holdings (KH), a property and casualty insurer. Ishikawa notes that the property and casualty market has been in a “hard” phase for a few years now, and she wonders whether the results will show the beginning of a cyclical shift.\n\nThe group reviews KH’s profitability information that Mori has provided in Exhibit 1. Ishikawa asks Mori to calculate KH’s combined ratio:\n\nExhibit 1 Excerpts from KH’s Financial Statements\n(¥ billions)\nLoss expense and loss adjustment expense | 41,208\nNet premiums earned | 58,420\nNet premiums written | 52,130\nUnderwriting expense | 21,874",
+    "questions": [
+     {
+      "q": "Which of the following reasons best supports Wexford's disagreement with her team about DB's overall performance?",
+      "options": [
+       "Reason 2",
+       "Reason 3",
+       "Reason 1"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because it is upward-trending relative accruals that could suggest management is trying to manipulate reported performance. Downward trending accruals provide less opportunity for manipulation. The analyst notes that the absolute level of accruals on the balance sheet is minor relative to the size of the operating assets, on either an ending balance basis or an average basis. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher. | B. Correct because the quality of income from operations is considered better when it is backed by cash flow. In this case, cash generated from operations is not fully backing income from operations, thereby calling the quality of income from operations into question. If the cash flow generated by operations was significantly or consistently less than operating profit, one would have reason to be suspicious about the quality of the operating profit. | C. Incorrect because a pattern of steady cash-flow-based accruals is unlikely to raise concerns. An erratic or upward-moving trend in cash-flow-based accruals would be concerning. The analyst would have been more concerned if the absolute levels of the accruals ratio were high; even more worrisome would have been if they were consistently trending higher."
+     },
+     {
+      "q": "Which of the enhancements Mori describes regarding the Basel III regulatory framework is most accurate?",
+      "options": [
+       "Enhancement 1",
+       "Enhancement 2",
+       "Enhancement 3"
+      ],
+      "answer": 0,
+      "why": "A. Correct. After the 2008 crisis, Basel III raised the required equity funding of banks' risk-weighted assets, which prevents banks from taking on excessive financial leverage.\nB. Incorrect. Basel III did increase requirements for stable funding, but consumer deposits are considered more stable than interbank deposits, so the preference is for consumer deposits.\nC. Incorrect. Earnings quality was not a focus of Basel III, although its changes will likely improve earnings quality."
+     },
+     {
+      "q": "If Ishikawa's interpretation of the current phase of the property and casualty market is correct, a cyclical shift is most likely to result in:",
+      "options": [
+       "capital adequacy being easier to achieve.",
+       "a tightening of underwriting standards.",
+       "additional competitors entering the market."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Hard markets help insurers maintain adequate capital; capital depletes as the market softens, making capital adequacy harder to achieve.\nB. Incorrect. In a hard market underwriting standards are already high; as the market softens they drop, not tighten.\nC. Correct. In a hard market premiums, profits and underwriting standards are high; this attracts competitors that offer lower premiums, which softens the market and weakens underwriting standards."
+     },
+     {
+      "q": "KH's combined ratio indicates that its underwriting business, before investment income, is:",
+      "options": [
+       "profitable, because the loss ratio is below 100%.",
+       "break-even, because the combined ratio is measured on net premiums written.",
+       "unprofitable, because claims and expenses exceed the premiums earned."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The loss ratio alone ignores the underwriting expense ratio; the combined ratio adds both.\nB. Incorrect. The combined ratio is not defined on net premiums written alone.\nC. Correct. A combined ratio above 100% means claims, loss adjustment expenses and underwriting expenses exceed the premiums, so the underwriting is a loss that investment income must cover."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nOrchard Packaging Group (OPG) had total assets of $2,400,000, financed with three times as much debt capital as equity capital.\n\nOPG's pretax cost of debt is 7% and its cost of equity capital is 11%.\n\nOPG had EBIT of $280,000 and was taxed at a rate of 30%. EBIT is expected to continue at $280,000 indefinitely.\n\nPart 2\nStark asks Parker to compare residual income models to dividend discount models and free cash flow models. Parker recognizes that valuation models based on discounting dividends or discounting free cash flows are as theoretically sound as the residual income model. While investigating the relationship of the residual income model to other valuation models, Parker makes the following statements.\n\nStatement 1: Residual income valuations recognize value later than different present value approaches.\n\nStatement 2: In theory, residual income valuations are mutually consistent with other present value approaches.\n\nPart 3\nTobias Weller values Grünwald AG with free cash flow models. Exhibit 1 shows data for the year (in € millions).\n\nExhibit 1: Grünwald AG Data\n# Item | Amount\nNet income | 420\nDepreciation | 150\nFixed capital investment | 310\nIncrease in current assets (including a €30 million increase in cash) | 110\nIncrease in current liabilities | 40\nTarget debt ratio | 40%\n\nGrünwald pays dividends that are far below its FCFE, and its dividends have little relation to its ability to pay.",
+    "questions": [
+     {
+      "q": "Using the method that deducts an equity charge, OPG's residual income is closest to:",
+      "options": [
+       "$107,800.",
+       "$41,800.",
+       "$130,000."
+      ],
+      "answer": 1,
+      "why": "Debt = 3/4 × $2,400,000 = $1,800,000 and equity = $600,000. Interest = $1,800,000 × 7% = $126,000.\nPretax income = 280,000 − 126,000 = $154,000; tax = 30% = $46,200; net income = $107,800.\nEquity charge = $600,000 × 11% = $66,000.\nResidual income = 107,800 − 66,000 = $41,800.\n$107,800 is net income (no equity charge deducted). $130,000 = EBIT × (1 − 30%) − 66,000 ignores the interest on the debt."
+     },
+     {
+      "q": "Are Parker's statements comparing residual income models with different present value approaches both correct?",
+      "options": [
+       "Yes",
+       "No, only statement 1 is correct",
+       "No, only statement 2 is correct"
+      ],
+      "answer": 2,
+      "why": "C is correct. RI models recognize value EARLIER, not later (Statement 1 wrong); in theory they are mutually consistent with other approaches (Statement 2 correct)."
+     },
+     {
+      "q": "Grünwald's FCFE, assuming investment is financed at the target debt ratio, is closest to:",
+      "options": [
+       "€260 million",
+       "€300 million",
+       "€236 million"
+      ],
+      "answer": 1,
+      "why": "FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv)\n= 420 − 0.60 × (310 − 150) − 0.60 × 40 = 420 − 96 − 24 = €300m"
+     },
+     {
+      "q": "Weller should most likely value Grünwald with:",
+      "options": [
+       "a dividend discount model, because Grünwald pays dividends",
+       "a residual income model, because FCFE is positive",
+       "an FCFE model, because dividends differ greatly from the capacity to pay them"
+      ],
+      "answer": 2,
+      "why": "Use FCFE instead of DDM when dividends differ significantly from FCFE (dividend-paying capacity), when the company pays no dividends, or when an investor takes a control perspective."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nDaniel Ashworth is an equity analyst at an investment bank. He is preparing updated research reports on two companies, Zorin Incorporated and Harlan Company.\n\nHarlan Company\nAshworth next reviews Harlan, which operates in a previously mature industry that now has high growth potential due to a recent technological innovation. Harlan's debt-to-equity ratio is significantly higher than the average of its competitors. Harlan spent heavily on advertising to create and maintain its brand, which is an important asset. The company is favored by many investors because its dividend payout ratio is the highest in its industry. Ashworth considers several potential metrics to use in valuing Harlan.\n\nPart 2\nThe Brookline Club is a small US investment club formed by a group of friends who recently graduated from university. At today's regular bimonthly meeting, two members present new companies for the club to analyse. The club uses a combination of comparables and forecasted fundamentals to make its investment decisions.\n\nUsing NYSE data, Ferro finds the average P/E for the Consumer Goods Index (15.2) and for its Processed and Packaged Goods sector (31.4). She then screens that sector for other small processed and packaged goods producers to build her own index. Partial results are shown in Exhibit 2.\n\nExhibit 2 Partial Results of Market Screen: Ferro's Index\n# Company | Market cap (US$ millions) | P/E\nHale Inc. | 6.40 | 13.4\nRivera Industries Inc. | 24.80 | 11.9\nBooth Brothers Co. | 512.30 | 5.6\nCorbin Foods Ltd. | 735.60 | 20.4\nLinden Delights Inc. | 548.90 | 17.6\n\nFerro observes that Corbin Foods must have both a higher-than-average growth rate and higher-than-average risk to justify its high P/E, and suggests the club look at Corbin at its next meeting.\n\nThe members discuss the wide range of market capitalisations and P/Es in Ferro's index and whether the arithmetic mean is the best value to use. Ferro decides to calculate the weighted harmonic mean of the index and says:\n\n\"The harmonic mean can be used to mitigate the effects of both large and small outliers.\"\n\nPart 3\nWeller values a small private company, Hallberg GmbH, for a minority investor. A controlling interest would command a control premium of 25%, and the discount for lack of marketability is 20%.",
+    "questions": [
+     {
+      "q": "Which of the following is the most appropriate metric for Ashworth to use in valuing Harlan?",
+      "options": [
+       "Dividend yield",
+       "Price to book ratio",
+       "Enterprise value to sales ratio"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Dividend yield ignores capital gains, which are likely important with the industry's growth potential, and the highest payout in the industry may not be safe.\nB. Incorrect. Book value ignores Harlan's brand, an internally generated intangible asset built by advertising that is not on the balance sheet.\nC. Correct. EV/sales uses the total value of debt and equity, so it suits Harlan's high debt-to-equity ratio and diverse capital structures; sales are stable and hard to manipulate."
+     },
+     {
+      "q": "Ferro's observation about Corbin Foods' high P/E is best described as:",
+      "options": [
+       "correct.",
+       "incorrect with respect to the risk.",
+       "incorrect with respect to the growth rate."
+      ],
+      "answer": 1,
+      "why": "Higher expected growth justifies a higher P/E: she is right on growth.\nHigher risk raises the required return and justifies a LOWER P/E: she is wrong on risk."
+     },
+     {
+      "q": "The weighted harmonic mean of the P/Es in Ferro's index (Exhibit 2) is closest to:",
+      "options": [
+       "11.3.",
+       "13.8.",
+       "15.3."
+      ],
+      "answer": 0,
+      "why": "Weighted harmonic mean = total market cap ÷ Σ(market cap ÷ P/E).\nTotal cap = 6.40 + 24.80 + 512.30 + 735.60 + 548.90 = 1,828.0.\nΣ(cap ÷ P/E) = 0.48 + 2.08 + 91.48 + 36.06 + 31.19 = 161.29.\n1,828.0 ÷ 161.29 = 11.3.\n13.8 is the simple arithmetic mean; 15.3 is the market-cap weighted arithmetic mean."
+     },
+     {
+      "q": "The total discount applied to a controlling value to value Hallberg's minority, non-marketable stake is closest to:",
+      "options": [
+       "36%",
+       "40%",
+       "45%"
+      ],
+      "answer": 0,
+      "why": "DLOC = 1 − 1/(1 + control premium) = 1 − 1/1.25 = 20%.\nTotal discount = 1 − (1 − DLOC)(1 − DLOM) = 1 − 0.80 × 0.80 = 36% (the discounts multiply, they are not added)."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nMandla Ncube, CFA, a senior equity analyst with Ellison-Brandt Investments, South Africa, has been assigned a recent graduate, Mpho Maseko, to assist in valuations. Maseko is interested in pursuing a career in equity analysis. In their first meeting, Ncube and Maseko discuss the concept of residual income and its commercial applications. Ncube asks Maseko to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.\n\nExhibit 1\nHypothetical Firm Data (amounts in South African rand)\nCurrent share price | R25.43\nBook value per share | R20.00\nTotal shares outstanding | 30 million\nCost of equity | 13%\nMarket value of debt | R55 million\nAccounting book value of total capital | R650 million\nIntrinsic share value of equity derived from residual income model | R22.00\nNcube also shares his valuation report of the hypothetical firm with Maseko. Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share. To assess Maseko’s knowledge of residual income valuation, Ncube asks Maseko two questions about the hypothetical firm:\n\nQuestion 1:\nWhat conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?\n\nPart 2\nElena Castovan is a junior analyst with Contralith Capital, a long-only equity investment manager. She has been asked to value three stocks on Contralith’s watch list: Portous, Inc. (PTU), SSX Financial (SSX), and Tantechi Ltd. (TTCI).\n\nCastovan’s final assignment is to determine the intrinsic value of TTCI using both a single-stage and a multistage RI model. Selected data and assumptions for TTCI are presented in Exhibit 2.\n\nExhibit 2\nTantechi Ltd. (TTCI) Selected Financial Data and Assumptions\nBook value per share | €45.25\nMarket price per share | €126.05\nConstant long-term ROE | 12.00%\nConstant long-term earnings growth rate | 4.50%\nCost of equity | 8.70%\nFor the multistage model, Castovan forecasts TTCI’s ROE to be higher than its long-term ROE for the first three years. Forecasted earnings per share and dividends per share for TTCI are presented in Exhibit 3. Starting in Year 4, Castovan forecasts TTCI’s ROE to revert to the constant long-term ROE of 12% annually. The terminal value is based on an assumption that residual income per share will be constant from Year 3 into perpetuity.\n\nExhibit 3\nTantechi Ltd. (TTCI) Forecasts of Earnings and Dividends\n#   | Year 1 | Year 2 | Year 3\nEarnings per share (€) | 7.82 | 8.17 | 8.54\nDividends per share (€) | 1.46 | 1.53 | 1.59",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the market value added of the hypothetical firm is closest to:",
+      "options": [
+       "R168 million.",
+       "R65 million.",
+       "R113 million."
+      ],
+      "answer": 0,
+      "why": "A is correct. Market value added equals the market value of firm minus total accounting book value of total capital.\nMarket value added = Market value of company – Accounting book value of total capital\nMarket value of firm = Market value of debt + Market value of equity\nMarket value of firm = R55 million + (30,000,000 × R25.43)\nMarket value of firm = R55 million + R762.9 million = R817.9 million\nMarket value added = R817.9 million – R650 million = R167.9 million, or approximately R168 million."
+     },
+     {
+      "q": "The most appropriate response to Ncube’s Question 1 would be that the present value of future residual earnings is expected to be:",
+      "options": [
+       "negative.",
+       "zero.",
+       "positive."
+      ],
+      "answer": 2,
+      "why": "C is correct. The intrinsic value of R22.00 is greater than the current book value of R20.00. The residual income model states that the intrinsic value of a stock is its book value per share plus the present value of expected (future) per share residual income. The higher intrinsic value per share, relative to book value per share, indicates that the present value of expected per share residual income is positive."
+     },
+     {
+      "q": "Based on Exhibits 2 and 3 and the multistage RI model, Castovan should estimate the intrinsic value of TTCI to be closest to:",
+      "options": [
+       "€54.88.",
+       "€83.01.",
+       "€85.71."
+      ],
+      "answer": 2,
+      "why": "C is correct. Residual income per share for the next three years is calculated as follows.\n \tYear 1\tYear 2\tYear 3\nBeginning book value per share\t45.25\t51.61\t58.25\nEarnings per share\t7.82\t8.17\t8.54\nLess dividends per share\t1.46\t1.53\t1.59\nChange in retained earnings\t6.36\t6.64\t6.95\nEnding book value per share\t51.61\t58.25\t65.20\nEarnings per share\t7.82\t8.17\t8.54\nLess per share equity charge*\t3.94\t4.49\t5.07\nResidual income\t3.88\t3.68\t3.47\n* Per share equity charge = Beginning book value per share × Cost of equity\nYear 1 per share equity charge = 45.25 × 0.087 = 3.94\nYear 2 per share equity charge = 51.61 × 0.087 = 4.49\nYear 3 per share equity charge = 58.25 × 0.087 = 5.07\nBecause Castovan forecasts that residual income per share will be constant into perpetuity, equal to Year 3 residual income per share, the present value of the terminal value is calculated using a persistence factor of 1.\nPresent value of terminal value = \n = \n \n= 33.78\nSo, the intrinsic value of TTCI is then calculated as follows.\n\n€\n€"
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Part 1\nFiona O’Connor, CFA, who is based in Dublin, runs the asset management firm that manages the assets for the Step Up Social Impact Private Equity Fund (the Fund), which is registered in Ireland. The general partner of the Fund has asked O’Connor to meet with Elise Jensen, CFA, a pension asset consultant, to find out whether Jensen will pitch the Fund to her institutional clients looking for an environmental, social, and governance (ESG) approach. Jensen specializes in working with continental European–based pension funds, many of which are Swiss pension funds required by Swiss pension regulations to undertake an ESG assessment prior to making an investment. In addition, all her clients have a relatively low risk profile, because they are small funds. The few pension funds Jensen works with that do not require an ESG assessment still include the desire for this type of evaluation in their investment mandate.\nDuring an introductory meeting that lasts about an hour, Jensen asks O’Connor to give an overview of the Fund. O’Connor makes the following three statements:\n\nSecond, let me explain how we select investments. I’ll give you the prospectus, too, for your further reference, because it contains all the details, and they’re quite extensive. We identify potential investments from around the globe through our own analysts’ research within the education and health care industries. We also use third-party agents to find potential investments. If we make an investment in the companies they present to us, we pay them a finder’s fee. One such agent we use is Make-a-Difference Consultants, an asset consulting firm that has adopted the CFA Institute Code and Standards.\n\nPart 2\nJacob Kowalski, CFA, is a portfolio manager at Harlan Investment Management, an asset management and research focused organization. After obtaining his CFA charter last month, Kowalski was transferred to the private wealth management division at Harlan.\n\nDhruv Bapat, a private wealth client, was involved in a major motorcycle accident and is in critical condition, fighting for his life. Bapat is a single parent with a daughter, Pavan Naidoo, in her mid-twenties. Since the accident, Naidoo has managed her father’s affairs, paying all expenses, including investment advisory fees. In several conversations with Naidoo, Kowalski highlighted Bapat’s low risk tolerance and investment goal of capital preservation. Naidoo has indicated her interest in managing the account more aggressively and possibly moving to another management firm. Naidoo recently petitioned the court to appoint her full power of attorney to legally manage Bapat’s affairs. Prior to the court decision, Naidoo asks Kowalski to invest her father’s account in the initial public offering (IPO) of Bluechirp, a highly sought after social media company that has yet to generate a profit.\n\nThe following week, the court approves Naidoo’s request to act on behalf of her father.\n\nNaidoo establishes a non-discretionary investment account at Harlan tied to her newly established business. Shortly thereafter, Kowalski joins the board of Talkwave.com, a smaller social media competitor to Bluechirp. Based on his knowledge of Bluechirp, Kowalski believes the stock of Talkwave is a good investment, even though it is not yet profitable. Buoyed by his faith in social media, Kowalski ultimately purchases shares of Talkwave’s IPO for Naidoo’s account, as well as for all clients he currently manages. When Kowalski informs Naidoo of the purchase, she expresses concern about her legal responsibilities and lack of accounting knowledge in overseeing the account. Kowalski provides Naidoo a list of recommended professionals he has worked with in the past, including attorneys and accountants. When he was in college 10 years earlier, Kowalski was engaged to one of the attorneys but broke off the relationship prior to their wedding, and one of the accountants was Kowalski’s college roommate. Since then, Kowalski has not had any contact with the lawyer and accountant.\n\nThe Talkwave investment is profitable on the first day of trading, doubling from its opening price. Kowalski tells his clients the multifactor valuation model used by Harlan shows Talkwave stock is still undervalued. Harlan’s research report, due out the next day, will recommend investors hold their Talkwave shares. However, Kowalski tells all his clients simultaneously they should sell their shares because he believes Talkwave is overvalued and the stock price will fall soon. Kowalski notes he has followed through on this belief by selling his personal holdings of Talkwave shares. Naidoo ignores Kowalski’s recommendation to sell Talkwave. Over the next week, the stock declines 75%.\n\nWatching Talkwave’s severe share price decline, Naidoo becomes furious with Kowalski because he did not sell shares of Talkwave in her account. She files a complaint with Kowalski’s supervisor, Sally Feng, CFA, claiming she was misled on the value of the IPO in the days immediately after the stock started trading. Kowalski responds to the complaint by telling Feng, “the analyst who wrote the hold recommendation on Talkwave has only passed his CFA Level II examination. As a charterholder, I have earned the right to use the CFA designation, so I am more qualified to manage clients’ investments.”\n\nPart 3\nRodrick Darko, CFA, is a senior research analyst at TTN Capital, a large full-service brokerage and investment firm. Darko is invited to an analyst conference hosted by Bloom Data Centers, a company covered by Darko. Bloom arranges to pay for the commercial flights for all analysts attending the conference. Bloom also provides a company-branded mug as a gift to all analysts who attend the conference. Darko accepts the travel arrangement and the gift.",
+    "questions": [
+     {
+      "q": "Scott works for a regional brokerage firm. He estimates that Walkton Industries will increase its dividend by US$1.50 a share during the next year. He realizes that this increase is contingent on pending legislation that would, if enacted, give Walkton a substantial tax break. The US representative for Walkton’s home district has told Scott that, although she is lobbying hard for the bill and prospects for its passage are favorable, concern of the US Congress over the federal deficit could cause the tax bill to be voted down. Walkton Industries has not made any statements about a change in dividend policy. Scott writes in his research report, “We expect Walkton’s stock price to rise by at least US$8.00 a share by the end of the year because the dividend will increase by US$1.50 a share. Investors buying the stock at the current time should expect to realize a total return of at least 15% on the stock.” According to the Standards:",
+      "options": [
+       "Scott violated the Standards by basing his research on uncertain predictions of future government action.",
+       "Scott violated the Standards because he failed to separate opinion from fact.",
+       "Scott violated the Standards because he used material inside information."
+      ],
+      "answer": 1,
+      "why": "This question relates to Standard V(B) Communication with Clients and Prospective Clients. Scott has issued a research report stating that he expects the price of Walkton Industries stock to rise by US$8 a share “because the dividend will increase” by US$1.50 per share. He has made this statement knowing that the dividend will increase only if Congress enacts certain legislation, an uncertain prospect."
+     },
+     {
+      "q": "Given O’Connor’s second statement to Jensen, which further action should O’Connor least likely take to comply with required or recommended procedures for the CFA Institute Standards of Professional Conduct?",
+      "options": [
+       "Monitor the consultants’ compliance policy execution.",
+       "Notify clients of the finder’s fee policy on a semiannual basis.",
+       "Disclose the finder’s fee arrangement in the fund prospectus."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Make-a-Difference has made claims that it abides by the CFA Institute Code and Standards. O’Connor has a responsibility under Standard I(A): Knowledge of the Law to not knowingly participate or assist others in violating any CFA Institute Standards. Therefore, she must seek assurances that Make-a-Difference Consultants also disclose the receipt of finder’s fees to their clients where applicable as required by Standard VI(C): Referral Fees.\nB. Correct. O’Connor should least likely notify clients of the finder’s fee policy on a semiannual basis. Recommended procedures to implement Standard VI(C): Referral Fees are to notify clients at least quarterly, not semiannually.\nC. Incorrect. O’Connor should ensure that the potential use of paying finder’s fees to Make-a-Difference Consultants or any other third-party agents is disclosed in the prospectus to avoid violating Standard VI(C): Referral Fees."
+     },
+     {
+      "q": "Which statement in Vass's brochure complies with Standard VII(B): Reference to CFA Institute, the CFA Designation and the CFA Program?",
+      "options": [
+       "\"Henrik Vass is a CFA charterholder.\"",
+       "\"As a CFA charterholder, Henrik Vass will earn you higher returns.\"",
+       "\"Henrik Vass passed all three CFA exams on his first attempt, which makes him a better analyst.\""
+      ],
+      "answer": 0,
+      "why": "Stating that one holds the designation is acceptable. Implying superior skill or promising better performance because of the designation is not."
+     },
+     {
+      "q": "In relation to Kowalski’s handling of the Talkwave stock recommendation, which of the following CFA Institute Standards of Professional Conduct did he least likely violate?",
+      "options": [
+       "Fair Dealing",
+       "Communication with Clients",
+       "Priority of Transactions"
+      ],
+      "answer": 0,
+      "why": "B. Incorrect because according to Standard V(B)–Communication with Clients and Prospective Clients, Kowalski should have distinguished fact from opinion. In addition, Kowalski should also disclose to clients and prospective clients the basic format and general principles of the investment processes used to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes and use reasonable judgment in identifying which factors are important to his investment analyses, recommendations, or actions and include those factors in communications with clients and prospective clients. | B. Incorrect because Kowalski has violated Standard VI(B)–Priority of Transactions. There is a potential conflict of interest because the client and the adviser hold the same stock, so the client should be given first priority to trade Talkwave. | C. Correct. Standard III(B)–Fair Dealing requires members and candidates to deal fairly and objectively with all clients when providing investment analysis, making investment recommendations, taking investment action, or engaging in other professional activities. When Kowalski informs clients of the upcoming investment recommendation by Harlan, he has treated all clients fairly because this disclosure is provided to all of his current clients."
+     },
+     {
+      "q": "Does Darko violate the Standards regarding the Bloom conference?",
+      "options": [
+       "No",
+       "Yes, by accepting the travel arrangement only",
+       "Yes, by accepting the travel arrangement and the gift"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because Darko violates Standard I(B) Independence and Objectivity by accepting the travel arrangement. According to the guidance for Standard I(B), to avoid the appearance of compromising their independence and objectivity, best practice dictates that Members and Candidates always use commercial transportation at their expense or at the expense of their firm rather than accept paid travel…"
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Part 1\nHelen Marsh is an analyst at Beacon Fund covering the real estate and energy sectors. She and her colleague are analyzing two companies that are currently held by the fund.\n\nThe first company is Mercury Corp., a publicly traded, national retail grocery store chain that has 3,100 physical stores. Mercury leases most of its grocery stores and all five of its office locations that help the company achieve its core business of operating 50,000 square foot stores in all markets of the United States. Mercury also owns the real estate (land and building) associated with 120 physical store locations. Mercury recently announced that its board of directors approved a strategic real estate plan to pursue a separation of all its owned assets. The company currently has a speculative-grade credit rating.\n\nThe separation would be achieved through a series of sale-leaseback transactions with real estate investment trusts (REITs) that specialize in owning retail properties. Under the plan, Mercury will sell its 120 owned grocery stores and lease them for 20-year terms with a combined annual rent expense of USD54 million. Mercury expects to receive cash proceeds of approximately USD1,000 million from the property sales, which will be used to retire approximately USD700 million of debt and repurchase 5 million common shares.\n\nMercury believes the pro forma capital structure following the transactions will enable it to receive an investment-grade credit rating. The sale-leaseback transactions value the 120 assets at an average capitalization rate of 5.40%. Based on Marsh’s colleague’s research, the 25th, 50th, and 75th percentile cap rates for sale transactions for similarly situated properties and similar lease terms in the last three years were 4.90%, 5.40%, and 5.90%, respectively.\n\nPart 2\nEmma Marlowe, CFA, is a fixed-income analyst for the Hanbit Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of KT Hotels, a publicly traded boutique hotel company. Marlowe notes that KT Hotels is a “green hotel” company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. The founding family owns 55% of the outstanding shares. Each ownership share has equivalent voting rights.The board of directors of KT Hotels consists of 15 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry.\n\nKT Hotels has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Marlowe and her supervisor discuss how KT Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Marlowe integrates ESG factors in the investment valuation of KT Hotels’ corporate bonds.\n\nPart 3\nSugi Tyler is a chemical industry analyst for a global investment firm. Tyler is researching the impact of environment, social, and governance (ESG) issues as they relate to ChemiKa LLC (ChemiKa) and PlastiKa Corp (PlastiKa). She summarizes the companies' ownership and governance structures in Exhibit 1.\n\nExhibit 1\n#   | ChemiKa | PlastiKa\nOwnership | Concentrated | Dispersed\nVoting power | Concentrated | Dispersed\nTotal number of directors | 19 | 8\nNumber of independent directors | 12 | 4\nTwo-tiered board | No | Yes\nCEO duality | Yes | No\nAverage board tenure | 8 years | 14 years\nIndependent committees: |  \nAudit | Yes | No\nCompensation | Yes | Yes\nDirector selection | No | Yes\nTyler shares this data with her co-worker Kim Myer and asks Myer to determine the risk of ChemiKa’s governance structure. Myer states:\"ChemiKa’s ownership and voting structure will likely diminish the ownership rights of minority shareholders which indicates principal-agent problem.\"\n\nTo evaluate the corporate governance policies and procedures of the two companies, Tyler considers the rankings provided by an independent ESG data analysis firm specializing in board and governance structure. The contributions of each board member are only considered after at least one year of service.\n\nThe ESG data analysis firm uses a scoring system awarding one point for favorable characteristics among the following:\n\nCEO duality is absent.\nAverage board tenure is below ten years.\nFor board independence, a two-tiered board is considered favorable. A simple majority of independent directors is generally favorable. However, in a one-tiered board which is considered unfavorable, a 60% majority of independent directors is the favorable threshold.\nIndependent committees for audit, compensation and director selection are present (1 point for the presence of each independent committee).",
+    "questions": [
+     {
+      "q": "Which of the following statements about Mercury's motivations for the strategic real estate plan is incorrect?",
+      "options": [
+       "The transactions will allow Mercury to unlock the value of its real estate assets.",
+       "The transactions will enable Mercury to sell a non-core business.",
+       "The expected change in Mercury's credit rating after the transactions will increase the firm's costs of capital."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Sale-leasebacks unlock the value in the real estate: Mercury receives cash and records a lease liability.\nB. Incorrect. Real estate ownership is not Mercury's core business (operating grocery stores), so this statement is correct.\nC. Correct. Retiring debt should improve the credit rating, which lowers (not raises) the cost of capital, so this statement is incorrect."
+     },
+     {
+      "q": "After integrating the ESG factors, the credit spread on KT Hotels’ bonds is most likely to:",
+      "options": [
+       "decrease.",
+       "remain unchanged.",
+       "increase."
+      ],
+      "answer": 2,
+      "why": "C is correct. KT Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 women out of 15 members), and low percentage of board members with hotel industry experience (20%). These factors are likely to increase investors’ perception of the corporation’s risk. The social risk for KT Hotels is also high. KT Hotels has a high labor turnover rate, pays most of its workforce at or near the minimum wage, and offers no health benefits. Legislation raising the minimum wage and the growing pressure on KT Hotels to offer benefits would increase operating costs. This could have a negative impact on future cash flows, which would be detrimental to the bond holders. The valuation of KT Hotels’ bonds could be adversely affected by the higher ESG risk. To account for the higher ESG risk, the credit spread on KT Hotels’ bonds is likely to increase.\n\nA is incorrect since the credit spread on KT Hotels’ bonds is likely to increase and not decrease.\n\nB is incorrect since the credit spread on KT Hotels’ bonds is likely to increase and not remain unchanged."
+     },
+     {
+      "q": "Based on the ESG data analysis firm's scoring system and Exhibit 1, compared to PlastiKa, ChemiKa most likely ranks:",
+      "options": [
+       "lower.",
+       "the same.",
+       "higher."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Both companies score 4 points.\nB. Correct. Scoring (1 point for each good-governance feature): independent directors 12 ÷ 19 = 63% is a majority for ChemiKa (1) but 4 ÷ 8 = 50% is not for PlastiKa (0); two-tiered board: ChemiKa no (0), PlastiKa yes (1); CEO duality: ChemiKa yes (0), PlastiKa no (1); average board tenure: ChemiKa 8 years (1), PlastiKa 14 years (0); audit committee: ChemiKa yes (1), PlastiKa no (0); compensation committee: both yes (1 each); director selection committee: ChemiKa no (0), PlastiKa yes (1). Ownership, voting power and the number of directors are not scored. Each company totals 4 points, so they rank the same.\nC. Incorrect. Both companies score 4 points."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Part 1\nGolden Island is a flourishing country because of tourism. The island is governed by a Governor General, a parliamentary body of elected legislators, and a couple of agencies to regulate the island’s economic and social environment. Recently, prospectors in the mountain range bordering the southern coast of the island discovered large deposits of gold, silver, and platinum. The government is concerned that development of these deposits will harm the tourist trade. Elena Trippi has been asked to participate in a series of fact-finding sessions conducted jointly by the island’s ministries of finance and tourism. This blue-ribbon fact-finding committee has been meeting weekly for the past two months.\n\nGolden Island’s Minister of Finance and president of the Central Bank, Rajiv Sengupta, addresses the issues of potential inflation as the island transitions to greater growth. He assures the committee that Golden Island’s central bank stands ready to use monetary tools to prevent such inflation\n\nPart 2\nMona Simmons is an analyst at Bluestone Fixed-Income Advisors, a fixed-income investment management firm located in Chicago, IL. Bluestone manages a variety of fixed-income strategies, primarily for institutional clients. Simmons provides economic research to portfolio managers by analyzing economic data and advising how these data may influence various segments of the fixed-income markets.\n\nAt the investment committee meeting, Simmons recommends purchasing United Kingdom inflation-linked government bonds. In her discussion, she makes the following statements about inflation-linked bonds:\n\nStatement 1: “Increases in uncertainty about future inflation are associated with lower break-even inflation rates.”\nStatement 2: “The break-even inflation rate incorporates the yield difference between longer dated and shorter dated inflation-linked bonds.”\nStatement 3: “The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about the quantity of goods and services investors will be able to consume in the future.”\nLloyd Redfield, a portfolio manager on the foreign bond team, asks Simmons to review the current business cycle and yield curve in Australia. The Australian economy entered a recession approximately 6 months ago, and the Australian Central Bank has been reducing its policy rate. Simmons expects the Australian economy to gradually improve over the next 6–12 months.\n\nGiven the ongoing recession in Australia, Redfield is reviewing Australian corporate bonds with the same five-year maturity held in the foreign bond strategy. The three bonds being reviewed are listed in Exhibit 2. Redfield agrees with Simmons’ assessment of the Australian economy.\nExhibit 2 Australia Corporate Bond Holdings\n# Bond | Credit Rating | Sector | Probability of Default | Estimated Recovery Rate | Spread over Government Bonds\nA | A | Consumer Staples | 0.5% | 40% | 200 bps\nB | BBB– | Consumer Discretionary | 2.0% | 35% | 350 bps\nC | BB | Industrial | 3.5% | 45% | 650 bps\nBased on this information, Redfield makes the following comments to Simmons regarding the Australian bonds:\nComment 1: Relative to bond B and bond C, bond A has likely experienced the worst price return over the last 9 months.\nComment 2: Based on your economic forecasts, in 6–12 months overall credit spreads should narrow and the rate of improvement will likely be greatest for bond C.\nComment 3: You can calculate the expected loss by multiplying the probability of default by the recovery rate.\n\nPart 3\nAt an international finance and economics conference in Bamako, Mali, Joao Almeida of Brazil and Lucinda Menon of India are discussing how to spur their countries’ economic growth. Almeida believes that growth can be bolstered by removing institutional impediments and suggests several possibilities for Brazil: launching a rural literacy program, clarifying property rights laws, and implementing a new dividend tax on foreign investors.\n\nMenon responds that for India, capital deepening will be more effective, and she has proposed the following ideas: building a group of auto and textile factories in the southern states, developing a north–south and east–west highway network, and sponsoring a patent initiative.\n\nAlthough Menon recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:\n\nChannel 1 | Deepening the capital base\nChannel 2 | Making investments in technology\nChannel 3 | Maintaining a low rupee exchange rate",
+    "questions": [
+     {
+      "q": "Which of the following will Sengupta most likely use to address the monetary issues relating to greater growth of the island’s economy? The central bank will:",
+      "options": [
+       "buy domestic securities from the private sector.",
+       "reduce the interest rate on loans to the private sector.",
+       "sell domestic securities to the private sector."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The central bank will sell domestic securities to the private sector.\nB. Incorrect. To reduce the money supply, the central bank would raise rates on loans to the private sector.\nC. Correct. The threat is inflation. To counter such a threat, the central bank will want to reduce the money supply. The central bank will sell domestic securities to the private sector."
+     },
+     {
+      "q": "Which of Simmons’ statements concerning inflation-linked bonds is most likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Statement 1 (Increases in uncertainty about future inflation are associated with lower break-even inflation rates.) is incorrect. Increases in uncertainty about future inflation would be associated with higher, not lower, break-even inflation rates.\nB. Incorrect. Statement 2 (The break-even inflation rate incorporates the yield difference between longer dated inflation-linked bonds and shorter dated inflation-linked bonds.) is incorrect. The break-even inflation rate incorporates the yield difference between inflation-linked and non-inflation-linked government bonds of the same maturity, not the yield difference between longer dated inflation-linked bonds and shorter dated inflation-linked bonds.\nC. Correct. Since Simmons makes her statements while looking at the yield difference between nominal and inflation-linked bonds, Statement 3 (The difference in yields reflects the uncertainty about the quantity of goods and services investors will be able to consume in the future.) is correct. The difference in yields incorporates uncertainty about future inflation and, therefore, the uncertainty about the quantity of goods and services investors will be able to consume in the future."
+     },
+     {
+      "q": "Which of Redfield’s comments regarding the Australian corporate bonds in Exhibit 2 is most likely correct?",
+      "options": [
+       "Comment 1",
+       "Comment 2",
+       "Comment 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Comment 1 is incorrect. The Australian economy entered recession approximately 6 months ago. As the business cycle turns down, those issuers with good credit ratings tend to outperform those with lower ratings as the spreads between low and higher quality issuers widen.\nB. Correct. Comment 2 is correct. When credit spreads are generally narrowing, the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Bond C has the lowest credit rating, highest probability of default, and widest spread over government bonds and should experience the greatest rate of improvement as the Australian economy improves and spreads narrow.\nC. Incorrect. Comment 3 is incorrect. Expected loss = Probability of default x (1 – Recovery rate). For example, bond B has an expected loss of 2% x (1 – 35%) = 1.3%."
+     },
+     {
+      "q": "The channel that is least likely to help India overcome its challenge of lacking significant natural resources is:",
+      "options": [
+       "Channel 1.",
+       "Channel 2.",
+       "Channel 3."
+      ],
+      "answer": 2,
+      "why": "C is correct. Maintaining a low currency exchange rate is a policy aimed at maintaining demand for the country’s exports. It would have little direct impact on the potential growth rate of aggregate supply. It might boost long-term capacity growth indirectly, however, by encouraging adoption of leading edge technology. Nonetheless, it would not be expected to be as powerful as capital deepening and/or investment in technology."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {
+  "rq1:1": {
+   "hl": [
+    "normal accruals explained by a regression on business activity, and the residual"
+   ],
+   "rule": "Explained by the regression = normal (non-discretionary). Residual = unusual (discretionary), the warning sign of manipulation."
+  },
+  "rq1:2": {
+   "hl": [
+    "@row:Stock options",
+    "@row:Unvested RSUs",
+    "Average unrecognised compensation expense"
+   ],
+   "rule": "RSUs have no exercise price, but the unrecognised expense still counts as proceeds: dilutive shares = 60,000 − 900,000 ÷ 30 = 30,000."
+  },
+  "rq1:3": {
+   "hl": [
+    "Bank X funds itself mainly with long-term consumer deposits; Bank Y relies on short-term interbank borrowing.",
+    "Morgan expects the yield curve to invert next year."
+   ],
+   "rule": "Stable funding: longer-term and consumer (retail) deposits are stickier than short-term interbank funding."
+  },
+  "rq1:4": {
+   "hl": [
+    "trend in its ROE components by using DuPont analysis",
+    "@row:Revenue",
+    "@row:Total liabilities",
+    "@row:Total asset turnover ratio"
+   ],
+   "rule": "Financial leverage = total assets ÷ equity; assets = revenue ÷ asset turnover, equity = assets − liabilities."
+  },
+  "rq1:5": {
+   "hl": [
+    "Montclair's analyst compares the full goodwill and partial goodwill methods.",
+    "Montclair Holdings acquires 80% of Tessaro SpA for €800 million in cash."
+   ],
+   "rule": "Partial goodwill = 800 − 0.80 × 850 = €120m."
+  },
+  "rq1:6": {
+   "hl": [
+    "Thorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates.",
+    "Maxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS."
+   ],
+   "rule": "A higher discount rate than peers lowers the present value of the pension obligation (and the reported expense), so the underfunding is understated: the assumption is aggressive."
+  },
+  "rq1:7": {
+   "hl": [
+    "Thorsell next examines Coleridge's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.5% higher than its industry competitors' discount rates.",
+    "Maxine Thorsell, a financial analyst, is examining the most recent annual financial report of Coleridge Ltd., a mature U.K.-based company that complies with IFRS."
+   ],
+   "rule": "Lower discount rate → larger obligation → liabilities ↑, equity ↓ (via AOCI), assets unchanged. So D/E ↑, financial leverage ↑ and book value per share ↓."
+  },
+  "rq1:8": {
+   "hl": [
+    "In the same year, 2,000 unvested RSUs from an earlier grant (grant-date fair value $22) were forfeited, and the full expense previously recognised for them ($22 per RSU) is reversed this year.",
+    "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate."
+   ],
+   "rule": "RSU expense = vested × grant-date FV − forfeited × their FV = 30,000 × 24 − 2,000 × 22 = 720,000 − 44,000 = $676,000."
+  },
+  "rq1:9": {
+   "hl": [
+    "They were granted at the start of the year with a grant-date fair value of $24 per RSU, and Kiruna's share price on the vesting date was $31.",
+    "Sven Aalto analyses the share-based compensation of Kiruna Tech, a US GAAP reporter with a 25% tax rate."
+   ],
+   "rule": "Once RSUs vest they become common shares: basic shares rise by the number vested (30,000). Unvested RSUs are potentially dilutive."
+  },
+  "rq1:10": {
+   "hl": [
+    "Both have net monetary liabilities and positive net assets.",
+    "Subsidiary B's functional currency is its local currency, so it is translated with the current rate method."
+   ],
+   "rule": "A: exposure = net monetary liabilities; foreign currency ↑ → liabilities worth more in dollars → loss in net income."
+  },
+  "rq1:11": {
+   "hl": [
+    "Subsidiary B's functional currency is its local currency, so it is translated with the current rate method.",
+    "Subsidiary A's functional currency is the US dollar (the parent's presentation currency), so it is remeasured with the temporal method."
+   ],
+   "rule": "Temporal method: COGS at older (lower) historical rates while sales are at the average rate → higher margin when the foreign currency appreciates (current rate method is better when it depreciates)."
+  },
+  "rq1:12": {
+   "hl": [
+    "Reason 2: Balance-sheet-based accruals are trending down relative to total assets.",
+    "Reason 3: Income from operations is consistently higher than cash generated from operations."
+   ],
+   "rule": "Red flags are: accruals ratio trending UP or erratic, and operating income consistently ABOVE cash from operations (Reason 3). Steady or falling accruals are not a concern."
+  },
+  "rq1:13": {
+   "hl": [
+    "Enhancement 1: More stringent capital requirements that prevent banks from taking on excessive financial leverage",
+    "Enhancement 2: Increased funding stability by giving preference to interbank deposits over those from consumers",
+    "Enhancement 3: Additional measures to ensure sufficient earnings quality"
+   ],
+   "rule": "Basel III: more equity against risk-weighted assets (less leverage), stable funding from consumer deposits."
+  },
+  "rq1:14": {
+   "hl": [
+    "has been in a “hard” phase for a few years now"
+   ],
+   "rule": "Hard market: high premiums and profits → new competitors → soft market: lower premiums, weaker underwriting standards, capital harder to maintain."
+  },
+  "rq1:15": {
+   "hl": [
+    "before investment income",
+    "underwriting business"
+   ],
+   "rule": "Combined ratio > 100% = underwriting loss (covered only by investment income)."
+  },
+  "rq1:16": {
+   "hl": [
+    "financed with three times as much debt capital as equity capital",
+    "pretax cost of debt is 7% and its cost of equity capital is 11%",
+    "EBIT of $280,000 and was taxed at a rate of 30%"
+   ],
+   "rule": "Residual income = net income − equity charge. Net income is AFTER interest and tax; equity charge = equity capital × cost of equity."
+  },
+  "rq1:17": {
+   "hl": [
+    "Residual income valuations recognize value later than different present value approaches."
+   ],
+   "rule": "RI models recognize value EARLIER (large book value up front); in theory RI and DDM give the same value."
+  },
+  "rq1:18": {
+   "hl": [
+    "@row:Increase in current assets",
+    "@row:Target debt ratio",
+    "target debt ratio"
+   ],
+   "rule": "Cash is not working capital: take it out of the current assets increase. Then multiply BOTH the net fixed investment and the working capital investment by (1 − DR)."
+  },
+  "rq1:19": {
+   "hl": [
+    "far below its FCFE",
+    "little relation to its ability to pay"
+   ],
+   "rule": "Dividends far from FCFE and unrelated to capacity: use FCFE, not a dividend discount model."
+  },
+  "rq1:20": {
+   "hl": [
+    "debt-to-equity ratio is significantly higher than the average of its competitors",
+    "spent heavily on advertising to create and maintain its brand"
+   ],
+   "rule": "High leverage + valuable internal brand → enterprise value to sales, not P/B or dividend yield."
+  },
+  "rq1:21": {
+   "hl": [
+    "Ferro observes that Corbin Foods must have both a higher-than-average growth rate and higher-than-average risk to justify its high P/E, and suggests the club look at Corbin at its next meeting.",
+    "Using NYSE data, Ferro finds the average P/E for the Consumer Goods Index (15.2) and for its Processed and Packaged Goods sector (31.4)."
+   ],
+   "rule": "Higher expected growth justifies a higher P/E: she is right on growth."
+  },
+  "rq1:22": {
+   "hl": [
+    "Exhibit 2 Partial Results of Market Screen: Ferro's Index",
+    "Ferro decides to calculate the weighted harmonic mean of the index and says:"
+   ],
+   "rule": "Weighted harmonic mean = total market cap ÷ Σ(market cap ÷ P/E)."
+  },
+  "rq1:23": {
+   "hl": [
+    "control premium of 25%",
+    "discount for lack of marketability is 20%"
+   ],
+   "rule": "The 25% is a control PREMIUM. Convert it: DLOC = 1 − 1/1.25 = 20%. Then total = 1 − (1 − DLOC)(1 − DLOM)."
+  },
+  "rq1:24": {
+   "hl": [
+    "Ncube asks Maseko to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.",
+    "Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share."
+   ],
+   "rule": "Market value added equals the market value of firm minus total accounting book value of total capital."
+  },
+  "rq1:25": {
+   "hl": [
+    "Ncube’s report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R22.00 per share.",
+    "What conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?"
+   ],
+   "rule": "The intrinsic value of R22.00 is greater than the current book value of R20.00. The residual income model states that the intrinsic value of a stock is its book value per share plus the present value "
+  },
+  "rq1:26": {
+   "hl": [
+    "Castovan’s final assignment is to determine the intrinsic value of TTCI using both a single-stage and a multistage RI model.",
+    "For the multistage model, Castovan forecasts TTCI’s ROE to be higher than its long-term ROE for the first three years."
+   ],
+   "rule": "Residual income per share for the next three years is calculated as follows."
+  },
+  "rq1:27": {
+   "hl": [
+    "The US representative for Walkton’s home district has told Scott that, although she is lobbying hard for the bill and prospects for its passage are favorable, concern of the US Congress over the federal deficit could cause the tax bill to be voted down.",
+    "Scott writes in his research report, “We expect Walkton’s stock price to rise by at least US$8.00 a share by the end of the year because the dividend will increase by US$1.50 a share."
+   ],
+   "rule": "This question relates to Standard V(B) Communication with Clients and Prospective Clients. Scott has issued a research report stating that he expects the price of Walkton Industries stock to rise by U"
+  },
+  "rq1:28": {
+   "hl": [
+    "The general partner of the Fund has asked O’Connor to meet with Elise Jensen, CFA, a pension asset consultant, to find out whether Jensen will pitch the Fund to her institutional clients looking for an environmental, social, and governance (ESG) approach.",
+    "Jensen specializes in working with continental European–based pension funds, many of which are Swiss pension funds required by Swiss pension regulations to undertake an ESG assessment prior to making an investment."
+   ],
+   "rule": "O’Connor should least likely notify clients of the finder’s fee policy on a semiannual basis. Recommended procedures to implement Standard VI(C): Referral Fees are to notify clients at least quarterly"
+  },
+  "rq1:29": {
+   "hl": [
+    "Standard VII(B)"
+   ],
+   "rule": "You may say you hold the designation. You may not link it to better returns or to being a better analyst."
+  },
+  "rq1:30": {
+   "hl": [
+    "However, Kowalski tells all his clients simultaneously they should sell their shares because he believes Talkwave is overvalued and the stock price will fall soon.",
+    "Kowalski tells his clients the multifactor valuation model used by Harlan shows Talkwave stock is still undervalued."
+   ],
+   "rule": "Mark every option violated / not violated first, then pick the one not violated. Here Fair Dealing was the one not breached; V(B) (fact vs opinion, disclose the process) and VI(B) (clients before own trades) were."
+  },
+  "rq1:31": {
+   "hl": [
+    "Darko is invited to an analyst conference hosted by Bloom Data Centers, a company covered by Darko.",
+    "Bloom arranges to pay for the commercial flights for all analysts attending the conference."
+   ],
+   "rule": "I(B) Independence and Objectivity: always use commercial transport at your own or your firm's expense. A token gift is fine; paid travel is the violation (the appearance of compromise counts). Exception: remote site with no commercial transport."
+  },
+  "rq1:32": {
+   "hl": [
+    "its core business of operating 50,000 square foot stores",
+    "retire approximately USD700 million of debt",
+    "will enable it to receive an investment-grade credit rating"
+   ],
+   "rule": "Less debt → better credit rating → lower cost of capital; real estate is a non-core business for a grocer."
+  },
+  "rq1:33": {
+   "hl": [
+    "Marlowe and her supervisor discuss how KT Hotels will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits.",
+    "The board includes one independent member and two women, and 20% of the board members have experience in the hotel industry."
+   ],
+   "rule": "KT Hotels faces significant corporate governance and social risk. Corporate governance risk is high due to a low number of independent board members (1 out of 15 members), lack of gender diversity (2 "
+  },
+  "rq1:34": {
+   "hl": [
+    "Independent committees for audit, compensation and director selection are present (1 point for the presence of each independent committee).",
+    "However, in a one-tiered board which is considered unfavorable, a 60% majority of independent directors is the favorable threshold."
+   ],
+   "rule": "Scoring (1 point for each good-governance feature): independent directors 12 ÷ 19 = 63% is a majority for ChemiKa (1) but 4 ÷ 8 = 50% is not for PlastiKa (0); two-tiered board: ChemiKa no (0), PlastiK"
+  },
+  "rq1:35": {
+   "hl": [
+    "Golden Island’s Minister of Finance and president of the Central Bank, Rajiv Sengupta, addresses the issues of potential inflation as the island transitions to greater growth.",
+    "He assures the committee that Golden Island’s central bank stands ready to use monetary tools to prevent such inflation"
+   ],
+   "rule": "The threat is inflation. To counter such a threat, the central bank will want to reduce the money supply. The central bank will sell domestic securities to the private sector."
+  },
+  "rq1:36": {
+   "hl": [
+    "Statement 3: “The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about the quantity of goods and services investors will be able to consume in the future.”",
+    "Statement 2: “The break-even inflation rate incorporates the yield difference between longer dated and shorter dated inflation-linked bonds.”"
+   ],
+   "rule": "Since Simmons makes her statements while looking at the yield difference between nominal and inflation-linked bonds, Statement 3 (The difference in yields reflects the uncertainty about the quantity o"
+  },
+  "rq1:37": {
+   "hl": [
+    "Comment 2: Based on your economic forecasts, in 6–12 months overall credit spreads should narrow and the rate of improvement will likely be greatest for bond C.",
+    "Based on this information, Redfield makes the following comments to Simmons regarding the Australian bonds:"
+   ],
+   "rule": "Comment 2 is correct. When credit spreads are generally narrowing, the rate of improvement will tend to be greater for those bonds issued by entities with a relatively weaker ability to pay. Bond C ha"
+  },
+  "rq1:38": {
+   "hl": [
+    "Although Menon recognizes that India lacks the significant natural resources that Brazil has, she states that India can overcome this challenge by bolstering long-term growth through three channels:",
+    "Menon responds that for India, capital deepening will be more effective, and she has proposed the following ideas: building a group of auto and textile factories in the southern states, developing a north–south and east–west highway network, and sponsoring a patent initiative."
+   ],
+   "rule": "Maintaining a low currency exchange rate is a policy aimed at maintaining demand for the country’s exports. It would have little direct impact on the potential growth rate of aggregate supply. It migh"
+  }
+ },
+ "srcmap": {
+  "1": [
+   "pq1",
+   33
+  ],
+  "2": [
+   "pq2",
+   42
+  ],
+  "3": [
+   "pq4",
+   6
+  ],
+  "4": [
+   "mock10",
+   1
+  ],
+  "5": [
+   "pq4",
+   14
+  ],
+  "6": [
+   "mock8",
+   30
+  ],
+  "7": [
+   "mock8",
+   32
+  ],
+  "8": [
+   "pq4",
+   21
+  ],
+  "9": [
+   "pq4",
+   24
+  ],
+  "10": [
+   "pq4",
+   40
+  ],
+  "11": [
+   "pq4",
+   41
+  ],
+  "12": [
+   "mock6",
+   23
+  ],
+  "13": [
+   "mock9",
+   25
+  ],
+  "14": [
+   "mock9",
+   26
+  ],
+  "15": [
+   "mock9",
+   28
+  ],
+  "16": [
+   "pq4",
+   49
+  ],
+  "17": [
+   "pq4",
+   53
+  ],
+  "18": [
+   "pq1",
+   16
+  ],
+  "19": [
+   "pq1",
+   17
+  ],
+  "20": [
+   "mock9",
+   15
+  ],
+  "21": [
+   "mock7",
+   38
+  ],
+  "22": [
+   "mock7",
+   39
+  ],
+  "23": [
+   "pq1",
+   42
+  ],
+  "24": [
+   "mock6",
+   25
+  ],
+  "25": [
+   "mock6",
+   26
+  ],
+  "26": [
+   "mock7",
+   12
+  ],
+  "27": [
+   "pq3",
+   9
+  ],
+  "28": [
+   "mock8",
+   39
+  ],
+  "29": [
+   "pq1",
+   21
+  ],
+  "30": [
+   "mock6",
+   43
+  ],
+  "31": [
+   "mock10",
+   9
+  ],
+  "32": [
+   "mock9",
+   9
+  ],
+  "33": [
+   "mock6",
+   16
+  ],
+  "34": [
+   "mock8",
+   34
+  ],
+  "35": [
+   "mock7",
+   20
+  ],
+  "36": [
+   "mock8",
+   6
+  ],
+  "37": [
+   "mock8",
+   8
+  ],
+  "38": [
+   "mock6",
+   19
+  ]
+ }
+}
