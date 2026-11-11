@@ -118,3 +118,5 @@ Exam hub > Quick questions: 52 concept multiple-choice questions without calcula
 
 ## Practice set audit (10 Nov, v208)
 pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.md "Practice set audit". Answer keys of the sets did not change (positions kept), so saved answers stay aligned; saved highlights of the changed vignettes were reset (`resetHl`).
+
+- Practice set 3 marked (11 Nov): user answers BBACCCBACACCACAABBACCBABCBACCACBCBBCABCCBACACBBCAACB = 46/52 (88.5%). Wrong: Q9 (V(B) fact vs opinion), Q21 (NAVPS), Q34 (real rates, volatility), Q39 (AIC vs BIC), Q43 (rental discount rate), Q50 (CVA/LGD). Q49-52 were marked against the version the user sat (old Norvalle key A, B, C, B), not the re-skinned one. PDF: bank/Practice3_wrong_answers.pdf (builder /tmp/gen/pq3/build.py + pdf.mjs, with the subject label under You/Answer).
