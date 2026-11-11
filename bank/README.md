@@ -126,3 +126,5 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - 11 Nov plan: Mock 11 will contain eq6-brady (Equity Module 6 Q20-23) re-skinned with new names and numbers (kept in memory only, not built yet).
 
 - 11 Nov: practice set 6 extended to 52 questions (156 min): Q49-52 short normalized-earnings vignettes (bank/exam/pq6_extra.py; re-skins of Module 6 Q3 definition, LPE Q11, Aaron Q17, Brady Q22 with new names and numbers). Keys: Q49 B, Q50 C, Q51 A, Q52 B. The eq6-brady vignette itself stays reserved for Mock 11.
+
+- Mock 10 marked (11 Nov): answers CBAABBACABABCACBABCCCBBACBBCACAABBCAAACACACC = 38/44 (86.4%). Wrong: Q1 (FSA, DuPont leverage trend, newest-year-first columns), Q9 (Ethics I(B) paid travel), Q13 (Quant, random walk b0 0 b1 1), Q24 (Deriv, American put 9.89), Q37 (Alt, unreimbursed expenses as % of EGI), Q38 (Alt, real estate cycle). Combined PDF with practice set 3: bank/Practice3_Mock10_wrong_answers.pdf (builder /tmp/gen/comb/build.py + pdf.mjs).
