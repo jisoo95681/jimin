@@ -1030,8 +1030,8 @@
  },
  "pq3:49": {
   "hl": [
-   "yield to maturity of 4.80% and a modified duration of 6.92",
-   "Brandt assumes that market spreads and yields will remain stable over the year",
+   "yield to maturity of 5.10% and a modified duration of 7.25",
+   "Kuiper assumes that market spreads and yields will remain stable over the year",
    "@row:Probability (%)",
    "@row:Credit spread"
   ],
@@ -1039,12 +1039,12 @@
  },
  "pq3:50": {
   "hl": [
-   "The recovery rate is one-quarter of the exposure each period.",
-   "The annual probability of default each year is 1.50%.",
+   "The recovery rate is one-third of the exposure each period.",
+   "The annual probability of default each year is 1.20%.",
    "the relevant binomial interest rate tree is presented in Exhibit 3",
    "@row:Rate"
   ],
-  "rule": "Recovery of one-quarter means LGD = 75%. Value the bond on the tree (VND), CVA = Σ DF × PD × LGD × expected exposure, fair value = VND − CVA, spread = YTM(fair value) − benchmark yield."
+  "rule": "Recovery of one-third means LGD = 2/3. Value the bond on the tree (VND), CVA = Σ DF × PD × LGD × expected exposure, fair value = VND − CVA, spread = YTM(fair value) − benchmark yield."
  },
  "pq3:51": {
   "hl": [

@@ -72,7 +72,10 @@ for k,st_ in enumerate(MIX['sets']):
 _m8=json.load(open('/home/user/jimin/bank/exam/mock8.json'))
 _x=[v for v in _m8['vignettes'] if 'Norvalle' in v['body']][0]
 _pq3=[s_ for s_ in sets if s_['id']=='pq3'][0]
-_pq3['vignettes'].append(dict(topic=_x['topic'],body=_x['body'],questions=copy.deepcopy(_x['questions'])))
+from pq3_reskin import build_vignette as _bv
+_rv,_=_bv()   # 11 Nov: re-skinned (names, numbers, tree), the original Mock 8 vignette had already been seen
+_pq3['vignettes'].append(_rv)
+_pq3['rev']=5; _pq3['resetHl']=sorted(set(_pq3.get('resetHl',[]))|{19}); _pq3['resetAns']=[49,50,51,52]
 _pq3['minutes']=156
 _pq3['desc']=_pq3['desc'].replace('48 questions, 2 h 24 min','52 questions, 2 h 36 min') if '48 questions' in _pq3['desc'] else _pq3['desc']
 # ---- Practice set 7 (10 Nov): main-table relationships + theory + earlier wrong theory questions (spec_g.py) + 4 Ethics questions ----
