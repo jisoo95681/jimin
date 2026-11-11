@@ -1,0 +1,8 @@
+{
+ "note": "11 Nov (user request): vignettes the user has NOT answered (blank/unattempted) in a module quiz. When a mock needs a vignette for that reading, use these FIRST. Remove an id once it has been used in a mock/practice set.",
+ "equity_residual_income_module5": {
+  "unsolved": ["eq5-sparrow", "s1a-kim", "eq2-armishaw", "eq5e-thales", "eq5e-dmh", "eq5e-pg"],
+  "used_in_practice": {"eq5-parker": "pq4 Q51-54 (11 Nov; Company C paragraph cut)"},
+  "source": "Module 5 Residual Income Valuation quiz review 11 Nov (38/72, 53%): Q37-48 essays and Q57-72 multiple choice were unanswered"
+ }
+}

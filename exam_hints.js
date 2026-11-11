@@ -1360,5 +1360,50 @@ const EXAM_HINTS = {
    "LONG-run equilibrium value of an exchange rate"
   ],
   "rule": "Short run: flows; medium run: portfolio balance; long run: debt sustainability."
+ },
+ "pq4:49": {
+  "hl": [
+   "financed with three times as much debt capital as equity capital",
+   "pretax cost of debt is 7% and its cost of equity capital is 11%",
+   "EBIT of $280,000 and was taxed at a rate of 30%"
+  ],
+  "rule": "Residual income = net income − equity charge. Net income is AFTER interest and tax; equity charge = equity capital × cost of equity."
+ },
+ "pq4:50": {
+  "hl": [
+   "EBIT is expected to continue at $280,000 indefinitely",
+   "book value per share is $15"
+  ],
+  "rule": "Constant residual income forever = perpetuity: value = book value per share + RI per share ÷ cost of equity."
+ },
+ "pq4:51": {
+  "hl": [
+   "Beginning book value per share is $10.00.",
+   "Expected net income per share is $2.00.",
+   "Required rate of return on equity is 10%."
+  ],
+  "rule": "RI = net income − cost of equity × BEGINNING book value (dividends and retained earnings are not used)."
+ },
+ "pq4:52": {
+  "hl": [
+   "Expected long-term ROE is 6.5%.",
+   "Expected long-term growth rate is 4%.",
+   "Cost of equity is 5%."
+  ],
+  "rule": "Single-stage RI: V0 = B0 + B0 × (ROE − r) ÷ (r − g): do not forget to add B0 and to use (r − g)."
+ },
+ "pq4:53": {
+  "hl": [
+   "Residual income valuations recognize value later than different present value approaches."
+  ],
+  "rule": "RI models recognize value EARLIER (large book value up front); in theory RI and DDM give the same value."
+ },
+ "pq4:54": {
+  "hl": [
+   "Earnings per share will be 32% of beginning book value for the next year.",
+   "Cash dividends will be 50% of earnings per share for the next year.",
+   "At the end of the year, the stock's P/B ratio will be 1.1."
+  ],
+  "rule": "Two-stage RI: V0 = B0 + PV(RI) + PV[(P/B − 1) × ending book value]; compare with the market price."
  }
 };

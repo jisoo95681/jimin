@@ -1854,8 +1854,8 @@
   "id": "pq4",
   "title": "Practice set 4",
   "kind": "practice",
-  "minutes": 144,
-  "desc": "Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)",
+  "minutes": 162,
+  "desc": "Mixed topics from the key notes, with 4 Ethics questions (54 questions, 2 h 42 min)",
   "vignettes": [
    {
     "topic": "Fixed Income",
@@ -2430,6 +2430,78 @@
       ],
       "answer": 2,
       "why": "A cap limits the coupon the issuer pays when rates rise, so it benefits the issuer; the investor is short the cap.\nCap value = straight floater − capped floater = 100 − 99.72 = 0.28\nA floor (minimum coupon) would benefit the investor."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Orchard Packaging Group (OPG) had total assets of $2,400,000, financed with three times as much debt capital as equity capital.\n\nOPG's pretax cost of debt is 7% and its cost of equity capital is 11%.\n\nOPG had EBIT of $280,000 and was taxed at a rate of 30%. EBIT is expected to continue at $280,000 indefinitely.\n\nOPG's book value per share is $15 and it has 40,000 shares of common stock outstanding.",
+    "questions": [
+     {
+      "q": "Using the method that deducts an equity charge, OPG's residual income is closest to:",
+      "options": [
+       "$107,800.",
+       "$41,800.",
+       "$130,000."
+      ],
+      "answer": 1,
+      "why": "Debt = 3/4 × $2,400,000 = $1,800,000 and equity = $600,000. Interest = $1,800,000 × 7% = $126,000.\nPretax income = 280,000 − 126,000 = $154,000; tax = 30% = $46,200; net income = $107,800.\nEquity charge = $600,000 × 11% = $66,000.\nResidual income = 107,800 − 66,000 = $41,800.\n$107,800 is net income (no equity charge deducted). $130,000 = EBIT × (1 − 30%) − 66,000 ignores the interest on the debt."
+     },
+     {
+      "q": "Using the residual income model, with the residual income expected to continue indefinitely, OPG's intrinsic value per share is closest to:",
+      "options": [
+       "$9.50.",
+       "$16.05.",
+       "$24.50."
+      ],
+      "answer": 2,
+      "why": "Residual income per share = 41,800 / 40,000 = $1.045.\nBecause EBIT stays at $280,000 indefinitely, the residual income is a perpetuity: PV = 1.045 / 0.11 = $9.50.\nIntrinsic value = book value per share + PV of residual income = 15.00 + 9.50 = $24.50.\n$9.50 leaves out the book value. $16.05 = 15.00 + 1.045 counts only one year of residual income instead of the perpetuity."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Lisa Parker is a junior analyst with a long-only equity investment manager. Parker is asked to value several stocks on a watch list. During a weekly meeting to discuss her approach, Parker and Russell Stark, the firm's director of research, review the residual income model and its characteristics. Stark begins by explaining how to calculate the intrinsic value of Company A's common stock using the residual income model. Stark provides Parker with the following data to calculate Company A's residual income for the year.\n\nBeginning book value per share is $10.00.\nExpected net income per share is $2.00.\nExpected dividends per share is $0.40.\nRequired rate of return on equity is 10%.\n\nStark asks Parker to calculate the intrinsic value of Company B's common stock using a single-stage residual income model. Parker assumes that Company B has a constant ROE and a constant earnings growth rate through time. For her analysis, Parker uses the following inputs.\n\nCurrent book value per share is $10.00.\nExpected long-term ROE is 6.5%.\nExpected long-term growth rate is 4%.\nCost of equity is 5%.\n\nStark asks Parker to compare residual income models to dividend discount models and free cash flow models. Parker recognizes that valuation models based on discounting dividends or discounting free cash flows are as theoretically sound as the residual income model. While investigating the relationship of the residual income model to other valuation models, Parker makes the following statements.\n\nStatement 1: Residual income valuations recognize value later than different present value approaches.\n\nStatement 2: In theory, residual income valuations are mutually consistent with other present value approaches.\n\n\nStark asks Parker to evaluate whether the common stock of Company D is undervalued, fairly valued, or overvalued based on a residual income model. Parker uses the two-stage residual income model to value Company D’s share. For her analysis, she assumes the following:\n\nCurrent market price is $24.00.\nBeginning book value per share is $20.00.\nEarnings per share will be 32% of beginning book value for the next year.\nCash dividends will be 50% of earnings per share for the next year.\nAt the end of the year, the stock's P/B ratio will be 1.1.\nRequired rate of return on equity is 10%.",
+    "questions": [
+     {
+      "q": "Based on the information given, the residual income of Company A’s common shares is closest to:",
+      "options": [
+       "$0.60.",
+       "$0.84.",
+       "$1.00."
+      ],
+      "answer": 2,
+      "why": "C is correct. Equity charge = 10 × 10% = $1; residual income = net income − equity charge = 2.00 − 1.00 = $1.00 (use beginning book value and net income, not retained earnings)."
+     },
+     {
+      "q": "Based on the given information, the intrinsic value of Company B's stock is closest to:",
+      "options": [
+       "$10.3.",
+       "$15.0.",
+       "$25.0."
+      ],
+      "answer": 2,
+      "why": "C is correct. V0 = B0 + B0 × (ROE − r)/(r − g) = 10 + 10 × (0.065 − 0.05)/(0.05 − 0.04) = $25.0."
+     },
+     {
+      "q": "Are Parker's statements comparing residual income models with different present value approaches both correct?",
+      "options": [
+       "Yes",
+       "No, only statement 1 is correct",
+       "No, only statement 2 is correct"
+      ],
+      "answer": 2,
+      "why": "C is correct. RI models recognize value EARLIER, not later (Statement 1 wrong); in theory they are mutually consistent with other approaches (Statement 2 correct)."
+     },
+     {
+      "q": "Based on the information given, Parker should conclude that Company D’s share is:",
+      "options": [
+       "undervalued.",
+       "fairly valued.",
+       "overvalued."
+      ],
+      "answer": 0,
+      "why": "A is correct. NI = 6.40; dividends 3.20; ending book 23.20; RI = 6.40 − 2.00 = 4.40, PV 4.00; terminal (1.1 − 1) × 23.20 = 2.32, PV 2.11. V0 = 20 + 4.00 + 2.11 = $26.11 > $24: undervalued."
      }
     ]
    }
