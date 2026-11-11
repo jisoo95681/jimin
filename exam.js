@@ -2522,8 +2522,8 @@ const EXAM_SETS = [
   "id": "pq5",
   "title": "Practice set 5",
   "kind": "practice",
-  "minutes": 144,
-  "desc": "Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)",
+  "minutes": 150,
+  "desc": "Mixed topics from the key notes, with 4 Ethics questions (50 questions, 2 h 30 min)",
   "vignettes": [
    {
     "topic": "Fixed Income",
@@ -3086,6 +3086,38 @@ const EXAM_SETS = [
       ],
       "answer": 2,
       "why": "Sanction 2, Require the adviser to hire an Independent Compliance Consultant to undertake an assessment, and recommend processes and procedures to prevent and detect violations, most likely complies with CFA Standards of Professional Conduct."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Mattias Holm, a derivatives analyst at Selwyn Capital, values an American-style call option on Selwyn Group shares with a two-period binomial model. The shares pay no dividends. The option matures at the end of the second period. Exhibit 1 shows the inputs.\n\nExhibit 1: Binomial Inputs\n# Item | Value\nCurrent share price | $50\nExercise price of the call option | $48\nRisk-free rate per period | 3%\nUp factor (u) | 1.20\nDown factor (d) | 0.90",
+    "questions": [
+     {
+      "q": "The value of the American call option on Selwyn Group is closest to:",
+      "options": [
+       "$6.44.",
+       "$7.03.",
+       "$8.48."
+      ],
+      "answer": 1,
+      "why": "Risk-neutral probability of an up move q = (1 + r − d) ÷ (u − d) = (1.03 − 0.90) ÷ (1.20 − 0.90) = 0.4333.\nPrices at the end of period 2: 72.00, 54.00 and 40.50. Call values there: 24.00, 6.00 and 0.\nUp node (S = 60): continuation value = (0.4333 × 24.00 + 0.5667 × 6.00) ÷ 1.03 = 13.40; exercise value = 60 − 48 = 12.00. The larger value is 13.40 (do not exercise).\nDown node (S = 45): continuation value = (0.4333 × 6.00 + 0.5667 × 0) ÷ 1.03 = 2.52; exercise value = 0, so the node value is 2.52.\nToday: (0.4333 × 13.40 + 0.5667 × 2.52) ÷ 1.03 = $7.03; exercising now is worth only 50 − 48 = 2.00.\nEarly exercise is never optimal for a call on a non-dividend-paying stock, so the American call equals the European call.\n$6.44 wrongly assumes exercise at the up node (12.00). $8.48 uses a probability of 0.5 instead of 0.4333."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Elena Varga, a derivatives analyst at Norden Bank, values an American-style put option on Calder Industries shares with a two-period binomial model. Calder pays no dividends. The put matures at the end of the second period. Exhibit 1 shows the inputs.\n\nExhibit 1: Binomial Inputs\n# Item | Value\nCurrent share price | $60\nExercise price of the put option | $65\nRisk-free rate per period | 3%\nUp factor (u) | 1.20\nDown factor (d) | 0.85",
+    "questions": [
+     {
+      "q": "The value of the American put option on Calder Industries is closest to:",
+      "options": [
+       "$7.50.",
+       "$6.60.",
+       "$7.89."
+      ],
+      "answer": 0,
+      "why": "Risk-neutral probability of an up move q = (1 + r − d) ÷ (u − d) = (1.03 − 0.85) ÷ (1.20 − 0.85) = 0.5143.\nPrices at the end of period 2: 86.40, 61.20 and 43.35. Put values there: 0, 3.80 and 21.65.\nUp node (S = 72): continuation value = (0.4857 × 3.80) ÷ 1.03 = 1.79; exercise value = 0. The node value is 1.79.\nDown node (S = 51): continuation value = (0.5143 × 3.80 + 0.4857 × 21.65) ÷ 1.03 = 12.11; exercise value = 65 − 51 = 14.00. The larger value is 14.00: early exercise.\nToday: (0.5143 × 1.79 + 0.4857 × 14.00) ÷ 1.03 = $7.50; exercising now is worth only 65 − 60 = 5.00.\n$6.60 is the European put value (no early exercise at the down node). $7.89 reverses the probabilities (uses 0.4857 for the up move)."
      }
     ]
    }

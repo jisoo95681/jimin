@@ -84,3 +84,9 @@ O6={
 'pq6:51':(['employees are paid about the same as employees of other bakeries in the area','takes no salary','at a rent well below market rates'],'Adjust only what is not at market level (unpaid family work, below- or above-market related-party rent). Items already at market need no adjustment.'),
 'pq6:52':(['is $600,000 a year higher than is typical','costs $40,000','annual operating expenses of $12,000 and annual depreciation of $25,000','at $9 a square foot a year','Market rents for similar space are $7 a square foot'],'Adjust EBIT for each non-market item (include the removed asset\'s depreciation), then apply the tax rate: normalized EBIT × (1 − t).'),
 }
+
+# practice set 5, Q49-50 appended 11 Nov (American options on a binomial tree): key -> (highlight phrases, rule)
+O5={
+'pq5:49':(['American-style call option','The shares pay no dividends','Exercise price of the call option'],'American option: at EVERY node take the larger of the continuation value and the exercise value. A call on a non-dividend-paying stock is never exercised early, so it equals the European call.'),
+'pq5:50':(['American-style put option','Exercise price of the put option','Calder pays no dividends'],'American put: at every node take the larger of the continuation value and K − S; early exercise shows up at the low-price (down) node. Do not start from the one-year payoffs: start at maturity and work backwards.'),
+}

@@ -84,6 +84,12 @@ _pq4=[s_ for s_ in sets if s_['id']=='pq4'][0]
 _pq4['vignettes'].append(_x4.vim()); _pq4['vignettes'].append(_x4.parker())
 _pq4['minutes']=162
 _pq4['desc']=_pq4['desc'].replace('48 questions, 2 h 24 min','54 questions, 2 h 42 min') if '48 questions' in _pq4['desc'] else _pq4['desc']
+# ---- 11 Nov (user request): Q49-50 appended to practice set 5: American call and American put on a two-period binomial tree ----
+import pq5_extra as _x5
+_pq5=[s_ for s_ in sets if s_['id']=='pq5'][0]
+for _v in _x5.vigs(): _pq5['vignettes'].append(_v)
+_pq5['minutes']=150
+_pq5['desc']=_pq5['desc'].replace('48 questions, 2 h 24 min','50 questions, 2 h 30 min') if '48 questions' in _pq5['desc'] else _pq5['desc']
 # ---- 11 Nov (user request): Q49-52 appended to practice set 6: short vignettes on normalized earnings (private company valuation) ----
 import pq6_extra as _x6
 _pq6=[s_ for s_ in sets if s_['id']=='pq6'][0]
@@ -254,7 +260,7 @@ import importlib.util as _iu
 _sp=_iu.spec_from_file_location('hints_override','/home/user/jimin/bank/exam/hints_override.py'); _hm=_iu.module_from_spec(_sp); _sp.loader.exec_module(_hm)
 _txt={}
 for _s in sets:
-    if _s['id'] in ('mock9','mock10','pq3','pq4','pq6'):
+    if _s['id'] in ('mock9','mock10','pq3','pq4','pq5','pq6'):
         _k=0
         for _v in _s['vignettes']:
             for _q in _v['questions']:
@@ -270,6 +276,10 @@ for _key,(_hl,_rule) in _hm.O3.items():
     for _ph in _hl:
         if _ph.startswith('@row:'): assert any(l.lstrip('# ').split(' | ')[0].strip().lower().startswith(_ph[5:].lower()) for l in _b.split('\n')),(_key,_ph)
         else: assert _ph in _b or _ph in _qq,(_key,_ph)
+    HH[_key]=dict(hl=_hl,rule=_rule)
+for _key,(_hl,_rule) in _hm.O5.items():
+    _b,_qq=_txt[_key]
+    for _ph in _hl: assert _ph in _b or _ph in _qq,(_key,_ph)
     HH[_key]=dict(hl=_hl,rule=_rule)
 for _key,(_hl,_rule) in _hm.O6.items():
     _b,_qq=_txt[_key]

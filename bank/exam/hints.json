@@ -1435,5 +1435,21 @@
    "Market rents for similar space are $7 a square foot"
   ],
   "rule": "Adjust EBIT for each non-market item (include the removed asset's depreciation), then apply the tax rate: normalized EBIT × (1 − t)."
+ },
+ "pq5:49": {
+  "hl": [
+   "American-style call option",
+   "The shares pay no dividends",
+   "Exercise price of the call option"
+  ],
+  "rule": "American option: at EVERY node take the larger of the continuation value and the exercise value. A call on a non-dividend-paying stock is never exercised early, so it equals the European call."
+ },
+ "pq5:50": {
+  "hl": [
+   "American-style put option",
+   "Exercise price of the put option",
+   "Calder pays no dividends"
+  ],
+  "rule": "American put: at every node take the larger of the continuation value and K − S; early exercise shows up at the low-price (down) node. Do not start from the one-year payoffs: start at maturity and work backwards."
  }
 }
