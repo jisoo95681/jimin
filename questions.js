@@ -5402,10 +5402,10 @@ const QUESTIONS = [
   {
     topic: "Ethical and Professional Standards",
     reading: "Guidance for Standards I–VII",
-    q: "An analyst is a guest of a company with hotel and transport paid for a plant visit. Independence and objectivity are:",
-    options: ["Not likely to be compromised if the hotel and transport are reasonable", "Always compromised by company-paid travel", "Compromised unless clients are told"],
+    q: "A company offers to pay the commercial flights and the hotel for an analyst's visit to its plant, which is easy to reach by commercial transport. Under I(B), the most appropriate action is to:",
+    options: ["Pay for the flights and the hotel himself (or have his firm pay), as the company must not reimburse air transportation", "Accept, because reasonable hotel and transport costs do not compromise independence and objectivity", "Accept and tell clients about the benefit"],
     answer: 0,
-    why: "I(B) targets benefits that could compromise objectivity. Reasonable hotel and transport do not."
+    why: "I(B): when a commercial option exists, pay your own commercial transportation and hotel; no covered company should reimburse air transportation. The exception is a remote, hard-to-reach site with no commercial transport: there, reasonable company-provided transport and lodging is acceptable. Disclosure does not cure the problem."
   },
   {
     topic: "Ethical and Professional Standards",
