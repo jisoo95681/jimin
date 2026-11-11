@@ -83,7 +83,7 @@ Navas also comments on interest rate volatility: "Volatility of short-term rates
    "Short-term volatility comes from monetary policy and is usually higher; long-term volatility reflects the economy and inflation expectations.")])
 
 sp5,sp3=0.030,0.024; buy=100/(1+sp5)**5; sell=100/(1+sp3)**3; H=2; ret=(sell/buy)**(1/H)-1
-add("Fixed Income",f"""Navas considers rolling down the yield curve. He would buy a five-year zero-coupon government bond and sell it after two years. The five-year spot rate is {sp5*100:.1f}% and the three-year spot rate is {sp3*100:.1f}%. He assumes the yield curve stays stable.
+add("Fixed Income",f"""Navas considers rolling down the yield curve. He would buy a five-year zero-coupon government bond and sell it after two years. The five-year spot rate is {sp5*100:.1f}% and the three-year spot rate is {sp3*100:.1f}%. He assumes the yield curve stays stable, so when he sells, the bond (then a three-year bond) is priced at today's three-year spot rate.
 
 Navas also compares his projected spot curve with the current forward curve. For a two-year bond, he expects future spot rates to be below the current forward rates.""",[
  Q("Navas's annualised return from rolling down the curve is closest to:",pct(ret),[pct(sell/buy-1),pct(sp5)],

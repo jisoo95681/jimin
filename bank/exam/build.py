@@ -66,6 +66,7 @@ for k,st_ in enumerate(MIX['sets']):
     st=build(vs,f'pq{k+1}',f'Practice set {k+1}',1+500*k)
     rv=PREV.get(f'pq{k+1}')
     if rv: st['rev']=3; st['resetHl']=rv
+    if st['id']=='pq3': st['rev']=4; st['resetHl']=sorted(set(rv)|{1})  # 11 Nov: Navas roll-down wording
     st['desc']='Mixed topics from the key notes, with 4 Ethics questions (48 questions, 2 h 24 min)'; sets.append(st)
 # ---- 11 Nov (user request): the Mock 8 credit-spread vignette (Marangoni / Norvalle, Q9-12) is appended at the END of practice set 3 (pq3 Q49-52; saved progress is keyed by question number, so nothing is reordered) ----
 _m8=json.load(open('/home/user/jimin/bank/exam/mock8.json'))

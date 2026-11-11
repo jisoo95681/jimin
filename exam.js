@@ -1223,7 +1223,7 @@ const EXAM_SETS = [
    },
    {
     "topic": "Fixed Income",
-    "body": "Navas considers rolling down the yield curve. He would buy a five-year zero-coupon government bond and sell it after two years. The five-year spot rate is 3.0% and the three-year spot rate is 2.4%. He assumes the yield curve stays stable.\n\nNavas also compares his projected spot curve with the current forward curve. For a two-year bond, he expects future spot rates to be below the current forward rates.",
+    "body": "Navas considers rolling down the yield curve. He would buy a five-year zero-coupon government bond and sell it after two years. The five-year spot rate is 3.0% and the three-year spot rate is 2.4%. He assumes the yield curve stays stable, so when he sells, the bond (then a three-year bond) is priced at today's three-year spot rate.\n\nNavas also compares his projected spot curve with the current forward curve. For a two-year bond, he expects future spot rates to be below the current forward rates.",
     "questions": [
      {
       "q": "Navas's annualised return from rolling down the curve is closest to:",
@@ -1836,8 +1836,9 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "rev": 3,
+  "rev": 4,
   "resetHl": [
+   1,
    6,
    9,
    11,
