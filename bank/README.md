@@ -122,3 +122,5 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - Practice set 3 marked (11 Nov): user answers BBACCCBACACCACAABBACCBABCBACCACBCBBCABCCBACACBBCAACB = 46/52 (88.5%). Wrong: Q9 (V(B) fact vs opinion), Q21 (NAVPS), Q34 (real rates, volatility), Q39 (AIC vs BIC), Q43 (rental discount rate), Q50 (CVA/LGD). Q49-52 were marked against the version the user sat (old Norvalle key A, B, C, B), not the re-skinned one. PDF: bank/Practice3_wrong_answers.pdf (builder /tmp/gen/pq3/build.py + pdf.mjs, with the subject label under You/Answer).
 
 - 11 Nov: Equity Module 5 quiz re-pasted (38/72, 53%). Unanswered vignettes are listed in bank/unsolved_priority.json (use first in mocks). Practice set 4 extended to 54 questions: Q49-50 VIM residual income re-skin (Orchard Packaging Group; RI $41,800, value $24.50), Q51-54 Parker vignette (Company C paragraph cut because its question is not in the bank). Keys: Q49 B, Q50 C, Q51 C, Q52 C, Q53 C, Q54 A.
+
+- 11 Nov plan: Mock 11 will contain eq6-brady (Equity Module 6 Q20-23) re-skinned with new names and numbers (kept in memory only, not built yet).
