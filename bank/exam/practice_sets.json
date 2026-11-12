@@ -8884,6 +8884,535 @@
   ]
  },
  {
+  "id": "mock14",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock 14",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Newly written in CFA style, focused on your weak areas (44 questions, 13 vignettes, 2 h 12 min)",
+  "vignettes": [
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Lena Marchetti, CFA, is a senior research analyst at Delmar Securities, a regional brokerage firm whose clients include pension funds, mutual funds and retail investors.\n\nOn Monday morning Marchetti changes her recommendation on Orrin Industries from \"buy\" to \"sell\". At 3:00 p.m. she telephones three large institutional clients to tell them about the change. The recommendation is posted to Delmar's website for all other clients at 4:00 p.m.\n\nMarchetti's research note states: \"Orrin's earnings will fall by 30% next year and the shares will decline to 40 by June.\" The note does not mention that the forecast rests on her assumption of a 20% rise in raw material prices, which she considers likely but which is not based on any company disclosure.\n\nGantry Corporation, a company that Marchetti covers, invites her to its investor day at an overseas plant. Gantry offers to pay for her business-class airfare and hotel. Delmar's gift policy allows modest gifts but does not mention travel. At the event, Gantry gives every attendee a pen set worth about US$15. Marchetti accepts both the trip and the pen set.\n\nAaron Pike, CFA, a Delmar portfolio manager, regularly refers clients who need tax advice to a local tax attorney. The attorney pays Pike a fee for each referral. Pike has told Delmar's compliance department about the arrangement but has not told his clients.",
+    "questions": [
+     {
+      "q": "Marchetti's handling of the change in her recommendation on Orrin most likely violated Standard III(B):",
+      "options": [
+       "Priority of Transactions.",
+       "Fair Dealing.",
+       "Loyalty, Prudence, and Care."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Priority of Transactions governs the order in which client and personal trades are executed; it is not about when clients are told about a recommendation.\nB. Correct. Standard III(B) requires members to give all clients a fair opportunity to act on a recommendation. Marchetti informed three institutional clients an hour before the other clients, so she disseminated the change unfairly.\nC. Incorrect. Loyalty, Prudence, and Care concerns the duty to act in clients' best interests and to preserve confidentiality; the problem here is the unequal timing of the dissemination."
+     },
+     {
+      "q": "With respect to the research note on Orrin, Marchetti most likely violated Standard V(B):",
+      "options": [
+       "Diligence and Reasonable Basis.",
+       "Communication with Clients and Prospective Clients.",
+       "Material Nonpublic Information."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Diligence and reasonable basis is not the issue: she has an assumption that she considers likely, but the problem is how the forecast is communicated.\nB. Correct. Marchetti presented a forecast as certain and left out the key assumption behind it. Standard V(B) requires members to separate fact from opinion and to include the important factors of the analysis.\nC. Incorrect. Her information is her own assumption, not material nonpublic information obtained from the company."
+     },
+     {
+      "q": "Does Marchetti violate the Standards by accepting the Gantry trip and the pen set?",
+      "options": [
+       "No.",
+       "Yes, by accepting the trip only.",
+       "Yes, by accepting both the trip and the pen set."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Accepting paid travel from a company she covers compromises, or appears to compromise, her independence and objectivity, so \"no\" is incorrect.\nB. Correct. Under Standard I(B), analysts should use commercial transportation at their own or their firm's expense. The business-class trip paid by Gantry is a violation; a pen set of about US$15 is a modest token gift and is acceptable.\nC. Incorrect. A pen set of this value is a token gift that does not by itself impair independence."
+     },
+     {
+      "q": "Which of the following actions is Pike most likely required to take to comply with Standard VI(C): Referral Fees?",
+      "options": [
+       "Pay the referral fees to Delmar.",
+       "Refuse all fees from the tax attorney.",
+       "Disclose the referral fee arrangement to clients and prospective clients before they use the attorney's services."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The fee does not have to be paid over to the employer; the requirement is disclosure.\nB. Incorrect. Referral fees are allowed if they are disclosed; refusing all fees is not required.\nC. Correct. Standard VI(C) requires members to disclose referral compensation to their employer, clients and prospective clients so that they can evaluate the objectivity of the recommendation. Pike has informed only his employer, so he must also inform clients and prospects before the services are provided (and update them periodically)."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Marco Esposito, CFA, analyzes the financial statements of Halvern Industries Inc. (Halvern), a manufacturer that reports under US GAAP and is taxed at 25%. Halvern sponsors a defined benefit pension plan and grants restricted stock units (RSUs) to its managers.\n\nExhibit 1 shows data for the plan for the most recent fiscal year (US$ thousands).\n\nExhibit 1: Halvern Defined Benefit Plan, Most Recent Fiscal Year\n# Item | Amount\nCurrent service cost | 1,950\nDiscount rate | 5.5%\nProjected benefit obligation, beginning of year | 62,000\nFair value of plan assets, beginning of year | 55,000\nExpected rate of return on plan assets | 6.8%\nActual return on plan assets | 4,100\nAmortization of prior service cost | 120\nAmortization of actuarial losses | 80\n\nEsposito wants to compare Halvern with a peer that reports under IFRS. No plan amendments occurred in the year, so no past service cost arises under IFRS.\n\nDuring the year 40,000 RSUs vested. They were granted at the start of the year with a grant-date fair value of $18 per RSU, and Halvern's share price on the vesting date was $23. In the same year 3,000 unvested RSUs from an earlier grant (grant-date fair value $16) were forfeited, and the compensation expense previously recognized for them is reversed.",
+    "questions": [
+     {
+      "q": "The periodic pension cost that Halvern reports in its income statement under US GAAP is closest to:",
+      "options": [
+       "US$1,460 thousand.",
+       "US$1,620 thousand.",
+       "US$1,820 thousand."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This uses the actual return on plan assets (4,100) instead of the expected return and is therefore wrong: 1,950 + 3,410 − 4,100 + 120 + 80 = 1,460.\nB. Incorrect. This leaves out the amortization of prior service cost and of actuarial losses (120 + 80): 1,950 + 3,410 − 3,740 = 1,620.\nC. Correct. US GAAP periodic pension cost = service cost + interest cost on the beginning obligation − EXPECTED return on assets + amortization of prior service cost + amortization of actuarial losses = 1,950 + (5.5% × 62,000 = 3,410) − (6.8% × 55,000 = 3,740) + 120 + 80 = 1,820."
+     },
+     {
+      "q": "If Halvern reported under IFRS, the pension expense recognized in profit or loss would be closest to:",
+      "options": [
+       "US$1,620 thousand.",
+       "US$2,335 thousand.",
+       "US$1,820 thousand."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the US GAAP cost without the amortization items, not the IFRS figure.\nB. Correct. Under IFRS, profit or loss includes the current service cost and the net interest on the net defined benefit liability: 1,950 + 5.5% × (62,000 − 55,000) = 1,950 + 385 = 2,335. Remeasurements go to OCI and nothing is amortized.\nC. Incorrect. This is the US GAAP figure, which includes expected return and amortization; IFRS uses net interest."
+     },
+     {
+      "q": "The compensation expense that Halvern recognizes for the RSUs in the year is closest to:",
+      "options": [
+       "$672,000.",
+       "$720,000.",
+       "$872,000."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Expense uses the grant-date fair value for the RSUs that vested and reverses the expense recognized for the forfeited ones: 40,000 × $18 − 3,000 × $16 = $672,000.\nB. Incorrect. This leaves out the reversal for the forfeitures: 40,000 × $18 = $720,000.\nC. Incorrect. This uses the share price on the vesting date ($23) instead of the grant-date fair value: 40,000 × $23 − $48,000 = $872,000."
+     },
+     {
+      "q": "The tax effect of the RSUs vesting, under US GAAP, is closest to:",
+      "options": [
+       "a $50,000 windfall recorded in equity.",
+       "a $50,000 shortfall that increases income tax expense.",
+       "a $50,000 windfall that reduces income tax expense."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Under current US GAAP the windfall is recognized in income tax expense, not in equity.\nB. Incorrect. The vesting-date price ($23) is above the grant-date fair value ($18), so the tax deduction exceeds the expense: it is a windfall, not a shortfall.\nC. Correct. Windfall = (23 − 18) × 40,000 × 25% = $50,000, recognized as a reduction of income tax expense."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Marta Kowalczyk, CFA, is an equity analyst at Baltic Ridge Securities. She is valuing the common shares of Norden Freight AB (NFAB), a Swedish shipping company, as of 31 December 2024. NFAB pays small and irregular dividends. Its free cash flow to equity has been negative in each of the last three years because of a large fleet expansion program. NFAB's financial statements are of high quality, and Kowalczyk expects the clean surplus relationship to hold in the forecast period.\n\nKowalczyk collects the data in Exhibit 1 (amounts in Swedish krona, SEK).\n\nExhibit 1: Selected Data for Norden Freight AB\n# Item | Value\nBook value per share, 31 December 2024 | SEK80.00\nExpected earnings per share (EPS), 2025 | SEK11.20\nExpected dividend payout ratio, 2025 | 40%\nCost of equity | 9.0%\nExpected return on equity (ROE), 2026 | 12.5%\nReported ROE, 2024 | 21.0%\nIndustry median ROE, 2024 | 11.0%\nOne-time gain on vessel sales as a percentage of 2024 net income | 30%\n\nKowalczyk uses a multistage residual income model. She forecasts residual income for 2025 and 2026 explicitly. From 2027 onward she assumes that residual income declines each year at a rate determined by a persistence factor of 0.60.",
+    "questions": [
+     {
+      "q": "Based on the information provided, the most appropriate model for Kowalczyk to use in valuing NFAB is the:",
+      "options": [
+       "dividend discount model.",
+       "free cash flow to equity model.",
+       "residual income model."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Dividends are small and irregular, so a dividend discount model would not reflect value.\nB. Incorrect. FCFE has been negative for three years, so a free cash flow model would give unreliable values.\nC. Correct. NFAB pays small and irregular dividends, its FCFE is negative and its accounting is of high quality with clean surplus expected to hold, which makes the residual income model the most appropriate."
+     },
+     {
+      "q": "Based on Exhibit 1, NFAB's residual income per share for 2025 is closest to:",
+      "options": [
+       "SEK3.40.",
+       "SEK6.72.",
+       "SEK4.00."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This charges the cost of equity on the END-of-year book value (86.72): 11.20 − 0.09 × 86.72 = 3.40.\nB. Incorrect. This is EPS minus dividends per share (11.20 − 4.48), which is unrelated to the equity charge.\nC. Correct. Residual income = EPS − cost of equity × BEGINNING book value = 11.20 − 0.09 × 80.00 = SEK4.00."
+     },
+     {
+      "q": "Based on Exhibit 1 and Kowalczyk's assumptions, the intrinsic value per share of NFAB is closest to:",
+      "options": [
+       "SEK89.35.",
+       "SEK86.22.",
+       "SEK114.61."
+      ],
+      "answer": 0,
+      "why": "A. Correct. B1 = 80.00 + 11.20 − 4.48 = 86.72; RI2026 = (0.125 − 0.09) × 86.72 = 3.04. Continuing RI at the end of 2026 = 3.04 × 0.60 ÷ (1.09 − 0.60) = 3.72. V0 = 80.00 + 4.00/1.09 + 3.04/1.09² + 3.72/1.09² = SEK89.35.\nB. Incorrect. This leaves out the value of the residual income after 2026: 80.00 + 4.00/1.09 + 3.04/1.09² = SEK86.22.\nC. Incorrect. This uses a persistence factor of 1.0 (constant residual income forever) instead of 0.60: SEK114.61."
+     },
+     {
+      "q": "Kowalczyk's choice of a persistence factor of 0.60 rather than 1.00 is best supported by NFAB's:",
+      "options": [
+       "low dividend payout ratio.",
+       "high 2024 ROE and the one-time gain included in 2024 earnings.",
+       "expected application of the clean surplus relationship."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. The payout ratio does not determine how long abnormal returns last.\nB. Correct. A ROE far above the industry median and a large one-time gain are exactly the factors that make high residual income fade; they argue for a persistence factor below 1.\nC. Incorrect. Clean surplus is a condition for using the model, not a reason for faster decay of residual income."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Tomás Ferreira, CFA, is a derivatives specialist at Costa Azul Capital. He is preparing a review for four clients.\n\nClient 1 entered a pay-fixed 3 × 9 forward rate agreement (FRA) 30 days ago on a notional amount of €40,000,000 at a fixed rate of 2.10%. The FRA settles in advance at expiration and uses a 360-day year. Today, the 60-day MRR is 1.00% and the 240-day MRR is 2.80%.\n\nClient 2 entered a 12-month forward contract on a non-dividend-paying share 180 days ago at a forward price of €41.30. The share now trades at €44.80, and 180 days remain until expiration. The annual risk-free rate is 2.00% (annual compounding, 360-day year basis; use a time of 0.5 for 180 days).\n\nClient 3 monitors a six-month futures contract on an equity index. The index is at 2,000. It is expected to pay dividends of 11 index points in three months and 13 index points in six months (at expiration). The annual risk-free rate is 2.40% with annual compounding, and the futures contract is currently quoted at 2,014.50.\n\nClient 4 wants to pay a fixed rate on a one-year plain vanilla interest rate swap with quarterly payments. Exhibit 1 shows present value factors from the current term structure.\n\nExhibit 1: Present Value Factors\n# Days to Maturity | Present Value Factor\n90 | 0.9964\n180 | 0.9921\n270 | 0.9866\n360 | 0.9801",
+    "questions": [
+     {
+      "q": "The current value of Client 1's FRA is closest to:",
+      "options": [
+       "€254,125",
+       "€255,294",
+       "€258,869"
+      ],
+      "answer": 0,
+      "why": "A. Correct. New 3 × 9 rate (after 30 days a 2 × 8 rate) = [(1 + 0.028 × 240/360) ÷ (1 + 0.010 × 60/360) − 1] × 360/180 = 3.394%. The pay-fixed party gains (3.394% − 2.10%) × 180/360 × 40,000,000 = €258,869 at the end of the underlying period, so the value today discounts that amount over 240 days: €258,869 ÷ (1 + 0.028 × 240/360) = €254,125.\nB. Incorrect. This discounts over 180 days, the length of the underlying period, instead of the 240 days from today to its end: €255,294.\nC. Incorrect. This leaves the settlement undiscounted: €258,869."
+     },
+     {
+      "q": "The current value of Client 2's forward contract (long position) is closest to:",
+      "options": [
+       "€3.06.",
+       "€3.50.",
+       "€3.91."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This discounts the share price instead of the forward price: 44.80 ÷ 1.02^0.5 − 41.30 = €3.06.\nB. Incorrect. This is the undiscounted difference between the share price and the forward price (44.80 − 41.30).\nC. Correct. Value = S − F0 ÷ (1 + r)^(T − t) = 44.80 − 41.30 ÷ 1.02^0.5 = €3.91."
+     },
+     {
+      "q": "Based on the cost of carry model, the most appropriate arbitrage strategy for Client 3's futures contract is to:",
+      "options": [
+       "sell the futures contract, buy the index and borrow at the risk-free rate.",
+       "take no position, because the futures price is fairly valued.",
+       "buy the futures contract, sell the index short and lend at the risk-free rate."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The model futures price = 2,000 × 1.024^0.5 − 11 × 1.024^0.25 − 13 = 1999.8. The quoted price (2,014.50) is above it, so the futures contract is overpriced: sell the futures and replicate by buying the index with borrowed money (cash-and-carry).\nB. Incorrect. The quoted price (2,014.50) differs from the model price (1999.8), so there is an arbitrage.\nC. Incorrect. This is the reverse cash-and-carry strategy, used when the futures contract is underpriced (quoted below the model price)."
+     },
+     {
+      "q": "The fixed rate that Client 4 would pay on the swap is closest to:",
+      "options": [
+       "0.50%.",
+       "2.01%.",
+       "2.68%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the rate per quarterly period; it has not been annualized (× 4).\nB. Correct. Fixed rate = (1 − 0.9801) ÷ (0.9964 + 0.9921 + 0.9866 + 0.9801) × 4 = 0.0199 ÷ 3.9552 × 4 = 2.01%.\nC. Incorrect. This leaves the final present value factor (0.9801) out of the sum of the factors: 0.0199 ÷ 2.9751 × 4 = 2.68%."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Karin Dalgaard, CFA, is a credit analyst at a Nordic asset manager. She values a two-year, 3.0% annual-coupon corporate bond issued by Havn Logistics A/S, using the arbitrage-free framework and assuming zero interest rate volatility so that the no-default value (VND) is calculated with the benchmark spot curve.\n\nExhibit 1: Benchmark Government Par Curve and Credit Assumptions\n# Item | Value\nOne-year par rate (spot rate) | 2.00%\nTwo-year par rate | 3.00%\nAnnual hazard rate (constant probability of default each year, conditional on survival) | 1.80%\nRecovery rate (percent of the exposure recovered in default) | 40%\n\nThe two-year spot rate implied by the par curve is 3.02%, and the one-year forward rate one year from now is 4.04%. The expected exposure to default is the bond's value including the coupon, which is 102.00 at the end of Year 1 and 103.00 at the end of Year 2. The VND of the bond is 100.0000.\n\nDalgaard also reviews a callable bond of Havn Logistics with no call protection. She expects interest rates to fall sharply.",
+    "questions": [
+     {
+      "q": "The credit valuation adjustment (CVA) for the Havn Logistics bond is closest to:",
+      "options": [
+       "1.41.",
+       "2.11.",
+       "2.06."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This uses the recovery rate (40%) in place of the loss given default (60%): 1.41.\nB. Correct. LGD = 1 − recovery = 60%. PD Year 1 = 1.80%; PD Year 2 = (1 − 0.018) × 0.018 = 1.7676%. CVA = 0.980392 × 1.80% × 60% × 102.00 + 0.942319 × 1.7676% × 60% × 103.00 = 2.11.\nC. Incorrect. This applies a flat exposure of 100 in both years instead of the expected exposures (102.00 and 103.00): 2.06."
+     },
+     {
+      "q": "The credit spread on the bond, derived from the CVA, is closest to:",
+      "options": [
+       "0.74%.",
+       "1.12%.",
+       "1.80%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This results from using the recovery rate instead of LGD in the CVA (1.41), which understates the CVA and the spread.\nB. Correct. Fair value = VND − CVA = 100.0000 − 2.1094 = 97.8906. The yield to maturity of a 3.0% two-year bond priced at 97.89 is 4.12%. Credit spread = 4.12% − 3.00% = 1.12%.\nC. Incorrect. This is the annual hazard rate; the credit spread is the yield difference after taking recovery and discounting into account, so it is lower."
+     },
+     {
+      "q": "Compared with the 40% recovery rate, a recovery rate of 60% would most likely cause the CVA and the credit spread to:",
+      "options": [
+       "both stay the same.",
+       "both increase.",
+       "both decrease."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. LGD enters the CVA directly, so a change in the recovery rate changes the CVA and the spread.\nB. Incorrect. A lower, not higher, recovery would raise both.\nC. Correct. Higher recovery lowers LGD (from 60% to 40%), which lowers the CVA, raises the fair value and lowers the yield: both decrease."
+     },
+     {
+      "q": "If interest rates fall sharply, the effective duration and convexity of the callable bond will most likely:",
+      "options": [
+       "rise, and its convexity will become more positive.",
+       "be the same as those of an otherwise identical option-free bond.",
+       "fall, and its convexity will become negative."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. A callable bond's price is capped near the call price when rates fall, which shortens its effective duration and gives negative convexity, not more positive.\nB. Incorrect. Compared with an option-free bond, the callable bond behaves differently when rates fall because the issuer's call option is in the money.\nC. Correct. With no call protection and a sharp fall in rates, the call becomes likely to be exercised: the effective duration falls and the convexity turns negative (price compression)."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Elin Sjöberg, CFO of Skogen Timber ASA, is preparing recommendations for the board on how to return cash to shareholders. Skogen's share price is NOK36.45 and its earnings per share (EPS) are NOK2.40, so the earnings yield is 6.0% at a price of NOK40.00 (the price used for buyback calculations).\n\nTwo proposals are on the table:\n\nProposal 1: A stock dividend of 8%.\n\nProposal 2: A share repurchase funded entirely with new debt at an after-tax cost of 4.5%, executed at a price of NOK40.00 per share.\n\nSkogen's largest shareholder is the founding family, which holds 55% of the capital through a class of shares carrying 10 votes per share. The remaining shares carry one vote each, and the family controls 92% of the votes.",
+    "questions": [
+     {
+      "q": "Assuming a total market value that does not change, the expected share price after Proposal 1 is closest to:",
+      "options": [
+       "NOK33.53.",
+       "NOK33.75.",
+       "NOK39.37."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This subtracts 8% from the price (36.45 × 0.92); the stock dividend increases the number of shares by 8%, so the price is divided by 1.08.\nB. Correct. A stock dividend leaves total market value unchanged and increases the share count by 8%: 36.45 ÷ 1.08 = NOK33.75.\nC. Incorrect. This multiplies the price by 1.08, which would raise the price."
+     },
+     {
+      "q": "If Skogen implements Proposal 2 at NOK40.00 per share, its EPS will most likely:",
+      "options": [
+       "not change.",
+       "decrease.",
+       "increase."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. EPS is unchanged only if the earnings yield equals the after-tax cost of debt.\nB. Incorrect. EPS would fall only if the after-tax cost of debt were above the earnings yield; here it is below.\nC. Correct. The earnings yield (EPS ÷ price = 2.40 ÷ 40.00 = 6.0%) exceeds the after-tax cost of borrowing (4.5%), so replacing equity with debt increases EPS."
+     },
+     {
+      "q": "Skogen's share structure most likely creates a governance conflict between:",
+      "options": [
+       "controlling shareholders and minority shareholders (principal–principal).",
+       "shareholders and bondholders.",
+       "shareholders and managers (principal–agent)."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The family controls 92% of the votes with 55% of the capital, so the conflict is between a controlling owner and the minority shareholders: a principal–principal problem.\nB. Incorrect. The structure of votes is about control among shareholders, not about creditors.\nC. Incorrect. The principal–agent problem arises when ownership is dispersed and managers are strong; here control is concentrated."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Anneli Berg, CFA, reviews the consolidated statements of Nordic Harvest AB (Nordic), a Swedish food group that reports in US dollars under US GAAP.\n\nOn 1 January 20X1, Nordic paid $520 million for 30% of Pelham Foods, which it accounts for with the equity method. On that date Pelham's net assets had a book value of $1,400 million and a fair value of $1,550 million. The entire difference between fair value and book value relates to plant and equipment, which has 10 years of remaining life and is depreciated on a straight-line basis. In 20X1 Pelham reported net income of $300 million and paid dividends of $120 million.\n\nNordic also owns two foreign subsidiaries.\n\nSubsidiary N operates in Norway. Its functional currency is the Norwegian krone (NOK). Its balance sheet at year end shows positive net assets, and the NOK appreciated against the US dollar during the year. Nordic translates Subsidiary N with the current rate method.\n\nSubsidiary D operates in Denmark. Its functional currency is the US dollar, and Nordic remeasures it with the temporal method. Subsidiary D has net monetary liabilities, and the Danish krone (DKK), in which it holds them, appreciated against the US dollar during the year.",
+    "questions": [
+     {
+      "q": "At the end of 20X1, the carrying value of Nordic's investment in Pelham is closest to:",
+      "options": [
+       "$569.5 million.",
+       "$574.0 million.",
+       "$605.5 million."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Carrying value = cost + share of net income − dividends received − amortization of the excess attributable to plant and equipment = 520 + (0.30 × 300 = 90) − (0.30 × 120 = 36) − (0.30 × (1,550 − 1,400) ÷ 10 = 4.5) = $569.5 million.\nB. Incorrect. This leaves out the amortization of the fair value excess on plant and equipment (4.5): 520 + 90 − 36 = $574.0 million.\nC. Incorrect. This does not deduct the dividends received (36), which reduce the investment account under the equity method: 520 + 90 − 4.5 = $605.5 million."
+     },
+     {
+      "q": "The translation of Subsidiary N's financial statements most likely results in a:",
+      "options": [
+       "negative cumulative translation adjustment in equity.",
+       "positive cumulative translation adjustment in equity.",
+       "gain in net income."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. A negative adjustment would arise if the NOK had depreciated against the US dollar.\nB. Correct. With the current rate method, positive net assets are exposed; when the foreign (local) currency appreciates, their value in dollars rises and a positive translation adjustment is recorded in equity (OCI).\nC. Incorrect. Under the current rate method the translation adjustment goes to equity, not to net income."
+     },
+     {
+      "q": "The remeasurement of Subsidiary D most likely results in a:",
+      "options": [
+       "loss in net income.",
+       "positive cumulative translation adjustment in equity.",
+       "gain in net income."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Under the temporal method, net monetary liabilities are exposed. The DKK appreciated, so the liabilities are worth more dollars and a remeasurement LOSS is recognized in net income.\nB. Incorrect. The temporal method puts the remeasurement result in net income, not in a translation adjustment in equity.\nC. Incorrect. A gain would arise if the DKK had depreciated: the net monetary liabilities would then be worth fewer dollars."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Sofia Brandt, CFA, an alternative investments analyst at a Danish pension fund, reviews three investments.\n\nProperty comparison. Brandt compares two properties, which have the following annual data (DKK thousands).\n\nExhibit 1: Property Data\n# Item | Property A (office) | Property B (apartments)\nEffective gross income | 2,400 | 3,100\nOperating expenses | 980 | 1,330\nExpense reimbursements from tenants | 300 | 0\n\nREIT valuation. Brandt values Hallmark Real Estate Trust using the net asset value approach. Next year's net operating income is expected to be DKK18 million, and the market capitalization rate for similar properties is 6.0%. Hallmark also holds DKK10 million in cash and other tangible assets, has DKK140 million of debt and 8 million shares outstanding.\n\nCommodity position. Brandt buys a futures contract on a commodity at 80.00. Three months later the near contract that she holds trades at 83.00 and the next contract trades at 81.50, so she rolls into the next contract. The collateral earns 1.2% per year.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, which statement about unreimbursed operating expenses is most accurate?",
+      "options": [
+       "Property B's NOI is more affected, because unreimbursed expenses are a larger percentage of its effective gross income.",
+       "Property A's NOI is more affected, because its expenses are lower than those of Property B.",
+       "Both properties are affected similarly, because both have expenses between 28% and 43% of EGI."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Unreimbursed expenses ÷ EGI: Property A = (980 − 300) ÷ 2,400 = 28.3%; Property B = 1,330 ÷ 3,100 = 42.9%. Property B is affected more.\nB. Incorrect. Lower expenses in dollars do not mean a smaller effect; the comparison is made as a percentage of effective gross income.\nC. Incorrect. The two percentages (28.3% and 42.9%) are clearly different."
+     },
+     {
+      "q": "Hallmark's net asset value per share is closest to:",
+      "options": [
+       "DKK20.00.",
+       "DKK21.25.",
+       "DKK38.75."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This leaves out the cash and other assets (+10 million): (300 − 140) ÷ 8 = DKK20.00.\nB. Correct. Property value = NOI ÷ cap rate = 18 ÷ 0.06 = DKK300 million. NAV = 300 + 10 − 140 = 170; per share = 170 ÷ 8 = DKK21.25.\nC. Incorrect. This does not subtract the debt: (300 + 10) ÷ 8 = DKK38.75."
+     },
+     {
+      "q": "The three-month total return on the commodity position is closest to:",
+      "options": [
+       "2.24%.",
+       "4.05%.",
+       "5.86%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This subtracts the roll return, but the market is in backwardation (near price above next price), so the roll return is positive: 2.24%.\nB. Incorrect. This leaves out the roll return: price return 3.75% + collateral return 0.30% = 4.05%.\nC. Correct. Total return = price return + roll return + collateral return. Price return = (83.00 − 80.00) ÷ 80.00 = 3.75%. Roll return = (83.00 − 81.50) ÷ 83.00 = 1.81% (backwardation: positive). Collateral return = 1.2% × 3/12 = 0.30%. Total = 5.86%."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Ilse Wagner, CFA, advises a private equity fund that is considering buying a minority stake in Valmont Brewery GmbH, a private company. Wagner's valuation of Valmont is a controlling-interest value. The fund would hold a non-controlling interest. Wagner has found that comparable controlling transactions took place at a control premium of 30%, and she applies a discount for lack of marketability (DLOM) of 15%.\n\nWagner also estimates free cash flow to equity (FCFE) for Valmont for the last year (EUR millions):\n\nExhibit 1: Selected Data for Valmont Brewery\n# Item | Amount\nNet income | 54\nDepreciation | 20\nFixed capital investment | 36\nIncrease in net working capital (excluding cash) | 8\nNet borrowing | 10",
+    "questions": [
+     {
+      "q": "The discount for lack of control (DLOC) that corresponds to the control premium of 30% is closest to:",
+      "options": [
+       "30.0%.",
+       "23.1%.",
+       "18.0%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. 30% is the control PREMIUM; the discount is calculated on the higher controlling value, so it is smaller.\nB. Correct. DLOC = 1 − 1 ÷ (1 + control premium) = 1 − 1 ÷ 1.30 = 23.1%.\nC. Incorrect. 18.0% has no basis in the data."
+     },
+     {
+      "q": "The total discount that Wagner should apply to the controlling value of Valmont is closest to:",
+      "options": [
+       "34.6%.",
+       "38.1%.",
+       "15.0%."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Total discount = 1 − (1 − DLOC)(1 − DLOM) = 1 − (1 − 0.231)(1 − 0.15) = 34.6%.\nB. Incorrect. This adds the two discounts (23.1% + 15%); they must be combined multiplicatively.\nC. Incorrect. 15.0% is only the marketability discount; the minority stake also lacks control."
+     },
+     {
+      "q": "Valmont's FCFE for the last year is closest to:",
+      "options": [
+       "EUR20 million.",
+       "EUR30 million.",
+       "EUR40 million."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This also leaves out depreciation: 54 − 36 − 8 + 10 = 20.\nB. Incorrect. This leaves out net borrowing (10): 54 + 20 − 36 − 8 = 30.\nC. Correct. FCFE = net income + depreciation − fixed capital investment − increase in net working capital + net borrowing = 54 + 20 − 36 − 8 + 10 = EUR40 million."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Ronja Nilsen, a quantitative analyst, studies monthly closing prices of a commodity index. She regresses the price on its previous month's price (P_t = b0 + b1 P_{t−1} + ε_t) using 120 monthly observations.\n\nExhibit 1: Regression of P_t on P_{t−1}\n# | Coefficient | t-statistic\nIntercept (b0) | 0.052 | 0.90\nSlope (b1) | 0.991 | 214.00\n\nNilsen then regresses the squared residuals of this model on their own lagged values (ε_t² = c0 + c1 ε_{t−1}² + u_t). The estimate of c1 is 0.31 with a t-statistic of 3.90. The critical t-value at the 5% significance level is 1.98.\n\nFor a second series, the monthly yield spread, Nilsen estimates an AR(1) model: S_t = 0.45 + 0.85 S_{t−1}. The current value of the spread is 3.80.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the price series is most likely:",
+      "options": [
+       "a random walk, because b0 is significantly different from zero.",
+       "covariance stationary, because b1 is significantly different from zero.",
+       "a random walk, because b0 is close to 0 and b1 is close to 1."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The intercept is not significantly different from zero (t = 0.90), so this reasoning does not hold.\nB. Incorrect. The slope is close to 1, which indicates a unit root, so the series is not covariance stationary; the large t-statistic for b1 only tests whether it differs from zero, not from one.\nC. Correct. A random walk implies an AR(1) intercept near zero and a slope near one (a unit root); the estimates (0.052 and 0.991) fit, and the intercept is not significantly different from zero (t = 0.90)."
+     },
+     {
+      "q": "Based on the regression of the squared residuals, Nilsen should conclude that the price model:",
+      "options": [
+       "shows autoregressive conditional heteroskedasticity (ARCH), because c1 is significantly different from zero.",
+       "has serial correlation in the residuals, because c1 is positive.",
+       "has no evidence of ARCH, because c1 is below 1."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The t-statistic of 3.90 exceeds the critical value of 1.98, so c1 is significantly different from zero: there is ARCH, and the variance of the errors depends on past squared errors.\nB. Incorrect. Serial correlation is tested by regressing residuals (not squared residuals) on their own lag.\nC. Incorrect. The test is whether c1 differs from ZERO, not from 1."
+     },
+     {
+      "q": "Using the AR(1) model, the forecast of the spread for the next month is closest to:",
+      "options": [
+       "3.00.",
+       "3.68.",
+       "3.80."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. 3.00 is the mean-reverting level, b0 ÷ (1 − b1) = 0.45 ÷ 0.15; the one-period forecast is not the mean-reverting level.\nB. Correct. Forecast = b0 + b1 × S_t = 0.45 + 0.85 × 3.80 = 3.68. It lies between the current value (3.80) and the mean-reverting level (3.00).\nC. Incorrect. The forecast is not equal to the current value; that is true only for a random walk."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Nadia Solheim, CFA, values options for a Norwegian asset manager. She uses a two-period binomial model for an American-style put option on Fjell Energy ASA, a non-dividend-paying share.\n\nExhibit 1: Inputs for the Fjell Energy Put Option\n# Item | Value\nCurrent share price | NOK50.00\nExercise price | NOK54.00\nUp factor (u) | 1.20\nDown factor (d) | 0.80\nRisk-free rate per period | 5.0%\nNumber of periods | 2\n\nSolheim holds 10,000 of these put options and wants to hedge the position with the underlying shares for the first period. She also compares the American put with an otherwise identical European put.",
+    "questions": [
+     {
+      "q": "The value of the American put option on Fjell Energy is closest to:",
+      "options": [
+       "NOK5.36.",
+       "NOK6.28.",
+       "NOK7.69."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the value of the European put, where no early exercise is allowed at the down node (continuation value 11.43 instead of the exercise value 14.00): NOK5.36.\nB. Correct. π = (1 + r − d) ÷ (u − d) = 0.625. Terminal puts: uu = 0, ud = 6, dd = 22. Up node: 2.14 (exercise value 0). Down node: continuation value 11.43, but exercising gives 54 − 40 = 14, so the node value is 14.00. P0 = [0.625 × 2.14 + 0.375 × 14.00] ÷ 1.05 = NOK6.28.\nC. Incorrect. This uses risk-neutral probabilities of 0.5 instead of 0.625."
+     },
+     {
+      "q": "To hedge the 10,000 put options for the first period, Solheim should most likely:",
+      "options": [
+       "buy 5,929 shares.",
+       "sell 5,929 shares.",
+       "buy 4,071 shares."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Delta = (P_u − P_d) ÷ (S_u − S_d) = (2.14 − 14.00) ÷ (60 − 40) = -0.5929. A long put position of 10,000 options has a delta of about −5,929 shares, so she buys 5,929 shares.\nB. Incorrect. The put delta is negative, so the hedge requires BUYING shares; selling would add to the exposure.\nC. Incorrect. 4,071 would result from using 1 + delta instead of the absolute value of delta."
+     },
+     {
+      "q": "The American put is worth more than the European put in this model because early exercise is optimal at the:",
+      "options": [
+       "up node, where the put is out of the money.",
+       "initial node, because the option is always exercised immediately.",
+       "down node, where the exercise value exceeds the continuation value."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. At the up node (share price 60) the put is out of the money and its exercise value is zero.\nB. Incorrect. At the initial node the exercise value (4.00) is lower than the value of keeping the option (6.28).\nC. Correct. At the down node (share price 40) the exercise value (14.00) exceeds the continuation value (11.43), so early exercise is optimal; this extra value is what the American put has over the European put."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Henrik Lund works in the treasury department of Maple Valley Exports, a Canadian company that invoices its customers in US dollars. The market quotes use the convention CAD/USD (Canadian dollars per US dollar).\n\nSix months ago Maple Valley sold USD5,000,000 forward for delivery in 12 months at a forward rate of 1.3400. Today Lund collects the following quotes.\n\nExhibit 1: Current Quotes\n# Item | Bid | Offer\nSpot CAD/USD | 1.3520 | 1.3524\nSix-month forward points | +18 | +22\n\nThe six-month CAD market reference rate is 1.60% (annualized, 360-day year). Lund also notes that the one-year interest rate is 2.10% in Canada and 3.30% in the United States, and he assumes that uncovered interest rate parity holds.\n\nLund is asked about the currency of a country in which monetary policy is expansionary and fiscal policy is restrictive. The exchange rate floats, and capital is highly mobile.",
+    "questions": [
+     {
+      "q": "The mark-to-market value of Maple Valley's forward position is closest to:",
+      "options": [
+       "a loss of CAD68,452.",
+       "a loss of CAD72,421.",
+       "a loss of CAD73,000."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This offsets with the BID side (1.3520 + 0.0018 = 1.3538); to close a short USD forward Maple Valley must BUY USD forward at the offer.\nB. Correct. To offset, Maple Valley buys USD forward at the offer: 1.3524 + 0.0022 = 1.3546. At settlement the position loses (1.3546 − 1.3400) × 5,000,000 = CAD73,000. The loss is received/paid in six months, so discount at the CAD rate: 73,000 ÷ (1 + 0.016 × 180/360) = CAD72,421.\nC. Incorrect. This is the undiscounted loss at settlement; the mark-to-market value is a present value."
+     },
+     {
+      "q": "Assuming uncovered interest rate parity, the expected spot CAD/USD rate in one year, using the midpoint of the current spot quotes, is closest to:",
+      "options": [
+       "1.3365.",
+       "1.3522.",
+       "1.3681."
+      ],
+      "answer": 0,
+      "why": "A. Correct. E(S) = S × (1 + i_CAD) ÷ (1 + i_USD) = 1.3522 × 1.021 ÷ 1.033 = 1.3365. The higher US rate implies that the USD is expected to depreciate against the CAD.\nB. Incorrect. 1.3522 is today's spot rate (the expectation of no change), which would hold only if the two interest rates were equal.\nC. Incorrect. This inverts the ratio ((1 + i_USD) ÷ (1 + i_CAD)), which would imply that the USD appreciates."
+     },
+     {
+      "q": "Based on the Mundell–Fleming model, the currency of the country described by Lund will most likely:",
+      "options": [
+       "appreciate.",
+       "change in an ambiguous direction.",
+       "depreciate."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Appreciation would require restrictive monetary policy or expansionary fiscal policy.\nB. Incorrect. The effect is ambiguous only when monetary and fiscal policies push in opposite directions (both expansionary or both restrictive).\nC. Correct. Expansionary monetary policy lowers interest rates and, with a floating rate and high capital mobility, depreciates the currency; restrictive fiscal policy lowers domestic demand and interest rates, which also pushes the currency down. Both effects point the same way: depreciation."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Tomas Eklund, CFA, is a portfolio manager at a Swedish asset manager.\n\nMacroeconomic factor model. Eklund uses a two-factor macroeconomic model for an equity portfolio:\n\nR = a + b_GDP × F_GDP + b_INF × F_INF + ε\n\nThe intercept a is 2.10%, the sensitivity to GDP growth surprises (b_GDP) is 0.90 and the sensitivity to inflation surprises (b_INF) is −0.40. Eklund's view is that the surprises will be +0.60% for GDP growth and +0.50% for inflation.\n\nActive manager skill. Eklund evaluates an active equity manager who has a transfer coefficient of 0.60 and an information coefficient of 0.08. The manager makes 64 independent bets a year.\n\nRisk. The portfolio is worth SEK500 million. Its expected daily return is 0.04% and the daily standard deviation is 1.20%. Eklund estimates the one-day 5% value at risk (VaR) with the parametric method, assuming normally distributed returns, and uses a z-score of 1.65.",
+    "questions": [
+     {
+      "q": "Based on Eklund's view of the factor surprises, the expected return of the portfolio is closest to:",
+      "options": [
+       "2.10%.",
+       "2.44%.",
+       "2.84%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the intercept, which is the expected return only if all factor surprises are zero.\nB. Correct. Expected return = 2.10% + 0.90 × 0.60% + (−0.40) × 0.50% = 2.44%.\nC. Incorrect. This treats the inflation sensitivity as positive: 2.10 + 0.54 + 0.20 = 2.84%."
+     },
+     {
+      "q": "The manager's expected information ratio is closest to:",
+      "options": [
+       "0.38.",
+       "0.64.",
+       "3.07."
+      ],
+      "answer": 0,
+      "why": "A. Correct. IR = TC × IC × √BR = 0.60 × 0.08 × √64 = 0.384.\nB. Incorrect. This leaves out the transfer coefficient (0.08 × 8 = 0.64).\nC. Incorrect. This uses breadth (64) instead of its square root: 0.60 × 0.08 × 64 = 3.07."
+     },
+     {
+      "q": "The one-day 5% parametric VaR of the portfolio is closest to:",
+      "options": [
+       "SEK9.70 million.",
+       "SEK9.90 million.",
+       "SEK13.78 million."
+      ],
+      "answer": 0,
+      "why": "A. Correct. VaR = (z × σ − expected return) × portfolio value = (1.65 × 1.20% − 0.04%) × 500 = SEK9.70 million.\nB. Incorrect. This ignores the expected return: 1.65 × 1.20% × 500 = SEK9.90 million.\nC. Incorrect. This uses a z-score of 2.33, which belongs to a 1% VaR, not a 5% VaR."
+     }
+    ]
+   }
+  ]
+ },
+ {
   "id": "rq1",
   "rev": 2,
   "resetHl": [],

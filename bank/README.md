@@ -158,3 +158,7 @@ pq1-pq6 (288 questions) read in full and recalculated. Corrections: see CLAUDE.m
 - Topic split: Ethics 8, FSA 7, Equity 6, PM 6, Corp 5, Deriv 5, FI 4, Econ 4, Quant 3, Alt 3 (follows the user's misses, so FI is 7.8%, Quant and Alt 5.9%). Build: bank/exam/mock13_src/ (assemble.py -> bank/exam/mock13.json, `srcmap` = origin of every question), integrated in build.py. Hints: explicit for calculation questions, automatic best-sentence for the rest.
 
 - 12 Nov: Mock 11 marked: answers ABBBABCCCBBCACACCACBCBAABABCBCBCAACABBAACCBA = 40/44 (90.9%). Wrong: Q23 (Equity, forward PEG), Q30 (Deriv, FRA value discounted over 150 days), Q31 (Deriv, currency swap: pay the euro leg), Q39 (FSA, equity method carrying value with plant excess amortisation). PDF bank/Mock11_wrong_answers.pdf (builder /tmp/gen/m11w/build.py + pdf.mjs). Not yet added to flash cards / rq set.
+
+## Mock 14 (12 Nov, v234)
+Newly written CFA-style questions (not re-skins), weak-area focus; 44 Q / 13 vignettes / 132 min. Split: Ethics 4, FSA 7, Equity 7, Derivatives 7, FI 4, Quant 3, Econ 3, Corp 3, Alt 3, PM 3. Source: bank/exam/mock14_src/ (p1-p5.py, assemble.py) -> mock14.json; build.py adds it.
+Key: BBBCCBACCCABACABBBCCBCAABAABCBACCABBACBACBAA

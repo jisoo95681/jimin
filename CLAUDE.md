@@ -58,3 +58,5 @@ Incorrect-question sets rq1/rq2 (user request 12 Nov, v230): the questions the u
 Flash cards (user request 12 Nov, v231): Exam hub > Flash cards, data `flash.js` (`FLASH`), built by bank/flash_src/build.py. After every marked paper add its wrong (and unsure) questions as cards (headline `h`, mistake, rule, formula, notes tables in `tb`; the card shows everything at once, never a flip) and rebuild flash.js; flash.js is also in sw.js FILES.
 
 Mock 13 (user request 12 Nov, v233): built from the questions wrong in Mocks 1-5 (names and numbers changed, 51 Q, 153 min); details, key and sources in bank/README.md and bank/exam/mock13_src/. After it is taken: add its wrong questions to the flash cards and a new rq set.
+
+Mock 14 (user request 12 Nov, v234): 44 newly written CFA-style questions (not re-skins) on the user's weak areas, all subjects; sources in bank/exam/mock14_src/, key in bank/README.md. After it is taken: wrong questions to flash cards and a new rq set.

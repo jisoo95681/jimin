@@ -317,6 +317,16 @@ for _v in _st['vignettes']:
             assert _ph in _v['body'] or _ph in _q['q'],('mock13',_n,_ph)
         assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mock13',_n)
 HH.update(_d['hints']); sets.append(_st); print('mock13',_n,_d['key'])
+# ---- Mock 13 (12 Nov): questions the user got wrong in Mocks 1-5, names and numbers changed (built in /tmp/gen/m13, copied to bank/exam/mock14_src/) ----
+_d=json.load(open('/home/user/jimin/bank/exam/mock14.json')); _st=_d['set']; _n=0
+for _v in _st['vignettes']:
+    for _q in _v['questions']:
+        _n+=1; _h=_d['hints'][f'mock14:{_n}']
+        for _ph in _h['hl']:
+            if _ph.startswith('@row:'): continue
+            assert _ph in _v['body'] or _ph in _q['q'],('mock14',_n,_ph)
+        assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mock14',_n)
+HH.update(_d['hints']); sets.append(_st); print('mock14',_n,_d['key'])
 # ---- Incorrect-question sets rq1, rq2 (12 Nov): built by retry_sets.py (wrong questions of Mocks 6-10 and Practice sets 1-4, relevant vignette parts only) ----
 for _sid in ('rq1','rq2'):
     _d=json.load(open(f'/home/user/jimin/bank/exam/{_sid}.json')); _st=_d['set']; _n=0
