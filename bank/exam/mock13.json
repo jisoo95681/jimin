@@ -1,0 +1,1033 @@
+{
+ "set": {
+  "id": "mock13",
+  "rev": 2,
+  "resetHl": [],
+  "title": "Mock 13",
+  "kind": "mock",
+  "minutes": 153,
+  "desc": "Built from the questions you got wrong in Mocks 1-5 (51 questions, 14 vignettes, 2 h 33 min); names and numbers changed",
+  "vignettes": [
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Part 1\nRenata Cole, CFA, is currently working as a capital market adviser in a developing country. While attending a regional securities exchange conference, she introduces herself to Marcus Webb, CFA. Webb is one of several partners at Southern Cross Advisory Partners, a consulting firm specializing in capital market expansion in developing countries.\n\nCole says to Webb, \"I'm wondering how you would respond to a situation whereby a regulator chooses not to implement extensive policies and regulations regarding the integrity of capital markets I recommended. They say my suggested policies and regulations related to market manipulation, material nonpublic information, and protecting client interests are too complicated, and they do not have the judicial competency to back them up. Consequently, they have requested I recommend just one primary rule.\"\n\nPart 2\nHelena Voss, CFA, was recently hired by Brandon Investment Management (Brandon) as its new chief executive officer. Brandon’s parent company owns several subsidiaries in the financial services industry. Although there are currently no outstanding compliance issues, Brandon’s employees have a history of unethical behavior and always seem to be on the brink of additional violations. Brandon’s board of directors has tasked Voss with bringing the firm’s policies and procedures into compliance with the CFA Institute Code of Ethics and Standards of Professional Conduct.\n\nOne of the first things Voss did after arriving at the firm was to meet with Owen Takeda, CFA, the firm’s chief compliance officer. Takeda had been with the firm only a few months. He told Voss the previous violations had primarily related to equity research, equity trading, and client confidentiality. After reviewing the summary of violations and the firm’s existing handbook, Voss and Takeda decided to submit the following recommendations regarding the firm’s trade allocation procedures for block trades to the board of directors for approval:\n\nRecommendation 1\n\nOrders will be executed on a first-in, first-out basis, with consideration given to bundling orders for efficiency.\n\nRecommendation 2\n\nAll accounts participating in a block trade should receive the same execution price and pay the same commission rate.\n\nPart 3\nCobalt Wealth Advisors, founded by Vincent Moretz, CFA, five years ago, is an investment adviser serving mostly middle-income clients along with several high-net-worth clients. Moretz initially worked alone, but because of rapid growth, Cobalt Wealth Advisors has expanded to 20 employees today. Cobalt Wealth Advisors continues to add new clients and recently hired a junior analyst, Elias Fontaine.\n\nIn a meeting with Walter Osei, a prospective client who recently sold his business for over $100 million, Moretz learns that Osei plans to quit working. Osei asks for ideas on how to invest the sale proceeds to build wealth within a trust structure so that he can pass capital on to his twin daughters, who are 19-year-old students. Moretz tells Osei:\n\nConsidering your objectives specifically, I looked at infrastructure projects in developing countries for clients interested in diversifying their portfolios with long-duration projects, consistent cash flow, high operating margins, and a positive correlation to inflation. These types of investments require large up-front cash injections, patience, and the ability to accept a long cash out period. But, there are several benefits to this type of investment that I think are important for you, including diversification, exposure to rapidly growing economies, and returns, which are currently in the 8%–12% range, based on my review of similar investments.\n\nPart 4\nClara Whitfield, CFA, recently left her position as a portfolio manager at Eastgate Investment Advisors (Eastgate). Her departure was not restricted by a noncompete agreement, and before leaving, she returned the company-owned electronic devices she had been issued. Whitfield has started her own investment management firm, Crestline Investment Management (Crestline). She has talked with several individuals about joining the firm as part of the management team and potentially being an equity owner. Whitfield has lunch with Marta Santos, CFA, the chief compliance officer at Eastgate, as she is interested in offering Santos a position at Crestline. During their meeting, Whitfield shares with Santos a presentation that includes the proposed management structure, the investment products to be offered, and a list of potential clients. Santos noted several of the names on the list were clients Whitfield had frequent contact with while at Eastgate.",
+    "questions": [
+     {
+      "q": "Which of the following should Webb most likely advise with regard to the regulator’s request?",
+      "options": [
+       "Ban the “pumping up” of investment prices",
+       "When trading, insist service providers give preference to investors",
+       "Require material information be made public within 24 hours"
+      ],
+      "answer": 1,
+      "why": "One broad rule that puts investors' interests first covers the most ground: it supports loyalty to clients and also makes trading on material nonpublic information and market manipulation unacceptable, since both put others ahead of investors. A is too narrow: it targets only information-based manipulation, not transaction-based manipulation or insider trading. B could harm investors: not all material information should be public (e.g. competitive secrets)."
+     },
+     {
+      "q": "Are the recommendations submitted to the board of directors most likely consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing?",
+      "options": [
+       "Yes",
+       "No with regard to Recommendation 1",
+       "No with regard to Recommendation 2"
+      ],
+      "answer": 0,
+      "why": "Both are recommended procedures for fair trade allocation under III(B): all accounts in a block trade get the same execution price and commission (Recommendation 2), and orders are executed first-in, first-out with bundling for efficiency (Recommendation 1). Other recommended procedures: pro-rata allocation of partial fills, written allocation policies, disclosure of the procedures."
+     },
+     {
+      "q": "Moretz’s advice to Osei with regards to a potential investment is most consistent with the Standards concerning which of the following?",
+      "options": [
+       "Diligence and Reasonable Basis",
+       "Performance Presentation",
+       "Suitability"
+      ],
+      "answer": 1,
+      "why": "B. Correct because Moretz has only stated historical returns for these types of investments based on research of other similar investments. In addition, he has not promised a specific return, so he is not in violation of Standard III(D), Performance Presentation. Moretz is, however, in violation of Standard III(A), Loyalty, Prudence, and Care, because he is required to identify the actual client, who in this case would be Osei and the trust beneficiaries, the twins. From the information provided, there is no evidence that Moretz knows or has considered the twins’ investment objectives and constraints and thus is also in violation of Standard III(C), Suitability. | B. Incorrect because even though Moretz has disclosed some of the risks related to this type of investment, he has not discussed any country-related risks such as different accounting standards, different business practices, and unstable governments. Standard V(A), Diligence and Reasonable Basis, requires that the manager should ensure that the client’s objectives and expectations for the performance of the account are realistic and suitable to the client’s circumstance and that the risks involved are appropriate. | C. Incorrect because there is no evidence that Moretz knows or has considered the investment objectives and constraints of the twins and therefore is in violation of Standard III(C), Suitability."
+     },
+     {
+      "q": "Based on the information provided, did Whitfield most likely violate any CFA Institute Code of Ethics and Standards of Professional Conduct during her lunch meeting with Santos?",
+      "options": [
+       "Yes, with regards to Standard III, Duties to Clients",
+       "Yes, with regards to Standard IV, Duties to Employers",
+       "No"
+      ],
+      "answer": 2,
+      "why": "No violation. Once she has left Eastgate, the skills and experience she gained there are not confidential, and simply knowing former clients' names generally isn't either (unless a confidentiality agreement or the law says so). She had no noncompete, returned the firm's devices, and there's no sign she contacted clients before leaving or used a Eastgate client list.\nB is wrong: III(E) Preservation of Confidentiality protects client information, and she has nothing beyond their names.\nC is wrong: IV(A) Loyalty doesn't stop former employees contacting old clients, as long as the contact details don't come from the former employer's records and no noncompete is breached."
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Gavin Okonkwo is a Level II CFA candidate. In addition to studying the curriculum independently, he and several of his coworkers have formed a study group that uses many of the resources provided by CFA Institute to prepare for the exam. They meet every Monday to review the previous week’s study materials and discuss items needing further clarification. This week’s reading is the CFA Institute Standards of Professional Conduct. After studying the Standards, Okonkwo answers the topic questions offered by CFA Institute. He notes three scenarios he wants to clarify with the group.\n\nOkonkwo brings up the first scenario and lays out the following facts given: A research analyst makes a presentation to a small group of investors. Prior to the start of the meeting, the analyst chatted with several individuals outside the meeting room. The analyst commented that she had just gotten off the phone with the CFO of a company she follows where they talked about a recently announced merger by a competitor. The analyst starts the presentation and discusses her research process and her published investment recommendations on the companies under her coverage. She mentions her call with the CFO as well as the comments she made during an interview on a major television network relating to the merger.\n\nIn the second scenario, Okonkwo states that he is really struggling to understand the following two recommendations and question if they apply to Standard I(B): Independence and Objectivity:\n\nRecommendation 1: Firms should implement effective supervisory and review procedures to ensure compliance with personal investment policies.\nRecommendation 2: Firms should require prior approval for employees participating in initial public offerings.\nThe final scenario he wants to discuss with the group has to do with policy recommendations made by a firm’s chief compliance officer regarding communication with clients and prospective clients. The officer provided her firm’s board the following policies for approval:\n\nPolicy 1: Significant changes in risk characteristics for either a security or asset strategy should be communicated to all clients.\nPolicy 2: When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model.\nPolicy 3: If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social media post.\nDuring their gathering, Okonkwo and his coworkers also discuss how they could unintentionally violate Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate. The group affirms their commitment to the high ethical standards of CFA Institute and talks about how a violation might occur. They make the following pledges to help each other stay in compliance with Standard VII following the exam:\n\nPledge 1: Refrain from expressing negative comments about the CFA Program.\nPledge 2: Avoid discussing the particulars of the topic areas tested with each other.\nPledge 3: Abstain from making any comments about the curriculum on social media.",
+    "questions": [
+     {
+      "q": "In the first scenario Okonkwo discusses, did the research analyst most likely violate any CFA Institute Standards of Professional Conduct?",
+      "options": [
+       "Yes, with regard to the presentation.",
+       "Yes, with regard to the discussion prior to the presentation.",
+       "No."
+      ],
+      "answer": 2,
+      "why": "C. Correct. In the first scenario Okonkwo provides no evidence of any violation of the CFA Institute Standards of Professional Conduct. The discussion prior to the meeting is not a violation of Standard II(A): Material Nonpublic Information. Standard II(A) states Members and Candidates who possess material nonpublic information that could affect the value of an investment must not act or cause others to act on the information. While a merger would be considered material information, this merger had already been announced so the information is public. Additionally, no details were given about the merger and no company names were disclosed, so it is unclear which companies she is discussing. There is no evidence she violated Standard III(B): Fair Dealing or Standard V(B): Communication with Clients and Prospective Clients in her discussion of her research process and published investment recommendations or in the comments she made about the merger during an interview on a major television network. Standard III(B) states Members and Candidates must deal fairly and objectively with all clients when providing investment analysis, making investment recommendations, taking investment action, or engaging in other professional activities. Standard V(B) states Members and Candidates must disclose to clients and prospective clients the basic format and general principles of the investment processes they use to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes. There is no evidence to indicate she treated the clients in the meeting differently than any other clients. She simply talked about the research process and her research recommendations and opinions that had already been published. | B. Incorrect. The first scenario Okonkwo notes provides no evidence of any violation of the Standards of Professional Conduct. | C. Incorrect. The first scenario Okonkwo notes provides no evidence of any violation of the Standards of Professional Conduct."
+     },
+     {
+      "q": "Do the recommendations Okonkwo outlines in the second scenario most likely apply to Standard I(B): Independence and Objectivity?",
+      "options": [
+       "Yes.",
+       "No, with regard to Recommendation 1.",
+       "No, with regard to Recommendation 2."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Both Recommendation 2 (“Firms should require prior approval for employees participating in initial public offerings.”) and Recommendation 1 (“Firms should implement effective supervisory and review procedures to ensure compliance with personal investment policies.”) apply to Standard I(B): Independence and Objectivity. Standard I(B) states Members and Candidates must use reasonable care and judgment to achieve and maintain independence and objectivity in their professional activities. Members and Candidates must not offer, solicit, or accept any gift, benefit, compensation, or consideration that reasonably could be expected to compromise their own or another’s independence and objectivity. The recommended procedures for compliance suggest investments be restricted and require prior approval for employee participation in IPOs. The recommended procedures also suggest review procedures be implemented to ensure compliance with policies relating to their personal investment activities. | B. Incorrect. Both Recommendation 2 and Recommendation 1 apply to Standard I(B): Independence and Objectivity. | C. Incorrect. Both Recommendation 2 and Recommendation 1 apply to Standard I(B): Independence and Objectivity."
+     },
+     {
+      "q": "In the third scenario, which policy presented by the chief compliance officer would least likely be fully compliant with Standard V: Investment Analysis, Recommendations, and Actions?",
+      "options": [
+       "Policy 1",
+       "Policy 2",
+       "Policy 3"
+      ],
+      "answer": 2,
+      "why": "B. Incorrect. Policy 2 and Policy 1 are both consistent with Standard V(B): Communication with Clients and Prospective Clients. | B. Correct. Policy 3 (“If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social medial post.”) is not fully compliant with Standard V: Investment Analysis, Recommendations, and Actions. When using social media, every effort should be made to treat clients fairly. However, to be consistent with Standard V(B), when utilizing capsule form or a condensed form of communication, clients should be notified that additional information and analyses are available from the producer of the report. Notifying all clients that a social media post has been made does not meet this requirement. Specifically, Standard V(B): Communication with Clients and Prospective Clients states Members and Candidates must: 1) Disclose to clients and prospective clients the basic format and general principles of the investment processes they use to analyze investments, select securities, and construct portfolios and must promptly disclose any changes that might materially affect those processes; 2) Disclose to clients and prospective clients significant limitations and risks associated with the investment process; 3) Use reasonable judgment in identifying which factors are important to their investment analyses, recommendations, or actions and include those factors in communications with clients and prospective clients; and 4) Distinguish between fact and opinion in the presentation of investment analysis and recommendations. Policy 2 (“When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model.”) and Policy 1 (“Significant changes in risk characteristics for either a security or asset strategy should be communicated to all clients.”) are both consistent with Standard V(B): Communication with Clients and Prospective Clients. | C. Incorrect. Policy 2 and Policy 1 are both consistent with Standard V(B): Communication with Clients and Prospective Clients."
+     },
+     {
+      "q": "Which of the study group’s pledges would most likely be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate?",
+      "options": [
+       "Pledge 1",
+       "Pledge 2",
+       "Pledge 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Pledge 3 (Abstain from making any comments about the curriculum on social media.) and Pledge 1 (Refrain from expressing negative comments about the CFA Program.) are not violations of Standard VII(A). | B. Correct. Pledge 2 (Avoid discussing the particulars of the topic areas tested with each other.) would be required to ensure compliance with Standard VII: Responsibilities as a CFA Institute Member or CFA Candidate. Specifically, Standard VII(A): Conduct as Participants in CFA Institute Programs states Members and Candidates must not engage in any conduct that compromises the reputation or integrity of CFA Institute or the CFA designation or the integrity, validity, or security of the CFA Institute programs. All aspects of the exam, including questions, broad topical areas, and formulas tested or not tested, are considered confidential until such time as CFA Institute elects to release them publicly. Therefore, members of the group should not discuss any exam-related content, including the particulars of the topic areas tested on the exam, with each other. Given the increased use of online forums as well as new technologies, CFA Institute polices blogs, forums, and related social networking groups for information considered confidential. Pledge 3 (Abstain from making any comments about the curriculum on social media.) and Pledge 1 (Refrain from expressing negative comments about the CFA Program.) are not in violation of Standard VII(A). The standard does not prohibit candidates from discussing nonconfidential information or curriculum material with others, nor does it prohibit expressing opinions regarding CFA Institute, the CFA Program, or other CFA Institute programs. Members and Candidates are free to disagree and express their disagreement with CFA Institute or its policies, its procedures, or any advocacy positions taken by the organization. The group is therefore free to express their negative opinions to others and on social media. | C. Incorrect. Pledge 3 (Abstain from making any comments about the curriculum on social media.) and Pledge 1 (Refrain from expressing negative comments about the CFA Program.) are not violations of Standard VII(A)."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nFairhaven Clinics, Inc. operates a chain of hospitals throughout the United States. The company has been expanding by acquiring local hospitals. Fairhaven complies with US GAAP.\n\nFairhaven is currently forming a 50/50 joint venture with Lakeside Care under which the companies will share control of several hospitals. Fairhaven plans to use the equity method to account for the joint venture. Lakeside Care complies with IFRS and will use the proportionate consolidation method to account for the joint venture.\n\nDaniel Whitaker is an equity analyst who covers both companies. He has estimated the joint venture's financial information for 2018 in order to prepare his estimates of each company's earnings and financial performance. This information is presented in Exhibit 1.\n\nExhibit 1\nSelected Financial Statement Forecasts for Joint Venture ($ Millions)\n# Year ending 31 December | 2018\nRevenue | 1,380\n# 31 December | 2018\nTotal assets | 1,540\n\nPart 2\nLanvik AB is a fictional company that uses a DB pension plan and stock option grants as part of its compensation to qualified employees. Lanvik AB prepares its financial statements under IFRS.\n\nInformation on Lanvik's DB plan and volatility assumptions used to value stock option grants were as follows:\n\nLanvik AB Defined Benefit Plan Information, Fiscal Year 2024\n# | FY2024\nEmployer contributions | 1,150\nCurrent service costs | 215\nPast service costs | 80\nDiscount rate used to estimate plan liabilities at beginning of year | 6.00%\nBenefit obligation at beginning of year | 48,000\nBenefit obligation at end of year | 47,700\nActuarial loss due to increase in plan obligation | 430\nPlan assets at beginning of year | 44,000\nPlan assets at end of year | 43,500\nActual return on plan assets | 2,700\nExpected rate of return on plan assets | 7.00%\n\nVolatility Assumptions Used to Value Stock Option Grants\n# Grant year | Weighted average expected volatility\n2024 valuation assumptions |\n2020–2024 | 22.00%\n2023 valuation assumptions |\n2019–2023 | 25.00%",
+    "questions": [
+     {
+      "q": "Based on Whitaker's estimates, the amount of joint venture revenue (in $ millions) included on Fairhaven's consolidated 2018 financial statements should be closest to:",
+      "options": [
+       "$0.",
+       "$690.",
+       "$1,380."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Under the equity method, Fairhaven would record its interest in the joint venture's net profit as a single line item, but would show no line-by-line contribution to revenues or expenses.\nB. Incorrect. $690 is 50% of the joint venture's revenue, which is what the proportionate consolidation method (Lakeside Care) would include, not the equity method.\nC. Incorrect. $1,380 is 100% of the joint venture's revenue, which would be the full consolidation of a controlled subsidiary."
+     },
+     {
+      "q": "Based on Whitaker's estimates, the amount of the joint venture's 31 December 2018 total assets (in $ millions) that will be included on Lakeside Care's consolidated financial statements will be closest to:",
+      "options": [
+       "$0.",
+       "$770.",
+       "$1,540."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. $0 would be the line-by-line contribution under the equity method, which Fairhaven uses; Lakeside Care uses proportionate consolidation.\nB. Correct. Under the proportionate consolidation method, Lakeside Care's consolidated financial statements will include its 50 percent share of the joint venture's total assets: 0.50 × 1,540 = 770.\nC. Incorrect. $1,540 is 100% of the joint venture's assets, which would be full consolidation."
+     },
+     {
+      "q": "If Lanvik prepared its financial statements under US GAAP, the total amount recognized by Lanvik on the income statement related to its DB plan for fiscal year 2024 (assuming the company chooses not to immediately recognize the actuarial loss and assuming there is no amortization of past service costs or actuarial gains and losses) would be closest to:",
+      "options": [
+       "15.",
+       "95.",
+       "535."
+      ],
+      "answer": 0,
+      "why": "A. Correct. US GAAP, no amortization: current service cost 215 + interest cost 6.0% × 48,000 = 2,880 − expected return 7.0% × 44,000 = 3,080 → 15. The past service cost goes to OCI.\nB. Incorrect. This adds the past service cost (80) to the P&L, but with no amortization it stays in OCI: 15 + 80 = 95.\nC. Incorrect. This is the IFRS-type figure: current service 215 + past service 80 + net interest 6.0% × (48,000 − 44,000) = 240 → 535."
+     },
+     {
+      "q": "If Lanvik had used the same volatility assumption for its FY2024 option grants that it had used in FY2023, its FY2024 net income would have been:",
+      "options": [
+       "higher.",
+       "lower.",
+       "the same."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. A higher volatility raises the fair value of the options and the compensation expense, which lowers (not raises) net income.\nB. Correct. Lanvik used a lower volatility in FY2024 (22.00% vs 25.00% in FY2023). A lower volatility lowers the option fair value and the expense. Using the FY2023 volatility would raise the expense and lower net income.\nC. Incorrect. Volatility is an input to the option valuation, so changing it changes the expense and net income."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nMontclair Retail is a retailer that compensates employees with a DB pension plan and stock options in addition to short-term benefits and a DC plan. Montclair prepares its financial statements in accordance with US GAAP.\n\nPeter Lindholm, CFA, is an equity analyst concerned with earnings quality. He is particularly interested in whether the discretionary assumptions the company is making regarding its DB plan are aggressive or conservative. Lindholm gathers the assumptions in the table below.\n\nAssumptions Used for Montclair DB Plan\n# | 20X3 | 20X2 | 20X1\nExpected long-term rate of return on plan assets | 6.10% | 6.35% | 6.80%\nDiscount rate used to estimate pension obligation at beginning of year | 4.70% | 4.85% | 5.20%\nEstimated salary growth rate | 3.50% | 4.10% | 4.00%\nEstimated inflation rate | 3.20% | 2.80% | 2.60%\n\nPart 2\nElena Fraser is a financial sector analyst writing an industry report. Part of Fraser's analysis focuses on Company PTV, a global commercial bank, and its risk management practices. To assess Company PTV's risk management practices, Fraser reviews the loan loss analysis in Exhibit 1.\n\nExhibit 1: Company PTV: Loan Loss Analysis Data\n# At 31 December | 2017 $m | 2016 $m | 2015 $m\nConsumer loans | | |\n   Allowance for loan losses | 11,300 | 12,000 | 12,200\n   Provision for loan losses | 1,650 | 2,400 | 3,100\n   Charge-offs | 3,450 | 3,650 | 3,800\n   Recoveries | 1,150 | 1,100 | 1,100\n   Net charge-offs | 2,300 | 2,550 | 2,700\nCommercial loans | | |\n   Allowance for loan losses | 1,200 | 880 | 520\n   Provision for loan losses | 760 | 640 | 410\n   Charge-offs | 960 | 820 | 700\n   Recoveries | 600 | 510 | 490\n   Net charge-offs | 360 | 310 | 210",
+    "questions": [
+     {
+      "q": "Compared to the assumptions Montclair used to compute its periodic pension cost in 20X1, earnings in 20X3 were most favorably affected by the change in the:",
+      "options": [
+       "discount rate.",
+       "estimated future salary increases.",
+       "expected long-term rate of return on plan assets."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. A lower discount rate raises the pension obligation and, in most cases, the interest cost, which lowers earnings.\nB. Correct. All three assumptions were lower in 20X3 than in 20X1. Lower expected salary increases (4.00% → 3.50%) reduce the service cost, which raises earnings. A lower discount rate (5.20% → 4.70%) increases the obligation and, in most cases, the interest cost; a lower expected return on plan assets (6.80% → 6.10%) typically increases the periodic pension cost.\nC. Incorrect. A lower expected return on plan assets means less return is credited against the pension cost, so the cost rises and earnings fall."
+     },
+     {
+      "q": "Compared to the pension assumptions Montclair used in 20X2, which of the following pairs of assumptions used in 20X3 is most likely internally inconsistent?",
+      "options": [
+       "Expected long-term rate of return on plan assets, discount rate",
+       "Discount rate, estimated future salary increases",
+       "Estimated future salary increases, inflation"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Both the expected return (6.35% → 6.10%) and the discount rate (4.85% → 4.70%) were lowered, which is consistent with each other.\nB. Incorrect. The discount rate and the salary growth rate both fell (4.85% → 4.70% and 4.10% → 3.50%), which is not an inconsistency between those two.\nC. Correct. The inflation estimate rose from 2.80% to 3.20% in 20X3 but the estimate of future salary increases was lowered from 4.10% to 3.50%. Normally, salary increases are positively related to inflation, so this pair is inconsistent."
+     },
+     {
+      "q": "Based on Exhibit 1, a loan loss analysis for the last three years indicates that:",
+      "options": [
+       "Company PTV has become less conservative in its provisioning for consumer loans.",
+       "the provision for commercial loan losses has trailed the actual net charge-off experience.",
+       "the cushion between the allowance and the net commercial loan charge-offs has declined."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Consumer provision ÷ net charge-offs: 3,100 ÷ 2,700 = 1.15 (2015) → 2,400 ÷ 2,550 = 0.94 (2016) → 1,650 ÷ 2,300 = 0.72 (2017). The provision has fallen below net charge-offs, so PTV has become LESS conservative in provisioning for consumer loans.\nB. Incorrect. Commercial provision ÷ net charge-offs: 410 ÷ 210 = 1.95 → 640 ÷ 310 = 2.06 → 760 ÷ 360 = 2.11. The provision has stayed above the net charge-offs, so it has not trailed them.\nC. Incorrect. Commercial allowance ÷ net charge-offs: 520 ÷ 210 = 2.48 → 880 ÷ 310 = 2.84 → 1,200 ÷ 360 = 3.33. The cushion has increased, not declined."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nMikael Strand has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years. Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies.\n\nPart 2\nIsabella Moretti is a junior analyst with RiveraEquity, an independent equity research firm. Moretti's supervisor asks her to update, as of 1 January 2020, a quarterly research report for Casalmare S.p.A., a telecommunications company headquartered in Italy. On that date, Casalmare's common share price is €48.\n\nMoretti gathers information on Casalmare. Exhibit 1 presents earnings data.\n\nExhibit 1: Earnings for Casalmare, 2016–2020\n# | 2016 | 2017 | 2018 | 2019 | 2020(E)\nEarnings per share (EPS, €) | 4.60 | 5.05 | 4.20 | 5.30 | 5.70\nThe data for 2016–2019 are actual and for 2020 are estimated.\n\nPart 3\nKatrine Vestergaard manages a dividend growth strategy for a large asset management firm. Vestergaard meets with her investment team to discuss a potential investment in Company A.\n\nExhibit 2: Statement of Cash Flow for Company A, Most Recent Fiscal Year End (Amounts in Millions of Dollars)\nCash Flow from Operating Activities |\nNet Income | 4,860\nAdjustments |\n  Depreciation | 470\n  Other noncash expenses | 760\n  Changes in working capital |\n    (Increase) Decrease accounts receivable | (360)\n    Increase (Decrease) accounts payable | (190)\n    Increase (Decrease) other current liabilities | 500\n      Net cash from operating activities | 6,040\nCash Flow from Investing Activities |\n(Purchase) Sale of fixed assets | 1,700\n      Net cash from investing activities | 1,700\nCash Flow from Financing Activities |\nIncrease (Decrease) notes payable | 60\nIncrease (Decrease) long-term debt | (1,150)\nPayment of common stock dividends | (950)\n      Net cash from financing activities | (2,040)\nNet change in cash and cash equivalents | 5,700",
+    "questions": [
+     {
+      "q": "Which valuation feature will Strand find different in valuing private companies versus public companies?",
+      "options": [
+       "Using market multiples to value companies",
+       "Using FCFF to value companies",
+       "Assessing discounts to account for illiquidity"
+      ],
+      "answer": 2,
+      "why": "An issue with private versus public company valuations is the need to adjust the valuation downward for a lack of liquidity (marketability). A and B are incorrect: FCFF and market multiples are used in both private and public company valuations."
+     },
+     {
+      "q": "Based on Exhibit 1, the trailing P/E for Casalmare as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
+      "options": [
+       "8.4.",
+       "9.1.",
+       "10.0."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. 8.4 is the forward P/E (€48 ÷ €5.70), which uses the estimate for 2020.\nB. Correct. Trailing P/E = current price ÷ most recent four quarters' EPS = €48 ÷ €5.30 = 9.1.\nC. Incorrect. 10.0 uses the 2016–19 average EPS of €4.79 (€48 ÷ €4.79); that would be a normalized P/E, not the trailing P/E."
+     },
+     {
+      "q": "Based on Exhibit 2, Company A's FCFE for the most recent year is closest to:",
+      "options": [
+       "$4,950 million.",
+       "$5,700 million.",
+       "$6,650 million."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This leaves out the proceeds from the sale of fixed assets: 6,040 − 1,090 = 4,950.\nB. Incorrect. This is the net change in cash (5,700), which also deducts the dividends paid; dividends are not deducted to get FCFE.\nC. Correct. FCFE = cash flow from operations − fixed capital investment + net borrowing. Net cash from operating activities is 6,040. The sale of fixed assets is a net divestment, so fixed capital investment is −1,700 (it adds 1,700). Net borrowing = notes +60 and long-term debt −1,150 = −1,090. FCFE = 6,040 + 1,700 − 1,090 = 6,650."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nChoi Min-jae is an equity analyst with Busan Securities. Choi is writing a research report on SeoHan Electronics, a South Korean company that is dual-listed on a US exchange and complies with US GAAP. As part of his analysis, Choi wants to determine the intrinsic value of SeoHan's common shares under residual income valuation.\n\nChoi assembles in Exhibit 1 selected financial information from SeoHan's 2013 and 2012 audited financial statements (values stated in South Korean won [KRW]). Other financial data pertaining to the valuation of SeoHan's shares at 31 December 2013 are shown in Exhibit 2.\n\nExhibit 1 Selected Information from SeoHan's 2013 and 2012 Financial Statements (KRW millions, except where noted)\n# | Year Ended 31 December 2013\nNet income | 126,000\nDividends | 50,000\nNumber of common shares outstanding (actual) | 30,000,000\n# | KRW at 31 December 2013 | KRW at 31 December 2012\nTotal stockholders' equity | 812,000 | 748,000\n\nExhibit 2 Other Financial Data for SeoHan Electronics\nRequired return on equity | 12%\nMarket price per share at 31 December 2013 | KRW69,000\n\nAt 31 December 2013, Choi provided the following forecasted fundamentals for SeoHan:\n* expected long-term return on equity (ROE) is 18%; and\n* after 2014, earnings and dividends will grow at 9% per year.\n\nPart 2\nOliver Grant is updating a research report on a well-established consumer company before first quarter 2021 earnings reports are released. His supervisor, Karen Ashworth, has asked Grant to use market-based valuations when updating the report.\n\nHarborview Beverage is a manufacturer and distributor of soft drinks and recently acquired a major water bottling company in order to offer a broader product line. The acquisition will have a significant impact on Harborview's future results.\n\nExhibit 3: Select Financial Data for Harborview Beverage\n2020 earnings per share (EPS) | $3.40\n2021 estimated EPS | $3.85\nCurrent share price | $73.50\nFree cash flow per share | $2.70",
+    "questions": [
+     {
+      "q": "Using the information in Exhibits 1 and 2, SeoHan's residual income (in millions) in 2013 is closest to:",
+      "options": [
+       "KRW28,560.",
+       "KRW36,240.",
+       "KRW76,000."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This charges the cost of equity on end-of-year equity: 126,000 − 0.12 × 812,000 = 28,560.\nB. Correct. Residual income = net income − equity charge on BEGINNING equity = 126,000 − 0.12 × 748,000 = 36,240.\nC. Incorrect. This is net income − dividends = 126,000 − 50,000 = 76,000; it has nothing to do with the equity charge."
+     },
+     {
+      "q": "Using the information in Exhibits 1 and 2, Choi's forecasts, and the single-stage (constant growth) residual income approach, the justified price-to-book ratio (P/B) at 31 December 2013 for SeoHan common stock is closest to:",
+      "options": [
+       "2.17.",
+       "2.55.",
+       "3.00."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. 2.17 uses the historical ROE 126,000 ÷ 812,000 = 15.5% instead of the expected long-term ROE of 18%.\nB. Incorrect. 2.55 is the market price ÷ book value per share (69,000 ÷ 27,067), not the justified P/B.\nC. Correct. Justified P/B = (ROE − g) ÷ (r − g) = (0.18 − 0.09) ÷ (0.12 − 0.09) = 3.00."
+     },
+     {
+      "q": "Based on the information in Exhibit 3, the most appropriate price-to-earnings ratio to use in the valuation of Harborview is closest to:",
+      "options": [
+       "19.09.",
+       "21.62.",
+       "27.22."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The forward P/E should be used because the recent acquisition of the water bottling company will have a significant impact on future results; 2021 estimated EPS includes the new business. Forward P/E = $73.50 ÷ $3.85 = 19.09.\nB. Incorrect. This is the trailing P/E ($73.50 ÷ $3.40 = 21.62); past earnings do not include the acquisition.\nC. Incorrect. This is price ÷ free cash flow per share ($73.50 ÷ $2.70 = 27.22), a price-to-cash-flow ratio, not a P/E."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Part 1\nMira Castellano is a fixed-income analyst with the hedge fund Lakeshore Asset Management (LAM). LAM invests in a variety of global fixed-income strategies, including fixed-income arbitrage. Castellano is responsible for pricing individual investments and analyzing market data to assess the opportunity for arbitrage. She uses two methods to value bonds:\n\nMethod 1: Build and use a binomial interest rate tree.\n\nMethod 2: Discount each year's cash flow separately using the appropriate interest rate curve.\n\nCastellano uses the benchmark yield curve provided in Exhibit 1 to consider arbitrage opportunities of corporate bonds. The benchmark bonds in Exhibit 1 pay coupons annually, and the bonds are priced at par.\n\nExhibit 1: Benchmark Par Curve\n# Maturity (years) | Yield-to-Maturity (YTM)\n1 | 3.0%\n2 | 4.0%\n3 | 5.0%\n\nCastellano then identifies a mispriced three-year annual coupon bond and compiles data on the bond (see Exhibit 2).\n\nExhibit 2: Market Data of an Annual Pay Corporate Bond\n# Company | Coupon | Market Price\nWhitcombe Industries Inc. | 4.5% | 99.3614\n\nLastly, Castellano identifies a mispriced Norwegian bond, Bond X, a three-year bond with a 5.0% annual coupon. To calculate the bond's value, Castellano devises the first three years of the interest rate lognormal tree presented in Exhibit 3 using historical interest rate volatility data.\n\nExhibit 3: Interest Rate Tree—Forward Rates Based on Norwegian Market\n# Node | Time 0 | Time 1 | Time 2\nUpper | | 4.0% | 6.0%\nMiddle | 2.0% | | 5.0%\nLower | | 3.0% | 4.0%\nAn interest rate tree at time 0, 1 and 2. Time 0, 2.0% followed by 4.0% and 3.0% in time 1. 4.0% is followed by 6.0% and 5.0% in time 2. 3.0% is followed by 5.0% and 4.0%.\n\nPart 2\nMarit Solberg is a senior portfolio manager at Northgate Multi-Asset Capital, a fixed income manager. Junior analyst, Erik Dahl, has been analyzing two groups of securities; corporate bonds and asset backed securities. He discusses his processes and observations with Solberg.\n\nSolberg explains: “We purchased the BBB rated Carrick Financial five-year bond, which currently has a modified duration of 4.1, and a yield to maturity of 5.85%.”\n\nSix months after the Carrick Financial bond purchase, it is downgraded to BB.\n\nSolberg observes: “I see that the credit spreads on the near-term Carrick Financial bonds rose significantly above credit spreads on the longer term bonds. This tells us valuable information regarding market expectations.”\n\nPart 3\nHartley & Grant is a fixed-income specialty firm that offers advisory services to investment management companies. On 1 October 20X0, Wesley Park, a senior analyst at Hartley & Grant, is reviewing three fixed-rate bonds issued by a local firm, Clearwater, Inc. The three bonds, whose characteristics are given in Exhibit 4, carry the highest credit rating.\n\nExhibit 4: Fixed-Rate Bonds Issued by Clearwater, Inc.\n# Bond | Maturity | Coupon | Type of Bond\nBond #1 | 1 October 20X3 | 4.60% annual | Option-free\nBond #2 | 1 October 20X3 | 4.60% annual | Callable at par on 1 October 20X1 and on 1 October 20X2\nBond #3 | 1 October 20X3 | 4.60% annual | Putable at par on 1 October 20X1 and on 1 October 20X2",
+    "questions": [
+     {
+      "q": "Based on Exhibits 1 and 2 and using Method 2, the amount (in absolute terms) by which the Whitcombe Industries Inc. corporate bond is mispriced is closest to:",
+      "options": [
+       "0.5609 per 100 of par value.",
+       "0.7230 per 100 of par value.",
+       "0.7400 per 100 of par value."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This discounts each cash flow at the par yield of its own maturity (3.0%, 4.0%, 5.0%) instead of the spot rates: value 98.8005, mispricing 0.5609.\nB. Incorrect. This discounts every cash flow at the flat three-year par yield of 5.0%: value 98.6384, mispricing 0.7230.\nC. Correct. Bootstrap spot rates from the par curve: z1 = 3.0%, z2 = 4.0202%, z3 = 5.0689%. Value of the 4.5% three-year bond = 4.5 ÷ 1.03 + 4.5 ÷ (1 + z2)² + 104.5 ÷ (1 + z3)³ = 98.6214. Mispricing = 99.3614 − 98.6214 = 0.7400."
+     },
+     {
+      "q": "Based on Exhibit 3 and using Method 1, the correct price for Bond X is closest to:",
+      "options": [
+       "104.3708",
+       "108.6516",
+       "109.3708"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Work backward through the tree (probability ½ each, 5.0% coupon). Time 2: 105 ÷ (1 + 6.0%, 5.0%, 4.0%) = 99.0566, 100.0000, 100.9615. Time 1: 4.0% node = 100.5080; 3.0% node = 102.4085. Time 0 = 104.3708.\nB. Incorrect. This discounts all cash flows at the current 2.0% rate instead of working through the tree: 108.6516.\nC. Incorrect. This adds the coupon again at time 0 (104.3708 + 5.0), which is not part of the price today."
+     },
+     {
+      "q": "The difference between near-term and longer-term credit spreads following Carrick bond's downgrade is most likely due to:",
+      "options": [
+       "strong current cash flow and high profit margins.",
+       "market expectations of improved future profitability.",
+       "a relatively stable expectation of default over time."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. Strong current cash flow and high profit margins are characteristic of a high-quality issuer and is consistent with an upward sloping credit term structure. | B. Incorrect because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. A flat credit term structure is an indication of a relatively stable expectation of default over time. A constant hazard rate will tend to flatten the credit curve. | C. Correct because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. A downward sloping credit term structure can result from a significant increase in leverage (as in a leveraged buyout or restructuring) and can indicate investor expectations that increased efficiencies will lead to improved future cash flow and profitability, benefiting debt investors. Strong current cash flow and high profit margins are characteristic of a high-quality issuer and is consistent with an upward sloping credit term structure. A flat credit term structure is an indication of a relatively stable expectation of default over time"
+     },
+     {
+      "q": "All else being equal, if Park assumes an interest rate volatility of 15% instead of 10%, the bond that would most likely increase in value is:",
+      "options": [
+       "Bond #2.",
+       "Bond #1.",
+       "Bond #3."
+      ],
+      "answer": 2,
+      "why": "Higher volatility raises the value of ANY option.\nPutable (#3) = straight + put → the investor owns the option, so value RISES.\nCallable (#2) = straight − call → the investor is short the option, so value FALLS.\nOption-free (#1): the tree is calibrated to the same par curve, so its value is unchanged by volatility."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Part 1\nSven Halvorsen is a partner at a private equity advisory firm. He is meeting with a data analysis consultant, Nora Berglund. Upon meeting Berglund, Halvorsen states that his firm has structured data from private equity transactions that had been conducted over the past year. He desires to merge that data with related publicly traded firm data to find factors that can be used to predict future firm valuations.\n\nHalvorsen suggests a support vector machine algorithm because the target variable is continuous and the algorithm does not require a user defined hyperparameter. Instead, Berglund suggests using an algorithm with a least absolute shrinkage and selection operator.\n\nPart 2\nPriya Menon is a portfolio manager at Meridian Capital (MC) based in the US. Menon has a shortlist of 50 US public firms and wants to better understand the factors that may explain the cross-sectional variation in these stocks' returns. Based on the finance literature, Menon believes that firm size and book-to-market ratio are important factors that need to be included in her model. She also thinks that being included in the Dow Jones Industrial Average Index (DJIA) can help a firm get more media attention and potentially attract more investors, which in turn may affect a stock's return.\n\nTo test her theory, Menon collects the annual returns (r) of these 50 stocks in the year that just ended, as well as their market capitalizations (Size, in billions of dollars) and book-to-market ratios (BMRatio) at the end of the previous year. She also creates a dummy variable (Dow) that is coded 1 if a stock is included in the DJIA and 0 otherwise, and then runs the following regression:\n\nri = b0 + b1 lnSizei + b2 BMRatioi + b3 Dowi + εi\n\nwhere lnSizei is the natural log of the market capitalization of company i in billions of dollars and Dowi is the dummy variable. The output from the regression model is shown in Exhibit 1.\n\nExhibit 1\n# | Coefficient | t-statistic | p-value\nIntercept | -0.6510 | -3.8820 | 0.0004\nSize | 0.1987 | 5.1203 | <0.0001\nBMRatio | 0.0745 | 3.3317 | 0.0017\nInDow | -0.0933 | -1.4120 | 0.1648\n\nMenon shows her model and results to a summer intern, and asks whether she should use the reported R2 or adjusted R2 to measure the goodness of fit of her model. The intern replies, \"Adjusted R2 would be more appropriate in this case because the model has more than one independent variable. Adjusted R2 is adjusted for degrees of freedom and nondecreasing in the number of independent variables.\"",
+    "questions": [
+     {
+      "q": "The algorithm suggested by Berglund is a:",
+      "options": [
+       "k-nearest neighbor algorithm.",
+       "classification and regression tree algorithm.",
+       "penalized regression algorithm."
+      ],
+      "answer": 2,
+      "why": "LASSO (least absolute shrinkage and selection operator) is the best-known penalized regression: it adds a penalty for each included feature, shrinking weak coefficients to zero. It also suits a continuous target like firm valuation. A (KNN) and C (CART) are different algorithms that don't use a LASSO penalty."
+     },
+     {
+      "q": "The predicted annual return for a stock that is included in the DJIA, has a market capitalization of $48 billion and a book-to-market ratio of 0.45 is closest to:",
+      "options": [
+       "5.84%",
+       "15.17%",
+       "24.50%"
+      ],
+      "answer": 0,
+      "why": "A. Correct. r = −0.6510 + 0.1987 × ln(48) + 0.0745 × 0.45 + (−0.0933) × 1 = 5.84%.\nB. Incorrect. This sets Dow = 0, which is a stock that is NOT in the DJIA: 15.17%.\nC. Incorrect. This adds the dummy coefficient instead of subtracting it (+0.0933 instead of −0.0933): 24.50%."
+     },
+     {
+      "q": "The intern’s response to Menon's question regarding the adjusted R2 measure is:",
+      "options": [
+       "incorrect with regard to the nondecreasing feature.",
+       "correct.",
+       "incorrect with regard to its appropriateness for Menon's model."
+      ],
+      "answer": 0,
+      "why": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and C is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t| < 1), and it can even be negative. It is plain R² that never decreases when variables are added."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Part 1\nDieter Kaufmann is the CEO of Rhein Builders and Finance, based in Germany. The company specializes in building low-income housing in developing countries, using new, highly specialized technology that lowers labor costs. Kaufmann is considering an investment in three neighboring African countries.\n\nPrior to leaving the region, Kaufmann meets again with the Minister of Finance to ask for tax incentives to make his investment in that country. He makes the following justifications:\n\nJustification 1\n\nMy investment will cause capital growth to rise more quickly and will result in higher productivity growth, causing per capita incomes to converge.\n\nJustification 2\n\nAs a result of my successful investments, more and more foreign investors will be attracted to the country. Therefore, the country will no longer be considered capital poor.\n\nJustification 3\n\nMy high-tech investment will likely cause the local housing industry to become more efficient; some local companies will become more innovative but some will leave the industry.\n\nPart 2\nAnanya Rao is an analyst who works in the finance department of Silverline Entertainment Group (SEG), a global entertainment company based in London, United Kingdom. SEG creates digital and film media content as well as maintaining a number of theme parks around the world.\n\nRao notes that Country A is currently experiencing positive economic growth, low unemployment, a high level of debt relative to GDP, and consistently maintains a current account surplus due to the demand for its commodities. Based on these factors and according to the flow supply/demand channel, Rao asserts in her analysis that Country A's currency should appreciate over time and that SEG should consider a longer-term hedging strategy.\n\nPart 3\nCamille Dubois was recently hired as an analyst at HarborFX Partners, a US-based currency trading firm that maintains offices in major financial centers around the world. Dubois assists HarborFX foreign currency strategist Hugo Lindgren. The firm executes trades for clients and manages a foreign currency investment fund. Dubois is meeting with Lindgren to discuss the characteristics of the foreign exchange markets.\n\nLindgren explains that knowing what establishes a currency's real long-term equilibrium value helps investors manage risk exposure. He notes that current account trends influence the path of exchange rates over time through several mechanisms.\n\n\"Of the three mechanisms that economists identify, I have the most confidence in the one that assumes there are long-run limits on current account deficits.\"\n\nLindgren and Dubois discuss some of HarborFX's recent trades using the currency quotes provided in Exhibit 1. (For all currency pairs provided, the notation used is, for example, USD/AUD: US dollars per Australian dollar.)\n\nExhibit 1 Interbank Currency Quotes\n# Currency Pair | Bid (Spot) | Offer (Spot)\nUSD/AUD | 0.6980 | 0.7012\nUSD/EUR | 1.0790 | 1.0815",
+    "questions": [
+     {
+      "q": "Which of Kaufmann's justifications most likely reflects the neoclassical growth model?",
+      "options": [
+       "Justification 1",
+       "Justification 2",
+       "Justification 3"
+      ],
+      "answer": 0,
+      "why": "Neoclassical model: in an open economy, capital flows from capital-rich (high K/L) to capital-poor countries seeking higher returns, so the capital stock of developing countries grows faster than in rich countries even with low saving; faster capital growth raises productivity growth and per capita incomes converge (Justification 1). Justification 2 is wrong: as foreign capital flows in and the country becomes less capital poor, returns fall and global savers slow their investment. Justification 3 describes the selection effect from endogenous growth models: foreign competition forces less efficient domestic firms to exit and others to innovate."
+     },
+     {
+      "q": "Rao's assertion about the change in the value of Country A's currency is most likely:",
+      "options": [
+       "correct because countries with trade surplus will finance their trade with increased borrowing.",
+       "correct because countries with persistent current account surpluses tend to appreciate over time.",
+       "incorrect because countries have an upper limit on the ability to borrow during trade surpluses."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because it is based on the portfolio balance channel but misrepresents the impact of trade surpluses on borrowing. The portfolio balance channel asserts that countries with trade deficits will finance their trade with increased borrowing, which may lead to shifts in global asset preferences and influence exchange rates. | B. Incorrect because it is based on the debt sustainability channel but misrepresents the impact of upper limits of borrowing being associated with trade surpluses instead of trade deficits. The debt sustainability channel asserts that there should be some upper limit on the ability of countries to run persistently large current account deficits. | C. Correct because the flow supply/demand channel asserts that countries with persistent current account surpluses should see their currencies appreciate over time, and countries with persistent current account deficits should see their currencies depreciate over time."
+     },
+     {
+      "q": "The mechanism about which Lindgren is most confident as an explanation for the long-run equilibrium value of exchange rates is best described as the:",
+      "options": [
+       "portfolio balance channel.",
+       "flow supply/demand channel.",
+       "debt sustainability channel."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The portfolio balance channel assumes that current account imbalances shift financial wealth from deficit nations to surplus nations. Countries with trade deficits will finance their trade with increased borrowing. This behavior may lead to shifts in global asset preferences, which in turn could influence the path of exchange rates. | B. Correct. Lindgren prefers the debt sustainability channel as a means to assess the long-run equilibrium value of exchange rates. According to this mechanism, there should be some upper limit on the ability of countries to run persistently large current account deficits. If a country runs a large and persistent current account deficit over time, eventually it will experience an untenable rise in debt owed to foreign investors. If such investors believe that the deficit country’s external debt is rising to unsustainable levels, they are likely to reason that a major depreciation of the deficit country’s currency will be required at some point to ensure that the current account deficit narrows significantly and that the external debt stabilizes at a level deemed sustainable. | C. Incorrect. The flow supply/demand channel mechanism focuses on the fact that purchases and sales of internationally traded goods and services require the exchange of domestic and foreign currencies in order to arrange payment for those goods and services. Such shifts in currency demand should exert upward pressure on the value of the surplus nation’s currency and downward pressure on the value of the deficit nation’s currency."
+     },
+     {
+      "q": "Based on the data in Exhibit 1, the bid EUR/AUD cross-rate implied by the interbank market is closest to:",
+      "options": [
+       "0.6454.",
+       "0.6469.",
+       "0.7531."
+      ],
+      "answer": 0,
+      "why": "A. Correct. The bid EUR/AUD is calculated as follows: Sell EUR/Buy AUD = Sell EUR/Buy USD × Sell USD/Buy AUD, which requires the inversion of USD/EUR to EUR/USD. Given the USD/EUR quotes of 1.0790/1.0815, take the inverse of each and interchange bid and offer: (1/1.0815)/(1/1.0790) = 0.9246/0.9268. Then multiply by the USD/AUD bid: 0.92464 × 0.6980 = 0.6454.\nB. Incorrect. This inverts the USD/EUR quote but does not interchange the bid and the offer, so it uses the wrong side: 0.92678 × 0.6980 = 0.6469.\nC. Incorrect. This multiplies the two bid rates (0.6980 × 1.0790 = 0.7531) without inverting USD/EUR."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Part 1\nAn equity index is established in Year 1 for a country that has recently moved to a market economy. The index vendor constructed returns for the four years prior to Year 1 based on the initial group of companies constituting the index in Year 1. From Year 12 to Year 16, a series of military confrontations concerning a disputed border disrupted the economy and financial markets. The dispute is conclusively arbitrated at the end of Year 16. In total, 20 years of equity market return history is available. Other selected data are in the following table.\n\nSelected Data\nGeometric mean return relative to 10-year government bond returns (over a 20-year period) | 1.7% per year\nArithmetic mean return relative to 10-year government bond returns (over a 20-year period) | 2.0% per year\nIndex forward dividend yield | 1.8%\nForecasted public company earnings growth | 4% per year\nForecasted market P/E growth | 0.4% per year\nForecasted real GDP growth rate (by Year 19) | 2.8%\nCurrent vs. long-term inflation forecast | 5.0% vs. 3.2% per year\nCurrent yield curve (inversion) | Short maturities: 7.5%\n | 10-year maturities: 6.0%\n\nPart 2\nLena Hartmann is an analyst at an investment bank covering the energy sector. She and her junior analyst are analyzing Cedarbrook Energy Corporation (CEC).\n\nCedarbrook Energy Corporation is a publicly traded, US-based energy company that just announced its acquisition of Tidewater Energy Corporation, a smaller US-based energy company. Cedarbrook's current trading enterprise value just prior to the announcement was USD146 billion.\n\nCedarbrook expects to realize annual recurring cost synergies of USD220 million (pre-tax), primarily from efficiencies in exploration and production activities and savings in corporate costs. The achievement of the full USD220 million in synergies is expected by the end of the third year after the acquisition closes. Synergies are realized in the amounts of USD60 million, USD150 million, and USD220 million in Years 1–3, respectively, and cash costs of USD110 million, USD180 million, and USD250 million are incurred in Years 1–3, respectively.\n\nExpectations for revenues and total operating expenses for Cedarbrook and Tidewater for the next three years prior to the acquisition announcement are shown in Exhibit 1.\n\nExhibit 1\nCedarbrook and Tidewater Year 1–3 Figures, Prior to Acquisition (USD millions)\n# Cedarbrook | Year 1 | Year 2 | Year 3\nRevenues | 17,600 | 18,480 | 19,404\nOperating expenses | 13,600 | 14,280 | 14,994\n# Tidewater | Year 1 | Year 2 | Year 3\nRevenues | 3,700 | 3,885 | 4,080\nOperating expenses | 2,250 | 2,360 | 2,480\n\nHartmann conducted a sum-of-the-parts valuation of Cedarbrook's three segments and calculated an estimated enterprise value of USD142 billion just prior to the announcement.\n\nPart 3\nMarcus Delgado is CFO at Northfield Industrial Components Corporation (NIC), an industrial manufacturer that specializes in engine components in a number of established product lines. He is preparing for a meeting with members of the executive committee to discuss and prepare recommendations for the board to determine if NIC should make any changes to its dividend policy and structure over the next fiscal year.\n\nNIC's share price closed at $21.00 yesterday. The Chief Operating Officer (COO) highlights that the company has a number of potential investments options and suggests that the company consider a 5% stock dividend instead. Delgado agrees to prepare a summary of the effect the stock dividend would have on the company's results assuming a purchase price per share based on the current market price.",
+    "questions": [
+     {
+      "q": "In the current interest rate environment, using a required return on equity estimate based on the short-term government bond rate and a historical ERP defined in terms of a short-term government bond rate would be expected to:",
+      "options": [
+       "bias long-term required return on equity estimates downward.",
+       "have no effect on long-term required return on equity estimates.",
+       "bias long-term required return on equity estimates upward."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Both effects (a larger ERP and a higher risk-free rate) increase, not decrease, the estimate.\nB. Incorrect. The choice of risk-free rate matters: using the short-term rate in an inverted curve changes both parts of the required return.\nC. Correct. The historical ERP is generally higher when it is measured against a short-term rate (the normal upward-sloping curve makes short rates lower). In addition the short-term rate is currently higher (7.5%) than the long-term rate (6.0%), which also increases the estimate. Both effects push the long-term required return up."
+     },
+     {
+      "q": "An estimate of the ERP consistent with the Grinold–Kroner model is closest to:",
+      "options": [
+       "0.7%.",
+       "1.8%.",
+       "2.2%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This subtracts the 7.5% short-term rate instead of the 10-year rate: 8.2% − 7.5% = 0.7%.\nB. Incorrect. This omits the 0.4% P/E growth: (7.8% − 6.0%) = 1.8%.\nC. Correct. Grinold–Kroner: expected equity return = dividend yield + inflation + real growth + change in P/E (no share-count change) = 1.8% + 3.2% + 2.8% + 0.4% = 8.2%. ERP = 8.2% − risk-free rate (10-year, 6.0%) = 2.2%."
+     },
+     {
+      "q": "Based on Exhibit 1, the forecasted operating income in Year 3 for the combined Cedarbrook and Tidewater is closest to:",
+      "options": [
+       "USD5,760.",
+       "USD5,980.",
+       "USD6,230."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This leaves out the synergies (6,010 − 250 = 5,760).\nB. Correct. Combined Year 3 revenues = 19,404 + 4,080 = 23,484. Combined operating expenses = 14,994 + 2,480 = 17,474. Operating income before deal effects = 6,010. Add the Year 3 synergies of 220 and subtract the Year 3 cash costs of 250: 6,010 + 220 − 250 = 5,980.\nC. Incorrect. This leaves out the costs to achieve the synergies (6,010 + 220 = 6,230)."
+     },
+     {
+      "q": "Cedarbrook's estimated conglomerate discount just prior to the announcement is:",
+      "options": [
+       "USD0.",
+       "–USD4 billion.",
+       "USD4 billion."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. The sum-of-the-parts value (142) and the trading value (146) differ, so the estimate is not zero.\nB. Correct. Estimated conglomerate discount = sum-of-the-parts enterprise value − current trading enterprise value = USD142 billion − USD146 billion = −USD4 billion. The sign is negative: the market values Cedarbrook ABOVE the sum of its parts, so there is a premium, not a discount.\nC. Incorrect. A positive figure would mean the market values the company BELOW the sum of its parts; here the trading value is higher, so the result is negative."
+     },
+     {
+      "q": "If NIC follows the COO's suggestion, the expected share price after the stock dividend is closest to:",
+      "options": [
+       "$19.95.",
+       "$20.00.",
+       "$22.05."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This subtracts 5% from the price (21.00 × 0.95 = $19.95); the 5% applies to the number of shares, so the price is divided by 1.05.\nB. Correct. A stock dividend leaves total market value unchanged and increases the share count, so the price falls by dividing: 21.00 ÷ 1.05 = $20.00.\nC. Incorrect. This multiplies the price by 1.05 (21.00 × 1.05 = $22.05), which would raise the price instead of lowering it."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Part 1\nReginald Pryor is CEO and CIO of Summit Peak Capital, a Registered Investment Advisory firm. He is meeting with Victor Lang, head trader, and Adrian Kessler, a recently hired analyst, to discuss option valuation methodologies in the context of the firm's use of derivatives to manage client portfolios.\n\nLang describes the two-period binomial model to Kessler and provides information related to Birchwood Corporation's common stock and options on that stock (presented in Exhibit 1). Birchwood stock does not pay a dividend.\n\nExhibit 1 Information on Birchwood Corporation Stock and Options\nStock price | $75\nCall strike | $75\nRisk-free interest rate | 4.00%\nUp factor | 1.20\nDown factor | 0.90\n\nThe price of a one-year call option on Birchwood Corporation common stock is $5.60. Based on this price and on information provided in Exhibit 1, Pryor, Kessler, and Lang believe that an arbitrage opportunity may exist, which arbitrageurs could exploit based on the binomial model no-arbitrage approach. Pryor states the arbitrageurs should buy call options using borrowed funds. Kessler disagrees, stating that arbitrageurs should short-sell shares and lend the proceeds. Lang also disagrees, stating that arbitrageurs should buy shares using borrowed funds.\n\nPart 2\nCarla Ibáñez is the CFO of Manufacturas Andes (MAn), an automobile parts manufacturer located in Guadalajara, Mexico. She is currently evaluating the firm's debt structure and anticipated financing needs.\n\nIbáñez explains to her deputy, Tomás Beltrán, \"The derivatives contracts we enter into are typically priced using a carry arbitrage model to have zero cost to us at origination. In addition to requiring current interest rates and coupon payments of the underlying bonds, the model makes three assumptions: (1) There are no transaction costs for buying and selling securities; (2) short-selling proceeds become available when the short is covered; and (3) we can borrow and lend at the same risk-free rate of interest.\"\n\nPart 3\nIngrid Hale is a portfolio manager at Lakecrest Capital, a hedge fund that frequently uses derivatives to hedge or speculate. She works with Lars Nilsen, a junior analyst.\n\nCarry Arbitrage Model\n\nHale and Nilsen discuss a futures contract in which the underlying bond is expected to make an interest payment in three months.\n\nStatement 1: Based on the cost of carry model, the futures price would be higher if the underlying bond's upcoming interest payment was expected in six months instead of three.\n\nStatement 2: If the futures price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased.\n\n10-Year Treasury Note\n\nNilsen's second idea involves a 10-year Treasury note futures contract. The underlying 2.5%, semi-annual 10-year Treasury note has a dirty price of 103.40. It has been 45 days since the last coupon payment. The futures contract expires in 60 days. The current annualized risk-free rate is 1.20%. The conversion factor is 0.7800. Assume a 180-day coupon period.",
+    "questions": [
+     {
+      "q": "The value of a two-year European call option on Birchwood Corporation shares is likely closest to:",
+      "options": [
+       "$9.41.",
+       "$9.78.",
+       "$10.40."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Risk-neutral probability π = (1 + r − d) ÷ (u − d) = (1.04 − 0.90) ÷ 0.30 = 0.4667. Payoffs: uu = 33, ud = 6, dd = 0. Value = [π² × 33 + 2π(1 − π) × 6] ÷ 1.04² = $9.41.\nB. Incorrect. This discounts the expected payoff only once (÷ 1.04) instead of for two periods: $9.78.\nC. Incorrect. This uses probabilities of 0.5 instead of the risk-neutral probability 0.4667: $10.40."
+     },
+     {
+      "q": "With respect to the one-year call option on Birchwood stock, whose strategy is most likely correct?",
+      "options": [
+       "Lang's",
+       "Pryor's",
+       "Kessler's"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Buying shares with borrowed funds is the replicating portfolio of a LONG call; it would be used when the call is overpriced and sold, not when it is underpriced.\nB. Incorrect. Buying calls with borrowed funds takes the right side (long call) but borrows to pay for it; the hedge needs short shares with the proceeds lent, not extra borrowing.\nC. Correct. The one-year model value is π × (90 − 75) ÷ 1.04 = $6.73, above the market price of $5.60, so the call is underpriced: buy the call and short the replicating portfolio, i.e. short-sell shares and lend the proceeds (Kessler's strategy)."
+     },
+     {
+      "q": "When discussing the assumptions of the carry arbitrage model, Ibáñez is least likely correct regarding:",
+      "options": [
+       "borrowing costs.",
+       "short-sale proceeds.",
+       "transaction costs."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Ibáñez is correct that the carry arbitrage model assumes funds can be borrowed and lent at the same risk-free rate. | B. Incorrect. Ibáñez is correct that the carry arbitrage model assumes no market frictions, such as transaction costs. | C. Correct. Ibáñez is incorrect regarding the availability of short-selling proceeds. The carry arbitrage approach assumes the proceeds from a short sale can be immediately used to purchase other securities."
+     },
+     {
+      "q": "Which of Hale's statements is correct?",
+      "options": [
+       "Only Statement 1",
+       "Both Statement 1 and Statement 2",
+       "Only Statement 2"
+      ],
+      "answer": 1,
+      "why": "Statement 2 is correct: a futures price below the carry-arbitrage price is underpriced, so buy the futures (reverse carry arbitrage). Statement 1 is correct: a later interest payment means the future value of the coupon benefit is smaller, so the futures price is higher."
+     },
+     {
+      "q": "The equilibrium quoted futures price of the 10-year Treasury note is closest to:",
+      "options": [
+       "131.89",
+       "132.43",
+       "132.83"
+      ],
+      "answer": 0,
+      "why": "A. Correct. The dirty price already includes accrued interest, so compound it to expiry: 103.40 × (1.012)^(60/360) = 103.6058. Accrued interest at expiry = (45 + 60)/180 × 1.25 = 0.7292. No coupon is paid during the 60 days. Quoted futures price = (103.6058 − 0.7292) ÷ 0.78 = 131.89.\nB. Incorrect. This subtracts only today's accrued interest (45/180 × 1.25 = 0.3125) instead of the accrued interest at expiry: 132.43.\nC. Incorrect. This forgets to subtract the accrued interest at expiry: 103.6058 ÷ 0.78 = 132.83."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Part 1\nRosa Almeida is an investment analyst for the Atlantic Teachers' Retirement Fund (ATRF). ATRF's investment committee (IC) has asked Almeida to evaluate a hedge fund allocation. Almeida simulates adding a 20% allocation to individual hedge fund strategies. The IC requires (1) that the variance of the combined portfolio be less than 85% of that of the current portfolio and (2) that the combined portfolio maximize the risk-adjusted return with the expectation of large negative events. Exhibit 1 provides the simulated results.\n\nExhibit 1: Simulated Combined Portfolios\n# Hedge fund strategy | Standard deviation (%) | Sharpe ratio | Sortino ratio | Maximum drawdown (%)\nCurrent portfolio | | | |\nNA | 9.20 | 0.46 | 1.00 | 18.10\nThree potential portfolios with a 20% hedge fund allocation | | | |\nMerger arbitrage | 8.30 | 0.60 | 1.66 | 8.20\nSystematic futures | 8.75 | 0.72 | 1.81 | 10.40\nEquity market neutral | 8.40 | 0.65 | 1.57 | 12.10\n\nPart 2\nEllis Marwood is a portfolio analyst for the Harbor-Ridge Pension Fund (HRPF). HRPF's investment committee (IC) asks Marwood to research adding hedge funds to the HRPF portfolio.\n\nMarwood also plans to recommend a specialist hedge fund strategy that would allow HRPF to maintain a high Sharpe ratio even during a financial crisis when equity markets fall.\n\nFinally, Marwood creates a model to simulate adding selected individual hedge fund strategies to the current portfolio with a 20% allocation. The IC's primary considerations for a combined portfolio are (1) that the variance of the combined portfolio must be less than 90% of that of the current portfolio and (2) that the combined portfolio maximize the risk-adjusted return with the expectation of large negative events. Exhibit 2 provides historical performance and risk metrics for three simulated portfolios.\n\nExhibit 2: Performance of Various Combined Portfolios\n# Hedge fund strategy | Standard deviation (%) | Sharpe ratio | Sortino ratio | Maximum drawdown (%)\nCurrent portfolio |\nNA | 8.60 | 0.50 | 1.05 | 16.40\nThree potential portfolios with a 20% hedge fund allocation |\nMerger arbitrage | 8.35 | 0.73 | 1.88 | 6.30\nSystematic futures | 7.30 | 0.80 | 1.74 | 9.10\nEquity market neutral | 7.65 | 0.69 | 1.86 | 11.80",
+    "questions": [
+     {
+      "q": "Based on the IC's two requirements, which simulated portfolio in Exhibit 1 is most suitable?",
+      "options": [
+       "Systematic futures",
+       "Merger arbitrage",
+       "Equity market neutral"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Systematic futures has the highest Sortino ratio, but its standard deviation (8.75%) is above the 8.48% allowed by the variance requirement.\nB. Correct. Maximum variance = 0.85 × 9.20² = 71.94, so maximum SD = 8.48%. Systematic futures (8.75%) breaks the variance limit even though it has the highest Sortino ratio (1.81). Merger arbitrage (8.30%) and equity market neutral (8.40%) both pass. With large negative events expected, use the Sortino ratio (downside risk only): merger arbitrage 1.66 beats equity market neutral 1.57.\nC. Incorrect. Equity market neutral passes the variance requirement, but its Sortino ratio (1.57) is lower than that of merger arbitrage (1.66)."
+     },
+     {
+      "q": "The specialist hedge fund strategy that Marwood plans to recommend is most likely:",
+      "options": [
+       "buying longer-dated out-of-the-money options on VIX index futures.",
+       "selling equity volatility and collecting the volatility risk premium.",
+       "cross-asset volatility trading between the US and Japanese markets."
+      ],
+      "answer": 0,
+      "why": "Long equity volatility is a crisis hedge: volatility is about 80% negatively correlated with equity returns, so it lowers portfolio standard deviation and supports the Sharpe ratio (at the cost of premium). Longer-dated options have more vega; OTM options trade at higher implied volatility. A is wrong: cross-asset volatility trading can carry idiosyncratic macro risks that hurt in a crisis. B is wrong: the volatility seller provides crash insurance and loses in a crisis."
+     },
+     {
+      "q": "Based on the IC's primary considerations for a combined portfolio, which simulated hedge fund strategy portfolio in Exhibit 2 creates the most suitable combined portfolio?",
+      "options": [
+       "Merger arbitrage",
+       "Systematic futures",
+       "Equity market neutral"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Merger arbitrage has the highest Sortino ratio (1.88), but its standard deviation (8.35%) is above the maximum of 8.16% allowed by the variance condition.\nB. Incorrect. Systematic futures passes the variance condition, but its Sortino ratio (1.74) is lower than that of equity market neutral (1.86).\nC. Correct. Maximum variance = 0.90 × 8.60² = 66.56, so maximum SD = 8.16%. Merger arbitrage (8.35) breaks the variance limit even though it has a high Sortino ratio. Systematic futures (7.30) and equity market neutral (7.65) pass. With large negative events expected, use the Sortino ratio: equity market neutral 1.86 beats systematic futures 1.74."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Part 1\nSophie Lambert is a corporate bond portfolio manager at Rhône Funds, LLC in Portland, ME. She manages a US$650 million fund of primarily investment grade corporate bonds. The fund can also invest in fixed-income securities within the high-yield emerging market and in the sovereign and municipal sectors. As a result of market volatility, Lambert has been noting that inflows and outflows are larger and more frequent than in the past. Because her fund is benchmarked against the Barclays Bloomberg Corporate Bond Index, and her peer universe is competitive, Lambert is looking at ways to ensure that the cash flows do not adversely affect fund performance. She considers the use of exchange-traded funds (ETFs) to manage her market exposures in the fund.\n\nLambert then asks Moreau, an analyst on her team, to analyze in more detail the economics surrounding ETFs. Moreau conducts a thorough analysis of the costs of an ETF, such as bid–ask spreads and sources of premiums and discounts. He summarizes his findings to Lambert in the following notes:\nNote 1: ETFs can trade at either a premium or discount to the underlying, which affect trading costs negatively or positively. Exchanges disclose the indicated intraday net asset values (NAVs), which are estimates of fair value based on the creation basket. Premiums and discounts are driven by a number of factors, including timing differences and stale pricing, which can be meaningful for foreign securities.\nNote 2: A number of factors can determine the width of bid–ask spreads. These include creation or redemption fees, trading costs, and importantly, the bid–ask spread of the underlying securities. Similar to any other stock, the market maker is compensated, including a profit spread, for the risks of holding and hedging a security which are a function of liquidity.\n\nPart 2\nGareth Armitage is chief investment officer at Crown & Vale Capital. Armitage decides to add a fourth offering to his group of balanced funds, Fund W, which will use a custom benchmark of 60% global equities and 40% global bonds.\n\nArmitage conducts a search to hire a manager for the global equity portion of Fund W and identifies three candidates. He asks the candidates to prepare risk and return forecasts relative to Fund W's benchmark based on their investment strategy, with the only constraint being no short selling. Each candidate develops independent annual forecasts with active return projections that are uncorrelated and constructs a portfolio made up of stocks that are diverse both geographically and across economic sectors. Selected data for the three candidates' portfolios are presented in Exhibit 1.\n\nExhibit 1: Forecasted Portfolio Data for Equity Portion of Fund W\n# | Candidate A | Candidate B | Candidate C\nRebalancing | Annually | Annually | Annually\nNumber of securities | 100 | 64 | 36\nInformation ratio (IR) | 0.738 | 0.651 | 0.630\nTransfer coefficient (TC) | 0.820 | 0.740 | 0.500\nInformation coefficient* | 0.09 | 0.11 | 0.21\n*Information coefficient based on previously managed funds.",
+    "questions": [
+     {
+      "q": "Based on Lambert’s objectives in managing her fund, which application of ETFs is least likely applicable?",
+      "options": [
+       "Portfolio transition management",
+       "Portfolio liquidity management",
+       "Portfolio completion strategies"
+      ],
+      "answer": 0,
+      "why": "B. Incorrect because portfolio liquidity management is easily achieved with the use of ETFs. | B. Incorrect because Lambert can use ETFs to invest the outflows or meet redemptions and keep her exposure to the market. | C. Correct because transition management refers to the process of hiring and firing managers — or making changes to allocations with existing managers. In this application, the manager can add the desired exposure to a market segment with ETFs while shedding exposure to the market segment she has received in kind. Lambert is experiencing inflows and outflows in her corporate bond fund. An efficient way to maintain the desired exposure is to buy and sell ETFs as flows occur. Using ETFs for portfolio completion can help fill in temporary gaps in exposure while she finds individual bonds to trade. The liquidity of ETFs relative to individual bonds allows Lambert to quickly invest inflows or meet redemptions."
+     },
+     {
+      "q": "Are Moreau’s notes regarding the economics surrounding ETFs most likely correct?",
+      "options": [
+       "Yes",
+       "No, he is incorrect with regard to Note 1",
+       "No, he is incorrect with regard to Note 2"
+      ],
+      "answer": 0,
+      "why": "A. Correct because Moreau is correct with regard to both notes. He has accurately described the economics surrounding ETFs pertaining to both bid-ask spreads and premiums and discounts. | B. Incorrect because Note 2 regarding bid-ask spreads is correct. | C. Incorrect because Note 1 regarding premiums and discounts is correct."
+     },
+     {
+      "q": "Based on the data presented in Exhibit 1, the candidate with the greatest skill at achieving active returns appears to be:",
+      "options": [
+       "Candidate B.",
+       "Candidate C.",
+       "Candidate A."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Candidate B has a higher IC (0.11) than Candidate A, but its IR (0.651) is lower than that of Candidate A (0.738).\nB. Incorrect. Candidate C has the highest IC (0.21), but its low TC (0.500) and small breadth (36 securities) give it the lowest IR (0.630).\nC. Correct. The IR measures the consistency of active return on a risk-adjusted basis; a higher IR generally indicates more skill. Candidate A has the highest IR (0.738) vs. Candidate B (0.651) and Candidate C (0.630). Candidate C has the highest IC (0.21), but its low TC (0.500) and small breadth (36 stocks) offset it."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Part 1\nJulia Whitmore is a financial planner at a large wealth management firm. One of her clients, Tobias Hartwell, just received a sizable inheritance. He invests a portion of the inheritance in an annuity that will immediately increase his income by a substantial amount. He enlists Whitmore’s help to invest the remaining amount of the inheritance.\n\nExhibit 1: Selected Macroeconomic Data\n#  | Nominal GDP Growth | Inflation Rate | Volatility of Real GDP Growth | Yield Curve Shape | Trailing 12-Month Equity Index P/E\nCountry #1 | 7.0% | 4.5% | High | Flat | 16.5\nCountry #2 | 5.5% | 3.0% | Low | Upward slope | 17.3\nCountry #3 | 4.0% | 2.5% | Low | Flat | 18.2\n\nIn her analysis, Whitmore observes that the spread between the three-year default-free nominal bond and the default-free real zero-coupon bond in Country #3 is 2.5%.\n\nWhitmore predicts that Country #3 will slip into a recession next quarter. She thinks it will be short-lived, lasting only 12 months or so, and considers the impact of such a recession on the performance of the country’s stocks and bonds.\n\nPart 2\nPierre Delacroix is the portfolio manager of the proprietary fixed-income portfolio of Coastal Regional Bank. The portfolio is structured as a barbell portfolio: About half of the portfolio is invested in zero-coupon Treasuries with maturities in the 3- to 5-year range (Portfolio P1), and the remainder is invested in zero-coupon Treasuries with maturities in the 10- to 15-year range (Portfolio P2). Delacroix has discretion to allocate between 40% and 60% of the assets to each maturity \"bucket.\" He must remain fully invested at all times. Exhibit 2 shows details of this portfolio.\n\nExhibit 2: US Treasury Barbell Portfolio\n# | P1 (3–5 Years) | P2 (10–15 Years)\nAverage duration | 3.30 | 11.07\nMarket value | $46.2 million | $63.8 million",
+    "questions": [
+     {
+      "q": "The recent change in Country #3’s break-even inflation rate suggests that the expected rate of inflation over the next three years is:",
+      "options": [
+       "greater than 2.5%.",
+       "equal to 2.5%.",
+       "less than 2.5%."
+      ],
+      "answer": 2,
+      "why": "The 2.5% spread between the nominal and real default-free yields is the break-even inflation rate (BEI) = expected inflation + a premium for uncertainty about future inflation. That premium is most likely positive (investors can’t predict inflation with confidence), so expected inflation must be below 2.5%."
+     },
+     {
+      "q": "If Whitmore’s prediction about the economy of Country #3 is realized, the yield curve in Country #3 will most likely:",
+      "options": [
+       "become upward sloping.",
+       "remain flat.",
+       "become downward sloping."
+      ],
+      "answer": 0,
+      "why": "The curve is flat now. In a recession central banks cut policy rates, pulling short-term yields down; long-term yields fall less because the central bank is expected to bring short rates back to normal as the recession ends. Short rates falling more than long rates makes the curve upward sloping."
+     },
+     {
+      "q": "If Delacroix is expecting a 50 bp increase in yields at all points along the yield curve, which of the following trades is he most likely to execute to minimize his risk?",
+      "options": [
+       "Sell $30 million of P2 and reinvest the proceeds in three-year bonds",
+       "Sell $8 million of P2 and reinvest the proceeds in three-year bonds",
+       "Sell $19 million of P2 and reinvest the proceeds in three-year bonds"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Selling $30m would leave P2 at 33.8 / 110.0 = 30.7%, below the 40% floor.\nB. Incorrect. Selling only $8m stays within the limits (50.7% in P2) but cuts duration far less than selling $19m.\nC. Correct. To cut interest rate risk before yields rise, shorten duration, within the 40%–60% limit per bucket. Total = 46.2 + 63.8 = $110.0m. Selling $19m of P2 leaves 44.8 / 110.0 = 40.7% in P2 (just above the 40% minimum), with the proceeds at the shortest permitted maturity (3 years)."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {
+  "mock13:1": {
+   "hl": [
+    "They say my suggested policies and regulations related to market manipulation, material nonpublic information, and protecting client interests are too complicated, and they do not have the judicial competency to back them up.",
+    "Renata Cole, CFA, is currently working as a capital market adviser in a developing country."
+   ],
+   "rule": "One broad rule that puts investors' interests first covers the most ground: it supports loyalty to clients and also makes trading on material nonpublic information and market manipulation unacceptable, since both put oth"
+  },
+  "mock13:2": {
+   "hl": [
+    "After reviewing the summary of violations and the firm’s existing handbook, Voss and Takeda decided to submit the following recommendations regarding the firm’s trade allocation procedures for block trades to the board of directors for approval:",
+    "Brandon’s board of directors has tasked Voss with bringing the firm’s policies and procedures into compliance with the CFA Institute Code of Ethics and Standards of Professional Conduct."
+   ],
+   "rule": "Both are recommended procedures for fair trade allocation under III(B): all accounts in a block trade get the same execution price and commission (Recommendation 2), and orders are executed first-in, first-out with bundl"
+  },
+  "mock13:3": {
+   "hl": [
+    "But, there are several benefits to this type of investment that I think are important for you, including diversification, exposure to rapidly growing economies, and returns, which are currently in the 8%–12% range, based on my review of similar investments.",
+    "In a meeting with Walter Osei, a prospective client who recently sold his business for over $100 million, Moretz learns that Osei plans to quit working."
+   ],
+   "rule": "B. Correct because Moretz has only stated historical returns for these types of investments based on research of other similar investments. In addition, he has not promised a specific return, so he is not in violation of"
+  },
+  "mock13:4": {
+   "hl": [
+    "Her departure was not restricted by a noncompete agreement, and before leaving, she returned the company-owned electronic devices she had been issued.",
+    "During their meeting, Whitfield shares with Santos a presentation that includes the proposed management structure, the investment products to be offered, and a list of potential clients."
+   ],
+   "rule": "No violation. Once she has left Eastgate, the skills and experience she gained there are not confidential, and simply knowing former clients' names generally isn't either (unless a confidentiality agreement or the law sa"
+  },
+  "mock13:5": {
+   "hl": [
+    "The analyst starts the presentation and discusses her research process and her published investment recommendations on the companies under her coverage.",
+    "She mentions her call with the CFO as well as the comments she made during an interview on a major television network relating to the merger."
+   ],
+   "rule": "In the first scenario Okonkwo provides no evidence of any violation of the CFA Institute Standards of Professional Conduct. The discussion prior to the meeting is not a violation of Standard II(A): Material Nonpublic Inf"
+  },
+  "mock13:6": {
+   "hl": [
+    "Recommendation 1: Firms should implement effective supervisory and review procedures to ensure compliance with personal investment policies.",
+    "Recommendation 2: Firms should require prior approval for employees participating in initial public offerings."
+   ],
+   "rule": "Both Recommendation 2 (“Firms should require prior approval for employees participating in initial public offerings.”) and Recommendation 1 (“Firms should implement effective supervisory and review procedures to ensure c"
+  },
+  "mock13:7": {
+   "hl": [
+    "Policy 3: If a capsule or condensed form of a recommendation is utilized in social media communications, reasonable efforts should be made to notify all clients about the social media post.",
+    "Policy 2: When discussing earnings estimates, caution should be exercised to avoid overconfidence regarding the accuracy of the earnings model."
+   ],
+   "rule": "B. Incorrect. Policy 2 and Policy 1 are both consistent with Standard V(B): Communication with Clients and Prospective Clients. | B. Correct. Policy 3 (“If a capsule or condensed form of a recommendation is utilized in s"
+  },
+  "mock13:8": {
+   "hl": [
+    "Pledge 2: Avoid discussing the particulars of the topic areas tested with each other.",
+    "Pledge 3: Abstain from making any comments about the curriculum on social media."
+   ],
+   "rule": "A. Incorrect. Pledge 3 (Abstain from making any comments about the curriculum on social media.) and Pledge 1 (Refrain from expressing negative comments about the CFA Program.) are not violations of Standard VII(A). | B. "
+  },
+  "mock13:9": {
+   "hl": [
+    "Fairhaven plans to use the equity method",
+    "@row:Revenue"
+   ],
+   "rule": "Equity method: one line (share of net income), no line-by-line revenue or assets; proportionate consolidation: your % of every line; full consolidation: 100% plus a non-controlling interest."
+  },
+  "mock13:10": {
+   "hl": [
+    "Lakeside Care complies with IFRS and will use the proportionate consolidation method",
+    "@row:Total assets"
+   ],
+   "rule": "Proportionate consolidation: include your ownership % of every line (assets, liabilities, revenue, expenses)."
+  },
+  "mock13:11": {
+   "hl": [
+    "assuming there is no amortization of past service costs or actuarial gains and losses"
+   ],
+   "rule": "US GAAP P&L pension cost = service cost + interest cost on the beginning obligation − EXPECTED return on assets (past service cost and actuarial items stay in OCI without amortization)."
+  },
+  "mock13:12": {
+   "hl": [
+    "Volatility Assumptions Used to Value Stock Option Grants"
+   ],
+   "rule": "Higher volatility → higher option value → higher compensation expense → lower net income."
+  },
+  "mock13:13": {
+   "hl": [
+    "@row:Expected long-term rate of return on plan assets",
+    "@row:Discount rate used to estimate pension obligation at beginning of year",
+    "@row:Estimated salary growth rate"
+   ],
+   "rule": "Pension cost drivers: lower salary growth → lower service cost (favorable); lower discount rate → higher obligation and interest cost (unfavorable); lower expected return → higher pension cost (unfavorable)."
+  },
+  "mock13:14": {
+   "hl": [
+    "@row:Estimated salary growth rate",
+    "@row:Estimated inflation rate"
+   ],
+   "rule": "Consistency check: salary growth and inflation should move together; expected return on assets and the discount rate should move in the same direction."
+  },
+  "mock13:15": {
+   "hl": [
+    "@row:Provision for loan losses",
+    "@row:Net charge-offs",
+    "@row:Allowance for loan losses"
+   ],
+   "rule": "Loan loss analysis: provision ÷ net charge-offs below 1 = less conservative; allowance ÷ net charge-offs shows the cushion (rising = bigger cushion)."
+  },
+  "mock13:16": {
+   "hl": [
+    "Mikael Strand has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years.",
+    "Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies."
+   ],
+   "rule": "An issue with private versus public company valuations is the need to adjust the valuation downward for a lack of liquidity (marketability). A and B are incorrect: FCFF and market multiples are used in both private and p"
+  },
+  "mock13:17": {
+   "hl": [
+    "trailing P/E",
+    "@row:Earnings per share (EPS, €)",
+    "common share price is €48"
+   ],
+   "rule": "Trailing P/E = price ÷ the most recent actual EPS (no averaging, no estimates); averaging several years = normalized; estimate for next year = forward."
+  },
+  "mock13:18": {
+   "hl": [
+    "@row:Net cash from operating activities",
+    "@row:(Purchase) Sale of fixed assets",
+    "@row:Increase (Decrease) long-term debt"
+   ],
+   "rule": "FCFE = CFO − FCInv + net borrowing (a SALE of fixed assets adds to FCFE; dividends are not deducted)."
+  },
+  "mock13:19": {
+   "hl": [
+    "@row:Net income",
+    "@row:Required return on equity",
+    "@row:Total stockholders' equity"
+   ],
+   "rule": "RI = net income − required return × BEGINNING book value of equity."
+  },
+  "mock13:20": {
+   "hl": [
+    "expected long-term return on equity (ROE) is 18%",
+    "after 2014, earnings and dividends will grow at 9% per year",
+    "@row:Required return on equity"
+   ],
+   "rule": "Justified P/B (single stage) = (ROE − g) ÷ (r − g) with the EXPECTED long-term ROE."
+  },
+  "mock13:21": {
+   "hl": [
+    "The acquisition will have a significant impact on Harborview's future results",
+    "@row:2021 estimated EPS"
+   ],
+   "rule": "Acquisition (or other big change) → past EPS no longer describes the company: use the FORWARD P/E on estimated EPS."
+  },
+  "mock13:22": {
+   "hl": [
+    "@row:2",
+    "@row:3"
+   ],
+   "rule": "Method 1 with a par curve: bootstrap the SPOT rates first, then discount each cash flow at its own spot rate; compare with the market price."
+  },
+  "mock13:23": {
+   "hl": [
+    "5.0% annual coupon",
+    "@row:Middle"
+   ],
+   "rule": "Binomial tree valuation: work backward; at each node value = [½ × (V_up + V_down) + coupon] ÷ (1 + node rate); the time-0 value is the price."
+  },
+  "mock13:24": {
+   "hl": [
+    "Solberg observes: “I see that the credit spreads on the near-term Carrick Financial bonds rose significantly above credit spreads on the longer term bonds.",
+    "This tells us valuable information regarding market expectations.”"
+   ],
+   "rule": "A. Incorrect because the credit spread curve is inverted, as near-term spreads are higher than longer-term spreads. Strong current cash flow and high profit margins are characteristic of a high-quality issuer and is cons"
+  },
+  "mock13:25": {
+   "hl": [
+    "Hartley & Grant is a fixed-income specialty firm that offers advisory services to investment management companies.",
+    "On 1 October 20X0, Wesley Park, a senior analyst at Hartley & Grant, is reviewing three fixed-rate bonds issued by a local firm, Clearwater, Inc."
+   ],
+   "rule": "Higher volatility raises the value of ANY option."
+  },
+  "mock13:26": {
+   "hl": [
+    "Instead, Berglund suggests using an algorithm with a least absolute shrinkage and selection operator.",
+    "Halvorsen suggests a support vector machine algorithm because the target variable is continuous and the algorithm does not require a user defined hyperparameter."
+   ],
+   "rule": "LASSO (least absolute shrinkage and selection operator) is the best-known penalized regression: it adds a penalty for each included feature, shrinking weak coefficients to zero. It also suits a continuous target like fir"
+  },
+  "mock13:27": {
+   "hl": [
+    "included in the DJIA",
+    "@row:Size",
+    "@row:InDow"
+   ],
+   "rule": "Prediction = intercept + each coefficient × its value; a stock in the index has Dow = 1 and size enters as the natural log (ln) of billions."
+  },
+  "mock13:28": {
+   "hl": [
+    "Menon shows her model and results to a summer intern, and asks whether she should use the reported R2 or adjusted R2 to measure the goodness of fit of her model.",
+    "The intern replies, \"Adjusted R2 would be more appropriate in this case because the model has more than one independent variable."
+   ],
+   "rule": "Adjusted R² is the right measure for a model with several independent variables, so that part is correct and C is wrong. But adjusted R² is NOT nondecreasing: it can fall when a new variable adds only a little to R² (|t|"
+  },
+  "mock13:29": {
+   "hl": [
+    "My investment will cause capital growth to rise more quickly and will result in higher productivity growth, causing per capita incomes to converge.",
+    "Kaufmann is considering an investment in three neighboring African countries."
+   ],
+   "rule": "Neoclassical model: in an open economy, capital flows from capital-rich (high K/L) to capital-poor countries seeking higher returns, so the capital stock of developing countries grows faster than in rich countries even w"
+  },
+  "mock13:30": {
+   "hl": [
+    "Based on these factors and according to the flow supply/demand channel, Rao asserts in her analysis that Country A's currency should appreciate over time and that SEG should consider a longer-term hedging strategy.",
+    "Rao notes that Country A is currently experiencing positive economic growth, low unemployment, a high level of debt relative to GDP, and consistently maintains a current account surplus due to the demand for its commodities."
+   ],
+   "rule": "A. Incorrect because it is based on the portfolio balance channel but misrepresents the impact of trade surpluses on borrowing. The portfolio balance channel asserts that countries with trade deficits will finance their "
+  },
+  "mock13:31": {
+   "hl": [
+    "Lindgren explains that knowing what establishes a currency's real long-term equilibrium value helps investors manage risk exposure.",
+    "He notes that current account trends influence the path of exchange rates over time through several mechanisms."
+   ],
+   "rule": "A. Incorrect. The portfolio balance channel assumes that current account imbalances shift financial wealth from deficit nations to surplus nations. Countries with trade deficits will finance their trade with increased bo"
+  },
+  "mock13:32": {
+   "hl": [
+    "@row:USD/AUD",
+    "@row:USD/EUR",
+    "bid EUR/AUD cross-rate"
+   ],
+   "rule": "Cross rate: write the chain you need (EUR/USD × USD/AUD), invert a quote by swapping bid and offer (bid = 1 ÷ offer), then multiply bid with bid."
+  },
+  "mock13:33": {
+   "hl": [
+    "Current yield curve (inversion) | Short maturities: 7.5%",
+    "@row:Current yield curve (inversion)"
+   ],
+   "rule": "Required return = risk-free rate + beta × ERP: a short-term rate gives a bigger historical ERP and (inverted curve) a bigger risk-free rate → upward bias for long-term estimates."
+  },
+  "mock13:34": {
+   "hl": [
+    "@row:Index forward dividend yield",
+    "@row:Forecasted market P/E growth",
+    "@row:Forecasted real GDP growth rate (by Year 19)"
+   ],
+   "rule": "Grinold–Kroner: E(R) = dividend yield + long-term inflation + real growth + P/E change; ERP = E(R) − the long-term (10-year) risk-free rate."
+  },
+  "mock13:35": {
+   "hl": [
+    "Synergies are realized in the amounts of USD60 million, USD150 million, and USD220 million in Years 1–3",
+    "cash costs of USD110 million, USD180 million, and USD250 million are incurred in Years 1–3"
+   ],
+   "rule": "Combined operating income = revenues − operating expenses of BOTH companies, plus the synergies of the year, minus the cash costs of achieving them in that year."
+  },
+  "mock13:36": {
+   "hl": [
+    "current trading enterprise value just prior to the announcement was USD146 billion",
+    "enterprise value of USD142 billion"
+   ],
+   "rule": "Conglomerate discount = SOTP enterprise value − trading enterprise value; negative = premium (market above the parts)."
+  },
+  "mock13:37": {
+   "hl": [
+    "5% stock dividend",
+    "closed at $21.00"
+   ],
+   "rule": "Stock dividend: total value unchanged, shares × (1 + %), so new price = old price ÷ (1 + %)."
+  },
+  "mock13:38": {
+   "hl": [
+    "@row:Risk-free interest rate",
+    "@row:Up factor",
+    "@row:Down factor",
+    "@row:Call strike"
+   ],
+   "rule": "Two-period binomial: π = (1 + r − d) ÷ (u − d); value = [π² × C_uu + 2π(1 − π) × C_ud + (1 − π)² × C_dd] ÷ (1 + r)²."
+  },
+  "mock13:39": {
+   "hl": [
+    "The price of a one-year call option on Birchwood Corporation common stock is $5.60",
+    "@row:Up factor",
+    "@row:Stock price"
+   ],
+   "rule": "Compare the model value with the market price: market price < model value → buy the call and short the replicating portfolio (short shares, lend); market price > model value → sell the call, buy shares with borrowed funds."
+  },
+  "mock13:40": {
+   "hl": [
+    "In addition to requiring current interest rates and coupon payments of the underlying bonds, the model makes three assumptions: (1) There are no transaction costs for buying and selling securities; (2) short-selling proceeds become available when the short is covered; and (3) we can borrow and lend at the same risk-free rate of interest.\"",
+    "Ibáñez explains to her deputy, Tomás Beltrán, \"The derivatives contracts we enter into are typically priced using a carry arbitrage model to have zero cost to us at origination."
+   ],
+   "rule": "A. Incorrect. Ibáñez is correct that the carry arbitrage model assumes funds can be borrowed and lent at the same risk-free rate. | B. Incorrect. Ibáñez is correct that the carry arbitrage model assumes no market frictio"
+  },
+  "mock13:41": {
+   "hl": [
+    "Statement 1: Based on the cost of carry model, the futures price would be higher if the underlying bond's upcoming interest payment was expected in six months instead of three.",
+    "Statement 2: If the futures price is less than the price suggested by the carry arbitrage model, the futures contract should be purchased."
+   ],
+   "rule": "Statement 2 is correct: a futures price below the carry-arbitrage price is underpriced, so buy the futures (reverse carry arbitrage). Statement 1 is correct: a later interest payment means the future value of the coupon "
+  },
+  "mock13:42": {
+   "hl": [
+    "has a dirty price of 103.40",
+    "The futures contract expires in 60 days",
+    "The conversion factor is 0.7800"
+   ],
+   "rule": "Quoted futures = [dirty price × (1 + r)^T − accrued interest at expiry − FV of coupons] ÷ conversion factor."
+  },
+  "mock13:43": {
+   "hl": [
+    "variance of the combined portfolio be less than 85% of that of the current portfolio",
+    "expectation of large negative events"
+   ],
+   "rule": "Step 1: variance screen (SD ≤ √limit × current SD). Step 2: among the survivors, large negative events → Sortino ratio."
+  },
+  "mock13:44": {
+   "hl": [
+    "Marwood also plans to recommend a specialist hedge fund strategy that would allow HRPF to maintain a high Sharpe ratio even during a financial crisis when equity markets fall.",
+    "HRPF's investment committee (IC) asks Marwood to research adding hedge funds to the HRPF portfolio."
+   ],
+   "rule": "Long equity volatility is a crisis hedge: volatility is about 80% negatively correlated with equity returns, so it lowers portfolio standard deviation and supports the Sharpe ratio (at the cost of premium). Longer-dated "
+  },
+  "mock13:45": {
+   "hl": [
+    "variance of the combined portfolio must be less than 90% of that of the current portfolio",
+    "expectation of large negative events",
+    "@row:Equity market neutral"
+   ],
+   "rule": "Step 1: variance screen (SD ≤ √0.90 × current SD). Step 2: among the survivors, large negative events → Sortino ratio (downside risk only)."
+  },
+  "mock13:46": {
+   "hl": [
+    "Sophie Lambert is a corporate bond portfolio manager at Rhône Funds, LLC in Portland, ME.",
+    "As a result of market volatility, Lambert has been noting that inflows and outflows are larger and more frequent than in the past."
+   ],
+   "rule": "B. Incorrect because portfolio liquidity management is easily achieved with the use of ETFs. | B. Incorrect because Lambert can use ETFs to invest the outflows or meet redemptions and keep her exposure to the market. | C"
+  },
+  "mock13:47": {
+   "hl": [
+    "Moreau conducts a thorough analysis of the costs of an ETF, such as bid–ask spreads and sources of premiums and discounts.",
+    "Lambert then asks Moreau, an analyst on her team, to analyze in more detail the economics surrounding ETFs."
+   ],
+   "rule": "A. Correct because Moreau is correct with regard to both notes. He has accurately described the economics surrounding ETFs pertaining to both bid-ask spreads and premiums and discounts. | B. Incorrect because Note 2 rega"
+  },
+  "mock13:48": {
+   "hl": [
+    "@row:Information ratio (IR)",
+    "greatest skill at achieving active returns"
+   ],
+   "rule": "Skill in achieving active returns = highest information ratio (IR = TC × IC × √breadth); the highest IC alone does not make the most skilled manager."
+  },
+  "mock13:49": {
+   "hl": [
+    "In her analysis, Whitmore observes that the spread between the three-year default-free nominal bond and the default-free real zero-coupon bond in Country #3 is 2.5%.",
+    "Whitmore predicts that Country #3 will slip into a recession next quarter."
+   ],
+   "rule": "The 2.5% spread between the nominal and real default-free yields is the break-even inflation rate (BEI) = expected inflation + a premium for uncertainty about future inflation. That premium is most likely positive (inves"
+  },
+  "mock13:50": {
+   "hl": [
+    "Whitmore predicts that Country #3 will slip into a recession next quarter.",
+    "She thinks it will be short-lived, lasting only 12 months or so, and considers the impact of such a recession on the performance of the country’s stocks and bonds."
+   ],
+   "rule": "The curve is flat now. In a recession central banks cut policy rates, pulling short-term yields down; long-term yields fall less because the central bank is expected to bring short rates back to normal as the recession e"
+  },
+  "mock13:51": {
+   "hl": [
+    "Delacroix has discretion to allocate between 40% and 60% of the assets to each maturity \"bucket.\"",
+    "@row:Market value",
+    "50 bp increase in yields"
+   ],
+   "rule": "Yields up → shorten duration; use the most the limits allow (here P2 can fall to 40% of the total), reinvesting in the shortest permitted maturity."
+  }
+ },
+ "srcmap": {
+  "1": "mercer Mock 3 Q31",
+  "2": "sedgwick Mock 2 Q10",
+  "3": "eth6-sobhani Mock 5 Q6",
+  "4": "victory Mock 4 Q17",
+  "5": "eth6-watson Mock 5 Q29",
+  "6": "eth6-watson Mock 5 Q30",
+  "7": "eth6-watson Mock 5 Q31",
+  "8": "eth6-watson Mock 5 Q32",
+  "9": "ic1-4",
+  "10": "ic1-4",
+  "11": "xyz",
+  "12": "xyz",
+  "13": "ec-terra",
+  "14": "ec-terra",
+  "15": "xyzbank",
+  "16": "schwalke Mock 1 Q33",
+  "17": "centralino",
+  "18": "izzo",
+  "19": "s1a-kim",
+  "20": "s1a-kim",
+  "21": "cannan",
+  "22": "sam",
+  "23": "sam",
+  "24": "s1a-suess Mock 2 Q20",
+  "25": "prostar Mock 4 Q23",
+  "26": "stigwood Mock 2 Q2",
+  "27": "elite-rivera",
+  "28": "elite-rivera Mock 1 Q32",
+  "29": "wagner-growth Mock 4 Q12",
+  "30": "fx29-kaur Mock 1 Q24",
+  "31": "fx29-beauregard Mock 5 Q33",
+  "32": "fx29-beauregard",
+  "33": "s1a-costcap",
+  "34": "s1a-costcap",
+  "35": "corp4-lee",
+  "36": "corp4-lee",
+  "37": "corp1-thornhill",
+  "38": "hamilton-nevis",
+  "39": "hamilton-nevis",
+  "40": "d28-torres Mock 1 Q17",
+  "41": "crestpoint Mock 4 Q37",
+  "42": "crestpoint",
+  "43": "ctrf",
+  "44": "pwpf Mock 1 Q43",
+  "45": "pwpf",
+  "46": "s1b-beaumont Mock 2 Q37",
+  "47": "s1b-beaumont Mock 2 Q39",
+  "48": "frazee",
+  "49": "carlisle Mock 4 Q43",
+  "50": "carlisle Mock 4 Q44",
+  "51": "eastern"
+ },
+ "key": "BABCCACBABABBCACBCBCACABCCAAABCACCBBBACBBABACAACCAC"
+}
