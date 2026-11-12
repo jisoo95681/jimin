@@ -591,7 +591,7 @@ const KEYQ = [];
   tb(25, "Effect on option and bond values", ["", "Call", "Callable", "Put", "Putable"], [
     ["r ↑", "↓", "↓", "↑", "↓"], ["r ↓", "↑", "↑", "↓", "↑"],
     ["Volatility ↑", "↑", "↓", "↑", "↑"], ["Volatility ↓", "↓", "↑", "↓", "↓"],
-    ["Yield curve flatter", "↑", "↓", "↓", "↓"], ["Yield curve steeper", "↓", "↑", "↑", "↑"]],
+    ["Yield curve flatter (flat or inverted)", "↑", "↓", "↓", "↓"], ["Yield curve steeper", "↓", "↑", "↑", "↑"]],
     "Callable bond = straight − call; putable bond = straight + put. The bond columns show the net direction.");
   tb(25, "OAS and volatility", ["", "OAS (callable bond)", "OAS (putable bond)"], [["Volatility ↑", "↓", "↑"], ["Volatility ↓", "↑", "↓"]]);
   mc(25, "Rank the prices of otherwise identical bonds:", ["Callable < straight < putable", "Straight < callable < putable", "Putable < straight < callable"], 0, "Investor-held options add value, the issuer's call subtracts value.");
