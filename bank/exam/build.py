@@ -327,6 +327,14 @@ for _v in _st['vignettes']:
             assert _ph in _v['body'] or _ph in _q['q'],('mock14',_n,_ph)
         assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mock14',_n)
 HH.update(_d['hints']); sets.append(_st); print('mock14',_n,_d['key'])
+# ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
+_d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
+for _st in _d['sets']:
+    for _v in _st['vignettes']:
+        for _q in _v['questions']:
+            _n+=1; assert len(set(_q['options']))==3 and 0<=_q['answer']<3,(_st['id'],_q['q'][:40])
+    sets.append(_st)
+print('ethics sessions',len(_d['sets']),_n)
 # ---- Incorrect-question sets rq1, rq2 (12 Nov): built by retry_sets.py (wrong questions of Mocks 6-10 and Practice sets 1-4, relevant vignette parts only) ----
 for _sid in ('rq1','rq2'):
     _d=json.load(open(f'/home/user/jimin/bank/exam/{_sid}.json')); _st=_d['set']; _n=0

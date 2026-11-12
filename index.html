@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v235 · 2026-11-12";
+  const APP_VERSION = "v236 · 2026-11-13";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1625,6 +1625,14 @@
     app.append(nav("Menu", () => home("back")));
     app.append(el("h1", { className: "title" }, "Exam"),
       el("p", { className: "sub" }, "Exam-style sets: vignette on the left, question on the right, a clock (3 minutes per question), flags and highlights. Everything is marked when you press Finish Test."));
+    const ethSets = exSets().filter(s => s.kind === "ethics");
+    if (ethSets.length) {
+      const est = exLoad(), done = ethSets.filter(s => (est.sets[s.id] || {}).last).length, nEth = ethSets.reduce((n, s) => n + exFlat(s).length, 0);
+      const eb = el("button", { className: "nt-item ex-item" });
+      eb.append(el("b", {}, "Ethics"), el("span", {}, `${nEth} questions from the key notes · ${plural(ethSets.length, "session")} · ${done} taken`));
+      eb.onclick = () => exEthicsHub();
+      app.append(eb);
+    }
     const qd = kqLoad(), qq = KEYQ.filter(q => q.reading === 98), qm = qq.filter(q => kqSt(qd, q).streak >= 3).length;
     const qb = el("button", { className: "nt-item" + (qq.length ? "" : " absorbed") });
     qb.append(el("b", {}, "Quick questions"), el("span", {}, qq.length ? `${plural(qq.length, "question")} · main ideas behind questions you missed · ${qm} mastered` : "No questions yet"));
@@ -1665,6 +1673,26 @@
       app.append(b);
     });
     if (!any) app.append(el("p", { className: "sub" }, "Questions you get wrong in a finished set are collected here, set by set."));
+  }
+
+  // Ethics: the key-notes Ethics questions as exam sessions (vignettes put back together, stand-alone questions grouped).
+  function exEthicsHub(dir = "fwd") {
+    screen(dir);
+    backTo = () => exEthicsHub("back");
+    app.append(nav("Exam", () => examHub("back")));
+    app.append(el("h1", { className: "title" }, "Ethics"),
+      el("p", { className: "sub" }, "Every Ethics question of the key notes, in exam sessions: some vignettes plus stand-alone questions, 3 minutes per question. Marking, review and incorrect questions work like the other exam sets."));
+    const st = exLoad();
+    exSets().filter(s => s.kind === "ethics").forEach(set => {
+      const s = st.sets[set.id] || {}, nq = exFlat(set).length;
+      let info = `${nq} questions · ${set.desc}`;
+      if (s.cur) info += ` · in progress, ${exHms(s.cur.left)} left`;
+      else if (s.last) info += ` · last score ${s.last.score}%`;
+      const b = el("button", { className: "nt-item ex-item" + (s.last ? " done" : "") });
+      b.append(el("b", {}, set.title), el("span", {}, info));
+      b.onclick = () => examSetMenu(set.id);
+      app.append(b);
+    });
   }
 
   // Quick questions: the main ideas and formulas to use behind questions missed in papers (no calculations), grouped by paper.
@@ -1766,7 +1794,7 @@
     const set = exSets().find(s => s.id === id);
     screen(dir);
     backTo = () => examSetMenu(id, "back");
-    app.append(nav("Exam", () => examHub("back")));
+    app.append(set.kind === "ethics" ? nav("Ethics", () => exEthicsHub("back")) : nav("Exam", () => examHub("back")));
     const st = exLoad(), s = st.sets[id] || {}, nq = exFlat(set).length;
     app.append(el("h1", { className: "title" }, set.title), el("p", { className: "sub" }, `${nq} questions · ${set.vignettes.length} vignettes · ${exHms(set.minutes * 60)} · ${set.desc || ""}`));
     const card = el("div", { className: "card" });

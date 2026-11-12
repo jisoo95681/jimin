@@ -165,3 +165,6 @@ Key: BBBCCBACCCABACABBBCCBCAABAABCBACCABBACBACBAA
 
 ## Mock 11 + 12 marking (12 Nov)
 Mock 11: 40/44 (wrong Q23, 30, 31, 39). Mock 12 (answers CBAABACACCBBCCACBBCCABCAAAABBCBBABAACBBCBBBB): 32/44 = 72.7% (wrong Q2, 3, 6, 7, 9, 16, 18, 26, 29, 37, 39, 42). Combined 72/88 = 81.8%. PDF bank/Mock11_12_wrong_answers.pdf (18 cards: 16 wrong + Mock 12 Q1 and Q30 added at the user's request; builder /tmp/gen/m1112w/build.py). Flash cards / rq set for these not yet added.
+
+## Ethics exam sessions (13 Nov, v236)
+eth1-eth12: all 276 key-notes Ethics questions as exam sessions (23 Q each, 69 min). Layout and keys in bank/exam/ethics_sets.json (do not send keys). Builder bank/exam/ethics_sets.py.
