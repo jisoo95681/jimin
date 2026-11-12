@@ -1,0 +1,103 @@
+{
+ "M15": [
+  {
+   "id": "s1a-kim",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "ic1-1",
+   "subject": "FSA",
+   "reading": 7
+  },
+  {
+   "id": "eg29-amaral",
+   "subject": "Econ",
+   "reading": 6,
+   "reskin": true
+  },
+  {
+   "id": "ap-robbin",
+   "subject": "PM",
+   "reading": 35
+  },
+  {
+   "id": "cds-6",
+   "subject": "FI",
+   "reading": 27
+  },
+  {
+   "id": "d28-megaarb",
+   "subject": "Deriv",
+   "reading": 28
+  },
+  {
+   "id": "fsa4-nanlife",
+   "subject": "FSA",
+   "reading": 10
+  },
+  {
+   "id": "eq5-sparrow",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "ts-rudall",
+   "subject": "Quant",
+   "reading": 2
+  },
+  {
+   "id": "m2-3",
+   "subject": "Corp",
+   "reading": 13
+  }
+ ],
+ "M16": [
+  {
+   "id": "ts-busse",
+   "subject": "Quant",
+   "reading": 2
+  },
+  {
+   "id": "re-delphinus2",
+   "subject": "Alt",
+   "reading": 31
+  },
+  {
+   "id": "eq1-santos",
+   "subject": "Equity",
+   "reading": 17
+  },
+  {
+   "id": "libra",
+   "subject": "FSA",
+   "reading": 11
+  },
+  {
+   "id": "m2-7",
+   "subject": "Deriv",
+   "reading": 28
+  },
+  {
+   "id": "golden-island",
+   "subject": "Econ",
+   "reading": 6,
+   "reskin": true
+  },
+  {
+   "id": "marker-esg",
+   "subject": "Corp",
+   "reading": 14
+  },
+  {
+   "id": "af-wenger",
+   "subject": "FI",
+   "reading": 24
+  },
+  {
+   "id": "ca-wong",
+   "subject": "FI",
+   "reading": 26
+  }
+ ]
+}

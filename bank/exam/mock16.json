@@ -1,0 +1,791 @@
+{
+ "set": {
+  "id": "mock16",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock 16",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Real vignettes never used before plus the Econ vignette you missed (names and numbers changed), 44 questions, 11 vignettes, 2 h 12 min",
+  "vignettes": [
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Tomas Reyes is an equity analyst studying the earnings quality of Corvara S.A., a Peruvian publicly-traded company that reports under IFRS. Reyes computes some financial ratios for Corvara in Exhibit 1.\n\nExhibit 1: Selected Ratios\n# Ratio | Most Recent Year | Previous Year | Two Years Ago\nReceivables turnover ratio | 8.4 | 5.9 | 5.8\nInventory turnover ratio | 2.6 | 3.8 | 3.9\n\nCorvara competes in a very mature industry with a 4% annual rate of revenue growth. In the last three years, Corvara's revenue growth was the same as the industry's average, which allowed the company to maintain its market share. Corvara had no significant change in its sales, collection, purchases or inventory policies.\n\nReyes realizes that most of Corvara's competitors are US companies, which report under US GAAP. When reviewing Corvara's cash flow statement, he notices that the only difference in cash flow classification relates to interest paid. To improve comparability with those competitors, Reyes reclassifies interest paid in Corvara's cash flow statement.\n\nReyes believes that Corvara's management significantly underestimates the environmental risks of its business. To investigate the issue, Reyes refers to different information sources.",
+    "questions": [
+     {
+      "q": "The trend in the receivables turnover ratio most likely indicates that, in the most recent year, Corvara engaged in:",
+      "options": [
+       "the sale of receivables.",
+       "channel stuffing.",
+       "bill-and-hold revenue practices."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Receivables turnover jumped, so receivables fell as a percentage of revenue. With no change in sales or collection policies, this points to selling receivables to third parties (removing them from the balance sheet).\nB. Incorrect. Incorrect. Channel stuffing raises revenue and receivables together, so the turnover ratio would have decreased.\nC. Incorrect. Incorrect. Bill-and-hold raises revenue and receivables by the same amount, so the turnover ratio would have decreased."
+     },
+     {
+      "q": "The trend in the inventory turnover ratio most likely indicates that, in the most recent year, Corvara has aggressively:",
+      "options": [
+       "reduced the obsolescence allowance.",
+       "liquidated inventory.",
+       "delayed payments to suppliers."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. The ratio fell significantly, so inventory rose relative to COGS; with no change in purchase or inventory policies this suggests a reduced obsolescence allowance (reserves used to manage earnings).\nB. Incorrect. Incorrect. Liquidating inventory lowers inventory and raises COGS, so the turnover ratio would have increased.\nC. Incorrect. Incorrect. Delaying payments to suppliers affects neither inventory nor COGS, so the ratio is not affected."
+     },
+     {
+      "q": "Reyes's adjustment to Corvara's cash flow statement will result in a higher cash flow from:",
+      "options": [
+       "investing activities.",
+       "operating activities.",
+       "financing activities."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Investing cash flow is not affected by moving interest paid.\nB. Incorrect. Incorrect. Interest paid moves INTO operating activities, so operating cash flow becomes lower.\nC. Correct. Correct. IFRS allows interest paid in operating or financing; US GAAP requires operating. Reyes moves interest paid from financing to operating: financing higher, operating lower, investing unchanged."
+     },
+     {
+      "q": "Which of the following information sources is least useful for Reyes's investigation?",
+      "options": [
+       "Financial press",
+       "Management commentary",
+       "Auditor's report"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. The financial press can uncover risk issues not yet recognized.\nB. Incorrect. Incorrect. Management commentary helps users understand risk exposures and risk management.\nC. Correct. Correct. The auditor's report says whether the statements fairly present the financial position; it does not list or explain environmental risks."
+     }
+    ]
+   },
+   {
+    "topic": "Economics",
+    "body": "Silver Cove is a flourishing country because of tourism. The island is governed by a Governor General, a parliamentary body of elected legislators, and a couple of agencies to regulate the island's economic and social environment. Recently, prospectors in the mountain range bordering the northern coast of the island discovered large deposits of silver, copper, and nickel. The government is concerned that development of these deposits will harm the tourist trade. Marta Valdis has been asked to participate in a series of fact-finding sessions conducted jointly by the island's ministries of finance and tourism. This blue-ribbon fact-finding committee has been meeting weekly for the past two months.\n\nValdis is concerned about the issue of tariffs because Silver Cove has relatively high tariffs on capital goods. Valdis states:\n\n\"Silver Cove will benefit from continuing to protect domestic capital goods by maintaining its relatively high tariff on non-domestic capital goods. High tariffs have little impact on foreign direct investment (FDI), and they generate revenue for the government.\"\n\nPaolo Ferrante is Silver Cove's Interim Deputy Minister for Tourism. He states that he is not very knowledgeable about the mining business but believes that developing the island's deposits will affect the relative value of its currency, the kora (Kr). The current exchange rate of the kora against the US dollar is Kr6.40/USD. Ferrante states that increased FDI will cause the kora to strengthen against world currencies. Tourism will be harmed because goods and services priced in koras will appear more expensive to the non-domestic visitors who make up the bulk of the tourist trade.\n\nValdis shows the committee Exhibit 1, which contains data from the currency exchange markets relative to the kora.\n\nExhibit 1: Exchange Rates and Interest Rates\n# Country | Current Spot Rates | One-Year Interest Rate (%)\nSilver Cove | Kr6.40/USD | 7.2\nUnited Kingdom | GBP0.64/USD | 3.9\nUnited States | --- | 3.1\n\nSilver Cove's Minister of Finance and president of the Central Bank, Samir Haddad, addresses the issues of potential inflation as the island transitions to greater growth. He assures the committee that Silver Cove's central bank stands ready to use monetary tools to prevent such inflation.",
+    "questions": [
+     {
+      "q": "Valdis's statement regarding tariffs is best described as:",
+      "options": [
+       "correct.",
+       "incorrect, because eliminating high tariffs on capital goods will increase Silver Cove's physical capital and contribute to higher productivity.",
+       "incorrect, because high tariffs support increases in FDI."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Developing countries benefit from policies that encourage investment from abroad, such as removing high tariffs on imported capital goods.\nB. Correct. Correct. Eliminating high tariffs on imported capital goods raises the capital stock and productivity.\nC. Incorrect. Incorrect. High tariffs do not support FDI; they discourage it."
+     },
+     {
+      "q": "Ferrante's statement about tourism and the currency exchange rate of the kora is best described as:",
+      "options": [
+       "incorrect, because increased FDI will likely lead to a weakening of the kora.",
+       "incorrect, because a stronger kora will make Silver Cove appear to be a less expensive tourist destination for non-domestic visitors.",
+       "correct."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Other things equal, increased FDI strengthens the currency.\nB. Incorrect. Incorrect. A stronger kora makes the destination more, not less, expensive for foreign visitors.\nC. Correct. Correct. Increased FDI strengthens the currency, and a stronger currency makes goods and services priced in it look more expensive to foreign visitors, at least in the short run."
+     },
+     {
+      "q": "Based on Exhibit 1, the one-year forward exchange rate of the Kr/GBP is closest to:",
+      "options": [
+       "Kr6.65/GBP.",
+       "Kr9.69/GBP.",
+       "Kr10.32/GBP."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This applies the interest rate ratio (kora over US rates) to the Kr/USD spot rate: 6.40 × 1.072 ÷ 1.031 = 6.65.\nB. Incorrect. This inverts the ratio of the interest rates: 10.00 × 1.039 ÷ 1.072 = 9.69.\nC. Correct. Kr/GBP spot = 6.40 ÷ 0.64 = 10.00; forward = spot × (1 + kora rate) ÷ (1 + pound rate) = 10.00 × 1.072 ÷ 1.039 = Kr10.32/GBP."
+     },
+     {
+      "q": "Which of the following will Haddad most likely use to address the monetary issues relating to greater growth of the island's economy? The central bank will:",
+      "options": [
+       "reduce the interest rate on loans to the private sector.",
+       "sell domestic securities to the private sector.",
+       "buy domestic securities from the private sector."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. A lower rate on loans increases the money supply; to restrain it the central bank would raise the rate.\nB. Correct. Correct. The threat is inflation, so the central bank reduces the money supply by selling domestic securities.\nC. Incorrect. Incorrect. Buying securities increases the money supply."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Hanna Norrland, the chief investment officer of Brightwater Capital, asks an analyst at the firm, Victor Lund, to focus his analysis on an 80,000 square foot office property in Chicago. Norrland believes the property is underpriced and that Brightwater can purchase it for USD46 million.\n\nLund begins his analysis by assembling the data shown in Exhibit 1.\n\nExhibit 1: Six-Year NOI and DCF Assumptions for the Chicago Office Property\n# Item | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 | Year 6\nNOI | $2,780,500 | $2,741,300 | $2,775,650 | $2,812,400 | $2,866,900 | $2,945,740\nDCF Assumptions\nInvestment holding period | 5 years\nGoing-in cap rate | 6.00%\nTerminal cap rate | 5.75%\nDiscount rate | 8.50%\n\nNorrland asks Lund to value the property using the sales comparison method, and he compiles the data shown in Exhibit 2.\n\nExhibit 2: Sales Comparison Data for Comparable Office Properties\n# Variable | Chicago Office | Sales Comp A | Sales Comp B | Sales Comp C\nAge (years) | 8 | 4 | 11 | 20\nCondition | Good | Excellent | Good | Average\nLocation | Prime | Secondary | Secondary | Prime\nSale price (per ft2) | | $520/ft2 | $470/ft2 | $485/ft2\nAdjustments:\nAge (years) | | −8% | 3% | 10%\nCondition | | −10% | 0% | 8%\nLocation | | 12% | 12% | 0%\nTotal adjustments | | −6% | 15% | 18%\n\nTo conclude his valuation work on the office property, Lund compiles detailed data on the replacement costs of the office building, its land value, and the total depreciation. He finds that the cost of constructing a building identical to the subject property is USD52 million. The land value is USD6 million, and the total depreciation is USD4 million. From these data, he calculates a value of the property using the cost approach.",
+    "questions": [
+     {
+      "q": "Which of the following amounts is closest to the undiscounted terminal value of the Chicago office property at the end of the five-year investment holding period?",
+      "options": [
+       "USD49.1 million",
+       "USD49.9 million",
+       "USD51.2 million"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This divides the sixth-year NOI by the going-in cap rate: 2,945,740 ÷ 0.06 = USD49.1 million.\nB. Incorrect. This divides the fifth-year NOI by the terminal cap rate: 2,866,900 ÷ 0.0575 = USD49.9 million.\nC. Correct. Terminal value = NOI of year 6 ÷ terminal cap rate = 2,945,740 ÷ 0.0575 = USD51.2 million."
+     },
+     {
+      "q": "Which of the following statements is most correct about cap rates and discount rates used in the discounted cash flow valuation of the Chicago office property using the data in Exhibit 1?",
+      "options": [
+       "The growth rate of NOI in Years 1 through 5 equals the difference between the discount rate and the going-in cap rate.",
+       "The going-in cap rate is used to discount the first-year NOI in the discounted cash flow valuation.",
+       "The terminal cap rate equals the difference between the discount rate and the constant growth rate of NOI between Years 5 and 6."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. That would imply 2.50% growth (8.50% − 6.00%), but the compound growth of NOI in Years 1 to 5 is only about 0.77%.\nB. Incorrect. Incorrect. Every year of NOI is discounted at the discount rate of 8.50%; cap rates are used to convert NOI to value.\nC. Correct. Correct. 8.50% − 5.75% = 2.75%, which equals the growth of NOI between Year 5 and Year 6 (2,945,740 ÷ 2,866,900 = 1.0275)."
+     },
+     {
+      "q": "Which of the following statements is consistent with the results of a sales comparison valuation using the information from Exhibit 2?",
+      "options": [
+       "The sales comparison approach to valuing the office property is consistent with Norrland's belief that the property is underpriced.",
+       "The sales comparison approach to valuing the office property suggests that the property is overpriced by approximately 8%.",
+       "The sales comparison approach to valuing the office property suggests that the property is overpriced by approximately 17%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. The sales comparison value (USD42.7 million) is below the USD46 million price, so the property is not underpriced.\nB. Correct. Correct. Adjusted prices: 520 × 0.94 = 488.80; 470 × 1.15 = 540.50; 485 × 1.18 = 572.30; the average of 533.87 times 80,000 ft2 gives USD42.7 million; the USD46 million price is about 8% higher.\nC. Incorrect. Incorrect. This uses the unadjusted average price per square foot: 491.67 × 80,000 = USD39.3 million, and 46 ÷ 39.3 = 17%."
+     },
+     {
+      "q": "Which of the following statements is most accurate regarding Lund's valuation of the office property using the cost approach?",
+      "options": [
+       "The replacement cost may exceed the market price of the property's building if the real estate cycle for this property is in the oversupply phase.",
+       "Lund's valuation of the office property implies that it is overpriced.",
+       "Replacement costs exclude the real estate developer's profits."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. In an oversupply phase replacement cost may be higher than the market value of the building, so the cost approach can overstate value.\nB. Incorrect. Incorrect. The cost approach value is 52 + 6 − 4 = USD54 million, above the USD46 million price, so it does not imply overpricing.\nC. Incorrect. Incorrect. Replacement cost includes the developer's profit."
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Michael Denton, CFA, founded WestLedge Financial, a registered investment advisory firm, five years ago. WestLedge is a small firm with just three employees. Denton is the firm's only investment professional, while the other two employees handle administrative tasks.\n\nIn a prior quarterly report to clients, Denton wrote that he had been researching artificial intelligence (AI) for over a year and believed it may improve WestLedge's existing investment process. Since distributing the client report, Denton has begun using AI to generate corporate earnings forecasts and screen securities for potential purchase in the firm's growth-oriented equity portfolios. He does not incorporate AI into the investment process for WestLedge's other equity strategies. Because AI is used only for growth-oriented portfolios, Denton does not disclose the use of AI in the firm's current quarterly client report.\n\nDenton is eager to expand WestLedge's business and actively encourages referrals from his professional and personal contacts. A friend of Denton's, Karri Lynch, has regularly referred clients to him over the past three years. Denton has offered to pay Lynch referral fees but she always declines, saying she is just trying to help a friend and will not accept compensation. Denton does not disclose to clients that he has offered to pay referral fees to Lynch. Each year, Denton and Lynch vacation together and Denton always pays for both of their plane tickets from his personal bank account. Denton does not disclose to clients the payments for Lynch's travel.\n\nDenton recently accepted an unpaid position on the investment committee of XLR Corporation's pension plan. XLR is a publicly traded biotechnology company that Denton has been recommending to clients. Denton was recommended for the committee position by Martin Hunter, the CEO of XLR, who is also a client of WestLedge. Denton does not disclose to clients his appointment or that Hunter is a client of WestLedge.\n\nHunter asks Denton for his opinion on Bio13, a biotechnology company that just went public. After performing appropriate due diligence, Denton recommends that Hunter buy shares of Bio13. Denton also informs Hunter that he plans to buy Bio13 shares in his own personal account but has determined that Bio13 is not suitable for any of his other clients. Hunter asks Denton to delay purchasing Bio13 shares in Hunter's account for 30 days, at which time his annual bonus will be deposited into the account. Denton immediately buys shares of Bio13 in his own account, and his purchase temporarily increases the price of the shares. Thirty days later, Denton purchases shares of Bio13 in Hunter's account.",
+    "questions": [
+     {
+      "q": "In his actions relating to the use of AI, does Denton comply with the Standards?",
+      "options": [
+       "No, he violates the Standard relating to communication with clients and prospective clients",
+       "Yes",
+       "No, he violates the Standard relating to fair dealing"
+      ],
+      "answer": 0,
+      "why": "Incorrect Answer Feedback: Incorrect because Denton must keep clients and other interested parties informed on an ongoing basis about changes to the investment process, especially newly identified significant risks and limitations. He has failed to do this and is in violation of Standard V(B): Investment Analysis, Recommendations, and Actions – Communication with Clients and Prospective Clients."
+     },
+     {
+      "q": "With respect to the referrals from Lynch, does Denton comply with the Standards?",
+      "options": [
+       "No, because he did not disclose the payments for travel",
+       "No, because he did not disclose the offer of referral fees",
+       "Yes"
+      ],
+      "answer": 0,
+      "why": "Incorrect Answer Feedback: Incorrect because under Standard VI(C): Conflicts of Interest – Referral Fees, Denton has an obligation to inform clients referred by Lynch of all forms of compensation provided to Lynch, including the plane tickets he purchases for her each year."
+     },
+     {
+      "q": "With respect to the investment committee position, does Denton violate the Standards?",
+      "options": [
+       "No",
+       "Yes, by not disclosing his appointment to the committee",
+       "Yes, by not disclosing that Hunter is a client"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because Denton's appointment to the investment committee of XLR Corporation's pension plan should be disclosed to his clients and prospective clients, as his new responsibilities could create conflicts of interest. Incorrect Answer Feedback: Incorrect because the fact that Hunter is a client is confidential information that should not be disclosed to other clients and prospective clients."
+     },
+     {
+      "q": "Did Denton comply with the Standards when purchasing Bio13 shares in his personal account?",
+      "options": [
+       "Yes",
+       "No, he violated the Standard relating to market manipulation",
+       "No, he violated the Standard relating to priority of transactions"
+      ],
+      "answer": 0,
+      "why": "Correct because Denton did not violate Standard VI(B): Conflicts of Interest – Priority of Transactions, which states: Investment transactions for clients and employers must have priority over investment transactions in which a Member or Candidate is the beneficial owner. Denton did not trade ahead of (front-run) his client."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Marta Gruber is a quantitative analyst modeling the credit risk of a fixed-income fund (the Fund) to support portfolio management. Tobias Klein, the portfolio manager, asks Gruber to calculate certain metrics on the Fund's positions to measure the credit risk of the Fund. Gruber analyzes the following fixed-income instruments held by the Fund.\n\nBond 1 is an A rated corporate bond maturing in 4 years, with details presented in Exhibit 1 below:\n\nExhibit 1: Bond 1 Details\n# Item | Value\nPar value | $1,000\nCoupon rate | 2.50%\nGovernment bond yield | 1.20%\nRisk-neutral probability of default | 1.40%\nRecovery rate | 35%\n\nGruber calculates the Credit Valuation Adjustment of Bond 1 as requested by Klein.\n\nPer Klein's request, Gruber calculates the credit spread of Bond 2, a BBB rated zero-coupon bond maturing in 5 years, in order to compare its valuation relative to other zero-coupon bonds with similar credit rating and maturity. Bond 2's details are presented in Exhibit 2 below:\n\nExhibit 2: Bond 2 Details\n# Item | Value\nPar value | $1,000.00\nMarket value | $905.40\nValue assuming no default | $951.30\nCredit valuation adjustment | $62.15\n\nWhile reviewing the Fund's investment grade portfolio, Gruber examines Bond 3, an AAA rated bond.\n\nGruber analyzes the ABS positions held by the Fund, and considers the appropriate credit analysis approach for ABS 1. ABS 1's underlying collateral pool comprises medium-term automobile loans which are considered both granular and homogenous.",
+    "questions": [
+     {
+      "q": "Assuming no interest rate volatility and a flat benchmark yield curve, Bond 1's Credit Valuation Adjustment is closest to:",
+      "options": [
+       "$36.15.",
+       "$36.80.",
+       "$37.22."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Exposure each year = PV (at the 1.20% government yield) of the remaining cash flows; LGD = (1 − 35%) × exposure; probability of default in year t = 1.40% × survival to t − 1; CVA = Σ LGD × probability × discount factor = $36.15.\nB. Incorrect. This uses the undiscounted remaining cash flows as the exposures (1,085 / 1,060 / 1,035 / 1,025): $36.80.\nC. Incorrect. This does not discount the expected losses: $37.22."
+     },
+     {
+      "q": "The credit spread of Bond 2 is closest to:",
+      "options": [
+       "100 bps.",
+       "137 bps.",
+       "201 bps."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This uses the market value instead of the value assuming no default for the risk-free yield: 100 bps.\nB. Correct. Fair value = VND − CVA = 951.30 − 62.15 = 889.15; its YTM = (1,000 ÷ 889.15)^(1/5) − 1 = 2.38%; the YTM of VND is 1.00%; spread = 2.38% − 1.00% = 137 bps.\nC. Incorrect. This is the YTM of the market value alone (2.01%), not a spread."
+     },
+     {
+      "q": "The term structure of Bond 3's credit spread is most likely:",
+      "options": [
+       "steeply inverted.",
+       "steeply upward sloping.",
+       "flat or slightly upward."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. A steeply inverted credit curve applies to distressed high-yield issuers.\nB. Incorrect. Incorrect. A steeply upward sloping credit curve applies to lower credit quality.\nC. Correct. Correct. For the highest-rated bonds spreads are very low with a lower bound of zero, so the credit term structure is flat or slightly upward sloping."
+     },
+     {
+      "q": "Given the description of ABS 1's asset pool, Gruber would most appropriately adopt a:",
+      "options": [
+       "loan-by-loan approach.",
+       "portfolio-based approach.",
+       "statistics-based approach."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. A loan-by-loan approach suits a small number of large, heterogeneous loans.\nB. Correct. Correct. Granular and homogeneous auto loans in a dynamic pool support a portfolio-based approach.\nC. Incorrect. Incorrect. A statistics-based approach suits a static book of loans."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Henrik Dahl is an equity analyst with a regional investment bank. Dahl reviews the growth prospects and quality of earnings for Meridian Foods, one of the companies he follows. He has developed a stock valuation model for this firm based on its forecasted fundamentals. His revenue growth rate estimate is less than that implied by the market price.\n\nMeridian's financial statements over the past five years show strong performance, with above average growth. Dahl has decided to use a lower forecasted growth rate in his models, reflecting the effect of \"regression to the mean\" over time. He notes two reasons for his lower growth rate forecast:\n\nReason 1:\nMeridian's brand licences and distribution agreements will be weakening over time.\n\nReason 2:\nSuccessful companies tend to draw more competition, putting their high profits under pressure.\n\nDahl meets with Colin Ashby, a newly hired associate in his department. In their conversation, Ashby states, \"Security analysts forecast company performance using both top-down and bottom-up analysis. I can think of three examples:\n\nA supermarket chain forecasts next year's sales by assuming that the sales in its newly built stores will have similar sales per square meter to that of its existing stores.\n\nA cement producer forecasts its sales to be its market share times forecast industry sales.\n\nA water utility company forecasts that its sales will grow proportional to increases in GDP.\"\n\nAshby is reviewing some possible trades for three stocks in the pharmaceutical industry based on a pairs-trading strategy. Ashby's evaluations are as follows:\n\nAldane Pharma is 12% overvalued.\n\nBexley Biotech is 8% overvalued.\n\nTarrant Labs is 14% undervalued.",
+    "questions": [
+     {
+      "q": "Based on Dahl's revenue growth rate estimate, the shares of Meridian are most likely:",
+      "options": [
+       "fairly valued.",
+       "overvalued.",
+       "undervalued."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. The two growth rates differ, so the shares are not fairly valued.\nB. Correct. Correct. The growth rate implied by the market price exceeds the growth rate Dahl expects, so the market price is too high and the firm is overvalued.\nC. Incorrect. Incorrect. Undervalued would require the implied growth to be lower than Dahl's estimate."
+     },
+     {
+      "q": "Which of the reasons given by Dahl most likely justifies a reduction in Meridian's forecasted growth rate?",
+      "options": [
+       "Reason 1 only",
+       "Reason 2 only",
+       "Both Reason 1 and Reason 2"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Reason 1 is valid, but Reason 2 also supports lower growth.\nB. Incorrect. Incorrect. Reason 2 is valid, but Reason 1 also supports lower growth.\nC. Correct. Correct. More competition for successful firms brings regression to the mean, and weakening licences and agreements also reduce potential growth."
+     },
+     {
+      "q": "Which of Ashby's examples of company performance forecasting best describes an example of bottom-up forecasting?",
+      "options": [
+       "Supermarket chain",
+       "Water utility company",
+       "Cement producer"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Forecasting from sales per square meter of new stores aggregates micro-level forecasts into the company total: bottom-up.\nB. Incorrect. Incorrect. Sales growing in proportion to GDP starts from the economy: top-down.\nC. Incorrect. Incorrect. Market share times industry sales starts from the industry: top-down."
+     },
+     {
+      "q": "Based on his trading strategy, which of the following should Ashby recommend?",
+      "options": [
+       "Short Aldane Pharma and Bexley Biotech",
+       "Buy Tarrant Labs and Bexley Biotech",
+       "Buy Tarrant Labs and short Aldane Pharma"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. This shorts two overvalued stocks but does not buy the undervalued one, so it is not a pairs trade.\nB. Incorrect. Incorrect. It buys an overvalued stock, which is the opposite of pairs trading.\nC. Correct. Correct. Pairs trading buys an undervalued stock and shorts an overvalued one in the same industry. The most mispriced pair is Tarrant Labs (14% undervalued) and Aldane Pharma (12% overvalued)."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Lukas Brenner is a portfolio manager in the fixed-income division of Allied Fixed Income Partners (AFIP), based in Atlanta, Georgia. AFIP seeks to identify and exploit fixed-income market inefficiencies. Brenner is meeting with analysts Mei Tan, Sofia Lenz, and Pavel Novak to evaluate securities for inclusion in AFIP's US Core Bond portfolio.\n\nBrenner asks the group to determine the arbitrage-free value of an option-free bond issued by TFCO Corporation that matures in four years and pays an annual coupon of 1.50% on a face amount of $100. To assist with the analysis, Brenner presents the group with the following interest rate information in Exhibits 1 and 2.\n\nExhibit 1: Benchmark Spot Rates (Zero-Coupon Yield Curve)\n# Maturity (Years) | Spot Rate\n1 | 1.200%\n2 | 1.650%\n3 | 2.100%\n4 | 2.550%\n\nExhibit 2: One-Year Implied Forward Rates\n# Maturity (Years) | One-Year Forward Rate\nCurrent one-year rate | 1.200%\nOne year forward | 2.102%\nTwo years forward | 3.006%\nThree years forward | 3.912%\n\nTan asks, \"Are there other ways to calculate the arbitrage-free value of a bond?\" Lenz responds, \"Yes, the arbitrage-free value of a bond can also be calculated using a binomial interest rate tree, where the interest rate tree provides a representation of how one-year forward rates evolve based on an interest rate model that identifies factors with predictable paths, an interest rate volatility assumption, and where forward rates on the tree are consistent with the current benchmark yield curve.\"\n\nBrenner asks the group to use a binomial interest rate tree to calculate the arbitrage-free value of a three-year option-free bond issued by NRB Corporation. Brenner asks, \"Would you get the same value for the NRB Corporation bond if you used the spot rates from Exhibit 1?\"\n\nTan responds: \"Yes, if the volatility assumed in the one-year implied forward rates in Exhibit 2 matches the volatility assumed in the binomial tree.\"\n\nLenz responds: \"No, because the binomial interest rate tree provides multiple paths for the evolution of interest rates, whereas the spot rates in Exhibit 1 do not allow for rates to follow multiple paths.\"\n\nNovak responds: \"Yes, but only if the binomial interest rates are calibrated to match the term structure of interest rates in Exhibit 1 so that they produce the correct benchmark bond values.\"\n\nNovak asks Tan how pathwise valuation compares with the Monte Carlo method. Tan responds with the following statements:\n\nStatement 1: \"In pathwise valuation, a constant is added to all interest rate paths so that the resulting present value for each benchmark bond is equal to its market value. No such adjustment is made in the Monte Carlo method.\"\nStatement 2: \"Interest rate paths for both the pathwise valuation and the Monte Carlo method are based on an assumption of interest rate volatility and an interest rate model that is calibrated to the current benchmark term structure of interest rates.\"\nStatement 3: \"Pathwise valuation calculates the present value of the bond's cash flows for each possible interest rate path, whereas the Monte Carlo method calculates present values for randomly selected interest rate paths.\"",
+    "questions": [
+     {
+      "q": "The arbitrage-free value of the TFCO Corporation bond is closest to:",
+      "options": [
+       "$91.35.",
+       "$96.12.",
+       "$97.72."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This discounts the cash flows with the one-year forward rates as if they were spot rates: $91.35.\nB. Correct. Discount each cash flow at the spot rate for its maturity: 1.5 ÷ 1.012 + 1.5 ÷ 1.0165² + 1.5 ÷ 1.021³ + 101.5 ÷ 1.0255⁴ = $96.12.\nC. Incorrect. This discounts every cash flow at a single yield of 2.10% (a yield to maturity), not at the spot rates: $97.72."
+     },
+     {
+      "q": "Lenz's response to Tan's question is least likely correct with respect to:",
+      "options": [
+       "the benchmark yield curve.",
+       "the interest rate model.",
+       "interest rate volatility."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Forward rates on the tree must be consistent with the benchmark yield curve (calibration): correct.\nB. Correct. Correct. The factors in an interest rate model are random (stochastic), not predictable.\nC. Incorrect. Incorrect. The tree rests on an interest rate volatility assumption: correct."
+     },
+     {
+      "q": "With respect to Brenner's question on valuing the NRB Corporation bond using the rates from Exhibit 1, who is most likely correct?",
+      "options": [
+       "Novak",
+       "Lenz",
+       "Tan"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. A tree calibrated to the benchmark term structure reproduces the benchmark bond values, so for an option-free bond it gives the same value as spot-rate valuation.\nB. Incorrect. Incorrect. Multiple paths do not change the value of an option-free bond when the tree is calibrated.\nC. Incorrect. Incorrect. Spot-rate valuation does not need a volatility assumption."
+     },
+     {
+      "q": "Which of Tan's statements to Novak is least likely correct?",
+      "options": [
+       "Statement 3",
+       "Statement 2",
+       "Statement 1"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Pathwise valuation computes the PV along each possible path, Monte Carlo along randomly selected paths: correct.\nB. Incorrect. Incorrect. Both methods rest on a volatility assumption and an interest rate model calibrated to the current term structure: correct.\nC. Correct. Correct. The adjustment (a drift term added to the rates on all paths so benchmark bonds equal market values) is made in the Monte Carlo method, not in pathwise valuation on a calibrated tree."
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Kyra Johnson, CFA, was recently hired by Sedgwick Investment Management (Sedgwick) as its new chief executive officer. Sedgwick’s parent company owns several subsidiaries in the financial services industry. Although there are currently no outstanding compliance issues, Sedgwick’s employees have a history of unethical behavior and always seem to be on the brink of additional violations. Sedgwick’s board of directors has tasked Johnson with bringing the firm’s policies and procedures into compliance with the CFA Institute Code of Ethics and Standards of Professional Conduct.\n\nShortly after Johnson was hired, the following announcement appeared in a major financial newspaper:\n\nThe board of directors of Sedgwick Investment Management is pleased to announce the hiring of Ms. Kyra Johnson, CFA, as the company’s new chief executive officer. She has demonstrated the ability to successfully complete a rigorous and comprehensive study program demanded by the CFA designation. The credibility of her CFA charter and the skills the CFA Program cultivates are key assets Ms. Johnson brings to Sedgwick. As a CFA charterholder, Ms. Johnson has superior qualities to manage our clients’ investments and guide the investment process. We are thrilled to have Ms. Kyra Johnson, CFA, as a member of the Sedgwick Investment Management team.\n\nOne of the first things Johnson did after arriving at the firm was to meet with Corey Tao, CFA, the firm’s chief compliance officer. Tao had been with the firm only a few months. He told Johnson the previous violations had primarily related to equity research, equity trading, and client confidentiality. After reviewing the summary of violations and the firm’s existing handbook, Johnson and Tao decided to submit the following recommendations regarding the firm’s trade allocation procedures for block trades to the board of directors for approval:\n\nRecommendation 1: All accounts participating in a block trade should receive the same execution price and pay the same commission rate.\n\nRecommendation 2: Orders will be executed on a first-in, first-out basis, with consideration given to bundling orders for efficiency.\n\nDuring the meeting Tao also mentioned to Johnson that the company handbook fails to address an area where he has some concerns and suggested the following policy addition, breaking it down into three points:\n\nPoint 1: Traders are prohibited from engaging in communication with brokers or dealers that would artificially cause a stock’s price to rise or fall.\n\nPoint 2: Research analysts are not allowed to communicate unrealistic expectations regarding a company’s results that may affect the market price of a stock.\n\nPoint 3: Portfolio managers are not allowed to enter into an agreement to promote the stock of any publicly listed company.\n\nTao later received a call from a news reporter who requested an interview. Tao is one of several people at the firm authorized to speak with the press. The reporter was interested in writing a piece about Johnson and the circumstances behind her joining the firm. They scheduled a time for the call and Tao forwarded to the reporter a copy of the board’s press release. Prior to the interview, Johnson told Tao to address the reporter’s questions truthfully but not to provide any details. When asked during the interview about the firm’s history of unethical behavior, Tao responded, “One of Ms. Johnson’s first acts was to strengthen the firm’s Code of Ethics, and although there had been a few prior incidences of questionable conduct, they were exaggerated in the press and happen in most investment firms.”",
+    "questions": [
+     {
+      "q": "Which statement in Sedgwick’s hiring announcement is most likely an incorrect reference to the CFA Program or the CFA designation? The statement referencing:",
+      "options": [
+       "the skills the program cultivates.",
+       "the demands of the study program for the CFA designation.",
+       "her ability to manage investments and guide the process."
+      ],
+      "answer": 2,
+      "why": "The statement referencing Ms. Johnson’s ability to manage investments and guide the process is an incorrect reference to the CFA designation. The statement that Ms. Johnson, as a CFA charterholder, “has superior qualities to manage our clients’ investments and guide the investment process” is an incorrect reference as outlined by Standard VII(B): References to CFA Institute, the CFA Designation, and the CFA Program."
+     },
+     {
+      "q": "Are the recommendations submitted to the board of directors most likely consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing?",
+      "options": [
+       "No with regard to Recommendation 2",
+       "No with regard to Recommendation 1",
+       "Yes"
+      ],
+      "answer": 2,
+      "why": "Recommendation 1, “All accounts participating in a block trade should receive the same execution price and pay the same commission rate,” and Recommendation 2, “Orders will be executed on a first-in, first-out basis, with consideration given to bundling orders for efficiency,” are consistent with the CFA Institute Recommended Procedures for Compliance with Standard III(B): Fair Dealing."
+     },
+     {
+      "q": "When considering the three points of Tao’s new policy as a whole, which CFA Institute Standard of Professional Conduct is he most likelyaddressing?",
+      "options": [
+       "Standard VI: Conflict of Interest",
+       "Standard II: Integrity of Capital Markets",
+       "Standard V: Investment Analysis, Recommendations, and Actions"
+      ],
+      "answer": 1,
+      "why": "When considering all three of Tao’s policy suggestions as a whole, he is addressing CFA Institute Standard II: Integrity of Capital Markets. Specifically, Standard II(B): Market Manipulation requires members and candidates not to engage in practices that artificially inflate trading volume or distort prices and not to enter into an agreement to promote a stock with the intent to mislead market participants."
+     },
+     {
+      "q": "Who has most likely violated the CFA Institute Standards of Professional Conduct regarding the newspaper interview?",
+      "options": [
+       "Tao",
+       "Both Tao and Johnson",
+       "Johnson"
+      ],
+      "answer": 0,
+      "why": "Tao has violated Standard I(D): Misconduct, which states, Members and Candidates must not engage in any professional conduct involving dishonesty, fraud, or deceit or commit any act that reflects adversely on their professional reputation, integrity, or competence. Tao’s comment downplayed the prior unethical incidents, which alone may not be a violation, because we do not have enough information about those incidents."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Leon Brandt is an analyst in the research department of a large hedge fund. He is asked to develop a model to predict future quarterly sales for ClearView Electronics, a major electronics retailer. He begins by running the following regression:\n\nRegression 1: ln Salest − ln Salest−1 = b0 + b1(ln Salest−1 − ln Salest−2) + εt.\n\nExhibit 1 presents the results of this regression.\n\nExhibit 1: Log Differenced Sales AR(1) Model: ClearView Electronics, Last 10 Years of Quarterly Sales\nRegression Statistics\n# Item | Value\nR2 | 0.1864\nStandard error | 0.0583\nObservations | 40\nDurbin–Watson | 1.9420\n# Item | Coefficient | Standard Error | t-Statistic\nIntercept | 0.0361 | 0.0105 | 3.4381\nln Salest−1 − ln Salest−2 | −0.3892 | 0.1371 | −2.8388\nAutocorrelations of the Residual\n# Lag | Autocorrelation | Standard Error | t-Statistic\n1 | 0.0178 | 0.1581 | 0.1126\n2 | −0.1021 | 0.1581 | −0.6458\n3 | −0.0866 | 0.1581 | −0.5478\n4 | 0.6613 | 0.1581 | 4.1828\nNote: The critical t-statistic at the 5% significance level is 2.03.\n\nAfter completing his work on ClearView, Brandt is asked to analyze the relationship of oil prices and the stock prices of three transportation companies. His firm wants to know whether the stock prices can be predicted by the price of oil. Exhibit 2 shows selected information from the results of his analysis.\n\nExhibit 2: Analysis Summary of Stock Prices for Three Transportation Stocks and the Price of Oil\n# Item | Unit Root? | Linear or Exponential Trend? | Serial Correlation of Residuals in Trend Model? | ARCH(1)? | Comments\nCompany 1 | No | Exponential | Yes | No | Not cointegrated with oil price\nCompany 2 | Yes | Exponential | Yes | Yes | Not cointegrated with oil price\nCompany 3 | Yes | Linear | Yes | No | Cointegrated with oil price\nOil Price | Yes | | | |\n\nTo assess the relationship between oil prices and stock prices, Brandt runs three regressions using the time series of each company's stock prices as the dependent variable and the time series of oil prices as the independent variable.",
+    "questions": [
+     {
+      "q": "Based on the regression output in Exhibit 1, what should lead Brandt to conclude that the Regression 1 equation is not correctly specified?",
+      "options": [
+       "The t-statistics for the autocorrelations of the residual",
+       "The t-statistic for the slope coefficient",
+       "The Durbin–Watson statistic"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. The 4th residual autocorrelation is 0.6613 with t = 4.1828, above the critical 2.03: the null of no autocorrelation is rejected, which signals seasonality and a misspecified model.\nB. Incorrect. Incorrect. A significant slope (|t| = 2.84 > 2.03) shows the lag has explanatory power; it does not signal misspecification.\nC. Incorrect. Incorrect. The Durbin–Watson statistic is not valid when a lagged dependent variable is a regressor (and 1.9420 is near 2 anyway)."
+     },
+     {
+      "q": "Based on Exhibit 2, Brandt should conclude that the variance of the error terms for Company 2:",
+      "options": [
+       "is constant.",
+       "is homoskedastic.",
+       "can be predicted."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Company 2 has ARCH(1) errors, so the variance is not constant.\nB. Incorrect. Incorrect. ARCH(1) means heteroskedastic errors, not homoskedastic.\nC. Correct. Correct. With ARCH(1) the variance of the error in one period depends on the previous period's error, so the variance of the error in t + 1 can be predicted in period t."
+     },
+     {
+      "q": "Based on Exhibit 2, for which company would the regression of stock prices on oil prices be expected to yield valid coefficients that could be used to estimate the long-term relationship between stock price and oil price?",
+      "options": [
+       "Company 3",
+       "Company 1",
+       "Company 2"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Company 3 and the oil price both have a unit root and are cointegrated: the regression error is covariance stationary, so the coefficients and standard errors are valid.\nB. Incorrect. Incorrect. Company 1 has no unit root, so the pair is not both unit-root series and is not cointegrated.\nC. Incorrect. Incorrect. Both series have a unit root but they are not cointegrated, so the regression is spurious."
+     },
+     {
+      "q": "Based on Exhibit 2, which single time-series model would most likely be appropriate for Brandt to use in predicting the future stock price of Company 1?",
+      "options": [
+       "First-differenced AR(2) model",
+       "First-differenced log AR(1) model",
+       "Log-linear trend model"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. The series has an exponential trend, so the log must be taken before differencing.\nB. Correct. Correct. Company 1 has an exponential trend: take the natural log and first-difference it. The trend-model residuals are serially correlated, so an autoregressive model is needed.\nC. Incorrect. Incorrect. The trend-model residuals are serially correlated, so a trend model alone is not appropriate."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Maximilian Reiter manages the equity exposure for a family office. All of the office's investment returns are measured in EUR, while equity holdings in foreign currencies are usually hedged to eliminate exchange rate risk. Six months ago, Reiter entered a 3-year receive-equity, pay-fixed, annual-reset equity swap with a notional amount of EUR 1,000,000. At initiation, the fixed rate was 2.1% and the equity index was trading at 100. Now the fixed rate has declined to 1.7% and the equity index is trading at 103.6. Reiter determines the no-arbitrage value of the equity swap based on the present value (PV) factors in Exhibit 1.\n\nExhibit 1: PV Factors for the Equity Swap\n# Maturity (in Years) | PV Factor\n0.5 | 0.99215\n1.5 | 0.97620\n2.5 | 0.95910\n\nOver the next year, Reiter expects regular cash inflows denominated in Australian dollar (AUD) from the family office's Australian equity portfolio. He hedges the currency exposure by entering into a one-year fixed-for-fixed currency swap with quarterly payments and notional amounts exchanged at initiation and at maturity. Reiter calculates the interest rate on the AUD leg that results in a contract value of zero at initiation, based on the present value factors in Exhibit 2.\n\nExhibit 2: PV Factors for the AUD Leg\n# Maturity (in Years) | PV Factor\n0.25 | 0.99620\n0.50 | 0.99130\n0.75 | 0.98410\n1.00 | 0.97720\nSum of PV factors | 3.9488\n\nReiter next identifies an arbitrage opportunity in shares of Dantel, a publicly traded company. A forward contract on Dantel is trading in the market at EUR 41.20, while the theoretical arbitrage-free price is EUR 40.85.\n\nFinally, Reiter evaluates a 9-month forward contract on Marlow, another equity holding. He enters into the 9-month forward contract on Marlow at a price of EUR 118. Six months after initiation of the contract, the dividend has been paid and Marlow shares are trading at EUR 125. The annually compounded interest rate is 1.4%.",
+    "questions": [
+     {
+      "q": "The no-arbitrage value (in EUR) of Reiter's position in the equity swap is closest to:",
+      "options": [
+       "−25,476.",
+       "15,424.",
+       "22,029."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This multiplies the sum of the PV factors by the coupon only and subtracts it from the equity return: 36,000 − 2.92745 × 21,000 = −25,476.\nB. Correct. Fixed leg = 21,000 × 0.99215 + 21,000 × 0.97620 + 1,021,000 × 0.95910 = 1,020,576; equity leg = 1,000,000 × 103.6 ÷ 100 = 1,036,000; value = 1,036,000 − 1,020,576 = 15,424.\nC. Incorrect. This uses the initiation fixed rate formula (1 − last PV factor) ÷ sum of PV factors = 1.397% and takes 3.6% − 1.397% = 2.203%, times the notional = 22,029."
+     },
+     {
+      "q": "The interest rate on the AUD leg that results in a contract value of zero at swap initiation is closest to:",
+      "options": [
+       "0.38%.",
+       "1.30%.",
+       "2.31%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This uses PV(0.25) in the numerator instead of PV(1.00): (1 − 0.99620) ÷ 3.9488 × 4 = 0.38%.\nB. Incorrect. This uses the average of the four PV factors in the numerator: (1 − 0.9872) ÷ 3.9488 × 4 = 1.30%.\nC. Correct. Fixed rate per period = (1 − PV of the last date) ÷ sum of PV factors = (1 − 0.97720) ÷ 3.9488 = 0.5774%; annualised × 4 = 2.31%."
+     },
+     {
+      "q": "Exploiting the arbitrage opportunity in Dantel shares involves:",
+      "options": [
+       "buying the forward contract, selling the underlying short, and investing the proceeds at the risk-free interest rate.",
+       "selling the forward contract and purchasing the underlying with borrowed funds.",
+       "selling the forward contract and investing the proceeds at the risk-free interest rate."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. This is reverse carry arbitrage, used when the market forward price is BELOW the theoretical price.\nB. Correct. Correct. The market forward price (EUR 41.20) is above the arbitrage-free price (EUR 40.85), so sell the forward, buy the underlying with borrowed funds and deliver it at maturity (carry arbitrage).\nC. Incorrect. Incorrect. Selling the forward and investing the proceeds at the risk-free rate leaves price risk, so it is not an arbitrage strategy."
+     },
+     {
+      "q": "Six months after initiation, the value (in EUR) of the forward contract on Marlow shares is closest to:",
+      "options": [
+       "6.98.",
+       "7.41.",
+       "7.82."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This discounts the difference between the price and the forward price: (125 − 118) ÷ 1.014^0.25 = 6.98.\nB. Correct. V = S − PV(F0), with PV(F0) discounted over the remaining 3 months (0.25 years): 125 − 118 ÷ 1.014^0.25 = 7.41.\nC. Incorrect. This discounts over the six months already passed instead of the three months remaining: 125 − 118 ÷ 1.014^0.5 = 7.82."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Hannah Voss, CFA, is a fixed-income analyst for the Corvin Funds. Her supervisor asks her to identify ESG factors and value the corporate bonds of EcoStay Resorts, a publicly traded boutique resort company. Voss notes that EcoStay is a \"green resort\" company that prioritizes sustainability and has successfully reduced water and energy usage at its resorts. The founding family owns 52% of the outstanding shares. Each ownership share has equivalent voting rights. The board of directors of EcoStay consists of 14 members, with independent CEO and chairperson roles. The board includes one independent member and two women, and three members (about 21%) have experience in the resort industry.\nEcoStay has historically had a high labor turnover rate. Most of its workforce are paid at or near the minimum wage, and the company offers no health benefits. Voss and her supervisor discuss how EcoStay will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Voss integrates ESG factors in the investment valuation of EcoStay's corporate bonds.",
+    "questions": [
+     {
+      "q": "The potential conflict between or among shareholders and managers of EcoStay can best be described as:",
+      "options": [
+       "a principal-agent problem.",
+       "voting caps.",
+       "a principal-principal problem."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. The principal-agent problem arises with dispersed ownership and dispersed voting rights (weak shareholders, strong managers).\nB. Incorrect. Incorrect. Voting caps are legal restrictions on the votes of large holders (concentrated ownership with dispersed voting rights); they are not a conflict.\nC. Correct. Correct. The family owns 52% of the shares and each share has equal voting rights, so ownership and voting power are concentrated: the conflict is between controlling and minority shareholders."
+     },
+     {
+      "q": "EcoStay's corporate governance risk is increased by:",
+      "options": [
+       "CEO duality.",
+       "family control.",
+       "the low percentage of independent board members."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. The CEO and chairperson roles are independent of each other, so there is no CEO duality (a sign of good governance).\nB. Incorrect. Incorrect. Family control lowers principal-agent risk; it is not the main governance risk here.\nC. Correct. Correct. Only one of the 14 board members is independent, below the usual 20%-50% minimum ratio."
+     },
+     {
+      "q": "The security analysis of EcoStay is most likely focused on:",
+      "options": [
+       "identifying potential opportunities.",
+       "mitigating downside risk.",
+       "adjusting the discount rate."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Identifying opportunities belongs to equity analysis.\nB. Correct. Correct. In fixed-income analysis ESG integration focuses on mitigating downside risk.\nC. Incorrect. Incorrect. Adjusting the discount rate belongs to equity analysis; in fixed income the credit spread or CDS is adjusted."
+     },
+     {
+      "q": "After integrating the ESG factors, the credit spread on EcoStay's bonds is most likely to:",
+      "options": [
+       "increase.",
+       "decrease.",
+       "remain unchanged."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Weak governance (one independent director, little diversity, little industry experience) and social risk (low pay, no benefits, rising minimum wage) raise costs and cash flow risk, so the credit spread rises.\nB. Incorrect. Incorrect. Higher ESG risk does not lower the spread.\nC. Incorrect. Incorrect. The identified ESG risks affect the valuation, so the spread does not stay unchanged."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {
+  "mock16:1": {
+   "hl": [
+    "@row:Receivables turnover ratio",
+    "no significant change in its sales, collection, purchases or inventory policies"
+   ],
+   "rule": "Receivables turnover UP with no policy change → receivables sold or removed; channel stuffing and bill-and-hold push the ratio DOWN."
+  },
+  "mock16:2": {
+   "hl": [
+    "@row:Inventory turnover ratio",
+    "no significant change in its sales, collection, purchases or inventory policies"
+   ],
+   "rule": "Inventory turnover DOWN with no policy change → inventory not written down (obsolescence allowance cut)."
+  },
+  "mock16:3": {
+   "hl": [
+    "the only difference in cash flow classification relates to interest paid",
+    "most of Corvara's competitors are US companies, which report under US GAAP"
+   ],
+   "rule": "US GAAP: interest paid is operating. Converting an IFRS financing classification to US GAAP raises CFF and lowers CFO."
+  },
+  "mock16:4": {
+   "hl": [
+    "environmental risks of its business",
+    "least useful"
+   ],
+   "rule": "For risk investigation: financial press, management commentary and notes help; the audit opinion does not describe specific risks."
+  },
+  "mock16:5": {
+   "hl": [
+    "relatively high tariff on non-domestic capital goods",
+    "High tariffs have little impact on foreign direct investment (FDI)"
+   ],
+   "rule": "Growth policy: free trade and openness to FDI (low tariffs on capital goods) raise capital and productivity; protection does not."
+  },
+  "mock16:6": {
+   "hl": [
+    "increased FDI will cause the kora to strengthen against world currencies"
+   ],
+   "rule": "FDI inflow → currency appreciates → domestic goods look more expensive to foreigners (tourism hurt)."
+  },
+  "mock16:7": {
+   "hl": [
+    "@row:Silver Cove",
+    "@row:United Kingdom",
+    "The current exchange rate of the kora against the US dollar is Kr6.40/USD"
+   ],
+   "rule": "Forward (price/base) = spot × (1 + rate of the PRICE currency) ÷ (1 + rate of the BASE currency); build the cross rate first."
+  },
+  "mock16:8": {
+   "hl": [
+    "potential inflation",
+    "stands ready to use monetary tools to prevent such inflation"
+   ],
+   "rule": "Inflation threat → contractionary policy: sell securities, raise the policy rate (reduce the money supply)."
+  },
+  "mock16:9": {
+   "hl": [
+    "@row:NOI",
+    "@row:Terminal cap rate",
+    "@row:Investment holding period"
+   ],
+   "rule": "Terminal value at the end of year 5 = NOI of year 6 (the year AFTER the holding period) ÷ terminal cap rate."
+  },
+  "mock16:10": {
+   "hl": [
+    "@row:Going-in cap rate",
+    "@row:Terminal cap rate",
+    "@row:Discount rate"
+   ],
+   "rule": "Cap rate = discount rate − growth rate (constant growth); discounting uses the discount rate, never the cap rate."
+  },
+  "mock16:11": {
+   "hl": [
+    "@row:Total adjustments",
+    "@row:Sale price (per ft2)",
+    "can purchase it for USD46 million"
+   ],
+   "rule": "Sales comparison: apply the TOTAL adjustment to each comparable's price, average the adjusted prices, multiply by the area, then compare with the price."
+  },
+  "mock16:12": {
+   "hl": [
+    "the cost of constructing a building identical to the subject property is USD52 million",
+    "The land value is USD6 million, and the total depreciation is USD4 million"
+   ],
+   "rule": "Cost approach: replacement cost + land − depreciation; it can overstate value in an oversupplied market; replacement cost includes developer's profit."
+  },
+  "mock16:17": {
+   "hl": [
+    "@row:Government bond yield",
+    "@row:Risk-neutral probability of default",
+    "@row:Recovery rate"
+   ],
+   "rule": "CVA = Σ [exposure (PV of remaining flows) × LGD (1 − recovery) × probability of default in year t × discount factor]."
+  },
+  "mock16:18": {
+   "hl": [
+    "@row:Market value",
+    "@row:Value assuming no default",
+    "@row:Credit valuation adjustment"
+   ],
+   "rule": "Credit spread = YTM of (VND − CVA) − YTM of VND (both on the same par value and maturity)."
+  },
+  "mock16:19": {
+   "hl": [
+    "an AAA rated bond"
+   ],
+   "rule": "AAA: spreads near the floor → flat or slightly upward credit curve; distressed credits → inverted; weaker investment grade/high yield → steeper upward."
+  },
+  "mock16:20": {
+   "hl": [
+    "both granular and homogenous"
+   ],
+   "rule": "Granular + homogeneous pool → portfolio-based; discrete large heterogeneous loans → loan-by-loan; static pools → statistics-based."
+  },
+  "mock16:21": {
+   "hl": [
+    "His revenue growth rate estimate is less than that implied by the market price."
+   ],
+   "rule": "Market-implied growth > your forecast growth → the price is too high → overvalued."
+  },
+  "mock16:22": {
+   "hl": [
+    "Successful companies tend to draw more competition",
+    "brand licences and distribution agreements will be weakening"
+   ],
+   "rule": "Regression to the mean: competition erodes high profits and weakening protections (IP, franchises, licences) reduce growth."
+  },
+  "mock16:23": {
+   "hl": [
+    "sales per square meter",
+    "market share times forecast industry sales"
+   ],
+   "rule": "Top-down starts from the economy or industry and moves to the company; bottom-up builds the company forecast from its units (stores, products)."
+  },
+  "mock16:24": {
+   "hl": [
+    "pairs-trading strategy",
+    "Tarrant Labs is 14% undervalued",
+    "Aldane Pharma is 12% overvalued"
+   ],
+   "rule": "Pairs trading: buy the undervalued stock and short the overvalued stock of the same industry; use the largest mispricing on each side."
+  },
+  "mock16:25": {
+   "hl": [
+    "@row:1",
+    "@row:4",
+    "matures in four years"
+   ],
+   "rule": "Arbitrage-free value = each cash flow discounted at the spot rate of its own maturity (not forward rates, not one YTM)."
+  },
+  "mock16:26": {
+   "hl": [
+    "an interest rate model that identifies factors with predictable paths"
+   ],
+   "rule": "Interest rate model factors are random (stochastic); the tree needs a volatility assumption and calibration to the benchmark curve."
+  },
+  "mock16:27": {
+   "hl": [
+    "calibrated to match the term structure of interest rates in Exhibit 1",
+    "option-free bond"
+   ],
+   "rule": "Calibrated tree = same value as the spot curve for option-free bonds; paths and volatility matter only for bonds with embedded options."
+  },
+  "mock16:28": {
+   "hl": [
+    "a constant is added to all interest rate paths",
+    "No such adjustment is made in the Monte Carlo method."
+   ],
+   "rule": "Monte Carlo needs the drift adjustment so benchmark bonds price at market; pathwise valuation uses all paths of a calibrated tree."
+  },
+  "mock16:33": {
+   "hl": [
+    "@row:4",
+    "Autocorrelations of the Residual",
+    "correctly specified"
+   ],
+   "rule": "AR model: check the t-statistics of the residual autocorrelations; any lag above the critical t → misspecified (add that lag, e.g. lag 4 for seasonality)."
+  },
+  "mock16:34": {
+   "hl": [
+    "@row:Company 2"
+   ],
+   "rule": "ARCH(1) = Yes → conditional heteroskedasticity → error variance depends on the previous period and is predictable (use GARCH)."
+  },
+  "mock16:35": {
+   "hl": [
+    "@row:Company 3",
+    "@row:Oil Price"
+   ],
+   "rule": "Two unit-root series: regression valid only if cointegrated; not cointegrated → spurious regression."
+  },
+  "mock16:36": {
+   "hl": [
+    "@row:Company 1"
+   ],
+   "rule": "Exponential trend + serial correlation in trend-model residuals → log, first difference, then an AR model."
+  },
+  "mock16:37": {
+   "hl": [
+    "receive-equity, pay-fixed",
+    "the equity index is trading at 103.6",
+    "@row:2.5"
+   ],
+   "rule": "Equity swap value (receive equity, pay fixed) = equity leg value − PV of the fixed payments (include the notional at the last date)."
+  },
+  "mock16:38": {
+   "hl": [
+    "@row:1.00",
+    "@row:Sum of PV factors"
+   ],
+   "rule": "Fixed swap rate = (1 − final PV factor) ÷ Σ PV factors, then multiply by the number of periods per year (quarterly: × 4)."
+  },
+  "mock16:39": {
+   "hl": [
+    "trading in the market at EUR 41.20",
+    "theoretical arbitrage-free price is EUR 40.85"
+   ],
+   "rule": "Forward overpriced (market > theoretical) → sell forward, buy underlying with borrowed money; underpriced → buy forward, short the underlying and lend."
+  },
+  "mock16:40": {
+   "hl": [
+    "enters into the 9-month forward contract on Marlow at a price of EUR 118",
+    "Six months after initiation",
+    "The annually compounded interest rate is 1.4%"
+   ],
+   "rule": "Forward value after t: V = S(t) − F0 ÷ (1 + r)^(time REMAINING); discount only the contract price."
+  },
+  "mock16:41": {
+   "hl": [
+    "The founding family owns 52% of the outstanding shares.",
+    "Each ownership share has equivalent voting rights."
+   ],
+   "rule": "Controlling shareholder + one share one vote → principal-principal (controlling vs minority); dispersed ownership → principal-agent."
+  },
+  "mock16:42": {
+   "hl": [
+    "The board includes one independent member",
+    "independent CEO and chairperson roles"
+   ],
+   "rule": "Governance risk: few independent directors raises risk; separate CEO/chair roles reduce it."
+  },
+  "mock16:43": {
+   "hl": [
+    "fixed-income analyst",
+    "corporate bonds of EcoStay Resorts"
+   ],
+   "rule": "ESG in fixed income: downside risk; in equity: opportunities and downside risk, discount rate adjustment."
+  },
+  "mock16:44": {
+   "hl": [
+    "Most of its workforce are paid at or near the minimum wage",
+    "legislation raising the minimum wage"
+   ],
+   "rule": "Higher ESG risk → higher credit spread (lower bond value); better ESG → lower spread."
+  }
+ },
+ "key": "AACCBCCBCCBAAABAABCBBCACBBACCCBAACABBCBBCCBA",
+ "topics": [
+  "Financial Statement Analysis",
+  "Economics",
+  "Alternative Investments",
+  "Ethical and Professional Standards",
+  "Fixed Income",
+  "Equity Valuation",
+  "Fixed Income",
+  "Ethical and Professional Standards",
+  "Quantitative Methods",
+  "Derivatives",
+  "Corporate Issuers"
+ ]
+}

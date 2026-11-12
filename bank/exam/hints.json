@@ -3296,5 +3296,643 @@
    "uses a z-score of 1.65"
   ],
   "rule": "Parametric VaR = (z × σ − μ) × portfolio value (the expected return reduces the loss)."
+ },
+ "mock15:1": {
+  "hl": [
+   "@row:Net income",
+   "Total stockholders' equity at 31 December",
+   "Required return on equity"
+  ],
+  "rule": "Residual income = net income − (required return × BEGINNING-of-year equity)."
+ },
+ "mock15:2": {
+  "hl": [
+   "expected long-term return on equity (ROE) is 13%",
+   "after 2014, earnings and dividends will grow at 6% per year",
+   "Required return on equity"
+  ],
+  "rule": "Single-stage justified P/B = (ROE − g) ÷ (r − g), with the long-term ROE given in the forecast, not the historical one."
+ },
+ "mock15:3": {
+  "hl": [
+   "Non-domestic currency transactions with customers and suppliers",
+   "least likely to result in a clean surplus accounting violation"
+  ],
+  "rule": "Clean surplus is violated when a change in equity bypasses net income (OCI items: AFS securities, translation adjustments of subsidiaries); ordinary foreign currency transactions go through net income."
+ },
+ "mock15:4": {
+  "hl": [
+   "Reduce research and development (R&D) expenses.",
+   "least likely result in a higher EVA"
+  ],
+  "rule": "EVA = NOPAT − WACC × capital: lower cost of capital or higher NOPAT raises it; R&D is added back to NOPAT, so cutting R&D lowers it."
+ },
+ "mock15:5": {
+  "hl": [
+   "a material increase in Brenta's dividend payout ratio",
+   "mature company"
+  ],
+  "rule": "Higher payout: less free cash for overinvestment (manager-shareholder conflict falls) but less cushion for creditors (shareholder-bondholder conflict rises)."
+ },
+ "mock15:6": {
+  "hl": [
+   "60% target payout ratio with an adjustment period of five years",
+   "most recent annual dividend was $0.40 per share",
+   "$2.10 in Year 1 and $2.30 in Year 2"
+  ],
+  "rule": "Target payout adjustment: increase = (EPS × target payout − last dividend) × (1 ÷ adjustment years); update the dividend each year before Year 2."
+ },
+ "mock15:7": {
+  "hl": [
+   "its current share price is $48",
+   "after-tax cost of borrowing is 3.80%",
+   "300,000 shares are repurchased immediately"
+  ],
+  "rule": "Debt-financed buyback: EPS = (earnings − after-tax interest on the borrowed funds) ÷ (shares − shares repurchased)."
+ },
+ "mock15:8": {
+  "hl": [
+   "is chaired by the company's CEO",
+   "seven of whom are independent"
+  ],
+  "rule": "Check each board feature: CEO as chair (duality) is a governance weakness; a majority of independent directors and full committees are strengths."
+ },
+ "mock15:9": {
+  "hl": [
+   "implementing a new dividend tax on foreign investors",
+   "removing institutional impediments"
+  ],
+  "rule": "Growth: foreign capital inflows, property rights and education help; taxes or restrictions that deter foreign capital hurt."
+ },
+ "mock15:10": {
+  "hl": [
+   "Maintaining a low rupiah exchange rate",
+   "lacks the significant natural resources"
+  ],
+  "rule": "Long-run growth comes from capital deepening and technology (TFP); a cheap currency is not a growth channel."
+ },
+ "mock15:11": {
+  "hl": [
+   "low standard of living in Ghana and its large informal sector",
+   "Lower the country's tax rate."
+  ],
+  "rule": "Low-income country with a large informal sector: human capital, labor participation and infrastructure matter more than the tax rate."
+ },
+ "mock15:12": {
+  "hl": [
+   "Impose high tariffs on imports to protect the country's nascent industries."
+  ],
+  "rule": "Convergence needs open trade, capital flows and human/physical capital; protectionism delays it."
+ },
+ "mock15:17": {
+  "hl": [
+   "A statistically meaningful low Durbin-Watson statistic",
+   "most likely correct"
+  ],
+  "rule": "Low DW → positive serial correlation; constant growth rate → log-linear; high R2 alone says nothing about serial correlation."
+ },
+ "mock15:18": {
+  "hl": [
+   "an intercept of 0.0380 and a coefficient on the first lag of the net margin of 0.7640",
+   "net margin is 12% this quarter",
+   "two quarters from now"
+  ],
+  "rule": "Multi-step AR(1) forecast: iterate x(t+1) = b0 + b1 × x(t) using the previous forecast each time."
+ },
+ "mock15:19": {
+  "hl": [
+   "residual autocorrelations differ significantly from 0",
+   "Durbin-Watson statistic differs significantly from 2"
+  ],
+  "rule": "AR model (lagged Y as regressor): test residual autocorrelations; DW is not valid."
+ },
+ "mock15:20": {
+  "hl": [
+   "@row:1 Quarter Lag Coefficient",
+   "@row:4 Quarter Lag Coefficient",
+   "@row:Earnings Per Share Last Quarter",
+   "@row:Earnings Per Share 4 Quarters Prior"
+  ],
+  "rule": "Seasonal AR(1): EPS(t) = b0 + b1 × EPS(t−1) + b4 × EPS(t−4); match each coefficient with its own lag."
+ },
+ "mock15:21": {
+  "hl": [
+   "@row:Classification",
+   "@row:Cost*",
+   "@row:Market value, 31 December 2018"
+  ],
+  "rule": "Carrying value: FVPL and FVOCI at market value, amortized cost at cost (acquired at par, no amortization)."
+ },
+ "mock15:22": {
+  "hl": [
+   "@row:Market value, 31 December 2017",
+   "@row:Market value, 31 December 2018",
+   "if Corvin had been classified as a FVPL security"
+  ],
+  "rule": "FVPL: the change in market value over the year goes through net income (use the 2017 and 2018 market values)."
+ },
+ "mock15:23": {
+  "hl": [
+   "@row:Cost*",
+   "Note: * All securities were acquired at par value."
+  ],
+  "rule": "Premium (par < cost) → interest income lower than cash coupon; discount (par > cost) → higher."
+ },
+ "mock15:24": {
+  "hl": [
+   "special purpose entity (SPE) for Rennes's benefit",
+   "complies with IFRS 9"
+  ],
+  "rule": "IFRS: consolidate an SPE run for the sponsor's benefit; no qualifying SPE exception."
+ },
+ "mock15:25": {
+  "hl": [
+   "makes assumptions about future earnings and dividend growth",
+   "least accurate"
+  ],
+  "rule": "RI and DDM give the same value under clean surplus; RI puts more value in the current book value; RI does not need separate earnings and dividend growth assumptions."
+ },
+ "mock15:26": {
+  "hl": [
+   "@row:Book value per share 30 June previous year",
+   "@row:Forecasted earnings for year-end 30 June current year",
+   "@row:Required rate of return = re"
+  ],
+  "rule": "RI per share = EPS − required return × BEGINNING book value per share."
+ },
+ "mock15:27": {
+  "hl": [
+   "Long-term growth rate",
+   "Return on equity (ROE)"
+  ],
+  "rule": "Single-stage RI value: V0 = B0 + B0 × (ROE − r) ÷ (r − g)."
+ },
+ "mock15:28": {
+  "hl": [
+   "@row:Earnings before interest and taxes",
+   "@row:Tax rate",
+   "@row:Weighted average cost of capital (WACC)"
+  ],
+  "rule": "EVA = NOPAT − WACC × (debt + equity); NOPAT = EBIT × (1 − tax)."
+ },
+ "mock15:29": {
+  "hl": [
+   "identify a credit event in the United States",
+   "A change in seniority of outstanding obligations"
+  ],
+  "rule": "US credit events: bankruptcy and failure to pay (restructuring is a credit event outside the US only)."
+ },
+ "mock15:30": {
+  "hl": [
+   "@row:Company A",
+   "Credit Spread (bps)"
+  ],
+  "rule": "CDS price per 100 par = 100 − (credit spread − fixed coupon) × duration."
+ },
+ "mock15:31": {
+  "hl": [
+   "expect the US economy to weaken",
+   "spreads on high-yield CDSs widening by 150 bps",
+   "spreads on investment-grade CDSs widening by 10 bps"
+  ],
+  "rule": "Buy protection = short credit (gains when spreads widen); weaker economy → HY widens more than IG → buy HY protection, sell IG protection."
+ },
+ "mock15:32": {
+  "hl": [
+   "the credit curve for Company A will steepen, whereas the credit curve for Company B is expected to flatten",
+   "buy Company B CDSs with a 10-year tenor and sell Company B CDSs with a 5-year tenor"
+  ],
+  "rule": "Curve trades: steepening → buy long tenor, sell short tenor; flattening → sell long tenor, buy short tenor."
+ },
+ "mock15:33": {
+  "hl": [
+   "@row:Loans and deposits",
+   "@row:Debt securities",
+   "@row:Interest income",
+   "@row:Gains (losses) on fixed-income investments"
+  ],
+  "rule": "Fixed-income return = (interest income + gains/losses on fixed-income) ÷ AVERAGE (loans and deposits + debt securities)."
+ },
+ "mock15:34": {
+  "hl": [
+   "its claims have a shorter duration",
+   "its claims are relatively more predictable"
+  ],
+  "rule": "Life and health insurers: claims more predictable AND longer duration than P&C, so they can hold more equities."
+ },
+ "mock15:35": {
+  "hl": [
+   "Net interest income has been growing at a constant rate over the period.",
+   "@row:Net interest income",
+   "@row:Trading income"
+  ],
+  "rule": "Check each point with the table: growth rate (year over year) and portion of total; a 'constant' claim fails when growth changes every year."
+ },
+ "mock15:36": {
+  "hl": [
+   "@row:Provision for credit losses",
+   "@row:Earnings before taxes",
+   "the 2018 increase in EBT"
+  ],
+  "rule": "Share of the EBT increase from the provision = change in provision ÷ change in EBT (both year-over-year)."
+ },
+ "mock15:37": {
+  "hl": [
+   "A manager adds value when he produces a positive rate of return.",
+   "least likely to be correct"
+  ],
+  "rule": "Value added (active return) = portfolio return − benchmark return, not just a positive return."
+ },
+ "mock15:38": {
+  "hl": [
+   "@row:Fund average annual return (%)",
+   "@row:Benchmark average annual return (%)",
+   "@row:Active risk"
+  ],
+  "rule": "IR = (portfolio return − benchmark return) ÷ active risk (standard deviation of the difference), not the difference of standard deviations."
+ },
+ "mock15:39": {
+  "hl": [
+   "The information ratio will change as the active weights deviate from the benchmark weights.",
+   "least likely correct"
+  ],
+  "rule": "IR does not change with the aggressiveness of the active weights (active return and active risk scale together)."
+ },
+ "mock15:40": {
+  "hl": [
+   "The information ratio is a measure of relative expected or realized reward to risk",
+   "the Sharpe ratio measures the absolute risk–return trade-off"
+  ],
+  "rule": "Sharpe = absolute (unaffected by cash and leverage); information ratio = relative to the benchmark."
+ },
+ "mock15:41": {
+  "hl": [
+   "@row:Classification",
+   "@row:Cost*",
+   "@row:Market value, 31 December 2018"
+  ],
+  "rule": "Carrying value: FVPL and FVOCI at market value, amortized cost at cost (acquired at par, no amortization)."
+ },
+ "mock15:42": {
+  "hl": [
+   "@row:Market value, 31 December 2017",
+   "@row:Market value, 31 December 2018",
+   "if Corvin had been classified as a FVPL security"
+  ],
+  "rule": "FVPL: the change in market value over the year goes through net income (use the 2017 and 2018 market values)."
+ },
+ "mock15:43": {
+  "hl": [
+   "@row:Cost*",
+   "Note: * All securities were acquired at par value."
+  ],
+  "rule": "Premium (par < cost) → interest income lower than cash coupon; discount (par > cost) → higher."
+ },
+ "mock15:44": {
+  "hl": [
+   "special purpose entity (SPE) for Rennes's benefit",
+   "complies with IFRS 9"
+  ],
+  "rule": "IFRS: consolidate an SPE run for the sponsor's benefit; no qualifying SPE exception."
+ },
+ "mock16:1": {
+  "hl": [
+   "@row:Receivables turnover ratio",
+   "no significant change in its sales, collection, purchases or inventory policies"
+  ],
+  "rule": "Receivables turnover UP with no policy change → receivables sold or removed; channel stuffing and bill-and-hold push the ratio DOWN."
+ },
+ "mock16:2": {
+  "hl": [
+   "@row:Inventory turnover ratio",
+   "no significant change in its sales, collection, purchases or inventory policies"
+  ],
+  "rule": "Inventory turnover DOWN with no policy change → inventory not written down (obsolescence allowance cut)."
+ },
+ "mock16:3": {
+  "hl": [
+   "the only difference in cash flow classification relates to interest paid",
+   "most of Corvara's competitors are US companies, which report under US GAAP"
+  ],
+  "rule": "US GAAP: interest paid is operating. Converting an IFRS financing classification to US GAAP raises CFF and lowers CFO."
+ },
+ "mock16:4": {
+  "hl": [
+   "environmental risks of its business",
+   "least useful"
+  ],
+  "rule": "For risk investigation: financial press, management commentary and notes help; the audit opinion does not describe specific risks."
+ },
+ "mock16:5": {
+  "hl": [
+   "relatively high tariff on non-domestic capital goods",
+   "High tariffs have little impact on foreign direct investment (FDI)"
+  ],
+  "rule": "Growth policy: free trade and openness to FDI (low tariffs on capital goods) raise capital and productivity; protection does not."
+ },
+ "mock16:6": {
+  "hl": [
+   "increased FDI will cause the kora to strengthen against world currencies"
+  ],
+  "rule": "FDI inflow → currency appreciates → domestic goods look more expensive to foreigners (tourism hurt)."
+ },
+ "mock16:7": {
+  "hl": [
+   "@row:Silver Cove",
+   "@row:United Kingdom",
+   "The current exchange rate of the kora against the US dollar is Kr6.40/USD"
+  ],
+  "rule": "Forward (price/base) = spot × (1 + rate of the PRICE currency) ÷ (1 + rate of the BASE currency); build the cross rate first."
+ },
+ "mock16:8": {
+  "hl": [
+   "potential inflation",
+   "stands ready to use monetary tools to prevent such inflation"
+  ],
+  "rule": "Inflation threat → contractionary policy: sell securities, raise the policy rate (reduce the money supply)."
+ },
+ "mock16:9": {
+  "hl": [
+   "@row:NOI",
+   "@row:Terminal cap rate",
+   "@row:Investment holding period"
+  ],
+  "rule": "Terminal value at the end of year 5 = NOI of year 6 (the year AFTER the holding period) ÷ terminal cap rate."
+ },
+ "mock16:10": {
+  "hl": [
+   "@row:Going-in cap rate",
+   "@row:Terminal cap rate",
+   "@row:Discount rate"
+  ],
+  "rule": "Cap rate = discount rate − growth rate (constant growth); discounting uses the discount rate, never the cap rate."
+ },
+ "mock16:11": {
+  "hl": [
+   "@row:Total adjustments",
+   "@row:Sale price (per ft2)",
+   "can purchase it for USD46 million"
+  ],
+  "rule": "Sales comparison: apply the TOTAL adjustment to each comparable's price, average the adjusted prices, multiply by the area, then compare with the price."
+ },
+ "mock16:12": {
+  "hl": [
+   "the cost of constructing a building identical to the subject property is USD52 million",
+   "The land value is USD6 million, and the total depreciation is USD4 million"
+  ],
+  "rule": "Cost approach: replacement cost + land − depreciation; it can overstate value in an oversupplied market; replacement cost includes developer's profit."
+ },
+ "mock16:13": {
+  "hl": [
+   "@row:1",
+   "@row:4",
+   "matures in four years"
+  ],
+  "rule": "Arbitrage-free value = each cash flow discounted at the spot rate of its own maturity (not forward rates, not one YTM)."
+ },
+ "mock16:14": {
+  "hl": [
+   "an interest rate model that identifies factors with predictable paths"
+  ],
+  "rule": "Interest rate model factors are random (stochastic); the tree needs a volatility assumption and calibration to the benchmark curve."
+ },
+ "mock16:15": {
+  "hl": [
+   "calibrated to match the term structure of interest rates in Exhibit 1",
+   "option-free bond"
+  ],
+  "rule": "Calibrated tree = same value as the spot curve for option-free bonds; paths and volatility matter only for bonds with embedded options."
+ },
+ "mock16:16": {
+  "hl": [
+   "a constant is added to all interest rate paths",
+   "No such adjustment is made in the Monte Carlo method."
+  ],
+  "rule": "Monte Carlo needs the drift adjustment so benchmark bonds price at market; pathwise valuation uses all paths of a calibrated tree."
+ },
+ "mock16:21": {
+  "hl": [
+   "His revenue growth rate estimate is less than that implied by the market price."
+  ],
+  "rule": "Market-implied growth > your forecast growth → the price is too high → overvalued."
+ },
+ "mock16:22": {
+  "hl": [
+   "Successful companies tend to draw more competition",
+   "brand licences and distribution agreements will be weakening"
+  ],
+  "rule": "Regression to the mean: competition erodes high profits and weakening protections (IP, franchises, licences) reduce growth."
+ },
+ "mock16:23": {
+  "hl": [
+   "sales per square meter",
+   "market share times forecast industry sales"
+  ],
+  "rule": "Top-down starts from the economy or industry and moves to the company; bottom-up builds the company forecast from its units (stores, products)."
+ },
+ "mock16:24": {
+  "hl": [
+   "pairs-trading strategy",
+   "Tarrant Labs is 14% undervalued",
+   "Aldane Pharma is 12% overvalued"
+  ],
+  "rule": "Pairs trading: buy the undervalued stock and short the overvalued stock of the same industry; use the largest mispricing on each side."
+ },
+ "mock16:25": {
+  "hl": [
+   "@row:1",
+   "@row:4",
+   "matures in four years"
+  ],
+  "rule": "Arbitrage-free value = each cash flow discounted at the spot rate of its own maturity (not forward rates, not one YTM)."
+ },
+ "mock16:26": {
+  "hl": [
+   "an interest rate model that identifies factors with predictable paths"
+  ],
+  "rule": "Interest rate model factors are random (stochastic); the tree needs a volatility assumption and calibration to the benchmark curve."
+ },
+ "mock16:27": {
+  "hl": [
+   "calibrated to match the term structure of interest rates in Exhibit 1",
+   "option-free bond"
+  ],
+  "rule": "Calibrated tree = same value as the spot curve for option-free bonds; paths and volatility matter only for bonds with embedded options."
+ },
+ "mock16:28": {
+  "hl": [
+   "a constant is added to all interest rate paths",
+   "No such adjustment is made in the Monte Carlo method."
+  ],
+  "rule": "Monte Carlo needs the drift adjustment so benchmark bonds price at market; pathwise valuation uses all paths of a calibrated tree."
+ },
+ "mock16:29": {
+  "hl": [
+   "@row:4",
+   "Autocorrelations of the Residual",
+   "correctly specified"
+  ],
+  "rule": "AR model: check the t-statistics of the residual autocorrelations; any lag above the critical t → misspecified (add that lag, e.g. lag 4 for seasonality)."
+ },
+ "mock16:30": {
+  "hl": [
+   "@row:Company 2"
+  ],
+  "rule": "ARCH(1) = Yes → conditional heteroskedasticity → error variance depends on the previous period and is predictable (use GARCH)."
+ },
+ "mock16:31": {
+  "hl": [
+   "@row:Company 3",
+   "@row:Oil Price"
+  ],
+  "rule": "Two unit-root series: regression valid only if cointegrated; not cointegrated → spurious regression."
+ },
+ "mock16:32": {
+  "hl": [
+   "@row:Company 1"
+  ],
+  "rule": "Exponential trend + serial correlation in trend-model residuals → log, first difference, then an AR model."
+ },
+ "mock16:37": {
+  "hl": [
+   "receive-equity, pay-fixed",
+   "the equity index is trading at 103.6",
+   "@row:2.5"
+  ],
+  "rule": "Equity swap value (receive equity, pay fixed) = equity leg value − PV of the fixed payments (include the notional at the last date)."
+ },
+ "mock16:38": {
+  "hl": [
+   "@row:1.00",
+   "@row:Sum of PV factors"
+  ],
+  "rule": "Fixed swap rate = (1 − final PV factor) ÷ Σ PV factors, then multiply by the number of periods per year (quarterly: × 4)."
+ },
+ "mock16:39": {
+  "hl": [
+   "trading in the market at EUR 41.20",
+   "theoretical arbitrage-free price is EUR 40.85"
+  ],
+  "rule": "Forward overpriced (market > theoretical) → sell forward, buy underlying with borrowed money; underpriced → buy forward, short the underlying and lend."
+ },
+ "mock16:40": {
+  "hl": [
+   "enters into the 9-month forward contract on Marlow at a price of EUR 118",
+   "Six months after initiation",
+   "The annually compounded interest rate is 1.4%"
+  ],
+  "rule": "Forward value after t: V = S(t) − F0 ÷ (1 + r)^(time REMAINING); discount only the contract price."
+ },
+ "mock16:41": {
+  "hl": [
+   "The founding family owns 52% of the outstanding shares.",
+   "Each ownership share has equivalent voting rights."
+  ],
+  "rule": "Controlling shareholder + one share one vote → principal-principal (controlling vs minority); dispersed ownership → principal-agent."
+ },
+ "mock16:42": {
+  "hl": [
+   "The board includes one independent member",
+   "independent CEO and chairperson roles"
+  ],
+  "rule": "Governance risk: few independent directors raises risk; separate CEO/chair roles reduce it."
+ },
+ "mock16:43": {
+  "hl": [
+   "fixed-income analyst",
+   "corporate bonds of EcoStay Resorts"
+  ],
+  "rule": "ESG in fixed income: downside risk; in equity: opportunities and downside risk, discount rate adjustment."
+ },
+ "mock16:44": {
+  "hl": [
+   "Most of its workforce are paid at or near the minimum wage",
+   "legislation raising the minimum wage"
+  ],
+  "rule": "Higher ESG risk → higher credit spread (lower bond value); better ESG → lower spread."
+ },
+ "mock15:13": {
+  "hl": [
+   "Pricing involves determining the appropriate forward commitment price or rate, typically after it has been initiated.",
+   "least likely correct"
+  ],
+  "rule": "Pricing = set the forward price/rate at initiation; valuation = value of the contract after initiation."
+ },
+ "mock15:14": {
+  "hl": [
+   "the forward contract expiring in one year is priced at 2,138",
+   "continuously compounded dividend yield of 2.20%",
+   "one-year continuously compounded interest rate is 0.60%"
+  ],
+  "rule": "Fair forward = S0 × e^((r − dividend yield)T); forward above fair → carry arbitrage (sell forward, buy underlying); below → reverse carry."
+ },
+ "mock15:15": {
+  "hl": [
+   "must make a Euribor deposit in two months",
+   "a fixed-rate receiver that is short Euribor and a floating-rate receiver that is long Euribor"
+  ],
+  "rule": "FRA long = floating-rate receiver = long Euribor; the deposit is a way to hedge/replicate, not a requirement."
+ },
+ "mock15:16": {
+  "hl": [
+   "to account for any accrued interest",
+   "least likely correct"
+  ],
+  "rule": "Conversion factor equalizes deliverable bonds with different coupons and maturities (to a standard coupon); it does not account for accrued interest."
+ },
+ "mock16:33": {
+  "hl": [
+   "@row:4",
+   "Autocorrelations of the Residual",
+   "correctly specified"
+  ],
+  "rule": "AR model: check the t-statistics of the residual autocorrelations; any lag above the critical t → misspecified (add that lag, e.g. lag 4 for seasonality)."
+ },
+ "mock16:34": {
+  "hl": [
+   "@row:Company 2"
+  ],
+  "rule": "ARCH(1) = Yes → conditional heteroskedasticity → error variance depends on the previous period and is predictable (use GARCH)."
+ },
+ "mock16:35": {
+  "hl": [
+   "@row:Company 3",
+   "@row:Oil Price"
+  ],
+  "rule": "Two unit-root series: regression valid only if cointegrated; not cointegrated → spurious regression."
+ },
+ "mock16:36": {
+  "hl": [
+   "@row:Company 1"
+  ],
+  "rule": "Exponential trend + serial correlation in trend-model residuals → log, first difference, then an AR model."
+ },
+ "mock16:17": {
+  "hl": [
+   "@row:Government bond yield",
+   "@row:Risk-neutral probability of default",
+   "@row:Recovery rate"
+  ],
+  "rule": "CVA = Σ [exposure (PV of remaining flows) × LGD (1 − recovery) × probability of default in year t × discount factor]."
+ },
+ "mock16:18": {
+  "hl": [
+   "@row:Market value",
+   "@row:Value assuming no default",
+   "@row:Credit valuation adjustment"
+  ],
+  "rule": "Credit spread = YTM of (VND − CVA) − YTM of VND (both on the same par value and maturity)."
+ },
+ "mock16:19": {
+  "hl": [
+   "an AAA rated bond"
+  ],
+  "rule": "AAA: spreads near the floor → flat or slightly upward credit curve; distressed credits → inverted; weaker investment grade/high yield → steeper upward."
+ },
+ "mock16:20": {
+  "hl": [
+   "both granular and homogenous"
+  ],
+  "rule": "Granular + homogeneous pool → portfolio-based; discrete large heterogeneous loans → loan-by-loan; static pools → statistics-based."
  }
 }

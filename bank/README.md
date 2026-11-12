@@ -168,3 +168,12 @@ Mock 11: 40/44 (wrong Q23, 30, 31, 39). Mock 12 (answers CBAABACACCBBCCACBBCCABC
 
 ## Ethics exam sessions (13 Nov, v236)
 eth1-eth12: all 276 key-notes Ethics questions as exam sessions (23 Q each, 69 min). Layout and keys in bank/exam/ethics_sets.json (do not send keys). Builder bank/exam/ethics_sets.py.
+
+## Mock 15 + Mock 16 (13 Nov, v237; one pair like Mock 11/12, 44 Q / 132 min each; NOT yet taken)
+- Keys (do not send unless asked): Mock 15 BACBCABCCCABBCCCABABABCCBBAABAACBBBCABACCCAC ; Mock 16 AACCBCCBCCBAAABAABCBBCACBBACCCBAACABBCBBCCBA
+- Combined topics (88 Q): Ethics 12, FSA 12, Equity 12, FI 12, Quant 8, Econ 8, Corp 8, Deriv 8, Alt 4, PM 4 (same split as Mock 11 + 12).
+- Mock 15: Equity 2 (s1a-kim unsolved RI, eq5-sparrow unsolved RI; both names/numbers changed), FSA 2 (ic1-1, fsa4-nanlife), Econ 1 (re-skin of the missed eg29-amaral growth vignette), PM 1 (ap-robbin), FI 1 (cds-6), Deriv 1 (d28-megaarb), Quant 1 (ts-rudall), Corp 1 (m2-3), Ethics 1 unit (key notes). Mock 16: Quant 1 (ts-busse), Alt 1 (re-delphinus2), Equity 1 (eq1-santos), FSA 1 (libra), Deriv 1 (m2-7), Econ 1 (re-skin of the missed golden-island vignette, Mock 7 Q20), Corp 1 (marker-esg), FI 2 (af-wenger, ca-wong), Ethics 2 units (key notes).
+- Method: bank/exam/mock1516_pick.py (draw, OS random), mock1516_src/e1..e18.py (one block per vignette: names and numbers changed, every calculation recomputed with asserts, listed items renumbered, text no question uses cut, 4 questions kept), assemble.py (order without neighbours of the same subject, answer positions balanced and no run of 4, Ethics units drawn from unused key-notes Ethics vignette units and checked against every earlier body), build.py appends mock15 / mock16. Hints: every non-Ethics question has hl phrases + rule (checked in the build); the 12 Ethics questions have none (the app shades matching lines).
+- Not applied this time: the "replace simple definition questions by another concept of the same reading" step of the disguise rule.
+- yeta (Corp) was swapped for m2-3 because it is the same vignette type as Mock 11's Karsa (Corp); it stays unused and counts as a near-duplicate.
+- Remaining unused real vignettes after Mock 15 + 16 (4+ usable questions): Equity 36, FSA 18, Fixed Income 13, PM 14, Alt 11, Quant 3, Derivatives 3, Corp 2 (yeta is a near-duplicate of Karsa), Econ 0, Ethics 7 in the vignette bank (key-notes Ethics 4-question units still free: 10).
