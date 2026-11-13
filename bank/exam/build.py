@@ -339,6 +339,16 @@ for _mid in ('mock15','mock16'):
                     assert _ph in _v['body'] or _ph in _q['q'],(_mid,_n,_ph)
             assert len(set(_q['options']))==3 and 0<=_q['answer']<3,(_mid,_n)
     HH.update(_d['hints']); sets.append(_st); print(_mid,_n,_d['key'])
+# ---- Mock 17 (13 Nov): questions the user got wrong in Mocks 6-10, names and numbers changed (bank/exam/mock17_src/) ----
+_d=json.load(open('/home/user/jimin/bank/exam/mock17.json')); _st=_d['set']; _n=0
+for _v in _st['vignettes']:
+    for _q in _v['questions']:
+        _n+=1; _h=_d['hints'][f'mock17:{_n}']
+        for _ph in _h['hl']:
+            if _ph.startswith('@row:'): continue
+            assert _ph in _v['body'] or _ph in _q['q'],('mock17',_n,_ph)
+        assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mock17',_n)
+HH.update(_d['hints']); sets.append(_st); print('mock17',_n,_d['key'])
 # ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
 _d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
 for _st in _d['sets']:

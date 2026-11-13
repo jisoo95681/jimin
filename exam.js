@@ -8887,7 +8887,7 @@ const EXAM_SETS = [
  },
  {
   "id": "mock14",
-  "rev": 1,
+  "rev": 2,
   "resetHl": [],
   "title": "Mock 14",
   "kind": "mock",
@@ -9381,14 +9381,14 @@ const EXAM_SETS = [
     "body": "Tomas Eklund, CFA, is a portfolio manager at a Swedish asset manager.\n\nMacroeconomic factor model. Eklund uses a two-factor macroeconomic model for an equity portfolio:\n\nR = a + b_GDP × F_GDP + b_INF × F_INF + ε\n\nThe intercept a is 2.10%, the sensitivity to GDP growth surprises (b_GDP) is 0.90 and the sensitivity to inflation surprises (b_INF) is −0.40. Eklund's view is that the surprises will be +0.60% for GDP growth and +0.50% for inflation.\n\nActive manager skill. Eklund evaluates an active equity manager who has a transfer coefficient of 0.60 and an information coefficient of 0.08. The manager makes 64 independent bets a year.\n\nRisk. The portfolio is worth SEK500 million. Its expected daily return is 0.04% and the daily standard deviation is 1.20%. Eklund estimates the one-day 5% value at risk (VaR) with the parametric method, assuming normally distributed returns, and uses a z-score of 1.65.",
     "questions": [
      {
-      "q": "Based on Eklund's view of the factor surprises, the expected return of the portfolio is closest to:",
+      "q": "Based on Eklund's view of the factor surprises, the portfolio's return over the period is forecast to be closest to:",
       "options": [
        "2.10%.",
        "2.44%.",
        "2.84%."
       ],
       "answer": 1,
-      "why": "A. Incorrect. This is the intercept, which is the expected return only if all factor surprises are zero.\nB. Correct. Expected return = 2.10% + 0.90 × 0.60% + (−0.40) × 0.50% = 2.44%.\nC. Incorrect. This treats the inflation sensitivity as positive: 2.10 + 0.54 + 0.20 = 2.84%."
+      "why": "A. Incorrect. This is the intercept, which is the EXPECTED return of the macroeconomic factor model (the value when all factor surprises are zero); it does not include Eklund's surprises.\nB. Correct. Return given the surprises = 2.10% + 0.90 × 0.60% + (−0.40) × 0.50% = 2.44%.\nC. Incorrect. This treats the inflation sensitivity as positive: 2.10 + 0.54 + 0.20 = 2.84%."
      },
      {
       "q": "The manager's expected information ratio is closest to:",
@@ -10443,6 +10443,545 @@ const EXAM_SETS = [
       ],
       "answer": 0,
       "why": "A. Correct. Correct. Weak governance (one independent director, little diversity, little industry experience) and social risk (low pay, no benefits, rising minimum wage) raise costs and cash flow risk, so the credit spread rises.\nB. Incorrect. Incorrect. Higher ESG risk does not lower the spread.\nC. Incorrect. Incorrect. The identified ESG risks affect the valuation, so the spread does not stay unchanged."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mock17",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock 17",
+  "kind": "mock",
+  "minutes": 135,
+  "desc": "The questions you got wrong in Mocks 6-10, rebuilt with new names and numbers (45 questions, 13 vignettes, 2 h 15 min)",
+  "vignettes": [
+   {
+    "topic": "Economics",
+    "body": "Part 1\nPalm Reef is a small island economy that depends on tourism and fishing. The island is governed by a Governor General, a parliamentary body of elected legislators, and a couple of agencies to regulate the island's economic and social environment. A series of hurricanes has pushed the economy into a recession, with falling output and rising unemployment. Hana Okafor is the island's Minister of Finance and president of the Central Bank. She assures the committee studying the recovery that the central bank stands ready to use monetary tools to stimulate the economy.\n\nPart 2\nMona Keller is an analyst at Bluestone Fixed-Income Advisors, a fixed-income investment management firm located in Chicago, IL. Bluestone manages a variety of fixed-income strategies, primarily for institutional clients. Keller provides economic research to portfolio managers by analyzing economic data and advising how these data may influence various segments of the fixed-income markets.\n\nAt the investment committee meeting, Keller recommends purchasing United Kingdom inflation-linked government bonds. In her discussion, she makes the following statements about inflation-linked bonds:\n\nStatement 1: \"The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about the quantity of goods and services investors will be able to consume in the future.\"\nStatement 2: \"Increases in uncertainty about future inflation are associated with lower break-even inflation rates.\"\nStatement 3: \"The break-even inflation rate incorporates the yield difference between longer dated and shorter dated inflation-linked bonds.\"\n\nLloyd Redfield, a portfolio manager on the foreign bond team, asks Keller to review the current business cycle and yield curve in Australia. The Australian economy entered a recession approximately 6 months ago, and the Australian Central Bank has been reducing its policy rate. Keller expects the Australian economy to gradually improve over the next 6-12 months.\n\nGiven the ongoing recession in Australia, Redfield is reviewing Australian corporate bonds with the same five-year maturity held in the foreign bond strategy. The three bonds being reviewed are listed in Exhibit 1. Redfield agrees with Keller's assessment of the Australian economy.\n\nExhibit 1: Australia Corporate Bond Holdings\n# Bond | Credit Rating | Sector | Probability of Default | Estimated Recovery Rate | Spread over Government Bonds\nA | A | Consumer Staples | 0.4% | 45% | 170 bps\nB | BBB– | Consumer Discretionary | 1.8% | 40% | 310 bps\nC | BB | Industrial | 3.2% | 50% | 590 bps\n\nBased on this information, Redfield makes the following comments to Keller regarding the Australian bonds:\nComment 1: You can calculate the expected loss by multiplying the probability of default by the recovery rate.\nComment 2: Relative to bond B and bond C, bond A has likely experienced the worst price return over the last 9 months.\nComment 3: Based on your economic forecasts, in 6-12 months overall credit spreads should narrow and the rate of improvement will likely be greatest for bond C.\n\nPart 3\nAt an international finance and economics conference in Lagos, Nigeria, Diego Paredes of Peru and Linh Tran of Vietnam are discussing how to spur their countries' economic growth. Although Tran recognizes that Vietnam lacks the significant natural resources that Peru has, she states that Vietnam can overcome this challenge by bolstering long-term growth through three channels:\n\nChannel 1: Making investments in technology\nChannel 2: Maintaining a low dong exchange rate\nChannel 3: Deepening the capital base",
+    "questions": [
+     {
+      "q": "Which of the following will Okafor most likely use to address the monetary issues relating to the recession on the island? The central bank will:",
+      "options": [
+       "sell domestic securities to the private sector.",
+       "buy domestic securities from the private sector.",
+       "raise the interest rate on loans to the private sector."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Selling securities reduces the money supply, which is the response to inflation, not recession.\nB. Correct. Correct. The threat is recession, so the central bank wants to expand the money supply: it will buy domestic securities from the private sector.\nC. Incorrect. Incorrect. Raising the rate on loans reduces the money supply."
+     },
+     {
+      "q": "Which of Keller's statements concerning inflation-linked bonds is most likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 3",
+       "Statement 2"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. The yield difference between nominal and inflation-linked bonds reflects expectations of and uncertainty about future inflation, i.e. about the quantity of goods and services investors can consume in the future.\nB. Incorrect. Incorrect. The break-even inflation rate is the yield difference between nominal and inflation-linked bonds of the same maturity, not between longer and shorter dated inflation-linked bonds.\nC. Incorrect. Incorrect. More uncertainty about future inflation is associated with HIGHER, not lower, break-even inflation rates."
+     },
+     {
+      "q": "Which of Redfield's comments regarding the Australian corporate bonds in Exhibit 1 is most likely correct?",
+      "options": [
+       "Comment 1",
+       "Comment 2",
+       "Comment 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Expected loss = probability of default × (1 − recovery rate): for bond B, 1.8% × (1 − 40%) = 1.08%.\nB. Incorrect. Incorrect. In a downturn, issuers with good ratings tend to outperform those with lower ratings as spreads between low and high quality widen, so bond A has not had the worst price return.\nC. Correct. Correct. When spreads are narrowing, the improvement is greatest for the weakest credits; bond C has the lowest rating, the highest default probability and the widest spread."
+     },
+     {
+      "q": "The channel that is least likely to help Vietnam overcome its challenge of lacking significant natural resources is:",
+      "options": [
+       "Channel 3.",
+       "Channel 2.",
+       "Channel 1."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Deepening the capital base raises output per worker and potential growth.\nB. Correct. Correct. A low exchange rate supports export demand but has little direct effect on the growth of aggregate supply; it is less powerful than capital deepening or technology.\nC. Incorrect. Incorrect. Investment in technology raises total factor productivity and long-term growth."
+     }
+    ]
+   },
+   {
+    "topic": "Derivatives",
+    "body": "Part 1\nBeat Hofmann is the CEO of the Rhine Foundation (\"the Foundation\"), an organization located in Zurich, Switzerland, whose mission is to support rural healthcare initiatives. The Foundation has a CHF220 million portfolio consisting entirely of actively managed Swiss equities. The portfolio manager, Anja Keller, is permitted to use derivatives to control risks within the portfolio and to synthetically alter positions without trading the underlying securities, many of which are somewhat illiquid.\n\nKeller tells Hofmann she is considering entering into a currency swap because the Foundation has a number of long-term contracts to purchase supplies and equipment for rural clinics and these contracts are priced in US dollars. She explains, \"A fixed-for-fixed currency swap would help reduce the risk from fluctuating USD/CHF exchange rates by providing fixed US dollar payments in exchange for fixed Swiss franc payments. I'm looking at a five-year swap with annual payments. I've done some analysis of this swap based on current Swiss and US interest rates and present value factors, which I'm providing to you in Exhibit 1.\"\n\nExhibit 1: Swiss and US Interest Rates and PV Factors\n# T | Swiss Treasury Yield (%) | Present Value CHF1 | US Treasury Yield (%) | Present Value USD1\n1 | 0.45 | 0.9955 | 3.10 | 0.9699\n2 | 0.60 | 0.9881 | 3.25 | 0.9380\n3 | 0.72 | 0.9787 | 3.38 | 0.9051\n4 | 0.85 | 0.9667 | 3.50 | 0.8714\n5 | 0.96 | 0.9534 | 3.60 | 0.8379\n\nPart 2\nInes Berger is CEO and chief investment officer of Hollis Capital, a registered investment advisory firm. She is working with Marco Tillman, head trader, and Priya Das, a new analyst. They meet to discuss option valuation methodologies in the context of the firm's use of derivatives to manage client portfolios.\n\nDas notes that the implied volatility of one call option on Weston stock is a given market input. With respect to other call options on Weston stock, Das states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Berger adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Tillman concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising.\n\nPart 3\nBerger next considers an American-style put option on Dunmore Corporation that matures in two years. She values it with a two-period binomial option pricing model and collects the relevant information in Exhibit 2. Dunmore does not pay dividends.\n\nExhibit 2: Binomial Inputs for the Dunmore Put\n# Item | Value\nCurrent share price of Dunmore | $90\nExercise price of Dunmore put option | $95\nRisk-free rate (compounded annually) | 3%\nUp factor (u) | 1.20\nDown factor (d) | 0.85\n\nPart 4\nTomas Lindgren is a derivatives trader for Northern Shores Investments. The firm seeks arbitrage opportunities in the forward and futures markets using the carry arbitrage model.\n\nLindgren identifies an arbitrage opportunity relating to a fixed-income futures contract and its underlying bond. Current data on the futures contract and underlying bond are presented in Exhibit 3. The current annual compounded risk-free rate is 0.50%.\n\nExhibit 3: Current Data for Futures and Underlying Bond\n# Item | Value\nFutures contract |\nQuoted futures price | 114.40\nConversion factor | 0.95\nTime remaining to contract expiration | Six months\nAccrued interest over life of futures contract | 0.00\nUnderlying bond |\nQuoted bond price | 108.20\nAccrued interest since last coupon payment | 0.10\nAccrued interest at futures contract expiration | 0.32",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the interest rate that the Foundation would receive in the proposed currency swap is closest to:",
+      "options": [
+       "0.96%.",
+       "3.37%.",
+       "3.58%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. This is the Swiss franc fixed rate, which the Foundation pays, not receives.\nB. Incorrect. Incorrect. This is the geometric average of the US interest rates, not the swap fixed rate.\nC. Correct. Correct. The Foundation's contracts are priced in US dollars, so it receives the US dollar fixed rate: (1 − PV5) ÷ ΣPV = (1 − 0.8379) ÷ (0.9699 + 0.9380 + 0.9051 + 0.8714 + 0.8379) = 0.1621 ÷ 4.5223 = 3.58%."
+     },
+     {
+      "q": "Whose comment regarding implied volatility is most likely correct?",
+      "options": [
+       "Tillman's",
+       "Berger's",
+       "Das's"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. When demand for hedging rises the skew steepens, so skew and smile do not have identical shapes.\nB. Incorrect. Incorrect. Implied volatility is backed out of market option prices and is forward looking; it is not calculated from historical volatility.\nC. Correct. Correct. The volatility surface shows implied volatility across both exercise prices and maturities."
+     },
+     {
+      "q": "Using the two-period binomial option pricing model, the value of the American put on Dunmore Corporation is closest to:",
+      "options": [
+       "$8.17.",
+       "$9.48.",
+       "$9.73."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is the European put value: it ignores early exercise at the down node.\nB. Correct. Risk-neutral probability = (1 + 0.03 − 0.85) ÷ (1.20 − 0.85) = 0.5143. Put payoffs at T = 2: 0 (129.6), 3.20 (91.8), 29.975 (65.025). Up node: 1.509. Down node: continuation value 15.73 but early exercise gives 95 − 76.5 = 18.50, so use 18.50. P0 = [0.5143 × 1.509 + 0.4857 × 18.50] ÷ 1.03 = $9.48.\nC. Incorrect. This uses risk-neutral probabilities of 0.5 instead of 0.5143: $9.73."
+     },
+     {
+      "q": "Based on Exhibit 3 and assuming annual compounding, the arbitrage profit on the bond futures contract is closest to:",
+      "options": [
+       "0.4285.",
+       "0.4296.",
+       "0.5285."
+      ],
+      "answer": 0,
+      "why": "A. Correct. No-arbitrage futures price = FV[B0 + AI0] = 1.005^0.5 × (108.20 + 0.10) = 108.5704. Adjusted futures price = 0.95 × 114.40 + 0.32 = 109.00. The contract is overpriced by 0.4296; the arbitrage profit is its present value: 0.4296 ÷ 1.005^0.5 = 0.4285.\nB. Incorrect. This does not discount the difference to today.\nC. Incorrect. This leaves out the accrued interest since the last coupon (0.10) when computing the no-arbitrage price."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nNina Falkner is an analyst working for Brightwave Investments, which manages a variety of investment funds. She analyzes the recent performance of Valmora Beverages SA, a multinational brewer of carbonated beverages that recently entered the energy drinks market. As a core holding, Valmora's prominence in Europe provides geographic diversification for Brightwave, which tends to be North-America-centric.\n\nFalkner and her team assess the quality of Valmora's overall performance. The consensus is positive, but Falkner disagrees with her team for the following reasons:\nReason 1: Income from operations is consistently higher than cash generated from operations.\nReason 2: The rate of fluctuation in the cash-flow-based accruals ratio is low.\nReason 3: Balance-sheet-based accruals are trending down relative to total assets.\n\nPart 2\nRosa Delgado works as a senior examiner for the Financial Supervisory Agency (FSA), and Tomas Weber is one of the analysts who reports to her. Weber is a new hire who previously worked at an investment firm that specialized in manufacturing companies. His first two weeks at the FSA were spent in training sessions focused on the Basel III regulatory framework for banks to prepare him for his new analyst role.\n\nAt today's weekly meeting, Delgado and her analysts are conducting a preliminary review of some of their assigned insurance institutions. Weber arrives early, so Delgado takes the opportunity to ask him to explain his understanding of the Basel III framework. Weber describes three enhancements that Basel III incorporated as part of its transition from the previous iteration:\n\nEnhancement 1: Additional measures to ensure sufficient earnings quality, thereby strengthening banks' regulatory capital.\nEnhancement 2: Increased funding stability by giving preference to interbank deposits over those from consumers.\nEnhancement 3: More stringent capital requirements that prevent banks from taking on excessive financial leverage.\nThe other analysts arrive, and the meeting gets underway. The group is scheduled to review an insurance company, Nordheim Holdings (NH), a property and casualty insurer. Delgado notes that the property and casualty market has been in a \"hard\" phase for a few years now, and she wonders whether the results will show the beginning of a cyclical shift.\n\nThe group reviews NH's profitability information that Weber has provided in Exhibit 1. Delgado asks Weber to calculate NH's combined ratio:\n\nExhibit 1: Excerpts from NH's Financial Statements (¥ billions)\n# Item | Value\nLoss expense and loss adjustment expense | 38,760\nNet premiums earned | 55,300\nNet premiums written | 49,800\nUnderwriting expense | 19,950",
+    "questions": [
+     {
+      "q": "Which of the following reasons best supports Falkner's disagreement with her team about Valmora's overall performance?",
+      "options": [
+       "Reason 1",
+       "Reason 3",
+       "Reason 2"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Income from operations is higher quality when it is backed by cash flow; operating income consistently above operating cash flow calls its quality into question.\nB. Incorrect. Incorrect. Downward-trending accruals give less opportunity for manipulation.\nC. Incorrect. Incorrect. A steady cash-flow-based accruals ratio is unlikely to raise concerns; erratic or rising accruals would."
+     },
+     {
+      "q": "Which of the enhancements Weber describes regarding the Basel III regulatory framework is most accurate?",
+      "options": [
+       "Enhancement 2",
+       "Enhancement 1",
+       "Enhancement 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Basel III raised stable-funding requirements, but consumer deposits are considered more stable than interbank deposits.\nB. Incorrect. Incorrect. Earnings quality was not a focus of Basel III.\nC. Correct. Correct. After the 2008 crisis Basel III raised the equity funding required against risk-weighted assets, which prevents banks from taking on excessive financial leverage."
+     },
+     {
+      "q": "If Delgado's interpretation of the current phase of the property and casualty market is correct, a cyclical shift is most likely to result in:",
+      "options": [
+       "capital adequacy being easier to achieve.",
+       "additional competitors entering the market.",
+       "a tightening of underwriting standards."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Hard markets help insurers keep adequate capital; capital depletes as the market softens.\nB. Correct. Correct. In a hard market premiums, profits and underwriting standards are high; this attracts competitors offering lower premiums, which softens the market.\nC. Incorrect. Incorrect. In a hard market underwriting standards are already high; as the market softens they loosen."
+     },
+     {
+      "q": "NH's combined ratio indicates that its underwriting business, before investment income, is:",
+      "options": [
+       "unprofitable, because claims and expenses exceed the premiums.",
+       "profitable, because the loss ratio is below 100%.",
+       "break-even, because the combined ratio is measured on net premiums written."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Loss ratio = 38,760 ÷ 55,300 = 70.1% (premiums earned); expense ratio = 19,950 ÷ 49,800 = 40.1% (premiums written); combined ratio = 110.2% > 100%, so claims and expenses exceed premiums and investment income must cover the loss.\nB. Incorrect. Incorrect. The loss ratio alone ignores the underwriting expense ratio; the combined ratio adds both.\nC. Incorrect. Incorrect. The combined ratio is not defined on net premiums written alone, and a figure above 100% is not break-even."
+     }
+    ]
+   },
+   {
+    "topic": "Ethical and Professional Standards",
+    "body": "Part 1\nNiamh Gallagher, CFA, who is based in Dublin, runs the asset management firm that manages the assets for the Bright Futures Social Impact Private Equity Fund (the Fund), which is registered in Ireland. The general partner of the Fund has asked Gallagher to meet with Greta Sundberg, CFA, a pension asset consultant, to find out whether Sundberg will pitch the Fund to her institutional clients looking for an environmental, social, and governance (ESG) approach.\n\nDuring an introductory meeting that lasts about an hour, Sundberg asks Gallagher to give an overview of the Fund. Gallagher makes the following statement:\n\n\"Let me explain how we select investments. I'll give you the prospectus, too, for your further reference, because it contains all the details, and they're quite extensive. We identify potential investments from around the globe through our own analysts' research within the education and health care industries. We also use third-party agents to find potential investments. If we make an investment in the companies they present to us, we pay them a finder's fee. One such agent we use is Impact Alliance Consultants, an asset consulting firm that has adopted the CFA Institute Code and Standards.\"\n\nPart 2\nJonas Pettersen, CFA, is a portfolio manager at Corbett Investment Management, an asset management and research focused organization.\n\nPettersen joins the board of Chatterly.com, a smaller social media competitor to Skyrelay. Based on his knowledge of Skyrelay, Pettersen believes the stock of Chatterly is a good investment, even though it is not yet profitable. Pettersen purchases shares of Chatterly's IPO for all the clients he currently manages.\n\nThe Chatterly investment is profitable on the first day of trading, doubling from its opening price. Corbett's research report, due out the next day, will recommend investors hold their Chatterly shares, because the multifactor valuation model used by Corbett shows the stock is still undervalued. However, Pettersen tells all his clients simultaneously they should sell their shares because he believes Chatterly is overvalued and the stock price will fall soon. Pettersen notes he has followed through on this belief by selling his personal holdings of Chatterly shares. Over the next week, the stock declines 75%.\n\nPart 3\nRodrick Valdes, CFA, is a senior research analyst at TTN Capital, a large full-service brokerage and investment firm. Valdes is invited to an analyst conference hosted by Orion Data Centers, a company covered by Valdes. Orion arranges to pay for the commercial flights for all analysts attending the conference. Orion also provides a company-branded notebook as a gift to all analysts who attend the conference. Valdes accepts the travel arrangement and the gift.",
+    "questions": [
+     {
+      "q": "Given Gallagher's statement to Sundberg, which further action should Gallagher least likely take to comply with required or recommended procedures for the CFA Institute Standards of Professional Conduct?",
+      "options": [
+       "Monitor the consultants' compliance policy execution.",
+       "Notify clients of the finder's fee policy on an annual basis.",
+       "Disclose the finder's fee arrangement in the fund prospectus."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Impact Alliance claims to follow the Code and Standards; under Standard I(A) Gallagher must not knowingly assist others in violations, so she should seek assurance that they also disclose referral fees.\nB. Correct. Correct. Recommended procedures for Standard VI(C) Referral Fees are to notify clients at least quarterly, not annually.\nC. Incorrect. Incorrect. The use of finder's fees should be disclosed in the prospectus to comply with Standard VI(C)."
+     },
+     {
+      "q": "In relation to Pettersen's handling of the Chatterly stock recommendation, which of the following CFA Institute Standards of Professional Conduct did he least likely violate?",
+      "options": [
+       "Priority of Transactions",
+       "Fair Dealing",
+       "Communication with Clients"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. He violated Standard VI(B) Priority of Transactions: clients hold the same stock and should have priority to trade; he sold his personal holdings after telling clients to sell, instead of letting client transactions come first.\nB. Correct. Correct. Under Standard III(B) he treated all clients fairly: his sell recommendation was given to all of his clients simultaneously.\nC. Incorrect. Incorrect. Under Standard V(B) he should have distinguished fact from opinion and disclosed the basis of his analysis, including that it contradicts the firm's research recommendation."
+     },
+     {
+      "q": "Does Valdes violate the Standards regarding the Orion conference?",
+      "options": [
+       "No",
+       "Yes, by accepting the travel arrangement only",
+       "Yes, by accepting the travel arrangement and the gift"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Accepting paid travel does violate the Standard.\nB. Correct. Correct. Under Standard I(B) Independence and Objectivity, best practice is to use commercial transportation at one's own or the firm's expense rather than accept paid travel; a modest branded gift is acceptable.\nC. Incorrect. Incorrect. A company-branded notebook is a token item of nominal value; accepting it does not compromise independence."
+     }
+    ]
+   },
+   {
+    "topic": "Corporate Issuers",
+    "body": "Part 1\nHelen Brandt is an analyst at Cedar Fund covering the real estate and energy sectors. She and her colleague are analyzing two companies that are currently held by the fund.\n\nThe first company is Kestrel Corp., a publicly traded, national retail grocery store chain that has 2,400 physical stores. Kestrel leases most of its grocery stores and all of its office locations that help the company achieve its core business of operating grocery stores in all markets of the United States. Kestrel also owns the real estate (land and building) associated with 95 physical store locations. Kestrel recently announced that its board of directors approved a strategic real estate plan to pursue a separation of all its owned assets. The company currently has a speculative-grade credit rating.\n\nThe separation would be achieved through a series of sale-leaseback transactions with real estate investment trusts (REITs) that specialize in owning retail properties. Under the plan, Kestrel will sell its 95 owned grocery stores and lease them for 20-year terms with a combined annual rent expense of USD41 million. Kestrel expects to receive cash proceeds of approximately USD780 million from the property sales, which will be used to retire approximately USD560 million of debt and repurchase 4 million common shares. Kestrel believes the pro forma capital structure following the transactions will enable it to receive an investment-grade credit rating.\n\nPart 2\nDaniel Reyes, CFA, is a fixed-income analyst for the Alpine Funds. His supervisor asks him to identify ESG factors and value the corporate bonds of GreenLeaf Hotels, a publicly traded boutique hotel company. Reyes notes that GreenLeaf is a \"green hotel\" company that prioritizes sustainability and has successfully reduced water and energy usage at its hotels. Its widely held shares each carry equal voting rights. The board of directors of GreenLeaf consists of 12 members, with independent CEO and chairperson roles. Nine of the board members are independent, five are women, and seven have experience in the hotel industry.\n\nGreenLeaf has a low labor turnover rate. Most of its workforce are paid above the local living wage, and the company offers health benefits. Reyes and his supervisor discuss how GreenLeaf will be affected by the expected passage of legislation raising the minimum wage and growing pressure to offer benefits. Reyes integrates ESG factors in the investment valuation of GreenLeaf's corporate bonds.\n\nPart 3\nSofia Tanaka is a chemical industry analyst for a global investment firm. Tanaka is researching the impact of environment, social, and governance (ESG) issues as they relate to Verdana Chem LLC (Verdana) and Polymex Corp (Polymex). She summarizes the companies' ownership and governance structures in Exhibit 1.\n\nExhibit 1: Ownership and Governance Structures\n# Item | Verdana | Polymex\nTotal number of directors | 15 | 10\nNumber of independent directors | 10 | 5\nTwo-tiered board | No | Yes\nCEO duality | No | Yes\nAverage board tenure | 11 years | 9 years\nIndependent committees: | |\nAudit | Yes | No\nCompensation | Yes | Yes\nDirector selection | Yes | Yes\n\nTo evaluate the corporate governance policies and procedures of the two companies, Tanaka considers the rankings provided by an independent ESG data analysis firm specializing in board and governance structure.\n\nThe ESG data analysis firm uses a scoring system awarding one point for favorable characteristics among the following:\n\nCEO duality is absent.\nAverage board tenure is below ten years.\nFor board independence, a two-tiered board is considered favorable. A simple majority of independent directors is generally favorable. However, in a one-tiered board which is considered unfavorable, a 60% majority of independent directors is the favorable threshold.\nIndependent committees for audit, compensation and director selection are present (1 point for the presence of each independent committee).",
+    "questions": [
+     {
+      "q": "Which of the following statements about Kestrel's motivations for the strategic real estate plan is incorrect?",
+      "options": [
+       "The expected change in Kestrel's credit rating after the transactions will increase the firm's costs of capital.",
+       "The transactions will allow Kestrel to unlock the value of its real estate assets.",
+       "The transactions will enable Kestrel to sell a non-core business."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Retiring debt should improve the credit rating, which lowers (not raises) the cost of capital, so this statement is incorrect.\nB. Incorrect. Incorrect. Sale-leasebacks unlock the value in the real estate: Kestrel receives cash and records a lease liability.\nC. Incorrect. Incorrect. Owning real estate is not Kestrel's core business (operating grocery stores), so this statement is correct."
+     },
+     {
+      "q": "After integrating the ESG factors, the credit spread on GreenLeaf's bonds is most likely to:",
+      "options": [
+       "remain unchanged.",
+       "decrease.",
+       "increase."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Strong ESG factors affect the valuation: the spread does not stay unchanged.\nB. Correct. Correct. GreenLeaf has strong governance (nine of 12 directors independent, separate CEO and chair, diversity, industry experience) and low social risk (low turnover, living wage, health benefits). Lower ESG risk lowers investors' perception of risk, so the credit spread is likely to decrease.\nC. Incorrect. Incorrect. The ESG factors here are favorable, not adverse."
+     },
+     {
+      "q": "Based on the ESG data analysis firm's scoring system and Exhibit 1, compared to Polymex, Verdana most likely ranks:",
+      "options": [
+       "higher.",
+       "lower.",
+       "the same."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Verdana: independent 10 ÷ 15 = 67% ≥ 60% for a one-tier board (1), two-tiered board (0), CEO duality absent (1), tenure 11 years (0), audit (1), compensation (1), director selection (1) = 5. Polymex: independent 5 ÷ 10 = 50% is not a majority (0), two-tiered (1), CEO duality present (0), tenure 9 years (1), audit (0), compensation (1), director selection (1) = 4.\nB. Incorrect. Incorrect. Verdana scores 5 points and Polymex 4.\nC. Incorrect. Incorrect. The totals differ: 5 versus 4 points."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nThandi Mokoena, CFA, a senior equity analyst with Karoo Capital, South Africa, has been assigned a recent graduate, Lerato Sithole, to assist in valuations. Sithole is interested in pursuing a career in equity analysis. In their first meeting, Mokoena and Sithole discuss the concept of residual income and its commercial applications. Mokoena asks Sithole to determine the market value added for a hypothetical South African firm using the data provided in Exhibit 1.\n\nExhibit 1: Hypothetical Firm Data (amounts in South African rand)\n# Item | Value\nCurrent share price | R31.80\nBook value per share | R24.50\nTotal shares outstanding | 40 million\nMarket value of debt | R70 million\nAccounting book value of total capital | R880 million\nIntrinsic share value of equity derived from residual income model | R21.60\n\nMokoena also shares her valuation report of the hypothetical firm with Sithole. Her report concludes that the intrinsic value of the hypothetical firm, based on the residual income model, is R21.60 per share. To assess Sithole's knowledge of residual income valuation, Mokoena asks Sithole a question about the hypothetical firm:\n\nQuestion 1:\nWhat conclusion can we make about future residual earnings given the current book value per share and my estimate of intrinsic value per share?\n\nPart 2\nElise Brandt is a junior analyst with Corvale Capital, a long-only equity investment manager. She has been asked to value a stock on Corvale's watch list, Tavistock Ltd. (TVK), using a multistage residual income model. Selected data and assumptions for TVK are presented in Exhibit 2.\n\nExhibit 2: Tavistock Ltd. (TVK) Selected Financial Data and Assumptions\n# Item | Value\nBook value per share | €38.40\nCost of equity | 9.20%\n\nBrandt forecasts TVK's ROE to be higher than its long-term ROE for the first three years. Forecasted earnings per share and dividends per share for TVK are presented in Exhibit 3. The terminal value is based on an assumption that residual income per share will be constant from Year 3 into perpetuity.\n\nExhibit 3: Tavistock Ltd. (TVK) Forecasts of Earnings and Dividends\n# Item | Year 1 | Year 2 | Year 3\nEarnings per share (€) | 6.55 | 6.90 | 7.28\nDividends per share (€) | 1.20 | 1.28 | 1.35",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the market value added of the hypothetical firm is closest to:",
+      "options": [
+       "R292 million.",
+       "R392 million.",
+       "R462 million."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This is (price − book value per share) × shares: (31.80 − 24.50) × 40 = R292 million; it is not the market value added.\nB. Incorrect. This leaves out the market value of debt: 40 × 31.80 − 880 = R392 million.\nC. Correct. Market value added = market value of the firm − accounting book value of total capital. Market value of the firm = R70 million + 40 million × R31.80 = R1,342 million; MVA = 1,342 − 880 = R462 million."
+     },
+     {
+      "q": "The most appropriate response to Mokoena's Question 1 would be that the present value of future residual earnings is expected to be:",
+      "options": [
+       "negative.",
+       "positive.",
+       "zero."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. The intrinsic value of R21.60 is lower than the book value of R24.50. Intrinsic value = book value per share + PV of expected residual income, so the PV of expected residual income is negative.\nB. Incorrect. Incorrect. Intrinsic value is below book value per share, so the present value of future residual income cannot be positive.\nC. Incorrect. Incorrect. Zero residual income would make intrinsic value equal to book value."
+     },
+     {
+      "q": "Based on Exhibits 2 and 3 and the multistage RI model, Brandt should estimate the intrinsic value of TVK to be closest to:",
+      "options": [
+       "€43.57.",
+       "€66.43.",
+       "€68.53."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This leaves out the terminal value: 38.40 + 2.76 + 2.41 = €43.57.\nB. Incorrect. This discounts the terminal value over three years instead of two: €66.43.\nC. Correct. RI = EPS − 9.2% × beginning book value: Year 1 3.02, Year 2 2.88 (book value 43.75), Year 3 2.74 (book value 49.37). PV of terminal value = (2.74 ÷ 0.092) ÷ 1.092² = 24.96. V0 = 38.40 + 3.02 ÷ 1.092 + 2.88 ÷ 1.092² + 24.96 = €68.53."
+     }
+    ]
+   },
+   {
+    "topic": "Financial Statement Analysis",
+    "body": "Part 1\nLinnea Strand, a financial analyst, is examining the most recent annual financial report of Harcourt Ltd., a mature U.K.-based company that complies with IFRS. Strand wants to evaluate the quality of the company's financial reports for the purpose of making an investment recommendation to her firm.\n\nStrand next examines Harcourt's underfunded defined benefit pension plan and observes that the plan's discount rate assumption is 0.6% higher than its industry competitors' discount rates. For comparison purposes, Strand adjusts Harcourt's financial statements before computing the company's financial ratios.\n\nPart 2\nOskar Brandt is a financial analyst who is examining the most recent annual report of Pellworth Inc., a US-based company that complies with US GAAP. Brandt wants to determine Pellworth's ROE as well as the trend in its ROE components by using DuPont analysis. Data used for this purpose is presented in Exhibit 1.\n\nExhibit 1: DuPont Data for Pellworth\n# Item | Most Recent Year | Previous Year | Two Years Ago\nRevenue (USD million) | 840 | 800 | 767\nTotal liabilities (USD million) | 350 | 340 | 340\nTotal asset turnover ratio | 1.20 | 1.25 | 1.30",
+    "questions": [
+     {
+      "q": "Compared with its industry competitors, Harcourt's pension discount rate assumption is most likely:",
+      "options": [
+       "aggressive, because it lowers the reported pension obligation.",
+       "conservative, because it raises the reported pension expense.",
+       "neutral, because the plan is underfunded in any case."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. A discount rate above peers lowers the present value of the pension obligation (and the reported expense), so the underfunding is understated: the assumption is aggressive.\nB. Incorrect. Incorrect. A higher discount rate lowers, not raises, the reported obligation and expense.\nC. Incorrect. Incorrect. The assumption changes the measured size of the deficit, so the plan being underfunded does not make it neutral."
+     },
+     {
+      "q": "With respect to the defined benefit pension plan assumption, which of the following will decrease after Strand's adjustment?",
+      "options": [
+       "Book value per share",
+       "Financial leverage ratio",
+       "Debt-to-equity ratio"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. A lower discount rate raises the obligation and deepens the underfunding; equity (through accumulated other comprehensive income) falls while the number of shares is unchanged, so book value per share decreases.\nB. Incorrect. Incorrect. Total assets are unchanged and equity falls, so assets ÷ equity (financial leverage) increases.\nC. Incorrect. Incorrect. Strand lowers the discount rate by 0.6%: the obligation rises, total debt rises and equity falls, so debt-to-equity increases."
+     },
+     {
+      "q": "Based on the 3 years of data provided for DuPont analysis, Pellworth's financial leverage has been:",
+      "options": [
+       "stable.",
+       "trending higher.",
+       "trending lower."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. The ratio moves in one direction every year, so it is not stable.\nB. Incorrect. Incorrect. Assets ÷ equity falls from 2.36 two years ago to 2.00 in the most recent year.\nC. Correct. Correct. Total assets = revenue ÷ asset turnover: 840 ÷ 1.20 = 700; 800 ÷ 1.25 = 640; 767 ÷ 1.30 = 590. Equity = assets − liabilities: 350; 300; 250. Financial leverage = assets ÷ equity: 2.00; 2.13; 2.36 (most recent to oldest), so leverage has been trending lower over time."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Part 1\nCrestline Investment Partners is a global asset management firm offering a wide variety of mutual funds to both institutional and individual investors. Victor Hallman, Crestline's chief risk officer, is responsible for risk oversight across the firm's many strategies, as well as communication of any risk issues to the portfolio management, compliance, and executive teams. Hallman oversees a team of six analysts who are responsible for the ongoing calculation and assessment of portfolio risk. Crestline uses a variety of methods when estimating risk, including value at risk (VaR), sensitivity risk measures, and scenario risk measures.\n\nJoanna Weiss just joined Crestline as a risk analyst, and Hallman is familiarizing her with how the firm measures portfolio risk. In a conversation with Weiss, Hallman asks her what she has learned regarding the advantages of using VaR as a risk management tool. Weiss responds, \"The advantages of VaR are that it (1) provides an estimate of downside exposure during a worst-case scenario, (2) avoids subjectivity, and (3) can be used for performance evaluation.\"\n\nLater that day, Weiss receives an email from Hallman asking her to estimate the dollar VaR at the 5% level for the firm's emerging market equity fund. Weiss estimates VaR using the parametric method (assuming normal distribution).\n\nPart 2\nPrime Advisers is a registered investment advisory firm that uses exchange-traded funds (ETFs) for its clients' investment portfolios. Karl Brandt is CEO and chief investment officer of Prime. Dana Wells, a prospective client, is a high-net-worth individual who is considering transforming her actively managed portfolio of individual stocks and bonds into actively managed and passive ETFs.\n\nWells wants to maintain the current blended stock and bond benchmark allocations following her portfolio's transition from individual stocks and bonds to active and passive ETFs. Brandt states that whenever active ETF managers implement active views, gaps with respect to desired market exposures may result. For Wells's portfolio, Brandt plans to use passive ETFs to maintain benchmark exposure should any of the active ETF managers implement active views that cause changes in the portfolio's industry sector weightings. Passive ETFs will enable Brandt to maintain benchmark exposure while not necessarily replacing an active ETF manager.",
+    "questions": [
+     {
+      "q": "Weiss's comments on the advantages of VaR are most likely correct regarding:",
+      "options": [
+       "subjectivity.",
+       "performance evaluation.",
+       "downside exposure."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. VaR relies on subjective inputs: the confidence level, the time horizon and the estimation method.\nB. Correct. Correct. VaR can be the basis for risk adjustment of returns, which is needed in performance evaluation.\nC. Incorrect. Incorrect. VaR is not a worst-case scenario; losses can and will exceed VaR."
+     },
+     {
+      "q": "A limitation of the parametric method that Weiss used to estimate VaR is that it:",
+      "options": [
+       "assumes returns are normally distributed, which fits poorly with fat tails and options.",
+       "uses actual past returns, so it cannot capture new risks.",
+       "requires a large number of random scenarios to be generated."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. The parametric method assumes a normal distribution, which understates tail risk and does not suit portfolios with options.\nB. Incorrect. Incorrect. Using actual past returns describes the historical simulation method.\nC. Incorrect. Incorrect. Generating random scenarios describes Monte Carlo simulation."
+     },
+     {
+      "q": "Brandt's explanation of benchmark exposure most likely describes portfolio:",
+      "options": [
+       "liquidity management.",
+       "rebalancing.",
+       "completion strategies."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Liquidity management uses ETFs to invest excess cash and reduce cash drag.\nB. Incorrect. Incorrect. Rebalancing uses ETFs to return to target weights when market values drift.\nC. Correct. Correct. Completion strategies use ETFs to fill temporary gaps in exposure that arise when an active manager moves away from the benchmark exposure, while keeping that manager."
+     }
+    ]
+   },
+   {
+    "topic": "Equity Valuation",
+    "body": "Part 1\nColm Rafferty is an equity analyst at an investment bank. He is preparing updated research reports on two companies, Orlan Incorporated and Dunmore Company.\n\nDunmore Company\nRafferty next reviews Dunmore, which operates in a previously mature industry that now has high growth potential due to a recent technological innovation. Dunmore's debt-to-equity ratio is significantly higher than the average of its competitors. Dunmore spent heavily on advertising to create and maintain its brand, which is an important asset. The company is favored by many investors because its dividend payout ratio is the highest in its industry. Rafferty considers several potential metrics to use in valuing Dunmore.\n\nPart 2\nThe Westfield Club is a small US investment club formed by a group of friends who recently graduated from university. At today's regular bimonthly meeting, two members present new companies for the club to analyse. The club uses a combination of comparables and forecasted fundamentals to make its investment decisions.\n\nUsing NYSE data, Quinn finds the average P/E for the Household Goods Index (14.8) and for its Packaged Foods sector (29.6). She then screens that sector for other small packaged foods producers to build her own index. Partial results are shown in Exhibit 1.\n\nExhibit 1: Partial Results of Market Screen: Quinn's Index\n# Company | Market cap (US$ millions) | P/E\nAlder Inc. | 8.20 | 14.5\nBrant Industries Inc. | 31.40 | 10.6\nCobb Brothers Co. | 480.00 | 6.2\nDyer Foods Ltd. | 690.50 | 21.8\nElm Delights Inc. | 520.10 | 16.3\n\nQuinn observes that Dyer Foods must have both a higher-than-average growth rate and lower-than-average risk to justify its high P/E, and suggests the club look at Dyer at its next meeting.\n\nThe members discuss the wide range of market capitalisations and P/Es in Quinn's index and whether the arithmetic mean is the best value to use. Quinn decides to calculate the weighted harmonic mean of the index and says:\n\n\"The harmonic mean can be used to mitigate the effects of both large and small outliers.\"",
+    "questions": [
+     {
+      "q": "Which of the following is the most appropriate metric for Rafferty to use in valuing Dunmore?",
+      "options": [
+       "Dividend yield",
+       "Enterprise value to sales ratio",
+       "Price to book ratio"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Dividend yield ignores capital gains, which matter with the growth potential, and the highest payout in the industry may not be safe.\nB. Correct. Correct. EV/sales uses the total value of debt and equity, so it suits Dunmore's high debt-to-equity ratio; sales are stable and hard to manipulate.\nC. Incorrect. Incorrect. Book value ignores Dunmore's brand, an internally generated intangible asset built by advertising that is not on the balance sheet."
+     },
+     {
+      "q": "Quinn's observation about Dyer Foods' high P/E is best described as:",
+      "options": [
+       "incorrect with respect to the growth rate.",
+       "correct.",
+       "incorrect with respect to the risk."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. She is right on growth: higher expected growth justifies a higher P/E.\nB. Incorrect. Incorrect. Higher expected growth does justify a higher P/E, but the risk part is wrong.\nC. Correct. Correct. A LOWER-than-average risk (lower required return) would justify a higher P/E; higher risk raises the required return and justifies a lower P/E. She is wrong on the risk."
+     },
+     {
+      "q": "The weighted harmonic mean of the P/Es in Quinn's index (Exhibit 1) is closest to:",
+      "options": [
+       "12.0.",
+       "13.9.",
+       "15.6."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Weighted harmonic mean = total market cap ÷ Σ(market cap ÷ P/E) = 1,730.2 ÷ 144.53 = 12.0.\nB. Incorrect. This is the simple arithmetic mean of the five P/Es: 13.9.\nC. Incorrect. This is the market-cap weighted arithmetic mean: 15.6."
+     }
+    ]
+   },
+   {
+    "topic": "Quantitative Methods",
+    "body": "Part 1\nCredit industry analyst Nora Blake has been assigned the task of forecasting auto loan defaults. Specifically, Blake is asked to forecast the percentage of outstanding auto loans that will default in the coming quarter. Blake decides to employ multiple linear regression and time series analysis.\n\nResearch Question: Is the default share significantly affected by government relief policies?\n\nTo measure the effects of government relief in the research question, Blake uses a dummy variable that equals 1 whenever the Federal government enacted a relief package that exceeded 1% of annual Gross Domestic Product. Blake sets the dummy variable equal to 1 for four quarters starting with the quarter in which the package is enacted and extending through the following 3 quarters. Otherwise, the dummy variable equals zero. Blake uses quarterly data over the past 5 years to derive her regression. Blake's regression equation is provided in Exhibit 1:\n\nExhibit 1: Default Share Regression Equation\ndefault share = b0 + b1(dUNEM) + b2(RELIEF) + b3(SHOCK) + e\nwhere: default share = the percentage of all outstanding auto loans in default during the quarter; dUNEM = the quarterly change in the unemployment rate (e.g., dUNEM = 2 for a two percentage point increase); RELIEF = 1 for quarters in which a Federal relief package was in place; SHOCK = 1 for quarters in which the median used-car price is one standard deviation below its 5-year moving average.\n\nThe results of Blake's regression are provided in Exhibit 2:\n\nExhibit 2: Default Share Regression Results\n# Variable | Coefficient | t-statistic\nIntercept | 2.50 | 2.10\ndUNEM | 1.20 | 2.30\nRELIEF | -1.80 | -1.98\nSHOCK | 3.50 | 2.55\n\nThe ANOVA results from Blake's regression are provided in Exhibit 3:\n\nExhibit 3: Default Share Regression ANOVA Table\n# Source | Degrees of Freedom | Sum of Squares | Mean Sum of Squares\nRegression | 3 | 18 | 6.0000\nError | 16 | 4 | 0.2500\nTotal | 19 | 22 |\n\nExhibit 4: Critical Values for Student's t-Distribution (Area in Both Tails Combined)\n# Degrees of Freedom | 20% | 10% | 5% | 1%\n16 | 1.337 | 1.746 | 2.120 | 2.921\n17 | 1.333 | 1.740 | 2.110 | 2.898\n18 | 1.330 | 1.734 | 2.101 | 2.878\n19 | 1.328 | 1.729 | 2.093 | 2.861\n20 | 1.325 | 1.725 | 2.086 | 2.845\n\nPart 2\nFrank Mercer, CFA, is the chief financial officer for Sunrise Orchards, one of the largest producers of fruit and nuts in the Western United States. Mercer gathers information regarding quarterly sales revenue and marketing expenditures for the past five years and derives a regression equation for Sunrise Orchards. Mercer explains the standard error of estimate (SEE) to his colleague Larsen with three points:\n\nPoint 1: The SEE is the standard deviation of the differences between the estimated values for the independent variables and the actual observations for the independent variable.\nPoint 2: If there is a strong relationship between the variables and the SEE is small, the individual estimation errors will also be small.\nPoint 3: The SEE is equal to the standard deviation of the dependent variable.\n\nPart 3\nLucas Ferreira, a research analyst at Porto Securities, is studying the time-series behavior of price-to-earnings ratios (P/Es) computed with trailing 12-month earnings (Etrailing). He and his assistant, Ana Costa, are reviewing the results of the ordinary least squares time series regression shown in Exhibit 5.\n\nExhibit 5: Results of Regression of P/E on Lagged P/E (P/Et = b0 + b1P/Et-1 + εt)\n# | Coefficient | Standard Error | t | Significance of t\nConstant (b0) | 0.131 | 0.140 | 0.936 | 0.176\nLagged P/E (b1) | 0.620 | 0.058 | 10.690 | 0\n\nFerreira states: \"This regression is a special case of a first-order autoregressive [AR(1)] model in which the value for b0 is close to zero and the value of b1 is close to 1. These values suggest that the time series is a random walk.\"",
+    "questions": [
+     {
+      "q": "Based on her regression results in Exhibit 2, using a 5% level of significance, Blake should conclude that:",
+      "options": [
+       "both relief packages and used-car price shocks have significant effects on default percentages.",
+       "relief packages have significant effects on default percentages, but used-car price shocks do not have significant effects on default percentages.",
+       "relief packages do not have significant effects on default percentages, but used-car price shocks do have significant effects on default percentages."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. RELIEF is not significant at the 5% level.\nB. Incorrect. Incorrect. RELIEF has t = −1.98, whose absolute value is below the critical value of 2.120, so it is not significant; SHOCK is significant.\nC. Correct. Correct. Degrees of freedom = error df = 16 (20 observations − 3 slopes − 1); the critical t at the 5% level is 2.120. |−1.98| < 2.120, so RELIEF is not significant; 2.55 > 2.120, so SHOCK is significant."
+     },
+     {
+      "q": "How many of Mercer's points about the standard error of estimate are most accurate?",
+      "options": [
+       "1 of Mercer's points is correct.",
+       "2 of Mercer's points are correct.",
+       "All 3 of Mercer's points are correct."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Point 2 is correct. Point 1 is wrong: the SEE measures the differences between estimated and actual values of the DEPENDENT variable. Point 3 is wrong: the SEE is the standard deviation of the regression residuals, not of the dependent variable.\nB. Incorrect. Incorrect. Only Point 2 is correct.\nC. Incorrect. Incorrect. Points 1 and 3 are wrong."
+     },
+     {
+      "q": "Ferreira's statement that the coefficients depicted in Exhibit 5 are consistent with a random walk is most likely:",
+      "options": [
+       "incorrect because b0 should be close to 1.",
+       "correct.",
+       "incorrect because b1 should be close to 1."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. For a random walk the intercept should be close to 0, not 1 (and here it is already close to 0).\nB. Incorrect. Incorrect. A random walk requires b0 close to 0 AND b1 close to 1; here b1 = 0.62.\nC. Correct. Correct. For a random walk estimated as an AR(1), the intercept is near zero and the slope on the lagged value is near 1. b1 = 0.62 is far from 1 (a mean-reverting AR(1)), so the statement is incorrect."
+     }
+    ]
+   },
+   {
+    "topic": "Alternative Investments",
+    "body": "Part 1\nGianni Moretti is a financial adviser specializing in commercial real estate investing. He meets with Karen Doyle, a new client, who wants to diversify her portfolio by adding real estate investments to it.\n\nUsing data from an appraisal-based index, Moretti discusses real estate return and risk statistics with Doyle and compares them to the return and risk of Doyle's current portfolio of stocks and bonds. Based on Doyle's investment objectives, Moretti recommends the following types of investments:\n\nInvestment 1: An equity real estate investment trust (REIT);\nInvestment 2: A real estate operating company (REOC).\n\nPart 2\nDaniel Park, CFA, is an investment manager looking to diversify his portfolio by adding equity real estate investments. Park and his investment analyst, Elena Marsh, are discussing whether they should invest in publicly traded real estate investment trusts or public real estate operating companies. Marsh gathers data on two specific REITs shown in Exhibit 1.\n\nExhibit 1: Select REIT Information\n# Item | REIT A | REIT B\nProperty subsector | Retail (shopping centers) | Storage\n\nPart 3\nSofia Martins is an alternative investment analyst for a US investment management firm, Orion Brothers. Orion's chief investment officer, Daniel Cho, has informed Martins that he wants to reduce the amount invested in traditional asset classes and gain exposure to the real estate sector by acquiring commercial property in the United States. Martins is asked to analyze potential commercial real estate investments for Orion Brothers. Selected data on two commercial real estate properties are shown in Exhibit 2.\n\nExhibit 2: Selected Property Data\n# Item | Property 1 | Property 2\nProperty type | Downtown Office | Multi-Family Building\nLocation | Chicago | Denver\nOccupancy | 85.00% | 96.00%\nGross potential rental income | $3,600,000 | $2,800,000\nLoss to lease | ($180,000) | ($140,000)\nGross rental income | $3,420,000 | $2,660,000\nVacancy loss | ($513,000) | ($106,400)\nNet rental income | $2,907,000 | $2,553,600\nExpense reimbursement revenue | $240,000 | $0\nOther income (includes % rent) | $300,000 | $45,000\nEffective gross income | $3,447,000 | $2,598,600\nProperty management fees | ($120,645) | ($90,951)\nOther operating expenses | ($1,480,000) | ($900,000)\nNet operating income | $1,846,355 | $1,607,649\n\nCho explains that the multi-family property in Denver and the office property in Chicago have to absorb their operating expenses: only the office property is partly reimbursed by its tenants.\n\nCho comments to Martins that these properties may be in different phases of the real estate cycle. He specifically cites the differences between gross potential rental income and gross rental income in making his argument. In response to Cho's comments, Martins makes the two following statements about the office building in Chicago:\n\nStatement 1:\nI believe that the office market in Chicago is likely to enter the recovery stage of the real estate cycle within two years.\n\nStatement 2:\nI believe that the high vacancy rates indicate that the net operating income of the office building has the potential to improve within two years.",
+    "questions": [
+     {
+      "q": "Compared to Investment 2 recommended by Moretti, Investment 1 most likely:",
+      "options": [
+       "requires less expertise in real estate investing.",
+       "avoids double taxation on dividends received by investors.",
+       "is better able to hold properties under development."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Both public REITs and public REOCs are professionally managed, so both require much less expertise than private real estate investing.\nB. Correct. Correct. A REIT passes income through, avoiding corporate income tax, so only the investor pays tax on the dividends; a REOC is an ordinary taxable company, so dividends are taxed twice.\nC. Incorrect. Incorrect. REITs have limits on non-qualifying activities such as merchant development; REOCs are the vehicle for development of for-sale properties."
+     },
+     {
+      "q": "The risk factor most likely to adversely affect an investment in REIT A is:",
+      "options": [
+       "new competitive facilities.",
+       "obsolescence of existing space.",
+       "tenants' sales per square foot."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. New competing facilities (easy entry, overbuilding) are the main risk for storage REITs.\nB. Incorrect. Incorrect. Obsolescence of existing space is a typical concern for office REITs.\nC. Correct. Correct. REIT A owns shopping centers; tenants' sales per square foot is the risk measure for retail REITs."
+     },
+     {
+      "q": "Which of the following statements is most accurate regarding the effect of unreimbursed operating expenses on the NOI of the Chicago and Denver properties?",
+      "options": [
+       "The NOI of the office property in Chicago is more negatively affected by unreimbursed operating expenses than is the NOI of the multi-family property in Denver.",
+       "The NOIs of both properties are affected similarly by unreimbursed operating expenses.",
+       "The NOI of the multi-family property in Denver is more negatively affected by unreimbursed operating expenses than is the NOI of the office property in Chicago."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Unreimbursed operating expenses as a share of effective gross income: Chicago (120,645 + 1,480,000 − 240,000) ÷ 3,447,000 = 39.5%; Denver (90,951 + 900,000 − 0) ÷ 2,598,600 = 38.1%. Chicago is affected more.\nB. Incorrect. Incorrect. The two ratios (39.5% and 38.1%) differ.\nC. Incorrect. Incorrect. Denver's unreimbursed expenses are 990,951 ÷ 2,598,600 = 38.1% of effective gross income, lower than Chicago's."
+     },
+     {
+      "q": "Which of the following responses is most accurate regarding Martins's Statement 1 and Statement 2?",
+      "options": [
+       "Statements 1 and 2 are both accurate statements.",
+       "Statement 1 is more accurate than Statement 2.",
+       "Statement 2 is more accurate than Statement 1."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. The statements imply different cycle phases, so both cannot be accurate.\nB. Correct. Correct. High vacancy likely means the office market is in the oversupply or recession phase; recovery within two years (Statement 1) is consistent with that, while NOI improving soon (Statement 2) describes expansion.\nC. Incorrect. Incorrect. Statement 2 implies NOI is already improving (expansion), which skips the recovery stage."
+     }
+    ]
+   },
+   {
+    "topic": "Fixed Income",
+    "body": "Part 1\nElena Vasco is a fixed-income portfolio manager. Daniel Cho, a junior analyst, and Vasco meet to review several positions in Vasco's portfolio.\n\nVasco begins the meeting by discussing credit rating migration. Cho asks Vasco about the typical impact of credit rating migration on the expected return on a bond. Vasco asks Cho to estimate the expected return over the next year on a bond issued by Calder Corp. The BBB rated bond has a yield to maturity of 5.20% and a modified duration of 6.80. Cho calculates the expected return on the bond over the next year given the partial credit transition and credit spread data in Exhibit 1. He assumes that market spreads and yields will remain stable over the year.\n\nExhibit 1: One-Year Transition Matrix for BBB Rated Bonds and Credit Spreads\n# Rating | AAA | AA | A | BBB | BB | B | CCC, CC, C\nProbability (%) | 0.03 | 0.25 | 5.10 | 86.00 | 6.50 | 1.65 | 0.47\nCredit spread | 0.60% | 0.90% | 1.10% | 1.50% | 3.40% | 6.50% | 9.50%\n\nVasco next asks Cho to analyze a three-year bond, issued by Arvento S.A., using an arbitrage-free framework. The bond's coupon rate is 4.5%, with interest paid annually and a par value of 100. In his analysis, Cho makes the following three assumptions:\nThe annual interest rate volatility is 12%.\nThe recovery rate is 30% of the exposure each period.\nThe annual probability of default each year is 1.80%.\n\nSelected information on benchmark government bonds for the Arvento bond is presented in Exhibit 2, and the relevant binomial interest rate tree is presented in Exhibit 3.\n\nExhibit 2: Par Curve Rates for Annual Payment Benchmark Government Bonds\n# Maturity | Coupon Rate | Price | Discount Factor | Spot Rate | Forward Rate\n1 | 2.6000% | 100 | 0.974659 | 2.6000% | 2.6000%\n2 | 3.3866% | 100 | 0.935317 | 3.4000% | 4.2062%\n3 | 4.0610% | 100 | 0.886437 | 4.1000% | 5.5142%\n\nExhibit 3: One-Year Binomial Interest Rate Tree for 12% Volatility (risk-neutral probability of 50% on each branch)\n# Date | 0 | 1 (top) | 1 (bottom) | 2 (top) | 2 (middle) | 2 (bottom)\nRate | 2.6000% | 4.9000% | 3.8000% | 7.1000% | 5.5000% | 4.2000%\n\nCho estimates the value of the Arvento bond assuming no default (VND) as well as the fair value of the bond. He then estimates the bond's yield to maturity and the bond's credit spread over the benchmark in Exhibit 2. Cho asks Vasco, \"What might cause the bond's credit spread to decrease?\"\n\nPart 2\nMarcus Dreyer is a fund manager with Atlas Asset Partners, a fixed-income asset management firm. He actively manages his fund's holdings, duration, and yield curve exposure. Dreyer's view is that the spot curve one year from today will reflect the current forward curve.\n\nPart 3\nKevin Hartman is a fixed-income analyst at Meridian Partners, a hedge fund focusing on global macro arbitrage opportunities. Hartman is conducting a training session for a new analyst, Sam Orlov.\n\nHartman states: \"We need to be able to value bonds with embedded options, where expected cash flows change depending on the path of future interest rates. We typically construct an interest rate tree as a visual representation of the paths of future interest rates, with the average of possible future values being centered on the current yield curve. The following three steps can be employed to construct an interest rate tree for valuing a particular bond:\n\nStep 1: Using prices of the benchmark bonds, determine the current par curve.\nStep 2: Estimate interest rate volatility, and calculate the potential paths of future rates.\nStep 3: Starting with the current market price, calculate each successive node's value.\n\nThe interest rate tree must then be calibrated to fit the actual yield curve while being consistent with an underlying interest rate model.\"\n\nOrlov states: \"I believe the iterative process must involve a trial-and-error search to determine the higher and lower rates subsequent to each node in the tree, which branches out from an average yield centered on the forward rate curve. The rates must also be consistent with an assumption of log-normality, the volatility assumption, and the observed market value of the bond being evaluated.\"",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the one-year expected return on the Calder Corp. bond is closest to:",
+      "options": [
+       "3.69%.",
+       "5.20%.",
+       "6.71%."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Expected return = YTM + expected price change from migration. Each transition: −6.80 × (new spread − 1.50%) × probability; the sum is −1.51%. Expected return = 5.20% − 1.51% = 3.69%.\nB. Incorrect. This is the yield to maturity alone; it ignores the expected loss from migration.\nC. Incorrect. This ADDS the expected migration loss to the yield (5.20% + 1.51%) instead of subtracting it."
+     },
+     {
+      "q": "Based on Cho's assumptions and Exhibits 2 and 3, the credit spread on the Arvento bond is closest to:",
+      "options": [
+       "0.9952%.",
+       "1.3797%.",
+       "1.9670%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This uses a loss given default of 50% of exposure (recovery 50%) instead of 70%.\nB. Correct. Step 1: VND from the tree = 101.0557. Step 2: expected exposures 103.6831, 103.4911, 104.5000; LGD = 70% of exposure (recovery 30%); probabilities of default 1.8000%, 1.7676%, 1.7364%; discounted at the benchmark spot discount factors: CVA = 3.5965. Step 3: fair value = VND − CVA = 97.4592. Step 4: YTM that prices the bond at 97.4592 = 5.4407%; spread = 5.4407% − 4.0610% (3-year benchmark coupon) = 1.3797%.\nC. Incorrect. This assumes no recovery (loss given default of 100%)."
+     },
+     {
+      "q": "Which change is most likely to cause the credit spread on the Arvento bond to decrease?",
+      "options": [
+       "A lower recovery rate",
+       "A higher recovery rate",
+       "A higher probability of default"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. A lower recovery rate raises LGD and CVA, so the fair value falls and the spread widens.\nB. Correct. Correct. A higher recovery rate lowers LGD and CVA, which raises the fair value and narrows the credit spread.\nC. Incorrect. Incorrect. A higher probability of default raises CVA and widens the spread."
+     },
+     {
+      "q": "Dreyer's view that the spot curve one year from today will reflect the current forward curve is most consistent with:",
+      "options": [
+       "the liquidity preference theory.",
+       "the pure expectations theory.",
+       "the segmented markets theory."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Liquidity preference adds a premium for longer maturities, so forward rates overstate expected future spot rates.\nB. Correct. Correct. Pure expectations: forward rates are unbiased predictors of future spot rates, so the future spot curve equals today's forward curve.\nC. Incorrect. Incorrect. Segmented markets: each maturity is priced by its own supply and demand; forward rates are not forecasts."
+     },
+     {
+      "q": "When describing calibrating the interest rate tree, Orlov is least likely correct with respect to the:",
+      "options": [
+       "value of the bond being evaluated.",
+       "assumption of log-normality.",
+       "volatility assumption."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Correct. Calibration uses the observed market values of the benchmark bonds, not the value of the bond being evaluated.\nB. Incorrect. Incorrect. The tree rates are consistent with an assumption of log-normality (the interest rate model).\nC. Incorrect. Incorrect. The tree is built on a volatility assumption."
+     }
+    ]
+   },
+   {
+    "topic": "Portfolio Management",
+    "body": "Hui Chang, a portfolio manager, asks her assistant, Ronald Lopez, to review the macroeconomic factor model currently in use and to consider a fundamental factor model as an alternative.\n\nThe current macroeconomic factor model has four factors:\n\nRi = ai + bi1FGDP + bi2FCAP + bi3FCON + bi4FUNEM + εi,\nwhere FGDP, FCAP, FCON, and FUNEM represent unanticipated changes in four factors: gross domestic product, manufacturing capacity utilization, consumer spending, and the rate of unemployment, respectively. Lopez assumes the error term is equal to zero when using this model.\n\nLopez estimates the current model using historical monthly returns for a portfolio for the most recent five years. The inputs used in and estimates derived from the macroeconomic factor model are presented in Exhibit 1.\n\nExhibit 1: Inputs for and Estimates from the Current Macroeconomic Model\n# Factor | Portfolio 1 | Factor surprise (%)\nIntercept (%) | 3.10 | ---\nFGDP | 0.60 | 0.7\nFCAP | −0.30 | 0.4\nFCON | 1.10 | 2.0\nFUNEM | −0.20 | 0.9\n\nLopez and Chang discuss similarities and differences between macroeconomic factor models and fundamental factor models, and Lopez offers a comparison of those models to statistical factor models. Lopez makes the following statements.\n\nStatement 1:\nThe factors in fundamental factor models are based on attributes of stocks or companies, whereas the factors in macroeconomic factor models are based on surprises in economic variables.\n\nStatement 2:\nThe factor sensitivities are generally determined first in fundamental factor models, whereas the factor sensitivities are estimated last in macroeconomic factor models.\n\nLopez tells Chang that multifactor models can be useful in active portfolio management, but not in passive management. Chang disagrees; she tells Lopez that multifactor models can be useful in both active and passive management.",
+    "questions": [
+     {
+      "q": "Assuming that the information in Exhibit 1 reflects the analyst's view, the expected return for Portfolio 1 is closest to:",
+      "options": [
+       "2.32%.",
+       "3.10%.",
+       "5.42%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This is only the contribution of the factor surprises: 0.60 × 0.7 − 0.30 × 0.4 + 1.10 × 2.0 − 0.20 × 0.9 = 2.32%.\nB. Correct. In a macroeconomic factor model the expected return is the intercept: the value when all factor surprises are zero, because surprises have an expected value of zero. The intercept is 3.10%.\nC. Incorrect. This is the return given the surprises in the table: 3.10 + 2.32 = 5.42%."
+     },
+     {
+      "q": "Which of Lopez's statements regarding macroeconomic factor models and fundamental factor models is correct?",
+      "options": [
+       "Only Statement 2",
+       "Only Statement 1",
+       "Both Statements 1 and 2"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect. Statement 1 is also correct.\nB. Incorrect. Incorrect. Statement 2 is also correct.\nC. Correct. Correct. Fundamental factors are attributes of stocks or companies; macroeconomic factors are surprises in economic variables. Sensitivities are specified first in fundamental models and estimated last in macroeconomic models."
+     },
+     {
+      "q": "Whose statement regarding the use of multifactor models in active and passive portfolio management is correct?",
+      "options": [
+       "Lopez only",
+       "Chang only",
+       "Both Lopez and Chang"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect. Multifactor models are also useful in passive management.\nB. Correct. Correct. Analysts can use multifactor models in passively managed portfolios to replicate an index fund's factor exposures, as well as in active management.\nC. Incorrect. Incorrect. Lopez is wrong: models are also useful in passively managed portfolios."
      }
     ]
    }

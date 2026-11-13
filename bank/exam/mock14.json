@@ -1,7 +1,7 @@
 {
  "set": {
   "id": "mock14",
-  "rev": 1,
+  "rev": 2,
   "resetHl": [],
   "title": "Mock 14",
   "kind": "mock",
@@ -495,14 +495,14 @@
     "body": "Tomas Eklund, CFA, is a portfolio manager at a Swedish asset manager.\n\nMacroeconomic factor model. Eklund uses a two-factor macroeconomic model for an equity portfolio:\n\nR = a + b_GDP × F_GDP + b_INF × F_INF + ε\n\nThe intercept a is 2.10%, the sensitivity to GDP growth surprises (b_GDP) is 0.90 and the sensitivity to inflation surprises (b_INF) is −0.40. Eklund's view is that the surprises will be +0.60% for GDP growth and +0.50% for inflation.\n\nActive manager skill. Eklund evaluates an active equity manager who has a transfer coefficient of 0.60 and an information coefficient of 0.08. The manager makes 64 independent bets a year.\n\nRisk. The portfolio is worth SEK500 million. Its expected daily return is 0.04% and the daily standard deviation is 1.20%. Eklund estimates the one-day 5% value at risk (VaR) with the parametric method, assuming normally distributed returns, and uses a z-score of 1.65.",
     "questions": [
      {
-      "q": "Based on Eklund's view of the factor surprises, the expected return of the portfolio is closest to:",
+      "q": "Based on Eklund's view of the factor surprises, the portfolio's return over the period is forecast to be closest to:",
       "options": [
        "2.10%.",
        "2.44%.",
        "2.84%."
       ],
       "answer": 1,
-      "why": "A. Incorrect. This is the intercept, which is the expected return only if all factor surprises are zero.\nB. Correct. Expected return = 2.10% + 0.90 × 0.60% + (−0.40) × 0.50% = 2.44%.\nC. Incorrect. This treats the inflation sensitivity as positive: 2.10 + 0.54 + 0.20 = 2.84%."
+      "why": "A. Incorrect. This is the intercept, which is the EXPECTED return of the macroeconomic factor model (the value when all factor surprises are zero); it does not include Eklund's surprises.\nB. Correct. Return given the surprises = 2.10% + 0.90 × 0.60% + (−0.40) × 0.50% = 2.44%.\nC. Incorrect. This treats the inflation sensitivity as positive: 2.10 + 0.54 + 0.20 = 2.84%."
      },
      {
       "q": "The manager's expected information ratio is closest to:",
@@ -829,7 +829,7 @@
     "The intercept a is 2.10%",
     "the surprises will be +0.60% for GDP growth and +0.50% for inflation"
    ],
-   "rule": "Macro factor model: R = a + Σ b × (factor SURPRISE); a is the expected return only when all surprises are zero."
+   "rule": "Macro factor model: EXPECTED return = intercept (surprises are zero on average); the return given specific factor surprises = intercept + Σ sensitivity × surprise. Read whether the question asks for the expected return or the return given the surprises."
   },
   "mock14:43": {
    "hl": [

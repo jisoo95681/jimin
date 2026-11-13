@@ -3283,7 +3283,7 @@ const EXAM_HINTS = {
    "The intercept a is 2.10%",
    "the surprises will be +0.60% for GDP growth and +0.50% for inflation"
   ],
-  "rule": "Macro factor model: R = a + Σ b × (factor SURPRISE); a is the expected return only when all surprises are zero."
+  "rule": "Macro factor model: EXPECTED return = intercept (surprises are zero on average); the return given specific factor surprises = intercept + Σ sensitivity × surprise. Read whether the question asks for the expected return or the return given the surprises."
  },
  "mock14:43": {
   "hl": [
@@ -3936,5 +3936,326 @@ const EXAM_HINTS = {
    "both granular and homogenous"
   ],
   "rule": "Granular + homogeneous pool → portfolio-based; discrete large heterogeneous loans → loan-by-loan; static pools → statistics-based."
+ },
+ "mock17:1": {
+  "hl": [
+   "pushed the economy into a recession",
+   "stimulate the economy"
+  ],
+  "rule": "Recession → expansionary policy: buy securities, cut the policy rate (money supply up); inflation threat → sell securities, raise the rate."
+ },
+ "mock17:2": {
+  "hl": [
+   "The difference between nominal and inflation-linked bond yields reflects the expectations of and uncertainty about"
+  ],
+  "rule": "Break-even inflation = nominal yield − real (inflation-linked) yield of the same maturity; more inflation uncertainty → higher BEI."
+ },
+ "mock17:3": {
+  "hl": [
+   "rate of improvement will likely be greatest for bond C",
+   "expected loss by multiplying the probability of default by the recovery rate"
+  ],
+  "rule": "Recession: quality outperforms, spreads widen; recovery: spreads narrow most for the weakest credits. Expected loss = PD × (1 − recovery)."
+ },
+ "mock17:4": {
+  "hl": [
+   "Maintaining a low dong exchange rate",
+   "lacks the significant natural resources"
+  ],
+  "rule": "Long-run growth: capital deepening and technology (TFP); a cheap currency is not a growth channel."
+ },
+ "mock17:5": {
+  "hl": [
+   "these contracts are priced in US dollars",
+   "providing fixed US dollar payments in exchange for fixed Swiss franc payments",
+   "@row:5"
+  ],
+  "rule": "Currency swap: decide which currency you RECEIVE (the one your liabilities are priced in) and use that currency's PV factors: fixed rate = (1 − final PV) ÷ ΣPV."
+ },
+ "mock17:6": {
+  "hl": [
+   "volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity",
+   "calculated on the basis of the historical volatility"
+  ],
+  "rule": "Implied volatility = market price of options, forward looking; volatility surface = exercise price × maturity."
+ },
+ "mock17:7": {
+  "hl": [
+   "@row:Current share price of Dunmore",
+   "@row:Exercise price of Dunmore put option",
+   "@row:Up factor (u)",
+   "American-style put option"
+  ],
+  "rule": "American put: at each node compare continuation value with immediate exercise value; use risk-neutral probability (1 + r − d) ÷ (u − d)."
+ },
+ "mock17:8": {
+  "hl": [
+   "@row:Quoted futures price",
+   "@row:Conversion factor",
+   "@row:Accrued interest at futures contract expiration"
+  ],
+  "rule": "Bond futures arbitrage: fair price = FV[bond + AI0 − PV coupons]; compare with CF × quoted price + AI at expiration; profit = PV of the difference."
+ },
+ "mock17:9": {
+  "hl": [
+   "Income from operations is consistently higher than cash generated from operations."
+  ],
+  "rule": "Earnings quality: operating income should be backed by operating cash flow; stable or falling accruals are reassuring."
+ },
+ "mock17:10": {
+  "hl": [
+   "More stringent capital requirements that prevent banks from taking on excessive financial leverage."
+  ],
+  "rule": "Basel III: higher capital and liquidity/stable-funding requirements (consumer deposits are the more stable funding), leverage limits."
+ },
+ "mock17:11": {
+  "hl": [
+   "has been in a \"hard\" phase for a few years now"
+  ],
+  "rule": "Insurance cycle: hard market (high premiums and profits) → new competitors → soft market (lower premiums, looser standards, weaker capital)."
+ },
+ "mock17:12": {
+  "hl": [
+   "@row:Loss expense and loss adjustment expense",
+   "@row:Underwriting expense",
+   "calculate NH's combined ratio"
+  ],
+  "rule": "Combined ratio = loss ratio (losses ÷ premiums EARNED) + expense ratio (underwriting expense ÷ premiums WRITTEN); above 100% = underwriting loss."
+ },
+ "mock17:13": {
+  "hl": [
+   "we pay them a finder's fee"
+  ],
+  "rule": "VI(C) Referral Fees: disclose finder's fee arrangements to clients and prospects (prospectus) and notify clients at least QUARTERLY."
+ },
+ "mock17:14": {
+  "hl": [
+   "tells all his clients simultaneously they should sell their shares",
+   "least likely violate"
+  ],
+  "rule": "'Least likely violated' = the Standard with NO problem: equal and simultaneous dissemination → fair dealing OK; opinion vs fact, contradicting research and trading ahead of clients → problems."
+ },
+ "mock17:15": {
+  "hl": [
+   "Orion arranges to pay for the commercial flights for all analysts attending the conference",
+   "company-branded notebook as a gift"
+  ],
+  "rule": "I(B): do not accept paid travel from the covered company (pay for flights yourself or via your firm); small token gifts are acceptable."
+ },
+ "mock17:16": {
+  "hl": [
+   "used to retire approximately USD560 million of debt",
+   "enable it to receive an investment-grade credit rating",
+   "incorrect"
+  ],
+  "rule": "Sale-leaseback: unlocks real estate value, finances debt reduction/buybacks; better credit rating → LOWER cost of capital."
+ },
+ "mock17:17": {
+  "hl": [
+   "Nine of the board members are independent",
+   "Most of its workforce are paid above the local living wage"
+  ],
+  "rule": "Weak ESG (few independent directors, low pay, no benefits) → spread up; strong ESG → spread down."
+ },
+ "mock17:18": {
+  "hl": [
+   "@row:Number of independent directors",
+   "@row:Two-tiered board",
+   "@row:CEO duality",
+   "@row:Average board tenure",
+   "@row:Audit"
+  ],
+  "rule": "Score each feature separately for each company (one-tier board needs 60% independents, two-tier needs a simple majority) and add the points."
+ },
+ "mock17:19": {
+  "hl": [
+   "@row:Current share price",
+   "@row:Market value of debt",
+   "@row:Accounting book value of total capital"
+  ],
+  "rule": "MVA = (market value of debt + market value of equity) − book value of total capital."
+ },
+ "mock17:20": {
+  "hl": [
+   "Intrinsic share value of equity derived from residual income model",
+   "@row:Book value per share"
+  ],
+  "rule": "V0 = B0 + PV(RI): V0 > B0 → PV(RI) positive; V0 < B0 → negative; V0 = B0 → zero."
+ },
+ "mock17:21": {
+  "hl": [
+   "@row:Earnings per share (€)",
+   "@row:Dividends per share (€)",
+   "residual income per share will be constant from Year 3 into perpetuity"
+  ],
+  "rule": "Multistage RI: B(t) = B(t−1) + EPS − DPS; RI = EPS − r × beginning B; terminal value at year 2 = RI3 ÷ r (persistence 1), discounted 2 years."
+ },
+ "mock17:22": {
+  "hl": [
+   "discount rate assumption is 0.6% higher than its industry competitors' discount rates"
+  ],
+  "rule": "Higher discount rate than peers → lower obligation and expense → aggressive; lower discount rate → conservative."
+ },
+ "mock17:23": {
+  "hl": [
+   "Strand adjusts Harcourt's financial statements before computing the company's financial ratios",
+   "discount rate assumption is 0.6% higher"
+  ],
+  "rule": "Adjusting an aggressive (too high) discount rate down raises the obligation: debt-based leverage ratios up, equity and book value per share down."
+ },
+ "mock17:24": {
+  "hl": [
+   "@row:Revenue (USD million)",
+   "@row:Total liabilities (USD million)",
+   "@row:Total asset turnover ratio",
+   "Most Recent Year"
+  ],
+  "rule": "Columns run NEWEST FIRST: read the trend from right (oldest) to left (newest). Assets = revenue ÷ turnover; equity = assets − liabilities; leverage = assets ÷ equity."
+ },
+ "mock17:25": {
+  "hl": [
+   "can be used for performance evaluation",
+   "avoids subjectivity"
+  ],
+  "rule": "VaR advantages: simple, comparable across assets, usable for risk-adjusted performance; limitations: subjective inputs, not a worst case, tail risk."
+ },
+ "mock17:26": {
+  "hl": [
+   "parametric method (assuming normal distribution)"
+  ],
+  "rule": "Parametric VaR = normality (understates fat tails, poor for options); historical = actual past returns; Monte Carlo = random scenarios."
+ },
+ "mock17:27": {
+  "hl": [
+   "use passive ETFs to maintain benchmark exposure",
+   "gaps with respect to desired market exposures may result"
+  ],
+  "rule": "ETF uses: completion = fill exposure gaps while keeping the active manager; rebalancing = back to target weights; liquidity = invest cash / meet flows; transition = change managers."
+ },
+ "mock17:28": {
+  "hl": [
+   "debt-to-equity ratio is significantly higher than the average of its competitors",
+   "spent heavily on advertising to create and maintain its brand"
+  ],
+  "rule": "Metric choice: high leverage / different capital structures → EV multiples; intangible brand not on the balance sheet → avoid P/B; growth → avoid dividend yield."
+ },
+ "mock17:29": {
+  "hl": [
+   "higher-than-average growth rate and lower-than-average risk to justify its high P/E"
+  ],
+  "rule": "P/E ↑ with higher growth and LOWER risk (lower required return); higher risk → lower P/E."
+ },
+ "mock17:30": {
+  "hl": [
+   "@row:Cobb Brothers Co.",
+   "@row:Dyer Foods Ltd.",
+   "weighted harmonic mean of the index"
+  ],
+  "rule": "Weighted harmonic mean = Σ weights ÷ Σ(weight ÷ P/E); it is below the arithmetic mean and dampens large P/E outliers."
+ },
+ "mock17:31": {
+  "hl": [
+   "@row:RELIEF",
+   "@row:SHOCK",
+   "@row:Error"
+  ],
+  "rule": "t-test: compare |t| with the critical t (df = n − k − 1, from the ANOVA error df); |t| > critical → reject H0 → variable matters."
+ },
+ "mock17:32": {
+  "hl": [
+   "The SEE is the standard deviation of the differences between the estimated values for the independent variables",
+   "The SEE is equal to the standard deviation of the dependent variable."
+  ],
+  "rule": "SEE = standard deviation of the residuals (estimated vs actual DEPENDENT variable); small SEE with a strong relationship → small errors."
+ },
+ "mock17:33": {
+  "hl": [
+   "@row:Lagged P/E (b1)",
+   "the value of b1 is close to 1"
+  ],
+  "rule": "Random walk: b0 = 0 (or drift), b1 = 1; |b1| < 1 → covariance stationary, mean reverting."
+ },
+ "mock17:34": {
+  "hl": [
+   "Investment 1: An equity real estate investment trust (REIT)",
+   "Investment 2: A real estate operating company (REOC)"
+  ],
+  "rule": "REIT vs REOC: REIT = pass-through, high payout, no double taxation, limited development; REOC = taxable, retains earnings, can develop and offer non-qualifying services."
+ },
+ "mock17:35": {
+  "hl": [
+   "@row:Property subsector"
+  ],
+  "rule": "REIT risk factors by sector: retail → tenants' sales per square foot; office → obsolescence of space; storage → new competing facilities (easy entry)."
+ },
+ "mock17:36": {
+  "hl": [
+   "@row:Expense reimbursement revenue",
+   "@row:Effective gross income",
+   "@row:Other operating expenses"
+  ],
+  "rule": "Unreimbursed operating expenses ÷ effective gross income (include management fees; subtract reimbursements); compare ratios, not dollars."
+ },
+ "mock17:37": {
+  "hl": [
+   "the office market in Chicago is likely to enter the recovery stage of the real estate cycle within two years",
+   "high vacancy rates indicate"
+  ],
+  "rule": "Real estate cycle: recovery → expansion → hyper-supply → recession; high vacancy = oversupply/recession, so next is recovery, not expansion."
+ },
+ "mock17:38": {
+  "hl": [
+   "@row:Probability (%)",
+   "@row:Credit spread",
+   "modified duration of 6.80"
+  ],
+  "rule": "Expected return with migration = YTM − modified duration × Σ [probability × (new spread − current spread)]; a downgrade (wider spread) lowers price."
+ },
+ "mock17:39": {
+  "hl": [
+   "The recovery rate is 30% of the exposure each period",
+   "The annual probability of default each year is 1.80%",
+   "@row:3"
+  ],
+  "rule": "Credit spread = YTM(fair value) − benchmark yield, with fair value = VND − CVA and CVA = Σ exposure × LGD (1 − recovery) × PD × discount factor."
+ },
+ "mock17:40": {
+  "hl": [
+   "What might cause the bond's credit spread to decrease?"
+  ],
+  "rule": "CVA = exposure × (1 − recovery) × PD: lower PD or higher recovery → lower CVA → higher fair value → lower spread."
+ },
+ "mock17:41": {
+  "hl": [
+   "the spot curve one year from today will reflect the current forward curve"
+  ],
+  "rule": "Pure expectations: forward = expected future spot; liquidity preference adds a liquidity premium; segmented markets: no link between maturities."
+ },
+ "mock17:42": {
+  "hl": [
+   "the observed market value of the bond being evaluated",
+   "least likely correct"
+  ],
+  "rule": "Tree calibration inputs: volatility, interest rate model (log-normality) and the benchmark bond prices/par curve; NOT the price of the bond being valued."
+ },
+ "mock17:43": {
+  "hl": [
+   "@row:Intercept (%)",
+   "@row:FGDP"
+  ],
+  "rule": "Macro factor model: EXPECTED return = intercept (surprises are zero on average); return given specific surprises = intercept + Σ sensitivity × surprise."
+ },
+ "mock17:44": {
+  "hl": [
+   "The factors in fundamental factor models are based on attributes of stocks or companies",
+   "the factor sensitivities are estimated last in macroeconomic factor models"
+  ],
+  "rule": "Macro model: factors = surprises, sensitivities estimated by regression (last); fundamental model: factors = attributes, sensitivities set first."
+ },
+ "mock17:45": {
+  "hl": [
+   "multifactor models can be useful in both active and passive management"
+  ],
+  "rule": "Multifactor models: active (factor tilts, active risk decomposition) and passive (replicate factor exposures of an index)."
  }
 };
