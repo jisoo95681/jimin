@@ -349,6 +349,12 @@ for _v in _st['vignettes']:
             assert _ph in _v['body'] or _ph in _q['q'],('mock17',_n,_ph)
         assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mock17',_n)
 HH.update(_d['hints']); sets.append(_st); print('mock17',_n,_d['key'])
+# ---- Real CFA Institute Mock Paper 2 (13 Nov): verbatim, no hints (auto-shading) ----
+_d=json.load(open('/home/user/jimin/bank/exam/mockpaper2.json')); _st=_d['set']; _n=0
+for _v in _st['vignettes']:
+    for _q in _v['questions']:
+        _n+=1; assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mockp2',_n)
+sets.append(_st); print('mockp2',_n,_d['key'])
 # ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
 _d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
 for _st in _d['sets']:

@@ -1,0 +1,521 @@
+{
+ "set": {
+  "id": "mockp2",
+  "rev": 1,
+  "resetHl": [],
+  "title": "CFA Institute Mock Paper 2 (real)",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "The real CFA Institute mock paper 2: vignettes and questions exactly as published (44 questions, 132 minutes).",
+  "vignettes": [
+   {
+    "topic": "FI",
+    "body": "Yuvan Bisht, a fixed-income portfolio manager, is reviewing investments in his fund.\nBisht values a convertible bond issued one year ago by Doredum at a par value of $100. Each bond can be converted to 25 shares of Doredum common stock. The current share price is $3.80. A comparable option-free bond of the same maturity is valued at $105. Based on Doredum's strong operating performance, Bisht expects its share price will reach $8.00 in one year.\nNext, Bisht values a 3% default-free annual coupon bond with a 2-year maturity. The bond is putable at par ($100) at the end of Year 1. He estimates the binomial interest rate tree shown in Exhibit 1, assuming interest rate volatility of 15% and that branching from each node to a high state and to a low state occurs with equal probability.\nA binomial diagram with two column heads: Year zero and Year 1. Year zero: 2 point zero zero percent. Arrow up to Year 1: 4 point 6 4 percent. Arrow down to 3 point 4 4 percent.\nBisht considers a scenario in which the assumed level of interest rate volatility increases from 15% to 25%. He considers the impact of this scenario on the value of the putable bond.\nBisht analyzes the effects of an interest rate scenario in which there is a non-parallel shift in the yield curve, where the only change in the curve is a 30 bp increase in the 2-year benchmark. He considers the most appropriate measure to evaluate the putable bond's sensitivity to this scenario.",
+    "questions": [
+     {
+      "q": "The minimum value today of the Doredum convertible bond is:",
+      "options": [
+       "$95.",
+       "$100.",
+       "$105."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because this is the conversion value of the bond. The conversion value based on the current stock price is $3.80 × 25 = $95\nThe minimum value of a convertible bond is equal to the greater of (i) the conversion value (underlying share price conversion ratio) and (ii) the value of the underlying option-free bond. The value of the underlying option-free bond is $105.\n\nIncorrect Answer Feedback: Incorrect because this is the par value of the bond and not the minimum value of the convertible bond. \n\nCorrect Answer Feedback: Correct because the minimum value of a convertible bond is equal to greater of (i) the conversion value (underlying share price conversion ratio) and (ii) the value of the underlying option-free bond. Based on the information in the vignette, $105 is the value of the underlying option-free bond, which is greater than the conversion value of $3.80 × $25 = $95"
+     },
+     {
+      "q": "Based on the binomial interest rate tree, the value of the putable bond is closest to:",
+      "options": [
+       "$98.04.",
+       "$100.00.",
+       "$100.98."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because the coupon of $3 is not added to the calculation:\n[((100+100)/2)]/1.020 = 98.04\n\nIncorrect Answer Feedback: Incorrect because this is also the par value of the bond.\nWhere: CF is the bond's cash flow in each period.\nYear 0\t\tYear 1\t\tYear 2\nCF = 103\n \t\t\nValue = 98.43\t\t\nt1,H = 4.64%\t\t\nValue = 100\t\t3\t\tCF = 103\n2.00%\t\t\t\nValue = 99.57\t\t\nt1,L = 3.44%\t\t\nCF = 103\n\nCorrect Answer Feedback: Correct because the value of the 2-yr putable bond equals the present value of future cash flows and where in any period if the price is lower than 100, the bond will be putable at 100.\nThe value at the end of period 1 at t1,H = 4.64% equals ((103+103)/2)/(1.0464) = 98.43, where 103 is the total cash flow at maturity (Par = 100 and coupon = 3). \nAs this bond is putable at the end of year 1 at par, the value is set to 100.\nThe value at the end of period 1 at t1,L = 3.44% equals ((103+103)/2)/(1.0344) = 99.57. As this bond is putable at the end of year 1 at par, the value is set to 100.\nThe value today equals:\n[((100+100)/2) + 3]/1.020 = 100.98, where 2.00% is the spot rate."
+     },
+     {
+      "q": "Under Bisht’s volatility scenario, the value of the putable bond would most likely:",
+      "options": [
+       "decrease.",
+       "not change.",
+       "increase."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because under a scenario where interest rate volatility is assumed to be higher, the value of the putable bond increases. The value of the putable bond is the i) value of a similar straight bond plus the ii) value of the put option. Therefore, with higher interest rate volatility, the value of the put option increases, causing the overall value of the putable bond to increase and not decrease.\n\nIncorrect Answer Feedback: Incorrect because the value of any embedded option, regardless of the type of option, increases with interest rate volatility and hence impacts the value of the bond.\n\nCorrect Answer Feedback: Correct because under a scenario where interest rate volatility is assumed to be higher, the value of the putable bond increases. The value of the putable bond is the i) value of a similar straight bond plus the ii) value of the put option. Therefore, with higher interest rate volatility, the value of the put option increases, causing the overall value of the putable bond to increase."
+     },
+     {
+      "q": "Based on his interest rate scenario, which of the following types of duration would be most appropriate for Bisht to use in evaluating the putable bond?",
+      "options": [
+       "Key rate duration",
+       "Effective duration",
+       "One-sided duration"
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because the key rate durations reflect the sensitivity of the bond’s price to change in specific maturities on the benchmark yield curve. Thus, key rate durations help identify the ‘shaping risk’ for bonds—that is, the bond’s sensitivity to changes with the shape of the yield curve (e.g., steepening and flattening). In this case, the interest rate scenario is for a non-parallel shift in the yield curve with only the 2-year benchmark rate changing.\n\nIncorrect Answer Feedback: Incorrect because the effective duration indicates the sensitivity of the bond’s price to a parallel shift of the benchmark yield curve - normally calculated by averaging the changes resulting from shifting the benchmark yield curve up and down by the same amount and not change in one-specific maturity. Effective duration is less appropriate for measuring sensitivity to non-parallel shifts as in this case.\n\nIncorrect Answer Feedback: Incorrect because one-sided duration is the effective duration when interest rates go up or down and are better at capturing the interest rate sensitivity of a callable or putable bond than the normal effective durations, as the upside is capped in the callable bond and down-side is capped in the putable bond. However, since the measure is based on effective duration, it is still based on a parallel shift in the yield curve and not non-parallel shift as per the case here."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "David Albertson is an equity analyst at an investment bank. He is preparing updated research reports on two companies, Xita Incorporated and Garc Company.\nXita Incorporated\nIn Albertson's previous report on Xita, the stock had a forward P/E ratio of 14.9 and a trailing P/E ratio of 15.7. He considers a likely explanation for the difference in the P/E ratios.\nAlbertson indicates in his updated report that Xita's profits are cyclical. Using the data for the past four years in Exhibit 1, he computes Xita's normalized EPS based on the average ROE method. He determines that Year 1 through Year 4 (the most recent year) constitutes a full business cycle.\nExhibit 1\n#  | Year 1 | Year 2 | Year 3 | Year 4\nEPS | $3.19 | $2.21 | $0.37 | $2.56\nBook value per share | $10.90 | $12.50 | $12.60 | $13.30\nGarc Company\nAlbertson next reviews Garc, which operates in a previously mature industry that now has high growth potential due to a recent technological innovation. Garc's debt-to-equity ratio is significantly higher than the average of its competitors. Garc spent heavily on advertising to create and maintain its brand, which is an important asset. The company is favored by many investors because its dividend payout ratio is the highest in its industry. Albertson considers several potential metrics to use in valuing Garc.\nDuring the past year, Garc's share price rose from $27.95 to $31.05 per share and the company paid an annual dividend of $1.24 per share. Over the same period, the market index rose from 550.40 to 602.21 and had an average dividend yield of 3.4%. Albertson computes Garc's relative strength compared to the index, which is a common technical indicator.",
+    "questions": [
+     {
+      "q": "Which of the following would best explain the difference between the two Xita P/E ratios in Albertson's previous report?",
+      "options": [
+       "Rising earnings",
+       "Negative expected growth",
+       "An estimated stock value below the current market price"
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because for companies with rising earnings, the forward P/E will be smaller than the trailing P/E because the denominator in the forward P/E calculation will be larger. In the previous report, Xita had a forward P/E ratio of 14.9 and a trailing P/E ratio of 15.7, which is consistent with rising earnings at the company.\n\nIncorrect Answer Feedback: Incorrect because with the numerator (current stock price) being the same in both ratios, any difference between the trailing and forward P/E ratios must arise from differences in earnings per share. Any expected increase in earnings, even if positive growth was slower than forecast, will result in a forward P/E less than the trailing P/E.\nIf the earnings growth forecast was negative, the forward P/E would be greater, not smaller (as in the vignette), as the forward P/E denominator would be smaller than the trailing P/E denominator.\n\nIncorrect Answer Feedback: Incorrect because the numerator (current stock price) is the same in both the trailing and forward P/E ratios."
+     },
+     {
+      "q": "Xita's normalized EPS based on the average ROE method is closest to:",
+      "options": [
+       "$2.08.",
+       "$2.13.",
+       "$2.30."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because this is computed as the average EPS for Years 1 to 4:\n(3.19 + 2.21 + 0.37 + 2.56)/4 = $2.08\n\nIncorrect Answer Feedback: Incorrect because this is the average ROE for Years 1 to 4 (17.28%) multiplied by the average BVPS for Years 1 to 4 ($12.325, calculated as [10.90 + 12.50 + 12.60 + 13.30 ]/4):\n0.1728 × 12.325 = $2.13\n\nCorrect Answer Feedback: Correct because in the method of average return on equity normalized EPS is calculated as the average return on equity (ROE) from the most recent full cycle, multiplied by current book value per share.\nEach year's ROE is computed by dividing EPS by BVPS, giving ROE values, by year, of:\nYear 1: 3.19/10.90 = 29.3%\nYear 2: 2.21/12.50 =17.7%\nYear 3: 0.37/12.60 = 2.9%\nYear 4: 2.56/13.30 =19.2%\nThe average ROE for Years 1 to 4 is (29.3 + 17.7 + 2.9 + 19.2)]/4 = 17.28%. Multiplying this by the current BVPS ($13.30 in Year 4) results in normalized EPS of $2.30."
+     },
+     {
+      "q": "Which of the following is the most appropriate metric for Albertson to use in valuing Garc?",
+      "options": [
+       "Dividend yield",
+       "Price to book ratio",
+       "Enterprise value to sales ratio"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect as dividend yield is only one component of total return; not using all information related to expected return is suboptimal. With growth opportunities arising in the industry, capital gains are likely to be an important source of future returns.\nIn addition, the investment required to capitalize on the growth opportunities may adversely affect Garc's ability to pay dividends in the future – especially because Garc's dividend payout ratio is the highest in the industry, which is attractive to many of its current investors. A useful metric in assessing the safety of the dividend is the payout ratio: A high payout relative to other companies operating in the same industry may indicate a less secure dividend because the dividend is less well covered by earnings.\n\nIncorrect Answer Feedback: Incorrect as a material portion of Garc's value arises from the value of its brand, which as an internally generated intangible asset is not shown on the balance sheet (and thus not reflected in book value per share).\nAssets in addition to those recognized in financial statements may be critical operating factors. For example, in many service companies, human capital—the value of skills and knowledge possessed by the workforce—is more important than physical capital as an operating factor, but it is not reflected as an asset on the balance sheet.\nIn addition, accounting effects on book value may compromise how useful book value is as a measure of the shareholders’ investment in the company. In general, intangible assets that are generated internally (as opposed to being acquired) are not shown as assets on a company’s balance sheet. For example, companies account for advertising and marketing as expenses, so the value of internally generated brands, which are created and maintained by advertising and marketing activities, do not appear as assets on a company’s balance sheet under IFRS or US GAAP.\n\nCorrect Answer Feedback: Correct because the numerator of the EV/Sales ratio is the firm's total value of debt and equity. EV/S is an alternative sales-based ratio that is particularly useful when comparing companies with diverse capital structures, which applies to Garc's industry. Sales is an appropriate denominator as sales growth is consistent and not as variable as earnings. In addition, sales are generally less subject to distortion or manipulation than are other fundamentals, such as EPS or book value."
+     },
+     {
+      "q": "Garc's relative strength compared to the market index over the past year is closest to:",
+      "options": [
+       "1.0153.",
+       "1.0168.",
+       "1.0241."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because the relative strength measure of Garc against the market index is 1.0154.\nThe value of Garc divided by the index at the beginning of the period is 27.95 / 550.40 = 0.050781; the relative strength on that day is thus 0.050781 / 0.050781 = 1.0000.\nAt the end of the time frame, the value of Garc divided by the index is 31.05 / 602.21 = 0.051560. Thus, over the time frame the relative strength measure for Garc is 0.051560 / 0.050781 = 1.0153.\nDividends are not incorporated into the relative strength calculation because relative strength is based strictly on price movement. Also, the valuation indicators we call momentum indicators relate either price or a fundamental, such as earnings, to the time series of their own past values.\nA simple relative-strength indicator of the second type (i.e., the stock’s performance relative to the performance of some group of stocks) is the stock’s performance divided by the performance of an equity index. If the value of this ratio increases, the stock price increases relative to the index and displays positive relative strength.\n\nIncorrect Answer Feedback: Incorrect because this is 1 plus the Garc price return of 11.09% (31.05 / 27.95 – 1) minus the market index price return of 9.41% (602.21 / 550.40 – 1):\n1 + 11.09% – 9.41% = 1.0168\n\nIncorrect Answer Feedback: Incorrect because this is the total return including dividends:\nGarc total return = Price return + Dividend return = 31.05/27.95 + 1.24/27.95 = 1.155277\nIndex total return: Price return + Dividend return = (602.21/550.40) + 3.4% = 1.094131 + 0.034 = 1.128131\nReturn ratio: 1.155277 / 1.128131 = 1.0241"
+     }
+    ]
+   },
+   {
+    "topic": "Corp",
+    "body": "Greta Edberg is an activist investor with Sintra Partners. Sintra recently acquired a 9.9% equity position in Alfa Corporation and is seeking two board seats. \nAlfa is a mature company that has maintained a constant dividend payout ratio and does not currently have a share repurchase program. In public comments, Edberg recommends a material increase in Alfa's dividend payout ratio and benchmarking the payout to Alfa's competitors.\nEdberg tells Alfa's management that Minskar, one of Alfa's competitors, has a 75% target payout ratio with an adjustment period of four years. Minskar's most recent annual dividend was $0.25 per share. Minskar's EPS is expected to be $1.30 in Year 1 and $1.10 in Year 2 of the adjustment period.\nAs an alternative to Alfa increasing dividends, Edberg proposes a one-time share repurchase using borrowed funds. Edberg's current EPS forecast for Alfa for the next year is $1.50. The company currently has 2,267,000 shares outstanding, its current share price is $30, and its after-tax cost of borrowing is 4.25%. Edberg calculates the revised EPS forecast for Alfa, assuming that 250,000 shares are repurchased immediately at the current share price.\nTaylor Greene, an analyst, oversees the integration of ESG factors into Sintra's investment analysis. Greene analyzes current policies and practices related to Alfa's board and recommends changes that would increase governance effectiveness. Alfa's board has 13 members, seven of whom are independent, and is chaired by the company's CEO. The board has audit, compensation, nomination, risk and compliance, and governance committees.",
+    "questions": [
+     {
+      "q": "The implementation of Edberg's recommendation regarding Alfa's dividend payout ratio would most likely:",
+      "options": [
+       "reduce management's ability to invest in negative NPV projects.",
+       "increase the agency conflict between Alfa's managers and shareholders.",
+       "reduce the agency conflict between Alfa's bondholders and shareholders."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because increasing the dividend payout ratio (i.e., paying out a higher percentage of earnings as dividends) would constrain Alfa management's access to capital, and thus their ability to overinvest by taking on negative NPV projects. One managerial incentive of particular concern is the potential private benefit managers may obtain from investment in negative net present value (NPV) projects. Such projects will generate negative economic returns; but because they may grow the size of the company (measured in sales or assets) and thus enlarge the manager’s span of control, the manager may have the incentive to invest in them. The potential overinvestment agency problem might be alleviated by the payment of dividends. In particular, by paying out all free cash flow to equity in dividends, managers would be constrained in their ability to overinvest by taking on negative NPV projects.\n\nIncorrect Answer Feedback: Incorrect because increasing the dividend payout ratio would reduce, rather than increase, the agency conflict between managers and shareholders. As a mature company, paying out more dividends would dissuade managers from overinvesting in negative NPV projects.\n\nIncorrect Answer Feedback: Incorrect because increasing the dividend payout ratio would increase, not reduce, the agency conflict between Alfa's bondholders and shareholders. Another concern when a company is financed by debt as well as equity is that paying dividends can exacerbate the agency conflict between shareholders and bondholders. When a company has debt outstanding, the payment of dividends reduces the cash cushion available to the company for the disbursement of fixed required payments to bondholders."
+     },
+     {
+      "q": "Using a target payout adjustment model, the expected increase in Minskar's dividend per share in Year 2 of the adjustment period is closest to:",
+      "options": [
+       "$0.10.",
+       "$0.15.",
+       "$0.18."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because the expected increase in dividends = (Expected earnings × Target payout ratio − Previous dividend) × Adjustment factor. The expected dividend increases for Minskar are as follows:\nIn Year 1: ($1.30 × 0.75 − $0.25) × 0.25 = $0.18125 (for a Year 1 dividend of $0.43125)\nIn Year 2: ($1.10 × 0.75 − $0.43125) × 0.25 = $0.0984375 ≈ $0.10\n\nIncorrect Answer Feedback: Incorrect because the calculation uses a 100% target payout ratio instead of 75%, as follows:\nIn Year 1: ($1.30 × 1.00 − $0.25) × 0.25 = $0.2625 (for a Year 1 dividend of $0.5125)\nIn Year 2: ($1.10 × 1.00 − $0.5125) × 0.25 = $0.146875 ≈ $0.15\n\nIncorrect Answer Feedback: Incorrect because this is the expected Year 1 increase, as follows:\nIn Year 1: ($1.30 × 0.75 − $0.25) × 0.25 = $0.18125 ≈ $0.18"
+     },
+     {
+      "q": "If the proposed share repurchase is implemented immediately, Edberg's revised EPS forecast for Alfa for the next year would be closest to:",
+      "options": [
+       "$1.36.",
+       "$1.53.",
+       "$1.69."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because this calculation does not adjust for the new share count in the EPS calculation:\n($3,400,500 − $318,750) / 2,267,000 shares\n= $3,081,750 / 2,267,000 shares\n≈ $1.36\n\nCorrect Answer Feedback: Correct because EPS after the share repurchase is calculated as follows:\nEarnings = EPS x Number of shares = $1.50 x 2,267,000 = $3,400,500\nFunds needed to repurchase shares = $30 x 250,000 = $7,500,000\nCost of funds to repurchase shares = 4.25% x $7,500,000 = $318,750\nNumber of shares after repurchase = 2,267,000 − 250,000 = 2,017,000\nUsing the above information, we have:\nEPS after buyback = (Earnings − After-tax cost of funds) / Shares outstanding after buyback\n= [$3,400,500 − ($7,500,000 × 0.0425)] / 2,017,000 shares\n= ($3,400,500 − $318,750) / 2,017,000 shares\n= $3,081,750 / 2,017,000 shares\n≈ $1.53\n\nIncorrect Answer Feedback: Incorrect because this answer choice does not consider the cost of borrowing in the EPS calculation:\n($3,400,500 − $0) / 2,017,000 shares\n= $3,400,500 / 2,017,000 shares\n≈ $1.69"
+     },
+     {
+      "q": "Which of the following characteristics of Alfa's board is most likely to pose the greatest potential governance concern?",
+      "options": [
+       "Roles of the CEO",
+       "Number and type of committees",
+       "Number of independent directors"
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because Alfa's CEO also serves as board chair, which is not a characteristic of effective corporate governance.\nGenerally, when evaluating board structure, investors consider whether the organization and structure of the board provide sufficient oversight, representation, and accountability to shareholders. A related topic is 'CEO duality,' whereby the chief executive officer (CEO) also serves as chairperson of the board. CEO duality may raise concerns that the monitoring and oversight role of the board may be compromised relative to independent chairperson and CEO roles. When the chairperson is not independent or the role is combined, a company may appoint a lead independent director to help protect investor interests.\n\nIncorrect Answer Feedback: Incorrect because Alfa has a comprehensive set of board committees. The number of board committees and how the committees operate are relevant considerations in an investor’s analysis of governance. Committees vary by corporation and industry but generally include audit, governance, remuneration (or compensation), nomination, and risk and compliance committees.\n\nIncorrect Answer Feedback: Incorrect because 7 of the 13 directors (54%) on Alfa's board are independent. The independence of the directors is a relevant consideration for investors. The absence or presence of a minority of independent directors is a negative aspect of corporate governance. Without independent directors, the potential exists for management to act in a self-serving manner. Consequently, a lack of independent directors on a board may increase investors’ perception of the corporation’s risk."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Adriani Nicola is an analyst for an investment consulting firm. She is preparing an analysis of equity funds for an institutional client.\nNicola evaluates risk metrics for the Lagunas Fund. For her current analysis, Nicola calculates a 5% daily VaR using the parametric method. Lagunas has $175 million in assets under management and is expected to have an annual return of 8.80% with a standard deviation of 14.25%. She assumes 250 trading days in a year. In a standard normal distribution, a 5% VaR is 1.65 standard deviations below the expected value. \nNicola supplements her analysis with an annual﻿﻿﻿﻿ 5% VaR using the historical simulation approach over a 10-year period. She observes higher volatility in recent years, which she expects to persist in the future. Nicola is concerned that VaR using the historical simulation approach may not adequately reflect the higher volatility and considers potential revisions to this approach.\nThe Lagunas Fund has a large position in ABC stock, whose price has been extremely volatile. The portfolio manager has proposed reducing the fund's position in ABC stock by 3%. Nicola considers a measure to capture how the VaR of the fund would change if the reduction was implemented.\nNicola evaluates three multifactor equity strategies that use a risk parity approach to portfolio construction. Each strategy's investment objective is to achieve market returns with potential for upside, while managing volatility and extreme downside risk. As part of her evaluation, Nicola backtests the three strategies using monthly returns from the past 20 years. She assesses the backtest results shown in Exhibit 1.\nExhibit 1\n#  | Mean Return | Maximum Return | Minimum Return | Standard Deviation | Skewness | Kurtosis\nStrategy A | 0.71% | 3.60% | –2.40% | 1.46% | 0.15 | 8.70\nStrategy B | 0.68% | 3.40% | –2.30% | 1.39% | –0.25 | 6.50\nStrategy C | 0.70% | 3.50% | –2.35% | 1.44% | 0.65 | 4.20",
+    "questions": [
+     {
+      "q": "In Nicola's current analysis, the 5% daily parametric VaR for the Lagunas Fund is closest to:",
+      "options": [
+       "$1.52 million.",
+       "$2.54 million.",
+       "$2.66 million."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because this calculation uses a critical value of 1 instead of 1.65 (or, effectively omits the critical value).\nStep 1: Multiply the portfolio standard deviation by 1.00: 0.00901249 × 1.00 = 0.00901249\nStep 2: Subtract the answer obtained in Step 1 from the expected return: 0.000352 − 0.00901249 = −0.00866049\nStep 3: Because VaR is expressed as an absolute number (despite representing an expected loss), change the sign of the value obtained in Step 2 to 0.00866049\nStep 4: Multiply the result from Step 3 by the value of the portfolio: $175,000,000 × 0.00866049 = $1,515,586 ≈ $1.52 million.\n\nCorrect Answer Feedback: Correct because the 5% daily parametric VaR is calculated as follows:\nFirst, convert the portfolio annual return and standard deviation to daily figures: Portfolio return = 0.0880/250 = 0.000352\nPortfolio standard deviation = 0.1425/√(250) = 0.00901249\nThe following step-by-step procedure shows how VaR is derived:\nStep 1: Multiply the portfolio standard deviation by 1.65: 0.00901249 × 1.65 = 0.01487061\nStep 2: Subtract the answer obtained in Step 1 from the expected return: 0.000352 − 0.01487061 = −0.01451861\nStep 3: Because VaR is expressed as an absolute number (despite representing an expected loss), change the sign of the value obtained in Step 2 to 0.01451861\nStep 4: Multiply the result from Step 3 by the value of the portfolio: $175,000,000 × 0.01451861 = $2,540,757 ≈ $2.54 million.\n\nIncorrect Answer Feedback: Incorrect because the calculation adds, rather than subtracts, the product of the critical value and the standard deviation.\nStep 1: Multiply the portfolio standard deviation by 1.65: 0.00901249 × 1.65 = 0.01487061\nStep 2: (Incorrect) Add the answer obtained in Step 1 to the expected return: 0.000352 + 0.01487061 = 0.01522261\nStep 3: Because VaR is expressed as an absolute number (despite representing an expected loss), change the sign of the value obtained in Step 2 to 0.01522261\nStep 4: Multiply the result from Step 3 by the value of the portfolio: $175,000,000 × 0.01522261 = $2,663,957 ≈ $2.66 million."
+     },
+     {
+      "q": "Given Nicola's volatility expectation, the most appropriate revision when supplementing her analysis with an annual 5% VAR would be to:",
+      "options": [
+       "use a wider confidence interval.",
+       "assume a normal distribution of returns.",
+       "increase the weight of more recent observations."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because using a wider confidence interval would increase the confidence level (e.g., from 95% to 99%) and produce a larger VaR estimate, but would not directly incorporate Nicola's volatility view.\n\nIncorrect Answer Feedback: Incorrect because, although the historical simulation approach is not constrained by an assumption of normality, assuming a normal distribution in this case would not incorporate Nicola's expectation of recent higher volatility persisting into the future.\n\nCorrect Answer Feedback: Correct because both the parametric and historical simulation methods in their most basic forms have the limitation that, as with most samples, all observations are weighted equally. The historical simulation method can adjust for this problem, however, by using a weighting methodology that gives more weight to more recent observations and less weight to more distant observations."
+     },
+     {
+      "q": "Which of the following would best capture the effect on the Lagunas Fund's VaR of the proposed reduction in the ABC stock position?",
+      "options": [
+       "Relative VaR",
+       "Conditional VaR",
+       "Incremental VaR"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because relative VaR is a measure of the degree to which the performance of a given investment portfolio might deviate from its benchmark. It does not capture how portfolio VaR will change if a position size is changed relative to the remaining positions.\n\nIncorrect Answer Feedback: Incorrect because conditional VaR is the average loss conditional on exceeding VaR cutoff. It does not capture how portfolio VaR will change if a position size is changed relative to the remaining positions.\n\nCorrect Answer Feedback: Correct because incremental VaR measures how the portfolio VaR will change if a position size is changed relative to the remaining positions suppose the portfolio manager is contemplating increasing the risk by increasing the investment in SPY to 90% of the portfolio. We recalculate the VaR under the proposed allocation, and the incremental VaR is the difference between the 'before' and 'after' VaR. The potential 3% change in the ABC stock position is exactly the type of change incremental VaR is intended to measure."
+     },
+     {
+      "q": "Based on the backtest results, the multifactor equity strategy that best achieves the investment objective is:",
+      "options": [
+       "Strategy A.",
+       "Strategy B.",
+       "Strategy C."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because Strategy A has similar returns and volatility to those of Strategy C, but has a lower probability of positive returns (lower positive skewness) and is more fat-tailed (higher kurtosis, which can lead to extreme negative surprises).\n\nIncorrect Answer Feedback: Incorrect because Strategy B has similar returns and volatility to those of Strategy C, but has a lower probability of positive returns (negative skewness) and is more fat-tailed (higher kurtosis, which can lead to extreme negative surprises).\n\nCorrect Answer Feedback: Correct because the backtest results for Strategy C best meet the objective to achieve market returns with potential for upside, while managing volatility and extreme downside risk. Strategy C has similar returns and volatility to those of Strategy A and Strategy B, but has a higher probability of positive returns (higher positive skewness) and is less fat-tailed (lower kurtosis)."
+     }
+    ]
+   },
+   {
+    "topic": "Econ",
+    "body": "Joanne Bernard is a currency trader for a US-based hedge fund. She reviews interbank bid-offer quotes in Exhibit 1 (USD/EUR is the number of USD per 1 EUR; JPY/USD is the number of JPY per 1 USD). Bernard determines if an arbitrage profit is possible for the fund based on a dealer's bid/offer rate quote of 119.38/119.40 in JPY/EUR. \nExhibit 1\n# Currency Pair | Interbank Bid | Interbank Offer\nUSD/EUR | 1.1416 | 1.1421\nJPY/USD | 104.62 | 104.68\nThe hedge fund considers hedging a New Zealand dollar (NZD) 1,000,000 coupon payment it will receive in six months. Bernard calculates the 6-month forward USD/NZD (number of USD per 1 NZD) exchange rate implied by covered interest rate parity. Note that MRR is the market reference rate.\n6-month annualized MRR in the US is 0.50%\n6-month annualized MRR in New Zealand is 1.00%\nThe spot mid-market currency quote for USD/NZD is 0.6808\nBernard next considers a 1-year carry trade that involves borrowing the USD and investing in the Brazilian real (BRL). She computes the all-in return (measured in USD terms) of the carry trade using the following information:\nSpot mid-market quote for the BRL/USD is 5.1300\n1-year MRR in the US is 1.00%\n1-year MRR in Brazil is 9.75%\nThe BRL/USD exchange rate in one year is 5.2000\nFinally, Bernard is concerned about a currency crisis in emerging market Country B. She notes the following conditions about the country:\nCondition 1: A slight decline of foreign investment in its equity market\nCondition 2: Broad money growth and a decline in the ratio of M2 (a measure of money supply) to bank reserves \nCondition 3: A sizable decline in the ratio of foreign exchange (FX) reserve holdings to average daily FX turnover in their domestic currency",
+    "questions": [
+     {
+      "q": "Based on the dealer's JPY/EUR quote, is there an arbitrage opportunity for the hedge fund?",
+      "options": [
+       "No",
+       "Yes, by purchasing EUR in the interbank market and selling EUR to the dealer",
+       "Yes, by purchasing EUR from the dealer and selling EUR in the interbank market"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because there is an arbitrage opportunity by buying EUR from the dealer and selling in the interbank market.   \n\nIncorrect Answer Feedback: Incorrect because the arbitrage opportunity is the opposite of this transaction, as explained in the response rationale for the correct answer. The fund should buy EUR from the dealer and sell it in the interbank market. \n\nCorrect Answer Feedback: Correct because the dealer's quote of JPY/EUR 119.38/119.40 leads to arbitrage as follows:\nIn the interbank market we have the following rates from Exhibit 1:\n \tBid\tOffer\n1. USD/EUR\t1.1416\t1.1421\n2. JPY/USD\t104.62\t104.68\n3. Implied JPY/EUR (1 × 2)\t119.4342\t119.5550\n4. DEALER (info in vignette)\t119.38\t119.40\n \nTherefore, the hedge fund can buy EUR from the dealer at JPY119.40 (row 4) and then effectively sell EUR in the interbank market for 119.43 (from row 3)."
+     },
+     {
+      "q": "Based on covered interest rate parity, the 6-month forward USD/NZD exchange rate is closest to:",
+      "options": [
+       "0.6774.",
+       "0.6791.",
+       "0.6825."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the annual interest rates are used rather than the correct 6-month interest rates as follows (where S0 is the spot exchange rate expressed as USD/NZD)\nF(USD/NZD) = S0 × (1+rUS)/(1+rNZD) = 0.6808 × (1.005)/(1+0.01) = 0.6774\n\nCorrect Answer Feedback: Correct because the 6-month forward rate is calculated using the correct formula and interest rates for the covered interest rate parity forward rate (S0 is the current spot exchange rate which is equal to 0.6808).\nFf/d = Sf/d × [1 + if(actual/360)]/[1 + id(Actual/360)]\nF(USD/NZD) = S0 × (1+rUS/2)/(1+rNZD/2) = 0.6808 × (1 + 0.005/2)/(1+0.01/2) = 0.6791\n\nIncorrect Answer Feedback: Incorrect because the ratio of interest rates is inverted as follows:\nF(USD/NZD) = S0 × (1+rNZD/2)/(1+rUS/2) = 0.6808 × (1 + 0.01/2)/(1+0.005/2) = 0.6825"
+     },
+     {
+      "q": "The all-in return for the carry trade, measured in USD terms, is closest to:",
+      "options": [
+       "7.27%.",
+       "8.27%.",
+       "8.75%."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because it considers both the return from the BRL investment and then also deducts the cost of borrowing USD. We can see this as follows for borrowing a hypothetical USD1,000 as follows:\nBorrow $1,000 at 1% for 1 year, end of year value $1,010\nConvert to BRL at 5.130; this becomes BRL 5,130\nInvest BRL 5,130 at the Brazilian rate of 9.75% for 1 year.\nThe investment in (3) becomes BRL 5,130 × 1.0975 = BRL 5,630.175\nConvert at the t=1 year exchange rate of BRL 5.200 which gives USD 1,082.72596\nPay back the borrowing from (1): USD 1,010.00\nNet return in USD is the difference between (5) and (6) or USD 72.72596\nExpressed in percentage USD term the amount in (7) is 0.072725 or 7.27%\n\nIncorrect Answer Feedback: Incorrect because it is the rate earned on the carry trade that does not include the cost of borrowing USD. This is seen as follows for borrowing a hypothetical USD1,000:\nBorrow $1,000 at 1% for 1 year, end of year value $1,010\nConvert to BRL at 5.130; this becomes BRL 5,130\nInvest BRL 5,130 at the Brazilian rate of 9.75% for 1 year.\nThe investment in (3) becomes BRL 5,130 × 1.0975 = BRL 5,630.175\nConvert at the t=1 year exchange rate of BRL 5.200 which gives USD 1,082.72596\nIncorrect net return, deduct $1,000 original cost USD 82.7256\nAs a percentage of original USD borrowed: 8.27%\n\nIncorrect Answer Feedback: Incorrect because it is the interest rate differential between BRL and USD (i.e., 9.75% and 1.00%)."
+     },
+     {
+      "q": "Which of the following conditions would most likely be a warning sign of a currency crisis in Country B?",
+      "options": [
+       "Condition 1",
+       "Condition 2",
+       "Condition 3"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because it is typically large inflows of foreign capital that precede a crisis. In the vignette it is stated that Country B has experienced a slight decline in the allocation by foreign investors. \n\nIncorrect Answer Feedback: Incorrect because studies have shown that broad money growth and the ratio of M2 (a measure of money supply) to bank reserves tend to rise prior to a currency crisis. Bernard notes that these indicators have declined.  \n\nCorrect Answer Feedback: Correct because foreign exchange reserves tend to decline precipitously as a crisis approaches. In the vignette, Bernard notes that this is indeed the situation for Country B."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Susan Traske is an analyst specializing in financial institutions. She is evaluating Sigmar, a large US-based commercial bank. Traske uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach in her evaluation of Sigmar. As part of this analysis, she examines Sigmar's liquidity ratios and notes that the bank's net stable funding ratio has increased steadily over the past three years. She then investigates which components of the ratio explain this trend.\nTraske reviews Sigmar's employee compensation policy and notes that a large restricted stock grant vested during the current year. The share price on the settlement date was greater than the share price on the grant date. Recognizing that Sigmar prepares its financial statements in accordance with US GAAP, Traske considers the effect of the vested grant on Sigmar's income tax expense for the current year.\nSigmar sponsors a defined benefit pension plan for employees. Sigmar's pension disclosure for the most recent year is shown in Exhibit 1 (amounts in $ millions):\nExhibit 1\nInterest cost | 2,875\nCurrent service cost | 535\nActual return on plan assets | 2,895\nExpected return on plan assets | 3,000\nTraske notes that there was no amortization of past service costs, no amortization of actuarial gains or losses, and no amortization of differences between actual and expected return on plan assets.\nFinally, Traske compares the overall efficiency of the underwriting operations of three property and casualty insurance companies based on the information in Exhibit 2.\nExhibit 2\n#  | Insurer A | Insurer B | Insurer C\nLoss and loss adjustment ratio | 60.2% | 66.4% | 63.1%\nUnderwriting expense ratio | 42.3% | 30.8% | 32.5%",
+    "questions": [
+     {
+      "q": "An increase in which of the following would best explain the trend in Sigmar's net stable funding ratio?",
+      "options": [
+       "Loans to customers",
+       "Long-term debt liabilities",
+       "High-quality liquid assets"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because an increase in loans to customers (a component of the bank's asset base) would be consistent with a decrease, not an increase, in the NSFR.\n\nCorrect Answer Feedback: Correct because the Net Stable Funding Ratio (NSFR) is expressed as the minimum percentage of a bank’s required stable funding that must be sourced from available stable funding. For this ratio, required stable funding (the denominator) is a function of the composition and maturity of a bank’s asset base, whereas available stable funding (the numerator) is a function of the composition and maturity of a bank’s funding sources (i.e., capital and deposits and other liabilities). The NSFR has steadily increased over the past three years. Accordingly, an increase in long-term debt liabilities (a funding source) would be consistent with an increase in the NSFR.\n\nIncorrect Answer Feedback: Incorrect because highly liquid assets do not enter the calculation of the Net Stable Funding Ratio."
+     },
+     {
+      "q": "The difference in share price between the grant date and the settlement date for the large restricted stock grant will most likely:",
+      "options": [
+       "decrease income tax expense.",
+       "have no effect on income tax expense.",
+       "increase income tax expense."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because a higher share price at settlement versus the grant date results in a higher tax deduction than the cumulative stock-based compensation expense. This is known as an excess tax benefit or tax windfall because taxable income and tax expense are reduced.\n\nIncorrect Answer Feedback: Incorrect because Sigmar follows US GAAP, so a difference in share price between the settlement date and the grant date will cause income tax expense to increase or decrease.\n\nIncorrect Answer Feedback: Incorrect because a lower (not higher) share price at settlement versus at the grant date results in a lower tax deduction than the cumulative stock-based compensation expense."
+     },
+     {
+      "q": "The total pension expense (in $ millions) reported on Sigmar's income statement for the most recent year is:",
+      "options": [
+       "410.",
+       "515.",
+       "535."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because there is no amortization of past service costs or actuarial gains and losses, hence the total pension expense (in $ millions) is computed as: Current service cost + Interest cost – Expected return on plan assets = 535 + 2,875 – 3,000 = 410.\n\nIncorrect Answer Feedback: Incorrect because this answer uses the actual (instead of expected) return on plan assets, hence the total pension expense (in $ millions) is incorrectly computed as: 535 + 2,875 – 2,895 = 515.\n\nIncorrect Answer Feedback: Incorrect because this answer is the current service cost, and it ignores the interest cost and expected return on plan assets. The current service cost would be recognized in operating expense, but would not be the only pension expense reported on Sigmar's income statement for the most recent year."
+     },
+     {
+      "q": "Which insurer's underwriting operation is the most efficient overall?",
+      "options": [
+       "Insurer A",
+       "Insurer B",
+       "Insurer C"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because Insurer A has the highest combined ratio (60.2% + 42.3% = 102.5%) compared to Insurer B (66.4% + 30.8% = 97.2%) and Insurer C (63.1% + 32.5% = 95.6%), thus it does not have the most efficient underwriting operation overall.\n\nIncorrect Answer Feedback: Incorrect because Insurer B has a higher combined ratio (66.4% + 30.8% = 97.2%) than Insurer C (63.1% + 32.5% = 95.6%), thus it does not have the most efficient underwriting operation overall.\n\nCorrect Answer Feedback: Correct because Insurer C has the lowest combined ratio (63.1% + 32.5% = 95.6%) compared to Insurer A (60.2% + 42.3% = 102.5%) and Insurer B (66.4% + 30.8% = 97.2%). Combined ratio = Loss and loss adjustment expense ratio + Underwriting expense ratio. This ratio indicates the overall efficiency of an underwriting operation. A combined ratio of less than 100% is considered efficient."
+     }
+    ]
+   },
+   {
+    "topic": "Deriv",
+    "body": "Maximilian Bueden manages the equity exposure for a family office. All of the office's investment returns are measured in EUR, while equity holdings in foreign currencies are usually hedged to eliminate exchange rate risk. Six months ago, Bueden entered a 3-year receive-equity, pay-fixed, annual-reset equity swap with a notional amount of EUR 1,000,000. At initiation, the fixed rate was 2.3% and the equity index was trading at 100. Now the fixed rate has declined to 1.8% and the equity index is trading at 104.8. Bueden determines the no-arbitrage value of the equity swap based on the present value (PV) factors in Exhibit 1.\nExhibit 1\n# Maturity (in Years) | PV Factor for Equity Swap\n0.5 | 0.99108\n1.5 | 0.97371\n2.5 | 0.95694\nOver the next year, Bueden expects regular cash inflows denominated in Australian dollar (AUD) from the family office's Australian equity portfolio. He hedges the currency exposure by entering into a fixed-for-fixed currency swap with a notional amount of AUD 16 million. The AUD/EUR spot exchange rate is 1.60 AUD per EUR and notional amounts are exchanged at initiation and at maturity. The interest rate on the EUR leg is 1.8%. Bueden calculates the interest rate on the AUD leg that results in a contract value of zero at initiation, based on the present value factors in Exhibit 2.\nExhibit 2\n# Maturity (in Years) | PV Factor for AUD Leg\n0.25 | 0.99567\n0.50 | 0.99012\n0.75 | 0.98345\n1.00 | 0.97965\nSum of PV factors: | 3.94889\nBueden next identifies an arbitrage opportunity in shares of Reyab, a publicly traded company. A forward contract on Reyab is trading in the market at EUR 63.25, while the theoretical arbitrage-free price is EUR 63.65.\nFinally, Bueden evaluates a 9-month forward contract on Furblag, another equity holding. He enters into the 9-month forward contract on Furblag at a price of EUR 123. Six months after initiation of the contract, the dividend has been paid and Furblag shares are trading at EUR 131. The annually compounded interest rate is 1.6%.",
+    "questions": [
+     {
+      "q": "The no-arbitrage value (in EUR) of Bueden's position in the equity swap is closest to:",
+      "options": [
+       "−19,200.",
+       "23,860.",
+       "33,262."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the sum of the present value factors (0.99108 + 0.97371 + 0.95694 = 2.92173) is multiplied by the fixed income cash flows (1,000,000 x 2.3% = 23,000): 2.92173 x 23,000 = 67,200. This is subtracted from the equity return (1,000,000 x 104.8/100 – 1,000,000 = 48,000) to arrive at –19,200. \n\nCorrect Answer Feedback: Correct because to determine the value of the fixed leg, the present value factors are multiplied by the fixed income cash flows (1,000,000 x 2.3% = 23,000) as follows: \n0.99108 x 23,000 = 22,795\n0.97371 x 23,000 = 22,395\n0.95694 x 1,023,000 = 978,950\nand then 22,795 + 22,395 + 978,950 = 1,024,140. \nThe equity investment becomes 1,000,000 x 104.8/100 = 1,048,000.\nThe difference is 1,048,000 - 1,024,140 = 23,860.\n\nIncorrect Answer Feedback: Incorrect because the present value factors are used to determine the equilibrium interest rate (at initiation) by calculating (1 - last PV factor) / Sum of PV-factors. This yields 1 - 0.95694 / 2.92173 = 0.014738. The difference between the equity return of 0.048 and 0.014738 = 0.033262 which multiplied by 1,000,000 = 33,262."
+     },
+     {
+      "q": "The interest rate on the AUD leg that results in a contract value of zero at swap initiation is closest to:",
+      "options": [
+       "0.44%.",
+       "1.29%.",
+       "2.06%."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because PV (90) is used in the formula instead of PV(360). (1 - 0.9957) / 3.94889 = 0.0011. Annualizing this quarterly rate (0.0011 x 4) yields 0.44%.   \n\nIncorrect Answer Feedback: Incorrect because the average of the four PVs ((0.9957 + 0.9901 + 0.9835 + 0.9797) / 4 = 0.987223) is used in the formula instead of PV(360). (1 - 0.987223) / 3.94889 = 0.0032. Annualizing this quarterly rate (0.0032 x 4) yields 1.29%.\n\nCorrect Answer Feedback: Correct because the formula for calculating the interest rate in a fixed-for-fixed swap is\n(1 - PV(360)) / ( Sum of PVs). (1 – 0.97965) / 3.94889 = 0.005153. Annualizing this quarterly rate (0.005153 x 4) yields 2.06%."
+     },
+     {
+      "q": "Exploiting the arbitrage opportunity in Reyab shares involves:",
+      "options": [
+       "selling the forward contract and purchasing the underlying with borrowed funds.",
+       "selling the forward contract and investing the proceeds at the risk-free interest rate.",
+       "buying the forward contract, selling the underlying short, and investing the proceeds at the risk-free interest rate."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because selling the forward contract and purchasing the underlying with borrowed funds would be the appropriate arbitrage strategy if the observed forward price was above the theoretical arbitrage-free forward price, which is not the case. \n\nIncorrect Answer Feedback: Incorrect because selling the forward and investing the proceeds at the risk-free interest rate exposes the investor to price risk and is therefore not an arbitrage strategy.\n\nCorrect Answer Feedback: Correct because where the observed forward price (in this case EUR 63.25) is below the theoretical arbitrage-free forward price (in this case EUR 63.65), reverse carry arbitrage is the appropriate strategy to exploit the arbitrage opportunity. Reverse carry arbitrage involves the following steps: (1) Buy the forward contract, (2) Sell the underlying short, (3) Lend (invest) the short sale proceeds."
+     },
+     {
+      "q": "Six months after initiation, the value (in EUR) of the forward contract on Furblag shares is closest to:",
+      "options": [
+       "7.97.",
+       "8.49.",
+       "8.97."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the difference between St and F0 is incorrectly used in the discount calculation.\n= (131 – 123) /1.0160.25 \n= 7.97\n\nCorrect Answer Feedback: Correct because the value of a forward contract is given as Vt = St - PV(F0), where St is the underlying price at Time t and PV(F0) is calculated based on the remaining 3 months (0.25 years).\n= 131 – 123/1.0160.25\n= 8.49\n\nIncorrect Answer Feedback: Incorrect because six months (i.e. the time that has passed rather than the three months remaining) is incorrectly used for calculating PV(F0). \n= 131 – 123/1.0160.5\n= 8.97"
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Shawn Laver, a buy-side analyst, is evaluating three companies: Globac, Waltun, and Dentoc. Laver first values Globac, a natural resources company that has significant iron ore reserves. Due to its weak growth prospects, Globac has generated negative earnings and negative operating cash flows in recent years. This trend appears likely to continue for the foreseeable future.\nNext, Laver computes Waltun's FCFF using the most recent fiscal year data (in $ millions) provided in Exhibit 1. Waltun has a tax rate of 30% and its financial statements are prepared under US GAAP.\nExhibit 1\nNet income | 500\nDepreciation expense | 25\nInterest expense | 50\nInvestment in fixed capital | 75\nInvestment in working capital | 150\nCash flow from operations | 375\nLaver computes Dentoc's FCFE for the most recent year to be $750 million. He believes the company will have annual growth of 12% for each of the next three years, followed by a decline to the industry-average growth rate of 4%. Laver assumes a required rate of return on equity of 10% and a WACC of 9%. Using a two-stage model, Laver estimates the intrinsic value of Dentoc's common equity.\nSix months later, Laver revises his FCFE projections of Dentoc to incorporate the impact of several financial decisions approved by the company's board:\n• Decision 1: Dentoc will pay a cash dividend of $2 per share to its common shareholders.\n• Decision 2: Dentoc will buy back 1 million shares of its own common stock.\n• Decision 3: Dentoc will modify its capital structure by increasing its level of debt by 5%.",
+    "questions": [
+     {
+      "q": "Which of the following valuation methods would be most appropriate to value Globac?",
+      "options": [
+       "Asset-based valuation",
+       "Discounted cash flow model",
+       "Relative valuation using P/E multiple"
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because Globac has significant iron ore reserves. Asset-based valuation would be a better fit given the company is struggling financially and the value of the company will be derived from its assets (in this case iron ore reserves). Asset-based valuation values a company on the basis of the market value of the assets or resources it controls. Hence, the method is a reasonable approach. \n\nIncorrect Answer Feedback: Incorrect because earnings are negative and likely to remain negative due to which the discounted cash flow model cannot be applied. \n\nIncorrect Answer Feedback: Incorrect because earnings are negative and likely to remain negative. Hence, the company cannot be valued using P/E relative to its peers. A relative valuation model estimates an asset’s value relative to that of another asset. The idea underlying relative valuation is that similar assets should sell at similar prices."
+     },
+     {
+      "q": "Waltun's FCFF for the most recent year (in $ millions) is:",
+      "options": [
+       "335.",
+       "350.",
+       "360."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because FCFF = NI + Dep + Int(1 – Tax rate) – FCInv – WCInv\nNet income = NI = 500\nDepreciation = Dep = 25\nInterest expense = Int = 50\nTax rate = 30%\nFixed capital investment = FCInv = 75\nWorking capital investment = WCInv = 150\nFCFF = 500 + 25 + 50 × (1 – 30%) – 75 – 150 = 335\n \nAlternate calculation:\nFCFF = CFO + Int(1 – Tax rate) – FCInv\nFCFF = 375 + 50 × (1 – 30%) – 75 = 335\n\nIncorrect Answer Feedback: Incorrect because the interest is not adjusted by the tax rate.\nIncorrect formula:\nFCFF = NI + Dep + Int – FCInv – WCInv\nFCFF = 500 + 25 + 50 – 75 – 150 = 350\n\nIncorrect Answer Feedback: Incorrect because depreciation is incorrectly added into the formula below:\nFCFF = CFO + Int(1 – Tax rate) – FCInv + Dep\nFCFF = 375 + 50 × (1 – 30%) – 75 + 25"
+     },
+     {
+      "q": "Based on Laver's assumptions, the intrinsic value (in $ millions) of Dentoc's common equity is closest to:",
+      "options": [
+       "14,807.",
+       "16,055.",
+       "19,300."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the PV is wrongly calculated by discounting the terminal value over four years rather than three years.\nYear 0\tYear 1\tYear 2\tYear 3\tYear 4\nFCFE\t750\t750 × 1.12\n= 840\t840 × 1.12\n= 940.8\t940.8 × 1.12\n= 1,053.696\t\nTV\t\t\t\t\t1,053.696 × (1 + 4%) / (10% – 4%)\n= 18,264.064\nSum\t\t840\t940.8\t1,053.696\t18,264.064\nPV\t\t840 / (1 + 10%)1\n= 763.636\t940.8 / (1 + 10%)2\n= 777.521\t1,053.696 / (1 + 10%)3\n= 791.657\t18,264.064 / (1 + 10%)4\n= 12,474.601\nSum of PV\t14,807.41\n≈ 14,807\t\t\t\t\n\nCorrect Answer Feedback: Correct because the equity value is the sum of PV of FCFEs and PV of Terminal Value (TV).\nYear 0\tYear 1\tYear 2\tYear 3\nFCFE\t750\t750 × 1.12\n= 840\t840 × 1.12\n= 940.8\t940.8 × 1.12\n= 1,053.696\nTV\t\t\t\t1,053.696 × (1 + 4%) / (10% – 4%)\n= 18,264.064\nSum\t\t840\t940.8\t19,317.760\nPV\t\t840 / (1 + 10%)1\n= 763.636\t940.8 / (1 + 10%)2\n= 777.521\t19,317.760 / (1 + 10%)3\n= 14,513.719\nSum of PV\t16,054.876\n≈ 16,055\t\t\t\n\nIncorrect Answer Feedback: Incorrect because the WACC of 9% is used instead of the required rate of return on equity of 10%.\nYear 0\tYear 1\tYear 2\tYear 3\nFCFE\t750\t750 × 1.12\n= 840\t840 × 1.12\n= 940.8\t940.8 × 1.12 = 1,053.696\nTV\t\t\t\t1,053.696 × (1 + 4%) / (9% – 4%)\n= 21,916.877\nSum\t\t840\t940.8\t22,970.573\nPV\t\t840 / (1 + 9%)1\n= 770.642\t940.8 / (1 + 9%)2\n= 791.853\t22,970.573 / (1 + 9%)3\n= 17,737.497\nSum of PV\t19,299.992\n≈ 19,300"
+     },
+     {
+      "q": "Which decision will most likely impact Laver's revised FCFE projections of Dentoc?",
+      "options": [
+       "Decision 1",
+       "Decision 2",
+       "Decision 3"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because paying cash dividends on common stock does not affect FCFF or FCFE, which are the amounts of cash available to all investors or to common stockholders.\n\nIncorrect Answer Feedback: Incorrect because share repurchases of common stock also do not affect FCFF or FCFE. Share repurchases are, in many respects, a substitute for cash dividends.\n\nCorrect Answer Feedback: Correct because changing leverage (changing the amount of debt financing in the company’s capital structure), does have some effects on FCFE particularly. An increase in leverage will not affect FCFF (although it might affect the calculations used to arrive at FCFF). An increase in leverage affects FCFE in two ways. In the year the debt is issued, it increases the FCFE by the amount of debt issued. After the debt is issued, FCFE is then reduced by the after-tax interest expense. Further, FCFE is calculated by adding net borrowings to FCFF and reducing the tax-adjusted interest payments."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Pamela Brown, CFA, is a financial planner at Metulla Investment Management, a private wealth management firm. Brown is preparing to meet with Jonathan Cliff, a prospective client, to review a sample of Metulla's strategies that are suitable for Cliff's risk tolerance and return objectives.\nDuring her meeting with Cliff, Brown presents the latest performance report for Metulla’s flagship large-cap equity composite. The report has been prepared by Brown's team. The composite return calculation includes the returns of terminated accounts. The report's disclosure regarding terminated accounts does not state the dates when the accounts were terminated. Metulla does not claim compliance with the GIPS standards.\nBrown provides Cliff with an overview of Metulla's IPO allocation policies. Brown demonstrates how she recently allocated the shares received from an IPO that was suitable for clients with a small-cap mandate. The IPO was oversubscribed and Metulla received 100,000 shares. In Exhibit 1, Brown provides the list of Metulla's accounts with a small-cap mandate, including some accounts of family members of Metulla's employees, as well as the number of shares subscribed by each group. All accounts pay fees according to Metulla's standard fee schedule. Employees do not have beneficial interest in family members' accounts.\nExhibit 1\n#  | Type of Account | Clients | IPO Subscription (Number of Shares)\nGroup 1 | Discretionary | Family members | 25,000\nGroup 2 | Discretionary | Non-family members | 70,000\nGroup 3 | Nondiscretionary | Non-family members | 30,000\nOne month later, Cliff hires Brown to manage his account. Cliff instructs that his trades should be directed to Brinkman Securities LLC. Brown notifies Cliff in writing that Brinkman does not provide best execution, but nonetheless executes trades for Cliff's account with Brinkman. Brinkman provides Brown with \"soft dollars\" for each of Cliff's trades. Brown uses the soft dollars to benefit Metulla's institutional clients.\nBrown recently prepared an IPS for a family friend who is not one of Metulla's clients. In exchange for preparing the IPS, Brown accepted a $1,000 consulting fee. Separately, Brown received a one-year gift membership to an exclusive golf club from one of Metulla's clients. For this additional compensation, Brown disclosed neither the consulting fee nor the gift membership to Metulla.",
+    "questions": [
+     {
+      "q": "Does Brown violate the Standards when presenting her composite performance?",
+      "options": [
+       "No",
+       "Yes, with respect to the termination dates",
+       "Yes, with respect to the accounts included in the return calculation"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the performance report of the large-cap composite does not include a disclosure of the date of termination for terminated accounts, which is a violation of Standard III(D) Performance Presentation. \n\nCorrect Answer Feedback: Correct because Standard III(D) Performance Presentation states that when communicating investment performance information, Members and Candidates must make reasonable efforts to ensure that it is fair, accurate, and complete.\" In the case of terminated accounts, members and candidates can also meet their obligations under Standard III(D) by including terminated accounts as part of performance history with a clear indication of when the accounts were terminated. Metulla's performance report for the large-cap equity composite includes terminated accounts in the composite's performance calculation. However, the report does not disclose when the accounts were terminated, which is required in order to have a fair, accurate, and complete performance report under the Standards.\n\nIncorrect Answer Feedback: Incorrect because the inclusion of terminated accounts in the calculation of the large-cap equity composite's return is in compliance with Standard III(D) Performance Presentation."
+     },
+     {
+      "q": "To comply with the Standards, how many shares should Brown have allocated to Group 3?",
+      "options": [
+       "5,000",
+       "24,000",
+       "30,000"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because Group 3 is eligible to participate on a pro rata basis together with the other groups in the IPO allocation, and will receive more than 5,000 shares under Standard III(B) Fair Dealing as a result. \nThe number of shares allocated to Group 3 is calculated incorrectly as:\nTotal shares available – Shares for discretionary accounts = 100,000 – (25,000 + 70,000) = 100,000 – 95,000 = 5,000.\n\nCorrect Answer Feedback: Correct because Standard III(B) Fair Dealing states that Members and Candidates must deal fairly and objectively with all clients when providing investment analysis, making investment recommendations, taking investment action, or engaging in other professional activities. Accordingly, all accounts that are fee paying, whether discretionary or nondiscretionary and whether owned by family members or other clients, must be included in the IPO allocation on a pro rata basis. Group 3 should receive an allocation calculated as follows:\nAllocation of IPO shares to Group 3:\n100,000 × [30,000/(25,000 + 70,000 + 30,000)] = 100,000 × 30,000/125,000 = 24,000 shares.\n\nIncorrect Answer Feedback: Incorrect because, under Standard III(B) Fair Dealing, all accounts in Exhibit 1 are eligible to participate in the IPO allocation, on a pro rata basis. Given that the number of subscribed shares (125,000) exceeds the number of total allotted shares (100,000), each of the three groups will receive less than 100% of the subscribed amount. In particular, Group 3 will receive less than the 30,000 shares subscribed."
+     },
+     {
+      "q": "Brown violates the Standards in relation to Cliff's directed brokerage arrangement due to:",
+      "options": [
+       "the use of soft dollars only.",
+       "failure to obtain best execution only.",
+       "both the use of soft dollars and failure to obtain best execution."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because Brown violates Standard III(A) Loyalty, Prudence, and Care. From time to time, a client will direct a manager to use the client’s brokerage to purchase goods or services for the client. Because brokerage commission is an asset of the client and is used to benefit that client, not the manager, such a practice does not violate any duty of loyalty. However, a member or candidate is obligated to seek 'best price' and 'best execution' and be assured by the client that the goods or services purchased from the brokerage will benefit the account beneficiaries. To the extent that Brown is using the commission soft dollars received from Brinkman for the benefit of Metulla's institutional clients rather than Cliff as the client that generated such commissions, Brown is in violation of Standard III(A). \n\nIncorrect Answer Feedback: Incorrect because Brown had notified Cliff that Brinkman does not provide best execution. Under Standard III(A) Loyalty, Prudence, and Care, a member or candidate is obligated to seek 'best price' and 'best execution' and be assured that the good or services purchased from the brokerage will benefit the account beneficiaries. In case a client directs the manager to use the services of a particular broker that does not provide best execution, the member or candidate should disclose to the client that the client may not be getting best execution from the directed brokerage. Brown has fulfilled her disclosure obligation.\n\nIncorrect Answer Feedback: Incorrect because Brown violates the Standards regarding only the use of soft dollars. She does not violate the Standards by failing to obtain the best execution. A member or candidate who pays a higher brokerage commission than he or she would normally pay to allow for the purchase of goods or services, without corresponding benefit to the client, violates the duty of loyalty to the client. In using Brinkman's commission to benefit Metulla's institutional clients rather than Cliff, Brown violates Standard III(A) Loyalty, Prudence, and Care."
+     },
+     {
+      "q": "With regard to Brown's additional compensation, the Standards require that she obtain Metulla's consent for:",
+      "options": [
+       "the gift only.",
+       "the consulting fee only.",
+       "both the gift and the consulting fee."
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because both the gift (non-monetary) and the consulting fee (monetary) are types of compensation that require written consent from the employer. Brown did not receive written consent from Metulla and is therefore in violation of Standard IV(B) Additional Compensation Arrangements.\n\nIncorrect Answer Feedback: Incorrect because both the gift (non-monetary) and the consulting fee (monetary) are types of compensation that require written consent from the employer. Brown did not receive written consent from Metulla and is therefore in violation of Standard IV(B) Additional Compensation Arrangements.\n\nCorrect Answer Feedback: Correct because Standard IV(B) Additional Compensation Arrangements states that Members and Candidates must not accept gifts, benefits, compensation, or consideration that competes with or might reasonably be expected to create a conflict of interest with their employer's interest unless they obtain written consent from all parties involved. Compensation and benefits include direct compensation by the client and any indirect compensation or other benefit received from third parties. Written consent includes any form of communication that can be documented. Both the gift (non-monetary) and the consulting fee (monetary) are types of compensation that require written consent. Brown did not receive written consent from Metulla and is therefore in violation of Standard IV(B)."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Rodrick Darko, CFA, is a senior research analyst at TTN Capital, a large full-service brokerage and investment firm. Darko is invited to an analyst conference hosted by Bloom Data Centers, a company covered by Darko. Bloom arranges to pay for the commercial flights for all analysts attending the conference. Bloom also provides a company-branded mug as a gift to all analysts who attend the conference. Darko accepts the travel arrangement and the gift.\nDarko is building a model to support his analysis for a research report on Ncenter Corp. As a source for the model, Darko relies on a third-party research provider that was approved by TTN's research division. He does not perform his own due diligence on the research provider. Darko's analysis includes both positive and negative growth scenarios in the model, but Darko decides to include only the positive growth scenario in his report.\nDarko's supervisor is concerned about recent policy violations by employees in his department. During a compliance training meeting, Darko suggests three initiatives to improve compliance.\nInitiative 1: Periodically update compliance procedures to ensure that the measures are adequate under the law\nInitiative 2: Educate personnel regarding the compliance procedures only when they join the firm\nInitiative 3: Issue periodic reminders of the compliance procedures to appropriate personnel \nAnne Garcia, CFA, works in TTN's client services department. Garcia meets with a client and, during the meeting, she receives information that makes her suspect the client has committed tax fraud. Garcia sends a company-wide email detailing her suspicions. The regulator contacts Garcia as part of its investigation into the client's suspected tax fraud and requests that Garcia send information regarding the client to the regulator. Garcia provides the information to the regulator as required by local law.",
+    "questions": [
+     {
+      "q": "Does Darko violate the Standards regarding the Bloom conference?",
+      "options": [
+       "No",
+       "Yes, by accepting the travel arrangement only",
+       "Yes, by accepting the travel arrangement and the gift"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because Darko violates Standard I(B) Independence and Objectivity by accepting the travel arrangement. According to the guidance for Standard I(B), to avoid the appearance of compromising their independence and objectivity, best practice dictates that Members and Candidates always use commercial transportation at their expense or at the expense of their firm rather than accept paid travel arrangements from an outside company.\n\nCorrect Answer Feedback: Correct because Standard I(B) Independence and Objectivity states, when attending meetings at an issuer’s headquarters (or covered company), members and candidates should pay for commercial transportation and hotel charges. No corporate issuer (or covered company) should reimburse members or candidates for air transportation. Additionally, according to the guidance for Standard I(B), to avoid the appearance of compromising their independence and objectivity, best practice dictates that Members and Candidates always use commercial transportation at their expense or at the expense of their firm rather than accept paid travel arrangements from an outside company.\nThe conference was hosted by Bloom, which is one of the companies covered by Darko. If Bloom pays for Darko's flights, it would appear that his independence and objectivity will be compromised as he covers the company and this may influence his investment analysis, recommendations, and actions while working on Bloom. Standard I(B) emphasizes the need for members and candidates to maintain their independence and objectivity and accepting the flights would likely create a conflict of interest and compromise Darko's independence and objectivity.\n\nIncorrect Answer Feedback: Incorrect because Darko violates Standard I(B) Independence and Objectivity by accepting the travel arrangement, but not by accepting the gift. As per practices under Standard I(B) Independence and Objectivity, members and candidates must limit the acceptance of gratuities and/or gifts to token items. A mug can be considered as a token (low value) item and that was given to all analysts who attended the conference. Accepting the mug should not impair Darko's objectivity. Standard I(B) states, modest gifts and entertainment are acceptable, but special care must be taken by members and candidates to resist subtle and not-so-subtle pressures to act in conflict with the interests of their clients."
+     },
+     {
+      "q": "Does Darko violate the Standards regarding his work on the Ncenter research report?",
+      "options": [
+       "No",
+       "Yes, regarding the third-party research provider",
+       "Yes, regarding his scenario choice in the report"
+      ],
+      "answer": 2,
+      "why": "Incorrect Answer Feedback: Incorrect because Darko violates Standard V(A) Diligence and Reasonable Basis by including only the positive growth scenario and omitting the negative growth scenario. He does not violate the Standards by using third-party research which was approved by TTN's research division.\n\nIncorrect Answer Feedback: Incorrect because a member or candidate may rely on others in his or her firm to determine whether secondary or third-party research is sound and use the information in good faith unless the member or candidate has reason to question its validity or the processes and procedures used by those responsible for the research. Darko uses information from a third-party research provider which was approved by TTN's research division. He can rely on others at TTN to determine that the quality of the research meets the necessary standards and to approve the research provider without violating Standard V(A) Diligence and Reasonable Basis. There is no requirement that he has to perform his own due diligence on the third-party research in this scenario.\n\nCorrect Answer Feedback: Correct because Darko violates Standard V(A) Diligence and Reasonable Basis by reporting only the positive growth scenario and omitting the negative growth scenario. Members and Candidates must have a reasonable and adequate basis, supported by appropriate research and investigation, for any investment analysis, recommendation, or action.\nAlso, the omission from the analysis of potentially negative outcomes or of levels of risk outside the norm may misrepresent the true economic value of an investment. The possible scenarios for analysis should include factors that are likely to have a substantial influence on the investment value and may include extremely positive and negative scenarios."
+     },
+     {
+      "q": "Which compliance initiative suggested by Darko is not consistent with the Standards?",
+      "options": [
+       "Initiative 1",
+       "Initiative 2",
+       "Initiative 3"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because, as per the guidance under Standard IV(C) Responsibilities of Supervisors, once a compliance program is in place, a supervisor should periodically update procedures to ensure that the measures are adequate under the law. The suggested initiative to periodically update procedures to ensure that the measures are adequate under the law is in line with the principles of Standard IV(C).\n\nCorrect Answer Feedback: Correct because, as per the guidance under Standard IV(C) Responsibilities of Supervisors, once a compliance program is in place, a supervisor should...continually educate personnel regarding the compliance procedures. Educating personnel regarding the compliance procedures only when they join is not an adequate procedure under the guidelines of Standard IV(C). Personnel should receive compliance procedures education continually.\n\nIncorrect Answer Feedback: Incorrect because, as per the guidance under Standard IV(C) Responsibilities of Supervisors, once a compliance program is in place, a supervisor should issue periodic reminders of the procedures to appropriate personnel. The suggested initiative to issue periodic reminders of the procedures to appropriate personnel is in line with the principles of Standard IV(C)."
+     },
+     {
+      "q": "Do Garcia's actions regarding her client's suspected tax fraud violate the Standards?",
+      "options": [
+       "No",
+       "Yes, by sharing the information in the email",
+       "Yes, by sharing the information with the regulator"
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because Garcia violates Standard III(E) Preservation of Confidentiality by sending information about a specific client's suspected tax fraud to all internal personnel of her company via email. The principles of Standard III(E) require that members and candidates preserve the confidentiality of information communicated to them by their clients, prospective clients, and former clients. Garcia's information concerns illegal activities by the client, so she should have an obligation to report the activities to the appropriate authorities or disclose the information to authorized fellow employees who are also working for the client but not to the whole company. \n\nCorrect Answer Feedback: Correct because the simplest, most conservative, and most effective way to comply with Standard III(E) is to avoid disclosing any information received from a client except to authorized fellow employees who are also working for the client.\nGarcia sends an email about suspected tax fraud by a client to the whole company, irrespective of whether employees are authorized to receive this information. This violates the principles of Standard III(E) Preservation of Confidentiality, which require that members and candidates preserve the confidentiality of information communicated to them by their clients, prospective clients, and former clients.\n\nIncorrect Answer Feedback: Incorrect because, as per the requirements of Standard III(E) Preservation of Confidentiality, if disclosure of the information is required by law or the information concerns illegal activities by the client, however, the member or candidate may have an obligation to report the activities to the appropriate authorities.\nGarcia becomes aware that one of her clients is suspected of tax fraud, which falls into the category of illegal activities. Also, the regulator contacts Garcia as part of their investigation into the suspected tax fraud of the client. Hence, Garcia has an obligation to report the activities to the regulator as per the requirements of the applicable law and based on her suspicion that the client broke the law."
+     }
+    ]
+   },
+   {
+    "topic": "Alt",
+    "body": "Martin Pasco is an analyst with the Hekla University Endowment. Pasco is evaluating opportunities to increase the alternative investments allocation in Hekla's portfolio.\nPasco considers Fund 1, a commodity managed futures fund, as a potential investment for Hekla. Current price data for the largest exposures in Fund 1 are presented in Exhibit 1.\nExhibit 1\n#  | Crude Oil—Brent ($ per barrel) | Cocoa ($ per metric tonne) | Gold ($ per troy ounce)\nSpot price | 75.02 | 3,318 | 1,919.4\n3-month futures price | 74.25 | 3,264 | 1,929.3\n6-month futures price | 74.25 | 3,233 | 1,935.6\nPasco reviews a previous cocoa trade for Fund 1. At inception of the trade, Fund 1 took a fully collateralized long position in a 3-month futures contract at a price of $3,294. Three months later, the entire position was rolled into a new 3-month futures contract. At that time, the price of the initial futures contract was $3,285 and the price of a new 3-month futures contract was $3,260. The collateral earned an annualized return of 5.0% during the three months. \nPasco also evaluates several equity hedge fund strategies for Hekla's portfolio. \nFirst, Pasco reviews Fund 2, an event-driven hedge fund. The fund has a merger arbitrage trade involving a potential merger between two companies, Acquirer Company (AC) and Target Company (TC). AC has offered to buy TC in a stock-for-stock deal. The offer ratio is one share of AC for three shares of TC. AC was trading at $39 per share prior to the merger announcement, and its price decreased to $35 per share after the announcement. TC was trading at $10 per share prior to the merger announcement, and its price increased to $11 per share after the announcement. After the merger announcement, the hedge fund bought 30,000 shares of TC at $11 per share and sold 10,000 shares of AC at $35 per share. \nPasco is evaluating the benefits of allocating to a single hedge fund that combines multiple strategies rather than to multiple single-strategy hedge funds. Pasco is considering the following investment options:\nOption 1: A fund of funds\nOption 2: A multi-strategy fund",
+    "questions": [
+     {
+      "q": "Based on the current price data of Fund 1's largest exposures, the most appropriate conclusion is that the:",
+      "options": [
+       "crude oil basis is zero.",
+       "cocoa market is in backwardation.",
+       "gold market calendar spread is positive."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the spot price in the crude oil market is higher than the futures prices, which indicates a positive basis. The difference between spot and futures prices is generally called the basis.\nThe basis between spot price and futures prices in the crude oil market is calculated as:\nBasis (spot to near term): Spot price – Near-term futures price = $75.02 – $74.25 = $0.77. \nBasis (spot to farther term): Spot price – Farther-term futures price = $75.02 – $74.25 = $0.77.\nThis response incorrectly assumes that the basis is the difference between the near-term and the farther-term futures prices = 74.25 – 74.25 = 0.\n\nCorrect Answer Feedback: Correct because futures prices are lower than the spot price when the market is in backwardation. When the spot price exceeds the futures price, the situation is called backwardation.\nIn the cocoa market, prices decrease as we move from the spot price ($3,318) to the near-term futures contract price ($3,264) and the farther-term futures contract price ($3,233), which represents a market state of backwardation.  \n\nIncorrect Answer Feedback: Incorrect because the near-term futures price in the gold futures market is lower than the farther-term futures price, which indicates a negative calendar spread. The calendar spread is the difference between the near-term futures contract price and the longer-term futures contract price.\nThe calendar spread between the near-term and the farther-term futures prices in the gold market is calculated as:\nCalendar spread = Near-term futures price – Farther-term futures price = $1,929.3 – $1,935.6 = –$6.3."
+     },
+     {
+      "q": "The 3-month total return of the past cocoa futures trade is closest to:",
+      "options": [
+       "0.2%.",
+       "1.7%.",
+       "5.5%."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because the roll return is calculated as the closing price of the new 3-month futures contract (i.e., the farther-term contract) less the closing price of the initial 3-month futures contract (i.e., the near-term contract) in the numerator rather than vice versa, as follows:\n1) Price return (correct) = (Current price – Previous price) / Previous price = ($3,285 – $3,294)/$3,294 = –$9/$3,294 = –0.2732% \n2) Roll return (incorrect) = (Farther-term futures contract closing price – Near-term futures contract closing price) / Near-term futures contract closing price = ($3,260 – $3,285)/$3,285 = –$25/$3,285 = –0.7610%\n3) Collateral return (correct) = Collateral rate × Number of months in period / 12 = 5.0% × 3/12 = 1.2500%\n4) Total return (incorrect) = Price return (correct) + Roll return (incorrect) + Collateral return (correct) = –0.2732% – 0.7610% + 1.2500% = 0.2157% ≈ 0.2%\n\nCorrect Answer Feedback: Correct because the total return on commodity futures is broken into three components—the price return (or spot yield), the roll return (or roll yield), and the collateral return (or collateral yield)—and is calculated as follows:\n1) Price return = (Current price – Previous price) / Previous price = ($3,285 – $3,294)/$3,294 = –$9/$3,294 = –0.2732% \n2) Roll return = (Near-term futures contract closing price – Farther-term futures contract closing price) / Near-term futures contract closing price = ($3,285 – $3,260)/$3,285 = $25/$3,285 = 0.7610%\n3) Collateral return = Collateral rate × Number of months in period / 12 = 5.0% × 3/12 = 1.2500%\n4) Total return = Price return + Roll return + Collateral return = –0.2732% + 0.7610% + 1.2500% = 1.7378% ≈ 1.7%\n\nIncorrect Answer Feedback: Incorrect because the collateral return reflects the entire annualized rate rather than the rate adjusted for a 3-month period. Total return is calculated as follows:\nTotal return (incorrect) = Price return (correct) + Roll return (correct) + Collateral return (incorrect) = –0.2732% + 0.7610% + 5.0% = 5.4878% ≈ 5.5%"
+     },
+     {
+      "q": "If the merger between AC and TC closes successfully, Fund 2's merger arbitrage trade will result in a gain closest to:",
+      "options": [
+       "$7,000.",
+       "$20,000.",
+       "$90,000."
+      ],
+      "answer": 1,
+      "why": "Incorrect Answer Feedback: Incorrect because it calculates the payoff as ($35/3 – $11) × 10,000 = $6,667 ≈ $7,000.\n\nCorrect Answer Feedback: Correct because, if the merger between AC and TC is successful, Fund 2 will realize a gain of $20,000, calculated as follows:\nCost to purchase 30,000 shares of TC = 30,000 × $11 = $330,000\nAC shares received upon conversion = 30,000/3 (conversion ratio) = 10,000\nProceeds from sale of AC shares = 10,000 × $35 = $350,000\nGain in case of M&A success = $350,000 – $330,000 = $20,000\n\nIncorrect Answer Feedback: Incorrect because the initial pre-merger prices are used to compute the payoff as follows:\nCost to purchase 30,000 shares of TC (incorrect) = 30,000 × $10 = $300,000\nAC shares received upon conversion = 30,000/3 (conversion ratio) = 10,000\nProceeds from sale of AC shares (incorrect) = 10,000 × $39 = $390,000\nGain in case of M&A success (incorrect) = $390,000 – $300,000 = $90,000"
+     },
+     {
+      "q": "Compared to Option 2, Option 1 most likely has:",
+      "options": [
+       "less leverage.",
+       "fewer layers of fees.",
+       "a shorter tactical reaction time."
+      ],
+      "answer": 0,
+      "why": "Correct Answer Feedback: Correct because multi-strategy funds tend to use significantly more leverage than most FoFs, which gravitate to modest leverage usage. Therefore, the fund of funds (Option 1) will most likely have less leverage than the multi-strategy fund (Option 2).\n\nIncorrect Answer Feedback: Incorrect because FoFs (Option 1) would typically include a double layer of fees the investor must pay, while in multi-strategy funds (Option 2) generally fee netting risk is handled at the strategy level and absorbed (or partially absorbed) by the general partner of the multi-strategy fund. In a FoF, in addition to management and incentive fees charged by the individual hedge funds in which the FoF invests, investors in a fund-of-funds [pay fees] on the performance of the total FoF portfolio. \n\nIncorrect Answer Feedback: Incorrect because FoFs (Option 1) typically have a higher tactical reaction time than multi-manager funds (Option 2), given that the different strategies are executed in different underlying funds instead of within the same fund structure. FoFs offer a potentially more diverse strategy mix but with less transparency and slower tactical reaction time"
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {},
+ "key": "CCCAACCAAABABCCCCBACBAACBCCBAABCBBACBCBBBBBA"
+}
