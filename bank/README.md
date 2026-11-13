@@ -177,3 +177,6 @@ eth1-eth12: all 276 key-notes Ethics questions as exam sessions (23 Q each, 69 m
 - Not applied this time: the "replace simple definition questions by another concept of the same reading" step of the disguise rule.
 - yeta (Corp) was swapped for m2-3 because it is the same vignette type as Mock 11's Karsa (Corp); it stays unused and counts as a near-duplicate.
 - Remaining unused real vignettes after Mock 15 + 16 (4+ usable questions): Equity 36, FSA 18, Fixed Income 13, PM 14, Alt 11, Quant 3, Derivatives 3, Corp 2 (yeta is a near-duplicate of Karsa), Econ 0, Ethics 7 in the vignette bank (key-notes Ethics 4-question units still free: 10).
+
+## Mock 13 audit (13 Nov, v238)
+Checked: structure, answer letters in explanations, every calculation (Q9-11, 17-23, 27, 32, 34, 35, 37, 38, 42 recomputed in code), unused label/paragraph scan. Fixed with bank/exam/mock13_fix.py (idempotent; set.rev 3): explanations of Q3, 5, 7, 24, 30, 31, 40, 46 whose A/B/C letters followed the original option order instead of the shuffled order; four unused DB-plan rows cut from V3 (employer contributions, ending obligation, ending assets, actual return). Same letter problem found and fixed in rq1 Q30. A scan of every exam.js set now finds no explanation whose "Correct" letter differs from the answer. Key unchanged.
