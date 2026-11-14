@@ -197,8 +197,14 @@ Set id `mockp2`, under Mocks after Mock 17: the 11 vignettes m2-1..m2-11 of bank
 
 ## Big-subject mocks A1-A4 (14 Nov, v241)
 Plan: A1-A8 big subjects (Equity, FSA, FI, PM; no Ethics), B1-B6 small subjects + 1 Ethics unit; 4 mocks per day from 15 Nov (bank/exam/mockAB_progress.md). A1-A4 = real never-used vignettes (draw bank/exam/mockA_pick.json), names changed (a_names_map.py), concept options shuffled where the explanation allowed, tables converted; NUMBERS NOT changed (user chose the simplified A route), no hand-written hints (auto-shading). Builder bank/exam/mockA_build.py -> mockA1..4.json. Keys:
-A1 BCABAAAABCABAAAABCBAAACAAABBBABAACCCACCBACCA
-A2 ACCCABCCCBCBABBAAAAAAABACBBBBACCBAACACABABAB
-A3 BBCCCBCBBBBAACCAAAAACCABAACCBCBBBBCCBABBCBAC
-A4 ABBBBAAABBCCBCCBBABCABCABBCABCCABCCBBABAACAC
+A1 ACABACAABCABABBCBCBBAACAAABBBABAACCCBCCBACCA
+A2 CCCCABCCCBCBCBBACCAAAABABBAABACCBAACACBBABAB
+A3 BBCCCBCCBBBAACAACAACACABAACCBCBBBCACBABBCBAC
+A4 ABBABAAABBCCBCCBBCBCABCABBCABCCABCCBBACCACAC
 Unused A5-A8 slots with RESKIN (FSA 3, FI 7) still to be filled; A5-A8 not built yet.
+
+Update 14 Nov (v242): A1-A4 vignettes shortened to about 250-320 words each (like the real Mock Paper 2, 301 words) by bank/exam/a_trim.py + a_trim_apply.py: only text used by the 4 questions was kept, all traps and exhibits the questions need were kept. Changes beyond cutting: A1 V5 lost its binomial-tree exhibit (figure missing in the bank), so its backward-induction question was replaced by the Monte Carlo question; A3 V3 (tree figures missing) got two other questions of the same vignette (calibration benefit, volatility); A4 V2 got the bootstrapping equation written out (it was missing); A2 V7 states the two tree values instead of the missing tree; A4 V10 no longer says the Hermes required return is 8% (it contradicted the question); A1 V7 and A4 V8 are Economics vignettes (topic label Econ). Answer letters of some numeric questions were re-ordered to break runs (a_balance.py). Current keys:
+A1 ACABACAABCABABBCBCBBAACAAABBBABAACCCBCCBACCA
+A2 CCCCABCCCBCBCBBACCAAAABABBAABACCBAACACBBABAB
+A3 BBCCCBCCBBBAACAACAACACABAACCBCBBBCACBABBCBAC
+A4 ABBABAAABBCCBCCBBCBCABCABBCABCCABCCBBACCACAC

@@ -10,20 +10,20 @@
   "vignettes": [
    {
     "topic": "Equity",
-    "body": "Summit-Anchor Capital is a rapidly growing international investment firm. The firm’s research team is responsible for identifying undervalued and overvalued publicly-traded equities that have a market capitalization greater than $500 million.\n\nDue to the rapid growth of assets under management, Summit-Anchor Capital recently hired a new analyst, Jim Ruddock, to support the research process. At the new analyst orientation meeting, the director of research made the following statements about equity valuation at the firm:\n\nStatement 1:\n“Analysts at Summit-Anchor Capital seek to identify mispricing, relying on price eventually converging to intrinsic value. However, convergence of the market price to an analyst’s estimate of intrinsic value may not happen within the portfolio manager’s investment time horizon. So, besides evidence of mispricing, analysts should look for the presence of a particular market or corporate event—that is, a catalyst—that will cause the marketplace to re-evaluate the subject firm’s prospects.”\n\nStatement 2:\n“An active investment manager attempts to capture positive alpha. But mispricing of assets is not directly observable. It is therefore important that you understand the possible sources of perceived mispricing.”\n\nStatement 3:\n“For its distressed securities fund, Summit-Anchor Capital screens its investable universe of securities for companies in financial distress.”\n\nStatement 4:\n“For its core equity fund, Summit-Anchor Capital selects financially sound companies that are expected to generate significant positive free cash flow from core business operations within a multiyear forecast horizon.”\n\nStatement 5:\n“Summit-Anchor Capital’s research process requires analysts to evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his or her own expectations.”\n\nAfter the orientation meeting, the director of research asks Ruddock to evaluate three companies that are retailers of men’s clothing: Diamond Co., Meridian Clothing, and Prime Men’s Wear.\n\nRuddock starts his analysis by evaluating the characteristics of the men’s retail clothing industry. He finds few barriers to new retail entrants, high intra-industry rivalry among retailers, low product substitution costs for customers, and a large number of wholesale clothing suppliers.\n\nWhile conducting his analysis, Ruddock discovers that Meridian Clothing included three non-recurring items in their most recent earnings release: a positive litigation settlement, a one-time tax credit, and the gain on the sale of a non-operating asset.\n\nTo estimate each firm’s intrinsic value, Ruddock applies appropriate discount rates to each firm’s estimated free cash flows over a ten-year time horizon and to the estimated value of the firm at the end of the ten-year horizon.\n\nMonica Yi, a junior technology analyst at Summit-Anchor, asks the director of research for advice as to which valuation model to use for VEGA, a fast growing semiconductor company that is rapidly gaining market share.\n\nThe director of research states that “the valuation model selected must be consistent with the characteristics of the company being valued.”\n\nYi tells the director of research that VEGA is not expected to be profitable for several more years. According to management guidance, when the company turns profitable, it will invest in new product development; as a result, it does not expect to initiate a dividend for an extended period of time. Yi also notes that she expects that certain larger competitors will become interested in acquiring VEGA because of its excellent growth prospects. The director of research advises Yi to consider that in her valuation.",
+    "body": "Summit-Anchor Capital is a rapidly growing international investment firm. The firm’s research team is responsible for identifying undervalued and overvalued publicly-traded equities that have a market capitalization greater than $500 million.\n\nDue to the rapid growth of assets under management, Summit-Anchor Capital recently hired a new analyst, Jim Ruddock, to support the research process. At the new analyst orientation meeting, the director of research made the following statements about equity valuation at the firm:\n\nStatement 1:\n“An active investment manager attempts to capture positive alpha. But mispricing of assets is not directly observable. It is therefore important that you understand the possible sources of perceived mispricing.”\n\nStatement 2:\n“For its distressed securities fund, Summit-Anchor Capital screens its investable universe of securities for companies in financial distress.”\n\nStatement 3:\n“For its core equity fund, Summit-Anchor Capital selects financially sound companies that are expected to generate significant positive free cash flow from core business operations within a multiyear forecast horizon.”\n\nStatement 4:\n“Summit-Anchor Capital’s research process requires analysts to evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his or her own expectations.”",
     "questions": [
      {
-      "q": "Based on Statement 2, which of the following sources of perceived mispricing do active investment managers attempt to exploit? The difference between:",
+      "q": "Based on Statement 1, which of the following sources of perceived mispricing do active investment managers attempt to exploit? The difference between:",
       "options": [
-       "intrinsic value and market price.",
+       "intrinsic value and estimated intrinsic value.",
        "estimated intrinsic value and market price.",
-       "intrinsic value and estimated intrinsic value."
+       "intrinsic value and market price."
       ],
       "answer": 1,
       "why": "B is correct. The difference between the true (real) but unobservable intrinsic value and the observed market price contributes to the abnormal return or alpha, which is the concern of active investment managers."
      },
      {
-      "q": "With respect to Statements 3 and 4, which of the following measures of value would the distressed securities fund’s analyst consider that a core equity fund analyst might ignore?",
+      "q": "With respect to Statements 2 and 3, which of the following measures of value would the distressed securities fund’s analyst consider that a core equity fund analyst might ignore?",
       "options": [
        "Fair value",
        "Liquidation value",
@@ -33,17 +33,17 @@
       "why": "B is correct. The measure of value the distressed securities fund’s analyst would consider that the core equity fund analyst might ignore is liquidation value. The liquidation value of a company is its value if it were dissolved and its assets sold individually."
      },
      {
-      "q": "With respect to Statement 4, which measure of value is most relevant for the analyst of the fund described?",
+      "q": "With respect to Statement 3, which measure of value is most relevant for the analyst of the fund described?",
       "options": [
-       "Liquidation value",
        "Investment value",
+       "Liquidation value",
        "Going-concern value"
       ],
       "answer": 2,
       "why": "C is correct. For its core equity fund, Summit-Anchor Capital screens its investable universe of securities for well-capitalized companies that are expected to generate significant future free cash flow from core business operations. The concern with future free cash flows implies that going-concern value is relevant."
      },
      {
-      "q": "According to Statement 5, analysts are expected to use valuation concepts and models to:",
+      "q": "According to Statement 4, analysts are expected to use valuation concepts and models to:",
       "options": [
        "value private businesses.",
        "render fairness opinions.",
@@ -56,7 +56,7 @@
    },
    {
     "topic": "Equity",
-    "body": "Gianna Hendry is an investment analyst who focuses on dividend-paying stocks. Hendry uses a DCF approach to stock selection. She is meeting with her staff to evaluate portfolio holdings based on a bottom-up screening of stocks listed in the United States and Canada. Hendry and her staff begin by reviewing the characteristics of the following portfolio candidates.\n\nCompany ABC\n\nA Canadian company in the consumer staples sector with a required rate of return of 7.35%. Recent media reports suggest that ABC might be a takeover candidate. Hendry and her team estimate that if the incumbent Canadian prime minister’s party retains its power, the company’s current annual dividend of C$0.65 per share will grow 12% a year for the next four years and then stabilize at a 3.5% growth rate a year indefinitely. If a new government takes office in Canada, however, then the team estimates that ABC will likely not experience the elevated 12% short-run growth because of new regulatory and tax changes, and instead it will grow by 3.5% indefinitely.\n\nCompany XYZ\n\nA mid-sized US company in the utilities sector with a required rate of return of 10%. Hendry and her team believe that because of a recent restructuring, the company is unlikely to pay dividends for the next three years. The team expects XYZ to pay an annual dividend of US$1.72 per share beginning four years from now, however. Thereafter, the dividend is expected to grow indefinitely at 4% even though the current price implies a growth rate of 6% during this same period.\n\nCompany JZY\n\nA large US company in the telecom sector with a required rate of return of 8%. The stock is currently trading at US$32.76 per share with an implied earnings growth rate of 5.3%. Hendry believes that because JZY is mature and has a stable capital structure, the company will grow at its sustainable growth rate. Over the past 10 years, the company’s return on equity (ROE) has averaged 8.17% and its payout ratio has averaged 40%. Recently, the company paid an annual dividend of US$0.84 per share.\n\nHendry asks a newly hired analyst, Karl Tobin, to comment on the evaluation approach for these three stocks. Tobin makes the following statements:\n\nA free cash flow valuation model would not be appropriate to evaluate Company ABC if the firm becomes a takeover candidate.\n\nA dividend discount model cannot be applied to Company XYZ if dividends are suspended for a few years.\n\nA dividend discount model is suitable for evaluating the stock of Company JZY because of the historically consistent payout ratio.\n\nHendry then asks the team to examine the growth opportunities of three Canadian stocks currently held in the portfolio. These stocks are listed in Exhibit 1. Hendry believes that the stocks are fairly valued.\n\nExhibit 1\nSelected Stock Characteristics\n# Stock | Required Rate of Return | Next Year’s Forecasted EPS (C$) | Current Price per Share (C$)\nABTD | 10.5% | 7.30 | 80.00\nBKKQ | 8.0% | 2.12 | 39.00\nCPMN | 12.0% | 1.90 | 27.39",
+    "body": "Gianna Hendry is an investment analyst who focuses on dividend-paying stocks. Hendry uses a DCF approach to stock selection. She is meeting with her staff to evaluate portfolio holdings based on a bottom-up screening of stocks listed in the United States and Canada. Hendry and her staff begin by reviewing the characteristics of the following portfolio candidates.\n\nCompany ABC\n\nA Canadian company in the consumer staples sector with a required rate of return of 7.35%. Recent media reports suggest that ABC might be a takeover candidate. Hendry and her team estimate that if the incumbent Canadian prime minister’s party retains its power, the company’s current annual dividend of C$0.65 per share will grow 12% a year for the next four years and then stabilize at a 3.5% growth rate a year indefinitely. If a new government takes office in Canada, however, then the team estimates that ABC will likely not experience the elevated 12% short-run growth because of new regulatory and tax changes, and instead it will grow by 3.5% indefinitely.\n\nCompany XYZ\n\nA mid-sized US company in the utilities sector with a required rate of return of 10%. Hendry and her team believe that because of a recent restructuring, the company is unlikely to pay dividends for the next three years. The team expects XYZ to pay an annual dividend of US$1.72 per share beginning four years from now, however.\n\nCompany JZY\n\nA large US company in the telecom sector with a required rate of return of 8%. Hendry believes that because JZY is mature and has a stable capital structure, the company will grow at its sustainable growth rate. Over the past 10 years, the company’s return on equity (ROE) has averaged 8.17% and its payout ratio has averaged 40%.\n\nHendry asks a newly hired analyst, Karl Tobin, to comment on the evaluation approach for these three stocks. Tobin makes the following statements:\n\nStatement 1: A free cash flow valuation model would not be appropriate to evaluate Company ABC if the firm becomes a takeover candidate.\nStatement 2: A dividend discount model cannot be applied to Company XYZ if dividends are suspended for a few years.\nStatement 3: A dividend discount model is suitable for evaluating the stock of Company JZY because of the historically consistent payout ratio.",
     "questions": [
      {
       "q": "Which of the following statements made by Tobin is correct?",
@@ -92,17 +92,17 @@
       "q": "Assume that a new government takes office in Canada. If Hendry and her team use the Gordon growth model and assume that Company ABC stock is fairly valued, then which of the following would most likely be true?",
       "options": [
        "The total return of ABC stock will be 10.85%.",
-       "The dividend yield of ABC stock will be 3.85%.",
-       "The stock price of ABC will grow at 7.35% annually."
+       "The stock price of ABC will grow at 7.35% annually.",
+       "The dividend yield of ABC stock will be 3.85%."
       ],
-      "answer": 1,
-      "why": "B is correct. In the Gordon growth model, Total return = Dividend yield + Capital gains yield (i.e., constant growth rate). When a stock is fairly valued, the expected total return will equal the required return or discount rate (i.e., 7.35%). In the case of ABC, the total return is 7.35% and the capital gains yield is 3.5%. Therefore, the dividend yield is 7.35% – 3.5% = 3.85%."
+      "answer": 2,
+      "why": "C is correct. In the Gordon growth model, Total return = Dividend yield + Capital gains yield (i.e., constant growth rate). When a stock is fairly valued, the expected total return will equal the required return or discount rate (i.e., 7.35%). In the case of ABC, the total return is 7.35% and the capital gains yield is 3.5%. Therefore, the dividend yield is 7.35% – 3.5% = 3.85%."
      }
     ]
    },
    {
     "topic": "PM",
-    "body": "Dea Yoon is a senior portfolio manager for Baekdu Capital, an investment management firm located in Jeonju, South Korea. Baekdu specializes in using multifactor models to build and manage global investment portfolios for institutional clients.\n\nMin-Ho Park works for Yoon as a research analyst and often is tasked with working on factor models. During a conversation with Yoon, Park mentions that he has not worked on building models using the arbitrage pricing theory (APT) framework. Yoon asks Park what he knows about APT. Park explains that while both the APT and capital asset pricing model (CAPM) provide an expression of the expected return of an asset, the APT provides an alternative framework to CAPM and cites three key attributes of APT:\n\nAttribute 1: The APT model makes stronger assumptions than the CAPM.\nAttribute 2: APT makes the assumption that investors can form portfolios that eliminate asset-specific risk.\nAttribute 3: APT makes the assumption that arbitrage opportunities exist among well-diversified portfolios.\nBaekdu manages a global equity strategy for Jeonju Electric, an institutional client. This portfolio is managed to overweight or underweight certain factors. These factors include small minus big (SMB), high minus low book value (HML), and winners minus losers (WML). Exhibit 1 provides information regarding the portfolio sensitivities to these factors, the premiums of these factors, and the return of the value-weighted equity index in excess of the 1-month T-bill rate (RMRF). The risk-free rate is currently 1.5%.\n\nExhibit 1 Portfolio Sensitivities and Factor Premiums\n# Risk Factor | RMRF | SMB | HML | WML\nJeonju Electric Portfolio Factor Sensitivity | 1.01 | 0.45 | 0.95 | 0.09\nFactor Premium | 3.11% | 2.11% | 3.75% | 1.56%\nFollowing the conclusion of a performance reporting period, Yoon asks Park to evaluate the risk attributes and results of two of Baekdu’s institutional portfolios relative to a global equity benchmark over the previous year. Park compiles the data in Exhibit 2 and provides the results to Yoon for discussion and analysis.\n\nExhibit 2 1-Year Portfolio Performance Data\n# Portfolio | Active Specific Risk (%) | Active Factor Risk (%) | Active Risk Squared | Information Ratio\nCity of Gwangju | 10 | 90 | 0.38% | 0.70\nChungcheong Pension Plan | 75 | 25 | 0.09% | 0.62\nYoon asks Park to share observations on how the portfolios have performed. Park responds that Gwangju’s portfolio appears to have had the largest active return and Chungcheong’s portfolio appears to have the highest contribution of active risk from stock selection.",
+    "body": "Dea Yoon is a senior portfolio manager for Baekdu Capital, an investment management firm located in Jeonju, South Korea. Baekdu specializes in using multifactor models to build and manage global investment portfolios for institutional clients.\n\nMin-Ho Park works for Yoon as a research analyst. Yoon asks Park what he knows about the arbitrage pricing theory (APT). Park explains that while both the APT and capital asset pricing model (CAPM) provide an expression of the expected return of an asset, the APT provides an alternative framework to CAPM and cites three key attributes of APT:\n\nAttribute 1: The APT model makes stronger assumptions than the CAPM.\nAttribute 2: APT makes the assumption that investors can form portfolios that eliminate asset-specific risk.\nAttribute 3: APT makes the assumption that arbitrage opportunities exist among well-diversified portfolios.\n\nBaekdu manages a global equity strategy for Jeonju Electric, an institutional client. This portfolio is managed to overweight or underweight certain factors. These factors include small minus big (SMB), high minus low book value (HML), and winners minus losers (WML). Exhibit 1 provides information regarding the portfolio sensitivities to these factors, the premiums of these factors, and the return of the value-weighted equity index in excess of the 1-month T-bill rate (RMRF). The risk-free rate is currently 1.5%.\n\nExhibit 1 Portfolio Sensitivities and Factor Premiums\n# Risk Factor | RMRF | SMB | HML | WML\nJeonju Electric Portfolio Factor Sensitivity | 1.01 | 0.45 | 0.95 | 0.09\nFactor Premium | 3.11% | 2.11% | 3.75% | 1.56%\n\nFollowing the conclusion of a performance reporting period, Yoon asks Park to evaluate the risk attributes and results of two of Baekdu’s institutional portfolios relative to a global equity benchmark over the previous year. Park compiles the data in Exhibit 2.\n\nExhibit 2 1-Year Portfolio Performance Data\n# Portfolio | Active Specific Risk (%) | Active Factor Risk (%) | Active Risk Squared | Information Ratio\nCity of Gwangju | 10 | 90 | 0.38% | 0.70\nChungcheong Pension Plan | 75 | 25 | 0.09% | 0.62\n\nPark responds that Gwangju’s portfolio appears to have had the largest active return and Chungcheong’s portfolio appears to have the highest contribution of active risk from stock selection.",
     "questions": [
      {
       "q": "Which of Park’s attributes about APT is most likely correct?",
@@ -148,7 +148,7 @@
    },
    {
     "topic": "FI",
-    "body": "Katrina Black, a portfolio manager at Opal Bond Management, Ltd., is conducting a training session with Alan Sung, a junior analyst in the fixed-income department. Black wants to explain to Sun the arbitrage-free valuation framework used by the firm. Black presents Sun with Exhibit 1, showing a fictitious bond being traded on three exchanges, and asks Sun to identify the arbitrage opportunity of the bond. Sun agrees to ignore transaction costs in his analysis.\n\nExhibit 1\nThree-Year, €100 par, 3.00% Coupon, Annual Pay Option-Free Bond\n#  | Eurex | NYSE Euronext | Frankfurt\nPrice | €103.7956 | €103.7815 | €103.7565\n\nBlack shows Sun some exhibits that were part of a recent presentation. Exhibit 3 presents most of the data of a binomial lognormal interest rate tree fit to the yield curve shown in Exhibit 2. Exhibit 4 presents most of the data of the implied values for a four-year, option-free, annual pay bond with a 2.5% coupon based on the information in Exhibit 3.\n\nExhibit 2\nYield-to-Maturity Par Rates for One-, Two-, and Three-Year Annual Pay Option-Free Bonds\n# One-year | Two-year | Three-year\n1.25% | 1.50% | 1.70%\n\nExhibit 3\nBinomial Interest Rate Tree Fit to the Yield Curve (Volatility = 10%)\n[Tree figure not captured in the paste: higher and lower interest rates at time 0, 1, 2, 3 and 4 at volatility 10%.]\n\nExhibit 4\nImplied Values (in Euros) for a 2.5%, Four-Year, Option-Free, Annual Pay Bond Based on Exhibit 3\n[Tree figure not captured in the paste: bond values at each node, times 0 to 4, coupon 2.50%.]\n\nBlack asks about the missing data in Exhibits 3 and 4 and directs Sun to complete the following tasks related to those exhibits:\n\nTask 1: Test that the binomial interest tree has been properly calibrated to be arbitrage free.\nTask 2: Develop a spreadsheet model to calculate pathwise valuations. To test the accuracy of the spreadsheet, use the data in Exhibit 3 and calculate the value of the bond if it takes a path of lowest rates in Year 1 and Year 2 and the second lowest rate in Year 3.\nTask 3: Identify a type of bond where the Monte Carlo calibration method should be used in place of the binomial interest rate method.\nTask 4: Update Exhibit 3 to reflect the current volatility, which is now 15%.",
+    "body": "Katrina Black, a portfolio manager at Opal Bond Management, Ltd., is conducting a training session with Alan Sung, a junior analyst in the fixed-income department. Black wants to explain to Sung the arbitrage-free valuation framework used by the firm. Black presents Sung with Exhibit 1, showing a fictitious bond being traded on three exchanges, and asks Sung to identify the arbitrage opportunity of the bond. Sung agrees to ignore transaction costs in his analysis.\n\nExhibit 1\nThree-Year, €100 par, 3.00% Coupon, Annual Pay Option-Free Bond\n#  | Eurex | NYSE Euronext | Frankfurt\nPrice | €103.7956 | €103.7815 | €103.7565\n\nBlack also shows Sung the yield-to-maturity par rates in Exhibit 2 and a binomial lognormal interest rate tree that is fit to that yield curve (volatility = 10%).\n\nExhibit 2\nYield-to-Maturity Par Rates for One-, Two-, and Three-Year Annual Pay Option-Free Bonds\n# One-year | Two-year | Three-year\n1.25% | 1.50% | 1.70%\n\nBlack directs Sung to complete the following tasks related to the tree:\n\nTask 1: Test that the binomial interest tree has been properly calibrated to be arbitrage free.\nTask 2: Update the tree to reflect the current volatility, which is now 15%.",
     "questions": [
      {
       "q": "Based on Exhibit 1, the best action that an investor should take to profit from the arbitrage opportunity is to:",
@@ -171,24 +171,24 @@
       "why": "Bootstrap spot rates from the par rates: z1 = 1.25%, z2 = 1.5019%, z3 = 1.7049%. PV = 3/1.0125 + 3/(1.015019)² + 103/(1.017049)³ = 2.9630 + 2.9119 + 97.9066 = 103.7815, the NYSE Euronext price. Eurex discounts at the YTM; Frankfurt discounts all cash flows at the year-3 spot rate."
      },
      {
-      "q": "Recall from the reading that each node is represented by both a time element and a rate change component. Which of the following statements about the missing data in Exhibit 3 is correct?",
+      "q": "A benefit of performing Task 1 is that it:",
       "options": [
-       "Node 3–2 can be derived from Node 2–2.",
-       "Node 4–1 should be equal to Node 4–5 multiplied by e^0.4.",
-       "Node 2–2 approximates the implied one-year forward rate two years from now."
-      ],
-      "answer": 2,
-      "why": "Node 2–2 is the middle node in Year 2 and is close to the implied one-year forward rate two years from now. Node 4–1 equals Node 4–5 times e^0.8 (not e^0.4). Node 3–2 cannot be derived from Node 2–2; it can be derived from another Year 3 node (e.g. Node 3–4 times e^(4σ))."
-     },
-     {
-      "q": "Based on the information in Exhibits 3 and 4, the bond price in euros at Node 1–2 in Exhibit 4 is closest to:",
-      "options": [
-       "102.7917.",
-       "104.8640.",
-       "105.2917."
+       "enables the model to price bonds with embedded options.",
+       "identifies benchmark bonds that have been mispriced by the market.",
+       "allows investors to realize arbitrage profits through stripping and reconstitution."
       ],
       "answer": 0,
-      "why": "Value = [0.5 × (101.5168 + 102.1350) + 2.5] ÷ (1 + rate at Node 1–2) = 102.7917, using the middle and lower Year 2 node values and the 2.5 coupon."
+      "why": "Calibration verifies the tree against known benchmark values; once verified, the tree can value bonds with embedded options whose cash flows depend on future rates. Calibration does not identify mispriced benchmarks (they are assumed correctly priced) and it is designed to be arbitrage free, so it does not create stripping profits."
+     },
+     {
+      "q": "If the assumed volatility is changed as Black requested in Task 2, the interest rates shown in the tree will most likely:",
+      "options": [
+       "spread out.",
+       "remain unchanged.",
+       "converge to the spot rates."
+      ],
+      "answer": 0,
+      "why": "Volatility enters the multiple between nodes (e^(xσ)); raising it from 10% to 15% spreads the possible forward rates out. Lower volatility narrows them toward the implied forward rates."
      }
     ]
    },
@@ -199,19 +199,19 @@
      {
       "q": "Net income is €5.00 per share, dividends are €1.00, beginning book value of equity is €30.00 and the required return on equity is 11%. Residual income per share is closest to:",
       "options": [
-       "€1.70.",
+       "€2.00.",
        "€4.00.",
-       "€2.00."
+       "€1.70."
       ],
-      "answer": 0,
-      "why": "A is correct. RI = net income − equity charge = 5.00 − 0.11 × 30.00 = €1.70; dividends are irrelevant."
+      "answer": 2,
+      "why": "C is correct. RI = net income − equity charge = 5.00 − 0.11 × 30.00 = €1.70; dividends are irrelevant."
      },
      {
       "q": "Return on equity is 18%, the required return on equity is 12% and beginning book value of equity is €30.00. Residual income per share is closest to:",
       "options": [
        "€1.80.",
-       "€5.40.",
-       "€3.60."
+       "€3.60.",
+       "€5.40."
       ],
       "answer": 0,
       "why": "A is correct. RI = (ROE − r) × B0 = (0.18 − 0.12) × 30 = €1.80."
@@ -229,12 +229,12 @@
      {
       "q": "Aldencroft’s closing share price is $26, 84 million shares are outstanding and total capital is $700 million. Market value added is closest to:",
       "options": [
-       "$1,484 million.",
        "$2,184 million.",
-       "$784 million."
+       "$784 million.",
+       "$1,484 million."
       ],
-      "answer": 0,
-      "why": "A is correct. MVA = market value of capital − total capital = 26 × 84 = 2,184 − 700 = $1,484 million ($17.67 per share)."
+      "answer": 2,
+      "why": "C is correct. MVA = market value of capital − total capital = 26 × 84 = 2,184 − 700 = $1,484 million ($17.67 per share)."
      }
     ]
    },
@@ -245,12 +245,12 @@
      {
       "q": "Which valuation feature will Thornfeld find different in valuing private companies versus public companies?",
       "options": [
+       "Assessing discounts to account for illiquidity",
        "Using FCFF to value companies",
-       "Using market multiples to value companies",
-       "Assessing discounts to account for illiquidity"
+       "Using market multiples to value companies"
       ],
-      "answer": 2,
-      "why": "C is correct. Private company values need a downward adjustment for lack of liquidity; FCFF and multiples are used for both."
+      "answer": 0,
+      "why": "A is correct. Private company values need a downward adjustment for lack of liquidity; FCFF and multiples are used for both."
      },
      {
       "q": "During Thornfeld’s meeting with his former classmate, they discuss how their approaches to private company valuation vary given the different uses of their analysis. Which of the following best characterizes how Thornfeld’s approach differs from that of his former classmate?",
@@ -275,9 +275,9 @@
      {
       "q": "Which statement best describes a possible bias in the WACC of the private target with a suboptimal debt ratio?",
       "options": [
-       "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt.",
+       "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt.",
        "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on equity.",
-       "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt."
+       "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt."
       ],
       "answer": 1,
       "why": "B is correct. Equity costs more than debt, so a lower debt weight and higher equity weight push WACC above the optimal level."
@@ -383,12 +383,12 @@
      {
       "q": "The expected 1-year total return for the Dan Ibarra A-rated bond under Wellman’s credit migration scenario is closest to:",
       "options": [
-       "–0.14%.",
+       "0.95%.",
        "0.86%.",
-       "0.95%."
+       "–0.14%."
       ],
       "answer": 1,
-      "why": "A. Incorrect because the YTM is not considered when calculating the total return of the bond. In this case, the expected 1-year total return of the bond is only equal to the expected price return from a change in the credit spread.\nThe expected credit spread change is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 \n= –0.144%, which is rounded to –0.14%.\nB. Correct because the expected total return of the A-rated bond is the sum of the YTM and the expected percentage change in bond value. The YTM is 1%, while the expected return due to a credit spread change can be computed as (minus) the expected spread change (subject to migration) times the modified duration of the bond of 4.5. In turn, the expected spread change for an A-rated bond is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 = –0.144%\nThe expected total return of the bond is therefore: –0.144% + 1% = 0.856%, which is rounded to 0.86%.\nC. Incorrect because the probabilities corresponding to the \"A\" column rather than the \"A\" row are retrieved from the transition matrix. Note that in this case the probabilities do not sum to 100% as the rows (but not the columns) need to sum to 1.\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the probability from the transition matrix in the column with the label rating of \"A\".\nExpected price return = 2.25% × 0.03 + 1.35% × 0.04 + 0% × 0.88 – 1.8% × 0.03 – 2.7% × 0.03 – 3.6% × 0.01 – 6.75% × 0 = –0.0495%\nThe expected total return of the bond: –0.0495% + 1% = 0.9505%, which is rounded to 0.95%."
+      "why": "A. Incorrect because the probabilities corresponding to the \"A\" column rather than the \"A\" row are retrieved from the transition matrix. Note that in this case the probabilities do not sum to 100% as the rows (but not the columns) need to sum to 1.\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the probability from the transition matrix in the column with the label rating of \"A\".\nExpected price return = 2.25% × 0.03 + 1.35% × 0.04 + 0% × 0.88 – 1.8% × 0.03 – 2.7% × 0.03 – 3.6% × 0.01 – 6.75% × 0 = –0.0495%\nThe expected total return of the bond: –0.0495% + 1% = 0.9505%, which is rounded to 0.95%.\nB. Correct because the expected total return of the A-rated bond is the sum of the YTM and the expected percentage change in bond value. The YTM is 1%, while the expected return due to a credit spread change can be computed as (minus) the expected spread change (subject to migration) times the modified duration of the bond of 4.5. In turn, the expected spread change for an A-rated bond is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 = –0.144%\nThe expected total return of the bond is therefore: –0.144% + 1% = 0.856%, which is rounded to 0.86%.\nC. Incorrect because the YTM is not considered when calculating the total return of the bond. In this case, the expected 1-year total return of the bond is only equal to the expected price return from a change in the credit spread.\nThe expected credit spread change is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 \n= –0.144%, which is rounded to –0.14%."
      },
      {
       "q": "The most suitable approach for the credit analysis of the commercial ABS is:",
@@ -403,12 +403,12 @@
      {
       "q": "At settlement of the Volt Motors CDS, the total proceeds from Wellman’s Bond X and CDS positions are:",
       "options": [
+       "$21 million.",
        "$19 million.",
-       "$20 million.",
-       "$21 million."
+       "$20 million."
       ],
-      "answer": 2,
-      "why": "A. Incorrect because one may:\nconclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event, and\nincorrectly use the recovery rate of Bond Y to value the position in Bond X.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 35% = $7 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $7 million + $12 million = $19 million.\nB. Incorrect because one may conclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $8 million + $12 million = $20 million.\nC. Correct because Wellman holds a $20 million position in Bond X, and simultaneously has bought protection using a CDS contract referencing Volt Motors.\nUpon default, the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 65% = $13 million.\nThe cheapest-to-deliver (CTD) contract is the one which shall be chosen to deliver. As Bond Y trades at 35% of face value while Bond X trades at 40% of face value, Bond Y is the CTD contract and therefore the recovery rate of the CDS contract is 65%.\nThe total proceeds from the combined position are therefore $8 million + $13 million = $21 million."
+      "answer": 0,
+      "why": "A. Correct because Wellman holds a $20 million position in Bond X, and simultaneously has bought protection using a CDS contract referencing Volt Motors.\nUpon default, the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 65% = $13 million.\nThe cheapest-to-deliver (CTD) contract is the one which shall be chosen to deliver. As Bond Y trades at 35% of face value while Bond X trades at 40% of face value, Bond Y is the CTD contract and therefore the recovery rate of the CDS contract is 65%.\nThe total proceeds from the combined position are therefore $8 million + $13 million = $21 million.\nB. Incorrect because one may:\nconclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event, and\nincorrectly use the recovery rate of Bond Y to value the position in Bond X.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 35% = $7 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $7 million + $12 million = $19 million.\nC. Incorrect because one may conclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $8 million + $12 million = $20 million."
      },
      {
       "q": "Which of the following strategies should profit the most from the expected flattening of the Crunchy Chips CDS curve?",
@@ -429,9 +429,9 @@
      {
       "q": "Normalized EPS is best defined as the:",
       "options": [
-       "EPS adjusted only for nonrecurring items.",
+       "EPS expected for the next four quarters.",
        "level of EPS the company could currently achieve under mid-cyclical conditions.",
-       "EPS expected for the next four quarters."
+       "EPS adjusted only for nonrecurring items."
       ],
       "answer": 1,
       "why": "B is correct. Normalized EPS removes the business-cycle influence by estimating mid-cycle earnings."
@@ -517,5 +517,5 @@
   ]
  },
  "hints": {},
- "key": "BBCCCBCBBBBAACCAAAAACCABAACCBCBBBCCCBABBCBAC"
+ "key": "BBCCCBCCBBBAACAACAACACABAACCBCBBBCACBABBCBAC"
 }
