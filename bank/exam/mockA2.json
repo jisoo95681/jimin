@@ -1,0 +1,521 @@
+{
+ "set": {
+  "id": "mockA2",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock A2",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Big subjects (Equity, FSA, Fixed Income, Portfolio Management): 11 vignettes, 44 questions, 132 minutes. No Ethics.",
+  "vignettes": [
+   {
+    "topic": "Equity",
+    "body": "Mark Pellham is updating research reports on two well-established consumer companies before first quarter 2021 earnings reports are released. His supervisor, Sheila Rooney, has asked Pellham to use market-based valuations when updating the reports.\n\nBravia Beverage is a manufacturer and distributor of soft drinks and recently acquired a major water bottling company in order to offer a broader product line. The acquisition will have a significant impact on Bravia’s future results.\n\nFix Pro is a US retail distributor of products for home improvement, primarily for those consumers who choose to do the work themselves. The home improvement industry is cyclical; the industry was adversely affected by the recent downturn in the economy, the level of foreclosures, and slow home sales. Although sales and earnings at Fix Pro weakened, same store sales are beginning to improve as consumers undertake more home improvement projects. Poor performing stores were closed, resulting in significant restructuring charges in 2020.\n\nBefore approving Pellham’s work, Rooney wants to discuss the calculations and choices of ratios used in the valuation of Bravia and Fix Pro. The data used by Pellham in his analysis are summarized in Exhibit 1.\n\nExhibit 1\nSelect Financial Data for Bravia Beverage and Fix Pro\n#  | Bravia Beverage | Fix Pro\n2020 earnings per share (EPS) | $3.44 | $1.77\n2021 estimated EPS | $3.50 | $1.99\nBook value per share end of year | $62.05 | $11.64\nCurrent share price | $65.50 | $37.23\nSales (billions) | $32.13 | $67.44\nFree cash flow per share | $2.68 | $0.21\nShares outstanding end of year | 2,322,034,000 | 1,638,821,000\nPellham advises Rooney that he is considering three different approaches to value the shares of Fix Pro:\n\nApproach 1:\nPrice-to-book ratio (P/B)\n\nApproach 2:\nPrice-to-earnings ratio (P/E) using trailing earnings\n\nApproach 3:\nPrice-to-earnings ratio using normalized earnings\n\nPellham tells Rooney that he calculated the price-to-sales ratio (P/S) for Fix Pro but chose not to use it in the valuation of the shares. Pellham states to Rooney that it is more appropriate to use the P/E than the P/S because\n\nReason 1:\nEarnings are more stable than sales.\n\nReason 2:\nEarnings are less easily manipulated than sales.\n\nReason 3:\nThe P/E reflects financial leverage, whereas the P/S does not.\n\nPellham also informs Rooney that he did not use a price-to-cash-flow multiple in valuing the shares of Bravia or Fix Pro. The reason is that he could not identify a cash flow measure that would both account for working capital and noncash revenues and be after interest expense and thus not be mismatched with share price. Rooney advises Pellham that such a cash flow measure does exist.\n\nRooney provides Pellham with financial data on three close competitors as well as the overall beverage sector, which includes other competitors, in Exhibit 2. She asks Pellham to determine, based on the P/E-to-growth (PEG) ratio, whether Bravia shares are overvalued, fairly valued, or undervalued.\n\nExhibit 2\nBeverage Sector Data\n#  | Forward P/E | Earnings Growth\nBravia | — | 12.41%\nCool Brew Tea Company | 16.59 | 9.52%\nSparko Soda | 15.64 | 11.94%\nHearty Root Beer | 44.10 | 20%\nBeverage sector average | 16.40 | 10.80%\nAfter providing Rooney his answer, Pellham is concerned about the inclusion of Hearty Root Beer in the comparables analysis. Specifically, Pellham says to Rooney:\n\n“I feel we should mitigate the effect of large outliers but not the impact of small outliers (i.e., those close to zero) when calculating the beverage sector P/E. What measure of central tendency would you suggest we use to address this concern?”\n\nRooney requests that Pellham incorporate their discussion points before submitting the reports for final approval.",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the most appropriate price-to-earnings ratio to use in the valuation of Bravia is closest to:",
+      "options": [
+       "18.71.",
+       "19.04.",
+       "24.44."
+      ],
+      "answer": 0,
+      "why": "A is correct. The forward P/E should be used given the recent significant acquisition of the water bottling company: $65.50 / $3.50 = 18.71."
+     },
+     {
+      "q": "Based on the information in Exhibit 1, the price-to-sales ratio for Fix Pro is closest to:",
+      "options": [
+       "0.28.",
+       "0.55.",
+       "0.90."
+      ],
+      "answer": 2,
+      "why": "C is correct. Sales per share = $67.44 billion / 1.638821 billion shares = $41.15; P/S = $37.23 / $41.15 = 0.90."
+     },
+     {
+      "q": "Which valuation approach would be most appropriate in valuing shares of Fix Pro?",
+      "options": [
+       "Approach 1",
+       "Approach 2",
+       "Approach 3"
+      ],
+      "answer": 2,
+      "why": "C is correct. Fix Pro is in a cyclical industry; normalized earnings estimate the EPS the company could achieve under mid-cyclical conditions."
+     },
+     {
+      "q": "Pellham’s preference to use the P/E over the P/S is best supported by:",
+      "options": [
+       "Reason 1.",
+       "Reason 2.",
+       "Reason 3."
+      ],
+      "answer": 2,
+      "why": "C is correct. Sales is a pre-financing measure and ignores the impact of debt in the capital structure; earnings reflect operating and financial leverage, so the P/E incorporates it."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Matthew Lawton is a senior consultant in the institutional consulting division of Hale & Associates (Hale). Hale advises its institutional clients on asset manager selection and provides ongoing evaluation and performance analysis of all the fund managers in its database. Lawton was recently engaged by the retirement fund of a large municipality that has ten managers, each specializing in a particular asset class or style. Lawton notes that the members of the fund's investment committee vary greatly in their level of understanding of financial markets and active portfolio management. He hopes to increase their comprehension during a meeting scheduled for the following day.\n\nAt the start of the meeting, Lawton provides the investment committee members with a report outlining the three-year historical performance and value-added statistics for the fund's ten managers. He highlights the fund’s best- and worst-performing managers for the same period. David Ames, a new committee member, asks Lawton how to interpret value added statistics. Lawton responds with the following statements.\n\nStatement 1: The measurement is derived from the various sources that make up the contribution from active management decisions, including asset allocation and security selection.\nStatement 2: It appraises active management decisions and further compares the portfolio’s return in excess of the benchmark with the risk-free rate and relative to the standard deviation of returns.\nStatement 3: The statistic is a useful tool for comparing relative returns, but it is most applicable in comparing active management decisions of equity portfolios.\nLawton wants to ensure the committee understands the amount of active management risk its equity growth fund managers are taking in the portfolios. He mentions he is particularly concerned about the risk statistics for Denver Asset Management. The statistics have him questioning whether the manager is actually adding value by following an active management strategy. He provides the committee with data presented in Exhibit 1.\n\nExhibit 1 Selected Data for Denver Asset Management\nBenchmark return | –9.0%\nPortfolio return | –11.0%\nRisk-free rate | 2.00%\nStandard deviation of portfolio returns | 5.75%\nStandard deviation of benchmark returns | 4.75%\nActive risk | 3.75%\nPortfolio Sharpe ratio | –2.26\nBenchmark Sharpe ratio | –2.32\nLawton has asked a colleague, Janet Ward, to prepare a performance attribution analysis on the portfolios of each of the fund’s investment managers and to review the report with the committee. He requested that she include in the report an analysis showing the various components of the fundamental law of active management. Ward believes it is important to convey to the committee the significance of the interaction among the various components. She comments to the members that there is a low probability of a manager adding value if its forecast of active returns does not correlate with its realized active return over time.\n\nLawton is also worried about one of the fund’s small-cap managers whose portfolio has been underperforming its benchmark for the past few years, and the output from Ward’s fundamental law analysis was troubling. Lawton has recommended the fund consider replacing the manager and has provided the committee with a list of several alternative managers. Ames reviews the handout containing the expected information ratio and active risk measures and asks whether one statistic is more relevant than the other. Lawton responds, “They are both equally important.”\n\nTo better familiarize himself with the various managers the fund employs, Ames continues to study Ward’s report showing the various components of the fundamental law of active management. He notes the committee has yet to talk about the fixed-income advisers used by the fund. He is curious how the fundamental law of active management applies to the analysis of fixed-income managers and asks Ward for her opinion.\n\nThe final item Lawton wants to discuss with the committee concerns a notification he received from Marino Asset Management, one of the fund’s active managers, regarding a change in the quantitative investment process that Marino now uses. All of the fund’s managers are contractually required to provide written notification when implementing such changes. The correspondence addresses a change recently made regarding the rebalancing frequency. The manager previously rebalanced the portfolio on a quarterly basis but has now moved to rebalancing on a monthly basis. Marino believe this change allows it more opportunities to outperform its benchmark.",
+    "questions": [
+     {
+      "q": "Which of Lawton’s statements responding to Ames’s question is most likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Value added is determined by deviations from benchmark performance and arises from deviation from portfolio benchmark weights. This calculation can be further broken down into the various sources that make up the contribution from active management decision, including asset allocation and security selection. If every asset in the managed portfolio is held at its benchmark weight, there would be no value added relative to the benchmark. | B. Incorrect. The determination of value added does not include either the risk-free rate or the standard deviation of returns. | C. Incorrect. The use of value added is applicable to the evaluation of relative return of most asset classes."
+     },
+     {
+      "q": "Based on Exhibit 1, which of the following statements regarding Denver Asset Management is least likely correct?",
+      "options": [
+       "The manager is likely a closet indexer",
+       "On a risk-adjusted basis, the manager has added value",
+       "The manager’s strategy has not added value on a risk-adjusted basis"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This statement is correct. | B. Correct. Denver Asset Management has not added value on a risk-adjusted basis. A fund manager that pursues an active investment strategy but manages the portfolio in such a way to appear more like an index fund is referred to as a closet index fund manager. The Sharpe ratio for the portfolio is close to the benchmark: The portfolio Sharpe ratio is –2.26, and the benchmark Sharpe ratio is –2.32. In addition, the information ratio is negative, –0.53. Taken together, these data suggest there is very little active management. Information ratio = [–9.0% – (–11.0%)/3.75%] = –0.53 | C. Incorrect. This statement is correct."
+     },
+     {
+      "q": "Which component of the fundamental law of active management most likely explains Ward’s comment to the fund’s committee?",
+      "options": [
+       "Value added",
+       "Transfer coefficient",
+       "Information coefficient"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Value added measures the realized value added through active management. It is defined as the difference between the realized return on he actively managed portfolio and the benchmark portfolio. | B. Incorrect. The transfer coefficient measures the degree to which the investor’s forecasted active returns are translated into active weights. | C. Correct. The information coefficient, also known as signal quality, links forecasted active returns with realized active returns. Managers will have difficulty adding value if their forecast of active returns does not at least loosely correspond with their realized active returns. Over time, skill in forecasting returns will add more value and lead to a higher information coefficient."
+     },
+     {
+      "q": "Is Lawton’s response to Ames regarding small-cap managers most likely correct?",
+      "options": [
+       "Yes",
+       "No, the committee should focus on active risk",
+       "No, the committee should focus on the expected information ratio"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The committee should focus on the information ratio. It is the single best criterion for evaluating active investment manager’s performance given the same benchmark. | B. Incorrect, active risk alone will not lead to the highest Sharpe ratio given the fund’s risk aversion. The highest information ratio manager will produce the highest Sharpe ratio for the fund. | C. Correct. The expected information ratio is the single best criterion for evaluating active investment managers’ performance given the same benchmark. Selecting the highest information ratio manager will produce the highest Sharpe ratio for the portfolio."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Bill Tulsa is Director of Research at Brazos Fixed Income Advisors. He has a large staff of research analysts and each year adds six new hires to the group. In addition to their regular work assignments, the analysts undergo formal training conducted by Tulsa. He plans to have six modules over the coming weeks each covering key fixed-income concepts. In each module, Tulsa starts out by outlining a lesson.\n\nModule 1:\n\n“A good place to start a fixed-income program is with a discussion of the yield curve and the information it conveys. This lesson will be theoretical in nature as we discuss interpretations of the term structure of interest rates. I want to present three theories that explain the shape of the yield curve. First is the pure expectations theory, which states that the forward rate is an unbiased predictor of the future spot rate. This theory assumes investors are affected by uncertainty and require a risk premium. Second is the liquidity preference theory, which postulates that investors are willing to take on more risk by investing in longer maturity bonds if they are paid a liquidity premium. Its explanation for an upward sloping yield curve, even if spot rates are expected to be unchanged, is the liquidity premium. A third explanation of the shape of the yield curve is the segmented markets theory, which says that yields are a function of supply and demand for funds in a specific maturity segment. This last theory is very similar to the preferred habitat theory and is premised on investors and borrowers having strong preferences for particular maturities.”\n\nModule 2:\n\n“Let’s use the term structure of interest rates to price bonds, and in particular, I want you to fully understand the relationships between spot and forward rates and yield to maturity. Use the data in Exhibit 1 to determine whether a 4% coupon Treasury bond, maturing in four years and offered by a dealer at a yield-to maturity of 7.89% is cheap (buy recommendation), fairly valued (hold recommendation), or rich (sell recommendation) based on arbitrage opportunities.”\n\nExhibit 1 Select Spot and Forward Rates\n#  | Year 1 | Year 2 | Year 3 | Year 4\nSpot Rate | 0.055 | --- | --- | 0.0825\nDiscount Factor | --- | --- | 0.8163 | ---\nForward Rate f(2,1) | --- | --- | 0.0852 | ---\n\nModule 3:\n\n“Today I want to go over techniques we use at Brazos to add alpha to our active fixed-income strategies. Many of our portfolio managers like to use a portfolio management strategy called riding the yield curve. This strategy can enhance total return in two ways. First, it increases the yield of the portfolio by buying bonds with maturities longer than their investment horizon whenever the yield curve is upward sloping and expected to maintain the same level and whenever the shape and spot rates rise as predicted by forward rates. Second, even if interest rates increase unexpectedly, since the bonds roll down the yield curve, the bonds will appreciate in price.”\n\nModule 4:\n\n“Today I want to go over several spread measures used in fixed-income markets. The Z-spread provides a useful measure of risk for credit instruments such as corporate bonds. It uses the implied spot yield curve and adds the spread necessary to discount the bond’s cash flows and derive its current market price. The TED spread is used for the valuation of government bonds and is calculated as the difference between MRR and the yield on a T-bill of equal maturity. The MRR–OIS spread incorporates unsecured lending between banks. It serves as a good measure of the risk and liquidity of money market securities.”\n\nModule 5:\n\n“Swap rates are very useful in the valuation of bonds. I would like you to use the information in Exhibit 2 to value a bond, issued by AAA-rated European Supranational Bank (ESB), maturing in 3.86 years, with a coupon rate of 2.86% paid annually. Dealers are quoting the bond flat to swaps. Simple interpolation can be used to perform the calculations.”\n\nExhibit 2 Yield Measures at Various Maturities\nMaturity (Years) | 1 | 2 | 3 | 4 | 5\nOff the run Bund yield (%) | 0.25 | 0.32 | 0.46 | 0.57 | 0.66\nOn the run Bund yield (%) | 0.21 | 0.27 | 0.41 | 0.5 | 0.59\nSwap rate (%) | 0.81 | 0.89 | 1.05 | 1.16 | 1.27\n\nModule 6:\n\n“Consider a portfolio of zero-coupon bonds that mature at different times in the future. Changes in interest rates are not always parallel across maturities, so let’s analyze what happens as rates change across the yield curve. Let’s assume that the portfolio has sensitivities to factors as provided in Exhibit 3. The portfolio has equal weightings in each key rate duration and an effective duration of 4.7. I would like you to assess the impact on the return of the portfolio if rates rise evenly across the curve and also when the curve flattens but does not twist.”\n\nExhibit 3 Factor Movements per One Standard Deviation Shift and Portfolio Key Rate Durations\nYear | 5 | 10 | 30\nParallel | 1 | 1 | 1\nSteepness | 1 | 0.5 | –1\nCurvature | 0.5 | 0 | 1\nKey rate durations | 1.8 | 3.6 | 8.7",
+    "questions": [
+     {
+      "q": "Tulsa is least likely correct with regard to which theory of the term structure of interest rates?",
+      "options": [
+       "Liquidity preference theory",
+       "Segmented markets theory",
+       "Pure expectations theory"
+      ],
+      "answer": 2,
+      "why": "Tulsa is incorrect regarding uncertainty under the pure expectations theory. The theory assumes risk neutrality: investors are unaffected by uncertainty and risk premiums do not exist. The statements on liquidity preference and segmented markets are correct."
+     },
+     {
+      "q": "Based on the data in Exhibit 1 and the yield to maturity quoted by the dealer referenced in Module 2, what action should an analyst most likely take with regard to the Treasury bond?",
+      "options": [
+       "Buy",
+       "Sell",
+       "Hold"
+      ],
+      "answer": 1,
+      "why": "Step 1: calculate the year 3 spot rate from the discount factor. Step 2: using the year 3 spot rate and f(2,1), calculate the year 2 spot rate. Step 3: using the spot rates, calculate the YTM of the bond: 8.14%. The quoted YTM of 7.89% is more expensive (price = 87.08) than the spot-rate based value (price = 86.34), so the analyst should sell."
+     },
+     {
+      "q": "Is Tulsa most likely correct with regard to how portfolio managers can profit from riding the yield curve?",
+      "options": [
+       "Yes.",
+       "No, he is incorrect with respect to bond maturities.",
+       "No, he is incorrect regarding the impact of interest rate changes."
+      ],
+      "answer": 2,
+      "why": "Tulsa is incorrect in stating that the strategy will increase total return even if rates rise unexpectedly. If rates rise by more than predicted by forward rates, the bond loses value as it is priced using higher rates. He is correct regarding the increased yield."
+     },
+     {
+      "q": "Tulsa is least likely correct with regard to which spread measure in Module 4?",
+      "options": [
+       "Z-spread",
+       "TED spread",
+       "MRR–OIS spread"
+      ],
+      "answer": 1,
+      "why": "The TED spread is not used for the valuation of individual bonds but is an indicator of perceived risk in the general economy. It is the difference between MRR and the yield on a T-bill of equal maturity. His descriptions of the Z-spread and the MRR–OIS spread are correct."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "BJL Financial provides clients with professional investment management services that are tailored to the specific needs of each client. The firm’s portfolio manager, Anika Mbeki, has called a meeting with the senior analyst, Sana Qureshi, to discuss the quarterly rebalancing of three client portfolios. The valuation model used in the analyses is the discounted dividend model.\n\nClient 1 has a portfolio with significant exposure to dividend-paying stocks.\n\nClient 2 is interested in including preferred stock in the portfolio.\n\nClient 3 has a growth-oriented equity-only portfolio.\n\nQureshi has identified two utilities (ABC and XYZ) for possible inclusion in Client 1’s portfolio, as shown in Exhibit 1. She uses a discount rate of 7% for both common stocks.\n\nExhibit 1\nCandidate Stocks for Client 1\n# Stock | Company Description\nABC | \nABC is a publicly traded utility with an expected constant growth rate for earnings and dividends of 3.5%.\n\nThe most recent year’s dividend payout is 70%. The expected dividend payout in future years is 60%.\n\nThe common stock price is $14.49 per share.\n\n# XYZ | \nXYZ is a publicly traded utility with several unregulated business subsidiaries.\n\nThe company generates 3% growth in dividends and has an annual dividend payout of 80%. No changes in dividend growth or payout are expected.\n\nThe common stock price is $10 per share.\n\nThe current year earnings are $0.45 per share, and next year’s earnings are expected to be $0.50 per share.\n\nMbeki asks Qureshi to investigate the most appropriate models for valuing utility companies. She tells Qureshi about the following points mentioned in various research reports on the utilities sector.\n\nReport 1: A resurgence in domestic manufacturing activity will generate long-term growth in earnings and dividends that exceeds the cost of equity.\n\nReport 2: Share repurchases are expected to increase. The report expresses confidence in the forecasts regarding the magnitude and timing of these repurchases.\n\nReport 3: The report forecasts earnings growth of 4.5%. The key growth drivers are increases in population and business creation associated with stable GDP growth of 2.75%.\n\nFor Client 2’s portfolio, Qureshi has identified the non-callable perpetual preferred stocks of Regent Company and Keystone Company.\n\nThe Regent Company’s preferred stock pays 2.75% on a par value of $100. Qureshi believes it to be fairly valued at a market price of $49.60.\n\nThe perpetual preferred stock of Keystone Company has a par value of $50 per share and pays an annual dividend of 5.5%. Qureshi estimates a capitalization rate at 6%. The current market price of Keystone Company preferred stock is $42.\n\nFinally, Qureshi has identified three stocks, shown in Exhibit 2, as likely candidates for Client 3’s portfolio.\n\nExhibit 2\nCandidate Stocks for Client 3\n# Stock | Company Description\nBIOK | \nBIOK is a profitable biotech firm that currently pays an annual dividend of $1.20 per share.\n\nThe current annual dividend growth rate is 15%.\n\nPatent protection runs out in eight years, after which dividend growth will likely decline at a steady rate over three years before stabilizing at a mature growth rate.\n\n# CCAX | \nCCAX builds communication software for state and federal prisons and detention facilities.\n\nThe company is expected to hold its cash dividends steady at $0.56 per share for six years as it builds out facilities and acquires properties.\n\nDividends are expected to grow at the nominal GDP growth rate after the next six years.\n\n# HLTV | \nHLTV is a health care equipment and services firm that is expected to maintain a stable dividend payout ratio.\n\nEarnings are forecast to grow over the next two years by 27% annually.\n\nAfter that, earnings will likely grow by 12% annually for another 10 years before stabilizing at a mature growth rate.",
+    "questions": [
+     {
+      "q": "Based on the Gordon growth model, the justified leading P/E for ABC stock is closest to:",
+      "options": [
+       "17.1.",
+       "17.7.",
+       "20.0."
+      ],
+      "answer": 0,
+      "why": "A is correct. The justified leading P/E is calculated as\n ,\nwhere b is the retention ratio, 1 – b is the dividend payout ratio, r is the discount rate, and g is the long-term growth rate.\nABC’s dividend payout rate, 1 – b, is given as 0.60. For Company ABC, the justified leading P/E is\n."
+     },
+     {
+      "q": "Based on its justified leading P/E and the Gordon growth model, XYZ stock is:",
+      "options": [
+       "undervalued.",
+       "fairly valued.",
+       "overvalued."
+      ],
+      "answer": 1,
+      "why": "<\nB is correct. The justified leading P/E is calculated as\n,\nwhere b is the retention ratio, 1 – b is the dividend payout ratio, r is the discount rate, and g is the long-term growth rate.\nThe justified leading P/E is\n.\nXYZ’s actual leading P/E is\n.\nBecause the justified leading P/E equals the actual leading P/E, the stock is fairly valued."
+     },
+     {
+      "q": "Which sector report best describes a situation in which the Gordon growth model could be used to value utility stocks?",
+      "options": [
+       "Report 1",
+       "Report 2",
+       "Report 3"
+      ],
+      "answer": 1,
+      "why": "B is correct because the Gordon growth model can accurately value companies that are repurchasing shares when the analyst can appropriately adjust the dividend growth rate for the impact of share repurchases."
+     },
+     {
+      "q": "Based on Qureshi’s estimate of the capitalization rate, Keystone Company’s preferred stock is:",
+      "options": [
+       "undervalued.",
+       "fairly valued.",
+       "overvalued."
+      ],
+      "answer": 0,
+      "why": "A is correct. The value of a share of Keystone Company’s preferred stock is\n.\nThe current price of a share of Keystone Company’s preferred stock is $42, so the stock is currently undervalued."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Farhan Qureshi, an analyst at an asset management company, is new to the concepts of residual income valuation. In response to some questions from his supervisor, Robert Ellis, Qureshi makes the following statements about the residual income model:\n\nStatement 1: The residual income model has a clear relationship to other valuation models, such as the dividend discount models.\n\nStatement 2:  The intrinsic value based on a residual income model is not affected by dividend payments by the company.\n\nStatement 3: The intrinsic value based on a residual income model will be at least equal to the book value if the company remains profitable.\n\nEllis asks Qureshi to calculate the residual income of Orion Company based on the information in Exhibit 1.\n\nExhibit 1\n# Earnings before interest and taxes | $165 million\nInterest expense (tax deductible) | $65 million\nTax rate | 20%\nEquity charge | $45 million\nEllis also asks Qureshi to calculate the justified P/B ratio of Vega Company. Qureshi assumes a long-term ROE of 8% and a required rate of return of 7% for calculating the justified P/B ratio of Beta. Based on a single-stage residual income model, he calculates the justified P/B ratio of 1.5.\n\nEllis believes the justified P/B ratio of 1.5 is too low for Beta and asks Qureshi to calculate its intrinsic value using a multistage residual income model. Qureshi uses the following assumptions and estimates for the calculation:\n\nBeginning book value per share is $12.00\nPresent value of four years' residual income per share is $7.50\nAt the end of four years, book value per share will be $15.00\nAt the end of four years, market value per share will be $21.00\nThe required rate of return is 7%",
+    "questions": [
+     {
+      "q": "Which of Qureshi's statements about residual income models is most likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 0,
+      "why": "A is correct. The RI model is derived from and consistent with the DDM. Dividends reduce future book value, so they affect RI value (Statement 2 wrong); a profitable company with negative RI is worth less than book value (Statement 3 wrong)."
+     },
+     {
+      "q": "Based on the information in Exhibit 1, the residual income of Alpha is closest to:",
+      "options": [
+       "$35 million.",
+       "$55 million.",
+       "$80 million."
+      ],
+      "answer": 0,
+      "why": "A is correct. Pretax income = 165 − 65 = 100; net income = 100 × 0.8 = 80; residual income = 80 − 45 = $35 million. $80 million is net income."
+     },
+     {
+      "q": "What is the implied long-term growth rate Qureshi uses in calculating Beta's justified P/B ratio?",
+      "options": [
+       "5.0%",
+       "6.0%",
+       "7.5%"
+      ],
+      "answer": 0,
+      "why": "A is correct. P/B = 1 + (ROE − r)/(r − g): 1.5 = 1 + 0.01/(0.07 − g), so g = 5%."
+     },
+     {
+      "q": "Based on the multistage residual income model, Beta's intrinsic value per share is closest to:",
+      "options": [
+       "$24.08.",
+       "$30.94.",
+       "$35.52."
+      ],
+      "answer": 0,
+      "why": "A is correct. V0 = 12.00 + 7.50 + (21 − 15)/1.07^4 = $24.08. B discounts book value (15) and C discounts the market value (21) instead of the premium over book."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Giulia Ferraro works as a senior manager at the National Banking Regulatory Commission (NBRC). She is meeting with her team today to review Banco San Carlo (BSB), a large commercial bank with operations across the country. The central bank announced a rate hike last month, and Ferraro wants to re-examine BSB’s ability to withstand the changing environment. Antonio Marino, her junior colleague, displays the summary information (Exhibit 1) he has gathered on BSB’s earnings composition and comments that he thinks the earnings composition has become less volatile and more sustainable.\n\nExhibit 1 Key Components of BSB’s Earnings\n# (€ millions) | Current Year | Prior Year\nNet interest income | 55,288 | 50,285\nNet fee income | 22,648 | 21,107\nNet trading income | 18,651 | 18,624\nTotal | 96,587 | 90,016\nFerraro further explains that BSB has been flagged by the data analytics system. The flag warns that BSB may be acting to boost its net interest income by shifting its portfolio toward more long-term assets without a corresponding shift on the liability side of the balance sheet. “I don’t like it,” said Ferraro. Seeing Marino’s puzzled look, she adds, “It’s a value creation strategy in a stable interest rate market, but it heightens their risk, especially in this environment of increasing rates.”\n\nThe team next turns to BSB’s balance sheet. Marino displays the information he has gathered (Exhibit 2), and they use it to calculate the Total Tier 1 Capital.\n\nExhibit 2 Excerpts from BSB’s Year-End Balance Sheet\n# (€ billions) | Current Year | Prior Year\nCustomer deposits | 502 | 572\nSubordinated debt | 23 | 21\nPreferred shares | 17 | 17\nCommon shares | 12 | 12\nRetained earnings | 187 | 201\nAs the discussion draws to a close, Ferraro mentions that at the next meeting, they will complete a detailed CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) analysis of BSB.",
+    "questions": [
+     {
+      "q": "Marino’s comment about BSB’s earnings composition is best described as:",
+      "options": [
+       "correct.",
+       "incorrect with respect to volatility.",
+       "incorrect with respect to sustainability."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Net trading income is typically considered more volatile than net interest income or net fee income. As a component of the total, BSB’s net trading income has decreased from 20.7% to 19.3% per the following table, while the sustainable components (net interest income and net fee income) have increased. Overall, BSB’s earnings composition has become less volatile and more sustainable. (€ millions)\tCurrent Year\t(%)\tPrior Year\t(%) Net interest income\t55,288\t57.2%\t50,285\t55.9% Net fee income\t22,648\t23.5%\t21,107\t23.4% Net trading income\t18,651\t19.3%\t18,624\t20.7% Total\t96,587\t100.0%\t90,016\t100.0% | B. Incorrect. Net trading income, which is typically considered volatile income, has decreased as a proportion of the total. As such, Marino’s comment that the earnings composition has become less volatile is correct. | C. Incorrect. Both net interest income and net fee income, which are considered more sustainable sources of income, have increased as a proportion of the total. As such, Marino’s comment that the earnings composition has become more sustainable is correct."
+     },
+     {
+      "q": "The value creation strategy Ferraro refers to is best described as:",
+      "options": [
+       "maturity transformation.",
+       "contractual maturity mismatch.",
+       "risk-weighted asset stratification."
+      ],
+      "answer": 0,
+      "why": "A. Correct. When banks borrow money (liabilities) on shorter terms than the terms for lending to customers (assets), they create value by lending at higher rates than their short-term funding costs. This is called maturity transformation. | B. Incorrect. A contractual maturity mismatch is the result of the strategy described but is not the name of the strategy itself. | C. Incorrect. Risk-weighted asset stratification is part of the process of assessing a bank’s capital adequacy."
+     },
+     {
+      "q": "BSB’s Total Tier 1 Capital (in billions) for the current year is closest to:",
+      "options": [
+       "€199.",
+       "€216.",
+       "€239."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. This calculation correctly includes the Common Equity Tier 1 components (common shares (€12) and retained earnings (€187)) for a total of €199. However, it incorrectly excludes preferred shares, which should be included as part of Total Tier 1 Capital. 12 + 187 = €199. | B. Correct. Total Tier 1 Capital includes Common Equity Tier 1 Capital plus other instruments (such as preferred shares) that bear no fixed maturity and carry no requirement to pay dividends or interest without the full discretion of the bank. Common Equity Tier 1 Capital includes common stock, capital surplus, retained earnings, and other comprehensive income. BSB’s Total Tier 1 Capital is as follows: (€ billions) Common stock\t12 Retained earnings\t187 Common Equity Tier 1 Capital\t199 Preferred shares\t17 Total Tier 1 Capital\t€216 | C. Incorrect. This calculation correctly includes preferred shares (€17), common shares (€12), and retained earnings (€187). However, it incorrectly also includes subordinated debt (€23), bringing the total to €239. Subordinated debt is part of Tier 2 Capital. 17 + 12 + 187 +23 = €239."
+     },
+     {
+      "q": "In the next meeting when completing the detailed analysis suggested by Ferraro, which of the following topics is least likely to be covered?",
+      "options": [
+       "Currency exposure",
+       "Governance structure",
+       "Concentration of funding"
+      ],
+      "answer": 0,
+      "why": "A. Correct. In the next meeting, they are to complete a detailed CAMELS analysis of BSB, which would not include an analysis of currency exposure. Currency exposure is relevant to the analysis of a bank, but it is not covered by the CAMELS approach. | B. Incorrect. A strong governance structure is a critically important aspect of the management capabilities element of CAMELS. | C. Incorrect. Concentration of funding is one of the liquidity-monitoring metrics described in Basel III. It is covered under the liquidity position element of CAMELS."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Zachary Alicia is analyzing the earnings and financial reporting quality of Zenith, a consumer electronics manufacturer. The company reports its financial statements according to US GAAP.\nIn Exhibit 1, Alicia compiles selected financial statement data for Zenith for the year just ended. Alicia then assesses the company's earnings quality by calculating the cash-flow-based accruals ratio. \nExhibit 1\n#  | Year Just Ended\n($ millions) | Prior Year\n($ millions)\nNet operating assets | 280 | 229\nNet income | 83 | 64\nOperating cash flow | 113 | 77\nInvesting cash flow | (58) | (39)\nFinancing cash flow | 5 | 0\nWhen reviewing the notes to Zenith's most recent financial statements, Alicia observes that some inventory is held in preparation for product launches. This inventory is not expected to be sold within one year and was reclassified as other non-current assets in the year just ended. This is the first year Zenith has made such a reclassification. Alicia determines how the reclassification affects its financial ratios. \nZenith recently announced that it will purchase an 80% interest in Titan Electronics (Titan) for $24 million and will gain control over Titan. Titan's identifiable net assets have a fair value of $25 million and the fair value of the entire company is $30 million.",
+    "questions": [
+     {
+      "q": "Zenith's cash-flow-based accruals ratio for the year just ended is closest to:",
+      "options": [
+       "9%.",
+       "10%.",
+       "11%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because financing cash flow is included in the calculation as follows:\n= [NI1 − (CFO1 + CFI1+ CFF1] / [(NOA1 + NOA0) / 2]\n= [83 − [113 + (–58) + 5]] / [(280 + 229) / 2]\n= [83 − (60)] / [(509) / 2]\n= 23 / 254.5 ≈ 9%\nB. Incorrect because net operating assets of the year just ended is used instead of average net operating assets as follows:\n= [NI1 − (CFO1 + CFI1)] / NOA1\n= [83 − [113 + (–58)]] / 280\n= [83 − (55)] / 280\n= 28 / 280 = 10%\nC. Correct because the cash flow accruals ratio for the year just ended is 11% as follows:\n= [NI1 − (CFO1 + CFI1)] / [(NOA1 + NOA0) / 2]\nwhere:\nNI = net income\nCFO = cash flow from operations\nCFI = cash flow from investing\nNOA = net operating assets\n= [83 − [113 + (–58)]] / [(280 + 229) / 2]\n= [83 − (55)] / [(509) / 2]\n= 28 / 254.5 ≈ 11%"
+     },
+     {
+      "q": "As a result of Zenith's reclassification of its inventory in the year that has just ended, which of the following ratios most likely increased?",
+      "options": [
+       "Inventory turnover",
+       "Days of inventory on hand",
+       "Current ratio"
+      ],
+      "answer": 0,
+      "why": "A. Correct because the inventory turnover calculated using the reported inventory number will most likely increase because the amount of inventory relative to cost of goods sold will decrease.\nB. Incorrect because the number of days of inventory on hand calculated using the reported inventory number will most likely decrease because the amount of inventory relative to cost of goods sold will decrease.\nC. Incorrect because Zenith's reclassifies its inventory, which is part of current assets, to other non-current assets therefore the current ratio will decrease because current assets will decrease and current liabilities will stay the same."
+     },
+     {
+      "q": "Zenith should account for its purchase of Titan using the:",
+      "options": [
+       "equity method.",
+       "proportionate consolidation method.",
+       "acquisition method."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because if Zenith is deemed to have control over Titan, it would use the acquisition method to account for Titan in its consolidated financial statements. The equity method is used for some joint ventures and when there is significant influence but not control. In this case, Zenith has an 80% stake and has control over Titan.\nB. Incorrect because if Zenith is deemed to have control over Titan, it would use the acquisition method to account for Titan in its consolidated financial statements. Proportionate consolidation is used for joint ventures. In this case, Zenith has an 80% stake and has control over Titan.\nC. Correct because if Zenith is deemed to have control over Titan, it would use the acquisition method to account for Titan in its consolidated financial statements. In this case, Zenith has an 80% stake and has control over Titan."
+     },
+     {
+      "q": "As a result of its purchase of Titan, Zenith should recognize goodwill of:",
+      "options": [
+       "$4 million.",
+       "$5 million.",
+       "$6 million."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because Zenith reports under US GAAP, and should report $5 million under the full goodwill method. This would be the amount reported under the partial goodwill method. Partial goodwill = Fair value of consideration – Share of fair value of identifiable net assets = $24 million – 80% × $ 25 million = $24 million – $20 million = $4 million.\nB. Correct because Zenith reports under US GAAP, and should report $5 million under the full goodwill method. Full goodwill = Fair value of entity – Fair value of identifiable net assets = $30 million – $25 million = $5 million.\nC. Incorrect because Zenith reports under US GAAP, and should report $5 million under the full goodwill method. If acquisition cost was used instead of fair value of identifiable net assets then full goodwill would = $30 million – $24 million = $6 million."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Jules Ferretti is a bond analyst for Calder Investments, Inc. Ferretti gathers data on three corporate bonds, as shown in Exhibit 1.\n\nExhibit 1\nSelected Bond Data\n# Issuer | Coupon Rate | Price | Bond Description\nDumont, Inc. (AI) | 5.25% | 100.200 | Callable at par in one year and two years from today\nKessel, Inc. (BI) | 5.25% | 101.300 | Option-free\nDalbert Enterprises (CE) | 5.25% | 102.100 | Putable at par in one year from today\nNote: Each bond has a remaining maturity of three years, annual coupon payments, and a credit rating of BBB.\n\nTo assess the interest rate risk of the three bonds, Ferretti constructs two binomial interest rate trees based on a 10% interest rate volatility assumption and a current one-year rate of 4%. Panel A of Exhibit 2 provides an interest rate tree assuming the benchmark yield curve shifts down by 30 bps, and Panel B provides an interest rate tree assuming the benchmark yield curve shifts up by 30 bps. Ferretti determines that the AI bond is currently trading at an option-adjusted spread (OAS) of 13.95 bps relative to the benchmark yield curve.\n\nExhibit 2\nBinomial Interest Rate Trees\n[Tree figures not captured in the paste: Panel A, interest rates shift down by 30 bps; Panel B, interest rates shift up by 30 bps; trees at year 0, 1 and 2. From the answer key: the AI bond value is PV– = 100.78 if rates shift down 30 bps and PV+ = 99.487 if rates shift up 30 bps.]\n\nLouis Garnier, a convertible bond analyst, stops by Ferretti’s office to discuss two convertible bonds. One is issued by DeLille Enterprises (DE), and the other is issued by Voisin Incorporated (RI). Selected data for the two bonds are presented in Exhibit 3 and Exhibit 4.\n\nExhibit 3\nSelected Data for DE Convertible Bond\n# Issue price | €1,000 at par\nConversion period | 13 September 20X5 to 12 September 20X8\nInitial conversion price | €10.00 per share\nThreshold dividend | €0.50 per share\nChange of control conversion price | €8.00 per share\nCommon stock share price on issue date | €8.70\nShare price on 17 September 20X5 | €9.10\nConvertible bond price on 17 September 20X5 | €1,123\n\nExhibit 4\nSelected Data for RI Convertible Bond\n# Straight bond value | €978\nValue of embedded issuer call option | €43\nValue of embedded investor put option | €26\nValue of embedded call option on issuer’s stock | €147\nConversion price | €12.50\nCurrent common stock share price | €11.75\n\nGarnier makes the following comments to Ferretti:\n\n“The DE bond does not contain any call or put options, but the RI bond contains both an embedded call option and put option. I expect that DeLille Enterprises will soon announce a common stock dividend of €0.70 per share.”\n\n“My belief is that, over the next year, Voisin’s share price will appreciate toward the conversion price but not exceed it.”",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1 and Exhibit 2, the effective duration for the AI bond is closest to:",
+      "options": [
+       "1.98.",
+       "2.15.",
+       "2.73."
+      ],
+      "answer": 1,
+      "why": "Effective duration = (PV– − PV+) ÷ (2 × PV0 × Δcurve) = (100.78 − 99.487) ÷ (2 × 100.2 × 0.003) = 2.15."
+     },
+     {
+      "q": "If benchmark yields were to fall, which bond in Exhibit 1 would most likely experience a decline in effective duration?",
+      "options": [
+       "AI bond",
+       "BI bond",
+       "CE bond"
+      ],
+      "answer": 0,
+      "why": "The AI bond is callable: when rates fall the call moves into the money and limits price appreciation, so effective duration decreases. It is already in the money (price 100.200 above the call price of par)."
+     },
+     {
+      "q": "Based on Exhibit 1, for the BI bond, one-sided:",
+      "options": [
+       "up-duration will be greater than one-sided down-duration.",
+       "down-duration will be greater than one-sided up-duration.",
+       "up-duration and one-sided down-duration will be about equal."
+      ],
+      "answer": 2,
+      "why": "BI is option-free, so one-sided up-duration and down-duration are about equal."
+     },
+     {
+      "q": "Based on Exhibit 1, which key rate duration is the largest for the BI bond?",
+      "options": [
+       "One-year key rate duration",
+       "Two-year key rate duration",
+       "Three-year key rate duration"
+      ],
+      "answer": 2,
+      "why": "For an option-free bond the longest key rate duration is at maturity, where the largest cash flow (coupon plus principal) occurs."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Evelyn Hartung is an analyst tasked with estimating changes in interest rates and risk premiums to help make investment decisions in various countries. \n\nFor the country of Kordal, Hartung analyzes data in order to forecast changes in central bank policy rates and the government bond rate. She gathers the information in Exhibit 1. Based on this data, she concludes the current policy rate is too low.\n\nExhibit 1\nActual GDP (in $ billions) | 465\nPotential GDP (in $ billions) | 455\nTarget inflation rate | 2.50%\nInflation rate | 2.00%\nReal rate that balances long-term savings and borrowing | 0.50%\nCurrent policy rate | 2.25%\nIn addition to the information in Exhibit 1, Hartung gathers information on zero-coupon government bond rates as an input into her forecasts of the break-even inflation rate. The yield on a 5-year default-free real bond is 1.8%, and the yield on a default-free nominal bond with the same maturity is 4.3%.\n\nFinally, Hartung considers the risk premiums and valuation of equities in the country of Neolandia. The country has experienced a long period of economic growth. She believes that a recession is likely to occur in the near future and recommends investing in companies that are better at hedging lower consumption.\n\nHartung notes that current P/E ratios are high by historical standards, but she expects them to decrease. She justifies her expectations on future P/E ratios by linking them to her forecasts of an increase in inflation expectations, a decrease in equity risk premiums, and a decline in the real rate of interest.",
+    "questions": [
+     {
+      "q": "The break-even inflation rate in Kordal is closest to:",
+      "options": [
+       "1.3%.",
+       "2.5%.",
+       "3.8%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because it is the difference between the real bond yield of 1.80% and the real rate that balances savings and borrowing; 1.80% – 0.50% = 1.30%. However, the breakeven inflation rate is the difference between zero-coupon default-free nominal and real bond rates with the same maturity. Also, 2.25% – 0.50% = 1.75%, closest to 1.30%, should a candidate calculate the following: current policy rate less the real rate that balances savings and borrowing. | B. Correct because the difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. The BEI rate for Kordal is 4.30% – 1.80% = 2.50%. | C. Incorrect because it is the difference between the yield on nominal bonds and the real rate that balances savings and borrowing; 4.30% – 0.50% = 3.80%. However, the breakeven inflation rate is the difference between zero-coupon default-free nominal and real bond rates with the same maturity."
+     },
+     {
+      "q": "Based on Hartung's forecast for the Neolandian economy, the most appropriate companies to invest in produce:",
+      "options": [
+       "staple goods.",
+       "durable goods.",
+       "discretionary goods."
+      ],
+      "answer": 0,
+      "why": "A. Correct because non-cyclical companies have earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors. | B. Incorrect because companies producing durable goods have sales and profits that are sensitive to the economic cycle. As a recession is feared, firms in durable goods industries are likely to underperform. A non-cyclical company has earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors. | C. Incorrect because companies producing discretionary goods have sales that are cyclical in nature. Given the forecast of a recession, firms in discretionary goods industries are likely to underperform the market. A non-cyclical company has earnings that are relatively less sensitive to economic conditions. Non-cyclical companies include those that produce staple (or less discretionary) consumer goods. In a recession, these companies will have earnings that will not fall (on average) as other sectors, including companies in durables and cyclical sectors."
+     },
+     {
+      "q": "Hartung's conclusion about the level of the policy rate is best supported by the difference between:",
+      "options": [
+       "actual and potential GDP.",
+       "the target and actual inflation rates.",
+       "the current policy rate and the target inflation rate."
+      ],
+      "answer": 0,
+      "why": "A. Correct because the actual GDP is greater than the potential GDP, creating a positive output gap, but the inflation rate is below its target rate. Using the Taylor rule, the policy rate = It + tt + 0.5(tt – t*t) + 0.5(Yt – Y*t) and the neutral rate = It + tt, where It = real rate that balances savings and borrowing tt = inflation rate t*t = target inflation rate Yt = actual GDP output (in log scale) Y*t = potential GDP output (in log scale), and (Yt – Y*t) = output gap. Given the information in the exhibit, the neutral rate = 0.5% + 2.0% = 2.5%. However, the current policy rate is 2.25% (= 0.5% + 2.0% + 0.5 × (2.0% – 2.5%) + 0.5 × output gap = 2.25% + 0.5 × output gap). The current policy rate would be appropriate if the output gap was 0. However, the output gap is positive (Actual GDP > Potential GDP), so the current policy rate is too low. | B. Incorrect because the target inflation rate and the actual inflation rate are consistent with the policy rate if the output gap is zero. A lower inflation rate than the target inflation rate would cause the policy rate to move lower (not higher). | C. Incorrect because the current policy rate (2.25%) is below the target inflation rate (2.50%) because it accounts for the fact that the reported inflation rate is below the target inflation rate. Per the Taylor rule, the adjustment to the neutral rate is equal to 0.5(2.0% – 2.5%) = –0.25%; 2.50% – 0.25% = 2.25%. This would have been an appropriate policy rate had the output gap been 0. However, the output gap is positive."
+     },
+     {
+      "q": "Which of Hartung's forecasts supports her expectation about changes in P/E ratios?",
+      "options": [
+       "Real interest rate",
+       "Equity risk premium",
+       "Inflation expectations"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because high P/E ratios are likely associated win a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Hartung is expecting a decrease in the real rate of interest, which will have a positive (increasing) effect on P/E ratios. | B. Incorrect because high P/E ratios are likely associated with a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Hartung is expecting a decrease in the equity risk premium, which will have a positive (increasing) effect on P/E ratios. | C. Correct because high P/E ratios are likely associated with a decrease in inflation expectations, a decrease in real interest rates, and a decrease in the equity risk premium. Hartung is expecting an increase in inflation expectations, which will have a negative (decreasing) effect on P/E ratios."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Ulrich Thornfeld continues his work in valuing private companies, taking specific interest in transactions involving public companies buying private company targets. As he has seen in his work, private company discount rates are often biased because private firms typically have less access to debt capital.\n\nWhile Thornfeld has experience using CAPM for public companies, he has rarely used it for private firms, instead relying on the expanded CAPM or a build-up approach to estimate required return on equity. When using the expanded CAPM for a private company, JNK Corporation, Thornfeld gathered beta estimates from publicly traded comparable companies. On a recent engagement, he found the average beta from public comparables of 1.20. The average debt ratio of the public comparables exceeded that of JNK, while tax rates were equal between the public comparables and JNK.\n\nContinuing in his role, Thornfeld completed many private company valuations for entire businesses. As a result, certain methods of calculating terminal values seemed to be more useful for his work than other methods.\n\nThornfeld had initially struggled with applying discounts in private company valuation but became more comfortable with different estimation methods. In particular, he finds an option-based approach to quantifying the lack of marketability quite useful. In his recent work on valuing JNK, he estimated the value of three put options with three months until expiration on the most similar public comparable company to JNK. The public comparable was trading at a stock price of EUR 29.70. The three-month risk-free rate is 4%. The put option valuation results are summarized as follows:\n\nJNK Put Option Exercise Prices and Values\n# Exercise price | Put option value\nEUR 25 | EUR 1.25\nEUR 30 | EUR 3.75\nEUR 35 | EUR 6.95",
+    "questions": [
+     {
+      "q": "Which statement best reflects how discount rate biases may affect offer prices in transactions involving public company buyers and private company targets?",
+      "options": [
+       "Public company buyers pay offer prices for private firms that reflect improvements the buyer will make after a successful acquisition.",
+       "Public company buyers pay offer prices for private firms that reflect the higher discount rates that apply to private companies.",
+       "Public company buyers pay offer prices for private companies that do not reflect any control premium."
+      ],
+      "answer": 0,
+      "why": "A is correct. Offer prices reflect improvements the buyer will make (e.g. lower expenses), not the higher private discount rates; a control premium is usually paid."
+     },
+     {
+      "q": "Which statement best explains why the CAPM may be inappropriate for estimating required return on equity for private firms?",
+      "options": [
+       "The CAPM was only designed for publicly traded stocks.",
+       "The CAPM does not utilize a company-specific risk premium.",
+       "The CAPM assumes investors are well diversified."
+      ],
+      "answer": 2,
+      "why": "C is correct. Private owners are rarely diversified and bear total risk; CAPM prices only market risk."
+     },
+     {
+      "q": "Which statement is most correct regarding Thornfeld’s estimation of JNK’s beta?",
+      "options": [
+       "Thornfeld estimates JNK’s beta to be less than 1.20.",
+       "Thornfeld estimates JNK’s beta to be 1.20.",
+       "Thornfeld estimates JNK’s beta to be greater than 1.20."
+      ],
+      "answer": 0,
+      "why": "A is correct. Unlever the comparables' beta (higher debt ratio than JNK) and re-lever at JNK's lower debt ratio: the result is below 1.20."
+     },
+     {
+      "q": "Which terminal value estimation method is least useful for Thornfeld?",
+      "options": [
+       "CCM",
+       "EEM",
+       "Market multiple method"
+      ],
+      "answer": 1,
+      "why": "B is correct. He values entire businesses; the excess earnings method (several discount rates) is mainly used for intangible assets, while CCM and market multiples suit whole businesses."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Sasha Hollis, a successful entrepreneur, is preparing for retirement and considering selling off her businesses. She is meeting with Ervin Goldfarb, an independent valuation consultant, to discuss the process and her options.\n\nHollis owns 100% of two chains of spas and wellness centers. The spa market can be divided into two segments:\n\nSmaller operations, typically in urban settings. Clients usually book only one or two services at a time and spend an hour or two at the outlet. Outlets compete on location, price and reputation. \nLarger full-service facilities, that operate in more rural settings. These offer more services than the urban spas and clients typically spend a full day at the facility. Providing good customer service and products are key to success in this market.\nHollis explains: \"I initially owned and operated two full-service spas as a chain under the banner of Hollis Spa Days (DSD). The outlets have done well since established ten years ago and the company has a good reputation in the area. I believe in offering an exceptional customer experience supported by a full complement of well-trained staff. Five years ago, a chain of four urban spas became available for sale. Although the chain appeared able to survive for the next 12 months, it was undercapitalized and in financial distress, so I was able to acquire it at a good price. By converting those spas to the Hollis banner and adding my management skills I was able to quickly offer, and keep offering, good quality services at industry average prices while keeping costs lower than competitors in this segment.\n\nGoldfarb explains that spas and personal service businesses are usually valued using a multiple of gross revenue model. He makes the following note for his file: Due to the competitive strategies of the two chains, I will be able to apply a higher multiple than the industry average to value both businesses.\n\nBefore calculating a value for the chain of full-service spas, Goldfarb asks Hollis about that company's financial performance. \"It seems like the most recent year was very successful, revenue is up 20% but your operating costs are generally the same or lower, can you explain that discrepancy to me?\"\n\nHollis gives three explanations:\n\nPeople buy a lot of spa packages as gifts, but not all packages get used on a timely basis, so we changed to recording them as revenue when we are paid.\nSome of the costs we incur maintaining and growing our customer base are really investments in the future, therefore, we started recording one-half of our marketing costs as customer acquisition assets.\nWe did not record any depreciation expense this past year for some of our smaller assets because they are already fully depreciated.",
+    "questions": [
+     {
+      "q": "The price Hollis paid for the chain of four urban spas was most likely based on its:",
+      "options": [
+       "liquidation value.",
+       "fair market value.",
+       "going-concern value."
+      ],
+      "answer": 0,
+      "why": "A. Correct because the group was in financial distress and seemed to be lacking the value added by assets working together and by human capital. Hollis was able to add that value after she took over, via her management skills and by converting to the Hollis banner. Therefore, the valuation was most likely based on a liquidation value.  | B. Incorrect because FMV is the price at which an asset (or liability) would change hands between a willing buyer and a willing seller when the former is not under any compulsion to buy and the latter is not under any compulsion to sell. Because the urban group was in financial distress it is likely the seller was not completely willing and potentially was under a compulsion to sell.  | C. Incorrect because a going concern assumption may not be appropriate for a company in financial distress as the chain of urban spas was at that time. Also, the chain should be able to survive for the next 12 months which does not constitute a going concern issue. In estimating value, a going-concern assumption is the assumption that the company will continue its business activities into the foreseeable future. "
+     },
+     {
+      "q": "The model Goldfarb suggests for valuing spas and personal service businesses is best described as:",
+      "options": [
+       "an income model.",
+       "a relative valuation model.",
+       "an absolute valuation model."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because an income model is a type of absolute valuation model which includes present value models or discounted cash flow models. The model Goldfarb has suggested for spas and personal service businesses (a multiple of gross revenue) is a relative model. A present value model or discounted cash flow model applied to equity valuation derives the value of common stock as the present or discounted value of its expected future cash flows (such models are known as income models of valuation in private business appraisals).  | B. Correct because a relative valuation is typically implemented using price multiples (ratios of stock price to a fundamental, such as cash flow per share) or enterprise multiples. The model Goldfarb suggested for spas and personal service businesses uses a multiple of gross revenue.  | C. Incorrect because absolute valuation models include present value models or discounted cash flow models. The model Goldfarb has suggested for spas and personal service businesses (a multiple of gross revenue) is a relative model. "
+     },
+     {
+      "q": "Is Goldfarb correct in his decision to apply a higher multiple to the two spa businesses?",
+      "options": [
+       "Yes",
+       "No, because it should be applied to the DSD chain only",
+       "No, because it should be applied to the urban chain only"
+      ],
+      "answer": 0,
+      "why": "A. Correct because the higher multiple should be applied to both spa chains. Both have been able to create and sustain an advantage relative to their competitors. In general, a company’s value is higher to the extent that it can create and sustain an advantage relative to its competition. Porter identifies several generic corporate strategies for achieving above-average performance: i. Cost leadership ii. Differentiation iii. Focus Even though the spas follow different competitive strategies, both have been able to create and sustain an advantage relative to their competitors. The DSD chain follows a differentiation strategy (good reputation, offers exceptional service, has highly trained staff) while the urban chain follows a cost leadership strategy (products priced at or near industry average while keeping costs lower than competitors in the segment). | B. Incorrect because both spas have been able to create and sustain an advantage relative to their competitors so a higher multiple can be applied to both. The urban chain has successfully implemented and sustained a cost leadership strategy (products priced at or near industry average while keeping costs lower than competitors in the segment).  | C. Incorrect because both spas have been able to create and sustain an advantage relative to their competitors so a higher multiple can be applied to both. The DSD chain has successfully implemented and sustained a differentiation strategy (good reputation, offers exceptional service, has highly trained staff). "
+     },
+     {
+      "q": "In response to Goldfarb's question about financial performance, which of Hollis' explanations is least likely a quality of earnings issue?",
+      "options": [
+       "Gift packages",
+       "Depreciation expense",
+       "Customer acquisition cost"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because recognizing gift packages (or gift cards) when customers paid, and not when the service is provided, would result in early revenue recognition and is an indicator of lower quality of earnings. This is not in accordance with accounting standards (IFRS and US GAAP).  | B. Correct because although the fully depreciated status of the assets might indicate poor matching of the expense in prior years, the estimate of the useful life on the shorter side, not the longer side which would typically be an indication of lower quality earnings. In addition, the assets are smaller indicating the understatement of depreciation expense is less material and there is no evidence of a pattern of misstating depreciation for other more significant assets. Therefore, the lower depreciation expense is not an indicator of lower quality of earnings.  | C. Incorrect because deferral of expenses by capitalizing expenditures as an asset, for example: customer acquisition costs would be an indicator of lower quality of earnings. "
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {},
+ "key": "ACCCABCCCBCBABBAAAAAAABACACBBACCBAACACABABAB"
+}

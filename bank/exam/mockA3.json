@@ -1,0 +1,521 @@
+{
+ "set": {
+  "id": "mockA3",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock A3",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Big subjects (Equity, FSA, Fixed Income, Portfolio Management): 11 vignettes, 44 questions, 132 minutes. No Ethics.",
+  "vignettes": [
+   {
+    "topic": "Equity",
+    "body": "Summit-Anchor Capital is a rapidly growing international investment firm. The firm’s research team is responsible for identifying undervalued and overvalued publicly-traded equities that have a market capitalization greater than $500 million.\n\nDue to the rapid growth of assets under management, Summit-Anchor Capital recently hired a new analyst, Jim Ruddock, to support the research process. At the new analyst orientation meeting, the director of research made the following statements about equity valuation at the firm:\n\nStatement 1:\n“Analysts at Summit-Anchor Capital seek to identify mispricing, relying on price eventually converging to intrinsic value. However, convergence of the market price to an analyst’s estimate of intrinsic value may not happen within the portfolio manager’s investment time horizon. So, besides evidence of mispricing, analysts should look for the presence of a particular market or corporate event—that is, a catalyst—that will cause the marketplace to re-evaluate the subject firm’s prospects.”\n\nStatement 2:\n“An active investment manager attempts to capture positive alpha. But mispricing of assets is not directly observable. It is therefore important that you understand the possible sources of perceived mispricing.”\n\nStatement 3:\n“For its distressed securities fund, Summit-Anchor Capital screens its investable universe of securities for companies in financial distress.”\n\nStatement 4:\n“For its core equity fund, Summit-Anchor Capital selects financially sound companies that are expected to generate significant positive free cash flow from core business operations within a multiyear forecast horizon.”\n\nStatement 5:\n“Summit-Anchor Capital’s research process requires analysts to evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his or her own expectations.”\n\nAfter the orientation meeting, the director of research asks Ruddock to evaluate three companies that are retailers of men’s clothing: Diamond Co., Meridian Clothing, and Prime Men’s Wear.\n\nRuddock starts his analysis by evaluating the characteristics of the men’s retail clothing industry. He finds few barriers to new retail entrants, high intra-industry rivalry among retailers, low product substitution costs for customers, and a large number of wholesale clothing suppliers.\n\nWhile conducting his analysis, Ruddock discovers that Meridian Clothing included three non-recurring items in their most recent earnings release: a positive litigation settlement, a one-time tax credit, and the gain on the sale of a non-operating asset.\n\nTo estimate each firm’s intrinsic value, Ruddock applies appropriate discount rates to each firm’s estimated free cash flows over a ten-year time horizon and to the estimated value of the firm at the end of the ten-year horizon.\n\nMonica Yi, a junior technology analyst at Summit-Anchor, asks the director of research for advice as to which valuation model to use for VEGA, a fast growing semiconductor company that is rapidly gaining market share.\n\nThe director of research states that “the valuation model selected must be consistent with the characteristics of the company being valued.”\n\nYi tells the director of research that VEGA is not expected to be profitable for several more years. According to management guidance, when the company turns profitable, it will invest in new product development; as a result, it does not expect to initiate a dividend for an extended period of time. Yi also notes that she expects that certain larger competitors will become interested in acquiring VEGA because of its excellent growth prospects. The director of research advises Yi to consider that in her valuation.",
+    "questions": [
+     {
+      "q": "Based on Statement 2, which of the following sources of perceived mispricing do active investment managers attempt to exploit? The difference between:",
+      "options": [
+       "intrinsic value and market price.",
+       "estimated intrinsic value and market price.",
+       "intrinsic value and estimated intrinsic value."
+      ],
+      "answer": 1,
+      "why": "B is correct. The difference between the true (real) but unobservable intrinsic value and the observed market price contributes to the abnormal return or alpha, which is the concern of active investment managers."
+     },
+     {
+      "q": "With respect to Statements 3 and 4, which of the following measures of value would the distressed securities fund’s analyst consider that a core equity fund analyst might ignore?",
+      "options": [
+       "Fair value",
+       "Liquidation value",
+       "Fair market value"
+      ],
+      "answer": 1,
+      "why": "B is correct. The measure of value the distressed securities fund’s analyst would consider that the core equity fund analyst might ignore is liquidation value. The liquidation value of a company is its value if it were dissolved and its assets sold individually."
+     },
+     {
+      "q": "With respect to Statement 4, which measure of value is most relevant for the analyst of the fund described?",
+      "options": [
+       "Liquidation value",
+       "Investment value",
+       "Going-concern value"
+      ],
+      "answer": 2,
+      "why": "C is correct. For its core equity fund, Summit-Anchor Capital screens its investable universe of securities for well-capitalized companies that are expected to generate significant future free cash flow from core business operations. The concern with future free cash flows implies that going-concern value is relevant."
+     },
+     {
+      "q": "According to Statement 5, analysts are expected to use valuation concepts and models to:",
+      "options": [
+       "value private businesses.",
+       "render fairness opinions.",
+       "extract market expectations."
+      ],
+      "answer": 2,
+      "why": "C is correct. Market prices reflect the expectations of investors about the future performance of companies. The analyst can evaluate the reasonableness of the expectations implied by the market price by comparing the market’s implied expectations to his own expectations. This process assumes a valuation model, as discussed in the text."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Gianna Hendry is an investment analyst who focuses on dividend-paying stocks. Hendry uses a DCF approach to stock selection. She is meeting with her staff to evaluate portfolio holdings based on a bottom-up screening of stocks listed in the United States and Canada. Hendry and her staff begin by reviewing the characteristics of the following portfolio candidates.\n\nCompany ABC\n\nA Canadian company in the consumer staples sector with a required rate of return of 7.35%. Recent media reports suggest that ABC might be a takeover candidate. Hendry and her team estimate that if the incumbent Canadian prime minister’s party retains its power, the company’s current annual dividend of C$0.65 per share will grow 12% a year for the next four years and then stabilize at a 3.5% growth rate a year indefinitely. If a new government takes office in Canada, however, then the team estimates that ABC will likely not experience the elevated 12% short-run growth because of new regulatory and tax changes, and instead it will grow by 3.5% indefinitely.\n\nCompany XYZ\n\nA mid-sized US company in the utilities sector with a required rate of return of 10%. Hendry and her team believe that because of a recent restructuring, the company is unlikely to pay dividends for the next three years. The team expects XYZ to pay an annual dividend of US$1.72 per share beginning four years from now, however. Thereafter, the dividend is expected to grow indefinitely at 4% even though the current price implies a growth rate of 6% during this same period.\n\nCompany JZY\n\nA large US company in the telecom sector with a required rate of return of 8%. The stock is currently trading at US$32.76 per share with an implied earnings growth rate of 5.3%. Hendry believes that because JZY is mature and has a stable capital structure, the company will grow at its sustainable growth rate. Over the past 10 years, the company’s return on equity (ROE) has averaged 8.17% and its payout ratio has averaged 40%. Recently, the company paid an annual dividend of US$0.84 per share.\n\nHendry asks a newly hired analyst, Karl Tobin, to comment on the evaluation approach for these three stocks. Tobin makes the following statements:\n\nA free cash flow valuation model would not be appropriate to evaluate Company ABC if the firm becomes a takeover candidate.\n\nA dividend discount model cannot be applied to Company XYZ if dividends are suspended for a few years.\n\nA dividend discount model is suitable for evaluating the stock of Company JZY because of the historically consistent payout ratio.\n\nHendry then asks the team to examine the growth opportunities of three Canadian stocks currently held in the portfolio. These stocks are listed in Exhibit 1. Hendry believes that the stocks are fairly valued.\n\nExhibit 1\nSelected Stock Characteristics\n# Stock | Required Rate of Return | Next Year’s Forecasted EPS (C$) | Current Price per Share (C$)\nABTD | 10.5% | 7.30 | 80.00\nBKKQ | 8.0% | 2.12 | 39.00\nCPMN | 12.0% | 1.90 | 27.39",
+    "questions": [
+     {
+      "q": "Which of the following statements made by Tobin is correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 2,
+      "why": "C is correct. A dividend discount model is especially useful when dividend policy bears an understandable and consistent relationship to the company’s profitability. The relatively consistent dividend payout ratio suggests Company JZY would be a suitable candidate for a dividend discount model."
+     },
+     {
+      "q": "Assuming the incumbent government retains office in Canada, Hendry and her team estimate that the current value of Company ABC stock would be closest to:",
+      "options": [
+       "C$22.18.",
+       "C$23.60.",
+       "C$25.30."
+      ],
+      "answer": 1,
+      "why": "B is correct. The value of ABC stock can be computed as follows:\nGiven: Dividend (D0) = C$0.65, Return (r) = 7.35%, Short-term growth (gS) = 12% for 4 years, Long-term growth (gL) = 3.5% thereafter.\nThen:\nD1 = D0(1 + gS)1 = 0.65(1.12) = C$0.7280\nD2 = D0(1 + gS)2 = 0.65(1.12)2 = C$0.8154\nD3 = D0(1 + gS)3 = 0.65(1.12)3 = C$0.9132\nD4 = D0(1 + gS)4 = 0.65(1.12)4 = C$1.0228\nP4 = [D4 (1 + gL)]/(r – gL) = [D4 (1.035)]/(0.0735 – 0.035) = C$27.4960.\nV0 = D1/(1 + r)1 + …. + D4/(1 + r)4 + P4/(1 + r)4.\nV0 = [0.7280/(1.0735)1] + [0.8154/(1.0735)2] +[ 0.9132/(1.0735)3] + [1.0228/(1.0735)4] + [27.4960/(1.0735)4]\n = C$23.5984 (rounded to C$23.60)."
+     },
+     {
+      "q": "Assuming a new government takes office in Canada, Hendry and her team estimate that the current intrinsic value of Company ABC would be closest to:",
+      "options": [
+       "C$9.15.",
+       "C$16.88.",
+       "C$17.47."
+      ],
+      "answer": 2,
+      "why": "C is correct. The value of ABC would be calculated using the Gordon growth model as follows:\nV0 = [D0(1 + g)]/(r – g) = [0.65 (1.035)]/(0.0735 – 0.035) = C$17.47."
+     },
+     {
+      "q": "Assume that a new government takes office in Canada. If Hendry and her team use the Gordon growth model and assume that Company ABC stock is fairly valued, then which of the following would most likely be true?",
+      "options": [
+       "The total return of ABC stock will be 10.85%.",
+       "The dividend yield of ABC stock will be 3.85%.",
+       "The stock price of ABC will grow at 7.35% annually."
+      ],
+      "answer": 1,
+      "why": "B is correct. In the Gordon growth model, Total return = Dividend yield + Capital gains yield (i.e., constant growth rate). When a stock is fairly valued, the expected total return will equal the required return or discount rate (i.e., 7.35%). In the case of ABC, the total return is 7.35% and the capital gains yield is 3.5%. Therefore, the dividend yield is 7.35% – 3.5% = 3.85%."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Dea Yoon is a senior portfolio manager for Baekdu Capital, an investment management firm located in Jeonju, South Korea. Baekdu specializes in using multifactor models to build and manage global investment portfolios for institutional clients.\n\nMin-Ho Park works for Yoon as a research analyst and often is tasked with working on factor models. During a conversation with Yoon, Park mentions that he has not worked on building models using the arbitrage pricing theory (APT) framework. Yoon asks Park what he knows about APT. Park explains that while both the APT and capital asset pricing model (CAPM) provide an expression of the expected return of an asset, the APT provides an alternative framework to CAPM and cites three key attributes of APT:\n\nAttribute 1: The APT model makes stronger assumptions than the CAPM.\nAttribute 2: APT makes the assumption that investors can form portfolios that eliminate asset-specific risk.\nAttribute 3: APT makes the assumption that arbitrage opportunities exist among well-diversified portfolios.\nBaekdu manages a global equity strategy for Jeonju Electric, an institutional client. This portfolio is managed to overweight or underweight certain factors. These factors include small minus big (SMB), high minus low book value (HML), and winners minus losers (WML). Exhibit 1 provides information regarding the portfolio sensitivities to these factors, the premiums of these factors, and the return of the value-weighted equity index in excess of the 1-month T-bill rate (RMRF). The risk-free rate is currently 1.5%.\n\nExhibit 1 Portfolio Sensitivities and Factor Premiums\n# Risk Factor | RMRF | SMB | HML | WML\nJeonju Electric Portfolio Factor Sensitivity | 1.01 | 0.45 | 0.95 | 0.09\nFactor Premium | 3.11% | 2.11% | 3.75% | 1.56%\nFollowing the conclusion of a performance reporting period, Yoon asks Park to evaluate the risk attributes and results of two of Baekdu’s institutional portfolios relative to a global equity benchmark over the previous year. Park compiles the data in Exhibit 2 and provides the results to Yoon for discussion and analysis.\n\nExhibit 2 1-Year Portfolio Performance Data\n# Portfolio | Active Specific Risk (%) | Active Factor Risk (%) | Active Risk Squared | Information Ratio\nCity of Gwangju | 10 | 90 | 0.38% | 0.70\nChungcheong Pension Plan | 75 | 25 | 0.09% | 0.62\nYoon asks Park to share observations on how the portfolios have performed. Park responds that Gwangju’s portfolio appears to have had the largest active return and Chungcheong’s portfolio appears to have the highest contribution of active risk from stock selection.",
+    "questions": [
+     {
+      "q": "Which of Park’s attributes about APT is most likely correct?",
+      "options": [
+       "Attribute 1",
+       "Attribute 2",
+       "Attribute 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because APT makes less strong assumptions than the CAPM. | B. Correct because APT makes the assumption that investors can form well-diversified portfolios that eliminate asset-specific risk. | C. Incorrect because APT requires that arbitrage opportunities do not exist among well-diversified portfolios."
+     },
+     {
+      "q": "The strategy incorporated in the management of the equity portfolio for Jeonju Electric is most likely an example of which type of factor model?",
+      "options": [
+       "Statistical",
+       "Fundamental",
+       "Macroeconomic"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because statistical factor models make minimal assumptions and factors are observed from the returns of securities in a group. There are two primary types of statistical models: (1) factor analysis models in which the factors are the portfolios of securities that best explain historical return covariances, and (2) principal component models in which the factors are portfolios of securities that best explain historical return variances. | B. Correct because the model described is based on company fundamental factors, such as market capitalization and valuation, as well as a company share-related factor to explain cross-sectional differences in stock prices. This is an example of a fundamental factor model. Statistical factor models do not rely on defining the factors up front. Macroeconomic models would represent broader economic factors, such as interest rates, inflation, and credit spread. | C. Incorrect because macroeconomic factor models have factors that represent surprises in macroeconomic variables, such as interest rates, inflation, business cycle, and credit spreads."
+     },
+     {
+      "q": "Assuming an equilibrium with no alpha or no residual, the expected return of the Jeonju Electric Portfolio is closest to:",
+      "options": [
+       "7.5%.",
+       "9.0%.",
+       "10.5%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because this return calculation of 7.5% does not include the risk-free rate of 1.5%. E(Rp) = (1.01)(3.11%) + (0.45)(2.11%) + (0.95)(3.75%) + (–0.09)(1.56%) = 7.513% | B. Correct because the formula for determining the expected portfolio return from the information provided is: E(Rp) = RF + ßp,1RMRF + ßp,2SMB + ßp,3HML + ßp,4WML(+error) E(Rp) = 1.5% + (1.01)(3.11%) + (0.45)(2.11%) + (0.95)(3.75%) + (–0.09)(1.56%) + 0 = 9.013% | C. Incorrect because this return calculation does not include the risk-free rate or adjust the returns for the factor sensitivities. E(Rp) = (3.11%) + (2.11%) + (3.75%) + (1.56%) = 10.53%"
+     },
+     {
+      "q": "Is Park most likely accurate in his comments regarding how the portfolios have performed?",
+      "options": [
+       "Yes",
+       "No, with regard to his comment on Gwangju’s portfolio",
+       "No, with regard to his comment on Chungcheong’s portfolio"
+      ],
+      "answer": 0,
+      "why": "A. Correct because Park correctly interprets the performance of the various portfolios from the information compiled in Exhibit 2. Park is correct that Gwangju’s portfolio has the highest active return. The information ratio is defined as active return divided by active risk or tracking error. Gwangju has by far the largest active risk, and it has a higher information ratio than Chungcheong, its information ratio is 13% higher with an active risk that is 2.1 times larger (square root of Gwangju active risk squared divided by square root of Chungcheong active risk squared). As a result, understanding the equation for information ratio, Gwangju must have the largest active return. Park is also correct that Chungcheong’s portfolio appears to have the highest contribution of active risk from stock selection; 75% of Chungcheong’s active risk comes from active specific risk, which means security specific risk. Even when considering Gwangju’s higher active total risk, only 10% of Gwangju’s active risk comes from active specific versus active factor sources, indicating the most security specific (stock selection) risk from Chungcheong. | B. Incorrect because Park is correct that Gwangju’s portfolio has the highest active return. The information ratio is defined as active return divided by active risk or tracking error. Gwangju has by far the largest active risk, and although it has a lower information ratio than Incheon, its information ratio is 82% as high with an active risk that is more than three times larger. As a result, Gwangju must have the largest active return. | C. Incorrect because Park is correct that Chungcheong’s portfolio appears to have the highest contribution of active risk from stock selection; 75% of Chungcheong’s active risk comes from active specific risk, which means security specific risk. Even when considering Gwangju’s higher active total risk, only 10% of Gwangju’s active risk comes from active specific versus active factor sources, indicating the most security specific (stock selection) risk from Chungcheong."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Katrina Black, a portfolio manager at Opal Bond Management, Ltd., is conducting a training session with Alan Sung, a junior analyst in the fixed-income department. Black wants to explain to Sun the arbitrage-free valuation framework used by the firm. Black presents Sun with Exhibit 1, showing a fictitious bond being traded on three exchanges, and asks Sun to identify the arbitrage opportunity of the bond. Sun agrees to ignore transaction costs in his analysis.\n\nExhibit 1\nThree-Year, €100 par, 3.00% Coupon, Annual Pay Option-Free Bond\n#  | Eurex | NYSE Euronext | Frankfurt\nPrice | €103.7956 | €103.7815 | €103.7565\n\nBlack shows Sun some exhibits that were part of a recent presentation. Exhibit 3 presents most of the data of a binomial lognormal interest rate tree fit to the yield curve shown in Exhibit 2. Exhibit 4 presents most of the data of the implied values for a four-year, option-free, annual pay bond with a 2.5% coupon based on the information in Exhibit 3.\n\nExhibit 2\nYield-to-Maturity Par Rates for One-, Two-, and Three-Year Annual Pay Option-Free Bonds\n# One-year | Two-year | Three-year\n1.25% | 1.50% | 1.70%\n\nExhibit 3\nBinomial Interest Rate Tree Fit to the Yield Curve (Volatility = 10%)\n[Tree figure not captured in the paste: higher and lower interest rates at time 0, 1, 2, 3 and 4 at volatility 10%.]\n\nExhibit 4\nImplied Values (in Euros) for a 2.5%, Four-Year, Option-Free, Annual Pay Bond Based on Exhibit 3\n[Tree figure not captured in the paste: bond values at each node, times 0 to 4, coupon 2.50%.]\n\nBlack asks about the missing data in Exhibits 3 and 4 and directs Sun to complete the following tasks related to those exhibits:\n\nTask 1: Test that the binomial interest tree has been properly calibrated to be arbitrage free.\nTask 2: Develop a spreadsheet model to calculate pathwise valuations. To test the accuracy of the spreadsheet, use the data in Exhibit 3 and calculate the value of the bond if it takes a path of lowest rates in Year 1 and Year 2 and the second lowest rate in Year 3.\nTask 3: Identify a type of bond where the Monte Carlo calibration method should be used in place of the binomial interest rate method.\nTask 4: Update Exhibit 3 to reflect the current volatility, which is now 15%.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the best action that an investor should take to profit from the arbitrage opportunity is to:",
+      "options": [
+       "buy on Frankfurt, sell on Eurex.",
+       "buy on NYSE Euronext, sell on Eurex.",
+       "buy on Frankfurt, sell on NYSE Euronext."
+      ],
+      "answer": 0,
+      "why": "The same bond trades at three prices: buy where it is cheapest (Frankfurt 103.7565) and sell where it is dearest (Eurex 103.7956) for a risk-free profit of 0.0391 per 100 par. Buy NYSE/sell Eurex gives 0.0141; buy Frankfurt/sell NYSE gives 0.0250."
+     },
+     {
+      "q": "Based on Exhibits 1 and 2, the exchange that reflects the arbitrage-free price of the bond is:",
+      "options": [
+       "Eurex.",
+       "Frankfurt.",
+       "NYSE Euronext."
+      ],
+      "answer": 2,
+      "why": "Bootstrap spot rates from the par rates: z1 = 1.25%, z2 = 1.5019%, z3 = 1.7049%. PV = 3/1.0125 + 3/(1.015019)² + 103/(1.017049)³ = 2.9630 + 2.9119 + 97.9066 = 103.7815, the NYSE Euronext price. Eurex discounts at the YTM; Frankfurt discounts all cash flows at the year-3 spot rate."
+     },
+     {
+      "q": "Recall from the reading that each node is represented by both a time element and a rate change component. Which of the following statements about the missing data in Exhibit 3 is correct?",
+      "options": [
+       "Node 3–2 can be derived from Node 2–2.",
+       "Node 4–1 should be equal to Node 4–5 multiplied by e^0.4.",
+       "Node 2–2 approximates the implied one-year forward rate two years from now."
+      ],
+      "answer": 2,
+      "why": "Node 2–2 is the middle node in Year 2 and is close to the implied one-year forward rate two years from now. Node 4–1 equals Node 4–5 times e^0.8 (not e^0.4). Node 3–2 cannot be derived from Node 2–2; it can be derived from another Year 3 node (e.g. Node 3–4 times e^(4σ))."
+     },
+     {
+      "q": "Based on the information in Exhibits 3 and 4, the bond price in euros at Node 1–2 in Exhibit 4 is closest to:",
+      "options": [
+       "102.7917.",
+       "104.8640.",
+       "105.2917."
+      ],
+      "answer": 0,
+      "why": "Value = [0.5 × (101.5168 + 102.1350) + 2.5] ÷ (1 + rate at Node 1–2) = 102.7917, using the middle and lower Year 2 node values and the 2.5 coupon."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Four independent questions on residual income, EVA and MVA. Each question gives its own data.",
+    "questions": [
+     {
+      "q": "Net income is €5.00 per share, dividends are €1.00, beginning book value of equity is €30.00 and the required return on equity is 11%. Residual income per share is closest to:",
+      "options": [
+       "€1.70.",
+       "€4.00.",
+       "€2.00."
+      ],
+      "answer": 0,
+      "why": "A is correct. RI = net income − equity charge = 5.00 − 0.11 × 30.00 = €1.70; dividends are irrelevant."
+     },
+     {
+      "q": "Return on equity is 18%, the required return on equity is 12% and beginning book value of equity is €30.00. Residual income per share is closest to:",
+      "options": [
+       "€1.80.",
+       "€5.40.",
+       "€3.60."
+      ],
+      "answer": 0,
+      "why": "A is correct. RI = (ROE − r) × B0 = (0.18 − 0.12) × 30 = €1.80."
+     },
+     {
+      "q": "Aldencroft’s adjusted NOPAT for fiscal 2020 is $100 million, total capital is $700 million (no debt) and the cost of equity is 14%. EVA is closest to:",
+      "options": [
+       "$2 million.",
+       "$98 million.",
+       "$7 million."
+      ],
+      "answer": 0,
+      "why": "A is correct. EVA = 100 − 14% × 700 = $2 million; with no debt the only capital cost is the cost of equity."
+     },
+     {
+      "q": "Aldencroft’s closing share price is $26, 84 million shares are outstanding and total capital is $700 million. Market value added is closest to:",
+      "options": [
+       "$1,484 million.",
+       "$2,184 million.",
+       "$784 million."
+      ],
+      "answer": 0,
+      "why": "A is correct. MVA = market value of capital − total capital = 26 × 84 = 2,184 − 700 = $1,484 million ($17.67 per share)."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Ulrich Thornfeld has been recently hired as an analyst at a private equity firm that specializes in buying and restructuring private companies to be taken public within five years. Given his background with valuing public firms, this role will provide him his first experiences in valuing private companies.\n\nBefore starting his new position, Thornfeld meets with a former classmate who works as an associate focused on private company valuations in order to resolve legal disputes. During the meeting, Thornfeld’s classmate mentions that private business valuation often requires normalizing certain expense items on a company’s income statement before taking next steps.\n\nOn his first assignment, Thornfeld is asked to estimate a WACC for a potential private target company. The partner has commented that the private target has a far lower debt ratio than would be considered optimal.\n\nThornfeld’s firm recently announced plans to buy one of the private companies that Thornfeld has valued. Thornfeld spent considerable time assessing the validity of different control premiums in analyzing a possible offer price.",
+    "questions": [
+     {
+      "q": "Which valuation feature will Thornfeld find different in valuing private companies versus public companies?",
+      "options": [
+       "Using FCFF to value companies",
+       "Using market multiples to value companies",
+       "Assessing discounts to account for illiquidity"
+      ],
+      "answer": 2,
+      "why": "C is correct. Private company values need a downward adjustment for lack of liquidity; FCFF and multiples are used for both."
+     },
+     {
+      "q": "During Thornfeld’s meeting with his former classmate, they discuss how their approaches to private company valuation vary given the different uses of their analysis. Which of the following best characterizes how Thornfeld’s approach differs from that of his former classmate?",
+      "options": [
+       "Thornfeld usually incorporates a DLOM.",
+       "Thornfeld usually adjusts the investment value as a minority interest.",
+       "Thornfeld’s approach usually considers a synergistic control premium."
+      ],
+      "answer": 2,
+      "why": "C is correct. His firm buys and restructures companies (control, strategic buyer), so a control premium is considered; DLOM and minority adjustments fit the classmate's dispute-resolution work."
+     },
+     {
+      "q": "Which of the following statements best describes the meaning of “normalizing earnings” in the context of private business valuation?",
+      "options": [
+       "Adjustments to revenues and/or costs necessary to allow comparison of private company financial results to comparable public companies",
+       "Adjustments to offset the cyclicality of revenues and/or costs for private companies",
+       "Adjustments that allow comparisons due to the lack of marketability for private companies"
+      ],
+      "answer": 0,
+      "why": "A is correct. Normalizing removes distortions such as non-market owner compensation; cyclicality is a separate issue and marketability does not affect earnings."
+     },
+     {
+      "q": "Which statement best describes a possible bias in the WACC of the private target with a suboptimal debt ratio?",
+      "options": [
+       "Private companies are likely to have WACC estimates below their optimal WACC because of a lower weight on debt.",
+       "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on equity.",
+       "Private companies are likely to have WACC estimates above their optimal WACC because of a higher weight on debt."
+      ],
+      "answer": 1,
+      "why": "B is correct. Equity costs more than debt, so a lower debt weight and higher equity weight push WACC above the optimal level."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Mindy Liang manages a global equity portfolio for Morning Star Investment Management. Liang analyzes Great Prairie Bank (GWNB) for possible inclusion in the portfolio. Liang uses the CAMELS (capital adequacy, asset quality, management, earnings, liquidity, and sensitivity) approach with an emphasis on capital adequacy and asset quality.\n\nLiang begins her analysis by assessing GWNB's capital adequacy using the data in Exhibit 1.\n\nExhibit 1 (in USD millions)\n# Regulatory Capital and Risk-Weighted Assets | Current Year | Prior Year\nCommon Equity Tier 1 capital | 17,252 | 14,783\nAdditional Tier 1 Capital | 1,879 | 1,927\nTier 2 Capital | 1,554 | 988\nRisk-weighted assets | 218,617 | 212,587\nLiang recalls that the minimum total capital ratio under Basel III is 8%. Liang then analyzes GWNB's asset quality using the data in Exhibit 2.\n\nExhibit 2 (in USD millions)\n# Assets | Current Year | Prior Year\nLiquid assets | 62,809 | 41,474\nInvestments | 14,602 | 14,481\nLoans | 211,537 | 220,828\nAllowance for loan losses | \n17,500\n18,600\nTangible assets | 32,180 | \n32,405\nIntangible assets | 13,798 | 13,482\nDeferred tax assets | 4,897 | 4,735\nTotal assets | 357,323 | 346,005\nLiang considers the proportionate increases in the following income statement items and how they would impact GWNB's CAMELS rating:\n\nItem 1: Trading income\nItem 2: Service income\nItem 3: Net interest income",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, compared to the prior year, GWNB's current year Total Tier 1 Capital ratio most likely has a net increase closest to:",
+      "options": [
+       "0.89%.",
+       "0.94%.",
+       "1.13%."
+      ],
+      "answer": 0,
+      "why": "A. Correct because GWNB's Total Tier 1 Capital ratio in the prior year = (14,783 + 1,927) / 212,587 ≈ 0.0786 = 7.86%. In the current year GWNB's Total Tier 1 Capital ratio = (17,252 + 1,879) / 218,617 ≈ 0.0875 = 8.75%. GWNB's Total Tier 1 Capital ratio therefore increased by 8.75% – 7.86% = 0.89% in the current year. | B. Incorrect because this is the increase in GWNB's Common Equity Tier 1 Capital ratio. In the prior year = 14,783 / 212,587 ≈ 0.0695 = 6.95%. In the current year GWNB's Total Tier 1 Capital ratio = 17,252 / 218,617 ≈ 0.0789 = 7.89%. GWNB's Common Equity Tier 1 Capital ratio therefore increased by 7.89% – 6.95% = 0.94% in the current year. | C. Incorrect because this is the increase in GWNB's Total Capital ratio. Total Capital ratio in the prior year = (14,783 + 1,927 + 988) / 212,587 ≈ 0.0833 = 8.33%. In the current year GWNB's Total Capital ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 0.0946 = 9.46%. GWNB's Total Capital ratio therefore improved in the current year by 9.46% – 8.33% = 1.13%."
+     },
+     {
+      "q": "Did GWNB meet the minimum total capital requirement under Basel III in both the current and prior years?",
+      "options": [
+       "Yes.",
+       "No, GWNB was below the minimum Basel III total capital requirement in the prior year.",
+       "No, GWNB was below the minimum Basel III total capital requirement in the current year."
+      ],
+      "answer": 0,
+      "why": "A. Correct because GWNB's minimum total capital requirement exceeded 8% in both the prior and current years. To calculate the ratio in each year we use: (common equity tier 1 capital + additional tier 1 capital + tier 2 capital) / (risk-weighted assets). For the prior year GWNBs ratio = (14,783 + 1,927 + 988) / 212,857 ≈ 8.3% which exceeds the 8% minimum. For the current year GWNBs ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 9.5% which exceeds the 8% minimum. | B. Incorrect because in the prior year GWNBs ratio = (14,783 + 1,927 + 988) / 212,857 ≈ 8.3% which exceeds the 8% minimum. | C. Incorrect because in the current year GWNBs ratio = (17,252 + 1,879 + 1,554) / 218,617 ≈ 9.5% which exceeds the 8% minimum."
+     },
+     {
+      "q": "Based on Exhibit 2, compared to the prior year GWNB's asset quality in the current year most likely:",
+      "options": [
+       "decreased.",
+       "stayed the same.",
+       "increased."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality. | B. Incorrect because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality. | C. Correct because GWNB's liquid assets grew relative to total assets from 41,474 / 346,005 ≈ 12% in the prior year to 62,809 / 357,323 ≈17.6% in the current year, while loans decreased relative to total assets from 220,828 / 346,005 ≈ 63.8% to 211,537 / 357,323 ≈ 59.2%. Other asset categories were relatively unchanged year over year. Both the reduction in loans and the increase in liquid assets as a percent of total assets suggest an improvement in asset quality."
+     },
+     {
+      "q": "Which of the income statement items that Liang considers would most likely result in an improved CAMELs rating?",
+      "options": [
+       "Item 1 and Item 2",
+       "Item 1 and Item 3",
+       "Item 2 and Item 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because trading income (Item 1) for banks tends to be more volatile and therefore of lower quality. | B. Incorrect because trading income (Item 1) for banks tends to be more volatile and therefore of lower quality. | C. Correct because service income (Item 2) and net interest income (Item 3) provide more sustainable earnings than does trading income (Item 1). Regarding sustainability of a bank’s earnings, it is important to examine the composition of earnings. Banks’ earnings typically comprise (a) net interest income (the difference between interest earned on loans minus interest paid on the deposits supporting those loans), (b) service income, and (c) trading income. Of these three general sources, trading income is typically the most volatile. Thus, a greater proportion of net interest income and service income is typically more sustainable than trading income."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Mike Ortega is an equity analyst who has been asked to analyze Radiant, Inc. by his supervisor, Daniel Hutchins. Radiant exhibited strong earnings growth last year; however, Hutchins is skeptical about the sustainability of the company’s earnings. He wants Ortega to focus on Radiant’s financial reporting quality and earnings quality.\n\nAfter conducting a thorough review of the company’s financial statements, Ortega concludes the following:\n\nConclusion 1:\nAlthough Radiant’s financial statements adhere to generally accepted accounting principles (GAAP), Radiant understates earnings in periods when the company is performing well and overstates earnings in periods when the company is struggling.\n\nConclusion 2:\nRadiant most likely understated the value of amortizable intangibles when recording the acquisition of Solar, Inc. last year. No goodwill impairment charges have been taken since the acquisition.\n\nConclusion 3:\nOver time, the accruals component of Radiant’s earnings is large relative to the cash component.\n\nConclusion 4:\nRadiant reported an unusually sharp decline in accounts receivable in the current year, and an increase in long-term trade receivables.",
+    "questions": [
+     {
+      "q": "Based on Ortega’s conclusions, Radiant’s financial statements are best categorized as:",
+      "options": [
+       "non-GAAP compliant.",
+       "GAAP compliant, but with earnings management.",
+       "GAAP compliant and decision useful, with sustainable and adequate returns."
+      ],
+      "answer": 1,
+      "why": "B is correct. Radiant’s financial statements are GAAP compliant (Conclusion 1) but cannot be relied upon to assess earnings quality. There is evidence of earnings management: understating and overstating earnings depending upon the results of the period (Conclusion 1), understated amortizable intangibles (Conclusion 2), and a high accruals component in the company’s earnings (Conclusion 3)."
+     },
+     {
+      "q": "Based on Conclusion 2, after the acquisition of Solar, Radiant’s earnings are most likely:",
+      "options": [
+       "understated.",
+       "fairly stated.",
+       "overstated."
+      ],
+      "answer": 2,
+      "why": "C is correct. Ortega believes that Radiant most likely understated the value of amortizable intangibles when recording the acquisition of a rival company last year. Impairment charges have not been taken since the acquisition (Conclusion 2). Consequently, the company’s earnings are likely to be overstated because amortization expense is understated. This understatement has not been offset by an impairment charge."
+     },
+     {
+      "q": "In his follow-up analysis relating to Conclusion 3, Ortega should focus on Radiant’s:",
+      "options": [
+       "total accruals.",
+       "discretionary accruals.",
+       "non-discretionary accruals."
+      ],
+      "answer": 1,
+      "why": "B is correct. Ortega concluded that the accruals component of Radiant’s earnings was large relative to the cash component (Conclusion 3). Earnings with a larger component of accruals are typically less persistent and of lower quality. An important distinction is between accruals that arise from normal transactions in the period (called non-discretionary) and accruals that result from transactions or accounting choices outside the normal (called discretionary accruals). The discretionary accruals are possibly made with the intent to distort reported earnings. Outlier discretionary accruals are an indicator of possibly manipulated—and thus low quality earnings. Thus, Ortega is primarily focused on discretionary accruals, particularly outlier discretionary accruals (referred to as abnormal accruals)."
+     },
+     {
+      "q": "What will be the impact on Radiant in the current year if Ortega’s belief in Conclusion 4 is correct? Compared with the previous year, Radiant’s:",
+      "options": [
+       "current ratio will increase.",
+       "days sales outstanding (DSO) will decrease.",
+       "accounts receivable turnover will decrease."
+      ],
+      "answer": 1,
+      "why": "B is correct. Because accounts receivable will be lower than reported in the past, Radiant’s DSO [Accounts receivable/(Revenues/365)] will decrease. Radiant’s accounts receivable turnover (365/days’ sales outstanding) will increase with the lower DSO, giving the false impression of a faster turnover. The company’s current ratio will decrease (current assets will decrease with no change in current liabilities)."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Mark Wellman is a credit portfolio manager. He is reviewing several positions in his portfolio.\nWellman holds an A-rated bond issued by Dan Ibarra, a large US tequila producer. The bond has a YTM of 1.0% and a modified duration of 4.5. He computes its expected 1-year total return under a credit rating migration scenario based on the 1-year credit transition matrix in Exhibit 1 where, for example, the probability of an AAA-rated bond having an A rating at the end of the year is 3%. He also uses the expected credit spread change of an A-rated bond for each possible credit rating migration, as shown in Exhibit 2.\nExhibit 1\nFrom/To\n# (Entries are in %) | AAA | AA | A | BBB | BB | B | CCC\nAAA | 85 | 4 | 3 | 2 | 2 | 2 | 2\nAA | 5 | 83 | 4 | 3 | 3 | 1 | 1\nA | 2 | 3 | 88 | 2 | 2 | 2 | 1\nBBB | 1 | 1 | 3 | 90 | 3 | 1 | 1\nBB | 1 | 1 | 3 | 4 | 85 | 4 | 2\nB | 0 | 0 | 1 | 2 | 3 | 87 | 7\nCCC | 0 | 0 | 0 | 2 | 5 | 11 | 82\nExhibit 2\n#  | AAA | AA | A | BBB | BB | B | CCC\nExpected change in credit spread (in bps) | 50 | 30 | 0 | 40 | 60 | 80 | 150\nNext, Wellman performs a credit analysis for a commercial ABS collateralized by short-term loans to small US retailers. He notes that the loan pool is granular and homogeneous. Wellman considers three approaches for the credit analysis of the ABS: loan-by-loan, portfolio-based, or statistics-based.\nWellman owns $20 million of face value of Bond X, a bond issued by Volt Motors, Incorporated. Wellman recently bought protection using a $20 million notional value CDS on Volt Motors. Two bonds can be delivered to settle the CDS upon a credit event: Bond X and Bond Y. Volt Motors declares bankruptcy, triggering a credit event on the CDS. Upon default, Bond X trades at 40% of its face value and Bond Y trades at 35% of its face value.\nWellman expects that the CDS curve of Crunchy Chips, Inc., which is currently upward sloping, will flatten in the near term. Crunchy Chips CDS contracts have 1-year, 3-year, and 5-year maturities. He considers using one of the following curve strategies to profit from his expectation. He assumes equal absolute notional values for each trade in each strategy.\nStrategy 1: Sell protection using the 1-year contract and buy protection using the 5-year contract.\nStrategy 2: Buy protection using the 3-year contract and sell protection using the 5-year contract.\nStrategy 3: Buy protection using the 1-year contract and sell protection using the 5-year contract.",
+    "questions": [
+     {
+      "q": "The expected 1-year total return for the Dan Ibarra A-rated bond under Wellman’s credit migration scenario is closest to:",
+      "options": [
+       "–0.14%.",
+       "0.86%.",
+       "0.95%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the YTM is not considered when calculating the total return of the bond. In this case, the expected 1-year total return of the bond is only equal to the expected price return from a change in the credit spread.\nThe expected credit spread change is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 \n= –0.144%, which is rounded to –0.14%.\nB. Correct because the expected total return of the A-rated bond is the sum of the YTM and the expected percentage change in bond value. The YTM is 1%, while the expected return due to a credit spread change can be computed as (minus) the expected spread change (subject to migration) times the modified duration of the bond of 4.5. In turn, the expected spread change for an A-rated bond is the probability-weighted spread change, where the probabilities are retrieved from the transition matrix row with the label rating of \"A\".\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the appropriate probability from the transition matrix in the row with the label rating of \"A\".\nExpected price return = 2.25% × 0.02 + 1.35% × 0.03 + 0% × 0.88 – 1.8% × 0.02 – 2.7% × 0.02 – 3.6% × 0.02 – 6.75% × 0.01 = –0.144%\nThe expected total return of the bond is therefore: –0.144% + 1% = 0.856%, which is rounded to 0.86%.\nC. Incorrect because the probabilities corresponding to the \"A\" column rather than the \"A\" row are retrieved from the transition matrix. Note that in this case the probabilities do not sum to 100% as the rows (but not the columns) need to sum to 1.\nWe first compute the expected percentage price change using the modified duration of 4.5 for each rating migration.\nFrom A to AAA\t–4.5 × –0.5% = 2.25%\nFrom A to AA\t–4.5 × –0.3% = 1.35%\nFrom A to A\t–4.5 × 0% = 0%\nFrom A to BBB\t–4.5 × 0.4% = –1.8%\nFrom A to BB\t–4.5 × 0.6% = –2.7%\nFrom A to B\t–4.5 × 0.8% = –3.6%\nFrom A to CCC\t–4.5 × 1.5% = –6.75%\nThe expected price return is computed by multiplying each price change by the probability from the transition matrix in the column with the label rating of \"A\".\nExpected price return = 2.25% × 0.03 + 1.35% × 0.04 + 0% × 0.88 – 1.8% × 0.03 – 2.7% × 0.03 – 3.6% × 0.01 – 6.75% × 0 = –0.0495%\nThe expected total return of the bond: –0.0495% + 1% = 0.9505%, which is rounded to 0.95%."
+     },
+     {
+      "q": "The most suitable approach for the credit analysis of the commercial ABS is:",
+      "options": [
+       "loan-by-loan.",
+       "portfolio-based.",
+       "statistics-based."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because a loan-by-loan approach is not suitable when the portfolio is granular and homogeneous. Evaluating each loan on an individual basis is too time-consuming and therefore it is not suitable in this case. A loan-by-loan approach would be inefficient because of the large number of basically similar loans.\nB. Incorrect because a portfolio-based approach is not suitable when the portfolio of loans is short-term, as the portfolio does not materially change in the short term. Short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. A portfolio-based approach is instead more suitable when the portfolio of loans is medium-term/dynamic and therefore subject to change over time.\nC. Correct because short-term structured finance vehicles with granular, homogeneous assets tend to be evaluated using a statistics-based approach to the existing book of loans. A statistics-based approach is most suitable when the portfolio of loans is short-term (and therefore fairly static), granular, and homogeneous, like in this case. Portfolio statistics are sufficient to appropriately analyze the credit of the loan pool."
+     },
+     {
+      "q": "At settlement of the Volt Motors CDS, the total proceeds from Wellman’s Bond X and CDS positions are:",
+      "options": [
+       "$19 million.",
+       "$20 million.",
+       "$21 million."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because one may:\nconclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event, and\nincorrectly use the recovery rate of Bond Y to value the position in Bond X.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 35% = $7 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $7 million + $12 million = $19 million.\nB. Incorrect because one may conclude that the cheapest-to-deliver bond is Bond X, as Wellman buys protection using a CDS contract in order to protect from a credit event.\nIn this case, upon default the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 60% = $12 million.\nThe total proceeds from the combined position are therefore $8 million + $12 million = $20 million.\nC. Correct because Wellman holds a $20 million position in Bond X, and simultaneously has bought protection using a CDS contract referencing Volt Motors.\nUpon default, the value of the position is computed as follows:\nThe position on Bond X is valued $20 million × 40% = $8 million.\nThe payoff on the CDS contract is $20 million × 65% = $13 million.\nThe cheapest-to-deliver (CTD) contract is the one which shall be chosen to deliver. As Bond Y trades at 35% of face value while Bond X trades at 40% of face value, Bond Y is the CTD contract and therefore the recovery rate of the CDS contract is 65%.\nThe total proceeds from the combined position are therefore $8 million + $13 million = $21 million."
+     },
+     {
+      "q": "Which of the following strategies should profit the most from the expected flattening of the Crunchy Chips CDS curve?",
+      "options": [
+       "Strategy 1",
+       "Strategy 2",
+       "Strategy 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because, as the Crunchy Chips CDS curve is expected to flatten, Wellman should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 1-year contract minimizes the losses from widening of short-term CDS spreads.\nStrategy 1 incorrectly suggests that selling protection is profitable when CDS spreads increase (rather than decrease), and conversely that buying protection is profitable when CDS spreads decrease (rather than increase).\nB. Incorrect because, as the Crunchy Chips CDS curve is expected to flatten, Wellman should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 3-year contract is not the best strategy—losses are minimized when Wellman buys protection using the 1-year contract rather than the 3-year contract.\nStrategy 2 is not the one which Wellman should implement, as Strategy 3 is more profitable.\nC. Correct because, as the Crunchy Chips CDS curve is expected to flatten, Wellman should sell protection using the 5-year contract in order to maximize the gains from a tightening of long-term CDS spreads. On the contrary, buying protection using the 1-year contract minimizes the losses from widening of short-term CDS spreads.\nPut differently, protection at the short end is expected to become more expensive, so he should buy it now, while protection at the long end is becoming cheaper, so he should sell it now.\nStrategy 3 is the one which Wellman should implement as it yields the maximum profit, should Wellman's expected flattening of the CDS curve materialize."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Karlin International\nAs of February 2020, you are researching Karlin International, a hypothetical company subject to cyclical demand for its services. Karlin shares closed at $57.98 on 2 February 2019. You believe the 2015–18 period reasonably captures average profitability:\n\nMeasure | 2019 | 2018 | 2017 | 2016 | 2015\nEPS | E$3.03 | $1.45 | $0.23 | $2.13 | $2.55\nBV per share | E$19.20 | $16.21 | $14.52 | $13.17 | $11.84\nROE | E16.0% | 8.9% | 1.6% | 16.3% | 21.8%\n\nHand and Cartwheel\nAn analyst plans to use P/E and the method of comparables as a basis for recommending purchasing shares of one of two peer-group companies in the business of manufacturing personal digital assistants. Neither company has been profitable to date, and neither is expected to have positive EPS over the next year. Data on the companies’ prices, trailing EPS, and expected growth rates in sales (five-year compounded rates) are given in the following table:\n\n# Company | Price | Trailing EPS | P/E | Expected Growth (Sales)\nHand | $22 | –$2.20 | NMF | 45%\nCartwheel | $10 | –$1.25 | NMF | 40%\nUnfortunately, because the earnings for both companies have been negative, their P/Es are not meaningful.",
+    "questions": [
+     {
+      "q": "Normalized EPS is best defined as the:",
+      "options": [
+       "EPS adjusted only for nonrecurring items.",
+       "level of EPS the company could currently achieve under mid-cyclical conditions.",
+       "EPS expected for the next four quarters."
+      ],
+      "answer": 1,
+      "why": "B is correct. Normalized EPS removes the business-cycle influence by estimating mid-cycle earnings."
+     },
+     {
+      "q": "Based on the method of historical average EPS (2015–18), Karlin’s normalized EPS and the P/E based on it are closest to:",
+      "options": [
+       "$1.59 and 36.5.",
+       "$2.33 and 24.9.",
+       "$1.59 and 24.9."
+      ],
+      "answer": 0,
+      "why": "A is correct. (2.55 + 2.13 + 0.23 + 1.45)/4 = $1.59; P/E = 57.98/1.59 = 36.5."
+     },
+     {
+      "q": "Based on the method of average ROE (2015–18), Karlin’s normalized EPS and the P/E based on it are closest to:",
+      "options": [
+       "$1.97 and 29.4.",
+       "$2.33 and 24.9.",
+       "$1.59 and 36.5."
+      ],
+      "answer": 1,
+      "why": "B is correct. Average ROE = (0.218 + 0.163 + 0.016 + 0.089)/4 = 12.15%; × current BVPS $19.20 = $2.33; P/E = 57.98/2.33 = 24.9. A uses last year’s book value (16.21) instead of the current estimate."
+     },
+     {
+      "q": "For the analyst’s relative valuation of Hand and Cartwheel, the most appropriate approach is to:",
+      "options": [
+       "use normalized EPS or forward P/E, because both companies have a history of profitability.",
+       "rank the stocks by earnings yield (E/P), which is meaningful even when EPS is negative.",
+       "skip the comparison because P/Es are not meaningful."
+      ],
+      "answer": 1,
+      "why": "B is correct. A lower (more negative) E/P means a richer valuation. Neither company has a profitable history, and next year’s earnings are also negative, so normalized EPS and forward P/E do not help."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Ashgrove Capital Advisors is an investment advisory firm that specializes in taxable fixed-income investing. Its clients consist of medium sized foundations and endowments who select outside managers such as Ashgrove after having formulated their investment policy and asset allocation targets.\n\nAshgrove’s chief investment strategist, Chad Stone, and quantitative analyst, Claire Finch, are meeting to discuss a research report that Finch is producing. The report will address various fixed-income investing topics, including investment strategies, credit spreads, and yield curve movements.\n\nFinch is evaluating two US Treasury instruments. The first is a newly issued 7.00% coupon bond with a 5-year maturity issued at a price of $101.15 ($100.00 face value) with a yield to maturity of 6.72%. The second is newly issued zero-coupon bond with a 5-year maturity issued at a price of $71.30 ($100.00 face value) with a yield to maturity of 7.00%. Current US Treasury spot rates and extrapolated forward rates are provided in Exhibit 1. Finch expects that the future path of interest rates will follow that which is implied by the forward curve.\n\nExhibit 1 Spot and Forward Interest Rates\n# Maturity (n) | Spot Rates r(n) | Forward Rate (1 year), n – 1 years forward: f(n – 1,1) | Forward Rates (n – 1 year), 1 year forward: f(1, n – 1)\n1 | 3.00% | 3.00% | 3.00%\n2 | 4.00% | 5.01% | 5.01%\n3 | 5.00% | 7.03% | 6.01%\n4 | 6.00% | 9.06% | 7.02%\n5 | 7.00% | 11.10% | 8.02%\n\nFinch proposes to review other credit spread indicators that measure credit and liquidity risk for money market securities, general creditworthiness of individual debt issuers, and counterparty risk. Finch offers the following statements about measures of credit risk:\n\nStatement 1: The TED spread represents the difference between MRR and overnight bank lending rates.\nStatement 2: The MRR–OIS spread represents the difference between MRR and corporate bond spreads.\nStatement 3: The Z spread represents the constant basis point spread that is added to the implied spot yield curve to measure the price of credit risky bonds.",
+    "questions": [
+     {
+      "q": "Using the information provided in Exhibit 1 and assuming that Finch’s interest rate expectation materializes, the realized return for an investor who buys and holds to maturity the US Treasury 7.00% coupon bond would most likely be:",
+      "options": [
+       "less than the yield to maturity.",
+       "equal to the yield to maturity.",
+       "greater than the yield to maturity."
+      ],
+      "answer": 2,
+      "why": "Coupons are reinvested at forward rates that rise above the YTM because the spot curve is upward sloping. Future value of the bond with coupons reinvested at forward rates = 141.87 against a price of 101.15, so the annualized realized return is 7.0%, above the 6.72% YTM."
+     },
+     {
+      "q": "Using the information provided in Exhibit 1 and assuming that Finch’s interest rate expectation materializes, the forward rate at which an investor would be indifferent to purchasing the US Treasury zero coupon note today or one year from today is closest to:",
+      "options": [
+       "7.02%.",
+       "8.02%.",
+       "11.10%."
+      ],
+      "answer": 1,
+      "why": "The breakeven rate is the one-year-forward, four-year rate: (1.07)^5 = (1.03)(1 + f1,4)^4, so f1,4 = 8.02%. 7.02% is f(1,3); 11.10% is f(4,1)."
+     },
+     {
+      "q": "Using the information provided in Exhibit 1 and assuming that Finch’s interest rate expectation materializes, the year one holding period return for the Zero Coupon bond is closest to:",
+      "options": [
+       "3.00%.",
+       "5.01%.",
+       "7.00%."
+      ],
+      "answer": 0,
+      "why": "If spot rates evolve as implied by the forward curve, the one-year return of any bond equals the one-year rate (3.00%). The five-year zero bought at 71.30 is worth 73.45 one year later: 73.45 ÷ 71.30 − 1 = 3.00%."
+     },
+     {
+      "q": "Which of Finch’s statements regarding measures of credit risk is most likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 2,
+      "why": "Statement 3 describes the Z-spread. Statement 1 is wrong: the TED spread is MRR minus the T-bill rate. Statement 2 is wrong: the MRR–OIS spread is MRR minus the overnight indexed swap rate."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {},
+ "key": "BBCCCBCBBBBAACCAAAAACCABAACCBCBBBCCCBABBCBAC"
+}

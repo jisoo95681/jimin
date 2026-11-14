@@ -1,0 +1,521 @@
+{
+ "set": {
+  "id": "mockA4",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock A4",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Big subjects (Equity, FSA, Fixed Income, Portfolio Management): 11 vignettes, 44 questions, 132 minutes. No Ethics.",
+  "vignettes": [
+   {
+    "topic": "FSA",
+    "body": "Ivan Valdric, an analyst at a large wealth management firm, meets with his supervisor to discuss adding financial institution equity securities to client portfolios. Valdric focuses on Scarlet Insurance (Scarlet), a property and casualty company, and Indigo Life Insurance (Indigo). To evaluate Scarlet further, Valdric compiles the information presented in Exhibit 1.\n\nExhibit 1\nSelect Financial Ratios for Scarlet Insurance\nRatio | 2017 | 2016\nLoss and loss adjustment expense | 59.1% | 61.3%\nUnderwriting expense | 36.3% | 35.8%\nCombined | 95.4% | 97.1%\nDividend | 2.8% | 2.6%\nIn addition to the insurance companies, Valdric gathers data on three national banks that meet initial selection criteria but require further review. This information is shown in Exhibits 2, 3, and 4.\n\nExhibit 2\nSelect Balance Sheet Data for National Banks—Trading: Contribution to Total Revenues\nBank | 2017 | 2013 | 2009 | 2005\nN-bank | 4.2% | 7.0% | 10.1% | 8.9%\nR-bank | 8.3% | 9.1% | 17.0% | 7.9%\nT-bank | 5.0% | 5.0% | 11.9% | 6.8%\nFocusing on N-bank and T-bank, Valdric prepares the following data.\n\nExhibit 3\n2017 Select Data for N-bank and T-bank\n#  | N-bank |  | T-bank\n | 2017 | 2016 |  | 2017 | 2016\nAverage daily trading VaR ($ millions) | 11.3 | 12.6 |  | 21.4 | 20.5\nAnnual trading revenue/average daily trading VaR | 160× | 134× |  | 80× | 80×\nValdric investigates R-bank’s risk management practices with respect to the use of credit derivatives to enhance earnings, following the 2008 financial crisis. Exhibit 4 displays R-bank’s exposure over the last decade to credit derivatives not classified as hedges.\n\nExhibit 4\n  R-bank’s Exposure to Freestanding Credit Derivatives\nCredit Derivative Balances | 2017 | 2012 | 2007\nNotional amount ($ billions) | 13.4 | 15.5 | 305.1\nAll of the national banks under consideration primarily make long-term loans and source a significant portion of their funding from retail deposits. Valdric and the rest of the research team note that the central bank is unwinding a long period of monetary easing as evidenced by two recent increases in the overnight funding rate. Valdric informs his supervisor that:\n\nStatement 1:\nGiven the recently reported stronger-than-anticipated macroeconomic data, there is an imminent risk that the yield curve will invert.\n\nStatement 2:\nN-bank is very active in the 30-day reverse repurchase agreement market during times when the bank experiences significant increases in retail deposits.",
+    "questions": [
+     {
+      "q": "Valdric’s analysis of the two insurance companies most likely indicates that:",
+      "options": [
+       "Indigo has more-predictable claims than Scarlet.",
+       "Indigo has a higher capital requirement than Scarlet.",
+       "Scarlet’s calculated risk-based capital is more sensitive than Indigo’s to interest rate risk."
+      ],
+      "answer": 0,
+      "why": "A is correct. Claims associated with life and health insurance companies (Indigo) are more predicable than those for property and casualty insurance companies (Scarlet). Property and casualty insurers’ claims are more variable and “lumpier” because they arise from accidents and other unpredictable events, whereas life and health insurers’ claims are more predictable because they correlate closely with relatively stable actuarially based mortality rates when applied to large populations."
+     },
+     {
+      "q": "Based only on the information in Exhibit 1, in 2017 Scarlet most likely:",
+      "options": [
+       "experienced a decrease in overall efficiency.",
+       "improved its ability to estimate insured risks.",
+       "was more efficient in obtaining new premiums."
+      ],
+      "answer": 1,
+      "why": "B is correct. The loss and loss adjustment expense ratio decreased from 61.3% to 59.1% between 2016 and 2017. This ratio is calculated as follows: (Loss Expense + Loss Adjustment Expense)/Net Premiums Earned. The loss and loss adjustment expense ratio indicates the degree of success an underwriter has achieved in estimating the risks insured. A lower ratio indicates greater success in estimating insured risks."
+     },
+     {
+      "q": "Based only on Exhibit 2, which of the following statements is correct?",
+      "options": [
+       "The quality of earnings for R-bank was the highest in 2009.",
+       "Relative to the other banks, N-bank has the highest quality of earnings in 2017.",
+       "Trading represented a sustainable revenue source for T-bank between 2005 and 2013."
+      ],
+      "answer": 1,
+      "why": "B is correct. The quality of earnings is directly related to the level of sustainable sources of income. Trading income tends to be volatile and not necessarily sustainable. Higher-quality income would be net interest income and fee-based service income. Because N-bank’s 2017 trading revenue contribution is the lowest relative to other banks, its quality of earnings would be considered the best of the three banks."
+     },
+     {
+      "q": "Based only on Exhibit 3, Valdric should conclude that:",
+      "options": [
+       "trading activities are riskier at T-bank than N-bank.",
+       "trading revenue per unit of risk has improved more at N-bank than T-bank.",
+       "compared with duration, the metric used is a better measure of interest rate risk."
+      ],
+      "answer": 1,
+      "why": "B is correct. Trading revenue per unit of risk can be represented by the ratio of annual trading revenue to average daily trading value at risk (VaR) and represents a measure of reward-to-risk. The trading revenue per unit of risk improved at N-bank (from 134× to 160×) between 2016 and 2017, and there was no change at T-bank (80×). VaR can be used for gauging trends in intra-company risk taking."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Four independent questions on residual income and EVA. Each question gives its own data.",
+    "questions": [
+     {
+      "q": "Vertically Integrated Manufacturing (VIM) has total assets of $3,000,000, financed with twice as much debt as equity. Pretax cost of debt is 6% and cost of equity is 10%. EBIT is $300,000 and the tax rate is 40%. Using the equity charge method, VIM’s residual income is closest to:",
+      "options": [
+       "–$8,000.",
+       "$8,000.",
+       "$108,000."
+      ],
+      "answer": 1,
+      "why": "B is correct. Interest = 2,000,000 × 6% = 120,000; net income = (300,000 − 120,000) × 0.6 = 108,000; equity charge = 1,000,000 × 10% = 100,000; RI = $8,000. C is net income."
+     },
+     {
+      "q": "New Market Products (NMP) has total assets of $450,000,000, 90% financed with debt (8% pretax), cost of equity 12%, pretax income of $5.1 million (after interest) and a tax rate of 40%. NMP’s residual income is closest to:",
+      "options": [
+       "–$2,340,000.",
+       "$3,060,000.",
+       "–$5,400,000."
+      ],
+      "answer": 0,
+      "why": "A is correct. Net income = 5.1 × 0.6 = 3.06m; equity charge = 45m × 12% = 5.4m; RI = −$2.34 million. Interest is already deducted in pretax income."
+     },
+     {
+      "q": "Hartigan–Barlow Industries (SWI) earned NOPAT of €10 million on total assets of €100 million. Half the assets are debt (9% pretax), cost of equity is 12% and the tax rate is 40%. SWI’s residual income is closest to:",
+      "options": [
+       "€1.3 million (positive).",
+       "–€1.3 million (negative).",
+       "€4.0 million."
+      ],
+      "answer": 0,
+      "why": "A is correct. WACC = 0.5 × 0.09 × 0.6 + 0.5 × 0.12 = 8.7% < NOPAT/assets of 10%; RI = (10% − 8.7%) × 100m = €1.3 million."
+     },
+     {
+      "q": "NOPAT is $100, beginning book value of debt is $200, beginning book value of equity is $300 and WACC is 11%. EVA is closest to:",
+      "options": [
+       "$45.",
+       "$67.",
+       "$100."
+      ],
+      "answer": 0,
+      "why": "A is correct. EVA = 100 − 11% × (200 + 300) = $45."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "SCAI is a registered investment adviser based in Louisville, Kentucky, providing investment and private wealth management advice to endowments, retirement plans, and corporations. Dieter Fenwick, a portfolio manager, is meeting with analysts Nasir Qadri and Laura Ibanez to discuss fixed-income investment opportunities and portfolio management strategies. Fenwick presents the group with the information on spot rates shown in Exhibit 1:\n\nExhibit 1 Spot Rates for Zero-Coupon Bonds\n# Maturity (Years) | Spot Rate\n1 | 2.041%\n2 | 2.598%\n3 | 2.818%\n4 | 2.956%\n5 | 3.304%\n\nQadri is currently evaluating a corporate bond and makes the following statements:\n\nStatement 1: “The value of a bond calculated by discounting its future cash flows by their corresponding spot rates will be the same as the value obtained by discounting future cash flows by the yield-to-maturity of a bond, as long as the yield-to-maturity is some weighted average of the spot rates.”\nStatement 2: “Yield-to-maturity is a good estimate of the expected return on a bond assuming coupons are reinvested at the prevailing spot rates.”\nStatement 3: “If the yield curve remains flat during the holding period, the realized rate of return on a bond will be the same as the expected rate of return.”\n\nQadri asks Fenwick to explain the spot curve in Exhibit 1. Fenwick responds that the spot rate curve in Exhibit 1 is derived from the par curve using a process called bootstrapping. The par rates are yields-to-maturity, at various maturities, for on-the-run, coupon-paying government bonds priced at par. Bootstrapping is a process of forward substitution, where successive spot rates are derived from par rates one at a time. The process begins with recognizing that the one-year spot rate is the same as the one-year par rate. The two-year spot rate, r(2), is then calculated by solving the following equation: [equation not captured in the paste]. This process continues until all spot rates are derived.\n\nFenwick then asks Ibanez how the spot curve can be used in fixed-income analysis. Ibanez responds, “Our expectations regarding the evolution of future spot rates compared to the forward curve allow for an evaluation of the relative value of a bond and the identification of appropriate bond trading strategies. Interest rate scenarios and corresponding appropriate strategies are outlined here”:\n\nScenario 1: If we expect future spot rates to be lower than current forward rates, then we should short the bond since it is likely to be overvalued.\nScenario 2: If the spot curve is expected to be above the forward curve and our expectations turn out to be correct, the bond should be purchased since the one-year return will be more than the one-year risk-free rate.\nScenario 3: If the yield curve is upward sloping and we expect it to remain static, then a strategy of buying bonds with maturities longer than the investment holding period will allow us to earn a return greater than a maturity matching strategy.",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the forward rate for a two-year zero-coupon bond issued three years from today is closest to:",
+      "options": [
+       "3.13%.",
+       "4.04%.",
+       "4.71%."
+      ],
+      "answer": 1,
+      "why": "(1 + f3,2)² = (1.03304)⁵ ÷ (1.02818)³ = 1.08235, so f3,2 = 1.08235^0.5 − 1 = 4.04%. 3.13% is a simple average of the 4- and 5-year spot rates; 4.71% wrongly uses the 5- and 4-year spot rates."
+     },
+     {
+      "q": "Which of Qadri’s three statements is least likely correct?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 1,
+      "why": "Statement 2 is incorrect: YTM is a poor estimate of expected return when rates are volatile, the curve is steep, default risk is significant or there are embedded options, because coupons are not reinvested at the YTM. Statements 1 and 3 are correct."
+     },
+     {
+      "q": "Is Fenwick’s statement on par rates and bootstrapping most likely correct?",
+      "options": [
+       "Yes.",
+       "No, he is incorrect about par rates.",
+       "No, he is incorrect about bootstrapping."
+      ],
+      "answer": 2,
+      "why": "Fenwick describes par rates correctly but misstates the equation used in bootstrapping (the first term of the two-year equation)."
+     },
+     {
+      "q": "In Ibanez’s response to Fenwick, under which scenario is the recommended strategy most likely appropriate?",
+      "options": [
+       "Scenario 1",
+       "Scenario 2",
+       "Scenario 3"
+      ],
+      "answer": 2,
+      "why": "Scenario 3: an upward-sloping curve expected to stay static makes buying maturities longer than the horizon (rolling down) earn more than maturity matching. Scenario 1 should be a purchase (bond undervalued); in Scenario 2 the bond should be shorted (return below the risk-free rate)."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Andrew Whitlock is a fixed-income analyst with Vertex Credit Advisers, an institutional investment management company. Vertex offers a variety of fixed-income oriented investment strategies, including a core-plus-bond strategy as well as a popular long–short credit hedge fund. Whitlock participates in Vertex’s weekly fixed-income committee meetings.\n\nA macro topic for this week’s fixed-income committee is the possibility that the US Federal Reserve Board (Fed) will raise the federal funds rate (FFR) 25 bps at their next meeting. Vertex’s committee believes that the Fed is likely to hold off raising the FFR for at least six months because of weak economic data, and that weakness will be seen in the upcoming payroll numbers. Vertex expects the monthly non-farm payroll report to show that the US labor market added only 90,000 jobs this month, roughly in line with consensus expectations. The committee is debating what will happen to the short end of the US yield curve (and what will happen subsequently to short-dated bond prices) if the payroll report comes in at the level they expect.\n\nVertex’s committee forecasts weaker-than-expected GDP growth in the future and expects that GDP growth will be more volatile as the economy ultimately adjusts to a changing interest rate policy. Whitlock believes these factors will exert downward pressure on short-term Treasury Inflation-Protected Securities (TIPS) rates.\n\nAs part of Whitlock’s analysis, he forecasts the real one-year risk-free rate to be 0.25% and average inflation over the next year to be 1.5%. A zero-coupon nominal Treasury bond with 1-year to maturity and a par value of $100 is currently trading at $98.05. Whitlock notes the discrepancy in market pricing relative to his forecasts.\n\nDora Kemp is a senior credit analyst at Vertex. Based on the GDP outlook from the committee, she evaluates three bonds from different sectors (shown in Exhibit 1) for a potential new short position in the company’s hedge fund. All three bonds mature in five years.\n\nExhibit 1 Credit Market Observations\n#  | Economic Sector | Debt/\nCapital | Enterprise Value/EBITDA | Spread to Treasuries (bps) | Credit Rating\nBond 1 | Pharmaceutical | 52.2% | 7.2 | 255 | Baa2\nBond 2 | Consumer Discretionary | 48.3% | 7.8 | 220 | Baa1\nBond 3 | Soft Drinks | 32.3% | 8.5 | 210 | A3\nVertex is looking to enhance its equity offerings. It has recently hired Dennis Hsu to help construct a quantitative equity rotation strategy that will use economic input from the fixed-income committee. Wu has a background in quantitative modeling of equity markets and is tasked with developing an aggregate earnings forecasts. He is also working on incorporating a target equity risk premium into an equity rotation model. Wu makes the following observations based on his prior experiences:\n\nObservation 1: The equity premium should be larger than, and positively correlated with, the corporate bond premium.\nObservation 2: Corporate profitability is a leading economic indicator.\nObservation 3: Equities provide superior consumption-hedging properties to high-quality bonds.\nThe equity rotation model can allocate between small- and large-cap stocks and growth and value stocks and can take targeted sector positions to enhance returns relative to the broader equity market. As the model is nearing completion, Wu evaluates how it would have performed during previous economic cycles. He runs extensive backtesting and observes the following tendencies of the model in the aftermath of recessions:\n\nRotates from consumer discretionary to consumer staple stocks\nRotates from large-cap growth stocks into large-cap value stocks\nRotates from small-cap value stocks to mid-cap value stocks",
+    "questions": [
+     {
+      "q": "Which of the following is the most likely impact on short-term bond prices if Vertex’s expectations regarding the payroll report are correct?",
+      "options": [
+       "Fall",
+       "No change",
+       "Rise"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Bond prices are unlikely to rise or fall based on this information because it is already anticipated by the market. | B. Correct. Although Vertex is forecasting a fairly low non-farm payroll number, their expectation is in line with market consensus forecasts. Although this data may be considered weak, it provides information that is anticipated and thus already reflected in asset prices. Prices would be more likely to rise or fall if the news is a surprise relative to fully anticipated information. | C. Incorrect. Bond prices are unlikely to rise or fall based on this information because it is already anticipated by the market."
+     },
+     {
+      "q": "Is Whitlock most likely correct with regard to the impact on short-term TIPS rates?",
+      "options": [
+       "Yes",
+       "No, with regard to the impact of growth",
+       "No, with regard to the impact of volatility"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Whitlock is incorrect about the impact higher GDP volatility should have on short-term TIPS rates. | B. Incorrect. Whitlock is correct about the impact higher GDP growth should have on short-term TIPS rates. | C. Correct. Short-term TIPS are a proxy for real default-free interest rates in the United States. Real default-free interest rates should be positively related to GDP growth and positively related to the expected volatility of GDP growth. Expected increases in GDP volatility would put upward pressure on short-term TIPS rates, all else being held equal."
+     },
+     {
+      "q": "Which implied market expectation most likely accounts for the discrepancy in bond pricing that Whitlock notes?",
+      "options": [
+       "Credit risk",
+       "Interest rate risk",
+       "Inflation uncertainty"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Given that this is a Treasury bond, it is considered risk-free and does not include a premium for credit risk. | B. Incorrect. Interest rate risk is already being incorporated into the term structure of the yield curve and does not need to be separately added. | C. Correct. The breakeven inflation rate incorporates both premiums for expectations about inflation and for the uncertainty of the future inflation environment."
+     },
+     {
+      "q": "Based on Vertex’s economic forecast and the data in Exhibit 1, which bond is Kemp most likely to recommend as the short position for the hedge fund?",
+      "options": [
+       "Bond 1",
+       "Bond 2",
+       "Bond 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Bond 1 is in a non-cyclical industry, unlike Bond 2, which is in a cyclical industry. Bond 1 has a slightly higher debt-to-capital ratio than Bond 2 but not material. Bond 2 has a relatively tight spread compared with Bond 1. These factors suggest that Bond 2 is a better candidate for a short position. | B. Correct. Bond 1 is in a non-cyclical industry, unlike Bond 2, that is in a cyclical industry. Bond 1 has a slightly higher debt-to-capital ratio than Bond 2 but not material. Bond 2 has a relatively tight spread compared with Bond 1. These factors suggest that Bond 2 is a better candidate for a short position. During an environment in which GDP is forecast to surprise to the downside, higher-rated issues are likely to outperform such as Bond 3. Given Vertex’s expectation for declining GDP and its relatively tight spread, Bond 2 is the best candidate for a short position. | C. Incorrect. During an environment where GDP is forecast to surprise to the downside, higher rated issues such as Bond 3 are likely to outperform."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Andrea Bellini is a junior analyst with AquistareFianco, an independent equity research firm. Bellini’s supervisor asks her to update, as of 1 January 2020, a quarterly research report for Corsaro S.p.A., a telecommunications company headquartered in Italy. On that date, Corsaro’s common share price is €50 and its preferred shares trade for €5.25 per share.\n\nBellini gathers information on Corsaro. Exhibit 1 presents earnings and dividend data, and Exhibit 2 presents balance sheet data. Net sales were €3.182 billion in 2019. Bellini estimates a required return of 15% for Corsaro and forecasts growth in dividends of 6% into perpetuity.\n\nExhibit 1\nEarnings and Dividends for Corsaro, 2016–2020\n#  | 2016 | 2017 | 2018 | 2019 | 2020(E)\nEarnings per share (EPS, €) | 4.93 | 5.25 | 4.46 | 5.64 | 6.00\nDividends per share (DPS, €) | 2.45 | 2.60 | 2.60 | 2.75 | 2.91\nReturn on equity (ROE) | 13.01% | 13.71% | 11.58% | 14.21% | 14.96%\nNote: The data for 2016–2019 are actual and for 2020 are estimated.\nExhibit 2\nSummary Balance Sheet for Corsaro, Year Ended 31 December 2019\n# Assets (€ millions) |  | Liabilities and Shareholders’ Equity (€ millions) | \nCash and cash equivalents | 102 | Current liabilities | 259\nAccounts receivable | 305 | Long-term debt | 367\nInventory | 333 | Total liabilities | 626\nTotal current assets | 740 | Preferred shares | 80\nProperty and equipment, net | 913 | Common shares | 826\nTotal assets | 1,653 | Retained earnings | 121\n |  | Total shareholders’ equity | 1,027\n |  | Total liabilities and shareholders’ equity | 1,653\nNotes: The market value of long-term debt is equal to its book value. Shares outstanding are 41.94 million common shares and 16.00 million preferred shares.\nExhibit 3 presents forward price-to-earnings ratios (P/Es) for Corsaro’s peer group. Bellini assumes no differences in fundamentals among the peer-group companies.\n\nExhibit 3\nPeer Group Forward P/Es\n# Company | Forward P/E\nTrovata | 5.9\nLazzeri | 8.3\nVeloce | 3.0\nCantiere | 15.0\nSabbiolo | 4.6\nBellini also wants to calculate normalized EPS using the average return on equity method. She determines that the 2016–19 time period in Exhibit 1 represents a full business cycle for Corsaro.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the trailing P/E for Corsaro as of 1 January 2020, ignoring any business-cycle influence, is closest to:",
+      "options": [
+       "8.3.",
+       "8.9.",
+       "9.9."
+      ],
+      "answer": 1,
+      "why": "B is correct. Trailing P/E = €50 / €5.64 = 8.9."
+     },
+     {
+      "q": "Based on Exhibit 1 and Bellini’s estimates of return and dividend growth, Corsaro’s justified forward P/E based on the Gordon growth dividend discount model is closest to:",
+      "options": [
+       "5.4.",
+       "5.7.",
+       "8.3."
+      ],
+      "answer": 0,
+      "why": "A is correct. Justified forward P/E = payout ratio / (r − g) = (2.91 / 6.00) / (0.15 − 0.06) = 0.485 / 0.09 = 5.4. Using 1 − 0.485 as payout is the common slip."
+     },
+     {
+      "q": "Based on Exhibit 2, the price-to-book multiple for Corsaro is closest to:",
+      "options": [
+       "2.0.",
+       "2.2.",
+       "2.5."
+      ],
+      "answer": 1,
+      "why": "B is correct. Common equity = €1,027 − €80 = €947 million; BVPS = €947 / 41.94 = €22.58; P/B = €50 / €22.58 = 2.2."
+     },
+     {
+      "q": "Based on Exhibit 2, the multiple of enterprise value to sales for Corsaro as of 31 December 2019 is closest to:",
+      "options": [
+       "0.67.",
+       "0.74.",
+       "0.77."
+      ],
+      "answer": 2,
+      "why": "C is correct. EV = (€50 × 41.94) + (€5.25 × 16.00) + €367 − €102 = €2,446 million; EV/sales = 2.446 / 3.182 = 0.77."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Four independent questions on private company valuation. Each one can be answered on its own.",
+    "questions": [
+     {
+      "q": "Which of the following approaches to private company valuation corresponds to discounted cash flow models?",
+      "options": [
+       "Income approach",
+       "Market approach",
+       "Asset-based approach"
+      ],
+      "answer": 0,
+      "why": "A is correct. The income approach corresponds to what public equity analysts call discounted cash flow or present value models."
+     },
+     {
+      "q": "Using a market approach, an analyst seeks to estimate the enterprise value of a privately held company from the perspective of a minority shareholder. Revenue mix and public comparable EV/Sales multiples: Toys 60% at 8.3, Apparel 30% at 5.2, Grocery 10% at 1.5. If the total discount for lack of marketability and control is 25% and the company has total revenues of $65,000,000, its enterprise value is closest to:",
+      "options": [
+       "$243,750,000.",
+       "$326,137,500.",
+       "$434,850,000."
+      ],
+      "answer": 1,
+      "why": "B is correct. Composite multiple = 0.6 × 8.3 + 0.3 × 5.2 + 0.1 × 1.5 = 6.69; 6.69 × 65,000,000 = 434,850,000; × (1 − 0.25) = $326,137,500. A uses an equally weighted multiple; C skips the discount."
+     },
+     {
+      "q": "Which of the following statements about private company discount rates is most accurate?",
+      "options": [
+       "Limited access to debt leads a private company to rely more on equity financing, which would decrease its WACC",
+       "Size premium estimates from financially distressed small capitalization public companies are added to the discount rate",
+       "Lack of information about a private company's operations introduces greater uncertainty in projections, resulting in a higher discount rate"
+      ],
+      "answer": 2,
+      "why": "C is correct. Less information means more uncertain projections and a higher required return. Limited debt access RAISES WACC; distressed-company size premiums may not apply."
+     },
+     {
+      "q": "An analyst values a private company using the income approach from the perspective of a non-controlling shareholder. FCFF (base year) is $25,000,000, WACC is 18%, growth is 8% for the first 2 years and 2% perpetually, market value of outstanding debt is $12,000,000, and the total discount for lack of marketability and control is 25%. The non-marketable equity value of the firm is closest to:",
+      "options": [
+       "$123,998,000.",
+       "$132,998,000.",
+       "$165,331,000."
+      ],
+      "answer": 0,
+      "why": "A is correct. FCFF1 = 27.0m, FCFF2 = 29.16m; terminal value = 29.16 × 1.02/(0.18 − 0.02) = 185.9m; EV = 177.33m; less debt = 165.33m equity; × (1 − 0.25) = $123,998,000. B discounts the whole firm value, C skips the discount."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "FIQ Bank is a highly rated corporate and institutional bank that operates a client-facing credit default swap (CDS) desk. Larry Ahlgren is a CDS client strategist. Mark Montrose is FIQ’s chief CDS trader. Ahlgren and Montrose are meeting with Brent Haldane, a portfolio manager for BLB Fund, to discuss investment and trading strategies for bonds, CDSs, and equities.\n\nHaldane begins the discussion by asking for a refresher on basic CDS concepts and parameters. Ahlgren replies that a CDS includes both a premium leg and a payment leg and that expected loss is among the functions that affect its price. Ahlgren provides information for a bond issued by Helios Company.\n\nExhibit 1 Information for Helios Bond\nAmount | $1,000.00\nCoupon | 5.00%\nMaturity | 3 years\nProbability of Default | Year 1: 2.0%. Year 2: 2.5%. Year 3: 3.0%\nRecovery Rate | 40%\nHaldane reviews the data and opines that the market is incorrectly assessing Helios’s credit risk. He believes that Helios’s conditional probability of default is 2.0% for Year 1, Year 2, and Year 3. Montrose reviews Helios’s CDSs and adds that the market is pricing no basis between Helios’s bonds and its CDSs.\n\nHaldane expresses confidence in Helios’s credit condition over a longer cycle, stating that Helios is likely to experience improving credit fundamentals over the next five years. Montrose compares Helios’s bonds with its CDSs. Montrose notes that Helios’s five-year bond has a 200 bp credit spread and that Helios’s five-year CDS has a 400 bp up-front premium. The CDS is based on a 1.00% fixed coupon and has duration of four years. Montrose suggests that FIQ and BLB execute a five-year naked CDS in which FIQ buys the CDS and BLB sells the CDS.\n\nIn building credit portfolios, Haldane conducts fundamental credit research on companies. He discusses observations on three separate companies that he has been researching. Haldane states that Dalton has low leverage and that its free cash flow will increase because of its new product pipeline. Haldane describes Corbin as being highly leveraged following an acquisition whose integration, he believes, will be more complex than originally expected. Haldane shares his view that Tarvell may potentially be affected by environmental litigation following its recent purchase of a manufacturing facility that contains unremediated hazardous materials.\n\nMontrose believes that credit research should consider the proper pricing of credit risk. He states that basis trades are used by credit investors to ensure that the credit risk of bonds and CDSs is priced appropriately. He provides bond and CDS information for Dalton, Tarvell, and Corbin. The current level of MRR is 2.00%.\n\nExhibit 2 Information for Three-Year Bonds and Three-Year CDSs\n# Company | Bond Yield | CDS Spread\nDalton | 5.00% | 3.00%\nTarvell | 5.50% | 3.25%\nCorbin | 5.25% | 3.50%\nAhlgren adds that speculation about company balance sheet recapitalizations frequently affects bond yields, CDS spreads, and stock prices. He outlines three such recapitalization scenarios for Dalton, Tarvell, and Corbin and an associated CDS trade idea for each scenario.\n\nExhibit 3 Recapitalization Scenarios and Related Trade Ideas\n#  | Recapitalization Scenario | Trade Idea\nScenario 1 | Dalton issues five-year debt to acquire 100% of Corbin equity at a premium. | Buy Dalton CDS\nScenario 2 | Corbin issues equity in a “follow-on” (post-IPO) equity offering to retire debt. | Buy Corbin CDS\nScenario 3 | Tarvell issues five-year debt to acquire 100% of its public equity at a premium. | Sell Tarvell CDS",
+    "questions": [
+     {
+      "q": "Based on the information in Exhibit 1, the expected loss for Helios bond is most likely closest to:",
+      "options": [
+       "$35.28.",
+       "$48.03.",
+       "$90.00."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. An expected loss of $35.28 incorrectly presumes an equivalent hazard rate of 2% for each year: 1.Probability of survival represents the probability of no default: 0.98 × 0.98 × 0.98 = 0.94119. 2. Probability of default: 1.0 – Probability of survival = 1 – 0.94119 = 0.058810 = 5.8810%. 3. Expected loss = Probability of default × Loss given default × Face amount = 5.8810% × 60% × $1,000 = $35.28. | B. Correct. Expected loss = Summation of conditional probability of default × Loss given default for each discrete cash flow, as illustrated. A diagram made up of a list and 3 tables.At the left is a list: Par one thousand; Coupon 5 percent; Recovery 40 percent. Expand / Collapse Extended Description Calculation: Cash flow (CF): $50.00 interest coupons, $1,000.00 principal repayment Expected loss (EL) = CF × Conditional probability of default (PD) × Loss given default (LGD), where LGD = 1 – Recovery rate Conditional probability of default: Year 1 PD = 2.0% = 2% Hazard rate [98% no default in Year 1 (100% – 2% PD)]. Year 2 conditional PD = 4.45% = 2.0% (Y1 PD) + 2.45% (Y2 conditional PD) [(2.5% Hazard rate × 98% No default Y1); 95.50% no default in Year 2 (100% – 4.5% PD)]. Year 3 conditional PD = 7.317% = 2.0% (Y1 PD) + 2.45% (Y2 conditional PD) + 2.867% (Y3 conditional PD) [(3.0% Hazard rate × 0.955 No default Y2); 92.684% no default in Year 3 (100% – 7.317% PD)]. Expected loss = $48.03, where Year 1 = $50.00 CF × (2.00% Y1 PD × 0.60 LGD) = $0.60. Year 2 = $50.00 CF × (4.45% Y2 conditional PD × 0.60 LGD) = $1.34. Year 3 = $1,050.00 CF × (7.316% Y3 conditional PD × 0.60 LGD) = $46.09. | C. Incorrect. An expected loss of $90.00 is incorrectly determined by the following calculation: $1,000 (face amount of the bond) × 15.00% (summation of the three years of 5.00% interest coupons) × (1.0 – 0.40 Recovery rate)."
+     },
+     {
+      "q": "Presuming that Haldane’s assessment of Helios’s conditional default probability is accurate, which position entered into today is most likely to be profitable? The position of an Helios CDS:",
+      "options": [
+       "buyer.",
+       "seller.",
+       "reference bond short seller."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. A CDS buyer is synthetically short the underlying credit, which will not be profitable presuming that Helios’s credit profile improves. | B. Correct. Based on Haldane’s credit opinion that the market is assigning a higher conditional probability of default than what he believes to be appropriate, a CDS seller is most likely to be profitable since the trade is equivalent to being long Helios credit. To the extent that he is correct in his credit opinion, being both long a bond and short a CDS will be profitable since the bond is being purchased at a price that is lower than fair value and the CDS will increase in value as the Year 2 and Year 3 conditional probabilities of default migrate to Haldane’s expected 2.0% level. For any given company that is a debt issuer and on which credit default swaps are traded, being “short a CDS” is economically equivalent as being “long a bond” since the short CDS position is receiving an income stream but is exposed to deterioration in the credit of the reference company (in this example Helios), which is similar to owning a bond. | C. Incorrect. A reference bond short seller is short the underlying credit, which will not be profitable presuming that Helios’s credit profile improves."
+     },
+     {
+      "q": "If Haldane’s five-year credit assessment of Helios is correct, will Montrose’s suggested CDS trade most likely be profitable for BLB fund?",
+      "options": [
+       "No.",
+       "Yes, because of valuation disparities.",
+       "Yes, because of changing expectations about credit risk."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. The naked CDS trade suggested by Montrose will be profitable for BLB fund if Haldane is correct in his credit opinion. | B. Incorrect. CDS trades are potentially profitable whenever a valuation disparity exists. Since there is no valuation disparity between Helios’s five-year bond and Helios’s five-year CDS, Helios’s CDS is fairly priced relative to its comparable underlying debt instrument. The calculation is as follows: CDS up-front premium = (Credit spread – CDS fixed coupon) × Duration. 400 bps = (200 bps – 100 bps) × 4. | C. Correct. Montrose is suggesting a naked CDS, which enables investors to take positions in an entity’s credit quality without actually owning, or shorting, any underlying debt instruments. Accordingly, should Haldane be correct in his opinion that Helios’s credit condition will improve (changing expectation of credit risk), the suggested CDS will be profitable for BLB because the value of the CDS following any improvement in Helios’s credit condition will be greater than the up-front premium that was paid to enter into the CDS. In this example, there is no basis between Helios’s bond and CDS because Helios’s CDS is fairly priced relative to its comparable underlying debt instrument, as calculated: Up-front premium = (Credit spread – CDS fixed coupon) × Duration. 400 bps = (200 bps – 100 bps) × 4."
+     },
+     {
+      "q": "In considering Haldane’s credit research, which CDS long/short trade is likely most profitable?",
+      "options": [
+       "Sell Dalton CDS and buy Corbin CDS.",
+       "Sell Corbin CDS and buy Tarvell CDS.",
+       "Sell Tarvell CDS and buy Dalton CDS."
+      ],
+      "answer": 0,
+      "why": "A. Correct. A CDS long/short trade attempts to simultaneously benefit from a strong/improving credit profile for one company and a deteriorating credit profile for another company. In this example, Dalton likely has a strong/improving credit profile based on its low leverage and increasing cash flow (selling the Dalton CDS is likely profitable). Corbin likely has a deteriorating credit profile based on its challenges in integrating a sizable acquisition (buying the Corbin CDS is likely profitable). Tarvell likely has a deteriorating credit profile based on the environmental litigation at the site of the manufacturing facility it recently purchased (buying the Tarvell CDS is likely profitable). | B. Incorrect. Being short (selling) the Corbin CDS is likely not profitable given its deteriorating credit profile. | C. Incorrect. Being long (buying) the Dalton CDS is likely not profitable based on its strong/improving credit profile."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Halimah Hakim is a portfolio manager at VSL Asset Management (VSLAM), based in Singapore. VSLAM provides customized portfolio management and investment consulting services to institutional clients. Hakim is meeting with new analysts, Joel Cardin, Elaine Tay, and Ishan Rao, to review the firm’s portfolio management models and techniques.\n\nHakim welcomes everyone to the meeting and begins by stating, “We use multifactor models for portfolio construction as well as return and risk attribution.” She asks, “Can anyone tell me how arbitrage pricing theory (APT) is related to these multifactor models?”\nTay responds, “APT helps us determine the appropriate number of factors to use in a multifactor model; however, it does not specify the identity of those factors.”\n\nHakim continues, “Multifactor models fall into one of three categories: macroeconomic factor models, fundamental factor models, and statistical factor models. For macroeconomic factor models, the factors are the value, or level, of selected macroeconomic variables. For fundamental factor models, the factors are company share attributes, such as price-to-earnings ratio and market capitalization. Finally, when using statistical factor models, we apply statistical techniques, such as factor analysis or principal component analysis, to derive factors that are portfolios of securities that best explain historical return covariances and variances.”\n\nTo explain the use of multifactor models for portfolio return attribution, Hakim presents the group with portfolio and benchmark information in Exhibit 1. She also notes the risk-free rate of return is 1.3%.\n\nExhibit 1 Multifactor Model Data\n#  | Factor Sensitivity | Factor\nFactor | Portfolio | Benchmark | Return\nMarket | 1.05 | 1 | 3.5%\nSmall-Cap | 0.5 | 0.3 | 4.7%\nValue | –0.6 | 0.2 | –4.5%\nMomentum | 0.5 | 0.1 | 5.1%\nHakim asks the group to use Exhibit 1 to characterize the portfolio manager’s investment style. Cardin responds, “This manager has a large-cap orientation and follows a contrarian strategy with a growth bias.”\n\nHakim continues, “Based on your review of the information in Exhibit 1 and given that the portfolio manager’s active return from security selection is 1.5%, I would like each of you to identify the factor that contributes the most to the manager’s active return.” The analysts respond as follows:\n\nCardin says, “My calculations suggest that it is the Value factor.”\n\nTay responds, “I disagree. In my view, it is the Momentum factor.”\n\nRao states, “No, my analysis indicates that it is the Market factor.”\n\nFinally, Hakim provides the group with the information in Exhibit 2 and states, “As I previously stated, multifactor models can also be used to identify a portfolio manager’s risk exposures. Please use the information in Exhibit 2 to identify the portfolio with the highest active factor risk related to style factors, relative to active risk.”\n\nExhibit 2 Active Risk Squared Analysis for Selected Portfolios (Entries Are in Percentage Squared)\n#  | Active Factor\nPortfolio | Industry Factor | Style Factor | Total Factor | Active Specific | Active Risk Squared\nX | 12 | 28 | 40 | 24 | 64\nY | 7.2 | 14.4 | 21.6 | 14.4 | 36\nZ | 4 | 10 | 14 | 2 | 16",
+    "questions": [
+     {
+      "q": "Is Tay’s response to Hakim most likely correct?",
+      "options": [
+       "Yes",
+       "No, she is incorrect regarding the number of factors",
+       "No, she is incorrect regarding the identity of the factors"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Tay is incorrect in stating that APT specifies the number of factors in a multifactor model but correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity. | B. Correct. Tay is incorrect in stating that APT specifies the number of factors in a multifactor model but is correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity. | C. Incorrect. Tay is correct in stating that APT does not specify the identity of factors in a multifactor model. APT does not indicate the number of factors or their identity."
+     },
+     {
+      "q": "In her statement about the three types of multifactor models, Hakim is least likely correct with respect to:",
+      "options": [
+       "statistical factor models.",
+       "fundamental factor models.",
+       "macroeconomic factor models."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Statistical models are described accurately. Statistical factor models use factor analysis to produce factors that are portfolios of securities that best explain historical return covariances. Alternatively, they use principal component analysis to derive factors that are portfolios of securities that best explain historical return variances. | B. Incorrect. Fundamental factor models are described correctly; the factors are company share attributes, such as price-to-earnings ratio and market capitalization. | C. Correct. In macroeconomic models, the factors are “surprises” (how much higher or lower than what was expected) in macroeconomic variables, not the level or value of macroeconomic variables."
+     },
+     {
+      "q": "Based on Exhibit 1 and other information provided by Hakim, the expected return on the portfolio is closest to:",
+      "options": [
+       "8.90%.",
+       "11.28%.",
+       "12.58%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. This calculation incorrectly neglects to add the Market factor: 0.0890 = 0.013 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 | B. Incorrect. This calculation incorrectly neglects to add the risk-free rate (1.3%): 0.1128 = 1.05 × 0.035 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 | C. Correct. E(Rp) = RF + βp,1Market + βp,2Small-Cap + βp,3Value + βp,4Momentum = 0.013 + 1.05 × 0.035 + 0.5 × 0.047 + (–0.6) × (–0.045) + 0.5 × 0.051 = 0.12575, or 12.58%."
+     },
+     {
+      "q": "In his response to Hakim, Cardin’s characterization of the portfolio manager’s investment style, using Exhibit 1, is most likely correct with respect to having a:",
+      "options": [
+       "growth bias.",
+       "contrarian strategy.",
+       "large-cap orientation."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Cardin is correct regarding the growth bias. The factor sensitivity for the Value factor is –0.6, which signifies a growth bias. Cardin is incorrect regarding a large-cap orientation and a contrarian strategy. The portfolio factor sensitivity for the Small-Cap factor is 0.5, indicating a small-cap orientation. For the Momentum factor, the factor sensitivity of 0.5 indicates a momentum bias, not a contrarian strategy, which would be true if the factor sensitivity for the Momentum factor were negative and not close to zero. | B. Incorrect. Cardin is incorrect with regard to the contrarian strategy. For the Momentum factor, the factor sensitivity is 0.5, which indicates a momentum bias. | C. Incorrect. Cardin is incorrect with regard to a large-cap orientation. The portfolio factor sensitivity for the Small-Cap factor is 0.5, indicating a small-cap orientation."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Hans Berger, CFA, is a portfolio manager with a boutique investment firm that specializes in sovereign credit analysis. Berger’s supervisor asks him to develop estimates for GDP growth for three countries. Information on the three countries is provided in Exhibit 1.\n\nExhibit 1\nSelect Economic Data for Countries A, B, and C\n# Country | Economy | Capital per Worker\nA | Developed | High\nB | Developed | High\nC | Developing | Low\nAfter gathering additional data on the three countries, Berger shares his findings with colleague, Seth O’Hanlon. After reviewing the data, O’Hanlon notes the following observations:\n\nObservation 1: The stock market of Country A has appreciated considerably over the past several years. Also, the ratio of corporate profits to GDP for Country A has been trending upward over the past several years and is now well above its historical average.\n\nObservation 2: The government of Country C is working hard to bridge the gap between its standard of living and that of developed countries. Currently, the rate of potential GDP growth in Country C is high.\n\nBerger knows that a large part of the analysis of sovereign credit is to develop a thorough understanding of the potential GDP growth rate for a particular country and the region in which the country is located. Berger is also doing research on Country D for a client of the firm. Selected economic facts on Country D are provided in Exhibit 2.\n\nExhibit 2\nSelect Economic Facts for Country D\nSlow GDP Growth\n\nAbundant Natural Resources\n\nDeveloped Economic Institutions\n\nPrior to wrapping up his research, Berger schedules a final meeting with O’Hanlon to see if he can provide any other pertinent information. O’Hanlon makes the following statements to Berger:\n\nStatement 1: Many countries that have the same population growth rate, savings rate, and production function will have growth rates that converge over time.\n\nStatement 2: Convergence between countries can occur more quickly if economies are open and there is free trade and international borrowing and lending; however, there is no permanent increase in the rate of growth in an economy from a more open trade policy.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the factor that would most likely have the greatest positive impact on the per capita GDP growth of Country A is:",
+      "options": [
+       "free trade.",
+       "technology.",
+       "saving and investment."
+      ],
+      "answer": 1,
+      "why": "B is correct. Country A is a developed country with a high level of capital per worker. Technological progress and/or more intensive use of existing technology can help developed countries increase productivity and thereby increase per capita GDP. Most developed countries have reasonably low trade barriers; thus, somewhat freer trade is likely to have only an incremental, and probably transitory, impact on per capita GDP growth. Also, because the country already has a high capital-to-labor ratio, increased saving/investment is unlikely to increase the growth rate substantially unless it embodies improved technology."
+     },
+     {
+      "q": "Based on Observation 1, in the long run the ratio of profits to GDP in Country A is most likely to:",
+      "options": [
+       "remain near its current level.",
+       "increase from its current level.",
+       "decrease from its current level."
+      ],
+      "answer": 2,
+      "why": "C is correct. The ratio of profits to GDP for Country A has been trending upward over the past several years and is now well above its historical average. The ratio of profits to GDP cannot rise forever. At some point, stagnant labor income would make workers unwilling to work without an increase in wages and would also undermine demand, making further expansion of profit margins unsustainable. Thus, the ratio of profits to GDP will likely decline in the long run toward its historical average."
+     },
+     {
+      "q": "Based on Observation 2, Country C is most likely to have:",
+      "options": [
+       "relatively low real asset returns.",
+       "a relatively low real interest rate.",
+       "a relatively high real interest rate."
+      ],
+      "answer": 2,
+      "why": "C is correct. A high growth rate of potential GDP would cause real incomes to rise more rapidly and also translate into higher real interest rates and higher expected/required real asset returns. The real interest rate is essentially the real return that consumers/savers demand in exchange for postponing consumption. Faster growth in potential GDP means that consumers expect their real income to rise more rapidly. This implies that an extra unit of future income/consumption is less valuable than it would be if income were expected to grow more slowly. All else the same, the real interest rate will have to be relatively high in order to induce the savings required to fund required/desired capital accumulation."
+     },
+     {
+      "q": "Based on Exhibit 2, the least likely reason for the current pace of GDP growth in Country D is:",
+      "options": [
+       "a persistently strong currency.",
+       "strong manufacturing exports.",
+       "strong natural resource exports."
+      ],
+      "answer": 1,
+      "why": "B is correct. Country D is a country with abundant resources and has developed the economic institutions necessary for growth, yet the country is experiencing slow economic growth. It is likely that Country D is experiencing the Dutch Disease, whereby currency appreciation driven by strong export demand for natural resources makes other segments of the economy, in particular manufacturing, globally uncompetitive. Strong manufacturing exports indicate that Country D is globally competitive and likely to have adopted leading edge technology. Thus, it is unlikely that the slow growth reflects inability to maintain productivity growth. Similarly, strong exports suggest adequate demand for its products. Thus, strong exports are unlikely to be the cause of slow growth."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Emmitt Mercer is a portfolio manager for Omega Advisers. Mercer meets with Sonia Dalton, the firm’s analyst responsible for the machinery industry, to discuss three established companies: BIG Industrial, Builders Supply, and Vector Production. Dalton provides Mercer with research notes for each company that reflect trends during the last three years:\n\n \n\nBIG Industrial:\nNote 1:\nOperating income has been much lower than operating cash flow (OCF).\n\nNote 2:\nAccounts payable has increased, while accounts receivable and inventory have substantially decreased.\n\nNote 3:\nAlthough OCF was positive, it was just sufficient to cover capital expenditures, dividends, and debt repayments.\n\nBuilders Supply:\nNote 4:\nOperating margins have been relatively constant.\n\nNote 5:\nThe growth rate in revenue has exceeded the growth rate in receivables.\n\nNote 6:\nOCF was stable and positive, close to its reported net income, and just sufficient to cover capital expenditures, dividends, and debt repayments.\n\nVector Production:\nNote 7:\nOCF has been more volatile than that of other industry participants.\n\nNote 8:\nOCF has fallen short of covering capital expenditures, dividends, and debt repayments.\n\nMercer asks Dalton about the use of quantitative tools to assess the likelihood of misreporting. Dalton tells Mercer she uses the Beneish model, and she presents the estimated M-scores for each company in Exhibit 1.\n\nExhibit 1\nBeneish Model M-scores\nCompany | 2017 | 2016 | Change in M-score\nBIG Industrial | −1.54 | −1.82 | 0.28\nBuilders Supply | −2.60 | −2.51 | −0.09\nVector Production | −1.86 | −1.12 | −0.74\nDalton tells Mercer that Vector Production was required to restate its 2016 financial statements as a result of its attempt to inflate sales revenue. Customers of Vector Production were encouraged to take excess product in 2016, and they were then allowed to return purchases in the subsequent period, without penalty.\n\nDalton’s industry analysis leads her to believe that innovations have caused some of the BIG Industrial’s inventory to become obsolete. Dalton expresses concern to Mercer that although the notes to the financial statements for BIG Industrial are informative about its inventory cost methods, its inventory is overstated.\n\nThe BIG Industrial income statement reflects a profitable 49% unconsolidated equity investment. Dalton calculates the return on sales of BIG Industrial based on the reported income statement. Mercer notes that industry peers consolidate similar investments. Mercer asks Dalton to use a comparable method of calculating the return on sales for BIG Industrial.",
+    "questions": [
+     {
+      "q": "Which of Dalton’s notes about BIG Industrial provides an accounting warning sign of a potential reporting problem?",
+      "options": [
+       "Only Note 1",
+       "Only Note 2",
+       "Both Note 1 and Note 2"
+      ],
+      "answer": 1,
+      "why": "B is correct. Only Note 2 provides a warning sign. The combination of increases in accounts payable with substantial decreases in accounts receivable and inventory are an accounting warning sign that management may be overstating cash flow from operations. Note 1 does not necessarily provide a warning sign. Operating income being greater than operating cash flow is a warning sign of a potential reporting problem. In this case, however, BIG Industrial’s operating income is lower than its operating cash flow."
+     },
+     {
+      "q": "Do either of Dalton’s Notes 4 or 5 about Builders Supply describe an accounting warning sign of potential overstatement or non-sustainability of operating income?",
+      "options": [
+       "No",
+       "Yes, Note 4 provides a warning sign",
+       "Yes, Note 5 provides a warning sign"
+      ],
+      "answer": 0,
+      "why": "A is correct. Neither Note 4 nor Note 5 provides an accounting warning sign of potential overstatement or non-sustainability of operating income.\n\nIncreases in operating margins can be a warning sign of potential overstatement or non-sustainability of operating and/or net income. In this case, however, operating margins for Builders Supply have been relatively constant during the last three years.\n\nA growth rate in receivables exceeding the growth rate in revenue is an accounting warning sign of potential overstatement or non-sustainability of operating income. In this case, however, Builders Supply’s revenue growth exceeds the growth rate in receivables."
+     },
+     {
+      "q": "Based on Dalton’s research notes, which company would most likely be described as having high-quality cash flow?",
+      "options": [
+       "BIG Industrial",
+       "Builders Supply",
+       "Vector Production"
+      ],
+      "answer": 1,
+      "why": "B is correct. High-quality OCF means the performance is of high reporting quality and also of high results quality. For established companies, high-quality operating cash flow would typically be positive; be derived from sustainable sources; be adequate to cover capital expenditures, dividends, and debt repayments; and have relatively low volatility compared with industry peers. Builders Supply reported positive OCF during each of the last three years. The OCF appears to be derived from sustainable sources, because it compares closely with reported net income. Finally, OCF was adequate to cover capital expenditures, dividends, and debt repayments. Although the OCF for BIG Industrial has been positive and just sufficient to cover capital expenditures, dividends, and debt repayments, the increases in accounts payable and substantial decreases in accounts receivable and inventory during the last three years are an accounting warning sign that management may be overstating cash flow from operations. For Vector Production, OCF has been more volatile than other industry participants, and it has fallen short of covering capital expenditures, dividends, and debt repayments for the last three years. Both of these conditions are warning signs for Vector Production."
+     },
+     {
+      "q": "Based on the Beneish model results for 2017 in Exhibit 1, which company has the highest probability of being an earnings manipulator?",
+      "options": [
+       "BIG Industrial",
+       "Builders Supply",
+       "Vector Production"
+      ],
+      "answer": 0,
+      "why": "A is correct. Higher M-scores indicate an increased probability of earnings manipulation. The company with the highest M-score in 2017 is BIG Industrial, with an M-score of −1.54. Builders Supply has the lowest M-score at −2.60, and Vector Production also has a lower M-score at −1.86. The M-score for BIG Industrial is above the relevant cutoff of −1.78."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "June Pruitt is analyzing four stocks in the processed food industry as of 31 December 2019. All stocks pay a dividend at the end of each year.\n\nOrlan Corporation\n\nPruitt estimates a required rate of return for Orlan Corporation of 8% and notes that the dividend for 2019 was EUR 2.315 per share. Her first valuation approach is a basic two-stage DDM, with dividends growing at a rate of 5% from 2020 through 2023, after which time dividends will grow at a sustainable rate of 3%. Her second valuation approach is the H-model, assuming that dividend growth of 5% in 2020 declines linearly during the years 2021 through 2023 to the 3% growth rate after 2023. Exhibit 1 summarizes Pruitt’s dividend growth assumptions.\n\nExhibit 1\nOrlan Corporation Dividend Growth Assumptions, by Model\n# Model | Period | Rate\nTwo-stage DDM | 2020 through 2023 | 5%\nBeginning 2024 | 3%\nH-model | 2020 | 5%\n2021 through 2023 | Declining linearly to 3.5%\nBeginning 2024 | 3%\nHermes Company\n\nPruitt has assembled the data on Hermes Company in Exhibit 2. After analyzing competitive pressures and financial conditions in the industry, she predicts that Hermes Company will lose market share because of new entrants but will stabilize within a few years. The required rate of return for Hermes Company is 8%. Beginning with a per-share dividend of USD3.15 in 2019, she develops two scenarios regarding Hermes Company’s dividend growth. The scenarios, shown in Exhibit 2, are summarized as follows:\n\nIn Scenario 1, the growth rate will fall in a linear manner over the years 2020 through 2023 from 8% to 4%. Using the H-model, Pruitt calculates a value of USD58.79 per share of Hermes Company stock.\n\nIn Scenario 2, the growth rate falls from 8% in 2019 to 6% in 2020 and 2021, to 5% in 2022 and 2023, and then to a sustainable rate of 3% for 2024 and beyond.\n\nExhibit 2\nHermes Company Dividend Growth Scenarios\n# Scenario | Period | Rate\nScenario 1 | 2020 through 2023 | Declining linearly to 4%\nBeginning 2024 | Remaining stable at 4%\nScenario 2 | 2020 and 2021 | 6%\n2022 and 2023 | 5%\nBeginning 2024 | Remaining stable at 3%\nTamaru Corporation\n\nPruitt evaluates Tamaru Corporation and uses recent financial data from Exhibit 3 to calculate a sustainable growth based on the DuPont model. In addition to this estimate, she performs a sensitivity analysis on the sustainable growth rate whereby the dividend payout ranges from 0% to 10% and the return on equity ranges from 8% to 12%.\n\nExhibit 3\nSelected Data for Tamaru Corporation (JPY billions)\nNet income | 43,923\nSales | 423,474\nTotal assets, average during year | 486,203\nShareholders’ equity, beginning of year | 397,925\nDividends paid | 1,518\nZander Corporation\n\nIn her analysis of the stock of Zander Corporation, Pruitt observes that it has a dividend of USD2 per share and a stock price of USD52. Two analyst interns have offered estimates of the company’s required rate of return and dividend growth rate, as shown in Exhibit 4.\n\nExhibit 4\nZander Corporation Required Rate of Return and Dividend Growth Rates (Estimates)\n#  | Intern 1 | Intern 2\nRequired rate of return | 8.3% | 7.8%\nGrowth rate, first four years | 5.0% | 4.8%\nGrowth rate, beyond first four years | 3.6% | 4.0%",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, when Pruitt applies the first valuation approach to Orlan Corporation, the estimated value of the stock at the end of the first stage represents the:",
+      "options": [
+       "present value of the dividends beyond year 2023.",
+       "present value of the dividends for years 2020 through 2023.",
+       "sum of the present value of the dividends for 2020 through 2023 and the present value of dividends beyond year 2023."
+      ],
+      "answer": 0,
+      "why": "A is correct because the estimated value of the stock at the end of the first stage of a basic two-stage DDM (terminal value) is the present value of all dividends beyond the first stage. The first stage is 2020 through 2023, and the second stage begins in 2024, so the terminal value (that is, the value of the stock at the end of 2023) is the present value of future dividends beyond 2023."
+     },
+     {
+      "q": "Using her first valuation approach and Exhibit 1, Pruitt’s forecast of the per share stock value of Orlan Corporation at the end of 2019 should be closest to:",
+      "options": [
+       "EUR48.",
+       "EUR50.",
+       "EUR51."
+      ],
+      "answer": 2,
+      "why": "C is correct based on Pruitt’s assumptions applied to the dividend valuation model.\nThe stock value as of the end of 2019 equals the present value of all future dividends in 2020 through 2022 plus the present value of the terminal value at the end of 2022. The forecasted stock value equals EUR51.254:\nYear\tDividend\tTerminal Value\tDt or Vt\tPresent Value of Dt or Vt\n2020\t2.315(1.05) = 2.431\t \t2.431\t2.251\n2021\t2.431(1.05) = 2.553\t \t2.553\t2.189\n2022\t2.553(1.05) = 2.681\t \t2.681\t2.128\n2023\t2.681(1.05) = 2.815\t57.980\t60.795\t44.686\n2024\t2.815(1.03) = 2.899\t \t \t \n   Total\t \t \t \t51.254\nThe terminal value at the end of 2023 is calculated using the dividend in the first year beyond the first stage, divided by the difference between the required rate of return and the growth rate in the second stage.\nTerminal value at end of 2023 ="
+     },
+     {
+      "q": "Using Pruitt’s assumptions for the H-model and the basic two-stage dividend discount model, the forecasted Orlan stock price at the end of the year 2023 for the H-model should be:",
+      "options": [
+       "lower than the basic two-stage model.",
+       "the same as the basic two-stage model.",
+       "higher than the basic two-stage model."
+      ],
+      "answer": 0,
+      "why": "A is correct. During the first stage, the basic two-stage model has higher (i.e., 5%) growth than the H-model, in which growth is declining linearly from 5.0% to 3.5%. Higher growth rates result in higher forecasted dividends and stock prices at the beginning of the sustained growth phase. Because the long-term dividend growth rates are the same for both models, the difference in forecasted stock price arises from growth rate differences in the first stage.\nTherefore, the dividend at the end of the first stage will be lower for the H-model than for the basic two-stage DDM, and the terminal value will be lower in the H-model than in the two-stage model. Specifically, the 2023 dividends will be 2.734 (i.e., 2.315 × 1.05 × 1.045 × 1.04 × 1.035) for the H-model versus 2.815 [i.e., 2.315 × (1.05)4] for the basic two-stage DDM."
+     },
+     {
+      "q": "Under her Scenario 1 and based on Exhibit 2, the required rate of return that Pruitt used for Hermes Company stock valuation is closest to:",
+      "options": [
+       "8.0%.",
+       "9.6%.",
+       "10.0%."
+      ],
+      "answer": 2,
+      "why": "C is correct, based on Exhibit 2 and the H-model.\nEstimate the required rate of return using Equation 21:\n\nSubstitute the following:\nD0 = 3.15\ngS = 8%\ngL = 4%\nH = 4 ÷ 2 = 2\nThe model thus produces\nr = \n = (0.053581 × 1.12) + 0.04\n = 0.060010 + 0.04 = 0.10001 ≈ 10%."
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {},
+ "key": "ABBBBAAABBCCBCCBBABCABCABBCABCCABCCBBABAACAC"
+}

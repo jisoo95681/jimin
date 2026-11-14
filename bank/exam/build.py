@@ -355,6 +355,13 @@ for _v in _st['vignettes']:
     for _q in _v['questions']:
         _n+=1; assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mockp2',_n)
 sets.append(_st); print('mockp2',_n,_d['key'])
+# ---- Big-subject mocks A1-A4 (14 Nov): real never-used vignettes, names changed, options shuffled where the explanation allows; no hints (auto-shading) ----
+for _k in (1,2,3,4):
+    _d=json.load(open(f'/home/user/jimin/bank/exam/mockA{_k}.json')); _st=_d['set']; _n=0
+    for _v in _st['vignettes']:
+        for _q in _v['questions']:
+            _n+=1; assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mockA',_k,_n)
+    assert _n==44; sets.append(_st); print('mockA%d'%_k,_n)
 # ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
 _d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
 for _st in _d['sets']:

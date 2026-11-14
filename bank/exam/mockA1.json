@@ -1,0 +1,521 @@
+{
+ "set": {
+  "id": "mockA1",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock A1",
+  "kind": "mock",
+  "minutes": 132,
+  "desc": "Big subjects (Equity, FSA, Fixed Income, Portfolio Management): 11 vignettes, 44 questions, 132 minutes. No Ethics.",
+  "vignettes": [
+   {
+    "topic": "Equity",
+    "body": "David Marlow is an equity analyst whose required ROE is 10%. He evaluates the stocks of several companies.\n\nCompany A\n\nMarlow wants to value Company A using a suitable DCF model. His forecasts on Company A are presented in Exhibit 1. Marlow assumes that there are no capital issuances or repayments during his forecast period.\n\nExhibit 1\n# Year | Dividend Payout Ratio | Earnings ($ millions) | Operating Cash Flow ($ millions) | Capital Expenditure ($ millions)\n1 | 30% | 81.90 | 125.00 | 100.00\n2 | 25% | 83.76 | 131.25 | 120.00\n3 | 20% | 85.32 | 137.81 | 144.00\n4 | 15% | 86.52 | 144.70 | 172.80\n5 | 5% | 87.23 | 151.94 | 207.36\nCompany C\n\nCompany C has just paid out an annual dividend of $2 per share. Marlow expects dividends from Company C to grow at 5% annually in perpetuity and calculates the fair value of the stock of Company C using the Gordon growth model.\n\nCompany D\n\nCompany D just ended the year with earnings per share of $3 and its stock trades at $40 per share. Marlow expects Company D's earnings to grow at 10% next year and calculates the present value of growth opportunities reflected in its share price.\n\nCompany E\n\nCompany E has just declared an annual dividend of $1 per share. Marlow expects the company to have a dividend growth rate of 20% every year for the next 10 years and thereafter grow dividends at 8% per year in perpetuity. He calculates the fair value of Company E's stock using the H-model.",
+    "questions": [
+     {
+      "q": "For company A, the most suitable forecast input to a DCF model is:",
+      "options": [
+       "dividends.",
+       "residual income.",
+       "free cash flow."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the expected dividend payout of Company A has no consistent relationship with earnings, as evidenced by the varying expected dividend payout rates over the forecast years. The earnings of Company A are expected to grow every year during the forecast period, but the dividend is not likely to mimic the growth of earnings. This is probably because the management of Company A wants to conserve cash to fund its capital expenditure requirements. Hence, the expected dividends of Company A is not a good proxy for the value creation expected to happen in Company A during Marlow's forecast period. If dividends do not bear an understandable relation to value creation in the company, applying the DDM to value the stock is prone to error. Generally, the definition of returns as dividends, and the DDM, is most suitable when the company is dividend-paying (i.e., the analyst has a dividend record to analyze); the board of directors has established a dividend policy that bears an understandable and consistent relationship to the company’s profitability; and the investor takes a non-control perspective.\nB. Correct because analysts may choose a residual income approach for companies with negative expected free cash flows within their comfortable forecast horizon. In such cases, a residual income valuation often brings the recognition of value closer to the present as compared with a free cash flow valuation, producing higher value estimates. Also, a residual income model can be used for both dividend-paying and non-dividend-paying stocks. The residual income model is a useful addition to an analyst’s toolbox. Because the record of residual income can always be calculated, a residual income model can be used for both dividend-paying and non-dividend-paying stocks. Analysts may choose a residual income approach for companies with negative expected free cash flows within their comfortable forecast horizon. In such cases, a residual income valuation often brings the recognition of value closer to the present as compared with a free cash flow valuation, producing higher value estimates.\nC. Incorrect because the capital expenditure of Company A is much larger than its operating cash flow so that free cash flow of the Company is negative over a few years in the forecast horizon, especially since the Company is not expected to witness any debt or equity issuances or repayments during this period. Just as there are cases in which an analyst would find it impractical to apply the DDM, applying the free cash flow approach is a problem in some cases. Some companies have intense capital demands and, as a result, have negative expected free cash flows far into the future. The present value of a series of negative free cash flows is a negative number: The use of a free cash flow model may entail a long forecast horizon to capture the point at which expected free cash flow turns positive. The uncertainty associated with distant forecasts may be considerable. In such cases, the analyst may have more confidence using another approach, such as residual income valuation."
+     },
+     {
+      "q": "The fair value of Company C's stock for Marlow is closest to:",
+      "options": [
+       "$21.",
+       "$40.",
+       "$42."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because the candidate uses V0 D1 r Hence incorrect fair value  2  $21 The correct formula and calculation would have been: Correct fair value $42\nB. Incorrect because the candidate uses V0  D0 Hence incorrect fair value  $40 The correct formula and calculation would have been: Correct fair value $42\nC. Correct because it applies the formula of Gordon growth model. where V0 is the fair value of the stock according to the GGM D0 is the most recent dividend at time t=0 D1 is the expected dividend payable at time t=1 r is the required rate of return on equity g is the expected constant growth rate in dividends Correct fair value The Gordon growth model, developed by Gordon and Kessler (1956) and Gordon (1962), assumes that dividends grow indefinitely at a constant rate. This assumption, applied to the general dividend discount model, leads to a simple and elegant valuation formula that has been influential in investment practice. To illustrate the calculation, suppose that an annual dividend of €5 has just been paid (D0 = €5). The expected long-term growth rate is 5% and the required return on equity is 8%. The Gordon growth model value per share is D0(1 + g)/(r − g) = (€5 × 1.05)/(0.08 − 0.05) = €5.25/0.03 = €175. When calculating the model value, be careful to use D1 and not D0 in the numerator."
+     },
+     {
+      "q": "The present value of growth opportunities per share reflected in Company D's current stock price for Marlow is closest to:",
+      "options": [
+       "$7.",
+       "$10.",
+       "$33."
+      ],
+      "answer": 0,
+      "why": "A. Correct because if the price of the stock of Company D reflects its value, then where V0 is the value of the stock P0 is the price of the stock E1 is the 1 period forward earnings of the company PVGO is the Present Value of the Growth Opportunities E1/r is also termed as the no-growth per share value of the company Hence, the no-growth value per share of Company D is E1r  $33 Since the current price of the equity shares of Company D is $40, it implies that the difference of $7 represents the PVGO of Company D shares, based on Marlow’s required rate of return on equity of 10%. The value of a stock can be analyzed as the sum of 1) the value of the company without earnings reinvestment and 2) the present value of growth opportunities (PVGO). PVGO, also known as the value of growth, sums the expected value today of opportunities to profitably reinvest future earnings. More technically, PVGO can be defined as the forecasted total net present value of future projects. The no-growth value per share is defined as E1/r, which is the present value of a perpetuity in the amount of E1 where the capitalization rate, r, is the required rate of return on the company’s equity. E1/r can also be interpreted as the per-share value of assets in place because of the assumption that the company is making no new investments because none are profitable. For any company, the actual value per share is the sum of the no-growth value per share and the present value of growth opportunities. If prices reflect value (P0 = V0), P0 less E1/r gives the market’s estimate of the company’s value of growth, PVGO.\nB. Incorrect because the no-growth value of Company D shares is wrongly calculated as $30 based on past earnings rather than forward earnings. Hence, the incorrect no-growth value per share of Company D is E0r$30 Since the current stock price is $40,  the incorrect implied PVGO is calculated as $40$30$10 per share The correct equation and calculation would have been: 40 Therefore PVGO4033$7 per share\nC. Incorrect because a wrong formula is used for the calculation. PVGOE1/r 3.30.1$33 In fact, $33 is the no-growth value per share of the stock. The correct equation and calculation would have been: 40 Therefore PVGO4033$7 per share"
+     },
+     {
+      "q": "According to Marlow's calculations, the fair value of Company E's stock is closest to:",
+      "options": [
+       "$54.",
+       "$84.",
+       "$101."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the candidate computes the value of only the second term, which is the approximate extra value of the stock because of its high growth in the next ten years. The incorrect calculation is: $54 The correct formula and calculation would have been: V0 $54$30 $84\nB. Correct because the H-model has 2 components: the first term is the present value of the company’s dividend stream if it were to grow dividends at 8% per annum  until perpetuity. The second term is the approximate extra value of the stock because of its high growth in the next ten years. where V0  is the value per share at t=0 D0 is the current dividend r is the required rate of return on equity H is the half-life in years of the high-growth period(2H) gS is the initial short-term dividend growth rate gL is the long-term dividend growth rate after Year 2H V0 $54$30 $84 Haverly and Okafor (1984) developed a variant of the two-stage model in which growth begins at a high rate and declines linearly throughout the supernormal growth period until it reaches a normal rate at the end. The first term on the right-hand side of Equation 20 is the present value of the company’s dividend stream if it were to grow at gL forever. The second term is an approximation of the extra value (assuming gS > gL) accruing to the stock because of its supernormal growth for Years 1 through 2H (see Haverly and Okafor 1984 for technical details). Logically, the longer the supernormal growth period (i.e., the larger the value of H, which is one-half the length of the supernormal growth period) and the larger the extra growth rate in the supernormal growth period (measured by gS minus gL), the higher the share value, all else equal.\nC. Incorrect because the candidate computes the fair price on H-model on D1 of $1.2 instead of D0 of $1 per share. The incorrect calculation is: V0 $64.8 $36$100.8 The correct formula and calculation would have been: V0 $54$30 $84"
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Kenji Takeda is valuing Halbrook & Whitcombe Company (NYSE: PG). Takeda has made the following assumptions:\n\nBook value per share is estimated at $21.30 on 31 March 2019.\n\nEPS will be 18% of the beginning book value per share for the next eight years.\n\nCash dividends paid will be 70% of EPS.\n\nAt the end of the eight-year period, the market price per share will be four times the book value per share.\n\nThe beta for PG is 0.50, the risk-free rate is 2.0%, and the equity risk premium is 6.2%.\n\nThe current market price of PG is $107.50, which indicates a current P/B of 5.05.",
+    "questions": [
+     {
+      "q": "The ending book value per share at the end of Year 8 is closest to:",
+      "options": [
+       "$32.44.",
+       "$30.78.",
+       "$27.71."
+      ],
+      "answer": 0,
+      "why": "A is correct. Each year book value grows by 18% × (1 − 0.70) = 5.4%; $21.30 × 1.054⁸ = $32.44 (Year 1: 21.30 + 3.834 − 2.684 = 22.45)."
+     },
+     {
+      "q": "The Year 1 residual income per share is closest to:",
+      "options": [
+       "$2.75.",
+       "$3.83.",
+       "$1.09."
+      ],
+      "answer": 0,
+      "why": "A is correct. r = 2% + 0.5 × 6.2% = 5.1%; RI = 3.834 − 5.1% × 21.30 = $2.748."
+     },
+     {
+      "q": "The value per share of PG using the residual income model is closest to:",
+      "options": [
+       "$107.80.",
+       "$86.43.",
+       "$65.37."
+      ],
+      "answer": 0,
+      "why": "A is correct. V0 = 21.30 + 21.125 (PV of eight residual incomes) + (129.767 − 32.442)/1.051⁸ (65.374) = $107.80."
+     },
+     {
+      "q": "The value per share of PG using the dividend discount model compared with the residual income estimate is:",
+      "options": [
+       "identical ($107.80).",
+       "lower, because dividends are paid later.",
+       "higher, because dividends are not discounted."
+      ],
+      "answer": 0,
+      "why": "A is correct. PV of eight dividends 20.634 + PV of terminal price 129.767 (87.165) = $107.80. With the same assumptions the two models agree even though they recognize value at different times."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Peter Lund manages institutional client portfolios of US Treasury securities. He expects that spot rates one year from now will be the same as they are today. Lund implements a strategy of rolling down the yield curve in one of the managed portfolios. Current information on rates is shown in Exhibit 1.\nExhibit 1\n# Spot Rate | 1-year Implied Forward Rate\nr(1) = 0.75% | f(0,1) = 0.75%\nr(2) = 1.20% | f(1,1) = 1.65%\nr(3) = 1.45% | f(2,1) = 1.95%\nr(4) = 1.65% | f(3,1) = 2.25%\nLund is reviewing the portfolios of his two largest clients. Client 1 restricts Lund to buy only bonds with maturities of three years or less. Even though Lund expects the return of 5-year maturity bonds to be superior to that of 3-year maturity bonds, he continues to invest in 3-year maturities for Client 1's portfolio.\nClient 2's portfolio consists of 1-year, 3-year and 5-year zero-coupon bonds and has an effective duration of 3.20. Lund is concerned about the effect a twist in the yield curve would have on this portfolio. The portfolio's 1-year key rate duration is 0.25 and its 3-year key rate duration is 1.10.",
+    "questions": [
+     {
+      "q": "The current yield to maturity (YTM) on a default-free, 1.2% annual-pay, three-year coupon bond is closest to:",
+      "options": [
+       "1.2%.",
+       "1.45%.",
+       "2.25%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because this is the coupon on the bond, not the YTM. It would be the correct answer if the bond was priced at par. Given the term structure in the exhibit, the bond is not priced at par.\nB. Correct because the YTM on a three-year coupon bond will be closest to the three-year spot rate, regardless of coupon. The three-year spot rate is 1.45%. \nThe price of the bond is calculated as the present value of cash flows. \nPV = PMT/(1 + z1)1 + PMT/(1 +z2)2 + PMT + 100/(1 + z3)3,\nWhere PMT = coupon and z = spot rate for each time period.\nPV = 1.2/1.0075+1.2/1.0122+101.2/1.01453 = 1.19107 + 1.17171 + 96.9224 = 99.2852. \nNext, solve for YTM: PV = –99.2852, FV=100, n=3, PMT=1.2 and solving for I/Y = YTM = 1.445% ≈ 1.45%.\nC. Incorrect because this is the one-year forward rate in three years, not the YTM for a three-year bond."
+     },
+     {
+      "q": "Given Lund's expectation for spot rates, the first-year return on a 3-year zero-coupon bond is closest to:",
+      "options": [
+       "0.75%.",
+       "1.45%.",
+       "1.95%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because this is the 1-year spot rate. This rate would only have been achieved if the spot rates evolved as implied by the current forward curve. This is not the case under Lund's expectation of an unchanged spot curve.\nB. Incorrect because this is the 3-year spot rate. Lund would realize the one-year forward rate for year 3, not the geometric average of the forward rates over the three years.\nC. Correct because under Lund's spot curve expectation the total return will be the one-year forward rate for year 3. We can see that if the spot rate curve is unchanged, then each bond rolls down the curve and earns the forward rate.\nThis can be shown mathematically by calculating the price of a 3-year zero coupon bond today. Price = 1/(1 + spot rate)3 = 1/(1.01453) = 0.957732. With an unchanged yield curve, this bond will become a 2-year zero coupon bond in one year with a price = 1/(1 + spot rate)2 = 1/(1.01202) = 0.976425. The first year return = 0.976425/0.957732 – 1 ≈ 1.95%, which equals f(2,1) from Exhibit 1."
+     },
+     {
+      "q": "Client 1's restriction regarding the securities Lund can purchase is most consistent with the assumptions underlying the:",
+      "options": [
+       "liquidity preference theory.",
+       "segmented markets theory.",
+       "preferred habitat theory."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the liquidity preference theory focuses on investor's risk aversion and the fact that they demand a liquidity premium for added interest rate risk. Lund would prefer to invest in longer-term maturities to capture this premium but cannot. Also, Client 1 does not direct Lund to purchase only three-year maturity bonds to capture a possible liquidity premium, but that Lund can purchase securities up to three years. This direction indicates the client does not have a preference to capture the liquidity premium if it exists. Liquidity preference theory asserts that liquidity premiums exist to compensate investors for the added interest rate risk they face when lending long term and that these premiums increase with maturity.\nB. Correct because due to the direction from the Client, Lund continues to invest only in 3-year maturities even though he expects 5-year maturities to offer superior expected returns. The segmented markets theory assumes that market participants are either unwilling or unable to invest in anything other than securities of their preferred maturity. It follows that the yield of securities of a particular maturity is determined entirely by the supply and demand for funds of that particular maturity.\nC. Incorrect because the preferred habitat theory postulates that if the expected additional returns to be gained become large enough, institutions will be willing to deviate from their preferred maturities or habitats. Lund is not able to do that due to his investor-imposed constraints."
+     },
+     {
+      "q": "The 5-year key rate duration for Client 2's portfolio is closest to:",
+      "options": [
+       "1.60.",
+       "1.85.",
+       "1.95."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because this is the value that would be obtained if 5-year key rate duration is calculated as the 3-year key rate duration plus the 1-year key rate duration plus the 1-year key rate duration to get five full years of key rate duration. This incorrect calculation is: 1.10 + 0.25 + 0.25 = 1.60.\nB. Correct because for Portfolio 2 the sum of the three portfolio key rate durations must equal the portfolio's effective duration. Effective duration = 1-year key rate duration + 3-year key rate duration + 5-year key rate duration = 3.20 = 0.25 + 1.10 + 5-year key rate duration. 5-year key rate duration = 3.20 – 0.25 – 1.10 = 1.85.\nKey rate duration measures the portfolio risk exposure to each key rate. If all the key rates move by the same amount, then the yield curve has made a parallel shift, and as a result, the proportional change in value has to be consistent with effective duration.\nC. Incorrect because this is the value that would be obtained if the key rate duration curve is assumed to be linear calculated as the 3-year key rate duration plus the 3-year key rate duration less the 1-year key rate duration = 1.10 + (1.10 – 0.25) = 1.95."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Four independent questions on residual income valuation. Each question gives its own data.",
+    "questions": [
+     {
+      "q": "Ridgeway Prefab Homes (DMH) is expected to maintain a ROE of 15% and growth of 10%. It has a book value of $30 per share and a required return on equity of 12%. The single-stage residual income value per share is closest to:",
+      "options": [
+       "$75.",
+       "$60.",
+       "$45."
+      ],
+      "answer": 0,
+      "why": "A is correct. V0 = 30 + 30 × (0.15 − 0.12)/(0.12 − 0.10) = $75."
+     },
+     {
+      "q": "Northern Harbor Bank has B0 = $10 per share, ROE of 15% for the next five years with all earnings reinvested (10% thereafter), cost of equity of 10% and a 20% premium over book value at the end of five years (ending book value $20.14). The finite-horizon residual income value per share is closest to:",
+      "options": [
+       "$15.01.",
+       "$12.51.",
+       "$17.51."
+      ],
+      "answer": 0,
+      "why": "A is correct. V0 = 10 + 2.51 (PV of five residual incomes) + 0.20 × 20.14/1.10⁵ (2.50) = $15.01."
+     },
+     {
+      "q": "Fabricas Gómez has a current book value of €20.00 per share, expected EPS of €1.50, 2.50, 3.50, 4.50 and 5.50, dividends of €1.00 for three years and €2.00 for two years, a terminal price of 14× trailing earnings and a required return of 9%. The value per share is closest to:",
+      "options": [
+       "€55.29 under both the residual income model and the dividend discount model.",
+       "€30.22 under the residual income model and €50.05 under the DDM.",
+       "€20.00 under both models."
+      ],
+      "answer": 0,
+      "why": "A is correct. Residual incomes: −0.300, 0.655, 1.520, 2.295, 3.070 (PV 5.071); terminal premium 77.00 − 30.50 = 46.50 (PV 30.22); 20.00 + 5.071 + 30.222 = €55.293. The DDM gives the same value."
+     },
+     {
+      "q": "Corvane Electronics has had negative other comprehensive income from available-for-sale securities in each of the past five years. Kent should most likely:",
+      "options": [
+       "adjust income downward by the other comprehensive income losses, lowering ROE; book value is not misstated.",
+       "leave income as reported because the losses bypass the income statement.",
+       "add the losses back to book value."
+      ],
+      "answer": 0,
+      "why": "A is correct. Persistently negative OCI that bypasses the income statement is a recurring cost; book value already reflects it through accumulated other comprehensive income."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Warren Rahmani recently accepted a position as an assistant research analyst for B&N Securities (BNS), a large global brokerage firm. Rahmani's first two weeks with the firm is spent in training which is being trained in equity valuation by several of the firm's senior analysts.\n\nOne of the analysts discusses Price/Earnings multiples and introduces a company under her coverage, Hartwell & Orlov (BAM), a large multinational in the consumer staples industry. She presents the information in Exhibit 1 below.\n\nExhibit 1\n# Hartwell & Orlov (BAM) | Select Information\nMost Recent Earnings | $3.00/share\nMost Recent Dividend | $1.20/share\nExpected Earnings Growth Rate | 4.0%\nRequired Rate of Return | 6.4%\nFollowing a discussion about dividend yield, Rahmani asks the analyst how she deals with extremely low, zero or negative earnings. She replies, \"When I am interested in ranking securities that include those types of earnings I use the inverse price ratio or the earnings yield. When I rank securities from highest to lowest earnings yield the securities are correctly ranked from cheapest to most costly. I can also use normalized EPS, expected or trailing EPS in the calculation.  Additionally, earnings yield helps me deal with non-recurring items and business cycle influences.\n\nThe analyst moves on to review the determination of terminal value and displays the information for Ethan Pryce a large manufacturer under her coverage in Exhibit 2 below.\n\nExhibit 2\n# Ethan Pryce | Select Information\nYear 3 Earnings | $2.90\nDividend Payout | 60.0%\nAverage Industry P/E | 14.0x\nAverage Industry ROE | 13.0%\nRequired Rate of Return | 7.0%\nThe final topic on the agenda involves a discussion of momentum. The analyst makes the following statements regarding momentum indicators:\n\nStatement 1:\nThey relate either price or a fundamental, to a time series of their own past values.\n\nStatement 2:\nThe indicators demonstrate how positive surprises may be associated with persistent positive returns.\n\nStatement 3:\nThey indicate when the market price will converge with its estimated intrinsic value.",
+    "questions": [
+     {
+      "q": "Based on Exhibit 1, the justified forward P/E for BAM is closest to:",
+      "options": [
+       "6.3.",
+       "16.7.",
+       "25.0."
+      ],
+      "answer": 1,
+      "why": "B is correct. Retention b = (3.00 − 1.20)/3.00 = 0.60; payout = 0.40. P0/E1 = 0.40 / (0.064 − 0.04) = 16.7. A forgets to subtract g; C uses b = 0.40."
+     },
+     {
+      "q": "Is the analyst's response to Rahmani's question about extremely low, zero or negative earnings accurate?",
+      "options": [
+       "Yes",
+       "No with regard to ranking securities and earnings",
+       "No with regard to non-recurring items and business cycles influences"
+      ],
+      "answer": 2,
+      "why": "C is correct. Earnings yield ranks securities consistently, but it does not deal with non-recurring items or business-cycle effects; normalizing EPS does."
+     },
+     {
+      "q": "Using Exhibit 2, the terminal value based on comparables for Ethan Pryce is closest to:",
+      "options": [
+       "$33.18.",
+       "$40.60.",
+       "$101.67."
+      ],
+      "answer": 1,
+      "why": "B is correct. Vn = benchmark P/E × En = 14.0 × $2.90 = $40.60. C is the Gordon growth (fundamentals) estimate; A wrongly discounts earnings."
+     },
+     {
+      "q": "Which of the analyst's statement regarding momentum indicators is most likely accurate?",
+      "options": [
+       "Statement 1",
+       "Statement 2",
+       "Statement 3"
+      ],
+      "answer": 0,
+      "why": "A is correct. Momentum indicators relate price or a fundamental to a time series of its own past values. Statement 2 omits abnormal returns (alpha); Statement 3 overstates: they only provide a clue when price may converge."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Sarah Pemberly is the head of trading at Ravenwood Arbitrage Opportunities, LLP, a hedge fund specializing in fixed-income strategies. The firm’s investment approach is to exploit small price differences across similar or identical securities. Pemberly has asked Chester Vane to develop a comprehensive automated trading system that will allow traders to identify opportunities in the market. Pemberly and Vane are discussing several applications that need to be developed for the traders.\n\nVane begins development on an algorithm that will evaluate government bonds that have been stripped. He tests his logic by evaluating a dollar-denominated Zelanda government bond with a 3.20%, annual pay coupon maturing in three years, using data in Exhibit 1. The bond is quoted in the market at $103.50.\n\nExhibit 1 Spot, Par, and Forward Rates\n#  | Year 1 | Year 2 | Year 3\nSpot Rate | 1.10% | 1.50% | 2.01%\nPar Rate | 1.10% | 1.50% | 2.00%\nForward Rate | 1.10% | 1.91% | 3.04%\n\nVane develops a framework for valuing bonds using a binomial interest rate tree. He understands that there are several factors used in developing the tree and asks Pemberly for counsel on the correct data to use. Pemberly makes the following comments to Vane:\n\nComment 1: In the valuation process, the interest rate tree generates cash flows that are interest rate dependent but does not provide the interest rates used to discount those cash flows.\nComment 2: Two assumptions must be made to create a binomial tree. The first is an interest rate model such as a lognormal model of interest rates. The second is a volatility of interest rates.\nComment 3: Volatility can be measured relative to the current level of rates. By using a lognormal distribution, interest rate movements are proportional to the level of rates and are bounded at the low end by zero.\n\nPemberly asks Vane to use a binomial interest rate tree to calculate the value of a bond. He tests the module using a three-year, $100 par value, 4% annual pay coupon bond and the data in Exhibit 2.\n\nExhibit 2 Three-Year Binomial Rate Tree\n[Tree figure not captured in the paste. From the answer key: Time 2 rates 4.50%, 3.25%, 2.35%.]\n\nPemberly tells Vane that he needs to calibrate the binomial interest rate tree to match a term structure of interest rates. Vane wants to better understand this process and asks Pemberly to describe it. Pemberly says, “Calibrating an interest rate tree requires an iterative process that ensures that the upper and lower rates are consistent with the volatility assumption, the interest rate model, and the observed market value of the benchmark bond. The cash flows of the bond are discounted using the interest rate tree, and if this doesn’t produce the correct price, another pair of forward rates is selected and the process is repeated.”\n\nPemberly then develops a model that compares the value of a bond determined using a binomial interest rate tree to its value determined using spot rates. The bond he selects for the comparison is non-benchmark, option-free, and has five years to maturity and an annual-pay coupon rate of 3%. The coupon rate is below the coupon rate of the benchmark bond. The yield curve is currently downward sloping. The output of Pemberly’s model shows that the spot rates generate a value equal to the market price of the bond, but the interest rate tree methodology produces a higher value.\n\nPemberly wants Vane to develop a program for pricing securities that are interest rate path dependent, such as mortgage-backed securities (MBS). He believes that using the Monte Carlo method and employing 2,000 simulations will provide an average present value across all scenarios equal to the actual market value of the securities. Vane runs a simulation and uses it to value a benchmark bond. He finds that the value generated does not equal the market price of the bond.",
+    "questions": [
+     {
+      "q": "Based on the market price of the Zelanda government bond and the interest rates in Exhibit 1, what profitable arbitrage opportunity should Vane’s algorithm most likely identify?",
+      "options": [
+       "Buying the strips and selling the bond",
+       "Buying the bond and selling the strips",
+       "Buying the Year 1 and Year 2 strips and selling the Year 3 strip"
+      ],
+      "answer": 0,
+      "why": "Valued at spot rates the bond's cash flows are worth $103.4816, below the market price of $103.50: buy the strips, reconstitute the bond and sell it. Using par rates instead gives 103.519 (the opposite, wrong trade). Arbitrage must compare all strips with the bond, not single strips."
+     },
+     {
+      "q": "Which of Pemberly’s comments regarding binomial interest rate trees is least likely correct?",
+      "options": [
+       "Comment 1",
+       "Comment 2",
+       "Comment 3"
+      ],
+      "answer": 0,
+      "why": "The interest rate tree does two things: it generates the interest-rate-dependent cash flows AND supplies the interest rates used to discount them. Comments 2 and 3 are correct."
+     },
+     {
+      "q": "Using the backward induction method and the data in Exhibit 2, the value of the bond Vane has been asked to value is closest to:",
+      "options": [
+       "101.069",
+       "101.584",
+       "102.532"
+      ],
+      "answer": 2,
+      "why": "Time 3 cash flow 104. Time 2: 104/1.0450 = 99.522; 104/1.0325 = 100.726; 104/1.0235 = 101.612. Work back to Time 1 and Time 0 with the node expression (adding the 4 coupon at each step): 102.532."
+     },
+     {
+      "q": "Is Pemberly most likely correct in regard to his comments on calibrating a binomial interest rate tree?",
+      "options": [
+       "Yes.",
+       "No, he incorrectly describes the iterative process.",
+       "No, he is incorrect regarding the interest rate used."
+      ],
+      "answer": 0,
+      "why": "His description of the iterative calibration (consistent with volatility, interest rate model and the benchmark bond's market value, retrying other forward rate pairs until the price matches) is correct."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Ingrid AG is a European-based manufacturing firm that prepares its financial statements according to International Financial Reporting Standards (IFRS). Two members of Ingrid’s treasury group, Anders Lindqvist and Elise Brandt, are reviewing Ingrid’s portfolio of investments. They are interested in the investment income reported during the year and whether any of the investments should be considered impaired or need to be reclassified.\n\nOn July 1 the company purchased €4,000 of 10-year bonds of Solheim AG. The bonds have a 5% coupon payable annually and cost €3,705.60, reflecting the effective market rate of 6%. Ingrid is expecting to collect the interest and principal payments but if liquidity needs arise will sell the bonds. Lindqvist and Brandt start by reviewing how the bond is classified.\n\nThe company also holds bonds issued by Rosendal AG with a face value of €5 million and a coupon rate of 8%, payable semi-annually. The bonds have been held for 10 years and are classified as amortized cost.\n\nThe final investment is Ingrid’s longstanding holding of Aldera AG common shares. Aldera has been profitable and paid a consistent dividend every year since it was acquired, Additional details are available in Exhibit 1.\n\nExhibit 1 Additional Information Investment in Aldera AG (All € figures in 000s except per share data)\nAt the date of acquisition (February 28, 2008)\n# # shares purchased | 1.8 million\nTotal shares outstanding | 6.0 million\nPrice paid | €17 per share\nTotal net book value of Aldera | €90,000\nExcess of fair market value of plant and equipment above book value | €5,250\nExpected useful life remaining on plant and equipment | 15 years\nAldera uses straight-line depreciation for all of its tangible assets\nIngrid classified Aldera as an associate company\nAt December 31, 2019\n# Book value of investment on Ingrid’s statement of financial position | €59,022\nNet income reported by Aldera for 2019 | €12,375\nDividends paid by Aldera in 2019 | €0.50 per share\nLindqvist continues the meeting with the following statement:\n\n“Before we consider impairment, let us calculate the amount Aldera will contribute to Ingrid’s net earnings this year.”\n\nTurning to the Rosendal bonds, Brandt says:\n\n“If we’re looking for contributions to net earnings, I see an opportunity with the Rosendal bonds. The decline in interest rates over the years since the original purchase has significantly increased their market value. IFRS allows us to reclassify these bonds to fair value as a way to increase reported income in the period. It works well because the standards don’t require us to restate the prior periods when we reclassify.”",
+    "questions": [
+     {
+      "q": "The least appropriate classification for the investment in the Solheim bonds is:",
+      "options": [
+       "amortized cost.",
+       "fair value through profit and loss.",
+       "fair value through other comprehensive income."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Investments in a bond can be classified as amortized cost if it meets the two criteria; business model test and cash flow characteristic test. But if the asset may be sold prior to collecting all the contractual cash flows, as is Ingrid’s intent, it should be measured using one of the two fair value methods. | B. Incorrect. Because Ingrid’s intent is to sell the asset prior to collecting all the contractual cash flows if it requires liquidity, the bond may be measured at Fair value through profit and loss. | C. Incorrect. Because Ingrid’s intent is to sell the asset prior to collecting all the contractual cash flows if it requires liquidity the bond it may be measured at Fair value through other comprehensive income."
+     },
+     {
+      "q": "The contribution to Ingrid’s 2019 net earnings (in thousands) from its investment in Aldera is closest to:",
+      "options": [
+       "€3,607.5.",
+       "€3,712.5.",
+       "€4,507.5."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Ingrid would use the equity method to account for its investment in Aldera because of its classification as an associate company. Therefore, Ingrid will include its proportionate share of Aldera’s net earnings, minus the amortization of the excess purchase price from the initial acquisition. Ingrid owns 30%: (1.8/6.0, in millions of shares) of Aldera. Calculations Percentage of Aldera’s net income (in thousands)\t30% × €12,375\t€3,712.5 Minus amortization of the excess value (in thousands) of tangible assets at acquisition (from Exhibit 1)\t€5,250 × 30% = €1,575 €1,575/15 years\t–€105.0 Investment income (in thousands) from Aldera in 2019\t€3,607.5 | B. Incorrect because it does not include the amortization of the excess purchase price amount, just the % of net income: 3,712.5. | C. Incorrect because it also includes the dividends received from Aldera as income; they would be a reduction of the investment account on the balance sheet under the equity method: 3,607.5 + 900 = 4,507.50."
+     },
+     {
+      "q": "Which of the following best describes the accounting for goodwill in the Aldera investment?",
+      "options": [
+       "There is no goodwill arising from the Aldera investment",
+       "€2,025,000 included in the investment in Aldera account",
+       "€3,600,000 included in the investment in Aldera account"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because the equity method incorporates goodwill as part of the investment account reported on the balance sheet. | B. Correct. Under the equity method, goodwill is calculated at the date of acquisition and included in the carrying amount of the investment. Using data in Exhibit 1: Acquisition calculation Price per share\t€17.00 Number of shares\t× 1,800,000 Total price paid for 30%\t€30,600,000 30% of net book value of Aldera\t€27,000,000\t(0.30 × €90,000,000) Excess purchase price paid\t€3,600,000 Less: Allocated to plant and equipment\t(€1,575,000)\t(0.30 × €5,250,000) Goodwill\t€2,025,000 | C. Incorrect because it fails to allocate any of the purchase price excess to the plant and equipment."
+     },
+     {
+      "q": "Brandt’s comments about reclassifying the Rosendal bonds are best described as:",
+      "options": [
+       "both correct.",
+       "correct with respect to the effects on prior periods.",
+       "correct with respect to the rationale for reclassification."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Brandt is correct with respect to the restatement or prior periods, but not with respect to the rationale for reclassification. Reclassification of debt instruments is only permitted if the business model for the financial assets (objective for holding the financial assets) has changed in a way that significantly affects operations. | B. Correct. Brandt is correct with respect to his comments on the restatement of prior periods. When financial assets are reclassified there is no restatement of prior periods at the reclassification date. | C. Incorrect. Brandt is not correct with respect to the rationale for reclassification. Reclassification of debt instruments is only permitted if the business model for the financial assets (objective for holding the financial assets) has changed in a way that significantly affects operations."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Marovia is a medium sized developing country. Government policies have gradually opened the borders for international trade and the flow of capital. Trade is now substantial with members of the EU and is often denominated in Euros (€). During the early 2000s, privatization of some publicly owned industries, creation of a new free-floating currency, the Dornan (DRN), and sound policies implemented at the central bank put the economy on a track for steady growth and stability. Foreign currency reserves are sizable in comparison to the average daily turnover of the DRN.\nNadim Sarkis, Minister of Finance for Marovia, is preparing his annual report on the state of the economy and currency markets for the legislative branch of government. He will examine the long- and short-term trends in GDP growth, per capita income, inflation, and exchange rates. He is also responsible for recommending policy initiatives for the legislature to consider in order to promote overall economic prosperity for Marovian citizens.\nIn order to estimate long-term GDP growth, Sarkis examines the data in Exhibit 1 intending to use Solow’s growth accounting equation. \nExhibit 1 Long-Term Trends of Marovian Economy\nGrowth due to capital deepening | 2.3%\nPopulation growth | 3.4%\nGrowth rate of total factor productivity | –0.6%\nGrowth in labor productivity | 1.7%\nGrowth in capital | 6.1%\nShare of GDP paid to labor | 65%\nSarkis consults his colleague Zafer Ilgaz to review the policy choices facing the Marovian government and the possible effects on economic growth and per capita income.\nIlgaz states: \n“Marovia’s politicians are debating the effects of growth rate policies focused on three outcomes:\n* higher rates of saving and investment\n* importing more technological innovations\n* greater investment in research and development (R&D)\nI conclude that the impact from these policies will cause a long-term increase in the economy’s growth rate and our standard of living. Furthermore, if we emphasize R&D spending, then higher rates of saving and investment are unlikely to encounter diminishing marginal returns.”\nSarkis believes Marovia needs to address a recent increase in inflation and appreciation in the exchange rate. Should these trends accelerate, the country’s present prosperity could be threatened. Sarkis and Ilgaz discuss policy alternatives.\nSarkis states: “Since Marovia allows capital to flow freely, the clearest choice is to implement expansionary monetary and fiscal policies to stop the appreciation of the currency according to the Mundell–Fleming model.”\nIlgaz replies: “The long run solution to the problem, at least according to the portfolio balance approach, would be a policy choice by the Marovian government to run large budget deficits on a sustained basis.”\nSarkis adds: “There is also a timing dimension to consider. According to Dornbusch, with inflexible domestic prices in the short run, any decrease in nominal money supply will induce an increase in the domestic interest rate. This will encourage capital inflows and cause the exchange rate to overshoot to the upside in the short run, until domestic prices have a chance to react.”\nSarkis wants to be on the lookout for situations which might trigger a currency crisis. He and Ilgaz discuss recent economic developments that might provide potential warning signs.\nSarkis: “Moving our currency to a floating exchange rate has reduced our susceptibility to a currency crisis.”\nIlgaz: “Banking crises often precede currency crises, but our banking sector has grown and strengthened substantially by offering foreign denominated savings accounts to foreign investors and lending those funds for domestic infrastructure investments.”\nIlgaz: “I’m concerned that the ratio of exports to imports has been increasing recently and the ratio of M2 to bank reserves has been falling.”\nIn examining the currency markets, Sarkis is concerned that local currency dealers are being taken advantage of by arbitrageurs from Europe. He analyzes the rate quotes in Exhibit 2 for evidence of triangular arbitrage and carry trade opportunities by European hedge funds attempting to exploit the DNR currency. \nExhibit 2 Interbank and Dealer Currency Quotes and Rates\n# Currency Pair | Bid (spot) | Offer (spot) | Projected Spot in one year | One-Year MRR Rates\nInterbank Market: |  |  |  | \nEUR/USD | 0.8045 | 0.8065 | 0.8200 | EUR 0.8%\nDNR/USD | 1.2050 | 1.2100 | 1.2280 | USD 0.9%\nMarovian Dealer: |  |  |  | \nDNR/EUR | 1.5140 | 1.5190 | --- | DNR 3.0%",
+    "questions": [
+     {
+      "q": "Which of the statements regarding policy alternatives discussed between Sarkis and Ilgaz in response to Marovia’s recent increase in inflation and appreciation in exchange rate is least accurate?",
+      "options": [
+       "Sarkis’s statement regarding Dornbusch",
+       "Sarkis’s statement regarding Mundell–Fleming",
+       "Ilgaz’s statement regarding the portfolio balance approach"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect because Sarkis’s statement regarding Dornbusch is accurate. | B. Correct. Sarkis’s statement regarding the Mundell–Fleming model is inaccurate because restrictive (not expansionary) fiscal policy, along with expansionary monetary policy, would lead to capital outflows and cause the currency to depreciate assuming high capital mobility. | C. Incorrect because Ilgaz’s reply regarding the portfolio balance approach is accurate."
+     },
+     {
+      "q": "Which of the recent economic developments discussed by Sarkis and Ilgaz is most likely to lead to a currency crisis?",
+      "options": [
+       "The banking sector",
+       "The exchange rate system",
+       "The trend in terms of trade and monetary ratios"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Ilgaz’s description of growth in the banking sector coupled with short-term funding denominated in foreign currency can lead to a currency crisis. Countries with fixed or partially fixed exchange rates are more susceptible. Broad measures of money such as M2 are likely to be rising (not falling) just prior to a crisis. The terms of trade are favorable for Marovia. | B. Incorrect. Countries with fixed or partially fixed exchange rates are more susceptible. | C. Incorrect. Broad measures of money such as M2 are likely to be rising (not falling) just prior to a crisis."
+     },
+     {
+      "q": "Based on the exchange rate quotes in Exhibit 2, an opportunistic European hedge fund interested in triangular arbitrage between the dealer and interbank markets is most likely to:",
+      "options": [
+       "discover that no triangular arbitrage opportunity exists.",
+       "buy EUR in the interbank market and sell EUR to the Marovian dealer.",
+       "buy EUR from the Marovian dealer and sell EUR in the interbank market."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. There is an arbitrage profit opportunity as shown in the calculations. | B. Correct. Calculate the interbank implied cross rate for (DRN/EUR). Invert the (EUR/USD) quotes. The 0.8045 bid becomes 1/0.8045 = 1.243 offer for (USD/EUR). The 0.8065 offer becomes 1/0.8065 = 1.240 bid for (USD/EUR). Determine the interbank implied cross currency quotes for (DRN/EUR) as follows: Bid: 1.205(DRN/USD) × 1.24 (USD/EUR) = 1.4942 (DRN/EUR) Offer: 1.210 (DRN/USD) × 1.243 (USD/EUR) = 1.504 (DNR/EUR). The offer on the interbank is less than the bid by the dealer. A hedge fund can by EUR (sell DRN) in the interbank market for DRN 1.504 and sell EUR (buy DRN) to the Marovian dealer for a higher price of DRN 1.514. MAX17024-IS-Fa | C. Incorrect. This is the opposite of the profitable transaction."
+     },
+     {
+      "q": "Using the data provided in Exhibit 2 for the interbank market only, a European investor who attempts to exploit the DNR currency market with a normal one-year carry trade based on a 100,000 EUR position will most likely achieve a net profit in EUR of:",
+      "options": [
+       "1,963.",
+       "2,218.",
+       "3,018."
+      ],
+      "answer": 0,
+      "why": "A. Correct. Using the data provided in Exhibit 2 for the interbank market only, a European investor who attempts to exploit the DNR currency market with a normal one-year carry trade based on a 100,000 EUR position will most likely achieve a net profit in EUR of: Sell 100,000 EUR × (1/0.8065)(USD/EUR) = 123,992.56 USD Sell 123,992.56 USD × 1.2050(ENR/USD) = 149,411 DNR Invest at 3.0% DRN MRR: 149,411 DNR × (1 + 0.03) = 153,893.37 DNR Convert to EUR at projected spot: 153,893.37 DNR × (1/1.228)(USD/DNR) × 0.82(EUR/USD) = 102,763 EUR Less borrowing cost: 100,000 × 0.8% = EUR 800 Ending balance = EUR101,963 EUR Less 100,000 beginning value = EUR 1,963 profit | B. Incorrect. The mistake is using the bid of 0.8045 and inverting it in the first step. When you invert, the quote has a new base currency. The inverted bid is now an ask. | C. Incorrect. The mistake is omitting the deduction of the borrowing cost."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Francesca Verdello is an equity portfolio manager at Gruppo Sangiove, Spa, an investment management firm located in Verona, Italy. She is meeting with Luca Brunello, the equity research manager at Grechetto Partners, with the objective of receiving a buy rating on her funds from this key institutional investment consulting firm.\n\nVerdello and Brunello meet to discuss the firm’s investment philosophy, team, and process, as well as her performance track record. Verdello tells Brunello that she firmly believes in active management and her ability to add value relative to a benchmark because markets are inefficient.\n\nVerdello starts the meeting by stating that the criteria for benchmark selection is as follows: “It should be market capitalization weighted and should reflect the opportunity set available. The positions can be replicated at a low cost, weights are known ex ante, and return data are timely on an ex post basis. Value added is calculated as the sum of the active asset allocation decisions and the weighted sum of the value added from security selection. The firm conducts performance attribution based on a decomposition of value added into several sources, which include asset allocation, sector selection, and security selection.”\nThe meeting then progresses to a discussion of the risk and return measures presented in Exhibit 1. Verdello notes that during this period, the risk-free rate was 1.75%, and the benchmark return was 9.00%.\n\nExhibit 1 Data for the Sangiove Funds\n#  | Portfolio Return | Active Risk\nFund A | 10.10% | 4.00%\nFund B | 10.50% | 6.25%\nFund C | 11.85% | 7.30%\nBrunello tells Verdello that he likes to measure the consistency of active returns when reviewing and comparing managers. Because Verdello manages three funds, he was going to rank them in his analysis.\n\nBrunello asks Verdello, “As an active manager, what is your approach to generating excess returns?”\n\nVerdello responds, “I am a firm believer in the fundamental law of active management” and makes the following three points to support her view:\n\nPoint 1: The productivity of an active portfolio manager depends on both the skill level and how many opportunities are identified and put to use in the funds. The information ratio measures how much active return has been earned for the level of active risk taken.\nPoint 2: The information coefficient is the correlation between forecasted active returns and realized active returns. The transfer coefficient measures the degree to which a fund manager’s forecast is translated into active weights.\nPoint 3: Breadth is important and represents the number of independent decisions a fund manager makes in constructing the portfolio. Mathematically, breadth can be expressed as the number of independent investment opportunities squared.\nVerdello’s and Brunello’s discussion evolves into a debate about the strengths and limitations of the fundamental law of active management. Verdello provides her perspective, “The strength of the fundamental law of active management is that it provides a framework for evaluating and comparing managers based on skill. It can even produce operational measurements of the essential elements of an active management strategy. However, it also has some limitations. First, it does not consider covariances in calculating breadth. Second, it cannot measure ex ante value added.”",
+    "questions": [
+     {
+      "q": "Are the criteria that Verdello describes to Brunello at the start of the meeting most likely correct?",
+      "options": [
+       "Yes",
+       "No, she is incorrect regarding benchmark selection",
+       "No, she is incorrect regarding performance attribution"
+      ],
+      "answer": 0,
+      "why": "A. Correct because Verdello is correct in describing the process for selecting a benchmark, the calculation of value added, and performance attribution. The criteria she describes across these practices are a reasonable approach to measuring value added in active portfolio management. | B. Incorrect because Verdello’s comment regarding benchmark selection is correct. | C. Incorrect because Verdello’s comments regarding value-added calculation and performance attribution are correct."
+     },
+     {
+      "q": "Given Brunello’s preference for risk and return measurement and based on the data in Exhibit 1, how does he most likely rank the funds?",
+      "options": [
+       "Fund A, Fund B, Fund C",
+       "Fund B, Fund C, Fund A",
+       "Fund C, Fund A, Fund B"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because the correct ranking is based on the information ratio and is Funds C (0.39), Fund A (0.28), Fund B (0.24). | B. Incorrect because this is the ranking based on the Sharpe ratio. | C. Correct because the correct measure of risk and return in this application is the information ratio. The information ratio compares the active return from a portfolio relative to a benchmark with the volatility of the active return. It provides a way to measure the consistency of active returns. The Sharpe ratio is used to measure portfolio return in excess of a riskless rate. Calculate each fund’s information ratio as follows: I R = R P - R B S T D R P - R B = R A S T D R A ; I R = 10 . 10 + 9 . 00 4 . 00 = 0 . 28 ; I R = 10 . 50 - 9 . 00 6 . 25 = 11 . 85 - 9 . 00 7 . 30 = 0 . 39 The fund with the highest information ratio shows the most value added from active management. The ranking per the calculations is therefore Fund C, Fund A, Fund B."
+     },
+     {
+      "q": "Which of Verdello’s points regarding the fundamental law of active management is least likely accurate?",
+      "options": [
+       "Point 1",
+       "Point 2",
+       "Point 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because Point 1 is correct. | B. Incorrect because Point 2 is correct. | C. Correct because Verdello is correct with regard to Points 1 and 2. When she discusses breadth in Point 3, mathematically, it is expressed as the square root of the number of independent investment opportunities. Conceptually, breadth is equal to the number of independent decisions made per year by the investor in constructing the portfolio."
+     },
+     {
+      "q": "Verdello is least likely correct with regard to which aspect of the strength and limitations of the fundamental law of active management?",
+      "options": [
+       "The strength",
+       "First limitation",
+       "Second limitation"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because Verdello is correct regarding the strengths of the fundamental law of active management. | B. Incorrect because Verdello is incorrect that the fundamental law of active management does not consider covariances in calculating breadth. | C. Correct because Verdello provides Brunello with several strengths and limitations of the fundamental law of active management, although her list is not exhaustive. Her comment regarding the strengths are correct as is the first point regarding covariances in calculating breadth. Her comment regarding the inability to measure ex ante value added is not correct; the model can measure both ex ante and ex post value added."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Thornfeld is currently valuing LPE, a private furniture manufacturing company based in France. The company is owned entirely by the Duvall family, with several family members employed as senior company managers. Paul Duvall is the current CEO and owns 25% of LPE stock. LPE’s most recent income statement as part of its reviewed financial statements is as follows:\n\n# As of 31 December (in EUR) | As Reported\nRevenues | 30,000,000\nCost of goods sold | 18,000,000\nGross profit | 12,000,000\nSG&A expenses | 8,000,000\nEBITDA | 4,000,000\nDepreciation and amortization | 2,400,000\nEarnings before interest and taxes | 1,600,000\nPro forma taxes (at 25%) | 400,000\nOperating income after taxes | 1,200,000\nAs Thornfeld reviews compensation expenses, he learns that Paul Duvall’s annual compensation is EUR 300,000 and that CEOs of similarly sized consumer durable goods companies earn EUR 600,000 on average.\n\nTo estimate LPE’s required return on equity, Thornfeld gathers betas from public furniture manufacturing companies, and after making appropriate adjustments, estimates LPE’s beta at 0.80. He uses an equity risk premium of 6%, a small-cap stock premium of 2%, a company-specific stock premium of 1.5%, and an industry risk premium of 1%.\n\nAfter making other normalizing assumptions to LPE’s income statement and deducting the change in long-term assets of EUR 600,000 (equal to EUR 3,000,000 in capital expenditures less EUR 2,400,000 in depreciation), Thornfeld estimates FCFF for the base year to be EUR 600,000. He decides to use the CCM in his income approach to valuing LPE with a WACC of 8% and perpetual growth of 4%.\n\nGiven the availability of similar publicly traded furniture manufacturing companies, Thornfeld also uses a market approach to value LPE. He finds an average EV/Sales multiple of 0.60 from these public comparable companies. Thornfeld notes that LPE’s debt is currently EUR 6 million.\n\nPaul Duvall is seeking an estimate of the value of his LPE ownership stake. In the course of discussing the ownership structure, Thornfeld concludes that none of the family members, including Paul, has a controlling interest in the company. Thornfeld estimates discounts for lack of control and lack of marketability as 20% and 15%, respectively.",
+    "questions": [
+     {
+      "q": "Which amount is closest to LPE’s normalized EBITDA after considering Paul Duvall’s compensation?",
+      "options": [
+       "EUR 3.7 million",
+       "EUR 4.0 million",
+       "EUR 4.3 million"
+      ],
+      "answer": 0,
+      "why": "A is correct. Paul is paid EUR 0.3 million less than market, so normalized EBITDA = 4.0 − 0.3 = EUR 3.7 million."
+     },
+     {
+      "q": "Which amount most accurately reflects the difference between Thornfeld’s estimates of LPE’s required return on equity using the build-up approach versus the expanded CAPM?",
+      "options": [
+       "1.0% (build-up > expanded CAPM).",
+       "1.2% (build-up > expanded CAPM).",
+       "2.2% (build-up > expanded CAPM)."
+      ],
+      "answer": 2,
+      "why": "C is correct. Build-up = 6% + 2% + 1.5% + 1% = 10.5%; expanded CAPM = 0.8 × 6% + 2% + 1.5% = 8.3%; difference 2.2%."
+     },
+     {
+      "q": "Which of the following is closest to the proper calculation of LPE’s EV using the CCM?",
+      "options": [
+       "EUR 15 million",
+       "EUR 30 million",
+       "EUR 15.6 million"
+      ],
+      "answer": 2,
+      "why": "C is correct. EV = FCFF0 × (1 + g)/(WACC − g) = 0.6 × 1.04/(0.08 − 0.04) = EUR 15.6 million."
+     },
+     {
+      "q": "Which of the following is closest to the proper calculation of LPE’s equity value using the EV/Sales multiple?",
+      "options": [
+       "EUR 18 million",
+       "EUR 12 million",
+       "EUR 24 million"
+      ],
+      "answer": 1,
+      "why": "B is correct. EV = 0.60 × 30 = EUR 18 million; less debt of 6 = EUR 12 million."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Matthew Green, a research analyst, is asked to evaluate the performance of Third Coastal Bank (SNB), a US commercial bank. Green prepares a research report to support his recommendation. \n\nGreen notices that SNB's CEO was appointed 18 months ago. Previously, the CEO was the president of a non-profit, non-public depository institution that offered a comparable selection of deposits, loans, and mortgages as SNB.\n\nGreen includes the following Basel III highlights in his research report:\n\nHighlight 1 : Basel III specifies the minimum percentage of its risk-weighted assets that a bank must fund with equity capital. \nHighlight 2 : Basel III specifies that a bank must hold enough high-quality liquid assets to cover its liquidity needs in a 30-day liquidity stress scenario. \nHighlight 3 : Basel III requires a bank to have a minimum amount of stable funding relative to the bank's liquidity needs in a 90-day liquidity stress scenario. \nTo assess the ability of SNB to meet Basel III minimum capital requirements, Green calculates SNB's Total Tier 1 Capital. Green reviews the latest financial disclosures, and includes retained earnings, accumulated other comprehensive income, and all instruments with a fixed maturity that are subordinate to depositors in his calculation.\n\nGreen notices that the allowance for loan losses decreased year over year as a result of a recovery of a prior fiscal year charge-off. Green calculates several comparative ratios to assess the quality of the allowance for loan losses.",
+    "questions": [
+     {
+      "q": "Which of the following best describes the CEO's previous financial institution?",
+      "options": [
+       "Mutual bank",
+       "Mortgage bank",
+       "Savings and loan association"
+      ],
+      "answer": 0,
+      "why": "A. Correct because credit unions, cooperative and mutual banks are depository institutions that function like banks and offer many of the same services as banks. They are owned by their members, rather than being publicly traded like many banks. Another difference from commercial banks is that these institutions are organized as non-profits and, therefore, do not pay income taxes. | B. Incorrect because mortgage banks originate, sell, and service mortgages and are usually active participants in the securitization markets. | C. Incorrect because savings and loan associations are depository institutions that specialize in financing long-term residential mortgages."
+     },
+     {
+      "q": "Which of the following highlights included in Green's research report is incorrect?",
+      "options": [
+       "Highlight 1",
+       "Highlight 2",
+       "Highlight 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because Basel III specifies the minimum percentage of its risk-weighted assets that a bank must fund with equity capital. Therefore, Highlight 1 is an accurate statement. | B. Incorrect because Basel III specifies that a bank must hold enough high-quality liquid assets to covers its liquidity needs in a 30-day liquidity stress scenario. Therefore, Highlight 2 is an accurate statement. | C. Correct because Basel III requires a bank to have a minimum amount of stable funding relative to the bank's liquidity needs over a one-year horizon and not a 90-day liquidity stress scenario. Therefore, Highlight 3 is an inaccurate statement."
+     },
+     {
+      "q": "In calculating SNB's Total Tier 1 Capital, Green is incorrect in regard to:",
+      "options": [
+       "retained earnings.",
+       "accumulated other comprehensive income.",
+       "instruments that are subordinate to depositors."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect because common Equity Tier 1 Capital includes common stock, issuance surplus related to common stock, retained earnings, accumulated other comprehensive income, and certain adjustments including the deduction of intangible assets and deferred tax assets. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should be included in SNB's Total Tier 1 Capital. | B. Incorrect because common Equity Tier 1 Capital includes common stock, issuance surplus related to common stock, retained earnings, accumulated other comprehensive income, and certain adjustments including the deduction of intangible assets and deferred tax assets. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should be included in SNB's Total Tier 1 Capital. | C. Correct because instruments that are subordinate to depositors and to general creditors of the bank must not have a fixed maturity to be included in Other Tier 1 Capital. Other Tier 1 Capital includes other types of instruments issued by the bank that meet certain criteria. The criteria require, for example, that the instruments be subordinate to such obligations as deposits and other debt obligations, not have a fixed maturity, and not have any type of payment of dividend or interest that is not totally at the discretion of the bank. Therefore, this response should not be included in SNB's Total Tier 1 Capital."
+     },
+     {
+      "q": "The comparative ratio that Green is least likely to calculate is the ratio of the allowance for loan losses to:",
+      "options": [
+       "net income.",
+       "net loan charge-offs.",
+       "non-performing loans."
+      ],
+      "answer": 0,
+      "why": "A. Correct because this ratio would not provide any insight to the quality of the allowance for loan losses as it would only represent a comparison against the overall net income of the financial institution. | B. Incorrect because it is one of three ratios are helpful in assessing the quality of the allowance for loan losses: - the ratio of the allowance for loan losses to non-performing loans - the ratio of the allowance for loan losses to net loan charge-offs - the ratio of the provision for loan losses to net loan charge-offs | C. Incorrect because it is one of three ratios are helpful in assessing the quality of the allowance for loan losses: - the ratio of the allowance for loan losses to non-performing loans - the ratio of the allowance for loan losses to net loan charge-offs - the ratio of the provision for loan losses to net loan charge-offs"
+     }
+    ]
+   }
+  ]
+ },
+ "hints": {},
+ "key": "BCABAAAABCBBAAAABCBAAACAAABBBABAACCCACCBACCA"
+}

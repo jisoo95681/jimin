@@ -194,3 +194,11 @@ Answers BBBCCACBABABABACBCACACABACAABACAACBCBBABCACABAABCCA = 34/51 (66.7%). Wro
 
 ## Real CFA Institute Mock Paper 2 (13 Nov, v240)
 Set id `mockp2`, under Mocks after Mock 17: the 11 vignettes m2-1..m2-11 of bank/pasted_vignettes.json exactly as stored (44 Q, original option order, original explanations; only tab tables turned into table rows and the "Expand / Collapse" UI line dropped). Built by bank/exam/mockpaper2.py -> mockpaper2.json, added in build.py. No hand-written hints (app auto-shades). Key: CCCAACCAAABABCCCCBACBAACBCCBAABCBBACBCBBBBBA
+
+## Big-subject mocks A1-A4 (14 Nov, v241)
+Plan: A1-A8 big subjects (Equity, FSA, FI, PM; no Ethics), B1-B6 small subjects + 1 Ethics unit; 4 mocks per day from 15 Nov (bank/exam/mockAB_progress.md). A1-A4 = real never-used vignettes (draw bank/exam/mockA_pick.json), names changed (a_names_map.py), concept options shuffled where the explanation allowed, tables converted; NUMBERS NOT changed (user chose the simplified A route), no hand-written hints (auto-shading). Builder bank/exam/mockA_build.py -> mockA1..4.json. Keys:
+A1 BCABAAAABCABAAAABCBAAACAAABBBABAACCCACCBACCA
+A2 ACCCABCCCBCBABBAAAAAAABACBBBBACCBAACACABABAB
+A3 BBCCCBCBBBBAACCAAAAACCABAACCBCBBBBCCBABBCBAC
+A4 ABBBBAAABBCCBCCBBABCABCABBCABCCABCCBBABAACAC
+Unused A5-A8 slots with RESKIN (FSA 3, FI 7) still to be filled; A5-A8 not built yet.
