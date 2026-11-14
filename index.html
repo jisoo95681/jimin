@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v242 · 2026-11-14";
+  const APP_VERSION = "v243 · 2026-11-14";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1797,6 +1797,11 @@
     app.append(set.kind === "ethics" ? nav("Ethics", () => exEthicsHub("back")) : nav("Exam", () => examHub("back")));
     const st = exLoad(), s = st.sets[id] || {}, nq = exFlat(set).length;
     app.append(el("h1", { className: "title" }, set.title), el("p", { className: "sub" }, `${nq} questions · ${set.vignettes.length} vignettes · ${exHms(set.minutes * 60)} · ${set.desc || ""}`));
+    if (set.concept) {
+      const cc = el("div", { className: "card" }); cc.append(el("b", {}, "Design concept"));
+      set.concept.split("\n").forEach(t => cc.append(el("p", { style: "margin:6px 0" }, t)));
+      app.append(cc);
+    }
     const card = el("div", { className: "card" });
     if (s.cur) {
       const answered = Object.keys(s.cur.ans || {}).length;
