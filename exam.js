@@ -14625,6 +14625,1044 @@ const EXAM_SETS = [
   "concept": "The real CFA Institute Level II Mock B, Session 2 (44 questions, 2 h 12 min), exactly as published. Each paper is marked separately; the combined result appears after Paper 2."
  },
  {
+  "id": "mockC1",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock C · Paper 1",
+  "kind": "mockb",
+  "group": "C",
+  "minutes": 132,
+  "desc": "Real CFA Institute Level II Mock 1, Session 1: vignettes, questions and explanations as published (44 questions, 2 h 12 min).",
+  "vignettes": [
+   {
+    "topic": "Econ",
+    "body": "Janet Kuspa is an Australia-based manager of globally diversified portfolios.\nOne year ago, Kuspa hedged the currency risk of a Australian dollar (AUD) 50,000,000 long position by selling AUD one year forward at an all-in forward price of 0.7530 USD/AUD (0.7530 USD per 1 AUD). Now, nine months before the forward's settlement date, Kuspa marks the forward position to market based on the data in Exhibit 1 (MRR is the market reference rate).\nExhibit 1\nExchange Rate Data (USD/AUD)\n# Maturity | Bid | Offer\nSpot | 0.7233 | 0.7234\n9 months (forward points) | +7 | +8\nOther Data\n# Interest Rate | US | Australia\nMRR (annual rate) | 0.28% | 0.10%\nA few days later, Kuspa evaluates a carry trade strategy that involves borrowing AUD for one year and converting it to USD to earn the US MRR. She calculates the expected 1-year all-in percentage return of this strategy, based on the following:\nThe 1-year MRR is 0.31% for the USD\nThe 1-year MRR is 0.09% for the AUD\nThe current mid-market USD/AUD spot rate is 0.7235\nKuspa's prediction is that the USD/AUD spot rate will be 0.7243 at the end of one year.\nKuspa next evaluates three countries with floating exchange rates, as summarized in Exhibit 2. She uses the Mundell-Fleming model to forecast the short-term monetary and fiscal policy impacts on each of their domestic currencies.\nExhibit 2\n# Economic Characteristic | Country A | Country B | Country C\nCapital mobility | High | Low | Low\nMonetary policy | Expansionary | Expansionary | Restrictive\nFiscal policy | Restrictive | Restrictive | Restrictive\nFinally, Kuspa analyzes the risks related to the currencies of three emerging market countries, summarized in Exhibit 3. These countries have recently experienced increased global investor interest and significant foreign capital inflows. Kuspa uses the information in Exhibit 3 to evaluate the potential negative effects of these inflows.\nExhibit 3\n# Risk Characteristic | Country D | Country E | Country F\nEquity market returns (5-year compound annual growth rate) | 20% | 7% | 19%\nExternal debt (% of GDP) | 120% | 60% | 300%\nForeign exchange reserves (% average daily foreign exchange turnover in domestic currency) | 27% | 30% | 30%",
+    "questions": [
+     {
+      "q": "The mark-to-market value (in USD) of the USD/AUD forward position is closest to: Correct answer:",
+      "options": [
+       "1,436,982.",
+       "1,440,000.",
+       "1,446,961."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because it is the undiscounted net cash inflow.\n50,000,000 × (0.753 – 0.7234) = 1,440,000\nC. Incorrect. Incorrect because it is based on the bid quotes rather than the offer quotes in Exhibit 1. Using bids, the all-in forward price is 0.7233 + 0.0007 = 0.7240, the offsetting transaction using this incorrect rate is (AUD 50,000,000)(0.7240 USD/AUD) = USD 36,200,000, resulting in a net cash inflow of USD 37,650,000 − USD 36,200,000 = USD 1,450,000 which, in present value terms, is (USD 1,450,000)/[1 + (0.28%)(0.750)] = USD 1,446,961."
+     },
+     {
+      "q": "Based on the Mundell-Fleming model, which country is most likely to experience appreciation of its domestic currency in the short term?",
+      "options": [
+       "Country A",
+       "Country B",
+       "Country C"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because with floating exchange rates and high capital mobility, a domestic currency will appreciate given a restrictive domestic monetary policy and/or an expansionary fiscal policy. Similarly, a domestic currency will depreciate given an expansionary domestic monetary policy and/or a restrictive fiscal policy. In this explanatory table C↓ means the currency depreciates.\nCharacteristic\tCountry A\nCross-border capital mobility\tHigh\nMonetary policy\tExpansionary ⇒ C↓\nFiscal policy\tRestrictive ⇒ C↓\nNet effect:\t⇒C↓\nB. Incorrect. Incorrect because with low capital mobility the effect of an expansionary monetary policy combined with a restrictive fiscal policy is indeterminate. With low capital mobility, an expansionary monetary policy increases spending and imports, increasing trade deficits, and is bearish for the exchange rate. A restrictive fiscal policy would tend to have the opposite effect on spending, trade deficit, and the exchange rate, so the overall effect is indeterminate.\nCharacteristic\tCountry B\nCross-border capital mobility\tLow\nMonetary policy\tExpansionary ⇒ C ↓\nFiscal policy\tRestrictive ⇒ C↑\nNet effect:\t⇒C effect indeterminate\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "The expected all-in return of Kuspa's carry trade strategy (in AUD terms) is closest to: Correct answer:",
+      "options": [
+       "0.10%.",
+       "0.19%.",
+       "0.22%."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the 0.09% cost of borrowing AUD, the funding currency, needs to be subtracted from 0.19%.\nC. Incorrect. Incorrect because it is the MRR interest rate differential, 0.31% – 0.09% = 0.22%, and does not incorporate exchange rates into the computation of the all-in return."
+     },
+     {
+      "q": "Based on Kuspa's risk analysis, which emerging market country is least exposed to the potential negative effects of the foreign capital inflows?",
+      "options": [
+       "Country D",
+       "Country E",
+       "Country F"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because compared to Country E (1) Country D's higher asset price growth (20% 5-year compound growth rate versus 7% for Country E) means Country D is more likely to enter or be in an asset bubble related to foreign capital chasing high returns; and (2) Country D's level of external debt as a % of GDP is twice as large as Country E's, indicating a greater risk of the potential bad effects of running large current account deficits (e.g., deteriorating terms of trade may be associated with currency crises).\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because its 19% compound asset price growth and 300% ratio of external debt to GDP are factors increasing the likelihood that Country F may impose capital controls compared to Country E, while its level of foreign exchange reserves (matching Country E's) gives Country F no preference over Country E."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Margaret Smith is a consultant specializing in private company valuations. She evaluates Lytham Corporation, a small, family-owned company whose CEO is a member of the controlling family. Smith wants to normalize Lytham's reported operating income to compare it with public companies in the same industry. She notes the following items:\nThe current annual salary of Lytham's CEO is $600,000. The annual salary of a similarly qualified CEO of a comparable public company is $1,000,000.\nLytham owns a luxury apartment in Singapore that is used by the CEO for both business and personal travel. The apartment would be sold if Lytham were a public company. The annual operating costs for the property are $200,000 per year and the annual depreciation expense is $200,000.\nLytham pays 15% of its net income in dividends to its owners. Smith believes the payout ratio would be closer to 50% if Lytham were a public company.\nSmith calculates the required return on equity for Lytham using the expanded CAPM and the information in Exhibit 1. Smith determines that the appropriate industry risk premium is zero.\nExhibit 1\nBeta | 1.3\nRisk-free rate | 6%\nEquity risk premium | 4%\nSmall-cap risk premium | 3%\nCompany-specific risk premium | 1%\nCalcyte is a publicly traded company with an equity value of $9,043 million. Smith conducts a valuation of Calcyte for a private buyout client who is interested in purchasing a controlling stake. She determines the relevant discount for lack of control to be 23% and the relevant discount for lack of marketability to be 20%.\nSmith also values Ramabo Corporation, a privately held company with annual revenues of $10 million. Smith identifies comparable public companies and calculates an average EV/Sales multiple for each of Ramabo's three business segments. She uses these multiples and the revenue generated by each segment in Exhibit 2 to calculate Ramabo's EV based on the guideline public company method.\nExhibit 2\n#  | Revenue (in $ Millions) | EV/Sales\nSegment A | 6 | 3.3\nSegment B | 3 | 1.2\nSegment C | 1 | 4.9",
+    "questions": [
+     {
+      "q": "The required adjustments to normalize Lytham's earnings will result in:",
+      "options": [
+       "a reduction in reported operating income.",
+       "no change in reported operating income.",
+       "an increase in reported operating income."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because there should be no change to Lytham's reported operating income after the adjustments.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because there should be no change to Lytham's reported operating income after the adjustments."
+     },
+     {
+      "q": "The required return on equity for Lytham using the expanded CAPM is closest to:",
+      "options": [
+       "14.0%.",
+       "15.2%.",
+       "16.4%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the calculation of the expanded CAPM omits beta:\nre = 6.0% + 4.0% + 3.0% + 1.0%\n= 14.0%\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the calculation of the expanded CAPM applies beta to the small-cap risk premium and the company-specific risk premium, in addition to the equity risk premium:\nre = 6.0% + 1.30 × (4.0% + 3.0% + 1.0%)\n= 6.0% + 10.4%\n= 16.4%"
+     },
+     {
+      "q": "After applying the appropriate discounts or premiums, the value of Calcyte's equity (in $ millions) to the private buyout client should be closest to:",
+      "options": [
+       "8,898.",
+       "9,395.",
+       "11,744."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the control premium is not adjusted when calculating the estimated equity value.\nValue of equity to the client after adjusting for control premium and DLOM\n= Equity value × (1 + Control premium) × (1 – DLOM)\n= $9,043 million × (1 + 0.23) × (1 – 0.20)\n≈ $8,898 million\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the discount for lack of marketability is not applied when calculating the estimated equity value.\nValue of equity to the client after adjusting for control premium\n= Equity value × (1 + Control premium)\n= $9,043 million × (1 + 0.2987)\n≈ $11,744 million"
+     },
+     {
+      "q": "Using the guideline public company method, Ramabo's EV (in $ millions) is closest to: Correct answer:",
+      "options": [
+       "28.3.",
+       "31.3.",
+       "33.0."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Ramabo's EV is calculated using the guideline public company method and a simple average composite EV/Sales multiple as follows:\nEV = Revenue × Composite EV/Sales\nRevenue is given in the case as $10 million, and the composite EV/Sales multiple is calculated as:\nComposite EV/Sales = (3.3 + 1.2 + 4.9)/3\n= 9.4/3\n≈ 3.1333\nEV = $10 million × 3.1333\n≈ $31.3 million\nC. Incorrect. Incorrect because Ramabo's EV is calculated using the guideline public company method and the EV/Sales multiple of the largest segment (Segment A) as follows:\nEV = Revenue × EV/Sales\n= $10 million × 3.3\n= $33.0 million"
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Fazly Ahmad is an equity analyst researching Rose Mass Rapid Limited (RMRL), a Canadian transport operator. RMRL reports under IFRS and has a 31 December year end. Ahmad compares RMRL to one of its competitors, Orchid Mass Transit Inc., which reports under US GAAP and also has a 31 December year end.\nOn 1 January of the current year, RMRL purchased a 30% interest in Begonia Bus Inc.'s outstanding common equity for $12,000,000. The excess purchase price was $2,150,000. Half of the excess was attributable to Begonia's plant and equipment, and the other half was attributable to land. Begonia depreciates its plant and equipment using the straight-line method with a remaining useful life of 10 years and zero residual value. RMRL has the ability to exercise significant influence over Begonia. Ahmad expects Begonia to report net income of $1,500,000 for the current year and not pay any dividends. Ahmad assumes Begonia does not have any intercompany transactions with RMRL. He then estimates the carrying value of RMRL's investment in Begonia at the end of the current year.\nDuring the current year, RMRL acquired 80% of the outstanding shares of Petunia Transit Co. in exchange for common shares of RMRL. At the time of the acquisition, RMRL accounted for the acquisition using the partial goodwill method (Method 1). Also during the current year, Orchid acquired a controlling interest in another company and accounted for the acquisition using the full goodwill method (Method 2). Ahmad considers whether differences in the accounting treatment of these acquisitions could affect certain financial metrics.\nAhmad reviews the trend in RMRL's balance-sheet-based and cash-flow-based accruals ratios, as well as the trend in the Beneish M-scores and Altman Z-scores over the past two years, using the data in Exhibit 1.\nExhibit 1\n#  | Most Recent Year | Two Years Ago\nBalance-sheet-based accruals ratio | 4.3% | 0.6%\nCash-flow-based accruals ratio | 1.7% | –2.5%\nBeneish M-score | –1.94 | –1.43\nAltman Z-score | 1.54 | 1.85",
+    "questions": [
+     {
+      "q": "The estimated carrying value for RMRL's investment in Begonia at the end of the current year should be: Correct answer:",
+      "options": [
+       "$12,342,500.",
+       "$12,450,000.",
+       "$13,392,500."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because this calculation does not account for the annual amortization of the excess purchase price attributable to Begonia's plant and equipment:\n= $12,000,00 + (30% × $1,500,000)\n= $12,450,000\nC. Incorrect. Incorrect because this calculation includes 100% of Begonia's net income instead of RMRL's 30% share of Begonia's net income:\n= $12,000,000 + $1,500,000 – $107,500\n= $13,392,500"
+     },
+     {
+      "q": "Compared to Method 2, RMRL's consolidated book value per share under Method 1 would be: Correct answer:",
+      "options": [
+       "lower.",
+       "the same.",
+       "higher."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the carrying value of the non-controlling interest, and thus total equity and book value per share, is different between the partial goodwill method (Method 1) and the full goodwill method (Method 2).\nC. Incorrect. Incorrect because the full goodwill method (Method 2) will result in higher stockholders' equity than the partial goodwill method (Method 1). Thus, the book value per share is higher, rather than lower, using the full goodwill method (Method 2)."
+     },
+     {
+      "q": "With respect to RMRL's accruals ratios, Ahmad should conclude that",
+      "options": [
+       "both the balance-sheet-based accruals ratio and the cash-flow-based accruals ratio have improved.",
+       "the balance-sheet-based accruals ratio has deteriorated, but the cash-flow-based accruals ratio has improved.",
+       "the balance-sheet-based accruals ratio has improved, but the cash-flow-based accruals ratio has deteriorated."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the absolute value of the balance-sheet-based accruals ratio increased, reflecting a deterioration in the ratio.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the absolute value of the balance-sheet-based accruals ratio increased, whereas the absolute value of the cash-flow-based accruals ratio decreased. Thus, the balance-sheet-based accruals ratio has deteriorated, while the cash-flow-based accruals ratio has improved."
+     },
+     {
+      "q": "Based on the trends in the Beneish M-scores and Altman Z-scores, Ahmad should conclude that:",
+      "options": [
+       "both the probability of earnings manipulation and the probability of bankruptcy have decreased.",
+       "the probability of earnings manipulation has decreased and the probability of bankruptcy has increased.",
+       "the probability of earnings manipulation has increased and the probability of bankruptcy has decreased."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because, although both scores have decreased, the probability of bankruptcy has increased since the Z-score is now lower. \nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the probability of earnings manipulation has decreased since the M-score has become more negative. The Z-score has decreased, indicating that the probability of bankruptcy has increased."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "John Smith, an advisor at Godel Securities, is meeting with one of his clients, Client A, to provide advice on fixed income investments. Client A currently has investments in Country 1 and Country 2. Smith first analyzes the fixed income market in Country 1. In Exhibit 1, he gathers spot rates (with annual compounding) for government zero-coupon bonds, as well as swap spreads, for maturities of one, two, and three years. He uses that information to construct a forward curve.\nExhibit 1\n# Maturity (years) | 1 | 2 | 3\nGovernment spot rate | 3% | 5% | 8%\nSwap spread | 0.20% | 0.25% | 0.40%\nSmith tells Client A that there are a number of theories that attempt to explain the shape of the yield curve. While the computation of forward rates is straightforward, Smith states that he believes forward rates are upwardly biased predictors of future spot rates.\nIn Country 2, there is uncertainty about how the government will manage inflation. Smith evaluates the effect on Client A's portfolio from changes in the yields on 1-year, 3-year and 10-year securities. Selected key rate durations for the portfolio as well as Smith's expected change in interest rates at each key rate are shown in Exhibit 2.\nExhibit 2\n# Security | Key Rate Duration | Expected Key Rate Change\n1-year | 0.50 | 1.00%\n3-year | 0.75 | 0.75%\n10-year | 2.50 | –0.25%\nSmith computes the percentage change in the value of the portfolio. He observes that the average change in the three rates is 0.50%.\nSmith also advises Client A on an actively managed corporate bond portfolio in Country 2 using the swap spread as a measure of risk. Smith discusses the implied credit and liquidity risk with Client A using the 5-year swap rate as an example. The 5-year government and corresponding fixed swap rate at selected times over the last 12 months is presented in Exhibit 3.\nExhibit 3\n# Period | Government Bond Yield (%) | Fixed Swap Rate (%)\n1 month ago | 7.48 | 8.28\n6 months ago | 8.51 | 8.86\n12 months ago | 8.55 | 8.84",
+    "questions": [
+     {
+      "q": "For Country 1, the forward rate for a 2-year zero-coupon bond issued in one year is closest to:",
+      "options": [
+       "6.5%.",
+       "10.6%.",
+       "14.3%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because it is the geometric average of z2 = 5% and z3 = 8% which are the zero rates for year 2 and year 3. That is (1.05)(1.08)0.50 – 1 = 6.48% or 6.5%. \nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because it is the 1-year forward rate beginning in year 2 as follows:\n(1 + z3)3 = (1+ z2)2(1 + f2,1)1\n1.083 = 1.052(1 + f2,1)1\n(1 + f2,1)1 = 1.14259\nf2,1 = 0.14259 or 14.3%."
+     },
+     {
+      "q": "Which of the following term structure theories of interest rates is most consistent with Smith's beliefs?",
+      "options": [
+       "Preferred habitat",
+       "Liquidity preference",
+       "Unbiased expectations"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because preferred habit is a theory where lenders/borrowers will deviate from their strong preferences for certain segments of the yield curve to earn additional returns (if large enough). In this theory it is expectations and institutional factors that influence the shape of the yield curve. In the vignette, Smith states that forward rates are upwardly biased predictors of future spot rates. This statement does not describe the preferred habitat model. \nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because unbiased expectations implies that expected rates will rise with an upward sloping yield curve. Smith's belief is that forward rates are upwardly biased."
+     },
+     {
+      "q": "Based on Smith's expected change in Country 2's interest rates, the percentage change in the value of Client A's portfolio is closest to:",
+      "options": [
+       "–1.88%.",
+       "–1.69%.",
+       "–0.44%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because it uses the average of the change in yields times the overall effective duration as follows:\nAverage change in yields is: (1% + 0.75% – 0.25%)/3 = 0.50%.\n%ΔValue Portfolio = –Effective Duration × 0.50%, where effective duration is 3.75.\n%ΔValue Portfolio = –3.75 × 0.50% = –1.875%.\nB. Incorrect. Incorrect because it treats the last change (i.e., change in z10) as a positive value as follows:\n%ΔValue Portfolio = –0.50 × 1% – 0.75 × 0.75% – 2.50 × 0.25% = –1.6875%\n≈ –1.69%.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Country 2's government bond yields and swap rates best support a conclusion that the economy is experiencing: Correct answer:",
+      "options": [
+       "a recession.",
+       "no change.",
+       "an expansion."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because there is a trend in the swap spread that suggests a change in economic activity.\nC. Incorrect. Incorrect because the swap spread (swap rate – government bond rate) gives us an idea of the credit and liquidity risk in Country 2 and this spread typically has greater values during recessions/contractions and lower values during expansions. From Exhibit 3 we have the following showing that the spread is getting larger relative to its value 12 months ago:\n1 month ago: 8.28 – 7.48 = 0.80\n6 months ago: 8.86 – 8.51 = 0.35\n12 months ago: 8.84 – 8.55 = 0.29."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "James Ryan is a portfolio manager who is reviewing the risk exposure of his stock and bond portfolios, and evaluating new trading strategies.\nWhen analyzing his current stock portfolio, Ryan determines that the monthly 5% VaR is $10.6 million.\nRyan's current bond portfolio has a value of $260 million. He uses the parametric method to estimate the daily 5% VaR based on a daily expected return of 0.0218% and a daily standard deviation of returns of 0.8246%. He assumes that portfolio returns follow a normal distribution and that a 5% VaR is 1.65 standard deviations below the expected value.\nRyan considers the implications of adding bonds with embedded options to his current bond portfolio. He is concerned that adding these bonds will cause portfolio performance to deviate significantly from the benchmark. Given this concern, he wants to use an extension of VaR that will measure the extent of this deviation.\nRyan is in the process of backtesting a new multifactor portfolio strategy. For his investment universe of liquid securities, he assesses the performance of a large number of different strategies that use a wide range of factors and rebalancing periods.\nAfter completing his backtesting, Ryan identifies three factor strategies that are all expected to generate a similar mean return and standard deviation. He uses the metrics in Exhibit 1 to evaluate which strategy would provide the most attractive statistical properties for his risk-averse clients.\nExhibit 1\n#  | Strategy X | Strategy Y | Strategy Z\nSkewness | –0.9 | 2.4 | 2.4\nKurtosis | 12.7 | 20.3 | 12.7\nMaximum drawdown | 35.3% | 31.4% | 30.2%",
+    "questions": [
+     {
+      "q": "Which of the following statements is correct regarding Ryan's current stock portfolio?",
+      "options": [
+       "There is a 5% chance of losing $10.6 million over one month",
+       "The maximum monthly loss will be $10.6 million with 5% probability",
+       "Monthly losses of at least $10.6 million are expected 5% of the time"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because VaR does not give the likelihood of losing a specific amount. Instead, value at risk is the minimum loss that would be expected a certain percentage of the time over a certain period of time given the assumed market conditions. In this case, the monthly 5% VaR is $10.6 million, so $10.6 million would be the minimum expected loss over one month 5% of the time.\nB. Incorrect. Incorrect because value at risk is the minimum loss that would be expected a certain percentage of the time over a certain period of time given the assumed market conditions. In this case, the monthly 5% VaR is $10.6 million, so $10.6 million would be the minimum, not maximum, expected loss over one month 5% of the time.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Using the parametric method, the daily 5% VaR (in $ millions) for Ryan's current bond portfolio is closest to:",
+      "options": [
+       "2.09.",
+       "3.48.",
+       "3.54."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the first step of the calculation of the daily 5% parametric VaR is missed as follows:\nStep 1: Subtract the daily standard deviation from the daily expected return: 0.000218 – 0.008246 = –0.008028\nStep 2: Take the absolute value of the result in Step 1: 0.008028\nStep 3: Multiply the result in Step 2 by the value of the portfolio: VaR = 0.008028 × $260,000,000 = $2,087,280 ≈ $2.09 million\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the VaR is mistakenly calculated by multiplying the value of the portfolio by 1.65 times the standard deviation of the portfolio.\nVaR = $260,000,000 × 1.65 × 0.008246 = $3,537,534 ≈ $3.54 million"
+     },
+     {
+      "q": "Given his concern about the impact of adding bonds with embedded options to his current bond portfolio, which of the following extensions of VaR should Ryan use? Correct answer:",
+      "options": [
+       "Relative VaR",
+       "Conditional VaR",
+       "Incremental VaR"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Ryan is concerned about the performance of his portfolio deviating from its benchmark if he adds bonds with embedded options, however, conditional VaR would not enable him to address this concern. Conditional VaR is the average loss conditional on exceeding the VaR cutoff, which answers the question 'How much can I expect to lose if VaR is exceeded?'\nC. Incorrect. Incorrect because Ryan is concerned about the performance of his portfolio deviating from its benchmark if he adds bonds with embedded options, however, incremental VaR would not enable him to address this concern. Incremental VaR allows the user to know how the portfolio VaR will change if a position size is changed relative to the remaining positions."
+     },
+     {
+      "q": "Which of the following strategies would provide the most attractive statistical properties for Ryan's risk-averse clients?",
+      "options": [
+       "Strategy X",
+       "Strategy Y",
+       "Strategy Z"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Strategy X would be less attractive to risk-averse investors on the basis that, while it has the joint-lowest kurtosis (probability of extreme negative surprises), it has negative skewness (higher probability of negative returns) and a larger maximum drawdown (greater downside risk) than Strategy Z.\nB. Incorrect. Incorrect because Strategy Y would be less attractive to risk-averse investors on the basis that, while it has positive skewness (higher probability of positive returns), it also has higher kurtosis (higher probability of extreme negative surprises) and a larger maximum drawdown (greater downside risk) than Strategy Z.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Anita Daani, a research analyst, is evaluating the financial institutions in her coverage universe. She begins with an analysis of KTR Insurance, a property and casualty (P&C) insurance company. KTR reports under IFRS with a fiscal year end of 31 December. The company has two employee compensation plans:\nPlan A - a defined benefit pension plan\nPlan B - a share-based compensation plan which grants restricted stock units (RSUs)\nFor the most recent year, Daani calculates the amount recognized by KTR as an operating expense in its income statement related to Plan A. She observes that Plan A had a current service cost of $10 million and a past service cost of $2 million for the most recent year.\nDaani next assesses the dilutive effect of the share-based compensation plan on KTR's financial statements. She uses the treasury stock method and the data for the most recent year for Plan B in Exhibit 1. Daani assumes that KTR has no other potentially dilutive securities outstanding besides the RSUs granted under Plan B.\nExhibit 1\nBasic shares outstanding at end of year | 2,700 million\nNumber of unvested RSUs at end of year | 150 million\nAverage unrecognized share-based compensation expense | $840 million\nAverage share price during the most recent year | $7\nOn 1 January of the current year, KTR grants 2 million new RSUs to employees under Plan B. The share price on the grant date was $8 and the vesting period is 4 years. Daani calculates the effect of the new RSU grants under Plan B on KTR's financial statements for the current year.\nDaani next analyzes KTR's competitive position in the P&C insurance industry. She uses data in Exhibit 2 to compare KTR and its peers in their efficiency of obtaining new premiums.\nExhibit 2\n#  | KTR | Peer Company 1 | Peer Company 2\nLoss and loss adjustment expense ratio | 59.5% | 65.4% | 61.9%\nUnderwriting expense ratio | 38.1% | 30.7% | 33.2%\nCombined ratio | 97.6% | 96.1% | 95.1%",
+    "questions": [
+     {
+      "q": "For the most recent year, KTR's operating expense (in $ millions) related to Plan A was:",
+      "options": [
+       "8.",
+       "10.",
+       "12."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because this is the difference in the current and the past service cost.\nOperating expense on the income statement ($ million) = Current service cost – Past service cost = 10 – 2 = 8\nB. Incorrect. Incorrect because this is only the current service cost with the past service cost omitted. Under IFRS, service cost has two sub-components: current and past service costs. Service costs are recognized as an operating expense on the income statement.\nThis would be the correct answer if KTR reported under US GAAP, as under US GAAP, past service costs are reported in OCI in the period in which the change giving rise to the cost occurs. In subsequent periods, past service costs are amortized to the income statement over the average service lives of the affected employees.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Using the treasury stock method, KTR's number of diluted shares outstanding at the end of the most recent year (in millions) is closest to: Correct answer:",
+      "options": [
+       "2,730.",
+       "2,850.",
+       "2,970."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because assumed repurchases are ignored rather than being deducted\nBasic shares outstanding\t2,700 million\nPlus: Unvested RSUs\t150 million\nDiluted shares outstanding\t 2,850 million\nC. Incorrect. Incorrect because diluted shares outstanding is wrongly calculated by adding assumed repurchases rather than deducting\nBasic shares outstanding\t2,700 million\nPlus: Unvested RSUs\t150 million\nPlus: Assumed repurchases = Average unrecognized share based compensation expense/ Average stock price \t$840 million/ $7 = 120 million\nDiluted shares outstanding\t 2,970 million"
+     },
+     {
+      "q": "In KTR's current year financial statements, which of the following would result from its new RSU grants under Plan B? Correct answer:",
+      "options": [
+       "$4 million increase in compensation expense",
+       "$4 million increase in cash flow from financing activities",
+       "$16 million increase in share-based compensation reserve"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because there is no impact on the statement of cash flows because of the vesting of RSUs, which is a non-cash transaction.\nAs a non-cash transaction, share-based compensation does not impact cash flows.\nC. Incorrect. Incorrect because the share-based compensation reserve will increase by $4 million in the current financial year (first year of vesting) not $16 million (this is the cumulative increase in reserve over the 4 years of vesting). \nThe general approach is to measure the fair value of the share-based award at the grant date, recognize it as an expense over the vesting period with the offsetting entry to equity, and transfer the entries from one equity account to another at settlement."
+     },
+     {
+      "q": "Which P&C insurance company is the most efficient at obtaining new premiums?",
+      "options": [
+       "KTR",
+       "Peer Company 1",
+       "Peer Company 2"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because KTR has the highest and not the lowest underwriting expense ratio. KTR has the lowest loss and loss adjustment expense ratio, which indicates the efficiency of underwriting process, rather than the efficiency of obtaining new premium.\nLoss and loss adjustment expense ratio = (Loss expense + Loss adjustment expense)/Net premiums earned. This ratio indicates the degree of success an underwriter has achieved in estimating the risks insured. The lower the ratio, the greater the success.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because Peer Company 2 does not have the lowest underwriting expense ratio. Peer Company 2 has the lowest combined ratio, which indicates the overall efficiency rather than the efficiency of obtaining new premium.\nCombined ratio = Loss and loss adjustment expense ratio + Underwriting expense ratio. This ratio indicates the overall efficiency of an underwriting operation. A combined ratio of less than 100 is considered efficient."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Susanne Blythe is a fixed income analyst with an institutional fixed-income manager. She evaluates bonds for potential inclusion in the firm's portfolio.\nBlythe is calibrating the binomial tree shown in Exhibit 1 to be consistent with observable prices of default-free bonds. In the tree, interest rate volatility is assumed to be 10% and branching from each node to a high state or a low state occurs with equal probability. She uses the tree to calculate the value of a default-free 3-year bond with a 3.5% annual coupon that is priced at par ($100).\nBlythe has determined that the 1-year forward rates at Year 0 and Year 1 are correct. In the next iteration of the calibration process, she needs to determine if the 1-year forward rates at Year 2 must be adjusted for the bond's calculated value to equal its market price.\nExhibit 1 Binomial Interest Rate Tree (1-year rates)\n# | Year 0 | Year 1 | Year 2\nUpper node |  | 3.8784% | 5.3534%\nMiddle node | 2.4500% |  | 4.3830%\nLower node |  | 3.1754% | 3.5885%\nNote: This exhibit was a binomial diagram in the original paper. Its figure was not in the pasted text: the rates are taken from the answer explanation of Question 25 (Year 0: 2.45%; Year 1: 3.8784% and 3.1754%; Year 2: 5.3534%, 4.3830% and 3.5885%); their placement in the table is a reconstruction.\nBlythe evaluates three bonds just issued by Y Corporation. All three bonds have identical characteristics except for optionality, as shown in Exhibit 2.\nExhibit 2\n# Bond | Maturity | Annual Coupon | Type of Bond\nBond 1 | 3 years | 4.5% | Option-free\nBond 2 | 3 years | 4.5% | Putable at 100 one year and two years from now\nBond 3 | 3 years | 4.5% | Callable at 102 one year and two years from now\nBlythe also evaluates a convertible bond issued by Z Corporation with the characteristics provided in Exhibit 3.\nExhibit 3\nMaturity | 5 years\nIssue price of convertible bond | $1,000 (at par)\nCurrent convertible bond price | $1,091\nInitial conversion price | $25.00 per share\nShare price at issuance | $17.40\nCurrent share price | $18.50\nBlythe computes the market conversion premium ratio to compare the Z Corporation bond to other convertible bonds.",
+    "questions": [
+     {
+      "q": "When completing the next iteration of the calibration process for the binomial tree, Blythe should:",
+      "options": [
+       "decrease the 1-year forward rates at Year 2.",
+       "leave the 1-year forward rates at Year 2 unchanged.",
+       "increase the 1-year forward rates at Year 2."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the value of the bond using the current binomial tree is 100.1684, which is above the market price of 100. Therefore, the forward rates at Year 2 need to be increased, not decreased, to lower the value of the bond and properly calibrate the binomial tree to the market price.\nB. Incorrect. Incorrect because the value of the bond using the current binomial tree is 100.1684, which is above the market price of 100. Therefore, the forward rates at Year 2 need to be increased to lower the value of the bond and properly calibrate the binomial tree to the market price.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Which of the bonds issued by Y Corporation most likely has the highest value?",
+      "options": [
+       "Bond 1",
+       "Bond 2",
+       "Bond 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because Bond 2 should have a higher valuation than Bond 1 due to Bond 2's embedded put option. The value of the put option increases the value of the putable bond relative to the value of the straight bond.\nValue of putable bond = Value of straight bond + Value of investor put option.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because Bond 2 should have a higher valuation than Bond 3 due to Bond 2's embedded put option and Bond 3's embedded call option. The value of the put option increases the value of the putable bond relative to the value of the straight bond. The value of the call option decreases the value of the callable bond relative to the value of the straight bond.\nValue of putable bond = Value of straight bond + Value of investor put option\nValue of callable bond = Value of straight bond – Value of issuer call option\nHence, Bond 2's value > Bond 1's value > Bond 3's value."
+     },
+     {
+      "q": "Which of the bonds issued by Y Corporation is most likely to exhibit negative convexity?",
+      "options": [
+       "Bond 1",
+       "Bond 2",
+       "Bond 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Bond 1 is an option-free bond and an option-free bond exhibits low positive convexity.\nB. Incorrect. Incorrect because Bond 2 is a putable bond and putable bonds always have positive convexity.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "The current market conversion premium ratio for Z Corporation's convertible bond is closest to:",
+      "options": [
+       "43.7%.",
+       "47.4%.",
+       "56.8%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this is the calculation for the market conversion premium ratio at the time of issuance. \nInitial conversion premium per share = Initial conversion price – Share price at issuance = 25.00 – 17.40 = 7.60\nInitial conversion premium ratio = Initial conversion premium per share / Share price at issuance = 7.60 / 17.40 = 43.7%\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this calculation compares the market conversion price to the share price at issuance instead of the current share price. \nConversion ratio = Issue price of bond / Initial conversion price = 1,000 / 25 = 40\nMarket conversion price = Convertible bond price / Conversion ratio = 1,091 / 40 = 27.275\nMarket conversion premium per share = Market conversion price – Share price at issuance = 27.275 – 17.40 = 9.875\nMarket conversion premium ratio = Market conversion premium per share / Share price at issuance = 9.875 / 17.40 = 56.8%"
+     }
+    ]
+   },
+   {
+    "topic": "Corp",
+    "body": "Sebastian Traver is a financial analyst at Feldcroft Inc., a large, US-based construction company specializing in commercial and residential projects. He is reviewing the company's asset financing options and evaluating potential growth opportunities.\nFeldcroft is considering the purchase of a new corporate helicopter to access remote construction sites. Traver evaluates a proposal for a 10-year lease with payments of $125,000 at the end of each month. The helicopter has a fair value of $15 million, and the lessor would incur a direct cost of $750,000 at the beginning of the lease. The residual value of the helicopter at the end of the lease is expected to be $8,700,000. Feldcroft has an unsecured incremental borrowing rate of 8%.\nFeldcroft has operations in Country A, an emerging market that represents 10% of the company's revenue. To estimate the equity risk premium that should be used in calculating Feldcroft's cost of equity, Traver uses the country spread model with no adjustment for the relative volatility of Country A equity and bond returns. The current US equity risk premium is 5.94% and 10-year US Treasury bonds yield 3.50%. Country A recently issued a 10-year bond denominated in local currency that yields 7.55% and a 10-year bond denominated in US dollars that yields 5.15%.\nFeldcroft is considering acquiring a construction company that has sales of $7.00 per share. To estimate a fair takeover value for this target company, Traver uses comparable transaction analysis with equal weights on three transactions, as shown in Exhibit 1. He notes that Feldcroft's current price-to-sales (P/S) ratio is 1.35 and that transactions in the construction industry take place at an average takeover premium of 8%.\nExhibit 1\n# Variable | Acquired Company 1 | Acquired Company 2 | Acquired Company 3\nSales per share | $6.30 | $12.98 | $9.01\nP/S ratio at acquisition price | 1.78 | 1.84 | 1.63\nFinally, Traver prepares a pro forma income statement reflecting the acquisition of the target construction company. He assumes the acquisition would generate cost synergies and be funded with new debt, which would include refinancing the target company's existing debt. After separating depreciation and amortization from operating expenses, Traver models selected pro forma income statement balances as follows:\nInterest expense: Add interest expense from the new debt issuance to the target company's current interest expense\nOperating expenses: Add cost synergies to and subtract cost dis-synergies from combined operating expenses\nDepreciation and amortization expense: Add amortization of acquired intangible assets to combined depreciation and amortization expense",
+    "questions": [
+     {
+      "q": "The implied annual interest cost of the helicopter lease is closest to: Correct answer:",
+      "options": [
+       "6.30%.",
+       "7.10%.",
+       "8.00%."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because this response does not include Feldcroft's direct costs as part of the cash flows of the lease. Using a calculator, the implied interest cost is calculated as follows:\nPayment (PMT) = $125,000\nPresent value (PV) = –$15,000,000\nNumber of payments (N) = 120 (10 years × 12 monthly payments)\nFuture value (FV) = $8,700,000\nSolve for interest rate (i) = 0.5921% per month\nImplied annual interest rate = 0.5921% × 12 = 7.1049% ≈ 7.10%\nC. Incorrect. Incorrect because this response assumes the lease cost will be based on Feldcroft's unsecured incremental borrowing rate. However, the implied interest cost of the lease is based on the cash flows of the lease itself and is calculated independently from the unsecured incremental borrowing rate."
+     },
+     {
+      "q": "Based on the country spread model, the equity risk premium that should be used in calculating Feldcroft's cost of equity is closest to: Correct answer:",
+      "options": [
+       "6.11%.",
+       "6.35%.",
+       "7.59%."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because this response uses Country A's 10-year bond denominated in local currency instead of the USD-denominated 10-year bond. This response incorrectly calculates the equity risk premium as:\nERP = 5.94% + [10% × (7.55% – 3.50%)]\nERP = 6.345% ≈ 6.35%\nC. Incorrect. Incorrect because this response does not adjust Feldcroft's equity risk premium (ERP) for the level of exposure to Country A. This response incorrectly calculates the equity risk premium as:\nERP = 5.94% + (5.15% – 3.50%)\nERP = 7.59%"
+     },
+     {
+      "q": "Based on comparable transaction analysis, the fair takeover value per share of the target construction company is closest to:",
+      "options": [
+       "$9.45.",
+       "$12.25.",
+       "$13.23."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this response applies Feldcroft's P/S ratio of 1.35 instead of the mean P/S ratio of the comparable transactions (1.75). Given the target company's sales per share of $7.00:\nFair takeover value per share = Sales per share × Feldcroft's P/S ratio\n= $7.00 × 1.35\n= $9.45\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this response adds the 8% average takeover premium in the construction industry, which is double-counting as the premium is already embedded in the comparable transaction multiples. Given the target company's sales per share of $7.00:\nFair takeover value per share = Sales per share × Mean P/S of comparable transactions × (1 + Average industry takeover premium)\nMean P/S of comparable transactions = (1.78 + 1.84 + 1.63) / 3 = 1.75\nFair takeover value per share = $7.00 × 1.75 × (1 + 8%) = $13.23"
+     },
+     {
+      "q": "Which of the following balances on the pro forma income statement does Traver most likely model correctly?",
+      "options": [
+       "Interest expense",
+       "Operating expenses",
+       "Depreciation and amortization expense"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Traver double counts interest expense on the target's pre-acquisition debt, which would be refinanced as part of the new debt issuance associated with the acquisition. In addition, to the extent Feldcroft has any pre-acquisition debt (which is not stated in the vignette), Traver also omits interest expense related to that debt.\n1. Start with current acquirer interest expense.\n2. Add increased interest from new debt issuance and revised interest rate.\nB. Incorrect. Incorrect because cost synergies should be subtracted from, not added to, operating expenses, and cost dis-synergies should be added to, not subtracted from, operating expenses. \n1. Combine acquirer and target operating expenses.\n2. Subtract cost synergies or add the cost of incompatible activities (dis-synergies).\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Quant",
+    "body": "Megan Helmer is an analyst at Acuity Investments. She uses machine learning to build a model that categorizes companies according to whether their predicted ROE is low or high. The model uses multiple features to explain the variations in ROE. The model produces low error rates using training data, but much higher error rates using out-of-sample data.\nHelmer also builds a logistic regression model to predict the 1-year probability of default for junk bond issuers. She collects data for 70 issuers over the past five years and identifies those that defaulted within the subsequent year (DEFAULT = 1) and those that did not default (DEFAULT = 0). She uses two independent variables in the logistic regression model: the ratio of debt to total capital (LEVERAGE) and the interest coverage ratio (COVERAGE). The coefficients of the regression are shown in Exhibit 1. Using this model, Helmer then estimates the probability of default by ACME, an issuer with LEVERAGE of 0.8 and COVERAGE of 0.9.\nExhibit 1\n#  | Coefficient\nIntercept | –20.0\nLEVERAGE | 65.5\nCOVERAGE | –35.0\nNext, Helmer builds a linear regression model for manufacturing companies (Model 1) to forecast the impact of inflation caused by supply chain disruptions on profit margin. She uses five years of quarterly data for 100 companies and the following model specification:\nModel 1: MARGINt = b0 + b1INPUTt + b2LOGISTICSt + εt,\nwhere MARGIN is profit margin, INPUT is raw material cost inflation, and LOGISTICS is freight cost inflation.\nHelmer assesses possible violations of regression assumptions in Model 1 and makes the following observations:\nObservation 1: There are significant deviations of the residuals from the diagonal in the Q-Q plot.\nObservation 2: The null hypothesis of the Breusch–Pagan test is rejected.",
+    "questions": [
+     {
+      "q": "Helmer’s ROE prediction model most likely suffers from:",
+      "options": [
+       "overfitting and base error.",
+       "underfitting and bias error.",
+       "overfitting and variance error."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because base error is due to randomness in the data, which impacts both training data and out-of-sample data. Variance error captures how much the model’s results change in response to new data from validation and test samples. Unstable models pick up noise and produce high variance, causing overfitting and high out-of-sample error. Hence, high out-of-sample error (variance error) in the model is caused by overfitting to the training data.\nB. Incorrect. Incorrect because bias error captures the degree to which a model fits the training data. Algorithms with erroneous assumptions produce high bias with poor approximation, causing underfitting and high in-sample error. The case states that the model performs well on training or in-sample data, so there is no evidence of bias error or underfitting.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Based on the logistic regression model, the probability that ACME defaults within the next year is closest to:",
+      "options": [
+       "29%.",
+       "71%.",
+       "90%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the negative sign is omitted when calculating the event probability. The event probability is incorrectly calculated as:\nP = 1/(1 + exp(b0 + b1 × LEVERAGE + b2 × COVERAGE)).\nBased on the coefficient estimates in Exhibit 1 and the value of the independent variables for ACME:\nP = 1/(1 + exp(–20 + 65.5 × 0.8 – 35 × 0.9)) = 1/(1 + exp(0.9)) = 0.2891 or 29%\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the regression is treated as a linear regression instead of a logistic regression and the probability of default is incorrectly calculated as:\nP = b0 + b1 × LEVERAGE + b2 × COVERAGE\nP = –20 + 65.5 × 0.8 – 35 × 0.9 = 0.9 or 90%\nIn case the intercept is missed in calculating the event probability in the logistic regression model, the default probability is 100%, which is closest to 90%.\nThe event probability is incorrectly calculated as:\nP = 1/(1 + exp(–(b1 × LEVERAGE + b2 × COVERAGE))).\nBased on the coefficient estimates in Exhibit 1 and the value of the independent variables for ACME:\nP = 1/(1 + exp(–(65.5 × 0.8 – 35 × 0.9))) = 1/(1 + exp(–20.9)) = 1.0000 or 100%"
+     },
+     {
+      "q": "Observation 1 indicates a violation of which regression assumption? Correct answer:",
+      "options": [
+       "Normality",
+       "Homoskedasticity",
+       "Independence of explanatory variables"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but it does not mean that there is heteroskedasticity. Homoskedasticity could be visually explored with a scatterplot between dependent and independent variables included in the regression.\nC. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). The Q-Q plot cannot be used to identify non-linear relationships between the dependent variable (Y) and the independent variables (Xi). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but this does not mean that there is interdependence of explanatory variables or multicollinearity. A pairwise scatterplot of the independent variables is used to detect this relationship."
+     },
+     {
+      "q": "With respect to the tests for violations of regression assumptions, Observation 2 indicates that:",
+      "options": [
+       "no corrective action is necessary.",
+       "a larger sample size should be used.",
+       "robust standard errors should be calculated."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the null hypothesis for the Breusch–Pagan test is that there is no conditional heteroskedasticity. Since the hypothesis is rejected, it indicates that the residuals are conditionally heteroskedastic. This is a violation of the assumptions of linear regression, which needs to be corrected.\nB. Incorrect. Incorrect because the null hypothesis for the Breusch–Pagan test is that there is no conditional heteroskedasticity. Since the hypothesis is rejected, it indicates that the residuals are conditionally heteroskedastic. Increasing the sample size does not fix the existing conditional heteroskedasticity. This is instead a possible solution in the presence of multicollinearity.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Alt",
+    "body": "Sarah Lambert is an investment advisor meeting with one of her clients, Edward Banner. Banner is considering adding real estate and commodities to his portfolio.\nReal Estate\nLambert researches REIT A, a hotel REIT, and notes that recent property market transaction volumes have been high. In addition, REIT A has recorded a number of one-time gains and charges. Lambert considers the potential impact these issues could have on different valuation approaches.\nLambert next reviews REIT B, an industrial REIT. She performs a price-to-adjusted funds from operations (P/AFFO) calculation based on the full-year financial information (in thousands) contained in Exhibit 1. The current share price is $74.65.\nExhibit 1\nFunds from operations | $465,419\n(Gains)/Losses from sale of depreciable real estate | $22,613\nNon-cash (straight-line) rent adjustment | $14,705\nRecurring maintenance-type capital expenditures and leasing commissions | $33,297\nShares outstanding | 100,000\nLambert carries out further analysis on the wider economy and forecasts that job creation, retail sales growth, and consumer credit will all be stronger than expected. Based on these forecasts, she recommends hotel REITs over industrial REITs.\nCommodities\nLambert then recommends an investment in the Gemini Commodity Futures Fund. According to Gemini's prospectus, the fund always takes a long position in the natural gas futures contract with the shortest maturity. At the contract maturity date, Gemini sells the existing contract and buys the new contract with the shortest maturity. In Exhibit 2, Lambert gathers prior-year price information from the natural gas futures market for two of Gemini's trade dates. All prices are in $ per million British thermal units as of the date listed.\nExhibit 2\n# Trade Date | Spot Price | June Futures Price | July Futures Price | August Futures Price\n28 May | 2.546 | 2.489 | 2.418 | 1.957\n26 June | 2.546 | 2.546 | 2.338 | 1.795",
+    "questions": [
+     {
+      "q": "The issues Lambert is considering regarding REIT A would pose a disadvantage for which of the following valuation models?",
+      "options": [
+       "Net asset value",
+       "P/AFFO multiple",
+       "Dividend discount model"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because NAVPS (net asset value per share) can be reasonably estimated when there are ample market transactions to provide property comparables.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because REITs return a significant portion of their income to their investors as required by law and, as a result, tend to pay high dividends. Thus, dividend discount or discounted cash flow models for valuation are also applicable. One-time charges and gains have a limited effect on dividend payouts."
+     },
+     {
+      "q": "The P/AFFO multiple for REIT B is closest to:",
+      "options": [
+       "16.6.",
+       "17.9.",
+       "18.9."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because only Non-cash (straight-line) rent adjustment is subtracted from FFO, and not recurring maintenance-type capital expenditures and leasing commissions.\nIncorrect AFFO = FFO – Non-cash (straight-line) rent adjustment = $465,419 – $14,705 = $450,714. \nIncorrect AFFO/share = $450,714/100,000 = $4.51 per share.  \nIncorrect Price/AFFO = $74.65/$4.51 = 16.56x = 16.6x.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because (Gains)/Losses from sale of depreciable real estate are incorrectly subtracted from FFO to derive AFFO. This double counts (Gains)/Losses from sale of depreciable real estate since they have already been removed when calculating FFO.\nIncorrect AFFO = FFO – (Gains)/Losses from sale of depreciable real estate – Non-cash (straight-line) rent adjustment – Recurring maintenance-type capital expenditures and leasing commissions = $465,419 – $22,613 – $14,705 – $33,297 = $394,804.\nIncorrect AFFO/share = $394,804/100,000 = $3.95 per share. \nIncorrect Price/AFFO = $74.65/$3.95 = 18.91x = 18.9x."
+     },
+     {
+      "q": "Which of Lambert's forecasts about the wider economy best supports her recommended REIT property type?",
+      "options": [
+       "Job creation",
+       "Consumer credit",
+       "Retail sales growth"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because job creation is a factor for both hotel and industrial REITs, thus not supporting a preference for one over the other.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because retail sales growth is a factor for industrial REITs but not for hotel REITs and is thus contrary to Lambert's recommendation."
+     },
+     {
+      "q": "The roll return on Gemini's natural gas futures contract on the 26 June trade date was:",
+      "options": [
+       "negative.",
+       "zero.",
+       "positive."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the roll return is positive when the numerator is correctly calculated as Near-term futures contract closing price - Farther-term futures contract closing price. The roll return is only negative if the numerator calculation is incorrectly reversed and becomes Farther-term futures contract price - Near-term futures contract price =  $2.338 − $2.546 = −$0.208 < 0.\nB. Incorrect. Incorrect because the roll return would equal zero only if the June and July futures prices were equal on 26 June, which is not the case since the June futures price is $2.546 and the July futures price is $2.338.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Irina Benoit, CFA, is a senior research analyst at StockCo, an investment management firm. Multiple rumors have been circulating about a merger of StockCo with another firm. Benoit knows from internal senior management meetings that the merger will take place next year. As a result, Benoit has decided to leave StockCo and start her own investment management firm, Benoit Capital Traders (BCT). StockCo did not require Benoit to sign a non-compete agreement. During a family dinner, Benoit announces that she intends to start BCT after leaving StockCo. Benoit asks her brother to close his existing account at StockCo and bring his money to BCT once the new firm is operational. A week before Benoit leaves StockCo, she sends a message to a friend on her mobile phone: \"Goodbye StockCo—I'm glad I won't be here for the merger!\"\nUpon starting BCT, Benoit adopts the Standards with her firm and writes a compliance manual. She adds the following three procedures to BCT’s compliance manual.\nProcedure 1: Analysts may accept gifts in the form of business-related entertainment to a maximum value listed by the compliance office.\nProcedure 2: For all analysts, the purchase of a company’s stock through a private placement is capped at a maximum per private placement as listed by the compliance office.\nProcedure 3: When attending meetings at an issuer’s headquarters, analysts are allowed to accept modest commercial transportation and hotel accommodation paid by the issuer.\nDuring the first month of BCT's operations, Benoit creates a list of StockCo clients from memory to solicit their business. Benoit then uses an external marketing company to send each prospective client either a card or a coffee mug. She provides this marketing company with a list of clients with their approximate portfolio values. Benoit requests that the company send the coffee mugs to only those clients with portfolios larger than $1 million. During Benoit's employment at StockCo, she had access to the firm's internal data system that contains confidential personal information about StockCo’s clients. The database and its access are managed by Benoit's former department manager at StockCo, Mike Lee, CFA. Lee neglected to remove Benoit's access from the server and, as a result, Benoit discovers that she still has access to the system. Benoit checks the names on the client list that she created from memory against the list in StockCo’s internal data system and confirms that her list is complete and accurate. She then contacts Lee to request him to cancel her access.\nThree months later, Benoit hires and starts supervising two new analysts, Robert Kiprotich and Yoko Tanaka. Kiprotich’s first assignment is to write a report on a cryptocurrency. After writing the report, Kiprotich uses BCT’s social media page to promote the report. He starts by using an online generative artificial intelligence (AI) program to summarize his report and credits the generative AI program as the source of his summary. At the end of the summary, Kiprotich states that investors should not be concerned about the transaction costs of switching their investments because the higher returns from the cryptocurrency will more than offset the costs. He then posts the summary online, along with a link to the report. A week later, someone comments on the social media post, pointing out an error in the report. Kiprotich leaves the report unchanged since he intends to post a new report at the end of the week in which he will also correct the unintentional error.",
+    "questions": [
+     {
+      "q": "When leaving StockCo, Benoit violates the Standards in her actions related to:",
+      "options": [
+       "her friend only.",
+       "her brother only.",
+       "both her friend and her brother."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Benoit’s actions related to both her friend and her brother violate Standard IV(A) Loyalty.\nB. Incorrect. Incorrect because Benoit’s actions related to both her friend and her brother violate Standard IV(A) Loyalty.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Which procedure in the BCT compliance manual is not consistent with the Standards?",
+      "options": [
+       "Procedure 1",
+       "Procedure 2",
+       "Procedure 3"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Procedure 1 is consistent with Standard I(B) Independence and Objectivity, which does not preclude customary, ordinary business-related entertainment as long as its purpose is not to influence or reward members or candidates. Firms should consider a strict value limit for acceptable gifts that is based on the local or regional customs and should address whether the limit is per gift or an aggregate annual value. BCT’s procedure is that analysts may accept gifts in the form of business-related entertainment and a maximum annual value is listed by the compliance office.\nB. Incorrect. Incorrect because Procedure 2 is consistent with Standard I(B) Independence and Objectivity. A policy which specifies that purchases of a company’s stock through a private placement are capped at a maximum per purchase as listed by the compliance office is an example of a formal policy related to employee purchases of equity or equity-related IPOs. The Standard states that firms should develop formal policies related to employee purchases of equity or equity-related IPOs. Strict limits should be imposed on investment personnel acquiring securities in private placements.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Who violates the Standard relating to confidentiality during Benoit's first month at BCT?",
+      "options": [
+       "Lee only",
+       "Benoit only",
+       "Both Lee and Benoit"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because both Lee's and Benoit’s actions violate Standard III(E) Preservation of Confidentiality.\nB. Incorrect. Incorrect because both Lee's and Benoit’s actions violate Standard III(E) Preservation of Confidentiality.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Regarding BCT's social media page, which of the following is consistent with the Standards? Correct answer:",
+      "options": [
+       "The use of the AI program",
+       "The treatment of the error in the research report",
+       "The statement regarding transaction costs and returns"
+      ],
+      "answer": 0,
+      "why": "A. Correct. Practice Topics\nCFA-26-11-LII-A: Mock Exams\n2026 CFA LII Mock 1 Session 2\nB. Incorrect. Incorrect because Standard I(C) Misrepresentation states that Kiprotich must not knowingly make any misrepresentation related to investment analysis, recommendations, or actions. Kiprotich should not knowingly misrepresent information of a security in electronic communications. Knowingly means that Kiprotich either knows or should have known that the misrepresentation was being made. Actions undertaken through social media that knowingly misrepresent investment recommendations or professional activities are considered a violation of Standard I(C).\nKiprotich does not correct (i.e., resolve) the error in the report posted on the social media page when he becomes aware of it. He therefore implicitly endorses and approves the content of the report. That is effectively a communication made by Kiprotich and he is therefore responsible for the inaccurate content. Once the error is discovered, Kiprotich must take steps to cease distribution of the incorrect material and correct the error by informing those who have received the erroneous information.\nC. Incorrect. Incorrect because Standard I(C) Misrepresentation states that Kiprotich must not knowingly make any misrepresentation related to investment analysis, recommendations, or actions. Standard I(C) prohibits Kiprotich from guaranteeing clients any specific return on volatile investments. Stating that investors will recover their transaction costs with higher investment returns from cryptocurrencies is a guarantee offered by Kiprotich. If Kiprotich were to rephrase the statement to include a qualifying statement, such as in my opinion, investors may earn, it would not be in violation of the Standards."
+     }
+    ]
+   }
+  ],
+  "concept": "The real CFA Institute Level II Mock 1, Session 1 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Part of Mock C (two papers): Paper 1 is marked when you finish it and a 30-minute break starts; Paper 2 can be started at any time."
+ },
+ {
+  "id": "mockC2",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Mock C · Paper 2",
+  "kind": "mockb",
+  "group": "C",
+  "minutes": 132,
+  "desc": "Real CFA Institute Level II Mock 1, Session 2: vignettes, questions and explanations as published (44 questions, 2 h 12 min).",
+  "vignettes": [
+   {
+    "topic": "Equity",
+    "body": "Victoria Lazslo is an analyst valuing three firms held in client portfolios.\nFirm A owns a chain of regional dental offices and has no debt. Lazslo initially selects a single-stage residual income model to estimate the intrinsic value of Firm A’s stock and compiles the data in Exhibit 1.\nExhibit 1\nConstant long-term growth rate | 9.6%\nConstant long-term ROE | 16.0%\nMarket price per share | $220.00\nBook value per share | $166.00\nCost of equity | 12.5%\nLazslo also considers the possibility that after Year 10 Firm A’s ROE will exhibit mean reversion. She uses a multistage residual income model to value Firm A’s stock and estimates residual income in Year 10 to be $8.38 per share, with a persistence factor of 0.7.\n\nFirm B is a distributor of building supplies. Firm B’s year-end (Year 0) book value of equity is $111 per share and its cost of equity is 12%. Lazslo forecasts financial data for the next two years in Exhibit 2.\n\nExhibit 2\n#  | Year 1 | Year 2\nNet income | $26.25 | $31.56\nDividends | $3.80 | $4.57\nOther comprehensive income | $0.00 | $2.75\nFirm C is an international carbon capture firm that reported EPS of $3.75 last year. Lazslo forecasts earnings growth of 7%, a required return on equity of 12%, and a dividend payout ratio of 45% for the foreseeable future. She selects the Gordon growth model to value Firm C's stock.",
+    "questions": [
+     {
+      "q": "Based on the single-stage residual income model, the intrinsic value per share of Firm A’s common stock is closest to:",
+      "options": [
+       "$200.",
+       "$366.",
+       "$486."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this calculation omits adding the current book value to the second term of the equation:\nV0 = [(ROE – r)/(r – g)] × B0 = [(16.0% – 12.5%)/(12.5% – 9.6%)] × $166.00 = $200.34 ≈ $200\n\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this calculation uses the current market price instead of the book value:\nV0 = Market Price0 + [(ROE – r)/(r – g)] × Market Price0 = $220.00 + [(16.0% – 12.5%)/(12.5% – 9.6%)] × $220.00 = $485.52 ≈ $486"
+     },
+     {
+      "q": "Based on Lazslo's multistage residual income model, the present value of the estimated terminal value of Firm A's stock is closest to:",
+      "options": [
+       "$6.07.",
+       "$6.83.",
+       "$9.68."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this calculation discounts the capitalized Year 10 residual income for 10 years instead of 9 years. \nPresent value of terminal value = Residual income in Year T/[(1 + required return – persistence factor) × (1 + required return)T]\n\n= $8.38/[(1 + 0.125 – 0.7) × (1 + 0.125)10] = $6.07\n\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this calculation does not include the required return in the capitalization of Year 5 residual income.\nPresent value of terminal value = Residual income in Year T/[(1 – persistence factor) × (1 + required return)T–1]\n\n= $8.38/[(1 – 0.7) × (1 + 0.125)10–1] = $9.68"
+     },
+     {
+      "q": "Firm B’s per-share residual income for Year 2 is closest to:",
+      "options": [
+       "$14.73.",
+       "$15.55.",
+       "$18.30."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the capital charge is based on end-of-Year 2 book value of equity.\nBook value at the end of Year 1:\n= Book value at the beginning of Year 1 + net income – dividends + other comprehensive income = $111.00 + $26.25 – $3.80 + $0.00 = $133.45\nBook value at the end of Year 2:\n\n= Book value at the end of Year 1 + net income – dividends + other comprehensive income = $133.45 + $31.56 – $4.57 + $2.75 = $163.19\n\nResidual income in Year 2:\n\n= Net income + other comprehensive income – (cost of capital × end-of-year book value) = $31.56 + $2.75 – (12% × $163.19) = $14.73\nB. Incorrect. Incorrect because the residual income calculation does not adjust net income for other comprehensive income.\nBook value at the end of Year 1:\n= Book value at the beginning of Year 1 + net income – dividends + other comprehensive income = $111.00 + $26.25 – $3.80 + $0.00 = $133.45\nResidual income in Year 2:\n\n= Net income – (cost of capital × beginning-of-year book value) = $31.56 – (12% × $133.45) = $15.55\n\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Based on the Gordon growth model, the per-share value of Firm C’s stock is closest to:",
+      "options": [
+       "$34.",
+       "$36.",
+       "$44."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this calculation uses D0 instead of D1.\nV0 = $1.6875/(12.0% – 7.0%) = $33.75 ≈ $34,\n\nwhere D0 is last year’s dividend = last year’s EPS × dividend payout ratio = $3.75 × 45% = $1.6875\n\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because D1 is calculated as last year’s EPS × (1 – dividend payout ratio) × (1 + g) = $3.75 × (1 – 45%) × (1.07) = $2.2069.\nV0 = $2.2069/(5.0%) = $44.1375 ≈ $44"
+     }
+    ]
+   },
+   {
+    "topic": "Econ",
+    "body": "Sarah Simpson is an economist for an investment firm. She researches the economic growth of several countries. Simpson believes the growth rate of per capita income in developing countries will increase and eventually match that of developed countries.\nCountry A has a developed, slow-growing economy and a high rate of capital per worker. Exhibit 1 provides the average annual growth rates for selected economic variables in Country A over the most recent five years. Simpson uses this information to determine the contribution of capital deepening to factor productivity.\nExhibit 1\nHours worked | 0.6%\nLabor productivity | 1.4%\nTotal factor productivity | 0.5%\nCountry B's potential GDP currently exceeds its actual GDP. Simpson forecasts that Country B's potential GDP growth rate will be higher than the actual GDP growth rate over the next two years. She assesses the implications of her forecast on Country B's economy.",
+    "questions": [
+     {
+      "q": "Which of the following theories best supports Simpson's belief about the growth rate of per capita income?",
+      "options": [
+       "Classical growth theory",
+       "Endogenous growth theory",
+       "Neoclassical growth theory"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because, based on classical growth theory the labor input faces diminishing marginal returns, the additional output produced by the growing workforce eventually declines to zero. Ultimately, the population grows so much that labor productivity falls and per capita income returns back to the subsistence level. The classical model predicts that in the long run, the adoption of new technology results in a larger but not richer population. Thus, the standard of living is constant over time even with technological progress, and there is no growth in per capita output.\nPer capita economic growth under the classical model is only temporary because an exploding population with limited resources brings growth to an end.\nAccordingly, under the classical growth theory, there is no possibility of income convergence between developing countries and developed countries.\nB. Incorrect. Incorrect because according to endogenous growth theory, there is no reason why the incomes of developed and developing countries should converge. Because of constant or even increasing returns associated with investment in knowledge capital, the developed countries can continue to grow as fast as, or faster than, the developing countries. As a result, there is no reason to expect convergence of income over time.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Which of the following policies would most likely have the greatest impact on economic growth in Country A? Correct answer:",
+      "options": [
+       "Encouraging immigration",
+       "Encouraging increased savings and investment",
+       "Loosening credit restraints in the financial sector"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Country A is a developed country with a high rate of capital per worker. Consequently, increased savings and investment, which would further increase capital per worker, is unlikely to substantially increase economic growth.\nOne of the major problems for some developing countries is a low level of capital per worker.\nC. Incorrect. Incorrect because Country A being a developed economy already has a high rate of capital per worker and the economy is growing slowly. Consequently, a loosening of credit restraints, which would encourage additional capital, is unlikely to substantially increase economic growth."
+     },
+     {
+      "q": "In the most recent five years, the contribution of capital deepening to Country A's labor productivity growth was:",
+      "options": [
+       "0.3%.",
+       "0.8%.",
+       "0.9%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because this is the difference between the labor productivity annual growth rate and the growth rates of hours worked and total factor productivity:\n1.4% – 0.6% – 0.5% = 0.3%\nThe contribution of capital deepening to Country A's labor productivity growth should be the difference between the labor productivity growth rate and the total factor productivity growth rate:\n= 1.4% – 0.5% = 0.9%\nB. Incorrect. Incorrect because this is the difference between the labor productivity growth rate and the growth rate of the hours worked:\n= 1.4% – 0.6% = 0.8%\nThe contribution of capital deepening to Country A's labor productivity growth should be the difference between the labor productivity growth rate and the total factor productivity growth rate:\n= 1.4% – 0.5% = 0.9%\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Simpson's forecast for Country B's GDP growth rate implies that inflationary pressures will most likely: Correct answer:",
+      "options": [
+       "decrease.",
+       "remain the same.",
+       "increase."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation.\nSince Country B's actual GDP growth rate is presently lower than its potential GDP growth rate, and because this is also forecasted to continue in the future, there will likely be downward pressure on inflation.\nC. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation.\nSince Country B's actual GDP growth rate is presently lower than its potential GDP growth rate, and because this is also forecasted to continue in the future, there will likely be downward pressure on inflation."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Nathan Moffet is a fixed-income portfolio manager analyzing the credit risk within a corporate bond portfolio.\nMoffet purchases a senior unsecured bond issued by Company A at a price of $105.35. The bond has the following characteristics:\nAn 8% annual-pay coupon, a face value of $100, and no embedded options\nThree years remain to maturity and a coupon has just been paid\nMoffet collects information on the bond in Exhibit 1, which provides end-of-period data. He uses the information to consider a base case scenario where the bond defaults at the end of Year 3.\nExhibit 1\n#  | Exposure | Recovery | Loss Given Default | Probability of Default | Expected Loss | Discount Factor | Present Value (PV) of Expected Loss\nYear 1 | $117.57 | $47.03 | $70.54 | 5.00% | $3.53 | 0.9709 | $3.43\nYear 2 | $112.85 | $45.14 | $67.71 | 4.75% | $3.22 | 0.9426 | $3.04\nYear 3 | $108.00 | $43.20 | $64.80 | 4.51% | $2.92 | 0.9151 | $2.67\nSum | --- | --- | --- | 14.26% | $9.67 | --- | $9.14\nMoffet learns that Company B plans to issue a covered bond. He considers the benefits of covered bonds from the perspective of the company.\nMoffet owns $10 million of Bond 1, a 5-year senior unsecured bond issued by Company C. He recently bought credit protection on Company C using a $10 million notional value CDS. The CDS can be settled by physical or cash settlement and its reference obligation is Bond 1. Company C recently filed for bankruptcy and Moffet gathers the information in Exhibit 2 on its outstanding debt obligations.\nExhibit 2\n#  | Seniority | Tenor | Par Value | Current Price\nBond 1 | Senior unsecured | 5 years | $100 | $40\nBond 2 | Senior unsecured | 4 years | $100 | $35\nMoffet is considering buying CDS protection on Company D. He does not own any of the company's debt. He gathers the following information for a 3-year CDS on Company D:\nThe credit spread is 550 bps\nThe effective duration is 2.8\nThe coupon rate is 5.0%\nMoffet estimates the upfront premium needed to buy the CDS protection.",
+    "questions": [
+     {
+      "q": "Under his base case scenario, the annualized return on Moffet's Company A bond investment would be closest to: Correct answer:",
+      "options": [
+       "–19.57%.",
+       "–15.45%.",
+       "–9.29%."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because this answer includes an extra coupon payment in Year 3, which is already reflected in the exposure amount as an accrual.\nThe Year 3 exposure value of $108 already reflects the accrued coupon in Year 3. If default occurs in Year 3, the recovery amount of $43.20 already includes the coupon value expected to be paid along with the principal and hence the coupon should not be added again. \nThe return can be obtained by solving the equation:\n$105.35 = $8/(1 + IRR) + $8/(1 + IRR)2 + ($43.20 + $8)/(1 + IRR)3\nSolving for IRR results in a value of –15.45%.\nC. Incorrect. Incorrect because this uses the loss given default value from Year 3 instead of the recovery value.\nThe return can be obtained by solving the equation:\n$105.35 = $8/(1 + IRR) + $8/(1 + IRR)2 + $64.80/(1 + IRR)3\nSolving for IRR results in a value of –9.29%."
+     },
+     {
+      "q": "Which of the following is a benefit of the Company B bond from the prospective of the issuer? Correct answer:",
+      "options": [
+       "The bond can have a higher credit rating than Company B's rating",
+       "Once fully collateralized, the bond is no longer an obligation of Company B",
+       "Any prepaid or non-performing assets in the cover pool do not have to be replaced"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because with a covered bond the financial institution has the ongoing obligation to maintain sufficient assets in the cover pool to satisfy the claims of covered bondholders at all times.\nThe curriculum states that a covered bond is a senior debt obligation of a financial institution that gives recourse to both the originator/issuer and a predetermined underlying collateral pool. The dual recourse to the issuing financial institution and the underlying asset pool has been a hallmark of covered bonds since their inception. \nThe covered bond therefore remains an ongoing obligation of Company B, even after it is collateralized at inception.\nC. Incorrect. Incorrect because the cover pool is dynamic in nature and, if there are prepayments in the underlying pool, the financing institution needs to replace assets in the cover pool from time to time.\nThe curriculum states that another aspect of covered bonds that needs to be considered in credit analysis is the dynamic nature of the cover pool. In contrast to a static pool of mortgage loans (which expose investors to prepayment risk in the case of US mortgage-backed securities), cover pool sponsors must replace any prepaid or non-performing assets in the cover pool to ensure sufficient cash flows to the maturity of the covered bond."
+     },
+     {
+      "q": "Would the two settlement methods for the CDS on Company C result in the same total proceeds for Moffet?",
+      "options": [
+       "Yes",
+       "No, cash settlement would result in higher total proceeds",
+       "No, physical settlement would result in higher total proceeds"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the total proceeds are not the same for cash and physical settlements. The same proceeds would occur if the bond held by Moffet was also the cheapest-to-deliver bond. In this instance, however, Bond 1 is held by Moffet and trades at 40% of par, but Bond 2 is the cheapest-to-deliver bond and trades at 35% of par. \nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the total proceeds will not be higher in physical settlement when compared to cash settlement.\nIf Moffet opts for physical settlement, he will surrender his holding of Bond 1 and obtain the notional $10 million in cash. This is lower than the total amount that would be received if he sold the bond and cash settled the CDS ($4 million + $6.5 million = $10.5 million)."
+     },
+     {
+      "q": "As a percentage of the notional amount, the estimated upfront premium for the CDS on Company D is closest to:",
+      "options": [
+       "1.0%.",
+       "1.4%.",
+       "1.5%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this is derived by taking the difference between the CDS maturity and effective duration and multiplying it by the CDS coupon rate. \nUpfront premium = (Maturity – Effective duration) × Coupon rate\n= (3 – 2.8) × 5.0%\n= 1.0%\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this uses the wrong duration of 3 years, which is the CDS maturity, instead of the effective CDS duration, to calculate the upfront premium.\nUpfront premium ≈ (Credit spread – Coupon rate) × Maturity\n= (5.5% – 5.0%) × 3\n= 1.5%"
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Susan Walker is a portfolio manager at Meerkat Investment Group. She uses a factor model when managing portfolios for her institutional clients.\nWalker computes the expected return on an active ETF using a two-factor model based on arbitrage pricing theory (APT). The current risk-free rate is 2.0%. The APT factor prices and ETF factor sensitivities are presented in Exhibit 1.\nExhibit 1\n# Factor | Factor Price (%) | ETF Factor Sensitivity\n1 | 8.0 | 1.0\n2 | 6.0 | 0.4\nOne of Walker's clients asks her which of the following is an assumption of the two-factor model she used to value the active ETF:\nAssumption 1: The two factors in the model are correlated\nAssumption 2: Arbitrage opportunities are available in the market\nAssumption 3: Investors can form portfolios that eliminate asset-specific risk\nNext, Walker calculates the 2-year holding period cost of the active ETF. The annual management fee is 0.50%, the one-way commission is 0.05%, and the bid-ask spread is 0.12%.\nThe client is concerned that the ETF, which is currently trading at its NAV, could trade at a large discount in the future. Walker tells the client that there is a mechanism that ensures the ETF does not trade at a large discount to NAV.",
+    "questions": [
+     {
+      "q": "Based on the model used by Walker, the expected return on the active ETF is:",
+      "options": [
+       "9.6%.",
+       "10.4%.",
+       "12.4%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the risk-free rate is subtracted from each factor price:\nB. Incorrect. Incorrect because the risk-free rate is not included in the calculation. With RF = 0%, λ1 = 8.0%, λ2 = 6.0%, β1 = 1.0, and  β2 = 0.4: \n\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "The correct answer to the client's question is:",
+      "options": [
+       "Assumption 1.",
+       "Assumption 2.",
+       "Assumption 3."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the APT does not require that the factors are correlated. Assumption 1 states that a factor model describes asset returns.\nB. Incorrect. Incorrect because the APT Assumption 3 states that arbitrage opportunities are not available.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "The 2-year holding period cost of the active ETF is: Correct answer:",
+      "options": [
+       "1.22%.",
+       "1.34%.",
+       "1.44%."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the bid-ask spread is used rather than 1/2 the bid-ask spread in the second term of the equation: \nETF annual management fee is 0.50%\nETF one-way commission is 0.05%\nETF bid-ask spread is 0.12%.     \nRound trip trading costs = \n\nTwo-year holding-period cost = Round trip trading costs + 2 × Management fee\n= 0.34 + 2  0.50 = 1.34%,\nwhere annual management fee is multiplied by 2.\nC. Incorrect. Incorrect because the trading costs are incorrectly multiplied by two when computing the two-year holding-period costs.\nETF annual management fee is 0.50%\nETF one-way commission is 0.05%\nETF bid-ask spread is 0.12%.      \nRound trip trading costs =\n\nTwo-year holding-period cost = 2Round trip trading costs + 2Management fee\n = 2  0.22 + 2  0.50 = 1.44%,\nwhere round trip trading cost (incorrectly) and annual management fee is multiplied by 2 (years)."
+     },
+     {
+      "q": "The mechanism that addresses the client's concern about the active ETF involves the:",
+      "options": [
+       "ETF sponsor creating new shares.",
+       "authorized participant buying the basket of securities and selling the ETF shares in the open market.",
+       "authorized participant selling the basket of securities and buying the ETF shares in the open market."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the ETF sponsor would lose money if it issued new ETF shares that are selling for less than the NAV of the underlying basket.\nB. Incorrect. Incorrect because this is the action an AP might take if the fund is selling at a premium to its NAV. The AP would lose money because it would pay more for the underlying shares then it receives from selling the ETF.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Herbert Erikson is examining the multinational operations of Obsidian AG, a eurozone company that reports under IFRS.\nDuring the most recent year, Obsidian made unhedged export sales to customers located in non-eurozone countries. On 31 December, the end of the most recent year, USD 1 million of accounts receivable remained outstanding. At the time of sale, the EUR/USD (amount of EUR per 1 USD) exchange rate was 0.950. On 31 December, the EUR/USD exchange rate was 0.965.\nOn 1 January of the most recent year, Obsidian formed two new subsidiaries: Ametrine, a UK-based company, and Citrine, a Poland-based company. Ametrine was consolidated using the current rate method, while Citrine was consolidated using the temporal method. The GBP and the Polish zloty (PLN) steadily strengthened against the EUR throughout the year. All of the combined PP&E, and a major portion of the inventory that was sold during the year, were acquired when the companies were formed. Both companies were profitable and had positive shareholders' equity in their first year of operations.\nKunzite is a wholly owned subsidiary that Obsidian acquired six years ago. Erikson is concerned that Kunzite is based in a country that may soon become hyperinflationary, and considers the appropriate accounting treatment when Obsidian consolidates Kunzite.",
+    "questions": [
+     {
+      "q": "With regard to its USD accounts receivable, Obsidian should:",
+      "options": [
+       "not record any foreign currency transaction gain or loss until it is realized on settlement.",
+       "record an unrealized foreign currency transaction loss of EUR 15,000 for the most recent year.",
+       "record an unrealized foreign currency transaction gain of EUR 15,000 for the most recent year."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the increase in the value of the accounts receivable and the transaction gain may not be deferred until the settlement date.\nB. Incorrect. Incorrect because the accounts receivable would increase, rather than decrease, by EUR 15,000.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "On 31 December of the most recent year, after translating Ametrine, Obsidian should have reported a:",
+      "options": [
+       "foreign exchange loss on its consolidated income statement.",
+       "positive translation adjustment on its consolidated balance sheet.",
+       "negative translation adjustment on its consolidated balance sheet."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because Obsidian translates Ametrine's financial statements using the current rate method, with a translation adjustment reported on the consolidated balance sheet rather than the income statement. Gains or losses are reported on the consolidated income statement only when a subsidiary is translated using the temporal method.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because when the foreign currency decreases in value (i.e., weakens), the current rate method results in a decrease in the positive cumulative translation adjustment (or an increase in the negative cumulative translation adjustment) in stockholders' equity.\nDuring the most recent year, the foreign currency (GBP) strengthened, rather than weakened, against the EUR. A positive translation adjustment should be reported on the consolidated balance sheet."
+     },
+     {
+      "q": "Citrine's gross profit margin on 31 December of the most recent year was:",
+      "options": [
+       "lower after translation.",
+       "the same after translation.",
+       "higher after translation."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the PLN steadily strengthened relative to the EUR throughout the most recent year. Cost of goods sold will be lower, due to a historical cost for expensed inventory that is lower than the average cost used for translating its revenues.\nB. Incorrect. Incorrect because the PLN steadily strengthened relative to the EUR throughout the most recent year. Cost of goods sold will be lower, due to a historical cost for expensed inventory that is lower than the average cost used for translating its revenues.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "If Erikson's concern about Kunzite is realized, Obsidian should:",
+      "options": [
+       "translate Kunzite's financial statements using the temporal method directly.",
+       "restate Kunzite's financial statements for inflation, and then translate them using the temporal method.",
+       "restate Kunzite's financial statements for inflation, and then translate them using the current exchange rate."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because this is the required treatment under US GAAP, however, Obsidian reports under IFRS. US GAAP requires a very different approach for translating the foreign currency financial statements of foreign entities located in highly inflationary economies. US GAAP does not allow restatement for inflation but instead requires the foreign entity's financial statements to be remeasured as if the functional currency were the reporting currency (i.e., the temporal method). IFRS requires the foreign currency financial statements first to be restated for inflation using the procedures of IAS 29, and then the inflation-adjusted financial statements are translated using the current exchange rate.\nB. Incorrect. Incorrect because the financial statements should first be restated for inflation and the inflation-adjusted financial statements should then be translated using the current exchange rate, not using the temporal method. IFRS requires the foreign currency financial statements first to be restated for inflation using the procedures of IAS 29, and then the inflation-adjusted financial statements are translated using the current exchange rate.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Juan Bolton is a fixed-income analyst at an investment firm. He is analyzing the firm's actively managed funds and examining macroeconomic data.\nBolton analyzes two actively managed funds, Fund X and Fund Y. He compiles data regarding the performance of the funds and their benchmark in Exhibit 1. Fund X’s expected active risk is 1.3% and Fund Y’s ex ante information ratio is 0.27. The risk-free rate is 2.3%.\nExhibit 1\n#  | Fund X | Fund Y | Benchmark\nExpected annual return | 6.7% | 6.5% | 6.2%\nStandard deviation of returns | 8.9% | 8.6% | 8.3%\nBolton uses the fundamental law of active management to evaluate the performance of the managers of Fund X and Fund Y. He observes that both managers have access to the same set of securities and rebalance their portfolios at the same frequency. Neither manager has any restrictions on implementing their forecasts when constructing portfolios. Bolton also observes that Fund X’s manager has better forecasting skills than Fund Y’s manager.\nNext, Bolton examines the macroeconomic data of three countries for potential investment in their fixed-income securities. He collects selected market expectations for these countries, which are at similar stages of economic development, in Exhibit 2.\nExhibit 2\n#  | Country 1 | Country 2 | Country 3\nReal GDP growth (annual) | 2.8% | 4.2% | 4.2%\nVolatility of real GDP growth | 0.5% | 0.5% | 0.8%",
+    "questions": [
+     {
+      "q": "Fund X’s ex ante information ratio is closest to:",
+      "options": [
+       "0.06.",
+       "0.38.",
+       "0.49."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this answer uses Fund X’s standard deviation of returns as the denominator instead of active risk:\nFund X’s active return / Fund X’s standard deviation of returns = 0.5%/8.9% = 0.0562 ≈ 0.06\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this is Fund X’s Sharpe ratio (SR), not its information ratio:\nSR = (Fund X’s expected return – risk-free rate) / Fund X’s standard deviation of returns\n= (6.7% – 2.3%) / 8.9% = 0.4944 ≈ 0.49"
+     },
+     {
+      "q": "The maximum Sharpe ratio that can be achieved by combining Fund Y and the benchmark portfolio is closest to:",
+      "options": [
+       "0.29.",
+       "0.54.",
+       "0.74."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this calculation does not apply the square root to the equation:\nSRC = (SRB2 + IRY2)\nSRC = (0.46992 + 0.272) = 0.2937 ≈ 0.29\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this answer is the simple addition of the benchmark’s Sharpe ratio and Fund Y’s information ratio:\nSRC = SRB + IRY = 0.4699 + 0.27 = 0.7399 ≈ 0.74"
+     },
+     {
+      "q": "Compared to Fund Y's manager, Bolton's observations suggest that Fund X's manager most likely has:",
+      "options": [
+       "greater breadth.",
+       "a higher transfer coefficient.",
+       "a higher information coefficient."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because breadth measures the number of independent investment decisions made by the investor, typically defined using the number of securities and the rebalancing frequency. Bolton observes that both managers have access to the same set of securities and rebalance their portfolios at the same frequency. Therefore, it is most likely that breadth is similar for both managers.\nB. Incorrect. Incorrect because the transfer coefficient measures the degree to which the investor’s forecasts are translated into active weights. Bolton observes that neither manager has any restrictions on implementing their forecasts when constructing portfolios. Therefore, it is most likely that the transfer coefficients for Fund X’s and Fund Y’s managers are similar.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Based on the macroeconomic data of the three countries, real short-term default-free interest rates are most likely highest in:",
+      "options": [
+       "Country 1.",
+       "Country 2.",
+       "Country 3."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Country 1 has the lowest real GDP growth rate (2.8%) and the lowest volatility of real GDP growth (0.5%). Therefore, real default-free interest rates in Country 1 are most likely the lowest of the three countries.\nB. Incorrect. Incorrect because, although Country 2 has the same real GDP growth rate (4.2%) as Country 3, the volatility of its real GDP growth (0.5%) is lower than Country 3's (0.8%). Therefore, real default-free interest rates in Country 2 are most likely lower than in Country 3.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Corp",
+    "body": "Samantha Maloy is an analyst reviewing the payout policies of Firm A and Firm B.\nFirm A has a stable dividend policy. Its free cash flow has been consistently positive for the past 15 years and the firm does not have many growth opportunities. Firm A's D/E ratio is currently 35%. Maloy expects an increase in Firm A's dividend during the current year and calculates its expected dividend under a target payout adjustment model, using the information in Exhibit 1.\nExhibit 1\nEPS for previous year | $6.00\nPayout ratio for previous year | 50%\nExpected EPS growth for current year | 8%\nTarget payout ratio | 60%\nDividend adjustment period | 3 years\nNext, Maloy reviews the payout policies of Firm B. Firm B's management considers repurchasing 10 million of the company's 200 million outstanding shares at the prevailing market price of $80 per share. The repurchase would be financed using borrowed funds with an after-tax cost of capital of 7%. Before accounting for the repurchase, management expects that Firm B's EPS will be $10 for the current year and that book value per share (BVPS) of common equity will be $60 at year end. Maloy examines whether the share repurchase would affect expected EPS and BVPS of common equity.",
+    "questions": [
+     {
+      "q": "Which of the following is the most likely consequence of the expected change in Firm A's dividend during the current year?",
+      "options": [
+       "Negative information will be conveyed to the market",
+       "The agency conflict between shareholders and debtholders will be reduced",
+       "Management's ability to invest in negative NPV projects will be constrained"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because dividend increases typically convey positive information. Empirical studies broadly support the thesis that dividend initiations or increases convey positive information and are associated with future earnings growth, whereas dividend omissions or reductions convey negative information.\nB. Incorrect. Incorrect because increasing dividends will exacerbate the scope of the agency conflict between shareholders and debtholders. \nWhen a company has debt outstanding, the payment of dividends reduces the cash cushion available to the company for the disbursement of fixed required payments to bondholders. The payment of large dividends, with the intention of transferring wealth from bondholders to shareholders, could lead to underinvestment in profitable projects. All else equal, both dividends and share repurchases increase the default risk of debt.\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "Maloy should expect Firm A's dividend per share for the current year to be closest to:",
+      "options": [
+       "$3.08.",
+       "$3.20.",
+       "$3.30."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because this choice uses the payout ratio of the previous year (i.e., 50%) instead of the target payout ratio. This answer can be obtained as follows:\nExpected DPS = $3.00 + [($6.48 × 50% – $3.00) × 1/3] = $3.00 + $0.08 = $3.08\nB. Incorrect. Incorrect because this choice does not incorporate the expected earnings growth (i.e., 8%). This answer can be obtained as follows:\nExpected DPS = $3.00 + [($6.00 × 60% – $3.00) × 1/3] = $3.00 + $0.20 = $3.20\nCorrect answer:\nC. Correct."
+     },
+     {
+      "q": "If the share repurchase proposal is implemented, Firm B's expected EPS for the current year will be closest to:",
+      "options": [
+       "$9.72.",
+       "$10.23.",
+       "$10.53."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this choice does not account for the reduction in outstanding shares. This answer can be obtained as follows:\nEPS after buyback = ($2,000 million – $56 million) / 200 million = $9.72\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because this choice does not account for the effect of debt financing on after-tax earnings, thus implicitly assuming that the repurchase would be funded by surplus cash. This answer can be obtained as follows:\nEPS after buyback = ($2,000 million) / 190 million = $10.5263 ≈ $10.53"
+     },
+     {
+      "q": "If the share repurchase proposal is implemented, Firm B's expected book value per share of common equity will most likely: Correct answer:",
+      "options": [
+       "decrease.",
+       "not change.",
+       "increase."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the prevailing market price per share (i.e., $80) is greater than the BVPS of common equity (i.e., $60). This choice would be correct if the prevailing market price per share were equal to the BVPS of common equity.\nC. Incorrect. Incorrect because the prevailing market price per share (i.e., $80) is greater than the BVPS of common equity (i.e., $60). This choice would be correct if the prevailing market price per share were less than the BVPS of common equity."
+     }
+    ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Clara Connor, an advisor for Newbridge Investments, is valuing three publicly traded firms: Lismore Corp., Omega Pipeline, and Slane Industries.\nConnor estimates Lismore’s FCFF for the next year based on its forecasted revenues. Lismore’s revenues over the past 12 months were $2,500 million. Connor’s assumptions for estimating Lismore's FCFF are summarized in Exhibit 1.\nExhibit 1\nSales growth over the next year | 40%\nEBIT margin | 30%\nIncremental fixed capital as percent of increased sales | 35%\nIncremental working capital as percent of increased sales | 25%\nProportion of new fixed and working capital financed by debt | 15%\nTax rate | 20%\nOmega Pipeline is a US-based company operating a network of oil and gas pipelines. Connor is concerned about increasing awareness of the environmental and social impacts these pipelines have on their surrounding communities. She believes these concerns are not fully reflected in Omega's current share price and that an ESG equity risk premium should be incorporated in the discount rate. Using a two-stage model and the assumptions provided in Exhibit 2, Connor determines the company value of Omega.\nExhibit 2\nFCFF for both Year 1 and Year 2 | $1,850 million\nExpected long-term FCFF annual growth rate starting in Year 3 | 3.0%\nPretax cost of Omega's debt | 6.0%\nDebt-to-assets ratio | 40%\nRisk-free rate | 3.5%\nMarket equity risk premium | 5.5%\nESG equity risk premium | 0.9%\nOmega's equity beta | 1.4\nCorporate tax rate | 25%\nSoon after Connor completes her valuation of Omega, the company announces it will issue debt to buy back equity during the next year (Year 1). Connor considers how this capital structure change would impact her FCFF forecasts.\nFinally, Connor analyzes Slane Industries. Slane is composed of three independent divisions: 1) lithium mining, 2) bromine extraction, and 3) specialty chemicals. The values of the firm's lithium and bromine reserves are significant. The rates of revenue growth differ across the three divisions. Connor is able to identify publicly traded competitors for the specialty chemicals division but not for the other two divisions. After considering different approaches, she identifies the most appropriate approach for estimating the intrinsic value of Slane.",
+    "questions": [
+     {
+      "q": "Based on Connor’s assumptions, Lismore’s estimated FCFF (in $ millions) for the next year is closest to: Correct answer:",
+      "options": [
+       "240.",
+       "330.",
+       "450."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the proportions of incremental FC and WC financed by debt are included in the forecast FCFF. This would be included when computing FCFE, but not FCFF. Forecast FCFF is erroneously computed as follows:\n \tForecast\t \nSales\t$3,500\t= $2,500 × (1 + 40%)\nEBIT\t$1,050\t= $3,500 × 30%\nEBIT(1 – Tax rate)\t$840\t= $1,050 × (1 – 20%)\nIncremental Fixed Capital\t$(350)\t= $2,500 × 40% × 35%\nIncremental Working Capital\t$(250)\t= $2,500 × 40% × 25%\nNet borrowing\t$90\t= ($350 + $250) × 15%\nFCFF\t$330\t= $840 – $350 – $250 + $90\nwhere:        \nSales = (Most recent sales) × (1 + Sales growth)\nEBIT = (Sales forecast) × (EBIT margin)\nEBIT(1 – Tax rate) = After-tax EBIT\nIncremental FC = (Most recent sales) × (Sales growth) × (ΔFC as % Sales growth)\nIncremental WC = (Most recent sales) × (Sales growth) × (ΔWC as % Sales growth)\nNet borrowing = (Incremental FC + Incremental WC) × Proportion financed by debt\nFCFF = (EBIT(1 – Tax rate)) – Incremental FC – Incremental WC + Net borrowing\nC. Incorrect. Incorrect because taxes are ignored and the forecast FCFF is erroneously computed as follows:\n \tForecast\t \nSales\t$3,500\t= $2,500 × (1 + 40%)\nEBIT\t$1,050\t= $3,500 × 30%\nIncremental Fixed Capital\t$(350)\t= $2,500 × 40% × 35%\nIncremental Working Capital\t$(250)\t= $2,500 × 40% × 25%\nFCFF\t$450\t= $1,050 – $350 – $250\nwhere:\nSales = (Most recent sales) × (1 + Sales growth)\nEBIT = (Sales forecast) × (EBIT margin)\nIncremental FC = (Most recent sales) × (Sales growth) × (ΔFC as % Sales growth)\nIncremental WC = (Most recent sales) × (Sales growth) × (ΔWC as % Sales growth)\nFCFF = EBIT – Incremental FC – Incremental WC"
+     },
+     {
+      "q": "Based on Connor’s assumptions, the company value (in $ millions) of Omega is closest to:",
+      "options": [
+       "27,500.",
+       "29,700.",
+       "32,600."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the terminal value of the firm is discounted back three years instead of two years. The value of Omega is erroneously computed as follows.\nStep 1 Identify the FCFFs\nConnor is using a two-stage model with no growth in the first two years followed by a long-term growth rate of 3% starting in Year 3. The first three FCFFs would be:\nYear\tFCFF\n1\t$1,850\n2\t$1,850\n3\t$1,906 = $1,850 × (1 + 3.0%)\nStep 2 Estimate the WACC\nCost of debt = (Pre-tax cost of debt) × (1 – Tax rate) = 6.0% × (1 – 25%) = 4.5%\nCost of equity = Risk-free rate + [Beta × (Market risk premium)] + ESG premium \nCost of equity = 3.5% + [1.4 × 5.5%] + 0.9% = 12.1%\nWACC = Proportion of debt × Cost of debt + Proportion of equity × Cost of equity\nWACC = 0.4 × 4.5% + 0.6 × 12.1% = 9.06%\nStep 3 Estimate the terminal value of the firm but incorrectly assume that the TV is at the end of Year 3\nTV3 = CF3/(WACC – Long-term growth rate) = $1,906/(9.06% – 3.0%) = $31,444\nStep 4 Compute the value of the FCFFs to estimate the value of the firm\nValue of the firm = FCFF1/(1 + WACC) + FCFF2/(1 + WACC)2 + TV3/(1 + WACC)3\nValue of the firm = $1,850/1.0906 + $1,850/(1.0906)2 + $31,444/(1.0906)3\nValue of the firm = $1,696 + $1,555 + $24,240 = $27,492 ≈ $27,500\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the ESG risk premium is ignored and not added to the cost of equity. The value of Omega is erroneously computed as follows.\nStep 1 Identify the FCFFs\nConnor is using a two-stage model with no growth in the first two years followed by a long-term growth rate of 3% starting in Year 3. The first three FCFFs would be:\nYear\tFCFF\n1\t$1,850\n2\t$1,850\n3\t$1,906 = $1,850 × (1 + 3.0%)\nStep 2 Estimate the WACC\nCost of debt = (Pre-tax cost of debt) × (1 – Tax rate) \nCost of debt = 6.0% × (1 – 25%) = 4.5% \nCost of equity = Risk-free rate + [Beta × (Market risk premium)] \nCost of equity = 3.5% + [1.4 × 5.5%] = 11.2%\nWACC = Proportion of debt × Cost of debt + Proportion of equity × Cost of equity\nWACC = 0.4 × 4.5% + 0.6 × 11.2% = 8.52%\nStep 3 Estimate the terminal value of the firm at the end of Year 2\nTV2 = CF3/(WACC – Long-term growth rate) = $1,906/(8.52% – 3.0%) = $34,520\nStep 4 Compute the value of the FCFFs to estimate the value of the firm\nValue of the firm = FCFF1/(1 + WACC) + (FCFF2 + TV2)/(1 + WACC)2\nValue of the firm = $1,850/1.0852 + ($1,850 + $34,520)/(1.0852)2\nValue of the firm = $1,705 + $30,883 = $32,588 ≈ $32,600"
+     },
+     {
+      "q": "After incorporating Omega's capital structure change, Connor's FCFF forecasts would most likely be:",
+      "options": [
+       "lower.",
+       "unchanged.",
+       "higher."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because FCFF is determined before any payments are made to the suppliers of capital. The issuance of debt for the purpose of repurchasing common shares only impacts how the FCFF is distributed to the suppliers of capital but not what the FCFF is.\nAn increase in leverage affects FCFE in two ways. In the year the debt is issued, it increases the FCFE by the amount of debt issued. After the debt is issued, FCFE is then reduced by the after-tax interest expense.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because FCFF is determined before any payments are made to the suppliers of capital. The issuance of debt for the purpose of repurchasing common shares only impacts how the FCFF is distributed to the suppliers of capital but not what the FCFF is. \nAn increase in leverage affects FCFE in two ways. In the year the debt is issued, it increases the FCFE by the amount of debt issued. After the debt is issued, FCFE is then reduced by the after-tax interest expense."
+     },
+     {
+      "q": "Which of the following is the most appropriate approach for estimating the intrinsic value of Slane?",
+      "options": [
+       "Relative valuation",
+       "Asset-based valuation",
+       "Sum-of-the-parts valuation"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Connor could identify publicly traded competitors for the specialty chemicals division only. Relative valuation could not be used for valuing the lithium and the bromine divisions because there were no publicly traded competitors.\nA relative valuation model estimates an asset’s value relative to that of another asset. The idea underlying relative valuation is that similar assets should sell at similar prices.\nB. Incorrect. Incorrect because asset-based valuation would only be one part of the process of valuing the lithium and bromine divisions, which each hold significant reserves. \nAnother type of absolute valuation is asset-based valuation, which values a company on the basis of the market value of the assets or resources it controls. For appropriate companies asset-based valuation can provide an independent estimate of value, and an analyst typically finds alternative, independent estimates of value to be useful.\nCorrect answer:\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Deriv",
+    "body": "Qiu Tian is a hedge fund manager evaluating options on several equities. She begins with Tara Corp., a non-dividend-paying stock priced in Indian rupees (INR). Tian is bullish on Tara stock and values European-style Tara call options using a two-period binomial model and information from Exhibit 1.\nExhibit 1\nCurrent stock price | INR 10\nTime to option expiration | 2 years\nRisk-free rate (annual) | 5.0%\nOption strike price | INR 12\nUp factor per period | 1.50\nDown factor per period | 0.67\nTian observes that the 2-year Tara call option is illiquid. She determines how to replicate a long position in this call option.\nNext, Tian assesses the value of a European-style call option on equity index futures using the Black model. She gathers information related to the call in Exhibit 2. The Black model value of a put with the same underlying, strike price, and time to expiration is 225.\nExhibit 2\nCurrent futures price | 1,100\nTime to expiration | 6 months\nExercise price | 1,300\nRisk-free rate | 5.0%\nTian is also evaluating the addition of Purnima Corp. options to her portfolio. She compares the relative value of three Purnima call options in Exhibit 3. Her objective is to select the option that is cheapest after she makes adjustments for differences in moneyness and time to expiration. Purnima stock is currently trading at INR 62.\nExhibit 3\n# Option X | Option Y | Option Z\nCurrent price | INR 10.55 | INR 6.89 | INR 6.44\nImplied volatility | 30% | 25% | 35%\nStrike price | INR 55 | INR 62 | INR 75\nTime to expiration | 8 months | 12 months | 16 months",
+    "questions": [
+     {
+      "q": "Using a two-period binomial model, the no-arbitrage value of the Tara call option is closest to:",
+      "options": [
+       "INR 1.31.",
+       "INR 2.00.",
+       "INR 2.80."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because a single-period binomial model is incorrectly used to calculate the fair value of the option as follows;\nc+ = Max(0,uS – X) = Max (0, 1.5 × 10 –12) = 3\nc-  = Max(0,dS – X) = Max (0, 0.67 × 10 –12) = 0\nπ = [(1+ r – d) / (u – d)] = (1.05 – 0.67) / (1.5 – 0.67) = 0.457831\nc = PV [πc+ + (1 - π)c-]\nWhere PV = 1 / (1 + r)\nc = (1 / 1.05) × [0.457831 × 3 + 0.542169 x 0] = 1.30809 ≈ 1.31\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect as the stock up move factor is used in the place of stock down move factor and vice versa. This error is the same as mixing up π and (1 – π) in the valuation formula.\nπ = [(1+ r – d)  / (u – d)]\n   = (1.05 – 1.5) / (0.67 – 1.5)\n   = 0.542169\nc = PV [π2c++ + 2π(1 – π)c+- + (1 – π)2c--\nWhere PV = [1 / (1 + r)2]\nc = (1 / 1.05)2 × [0.5421692 x 10.5 + 2 × 0.457831 × 0.542169 × 0 + 0.4578312 × 0]\n   = (1 / 1.05)2 × 3.086442\n   = 2.799494 ≈ 2.80"
+     },
+     {
+      "q": "To replicate a position in the illiquid Tara option, Tian should:",
+      "options": [
+       "buy Tara stock and lend funds.",
+       "buy Tara stock and borrow funds.",
+       "short sell Tara stock and lend funds."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because buying both the stock and a zero-coupon bond is an upfront investment of cash, and does not replicate a long call option where only the option premium is paid at the outset. Moreover, in case the stock loses money, the fund manager is fully exposed, while the loss is restricted to the option premium in case of a long call position.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because short selling the underlying stock and lending the proceeds would not replicate the long call option, however it would replicate a long put option."
+     },
+     {
+      "q": "The value of the call option on equity index futures is closest to:",
+      "options": [
+       "25.",
+       "30.",
+       "35."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the difference between the futures price and the strike price is not discounted.\nc = (1,100 – 1,300) + 225 = 25\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because the 0.5 in the exponent is ignored.\nc = e(–0.05)[1,100 – 1,300] + 225\nc = 0.95123 × –200 + 225\nc = –190.246 + 225\nc = 34.754 ~ 35"
+     },
+     {
+      "q": "Which Purnima option in Exhibit 3 best meets Tian's objective?",
+      "options": [
+       "Option X",
+       "Option Y",
+       "Option Z"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because although Option X has the lowest strike price, what is relevant is that it has implied volatility of 30% which is higher than Option Y's implied volatility of 25% and therefore does not best meet Tian's objective.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because although Option Z has the lowest quoted price, what is relevant is that it has the highest implied volatility at 35% and therefore does not best meet Tian's objective."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Michael Lee is a portfolio manager at Skylark Advisory, a small financial advisory firm serving individual clients. He holds degrees in law and finance and has recently passed Level I of the CFA exam. Skylark has adopted the Standards.\nLee reports directly to the lead portfolio manager Deborah Holt. In a recent conversation with Holt, Lee states, \"I have successfully completed Level I of the CFA Program and I am likely to acquire the CFA charter over the next two years.\"\nLee is offered an opportunity to teach an online commercial law course for a semester at his former university. He will not receive any compensation for the role. Lee is able to accommodate the teaching outside of his regular work schedule as Skylark's policy permits employees to work from home and use flexible time when attending office in person.\nSkylark primarily uses mutual funds from Prexel Funds for client accounts. Prexel charges fees that are higher than similar funds; however, some of these fees are given back to Skylark as rebates. Skylark uses these rebates to maintain reporting systems for the benefit of all clients. The systems enable both Skylark and clients to access better and more timely performance data. Prexel Funds' net-of-fee performance is better than its competitor funds. Skylark determines Prexel to be best suited for clients. Holt discloses this arrangement to clients when they open an account with Skylark.\nLike most employees, Lee maintains his retirement portfolio with Skylark. His adult sister also has a fee-paying account with Skylark which is managed in the same manner as other clients. Recently, Prexel Funds offered a limited number of shares in the previously closed Prexel Commodity Strategies Fund (PCSF) to Skylark. The demand for PCSF shares from Skylark's suitable clients far exceeded the limited supply available. To avoid any conflict of interest, Lee did not allocate any shares to himself, or his sister.",
+    "questions": [
+     {
+      "q": "The reference to which of the following in Lee's statement to Holt violates the Standards?",
+      "options": [
+       "Level I only",
+       "Two-year completion only",
+       "Both Level I and two-year completion"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because stating that Lee has successfully completed Level I of the CFA program appears on the list of acceptable references to CFA program under the Standards appearing in Exhibit 3. It says \"I passed Level I of the CFA Program.”\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because while stating that Lee has successfully completed Level I of the CFA exam is not a violation, indicating an expected completion date is not permitted."
+     },
+     {
+      "q": "With respect to the commercial law course, is Lee required to take any action to comply with the Standard relating to duty to employers? Correct answer:",
+      "options": [
+       "No",
+       "Yes, prior to accepting the offer, he must obtain prior written approval from Holt",
+       "Yes, after accepting the offer, he must inform Holt of the terms in a written report"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Lee's offer to teach the course is uncompensated and given the firm's flexible time policy he will be able to carry out this activity on his own time, hence it does not create a requirement to seek permission or disclosure responsibility on Lee.\nC. Incorrect. Incorrect because Lee's offer is to teach the commercial law course is uncompensated and given the firm's flexible time policy he will be able to carry out this activity on his own time, hence it does not create a requirement of providing a written report of terms of the offer upon Lee."
+     },
+     {
+      "q": "Does the rebate arrangement with Prexel violate the Standard relating to loyalty, prudence, and care? Correct answer:",
+      "options": [
+       "No",
+       "Yes, because the rebate should not be used for Skylark's operations",
+       "Yes, because Holt should have sought lowest cost mutual funds for clients"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the rebate is used to maintain client reporting systems for the benefit of clients. The reporting system enables both Skylark and the clients to access more timely performance data. As the rebate is being used for client benefit, it is therefore not a violation.\nC. Incorrect. Incorrect because the 'rebate' is permitted as it meets the two standards for the use of soft dollars.  First, it is used for the benefit of clients and second, it has been disclosed to the clients. It is also mentioned in the case that Skylark has determined that the higher Prexel fees are justified."
+     },
+     {
+      "q": "Did Lee violate the Standard relating to fair dealing in his allocation of PCSF shares?",
+      "options": [
+       "No",
+       "Yes, because he should have allocated shares to his sister's account",
+       "Yes, because he should have allocated shares to both his sister's and to his account"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because Lee violated the Standard relating to Fair Dealing by not allocating shares to his sister. He did not violate the Standards by not allocating shares to himself. If the account for his sister is managed in the same manner as other clients, which it is, then she should not be precluded from the allocation.\nCorrect answer:\nB. Correct. Correct because his sister's account is managed in the same manner as other client accounts and therefore should have been allocated shares.\nIf the issue is oversubscribed, members and candidates should forgo any sales to themselves or their immediate families in order to free up additional shares for clients. If the investment professional’s family-member accounts are managed similarly to the accounts of other clients of the firm, however, the family-member accounts should not be excluded from buying such shares.\nC. Incorrect. Incorrect because Lee violated the Standard relating to Fair Dealing by not allocating shares to his sister.  He did not violate the Standards by not allocating shares to himself. If the account for his sister is managed in the same manner as other clients, which it is, then she should not be precluded from the allocation."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Carl Hirayo, CFA, recently joined Summit Investments as a portfolio manager. Hirayo plans to participate in Tarragon Petroleum’s IPO for both his personal account and his clients' accounts. He obtains preclearance for his own participation because the IPO is not fully subscribed at that time. The offering turns out to be fully subscribed at the time of issue and Summit receives all requested shares. Hirayo allocates these shares on a pro rata basis among his subscribing clients and his own account.\nWhile meeting with a client at a restaurant, Hirayo overhears two brokers talking about ION, an electronic manufacturing company. The brokers discuss a report that was released online earlier in the morning by a leading analyst. The report included a merger rumor about ION and the analyst placed a strong buy recommendation on the stock. Hirayo calls his broker to buy 4,000 shares of ION for his personal account.\nHirayo will receive a $60,000 performance bonus from Summit if his monthly portfolio performance exceeds that of Summit's other portfolios. He discloses the bonus arrangement to his existing clients but not to prospective clients. Separately, Hirayo will receive a $12,000 reward from Summit after he successfully brought in 20 clients from his previous employer. This reward is paid by Summit and is not charged to clients. Hirayo does not disclose this reward arrangement to the clients that he brought over.\nSummit's management team decides to further strengthen its record retention policy. The current policy has the following notable provisions:\nProvision 1: Client meeting notes must be preserved in electronic form; hence, any hard copies must be digitized.\nProvision 2: Informal blog posts and short message form posts sourced from the internet do not need to be preserved.\nProvision 3: Research reports and all supporting documents have a retention period of three years.",
+    "questions": [
+     {
+      "q": "With respect to the IPO, does Hirayo violate the Standard relating to priority of transactions? Correct answer:",
+      "options": [
+       "No",
+       "Yes, because he allocates shares to himself",
+       "Yes, because he applied for the IPO for his personal account"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because, although Hirayo receives IPO shares, he does not disadvantage his clients. Summit receives all requested IPO shares and Hirayo allocates them pro rata among his subscribing clients and his own account, with no client being disadvantaged. Therefore, Hirayo does not violate the Standards. \nAccording to Standard VI(B) Priority of Transactions, members and candidates should not benefit from the position that their clients occupy in the marketplace—through preferred trading, the allocation of limited offerings, or oversubscription.\nC. Incorrect. Incorrect because Hirayo does not disadvantage his clients by applying for the IPO for his personal account. Summit receives all requested IPO shares and Hirayo allocates them pro rata among his subscribing clients and his own account, with no client being disadvantaged. Therefore, Hirayo does not violate the Standards.\nAccording to Standard VI(B) Priority of Transactions, members and candidates should not benefit from the position that their clients occupy in the marketplace—through preferred trading, the allocation of limited offerings, or oversubscription."
+     },
+     {
+      "q": "When purchasing ION shares, does Hirayo violate the Standards? Correct answer:",
+      "options": [
+       "No",
+       "Yes, because he acts on material nonpublic information",
+       "Yes, because he does not have a reasonable basis for buying the shares"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the leading analyst issued the strong buy rating on ION during the morning, which means it is already public information. According to Standard II(A) Material Nonpublic Information, once the information is disseminated to the market, it is public information that is no longer covered by this standard. Similarly, the rumor about the merger is also no longer considered material nonpublic information.\nC. Incorrect. Incorrect because a reasonable basis is required by Standard V(A) Diligence and Reasonable Basis when making investment analysis, recommendations, and actions for clients and for the firm. Hirayo bought the securities for his own account. The Standards do not impose a requirement of diligence or reasonable basis on personal trades."
+     },
+     {
+      "q": "In relation to his compensation, Hirayo violates the Standards when he fails to disclose: Correct answer:",
+      "options": [
+       "the $60,000 bonus only.",
+       "the $12,000 reward only.",
+       "both the $60,000 bonus and the $12,000 reward."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Hirayo is not in violation of the CFA Institute Code and Standards. The $12,000 does not have to be disclosed to clients because it is not a referral fee or additional compensation, and it does not create a conflict of interest with his employer, clients, or prospective clients.\nAccording to Standard VI(C): Conflicts of Interest, Referral Fees, referral fees are any compensation, consideration, or benefit received from or paid to others for the recommendation of products or services.\nThe $12,000 reward Hirayo will receive from Summit for bringing over clients from his previous employer is not a referral fee because this reward is paid by Summit (the employer) and not charged to clients. This amount is compensation paid by the firm, not a fee charged to clients.\nC. Incorrect. Incorrect because Hirayo is not in violation of the Standards when he fails to disclose the $12,000 reward received from Summit (the employer) for bringing over clients, with Summit paying the reward that is not charged back to clients. The $12,000 does not have to be disclosed to clients because it is not a referral fee or additional compensation, and it does not create a conflict of interest with his employer, clients, or prospective clients.\nHowever, Hirayo violates the Standards regarding the $60,000 performance bonus arrangement by not disclosing it to his prospective clients."
+     },
+     {
+      "q": "To comply with the Standards, which provision in Summit’s record retention policy should be amended?",
+      "options": [
+       "Provision 1",
+       "Provision 2",
+       "Provision 3"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because, according to Standard V(C) Record Retention, records may be maintained either in hard copy or electronic form.\nCorrect answer:\nB. Correct.\nC. Incorrect. Incorrect because, according to Standard V(C) Record Retention, firms may also implement policies detailing the applicable time frame for retaining research and client communication records. Fulfilling such regulatory and firm requirements satisfies the requirements of Standard V(C).\nThe Standard adds that in the absence of regulatory guidance or firm policies, CFA Institute recommends maintaining records for at least seven years. The 7-year retention period is only recommended in the absence of a firm policy."
+     }
+    ]
+   }
+  ],
+  "concept": "The real CFA Institute Level II Mock 1, Session 2 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Marked on its own; the combined result of Mock C is in the Mock C hub."
+ },
+ {
   "id": "eth1",
   "title": "Ethics 1",
   "kind": "ethics",

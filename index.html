@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v245 · 2026-11-14";
+  const APP_VERSION = "v246 · 2026-11-14";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1573,9 +1573,10 @@
     return out;
   }
   // Mock B: the real CFA Institute mock, two papers taken like the exam (30-minute break, scores only after Paper 2).
-  const EX_MB = ["mockB1", "mockB2"], EX_BREAK = 30 * 60;
-  const exMBDone = st => EX_MB.every(id => ((st || exLoad()).sets[id] || {}).last);
-  const exBackTo = (id, dir = "back") => { const set = exSets().find(s => s.id === id); if (set && set.kind === "mockb") exMockBHub(dir); else examSetMenu(id, dir); };
+  const EX_GROUPS = ["B", "C"], EX_BREAK = 30 * 60;
+  const exMB = g => ["mock" + g + "1", "mock" + g + "2"], exGOf = id => id.slice(4, 5);
+  const exMBDone = (st, g = "B") => exMB(g).every(id => ((st || exLoad()).sets[id] || {}).last);
+  const exBackTo = (id, dir = "back") => { const set = exSets().find(s => s.id === id); if (set && set.kind === "mockb") exMockBHub(dir, exGOf(id)); else examSetMenu(id, dir); };
   const exHms = s => { s = Math.max(0, Math.round(s)); const p = n => String(n).padStart(2, "0"); return `${p(Math.floor(s / 3600))}:${p(Math.floor(s % 3600 / 60))}:${p(s % 60)}`; };
   const exPct = (a, b) => b ? Math.round(100 * a / b) : 0;
   function exWrongItems(setId) {
@@ -1637,14 +1638,15 @@
       eb.onclick = () => exEthicsHub();
       app.append(eb);
     }
-    if (exSets().some(s => s.kind === "mockb")) {
-      const mst = exLoad(), mb = el("button", { className: "nt-item ex-item" + (exMBDone(mst) ? " done" : "") });
-      const p1 = mst.sets.mockB1 || {}, p2 = mst.sets.mockB2 || {};
-      const stat = exMBDone(mst) ? `Paper 1 ${p1.last.score}% · Paper 2 ${p2.last.score}%` : p2.cur ? "Paper 2 in progress" : p1.last ? `Paper 1 ${p1.last.score}% · Paper 2 next` : p1.cur ? "Paper 1 in progress" : "not started";
-      mb.append(el("b", {}, "Mock B (real exam, 2 papers)"), el("span", {}, `88 questions · 2 × 2 h 12 min with a 30-minute break · ${stat}`));
-      mb.onclick = () => exMockBHub();
+    EX_GROUPS.forEach(g => {
+      if (!exSets().some(x => x.id === exMB(g)[0])) return;
+      const mst = exLoad(), mb = el("button", { className: "nt-item ex-item" + (exMBDone(mst, g) ? " done" : "") });
+      const p1 = mst.sets[exMB(g)[0]] || {}, p2 = mst.sets[exMB(g)[1]] || {};
+      const stat = exMBDone(mst, g) ? `Paper 1 ${p1.last.score}% · Paper 2 ${p2.last.score}%` : p2.cur ? "Paper 2 in progress" : p1.last ? `Paper 1 ${p1.last.score}% · Paper 2 next` : p1.cur ? "Paper 1 in progress" : "not started";
+      mb.append(el("b", {}, `Mock ${g} (real exam, 2 papers)`), el("span", {}, `88 questions · 2 × 2 h 12 min with a 30-minute break · ${stat}`));
+      mb.onclick = () => exMockBHub("fwd", g);
       app.append(mb);
-    }
+    });
     const qd = kqLoad(), qq = KEYQ.filter(q => q.reading === 98), qm = qq.filter(q => kqSt(qd, q).streak >= 3).length;
     const qb = el("button", { className: "nt-item" + (qq.length ? "" : " absorbed") });
     qb.append(el("b", {}, "Quick questions"), el("span", {}, qq.length ? `${plural(qq.length, "question")} · main ideas behind questions you missed · ${qm} mastered` : "No questions yet"));
@@ -1805,17 +1807,18 @@
   // ---------- Mock B: hub, break and combined result ----------
   let exMBTimer = null;
   function exMBTick(fn) { clearInterval(exMBTimer); exMBTimer = setInterval(() => { if (!fn()) { clearInterval(exMBTimer); exMBTimer = null; } }, 500); }
-  function exMBLeft() { const t = exLoad(); return t.mockb && t.mockb.breakEnd ? Math.max(0, Math.round((t.mockb.breakEnd - Date.now()) / 1000)) : EX_BREAK; }
-  function exMockBHub(dir = "fwd") {
+  const exBE = g => (g === "B" ? "breakEnd" : "breakEnd" + g);
+  function exMBLeft(g = "B") { const t = exLoad(), e = t.mockb && t.mockb[exBE(g)]; return e ? Math.max(0, Math.round((e - Date.now()) / 1000)) : EX_BREAK; }
+  function exMockBHub(dir = "fwd", g = "B") {
     screen(dir);
-    backTo = () => exMockBHub("back");
+    backTo = () => exMockBHub("back", g);
     app.append(nav("Exam", () => examHub("back")));
     const st = exLoad();
-    app.append(el("h1", { className: "title" }, "Mock B (real exam)"),
-      el("p", { className: "sub" }, "The real CFA Institute Level II Mock B: two papers of 44 questions, 2 h 12 min each. When you finish Paper 1 a 30-minute break starts and you can begin Paper 2 at any time. Each paper is marked separately as soon as you finish it."));
-    const sets = EX_MB.map(id => exSets().find(s => s.id === id));
+    app.append(el("h1", { className: "title" }, `Mock ${g} (real exam)`),
+      el("p", { className: "sub" }, `The real CFA Institute Level II ${g === "B" ? "Mock B" : "Mock 1 (Mock C)"}: two papers of 44 questions, 2 h 12 min each. When you finish Paper 1 a 30-minute break starts and you can begin Paper 2 at any time. Each paper is marked separately as soon as you finish it.`));
+    const sets = exMB(g).map(id => exSets().find(s => s.id === id));
     sets.forEach((set, i) => {
-      const s = st.sets[set.id] || {}, prevDone = i === 0 || (st.sets[EX_MB[0]] || {}).last;
+      const s = st.sets[set.id] || {}, prevDone = i === 0 || (st.sets[exMB(g)[0]] || {}).last;
       const card = el("div", { className: "card" });
       card.append(el("b", {}, set.title));
       const nq = exFlat(set).length;
@@ -1830,30 +1833,30 @@
       }
       app.append(card);
     });
-    const p1 = st.sets[EX_MB[0]] || {};
-    if (exMBDone(st)) { const rb = el("button", { className: "btn", style: "width:100%;margin:6px 0" }, "Combined result of both papers"); rb.onclick = () => exMockBResult(); app.append(rb); }
+    const p1 = st.sets[exMB(g)[0]] || {};
+    if (exMBDone(st, g)) { const rb = el("button", { className: "btn", style: "width:100%;margin:6px 0" }, "Combined result of both papers"); rb.onclick = () => exMockBResult("fwd", g); app.append(rb); }
     if (p1.last || p1.cur) {
       const rs = el("button", { className: "btn ghost small", style: "margin-top:14px" }, "Start Mock B again");
-      rs.onclick = () => { if (confirm("Throw away both papers of Mock B (answers, scores and incorrect questions) and start again?")) { const t = exLoad(); EX_MB.forEach(id => { delete t.sets[id]; Object.keys(t.wrong).forEach(k => { if (k.startsWith(id + ":")) delete t.wrong[k]; }); }); delete t.mockb; exSave(t); exMockBHub("back"); } };
+      rs.onclick = () => { if (confirm(`Throw away both papers of Mock ${g} (answers, scores and incorrect questions) and start again?`)) { const t = exLoad(); exMB(g).forEach(id => { delete t.sets[id]; Object.keys(t.wrong).forEach(k => { if (k.startsWith(id + ":")) delete t.wrong[k]; }); }); if (t.mockb) delete t.mockb[exBE(g)]; exSave(t); exMockBHub("back", g); } };
       app.append(rs);
     }
   }
-  function exMockBResult(dir = "fwd") {
+  function exMockBResult(dir = "fwd", g = "B") {
     const st = exLoad();
-    if (!exMBDone(st)) { exMockBHub(dir); return; }
+    if (!exMBDone(st, g)) { exMockBHub(dir, g); return; }
     screen(dir);
-    backTo = () => exMockBResult("back");
-    app.append(nav("Mock B", () => exMockBHub("back")));
-    const sets = EX_MB.map(id => exSets().find(s => s.id === id)), flats = sets.map(exFlat), lasts = sets.map(s => st.sets[s.id].last);
+    backTo = () => exMockBResult("back", g);
+    app.append(nav(`Mock ${g}`, () => exMockBHub("back", g)));
+    const sets = exMB(g).map(id => exSets().find(s => s.id === id)), flats = sets.map(exFlat), lasts = sets.map(s => st.sets[s.id].last);
     const right = lasts[0].right + lasts[1].right, total = flats[0].length + flats[1].length;
-    app.append(el("h1", { className: "title" }, "Mock B results"), el("p", { className: "ex-res-score" }, `${exPct(right, total)}%`),
+    app.append(el("h1", { className: "title" }, `Mock ${g} results`), el("p", { className: "ex-res-score" }, `${exPct(right, total)}%`),
       el("p", { className: "sub" }, `${right} of ${total} correct in both papers`));
     sets.forEach((set, i) => {
       const c = el("div", { className: "card" }), last = lasts[i], n = flats[i].length;
       c.append(el("b", {}, set.title), el("p", {}, `${last.right} of ${n} correct (${last.score}%) · time used ${exHms(last.used)} · ${last.date}`));
       const d = el("button", { className: "btn small" }, "Details, review and answers"); d.onclick = () => examResult(set.id);
       const w = exWrongItems(set.id).length, wb = el("button", { className: "btn small ghost", style: "margin-left:8px" }, `Incorrect questions (${w})`);
-      wb.onclick = () => exWrongScreen(set.id, () => exMockBResult("back"), "Mock B results");
+      wb.onclick = () => exWrongScreen(set.id, () => exMockBResult("back", g), `Mock ${g} results`);
       c.append(d, wb); app.append(c);
     });
     const by = {};
@@ -2011,7 +2014,7 @@
     $(".rev").onclick = review;
     $(".ex-fin").onclick = () => {
       const left = N - Object.keys(cur.ans).length;
-      const tail = set.kind === "mockb" && id === "mockB1" ? " Paper 1 is marked now and the 30-minute break starts." : "";
+      const tail = set.kind === "mockb" && id === exMB(exGOf(id))[0] ? " Paper 1 is marked now and the 30-minute break starts." : "";
       modal("Finish the test?", `${left ? `You have ${left} unanswered question${left > 1 ? "s" : ""}; they count as wrong. ` : ""}Once you finish you cannot return to the questions.${tail}`, "Finish", () => finish());
     };
     function modal(title, text, yes, onYes) {
@@ -2105,7 +2108,7 @@
       t.sets[id].last = { ans: cur.ans, flag: cur.flag, date: today(), used: set.minutes * 60 - cur.left, right, score: exPct(right, N) };
       delete t.sets[id].cur;
       flat.forEach(it => { if (cur.ans[it.n] !== it.q.answer) t.wrong[it.id] = { streak: 0 }; });
-      if (set.kind === "mockb" && id === "mockB1") { t.mockb = t.mockb || {}; if (!t.mockb.breakEnd) t.mockb.breakEnd = Date.now() + EX_BREAK * 1000; }
+      if (set.kind === "mockb" && id === exMB(exGOf(id))[0]) { t.mockb = t.mockb || {}; const bk = exBE(exGOf(id)); if (!t.mockb[bk]) t.mockb[bk] = Date.now() + EX_BREAK * 1000; }
       exSave(t);
       examResult(id, "up");
     }
@@ -2147,14 +2150,15 @@
     const set = exSets().find(s => s.id === id), flat = exFlat(set), last = (exLoad().sets[id] || {}).last;
     screen(dir);
     backTo = () => examResult(id, "back");
-    app.append(nav(set.kind === "mockb" ? "Mock B" : set.title, () => (set.kind === "mockb" ? exMockBHub("back") : examSetMenu(id, "back"))));
+    app.append(nav(set.kind === "mockb" ? `Mock ${exGOf(id)}` : set.title, () => (set.kind === "mockb" ? exMockBHub("back", exGOf(id)) : examSetMenu(id, "back"))));
     if (!last) return;
-    if (id === "mockB1" && !(exLoad().sets.mockB2 || {}).last) {
-      const bc = el("div", { className: "card" }), bt = el("p", { className: "ex-res-score", style: "font-variant-numeric:tabular-nums;margin:4px 0" }, exHms(exMBLeft()).slice(3)), bn = el("p", { className: "sub", style: "margin:2px 0 8px" }, "");
-      const go = el("button", { className: "btn" }, (exLoad().sets.mockB2 || {}).cur ? "Resume Paper 2" : "Start Paper 2");
-      go.onclick = () => { clearInterval(exMBTimer); examRun("mockB2"); };
+    if (set.kind === "mockb" && id === exMB(exGOf(id))[0] && !(exLoad().sets[exMB(exGOf(id))[1]] || {}).last) {
+      const gg = exGOf(id), id2 = exMB(gg)[1];
+      const bc = el("div", { className: "card" }), bt = el("p", { className: "ex-res-score", style: "font-variant-numeric:tabular-nums;margin:4px 0" }, exHms(exMBLeft(exGOf(id))).slice(3)), bn = el("p", { className: "sub", style: "margin:2px 0 8px" }, "");
+      const go = el("button", { className: "btn" }, (exLoad().sets[id2] || {}).cur ? "Resume Paper 2" : "Start Paper 2");
+      go.onclick = () => { clearInterval(exMBTimer); examRun(id2); };
       bc.append(el("b", {}, "Break before Paper 2"), bt, bn, go); app.append(bc);
-      exMBTick(() => { if (!document.body.contains(bt)) return false; const l = exMBLeft(); bt.textContent = exHms(l).slice(3); bn.textContent = l > 0 ? "Break time left. You can start Paper 2 at any time." : "The break is over: start Paper 2 whenever you are ready."; return true; });
+      exMBTick(() => { if (!document.body.contains(bt)) return false; const l = exMBLeft(gg); bt.textContent = exHms(l).slice(3); bn.textContent = l > 0 ? "Break time left. You can start Paper 2 at any time." : "The break is over: start Paper 2 whenever you are ready."; return true; });
     }
     app.append(el("p", { className: "ex-res-score" }, `${last.score}%`),
       el("p", { className: "sub" }, `${last.right} of ${flat.length} correct · time used ${exHms(last.used)} · ${last.date}`));
