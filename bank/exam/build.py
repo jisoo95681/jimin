@@ -362,6 +362,12 @@ for _k in (1,2,3,4):
         for _q in _v['questions']:
             _n+=1; assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('mockA',_k,_n)
     assert _n==44; sets.append(_st); print('mockA%d'%_k,_n)
+# ---- Real CFA Institute Mock B (14 Nov): Session 1 and 2 as published (kind 'mockb', shown in the Exam hub under 'Mock B', scores hidden until both papers are done) ----
+_d=json.load(open('/home/user/jimin/bank/exam/mockB_real/mockB.json'))
+for _st in _d['sets']:
+    assert sum(len(v['questions']) for v in _st['vignettes'])==44
+    sets.append(_st)
+print('mockB',_d['key'])
 # ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
 _d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
 for _st in _d['sets']:

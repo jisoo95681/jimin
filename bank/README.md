@@ -208,3 +208,9 @@ A1 ACABACAABCABABBCBCBBAACAAABBBABAACCCBCCBACCA
 A2 CCCCABCCCBCBCBBACCAAAABABBAABACCBAACACBBABAB
 A3 BBCCCBCCBBBAACAACAACACABAACCBCBBBCACBABBCBAC
 A4 ABBABAAABBCCBCCBBCBCABCABBCABCCABCCBBACCACAC
+
+## Real CFA Institute Mock B (14 Nov, v244): Paper 1 and Paper 2
+User pasted the real "2026 CFA LII Mock B Session 1 / Session 2" (22 vignettes, 88 questions) and asked to take it like the real exam. Data: bank/exam/mockB_real/ (s1a-c.py, s2a-c.py, build_data.py -> mockB.json; NOT in bank/*.json so the mock pickers never draw it: these vignettes are USED). Vignette text and questions/options as pasted; explanations are condensed (the correct-answer logic kept). Missing figures in the paste (reconstructed or described, noted in the exhibit): Paper 1 V12 (Plessinger binomial tree, Year 2 nodes reconstructed 3.29/4.91/7.32%), Paper 1 V7 Exhibit 3 (residual plot described in words). Sets mockB1 and mockB2 (kind "mockb"). Keys (do not send unless asked):
+Paper 1 BACACBBBBABCBCBBAAAAAABBCACCCCBBAABABAAABABA
+Paper 2 BABAAACBACACBCCCCACBBBCAABCCCABBBBCAABBBCBAC
+App: Exam hub > "Mock B (real exam, 2 papers)" (`exMockBHub`): Finish Paper 1 starts a 30-minute break (`exMockBBreak`, countdown stored in `cfa-exam`.mockb.breakEnd, Paper 2 can start any time, answers string copyable); scores, per-paper scores, combined topic table, copy-both answers and per-paper incorrect questions only after Paper 2 (`exMockBResult`; `exWrongItems` hides Mock B wrong items until both papers are done).
