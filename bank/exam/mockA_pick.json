@@ -1,0 +1,458 @@
+[
+ [
+  {
+   "id": "eq2-tian",
+   "subject": "Equity",
+   "reading": 18
+  },
+  {
+   "id": "eq5e-pg",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "m1-9",
+   "subject": "FI",
+   "reading": 23
+  },
+  {
+   "id": "eq5e-dmh",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "eq4-anwar",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "af-annisquam",
+   "subject": "FI",
+   "reading": 24
+  },
+  {
+   "id": "ic1-6",
+   "subject": "FSA",
+   "reading": 7
+  },
+  {
+   "id": "s1a-daltonia",
+   "subject": "FSA",
+   "reading": 6
+  },
+  {
+   "id": "ap-barolo",
+   "subject": "PM",
+   "reading": 35
+  },
+  {
+   "id": "eq6-lpe",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "fsa4-green",
+   "subject": "FSA",
+   "reading": 10
+  }
+ ],
+ [
+  {
+   "id": "eq4-cannan",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "ap-spencer",
+   "subject": "PM",
+   "reading": 35
+  },
+  {
+   "id": "s2a-akron",
+   "subject": "FI",
+   "reading": 23
+  },
+  {
+   "id": "eq2-kwaza",
+   "subject": "Equity",
+   "reading": 18
+  },
+  {
+   "id": "eq5-khan",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "fsa4-gallo",
+   "subject": "FSA",
+   "reading": 10
+  },
+  {
+   "id": "m1-6",
+   "subject": "FSA",
+   "reading": 11
+  },
+  {
+   "id": "eo-bianchi",
+   "subject": "FI",
+   "reading": 25
+  },
+  {
+   "id": "em-gosser",
+   "subject": "PM",
+   "reading": 34
+  },
+  {
+   "id": "eq6-schwalke2",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "eq1-davis",
+   "subject": "Equity",
+   "reading": 17
+  }
+ ],
+ [
+  {
+   "id": "eq1-globalguardian",
+   "subject": "Equity",
+   "reading": 17
+  },
+  {
+   "id": "eq2-peters",
+   "subject": "Equity",
+   "reading": 18
+  },
+  {
+   "id": "mf-cho",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": "af-black",
+   "subject": "FI",
+   "reading": 24
+  },
+  {
+   "id": "eq5e-ri2",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "eq6-schwalke1",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "fsa4-chen",
+   "subject": "FSA",
+   "reading": 10
+  },
+  {
+   "id": "fsa5-stellar",
+   "subject": "FSA",
+   "reading": 11
+  },
+  {
+   "id": "m1-1",
+   "subject": "FI",
+   "reading": 26
+  },
+  {
+   "id": "eq4e-jonash",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "ts-halstead",
+   "subject": "FI",
+   "reading": 23
+  }
+ ],
+ [
+  {
+   "id": "paulinic",
+   "subject": "FSA",
+   "reading": 10
+  },
+  {
+   "id": "eq5e-ri1",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "ts-scai",
+   "subject": "FI",
+   "reading": 23
+  },
+  {
+   "id": "em-rutherford",
+   "subject": "PM",
+   "reading": 34
+  },
+  {
+   "id": "eq4-risso",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "eq6-sa",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "cds-5",
+   "subject": "FI",
+   "reading": 26
+  },
+  {
+   "id": "mf-yusuf",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": "eg29-schmidt",
+   "subject": "FSA",
+   "reading": 6
+  },
+  {
+   "id": "fsa5-big",
+   "subject": "FSA",
+   "reading": 11
+  },
+  {
+   "id": "eq2-withers",
+   "subject": "Equity",
+   "reading": 18
+  }
+ ],
+ [
+  {
+   "id": "eq4e-gg",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "ts-fwd-4-5-6",
+   "subject": "FI",
+   "reading": 23
+  },
+  {
+   "id": "ec-colleague",
+   "subject": "FSA",
+   "reading": 8
+  },
+  {
+   "id": "eq6-rrbl",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "af-alvarez",
+   "subject": "FI",
+   "reading": 24
+  },
+  {
+   "id": "eq5e-ri3",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "mf-low",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": "tremblay-growth",
+   "subject": "FSA",
+   "reading": 6
+  },
+  {
+   "id": "ic1-3",
+   "subject": "FSA",
+   "reading": 7
+  },
+  {
+   "id": "eq2-barton",
+   "subject": "Equity",
+   "reading": 18
+  },
+  {
+   "id": "ap-bauer",
+   "subject": "PM",
+   "reading": 35
+  }
+ ],
+ [
+  {
+   "id": "m1-4",
+   "subject": "FSA",
+   "reading": 6
+  },
+  {
+   "id": "ap-martinez",
+   "subject": "PM",
+   "reading": 35
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": "eq5e-siti",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "s1b-treadway",
+   "subject": "FSA",
+   "reading": 7
+  },
+  {
+   "id": "eq4-thomas",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "fsa4-reddy",
+   "subject": "FSA",
+   "reading": 10
+  },
+  {
+   "id": "eq6-aaron",
+   "subject": "Equity",
+   "reading": 22
+  },
+  {
+   "id": "eq1-zylkin",
+   "subject": "Equity",
+   "reading": 17
+  },
+  {
+   "id": "af-fujioka",
+   "subject": "FI",
+   "reading": 24
+  },
+  {
+   "id": "mf-wilson",
+   "subject": "PM",
+   "reading": 37
+  }
+ ],
+ [
+  {
+   "id": "eq4e-rufpe",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "fcf-porto",
+   "subject": "Equity",
+   "reading": 19
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": "eq4e-screens",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": null,
+   "subject": "FSA",
+   "reskin": true
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": "ap-smith",
+   "subject": "PM",
+   "reading": 35
+  },
+  {
+   "id": "eq5-paramount",
+   "subject": "Equity",
+   "reading": 21
+  },
+  {
+   "id": "m1-3",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": "s1a-hollingsworth",
+   "subject": "FSA",
+   "reading": 6
+  }
+ ],
+ [
+  {
+   "id": "eq4e-cashflow",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": "fcf-nilsen",
+   "subject": "Equity",
+   "reading": 19
+  },
+  {
+   "id": null,
+   "subject": "FSA",
+   "reskin": true
+  },
+  {
+   "id": "mf-martinez",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": "eq4e-sundanci",
+   "subject": "Equity",
+   "reading": 20
+  },
+  {
+   "id": "mf-tia",
+   "subject": "PM",
+   "reading": 37
+  },
+  {
+   "id": null,
+   "subject": "FSA",
+   "reskin": true
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  },
+  {
+   "id": "fcf-baker",
+   "subject": "Equity",
+   "reading": 19
+  },
+  {
+   "id": null,
+   "subject": "FI",
+   "reskin": true
+  }
+ ]
+]
