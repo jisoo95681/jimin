@@ -216,3 +216,8 @@ Paper 2 BABAAACBACACBCCCCACBBBCAABCCCABBBBCAABBBCBAC
 App: Exam hub > "Mock B (real exam, 2 papers)" (`exMockBHub`): Finish Paper 1 starts a 30-minute break (`exMockBBreak`, countdown stored in `cfa-exam`.mockb.breakEnd, Paper 2 can start any time, answers string copyable); scores, per-paper scores, combined topic table, copy-both answers and per-paper incorrect questions only after Paper 2 (`exMockBResult`; `exWrongItems` hides Mock B wrong items until both papers are done).
 
 Change 14 Nov (v245): no hidden scores any more. Each paper is marked and reviewable right after Finish; Paper 1's result screen shows the 30-minute break countdown and Start Paper 2; combined result in the Mock B hub after both papers; incorrect questions are listed per paper.
+
+## Mock B marking (14 Nov)
+Paper 1: BABCCABACCBBBCAABACCACBCBBBACCCBAAAABCACBABB = 21/44 (48%). Wrong Q3, 4, 6, 8, 9, 10, 12, 15, 16, 17, 19, 20, 22, 24, 25, 26, 27, 28, 31, 35, 38, 40, 44. By topic: Quant 0/4, FI 1/4, Corp 2/4, FSA 2/4, Alt 2/4, PM 4/8, Equity 5/8, Ethics 5/8.
+Paper 2: AAAACBCBABCBBCBBCCCACBCACCCCCABABBCAAABBACCC = 25/44 (57%). Wrong Q1, 3, 5, 6, 10, 11, 12, 15, 16, 18, 20, 21, 25, 26, 32, 38, 41, 42, 43. By topic: Econ 1/4, Quant 2/8, Ethics 1/4 (Paper 2), PM 2/4, Equity 2/4, FSA 5/8, FI 5/8, Alt 3/4, Deriv 4/4.
+Combined 46/88 (52%). PDFs (one wrong question per page, topic label, Trigger box): bank/MockB_Paper1_wrong_answers.pdf, bank/MockB_Paper2_wrong_answers.pdf; builder bank/exam/mockB_real/wrong_pdf/ (data.py = trigger/rule per question, build.py, pdf.mjs). Not yet added to flash cards / Quick questions / an rq set.
