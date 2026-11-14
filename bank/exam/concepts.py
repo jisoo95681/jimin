@@ -16,6 +16,6 @@ CONCEPT={
 'mockA2':"Big subjects only, no Ethics. Real never-used vignettes, names changed, options reordered, cut to about 300 words per vignette (traps kept).",
 'mockA3':"Big subjects only, no Ethics. Real never-used vignettes, names changed, options reordered, cut to about 250 words per vignette (traps kept).",
 'mockA4':"Big subjects only, no Ethics. Real never-used vignettes, names changed, options reordered, cut to about 270 words per vignette (traps kept).",
-'mockB1':"The real CFA Institute Level II Mock B, Session 1 (44 questions, 2 h 12 min), exactly as published. Taken like the real exam together with Paper 2: when you press Finish Test a 30-minute break starts and you can begin Paper 2 at any time; scores for both papers appear only after Paper 2.",
-'mockB2':"The real CFA Institute Level II Mock B, Session 2 (44 questions, 2 h 12 min), exactly as published. Scores for both papers are shown after you finish this paper.",
+'mockB1':"The real CFA Institute Level II Mock B, Session 1 (44 questions, 2 h 12 min), exactly as published. Taken like the real exam together with Paper 2: when you press Finish Test Paper 1 is marked at once and a 30-minute break starts; you can begin Paper 2 at any time.",
+'mockB2':"The real CFA Institute Level II Mock B, Session 2 (44 questions, 2 h 12 min), exactly as published. Each paper is marked separately; the combined result appears after Paper 2.",
 }

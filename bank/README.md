@@ -214,3 +214,5 @@ User pasted the real "2026 CFA LII Mock B Session 1 / Session 2" (22 vignettes, 
 Paper 1 BACACBBBBABCBCBBAAAAAABBCACCCCBBAABABAAABABA
 Paper 2 BABAAACBACACBCCCCACBBBCAABCCCABBBBCAABBBCBAC
 App: Exam hub > "Mock B (real exam, 2 papers)" (`exMockBHub`): Finish Paper 1 starts a 30-minute break (`exMockBBreak`, countdown stored in `cfa-exam`.mockb.breakEnd, Paper 2 can start any time, answers string copyable); scores, per-paper scores, combined topic table, copy-both answers and per-paper incorrect questions only after Paper 2 (`exMockBResult`; `exWrongItems` hides Mock B wrong items until both papers are done).
+
+Change 14 Nov (v245): no hidden scores any more. Each paper is marked and reviewable right after Finish; Paper 1's result screen shows the 30-minute break countdown and Start Paper 2; combined result in the Mock B hub after both papers; incorrect questions are listed per paper.
