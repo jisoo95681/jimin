@@ -242,3 +242,6 @@ Also fixed (15 Nov): the portal markers "Correct answer:" and the next-paper hea
 
 ### Mock D Paper 1 marking (15 Nov)
 User answers CABCBABBABBCABBCBCBBACCCCAABAACBABBCABCBABBA -> 33/44 (75%). Wrong Q5,7,11,12,21,25,27,35,36,38,39. Topics: Deriv 4/4, Alt 4/4, Equity 6/8, PM 6/8, FSA 3/4, Ethics 6/8, Econ 2/4, FI 2/4. Right but explained on request: Q15 (commodity total return, sign flip for short), Q16, Q22 (IFRS CGU impairment), Q32 (factor models). Wrong-answer PDF: bank/MockD_Paper1_wrong_answers.pdf (builder bank/exam/mockC_real/wrong_pdf/build.py 1 D, data_D1.py). Not yet in flash cards.
+
+### Mock D Paper 2 marking (15 Nov)
+User answers CCCBBCACABACBBBABAACBABCAAAAAABBCACCABBACACA -> 30/44 (68%). Wrong Q17,19,20,22,25,26,30,33,34,35,40,41,42,44. Topics: Quant 4/4, Ethics 4/4, Corp 4/4, Equity 3/4, Deriv 3/4, FI 5/8, FSA 4/8, Alt 2/4, PM 1/4. Mock D combined 63/88 (72%). Wrong-answer PDF: bank/MockD_Paper2_wrong_answers.pdf (builder bank/exam/mockC_real/wrong_pdf/build.py 2 D, data_D2.py). Q15 (comparable transactions) was answered by feel (right). Not yet in flash cards.
