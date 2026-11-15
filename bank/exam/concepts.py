@@ -20,4 +20,6 @@ CONCEPT={
 'mockB2':"The real CFA Institute Level II Mock B, Session 2 (44 questions, 2 h 12 min), exactly as published. Each paper is marked separately; the combined result appears after Paper 2.",
 'mockC1':"The real CFA Institute Level II Mock 1, Session 1 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Part of Mock C (two papers): Paper 1 is marked when you finish it and a 30-minute break starts; Paper 2 can be started at any time.",
 'mockC2':"The real CFA Institute Level II Mock 1, Session 2 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Marked on its own; the combined result of Mock C is in the Mock C hub.",
+'mockD1':"The real CFA Institute Level II Mock 2, Session 1 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Part of Mock D (two papers): Paper 1 is marked when you finish it and a 30-minute break starts; Paper 2 can be started at any time.",
+'mockD2':"The real CFA Institute Level II Mock 2, Session 2 (44 questions, 2 h 12 min), exactly as published, with the original explanations. Marked on its own; the combined result of Mock D is in the Mock D hub.",
 }

@@ -233,3 +233,9 @@ User answers CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA -> 28/44 (64%). Wrong 
 
 ### Mock C Paper 2 marking (15 Nov)
 User answers BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA -> 27/44 (61%). Wrong Q2,3,6,7,8,9,10,11,19,29,30,32,34,35,36,43,44. Topics: Equity 3/8, Econ 1/4, FI 1/4, PM 8/8, FSA 3/4, Corp 4/4, Deriv 1/4, Ethics 6/8. Combined Mock C: 55/88 (63%). Wrong-answer PDF: bank/MockC_Paper2_wrong_answers.pdf (builder bank/exam/mockC_real/wrong_pdf/build.py 2, data in data2.py). Not yet in flash cards / Quick questions / rq set.
+
+## Real CFA Institute Mock 2 = "Mock D" (15 Nov, v247): Session 1 and 2
+Pasted by the user (22 vignettes, 88 questions, nothing answered yet), parsed by bank/exam/mockD_real/parse.py from paste.txt (extracted from the session transcript) -> parsed.json -> build_data.py -> mockD.json (kept out of bank/*.json: USED vignettes). Sets mockD1 / mockD2 (kind "mockb", group D), same flow as Mock B/C. Reconstructed: Paper 2 Q5 binomial tree (figure missing; Year 0 1.25%, Year 1 4.96% / 3.68% from the explanation, noted in the exhibit); several tables restructured (Delong BVPS/ROE, Carhart sensitivities, confusion matrix, active-return exhibit, payout table). Topics Paper 1: Deriv, Equity, PM, Alt, Equity, FSA, Ethics, PM, Econ, FI, Ethics. Paper 2: Quant, FI, Ethics, Corp, FI, FSA, Alt, Deriv, PM, Equity, FSA. Keys (do not send unless asked):
+Paper 1 CABCCACBABCAABBCBCBBCCCCBABBAACBABAAAABBABBA
+Paper 2 CCCBBCACABACBBBAAACABBBCBBAAACBBACBCABBBABCB
+Also fixed (15 Nov): the portal markers "Correct answer:" and the next-paper header lines that had leaked into Mock C question stems and explanations (88 questions) were removed in build_data.py (clean_txt) and exam.js rebuilt.

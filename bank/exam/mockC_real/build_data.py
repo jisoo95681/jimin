@@ -1,4 +1,9 @@
 import json,re
+def clean_txt(t):
+    t=t.replace('Practice Topics','')
+    t='\n'.join(l for l in t.split('\n') if l.strip()!='Correct answer:' and not l.startswith('CFA-26-11-LII-A') and not re.match(r'^2026 CFA LII Mock \d Session \d',l))
+    t=re.sub(r'\s*Correct answer:\s*$','',t)
+    return re.sub(r'(?m)^([ABC]\. (?:Correct|Incorrect)\.)[ \t]+$',r'\1',t).strip()
 sets=json.load(open('/home/user/jimin/bank/exam/mockC_real/parsed.json'))
 FIX=[
 (0,0,"#  | Exchange Rate Data (USD/AUD)\nMaturity | Bid | Offer","Exchange Rate Data (USD/AUD)\n# Maturity | Bid | Offer"),
@@ -14,7 +19,7 @@ for si,vi,a,b in FIX:
 TOP=[['Econ','Equity','FSA','FI','PM','FSA','FI','Corp','Quant','Alt','Ethics'],
      ['Equity','Econ','FI','PM','FSA','PM','Corp','Equity','Deriv','Ethics','Ethics']]
 def mk(i,title):
-    vs=[dict(topic=TOP[i][k],body=v['body'],questions=[dict(q=q['q'],options=q['options'],answer=q['answer'],why=q['why']) for q in v['questions']]) for k,v in enumerate(sets[i])]
+    vs=[dict(topic=TOP[i][k],body=v['body'],questions=[dict(q=clean_txt(q['q']),options=q['options'],answer=q['answer'],why=clean_txt(q['why'])) for q in v['questions']]) for k,v in enumerate(sets[i])]
     return dict(id=f'mockC{i+1}',rev=1,resetHl=[],title=title,kind='mockb',group='C',minutes=132,
       desc=f'Real CFA Institute Level II Mock 1, Session {i+1}: vignettes, questions and explanations as published (44 questions, 2 h 12 min).',vignettes=vs)
 out=[mk(0,'Mock C · Paper 1'),mk(1,'Mock C · Paper 2')]
