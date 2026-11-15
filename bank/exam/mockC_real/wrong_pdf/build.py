@@ -7,9 +7,10 @@ exec(open('/tmp/gen/m13w/css_add.py').read())
 css=css.replace("</style>",".ln{margin:3px 0;line-height:1.4}.ln.calc{font-family:'DejaVu Sans Mono','Liberation Mono',monospace;font-size:8.8pt;background:#eef3f7;padding:2px 8px;border-left:3px solid #1f4e79}.ln.fml{font-weight:700;color:#1f4e79;background:#fff7e0;padding:2px 8px;border-left:3px solid #d9a400}.expl{margin-top:8px}.expl h4{margin:0 0 4px}</style>")
 import sys
 P=int(sys.argv[1]) if len(sys.argv)>1 else 1
-exec(open('data.py' if P==1 else 'data2.py').read())
-D=json.load(open('/home/user/jimin/bank/exam/mockC_real/mockC.json'))['sets'][P-1]
-U={1:"CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA",2:"BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA"}[P]
+G=sys.argv[2] if len(sys.argv)>2 else 'C'
+exec(open(('data.py' if P==1 else 'data2.py') if G=='C' else f'data_{G}{P}.py').read())
+D=json.load(open(f'/home/user/jimin/bank/exam/mock{G}_real/mock{G}.json'))['sets'][P-1]
+U={("C",1):"CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA",("C",2):"BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA",("D",1):"CABCBABBABBCABBCBCBBACCCCAABAACBABBCABCBABBA"}[(G,P)]
 def pick(body,items):
     L=body.split('\n'); idx=[]
     for it in items:
@@ -33,7 +34,7 @@ def split_why(why,n=3):
         if m: cur='ABC'.index(m.group(1)); seg[cur]=[re.sub(r'^[ABC]\. (Correct|Incorrect)\.? ?(Incorrect (because)?)?','',l).strip()]
         elif l.startswith('Correct answer') or l.startswith('Practice Topics'): continue
         elif cur is not None and l.strip(): seg[cur].append(l.strip())
-    return {k:('<br>'.join(esc(x) for x in v[:1] if x)+' <i>(portal calculation omitted; see steps below)</i>' if sum(len(x) for x in v)>450 else '<br>'.join(esc(x) for x in v if x)) for k,v in seg.items()}
+    return {k:('<br>'.join(esc(x) for x in v[:1] if x)+' <i>(portal text shortened; see the steps below)</i>' if sum(len(x) for x in v)>450 else '<br>'.join(esc(x) for x in v if x)) for k,v in seg.items()}
 flat={};n=0
 for v in D['vignettes']:
     for q in v['questions']:
@@ -51,7 +52,7 @@ for k in wrong:
     trig="<br>".join('“'+esc(t)+'”' for t in dd['trig'])
     ex="".join(f"<div class='ln calc'>{esc(l[3:])}</div>" if l.startswith('C: ') else (f"<div class='ln fml'>{esc(l[3:])}</div>" if l.startswith('F: ') else f"<div class='ln'>{esc(l)}</div>") for l in dd['expl'])
     qtxt=re.sub(r'\s*Correct answer:\s*$','',q['q'])
-    cards.append(f"""<section class='q'><div class='qhead'><span class='qn'>Mock C · Paper {P} · Q{k}</span><div class='rt'><span class='res'>You <b class='x'>{'ABC'[me]}</b> · Answer <b class='ok'>{'ABC'[an]}</b></span><span class='subj'>{x['v']['topic']}</span></div></div>
+    cards.append(f"""<section class='q'><div class='qhead'><span class='qn'>Mock {G} · Paper {P} · Q{k}</span><div class='rt'><span class='res'>You <b class='x'>{'ABC'[me]}</b> · Answer <b class='ok'>{'ABC'[an]}</b></span><span class='subj'>{x['v']['topic']}</span></div></div>
 <h4>Vignette (relevant part, unedited)</h4><div class='vig'>{vh}</div><p class='ask'><b>Question {k}.</b> {esc(qtxt)}</p>
 <h4>Options</h4><table class='opts'>{rows}</table>
 <div class='trigger'><b>Trigger</b> {trig}<div class='rule'>Rule next time: {esc(dd['rule'])}</div></div>
@@ -61,10 +62,10 @@ for k,x in flat.items(): a=ts[x['v']['topic']]; a[1]+=1; a[0]+=(U[k-1]==x['key']
 tot=sum(a[0] for a in ts.values())
 trows="".join(f"<tr><td>{t}</td><td>{a}/{b}</td><td>{a/b*100:.0f}%</td></tr>" for t,(a,b) in sorted(ts.items(),key=lambda kv:kv[1][0]/kv[1][1]))
 glance="".join(f"<tr><td>Q{k}</td><td>{flat[k]['v']['topic']}</td><td>{U[k-1]}</td><td>{flat[k]['key']}</td></tr>" for k in wrong)
-html=f"""<!doctype html><html><head><meta charset='utf-8'><title>Mock C Paper {P} wrong-answer notes</title>{css}</head><body>
-<h1>Mock C · Paper {P}: Wrong-Answer Notes</h1><p class="sub">CFA Level II · {len(wrong)} wrong answers, one per page</p>
+html=f"""<!doctype html><html><head><meta charset='utf-8'><title>Mock {G} Paper {P} wrong-answer notes</title>{css}</head><body>
+<h1>Mock {G} · Paper {P}: Wrong-Answer Notes</h1><p class="sub">CFA Level II · {len(wrong)} wrong answers, one per page</p>
 <div class="kpis"><div class="kpi"><b>{tot} / 44</b><span>Paper {P} ({tot/44*100:.0f}%)</span></div></div>
 <h3>Score by topic</h3><table class="mini"><tr><th>Topic</th><th>Score</th><th>%</th></tr>{trows}</table>
 <h3>Questions at a glance</h3><table class="mini"><tr><th>Q</th><th>Topic</th><th>You</th><th>Ans</th></tr>{glance}</table>
 {''.join(cards)}</body></html>"""
-open(f'/tmp/gen/mc/p{P}.html','w').write(html); print('ok',tot,len(wrong),FAIL)
+open(f'/tmp/gen/mc/p{G}{P}.html','w').write(html); print('ok',tot,len(wrong),FAIL)
