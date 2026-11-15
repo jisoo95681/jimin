@@ -230,3 +230,6 @@ Topic labels per vignette (my own): Paper 1 Econ, Equity, FSA, FI, PM, FSA, FI, 
 
 ### Mock C Paper 1 marking (14 Nov)
 User answers CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA -> 28/44 (64%). Wrong Q1,5,7,9,11,13,19,25,29,30,31,32,34,35,39,43. Topics: Econ 3/4, Equity 2/4, FSA 6/8, FI 6/8, PM 3/4, Corp 0/4, Quant 2/4, Alt 3/4, Ethics 3/4. Wrong-answer PDF made (bank/MockC_Paper1_wrong_answers.pdf, builder bank/exam/mockC_real/wrong_pdf/). Not yet added to flash cards / rq set. Vignette-bank overlap analysis of Paper 1: about 30 of 44 questions same type, 12 partial, 2 new (Q29 lease cost, Q34 logistic probability).
+
+### Mock C Paper 2 marking (15 Nov)
+User answers BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA -> 27/44 (61%). Wrong Q2,3,6,7,8,9,10,11,19,29,30,32,34,35,36,43,44. Topics: Equity 3/8, Econ 1/4, FI 1/4, PM 8/8, FSA 3/4, Corp 4/4, Deriv 1/4, Ethics 6/8. Combined Mock C: 55/88 (63%). Wrong-answer PDF: bank/MockC_Paper2_wrong_answers.pdf (builder bank/exam/mockC_real/wrong_pdf/build.py 2, data in data2.py). Not yet in flash cards / Quick questions / rq set.
