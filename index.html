@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v247 · 2026-11-15";
+  const APP_VERSION = "v248 · 2026-11-15";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1573,7 +1573,7 @@
     return out;
   }
   // Mock B: the real CFA Institute mock, two papers taken like the exam (30-minute break, scores only after Paper 2).
-  const EX_GROUPS = ["B", "C", "D"], EX_BREAK = 30 * 60;
+  const EX_GROUPS = ["B", "C", "D", "E"], EX_BREAK = 30 * 60;
   const exMB = g => ["mock" + g + "1", "mock" + g + "2"], exGOf = id => id.slice(4, 5);
   const exMBDone = (st, g = "B") => exMB(g).every(id => ((st || exLoad()).sets[id] || {}).last);
   const exBackTo = (id, dir = "back") => { const set = exSets().find(s => s.id === id); if (set && set.kind === "mockb") exMockBHub(dir, exGOf(id)); else examSetMenu(id, dir); };
@@ -1815,7 +1815,7 @@
     app.append(nav("Exam", () => examHub("back")));
     const st = exLoad();
     app.append(el("h1", { className: "title" }, `Mock ${g} (real exam)`),
-      el("p", { className: "sub" }, `The real CFA Institute Level II ${g === "B" ? "Mock B" : g === "C" ? "Mock 1 (Mock C)" : "Mock 2 (Mock D)"}: two papers of 44 questions, 2 h 12 min each. When you finish Paper 1 a 30-minute break starts and you can begin Paper 2 at any time. Each paper is marked separately as soon as you finish it.`));
+      el("p", { className: "sub" }, `The real CFA Institute Level II ${g === "B" ? "Mock B" : g === "C" ? "Mock 1 (Mock C)" : g === "D" ? "Mock 2 (Mock D)" : "Mock 3 (Mock E)"}: two papers of 44 questions, 2 h 12 min each. When you finish Paper 1 a 30-minute break starts and you can begin Paper 2 at any time. Each paper is marked separately as soon as you finish it.`));
     const sets = exMB(g).map(id => exSets().find(s => s.id === id));
     sets.forEach((set, i) => {
       const s = st.sets[set.id] || {}, prevDone = i === 0 || (st.sets[exMB(g)[0]] || {}).last;

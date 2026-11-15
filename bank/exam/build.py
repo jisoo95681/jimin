@@ -380,6 +380,12 @@ for _st in _d['sets']:
     assert sum(len(v['questions']) for v in _st['vignettes'])==44
     sets.append(_st)
 print('mockD',_d['key'])
+# ---- Real CFA Institute Mock 3 (Mock E, 15 Nov): Session 1 and 2 as published, full explanations (kind 'mockb', group 'E') ----
+_d=json.load(open('/home/user/jimin/bank/exam/mockE_real/mockE.json'))
+for _st in _d['sets']:
+    assert sum(len(v['questions']) for v in _st['vignettes'])==44
+    sets.append(_st)
+print('mockE',_d['key'])
 # ---- Ethics sessions eth1-eth12 (13 Nov): all 276 key-notes Ethics questions as exam sessions (built by ethics_sets.py); no hand-written hints (the app shades matching lines automatically) ----
 _d=json.load(open('/home/user/jimin/bank/exam/ethics_sets.json')); _n=0
 for _st in _d['sets']:

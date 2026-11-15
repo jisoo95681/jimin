@@ -245,3 +245,8 @@ User answers CABCBABBABBCABBCBCBBACCCCAABAACBABBCABCBABBA -> 33/44 (75%). Wrong 
 
 ### Mock D Paper 2 marking (15 Nov)
 User answers CCCBBCACABACBBBABAACBABCAAAAAABBCACCABBACACA -> 30/44 (68%). Wrong Q17,19,20,22,25,26,30,33,34,35,40,41,42,44. Topics: Quant 4/4, Ethics 4/4, Corp 4/4, Equity 3/4, Deriv 3/4, FI 5/8, FSA 4/8, Alt 2/4, PM 1/4. Mock D combined 63/88 (72%). Wrong-answer PDF: bank/MockD_Paper2_wrong_answers.pdf (builder bank/exam/mockC_real/wrong_pdf/build.py 2 D, data_D2.py). Q15 (comparable transactions) was answered by feel (right). Not yet in flash cards.
+
+## Real CFA Institute Mock 3 = "Mock E" (15 Nov, v248): Session 1 and 2
+Pasted by the user (22 vignettes, 88 questions, nothing answered yet), recovered from the session transcript into bank/exam/mockE_real/paste.txt, parsed by parse.py -> parsed.json -> build_data.py (clean_txt, table fixes) -> mockE.json (kept out of bank/*.json: USED vignettes). Sets mockE1 / mockE2 (kind "mockb", group E), same flow as Mock B/C/D. Unlike Mock C/D the correct options carry the portal's explanation text. Reconstructed: Paper 1 Q33-36 binomial tree (figure missing; Year 0 3.00%, Year 1 4.89% / 4.00%, Year 2 7.46% / 6.11% / 5.00% from the Q33 explanation, noted in the exhibit); a few tables restructured (confusion matrix, factor exhibit header, list items). Topics Paper 1: Equity, Corp, FSA, FI, PM, PM, Ethics, Quant, FI, FSA, Alt. Paper 2: Ethics, Equity, FI, Alt, Ethics, FSA, Deriv, PM, Corp, Econ, Equity. Keys (do not send unless asked):
+Paper 1 AACBCABCBCCCBCACCBACBBBABCAABACABBABAAACAABB
+Paper 2 BABAABCACAACABBCACAAABCCACCBBBACACBAACBBBCCC
