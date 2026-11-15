@@ -49,8 +49,8 @@ w(27,["Garrett is part of a working group"],["include general fiduciary concepts
   "Answer B: 'No, with regard to compliance procedures'.",
   "Your pick (Yes) accepted both parts. Option C says the fiduciary concepts are wrong, which is false."])
 w(35,["Nine months ago, Podowski bought EUR 20 million forward"],["bought EUR 20 million forward against the USD","1.1352/1.1355"],
- "MTM = DIVORCE. Close the contract by trading the OPPOSITE way: if closing means selling, use the BID; if closing means buying, use the OFFER. Remember: you BUY at the Offer (oh, expensive) and SELL at the Bid (bad, cheap).",
- ["Podowski BOUGHT EUR 20m forward → to close he must SELL EUR 20m forward → use the BID.",
+ "MTM rule by POSITION: bought (long) → BID; sold (short) → OFFER. Reason: you value the position at the price at which you could get out of it. A long gets out by selling (bid); a short gets out by buying (offer).",
+ ["Podowski BOUGHT EUR 20m forward = LONG EUR → use the BID (the price at which he could sell it).",
   "F: All-in bid = spot bid + forward points bid (add the points with their sign)",
   "C: 1.1352 + (−14 / 10,000) = 1.1338",
   "F: Cash flow at settlement = EUR notional × (all-in rate of the offsetting trade − original rate)",
