@@ -10,7 +10,7 @@ P=int(sys.argv[1]) if len(sys.argv)>1 else 1
 G=sys.argv[2] if len(sys.argv)>2 else 'C'
 exec(open(('data.py' if P==1 else 'data2.py') if G=='C' else f'data_{G}{P}.py').read())
 D=json.load(open(f'/home/user/jimin/bank/exam/mock{G}_real/mock{G}.json'))['sets'][P-1]
-U={("C",1):"CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA",("C",2):"BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA",("D",1):"CABCBABBABBCABBCBCBBACCCCAABAACBABBCABCBABBA",("D",2):"CCCBBCACABACBBBABAACBABCAAAAAABBCACCABBACACA"}[(G,P)]
+U={("C",1):"CCABABAACACBCBCACBCCCAABBBCBCCCBCABCBBCCCCBA",("C",2):"BABBCBBCBBABCCACCBACBBCCCCBACABBBCCCBAABAACA",("D",1):"CABCBABBABBCABBCBCBBACCCCAABAACBABBCABCBABBA",("D",2):"CCCBBCACABACBBBABAACBABCAAAAAABBCACCABBACACA",("E",1):"AACBCABACCCCBAACAAAABBBCBBAABACABBABCAACAAAB"}[(G,P)]
 def pick(body,items):
     L=body.split('\n'); idx=[]
     for it in items:
@@ -40,9 +40,10 @@ for v in D['vignettes']:
     for q in v['questions']:
         n+=1; flat[n]=dict(v=v,q=q,key='ABC'[q['answer']])
 wrong=[k for k in flat if U[k-1]!=flat[k]['key']]
-assert set(wrong)==set(W),(sorted(wrong),sorted(W))
+EX=globals().get('EXTRA',set())
+assert set(wrong)|EX==set(W),(sorted(wrong),sorted(W))
 FAIL=[]; cards=[]
-for k in wrong:
+for k in sorted(W):
     x=flat[k]; dd=W[k]; q=x['q']; me='ABC'.index(U[k-1]); an=q['answer']
     lines=pick(x['v']['body'],dd['sel']); sel_txt='\n'.join(lines)
     for t in dd['trig']:
@@ -52,7 +53,7 @@ for k in wrong:
     trig="<br>".join('“'+esc(t)+'”' for t in dd['trig'])
     ex="".join(f"<div class='ln calc'>{esc(l[3:])}</div>" if l.startswith('C: ') else (f"<div class='ln fml'>{esc(l[3:])}</div>" if l.startswith('F: ') else f"<div class='ln'>{esc(l)}</div>") for l in dd['expl'])
     qtxt=re.sub(r'\s*Correct answer:\s*$','',q['q'])
-    cards.append(f"""<section class='q'><div class='qhead'><span class='qn'>Mock {G} · Paper {P} · Q{k}</span><div class='rt'><span class='res'>You <b class='x'>{'ABC'[me]}</b> · Answer <b class='ok'>{'ABC'[an]}</b></span><span class='subj'>{x['v']['topic']}</span></div></div>
+    cards.append(f"""<section class='q'><div class='qhead'><span class='qn'>Mock {G} · Paper {P} · Q{k}</span><div class='rt'><span class='res'>You <b class='{"ok" if me==an else "x"}'>{'ABC'[me]}</b> · Answer <b class='ok'>{'ABC'[an]}</b>{" · extra explanation (you were right)" if me==an else ""}</span><span class='subj'>{x['v']['topic']}</span></div></div>
 <h4>Vignette (relevant part, unedited)</h4><div class='vig'>{vh}</div><p class='ask'><b>Question {k}.</b> {esc(qtxt)}</p>
 <h4>Options</h4><table class='opts'>{rows}</table>
 <div class='trigger'><b>Trigger</b> {trig}<div class='rule'>Rule next time: {esc(dd['rule'])}</div></div>
@@ -61,9 +62,9 @@ ts=defaultdict(lambda:[0,0])
 for k,x in flat.items(): a=ts[x['v']['topic']]; a[1]+=1; a[0]+=(U[k-1]==x['key'])
 tot=sum(a[0] for a in ts.values())
 trows="".join(f"<tr><td>{t}</td><td>{a}/{b}</td><td>{a/b*100:.0f}%</td></tr>" for t,(a,b) in sorted(ts.items(),key=lambda kv:kv[1][0]/kv[1][1]))
-glance="".join(f"<tr><td>Q{k}</td><td>{flat[k]['v']['topic']}</td><td>{U[k-1]}</td><td>{flat[k]['key']}</td></tr>" for k in wrong)
+glance="".join(f"<tr><td>Q{k}</td><td>{flat[k]['v']['topic']}</td><td>{U[k-1]}</td><td>{flat[k]['key']}{' (extra)' if k in EX else ''}</td></tr>" for k in sorted(W))
 html=f"""<!doctype html><html><head><meta charset='utf-8'><title>Mock {G} Paper {P} wrong-answer notes</title>{css}</head><body>
-<h1>Mock {G} · Paper {P}: Wrong-Answer Notes</h1><p class="sub">CFA Level II · {len(wrong)} wrong answers, one per page</p>
+<h1>Mock {G} · Paper {P}: Wrong-Answer Notes</h1><p class="sub">CFA Level II · {len(wrong)} wrong answers + {len(EX)} extra explanations, one per page</p>
 <div class="kpis"><div class="kpi"><b>{tot} / 44</b><span>Paper {P} ({tot/44*100:.0f}%)</span></div></div>
 <h3>Score by topic</h3><table class="mini"><tr><th>Topic</th><th>Score</th><th>%</th></tr>{trows}</table>
 <h3>Questions at a glance</h3><table class="mini"><tr><th>Q</th><th>Topic</th><th>You</th><th>Ans</th></tr>{glance}</table>
