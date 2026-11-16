@@ -1,0 +1,127 @@
+# Mock E Paper 2: wrong answers + extra explanations for right ones (10, 13, 23, 31). 'F: ' formula first, 'C: ' one calc step per line.
+W={}
+EXTRA={10,13,23,31}
+def w(n,sel,trig,rule,expl): W[n]=dict(sel=sel,trig=trig,rule=rule,expl=expl)
+w(1,["Chan has been working with an internal data science team","Step 1:","Step 2:"],["Chan was not clear on how the new variables would improve the accuracy","Step 2: Review the model factors and parameters to better understand its assumptions and limitations"],
+ "Standard V(A) Diligence and Reasonable Basis: understand the model's assumptions and limitations. You do NOT have to become an expert in the technical or programming details.",
+ ["Step 2 (assumptions and limitations of the model) is required: Chan must understand what she recommends (B).",
+  "Step 1 (technical aspects and programming) goes beyond the Standard: members are not required to be technical experts.",
+  "Your pick C (both steps) over-requires: only Step 2 is needed."])
+w(2,["Chan receives a call from a client requesting a report"],["another partner published a telecommunications industry report last month","Chan advises the client of the partner's report","without changes"],
+ "Sharing someone else's report is not plagiarism when the author is disclosed and nothing is changed or presented as yours. Work done at a firm belongs to the firm.",
+ ["Chan told the client that the report was another partner's and forwarded it unchanged → no misrepresentation → no violation (A).",
+  "Option B: research developed while employed belongs to the firm, so it can still be used after the author leaves.",
+  "Your pick C: the violation would be passing it off as her own work. Here she did not."])
+w(8,["Another client asks Silva to evaluate a pairs trade"],["Both firms operate in the copper mining industry","They are both profitable and close competitors","two publicly traded firms, Firm C and Firm D"],
+ "Pairs trade between close, profitable, listed competitors → a market multiple comparison (P/E). Asset-based fits asset-heavy or loss-making firms; a conglomerate discount applies only to UNRELATED segments; a lack-of-marketability discount applies to private firms.",
+ ["Both firms are profitable, close competitors in the same industry → P/E comparables are suitable (A).",
+  "Option B: the wire segment (one-third of revenue) is related to copper, so no conglomerate discount; asset-based is less suitable for the wire business.",
+  "Option C: both firms are publicly traded → no lack-of-marketability discount.",
+  "Your pick B combined two points that do not apply here."])
+w(10,["Barilla considers adding another bond to the client's portfolio"],["refinance short-term debt with longer-maturity debt","tighter bid–offer spread","higher credit rating"],
+ "Credit spread curve steepens with longer maturity (more time for credit risk). A higher rating or a tighter bid-offer spread tends to FLATTEN it.",
+ ["The new issue refinances short-term debt with longer-maturity debt → more long-dated paper → longer maturity supports a steeper curve (A).",
+  "Higher credit rating: highly rated credit curves are flat or only slightly upward sloping, so this does not support steepening.",
+  "Tighter bid-offer spread: it lowers the spread at longer maturities, partly offsetting steepening."])
+w(13,["Castillo assesses the performance of each fund under a crisis scenario","@Exhibit 1","DEQU is the product"],["the stock market index falls and stock market volatility rises","DEQU | 0.09 | 0.16 | –0.02","DVOL | 0.27 | –0.18 | 0.03"],
+ "Crisis exposure = normal-times beta + incremental crisis beta. Equity falls and volatility rises, so the best fund has the most negative equity beta and the largest positive volatility beta.",
+ ["F: Crisis beta = Normal beta + Incremental (D) beta",
+  "C: Fund X: EQU = −0.19 + 0.09 = −0.10 ; VOL = 0.09 + 0.27 = 0.36",
+  "C: Fund Y: EQU = 0.43 + 0.16 = 0.59 ; VOL = 0.16 − 0.18 = −0.02",
+  "C: Fund Z: EQU = −0.03 − 0.02 = −0.05 ; VOL = 0.01 + 0.03 = 0.04",
+  "Equity falls: a negative EQU beta gains. Volatility rises: a positive VOL beta gains.",
+  "Fund X has the most negative EQU (−0.10) and the largest VOL (0.36) → best (A). Fund Y is worst (EQU +0.59)."])
+w(16,["Castillo suggests that, instead of futures"],["maximize exposure to energy commodities","Rogers International Commodity Index (RICI)"],
+ "Maximum energy exposure = the index with the highest energy weight: S&P GSCI (production-weighted, energy up to about 80%). BCOM caps a sector at 33%; RICI uses fixed weights.",
+ ["S&P GSCI is production-weighted, so energy can reach about 80% of the index (C).",
+  "BCOM: sector cap of 33% and a 2% floor per commodity → energy only about 30%.",
+  "RICI: fixed weights across 38 commodities, not energy-heavy.",
+  "Your pick A (RICI) has a fixed weighting scheme, so it does not maximize energy."])
+w(18,["Eto's research department releases an updated economic forecast"],["expected performance under an increase in market volatility","structured product developed by Eto which has a return tied to changes in market volatility"],
+ "Standard V(B) Communication with Clients: disclose the key characteristics and risks, and present both sides. A complex model's inner details do not have to be shared.",
+ ["The report showed performance only when volatility INCREASES, so it gives a one-sided picture → violation (C).",
+  "Your pick B: the specifics of the model and how inputs were determined do not have to be shared; what matters is the basic characteristics, the construction and the risks.",
+  "Rule: show the downside (volatility falls) as well as the upside."])
+w(20,["Lyden is considering adding to the Epic fund's investment in InG Pharma"],["a well-respected biotech industry analyst tells Lyden","He believes the drug will come to market in the next 24 months"],
+ "Standard II(A): information is material when it is specific and reliable, for example from people involved in the trial. An outside analyst's educated opinion is NOT material nonpublic information.",
+ ["The source is an industry analyst expressing his opinion, not someone connected to the trial.",
+  "An opinion on the drug's prospects is unlikely to be material → she may trade and may share it → no violation (A).",
+  "Your pick C: sharing MNPI with a colleague would be wrong, but this is not MNPI."])
+w(21,["Belle operates predominantly in the UK","@Exhibit 1","Lee notes that Belle purchased inventory"],["purchased inventory for GBP 500,000","settled on 18 January of the current year","16 November, most recent year | 1.186","31 December, most recent year | 1.176","18 January, current year | 1.193"],
+ "A payable in a foreign currency is remeasured at each balance sheet date. The gain or loss is recognized in the period it arises. The current-year loss = settlement cost − year-end carrying amount.",
+ ["F: EUR amount = GBP amount × EUR/GBP rate",
+  "C: 16 Nov: 500,000 × 1.186 = 593,000",
+  "C: 31 Dec: 500,000 × 1.176 = 588,000 → gain of 5,000 recognized in the MOST RECENT year (the payable fell)",
+  "C: 18 Jan: 500,000 × 1.193 = 596,500",
+  "C: Current-year loss = 596,500 − 588,000 = 8,500 (A)",
+  "Your pick C (3,500) = 596,500 − 593,000: from transaction date to settlement, ignoring the year-end remeasurement.",
+  "Check: −5,000 gain last year + 8,500 loss this year = 3,500 loss overall.",
+  "Option B (5,000 loss in the most recent year) has the wrong sign: it was a gain."])
+w(23,["Belle uses the current rate method to translate"],["Belle uses the current rate method to translate its subsidiaries' financial statements","cumulative translation adjustment"],
+ "Current rate method → translation adjustment goes to a separate component of stockholders' equity (CTA). Temporal method → translation gain or loss goes through net income.",
+ ["Belle uses the current rate method → the translation adjustment that keeps the balance sheet in balance is a separate component of equity (C).",
+  "Options A and B describe foreign currency TRANSACTION gains and losses (non-operating or other operating income), not translation adjustments.",
+  "Its competitor uses the temporal method: the adjustment goes to net income."])
+w(25,["Edel explains to Uder","@Exhibit 1"],["1.46 million call options at a strike price of 90","Each call option is a right to buy 100 shares of stock","Deltac  2 weeks before expiry | 0.057"],
+ "Dealers SOLD the calls and delta hedge by BUYING shares: shares = call delta × contracts × shares per contract. Use the CALL delta (0.057), not the put delta.",
+ ["F: Shares to buy = Delta(call) × number of calls × 100 shares per call",
+  "C: Underlying shares = 1.46 million × 100 = 146 million",
+  "C: Shares to buy = 0.057 × 146 = 8.32 million ≈ 8 (A)",
+  "Your pick B (144) = 0.989 × 146: that used the put delta.",
+  "Option C (146): assumes delta 1, but the far out-of-the-money call has a delta of only 0.057."])
+w(26,["Uder comments:"],["volatility of the New Optics stock price in the 3 months prior","The BSM options pricing model could have also been used"],
+ "Historical volatility looks backward; it does not measure perceived future uncertainty. Implied volatility (from the BSM model and option prices) is the forward-looking measure.",
+ ["Uder used the 23% volatility of the PRIOR 3 months: that is historical volatility.",
+  "Perceived uncertainty going forward = implied volatility, backed out of option prices with BSM.",
+  "Using BSM for this is right, so B is wrong; the error is relying on historical volatility (C).",
+  "Your pick A (correct) missed that the 23% is backward-looking."])
+w(27,["Edel explains to Uder","Option prices are also sensitive"],["by simultaneously delta hedging their own positions","short-term far out-of-the money call options","The same measure can simultaneously represent different types of risks to different market participants"],
+ "Dealers who delta hedge are left with GAMMA risk (their delta keeps changing). Speculators who buy short-dated OTM options face THETA risk (time decay: the options expire worthless).",
+ ["Dealers sell the options and hedge delta, so delta is not their main risk. The remaining risk is gamma: delta changes as the stock moves.",
+  "Speculators buy short-term far OTM calls: the main risk is theta, the option losing value as time passes (gamma and theta, C).",
+  "Your pick B: vega and delta. Dealers hedge delta, so delta is not their greatest risk, and vega is not the main risk for either group here.",
+  "Rule: hedged seller → gamma; short-dated option buyer → theta."])
+w(28,["@Exhibit 1"],["Stock price 2 weeks before expiry | 47","90 Call price 2 weeks before expiry | 0.15","90 Put price 2 weeks before expiry | 42.97","Stock price at expiry | 140"],
+ "Compute each position's profit at expiry (stock 47 → 140). The stock rises, so long stock gains; the put expires worthless and costs its premium.",
+ ["F: Profit = payoff at expiry − premium paid (stock: end price − 47)",
+  "C: Long put + long stock: 140 − 47 = 93 ; put 42.97 expires worthless → 93 − 42.97 = 50.03",
+  "C: Long call + long put: call (140 − 90) − 0.15 = 49.85 ; put −42.97 → 49.85 − 42.97 = 6.88",
+  "C: Long call + short stock: short stock 47 − 140 = −93 ; call +49.85 → −43.15",
+  "Greatest profit: long puts and long stock, 50.03 (B). (The portal text gives 6.85 for the third combination; either way it is far below B.)",
+  "Your pick A earns only 6.88: buying the put cost 42.97 and it expired worthless."])
+w(31,["Next, Kabbaj analyzes the information in Exhibit 3","@Exhibit 3"],["bond risk premium","Conventional government bond yield | 5.66%","Inflation-linked government bond yield | 2.32%","Survey-based inflation expectation | 2.80%"],
+ "Breakeven inflation (BEI) = nominal government yield − inflation-linked yield. BEI = expected inflation + inflation risk premium. Use government bonds, not corporate (credit premium).",
+ ["F: BEI = Conventional government yield − Inflation-linked government yield",
+  "F: Inflation risk premium = BEI − Expected inflation",
+  "C: BEI = 5.66% − 2.32% = 3.34%",
+  "C: Premium = 3.34% − 2.80% = 0.54% (A)",
+  "Option B (1.16%) used the corporate yield, which also contains a credit premium.",
+  "Option C (2.86%) = 5.66% − 2.80%, skipping the inflation-linked yield."])
+w(34,["Ulysses Emery is an analyst","The following week, Zeta announces its quarterly EPS"],["announced dividend is lower than what Emery and the market expected","faces near-term economic uncertainty in its major markets and needs to maintain its financial flexibility","Zeta's stock price rises after the dividend announcement","progressive income tax rate for individuals"],
+ "Price UP after a dividend below expectations rules out the bird-in-the-hand view (which predicts a fall). Taxes and progressive rates break the homemade-dividend assumption. The remaining answer is perceived agency cost changes.",
+ ["Bird in the hand: investors prefer dividends now, so lower-than-expected dividends should push the price DOWN. The price rose, so B does not fit (your pick).",
+  "Homemade dividends: needs perfect markets without taxes. Zeta's investors face progressive taxes, so A does not fit.",
+  "The remaining option is perceived agency cost changes (C). The portal gives no further reasoning, so this is reached by elimination."])
+w(35,["Emery considers a scenario in which Zeta pays a 10% stock dividend"],["Zeta pays a 10% stock dividend"],
+ "Stock dividend: no cash moves. Retained earnings fall and contributed capital (common stock plus paid-in capital) rises by the same amount. Total equity is unchanged.",
+ ["Cash: unchanged (no cash is paid).",
+  "Retained earnings: decrease (the value of the dividend is transferred out) → this changes (B).",
+  "Contributed capital: increases by the same amount.",
+  "Total stockholders' equity: unchanged, because the two changes offset (your pick C)."])
+w(37,["Country A is a developing economy"],["its population growth rate will continue to be higher than that in developed economies","level of per capita income will eventually match that of developed economies","develop legal, political, and economic institutions of developed countries"],
+ "Absolute convergence: all countries catch up. Conditional convergence: countries converge to their OWN steady state when they share the same saving rate, population growth and technology. Club convergence: only countries that adopt the right institutions and policies catch up.",
+ ["Country A reaches developed income only IF it adopts trade policies and developed-country institutions → club convergence (A).",
+  "Absolute (your pick B): would happen regardless of the country's characteristics, which is not the case here.",
+  "Conditional (C): needs the same saving rate and population growth, but Country A's population growth stays higher."])
+w(40,["Ling intends to trade government bonds"],["actual GDP growth rate will stay above the potential GDP growth rate","Country B will experience much lower inflation than the current market forecast"],
+ "Actual GDP growth above potential → inflation pressure → higher rates → bond prices FALL. Inflation lower than the market forecast → rates fall → bond prices RISE.",
+ ["Country A: actual growth above potential → more inflation → higher nominal rates → lower bond prices.",
+  "Country B: much lower inflation than the market expects → lower rates → higher bond prices.",
+  "Only Country B's bonds rise (B).",
+  "Your pick A reversed the direction for Country A."])
+w(41,["Dlamini believes that the valuation of small, privately owned Romala","Romala's reported EBIT is","Romala's CEO is not paid a salary","Romala's optimal level of debt","Romala's effective tax rate"],["Romala's reported EBIT is $5 million","Romala's CEO is not paid a salary","The annual salary of a replacement CEO is estimated to be $600,000","normalized EBIT"],
+ "Normalized EBIT: charge the market salary of the CEO that the company does not pay in salary; the $800,000 dividend is not an expense. Debt, interest and tax are BELOW the EBIT line and do not change EBIT.",
+ ["F: Normalized EBIT = Reported EBIT − Replacement CEO salary (no salary is currently expensed)",
+  "C: 5,000,000 − 600,000 = 4,400,000 = $4.4 million (B)",
+  "Your pick A (3.9): 5,000,000 − 600,000 − 550,000 + 99,000 = 3,949,000 is normalized earnings after interest and tax, not EBIT.",
+  "Option C (4.8): deducted only 800,000 − 600,000 = 200,000, treating the dividend as a salary expense."])
