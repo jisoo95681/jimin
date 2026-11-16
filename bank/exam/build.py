@@ -405,6 +405,18 @@ for _sid in ('rq1','rq2'):
                 assert _ph in _v['body'] or _ph in _q['q'],(_sid,_n,_ph)
             assert len(set(_q['options']))==3 and 0<=_q['answer']<3,(_sid,_n)
     HH.update(_d['hints']); sets.append(_st); print(_sid,_n)
+# ---- Set rq3 (16 Nov): all wrong and asked-about questions of the real Mocks B-E, by subject, built by bcde_wrong.py ----
+_d=json.load(open('/home/user/jimin/bank/exam/rq3.json')); _st=_d['set']; _n=0
+for _v in _st['vignettes']:
+    for _q in _v['questions']:
+        _n+=1
+        assert len(set(_q['options']))==3 and 0<=_q['answer']<3,('rq3',_n)
+        _h=_d['hints'].get(f'rq3:{_n}')
+        if _h:
+            for _ph in _h['hl']:
+                if _ph.startswith('@row:'): assert any(l.lstrip('# ').split(' | ')[0].strip().lower().startswith(_ph[5:].lower()) for l in _v['body'].split('\n')),('rq3',_n,_ph)
+                else: assert _ph in _v['body'] or _ph in _q['q'],('rq3',_n,_ph)
+HH.update(_d['hints']); sets.append(_st); print('rq3',_n)
 # ---- hint overrides (11 Nov): only decisive words/rows are highlighted; the rule text of the old hint is kept ----
 import importlib.util as _iu
 _sp=_iu.spec_from_file_location('hints_override','/home/user/jimin/bank/exam/hints_override.py'); _hm=_iu.module_from_spec(_sp); _sp.loader.exec_module(_hm)
