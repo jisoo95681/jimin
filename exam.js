@@ -22985,13 +22985,13 @@ const EXAM_SETS = [
   ]
  },
  {
-  "id": "rq3",
+  "id": "rq3_eth",
   "rev": 1,
   "resetHl": [],
-  "title": "Incorrect questions 3 (Mock B-E)",
+  "title": "Incorrect: Ethics",
   "kind": "practice",
-  "minutes": 429,
-  "desc": "Every question you got wrong or asked about in the real Mocks B, C, D and E (143 questions), split by subject, one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 48,
+  "desc": "Ethics: the questions you got wrong or asked about in the real Mocks B, C, D and E (16 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Ethics",
@@ -23206,7 +23206,19 @@ const EXAM_SETS = [
       "why": "A. Correct. Correct because, according to Standard II(A) regarding material nonpublic information, the information about the drug trial is not material nonpublic information. Lyden is allowed to share the information with a colleague and trade on the information.\nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material.\nThe source of the information is a well-respected industry analyst expressing his opinion on the prospects of the new drug driving InG Pharma's future sales. It is unlikely that his opinion would be considered material.\nB. Incorrect. Incorrect because the information is not material non-public information so she is allowed to purchase shares using this information as an input into her valuation model. \nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material.\nThe source of the information is a well-respected industry analyst expressing his opinion on the prospects of the new drug driving InG Pharma's future sales. It is unlikely that his opinion would be considered material.\nC. Incorrect. Incorrect because the information is not material non-public information so she is allowed to share it with her research analyst. \nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Ethics questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_qua",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Quantitative Methods",
+  "kind": "practice",
+  "minutes": 24,
+  "desc": "Quantitative Methods: the questions you got wrong or asked about in the real Mocks B, C, D and E (8 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Quant",
     "body": "Source: Mock B · Paper 1 · Vignette 7\n\nMoreno is tasked with a new project that looks to classify bond issuers based on their probability of default within the next 12 months. He gathers a large sample of financial and accounting metrics for 1,000 issuers and observes that the issuers are not linearly separable. He compares non-linear support vector machine (SVM), unconstrained classification and regression tree (CART), and SVM with soft margin classification. He wants to use a machine-learning algorithm that addresses non-linear separability and is not prone to overfitting.\n\nMoreno also creates Model 1, a logistic regression model that uses two factors, profit margin (PROFIT) and leverage ratio (LEVER), to predict the probability of default. The binary dependent variable is 1 for companies that defaulted within the subsequent 12 months and 0 otherwise. Using the regression results in Exhibit 1, Moreno calculates the predicted probability of default for the average distressed company, which has PROFIT = –2.0 and LEVER = 3.0.\n\nExhibit 1\n\n# | Coefficient\n\nIntercept | –1.7878\n\nPROFIT | –0.0185\n\nLEVER | 0.3876\n\nTo analyze the drivers of ROE for software companies, Moreno collects fundamental data and compares two linear regression models. Model 2 uses profit margin (PROFIT) and interest coverage (COVER). Model 3 extends Model 2 by adding a third factor, the quick ratio (QUICK).\n\nExhibit 2\n\n# | Coefficient | t-Statistic | p-Value\n\nIntercept | –1.4411 | –3.4888 | 0.0000\n\nPROFIT | 0.4840 | 49.5319 | 0.0000\n\nCOVER | 0.7487 | 27.9215 | 0.0000\n\nQUICK | 0.0919 | 1.9204 | 0.0558\n\nFinally, Moreno wants to test if last-12-month sales (SALES) are a good predictor of ROE. He runs Model 4, which has the following specification:\n\nA plot of the regression residuals against SALES is presented in Exhibit 3.\n\nNote: Exhibit 3 was an image in the original paper (file KL3.png) and was not in the pasted text. From the answer explanation: in the plot of the Model 4 residuals against SALES, the variance of the residuals increases as SALES increase.",
@@ -23304,7 +23316,19 @@ const EXAM_SETS = [
       "why": "A. Correct.\nB. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but it does not mean that there is heteroskedasticity. Homoskedasticity could be visually explored with a scatterplot between dependent and independent variables included in the regression.\nC. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). The Q-Q plot cannot be used to identify non-linear relationships between the dependent variable (Y) and the independent variables (Xi). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but this does not mean that there is interdependence of explanatory variables or multicollinearity. A pairwise scatterplot of the independent variables is used to detect this relationship."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Quantitative Methods questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_eco",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Economics",
+  "kind": "practice",
+  "minutes": 36,
+  "desc": "Economics: the questions you got wrong or asked about in the real Mocks B, C, D and E (12 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Econ",
     "body": "Source: Mock B · Paper 2 · Vignette 3\n\nTeam Green is asked to discuss how investment in physical capital, human capital, and technological development affects economic growth. As a summary of the discussion, Team Green presents a number of points including the following three:\n\nPoint 1: Since technology results in an upward shift in the production function, the relationship between economic growth and R&D spending is positive in the short run.\n\nPoint 2: Total factor productivity reflects the state of technology, and can be measured by the contribution of capital deepening plus the growth rates of labor productivity.\n\nPoint 3: Although long-term sustainable growth cannot rely on pure capital deepening, the impact of investment spending on available capital depends on the existing physical capital stock.\n\nTeam Purple is asked to investigate whether the per capita income of a developing country should converge toward that of developed countries over time. Team Purple reviews various determinants of per capital incomes: saving rate, population growth rate, the shape of production function, and the externalities associated with human capital. After a debate among team members, Team Purple concludes that the externalities associated with human capital is the most important determinant in predicting the occurrence of convergence.\n\nSmith presents the expected impact of removing trade barriers to economic growth. Referring to the neoclassical growth model, Smith concludes that opening up the economy should increase the rate at which countries' capital-to-labor ratios converge. Team Orange is asked to describe the dynamic adjustment process consistent with Smith's conclusion. Team Orange provides the following descriptions:\n\nDescription 1: The growth in the capital-exporting countries will be above the steady state.\n\nDescription 2: Developed countries will tend to run trade deficits as they export capital.\n\nDescription 3: The rate of return on investments will be lower in countries with high capital-to-labor ratios.",
@@ -23454,7 +23478,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation, which puts corresponding pressure on nominal interest rates and bond prices. Ling expects Country A's actual GDP growth rate will stay above the potential GDP growth rate. This leads to higher inflation and lower, not higher, bond prices.\nB. Correct.\nC. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation, which puts corresponding pressure on nominal interest rates and bond prices. Ling expects Country B will experience much lower inflation than the current market forecast. This leads to higher bond prices for Country B. Ling expects Country A's actual GDP growth rate will stay above the potential GDP growth rate. This leads to higher inflation and lower, not higher, bond prices."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Economics questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_fsa",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Financial Statement Analysis",
+  "kind": "practice",
+  "minutes": 57,
+  "desc": "Financial Statement Analysis: the questions you got wrong or asked about in the real Mocks B, C, D and E (19 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "FSA",
     "body": "Source: Mock B · Paper 1 · Vignette 2\n\nOn 1 January of the current year, Lonza granted 4 million stock options to employees. The options vest 3 years after the grant date and expire 6 years after the grant date. The fair value per option was EUR 1.8 on the grant date.\n\nExhibit 2\n\n# | Most Recent Year | Prior Year\n\nLiquidity Coverage Ratio | 95% | 110%\n\nNet Stable Funding Ratio | 95% | 90%",
@@ -23710,7 +23746,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect because this represents a potential treatment of a foreign currency transaction and not a translation adjustment. The two most common treatments (of foreign currency transaction gains and losses, not translation adjustments) are either (1) as a component of other operating income/expense or (2) as a component of non-operating income. Belle uses the current rate method, and when the current rate method is used, the cumulative translation adjustment needed to keep the translated balance sheet in balance is reported as a separate component of stockholders’ equity.\nB. Incorrect. Incorrect because Belle uses the current rate method and this represents treatment under the temporal method. Under both international and US accounting standards, when the temporal method is used, the translation adjustment needed to keep the translated balance sheet in balance is reported as a gain or loss in net income.\nIt also represents a potential treatment of a foreign currency transaction, not a translation adjustment. The two most common treatments (of foreign currency transaction gains and losses, not translation adjustments) are either (1) as a component of other operating income/expense or (2) as a component of non-operating income.\nC. Correct."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Financial Statement Analysis questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_cor",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Corporate Issuers",
+  "kind": "practice",
+  "minutes": 36,
+  "desc": "Corporate Issuers: the questions you got wrong or asked about in the real Mocks B, C, D and E (12 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Corp",
     "body": "Source: Mock B · Paper 1 · Vignette 1\n\nSingh would like to take advantage of the under-leveraged balance sheet of Axiom while ensuring that the company's current shareholders retain control. Singh considers what corporate actions could achieve these objectives.\n\nDivision B generated an EBITDA of $10.8 million last year and is valued at 6.0x EV/EBITDA. Division B has two segments:\n\nA wholesale segment which contributed 20% to the division's EBITDA. Comparable wholesale retailers are valued at 7.0x EV/EBITDA.\n\nA consumer segment which contributed 80% to the division's EBITDA. Comparable consumer retailers are valued at 5.1x EV/EBITDA.\n\nSingh evaluates if spinning off Division B's wholesale segment would have a material impact on shareholder value, which she defines as a change in shareholder value of greater than 5%.",
@@ -23860,7 +23908,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect because cash is not affected by a stock dividend; stock dividends do not affect assets or liquidity ratios.\nB. Correct.\nC. Incorrect. Incorrect because stockholders' equity is not affected by stock dividends (offsetting changes in retained earnings and contributed capital keep stockholders' equity unchanged)."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Corporate Issuers questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_equ",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Equity Valuation",
+  "kind": "practice",
+  "minutes": 54,
+  "desc": "Equity Valuation: the questions you got wrong or asked about in the real Mocks B, C, D and E (18 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Equity",
     "body": "Source: Mock B · Paper 1 · Vignette 4\n\nKassam evaluates the stock of Altair, which is a recently listed, high growth, biotechnology company. She is considering a stable market-based multiple to value the stock and does not want to make any adjustments to the reported financial statements. After reviewing recent analyst reports, Kassam notices that Altair has internally generated brands that are not shown as intangible assets on Altair's balance sheet. Further, she notes that certain discretionary accounting decisions about expenses have led to an inaccurate representation of Altair's economic performance.\n\nKassam values Becq, a small private company, using the excess earnings method. Relevant financial information is shown in Exhibit 3.\n\nExhibit 3\n\nFixed assets | $725,000\n\nWorking capital | $315,000\n\nLast reported earnings | $191,290\n\nResidual income growth rate | 2.50%\n\nRequired return on fixed assets | 8.50%\n\nRequired return on working capital | 3.25%\n\nDiscount rate | 11.25%",
@@ -24106,7 +24166,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect because the normalized earnings after interest and tax (EAIT) is calculated (instead of EBIT) as follows:\nNormalized EAIT = Reported EBIT – CEO salary – Increase in interest paid + Tax benefit on interest paid\nInterest paid = $5,500,000 × 0.10 = $550,000\nTax benefit on interest paid = $550,000 × 0.18 = $99,000\nNormalized EAIT = $5,000,000 – $600,000 – $550,000 + $99,000\n= $3,949,000 ≈ $3.9 million\nB. Correct.\nC. Incorrect. Incorrect because the normalized EBIT for Romala is calculated by deducting the net difference between the current CEO's compensation and a replacement CEO's salary ($800,000 – $600,000 = $200,000):\nNormalized EBIT = Reported EBIT – Net difference in CEO salary\n= $5,000,000 – $200,000\n= $4,800,000 = $4.8 million\nNo adjustment to EBIT was correctly taken into account for the increase in debt level as interest and its effect on taxes are below the EBIT line."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Equity Valuation questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_fi",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Fixed Income",
+  "kind": "practice",
+  "minutes": 63,
+  "desc": "Fixed Income: the questions you got wrong or asked about in the real Mocks B, C, D and E (21 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "FI",
     "body": "Source: Mock B · Paper 1 · Vignette 5\n\nShe first considers the following 2-year, default-free bonds with embedded options:\n\nBond A is a 5% annual pay coupon bond and is callable at par ($100) at the end of year 1.\n\nTo analyze these bonds, Plessinger creates a binomial interest rate tree using the rates in Exhibit 1, assuming an interest rate volatility of 20%, with branching from each node to a high state and a low state occurring with equal probability. Plessinger also considers the effective convexity of Bond B.\n\nExhibit 1 Binomial Interest Rate Tree (1-year rates)\n\n# | Year 0 | Year 1 | Year 2\n\nUpper node |  | 6.09% | 7.32%\n\nMiddle node | 2.00% |  | 4.91%\n\nLower node |  | 4.08% | 3.29%\n\nNote: This exhibit was a binomial diagram in the original paper. Its figure was not in the pasted text: the Year 0 and Year 1 rates come from the answer explanations, the Year 2 nodes are reconstructed from them (4.08% × e^0.4 = 6.09%, 3.29% × e^0.4 = 4.91% and 3.29% × e^0.8 = 7.32%).\n\nPlessinger next evaluates a 3-year maturity, callable investment-grade corporate bond. She computes an OAS of 51 bps using the same binomial interest rate tree in Exhibit 1. Plessinger considers the impact on the bond's OAS under a scenario where the bond's price is unchanged and interest rate volatility increases from 20% to 25%.\n\nFinally, still using the binomial interest rate tree in Exhibit 1, Plessinger analyzes a 3-year, default-free capped floating rate bond with a par value of $100. The bond pays an annual coupon equal to the 1-year reference rate, is set in arrears, and is capped at 5.0%.",
@@ -24382,7 +24454,19 @@ const EXAM_SETS = [
       "why": "A. Correct.\nB. Incorrect. Incorrect because Barilla notes that the new issue will have a higher credit rating than previously issued bonds and she expects the Grocery, Inc. credit spread curve to steepen after the new issue. The credit term structure for the most highly rated securities tends to be either flat or slightly upward sloping.\nC. Incorrect. Incorrect because Barilla notes that the new issue has a tighter bid–offer spread and she expects the Grocery, Inc. credit spread curve to steepen after the new issue. The steepening effect may be partially offset by a tighter bid–offer spread for longer credit maturities."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Fixed Income questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_der",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Derivatives",
+  "kind": "practice",
+  "minutes": 24,
+  "desc": "Derivatives: the questions you got wrong or asked about in the real Mocks B, C, D and E (8 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Deriv",
     "body": "Source: Mock C · Paper 2 · Vignette 9\n\nQiu Tian is a hedge fund manager evaluating options on several equities. She begins with Tara Corp., a non-dividend-paying stock priced in Indian rupees (INR). Tian is bullish on Tara stock and values European-style Tara call options using a two-period binomial model and information from Exhibit 1.\n\nExhibit 1\n\nCurrent stock price | INR 10\n\nTime to option expiration | 2 years\n\nRisk-free rate (annual) | 5.0%\n\nOption strike price | INR 12\n\nUp factor per period | 1.50\n\nDown factor per period | 0.67\n\nTian observes that the 2-year Tara call option is illiquid. She determines how to replicate a long position in this call option.\n\nNext, Tian assesses the value of a European-style call option on equity index futures using the Black model. She gathers information related to the call in Exhibit 2. The Black model value of a put with the same underlying, strike price, and time to expiration is 225.\n\nExhibit 2\n\nCurrent futures price | 1,100\n\nTime to expiration | 6 months\n\nExercise price | 1,300\n\nRisk-free rate | 5.0%\n\nTian is also evaluating the addition of Purnima Corp. options to her portfolio. She compares the relative value of three Purnima call options in Exhibit 3. Her objective is to select the option that is cheapest after she makes adjustments for differences in moneyness and time to expiration. Purnima stock is currently trading at INR 62.\n\nExhibit 3\n\n# Option X | Option Y | Option Z\n\nCurrent price | INR 10.55 | INR 6.89 | INR 6.44\n\nImplied volatility | 30% | 25% | 35%\n\nStrike price | INR 55 | INR 62 | INR 75\n\nTime to expiration | 8 months | 12 months | 16 months",
@@ -24480,7 +24564,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect. The 90 puts would have cost 42.97 and would have expired worthless if the stock rose to 140. The 90 calls would have cost 0.15 and had a price of 50 at expiration resulting in a profit of 49.85 for the call and a loss of 42.97 for the put.\nB. Correct.\nC. Incorrect. Incorrect. The 90 calls would hedge the short stock position after the stock price rose above 90, however the stocks would have had a loss between 47 and 90 of 43.  The terminal call price of 50 would have had the combination result in a net gain of 6.85 ((50-0.15)-43) = 6.85"
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Derivatives questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_alt",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Alternative Investments",
+  "kind": "practice",
+  "minutes": 33,
+  "desc": "Alternative Investments: the questions you got wrong or asked about in the real Mocks B, C, D and E (11 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "Alt",
     "body": "Source: Mock B · Paper 1 · Vignette 6\n\nChang is also evaluating hedge funds as potential additions to the portfolio. She identifies the following strategies and considers their returns, leverage, and liquidity:\n\nStrategy 1: Multi-strategy funds\n\nStrategy 2: Fund of funds\n\nThe pension plan has an objective to limit drawdowns. Chang considers what individual hedge fund strategy would best meet that objective when combined with the pension plan's stock and bond portfolio.",
@@ -24632,7 +24728,19 @@ const EXAM_SETS = [
       "why": "A. Incorrect. Incorrect because Pearl aims to maximize exposure to energy commodities, so the most appropriate index to use as a basis for the commodity swap is the one which has the highest sector weight on energy.  \nThe RICI uses a fixed-weighting scheme to allocate exposure among 38 different commodities. RICI uses the fixed weight weighting method.\nB. Incorrect. Incorrect because Pearl aims to maximize exposure to energy commodities, so the most appropriate index to use as a basis for the commodity swap is the one which has the highest sector weight on energy.\nBCOM's rules of index construction also place caps on the size of the sectors (33% maximum) and floors on individual commodities (2% minimum). These differences mean that very different index composition and weights can occur. For example, the energy sector currently dominates the S&P GSCI (as high as 80% weight), whereas the BCOM’s exposure is much lower (approximately 30%).\nC. Correct."
      }
     ]
-   },
+   }
+  ],
+  "concept": "Only the Alternative Investments questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+ },
+ {
+  "id": "rq3_pm",
+  "rev": 1,
+  "resetHl": [],
+  "title": "Incorrect: Portfolio Management",
+  "kind": "practice",
+  "minutes": 54,
+  "desc": "Portfolio Management: the questions you got wrong or asked about in the real Mocks B, C, D and E (18 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "vignettes": [
    {
     "topic": "PM",
     "body": "Source: Mock B · Paper 1 · Vignette 3\n\nGrap backtests the strategy using a model with the following parameters:\n\n• Rebalancing frequency: monthly (simulated using rolling windows);\n\n• Formation of factor portfolios: for each factor, buy the top 20% of stocks and sell the bottom 20% of stocks ranked by the factor over the previous 12 months;\n\n• Weighting of factor portfolios: risk parity.\n\nThe TOP100 Index is updated regularly and, as a result, its composition has significantly changed over the 10-year backtesting period. Grap wants to ensure that survivorship bias is mitigated and compares three alternative methods to form factor portfolios in each rolling window:\n\n• Method A only uses the companies that were in the TOP100 Index at any given point in time t.\n\n• Method B only uses the companies that were in the TOP100 Index at the end of the 10-year period.\n\n• Method C only uses the companies that have been in the TOP100 Index for the entire 10-year period.\n\nGrap performs a complementary risk analysis using a risk measure that can give him a better understanding of the downside risk of the absolute return trading strategy to be employed by the equity market-neutral fund. The strategy is benchmarked against cash.",
@@ -24874,6 +24982,6 @@ const EXAM_SETS = [
     ]
    }
   ],
-  "concept": "Every question you got wrong or asked about in the real Mocks B, C, D and E: 143 questions (126 wrong + 17 you asked to have explained), nothing changed.\nSplit by subject (Ethics, Quant, Econ, FSA, Corp, Equity, FI, Deriv, Alt, PM), one block per original vignette.\nOnly the vignette parts the questions use are kept, word for word; names, numbers, options and explanations are exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Portfolio Management questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  }
 ];

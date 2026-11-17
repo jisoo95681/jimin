@@ -53,33 +53,38 @@ for (g,p),s in SETS.items():
                 items=DATA[(g,p,n)]['sel'] if (g,p,n) in DATA else XSEL[(g,p,n)]
                 b['idx']|=set(pick_idx(v['body'],items,'B' if g=='B' else 'C'))
 assert n_in==143,n_in
-vigs=[];hints={};nq=0
-for key in sorted(blocks,key=lambda k:(ORDER.index(blocks[k]['v']['topic']),'BCDE'.index(k[0]),k[1],k[2])):
-    g,p,vi=key; b=blocks[key]; L=b['v']['body'].split('\n'); idx=sorted(b['idx']); out=[]; prev=None
-    for i in idx:
-        if not L[i].strip(): continue
-        if prev is not None: out.append('' if i!=prev+1 else None)
-        out.append(L[i]); prev=i
-    body='\n'.join(x if x is not None else '' for x in out)
-    body=re.sub(r'\n{3,}','\n\n',body)
-    body=f'Source: Mock {g} · Paper {p} · Vignette {vi+1}\n\n'+body
-    qs=[]
-    for n,q in b['qs']:
-        nq+=1; qs.append(dict(q=q['q'],options=q['options'],answer=q['answer'],why=q['why']))
-        d=DATA.get((g,p,n))
-        if d:
-            hl=[]
-            for t in d['trig']:
-                h=('@row:'+t.split(' | ')[0].strip()) if ' | ' in t else t
-                if h.startswith('@row:'):
-                    ok=any(l.lstrip('# ').split(' | ')[0].strip().lower().startswith(h[5:].lower()) for l in body.split('\n'))
-                else: ok=t in body or t in q['q']
-                if ok and h not in hl: hl.append(h)
-            if hl: hints[f'rq3:{nq}']=dict(hl=hl,rule=d['rule'])
-    vigs.append(dict(topic=b['v']['topic'],body=body,questions=qs))
-desc='Every question you got wrong or asked about in the real Mocks B, C, D and E (%d questions), split by subject, one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.'%nq
-st=dict(id='rq3',rev=1,resetHl=[],title='Incorrect questions 3 (Mock B-E)',kind='practice',minutes=3*nq,desc=desc,vignettes=vigs)
-json.dump(dict(set=st,hints=hints),open(B+'rq3.json','w'),ensure_ascii=False,indent=1)
-k=''.join('ABC'[q['answer']] for v in vigs for q in v['questions'])
-print(nq,len(vigs),len(hints),collections.Counter(v['topic'] for v in vigs),collections.Counter(k))
-print([ (v['topic'],len(v['questions'])) for v in vigs][:12])
+SETIDS={'Ethics':'rq3_eth','Quant':'rq3_qua','Econ':'rq3_eco','FSA':'rq3_fsa','Corp':'rq3_cor','Equity':'rq3_equ','FI':'rq3_fi','Deriv':'rq3_der','Alt':'rq3_alt','PM':'rq3_pm'}
+NAMES={'Ethics':'Ethics','Quant':'Quantitative Methods','Econ':'Economics','FSA':'Financial Statement Analysis','Corp':'Corporate Issuers','Equity':'Equity Valuation','FI':'Fixed Income','Deriv':'Derivatives','Alt':'Alternative Investments','PM':'Portfolio Management'}
+sets=[];hints={};allk=''
+for top in ORDER:
+    vigs=[];nq=0;sid=SETIDS[top]
+    for key in sorted([k for k in blocks if blocks[k]['v']['topic']==top],key=lambda k:('BCDE'.index(k[0]),k[1],k[2])):
+        g,p,vi=key; b=blocks[key]; L=b['v']['body'].split('\n'); idx=sorted(b['idx']); out=[]; prev=None
+        for i in idx:
+            if not L[i].strip(): continue
+            if prev is not None: out.append('' if i!=prev+1 else None)
+            out.append(L[i]); prev=i
+        body='\n'.join(x if x is not None else '' for x in out)
+        body=re.sub(r'\n{3,}','\n\n',body)
+        body=f'Source: Mock {g} · Paper {p} · Vignette {vi+1}\n\n'+body
+        qs=[]
+        for n,q in b['qs']:
+            nq+=1; qs.append(dict(q=q['q'],options=q['options'],answer=q['answer'],why=q['why']))
+            d=DATA.get((g,p,n))
+            if d:
+                hl=[]
+                for t in d['trig']:
+                    h=('@row:'+t.split(' | ')[0].strip()) if ' | ' in t else t
+                    if h.startswith('@row:'):
+                        ok=any(l.lstrip('# ').split(' | ')[0].strip().lower().startswith(h[5:].lower()) for l in body.split('\n'))
+                    else: ok=t in body or t in q['q']
+                    if ok and h not in hl: hl.append(h)
+                if hl: hints[f'{sid}:{nq}']=dict(hl=hl,rule=d['rule'])
+        vigs.append(dict(topic=top,body=body,questions=qs))
+    desc=f'{NAMES[top]}: the questions you got wrong or asked about in the real Mocks B, C, D and E ({nq} questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.'
+    sets.append(dict(id=sid,rev=1,resetHl=[],title=f'Incorrect: {NAMES[top]}',kind='practice',minutes=3*nq,desc=desc,vignettes=vigs))
+    allk+=''.join('ABC'[q['answer']] for v in vigs for q in v['questions'])
+    print(sid,nq,len(vigs))
+assert sum(len(v['questions']) for s_ in sets for v in s_['vignettes'])==143
+json.dump(dict(sets=sets,hints=hints),open(B+'rq3.json','w'),ensure_ascii=False,indent=1)
+print(len(hints),collections.Counter(allk))

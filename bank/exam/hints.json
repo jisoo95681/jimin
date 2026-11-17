@@ -5246,5 +5246,996 @@
    "@row:Survey-based inflation expectation"
   ],
   "rule": "Breakeven inflation (BEI) = nominal government yield − inflation-linked yield. BEI = expected inflation + inflation risk premium. Use government bonds, not corporate (credit premium)."
+ },
+ "rq3_eth:1": {
+  "hl": [
+   "buys its stock for one of the equity funds he manages",
+   "Silva sells some of his personal position",
+   "as part of rebalancing his personal portfolio"
+  ],
+  "rule": "VI(B) Priority of Transactions: client trades come first; personal trades are allowed if clients are not disadvantaged (the fund bought first, the stock is actively traded). A profit, or trading against his own recommendation, is not a violation by itself."
+ },
+ "rq3_eth:2": {
+  "hl": [
+   "hard copy form",
+   "He saves his records for 5 years",
+   "Local regulations require record retention for 5 years"
+  ],
+  "rule": "V(C): records may be kept in hard copy or electronic form, for the period required by regulation or firm policy; the 7-year recommendation applies only when neither exists."
+ },
+ "rq3_eth:3": {
+  "hl": [
+   "A monetary incentive will be offered as a reward for ethical behavior.",
+   "The deputy manager will be responsible for evaluating the ethical conduct of department members."
+  ],
+  "rule": "IV(C): a supervisor of a large department may delegate to trained deputies and may reward ethical behavior, even with money; responsibility remains with the supervisor."
+ },
+ "rq3_eth:4": {
+  "hl": [
+   "Dines knows that Prism's preferred broker would provide better execution",
+   "without further discussion she agrees to follow Kagan's wishes"
+  ],
+  "rule": "III(A) directed brokerage: following the client's chosen broker is allowed, but you must TELL him it may cost best execution. A disclosed cost-benefit proxy policy is fine."
+ },
+ "rq3_eth:5": {
+  "hl": [
+   "Prism publishes a report changing its recommendation on Cromwell Inc., a cybersecurity company, to a sell",
+   "without informing him of the firm's recent recommendation change"
+  ],
+  "rule": "III(B) Fair dealing: if a client orders against a current recommendation, tell him about the change before accepting the order. Paid premium calls after publication are fine (fair, not equal)."
+ },
+ "rq3_eth:6": {
+  "hl": [
+   "the past five years of return data for the top and bottom deciles of all Prism accounts",
+   "shown before taxes and gross of fees"
+  ],
+  "rule": "III(D): present a weighted composite of similar portfolios, not selected deciles or accounts; disclosing 'gross of fees, before taxes' is adequate."
+ },
+ "rq3_eth:7": {
+  "hl": [
+   "Lee neglected to remove Benoit's access from the server",
+   "against the list in StockCo’s internal data system"
+  ],
+  "rule": "III(E): both the person who USES confidential client data and the manager who FAILS to protect it can violate."
+ },
+ "rq3_eth:8": {
+  "hl": [
+   "He discloses the bonus arrangement to his existing clients but not to prospective clients",
+   "This reward is paid by Summit and is not charged to clients"
+  ],
+  "rule": "VI(A)/(C): disclose compensation that can create a conflict with clients or prospects. The $60,000 bonus (tied to client portfolio performance) must be disclosed to prospective clients too. A reward paid by the employer and not charged to clients is not a referral fee."
+ },
+ "rq3_eth:9": {
+  "hl": [
+   "Informal blog posts and short message form posts sourced from the internet do not need to be preserved",
+   "hence, any hard copies must be digitized"
+  ],
+  "rule": "V(C) Record Retention: keep the records that support the investment recommendations and client communications, including social-media posts. Format may be paper OR electronic; time period = regulation or firm policy (7 years only if neither exists)."
+ },
+ "rq3_eth:10": {
+  "hl": [
+   "did not obtain a copy of the study directly from the trade association",
+   "cites only the newspaper"
+  ],
+  "rule": "Always cite the ACTUAL source of information. Using an intermediary is fine, but cite the original author (best: cite both). There is no rule that third-party research must be independently reviewed."
+ },
+ "rq3_eth:11": {
+  "hl": [
+   "include general fiduciary concepts as well as detailed compliance procedures"
+  ],
+  "rule": "A stand-alone code of ethics = plain language, general fiduciary concepts, NOT cluttered with detailed procedures. Detailed compliance procedures belong in a separate compliance manual."
+ },
+ "rq3_eth:12": {
+  "hl": [
+   "if the client's annual portfolio return outperforms its benchmark by more than 5%",
+   "he has obtained verbal approval from his employer"
+  ],
+  "rule": "Standard IV(B) Additional Compensation Arrangements: extra compensation or benefits from a client are allowed only with WRITTEN consent from the parties involved (employer). Verbal approval is not enough."
+ },
+ "rq3_eth:13": {
+  "hl": [
+   "Chan was not clear on how the new variables would improve the accuracy",
+   "Step 2: Review the model factors and parameters to better understand its assumptions and limitations"
+  ],
+  "rule": "Standard V(A) Diligence and Reasonable Basis: understand the model's assumptions and limitations. You do NOT have to become an expert in the technical or programming details."
+ },
+ "rq3_eth:14": {
+  "hl": [
+   "another partner published a telecommunications industry report last month",
+   "Chan advises the client of the partner's report",
+   "without changes"
+  ],
+  "rule": "Sharing someone else's report is not plagiarism when the author is disclosed and nothing is changed or presented as yours. Work done at a firm belongs to the firm."
+ },
+ "rq3_eth:15": {
+  "hl": [
+   "expected performance under an increase in market volatility",
+   "structured product developed by Eto which has a return tied to changes in market volatility"
+  ],
+  "rule": "Standard V(B) Communication with Clients: disclose the key characteristics and risks, and present both sides. A complex model's inner details do not have to be shared."
+ },
+ "rq3_eth:16": {
+  "hl": [
+   "a well-respected biotech industry analyst tells Lyden",
+   "He believes the drug will come to market in the next 24 months"
+  ],
+  "rule": "Standard II(A): information is material when it is specific and reliable, for example from people involved in the trial. An outside analyst's educated opinion is NOT material nonpublic information."
+ },
+ "rq3_qua:1": {
+  "hl": [
+   "not linearly separable",
+   "addresses non-linear separability and is not prone to overfitting"
+  ],
+  "rule": "Non-linear separability + no overfitting → SVM with soft margin classification (penalty for misclassified points, wider margin). Non-linear SVM and unconstrained CART overfit."
+ },
+ "rq3_qua:2": {
+  "hl": [
+   "PROFIT = –2.0 and LEVER = 3.0",
+   "@row:Intercept"
+  ],
+  "rule": "Logit: P = 1 ÷ (1 + exp(−(b0 + b1x1 + b2x2))). exp(linear part) alone is the ODDS, not the probability, and dropping the intercept gives 77%."
+ },
+ "rq3_qua:3": {
+  "hl": [
+   "adding a third factor, the quick ratio (QUICK)",
+   "@row:QUICK"
+  ],
+  "rule": "Adding a variable never lowers R²; adjusted R² rises if the new coefficient's |t| > 1.0 (QUICK: 1.92), even though p = 0.0558 is not significant at 5%."
+ },
+ "rq3_qua:4": {
+  "hl": [
+   "A plot of the regression residuals against SALES",
+   "the variance of the residuals increases as SALES increase"
+  ],
+  "rule": "Residual variance that grows with the regressor = CONDITIONAL heteroskedasticity: biased standard errors, unreliable F-test, more Type I errors. Unconditional heteroskedasticity is not a problem. A residual plot does not show non-linearity of the relationship."
+ },
+ "rq3_qua:5": {
+  "hl": [
+   "more concerned about the models producing false negatives"
+  ],
+  "rule": "False negatives costly → highest RECALL (TP ÷ (TP + FN)); false positives costly → precision; equal weight → accuracy or F1."
+ },
+ "rq3_qua:6": {
+  "hl": [
+   "autoregressive conditional heteroskedasticity",
+   "ARCH(1) errors"
+  ],
+  "rule": "ARCH(1): the error variance depends on the previous period's squared error, so it is NOT constant but predictable."
+ },
+ "rq3_qua:7": {
+  "hl": [
+   "logistic regression model to predict the 1-year probability of default",
+   "LEVERAGE of 0.8 and COVERAGE of 0.9"
+  ],
+  "rule": "Logit: P = 1 / (1 + exp(−z)). The minus sign matters: with +z you get the probability of NOT defaulting."
+ },
+ "rq3_qua:8": {
+  "hl": [
+   "significant deviations of the residuals from the diagonal in the Q-Q plot"
+  ],
+  "rule": "Q-Q plot = normality of residuals. Heteroskedasticity = Breusch–Pagan or a residual-vs-X plot. Multicollinearity = pairwise scatterplots or VIF."
+ },
+ "rq3_eco:1": {
+  "hl": [
+   "Total factor productivity reflects the state of technology",
+   "the impact of investment spending on available capital depends on the existing physical capital stock"
+  ],
+  "rule": "Labor productivity growth = capital deepening + TFP growth, so TFP is NOT 'capital deepening plus labor productivity'. The R&D–growth link is not clear-cut in the short run. Investment matters most where the capital stock is small."
+ },
+ "rq3_eco:2": {
+  "hl": [
+   "externalities associated with human capital",
+   "most important determinant in predicting the occurrence of convergence"
+  ],
+  "rule": "Human capital and knowledge externalities = endogenous growth: no diminishing returns, so rich countries keep their lead → NON-convergence. Diminishing returns (neoclassical) → conditional or absolute convergence."
+ },
+ "rq3_eco:3": {
+  "hl": [
+   "opening up the economy should increase the rate at which countries' capital-to-labor ratios converge",
+   "Description 3: The rate of return on investments will be lower in countries with high capital-to-labor ratios."
+  ],
+  "rule": "Opening up: capital flows to the low capital-to-labor country (high MPK). The exporter grows BELOW its steady state and runs trade SURPLUSES; the importer grows above steady state and runs deficits. Returns are lower where capital per worker is high."
+ },
+ "rq3_eco:4": {
+  "hl": [
+   "selling AUD one year forward",
+   "@row:9 months (forward points)"
+  ],
+  "rule": "Mark a forward to market with the offsetting trade: you sold AUD forward, so you buy AUD forward at the OFFER; then discount with the USD rate."
+ },
+ "rq3_eco:6": {
+  "hl": [
+   "developed, slow-growing economy and a high rate of capital per worker"
+  ],
+  "rule": "A developed economy already has a high capital per worker (diminishing returns to capital). The growth lever left is the labour force (immigration) and technology, not more saving or credit."
+ },
+ "rq3_eco:7": {
+  "hl": [
+   "@row:Labor productivity",
+   "@row:Total factor productivity"
+  ],
+  "rule": "Labour productivity growth = TFP growth + capital deepening contribution. Hours worked do not enter."
+ },
+ "rq3_eco:8": {
+  "hl": [
+   "potential GDP currently exceeds its actual GDP",
+   "potential GDP growth rate will be higher than the actual GDP growth rate"
+  ],
+  "rule": "Actual GDP below potential (negative output gap) = slack = DOWNWARD pressure on inflation. Actual above potential = upward pressure."
+ },
+ "rq3_eco:9": {
+  "hl": [
+   "bought EUR 20 million forward against the USD",
+   "1.1352/1.1355"
+  ],
+  "rule": "MTM rule by POSITION: bought (long) → BID; sold (short) → OFFER. Reason: you value the position at the price at which you could get out of it. A long gets out by selling (bid); a short gets out by buying (offer)."
+ },
+ "rq3_eco:10": {
+  "hl": [
+   "potential carry trades",
+   "what market conditions are required for the trade to be profitable"
+  ],
+  "rule": "Carry trade = earn the interest differential. It works in LOW volatility (income accrues slowly, crash risk is in turbulent times) and only if uncovered interest rate parity does NOT hold. The yield spread is locked in at initiation."
+ },
+ "rq3_eco:11": {
+  "hl": [
+   "its population growth rate will continue to be higher than that in developed economies",
+   "level of per capita income will eventually match that of developed economies",
+   "develop legal, political, and economic institutions of developed countries"
+  ],
+  "rule": "Absolute convergence: all countries catch up. Conditional convergence: countries converge to their OWN steady state when they share the same saving rate, population growth and technology. Club convergence: only countries that adopt the right institutions and policies catch up."
+ },
+ "rq3_eco:12": {
+  "hl": [
+   "actual GDP growth rate will stay above the potential GDP growth rate",
+   "Country B will experience much lower inflation than the current market forecast"
+  ],
+  "rule": "Actual GDP growth above potential → inflation pressure → higher rates → bond prices FALL. Inflation lower than the market forecast → rates fall → bond prices RISE."
+ },
+ "rq3_fsa:1": {
+  "hl": [
+   "vest 3 years after the grant date",
+   "expire 6 years after the grant date"
+  ],
+  "rule": "Option expense is spread over the VESTING period, not the term to expiry. One year's expense = grant-date fair value × options ÷ vesting years."
+ },
+ "rq3_fsa:2": {
+  "hl": [
+   "@row:Liquidity Coverage Ratio",
+   "@row:Net Stable Funding Ratio"
+  ],
+  "rule": "NSFR = available ÷ required stable funding: below 100% means required > available; a higher NSFR than last year = improvement. LCR below 100% = cannot cover the 30-day stress outflows (it is short, not 5% to spare)."
+ },
+ "rq3_fsa:3": {
+  "hl": [
+   "highest sustainable sales growth rate"
+  ],
+  "rule": "Sustainable sales growth = volume + price; the foreign-exchange part is not sustainable."
+ },
+ "rq3_fsa:4": {
+  "hl": [
+   "Buttery uses the temporal method",
+   "@row:Weighted average rate when inventory was purchased",
+   "@row:Average for the most recent year"
+  ],
+  "rule": "Temporal method: monetary items at the current rate, inventory/COGS at historical rates, sales at the average rate. A ratio is unchanged only if numerator and denominator are translated at the same rate (COGS ÷ sales: 14,700 for both)."
+ },
+ "rq3_fsa:5": {
+  "hl": [
+   "will be able to influence the financial and operating policy of the SPE",
+   "expected to absorb any losses"
+  ],
+  "rule": "Power over the SPE's policies + exposure to its losses = control (IFRS 10) → consolidate: the debt is on the consolidated balance sheet, the same as borrowing directly."
+ },
+ "rq3_fsa:6": {
+  "hl": [
+   "purchased a 30% interest",
+   "Half of the excess was attributable to Begonia's plant and equipment",
+   "remaining useful life of 10 years",
+   "not pay any dividends"
+  ],
+  "rule": "Equity method: cost + SHARE (30%) of income − dividends − amortisation of the excess assigned to depreciable assets. Land is not amortised."
+ },
+ "rq3_fsa:7": {
+  "hl": [
+   "@row:Balance-sheet-based accruals ratio",
+   "@row:Cash-flow-based accruals ratio"
+  ],
+  "rule": "Accruals ratios: judge the ABSOLUTE value. Closer to zero = better earnings quality. A move from −2.5% to +1.7% is an improvement."
+ },
+ "rq3_fsa:8": {
+  "hl": [
+   "Citrine was consolidated using the temporal method",
+   "steadily strengthened against the EUR throughout the year",
+   "inventory that was sold during the year"
+  ],
+  "rule": "Temporal method: sales at the AVERAGE rate, COGS at the HISTORICAL rate of the inventory. If the foreign currency strengthens, the older (lower) historical rate makes COGS smaller than sales → higher gross margin."
+ },
+ "rq3_fsa:9": {
+  "hl": [
+   "Delphine exercises significant influence, but not control",
+   "Delphine exercises control over Company A",
+   "net profit margin might be affected"
+  ],
+  "rule": "Equity method (significant influence) = one-line consolidation: net income is the same, but the investee's SALES are not added. Consolidation adds 100% of the investee's sales, so the margin is LOWER under control."
+ },
+ "rq3_fsa:11": {
+  "hl": [
+   "purchased imported goods worth USD 3.2 million on credit",
+   "still outstanding as of 31 December",
+   "@row:1 November"
+  ],
+  "rule": "A payable in a foreign currency: if the foreign currency (USD) gets CHEAPER in the home currency (BRL per USD falls), you owe fewer BRL → gain."
+ },
+ "rq3_fsa:12": {
+  "hl": [
+   "Gowran issued $1 billion of Additional Tier 1 Capital",
+   "additional $3.5 billion of operational risk-weighted assets"
+  ],
+  "rule": "CET1 ratio = CET1 capital / total risk-weighted assets. Additional Tier 1 is NOT common equity, so it stays out of the numerator; extra operational RWA goes into the denominator."
+ },
+ "rq3_fsa:13": {
+  "hl": [
+   "@row:Provision for loan losses during the year",
+   "@row:Charge-offs, net of recoveries, during the year"
+  ],
+  "rule": "Allowance rolls forward: ADD the provision (an expense that builds the allowance), SUBTRACT net charge-offs (actual losses)."
+ },
+ "rq3_fsa:14": {
+  "hl": [
+   "5 million at-the-money stock options",
+   "fair value of each option was $3",
+   "2 million of the stock options are exercised at the strike price of $12"
+  ],
+  "rule": "On exercise, paid-in capital rises by the cash paid (strike) PLUS the compensation reserve transferred (grant-date fair value). The current share price is irrelevant."
+ },
+ "rq3_fsa:15": {
+  "hl": [
+   "Common Equity Tier 1 Capital Ratio",
+   "@row:Total risk-weighted assets",
+   "@row:Intangible assets",
+   "@row:Deferred tax assets"
+  ],
+  "rule": "CET1 ratio = (common equity − intangibles − deferred tax assets) / RISK-WEIGHTED assets. Both the deductions and the risk-weighted denominator are required."
+ },
+ "rq3_fsa:16": {
+  "hl": [
+   "Cela invested €25 million in each of three bonds",
+   "@row:Classification",
+   "@row:Coupon interest rate"
+  ],
+  "rule": "P&L (pre-tax income): amortized cost = interest only; FVOCI = interest only (fair value change goes to OCI); FVTPL = interest + fair value change."
+ },
+ "rq3_fsa:17": {
+  "hl": [
+   "paid €140 million in cash for 35%",
+   "exceeded their book value by €20 million",
+   "significant influence but not control"
+  ],
+  "rule": "Significant influence → equity method. Implicit goodwill = price − % × FV of identifiable net assets. It stays inside the investment account (no separate goodwill, no amortisation)."
+ },
+ "rq3_fsa:18": {
+  "hl": [
+   "purchased inventory for GBP 500,000",
+   "settled on 18 January of the current year",
+   "@row:16 November, most recent year",
+   "@row:31 December, most recent year",
+   "@row:18 January, current year"
+  ],
+  "rule": "A payable in a foreign currency is remeasured at each balance sheet date. The gain or loss is recognized in the period it arises. The current-year loss = settlement cost − year-end carrying amount."
+ },
+ "rq3_fsa:19": {
+  "hl": [
+   "Belle uses the current rate method to translate its subsidiaries' financial statements",
+   "cumulative translation adjustment"
+  ],
+  "rule": "Current rate method → translation adjustment goes to a separate component of stockholders' equity (CTA). Temporal method → translation gain or loss goes through net income."
+ },
+ "rq3_cor:1": {
+  "hl": [
+   "under-leveraged balance sheet",
+   "current shareholders retain control"
+  ],
+  "rule": "Under-leveraged + shareholders must keep control + replace equity by debt = dividend recapitalization (debt-financed dividend or buyback). Reorganization = court-supervised insolvency; LBO = an acquirer buys the firm."
+ },
+ "rq3_cor:2": {
+  "hl": [
+   "valued at 6.0x EV/EBITDA",
+   "contributed 20% to the division's EBITDA",
+   "change in shareholder value of greater than 5%"
+  ],
+  "rule": "Sum of the parts: each segment's EBITDA × ITS OWN comparable multiple, then compare with the combined EV. Material = change above ±5%."
+ },
+ "rq3_cor:3": {
+  "hl": [
+   "the lessor would incur a direct cost of $750,000",
+   "The helicopter has a fair value of $15 million",
+   "expected to be $8,700,000"
+  ],
+  "rule": "Implied lease interest cost = the rate that equates the lessor's investment (fair value + direct costs) with payments and residual. It is NOT the incremental borrowing rate."
+ },
+ "rq3_cor:4": {
+  "hl": [
+   "country spread model with no adjustment",
+   "represents 10% of the company's revenue",
+   "denominated in US dollars that yields 5.15%"
+  ],
+  "rule": "Country spread model: sovereign spread = USD-denominated bond yield − US Treasury yield. Add it to the US ERP, weighted by the exposure."
+ },
+ "rq3_cor:5": {
+  "hl": [
+   "P/S ratio at acquisition price",
+   "average takeover premium of 8%"
+  ],
+  "rule": "Multiples from comparable TRANSACTIONS are prices actually paid, so the takeover premium is already in them. Never add it again."
+ },
+ "rq3_cor:6": {
+  "hl": [
+   "Add cost synergies to and subtract cost dis-synergies from combined operating expenses",
+   "which would include refinancing the target company's existing debt"
+  ],
+  "rule": "Pro forma: synergies reduce costs, dis-synergies add costs; refinanced target debt disappears; new intangibles add amortisation."
+ },
+ "rq3_cor:8": {
+  "hl": [
+   "historical approach with arithmetic mean returns",
+   "short-term government bill rate"
+  ],
+  "rule": "Historical (arithmetic mean) ERP estimates: sensitive to extreme values; survivorship bias INFLATES them; T-bills have no coupon reinvestment problem."
+ },
+ "rq3_cor:9": {
+  "hl": [
+   "comparable transactions",
+   "given equal weights"
+  ],
+  "rule": "Comparable transaction: compute the multiple for EACH company first, average each multiple across companies, then apply it to the target's metric. Equal weights: average the values at the end."
+ },
+ "rq3_cor:10": {
+  "hl": [
+   "@row:Assumed Spritz debt",
+   "@row:New borrowings by Palmco",
+   "@row:Share issuance"
+  ],
+  "rule": "After the deal: debt = old debt + assumed target debt + new borrowing. Equity = share price × (old shares + new shares). Cash paid does not enter either."
+ },
+ "rq3_cor:11": {
+  "hl": [
+   "announced dividend is lower than what Emery and the market expected",
+   "faces near-term economic uncertainty in its major markets and needs to maintain its financial flexibility",
+   "Zeta's stock price rises after the dividend announcement",
+   "progressive income tax rate for individuals"
+  ],
+  "rule": "Price UP after a dividend below expectations rules out the bird-in-the-hand view (which predicts a fall). Taxes and progressive rates break the homemade-dividend assumption. The remaining answer is perceived agency cost changes."
+ },
+ "rq3_cor:12": {
+  "hl": [
+   "Zeta pays a 10% stock dividend"
+  ],
+  "rule": "Stock dividend: no cash moves. Retained earnings fall and contributed capital (common stock plus paid-in capital) rises by the same amount. Total equity is unchanged."
+ },
+ "rq3_equ:1": {
+  "hl": [
+   "stable market-based multiple",
+   "does not want to make any adjustments to the reported financial statements",
+   "internally generated brands"
+  ],
+  "rule": "No adjustments wanted + unreliable earnings and book value (internal brands, discretionary expenses) → P/S: sales are hard to manipulate and more stable than EPS. P/B misses internal intangibles; P/E is distorted by expense choices."
+ },
+ "rq3_equ:2": {
+  "hl": [
+   "excess earnings method",
+   "@row:Required return on working capital",
+   "@row:Discount rate"
+  ],
+  "rule": "Excess earnings: residual = earnings − required returns on working capital and fixed assets; capitalise it with the DISCOUNT rate − g (not the asset return) to value the intangibles, then ADD the tangible assets for the whole business."
+ },
+ "rq3_equ:3": {
+  "hl": [
+   "will issue new common stock during the next year",
+   "next year's FCFE forecast"
+  ],
+  "rule": "Share issuance, repurchases and dividends are USES of FCFE, not drivers of it: next year's FCFE is unchanged. FCFE changes only with CFO, capex and net borrowing."
+ },
+ "rq3_equ:4": {
+  "hl": [
+   "dividends exceeding free cash flow to equity",
+   "lower quality of accounting disclosure",
+   "regardless of future profitability"
+  ],
+  "rule": "Pick the model from the facts: dividends not tied to profitability and above FCFE → free cash flow model; poor accounting quality rules out residual income; a DDM needs a payout policy tied to profits."
+ },
+ "rq3_equ:5": {
+  "hl": [
+   "within 2% of its estimated fair value",
+   "60% retention ratio"
+  ],
+  "rule": "Payout = 1 − retention = 40% (not 60%): D = 40% × EPS; V0 = PV(dividends) + PV(year-3 price); within ±2% of fair value = fairly valued."
+ },
+ "rq3_equ:6": {
+  "hl": [
+   "similarly qualified CEO of a comparable public company is $1,000,000",
+   "The apartment would be sold if Lytham were a public company"
+  ],
+  "rule": "Normalise OPERATING income only: add back costs that would disappear, deduct costs a public firm would pay. The dividend payout is a financing policy, not an operating item."
+ },
+ "rq3_equ:7": {
+  "hl": [
+   "interested in purchasing a controlling stake",
+   "discount for lack of control to be 23%"
+  ],
+  "rule": "A DLOC of 23% is a discount on the control value. The control premium is 1/(1 − DLOC) − 1, not 23%."
+ },
+ "rq3_equ:8": {
+  "hl": [
+   "residual income in Year 10 to be $8.38 per share, with a persistence factor of 0.7",
+   "@row:Cost of equity"
+  ],
+  "rule": "Multistage RI: the Year-10 residual income is capitalised ONE year earlier, at Year 9, so discount the terminal value 9 years, not 10."
+ },
+ "rq3_equ:9": {
+  "hl": [
+   "year-end (Year 0) book value of equity is $111 per share",
+   "@row:Other comprehensive income"
+  ],
+  "rule": "RI = NI + OCI − r × BEGINNING book value. OCI is part of comprehensive income, and the capital charge uses the beginning-of-year book value."
+ },
+ "rq3_equ:10": {
+  "hl": [
+   "@row:Sales growth over the next year",
+   "@row:Tax rate"
+  ],
+  "rule": "FCFF = EBIT(1 − t) − FCInv − WCInv. Net borrowing belongs to FCFE, and you must apply the tax rate."
+ },
+ "rq3_equ:11": {
+  "hl": [
+   "an ESG equity risk premium should be incorporated in the discount rate",
+   "Using a two-stage model",
+   "@row:Expected long-term FCFF annual growth rate starting in Year 3"
+  ],
+  "rule": "Two-stage firm value: the terminal value is at the end of Year 2 (it values the Year 3 cash flow onward) and is discounted 2 years, with the ESG premium added to the cost of equity."
+ },
+ "rq3_equ:12": {
+  "hl": [
+   "composed of three independent divisions",
+   "publicly traded competitors for the specialty chemicals division but not for the other two divisions"
+  ],
+  "rule": "Independent divisions that need different methods (comps for one, reserves for the others) = sum-of-the-parts: value each part with its own method and add."
+ },
+ "rq3_equ:13": {
+  "hl": [
+   "long-term annual sales growth of 4% starting in Year 3",
+   "cost of equity to be 9%",
+   "@row:FCFE per share"
+  ],
+  "rule": "Two-stage FCFE: the terminal value is at the END of Year 2 (it values Year 3 onward). Add it to Year 2's cash flow. Year 3 is inside the terminal value, so never discount it a second time."
+ },
+ "rq3_equ:14": {
+  "hl": [
+   "large cash balance with a growing retained earnings balance",
+   "the new owner will likely change",
+   "will issue debt to maintain its capital expenditures"
+  ],
+  "rule": "Pick the model from the situation: dividends unreliable, change of control and a changing capital structure (new debt) → FCFF. FCFE needs stable borrowing; DDM needs a stable payout."
+ },
+ "rq3_equ:15": {
+  "hl": [
+   "Before-tax cost of debt of 6%",
+   "Interest is tax deductible"
+  ],
+  "rule": "Residual income charges ALL capital, but the debt charge uses the AFTER-TAX cost of debt because interest is tax deductible."
+ },
+ "rq3_equ:16": {
+  "hl": [
+   "Residual income model",
+   "@row:Expected EPS next period (E1)",
+   "@row:Required return on equity",
+   "@row:Current book value per share (B0)"
+  ],
+  "rule": "RI uses expected EARNINGS minus the equity charge (required return × beginning book value). Not the dividend, not ROA."
+ },
+ "rq3_equ:17": {
+  "hl": [
+   "Both firms operate in the copper mining industry",
+   "They are both profitable and close competitors",
+   "two publicly traded firms, Firm C and Firm D"
+  ],
+  "rule": "Pairs trade between close, profitable, listed competitors → a market multiple comparison (P/E). Asset-based fits asset-heavy or loss-making firms; a conglomerate discount applies only to UNRELATED segments; a lack-of-marketability discount applies to private firms."
+ },
+ "rq3_equ:18": {
+  "hl": [
+   "Romala's reported EBIT is $5 million",
+   "Romala's CEO is not paid a salary",
+   "The annual salary of a replacement CEO is estimated to be $600,000",
+   "normalized EBIT"
+  ],
+  "rule": "Normalized EBIT: charge the market salary of the CEO that the company does not pay in salary; the $800,000 dividend is not an expense. Debt, interest and tax are BELOW the EBIT line and do not change EBIT."
+ },
+ "rq3_fi:1": {
+  "hl": [
+   "Bond A is a 5% annual pay coupon bond and is callable at par",
+   "interest rate volatility of 20%"
+  ],
+  "rule": "Callable bond on the tree: work backwards from the end; at any node where the value exceeds the call price (100) the issuer calls, so cap the value at 100; then average the two nodes and discount with the node rate."
+ },
+ "rq3_fi:2": {
+  "hl": [
+   "callable investment-grade corporate bond",
+   "interest rate volatility increases from 20% to 25%",
+   "the bond's price is unchanged"
+  ],
+  "rule": "Callable bond, price fixed, volatility up: the call option is worth more; Z-spread = OAS + option cost, so the OAS FALLS (for a putable bond it would rise)."
+ },
+ "rq3_fi:3": {
+  "hl": [
+   "capped floating rate bond",
+   "capped at 5.0%",
+   "set in arrears"
+  ],
+  "rule": "A cap limits the coupon on paths where the tree rate exceeds the cap (6.09% in Year 1, 7.32% in Year 2), so the capped floater is worth LESS than par; without a cap a floater trades at par on reset dates."
+ },
+ "rq3_fi:4": {
+  "hl": [
+   "in three years the 2-year spot rate will equal 2.20%",
+   "consistent with current forward rates"
+  ],
+  "rule": "If the forecast future spot rate is LOWER than the implied forward rate, today's cash flows are discounted at too high a rate → the bond is undervalued (buy)."
+ },
+ "rq3_fi:5": {
+  "hl": [
+   "3.25% monthly standard deviation",
+   "higher key rate durations associated with longer-term rates leads to higher long-term annualized term structure volatility"
+  ],
+  "rule": "Annualise volatility with × √12 (3.25% × 3.464 = 11.26%: correct). Key rate duration is the price sensitivity to ONE maturity's yield; it says nothing about how volatile rates are (short rates are usually more volatile than long rates)."
+ },
+ "rq3_fi:6": {
+  "hl": [
+   "senior unsecured bond as its reference obligation",
+   "3-year subordinated unsecured bonds trading at 20% of par value",
+   "7-year senior unsecured bonds trading at 30% of par value"
+  ],
+  "rule": "CDS payout = LGD of the cheapest-to-deliver bond of the SAME or higher seniority than the reference obligation (any maturity); a cheaper subordinated bond is not deliverable."
+ },
+ "rq3_fi:7": {
+  "hl": [
+   "forward rate for a 2-year zero-coupon bond issued in one year",
+   "@row:Government spot rate"
+  ],
+  "rule": "'A 2-year bond issued in one year' = the 1y2y forward. Use (1 + z3)^3 = (1 + z1) × (1 + f)^2."
+ },
+ "rq3_fi:9": {
+  "hl": [
+   "priced at par ($100)",
+   "for the bond's calculated value to equal its market price"
+  ],
+  "rule": "Calibration: value the bond on the tree. If tree value > market price, the tree rates are too low: raise them. If lower, reduce them."
+ },
+ "rq3_fi:11": {
+  "hl": [
+   "bond defaults at the end of Year 3",
+   "@row:Year 3"
+  ],
+  "rule": "Default return: the Year 3 cash flow is the RECOVERY (43.20), which already includes the accrued coupon. Do not add another coupon, and do not use the loss given default."
+ },
+ "rq3_fi:12": {
+  "hl": [
+   "considers the benefits of covered bonds from the perspective of the company"
+  ],
+  "rule": "Covered bond = dual recourse (issuer AND cover pool). Issuer benefit: can have a higher rating than the issuer's own and cheaper funding. It stays an obligation of the issuer and the pool must be replenished."
+ },
+ "rq3_fi:13": {
+  "hl": [
+   "The CDS can be settled by physical or cash settlement",
+   "@row:Bond 1",
+   "@row:Bond 2"
+  ],
+  "rule": "Cash settlement pays against the CHEAPEST-to-deliver bond (Bond 2, 35%). Moffet holds Bond 1 (40%), so cash settlement leaves him with more."
+ },
+ "rq3_fi:14": {
+  "hl": [
+   "recovery rate of 40%",
+   "recovery rate for the AHM01 bond will be 30%",
+   "Holding all else equal"
+  ],
+  "rule": "Price is fixed (= VND − CVA). A LOWER recovery rate raises the loss given default, so to keep the same price the probability of default must be LOWER."
+ },
+ "rq3_fi:15": {
+  "hl": [
+   "standard annual coupon of 100 basis points",
+   "current market spread on AHM01 bonds is 150 basis points",
+   "Wang purchases protection"
+  ],
+  "rule": "Spread > coupon → the protection BUYER pays the upfront premium. Spread < coupon → the protection SELLER pays."
+ },
+ "rq3_fi:16": {
+  "hl": [
+   "Comment 1: Differences between the two rates arise because of differences in default risk and liquidity risk",
+   "Comment 2: Given the opportunity for arbitrage, differences between the two rates are minimal"
+  ],
+  "rule": "Swap rates are above Treasury rates because swaps carry credit risk and different liquidity, and arbitrage between them cannot be done perfectly, so the gap is not minimal."
+ },
+ "rq3_fi:17": {
+  "hl": [
+   "Russo accepts the theory that yields are solely a function of the supply and demand for funds at a particular maturity"
+  ],
+  "rule": "Segmented markets: each maturity is its own market, so yields depend ONLY on supply and demand at that maturity. Preferred habitat lets investors move for extra yield. Local expectations says short-period expected returns are risk-free for every bond."
+ },
+ "rq3_fi:18": {
+  "hl": [
+   "reviews portfolio exposures when there is a 25 basis point change in the yield curve",
+   "Change in Yield Curve (bps)",
+   "@row:1 year"
+  ],
+  "rule": "Use the CHANGE for each maturity in the exhibit (not 25 bps for all), convert bps to decimals, and keep the minus sign: rates up means value down."
+ },
+ "rq3_fi:19": {
+  "hl": [
+   "purchase a 2-year zero-coupon government bond",
+   "future spot rates below those predicted by the prevailing forward rates"
+  ],
+  "rule": "Long forward on a bond: if future spot rates end up BELOW the forward-implied rates, the bond is worth more at delivery than the agreed price → forward value goes UP. Bond price moves opposite to rates."
+ },
+ "rq3_fi:20": {
+  "hl": [
+   "conversion price of $10",
+   "$5 for Company Y"
+  ],
+  "rule": "Convertible with stock far BELOW the conversion price → behaves like a straight bond → most sensitive to interest rates. Stock far above → equity-like, least sensitive to rates."
+ },
+ "rq3_fi:21": {
+  "hl": [
+   "refinance short-term debt with longer-maturity debt",
+   "tighter bid–offer spread",
+   "higher credit rating"
+  ],
+  "rule": "Credit spread curve steepens with longer maturity (more time for credit risk). A higher rating or a tighter bid-offer spread tends to FLATTEN it."
+ },
+ "rq3_der:1": {
+  "hl": [
+   "Tian is bullish on Tara stock",
+   "determines how to replicate a long position in this call option"
+  ],
+  "rule": "Long call = leveraged long stock: BUY stock + BORROW. Long put = short stock + LEND. (The MP/FP forward table does NOT apply: this is option replication, not forward arbitrage.)"
+ },
+ "rq3_der:2": {
+  "hl": [
+   "using the Black model",
+   "The Black model value of a put with the same underlying, strike price, and time to expiration is 225",
+   "@row:Time to expiration"
+  ],
+  "rule": "Black model put-call parity: c − p = e^(−rT) × (F − X). The discount factor must use T in years (6 months = 0.5)."
+ },
+ "rq3_der:3": {
+  "hl": [
+   "cheapest after she makes adjustments for differences in moneyness and time to expiration",
+   "@row:Implied volatility"
+  ],
+  "rule": "To compare options with different strikes and maturities, compare IMPLIED VOLATILITY: the cheapest option after adjusting is the one with the lowest implied volatility."
+ },
+ "rq3_der:4": {
+  "hl": [
+   "delta hedging a short call position on 5,000 shares",
+   "@row:0.589"
+  ],
+  "rule": "Delta of a call = N(d1). Short calls have negative delta, so you BUY shares to hedge. N(−d1) is the PUT delta, N(d2) is not a delta."
+ },
+ "rq3_der:5": {
+  "hl": [
+   "1.46 million call options at a strike price of 90",
+   "Each call option is a right to buy 100 shares of stock",
+   "@row:Deltac  2 weeks before expiry"
+  ],
+  "rule": "Dealers SOLD the calls and delta hedge by BUYING shares: shares = call delta × contracts × shares per contract. Use the CALL delta (0.057), not the put delta."
+ },
+ "rq3_der:6": {
+  "hl": [
+   "volatility of the New Optics stock price in the 3 months prior",
+   "The BSM options pricing model could have also been used"
+  ],
+  "rule": "Historical volatility looks backward; it does not measure perceived future uncertainty. Implied volatility (from the BSM model and option prices) is the forward-looking measure."
+ },
+ "rq3_der:7": {
+  "hl": [
+   "by simultaneously delta hedging their own positions",
+   "short-term far out-of-the money call options",
+   "The same measure can simultaneously represent different types of risks to different market participants"
+  ],
+  "rule": "Dealers who delta hedge are left with GAMMA risk (their delta keeps changing). Speculators who buy short-dated OTM options face THETA risk (time decay: the options expire worthless)."
+ },
+ "rq3_der:8": {
+  "hl": [
+   "@row:Stock price 2 weeks before expiry",
+   "@row:90 Call price 2 weeks before expiry",
+   "@row:90 Put price 2 weeks before expiry",
+   "@row:Stock price at expiry"
+  ],
+  "rule": "Compute each position's profit at expiry (stock 47 → 140). The stock rises, so long stock gains; the put expires worthless and costs its premium."
+ },
+ "rq3_alt:1": {
+  "hl": [
+   "Strategy 1: Multi-strategy funds",
+   "Strategy 2: Fund of funds",
+   "returns, leverage, and liquidity"
+  ],
+  "rule": "Multi-strategy vs fund of funds: multi-strategy = higher returns, MORE leverage, more variance and more gates; funds of funds = more diversified mix, lower leverage, somewhat lower variance."
+ },
+ "rq3_alt:2": {
+  "hl": [
+   "limit drawdowns",
+   "combined with the pension plan's stock and bond portfolio"
+  ],
+  "rule": "Smallest maximum drawdown when added to a stock and bond portfolio: opportunistic strategies (global macro, systematic futures, merger arbitrage, equity market-neutral). Event-driven, relative value and long/short equity show high drawdowns."
+ },
+ "rq3_alt:3": {
+  "hl": [
+   "Perpetua Properties, a REIT",
+   "Rainfall Real Estate, a real estate operating company (REOC)"
+  ],
+  "rule": "REIT: exempt from corporate tax if it distributes about 90–100% of taxable income → high payout, little retention; REOC: taxable, can retain earnings for growth."
+ },
+ "rq3_alt:4": {
+  "hl": [
+   "she recommends hotel REITs over industrial REITs",
+   "job creation, retail sales growth, and consumer credit"
+  ],
+  "rule": "Pick the forecast that supports the recommended type and not the other one: hotels = discretionary travel and consumer credit; industrial = goods and retail sales."
+ },
+ "rq3_alt:7": {
+  "hl": [
+   "Fund 1 uses equity market-neutral strategies"
+  ],
+  "rule": "Equity market neutral: market (beta) risk is hedged away, so managers can use HIGH leverage; the skill is security selection, not market timing, and returns are steadier."
+ },
+ "rq3_alt:8": {
+  "hl": [
+   "Fund 2 applies an event-driven strategy focusing on distressed securities"
+  ],
+  "rule": "Distressed securities: long-biased, illiquid, hard to value, so LONG lock-ups; outcomes are binary: very good or very bad."
+ },
+ "rq3_alt:9": {
+  "hl": [
+   "growth rate of 3%",
+   "capitalization rate of 5%",
+   "@row:Cash and equivalents",
+   "@row:Land held for future development",
+   "@row:Total debt and other liabilities"
+  ],
+  "rule": "REIT NAVPS: value only the OPERATING real estate from NEXT 12 months NOI / cap rate, then ADD cash and land held for development and SUBTRACT all debt and liabilities."
+ },
+ "rq3_alt:10": {
+  "hl": [
+   "the stock market index falls and stock market volatility rises",
+   "@row:DEQU",
+   "@row:DVOL"
+  ],
+  "rule": "Crisis exposure = normal-times beta + incremental crisis beta. Equity falls and volatility rises, so the best fund has the most negative equity beta and the largest positive volatility beta."
+ },
+ "rq3_alt:11": {
+  "hl": [
+   "maximize exposure to energy commodities",
+   "Rogers International Commodity Index (RICI)"
+  ],
+  "rule": "Maximum energy exposure = the index with the highest energy weight: S&P GSCI (production-weighted, energy up to about 80%). BCOM caps a sector at 33%; RICI uses fixed weights."
+ },
+ "rq3_pm:1": {
+  "hl": [
+   "Rebalancing frequency: monthly (simulated using rolling windows)",
+   "Weighting of factor portfolios: risk parity"
+  ],
+  "rule": "Two layers (factor portfolios, then risk-parity weights from a covariance matrix) = TWO rolling-window iterations; windows overlap; the in-sample period is the previous 12 months (not 13)."
+ },
+ "rq3_pm:2": {
+  "hl": [
+   "composition has significantly changed",
+   "Method A only uses the companies that were in the TOP100 Index at any given point in time t."
+  ],
+  "rule": "Survivorship bias is avoided with point-in-time data (members as they were at each date, including later casualties). Methods that start from today's members, or from names present throughout, keep only survivors."
+ },
+ "rq3_pm:3": {
+  "hl": [
+   "absolute return trading strategy",
+   "benchmarked against cash",
+   "better understanding of the downside risk"
+  ],
+  "rule": "Absolute return vs a cash benchmark: relative VaR equals plain VaR (adds nothing); surplus at risk is for pension liabilities; downside of a market-neutral strategy = maximum drawdown (worst peak-to-trough)."
+ },
+ "rq3_pm:4": {
+  "hl": [
+   "spreads can be expected to narrow the most",
+   "economy recovers from a business downturn"
+  ],
+  "rule": "Spreads move most for low-rated AND cyclical issuers: they widen most in a downturn and narrow most in a recovery → speculative grade + cyclical = Sector B."
+ },
+ "rq3_pm:5": {
+  "hl": [
+   "surprises in inflation, FINFL, and GDP growth, FGDP"
+  ],
+  "rule": "Factors that are SURPRISES in macro variables = macroeconomic factor model; company attributes = fundamental; portfolios extracted from returns = statistical."
+ },
+ "rq3_pm:6": {
+  "hl": [
+   "expected return of the portfolio to be 1.8%"
+  ],
+  "rule": "R = a + Σ b × (actual − expected) + ε: use SURPRISES, and keep the intercept (expected return) and the error term."
+ },
+ "rq3_pm:7": {
+  "hl": [
+   "deviate significantly from the benchmark",
+   "measure the extent of this deviation"
+  ],
+  "rule": "Deviation from a benchmark = Relative VaR (VaR of the active return). Incremental VaR = effect of changing a position. Conditional VaR = average loss beyond VaR."
+ },
+ "rq3_pm:8": {
+  "hl": [
+   "managed accounts relative to their benchmark",
+   "reduce her concern"
+  ],
+  "rule": "Concern = deviating from (or underperforming) a BENCHMARK → an ex ante tracking error budget. Position limits address concentration; a VaR budget allocates total risk between desks."
+ },
+ "rq3_pm:9": {
+  "hl": [
+   "limitations of VaR"
+  ],
+  "rule": "VaR advantages: regulators accept it, it supports capital allocation, it is easy to compare. VaR limitations: correlation risk, subjectivity of method and inputs, no information about losses beyond the cut-off."
+ },
+ "rq3_pm:11": {
+  "hl": [
+   "Real GDP growth volatility and inflation expectations both increase"
+  ],
+  "rule": "P/E falls when real GDP volatility, inflation expectations, inflation uncertainty or the equity risk premium rise; P/E rises when expected real earnings growth rises or those factors fall."
+ },
+ "rq3_pm:12": {
+  "hl": [
+   "@row:Equities",
+   "@row:Fixed income"
+  ],
+  "rule": "Security selection uses the PORTFOLIO weights: (portfolio return − benchmark return) × portfolio weight. Asset allocation uses benchmark returns × weight difference."
+ },
+ "rq3_pm:13": {
+  "hl": [
+   "optimal level of active risk is 8.50%",
+   "@row:Active risk",
+   "@row:Active return"
+  ],
+  "rule": "If the portfolio's active risk (10%) is ABOVE the optimal active risk (8.5%), reduce it: short the active portfolio and go long the benchmark."
+ },
+ "rq3_pm:14": {
+  "hl": [
+   "contribution of factor tilts and security selection to the portfolio's active return",
+   "active return for the most recent year was 1.34%"
+  ],
+  "rule": "Active return = Σ (portfolio sensitivity − BENCHMARK sensitivity) × factor surprise + security selection. Portfolio first, then benchmark; never subtract the raw surprises."
+ },
+ "rq3_pm:15": {
+  "hl": [
+   "Each model assumes that stock returns are correlated with surprises",
+   "expected annual return was 8.0%",
+   "initial forecasted values of the model's factors to their actual values"
+  ],
+  "rule": "Macro factor model: expected return = intercept; return = intercept + Σ(sensitivity × SURPRISE) + ε. Surprise = actual − forecast. Never add a surprise without its sensitivity."
+ },
+ "rq3_pm:16": {
+  "hl": [
+   "trading at an usually high discount relative to their intraday NAV",
+   "arbitrage costs are low"
+  ],
+  "rule": "ETF at a DISCOUNT: authorized participants BUY the cheap ETF shares, redeem them for the basket and SELL the basket. ETF at a premium: the reverse (buy basket, create and sell ETF shares)."
+ },
+ "rq3_pm:17": {
+  "hl": [
+   "identifies ten fundamental factors",
+   "backtest numerous strategies",
+   "point-in-time data while accounting for reporting lags and data revisions",
+   "highest t-statistics"
+  ],
+  "rule": "Many factors / many strategies tested and the best t-stat picked → data snooping (data mining). 'Point-in-time data' rules out survivorship bias; 'reporting lags and revisions' rules out look-ahead bias."
+ },
+ "rq3_pm:18": {
+  "hl": [
+   "bond risk premium",
+   "@row:Conventional government bond yield",
+   "@row:Inflation-linked government bond yield",
+   "@row:Survey-based inflation expectation"
+  ],
+  "rule": "Breakeven inflation (BEI) = nominal government yield − inflation-linked yield. BEI = expected inflation + inflation risk premium. Use government bonds, not corporate (credit premium)."
  }
 }
