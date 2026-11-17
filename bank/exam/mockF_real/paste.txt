@@ -1,0 +1,2367 @@
+Practice Topics
+CFA-26-11-LII-A: Mock Exams
+2026 CFA LII Mock 4 Session 1
+Quiz review. You scored 0 percent, 0 out of 44 points
+Review
+
+0%
+0 out of 44 points
+Out of 44 points
+0
+Average time per question: 0 seconds
+Avg Time Per Question
+0:00
+Time for this attempt: 5 seconds
+Time for this Attempt
+0:05
+Your Answers:
+Vignette
+George Hansen manages portfolios for high-net-worth clients based in the US. He meets with a client who recently inherited a portfolio with investments in both a REIT and a commodity futures fund. 
+REIT 
+Hansen reviews the client's investment in Maipo Valley Group, a retail REIT located in the US. Hansen uses the information in Exhibit 1 to calculate Maipo's net asset value per share (NAVPS). 
+Exhibit 1
+Last-12-month pro forma cash net operating income (NOI)	$240 million
+Next-12-month growth in NOI 	$36 million
+Cash and equivalents 	$10 million
+Accounts receivable	$25 million
+Prepaid/Other assets	$15 million
+Land held for future development	$800 million
+Total debt 	$600 million
+Market capitalization	$2,250 million
+Shares outstanding 	50 million
+Capitalization rate	8.0%
+Cost of equity	9.5%
+Dividend payout ratio	100.0%
+Managed Commodity Futures Fund
+Hansen then reviews the investment in the Crescent commodity futures fund. The fund currently holds positions in the natural gas, softs (cash crops), and livestock sectors.
+Hansen observes that Crescent's returns in the natural gas sector behaved differently from the other two sectors over the past five years. According to Crescent's prospectus, the fund always takes a long position in the natural gas futures contract with the shortest maturity. At the contract maturity date, Crescent rolls forward the existing contract to the new contract with the shortest maturity. Hansen gathers in Exhibit 2 prior-year price information for the natural gas market for two of Crescent's trade dates. All prices are in $ per million British thermal units as of the date listed. 
+Exhibit 2
+Trade Date	Spot Price	June Futures Price	July Futures Price	August Futures Price
+28 May	1.795	1.957	2.418	2.793
+26 June	1.795	1.795	2.338	2.546
+1Multiple Choice0 / 1 point
+Maipo's NAVPS is closest to:
+
+A. $63.
+Incorrect Answer Feedback: Incorrect because NOI is valued at the cost of equity, not the cap rate:
+Last-12-month pro forma cash net operating income (NOI)	$240
+Plus: Next-12-month growth in NOI 	$36
+Equals: Estimated next-12-month cash NOI	$276
+Incorrectly divide the above number by cost of equity of 9.5% to get:
+Estimated value of operating real estate ($276/0.095)	$2,905.26
+Plus: Cash, Accounts Receivable, and Prepaid Assets	$50
+Plus: Land held for future development 	$800
+Equals: Estimated gross asset value	$3,755.26
+Less: Total debt 	$600
+Equals: Net asset value (NAV)	$3,155.26
+Divide by: Number of shares 	50
+Equals: NAVPS	$63.11
+Correct answer:
+
+B. $74.
+Correct Answer Feedback: Correct because NAVPS is calculated correctly:
+Last-12-month pro forma cash net operating income (NOI)	$240
+Plus: Next-12-month growth in NOI	$36
+Equals: Estimated next-12-month cash NOI	$276
+Divide above number by the cap rate of 8.0% to get:
+Estimated value of operating real estate ($276/0.08)	$3,450
+Plus: Cash, Accounts Receivable, and Prepaid Assets	$50
+Plus: Land held for future development	$800
+Equals: Estimated gross asset value	$4,300
+Less: Total debt	$600
+Equals: Net asset value (NAV)	$3,700
+Divide by: Number of shares	50
+Equals: NAVPS	$74
+
+C. $86.
+Incorrect Answer Feedback: Incorrect because debt is not subtracted from the estimated value of operating real estate when NAVPS is calculated:
+Last-12-month pro forma cash net operating income (NOI)	$240
+Plus: Next-12-month growth in NOI	$36
+Equals: Estimated next-12-month cash NOI	$276
+Divide above number by the cap rate of 8.0% to get:
+Estimated value of operating real estate ($276/0.08)	$3,450
+Plus: Cash, Accounts Receivable, and Prepaid Assets	$50
+Plus: Land held for future development	$800
+Equals: Estimated gross asset value	$4,300
+Less: Total debt (Omitted)	 
+Equals: Net asset value	$4,300
+Divide by: Number of shares	50
+Equals: NAVPS	$86
+This also rounds up from $85.50 which you get if you add the cash, accounts receivable, and prepaid assets before applying the cap rate (and subtract total debt correctly).
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. $74.
+2Multiple Choice0 / 1 point
+Which of the following factors is most likely a primary influence for all three commodity sectors held by Crescent?
+
+A. Spoilage
+Incorrect Answer Feedback: Incorrect because spoilage has very little effect on the supply of natural gas. Spoilage does affect the supply for the softs and livestock sectors. 
+Correct answer:
+
+B. Weather conditions
+Correct Answer Feedback: Correct because the weather affects all three sectors. Demand for natural gas is driven primarily by weather conditions, such as providing heat during cold weather and cooling during hot weather. Weather is a primary factor for both softs and livestock. Additionally, the health of livestock is vulnerable to unfavorable weather conditions.
+
+C. Consumer preferences
+Incorrect Answer Feedback: Incorrect because consumer preferences are not a primary influence on natural gas.
+Demand for natural gas is driven primarily by weather conditions (heating and cooling) and only secondarily by industrial activity. 
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Weather conditions
+3Multiple Choice0 / 1 point
+The roll return on Crescent's natural gas futures contract on the 26 June trade date was:
+Correct answer:
+
+A. negative.
+Correct Answer Feedback: Correct because Roll return = [(Near-term futures contract closing price − Farther-term futures contract closing price) / Near-term futures contract closing price] × Percentage of the position in the futures contract being rolled
+= ($1.795 – $2.338) / $1.795 = –$0.543 / $1.795 < 0.
+
+B. zero.
+Incorrect Answer Feedback: Incorrect because the roll return would equal zero only if the June and July futures prices were equal on 26 June, which is not the case since the June price is $1.795 and the July price is $2.338.
+
+C. positive.
+Incorrect Answer Feedback: Incorrect because the roll return is negative when the numerator is correctly calculated as (Near-term futures contract closing price − Farther-term futures contract closing price). The roll return is only positive if the numerator calculation is incorrectly reversed: (Farther-term futures contract closing price − Near-term futures contract closing price) = $2.338 – $1.795 = $0.543 > 0.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. negative.
+4Multiple Choice0 / 1 point
+Under the hedging pressure hypothesis, the prices in Exhibit 2 indicate:
+
+A. excess demand for price protection by producers.
+Incorrect Answer Feedback: Incorrect because if commodity producers as a group are more interested in selling forward (seeking price insurance) than commodity consumers (as per the concept of normal backwardation) are, then the shape and structure of the futures price curve can be illustrated as backwardation.
+Correct answer:
+
+B. excess demand for price protection by consumers.
+Correct Answer Feedback: Correct because if the buyers are especially worried about the availability of the crop in the next harvest but producers are less concerned this situation would lead to a futures price curve that represents a market in contango. In this case, the additional demand for price insurance among buyers (versus sellers) of the commodity will lead them to bid up the futures price to induce speculators to take on this price uncertainty risk.
+
+C. balanced demand for price protection by producers and consumers.
+Incorrect Answer Feedback: Incorrect because if the two forces of producers and consumers both seeking price protection are equal in weight, then a flat futures curve is produced. However, in this case the futures curve is upward sloping and so the demand must not be balanced.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. excess demand for price protection by consumers.
+Vignette
+Fei Yang is a portfolio manager analyzing fixed-income investments in various currencies.
+Yang begins by analyzing investment opportunities in Country 1. She has a 2-year investment horizon and evaluates the following two strategies, each of which uses government bonds with a 4.00% annual coupon and a par value of $100.
+Strategy A: Purchase a 2-year bond and hold it to maturity
+Strategy B: Purchase a 3-year bond and sell it in two years
+Yang uses the spot rates for Country 1 government bonds, shown in Exhibit 1, to evaluate these strategies. Yang expects the shape and level of the yield curve in Country 1 to remain unchanged over her investment horizon.
+Exhibit 1
+Term (Years)	Spot Rate
+1	3.00%
+2	5.00%
+3	7.00%
+For Country 2, Yang anticipates that economic growth will accelerate. As a result, she expects Country 2's yield curve, which is currently upward sloping, to rise and become steeper than currently expected by the market. Given her expectations, Yang considers which of the three compositions for her long–only government bond portfolio in Exhibit 2 would be the most appropriate.
+Exhibit 2
+Portfolio	Short-Term Bonds	Intermediate-Term Bonds	Long-Term Bonds
+1	80%	10%	10%
+2	33%	34%	33%
+3	45%	10%	45%
+Yang then considers Country 3 and calculates the 5-year swap spread, based on a 5-year swap rate of 5.50% and the data on recently issued government bonds shown in Exhibit 3.
+Exhibit 3
+Government Bond	Original Maturity	Remaining Maturity	Yield-to-Maturity
+Bond A	5.0 years	4.0 years	5.20%
+Bond B	5.0 years	4.5 years	5.30%
+Bond C	6.0 years	5.5 years	5.40%
+5Multiple Choice0 / 1 point
+The YTM for the bond in Strategy A is closest to:
+
+A. 3.65%.
+Incorrect Answer Feedback: Incorrect because this calculation is based on getting the correct price of the bond (98.21) but then assuming that the YTM involves multiplying the amortized discount by a factor of two (for a two-year bond).
+[(100/98.21) – 1] × 2 = 3.65%
+
+B. 4.00%.
+Incorrect Answer Feedback: Incorrect because this is the average of the 1- and 2-year spot rates (3.00%, 5.00%). It is also the coupon rate (4.00%). Neither of these approaches correctly uses the spot rates to value the bond's cash flows.
+Correct answer:
+
+C. 4.96%.
+Correct Answer Feedback: Correct because to determine the YTM of a bond it first has to be priced using the spot rates. Using the data given and a par of 100:
+P = 4/(1 + 0.03) + 104/(1 + 0.05)2 = 98.21
+Then, to get the YTM of this bond on a calculator the following is input: 
+FV = 100
+PMT = 4
+PV = -98.21
+N = 2
+Then solving for "I" leads to a YTM of 4.96%
+(Rounded to two decimal places, using a truncated price of -98.21. Without truncation gives 4.96% to two decimal places).
+ 
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 4.96%.
+6Multiple Choice0 / 1 point
+Given Yang's expectation for the yield curve in Country 1, the expected total return for Strategy A over her investment horizon is:
+Correct answer:
+
+A. less than that of Strategy B.
+Correct Answer Feedback: Correct because the spot rate curve is upward sloping and expected to remain unchanged over Yang's two-year investment horizon. Under these circumstances, the total return of a strategy of 'rolling down the yield curve' (Strategy B) will exceed that of a buy-and-hold strategy (Strategy A).
+
+B. equal to that of Strategy B.
+Incorrect Answer Feedback: Incorrect because the total return for a buy-and-hold strategy (Strategy A) will be less than that of 'rolling down the yield curve' (Strategy B) when the yield curve is upward sloping and expected to remain unchanged over the investment horizon.
+
+C. greater than that of Strategy B.
+Incorrect Answer Feedback: Incorrect because the total return from 'rolling down the yield curve' (Strategy B) is higher than that of buy-and-hold (Strategy A).
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. less than that of Strategy B.
+7Multiple Choice0 / 1 point
+Given Yang expectations for Country 2's yield curve, the most appropriate bond portfolio composition would be:
+Correct answer:
+
+A. Portfolio 1.
+Correct Answer Feedback: Correct because Yang expects that the yield rate curve will rise and become steeper. With higher yields, especially at the longer maturities, Yang will want to have the shortest portfolio duration. The yield curve movement described is a 'bear steepener'. With higher rates and a steeper curve, the investor will want to shift from long-term bonds into short-term bonds. Portfolio 1 is effectively a bullet portfolio focused on short-term bonds (80% of the portfolio).
+
+B. Portfolio 2.
+Incorrect Answer Feedback: Incorrect because Portfolio 2, whose composition is evenly spread across a range of maturities, is a 'laddered portfolio', will have a higher portfolio duration than Portfolio 1. Given rising yields and a steeper yield curve, Yang will want to have a portfolio with the shortest duration possible.
+
+C. Portfolio 3.
+Incorrect Answer Feedback: Incorrect because Portfolio 3 is a barbell portfolio with a greater weighting to long-term bonds than Portfolio 1 (45% compared with 10%). As a result, its portfolio duration will be longer than that of Portfolio 1. Given the expectation of a rising and steepening yield curve, Yang will want to have a portfolio with the shortest duration possible.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Portfolio 1.
+8Multiple Choice0 / 1 point
+The 5-year swap spread in Country 3 is:
+
+A. 15 bps.
+Incorrect Answer Feedback: Incorrect because this is the spread between the swap rate the interpolated YTMs of the bonds with the 4.5-year and 5.5-year remaining maturities, Bonds B and C.
+0.15% = 5.50% – (5.30% + 5.40%) / 2
+Correct answer:
+
+B. 20 bps.
+Correct Answer Feedback: Correct because the 5-year swap spread is defined as the difference between the fixed rate on the 5-year interest rate swap minus the YTM of the 'on-the-run' 5-year government bond, which is Bond B in this case. The 5-year swap spread is calculated as:
+0.20% = 5.50% – 5.30%
+The relevant 'on-the-run' 5-year bond is Bond B because it is the most recently issued 5-year bond.
+ 
+
+C. 25 bps.
+Incorrect Answer Feedback: Incorrect because this is calculated from the interpolated YTMs of the bonds with the 4.0-year and 4.5-year remaining maturities, but which were both originally issued as 5-year bonds, Bonds A and B:
+0.25% = 5.50% – (5.20% + 5.30%) / 2
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 20 bps.
+Vignette
+Debra McAlister is an equity analyst for a mutual fund company. She is researching two equities, Zedco Inc. and Midord Corporation, as possible additions to the firm's portfolios. 
+Zedco Inc.
+Zedco's average ROE is the highest in its industry, but it has been volatile. McAlister is concerned about using past data to estimate the company's future ROE. Zedco has an average level of debt for its industry but, in response to lower interest rates, is expected to refinance most of its older debt within the next year. In developing her valuation, McAlister is uncertain about her estimate of Zedco's terminal value. Zedco has a low dividend payout ratio, which McAlister expects to be maintained. Finally, compared to its historical financial statements, Zedco's most recent financial statement shows an abnormally high level of accounting accruals.
+McAlister decides to use both single-stage and multistage residual income models to value Zedco. To check her assumptions, McAlister calculates the implied growth rate in Zedco's residual income using its current market price. She uses the data in Exhibit 1 for her analysis.
+Exhibit 1
+Cost of equity capital	12%
+WACC	10%
+ROE (3-year average)	29%
+Current price per share	$80
+Book value per share	$20
+Midord Corporation
+Based on Midord's characteristics, McAlister decides to estimate its value using both a two-stage DDM and the H-model. For both models, she uses a required return on equity of 10% and Midord's most recent dividend payment of $0.55 per share. For the two-stage DDM, McAlister uses Midord's trailing P/E ratio to estimate its terminal value per share in Year 8 with the following additional assumptions:
+Annual growth in dividends in years 1 through 8 = 12%
+Dividend payout ratio at the end of Year 8 = 60%
+Trailing P/E ratio at the end of Year 8 = 20 
+For the H-model, McAlister's additional model inputs are:
+Half-life of the high-growth period (H) = 4 years
+Initial short-term dividend growth rate (gS) = 12%
+Long-term dividend growth rate (gL) = 5% 
+9Multiple Choice0 / 1 point
+Which of the following best supports McAlister's choice of valuation models for Zedco?
+
+A. The properties of Zedco's ROE
+Incorrect Answer Feedback: Incorrect because Zedco has the highest average ROE in its industry, but it has been volatile, and McAlister is not highly confident in using past data to estimate future ROE. ROE is a critical input to the residual income model, so an uncertain estimate of ROE would not support the use of the residual income model. Residual income models are least appropriate when significant determinants of residual income, such as book value and ROE, are not predictable.
+
+B. The characteristics of Zedco's debt
+Incorrect Answer Feedback: Incorrect because Zedco is expected to refinance most of its older debt within the year in response to lower interest rates. This implies that the interest cost on the most recent income statement does not accurately reflect the current cost of debt. One of the potential weaknesses of the residual income model is that: The residual income model’s use of accounting income assumes that the cost of debt capital is reflected appropriately by interest expense.
+Correct answer:
+
+C. The estimation of Zedco's terminal value
+Correct Answer Feedback: Correct because McAlister chooses the residual income model to value Zedco. She is uncertain about her estimate of Zedco's terminal value. Residual income places significantly less emphasis on a firm's terminal value relative to the dividend discount model or free cash flow models. So, an uncertain estimate of terminal value would support the use of the residual income model. 
+The strengths of residual income models include the following:
+Terminal values do not make up a large portion of the total present value, relative to other models. 
+Additionally, in residual income valuation, the current book value often captures a large portion of total value and the terminal value may not be a large component of total value because book value is larger than the periodic residual income and because ROE may fade over time toward the cost of equity. This contrasts with other multistage approaches (DDM and DCF), in which the present value of the terminal value is frequently a significant portion of total value.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. The estimation of Zedco's terminal value
+10Multiple Choice0 / 1 point
+Using the single-stage residual income model, Zedco's implied growth rate in residual income is closest to:
+
+A. 3.7%.
+Incorrect Answer Feedback: Incorrect because the WACC (10%) is used in place of the cost of equity capital:
+0.10 – [(0.29 – 0.10)/($80/$20 – 1)] = 0.03667 ≈ 3.7%.
+Correct answer:
+
+B. 6.3%.
+Correct Answer Feedback: Correct because the implied growth in residual income using the single-stage model is backed out of the valuation model: V0 = B0 + [(ROE – r)/(r – g)] × B0
+where:
+V0 = P0 = current price per share = $80
+B0 = book value per share = $20
+ROE = 29%
+r = cost of equity capital = 12%
+g = implied growth rate in residual income
+ 
+$80 = $20 + [(0.29 – 0.12)/(0.12 – g)] × $20
+g = 0.06333 ≈ 6.3%.
+ 
+Alternately: g = r – [(ROE – r)/(V0/B0 – 1)] = 0.12 – [(0.29 – 0.12)/($80/$20 – 1)] = 6.3%.
+
+C. 7.8%.
+Incorrect Answer Feedback: Incorrect because the "–1" is omitted from the denominator:
+0.12 – [(0.29 – 0.12)/($80/$20)] = 0.0775 ≈ 7.8%.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 6.3%.
+11Multiple Choice0 / 1 point
+Using the two-stage DDM, the estimated terminal value per share for Midord is closest to:
+
+A. $16.
+Incorrect Answer Feedback: Incorrect because the dividend payout ratio is multiplied instead of divided.
+TV = 20 × $0.55 × [(1.12)8 × 0.60] = $16.34 ≈ $16.
+Correct answer:
+
+B. $45.
+Correct Answer Feedback: Correct because TV = P/E × [D0(1 + g)t/(D/E)], where:
+TV = terminal value
+P/E = trailing P/E ratio = 20
+D0 = most recent dividend = $0.55
+g = growth rate of dividends years 1 – 8 = 12%
+t = 8 years
+D/E = dividend payout ratio = 60%
+ 
+TV = 20 × $0.55 × [(1.12)8/0.60] = $45.39 ≈ $45.
+
+C. $68.
+Incorrect Answer Feedback: Incorrect because (1 – D/E) or the retention ratio is used instead of the dividend payout ratio.
+TV = 20 × $0.55 × [(1.12)8/(1 – 0.60)] = $68.09 ≈ $68.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. $45.
+12Multiple Choice0 / 1 point
+Using the H-model, the estimated value per share of Midord stock is closest to:
+
+A. $12.
+Incorrect Answer Feedback: Incorrect because H is omitted.
+V0 = [$0.55(1.05) + $0.55(0.12 – 0.05)]/(0.10 – 0.05) = $12.32 ≈ $12.
+
+B. $13.
+Incorrect Answer Feedback: Incorrect because 0.5H (= 2) is used instead of H (= 4).
+V0 = [$0.55(1.05) + $0.55(2)(0.12 – 0.05)]/(0.10 – 0.05) = $13.09 ≈ $13.
+Correct answer:
+
+C. $15.
+Correct Answer Feedback: Correct because by the H-model V0 = [D0(1 + gL) + D0H(gS − gL)]/(r – gL), where:
+ 
+V0 = estimated value
+D0 = most recent dividend = $0.55
+gL = long-term dividend growth rate = 5%
+gS = initial short-term dividend growth rate = 12%
+H = half-life of the high-growth period = 4
+r = cost of equity capital = 10%
+ 
+V0 = [$0.55(1.05) + $0.55(4)(0.12 – 0.05)]/(0.10 – 0.05) = $14.63 ≈ $15.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. $15.
+Vignette
+Susan Park, CFA, is a portfolio manager at Plum Asset Management. Plum has adopted the Standards as part of its ethics and compliance policy, but does not claim compliance with the GIPS standards.
+When preparing reports relating to performance presentation for her clients, Park applies the following criteria:
+Criterion 1:	Performance is presented using a weighted composite of similar portfolios.
+Criterion 2	Terminated accounts are excluded from the calculation of performance history.
+Criterion 3:	Performance presentations are tailored to the knowledge and sophistication of the client.
+Park receives orders from four of her clients to purchase shares in an oversubscribed IPO. She determines that the IPO is suitable for all of these clients. One of the clients, a family member of Park's, has a regular fee-paying account that is managed similarly to those of the other three clients. Park allocates the shares she receives to the four clients on a pro rata basis according to order size. She discloses the firm's IPO allocation policy to only those clients that participate in IPOs.
+Park meets with a prospective client. During their initial meeting, Park makes the following statements to the client:
+Statement 1:	"I passed all three levels of the CFA exam on my first attempt."
+Statement 2:	"The CFA Program has enhanced my portfolio management skills."
+Statement 3:	"As a CFA charterholder, I am the most qualified to manage your investments."
+After their initial meeting, Park and the prospective client visit an inexpensive cafe. During their meal, the prospective client states that he is impressed with Plum's services and indicates that he will open an account with Plum. The client offers Park to use the client's vacation home for a week whenever she outperforms the benchmark index in a given quarter. At the end of the meal, the client insists on paying the cafe bill. Later that day, Park speaks with Plum's compliance officer about the client's offer to use the vacation home. The compliance officer does not raise any objections to the vacation home arrangement and gives verbal consent to use the home. Park also discloses to the compliance officer that the client paid the cafe bill. In the next quarter, Park outperforms the benchmark and then uses the vacation home.
+13Multiple Choice0 / 1 point
+Which of Park's criteria is not consistent with the Standard relating to performance presentation?
+
+A. Criterion 1
+Incorrect Answer Feedback: Incorrect because, when a firm does not claim compliance with GIPS, members and candidates can meet their obligations under Standard III(D) Performance Presentation by meeting certain criteria which include: presenting the performance of the weighted composite of similar portfolios rather than using a single representative account. Therefore, Criterion 1 is consistent with the Standard relating to performance presentation.
+Correct answer:
+
+B. Criterion 2
+Correct Answer Feedback: Correct because, when a firm does not claim compliance with GIPS, members and candidates can meet their obligations under Standard III(D) Performance Presentation by meeting certain criteria which include: including terminated accounts as part of performance history with a clear indication of when the accounts were terminated. Therefore, by excluding terminated accounts, Criterion 2 is not consistent with the Standard relating to performance presentation.
+
+C. Criterion 3
+Incorrect Answer Feedback: Incorrect because, when a firm does not claim compliance with GIPS, members and candidates can meet their obligations under Standard III(D) Performance Presentation by meeting certain criteria which include: considering the knowledge and sophistication of the audience to whom a performance presentation is addressed. Therefore, Criterion 3 is consistent with the Standard relating to performance presentation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Criterion 2
+14Multiple Choice0 / 1 point
+With regard to her actions associated with the IPO, did Park violate the Standard relating to fair dealing?
+
+A. No
+Incorrect Answer Feedback: Incorrect because Park violated Standard III(B) Fair Dealing by not disclosing the trade allocation policy to all clients—she did so to only those clients that participate in IPOs.
+
+B. Yes, because she allocated IPO shares to her family member
+Incorrect Answer Feedback: Incorrect because Park's allocation of IPO shares to her family member did not violate Standard III(B) Fair Dealing. Because the family member's account is a regular fee-paying account and is managed similarly to other clients' accounts, it was appropriate to allocate IPO shares to the family member.
+If the investment professional’s family-member accounts are managed similarly to the accounts of other clients of the firm, however, the family-member accounts should not be excluded from buying such shares.
+Correct answer:
+
+C. Yes, because she did not appropriately disclose the firm's IPO allocation policy
+Correct Answer Feedback: Correct because Park violated Standard III(B) Fair Dealing by not disclosing the trade allocation policy to all clients—she did so to only those clients that participate in IPOs.
+Members and candidates should disclose to clients and prospective clients the documented allocation procedures they or their firms have in place and how the procedures would affect the client or prospect. The disclosure should be clear and complete so that the client can make an informed investment decision. Members and candidates should disclose to clients and prospective clients how they select accounts to participate in an order and how they determine the amount of securities each account will buy or sell.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Yes, because she did not appropriately disclose the firm's IPO allocation policy
+15Multiple Choice0 / 1 point
+Which of Park's statements to the prospective client is a violation of the Standards?
+
+A. Statement 1
+Incorrect Answer Feedback: Incorrect because, according to Standard VII(B), if a candidate passes each level of the exam in consecutive years and wants to state that he or she did so, that is not a violation of Standard VII(B) because it is a statement of fact.
+
+B. Statement 2
+Incorrect Answer Feedback: Incorrect because Park's statement that completion of the CFA Program has enhanced her portfolio management skills is an example of a proper reference to the CFA designation and allowed under Standard VII(B).
+Correct answer:
+
+C. Statement 3
+Correct Answer Feedback: Correct because, according to Standard VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program, statements referring to CFA Institute, the CFA designation, or the CFA Program that overstate the competency of an individual or imply, either directly or indirectly, that superior performance can be expected from someone with the CFA designation are not allowed. Park's statement that, as a CFA charterholder, she is most qualified to manage the client's investments implies superior ability and is therefore an improper reference to the CFA designation and a violation of Standard VII(B).
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Statement 3
+16Multiple Choice0 / 1 point
+After their initial meeting, are Park's actions with regard to the prospective client a violation of the Standards?
+
+A. No
+Incorrect Answer Feedback: Incorrect because Park did not receive appropriate approval for the vacation home arrangement, so she should not have accepted the offer to use the home. She should have gotten written approval from all parties involved, not just verbal approval.
+
+B. Yes, because she did not pay the cafe bill
+Incorrect Answer Feedback: Incorrect because, according to Standard IV(B), modest gifts and entertainment are acceptable. A meal at an inexpensive cafe most likely falls within this category.
+Correct answer:
+
+C. Yes, because she used the client's vacation home
+Correct Answer Feedback: Correct because Park did not receive appropriate consent for the vacation home arrangement, so she should not have accepted the offer to use the home. She should have gotten written consent from all parties involved, not just verbal consent. Standard IV(B) Additional Compensation Arrangements requires that Members and Candidates must not accept gifts, benefits, compensation, or consideration that competes with or might reasonably be expected to create a conflict of interest with their employer’s interest unless they obtain written consent from all parties involved.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Yes, because she used the client's vacation home
+Vignette
+Evangelia Georgiou is an analyst with a family office. She is researching Rummidge, a publicly listed company, and Gimmerton, a private company.
+To analyze Rummidge, Georgiou uses the information in Exhibit 1. She believes that the past seven years reflect average profitability over the company's business cycle. Using the method of average ROE for earnings normalization, Georgiou calculates Rummidge's P/E ratio based on normalized EPS.
+Exhibit 1
+Current share price	$23.40
+Current book value per share	$19.50
+Average EPS (past 7 years)	$2.45
+Average ROE (past 7 years)	9.5%
+Required rate of return on equity	9.0%
+Forecast long-term dividend payout ratio	75%
+For comparison, Georgiou also determines Rummidge's justified P/B ratio based on her forecasts and using the Gordon growth model. For her calculation, she uses the average ROE for the past seven years as the forecast of long-term future ROE.
+Next, the family office asks Georgiou to evaluate a proposal to take a minority stake in Gimmerton. To facilitate comparison with the EBITDA disclosed by its publicly listed peers, Georgiou adjusts Gimmerton's reported EBITDA to account for the following:
+• Gimmerton's founder and CEO is paid a fixed annual salary of $0.4 million. A market-based compensation package for a CEO of a similar public company would be $1.0 million.
+• Gimmerton owns a luxury yacht that is not required for its core operations. In the last fiscal year, expenses associated with the yacht contributed $1.2 million to operating costs and $0.5 million to depreciation expense.
+Georgiou values a 100% equity stake in Gimmerton and then calculates the total discount for the minority stake to incorporate both the lack of control and the lack of marketability. She uses a control premium of 25% and a discount for lack of marketability of 10%.
+17Multiple Choice0 / 1 point
+Using the method of average ROE for earnings normalization, Rummidge's P/E ratio based on normalized EPS is closest to:
+
+A. 9.6.
+Incorrect Answer Feedback: Incorrect because this is the P/E when EPS is normalized by the method of historical average EPS and not the method of average ROE used by Georgiou. 
+The historical average EPS over the past 7 years is $2.45, which is deemed in this case to reflect average profitability over the business cycle.
+The current share price is $23.40, so P/E = $23.40/$2.45 = 9.55 ≈ 9.6.
+Correct answer:
+
+B. 12.6.
+Correct Answer Feedback: Correct because this is the P/E when EPS is normalized by the method of average ROE used by Georgiou.
+Under this method, normalized EPS is calculated as the average ROE over the most recent business cycle multiplied by the current book value per share.
+The historical average ROE over the past 7 years is 9.5%, which is deemed in this case to reflect average profitability over the business cycle. This is multiplied by the current book value per share of $19.50 to give normalized EPS: 0.095 × $19.50 = $1.8525.
+The current share price is $23.40, so P/E = $23.40/$1.8525 = 12.63 ≈ 12.6.
+
+C. 13.3.
+Incorrect Answer Feedback: Incorrect because this is the P/E when EPS is calculated by multiplying the book value per share by the required rate of return on equity and not the historical average ROE, which is the method used by Georgiou. 
+The required rate of return on equity is 9.0% and the book value per share is $19.50, so EPS is 0.09 × $19.50 = $1.755.
+P/E is then $23.40/$1.755 = 13.33 ≈ 13.3.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 12.6.
+18Multiple Choice0 / 1 point
+Based on Georgiou's forecasts, Rummidge's justified P/B ratio is closest to:
+
+A. 0.93.
+Incorrect Answer Feedback: Incorrect because this would be the justified P/B ratio if the numerator and denominator in the formula were switched.
+Justified P/B = (r – g)/(ROE – g) 
+Justified P/B = (0.09 – 0.02375)/(0.095 – 0.02375) = 0.9298 ≈ 0.93
+Correct answer:
+
+B. 1.08.
+Correct Answer Feedback: Correct because this is the justified P/B ratio based on Georgiou's forecasts.
+The average ROE for the past seven years is used as the forecast of long-term future ROE and the forecast long-term dividend payout ratio is given.
+The formula for justified P/B is as follows:
+Justified P/B = (ROE – g)/(r – g) 
+This formula assumes the Gordon growth model and uses the following expression for the sustainable growth rate: g = b × ROE, where:
+ROE = forecast long-term ROE = 9.5%
+r = required rate of return on equity = 9.0%
+b = earnings retention rate and therefore (1 – b) = dividend payout ratio
+The dividend payout ratio is 75%, so the earnings retention rate is b = (1 – 75%) = 25%. Therefore, g = 25% × 9.5% = 2.375%. 
+Justified P/B = (0.095 – 0.02375)/(0.09 – 0.02375) = 1.0755 ≈ 1.08
+
+C. 1.27.
+Incorrect Answer Feedback: Incorrect because this would be the justified P/B ratio if the dividend payout ratio of 75% was used in the formula instead of the earnings retention rate of 25% as follows: 
+g = 75% × 9.5% = 7.125%.
+Justified P/B = (0.095 – 0.07125)/(0.09 – 0.07125) = 1.2667 ≈ 1.27
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 1.08.
+19Multiple Choice0 / 1 point
+To facilitate comparison with publicly listed peers, Georgiou should adjust Gimmerton's EBITDA:
+
+A. down by $0.6 million.
+Incorrect Answer Feedback: Incorrect because this is the result if the correct adjustments are identified but incorrectly applied when adjusting reported EBITDA as follows:
+Incorrectly adding $0.6 million (with respect to the CEO's salary in excess of the market rate) and subtracting $1.2 million (with respect to the yacht's operating expenses, which are not related to core operations) results in an adjustment of:
+$0.6 million – $1.2 million = –$0.6 million.
+Correct answer:
+
+B. up by $0.6 million.
+Correct Answer Feedback: Correct because this is the EBITDA adjustment taking into account the following:
+First, the CEO is paid $0.4 million annually, whereas the market rate is $1.0 million. So this salary is $0.6 million less than the market rate. In order to make a comparison with a publicly owned company, it is necessary to add $0.6 million to salary expenses. 
+This will result in a reduction in EBITDA by $0.6 million.
+Secondly, the yacht is not required for Gimmerton's core operations. Therefore, it is necessary to adjust costs by deducting the $1.2 million operating costs, which will increase EBITDA by the same amount. An adjustment to take account of the depreciation associated with the yacht is not required as this does not impact EBITDA.
+Therefore, the adjustment is:
+–$0.6 million + $1.2 million = $0.6 million.
+
+C. up by $1.1 million.
+Incorrect Answer Feedback: Incorrect because this is the EBITDA adjustment if an adjustment for depreciation of the luxury yacht is also taken into account in addition to the other adjustments. 
+Subtracting $0.6 million (with respect to the CEO's salary in excess of the market rate) and adding $1.2 million (with respect to the yacht's operating expenses, which are not related to core activities) and also adding $0.5 million (with respect to depreciation) results in an adjustment of:
+–$0.6 million + $1.2 million + $0.5 million = $1.1 million.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. up by $0.6 million.
+20Multiple Choice0 / 1 point
+The total discount that Georgiou should apply when valuing the minority stake in Gimmerton is:
+Correct answer:
+
+A. 28.0%.
+Correct Answer Feedback: Correct because this is the total discount for Gimmerton based on the following:
+The discount for lack of control (DLOC) is calculated from the control premium as follows:
+DLOC = 1 – [1/(1 + Control premium)]
+With a control premium of 25%, DLOC = 1 – [1/(1.25)] = 0.20 or 20%. 
+The discount for lack of marketability (DLOM) is 0.10 or 10%.
+Total discount = 1 – [(1 – DLOC) × (1 – DLOM)] = 1 – [(1 – 0.20) × (1 – 0.10)] = 0.28 or 28%
+
+B. 30.0%.
+Incorrect Answer Feedback: Incorrect because the discounts for lack of control and lack of marketability are simply added as follows:
+With a control premium of 25%, DLOC = 1 – [1/(1.25)] = 0.20 or 20%.
+Total discount = DLOC + DLOM = 20% + 10% = 30%
+
+C. 32.5%.
+Incorrect Answer Feedback: Incorrect because the control premium is used instead of the discount for lack of control as follows:
+Total discount = 1 – [(1 – Control premium) × (1 – DLOM)] = 1 – [(1 – 0.25) × (1 – 0.10)]
+= 0.325 or 32.5%
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 28.0%.
+Vignette
+Isabelle Boyer is a fund-of-funds portfolio manager based in Ireland. She is assessing the performance of active asset managers across different regions over the previous quarter, and is planning her fund's tactical allocation for the next quarter.
+Boyer begins by looking at Polari, an active US equity manager. She analyzes Polari's performance for the previous quarter using the Carhart four-factor model, which includes the following factors: market return minus risk-free rate (RMRF), small minus big (SMB), high minus low (HML), and winners minus losers (WML).
+Exhibit 1 illustrates factor sensitivities and factor returns for Polari and its benchmark over the previous quarter. Polari’s active return for the quarter was 2.5%. Boyer uses this information to assess the investment style of the manager and to decompose the active returns into the return from factor tilts and from security selection.
+Exhibit 1
+Factor	Factor Sensitivity for Polari	Factor Sensitivity for Benchmark	Factor Return
+RMRF	1.1	1.0	5.0%
+SMB	0.3	0.0	–2.0%
+HML	0.4	0.2	1.0%
+WML	–0.1	0.1	–2.5%
+The current factor exposures of Polari do not reflect Boyer's preferred exposures for the next quarter. She considers using a smart beta ETF to implement a tactical allocation.
+In Exhibit 2, Boyer compares the characteristics of two smart beta ETFs, zTrak and xShares, both of which track the same US equity market index. Boyer calculates the 3-month holding period cost of investing in the two ETFs.
+Exhibit 2
+ 	zTrak	xShares
+Commission (one-way)	5 bps	10 bps
+Bid–ask spread on purchase and sale	15 bps	10 bps
+Annual management fee	20 bps	15 bps
+As an alternative, Boyer considers investing in yPath, a smart beta exchange-traded note (ETN) issued by a large US investment bank. Boyer compares the structure, creation/redemption mechanism, and counterparty risk of yPath with those of zTrak and xShares.
+21Multiple Choice0 / 1 point
+Over the previous quarter, Polari’s investment style has exhibited which of the following?
+Correct answer:
+
+A. Value bias
+Correct Answer Feedback: Correct because, over the previous quarter, Polari had positive sensitivity to HML (0.4), which indicates a value bias.
+HML (high minus low) is one of the factors used in Carhart's (1997) four-factor model and is calculated as the average return on two high book-to-market portfolios minus the average return on two low book-to-market portfolios. A positive HML indicates that portfolio returns are driven more by the return on value (i.e., high book-to-market) stocks than by that on growth (i.e., low book-to-market) stocks.
+
+B. Large-cap bias
+Incorrect Answer Feedback: Incorrect because, over the previous quarter, Polari had positive sensitivity to SMB (0.3), which indicates a small-cap, not a large-cap, bias. 
+SMB (small minus big) is one of the factors used in Carhart's (1997) four-factor model and is calculated as the average return on three small-cap portfolios minus the average return on three large-cap portfolios. A positive SMB indicates that portfolio returns are driven more by the return on small-cap stocks than by the return on large-cap stocks.
+
+C. Momentum bias
+Incorrect Answer Feedback: Incorrect because, over the previous quarter, Polari had a negative sensitivity to WML (–0.1), which indicates a contrarian, not a momentum, bias.
+WML (winners minus losers) is one of the factors used in Carhart's (1997) four-factor model and is calculated as the return on a portfolio of the past year’s winners minus the return on a portfolio of the past year’s losers. A negative WML indicates that portfolio returns are driven more by the return of the past year's losers (contrarian bias) than the past year's winners (momentum bias).
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Value bias
+22Multiple Choice0 / 1 point
+Over the previous quarter, the active return from security selection for Polari was closest to:
+
+A. –3.1%.
+Incorrect Answer Feedback: Incorrect because the return from security selection is calculated as active return minus return from factor sensitivities, instead of factor tilts (i.e., ignoring the return from factor sensitivities of the benchmark).
+The return from factor sensitivities is calculated as follows:
+RMRF: 1.1 × 5.0% = 5.50%
+SMB: 0.3 × (–2.0%) = –0.60%
+HML: 0.4 × 1.0% = 0.40%
+WML: –0.1 × (–2.5%) = 0.25%
+Total return from factor sensitivities = 5.50% – 0.60% + 0.40% + 0.25% = 5.55%
+Active return – Return from factor sensitivities = 2.50% – 5.55% = –3.05% ≈ –3.1%
+
+B. 0.6%.
+Incorrect Answer Feedback: Incorrect because this is the total return from factor tilts, not security selection.
+The factor tilt return for each of the four factors of the Carhart model is calculated as follows:
+RMRF: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (1.1 – 1.0) × (5.0%) = 0.5%
+SMB: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (0.3 – 0.0) × (–2.0%) = –0.6%
+HML: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (0.4 – 0.2) × (1.0%) = 0.2%
+WML: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (–0.1 – 0.1) × (–2.5%) = 0.5%
+Total return from factor tilts = 0.5% – 0.6% + 0.2% + 0.5% = 0.6%
+Correct answer:
+
+C. 1.9%.
+Correct Answer Feedback: Correct because active return from security selection can be calculated as active return (2.5%) minus return from factor tilts (0.6%, calculated below), which gives: 2.5% – 0.6% = 1.9%. 
+The tilt return for each of the four factors of the Carhart model is calculated as follows:
+RMRF: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (1.1 – 1.0) × (5.0%) = 0.5%
+SMB: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (0.3 – 0.0) × (–2.0%) = –0.6%
+HML: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (0.4 – 0.2) × (1.0%) = 0.2%
+WML: [(Portfolio sensitivity) − (Benchmark sensitivity)] × (Factor return) = (–0.1 – 0.1) × (–2.5%) = 0.5%
+Total return from factor tilts = 0.5% – 0.6% + 0.2% + 0.5% = 0.6%
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 1.9%.
+23Multiple Choice0 / 1 point
+The 3-month holding period cost of investing in the zTrak ETF is:
+Correct answer:
+
+A. lower than that of the xShares ETF.
+Correct Answer Feedback: Correct because the 3-month holding period cost is 30 bps for zTrak and 33.75 bps for xShares. The holding period cost is calculated as: (2 × one-way commission) + bid–ask spread on purchase and sale + (3/12 × annual management fee).
+zTrak: (2 × 5 bps) + 15 bps + (3/12 × 20 bps) = 30 bps
+xShares: (2 × 10 bps) + 10 bps + (3/12 × 15 bps) = 33.75 bps
+
+B. the same as that of the xShares ETF.
+Incorrect Answer Feedback: Incorrect because zTrak has a lower 3-month holding period cost, however, both ETFs would have the same 12-month holding period cost, calculated as follows:
+zTrak: (2 × 5 bps) + 15 bps + 20 bps = 45 bps
+xShares: (2 × 10 bps) + 10 bps + 15 bps = 45 bps
+
+C. higher than that of the xShares ETF.
+Incorrect Answer Feedback: Incorrect because zTrak has a lower 3-month holding period cost than xShares. If the one-way commission was incorrectly not multiplied by two, this would result in xShares having a lower 3-month holding period cost, calculated as follows:
+zTrak: (1 × 5 bps) + 15 bps + (3/12 × 20 bps) = 25 bps
+xShares: (1 × 10 bps) + 10 bps + (3/12 × 15 bps) = 23.75 bps
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. lower than that of the xShares ETF.
+24Multiple Choice0 / 1 point
+Which of the following statements is correct with regard to yPath?
+
+A. Similarly to zTrak and xShares, it holds underlying securities
+Incorrect Answer Feedback: Incorrect because yPath is an ETN and exchange-traded notes (ETNs) are not truly funds because they do not hold underlying securities. ETNs are unsecured debt obligations of the institution that issues them and are structured as a promise to pay a pattern of returns based on the return of the stated index minus fund expenses. The issuer of the note takes responsibility for setting up the counterbalancing hedges it believes necessary to meet the obligations.
+Correct answer:
+
+B. It has greater potential counterparty risk than zTrak and xShares
+Correct Answer Feedback: Correct because yPath is an ETN whereas zTrak and xShares are ETFs. ETNs have the largest potential counterparty risk of all exchange-traded products because they are unsecured, unsubordinated debt notes and, therefore, are subject to default by the ETN issuer.
+
+C. Unlike zTrak and xShares, it does not have a creation/redemption mechanism
+Incorrect Answer Feedback: Incorrect because both ETFs (like zTrak and xShares) and ETNs (like yPath) have creation/redemption mechanisms. ETFs are intrinsically linked to the creation/redemption process, which allows them to operate at lower cost and with greater tax efficiency than mutual funds and generally keeps ETF prices in line with their NAVs. ETNs also "trade on exchanges and have a creation/redemption mechanism.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. It has greater potential counterparty risk than zTrak and xShares
+Vignette
+Tina Habba, CFA, provides advisory services to high-net-worth individuals at FundLand, a wealth management firm that distributes both its own funds and third-party funds to clients.
+FundLand is setting up a referral fee arrangement with Schula Asset Management. Under this arrangement, Schula provides research services to FundLand in exchange for FundLand distributing Schula's funds. The arrangement has the following characteristics:
+Characteristic 1: The estimated value of the research services is $100,000 per year.
+Characteristic 2: The research services are provided on an ongoing basis, for as long as FundLand distributes Schula's funds.
+Fundland plans to offer a structured note to its clients. The structured note replicates the 1-year return of a US equity index, with a 15% cap on upside return and a maximum loss of 15%. Habba sends a brief email to all of her suitable clients with the following two statements and an invitation to follow up if they require more information:
+Statement 1: "This note is attractive because, in my view, the market will trend moderately higher."
+Statement 2: "This note provides the return of the US equity index with no downside risk."
+Habba receives a call from her client Trey Laurent, who has heard about the structured note. Laurent sends Habba a purchase order for a small amount relative to his total wealth. Laurent's recently updated IPS indicates that the structured note is not suitable for his portfolio. During the call Habba explains to Laurent that the trade is not suitable for him, which he acknowledges. Nonetheless, Laurent insists on purchasing the security. Habba then proceeds to execute the trade order according to his instructions.
+Both Habba and FundLand are based in Country A. Habba is preparing to market FundLand’s funds to investors in Country B, a rapidly growing economy. Country B investor protection laws are minimal and there are no restrictions on fund distribution and marketing practices. Country A's laws are more restrictive in this regard than the Standards, but Country A laws state that advisory firms must follow the laws of the local country where they conduct business.
+25Multiple Choice0 / 1 point
+To comply with the Standards, which of the characteristics of the referral fee arrangement must Habba disclose to existing and prospective clients?
+
+A. Characteristic 1 only
+Incorrect Answer Feedback: Incorrect because by only disclosing Characteristic 1, Habba would not be disclosing Characteristic 2, which is a required disclosure under the Standards. The disclosure of the referral fee arrangement must include the nature of the consideration or benefit -for example, flat fee or percentage basis, one-time or continuing benefit.
+
+B. Characteristic 2 only
+Incorrect Answer Feedback: Incorrect because by only disclosing Characteristic 2, Habba would not be disclosing Characteristic 1, which is a required disclosure under the Standards:
+Members and candidates must disclose to clients and prospective clients any benefit received for the recommendation of products or services.
+In particular, the disclosure must include the nature of the consideration or benefit together with the estimated dollar value.
+Correct answer:
+
+C. Both Characteristic 1 and Characteristic 2
+Correct Answer Feedback: Correct because the disclosure must include both the estimated dollar value and the nature of the consideration or benefit, such as whether it's a one-time or continuing benefit: The member or candidate must disclose the nature of the consideration or benefit—for example, flat fee or percentage basis, one-time or continuing benefit, based on performance, benefit in the form of provision of research or other noncash benefit—together with the estimated dollar value.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Both Characteristic 1 and Characteristic 2
+26Multiple Choice0 / 1 point
+In her email regarding the structured note, Habba violates the Standards with:
+
+A. Statement 1 only.
+Incorrect Answer Feedback: Incorrect because Statement 1 states that Habba is basing her recommendation on her view of the market trend, thereby stating that this is her opinion. Standard V(B)–Communication with Clients and Prospective Clients indicates that the content of any investment recommendation should include the distinction between facts and opinions.
+Correct answer:
+
+B. Statement 2 only.
+Correct Answer Feedback: Correct because Standard V(B)–Communication with Clients and Prospective Clients indicates that the content of any investment recommendation should include the identification of risks and limitations: members and candidates must adequately disclose the general market-related risks and the risks associated with the use of complex financial instruments that are deemed significant. Because the 15% drawdown offers limited downside protection, and is a significant element of risk in the complex financial instrument (the structured note), it should have been communicated clearly to clients and prospective clients. Furthermore, stating that there is 'no downside risk' can be comparable to stating an opinion as a fact, which would also be a violation of the standards.
+
+C. both Statement 1 and Statement 2.
+Incorrect Answer Feedback: Incorrect because Statement 1 is not a violation as Habba is, in that statement, stating that the market trend is her opinion and not a fact. Standard V(B)–Communication with Clients and Prospective Clients indicates that the content of any investment recommendation should include the distinction between facts and opinions.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Statement 2 only.
+27Multiple Choice0 / 1 point
+Does Habba violate the Standards when executing Laurent's trade order?
+Correct answer:
+
+A. No
+Correct Answer Feedback: Correct because this is the best course of action to ensure that Habba meets the Standards, in particular, Standard III(C): Duties to Clients – Suitability states that:
+An unsolicited request may be expected to have only a minimum impact on the entire portfolio because the size of the requested trade is small. In discussing the trade, the member or candidate should focus on educating the investor on how the request deviates from the current policy statement. Following the discussion, the member or candidate may follow his or her firm’s policies regarding the necessary client approval for executing unsuitable trades. At a minimum, the client should acknowledge the discussion and accept the conditions that make the recommendation unsuitable.
+
+B. Yes, because the trade is not suitable for Laurent
+Incorrect Answer Feedback: Incorrect because, even if the trade is not suitable, Habba should discuss with Laurent that the trade is not suitable for him, with the goal of educating the investor on how the request deviates from the current policy statement, instead of declining the trade outright. Habba does not violate the standards in this respect as she explains to Laurent that the trade is not suitable for him, which he acknowledges.
+
+C. Yes, because she should update the IPS before executing the trade
+Incorrect Answer Feedback: Incorrect, because not updating the IPS is not a violation, given that the trade only accounts for a small amount in relation to Laurent's total wealth: should the unsolicited request be expected to have a material impact on the portfolio, the member or candidate should use this opportunity to update the investment policy statement. Doing so would allow the client to fully understand the potential effect of the requested trade on his or her current goals or risk levels.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. No
+28Multiple Choice0 / 1 point
+In marketing the funds in Country B, Habba must follow:
+Correct answer:
+
+A. the Standards.
+Correct Answer Feedback: Correct because Country A states that the laws of the location where business is conducted should govern and local laws are less strict than the Code and Standards. Therefore, members must adhere to the Code and Standards. According to Standard I(A): Professionalism - Knowledge of the Law: members and candidates must follow the more strict of the applicable law or the Code and Standards. Applicable law is the law that governs the member’s or candidate’s conduct. The more strict law or regulation is the law or regulation that imposes greater restrictions on the action of the member or candidate or calls for the member or candidate to exert a greater degree of action that protects the interests of investors.
+
+B. the laws of Country A.
+Incorrect Answer Feedback: Incorrect because, although the case states that Country A's laws are more restrictive in this area than the Standards, Country A's laws state that the laws of the location where business is conducted should govern. In this case, the local laws are laws of Country B which are less strict than the Standards.
+
+C. the laws of Country B.
+Incorrect Answer Feedback: Incorrect because, even if the funds are sold in Country B, the Standards are more restrictive than the laws of Country B, and therefore the Standards should govern instead.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. the Standards.
+Vignette
+Aaron Hardie is an analyst with a commodity trading firm. Hardie is evaluating quantitative models for making predictions in the market for wheat futures.
+Hardie models commodity trading positions as he believes they provide information for future price movements. He calculates the net trading position for commercial traders (NTPC) as the difference in the number of long and short contracts as a proportion of the total number of outstanding contracts in week t. Hardie develops two autoregressive (AR) models to help predict the future NTPC:
+AR(1) model: NTPCt = 0.003 + 0.949 × NTPCt–1
+AR(2) model: NTPCt = 0.003 + 1.096 × NTPCt–1 – 0.116 × NTPCt–2
+Hardie uses the models to determine the mean-reverting level of NTPC. He also forecasts NTPC for the next two weeks given that it is 0.061 in the current week and was 0.034 in the prior week. He then uses the regression statistics in Exhibit 1 to compare the forecasting performance of the two models.
+Exhibit 1
+ 	AR(1) Model	AR(2) Model
+R-squared	0.907	0.905
+Standard error of regression	0.027	0.027
+Root mean squared error	0.032	0.030
+Hardie has access to a range of social media and news articles related to agricultural commodity markets. He decides to use this unstructured data to create a sentiment score by classifying articles as positive (Class "1") or negative (Class "0"). Since he plans to use the sentiment score generated by the text classification model to predict market movements, Hardie conducts error analysis on the classifications identified during model training. He uses the confusion matrix shown in Exhibit 2 to calculate the accuracy of the model.
+Exhibit 2
+Actual Training Labels
+Class "1"	Class "0"
+Predicted Results	Class "1"	546	182
+Class "0"	140	384
+29Multiple Choice0 / 1 point
+The mean-reverting level of the AR(1) model is closest to:
+
+A. 0.002.
+Incorrect Answer Feedback: Incorrect because the mean-reverting level is mistakenly calculated as b0 / (1 + b1) = 0.003 / (1 + 0.949) = 0.00154 ≈ 0.002.
+Correct answer:
+
+B. 0.059.
+Correct Answer Feedback: Correct because the mean-reverting level is calculated as b0 / (1 – b1) = 0.003 / (1 – 0.949) = 0.05882 ≈ 0.059.
+
+C. 0.946.
+Incorrect Answer Feedback: Incorrect because the mean-reverting level is mistakenly calculated as b1 / (1 + b0) = 0.949 / (1 + 0.003) = 0.94616 ≈ 0.946.
+This is also closest to swapping the coefficients in the correct calculation: 0.949 / (1 – 0.003) = 0.952.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 0.059.
+30Multiple Choice0 / 1 point
+Using the AR(2) model, the 2-week-ahead forecast for NTPC is closest to:
+
+A. 0.066.
+Incorrect Answer Feedback: Incorrect because this is the 1-week-ahead forecast of NTPC rather than the 2-week-ahead forecast, calculated as:
+xt+1 = b0 + b1xt + b2xt–1 = 0.003 + 1.096 × 0.061 – 0.116 × 0.034 = 0.003 + 0.06686 – 0.00394 = 0.065912 ≈ 0.066.
+Correct answer:
+
+B. 0.068.
+Correct Answer Feedback: Correct because the 2-week-ahead forecast of NTPC is calculated using the chain rule of forecasting.
+First, the 1-week-ahead forecast is calculated as xt+1 = b0 + b1xt + b2xt–1 = 0.003 + 1.096 × 0.061 – 0.116 × 0.034 = 0.003 + 0.06686 – 0.00394 = 0.065912,
+where xt is the value of NTPC for this week or the current week (0.061) and xt–1 is the value of NTPC for the prior week (0.034).
+This is then used to forecast xt+2 = b0 + b1xt+1 + b2xt = 0.003 + 1.096 × 0.065912 – 0.116 × 0.061 = 0.003 + 0.07224 – 0.00708 = 0.06816 ≈ 0.068.
+
+C. 0.091.
+Incorrect Answer Feedback: Incorrect because the 2-week-ahead forecast of NTPC is calculated using the chain rule of forecasting but the minus sign for the second lag is mistakenly ignored.
+The 1-week-ahead forecast is calculated as xt+1 = b0 + b1xt + b2xt–1 = 0.003 + 1.096 × 0.061 + 0.116 × 0.034 = 0.003 + 0.06686 + 0.00394 = 0.0738
+This is then used to forecast xt+2 = b0 + b1xt+1 + b2xt = 0.003 + 1.096 × 0.0738 + 0.116 × 0.061 = 0.003 + 0.08089 + 0.00708 = 0.09096 ≈ 0.091.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 0.068.
+31Multiple Choice0 / 1 point
+Compared to the AR(1) model, the out-of-sample forecasting performance of the AR(2) model is:
+
+A. worse.
+Incorrect Answer Feedback: Incorrect because we compare the out-of-sample forecasting performance of forecasting models by comparing their root mean squared error (RMSE). The model with the smallest RMSE is judged the most accurate, and not the model with the largest R-squared. This means that the AR(2) model has better out-of-sample forecasting performance.
+
+B. equal.
+Incorrect Answer Feedback: Incorrect because we compare the out-of-sample forecasting performance of forecasting models by comparing their root mean squared error (RMSE), and not the standard error of regression. The model with the smallest RMSE is judged the most accurate, which means that the AR(2) model has better out-of-sample forecasting performance.
+Correct answer:
+
+C. better.
+Correct Answer Feedback: Correct because we compare the out-of-sample forecasting performance of forecasting models by comparing their root mean squared error (RMSE) and the model with the smallest RMSE is judged the most accurate. Since the RMSE of the AR(2) model is lower than that of the AR(1) model (0.30 < 0.32), this indicates that the AR(2) model has better out-of-sample forecasting performance.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. better.
+32Multiple Choice0 / 1 point
+The accuracy of Hardie's text classification model is closest to:
+Correct answer:
+
+A. 0.74.
+Correct Answer Feedback: Correct because this is the accuracy of the model, calculated as:
+Accuracy = (TP + TN) / (TP + FP + TN + FN) = (546 + 384) / (546 + 182 + 384 + 140) = 930 / 1,252 = 0.742812 ≈ 0.74,
+where TP = True Positives, TN = True Negatives, FP = False Positives, and FN = False Negatives.
+
+B. 0.77.
+Incorrect Answer Feedback: Incorrect because this is the F1 score of the model, calculated as:
+F1 score = (2 × P × R) / (P + R) = (2 × 0.7500 × 0.795918) / (0.7500 + 0.795918) = 1.193878 / 1.545918 = 0.772277 ≈ 0.77,
+where
+P = Precision = TP / (TP + FP) = 546 / (546 + 182) = 546 / 728 = 0.7500
+R = Recall = TP / (TP + FN) = 546 / (546 + 140) = 546 / 686 = 0.795918
+and TP = True Positives, FP = False Positives, and FN = False Negatives.
+
+C. 0.80.
+Incorrect Answer Feedback: Incorrect because this is the recall of the model, calculated as:
+Recall = TP / (TP + FN) = 546 / (546 + 140) = 546 / 686 = 0.795918 ≈ 0.80,
+where TP = True Positives and FN = False Negatives.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 0.74.
+Vignette
+Olbab Nod is an analyst reviewing economic data from various countries.
+Nod begins by calculating the contribution of total factor productivity to economic growth for Country A. He gathers the relevant data in Exhibit 1.
+Exhibit 1
+Share of capital in GDP	45.0%
+Growth rate of capital	4.5%
+Growth rate of labor	6.5%
+Growth rate of output	6.7%
+Nod observes a consistent increase in Country A's per capita GDP over the past ten years. To better understand this increase, he analyzes the country's labor supply using the information in Exhibit 2.
+Exhibit 2
+ 	10 Years Ago	Today
+Percentage of population under the age of 16	15%	16%
+Percentage of population over the age of 64	17%	19%
+Female labor force participation	50%	65%
+Average hours worked per year	1,875	1,750
+Over the next two years, Nod expects an increase in the saving rate in Country A, resulting in increased investment in research and development targeting more efficient production methods. He concludes that this will lead to a permanently higher per capita GDP growth rate in the future, with no diminishing returns to capital.
+Nod reviews the information on three developing economies in Exhibit 3. There are no material differences in the countries' saving rates, population growth rates, and production functions. Nod believes that the three countries will benefit from conditional convergence with developed economies.
+Exhibit 3
+ 	Country B	Country C	Country D
+Capital-to-labor ratio	40%	40%	30%
+Per capita income	$1,100	$1,000	$1,000
+33Multiple Choice0 / 1 point
+Based on the growth accounting equation, the growth in total factor productivity in Country A is closest to:
+Correct answer:
+
+A. 1.1%.
+Correct Answer Feedback: Correct because, using the growth accounting equation, the growth in total factor productivity is calculated as follows:
+ΔY/Y = ΔA/A + αΔK/K + (1 − α)ΔL/L
+where:
+ΔY/Y = Growth rate of output = 6.7%
+ΔA/A = Total factor productivity growth (to be determined)
+ΔK/K = Growth rate of capital = 4.5%
+ΔL/L = Growth rate of labor = 6.5%
+α = Relative share of capital in GDP = 45% or 0.45
+1 – α = Relative share of labor in GDP = 1 – 0.45 = 0.55
+Therefore:
+ΔA/A = ΔY/Y – αΔK/K – (1 – α)ΔL/L
+ΔA/A = 6.7% – (0.45 × 4.5%) – (0.55 × 6.5%) = 1.1%
+
+B. 1.8%.
+Incorrect Answer Feedback: Incorrect because the relative share of capital is used instead of the relative share of labor as follows:
+ΔA/A = ΔY/Y – α(ΔK/K) – α(ΔL/L)
+ΔA/A = 6.7% – (0.45 × 4.5%) – (0.45 × 6.5%) = 1.75% ≈ 1.8%
+
+C. 2.0%.
+Incorrect Answer Feedback: Incorrect because this is simply the difference between the growth rate of labor (6.5%) and the growth rate of capital (4.5%).
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 1.1%.
+34Multiple Choice0 / 1 point
+The growth in per capita GDP in Country A over the past ten years is best explained by the change in the:
+
+A. age profile of the population.
+Incorrect Answer Feedback: Incorrect because there has been an increase in the percentage of the population both under the age of 16 and over the age of 64, implying a decrease in the percentage of the population of working age (16–64) compared with ten years ago, which would be contrary to the observed increase in per capita GDP.
+Correct answer:
+
+B. female labor force participation.
+Correct Answer Feedback: Correct because the female labor force participation rate has increased and this is a likely driver of Country A's increased per capita GDP. The labor force participation rate is defined as the percentage of the working age population in the labor force. It has trended upward in most countries over the last few decades because of rising participation rates among women. In contrast to population growth, an increase in the participation rate may raise the growth of per capita GDP.
+
+C. average hours worked per year.
+Incorrect Answer Feedback: Incorrect because an increase in the average hours worked typically results in higher output. In this case, the average hours worked per year have decreased, indicating less output and consequently lower per capita GDP.
+We can measure the potential size of the labor input as the total number of hours available for work.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. female labor force participation.
+35Multiple Choice0 / 1 point
+Nod’s conclusion about Country A’s future per capita GDP growth rate is most consistent with the:
+
+A. classical growth theory.
+Incorrect Answer Feedback: Incorrect because Nod concludes that the planned significant investments in research and development will result in a permanently higher growth rate in per capita GDP in Country A. This would be inconsistent with the classical growth theory.
+Specifically, the classical model predicts that in the long run, the adoption of new technology results in a larger but not richer population. Thus, the standard of living is constant over time even with technological progress, and there is no growth in per capita output.
+
+B. neoclassical growth theory.
+Incorrect Answer Feedback: Incorrect because Nod concludes that increased investment in research and development will result in a permanently higher growth rate in per capita GDP in Country A, with no diminishing returns to capital. This would be inconsistent with the neoclassical growth theory because it assumes diminishing returns to capital.
+Once the economy reaches this steady state, capital deepening cannot be a source of sustained growth in the economy. Only when the economy is operating below the steady state and when the marginal product of capital exceeds its marginal cost can capital deepening raise per capita growth.
+Correct answer:
+
+C. endogenous growth theory.
+Correct Answer Feedback: Correct because Nod concludes that increased investment in research and development will result in a permanently higher growth rate in per capita GDP in Country A, with no diminishing returns to capital. This would be consistent with the endogenous growth theory.
+Unlike the neoclassical model, there are no diminishing marginal returns to capital for the economy as a whole in the endogenous growth models. So increasing the saving rate permanently increases the rate of economic growth.
+Also, if the additional capital embodies new, more efficient methods of production or previously unavailable products, then more rapid capital accumulation can result in a permanently higher growth rate of per capita output.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. endogenous growth theory.
+36Multiple Choice0 / 1 point
+Assuming conditional convergence, which country is most likely to experience the highest growth in per capita income?
+
+A. Country B
+Incorrect Answer Feedback: Incorrect because the capital-to-labor ratio for Country B is higher than that for Country D and, as per conditional convergence, the economy with a lower capital-to-labor ratio will experience more rapid growth of productivity and per capita income.
+
+B. Country C
+Incorrect Answer Feedback: Incorrect because, even though Country C's per capita income is the same as Country D's, the capital-to-labor ratio for Country C is higher than that for Country D and, as per conditional convergence, the economy with a lower capital-to-labor ratio will experience more rapid growth of productivity and per capita income.
+Correct answer:
+
+C. Country D
+Correct Answer Feedback: Correct because Country D has the lowest capital-to-labor ratio and is therefore most likely to have the highest growth rate in per capita income, assuming conditional convergence.
+Assuming conditional convergence, for countries starting with different capital-to-labor ratios, their growth rates will differ in the transition to the steady state. The economy with a lower capital-to-labor ratio will experience more rapid growth of productivity and per capita income, but the differential will diminish until they finally converge.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Country D
+Vignette
+Emily Connelly is an investment analyst at Cove Investment Management. Connelly is analyzing a company that has $250 million in pretax earnings, 40% of which are distributed as dividends while the rest are retained. Both distributed and retained earnings are taxed at a 30% corporate tax rate. Connelly computes the effective tax rate on dividends for a client, Client X, who has a 20% personal tax rate on dividends received.
+Connelly evaluates potential stock price reactions to a reduction in dividend payments made by three firms (Firm A, Firm B, and Firm C), based on the metrics shown in Exhibit 1.
+Exhibit 1
+Metric	Firm A	Firm B	Firm C
+Growth opportunities	High	Low	High
+Financial flexibility	High	High	Low
+Firm D is a producer of consumer staples and follows a stable dividend policy. Connelly uses the target payout adjustment model to forecast the current year’s dividend based on the information presented in Exhibit 2. She assumes Firm D's dividends will move toward the target payout ratio over four years.
+Exhibit 2
+Most recent EPS	$3.25
+Most recent dividend per share	$1.35
+Target payout ratio	40%
+Expected earnings growth rate	10%
+The founder of Firm E owns 51% of the firm's outstanding shares. One of Cove's clients, Client Y, is considering the purchase of all the founder's shares. No other investor holds more than 3% of the outstanding shares. Firm E is located in a country of which the client is not a citizen, and regulations subject foreign ownership holdings in Firm E's equity to 5% voting caps. Connelly considers the ownership structure that would result from this transaction.
+37Multiple Choice0 / 1 point
+Client X's effective tax rate on dividends is closest to:
+
+A. 36%.
+Incorrect Answer Feedback: Incorrect because only 40% of pre-tax income is allocated to dividend payments, so only 40% of corporate tax contributes to the effective tax rate on dividends. This answer assumes that the total corporate tax ($75) on pre-tax income contributes to the effective tax rate. It was computed as follows:
+Given in vignette:
+Pre-tax earnings are $250 million.
+Proportion allocated to dividend payments is 40%.
+Corporate tax rate is 30%.
+Personal tax rate is 20%.
+Incorrect solution:
+Pre-tax earnings = $250.00
+Corporate income tax = 0.30 × $250 = $75
+After-tax earnings = $250 – $75 = $175
+After-tax earnings paid as dividends = 0.40 × $175 = $70
+Shareholder tax on dividends = 0.20 × $70 = $14
+Net dividend to shareholders = $70 – $14 = $56
+Total taxes paid = $75 + $14 = $89
+Effective tax rate on dividends = (Corporate tax + Personal tax) / Pre-tax earnings
+Effective tax rate on dividends = $89/$250 = 35.6% ≈ 36%
+Correct answer:
+
+B. 44%.
+Correct Answer Feedback: Correct because the effective tax rate is computed by first applying the corporate tax to the pre-tax earnings allocated to dividends and then applying the personal tax on after-tax earnings paid as dividends. The investor's effective tax rate on dividends is computed as follows:
+Given in vignette:
+Pre-tax earnings are $250 million.
+Proportion allocated to dividend payments is 40%.
+Corporate tax rate is 30%.
+Personal tax rate is 20%.
+Calculations:
+Pre-tax earnings allocated to dividend payments = 0.40 × $250 = $100 
+Corporate income tax = 0.30 × $100 = $30
+After-tax earnings paid as dividends = $100 – $30 = $70
+Shareholder tax on dividends = 0.20 × $70 = $14
+Net dividend to shareholders = $70 – $14 = $56
+Effective tax rate on dividends = (Corporate tax + Personal tax) / Pre-tax earnings allocated to dividends
+Effective tax rate on dividends = ($30 + $14)/$100 = 44%
+Alternatively, the effective tax rate can be computed as 1 minus the fraction of 1 unit of (pre-tax) earnings (allocated to dividends) that investors retain after all taxes, or:
+Effective tax rate = 1 − (1 − Corporate tax rate)(1 − Personal tax rate)
+Effective tax rate = 1 − (1 − 0.30)(1 − 0.20) = 1 − 0.56 = 0.44 or 44%
+The effective tax rate can also be calculated by adding the two tax rates and subtracting an interaction term as follows:
+Effective tax rate = Corporate tax rate + Personal tax rate − (Corporate tax rate × Personal tax rate)
+Effective tax rate = 0.30 + 0.20 − (0.30 × 0.20) = 0.50 − 0.06 = 0.44 or 44%
+
+C. 50%.
+Incorrect Answer Feedback: Incorrect because this is simply the sum of the two tax rates; 30% + 20% = 50%. This ignores the fact that dividends are paid from after-tax earnings. 
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 44%.
+38Multiple Choice0 / 1 point
+Based on Connelly's metrics, the stock price of which firm would most likely have a favorable reaction to a dividend reduction?
+
+A. Firm A
+Incorrect Answer Feedback: Incorrect because, while both Firm A and Firm C have high growth opportunities, Firm A has high financial flexibility whereas Firm C does not. Consequently, Firm C would be more likely to have a favorable stock price reaction to a reduction in dividend payments than would Firm A. 
+
+B. Firm B
+Incorrect Answer Feedback: Incorrect because Firm B has low growth opportunities and high financial flexibility. Based on this information, a reduction in dividends by Firm B would most likely result in an unfavorable stock price reaction. Firm B would more likely benefit from an increase in dividend payments.
+Correct answer:
+
+C. Firm C
+Correct Answer Feedback: Correct because Firm C has high growth opportunities but low financial flexibility. Based on these two factors, it could benefit from a reduction in dividend payments. A reduction in dividend payments could give its management the ability to take advantage of those opportunities without needing to go to the capital market. Firm A has high growth opportunities, but it also has high financial flexibility, which would mitigate the need to cut dividends to raise investment capital. Firm B has low growth opportunities and high financial flexibility. A reduction in dividends by Firm B would most likely result in an unfavorable stock price reaction. Consequently, Firm C would be most likely to have a favorable stock price reaction to a reduction in dividend payments. 
+Companies may not initiate, or may reduce or omit, dividends to obtain the financial flexibility associated with having substantial cash on hand. A company with substantial cash holdings is in a relatively strong position to meet unforeseen operating needs and to exploit investment opportunities with minimum delay.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Firm C
+39Multiple Choice0 / 1 point
+Based on the approach used by Connelly, Firm D's forecasted dividend per share for the current year is closest to:
+Correct answer:
+
+A. $1.37.
+Correct Answer Feedback: Correct because, using the target payout adjustment model and the information presented in the exhibit, the forecast of Firm D's dividend for the current year is computed as follows:
+Expected EPS based on 10% growth rate = $3.25 × 1.10 = $3.575
+Adjustment factor = 1 / (4 years) = 0.25
+Expected change in dividends = (Expected earnings × Target payout ratio − Previous dividend) × Adjustment factor
+= ($3.575 × 0.40 – $1.35) × 0.25 = $0.02
+Forecast of dividend per share = $1.35 + $0.02 = $1.37
+
+B. $1.43.
+Incorrect Answer Feedback: Incorrect because this ignores the 'adjustment' component of the forecast model used by Connelly, as follows:
+Expected EPS = $3.25 × 1.10 = $3.575
+Forecast of dividend per share = $3.575 × 0.40 = $1.43
+
+C. $1.49.
+Incorrect Answer Feedback: Incorrect because this is computed by assuming that the most recent dividend per share increases at the expected earnings growth rate, as follows:
+Forecast of dividend per share = $1.35 × 1.10 = $1.485 ≈ $1.49
+Alternatively, this answer can be incorrectly computed as:
+Most recent payout ratio = $1.35/$3.25 = 41.54%
+Since this payout ratio is above the new, higher target, maintain it for the current year.
+Then:
+Forecast of dividend per share = $3.25 × 1.10 × 41.54% = $1.485 ≈ $1.49
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. $1.37.
+40Multiple Choice0 / 1 point
+The ownership structure that would result from the Firm E transaction is best characterized as having:
+
+A. dispersed ownership and concentrated control.
+Incorrect Answer Feedback: Incorrect because Client Y will own 51% of Firm E shares, giving the client concentrated ownership. The voting caps will prevent the client from having concentrated control.
+Correct answer:
+
+B. concentrated ownership and dispersed control.
+Correct Answer Feedback: Correct because the purpose of voting caps is to limit the voting power and control of large foreign owners. Client Y would be buying 51% of the shares in Firm E—a position that would be subject to 5% voting caps. As a result, the ownership structure of Firm E would be characterized as having concentrated ownership and dispersed control.
+The combination of concentrated ownership and dispersed voting power arises when there are legal restrictions on the voting rights of large share positions, known as voting caps. A number of sovereign governments have imposed voting caps to deter foreign investors from obtaining controlling ownership positions in strategically important local companies.
+
+C. concentrated ownership and concentrated control.
+Incorrect Answer Feedback: Incorrect because, while Client Y will have concentrated ownership (51% of shares), the voting caps on foreign investors in Firm E will prevent concentrated control.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. concentrated ownership and dispersed control.
+Vignette
+Karl Reinke, a research analyst, is examining the financial statements of Argon plc, a UK-based company that reports under IFRS. Argon's primary competitors are US-based companies that report under US GAAP. On 1 January of the current year, Argon purchased a 40% non-controlling interest in Xenon plc for GBP 500 million. The book values of the assets and liabilities were equal to their fair values except for inventory, which was undervalued by GBP 5 million, and equipment, which was undervalued by GBP 10 million. Xenon uses the FIFO inventory valuation method and depreciates all of its equipment using the straight-line method. The equipment has an estimated remaining useful life of ten years with no residual value. Reinke estimates that Xenon will report net income of GBP 60 million and will not declare any dividends for the current year. 
+Argon also acquired an 80% controlling interest in Radon plc in the current year, and has elected to use the partial goodwill option for recognizing goodwill when consolidating Radon.
+Reinke next examines Argon's financial statement trends for the past three reported years. He compiles the accruals ratios in Exhibit 1, and the Beneish M-scores and Altman Z-scores in Exhibit 2.
+Exhibit 1
+ 	Most Recent Year	
+Two Years
+Ago
+Three Years
+Ago
+Cash-flow-based accruals ratio	–3.6%	–2.4%	1.1%
+Balance-sheet-based accruals ratio	2.5%	–2.9%	–4.4%
+Exhibit 2 
+ 	Most Recent Year	
+Two Years
+Ago
+Three Years
+Ago
+Beneish M-score	–1.93	–1.81	–1.76
+Altman Z-score	3.03	2.86	2.78
+41Multiple Choice0 / 1 point
+The estimated amount of Argon's investment in Xenon at the end of the current year should be:
+Correct answer:
+
+A. GBP 521.6 million.
+Correct Answer Feedback: Correct because the estimated amount of Argon's investment in Xenon is determined as follows (in GBP millions):
+1 January purchase price	500.0
+Add Argon's share of Xenon's estimated net income for the current year (GBP 60 million × 40%)	24.0
+Less: Fair value excess of inventory sold during the current year under FIFO (GBP 5 million × 40%)	(2.0)
+Less: Amortization of excess purchase price attributable to equipment (FV greater than BV): (GBP 10 million/10 years) × 40%	(0.4)
+31 December investment amount	521.6
+
+B. GBP 522.4 million.
+Incorrect Answer Feedback: Incorrect because the depreciation for the undervalued equipment is treated as though it was overvalued (500.0 + 24.0 – 2.0 + 0.4 = 522.4).
+
+C. GBP 523.6 million.
+Incorrect Answer Feedback: Incorrect because the deduction for the inventory sold under the FIFO valuation method is omitted from the calculation (500.0 + 24.0 – 0.4 = 523.6).
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. GBP 521.6 million.
+42Multiple Choice0 / 1 point
+When consolidating Radon, Argon's D/E ratio at the end of the current year would be: 
+
+A. lower than if it used the method of its primary competitors.
+Incorrect Answer Feedback: Incorrect because total shareholders' equity is lower under the partial goodwill method, thereby increasing the debt-to-equity ratio. Total debt is the same under both methods.
+
+B. the same as if it used the method of its primary competitors.
+Incorrect Answer Feedback: Incorrect because total shareholders' equity is lower under the partial goodwill method, thereby increasing the debt-to-equity ratio. Total debt is the same under both methods. 
+Correct answer:
+
+C. higher than if it used the method of its primary competitors.
+Correct Answer Feedback: Correct because the value of partial goodwill is less than the value of full goodwill. In this case, Argon uses the partial goodwill method, which is permissible under IFRS, while its primary competitors (which report under US GAAP) are required to use the full goodwill method. Accordingly, Argon's debt-to-equity ratio (Total debt ÷ Total shareholders' equity) will be higher under the partial goodwill method: total shareholders' equity is lower (due to the lower non-controlling interest) compared to that under the full goodwill method, while total debt is the same under both methods.
+IFRS allows two methods for recognizing goodwill at the transaction date. The goodwill option is on a transaction-by-transaction basis. Partial goodwill is measured as the fair value of the acquisition (fair value of consideration given) less the acquirer's share of the fair value of all identifiable tangible and intangible assets, liabilities, and contingent liabilities acquired. Full goodwill is measured as the fair value of the entity as a whole less the fair value of all identifiable tangible and intangible assets, liabilities, and contingent liabilities. US GAAP views the entity as a whole and requires full goodwill.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. higher than if it used the method of its primary competitors.
+43Multiple Choice0 / 1 point
+With respect to the trends in the cash-flow-based and the balance-sheet-based accruals ratios, Reinke should conclude that:
+
+A. only the cash-flow-based accruals ratio has improved.
+Incorrect Answer Feedback: Incorrect because the absolute values of the cash-flow-based accruals ratio have trended further away from zero. This is a deteriorating trend.
+Correct answer:
+
+B. only the balance-sheet-based-accruals ratio has improved.
+Correct Answer Feedback: Correct because it is the trend in the absolute values that determines whether the accruals ratios have improved or deteriorated over time. In addition, absolute accruals ratios close to zero (whether positive or negative) are better than ratios that are further away from zero. For Argon, the cash-flow-based accruals ratio (1.1% three years ago, –2.4% two years ago, and –3.6% in the most recent year) is trending further away from zero, while the balance-sheet-based accruals ratio (–4.4% three years ago, –2.9% two years ago, and 2.5% in the most recent year) is trending closer to zero. This means only the balance-sheet-based accruals ratio has improved whereas the cash-flow-based accruals ratio has worsened.
+
+C. both the cash-flow-based and the balance-sheet-based accruals ratios have improved.
+Incorrect Answer Feedback: Incorrect because, while the balance-sheet-based accruals ratio has improved, the absolute values of the cash-flow-based accruals ratios have trended further away from zero. This is a deteriorating trend.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. only the balance-sheet-based-accruals ratio has improved.
+44Multiple Choice0 / 1 point
+Regarding the trends in the Altman Z-score and the Beneish M-score, Reinke should conclude that:
+
+A. only the Altman Z-score has improved.
+Incorrect Answer Feedback: Incorrect because the Beneish M-score has also improved.
+
+B. only the Beneish M-score has improved.
+Incorrect Answer Feedback: Incorrect because the Altman Z-score has also improved.
+Correct answer:
+
+C. both the Altman Z-score and the Beneish M-score have improved.
+Correct Answer Feedback: Correct because higher M-scores (i.e., less negative numbers) indicate an increased probability of earnings manipulation. For Argon, the Beneish M-score has become more negative and hence slightly improved each year (–1.76 three years ago, –1.81 two years ago, and –1.93 in the most recent year).
+Regarding Altman's Z-score, the interpretation of the score is that a higher Z-score is better. For Argon, the Altman Z-score has increased and hence improved slightly each year (2.78 three years ago, 2.86 two years ago, and 3.03 in the most recent year). 
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. both the Altman Z-score and the Beneish M-score have improved.
+
+
+Practice Topics
+CFA-26-11-LII-A: Mock Exams
+2026 CFA LII Mock 4 Session 2
+Quiz review. You scored 0 percent, 0 out of 44 points
+Review
+
+0%
+0 out of 44 points
+Out of 44 points
+0
+Average time per question: 0 seconds
+Avg Time Per Question
+0:00
+Time for this attempt: 5 seconds
+Time for this Attempt
+0:05
+Your Answers:
+Vignette
+Tokushi Stone is a risk manager at Brockway Asset Management, a multi-manager hedge fund. Brockway has $10 billion in assets under management across three strategies: equity long–short, quantitative, and fixed income.
+Brockway's entity-level risk exposure is measured and monitored using VaR. Stone prepares a quarterly risk report and determines that the entity-level daily VaR is $15.8 million at the 95% confidence level.
+Stone first evaluates Brockway's equity long–short strategy. To calculate the VaR of the equity long–short portfolio, Stone compiles the portfolio characteristics in Exhibit 1 and estimates the monthly VaR at the 95% confidence level using the variance–covariance method. At the 95% confidence level, the critical value of the one-tailed z-statistic is 1.65.
+Exhibit 1
+Expected monthly return	0.738%
+Monthly volatility of returns	1.100%
+Portfolio value	$500 million
+Next, Stone reviews backtesting results of two portfolios for Brockway's quantitative strategy. Summary statistics using monthly returns for the two portfolios are presented in Exhibit 2.
+Exhibit 2
+ 	Portfolio 1	Portfolio 2
+Mean return	0.7%	0.6%
+Standard deviation	1.5%	0.8%
+Skewness	–1.9	1.1
+Kurtosis	15.8	4.6
+VaR (95%)	–1.9%	–0.6%
+Conditional VaR (95%)	–6.9%	–2.3%
+Finally, Stone reviews Brockway's fixed-income strategy, which uses a multifactor model to pick undervalued securities. He estimates downside risk measures for the strategy using Monte Carlo simulation. To perform the simulation, Stone specifies a functional form using ten factors and calibrates the model to a multivariate Student’s t-distribution. The model is complex and several factors have limited historical data. 
+1Multiple Choice0 / 1 point
+Based on the measure included in the quarterly report, Stone should expect Brockway to lose:
+Correct answer:
+
+A. at least $15.8 million in a day 5% of the time.
+Correct Answer Feedback: Correct because VaR is the minimum loss that would be expected a certain percentage of the time over a specified period of time, given the assumed market conditions. These are the explicit elements of a VaR statement: the frequency of losses of a given minimum magnitude expressed either in currency or percentage terms. As per the vignette, Brockway should expect to lose at least $15.8 million in a day 5% of the time.
+
+B. on average $15.8 million in a day 5% of the time.
+Incorrect Answer Feedback: Incorrect because $15.8 million is the minimum loss in a day and not the average loss that the fund would expect to experience. These are the explicit elements of a VaR statement: the frequency of losses of a given minimum magnitude expressed either in currency or percentage terms.
+
+C. at most $15.8 million in a day 5% of the time.
+Incorrect Answer Feedback: Incorrect because VaR is the minimum and not the maximum loss that would be expected a certain percentage of the time over a specified period of time, given the assumed market conditions. As per the vignette, Brockway should expect to lose at least $15.8 million in a day 5% of the time.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. at least $15.8 million in a day 5% of the time.
+2Multiple Choice0 / 1 point
+The monthly VaR of the equity long–short portfolio at the 95% confidence level is closest to:
+
+A. $1.8 million.
+Incorrect Answer Feedback: Incorrect because the calculation omits the z-value of 1.65.
+VaR = [E(Rp) – σp](–1)(Portfolio Value)
+The monthly 5% VaR is incorrectly calculated as:
+[0.738% – 1.100%](–1)($500,000,000) = $1,810,000 ≈ $1.8 million
+Correct answer:
+
+B. $5.4 million.
+Correct Answer Feedback: Correct because the variance–covariance method of estimating VaR implies a normal distribution. A 5% VaR lies 1.65 standard deviations to the left of the mean and is thus calculated using the following equation:
+VaR = [E(Rp) – 1.65σp](–1)(Portfolio Value)
+The monthly 5% VaR is:
+[0.738% – 1.65 × 1.100%](–1)($500,000,000) = $5,385,000 ≈ $5.4 million
+
+C. $9.1 million.
+Incorrect Answer Feedback: Incorrect because the expected return is omitted in the equation for VaR and only volatility is taken into consideration:
+VaR = 1.65σp(Portfolio Value)
+The monthly 5% VaR is incorrectly calculated as:
+[1.65 × 1.100%] × $500,000,000 = $9,075,000 ≈ $9.1 million
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. $5.4 million.
+3Multiple Choice0 / 1 point
+Based on the backtesting results, Portfolio 1 has a:
+
+A. lower volatility of returns than Portfolio 2.
+Incorrect Answer Feedback: Incorrect because Portfolio 1 has a higher standard deviation of returns (1.5%) than Portfolio 2 (0.8%).
+
+B. smaller expected tail loss than Portfolio 2.
+Incorrect Answer Feedback: Incorrect because Portfolio 1 has a larger expected tail loss as measured by CVaR (the average loss conditional on exceeding the VaR cutoff). Portfolio 1 has a CVaR of –6.9% and Portfolio 2 has a CVaR of –2.3%.
+Correct answer:
+
+C. higher probability of large negative returns than Portfolio 2.
+Correct Answer Feedback: Correct because Portfolio 1 exhibits excess kurtosis and negative skewness relative to the normal distribution. The kurtosis of 15.8 implies that Portfolio 1 has fat tails or outliers (surprises), thus it is more likely to generate extreme returns than the normal distribution. The skewness of –1.9 suggests that these surprises are more likely to be negative as they sit in the left tail of the distribution, which is longer or fatter than the tail on the right side. Portfolio 2 has kurtosis of 4.6 and positive skewness of 1.1, indicating a lower probability of surprises compared to Portfolio 1, and these surprises are more likely to be positive. 
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. higher probability of large negative returns than Portfolio 2.
+4Multiple Choice0 / 1 point
+The model used in Stone’s Monte Carlo simulation most likely has a:
+Correct answer:
+
+A. large estimation error.
+Correct Answer Feedback: Correct because several factors have limited empirical/historical data, which means that it may not be possible to specify these factors accurately. We can specify a highly complex model with many parameters (all of which need to be estimated/calibrated from historical data) that describe the empirical properties of the data well. Given limited historical data, however, we may be unable to estimate all the underlying parameters with sufficient precision. Such models tend to have low specification errors, but they suffer from large estimation errors.
+
+B. high specification error.
+Incorrect Answer Feedback: Incorrect because high specification error arises when the model is overly simplistic.
+Overly simplistic models require fewer parameters (therefore, they might have low estimation errors), but they may not fit the data well (because they are mis-specified). Stone’s model is complex and has ten key decision variables.
+
+C. low probability of producing extreme return estimates.
+Incorrect Answer Feedback: Incorrect because a multivariate Student’s t-distribution is used, which has fatter tails than the normal distribution and accounts for a higher probability of extreme events. The Student’s t-distribution is a natural extension of the multivariate normal distribution, because it has the ability to account for the skewness and the excess kurtosis often observed in factor and asset return data. Excess kurtosis indicates a higher probability of extreme events.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. large estimation error.
+Vignette
+Chun Tian is a US-based portfolio manager actively involved in the foreign exchange market.
+Three months ago, Tian made a 6-month deposit of 50 million Australian dollars (AUD) at the annualized 6-month AUD reference interest rate. She then fully hedged the deposit by selling AUD forward against USD. Today, she marks the forward position to market and notes that reference rates have not changed over the past three months. Selected current reference rates are provided in Exhibit 1.
+Exhibit 1
+ 	3-Month	6-Month
+AUD reference rate (annualized)	0.60%	0.67%
+USD reference rate (annualized)	0.26%	0.36%
+Next, Tian researches Cambodia, an emerging market that has the riel (KHR) as its currency. Tian notes that the 1-year KHR reference rate is 1.50% and the 1-year USD reference rate is 0.67%. The current KHR/USD (number of KHR per USD) spot rate is 4,100.00 and Tian expects the spot rate to be 4,161.50 one year from now. Tian explores a potential carry trade based on this information.
+One week later, Tian determines whether a triangular arbitrage opportunity exists based on the dealer quotes provided in Exhibit 2.
+Exhibit 2
+ 	Currency Pair	Bid / Ask Quote
+Dealer 1	JPY/USD	107.64 / 107.65
+Dealer 1	KHR/USD	4,043.00 / 4,156.00
+Dealer 2	JPY/KHR	0.0250 / 0.0256
+Next, Tian researches investment opportunities in Country L, a developing country. She concludes that Country L has low capital mobility and restrictive fiscal and monetary policies. Tian uses the Mundell–Fleming model to evaluate the effect of these conditions on the currency of Country L.
+5Multiple Choice0 / 1 point
+Assuming covered interest rate parity holds, the all-in annualized USD return that Tian should earn on the AUD deposit is closest to:
+
+A. 0.26%.
+Incorrect Answer Feedback: Incorrect because 0.26% is the 3-month annualized USD reference rate, but the AUD deposit has a term of 6 months. Candidates who mix up the time duration of placement and maturity of the deposit, but do not overlook the fact that the question asks for the rate of return in USD terms, may incorrectly select this answer option.
+Correct answer:
+
+B. 0.36%.
+Correct Answer Feedback: Correct because if covered interest rate parity holds, then the all-in investment return to a USD-based investor like Tian in a 6-month, fully hedged AUD-reference-rate-based deposit would be identical to the return on a 6-month US-reference-rate-based deposit. In this case, the 6-month annualized USD reference rate is 0.36%, and hence 0.36% is the right answer.
+Note that in this case, interest rates have remained unchanged over the last 3 months. So the rates given in the exhibit are the rates which prevail today, and are the same as the rates which prevailed 3 months ago.
+ 
+
+C. 0.67%.
+Incorrect Answer Feedback: Incorrect because 0.67% is the 6-month annualized AUD reference rate. Candidates who overlook the fact that the question asks for the rate of return in USD terms may incorrectly select this answer option.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 0.36%.
+6Multiple Choice0 / 1 point
+The expected 1-year all-in USD return from the KHR/USD carry trade is closest to:
+
+A. −1.49%.
+Incorrect Answer Feedback: Incorrect because the candidate has mistakenly used the interest rate of the US in calculating investment growth.
+For this candidate,
+Step 1: Tian borrows in USD (assume she borrows USD 1)
+Step 2: Tian converts borrowed USD to KHR at current spot rate (USD 1 = KHR 4,100)
+Step 3: Tian invests converted KHR at 0.67% p.a.
+Step 4 (wrong): At the end of 1 year, Tian's investment grows to
+
+Step 5: Tian reconverts the investments from KHR to USD at the then prevailing spot rate to get back USD
+
+Step 6: Tian needs to repay her USD borrowings with interest, amounting to USD 1.0067.
+Step 7: Calculation of all-in-rate-of-return
+Initial investment: USD 1
+Loss on investment: 
+Rate of return 
+Correct answer:
+
+B. −0.67%.
+Correct Answer Feedback: Correct because the candidate uses the correct exchange rates and interest rates, as per the following steps:
+Step 1: Tian borrows in USD (assume she borrows USD 1)
+Step 2: Tian converts borrowed USD to KHR at current spot rate (USD 1 = KHR 4,100)
+Step 3: Tian invests converted KHR at 1.5% p.a.
+Step 4: At the end of 1 year, Tian's investment grows to
+
+Step 5: At the end of 1 year, Tian converts KHR back to USD at the then-prevailing spot rate (her expected spot rate of KHR 4,161.50 = USD 1). She ends up with USD 1, the same amount she began with in Step 1.
+Step 6: Tian needs to pay back the borrowed USD with interest
+
+Step 7: Calculation of all-in-rate-of-return
+Initial investment (in step 1): USD 1
+Loss on investment 
+Rate of return 
+
+C. 0.83%.
+Incorrect Answer Feedback: Incorrect because the candidate simply subtracts the interest rate differentials without giving any importance to the spot rates.
+Specifically for this candidate, the USD interest rate is 0.67% and the KHR rate is 1.50%. The difference between these two rates is 0.83%. This candidate erroneously believes that this interest rate differential is the rate of return on the carry trade.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. −0.67%.
+7Multiple Choice0 / 1 point
+Based on Exhibit 2, does a triangular arbitrage opportunity exist?
+
+A. No
+Incorrect Answer Feedback: Incorrect because an arbitrage opportunity does exist by buying KHR from Dealer 2 and selling it to Dealer 1.
+
+B. Yes, by buying KHR from Dealer 1 and selling it to Dealer 2
+Incorrect Answer Feedback: Incorrect because buying KHR from Dealer 1 is more expensive than buying KHR from Dealer 2. Doing this transaction would imply buying KHR at 0.0266 JPY and selling at 0.0250 JPY, thereby making a loss for every KHR bought and sold.
+Correct answer:
+
+C. Yes, by buying KHR from Dealer 2 and selling it to Dealer 1
+Correct Answer Feedback: Correct because the candidate correctly inverts the given exchange rates to calculate the cross rate, and correctly compares this cross rate with the available quote from Dealer 2 to arrive at the right answer. The specific steps followed by the candidate to get at the right answer are as follows:
+Step 1:
+
+In the process of inverting, bid and offer rates will get swapped.
+Hence, 
+Step 2: Calculation of Dealer 1's implied cross rate
+
+
+Hence, 
+and
+
+Step 3: Compare Dealer 1's implied cross rate with the quote of 0.0250/0.0256 from Dealer 2.
+Conclusion: Buy KHR from Dealer 2 at 0.0256 JPY, and sell it to Dealer 1 at 0.0259 JPY.
+Riskless profit = 0.0259 - 0.0256 = 0.0003 JPY (3 pips) per KHR
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Yes, by buying KHR from Dealer 2 and selling it to Dealer 1
+8Multiple Choice0 / 1 point
+Based on Tian's conclusion and the Mundell–Fleming model, Country L's currency will most likely:
+
+A. depreciate.
+Incorrect Answer Feedback: Incorrect. Candidates who mix up between the effects of expansionary and contractionary fiscal and monetary policies under conditions of low capital mobility may incorrectly believe that the currency of country L will depreciate. This will happen only if the fiscal and monetary policies are expansionary, and not contractionary as the case suggests.
+
+B. not change.
+Incorrect Answer Feedback: Incorrect. An unprepared candidate, or a candidate who misses the condition of low capital mobility may choose this answer. Under conditions of high capital mobility and combination of restrictive fiscal and monetary policies, the direction of exchange rates is indeterminate.
+Correct answer:
+
+C. appreciate.
+Correct Answer Feedback: Correct because under conditions of low capital mobility, the combination of restrictive monetary and fiscal policy will be bullish for a currency. This policy mix will tend to reduce imports, leading to an improvement in the trade balance.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. appreciate.
+Vignette
+Fabiano Arlandi, a portfolio manager, is analyzing the term structure of credit spreads for three companies.
+Company A is a high-quality issuer with a strong competitive position in a stable industry with strong fundamentals; the company is currently refinancing near-term maturities with long-term debt.
+Company B was recently acquired in a leveraged buyout by an experienced team that is expected to restructure the organization and improve margins and profitability.
+Company C operates in a cyclical industry that is currently at the bottom of its economic cycle.
+Arlandi determines the credit spread of Company A's zero-coupon bond over a default-risk-free government bond, given the following information:
+The bond has a remaining maturity of five years and a face value of 100.
+The default-risk-free discount rate is 4% and the government yield curve is flat.
+The credit valuation adjustment is 2.924.
+Arlandi assumes there is no interest rate volatility.
+Three months ago, Arlandi bought $10 million of 5-year protection on Company B through a CDS contract with a duration of 3.7 years. The CDS credit spread has since narrowed from 350 bps to 220 bps currently. Arlandi closes out the trade by selling the CDS contract.
+Arlandi purchases CDS protection on a 7-year senior unsecured bond issued by Company C and held in his portfolio. Several months after purchasing protection, a credit event occurs. The following bonds of Company C are trading in the market.
+Bond 1: 7-year subordinated unsecured bond trading at 25% of par
+Bond 2: 3-year senior unsecured bond trading at 35% of par
+Bond 3: 7-year senior unsecured bond trading at 45% of par
+9Multiple Choice0 / 1 point
+The term structure of credit spreads is most likely upward sloping for: 
+Correct answer:
+
+A. Company A.
+Correct Answer Feedback: Correct because positive-sloped credit spread curves are likely when a high-quality issuer with a strong competitive position in a stable industry has low leverage, strong cash flow, and a high profit margin. This type of issuer tends to exhibit very low short-term credit spreads rising with increasing maturity given greater uncertainty due to the macroeconomic environment, potential adverse changes in the competitive landscape, technological change or other factors that drive a higher implied probability of default over time. In addition, one might expect the credit curve to steepen for a borrower refinancing near-term maturities with long-term debt.
+
+B. Company B.
+Incorrect Answer Feedback: Incorrect because an inverted credit spread curve is typical for a company undergoing a leveraged buyout. For example, an ownership change resulting from a leveraged buyout or private equity acquisition may often be accompanied by a significant increase of leverage. In such a case, an inverted credit curve may indicate investor expectations that the new owners will create efficiencies in the restructured organization, leading to improved future cash flows and profitability that will benefit debt investors.
+
+C. Company C. 
+Incorrect Answer Feedback: Incorrect because an inverted credit spread curve is typical for a company at the bottom of the economic cycle. Another example of an inverted credit term structure might result when issuers in a historically cyclical industry (such as oil and gas exploration or retail) find themselves at the bottom of an economic cycle, with investor expectations of a recovery in the industry tied to improving credit spreads over time.  
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Company A.
+10Multiple Choice0 / 1 point
+The credit spread for Company A's zero-coupon bond is closest to:
+
+A. 0.15%.
+Incorrect Answer Feedback: Incorrect because the credit valuation adjustment is divided by 5. 
+(1) The present value of the default-risk-free bond is 100/1.045 = 82.1927
+(2) Incorrectly subtracting only 1/5 of the credit valuation adjustment yields 82.1927 – 2.924/5 = 81.6079
+(3) Hence the yield on the corporate bond is calculated as (100/81.6079)0.2 – 1 = 4.149%
+(4) Subtracting the default-risk-free discount rate of 4%: 4.149% – 4% = 0.149% ≈ 0.15%
+
+B. 0.72%.
+Incorrect Answer Feedback: Incorrect because the credit valuation adjustment is added to the present value of the default-risk-free bond, rather than subtracted, and the resulting yield is subtracted from the 4% risk-free yield—not the reverse. 
+(1) The present value of the corresponding risk-free bond is 100/1.045 = 82.1927
+(2) Incorrectly adding the credit valuation adjustment yields 82.1927 + 2.924 = 85.1167
+(3) Hence the yield on the corporate bond is calculated as (100/85.1167)0.2 – 1 = 3.2754%
+(4) Subtracting this value from 4.00% yields 4% – 3.2754% = 0.7246% ≈ 0.72%
+Correct answer:
+
+C. 0.76%.
+Correct Answer Feedback: Correct because calculating the spread requires (1) determining the present value of the default-risk-free bond, (2) subtracting the credit valuation adjustment, (3) calculating the yield on the corporate bond, and (4) determining the spread.
+The calculation is as follows:
+(1) The present value of the default-risk-free bond is 100/1.045 = 82.1927
+(2) Subtracting the credit valuation adjustment yields 82.1927 – 2.924 = 79.2687
+(3) Hence the yield on the corporate bond is (100/79.2687)0.2 – 1 = 4.756%
+(4) Subtracting the default-risk-free discount rate of 4%: 4.756% – 4% = 0.756% ≈ 0.76%
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 0.76%.
+11Multiple Choice0 / 1 point
+The estimated loss on the CDS trade on Company B is closest to:
+Correct answer:
+
+A. $481,000.
+Correct Answer Feedback: Correct because the approximate loss on the trade is calculated as follows:
+Estimated loss = Change in credit spread × Duration × Notional amount
+= (220 bps – 350 bps) × 3.7 × $10 million = –130 bps × 3.7 × $10 million = –$481,000.
+ 
+
+B. $650,000.
+Incorrect Answer Feedback: Incorrect because the term to maturity of 5 years is used instead of duration:
+Estimated loss = Change in credit spread × Term to maturity × Notional amount
+= (220 bps – 350 bps) × 5.0 × $10 million = –130 bps × 5.0 × $10 million = –$650,000.
+
+C. $814,000.
+Incorrect Answer Feedback: Incorrect because the negative ending spread of 220 bps is used instead of the change in the spread: 
+Estimated loss = –Ending credit spread × Duration × Notional amount
+= –220 bps × 3.7 × $10 million = –220 bps × 3.7 × $10 million = –$814,000.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. $481,000.
+12Multiple Choice0 / 1 point
+The cheapest-to-deliver obligation for the CDS contract on the Company C senior unsecured bond is: 
+
+A. Bond 1. 
+Incorrect Answer Feedback: Incorrect because Bond 1 is subordinated and therefore does not qualify as the cheapest-to-deliver obligation under the CDS. 
+Correct answer:
+
+B. Bond 2.
+Correct Answer Feedback: Correct because Bond 2 is the lowest-priced instrument that has the same seniority as the reference obligation. The payoff of the CDS is determined by the cheapest-to-deliver obligation, which is the debt instrument that can be purchased and delivered at the lowest cost but has the same seniority as the reference obligation. Bond 2 (trading at 35% of par) has a lower cost than Bond 3 (trading at 45% of par) and has the same seniority as the Company C bond.
+
+C. Bond 3. 
+Incorrect Answer Feedback: Incorrect because Bond 3 is priced higher than Bond 2. The two bonds are of the same seniority and therefore the payoff of the CDS is determined by the cheapest-to-deliver obligation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Bond 2.
+Vignette
+Yasmine Bernal, an equity analyst, is valuing two port operators: Ariel Port Inc and Boston Terminals Ltd. Bernal uses [free cash flow models] to value the stocks.
+Ariel Port is an established business, which maintains moderate leverage and has steadily growing cash flows. Boston Terminals is completing construction of its second terminal this year, partially financed with new debt. Bernal forecasts that revenues of Boston Terminals will rise significantly in the first two years of operations of the new terminal and then stabilize. Bernal expects the leverage of Boston Terminals to decrease in the medium term once the second terminal is operational and the new debt is gradually repaid. 
+Ariel Port
+Bernal reviews key financial data from Ariel Port, which reports under IFRS. Based on data from Ariel's annual report in Exhibit 1, Bernal gathers data for the latest reporting year starting from cash flow from operations (CFO). Ariel Port's tax rate is 30%.
+Exhibit 1
+Cash Flow Statement ($ Million)
+Net income	648.2
+Depreciation and amortization	900.0
+Decrease/(increase) in working capital	100.0
+Interest expense	183.4
+Cash flow from operations	1,831.6
+ 	 
+Net purchases of fixed assets	(370.0)
+Cash flow from investing activities	(370.0)
+ 	 
+New borrowings	2,298.0
+Repayment of borrowings	(1,944.0)
+Interest expense	(262.0)
+Cash flow from financing activities	92.0
+ 	 
+Net change in cash	1,553.6
+Boston Terminals
+Bernal reviews Boston Terminals fundamental data and identifies three variables to consider:
+Variable 1:	The dividend payout ratio will decrease in the future
+Variable 2:	Boston Terminals will have an inconsistent capital structure
+Variable 3:	Capital expenditures will increase dramatically
+Bernal decides to use FCFF to value Boston Terminals.
+There are rumors that Boston Terminals plans to acquire a competitor, whose shares are currently trading at $24.1 per share. Bernal would like to determine if the stock is fairly valued, using the following assumptions:
+FCFF is estimated at $368 million in Year 1, $442 million in Year 2 and is expected to grow by 3% per year afterwards.
+WACC is 12% and number of outstanding shares is 100 million.
+Market value of non-operating assets is $300 million.
+Book value of debt is $2,000 million and market value of debt is $2,300 million.
+Bernal thinks that the competitor is likely to deploy anti-takeover measures against acquisition by Boston Terminals. She believes the competitor will issue new debt and use the proceeds to buy-back its own shares. Bernal assesses how these measures will affect the competitor's FCFF and FCFE.
+13Multiple Choice0 / 1 point
+Which approach is the most appropriate to value equity of the stocks Bernel is analyzing? 
+
+A. FCFE for both Ariel Ports and Boston Terminals
+Incorrect Answer Feedback: Incorrect because FCFF should be used for Boston Terminals. FCFF estimation is easier than FCFE estimation when the firm's leverage is changing. FCFE is less appropriate to value the equity of Boston Terminals than FCFF due to its changing capital structure. Boston Terminal's capital structure is changing and amounts of borrowings will be fluctuating in the medium-term. Therefore, FCFF will be more appropriate to use. Also, the required return on equity might be expected to be more sensitive to changes in financial leverage than changes in the WACC, making the use of a constant discount rate difficult to justify. 
+
+B. FCFE for Boston Terminals and FCFF for Ariel Ports
+Incorrect Answer Feedback: Incorrect because FCFF should be used for Boston Terminals and FCFE should be used for Ariel Ports.
+FCFF estimation is easier than FCFE estimation when the firm's leverage is changing. Large swings in net borrowings will cause large changes in FCFE and interest expense. In addition, the required return on equity might be expected to be more sensitive to changes in financial leverage than changes in the WACC, making the use of a constant discount rate difficult to justify. Boston Terminal's capital structure is changing and amounts of borrowings will be fluctuating in the medium-term. Therefore, FCFF will be more appropriate to use.
+An analyst may prefer to use one approach rather than the other because of the characteristics of the company being valued. For example, if the company's structure is relatively stable, using FCFE to value equity is more direct and simpler than using FCFF. Ariel Ports is an established business with steadily growing cash flows and a capital structure that is stable. I.e. it maintains a moderate leverage. Therefore, the use of FCFE is preferred.
+Correct answer:
+
+C. FCFE for Ariel Ports and FCFF for Boston Terminals
+Correct Answer Feedback: Correct because the two stocks should be valued by with the following approaches:  
+FCFE for Ariel Ports
+An analyst may prefer to use one approach rather than the other because of the characteristics of the company being valued. For example, if the company's structure is relatively stable, using FCFE to value equity is more direct and simpler than using FCFF. Ariel Ports is an established business with steadily growing cash flows and a capital structure that is stable. I.e. it maintains a moderate leverage. Therefore, the use of FCFE is preferred.
+FCFF for Boston Terminals
+FCFF estimation is easier than FCFE estimation when the firm's leverage is changing. Large swings in net borrowings will cause large changes in FCFE and interest expense. In addition, the required return on equity might be expected to be more sensitive to changes in financial leverage than changes in the WACC, making the use of a constant discount rate difficult to justify. Boston Terminal's capital structure is changing and amounts of borrowings will be fluctuating in the medium-term. Therefore, FCFF will be more appropriate to use.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. FCFE for Ariel Ports and FCFF for Boston Terminals
+14Multiple Choice0 / 1 point
+Ariel Port's FCFF is closest to:
+Correct answer:
+
+A. $1,462 million.
+Correct Answer Feedback: Correct because the FCFF for Ariel Port can be calculated as follows: 
+FCFF = CFO - CFInv
+where, CFO = Cash flow from operations = 1,831.6 
+CFInv = Cash flow from operations = 370
+FCFF = 1,831.6 - 370 = $1,461.6 million 
+Note: Ariel Port reports under IFRS and classifies its interest expenses as cash flow from financing activities. In this case to estimate FCFF by starting with CFO, it is not necessary to add interest when CFO is the starting point.
+
+B. $1,645 million.
+Incorrect Answer Feedback: Incorrect because in the FCFF calculation, interest expense is mistakenly added back to cash flow from operations and as a result is double counted.
+The incorrect calculation of FCFF is thus:
+FCFF = CFO + Interest Expense (1-Tax rate) - CFInv
+FCFF = 1,831.6 + 262*(1-30%) - 370 = $1,645 million 
+
+C. $1,816 million.
+Incorrect Answer Feedback: Incorrect because this is the FCFE equation which adds net borrowing.
+Net borrowing is calculated as: new borrowings - repayment of borrowings = 2,298.0 - 1,944.0 = 354
+FCFE = CFO - FCInv + Net borrowing = 1,831.6 - 370 + 354 = $1,815.6 million
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. $1,462 million.
+15Multiple Choice0 / 1 point
+Based on her assumptions for Boston Terminals competitor, Bernal should conclude that the stock is:
+Correct answer:
+
+A. undervalued.
+Correct Answer Feedback: Correct because the fair value of the Boston Terminals competitor is $27.1 per share whereas the shares are currently trading at $24.1 per share.
+The equity value is the value of the firm minus the market value of its debt plus the market value of its non-operating assets:
+Equity value = Value of operating assets + MV of non-operating assets - MV of debt
+The value of operating assets can be calculated in a two-stage free cash flow model. The two-stage model is appropriate for Boston Terminals because its FCFF exhibit higher growth in the first two years and dropping to the long-run sustainable rate of 3% thereafter (Stage 2).
+Value of operating assets =  
+ - free cash flow to firm in Year t
+WACC - weighted average cost of capital
+g - long-term growth rate
+Y1	Y2	Y3
+FCFF	368	442	455
+Discount factor	0.89	0.80	0.80
+TV			5,053.9
+PV at 12%	328.6	352.0	4,028.9
+Firm value / value of operating assets	4,709.5		
+Using the equation and the exhibit above, equity value is calculated as follows:
+Firm Value=  
+Equity value = Value of operating assets + MV of non-operating assets - MV of debt
+Equity value = 4,709.5 + 300 - 2,300 = $2,709.5 million
+Share price = $2,709.5 million/100 million shares = $27.1.
+
+B. fairly valued.
+Incorrect Answer Feedback: Incorrect because the fair value of the Boston Terminals competitor is $27.1 per share whereas the shares are currently trading at $24.1 per share. The correct calculation of equity value = Value of operating assets + MV of non-operating assets - MV of debt. However, if the MV of non-operating assets is mistakenly omitted from the formula, this will lead to: 
+Equity value = Value of operating assets - MV of debt
+Equity value = 4,709.5 - 2,300 = 2,409.5
+Share price = $2,409.5 million/100 million shares = $24.1.
+
+C. overvalued.
+Incorrect Answer Feedback: Incorrect because the fair value of the Boston Terminals competitor is $27.1 per share whereas the shares are currently trading at $24.1 per share. The correct calculation of equity value = Value of operating assets + MV of non-operating assets - MV of debt. However, if book value of debt is mistakenly used instead of MV of debt, this will lead to: 
+Equity value = Value of operating assets + Value of non-operating assets - Book Value of debt
+Equity value = 4,709.5 + 300 - 2,000 = 3,009.5
+Share price = $3,009.5 million/100 million shares = $30.1.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. undervalued.
+16Multiple Choice0 / 1 point
+The competitor's anti-takeover measures against the acquisition by Boston Terminals will:
+
+A. increase FCFF and decrease FCFE.
+Incorrect Answer Feedback: Incorrect because an increase in debt and share buy-backs are cash flows available to all investors, including shareholders, and as a result have no effect on FCFF. An increase in net borrowings increases FCFE in the year of issuance.
+Correct answer:
+
+B. not impact FCFF and increase FCFE.
+Correct Answer Feedback: Correct because an increase in debt and share buy-backs are cash flows available to all investors, including shareholders, and as a result have no effect on FCFF. An increase in net borrowings increases FCFE in the year of issuance. This can be illustrated by examining the uses of free cash flows: 
+ 
+Uses of FCFF:
+Increases in cash balances
+Plus: net payments to providers of debt capital (repayments - new borrowings + after-tax interest expense)
+Plus: payments to providers of equity capital (dividends plus share buy-back minus new share issuance)
+ 
+Uses of FCFE:
+Increases in cash balances
+Plus: payments to providers of equity capital (dividends plus share buy-back minus new share issuance)
+
+C. not impact FCFF and decrease FCFE.
+Incorrect Answer Feedback: Incorrect because an increase in debt and share buy-backs are cash flows available to all investors, including shareholders, and as a result have no effect on FCFF. An increase in net borrowings increases FCFE in the year of issuance.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. not impact FCFF and increase FCFE.
+Vignette
+Susan Li, CFA, an equity research analyst with Maipo Canyon Investment Bank (MCIB), specializes in identifying companies that are likely takeover candidates. MCIB has adopted the Standards as part of its ethics and compliance policy.
+Bloomberry, an institutional client of MCIB, recently earned a substantial return on a stock recommended by Li. To show its appreciation, Bloomberry offers Li tickets to a sold-out Broadway show as a gift. Li accepts the gift and plans to take her family to the show. Li does not notify her supervisor that she accepted the gift.
+In a recently published investment report, Li included a table with statistical analysis of publicly available information from a well-recognized industry journal. By downloading the table and not performing the statistical analysis herself, she saved considerable time and effort. Li did not cite the source of the table in her report nor did she verify the statistical analysis. 
+Li uses MCIB's proprietary model to identify companies that are likely takeover candidates. The proprietary model uses third-party accounting data. Although Li lacks the relevant programming skills, she understands the assumptions and limitations of the proprietary model. Li does not verify the underlying third-party data herself because MCIB has an established procedure for verifying the data.
+MCIB's proprietary model predicts that a takeover of Godoggo Corporation is highly likely. In a recent report, Li assigned a "Buy" recommendation to Godoggo's stock. Based on the report, one of MCIB's portfolio managers buys a large number of shares in Godoggo for his fund. He subsequently promotes the stock in several online chat rooms by stating, "I have purchased Godoggo stock because our internal research indicates that it is highly likely to be taken over." A week later, the price of Godoggo's stock has doubled and the portfolio manager subsequently sells all the shares of the stock in his fund.
+17Multiple Choice0 / 1 point
+Do Li's actions regarding the tickets violate the Standard relating to independence and objectivity?
+
+A. No
+Incorrect Answer Feedback: Incorrect because Li did not disclose the gift from the client to her employer.
+
+B. Yes, because Li should have refused the tickets
+Incorrect Answer Feedback: Incorrect because Li does not have to refuse the tickets in order to be consistent with Standard I(B) - Independence and Objectivity, but she does have to disclose the gift to her employer. Members may accept gifts from clients as long as they disclose them to their employer because gifts in a client relationship are deemed less likely to affect a member's objectivity and independence than gifts in other situations.
+Correct answer:
+
+C. Yes, because Li should have notified her supervisor
+Correct Answer Feedback: Correct because Li violated Standard I(B) - Independence and Objectivity as she did not disclose the gift from a client to her employer. A gift from a client could be considered supplementary compensation. When possible, prior to accepting 'bonuses' or gifts from clients, members and candidates should disclose to their employers such benefits offered by clients. If notification is not possible prior to acceptance, members and candidates must disclose to their employer benefits previously accepted from clients.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Yes, because Li should have notified her supervisor
+18Multiple Choice0 / 1 point
+By including the table in her investment report, did Li violate the Standard relating to misrepresentation?
+
+A. No
+Incorrect Answer Feedback: Incorrect because Li committed plagiarism by mispresenting the statistical analysis in the table as her own work.
+Correct answer:
+
+B. Yes, by not citing the source
+Correct Answer Feedback: Correct because Li violated Standard I(C) - Misrepresentation by committing plagiarism when she included the table in her report without citing the source, thereby implying it was her own work. Plagiarism involves copying substantially the same materials prepared by others without acknowledging the source.
+
+C. Yes, by not verifying the statistical analysis
+Incorrect Answer Feedback: Incorrect because failing to verify the statistical analysis is not a violation of Standard I(C) - Misrepresentation. Because the statistical analysis table is from a reputable source (a well-recognized industry journal), under Standard V(A) - Diligence and Reasonable Basis, it can reasonably be relied upon without Li having to verify the analysis for herself.
+When providing information to clients from a third party, members and candidates share a responsibility for the accuracy of the marketing and distribution materials that pertain to the third party’s capabilities, services, and products.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Yes, by not citing the source
+19Multiple Choice0 / 1 point
+By using MCIB's proprietary model in her analysis, does Li violate the Standard relating to diligence and reasonable basis?
+Correct answer:
+
+A. No
+Correct Answer Feedback: Correct because Li's actions do not violate Standard V(A) - Diligence and Reasonable Basis.
+She is not required to become an expert in programming. It is sufficient for her to understand the assumptions and limitations of the model. From the curriculum: Members and candidates need to have an understanding of the parameters used in models and quantitative research that are incorporated into their investment recommendations. Although they are not required to become experts in every technical aspect of the models, they must understand the assumptions and limitations inherent in any model and how the results were used in the decision-making process.
+In addition, Li is not required to verify the third-party data used in the proprietary model herself, as her company has in place a procedure for verifying the third-party information. A member or candidate may rely on others in his or her firm to determine whether secondary or third-party research is sound and use the information in good faith.
+
+B. Yes, because she lacks the relevant programming skills
+Incorrect Answer Feedback: Incorrect because Li is not required to become an expert in every technical aspect of the proprietary model. It is sufficient for her to understand the assumptions and limitations of the model.
+
+C. Yes, because she does not verify the third-party data used in the model
+Incorrect Answer Feedback: Incorrect because Li's firm has a procedure for verifying third-party information. Standard V(A) - Diligence and Reasonable Basis does not require verification of the data by Li.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. No
+20Multiple Choice0 / 1 point
+Are the portfolio manager's actions with regard to Godoggo shares a violation of the Standard relating to market manipulation?
+Correct answer:
+
+A. No
+Correct Answer Feedback: Correct because the portfolio manager did not violate Standard II(B) - Market Manipulation based on his stock purchase and subsequent sale or his online promotion of the stock.
+First, the portfolio manager did not engage in transaction-based manipulation because his purchase was based on Li's report and was not an attempt to manipulate the share price. Transaction-based manipulation includes transactions that artificially affect prices or volume to give the impression of activity or price movement in a financial instrument, which represent a diversion from the expectations of a fair and efficient market, and securing a controlling, dominant position in a financial instrument to exploit and manipulate the price of a related derivative and/or the underlying asset. None of these apply to the portfolio manager's stock purchase or stock sale. He had valid reasons to purchase and sell the stock and did not attempt to manipulate the stock price.
+Second, the manager's use of online chat rooms was not an attempt to use rumors to manipulate the stock price or mislead market participants. Information-based manipulation includes, but is not limited to, spreading false rumors to induce trading by others. The manager was not attempting to spread false rumors, but stating an opinion based on Li's report.
+
+B. Yes, because he engaged in transaction-based market manipulation
+Incorrect Answer Feedback: Incorrect because the manager bought the stock based on a recommendation in Li's report and presumably sold the stock because its price had doubled.
+
+C. Yes, because he engaged in information-based market manipulation
+Incorrect Answer Feedback: Incorrect because the portfolio manager's promotion of the stock was based on a recommendation contained in a report. The portfolio manager was not seemingly attempting to spread false information about the stock.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. No
+Vignette
+Joanne Gordon is a buy-side analyst covering the banking and insurance sectors.
+Gordon first analyzes the liquidity of Grand Bank. She reviews the information (in $ millions) from the bank's most recent annual report in Exhibit 1 and calculates its liquidity coverage ratio.
+Exhibit 1
+High-quality liquid assets	400
+Net cash outflows	300
+High-quality liquid assets in excess of net cash outflows	100
+Total available stable funding	1,300
+Total required stable funding	1,100
+Gordon next evaluates the performance of a property and casualty insurance company, Bronx Insurance Company. She calculates the company's combined ratio for the most recent year using the information (in $ millions) presented in Exhibit 2.
+Exhibit 2
+Net premiums written	3,600
+Net premiums earned	3,200
+Loss and loss adjustment expenses	2,300
+Underwriting expenses	990
+Dividends paid to policyholders	100
+Bronx Insurance has two share-based compensation plans: (1) a restricted stock unit (RSU) plan for employees; and (2) executive stock options. Settlement for the RSUs is made at the end of each year. On the grant date at the beginning of the first year, the share price was $6.00 per RSU. At the end of the second year, the share price was $5.00 per RSU. The CEO has vested stock options equivalent to 10% of the company's current outstanding shares. Gordon forecasts a net loss for Bronx Insurance during the second year of the RSU plan.
+21Multiple Choice0 / 1 point
+The liquidity coverage ratio for Grand Bank is closest to:
+
+A. 33%.
+Incorrect Answer Feedback: Incorrect because the calculation uses the high-quality liquid assets (HQLA) in excess of net cash outflows in the numerator instead of total high-quality liquid assets as required.
+LCR = HQLA in excess of net cash outflows/Net cash outflows = 100/300 ≈ 33%
+
+B. 118%.
+Incorrect Answer Feedback: Incorrect because this is the value for the net stable funding ratio. 
+Net stable funding ratio = Total available stable funding/Total required stable funding
+= 1,300/1,100 ≈ 118%
+Correct answer:
+
+C. 133%.
+Correct Answer Feedback: Correct because liquidity coverage ratio (LCR) represents the minimum percentage of a bank’s expected cash outflows that must be held in highly liquid assets. For this ratio, the net cash outflows (the denominator) are the bank’s anticipated one-month liquidity needs in a stress scenario, and the high-quality liquid assets (the numerator) include only those that are easily convertible into cash.
+LCR = High-quality liquid assets / Net cash outflows
+High-quality liquid assets = $400 million
+Net cash outflows = $300 million
+LCR = 400/300 ≈ 133%
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 133%.
+22Multiple Choice0 / 1 point
+The combined ratio for Bronx Insurance is closest to:
+
+A. 91%.
+Incorrect Answer Feedback: Incorrect because this calculation uses net premiums written, rather than net premiums earned as the denominator of the loss and loss adjustment expense ratio:
+Loss and loss adjustment expense ratio = Loss and loss adjustment expenses/Net premiums earned = 2,300/3,600 ≈ 63.9%
+Underwriting expense ratio = Underwriting expenses/Net premiums written = 990/3,600 = 27.5%
+Combined ratio = 63.9% + 27.5% = 91.4% ≈ 91%
+Correct answer:
+
+B. 99%.
+Correct Answer Feedback: Correct because the combined ratio is calculated as the sum of (1) the loss and loss adjustment expense ratio and (2) the underwriting expense ratio, as follows:
+Loss and loss adjustment expense ratio = Loss and loss adjustment expenses/Net premiums earned = 2,300/3,200 ≈ 71.9%
+Underwriting expense ratio = Underwriting expenses/Net premiums written = 990/3,600 = 27.5%
+Combined ratio = 71.9% + 27.5% = 99.4% ≈ 99%
+
+C. 103%.
+Incorrect Answer Feedback: Incorrect because it is the combined ratio after dividends, rather than the combined ratio.
+The combined ratio after dividends is calculated as the combined ratio plus the dividends to policyholders ratio.
+Dividends to policyholders ratio = Dividends paid to policyholders/Net premiums earned = 100/3,200 ≈ 3.1%
+Combined ratio after dividends = 99.4% + 3.1% = 102.5% ≈ 103%
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 99%.
+23Multiple Choice0 / 1 point
+During the second year of the RSU plan, Bronx Insurance incurred:
+Correct answer:
+
+A. a tax shortfall.
+Correct Answer Feedback: Correct because a lower share price at settlement versus at the grant date results in a lower tax deduction than the cumulative stock-based compensation expense. This is known as a tax shortfall because taxable income and tax expense are increased.
+The share price on settlement date is $5.00 at year end of second year of RSU plan, which is lower than the share price on grant date of $6.00, resulting in a tax shortfall.
+
+B. an excess tax benefit.
+Incorrect Answer Feedback: Incorrect because the share price of $5.00 on the settlement date at the end of the second year is lower than the share price of $6.00 on the grant date, resulting in a tax shortfall.
+A higher share price at settlement versus the grant date results in a higher tax deduction than the cumulative stock-based compensation expense. This is known as an excess tax benefit or tax windfall because taxable income and tax expense are reduced.
+
+C. neither a tax shortfall nor an excess tax benefit.
+Incorrect Answer Feedback: Incorrect because the share price of $5.00 on the settlement date at the end of the second year is lower than the share price of $6.00 on the grant date, resulting in a tax shortfall.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. a tax shortfall.
+24Multiple Choice0 / 1 point
+As a result of the employee RSU plan and executive stock options, Gordon's forecasted value for diluted EPS of the second year of the RSU plan should be:
+
+A. lower than basic EPS.
+Incorrect Answer Feedback: Incorrect because when EPS is positive, unvested RSUs are added to shares outstanding balance, resulting in a lower diluted EPS than basic EPS. The options would be excluded from the calculation as they are anti-dilutive: exercise is uneconomic for the holder, and if they were exercised, fewer shares would be issued upon their exercise than would be repurchased with the resulting cash received, reducing shares outstanding and increasing EPS.
+Correct answer:
+
+B. the same as basic EPS.
+Correct Answer Feedback: Correct, because diluted EPS cannot exceed basic EPS, so companies that report a net loss will report the same basic and diluted shares outstanding.
+When basic EPS is negative, unvested RSUs are anti-dilutive as the additional shares they represent increase the denominator of the EPS calculation, making them anti-dilutive; therefore, they are not included in the calculation. The same is true for the stock options as the options are anti-dilutive if their exercise increases the shares outstanding, which happens when the strike price is less than the current share price. Since neither RSUs nor options affect the diluted EPS calculation, both diluted and basic EPS can be equal.
+
+C. higher than basic EPS.
+Incorrect Answer Feedback: Incorrect because diluted EPS cannot exceed basic EPS, so companies that report a net loss will report the same basic and diluted shares outstanding.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. the same as basic EPS.
+Vignette
+Elaine Azul is an investment advisor at a mid-sized US investment firm. She is preparing for meetings with two of her clients, Jacob Green and Stella White.
+Jacob Green has a large position in the non-dividend-paying stock of his own firm. Four months ago, Azul advised Green to reduce his exposure to the firm's stock by $2 million. Due to tax considerations, Green entered into a short 6-month equity forward contract for the firm's stock instead of selling the shares outright. At the meeting, Green asks Azul how the value of the current forward position would be affected if the company pays a $3.50 dividend in three months and the share price is unchanged.
+
+Azul is evaluating longer-term solutions to reduce Green’s exposure to the firm’s stock. One approach is to enter into a 3-year equity swap. The proposed equity swap has a semiannual reset, a 30/360 day count, a 2.5% annual fixed rate, and a $2 million notional principal.
+
+Azul's second client, Stella White, is expecting a cash inflow of $5 million in three months that she plans to deposit for six months in a non-domestic account. Azul suggests protecting this investment from an expected decrease in interest rates. She proposes a market reference rate (MRR)-based 3 × 9 forward rate agreement (FRA) that is advanced set, advanced settled. Relevant MRR data are presented in Exhibit 1.
+
+Exhibit 1
+Maturity	MRR Spot Rate (Annualized)
+3 months	0.72%
+6 months	0.93%
+9 months	1.20%
+Two years ago, White entered into a local market $7 million 5-year interest rate swap with annual resets (30/360 day count), receiving the fixed rate of 1.36% and paying the MRR. Azul determines the value of the swap today using the relevant spot rate data in Exhibit 2.
+
+Exhibit 2
+Maturity	Spot Rate	Present Value Factor
+1 year	0.262%	0.9974
+2 years	0.672%	0.9867
+3 years	0.956%	0.9721
+4 years	1.140%	0.9564
+5 years	1.280%	0.9398
+25Multiple Choice0 / 1 point
+Azul's best response to Green’s question regarding the value of the forward position is that it will:
+
+A. decrease.
+Incorrect Answer Feedback: Incorrect because the dividend is paid after the forward contract expires, therefore there is no impact on the value of the forward contract. If the dividend did occur before the forward contract expired, this answer would still be incorrect because Green shorted the forward and the payment of a dividend would increase the value of his position. However, in case of a long position, the value of his position would decrease.
+Correct answer:
+
+B. be unaffected.
+Correct Answer Feedback: Correct because the dividend is paid after the forward contract expires, therefore there is no impact on the value of the forward contract.  
+
+C. increase.
+Incorrect Answer Feedback: Incorrect because the dividend is paid after the forward contract expires. However, if the dividend did occur before the forward contract expired, this answer would be correct because Green shorted the forward and the payment of a dividend would increase the value of his position.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. be unaffected.
+26Multiple Choice0 / 1 point
+If Green's stock has a –4.5% return (not annualized) over the next six months, the proposed equity swap's net cash flow to Green on its first payment date would be:
+
+A. –$65,000.
+Incorrect Answer Feedback: Incorrect because Green would receive fixed and pay the equity return. If the negative equity return is considered an outflow, this coupled with the receipt of the fixed payment would result in a negative cash flow of –$65,000:
+Receive Fixed Cash Flow = 0.025/2 × $2 million = $25,000
+Pay Equity Cash Flow = –0.045 × $2 million = –$90,000
+Correct answer:
+
+B. $115,000.
+Correct Answer Feedback: Correct because the cash flows for the equity leg (Si) of an equity swap can be expressed as:
+Si = NAE RE,
+
+where
+
+NAE denotes the notional amount, and
+
+RE denotes the periodic return of the equity either with or without dividends as specified in the swap contract.
+
+The cash flows for a fixed-interest rate leg (FS) of an equity swap are:
+
+FS = NAE × APFIX × rFIX,
+
+where
+
+APFIX denotes the accrual period for the fixed leg and
+
+rFIX denotes the fixed rate on the equity swap.
+
+Therefore, the receive-fixed/pay-equity cash flows (FS – Si = NAE x (rFIX – RE)) are as follows:
+
+$2,000,000 × (0.025/2 – (–0.045)) = $115,000,
+
+where:
+
+NAE = $2 million
+
+RE = –4.5%
+
+APFIX = 0.5
+
+rFIX = 2.5%
+
+Receive Fixed Cash Flow = 0.025/2 × $2 million = $25,000
+Pay Equity Cash Flow = –0.045 × $2 million = –$90,000 (paying a negative cash flow is actually an inflow).
+
+C. $140,000.
+Incorrect Answer Feedback: Incorrect because the cash inflow from the fixed-rate receipt is not adjusted for a semi-annual reset; –$2,000,000 × (0.025 – (–0.045)) = $140,000.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. $115,000.
+27Multiple Choice0 / 1 point
+The fixed rate on the 3 × 9 FRA is closest to:
+
+A. 0.9583%.
+Incorrect Answer Feedback: Incorrect because the calculation assumes m = the term of the deposit, 270 days instead of 180 days.
+FRA0= {[1 + (0.0120 × (270/360))]/[1 + (0.0072 × (90/360))] – 1}/(270/360) = 0.9583%
+
+B. 1.0331%.
+Incorrect Answer Feedback: Incorrect because the calculation uses the 6-month rate, 0.93%, instead of the 9-month rate, 1.20%.
+FRA0 = {[1 + (0.0093 × (270/360))]/[1 + (0.0072 × (90/360))] – 1}/(180/360) = 1.0331%
+Correct answer:
+
+C. 1.4374%.
+Correct Answer Feedback: Correct because the 3 × 9 FRA rate equals:
+FRA0 = {[1 + LTtT]/[1 + Lhth] – 1}/tm
+where:
+L is the MRR rate
+T is the maturity of the underlying deposit, 270 days
+h is the FRA expiration, 90 days
+m = T – h, 180 days
+tT = term of deposit/360
+th = term of FRA/360
+tm = (T – h)/360
+FRA0 = {[1 + L270 x t270]/[1 + L90 x t90] – 1}/tm
+FRA0 = {[1 + (0.0120 × (270/360))]/[1 + (0.0072 × (90/360))] – 1}/(180/360) = 1.4374%
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 1.4374%.
+28Multiple Choice0 / 1 point
+The current value of White’s interest rate swap is closest to:
+
+A. –$148,338.
+Incorrect Answer Feedback: Incorrect because the calculation of the current fixed swap rate uses the sum of the FV factors based on spot rates in years 3, 4, and 5 (2.8683). This yields a FSt of 2.10%.
+FSt = (1 – 0.9398)/2.8683 = 0.020988.
+Value of Swap = $7 million × (0.0136 – 0.020988) × 2.8683 = –$148,338.
+Correct answer:
+
+B. $86,130.
+Correct Answer Feedback: Correct because the value of Received Fixed Swap (VS) = NA × (FS0 – FSt) × Sum of PV Factors for 1-, 2-, and 3- year spot rates.
+Value of Swap = $7 million × (0.0136 – 0.009438) × 2.9562 = $86,130
+where:
+NA = $7 million
+Initial Fixed Rate (FS0) = 1.36%
+Sum of PV Factors for 1-, 2-, and 3- year spot rates = 2.9562
+Current Fixed Rate (FSt) = 1 – PV factor for the 3-year spot rate (1 – 0.9721)/Sum of PV Factors for 1-, 2-, and 3-year spot rate (2.9562) = 0.009438.
+
+C. $151,062.
+Incorrect Answer Feedback: Incorrect because the current fixed swap rate (FSt) is calculated as the average of the spot rates in year 1, 2, and 3 (0.63%).
+Value of Swap = $7 million × (0.0136 – 0.0063) × 2.9562 = $151,062.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. $86,130.
+Vignette
+Chloe Smith is an equity analyst evaluating Calpurnia Corp., a multinational company based in the US. Calpurnia reports under US GAAP and its fiscal year end is 31 December. Its reporting currency is the USD.
+Calpurnia has certain transactions in EUR and also has foreign subsidiaries which report in EUR. Smith analyzes the effect of these on Calpurnia's consolidated financial statements. The USD/EUR (number of USD per 1 EUR) exchange rates over the most recent year are in Exhibit 1. 
+Exhibit 1
+ 	USD/EUR
+1 January	1.14
+15 December	1.08
+31 December	1.05
+Average for the year	1.10
+On 15 December of the most recent year, Calpurnia purchased inventory from a supplier in Spain for EUR 50 million. Calpurnia paid for the inventory on 31 January of the current year.
+On 1 January of the most recent year, Calpurnia established a wholly-owned subsidiary in the Eurozone, Bartolo AG. Bartolo has the EUR as its reporting currency and uses the FIFO method to account for inventory. The exchange rate when Bartolo's inventory was purchased over the most recent year was 1.11. Bartolo's financial statements are translated into USD using the current rate method. Smith considers the effect of translation on Bartolo's gross profit margin. For the most recent year, Bartolo reported net income of EUR 10 million. On 15 December, Bartolo declared dividends of EUR 800,000.
+Finally, Smith evaluates the sustainability of growth in Calpurnia's geographic segments. She gathers information on the components of total net sales growth in Exhibit 2.
+Exhibit 2
+Geographic Segment	Contribution from Volume Growth	Contribution from Price Growth	Contribution from Foreign Currency Exchange	Total Net Sales Growth
+Eurozone	9.3%	4.5%	–2.5%	11.3%
+Americas	10.1%	2.4%	0.6%	13.1%
+Asia Pacific	8.1%	0.4%	5.4%	13.9%
+29Multiple Choice0 / 1 point
+For the most recent year, Calpurnia's inventory purchase resulted in a foreign exchange:
+
+A. loss of USD 1.5 million.
+Incorrect Answer Feedback: Incorrect because the foreign exchange transaction effect is calculated as the difference between the value using the exchange rate at 31 December of the most recent year and value at the date of purchase (cost) rather than vice versa as follows:
+Inventory cost in USD at purchase date: EUR 50 million × 1.08 = USD 54 million.
+Inventory cost in USD at 31 December of the most recent year = EUR 50 million × 1.05 = USD 52.5 million
+FX Gain (Loss) (incorrect) = USD 52.5 million - USD 54 million = (USD 1.5 million)
+
+B. loss of USD 1.0 million.
+Incorrect Answer Feedback: Incorrect because the foreign exchange transaction effect is calculated using the most recent year average USD/EUR exchange rate of 1.10 instead of the USD/EUR exchange rate of 1.05 at 31 December of the most recent year as follows:
+Inventory cost in USD at purchase date = EUR 50 million × 1.08 = USD 54 million.
+Inventory cost in USD at average rate = EUR 50 million × 1.10 = USD 55 million
+FX Gain (Loss) = USD 54 million - USD 55 million = (USD 1 million)
+Correct answer:
+
+C. gain of USD 1.5 million.
+Correct Answer Feedback: Correct because the foreign exchange transaction effect for the most recent year is calculated as follows:
+Inventory cost at purchase date in USD: EUR 50 million × 1.08 = USD 54 million.
+Inventory cost at 31 December of the most recent year in USD:  EUR 50 million x 1.05 = USD 52.5 million
+FX Gain (Loss) = USD 54 million - USD 52.5 million = USD 1.5 million. The year-end exchange rate is used for this calculation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. gain of USD 1.5 million.
+30Multiple Choice0 / 1 point
+After Bartolo’s financial statements are translated into USD, its gross profit margin would be:
+
+A. lower than before translation.
+Incorrect Answer Feedback: Incorrect because under the current rate method, sales and cost of goods sold must be translated using the same rate (average rate during the year). ​​Gross profit margin does not change in translation.
+Correct answer:
+
+B. the same as before translation.
+Correct Answer Feedback: Correct because Bartolo's financial statements are translated using the current rate method, whereby both sales and cost of goods sold are translated using the same rate, namely, the average rate for the most recent year. As a result, the translated USD gross profit margin will be the same as the gross profit margin in EUR before translation. 
+
+C. higher than before translation.
+Incorrect Answer Feedback: Incorrect because under the current method both sales and cost of goods sold must be translated using the same rate (the average rate for the most recent year). Gross profit margin does not change in translation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. the same as before translation.
+31Multiple Choice0 / 1 point
+The increase in Bartolo's retained earnings when translated into USD for the most recent year is:
+
+A. USD 9,660,000.
+Incorrect Answer Feedback: Incorrect because the increase in retained earnings is translated using the current rate as of the end of the most recent year:
+Net increase in retained earnings (incorrect): (EUR 10,000,000 – EUR 800,000) × 1.05 = USD 9,660,000.
+
+B. USD 10,120,000.
+Incorrect Answer Feedback: Incorrect because the increase in Bartolo's retained earnings is translated by using the average rate of the most recent year as follows:
+Increase in retained earnings: (EUR 10,000,000 – EUR 800,000) × 1.10 = USD 10,120,000.
+Correct answer:
+
+C. USD 10,136,000.
+Correct Answer Feedback: Correct because Bartolo is translated using the current rate method. Retained earnings for the most recent year are increased by net income EUR 10 million, translated at the average rate of 1.10, and decreased by dividends EUR 800,0000, translated at the exchange rate that existed when they were declared namely 1.08. The increase in Bartolo's translated net earnings is therefore: EUR 10,000,000 × 1.10 – EUR 800,000 × 1.08 = USD 11,000,000 – USD 864,000 = USD 10,136,000.
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. USD 10,136,000.
+32Multiple Choice0 / 1 point
+Based on the components of total net sales growth, which of Calpurnia's segments has the highest sustainable growth rate?
+Correct answer:
+
+A. Eurozone
+Correct Answer Feedback: Correct because the Eurozone has both 1) the highest net change in sales resulting from the combined effect of price and volume at 13.8% (9.3% + 4.5% and excluding the contribution from foreign currency exchange) and 2) the lowest contribution from foreign currency exchange (–2.5%). Calpurnia's management has more control over growth in sales resulting from volume and prices than growth resulting from currency fluctuations, and hence the growth in the Eurozone is considered more sustainable. 
+For a multinational company, sales growth is driven not only by changes in volume and price but also by changes in the exchange rates between the reporting currency and the currency in which sales are made. Arguably, growth in sales that comes from changes in volume or price are more sustainable than growth in sales that comes from changes in exchange rates.  Further, management arguably has greater control over growth in sales resulting from greater volume or higher price than from changes in exchange rates.
+
+B. Americas
+Incorrect Answer Feedback: Incorrect because the Americas segment, while having the highest Contribution from Volume growth, has a combined sustainable volume and price growth component of only 12.5% (10.1% + 2.4%), which is lower than the sustainable component of growth in the Eurozone (13.8%). In addition, it has a contribution for foreign currency exchange (0.6%) that is higher than that of the Eurozone (–2.5%), which also points to a less sustainable overall growth than that of the Eurozone.
+
+C. Asia Pacific
+Incorrect Answer Feedback: Incorrect because the Asia Pacific segment, while having the highest Total Net Sales Growth rate at 13.9%, has only 8.5% of that growth due to the combined effect of volume and price, which represents the sustainable component of growth. The remaining 5.4% is due to currency fluctuations, which are outside the control of Calpurnia's management. The sustainable component of growth in Asia Pacific (8.5%) is lower than the sustainable component of growth in the Eurozone (13.8%). In addition, the Asia Pacific segment has a contribution for foreign currency exchange (5.4%) that is higher than that of the Eurozone (–2.5%), which also points to a less sustainable overall growth than that of the Eurozone.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Eurozone
+Vignette
+Sarah Kendall is an analyst at a commodity trading firm. She is tasked with evaluating quantitative models to explain precious metal returns. Kendall develops a model with three factors to explain weekly returns (RET):
+RETt = b0 + b1FSIt + b2EPUt + b3GPRt + εt,
+where FSI is the weekly change in the financial stress index, EPU is the weekly change in economic policy uncertainty, and GPR is the weekly change in geopolitical risk. She estimates the model for silver and platinum returns using 624 weekly observations.
+Kendall gathers the model output for silver returns and tests whether the model explains RET with any statistical significance. She uses the partial ANOVA table results in Exhibit 1 and notes that the critical value of the F-statistic is 3.813 at the 1% significance level and 2.619 at the 5% significance level.
+Exhibit 1
+Source	Degrees of Freedom	Sum of Squares	Mean Squares
+Regression	3	0.0453	0.0151
+Residual	620	0.9512	0.0015
+Total	623	0.9965	---
+Next, Kendall considers platinum returns. After running the model, she tests for model misspecification. The variance inflation factor for each of the independent variables is close to 1.00, and the Breusch–Godfrey test fails to reject the null hypothesis.
+Kendall considers alternate model specifications using the three factors to model platinum returns. Her objective is to select the most parsimonious, best-fitting model. Kendall evaluates several goodness-of-fit measures, including Akaike's information criterion (AIC), Schwarz's Bayesian information criteria (BIC), and R2. She gathers relevant model output in Exhibit 2.
+Exhibit 2
+Model	Factors	AIC	BIC	R2
+1	FSI	5.134	5.141	0.098
+2	FSI, GPR	5.132	5.153	0.103
+3	FSI, GPR, EPU	5.139	5.160	0.106
+As a result of her firm investing in new data sources and technology, Kendall gains access to a wide range of new inputs that could be used to model the commodity market. She decides to utilize this dataset in a machine-learning algorithm with the goal of predicting commodity returns from the complex non-linear data. 
+33Multiple Choice0 / 1 point
+Do the independent variables jointly contribute to the explanation of silver returns?
+
+A. No
+Incorrect Answer Feedback: Incorrect because the joint contribution is tested using the F-statistic for the overall model. The F-statistic is calculated as F = mean square regression / mean square error = MSR/MSE = 0.0151/0.0015 ≈ 10. This exceeds the critical value at the 5% and 1% significance levels. 
+This response would be chosen if F were calculated as mean square error / mean square regression = MSE/MSR = 0.0015/0.0151 ≈ 0.1.
+
+B. Yes, at the 5% significance level only
+Incorrect Answer Feedback: Incorrect because the joint contribution is tested using the F-statistic for the overall model. The F-statistic is calculated as F = mean square regression / mean square error = MSR/MSE = 0.0151/0.0015 ≈ 10. This exceeds the critical value at the 5% and 1% significance levels. 
+This response would be chosen if F were calculated as sum of squares regression / mean square regression = SSR/MSR = 0.0453/0.0151 = 3.
+Correct answer:
+
+C. Yes, at both the 5% and 1% significance levels
+Correct Answer Feedback: Correct because the joint contribution is tested using the F-statistic for the overall model. The F-statistic is calculated as F = mean square regression / mean square error = MSR/MSE = 0.0151/0.0015 ≈ 10. This exceeds the critical value at the 5% and 1% significance levels. 
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Yes, at both the 5% and 1% significance levels
+34Multiple Choice0 / 1 point
+Does the testing of the platinum return model indicate model misspecification?
+Correct answer:
+
+A. No
+Correct Answer Feedback: Correct because the Breusch–Godfrey test and variance inflation factors do not provide evidence of misspecification.
+The null hypothesis of the Breusch–Godfrey test is that there is no serial correlation in the model's residuals up to lag p. Since the null is not rejected, there is no evidence of serial correlation.
+We can use the variance inflation factor (VIF) to quantify multicollinearity issues. VIFj > 5 warrants further investigation of the given independent variable. Since each VIF is close to 1, there is no evidence of multicollinearity. 
+
+B. Yes, because there is evidence of multicollinearity
+Incorrect Answer Feedback: Incorrect because each variance inflation factor is close to 1. We can use the variance inflation factor (VIF) to quantify multicollinearity issues and only VIF > 5 warrants further investigation of the given independent variable.
+
+C. Yes, because there is evidence of serial correlation
+Incorrect Answer Feedback: Incorrect because the results of the Breusch–Godfrey test do not reject the null hypothesis.
+The null hypothesis of the Breusch–Godfrey test is that there is no serial correlation in the model's residuals up to lag p.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. No
+35Multiple Choice0 / 1 point
+Which of the models for platinum returns should Kendall select based on her objective?
+Correct answer:
+
+A. Model 1
+Correct Answer Feedback: Correct because Model 1 has the lowest Schwarz's Bayesian information criterion (BIC). BIC is preferred when the best goodness of fit is desired and the lower the better.
+
+B. Model 2
+Incorrect Answer Feedback: Incorrect because Model 2 has the lowest Akaike's information criterion (AIC), which is preferred if the model is used for prediction purposes. However, BIC is preferred when the best goodness of fit is desired and Model 2 does not have the lowest BIC.  
+
+C. Model 3
+Incorrect Answer Feedback: Incorrect because Model 3 has the highest R2 but this is not generally suitable for testing the significance of the model's fit. The R2 cannot tell whether the model fit is good. BIC is preferred when the best goodness of fit is desired and Model 3 does not have the lowest BIC.
+In addition, as both the R2 and adjusted R2 may increase when we add independent variables, we risk model overfitting.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Model 1
+36Multiple Choice0 / 1 point
+Which of the following machine-learning algorithms is best suited to Kendall's goal?
+Correct answer:
+
+A. Neural networks
+Correct Answer Feedback: Correct because Kendall's goal is to predict future returns using complex non-linear data. If numerical prediction, then depending on whether the data have non-linear characteristics, the choice of ML algorithms is from a set of regression algorithms—either penalized regression/LASSO for linear data or CART, random forest, or neural networks for non-linear data.
+
+B. Support vector machine
+Incorrect Answer Feedback: Incorrect because support vector machines are useful for classification of linear data but Kendall's goal is to predict future returns using complex non-linear data. If the problem is one of classification, then depending on whether the data are labeled, the choice is either from a set of classification algorithms using labeled data or from a set of clustering algorithms using unlabeled data. If the data are labeled, then the choice of classification algorithm would be K-nearest neighbor and support vector machine for linear data.
+
+C. Principal components analysis
+Incorrect Answer Feedback: Incorrect because principal components analysis (PCA) is best suited to dimension reduction but Kendall's goal is to predict future returns using complex non-linear data.
+Dimension reduction aims to represent a dataset with many typically correlated features by a smaller set of features that still does well in describing the data. PCA is used to summarize or transform highly correlated features of data into a few main, uncorrelated composite variables.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Neural networks
+Vignette
+Amanda Glade is an analyst with an investment management firm that actively manages several diversified portfolios. She is currently updating her analysis of investment markets in Country A and Country B, both of which have developed economies, and assessing portfolio performance in preparation for a report to the firm's portfolio managers.
+Glade notes that Country A has a large positive equity risk premium, and she considers what this suggests about investor expectations.
+Glade analyzes the breakeven inflation rate of Country B. She examines the following most recent financial data for the country:
+Current yield on a 5-year zero-coupon default-free nominal bond: 4.5%
+Current yield on a 5-year zero-coupon default-free real bond: 2.0%
+Risk premium for inflation uncertainty: 0.3%
+Next, Glade assesses the performance of the firm's actively managed global asset portfolio. Using the most recent financial information presented in Exhibit 1, she calculates the value added to the portfolio from asset allocation.
+Exhibit 1
+ 	Portfolio Return (%)	Benchmark Return (%)	Current Allocation (%)	Strategic Asset Allocation (%)
+Global equities	16.4	12.8	74	70
+Global fixed income	–3.4	–4.5	26	30
+Glade considers the possibility of combining one of the firm's actively managed domestic equity funds, Fund X, with an investment in its passive index benchmark portfolio. Using the information in Exhibit 2, she determines the maximum Sharpe ratio that a portfolio manager could achieve by combining Fund X with the passive index benchmark portfolio.
+Exhibit 2
+ 	Index	Fund X
+Sharpe ratio	0.275	0.242
+Active return	---	1.5%
+Active risk	---	6.0%
+37Multiple Choice0 / 1 point
+Country A's equity risk premium most likely suggests that investors expect equity returns and the marginal value of future consumption to be:
+Correct answer:
+
+A. negatively correlated.
+Correct Answer Feedback: Correct because an asset’s risk premium is determined by the relationship between its future payoff and the marginal value of consumption as given by the covariance between the two quantities. When the covariance is negative—that is, payoffs are low and expected utility from consumption is high—or equivalently, when times in the future are expected to be bad and the value of an extra unit of consumption is high, the risk premium will be high. When the covariance term is zero (there is no relationship), the asset is risk free. When the covariance term is positive, the asset is a hedge and will have a rate of return less than the risk-free rate. Also, equity investors will demand an equity risk premium if the consumption hedging properties of equities are poor—that is, if equities tend not to pay off in bad times. Our arguments earlier indicate that the equity risk premium should be positive and therefore, implicitly, that equities are a bad hedge for bad consumption outcomes. Thus, a large positive equity risk premium most likely suggests that investors expect the marginal value of future consumption and equity returns to be negatively correlated.
+
+B. uncorrelated.
+Incorrect Answer Feedback: Incorrect because a large positive equity risk premium suggests that investors expect the marginal value of future consumption and equity returns to be negatively correlated. An equity risk premium of zero would suggest that the marginal value of future consumption and equity returns are uncorrelated.
+
+C. positively correlated.
+Incorrect Answer Feedback: Incorrect because a large positive equity risk premium suggests that investors expect the marginal value of future consumption and equity returns to be negatively correlated. A negative (not positive) equity risk premium would suggest that the marginal value of future consumption and equity returns are positively correlated.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. negatively correlated.
+38Multiple Choice0 / 1 point
+Based on the most recent financial data, Country B's breakeven inflation rate is closest to:
+
+A. 2.2%.
+Incorrect Answer Feedback: Incorrect because this answer choice incorrectly subtracts the risk premium for inflation uncertainty (0.3%) from the difference between the current yield on a 5-year zero-coupon default-free nominal bond (4.5%) and the current yield on a 5-year zero-coupon default-free real bond (2.0%).
+The difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. It should be clear from the discussion earlier that this break-even inflation rate will incorporate the inflation expectations of investors over the investment horizon of the two bonds, plus a risk premium that will be required by investors to compensate them predominantly for uncertainty about future inflation.
+Correct answer:
+
+B. 2.5%.
+Correct Answer Feedback: Correct because the difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. Thus, the current break-even inflation rate for Country B is 4.5% (current yield on 5-year zero-coupon default-free nominal bond) – 2.0% (current yield on 5-year zero-coupon default-free real bond) = 2.5%.
+
+C. 2.8%.
+Incorrect Answer Feedback: Incorrect because this answer choice incorrectly adds the risk premium for inflation uncertainty (0.3%) to the difference between the current yield on a 5-year zero-coupon default-free nominal bond (4.5%) and the current yield on a 5-year zero-coupon default-free real bond (2.0%).
+The difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. It should be clear from the discussion earlier that this break-even inflation rate will incorporate the inflation expectations of investors over the investment horizon of the two bonds, plus a risk premium that will be required by investors to compensate them predominantly for uncertainty about future inflation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 2.5%.
+39Multiple Choice0 / 1 point
+The value added to the global asset portfolio from asset allocation is closest to:
+Correct answer:
+
+A. 0.69%.
+Correct Answer Feedback: Correct because the value added from asset allocation is calculated as the sum of the differences in the weights between the strategic (benchmark) allocation and the actual sub-portfolio allocation multiplied by each sub-portfolio benchmark return. Thus, the value added from the asset allocation decision is: ([74% – 70%] × 12.8%) + ([26% – 30%] × (–4.5%)) = 0.512% + 0.180% = 0.692% ≈ 0.69%.
+
+B. 2.95%.
+Incorrect Answer Feedback: Incorrect because this is the value added from the security selection (not asset allocation) decision. The value added from security selection is calculated as the sum of the actual portfolio weights multiplied by each sub-portfolio’s value added measure. Thus, the value added from the security selection decision is: (74% × [16.4% – 12.8%]) + (26% × [–3.4% – (–4.5%)]) = 2.664% + 0.286% = 2.95%.
+
+C. 3.64%.
+Incorrect Answer Feedback: Incorrect because this is the total value added from the asset allocation and security selection decisions: 0.692% + 2.950% = 3.642% ≈ 3.64%.
+Total value added is also computed as the portfolio return minus the benchmark return: ([74% × 16.4%] + [26% × (–3.4%)]) – ([70% × 12.8%] + [30% × (–4.5%)]) = 11.252% – 7.610% = 3.642% ≈ 3.64%.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 0.69%.
+40Multiple Choice0 / 1 point
+The maximum Sharpe ratio that can be achieved by combining Fund X with an investment in its passive index benchmark portfolio is closest to:
+
+A. 0.25.
+Incorrect Answer Feedback: Incorrect because this is the information ratio of Fund X (active return/active risk = 1.5%/6.0%), not the maximum Sharpe ratio that can be achieved by combining Fund X with an investment in its passive index benchmark portfolio.
+
+B. 0.28.
+Incorrect Answer Feedback: Incorrect because this is the Sharpe ratio of the passive index benchmark portfolio (0.275 ≈ 0.28), but it is not the maximum Sharpe ratio that can be achieved by combining Fund X with an investment in its passive index benchmark portfolio.
+Correct answer:
+
+C. 0.37.
+Correct Answer Feedback: Correct because the highest Sharpe ratio that can be achieved by combining investments in an actively managed fund and its benchmark equals the square root of the sum of the squared Sharpe ratio of the benchmark and the squared information ratio of the actively managed fund. A similarly important property in active management theory is that given the opportunity to adjust active risk and return by investing in both the actively managed and benchmark portfolios, the squared Sharpe ratio of an actively managed portfolio is equal to the squared Sharpe ratio of the benchmark plus the information ratio squared.
+Thus, combining Fund X with an investment in its passive index benchmark portfolio will produce a squared Sharpe ratio equal to: 0.2752 + (1.5%/6.0%)2 = 0.075625 + 0.0625 = 0.138125. The maximum Sharpe ratio that can be achieved is approximately 0.37 (0.1381251/2 = 0.371652 ≈ 0.37).
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 0.37.
+Vignette
+Alice Kent, a fixed-income analyst, is evaluating several bonds for potential addition to her firm's portfolios.
+Kent reviews newly issued Bond X, a 3-year default-free bond with an annual coupon of 5.85% that is callable at its par value of 100 one year and two years from today. She assumes interest rate volatility of 15% and constructs the binomial interest rate tree shown in Exhibit 1. In the tree, branching from each node to a high state or a low state occurs with equal probability. Kent uses the tree to value Bond X.
+A binomial diagram with three column headings: Year zero, year 1, and year 2.
+Expand / Collapse Extended Description
+Kent compares Bond X to Bond Y, a 3-year default-free putable bond with the same coupon. She expects interest rate volatility to decrease in the future and determines how the values of the two bonds would change if her expectation is realized.
+Kent wants to develop a more flexible model than the binomial tree. She uses the Monte Carlo method to
+simulate various potential interest rate paths, with a 30-year default-free coupon-paying bond as the benchmark bond. After the initial simulation of the paths, she customizes the model by adding a constant to all interest rates on all paths to ensure that the average present value for the benchmark bond equals its current market price.
+Lastly, Kent gathers information on a convertible bond that was issued at par two years ago and has three years to maturity. The bond has a par value of $1,000, a 4.90% coupon payable annually, and a conversion price of $17.77 per share. Currently the bond's price is $1,198 and the price of the underlying shares is $20.
+41Multiple Choice0 / 1 point
+The value of Bond X is closest to: 
+Correct answer:
+
+A. 99.15.
+Correct Answer Feedback: Correct because this value reflects the exercise of the call option at the appropriate nodes in Year 1 and Year 2. The calculations are: 
+ 
+Values at Year 2
+Top node: (100 + 5.85) / 1.104577 = $95.8285
+Middle node: (100 + 5.85) / 1.077472 = $98.2392
+Bottom node: (100 + 5.85) / 1.057393 = $100.1047, so the bond would be called at 100
+ 
+Values at Year 1
+Top node: [5.85 + (0.5 × 95.8285 + 0.5 × 98.2392)] / (1.042530) = $98.6867
+Bottom node: [5.85 + (0.5 × 98.2392 + 0.5 × 100.0000)] / (1.031507) = $101.7633, so the bond would be called at 100
+ 
+Values at Year 0
+Current node: [5.85 + (0.5 × 98.6867 + 0.5 × 100.0000)] / (1.0610) = $99.1454 ≈ 99.15
+
+B. 99.98. 
+Incorrect Answer Feedback: Incorrect because this response only reflects the exercise of the call option in Year 2. The calculations are: 
+ 
+Values at Year 2
+Top node: (100 + 5.85) / 1.104577 = $95.8285
+Middle node: (100 + 5.85) / 1.077472 = $98.2392
+Bottom node: (100 + 5.85) / 1.057393 = $100.1047, so the bond would be called at 100
+ 
+Values at Year 1
+Top node: [5.85 + (0.5 × 95.8285 + 0.5 × 98.2392)] / (1.042530) = $98.6867
+Bottom node: [5.85 + (0.5 × 98.2392 + 0.5 × 100.0000)] / (1.031507) = $101.7633
+ 
+Values at Year 0
+Current node: [5.85 + (0.5 × 98.6867 + 0.5 × 101.7633)] / (1.0610) = $99.9764 ≈ $99.98
+ 
+This response is also closest to the result of ignoring the call option completely, which is $100.00.
+
+C. 101.74.
+Incorrect Answer Feedback: Incorrect because this response reflects the exercise of a put option, rather than a call option, at the appropriate nodes in Year 1 and Year 2. The calculations are: 
+ 
+Values at Year 2
+Top node: (100 + 5.85) / 1.104577 = $95.8285, so the bond would be put at 100
+Middle node: (100 + 5.85) / 1.077472 = $98.2392, so the bond would be put at 100
+Bottom node: (100 + 5.85) / 1.057393 = $100.1047
+ 
+Values at Year 1
+Top node: [5.85 + (0.5 × 100.0000 + 0.5 × 100.0000)] / (1.042530) = $101.5319
+Bottom node: [5.85 + (0.5 × 100.0000 + 0.5 × 100.1047)] / (1.031507) = $102.6676
+ 
+Values at Year 0
+Current node: [5.85 + (0.5 × 101.5319 + 0.5 × 102.6676)] / (1.0610) = $101.7433 ≈ $101.74
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 99.15.
+42Multiple Choice0 / 1 point
+If Kent's expectation for interest rate volatility is realized, which of the following bonds would most likely decrease in value?  
+
+A. Bond X only
+Incorrect Answer Feedback: Incorrect because Kent's expectation is that interest rate volatility will decrease, which will increase the value of Bond X as a result of the embedded short call option. All else being equal, the call option increases in value with interest rate volatility as interest rate volatility increases, the value of the callable bond decreases. Conversely, when interest rate volatility decreases, the value of the callable bond increases.
+Value of callable bond = Value of straight bond – Value of issuer call option
+Correct answer:
+
+B. Bond Y only
+Correct Answer Feedback: Correct because Kent's expectation is that interest rate volatility will decrease, which will decrease the value of Bond Y as a result of the embedded long put option. All else being equal, the put option increases in value with interest rate volatility as interest rate volatility increases, the value of the putable bond increases. Conversely, when interest rate volatility decreases, the value of the putable bond decreases.
+Value of putable bond = Value of straight bond + Value of investor put option
+
+C. Both Bond X and Bond Y
+Incorrect Answer Feedback: Incorrect because Kent's expectation is that interest rate volatility will decrease, which will increase the value of callable Bond X and decrease the value of putable Bond Y. 
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Bond Y only
+43Multiple Choice0 / 1 point
+The technique used by Kent to customize the Monte Carlo model is best described as: 
+Correct answer:
+
+A. making a drift adjustment.
+Correct Answer Feedback: Correct because in the Monte Carlo method, a constant is added to all interest rates on all paths such that the average present value for each benchmark bond equals its market value. The constant added to all short interest rates is called a drift term. When this technique is used, the model is said to be drift adjusted.
+
+B. implementing mean reversion.
+Incorrect Answer Feedback: Incorrect because mean reversion is implemented by implementing upper and lower bounds on the random process generating future interest rates. Mean reversion has the effect of moving the interest rate toward the implied forward rates from the yield curve. No adjustment involving adding a constant to all rates on all paths is required.
+
+C. benchmarking the term structure.
+Incorrect Answer Feedback: Incorrect because the benchmark term structure is represented by the current spot curve such that the average present value across all scenario interest rate paths for each benchmark bond equals its actual market value.
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. making a drift adjustment.
+44Multiple Choice0 / 1 point
+The current market conversion premium per share for the convertible bond is closest to: 
+Correct answer:
+
+A. $1.29.
+Correct Answer Feedback: Correct because the market conversion premium per share is calculated as follows:
+Market conversion premium per share = (Convertible bond price / Conversion ratio) – Underlying share price
+where
+Convertible bond price = $1,198
+Conversion ratio = (Par value / Conversion price) = $1,000 / $17.77 = 56.2746
+Underlying share price = $20
+= ($1,198 / 56.2746) – $20
+= $21.2884 – $20
+= $1.2884 ≈ $1.29
+
+B. $2.23.
+Incorrect Answer Feedback: Incorrect because this response is derived from the current share price less the conversion price, which does not reflect the change in the convertible bond's price since issuance:
+Incorrect market conversion premium per share = Current share price – Conversion price
+where
+Current share price  = $20
+Conversion price = $17.77
+= $20 – $17.77
+= $2.23
+
+C. $3.52.
+Incorrect Answer Feedback: Incorrect because this response uses the conversion price instead of the current share price:  
+Incorrect market conversion premium per share = (Convertible bond price / Conversion ratio) – Conversion price
+where
+Convertible bond price = $1,198
+Conversion ratio = (Par value / Conversion price) = $1,000 / $17.77 = 56.2746
+Conversion price = $17.77
+= ($1,198 / 56.2746) – $17.77
+= $21.2884 – $17.77
+= $3.5184 ≈ $3.52
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. $1.29.
