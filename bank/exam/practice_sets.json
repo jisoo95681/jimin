@@ -22985,11 +22985,12 @@
  {
   "id": "rq3_eth",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Ethics",
   "kind": "practice",
-  "minutes": 48,
-  "desc": "Ethics: the questions you got wrong or asked about in the real Mocks B, C, D and E (16 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 63,
+  "desc": "Ethics: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (21 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Ethics",
@@ -23204,18 +23205,87 @@
       "why": "A. Correct. Correct because, according to Standard II(A) regarding material nonpublic information, the information about the drug trial is not material nonpublic information. Lyden is allowed to share the information with a colleague and trade on the information.\nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material.\nThe source of the information is a well-respected industry analyst expressing his opinion on the prospects of the new drug driving InG Pharma's future sales. It is unlikely that his opinion would be considered material.\nB. Incorrect. Incorrect because the information is not material non-public information so she is allowed to purchase shares using this information as an input into her valuation model. \nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material.\nThe source of the information is a well-respected industry analyst expressing his opinion on the prospects of the new drug driving InG Pharma's future sales. It is unlikely that his opinion would be considered material.\nC. Incorrect. Incorrect because the information is not material non-public information so she is allowed to share it with her research analyst. \nIn addition to the substance and specificity of the information, the source or relative reliability of the information also determines materiality. The less reliable a source, the less likely the information provided would be considered material. Additionally, information about trials of a new drug, product, or service under development from qualified personnel involved in the trials is likely to be material, whereas educated conjecture by subject experts not connected to the trials is unlikely to be material."
      }
     ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Source: Mock F · Paper 1 · Vignette 4\n\nPark receives orders from four of her clients to purchase shares in an oversubscribed IPO. She determines that the IPO is suitable for all of these clients. One of the clients, a family member of Park's, has a regular fee-paying account that is managed similarly to those of the other three clients. Park allocates the shares she receives to the four clients on a pro rata basis according to order size. She discloses the firm's IPO allocation policy to only those clients that participate in IPOs.",
+    "questions": [
+     {
+      "q": "With regard to her actions associated with the IPO, did Park violate the Standard relating to fair dealing?",
+      "options": [
+       "No",
+       "Yes, because she allocated IPO shares to her family member",
+       "Yes, because she did not appropriately disclose the firm's IPO allocation policy"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because Park violated Standard III(B) Fair Dealing by not disclosing the trade allocation policy to all clients—she did so to only those clients that participate in IPOs.\nB. Incorrect. Incorrect because Park's allocation of IPO shares to her family member did not violate Standard III(B) Fair Dealing. Because the family member's account is a regular fee-paying account and is managed similarly to other clients' accounts, it was appropriate to allocate IPO shares to the family member.\nIf the investment professional’s family-member accounts are managed similarly to the accounts of other clients of the firm, however, the family-member accounts should not be excluded from buying such shares.\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Source: Mock F · Paper 1 · Vignette 7\n\nFundland plans to offer a structured note to its clients. The structured note replicates the 1-year return of a US equity index, with a 15% cap on upside return and a maximum loss of 15%. Habba sends a brief email to all of her suitable clients with the following two statements and an invitation to follow up if they require more information:\n\nStatement 1: \"This note is attractive because, in my view, the market will trend moderately higher.\"\n\nStatement 2: \"This note provides the return of the US equity index with no downside risk.\"\n\nBoth Habba and FundLand are based in Country A. Habba is preparing to market FundLand’s funds to investors in Country B, a rapidly growing economy. Country B investor protection laws are minimal and there are no restrictions on fund distribution and marketing practices. Country A's laws are more restrictive in this regard than the Standards, but Country A laws state that advisory firms must follow the laws of the local country where they conduct business.",
+    "questions": [
+     {
+      "q": "In her email regarding the structured note, Habba violates the Standards with:",
+      "options": [
+       "Statement 1 only.",
+       "Statement 2 only.",
+       "both Statement 1 and Statement 2."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because Statement 1 states that Habba is basing her recommendation on her view of the market trend, thereby stating that this is her opinion. Standard V(B)–Communication with Clients and Prospective Clients indicates that the content of any investment recommendation should include the distinction between facts and opinions.\nB. Correct.\nC. Incorrect. Incorrect because Statement 1 is not a violation as Habba is, in that statement, stating that the market trend is her opinion and not a fact. Standard V(B)–Communication with Clients and Prospective Clients indicates that the content of any investment recommendation should include the distinction between facts and opinions."
+     },
+     {
+      "q": "In marketing the funds in Country B, Habba must follow:",
+      "options": [
+       "the Standards.",
+       "the laws of Country A.",
+       "the laws of Country B."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because, although the case states that Country A's laws are more restrictive in this area than the Standards, Country A's laws state that the laws of the location where business is conducted should govern. In this case, the local laws are laws of Country B which are less strict than the Standards.\nC. Incorrect. Incorrect because, even if the funds are sold in Country B, the Standards are more restrictive than the laws of Country B, and therefore the Standards should govern instead."
+     }
+    ]
+   },
+   {
+    "topic": "Ethics",
+    "body": "Source: Mock F · Paper 2 · Vignette 5\n\nIn a recently published investment report, Li included a table with statistical analysis of publicly available information from a well-recognized industry journal. By downloading the table and not performing the statistical analysis herself, she saved considerable time and effort. Li did not cite the source of the table in her report nor did she verify the statistical analysis.\n\nMCIB's proprietary model predicts that a takeover of Godoggo Corporation is highly likely. In a recent report, Li assigned a \"Buy\" recommendation to Godoggo's stock. Based on the report, one of MCIB's portfolio managers buys a large number of shares in Godoggo for his fund. He subsequently promotes the stock in several online chat rooms by stating, \"I have purchased Godoggo stock because our internal research indicates that it is highly likely to be taken over.\" A week later, the price of Godoggo's stock has doubled and the portfolio manager subsequently sells all the shares of the stock in his fund.",
+    "questions": [
+     {
+      "q": "By including the table in her investment report, did Li violate the Standard relating to misrepresentation?",
+      "options": [
+       "No",
+       "Yes, by not citing the source",
+       "Yes, by not verifying the statistical analysis"
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because Li committed plagiarism by mispresenting the statistical analysis in the table as her own work.\nB. Correct.\nC. Incorrect. Incorrect because failing to verify the statistical analysis is not a violation of Standard I(C) - Misrepresentation. Because the statistical analysis table is from a reputable source (a well-recognized industry journal), under Standard V(A) - Diligence and Reasonable Basis, it can reasonably be relied upon without Li having to verify the analysis for herself.\nWhen providing information to clients from a third party, members and candidates share a responsibility for the accuracy of the marketing and distribution materials that pertain to the third party’s capabilities, services, and products."
+     },
+     {
+      "q": "Are the portfolio manager's actions with regard to Godoggo shares a violation of the Standard relating to market manipulation?",
+      "options": [
+       "No",
+       "Yes, because he engaged in transaction-based market manipulation",
+       "Yes, because he engaged in information-based market manipulation"
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the manager bought the stock based on a recommendation in Li's report and presumably sold the stock because its price had doubled.\nC. Incorrect. Incorrect because the portfolio manager's promotion of the stock was based on a recommendation contained in a report. The portfolio manager was not seemingly attempting to spread false information about the stock."
+     }
+    ]
    }
   ],
-  "concept": "Only the Ethics questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Ethics questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_qua",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Quantitative Methods",
   "kind": "practice",
-  "minutes": 24,
-  "desc": "Quantitative Methods: the questions you got wrong or asked about in the real Mocks B, C, D and E (8 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 30,
+  "desc": "Quantitative Methods: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (10 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Quant",
@@ -23314,18 +23384,51 @@
       "why": "A. Correct.\nB. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but it does not mean that there is heteroskedasticity. Homoskedasticity could be visually explored with a scatterplot between dependent and independent variables included in the regression.\nC. Incorrect. Incorrect because a Q-Q plot is used to visualize the distribution of a variable by comparing it to a normal distribution (the diagonal). The Q-Q plot cannot be used to identify non-linear relationships between the dependent variable (Y) and the independent variables (Xi). Significant deviations of the residuals from the diagonal of the Q-Q plot, as per Observation 1, indicate that the residuals are not normally distributed, but this does not mean that there is interdependence of explanatory variables or multicollinearity. A pairwise scatterplot of the independent variables is used to detect this relationship."
      }
     ]
+   },
+   {
+    "topic": "Quant",
+    "body": "Source: Mock F · Paper 1 · Vignette 8\n\nHardie uses the models to determine the mean-reverting level of NTPC. He also forecasts NTPC for the next two weeks given that it is 0.061 in the current week and was 0.034 in the prior week. He then uses the regression statistics in Exhibit 1 to compare the forecasting performance of the two models.\n\nExhibit 1\n\n#  | AR(1) Model | AR(2) Model\n\nR-squared | 0.907 | 0.905\n\nStandard error of regression | 0.027 | 0.027\n\nRoot mean squared error | 0.032 | 0.030",
+    "questions": [
+     {
+      "q": "Compared to the AR(1) model, the out-of-sample forecasting performance of the AR(2) model is:",
+      "options": [
+       "worse.",
+       "equal.",
+       "better."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because we compare the out-of-sample forecasting performance of forecasting models by comparing their root mean squared error (RMSE). The model with the smallest RMSE is judged the most accurate, and not the model with the largest R-squared. This means that the AR(2) model has better out-of-sample forecasting performance.\nB. Incorrect. Incorrect because we compare the out-of-sample forecasting performance of forecasting models by comparing their root mean squared error (RMSE), and not the standard error of regression. The model with the smallest RMSE is judged the most accurate, which means that the AR(2) model has better out-of-sample forecasting performance.\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Quant",
+    "body": "Source: Mock F · Paper 2 · Vignette 9\n\nKendall gathers the model output for silver returns and tests whether the model explains RET with any statistical significance. She uses the partial ANOVA table results in Exhibit 1 and notes that the critical value of the F-statistic is 3.813 at the 1% significance level and 2.619 at the 5% significance level.\n\nExhibit 1\n\n# Source | Degrees of Freedom | Sum of Squares | Mean Squares\n\nRegression | 3 | 0.0453 | 0.0151\n\nResidual | 620 | 0.9512 | 0.0015\n\nTotal | 623 | 0.9965 | ---",
+    "questions": [
+     {
+      "q": "Do the independent variables jointly contribute to the explanation of silver returns?",
+      "options": [
+       "No",
+       "Yes, at the 5% significance level only",
+       "Yes, at both the 5% and 1% significance levels"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the joint contribution is tested using the F-statistic for the overall model. The F-statistic is calculated as F = mean square regression / mean square error = MSR/MSE = 0.0151/0.0015 ≈ 10. This exceeds the critical value at the 5% and 1% significance levels. \nThis response would be chosen if F were calculated as mean square error / mean square regression = MSE/MSR = 0.0015/0.0151 ≈ 0.1.\nB. Incorrect. Incorrect because the joint contribution is tested using the F-statistic for the overall model. The F-statistic is calculated as F = mean square regression / mean square error = MSR/MSE = 0.0151/0.0015 ≈ 10. This exceeds the critical value at the 5% and 1% significance levels. \nThis response would be chosen if F were calculated as sum of squares regression / mean square regression = SSR/MSR = 0.0453/0.0151 = 3.\nC. Correct."
+     }
+    ]
    }
   ],
-  "concept": "Only the Quantitative Methods questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Quantitative Methods questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_eco",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Economics",
   "kind": "practice",
-  "minutes": 36,
-  "desc": "Economics: the questions you got wrong or asked about in the real Mocks B, C, D and E (12 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 42,
+  "desc": "Economics: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (14 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Econ",
@@ -23476,18 +23579,51 @@
       "why": "A. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation, which puts corresponding pressure on nominal interest rates and bond prices. Ling expects Country A's actual GDP growth rate will stay above the potential GDP growth rate. This leads to higher inflation and lower, not higher, bond prices.\nB. Correct.\nC. Incorrect. Incorrect because actual GDP growth above (below) the potential GDP growth rate puts upward (downward) pressure on inflation, which puts corresponding pressure on nominal interest rates and bond prices. Ling expects Country B will experience much lower inflation than the current market forecast. This leads to higher bond prices for Country B. Ling expects Country A's actual GDP growth rate will stay above the potential GDP growth rate. This leads to higher inflation and lower, not higher, bond prices."
      }
     ]
+   },
+   {
+    "topic": "Econ",
+    "body": "Source: Mock F · Paper 1 · Vignette 9\n\nNod reviews the information on three developing economies in Exhibit 3. There are no material differences in the countries' saving rates, population growth rates, and production functions. Nod believes that the three countries will benefit from conditional convergence with developed economies.\n\nExhibit 3\n\n#  | Country B | Country C | Country D\n\nCapital-to-labor ratio | 40% | 40% | 30%\n\nPer capita income | $1,100 | $1,000 | $1,000",
+    "questions": [
+     {
+      "q": "Assuming conditional convergence, which country is most likely to experience the highest growth in per capita income?",
+      "options": [
+       "Country B",
+       "Country C",
+       "Country D"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the capital-to-labor ratio for Country B is higher than that for Country D and, as per conditional convergence, the economy with a lower capital-to-labor ratio will experience more rapid growth of productivity and per capita income.\nB. Incorrect. Incorrect because, even though Country C's per capita income is the same as Country D's, the capital-to-labor ratio for Country C is higher than that for Country D and, as per conditional convergence, the economy with a lower capital-to-labor ratio will experience more rapid growth of productivity and per capita income.\nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "Econ",
+    "body": "Source: Mock F · Paper 2 · Vignette 2\n\nChun Tian is a US-based portfolio manager actively involved in the foreign exchange market.\n\nThree months ago, Tian made a 6-month deposit of 50 million Australian dollars (AUD) at the annualized 6-month AUD reference interest rate. She then fully hedged the deposit by selling AUD forward against USD. Today, she marks the forward position to market and notes that reference rates have not changed over the past three months. Selected current reference rates are provided in Exhibit 1.\n\nExhibit 1\n\n#  | 3-Month | 6-Month\n\nAUD reference rate (annualized) | 0.60% | 0.67%\n\nUSD reference rate (annualized) | 0.26% | 0.36%",
+    "questions": [
+     {
+      "q": "Assuming covered interest rate parity holds, the all-in annualized USD return that Tian should earn on the AUD deposit is closest to:",
+      "options": [
+       "0.26%.",
+       "0.36%.",
+       "0.67%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because 0.26% is the 3-month annualized USD reference rate, but the AUD deposit has a term of 6 months. Candidates who mix up the time duration of placement and maturity of the deposit, but do not overlook the fact that the question asks for the rate of return in USD terms, may incorrectly select this answer option.\nB. Correct.\nC. Incorrect. Incorrect because 0.67% is the 6-month annualized AUD reference rate. Candidates who overlook the fact that the question asks for the rate of return in USD terms may incorrectly select this answer option."
+     }
+    ]
    }
   ],
-  "concept": "Only the Economics questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Economics questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_fsa",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Financial Statement Analysis",
   "kind": "practice",
-  "minutes": 57,
-  "desc": "Financial Statement Analysis: the questions you got wrong or asked about in the real Mocks B, C, D and E (19 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 72,
+  "desc": "Financial Statement Analysis: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (24 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "FSA",
@@ -23744,18 +23880,87 @@
       "why": "A. Incorrect. Incorrect because this represents a potential treatment of a foreign currency transaction and not a translation adjustment. The two most common treatments (of foreign currency transaction gains and losses, not translation adjustments) are either (1) as a component of other operating income/expense or (2) as a component of non-operating income. Belle uses the current rate method, and when the current rate method is used, the cumulative translation adjustment needed to keep the translated balance sheet in balance is reported as a separate component of stockholders’ equity.\nB. Incorrect. Incorrect because Belle uses the current rate method and this represents treatment under the temporal method. Under both international and US accounting standards, when the temporal method is used, the translation adjustment needed to keep the translated balance sheet in balance is reported as a gain or loss in net income.\nIt also represents a potential treatment of a foreign currency transaction, not a translation adjustment. The two most common treatments (of foreign currency transaction gains and losses, not translation adjustments) are either (1) as a component of other operating income/expense or (2) as a component of non-operating income.\nC. Correct."
      }
     ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Source: Mock F · Paper 1 · Vignette 11\n\nKarl Reinke, a research analyst, is examining the financial statements of Argon plc, a UK-based company that reports under IFRS. Argon's primary competitors are US-based companies that report under US GAAP. On 1 January of the current year, Argon purchased a 40% non-controlling interest in Xenon plc for GBP 500 million. The book values of the assets and liabilities were equal to their fair values except for inventory, which was undervalued by GBP 5 million, and equipment, which was undervalued by GBP 10 million. Xenon uses the FIFO inventory valuation method and depreciates all of its equipment using the straight-line method. The equipment has an estimated remaining useful life of ten years with no residual value. Reinke estimates that Xenon will report net income of GBP 60 million and will not declare any dividends for the current year.\n\nArgon also acquired an 80% controlling interest in Radon plc in the current year, and has elected to use the partial goodwill option for recognizing goodwill when consolidating Radon.",
+    "questions": [
+     {
+      "q": "The estimated amount of Argon's investment in Xenon at the end of the current year should be:",
+      "options": [
+       "GBP 521.6 million.",
+       "GBP 522.4 million.",
+       "GBP 523.6 million."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the depreciation for the undervalued equipment is treated as though it was overvalued (500.0 + 24.0 – 2.0 + 0.4 = 522.4).\nC. Incorrect. Incorrect because the deduction for the inventory sold under the FIFO valuation method is omitted from the calculation (500.0 + 24.0 – 0.4 = 523.6)."
+     },
+     {
+      "q": "When consolidating Radon, Argon's D/E ratio at the end of the current year would be:",
+      "options": [
+       "lower than if it used the method of its primary competitors.",
+       "the same as if it used the method of its primary competitors.",
+       "higher than if it used the method of its primary competitors."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because total shareholders' equity is lower under the partial goodwill method, thereby increasing the debt-to-equity ratio. Total debt is the same under both methods.\nB. Incorrect. Incorrect because total shareholders' equity is lower under the partial goodwill method, thereby increasing the debt-to-equity ratio. Total debt is the same under both methods. \nC. Correct."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Source: Mock F · Paper 2 · Vignette 6\n\nJoanne Gordon is a buy-side analyst covering the banking and insurance sectors.\n\nGordon first analyzes the liquidity of Grand Bank. She reviews the information (in $ millions) from the bank's most recent annual report in Exhibit 1 and calculates its liquidity coverage ratio.\n\nExhibit 1\n\nHigh-quality liquid assets | 400\n\nNet cash outflows | 300\n\nHigh-quality liquid assets in excess of net cash outflows | 100\n\nTotal available stable funding | 1,300\n\nTotal required stable funding | 1,100\n\nBronx Insurance has two share-based compensation plans: (1) a restricted stock unit (RSU) plan for employees; and (2) executive stock options. Settlement for the RSUs is made at the end of each year. On the grant date at the beginning of the first year, the share price was $6.00 per RSU. At the end of the second year, the share price was $5.00 per RSU. The CEO has vested stock options equivalent to 10% of the company's current outstanding shares. Gordon forecasts a net loss for Bronx Insurance during the second year of the RSU plan.",
+    "questions": [
+     {
+      "q": "The liquidity coverage ratio for Grand Bank is closest to:",
+      "options": [
+       "33%.",
+       "118%.",
+       "133%."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the calculation uses the high-quality liquid assets (HQLA) in excess of net cash outflows in the numerator instead of total high-quality liquid assets as required.\nLCR = HQLA in excess of net cash outflows/Net cash outflows = 100/300 ≈ 33%\nB. Incorrect. Incorrect because this is the value for the net stable funding ratio. \nNet stable funding ratio = Total available stable funding/Total required stable funding\n= 1,300/1,100 ≈ 118%\nC. Correct."
+     },
+     {
+      "q": "As a result of the employee RSU plan and executive stock options, Gordon's forecasted value for diluted EPS of the second year of the RSU plan should be:",
+      "options": [
+       "lower than basic EPS.",
+       "the same as basic EPS.",
+       "higher than basic EPS."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because when EPS is positive, unvested RSUs are added to shares outstanding balance, resulting in a lower diluted EPS than basic EPS. The options would be excluded from the calculation as they are anti-dilutive: exercise is uneconomic for the holder, and if they were exercised, fewer shares would be issued upon their exercise than would be repurchased with the resulting cash received, reducing shares outstanding and increasing EPS.\nB. Correct.\nC. Incorrect. Incorrect because diluted EPS cannot exceed basic EPS, so companies that report a net loss will report the same basic and diluted shares outstanding."
+     }
+    ]
+   },
+   {
+    "topic": "FSA",
+    "body": "Source: Mock F · Paper 2 · Vignette 8\n\nExhibit 1\n\n#  | USD/EUR\n\n1 January | 1.14\n\n15 December | 1.08\n\n31 December | 1.05\n\nAverage for the year | 1.10\n\nOn 1 January of the most recent year, Calpurnia established a wholly-owned subsidiary in the Eurozone, Bartolo AG. Bartolo has the EUR as its reporting currency and uses the FIFO method to account for inventory. The exchange rate when Bartolo's inventory was purchased over the most recent year was 1.11. Bartolo's financial statements are translated into USD using the current rate method. Smith considers the effect of translation on Bartolo's gross profit margin. For the most recent year, Bartolo reported net income of EUR 10 million. On 15 December, Bartolo declared dividends of EUR 800,000.",
+    "questions": [
+     {
+      "q": "The increase in Bartolo's retained earnings when translated into USD for the most recent year is:",
+      "options": [
+       "USD 9,660,000.",
+       "USD 10,120,000.",
+       "USD 10,136,000."
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because the increase in retained earnings is translated using the current rate as of the end of the most recent year:\nNet increase in retained earnings (incorrect): (EUR 10,000,000 – EUR 800,000) × 1.05 = USD 9,660,000.\nB. Incorrect. Incorrect because the increase in Bartolo's retained earnings is translated by using the average rate of the most recent year as follows:\nIncrease in retained earnings: (EUR 10,000,000 – EUR 800,000) × 1.10 = USD 10,120,000.\nC. Correct."
+     }
+    ]
    }
   ],
-  "concept": "Only the Financial Statement Analysis questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Financial Statement Analysis questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_cor",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Corporate Issuers",
   "kind": "practice",
-  "minutes": 36,
-  "desc": "Corporate Issuers: the questions you got wrong or asked about in the real Mocks B, C, D and E (12 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 42,
+  "desc": "Corporate Issuers: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (14 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Corp",
@@ -23906,18 +24111,45 @@
       "why": "A. Incorrect. Incorrect because cash is not affected by a stock dividend; stock dividends do not affect assets or liquidity ratios.\nB. Correct.\nC. Incorrect. Incorrect because stockholders' equity is not affected by stock dividends (offsetting changes in retained earnings and contributed capital keep stockholders' equity unchanged)."
      }
     ]
+   },
+   {
+    "topic": "Corp",
+    "body": "Source: Mock F · Paper 1 · Vignette 10\n\nEmily Connelly is an investment analyst at Cove Investment Management. Connelly is analyzing a company that has $250 million in pretax earnings, 40% of which are distributed as dividends while the rest are retained. Both distributed and retained earnings are taxed at a 30% corporate tax rate. Connelly computes the effective tax rate on dividends for a client, Client X, who has a 20% personal tax rate on dividends received.\n\nConnelly evaluates potential stock price reactions to a reduction in dividend payments made by three firms (Firm A, Firm B, and Firm C), based on the metrics shown in Exhibit 1.\n\nExhibit 1\n\n# Metric | Firm A | Firm B | Firm C\n\nGrowth opportunities | High | Low | High\n\nFinancial flexibility | High | High | Low",
+    "questions": [
+     {
+      "q": "Client X's effective tax rate on dividends is closest to:",
+      "options": [
+       "36%.",
+       "44%.",
+       "50%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because only 40% of pre-tax income is allocated to dividend payments, so only 40% of corporate tax contributes to the effective tax rate on dividends. This answer assumes that the total corporate tax ($75) on pre-tax income contributes to the effective tax rate. It was computed as follows:\nGiven in vignette:\nPre-tax earnings are $250 million.\nProportion allocated to dividend payments is 40%.\nCorporate tax rate is 30%.\nPersonal tax rate is 20%.\nIncorrect solution:\nPre-tax earnings = $250.00\nCorporate income tax = 0.30 × $250 = $75\nAfter-tax earnings = $250 – $75 = $175\nAfter-tax earnings paid as dividends = 0.40 × $175 = $70\nShareholder tax on dividends = 0.20 × $70 = $14\nNet dividend to shareholders = $70 – $14 = $56\nTotal taxes paid = $75 + $14 = $89\nEffective tax rate on dividends = (Corporate tax + Personal tax) / Pre-tax earnings\nEffective tax rate on dividends = $89/$250 = 35.6% ≈ 36%\nB. Correct.\nC. Incorrect. Incorrect because this is simply the sum of the two tax rates; 30% + 20% = 50%. This ignores the fact that dividends are paid from after-tax earnings."
+     },
+     {
+      "q": "Based on Connelly's metrics, the stock price of which firm would most likely have a favorable reaction to a dividend reduction?",
+      "options": [
+       "Firm A",
+       "Firm B",
+       "Firm C"
+      ],
+      "answer": 2,
+      "why": "A. Incorrect. Incorrect because, while both Firm A and Firm C have high growth opportunities, Firm A has high financial flexibility whereas Firm C does not. Consequently, Firm C would be more likely to have a favorable stock price reaction to a reduction in dividend payments than would Firm A.\nB. Incorrect. Incorrect because Firm B has low growth opportunities and high financial flexibility. Based on this information, a reduction in dividends by Firm B would most likely result in an unfavorable stock price reaction. Firm B would more likely benefit from an increase in dividend payments.\nC. Correct."
+     }
+    ]
    }
   ],
-  "concept": "Only the Corporate Issuers questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Corporate Issuers questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_equ",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Equity Valuation",
   "kind": "practice",
-  "minutes": 54,
-  "desc": "Equity Valuation: the questions you got wrong or asked about in the real Mocks B, C, D and E (18 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 60,
+  "desc": "Equity Valuation: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (20 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Equity",
@@ -24164,18 +24396,45 @@
       "why": "A. Incorrect. Incorrect because the normalized earnings after interest and tax (EAIT) is calculated (instead of EBIT) as follows:\nNormalized EAIT = Reported EBIT – CEO salary – Increase in interest paid + Tax benefit on interest paid\nInterest paid = $5,500,000 × 0.10 = $550,000\nTax benefit on interest paid = $550,000 × 0.18 = $99,000\nNormalized EAIT = $5,000,000 – $600,000 – $550,000 + $99,000\n= $3,949,000 ≈ $3.9 million\nB. Correct.\nC. Incorrect. Incorrect because the normalized EBIT for Romala is calculated by deducting the net difference between the current CEO's compensation and a replacement CEO's salary ($800,000 – $600,000 = $200,000):\nNormalized EBIT = Reported EBIT – Net difference in CEO salary\n= $5,000,000 – $200,000\n= $4,800,000 = $4.8 million\nNo adjustment to EBIT was correctly taken into account for the increase in debt level as interest and its effect on taxes are below the EBIT line."
      }
     ]
+   },
+   {
+    "topic": "Equity",
+    "body": "Source: Mock F · Paper 2 · Vignette 4\n\nThere are rumors that Boston Terminals plans to acquire a competitor, whose shares are currently trading at $24.1 per share. Bernal would like to determine if the stock is fairly valued, using the following assumptions:\n\nFCFF is estimated at $368 million in Year 1, $442 million in Year 2 and is expected to grow by 3% per year afterwards.\n\nWACC is 12% and number of outstanding shares is 100 million.\n\nMarket value of non-operating assets is $300 million.\n\nBook value of debt is $2,000 million and market value of debt is $2,300 million.\n\nBernal thinks that the competitor is likely to deploy anti-takeover measures against acquisition by Boston Terminals. She believes the competitor will issue new debt and use the proceeds to buy-back its own shares. Bernal assesses how these measures will affect the competitor's FCFF and FCFE.",
+    "questions": [
+     {
+      "q": "Based on her assumptions for Boston Terminals competitor, Bernal should conclude that the stock is:",
+      "options": [
+       "undervalued.",
+       "fairly valued.",
+       "overvalued."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the fair value of the Boston Terminals competitor is $27.1 per share whereas the shares are currently trading at $24.1 per share. The correct calculation of equity value = Value of operating assets + MV of non-operating assets - MV of debt. However, if the MV of non-operating assets is mistakenly omitted from the formula, this will lead to: \nEquity value = Value of operating assets - MV of debt\nEquity value = 4,709.5 - 2,300 = 2,409.5\nShare price = $2,409.5 million/100 million shares = $24.1.\nC. Incorrect. Incorrect because the fair value of the Boston Terminals competitor is $27.1 per share whereas the shares are currently trading at $24.1 per share. The correct calculation of equity value = Value of operating assets + MV of non-operating assets - MV of debt. However, if book value of debt is mistakenly used instead of MV of debt, this will lead to: \nEquity value = Value of operating assets + Value of non-operating assets - Book Value of debt\nEquity value = 4,709.5 + 300 - 2,000 = 3,009.5\nShare price = $3,009.5 million/100 million shares = $30.1."
+     },
+     {
+      "q": "The competitor's anti-takeover measures against the acquisition by Boston Terminals will:",
+      "options": [
+       "increase FCFF and decrease FCFE.",
+       "not impact FCFF and increase FCFE.",
+       "not impact FCFF and decrease FCFE."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because an increase in debt and share buy-backs are cash flows available to all investors, including shareholders, and as a result have no effect on FCFF. An increase in net borrowings increases FCFE in the year of issuance.\nB. Correct.\nC. Incorrect. Incorrect because an increase in debt and share buy-backs are cash flows available to all investors, including shareholders, and as a result have no effect on FCFF. An increase in net borrowings increases FCFE in the year of issuance."
+     }
+    ]
    }
   ],
-  "concept": "Only the Equity Valuation questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Equity Valuation questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_fi",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Fixed Income",
   "kind": "practice",
-  "minutes": 63,
-  "desc": "Fixed Income: the questions you got wrong or asked about in the real Mocks B, C, D and E (21 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 78,
+  "desc": "Fixed Income: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (26 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "FI",
@@ -24452,18 +24711,87 @@
       "why": "A. Correct.\nB. Incorrect. Incorrect because Barilla notes that the new issue will have a higher credit rating than previously issued bonds and she expects the Grocery, Inc. credit spread curve to steepen after the new issue. The credit term structure for the most highly rated securities tends to be either flat or slightly upward sloping.\nC. Incorrect. Incorrect because Barilla notes that the new issue has a tighter bid–offer spread and she expects the Grocery, Inc. credit spread curve to steepen after the new issue. The steepening effect may be partially offset by a tighter bid–offer spread for longer credit maturities."
      }
     ]
+   },
+   {
+    "topic": "FI",
+    "body": "Source: Mock F · Paper 1 · Vignette 2\n\nFor Country 2, Yang anticipates that economic growth will accelerate. As a result, she expects Country 2's yield curve, which is currently upward sloping, to rise and become steeper than currently expected by the market. Given her expectations, Yang considers which of the three compositions for her long–only government bond portfolio in Exhibit 2 would be the most appropriate.\n\nExhibit 2\n\n# Portfolio | Short-Term Bonds | Intermediate-Term Bonds | Long-Term Bonds\n\n1 | 80% | 10% | 10%\n\n2 | 33% | 34% | 33%\n\n3 | 45% | 10% | 45%\n\nYang then considers Country 3 and calculates the 5-year swap spread, based on a 5-year swap rate of 5.50% and the data on recently issued government bonds shown in Exhibit 3.\n\nExhibit 3\n\n# Government Bond | Original Maturity | Remaining Maturity | Yield-to-Maturity\n\nBond A | 5.0 years | 4.0 years | 5.20%\n\nBond B | 5.0 years | 4.5 years | 5.30%\n\nBond C | 6.0 years | 5.5 years | 5.40%",
+    "questions": [
+     {
+      "q": "Given Yang expectations for Country 2's yield curve, the most appropriate bond portfolio composition would be:",
+      "options": [
+       "Portfolio 1.",
+       "Portfolio 2.",
+       "Portfolio 3."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because Portfolio 2, whose composition is evenly spread across a range of maturities, is a 'laddered portfolio', will have a higher portfolio duration than Portfolio 1. Given rising yields and a steeper yield curve, Yang will want to have a portfolio with the shortest duration possible.\nC. Incorrect. Incorrect because Portfolio 3 is a barbell portfolio with a greater weighting to long-term bonds than Portfolio 1 (45% compared with 10%). As a result, its portfolio duration will be longer than that of Portfolio 1. Given the expectation of a rising and steepening yield curve, Yang will want to have a portfolio with the shortest duration possible."
+     },
+     {
+      "q": "The 5-year swap spread in Country 3 is:",
+      "options": [
+       "15 bps.",
+       "20 bps.",
+       "25 bps."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this is the spread between the swap rate the interpolated YTMs of the bonds with the 4.5-year and 5.5-year remaining maturities, Bonds B and C.\n0.15% = 5.50% – (5.30% + 5.40%) / 2\nB. Correct.\nC. Incorrect. Incorrect because this is calculated from the interpolated YTMs of the bonds with the 4.0-year and 4.5-year remaining maturities, but which were both originally issued as 5-year bonds, Bonds A and B:\n0.25% = 5.50% – (5.20% + 5.30%) / 2"
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Source: Mock F · Paper 2 · Vignette 3\n\nFabiano Arlandi, a portfolio manager, is analyzing the term structure of credit spreads for three companies.\n\nCompany A is a high-quality issuer with a strong competitive position in a stable industry with strong fundamentals; the company is currently refinancing near-term maturities with long-term debt.\n\nCompany B was recently acquired in a leveraged buyout by an experienced team that is expected to restructure the organization and improve margins and profitability.\n\nCompany C operates in a cyclical industry that is currently at the bottom of its economic cycle.\n\nThree months ago, Arlandi bought $10 million of 5-year protection on Company B through a CDS contract with a duration of 3.7 years. The CDS credit spread has since narrowed from 350 bps to 220 bps currently. Arlandi closes out the trade by selling the CDS contract.",
+    "questions": [
+     {
+      "q": "The term structure of credit spreads is most likely upward sloping for:",
+      "options": [
+       "Company A.",
+       "Company B.",
+       "Company C."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because an inverted credit spread curve is typical for a company undergoing a leveraged buyout. For example, an ownership change resulting from a leveraged buyout or private equity acquisition may often be accompanied by a significant increase of leverage. In such a case, an inverted credit curve may indicate investor expectations that the new owners will create efficiencies in the restructured organization, leading to improved future cash flows and profitability that will benefit debt investors.\nC. Incorrect. Incorrect because an inverted credit spread curve is typical for a company at the bottom of the economic cycle. Another example of an inverted credit term structure might result when issuers in a historically cyclical industry (such as oil and gas exploration or retail) find themselves at the bottom of an economic cycle, with investor expectations of a recovery in the industry tied to improving credit spreads over time."
+     },
+     {
+      "q": "The estimated loss on the CDS trade on Company B is closest to:",
+      "options": [
+       "$481,000.",
+       "$650,000.",
+       "$814,000."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the term to maturity of 5 years is used instead of duration:\nEstimated loss = Change in credit spread × Term to maturity × Notional amount\n= (220 bps – 350 bps) × 5.0 × $10 million = –130 bps × 5.0 × $10 million = –$650,000.\nC. Incorrect. Incorrect because the negative ending spread of 220 bps is used instead of the change in the spread: \nEstimated loss = –Ending credit spread × Duration × Notional amount\n= –220 bps × 3.7 × $10 million = –220 bps × 3.7 × $10 million = –$814,000."
+     }
+    ]
+   },
+   {
+    "topic": "FI",
+    "body": "Source: Mock F · Paper 2 · Vignette 11\n\nKent reviews newly issued Bond X, a 3-year default-free bond with an annual coupon of 5.85% that is callable at its par value of 100 one year and two years from today. She assumes interest rate volatility of 15% and constructs the binomial interest rate tree shown in Exhibit 1. In the tree, branching from each node to a high state or a low state occurs with equal probability. Kent uses the tree to value Bond X.\n\nExhibit 1 Binomial Interest Rate Tree (1-year rates)\n\n# | Year 0 | Year 1 | Year 2\n\nUpper node |  | 4.2530% | 10.4577%\n\nMiddle node | 6.10% |  | 7.7472%\n\nLower node |  | 3.1507% | 5.7393%\n\nNote: This exhibit was a binomial diagram in the original paper. Its figure was not in the pasted text: the rates are taken from the answer explanation of Question 41 (Year 0: 6.10%; Year 1: 4.2530% and 3.1507%; Year 2: 10.4577%, 7.7472% and 5.7393%); their placement in the table is a reconstruction.",
+    "questions": [
+     {
+      "q": "The value of Bond X is closest to:",
+      "options": [
+       "99.15.",
+       "99.98.",
+       "101.74."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because this response only reflects the exercise of the call option in Year 2. The calculations are: \n \nValues at Year 2\nTop node: (100 + 5.85) / 1.104577 = $95.8285\nMiddle node: (100 + 5.85) / 1.077472 = $98.2392\nBottom node: (100 + 5.85) / 1.057393 = $100.1047, so the bond would be called at 100\n \nValues at Year 1\nTop node: [5.85 + (0.5 × 95.8285 + 0.5 × 98.2392)] / (1.042530) = $98.6867\nBottom node: [5.85 + (0.5 × 98.2392 + 0.5 × 100.0000)] / (1.031507) = $101.7633\n \nValues at Year 0\nCurrent node: [5.85 + (0.5 × 98.6867 + 0.5 × 101.7633)] / (1.0610) = $99.9764 ≈ $99.98\n \nThis response is also closest to the result of ignoring the call option completely, which is $100.00.\nC. Incorrect. Incorrect because this response reflects the exercise of a put option, rather than a call option, at the appropriate nodes in Year 1 and Year 2. The calculations are: \n \nValues at Year 2\nTop node: (100 + 5.85) / 1.104577 = $95.8285, so the bond would be put at 100\nMiddle node: (100 + 5.85) / 1.077472 = $98.2392, so the bond would be put at 100\nBottom node: (100 + 5.85) / 1.057393 = $100.1047\n \nValues at Year 1\nTop node: [5.85 + (0.5 × 100.0000 + 0.5 × 100.0000)] / (1.042530) = $101.5319\nBottom node: [5.85 + (0.5 × 100.0000 + 0.5 × 100.1047)] / (1.031507) = $102.6676\n \nValues at Year 0\nCurrent node: [5.85 + (0.5 × 101.5319 + 0.5 × 102.6676)] / (1.0610) = $101.7433 ≈ $101.74"
+     }
+    ]
    }
   ],
-  "concept": "Only the Fixed Income questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Fixed Income questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_der",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Derivatives",
   "kind": "practice",
-  "minutes": 24,
-  "desc": "Derivatives: the questions you got wrong or asked about in the real Mocks B, C, D and E (8 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 27,
+  "desc": "Derivatives: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (9 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Deriv",
@@ -24562,18 +24890,35 @@
       "why": "A. Incorrect. Incorrect. The 90 puts would have cost 42.97 and would have expired worthless if the stock rose to 140. The 90 calls would have cost 0.15 and had a price of 50 at expiration resulting in a profit of 49.85 for the call and a loss of 42.97 for the put.\nB. Correct.\nC. Incorrect. Incorrect. The 90 calls would hedge the short stock position after the stock price rose above 90, however the stocks would have had a loss between 47 and 90 of 43.  The terminal call price of 50 would have had the combination result in a net gain of 6.85 ((50-0.15)-43) = 6.85"
      }
     ]
+   },
+   {
+    "topic": "Deriv",
+    "body": "Source: Mock F · Paper 2 · Vignette 7\n\nJacob Green has a large position in the non-dividend-paying stock of his own firm. Four months ago, Azul advised Green to reduce his exposure to the firm's stock by $2 million. Due to tax considerations, Green entered into a short 6-month equity forward contract for the firm's stock instead of selling the shares outright. At the meeting, Green asks Azul how the value of the current forward position would be affected if the company pays a $3.50 dividend in three months and the share price is unchanged.",
+    "questions": [
+     {
+      "q": "Azul's best response to Green’s question regarding the value of the forward position is that it will:",
+      "options": [
+       "decrease.",
+       "be unaffected.",
+       "increase."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because the dividend is paid after the forward contract expires, therefore there is no impact on the value of the forward contract. If the dividend did occur before the forward contract expired, this answer would still be incorrect because Green shorted the forward and the payment of a dividend would increase the value of his position. However, in case of a long position, the value of his position would decrease.\nB. Correct.\nC. Incorrect. Incorrect because the dividend is paid after the forward contract expires. However, if the dividend did occur before the forward contract expired, this answer would be correct because Green shorted the forward and the payment of a dividend would increase the value of his position."
+     }
+    ]
    }
   ],
-  "concept": "Only the Derivatives questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Derivatives questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_alt",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Alternative Investments",
   "kind": "practice",
-  "minutes": 33,
-  "desc": "Alternative Investments: the questions you got wrong or asked about in the real Mocks B, C, D and E (11 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 36,
+  "desc": "Alternative Investments: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (12 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "Alt",
@@ -24726,18 +25071,35 @@
       "why": "A. Incorrect. Incorrect because Pearl aims to maximize exposure to energy commodities, so the most appropriate index to use as a basis for the commodity swap is the one which has the highest sector weight on energy.  \nThe RICI uses a fixed-weighting scheme to allocate exposure among 38 different commodities. RICI uses the fixed weight weighting method.\nB. Incorrect. Incorrect because Pearl aims to maximize exposure to energy commodities, so the most appropriate index to use as a basis for the commodity swap is the one which has the highest sector weight on energy.\nBCOM's rules of index construction also place caps on the size of the sectors (33% maximum) and floors on individual commodities (2% minimum). These differences mean that very different index composition and weights can occur. For example, the energy sector currently dominates the S&P GSCI (as high as 80% weight), whereas the BCOM’s exposure is much lower (approximately 30%).\nC. Correct."
      }
     ]
+   },
+   {
+    "topic": "Alt",
+    "body": "Source: Mock F · Paper 1 · Vignette 1\n\nHansen then reviews the investment in the Crescent commodity futures fund. The fund currently holds positions in the natural gas, softs (cash crops), and livestock sectors.\n\nHansen observes that Crescent's returns in the natural gas sector behaved differently from the other two sectors over the past five years. According to Crescent's prospectus, the fund always takes a long position in the natural gas futures contract with the shortest maturity. At the contract maturity date, Crescent rolls forward the existing contract to the new contract with the shortest maturity. Hansen gathers in Exhibit 2 prior-year price information for the natural gas market for two of Crescent's trade dates. All prices are in $ per million British thermal units as of the date listed.\n\nExhibit 2\n\n# Trade Date | Spot Price | June Futures Price | July Futures Price | August Futures Price\n\n28 May | 1.795 | 1.957 | 2.418 | 2.793\n\n26 June | 1.795 | 1.795 | 2.338 | 2.546",
+    "questions": [
+     {
+      "q": "The roll return on Crescent's natural gas futures contract on the 26 June trade date was:",
+      "options": [
+       "negative.",
+       "zero.",
+       "positive."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because the roll return would equal zero only if the June and July futures prices were equal on 26 June, which is not the case since the June price is $1.795 and the July price is $2.338.\nC. Incorrect. Incorrect because the roll return is negative when the numerator is correctly calculated as (Near-term futures contract closing price − Farther-term futures contract closing price). The roll return is only positive if the numerator calculation is incorrectly reversed: (Farther-term futures contract closing price − Near-term futures contract closing price) = $2.338 – $1.795 = $0.543 > 0."
+     }
+    ]
    }
   ],
-  "concept": "Only the Alternative Investments questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Alternative Investments questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  },
  {
   "id": "rq3_pm",
   "rev": 1,
+  "feedback": true,
   "resetHl": [],
   "title": "Incorrect: Portfolio Management",
   "kind": "practice",
-  "minutes": 54,
-  "desc": "Portfolio Management: the questions you got wrong or asked about in the real Mocks B, C, D and E (18 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
+  "minutes": 63,
+  "desc": "Portfolio Management: the questions you got wrong or asked about in the real Mocks B, C, D, E and F (21 questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.",
   "vignettes": [
    {
     "topic": "PM",
@@ -24978,8 +25340,50 @@
       "why": "A. Correct.\nB. Incorrect. Incorrect because the corporate bond yield is used as the starting point, however, this is incorrect as this would also include a credit premium.\nThe incorrect calculation is: Corporate bond yield less inflation-linked government bond yield less survey-based inflation expectation.\n6.28% – 2.32% – 2.80% = 1.16%\nC. Incorrect. Incorrect because this is calculated as conventional government bond yield less survey-based inflation expectation.\n5.66% – 2.80% = 2.86%"
      }
     ]
+   },
+   {
+    "topic": "PM",
+    "body": "Source: Mock F · Paper 2 · Vignette 1\n\nFinally, Stone reviews Brockway's fixed-income strategy, which uses a multifactor model to pick undervalued securities. He estimates downside risk measures for the strategy using Monte Carlo simulation. To perform the simulation, Stone specifies a functional form using ten factors and calibrates the model to a multivariate Student’s t-distribution. The model is complex and several factors have limited historical data.",
+    "questions": [
+     {
+      "q": "The model used in Stone’s Monte Carlo simulation most likely has a:",
+      "options": [
+       "large estimation error.",
+       "high specification error.",
+       "low probability of producing extreme return estimates."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because high specification error arises when the model is overly simplistic.\nOverly simplistic models require fewer parameters (therefore, they might have low estimation errors), but they may not fit the data well (because they are mis-specified). Stone’s model is complex and has ten key decision variables.\nC. Incorrect. Incorrect because a multivariate Student’s t-distribution is used, which has fatter tails than the normal distribution and accounts for a higher probability of extreme events. The Student’s t-distribution is a natural extension of the multivariate normal distribution, because it has the ability to account for the skewness and the excess kurtosis often observed in factor and asset return data. Excess kurtosis indicates a higher probability of extreme events."
+     }
+    ]
+   },
+   {
+    "topic": "PM",
+    "body": "Source: Mock F · Paper 2 · Vignette 10\n\nGlade notes that Country A has a large positive equity risk premium, and she considers what this suggests about investor expectations.\n\nGlade analyzes the breakeven inflation rate of Country B. She examines the following most recent financial data for the country:\n\nCurrent yield on a 5-year zero-coupon default-free nominal bond: 4.5%\n\nCurrent yield on a 5-year zero-coupon default-free real bond: 2.0%\n\nRisk premium for inflation uncertainty: 0.3%",
+    "questions": [
+     {
+      "q": "Country A's equity risk premium most likely suggests that investors expect equity returns and the marginal value of future consumption to be:",
+      "options": [
+       "negatively correlated.",
+       "uncorrelated.",
+       "positively correlated."
+      ],
+      "answer": 0,
+      "why": "A. Correct.\nB. Incorrect. Incorrect because a large positive equity risk premium suggests that investors expect the marginal value of future consumption and equity returns to be negatively correlated. An equity risk premium of zero would suggest that the marginal value of future consumption and equity returns are uncorrelated.\nC. Incorrect. Incorrect because a large positive equity risk premium suggests that investors expect the marginal value of future consumption and equity returns to be negatively correlated. A negative (not positive) equity risk premium would suggest that the marginal value of future consumption and equity returns are positively correlated."
+     },
+     {
+      "q": "Based on the most recent financial data, Country B's breakeven inflation rate is closest to:",
+      "options": [
+       "2.2%.",
+       "2.5%.",
+       "2.8%."
+      ],
+      "answer": 1,
+      "why": "A. Incorrect. Incorrect because this answer choice incorrectly subtracts the risk premium for inflation uncertainty (0.3%) from the difference between the current yield on a 5-year zero-coupon default-free nominal bond (4.5%) and the current yield on a 5-year zero-coupon default-free real bond (2.0%).\nThe difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. It should be clear from the discussion earlier that this break-even inflation rate will incorporate the inflation expectations of investors over the investment horizon of the two bonds, plus a risk premium that will be required by investors to compensate them predominantly for uncertainty about future inflation.\nB. Correct.\nC. Incorrect. Incorrect because this answer choice incorrectly adds the risk premium for inflation uncertainty (0.3%) to the difference between the current yield on a 5-year zero-coupon default-free nominal bond (4.5%) and the current yield on a 5-year zero-coupon default-free real bond (2.0%).\nThe difference between the yield on, for example, a zero-coupon default-free nominal bond and on a zero-coupon default-free real bond of the same maturity is known as the break-even inflation (BEI) rate. It should be clear from the discussion earlier that this break-even inflation rate will incorporate the inflation expectations of investors over the investment horizon of the two bonds, plus a risk premium that will be required by investors to compensate them predominantly for uncertainty about future inflation."
+     }
+    ]
    }
   ],
-  "concept": "Only the Portfolio Management questions you got wrong or asked about in the real Mocks B, C, D and E, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nIt is one of ten subject sets (together 143 questions) and a deliberate repeat, so the no-repeat rule does not apply."
+  "concept": "Only the Portfolio Management questions you got wrong or asked about in the real Mocks B, C, D, E and F, nothing changed.\nOne block per original vignette, with only the vignette parts the questions use (word for word); options and explanations exactly as in the papers.\nEach block starts with a Source line (which mock, paper and vignette it came from).\nAfter each vignette the explanation of its questions appears when you tap Next. It is one of ten subject sets (together 171 questions) and a deliberate repeat, so the no-repeat rule does not apply."
  }
 ]

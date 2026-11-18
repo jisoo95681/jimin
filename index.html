@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v251 · 2026-11-17";
+  const APP_VERSION = "v252 · 2026-11-18";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1997,7 +1997,7 @@
       items.forEach(it => paintOpt(it.n));
       if (scrollTo) { const t = root.querySelector("#exq" + scrollTo); if (t) t.scrollIntoView({ block: "start" }); }
       $(".bk").disabled = vi === 0;
-      $(".nx").disabled = vi === NV - 1;
+      $(".nx").disabled = !set.feedback && vi === NV - 1;
       clock();
     }
     function go(p) { cur.page = Math.max(0, Math.min(N - 1, p)); save(); render(flat[cur.page].n); }
@@ -2009,7 +2009,11 @@
     }
     $(".ex-clock").onclick = () => { cur.hide = !cur.hide; save(); clock(); };
     $(".bk").onclick = () => goV(-1);
-    $(".nx").onclick = () => goV(1);
+    $(".nx").onclick = () => {
+      if (!set.feedback) { goV(1); return; }
+      const v0 = flat[cur.page].vi, lastV = v0 === NV - 1;
+      exFeedback(set, flat, v0, cur.ans, lastV, () => { if (lastV) $(".ex-fin").onclick(); else goV(1); });
+    };
     $(".flg").style.display = "none";
     $(".ext").onclick = () => { stop(); save(); exBackTo(id); };
     $(".rev").onclick = review;
@@ -2099,7 +2103,7 @@
       if (zone) { cur.hl[zone.dataset.k] = zone.innerHTML; save(); }
       hlState();
     };
-    function stop() { clearInterval(exTick); exTick = null; document.removeEventListener("selectionchange", onSel); root.remove(); }
+    function stop() { clearInterval(exTick); exTick = null; document.removeEventListener("selectionchange", onSel); document.querySelectorAll(".fbroot").forEach(n => n.remove()); root.remove(); }
     function finish() {
       stop();
       let right = 0;
@@ -2244,6 +2248,69 @@
   function exCopy(text, btn) {
     const done = () => { const o = btn.textContent; btn.textContent = "Copied"; setTimeout(() => { btn.textContent = o; }, 1500); };
     try { navigator.clipboard.writeText(text).then(done, () => {}); } catch {}
+  }
+
+  // Instant feedback (sets with set.feedback): after a vignette, tapping Next first shows the answers and explanations of that vignette.
+  function exFeedback(set, flat, vi, ans, lastOne, onContinue) {
+    const items = flat.filter(it => it.vi === vi), NV = set.vignettes.length;
+    const right = items.filter(it => ans[it.n] === it.q.answer).length;
+    const root = el("div", { className: "exroot fbroot" });
+    root.innerHTML = `
+      <div class="ex-top"><div class="pg"><b>Feedback:</b> Vignette ${vi + 1} of ${NV} (Q${items[0].n}–${items[items.length - 1].n})<br><b>Section:</b> ${set.title}</div>
+        <div class="ex-clock" style="cursor:default"><span><span class="lbl">This vignette</span><br><span class="tm">${right} / ${items.length} correct</span></span></div>
+        <button class="ex-fin">Back to questions</button></div>
+      <div class="ex-green"><span>Test: CFA Level II · ${set.title} · feedback</span><span class="vlab"></span></div>
+      <div class="ex-main"><div class="ex-pane vpane"></div><div class="ex-pane qpane"></div></div>
+      <div class="ex-bot"><span class="sp"></span><button class="ex-btn nx">${lastOne ? "Finish test" : "Continue ›"}</button></div>`;
+    document.body.append(root);
+    const $ = s => root.querySelector(s), vpane = $(".vpane"), qpane = $(".qpane");
+    $(".vlab").textContent = exVTitle(set, vi);
+    vpane.innerHTML = `<h3>Vignette ${vi + 1}</h3><div class="vq">${exVTitle(set, vi).split(" · ")[1]}</div><p class="rv-hint">Tap a question on the right: the words in the vignette that point to its answer are highlighted.</p><div class="vbody"></div>`;
+    const vb = vpane.querySelector(".vbody");
+    vb.innerHTML = exBodyHTML(items[0].v.body);
+    let active = null;
+    function activate(n, scroll) {
+      active = n;
+      const it = flat[n - 1];
+      qpane.querySelectorAll(".ex-qblock").forEach(b => b.classList.toggle("active", +b.dataset.n === n));
+      vb.innerHTML = exBodyHTML(it.v.body);
+      const stem = qpane.querySelector(`#fbq${n} .ex-stem`);
+      exUnmark(stem); stem.textContent = it.q.q;
+      const hint = exHints(it.id); let first = null;
+      if (hint && hint.hl && hint.hl.length) { first = exMark(vb, hint.hl); exMark(stem, hint.hl); }
+      else first = exAuto(vb, it.q);
+      const fb = qpane.querySelector(`#fbq${n} .rv-trig`);
+      if (fb) fb.innerHTML = hint && hint.rule
+        ? `<b>Trigger</b> ${(hint.hl || []).filter(x => !x.startsWith("@row:")).map(x => "“" + x.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "”").join(" · ")}<div style="margin-top:4px"><b>Rule next time:</b> ${hint.rule.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</div>`
+        : `<span class="auto">No hand-written trigger for this question yet. The shaded lines in the vignette were picked automatically by matching words with the question.</span>`;
+      if (scroll !== false && first) setTimeout(() => { try { first.scrollIntoView({ block: "center", behavior: "smooth" }); } catch {} }, 30);
+    }
+    items.forEach(it => {
+      const ch = ans[it.n], ok = ch === it.q.answer;
+      const blk = el("div", { className: "ex-qblock rv", id: "fbq" + it.n }); blk.dataset.n = it.n;
+      const hd = el("div", { className: "ex-qn" });
+      hd.append(el("span", {}, `Question ${it.n}`), el("span", { className: "rv-badge " + (ch === undefined ? "skip" : ok ? "ok" : "bad") }, ch === undefined ? "Not answered" : ok ? "✓ Correct" : "✗ Incorrect"));
+      blk.append(hd, el("div", { className: "ex-stem" }, it.q.q));
+      const ln = el("div", { className: "rv-line" });
+      ln.innerHTML = `Your answer: <b class="${ok ? "ok" : "bad"}">${ch === undefined ? "none" : LETTERS[ch]}</b>${ok ? "" : ` · Correct answer: <b class="ok">${LETTERS[it.q.answer]}</b>`}`;
+      blk.append(ln);
+      it.q.options.forEach((o, k) => {
+        const b = el("div", { className: "ex-opt" + (k === it.q.answer ? " ok" : k === ch ? " bad" : "") });
+        b.append(el("span", {}, `${LETTERS[k]}. ${o}`));
+        if (k === it.q.answer && k === ch) b.append(el("span", { className: "tag" }, "Your answer · Correct"));
+        else if (k === it.q.answer) b.append(el("span", { className: "tag" }, "Correct answer"));
+        else if (k === ch) b.append(el("span", { className: "tag" }, "Your answer"));
+        blk.append(b);
+      });
+      const fb = el("div", { className: "rv-fb" });
+      fb.append(el("div", { className: "rv-why" }, it.q.why || ""), el("div", { className: "rv-trig" }));
+      blk.append(fb);
+      blk.onclick = () => { if (active !== it.n) activate(it.n); };
+      qpane.append(blk);
+    });
+    activate((items.find(x => ans[x.n] !== x.q.answer) || items[0]).n, true);
+    $(".ex-fin").onclick = () => root.remove();
+    $(".nx").onclick = () => { root.remove(); onContinue(); };
   }
 
   function examReview(id, startN) {

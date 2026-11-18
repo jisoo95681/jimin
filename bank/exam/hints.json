@@ -6237,5 +6237,215 @@
    "@row:Survey-based inflation expectation"
   ],
   "rule": "Breakeven inflation (BEI) = nominal government yield − inflation-linked yield. BEI = expected inflation + inflation risk premium. Use government bonds, not corporate (credit premium)."
+ },
+ "rq3_eth:17": {
+  "hl": [
+   "She discloses the firm's IPO allocation policy to only those clients that participate in IPOs",
+   "family member of Park's, has a regular fee-paying account that is managed similarly"
+  ],
+  "rule": "Standard III(B) Fair Dealing: disclose the allocation policy to ALL clients and prospects. A family member's regular fee-paying account managed like the others may take part. Pro rata by order size is fair."
+ },
+ "rq3_eth:18": {
+  "hl": [
+   "in my view, the market will trend moderately higher",
+   "no downside risk",
+   "a maximum loss of 15%"
+  ],
+  "rule": "Standard V(B): separate fact from opinion and disclose the significant risks. An opinion labeled as opinion ('in my view') is fine; saying 'no downside risk' about a note with a 15% maximum loss hides a key risk and states an opinion as fact."
+ },
+ "rq3_eth:19": {
+  "hl": [
+   "Country B investor protection laws are minimal and there are no restrictions on fund distribution and marketing practices",
+   "Country A laws state that advisory firms must follow the laws of the local country where they conduct business"
+  ],
+  "rule": "Standard I(A): follow the stricter of the APPLICABLE law and the Code and Standards. Applicable law = the law that governs her conduct. Here Country A law points to Country B law, which is weaker than the Standards → follow the Standards."
+ },
+ "rq3_eth:20": {
+  "hl": [
+   "Li did not cite the source of the table in her report nor did she verify the statistical analysis",
+   "well-recognized industry journal"
+  ],
+  "rule": "Standard I(C) Misrepresentation: using someone else's material without citing the source is plagiarism. Not verifying a table from a reputable source is NOT a violation (V(A) lets her rely on it)."
+ },
+ "rq3_eth:21": {
+  "hl": [
+   "one of MCIB's portfolio managers buys a large number of shares",
+   "I have purchased Godoggo stock because our internal research indicates that it is highly likely to be taken over"
+  ],
+  "rule": "Standard II(B) Market Manipulation: transaction-based (artificial price or volume) or information-based (false rumors). A purchase based on research and a statement of the research-based opinion is neither."
+ },
+ "rq3_qua:9": {
+  "hl": [
+   "compare the forecasting performance of the two models",
+   "@row:Root mean squared error"
+  ],
+  "rule": "Out-of-sample forecasting accuracy is compared with RMSE (lower = better). R-squared and the standard error of the regression are in-sample measures."
+ },
+ "rq3_qua:10": {
+  "hl": [
+   "critical value of the F-statistic is 3.813 at the 1% significance level and 2.619 at the 5% significance level",
+   "@row:Regression",
+   "@row:Residual"
+  ],
+  "rule": "Joint significance of all slopes = F-test: F = MSR / MSE. Compare with the critical value: F above the critical value → reject H0 (the variables jointly explain the returns)."
+ },
+ "rq3_eco:13": {
+  "hl": [
+   "There are no material differences in the countries' saving rates, population growth rates, and production functions",
+   "@row:Capital-to-labor ratio"
+  ],
+  "rule": "Conditional convergence: same saving rate, population growth and production function → the country with the LOWER capital-to-labor ratio grows fastest. The income level itself is not the test."
+ },
+ "rq3_eco:14": {
+  "hl": [
+   "made a 6-month deposit of 50 million Australian dollars (AUD)",
+   "fully hedged the deposit",
+   "reference rates have not changed over the past three months",
+   "@row:USD reference rate (annualized)"
+  ],
+  "rule": "Covered interest rate parity: a fully hedged foreign deposit earns the DOMESTIC (USD) rate for the SAME TERM as the deposit. The deposit term is 6 months, so use the 6-month USD rate."
+ },
+ "rq3_fsa:20": {
+  "hl": [
+   "inventory, which was undervalued by GBP 5 million, and equipment, which was undervalued by GBP 10 million",
+   "Xenon uses the FIFO inventory valuation method",
+   "estimated remaining useful life of ten years with no residual value"
+  ],
+  "rule": "Equity method: add your share of net income, then subtract your share of the fair value excess. FIFO inventory is sold within the year (expense it all); equipment excess is depreciated over its life."
+ },
+ "rq3_fsa:21": {
+  "hl": [
+   "has elected to use the partial goodwill option for recognizing goodwill when consolidating Radon",
+   "Argon's primary competitors are US-based companies that report under US GAAP"
+  ],
+  "rule": "Partial goodwill (IFRS option) gives lower goodwill and a lower non-controlling interest than full goodwill (US GAAP). Total debt is the same, equity is lower → D/E is HIGHER."
+ },
+ "rq3_fsa:22": {
+  "hl": [
+   "calculates its liquidity coverage ratio",
+   "@row:High-quality liquid assets",
+   "@row:Net cash outflows"
+  ],
+  "rule": "LCR = high-quality liquid assets / net cash outflows (one month, stress). NSFR = available stable funding / required stable funding. Do not use the excess of HQLA in the numerator."
+ },
+ "rq3_fsa:23": {
+  "hl": [
+   "Gordon forecasts a net loss for Bronx Insurance during the second year of the RSU plan"
+  ],
+  "rule": "With a NET LOSS, the extra shares from RSUs and options would make the loss per share smaller, so they are anti-dilutive and are left out: diluted EPS = basic EPS."
+ },
+ "rq3_fsa:24": {
+  "hl": [
+   "On 15 December, Bartolo declared dividends of EUR 800,000",
+   "@row:15 December",
+   "@row:Average for the year"
+  ],
+  "rule": "Current rate method: net income at the AVERAGE rate, dividends at the rate on the DECLARATION date. Retained earnings change = translated net income − translated dividends."
+ },
+ "rq3_cor:13": {
+  "hl": [
+   "Both distributed and retained earnings are taxed at a 30% corporate tax rate",
+   "has a 20% personal tax rate on dividends received"
+  ],
+  "rule": "Dividends are paid from AFTER-tax earnings, so the two taxes compound: effective rate = 1 − (1 − corporate rate)(1 − personal rate). It is not the simple sum."
+ },
+ "rq3_cor:14": {
+  "hl": [
+   "@row:Growth opportunities",
+   "@row:Financial flexibility"
+  ],
+  "rule": "A dividend cut is received well when the firm has high growth opportunities and LOW financial flexibility: the retained cash funds the projects without going to the capital markets."
+ },
+ "rq3_equ:19": {
+  "hl": [
+   "FCFF is estimated at $368 million in Year 1, $442 million in Year 2 and is expected to grow by 3% per year afterwards",
+   "whose shares are currently trading at $24.1 per share",
+   "Market value of non-operating assets is $300 million",
+   "market value of debt is $2,300 million"
+  ],
+  "rule": "Two-stage FCFF: discount FCFF at WACC and add a terminal value at the end of Year 2. Equity = firm value + non-operating assets − MARKET value of debt. Then compare per-share value with the price: fair value above price = undervalued."
+ },
+ "rq3_equ:20": {
+  "hl": [
+   "the competitor will issue new debt and use the proceeds to buy-back its own shares"
+  ],
+  "rule": "FCFF is the cash flow BEFORE financing, so new debt and buybacks do not change it. FCFE includes net borrowing, so new debt raises FCFE in the year of issuance."
+ },
+ "rq3_fi:22": {
+  "hl": [
+   "to rise and become steeper than currently expected by the market",
+   "long–only government bond portfolio"
+  ],
+  "rule": "Yields rising → keep portfolio duration SHORT. Steepening (a bear steepener) → the long end loses most, so avoid long-term bonds and hold short-term ones."
+ },
+ "rq3_fi:23": {
+  "hl": [
+   "calculates the 5-year swap spread, based on a 5-year swap rate of 5.50%",
+   "@row:Bond B"
+  ],
+  "rule": "Swap spread = swap rate − YTM of the ON-THE-RUN government bond of the same maturity (the most recently issued 5-year bond). No interpolation."
+ },
+ "rq3_fi:24": {
+  "hl": [
+   "high-quality issuer with a strong competitive position in a stable industry",
+   "currently refinancing near-term maturities with long-term debt",
+   "recently acquired in a leveraged buyout",
+   "at the bottom of its economic cycle"
+  ],
+  "rule": "Upward-sloping credit curve: strong, stable issuer (low short-term spread that rises with maturity). Inverted curve: leveraged buyout (investors expect improvement) or a cyclical firm at the bottom of its cycle."
+ },
+ "rq3_fi:25": {
+  "hl": [
+   "bought $10 million of 5-year protection",
+   "narrowed from 350 bps to 220 bps",
+   "contract with a duration of 3.7 years"
+  ],
+  "rule": "CDS value change ≈ −(Δspread) × duration × notional for the PROTECTION BUYER. Spreads narrowed → buyer loses. Use duration, not maturity, and the CHANGE in spread."
+ },
+ "rq3_fi:26": {
+  "hl": [
+   "callable at its par value of 100 one year and two years from today",
+   "annual coupon of 5.85%",
+   "interest rate volatility of 15%"
+  ],
+  "rule": "Callable bond in a tree: at EVERY call date, cap the node value at the call price (100) before moving back. Apply it in Year 2 AND Year 1."
+ },
+ "rq3_der:9": {
+  "hl": [
+   "Four months ago",
+   "short 6-month equity forward contract",
+   "pays a $3.50 dividend in three months"
+  ],
+  "rule": "A dividend only affects a forward if it is paid BEFORE the forward expires. Check the remaining life first."
+ },
+ "rq3_alt:12": {
+  "hl": [
+   "always takes a long position in the natural gas futures contract with the shortest maturity",
+   "rolls forward the existing contract to the new contract with the shortest maturity",
+   "@row:26 June"
+  ],
+  "rule": "Roll return compares the NEAR-term contract with the FAR-term contract you roll into, not with the spot price. Near > far (backwardation) → positive for a long. Near < far (contango) → negative."
+ },
+ "rq3_pm:19": {
+  "hl": [
+   "ten factors",
+   "several factors have limited historical data",
+   "The model is complex"
+  ],
+  "rule": "Many parameters + little data = LARGE ESTIMATION ERROR (the model is detailed, but its parameters cannot be estimated precisely). Too simple a model = high specification error."
+ },
+ "rq3_pm:20": {
+  "hl": [
+   "Glade notes that Country A has a large positive equity risk premium"
+  ],
+  "rule": "A large positive equity risk premium means equities pay off badly when consumption is most valuable → equity returns and the marginal value of consumption are NEGATIVELY correlated. Zero premium → uncorrelated; negative premium → positively correlated (a hedge)."
+ },
+ "rq3_pm:21": {
+  "hl": [
+   "Current yield on a 5-year zero-coupon default-free nominal bond: 4.5%",
+   "Current yield on a 5-year zero-coupon default-free real bond: 2.0%",
+   "Risk premium for inflation uncertainty: 0.3%"
+  ],
+  "rule": "Breakeven inflation = nominal yield − real yield. It already contains the inflation risk premium. The 0.3% is a distractor here: do not add or subtract it."
  }
 }
