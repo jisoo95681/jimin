@@ -1,0 +1,15 @@
+NR=[
+("IV(B)","V","Runs a fee-earning part-time consulting business and never tells the employer, even though it is done outside work hours","Disclose any paid work the employer could bill for, whatever the hours (kq41-41)"),
+("VI(A)","R","Analyst at a pension consultant plans to recommend her father's hedge fund strategy, which fits the plan's criteria","May recommend it if she truly thinks it is best, but must disclose the relationship (kq41-42)"),
+("IV(A)","OK","Leaving employee shows the new employer a model he built on his own time before joining the old firm","Not employer property: not made for the employer in the course of the job (kq41-46)"),
+("VII(B)","R","Passed Level II in 2009, not enrolled now: how to describe it","'Passed Level II of the CFA exam in 2009' is fine; no designation exists for passing a level, 'candidate' only while enrolled, never 'CFA (expected 2014)' (kq41-47)"),
+("III(C)","R","Before recommending private equity to a fund: which step has the lowest priority","Check the client's risk tolerance and IPS limits first; return analysis comes after suitability (kq41-48)"),
+("I(A)","V","CFA charterholder sits on a bank's audit committee that sets loan provisioning against the central bank's rules","Knowing the stricter regulation and not following it violates; the external auditor testing a random sample did not (kq41-49)"),
+("IV(C)","R","Offered a supervisory role where seminar ads hide that products are sold and promise quick riches","Decline the position until adequate procedures and compliant marketing exist; accepting exposes her to a violation (kq41-50)"),
+("VI(B)","N","Adviser recommends banning employees from all equity-related securities to stop front-running","Too restrictive and not required; use pre-clearance, blackout periods and reporting (kq41-51)"),
+("II(B)","V","Sells a stock, then runs a PR campaign publishing negative (some nonpublic) information on the company","Spreading information to move the price after positioning is manipulation; short selling and diligent research are fine (kq41-52)"),
+("II(A)","R","Analyst learns the founder-president has a serious illness the company has not announced","Encourage the issuer to disclose it publicly; do not trade or publish a sell on it (kq41-53)"),
+("I(D)","OK","Defaults on student loans and goes bankrupt after wedding costs, family medical bills and a job loss","Misconduct means dishonesty, fraud or deceit; personal financial problems are not (kq41-54)"),
+("III(B)","R","Analyst changes a buy to a sell; she runs a free newsletter read by non-clients and manages client money","Clients first: give asset-management clients the change before newsletter readers (kq41-55)"),
+("IV(B)","R","Manager runs a family investment pool for fees and sits on a golf-equipment board, tells his employer nothing","Disclose the pool and its fees (competing financial work); an unrelated board seat need not be disclosed (kq41-57)"),
+]

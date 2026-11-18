@@ -1,0 +1,2762 @@
+[
+{
+"std": "I(A) Knowledge of the Law",
+"rows": [
+[
+"DO / REQUIRED",
+"Told the regulatory filing overstates earnings; counsel says it is hard to prove",
+"Report to supervisor, get independent legal opinion, decide on regulator; counsel's advice does not remove the duty"
+],
+[
+"DO / REQUIRED",
+"Underwriter finds issuer hid severe quarterly losses; prospectus already out",
+"Report to supervisors; if not remedied and firm does not dissociate, sever all connections and seek legal advice"
+],
+[
+"VIOLATION",
+"Asked to use an ad's composite return that omits accounts that left",
+"Using the inflated number violates; dissociate and raise with supervisor/compliance"
+],
+[
+"DO / REQUIRED",
+"Analyst in a country with no insider-trading law",
+"Follow the Code and Standards when the local rules are weaker"
+],
+[
+"VIOLATION",
+"Adviser ignores local law barring IPO participation, thinks only home law applies",
+"Where the law of the country she works in is stricter, follow it"
+],
+[
+"DO / REQUIRED",
+"Fund for Middle Eastern investors seeking Islamic-law compliance; compliance unclear",
+"Proactively disclose whether the fund complies with Islamic law"
+],
+[
+"DO / REQUIRED",
+"New broker added to research payment list without bringing relevant portfolios",
+"Report through firm policy (supervisor, then compliance); push for disclosure of the link"
+],
+[
+"VIOLATION",
+"Adviser posts performance/opinions on social media after regulator's new restrictions",
+"Must keep up with evolving law; get guidance from compliance or counsel"
+],
+[
+"RULE",
+"No local law on MNPI use; member wants to trade on it",
+"Code and Standards govern; the stricter of law and Code applies"
+],
+[
+"VIOLATION",
+"CEO knows broker front-runs her personal account before the research report",
+"Knowingly participating or assisting in a violation; should reject, unwind and report"
+],
+[
+"VIOLATION",
+"PMs post on social media; only the PM with clients in the stricter third country",
+"Follow the stricter applicable law of that country (only that PM violated)"
+],
+[
+"VIOLATION",
+"Managing director allowed the PMs' social media use",
+"Supervisor must ensure compliance with the stricter law (IV(C))"
+],
+[
+"VIOLATION",
+"PMs trade by instant messaging and disclose to law enforcement where law prohibits",
+"Violated I(A) twice: applicable law is stricter than the Code"
+],
+[
+"DO / REQUIRED",
+"Quant's supervisor refuses to fix a model error; what next",
+"Go to the supervisor's boss/senior management; dissociation starts internally, leaving is the last step"
+],
+[
+"VIOLATION",
+"Platform collects data on minors online without parental permission",
+"Possible violation: confirm legality, keep informed of laws, legal review"
+]
+],
+"new": [
+[
+"VIOLATION",
+"CFA charterholder sits on a bank's audit committee that sets loan provisioning against the central bank's rules",
+"Knowing the stricter regulation and not following it violates; the external auditor testing a random sample did not (kq41-49)"
+],
+[
+"DO / REQUIRED",
+"Compliance head finds a possible legal breach",
+"Consult the firm's securities attorney; do not knowingly take part and dissociate (kq41-106)"
+],
+[
+"OK",
+"Internal auditor and investor-relations officer found no suspicious activity, false information or fraud before a bank failed",
+"No violation without evidence of knowing participation (kq41-111)"
+],
+[
+"DO / REQUIRED",
+"Anti-money-laundering rules are about to change",
+"Set up procedures to get timely news of law changes so policy is updated before they take effect (kq41-113)"
+],
+[
+"VIOLATION",
+"Comment: 'licensees should be required by regulation to follow the CFA Code and Standards'",
+"Wrong under I(A) and IV(C): the Standards apply to members and candidates, not a licensing rule for all (kq41-119)"
+],
+[
+"DO / REQUIRED",
+"Manager advising a plan with pensioners in two countries finishes desktop research on one country",
+"Consult a legal specialist who knows both countries' rules; follow the stricter (kq41-123)"
+],
+[
+"OK",
+"Member does not report a violation to the regulator",
+"The Standards do not require reporting unless the law does (may be prudent); dissociating is required (kq41-167)"
+],
+[
+"DO / REQUIRED",
+"Firm fires an employee who violated the Standards",
+"Dissociation is achieved; reporting to regulators is a separate legal question: consult legal and compliance (kq41-208)"
+]
+]
+},
+{
+"std": "I(B) Independence and Objectivity",
+"rows": [
+[
+"OK",
+"Analyst joins company-sponsored mining tour: chartered flights, motel, strictly business",
+"Not necessarily a violation if strictly business; use judgment to stay objective"
+],
+[
+"OK",
+"Corporate-finance analyst promises full coverage in a pitch",
+"Promising coverage is acceptable; a favorable recommendation may not be promised"
+],
+[
+"DO / REQUIRED",
+"Investment bank's pressure to avoid a negative report on an overpriced stock",
+"Issue an objective report based on fundamentals; pressure from other divisions is inappropriate"
+],
+[
+"DO / REQUIRED",
+"Fear of losing CEO/IR access after a negative report",
+"Issuer pressure is inappropriate; analysis must be objective"
+],
+[
+"DO / REQUIRED",
+"Credit analyst, pay tied to bond department, asked to push unsold bonds",
+"Refuse unless price already reflects the problem; opinion must not be influenced"
+],
+[
+"VIOLATION",
+"Boss: buy rating must not be changed under any circumstances",
+"Following the order violates; decline coverage or reach own conclusion"
+],
+[
+"VIOLATION",
+"Manager gets World Cup tickets and resort nights from a broker; boss not told",
+"Substantial gifts from a business partner impair independence"
+],
+[
+"OK",
+"Client gives Wimbledon tickets and flat for beating benchmark; disclosed to supervisor",
+"Client gifts may be accepted if disclosed to the employer"
+],
+[
+"VIOLATION",
+"Foreign fact-finding trip partly paid by a manager he later recommends",
+"Recommendation tainted; basic travel should be paid by employer or plan"
+],
+[
+"VIOLATION",
+"Analyst writes IR-firm report for flat fee plus bonus if investors buy",
+"Bonus compromises objectivity; accept only a flat fee not tied to the result"
+],
+[
+"VIOLATION",
+"Trust manager gets 0.25% fee for promoting a fund class; undisclosed",
+"Fee affected objectivity (also VI(A))"
+],
+[
+"OK",
+"Researcher runs a worst-case scenario against the PM's objection",
+"Did not let the manager's preference pressure his results"
+],
+[
+"VIOLATION",
+"Senior PM contributes to a pension board chair's fund to win a mandate",
+"Monetary gifts that could compromise the decision maker's objectivity"
+],
+[
+"VIOLATION",
+"PM wined and dined by a consultant who runs the manager search",
+"Expensive entertainment that could influence the consultant"
+],
+[
+"VIOLATION",
+"Performance analyst does not disclose an external manager's composite change",
+"Must disclose the change in her report despite relationships"
+],
+[
+"DO / REQUIRED",
+"Head of sales asks to remove a large departed account from the composite",
+"Refuse; a client in a similar strategy cannot be excluded because it left"
+],
+[
+"DO / REQUIRED",
+"Investment banking head asks brokerage unit to change a \"sell\" to \"buy\"",
+"Refuse; restricted list and factual information only"
+],
+[
+"DO / REQUIRED",
+"Analyst's trip to headquarters fully paid by the company",
+"Pay own expenses; avoiding the conflict beats accepting and disclosing"
+],
+[
+"DO / REQUIRED",
+"Keynote invite: manager offers conference/travel costs, free registrations, golf",
+"Accept only his own conference-related expenses"
+],
+[
+"OK",
+"Controller's sister sends a gift basket after first day",
+"Private gift unrelated to professional activities; no permission needed"
+],
+[
+"DO / REQUIRED",
+"Broker/dealer invites research firm to its forum with expenses paid",
+"Research firm should pay air travel and hotel; meals and entertainment may be accepted"
+],
+[
+"OK",
+"Research CEO has a discretionary account at a broker using analyst model portfolios",
+"Does not compromise independence or need disclosure"
+],
+[
+"VIOLATION",
+"Founders donate to a consultant's charity; he refers clients to them",
+"Donations give the consultant an incentive to refer"
+],
+[
+"VIOLATION",
+"President hires a connected \"subadviser\" and donates to win a sovereign mandate",
+"Gifts/contributions to influence the hiring decision"
+],
+[
+"VIOLATION",
+"Founders push 10% acceptance rate and less research per applicant",
+"Pressure puts independence at risk; use a documented, approved due-diligence process"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Analyst asks the covered company's CEO whether his friend may use the CEO's Paris home for a honeymoon",
+"Seeking a personal favour from a covered company impairs independence and duty to clients (kq41-73)"
+],
+[
+"VIOLATION",
+"Two job seekers agree to write favourable recommendation letters for each other",
+"Each has something to gain: the letters are not objective (kq41-145)"
+],
+[
+"VIOLATION",
+"Broker pays a trader's full three-day conference at an exclusive resort; the trader discloses it to clients",
+"Lavish benefit: disclosure does not cure it; only modest gifts and entertainment (kq41-163)"
+],
+[
+"VIOLATION",
+"Offering introductions to influential people to win a consulting assignment",
+"A benefit that could compromise the chooser's independence (kq41-170)"
+],
+[
+"VIOLATION",
+"Offering your employer's research to another firm hoping for a job and an equity stake there",
+"The hoped-for job and equity are a benefit that compromises objectivity (kq41-186)"
+],
+[
+"OK",
+"Asking a current client who knows your work for a reference letter",
+"Generally fine: the client has nothing to gain (kq41-190)"
+],
+[
+"VIOLATION",
+"Hinting that you will recommend a research provider to your next employer in return for a reference",
+"Promised business is a benefit that compromises your future independence (kq41-191)"
+],
+[
+"OK",
+"Firm caps gifts at USD100; a CFO sends six USD100 baskets, one per team member",
+"Within policy: each person gets one modest gift (kq41-196)"
+],
+[
+"RULE",
+"Issuer-paid research: how to structure the fee",
+"Flat fee, no bonus, independent of the conclusion, fully disclosed (kq41-233)"
+]
+]
+},
+{
+"std": "I(C) Misrepresentation",
+"rows": [
+[
+"VIOLATION",
+"Issuer-paid analyst's \"independent\" website, contracts undisclosed",
+"Misleading omission about the true relationship (also VI(A))"
+],
+[
+"OK",
+"Typo shows ¥350bn instead of ¥35bn in a presentation",
+"Not knowing misrepresentation, but stop distributing and correct (GIPS)"
+],
+[
+"VIOLATION",
+"Brochure falsely says the president has a finance degree; used for years",
+"President should have known of the misrepresentation"
+],
+[
+"VIOLATION",
+"Analyst adds to another's report and circulates without credit",
+"Plagiarism: large parts reproduced without acknowledgment"
+],
+[
+"VIOLATION",
+"Interest-only strips sold as \"guaranteed by the US government\"",
+"Misrepresented the terms and character of the investment"
+],
+[
+"OK",
+"CDs \"guaranteed\" up to a deposit-insurance limit",
+"No violation if within the insured limit; explain the facts"
+],
+[
+"VIOLATION",
+"Asked to recommend using another firm's report as his own",
+"May cite parts he agrees with and name the source"
+],
+[
+"VIOLATION",
+"Announces a seminar model as his own after minor changes",
+"Credit for the idea belongs to the original author; acknowledge the source"
+],
+[
+"VIOLATION",
+"Marketer copies plain-language definitions without naming authors",
+"Verbatim copying even of general concepts; use own words or cite"
+],
+[
+"RULE",
+"Citing a study learned of through a media article",
+"Cite the actual source, the study's author; obtain and review it"
+],
+[
+"VIOLATION",
+"Small firm distributes subscribed research as its own work",
+"May rely on third-party research with a basis, not imply authorship"
+],
+[
+"DO / REQUIRED",
+"Bank promotes structured securities as less risky than the pool's policy",
+"Worry is justified; pursue under firm policy"
+],
+[
+"OK",
+"Pension manager avoids securities she cannot understand or explain",
+"Compliant: limits exposure to what she can describe to trustees"
+],
+[
+"VIOLATION",
+"Performance head does not explain liberal composite construction to raters",
+"Cherry-picking composites misrepresents the track record"
+],
+[
+"VIOLATION",
+"Sales director gives out outdated fund fact sheets",
+"Outdated sheets misrepresent risks; clarify and give the latest prospectus"
+],
+[
+"VIOLATION",
+"Ad cites only the one fund that beat the median",
+"Overstates the firm's results (supportable only if all outperformed)"
+],
+[
+"VIOLATION",
+"Adviser says Treasury fund default risk near zero; also \"10% each year\"",
+"Only the guarantee of a specific return violates; the Treasury statement is accurate"
+],
+[
+"VIOLATION",
+"Average client return 26% driven by one penny-stock gain",
+"True but not fair, accurate and complete"
+],
+[
+"VIOLATION",
+"Policy to remove caveats from forecasts prepared by others",
+"Source and qualifying statements must be given"
+],
+[
+"VIOLATION",
+"Director blames market volatility for losses caused by a known model error",
+"Knowingly misrepresented the reason for underperformance"
+]
+],
+"new": [
+[
+"OK",
+"Adviser says he has a 'stellar reputation', repeating what the prospect herself had said",
+"Not a misrepresentation (kq41-108)"
+],
+[
+"VIOLATION",
+"Fund prospectus leaves out that the fund relies on one key person",
+"Omitting key-person risk is a misrepresentation by omission (and V(B)) (kq41-110)"
+],
+[
+"OK",
+"Analyst quotes management's earnings guidance next to her own estimates, clearly attributed",
+"Attributed sources are not plagiarism or misrepresentation (kq41-158)"
+],
+[
+"VIOLATION",
+"Request for proposal still describes a senior professional who left and the old structure",
+"Update the RFP: stale statements mislead prospects (kq41-249)"
+],
+[
+"DO / REQUIRED",
+"Sell-side analyst's report uses a colleague's model and third-party data",
+"Cite the data providers (sources of forecasts); the colleague's model belongs to the firm and need not be cited (Mock B1)"
+],
+[
+"OK",
+"Analyst summarizes his report with a generative AI tool and credits the tool as the source",
+"Consistent with the Standards: the source is credited (Mock C1)"
+],
+[
+"VIOLATION",
+"Social media post says investors need not worry about switching costs because returns will more than offset them",
+"A statement that knowingly misrepresents or omits risk (Mock C1)"
+],
+[
+"VIOLATION",
+"Analyst uses a trade association's study she saw only in a newspaper article and cites only the newspaper",
+"Cite the actual source: obtain the study and cite the association, or cite both (Mock D1)"
+]
+]
+},
+{
+"std": "I(D) Misconduct",
+"rows": [
+[
+"VIOLATION",
+"Trust officer returns intoxicated from lunch to make decisions",
+"Reflects on professionalism, competence, employer and industry"
+],
+[
+"VIOLATION",
+"Analyst alters health-insurance reimbursement forms for two years",
+"Intentional fraud and deceit reflecting on integrity"
+],
+[
+"VIOLATION",
+"Volunteer inflates van price 20% and splits the surcharge",
+"Dishonesty and fraud even in a non-employment setting"
+],
+[
+"OK",
+"Fund manager activist arrested for nonviolent trespass",
+"Civil disobedience for beliefs does not reflect on professional integrity"
+],
+[
+"DO / REQUIRED",
+"Trader sees a hedge fund's returns missing a market break; boss dismisses",
+"Use firm's procedure, gather proof, consider the regulator if unresolved"
+],
+[
+"VIOLATION",
+"Business-development head photographs a client list on top of a recycling bin and uses it",
+"Misappropriated confidential proprietary information (not II(A))"
+]
+],
+"new": [
+[
+"OK",
+"Defaults on student loans and goes bankrupt after wedding costs, family medical bills and a job loss",
+"Misconduct means dishonesty, fraud or deceit; personal financial problems are not (kq41-54)"
+],
+[
+"VIOLATION",
+"Adviser spreads speculation about a competitor's drinking and a rumour he heard",
+"Maligning someone on speculation and rumour is misconduct (kq41-108)"
+],
+[
+"VIOLATION",
+"Compliance officer tells a reporter that unethical incidents 'happen in most investment firms'",
+"Untrue and unknowable; reflects adversely on his integrity and competence (kq41-153)"
+],
+[
+"OK",
+"Applicant convicted of an unrelated offence as a teenager, before working as an investment professional",
+"Conduct before entering the profession is not covered (kq41-226)"
+],
+[
+"OK",
+"Assistant manager has heavy personal credit-card debt and plays legal poker",
+"Not misconduct: personal finances and legal activity do not reflect on professional integrity (Mock D1)"
+]
+]
+},
+{
+"std": "I(E) Competence",
+"rows": [
+[
+"OK",
+"Consultant reads a new trade agreement at once and consults experts",
+"Kept knowledge current"
+],
+[
+"OK",
+"Research director hires ESG analyst and requires ESG certification before offering ESG",
+"Extended competence before using ESG"
+],
+[
+"VIOLATION",
+"Attorney moves to sales, passes the exam without studying client-fairness rules",
+"Passing alone does not show competence"
+],
+[
+"VIOLATION",
+"Analyst promoted to research director learns no management or compliance",
+"Must extend competence to supervisory responsibilities"
+],
+[
+"OK",
+"Recommended insurer goes bankrupt after undiscovered CFO fraud",
+"Thorough research means no incompetence"
+],
+[
+"VIOLATION",
+"PM buys a social-media-promoted crypto product knowing little",
+"Did not understand the asset or its suitability"
+],
+[
+"VIOLATION",
+"Adviser tests a new crypto on his smallest clients while learning",
+"Gain competence first; committee review"
+]
+],
+"new": []
+},
+{
+"std": "II(A) Material Nonpublic Information",
+"rows": [
+[
+"VIOLATION",
+"Controlling shareholder's pending tender offer passed through relatives to a broker",
+"Material and nonpublic; passing it on is a violation"
+],
+[
+"VIOLATION",
+"Analyst on bankers' call learns earnings projections dropped; salespeople and PMs walk by",
+"Analyst failed to prevent transfer and misuse; firm lacked barriers"
+],
+[
+"VIOLATION",
+"Finance director tells the 9 largest shareholders of a coming strike",
+"A small-group meeting is not public dissemination"
+],
+[
+"OK",
+"Doctor's casual takeover tip about an oil-and-gas stock",
+"Takeover is normally material, but the source is unreliable"
+],
+[
+"OK",
+"Furniture analyst concludes next-quarter earnings will fall from public information and observations",
+"Earnings are material, but the conclusion came from public information"
+],
+[
+"OK",
+"Auto analyst pieces together a model's sales miss from many nonmaterial bits",
+"Mosaic of nonmaterial or public information"
+],
+[
+"VIOLATION",
+"Analyst tells a journalist of a rating change before airtime; she sells and tells her father",
+"Rating change is MNPI; trading and relaying violate"
+],
+[
+"VIOLATION",
+"Golf friend senior executive says bank will surprise with excellent earnings; later loss",
+"Investor must make sure it is not MNPI; the loss does not matter"
+],
+[
+"OK",
+"Executive at a wedding: \"do not get too excited about the medium-term prospects\"",
+"One piece of the mosaic; guard against soliciting MNPI and weigh against public facts"
+],
+[
+"OK",
+"Text from another firm's trader about strong earnings in two days",
+"Likely market noise, unless he knew the sender had an ongoing business relationship with the company"
+],
+[
+"VIOLATION",
+"Expert network call: scientist says tests are disappointing; analyst passes on and trades",
+"Ongoing product-test information is MNPI"
+],
+[
+"RULE",
+"Statement: use public and nonmaterial nonpublic information; conclusions material only after assembly",
+"This is the mosaic theory, which is permitted"
+],
+[
+"VIOLATION",
+"Adviser buys retail ETF after the CFO friend says sales almost 10% above estimates",
+"Traded on MNPI even though she did not buy the company's stock"
+],
+[
+"DO / REQUIRED",
+"Investment bank regularly gets MNPI useful to brokerage clients",
+"Physical and informational barriers (firewalls)"
+],
+[
+"DO / REQUIRED",
+"Wealth manager hears of an unannounced merger from a bank analyst",
+"Place the securities on the restricted trading list"
+],
+[
+"VIOLATION",
+"Analyst downloads LBO model built with a colleague, without employer's written permission",
+"Employer owns the model (IV(A))"
+],
+[
+"VIOLATION",
+"New analyst overhears an LBO financing in an elevator",
+"Reliable source, MNPI: must neither act nor cause others to act"
+],
+[
+"VIOLATION",
+"He discloses the LBO probability and inputs to a newsletter writer",
+"Least likely violation is suitability; II(A) risk remains"
+],
+[
+"OK",
+"Second analyst runs the same LBO model with her own inputs and gets 40%",
+"Usual process, no MNPI"
+],
+[
+"OK",
+"Analyst searches blogs and websites for LBO signs on stocks his model flags",
+"Public domain, not inside information"
+],
+[
+"VIOLATION",
+"Controller overhears a CEO conversation and tells her sister the stock is \"even more attractive\"",
+"Initial reasonable basis, then acted on MNPI (II(A))"
+],
+[
+"VIOLATION",
+"Controller recommends a target to her sister from a newspaper article",
+"Initial recommendation most likely breaches loyalty to employer (IV(A))"
+],
+[
+"VIOLATION",
+"CFO tells a fund holding 9% to stop selling: board has a cash offer",
+"Factual insider information is material even if the deal is not final"
+],
+[
+"VIOLATION",
+"President trades after hearing of the pending subsidiary offer",
+"Need not be definite or board-approved to be material"
+],
+[
+"DO / REQUIRED",
+"Firm holds MNPI: heightened review of all trading",
+"Restrict the flow of confidential information"
+],
+[
+"DO / REQUIRED",
+"A market maker holds MNPI",
+"Keep making the market; stopping would itself tip others"
+],
+[
+"OK",
+"Factory layout change with no new machinery or staff",
+"Not material"
+],
+[
+"OK",
+"Overheard talk about a newsletter or article only",
+"Public content, not MNPI"
+],
+[
+"RULE",
+"Industry experts as an information source",
+"Greatest risk of obtaining MNPI"
+],
+[
+"VIOLATION",
+"Client's confidential company information is shared further",
+"III(E) and II(A)"
+],
+[
+"VIOLATION",
+"Telling a relative which stocks the firm researches and trades",
+"Loyalty and confidentiality"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Analyst learns the founder-president has a serious illness the company has not announced",
+"Encourage the issuer to disclose it publicly; do not trade or publish a sell on it (kq41-53)"
+],
+[
+"OK",
+"Analyst emails his earnings model to two CFOs for review and comments",
+"Not a violation; no MNPI is passed on (kq41-71)"
+],
+[
+"OK",
+"Joking with friends about the CEO's nervousness after the asset sale was publicly announced",
+"No MNPI: the sale was already public (kq41-72)"
+],
+[
+"VIOLATION",
+"Senior analyst hears from a company accountant that a large group of assets will be retired",
+"Insider information: trading or passing it on would violate II(A) (kq41-85)"
+],
+[
+"VIOLATION",
+"Passes on MNPI and says, if challenged, it was based on publicly known fundamentals",
+"Causing others to trade on MNPI is prohibited whatever the justification (kq41-223)"
+],
+[
+"OK",
+"PM trades on and shares a respected biotech analyst's view about a late-stage drug trial",
+"Not material nonpublic: a reasoned view from an analyst source, not reliable inside information (Mock E2)"
+]
+]
+},
+{
+"std": "II(B) Market Manipulation",
+"rows": [
+[
+"VIOLATION",
+"Promotion firm paid in stock sends \"independent\" bullish analysis on microcaps",
+"II(B), plus V(A) and VI(A)"
+],
+[
+"VIOLATION",
+"Investor spreads large holding over many accounts, starts rumors and cross-trades",
+"False interest and appearance of liquidity"
+],
+[
+"VIOLATION",
+"Analyst tips the sales force, releases negative report in the company's quiet period",
+"Artificial volatility (II(B)) and V(A)"
+],
+[
+"VIOLATION",
+"PM trades blocks between two funds to raise price and volume",
+"Artificial distortion even if the funds benefit"
+],
+[
+"VIOLATION",
+"Exchange has members commit minimum volume for commission cuts",
+"Misleads about actual liquidity"
+],
+[
+"VIOLATION",
+"Analyst tells select clients she will raise her estimate to force the CFO to comment",
+"Exaggerated projection (II(B)) and III(B)"
+],
+[
+"VIOLATION",
+"Holder posts invented expansion news in chat rooms",
+"Pump and dump"
+],
+[
+"VIOLATION",
+"Structured-finance head feeds mostly positive scenarios to rating agencies",
+"Manipulating inputs for short-term gain"
+],
+[
+"VIOLATION",
+"Analyst posts merger rumors under the PM's name; no profit",
+"Misleads the market; personal profit is not needed"
+],
+[
+"VIOLATION",
+"Bank president buys 2,000 shares, four times weekly volume, to attract a buyer",
+"Attempt to raise the price (the purchase, not the press releases)"
+],
+[
+"VIOLATION",
+"Broker/dealer president orders traders to buy and sell simultaneously ahead of a buy report",
+"Wash trades (II(B)) and IV(C); not VI(B)"
+],
+[
+"VIOLATION",
+"Platform head pays influencers and hints at features and acquisition, with no knowledge",
+"Information-based manipulation; promotion must rest on facts"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Sells a stock, then runs a PR campaign publishing negative (some nonpublic) information on the company",
+"Spreading information to move the price after positioning is manipulation; short selling and diligent research are fine (kq41-52)"
+],
+[
+"RULE",
+"Regulator can adopt only ONE broad market rule",
+"Require that investors' interests come first: covers loyalty, insider trading and manipulation (kq41-171)"
+],
+[
+"RULE",
+"What II(B) Market Manipulation covers",
+"Information-based (misleading information, promotion agreements) AND transaction-based (false price or volume) (kq41-200)"
+],
+[
+"RULE",
+"A rule banning 'pumping up' of prices",
+"Covers only information-based manipulation, not trade-based manipulation or insider trading (kq41-210)"
+],
+[
+"OK",
+"Analyst gives interviews and speeches; no false information and no intent to distort prices",
+"Intent is critical: no market manipulation (Mock B1)"
+],
+[
+"OK",
+"PM buys a stock on an analyst's takeover recommendation, says so in chat rooms and sells after the price doubles",
+"Truthful promotion of a real recommendation is not manipulation (Mock F2)"
+]
+]
+},
+{
+"std": "III(A) Loyalty, Prudence, and Care",
+"rows": [
+[
+"VIOLATION",
+"Trustee bank asked to buy company stock for the plan during a hostile bid",
+"Act solely for participants and beneficiaries"
+],
+[
+"VIOLATION",
+"Counselor routes pension trades to a friend's high- commission brokerage",
+"Client brokerage for services that do not benefit clients"
+],
+[
+"VIOLATION",
+"Adviser directs other clients' trades to a broker to win new accounts",
+"Violation unless best price/execution or written consent"
+],
+[
+"VIOLATION",
+"Trust officer uses a broker for better personal terms",
+"Own interest before trust clients"
+],
+[
+"VIOLATION",
+"Analyst directs trades to fund a research trip without telling supervisor",
+"Verify commissions and best execution; trip cost is not research"
+],
+[
+"VIOLATION",
+"Manager trades accounts more than needed to hit minimum commissions",
+"Churning"
+],
+[
+"VIOLATION",
+"PM's brother's fee-paying account excluded from a smaller IPO",
+"Regular fee-paying accounts receive shares pro rata"
+],
+[
+"RULE",
+"Expert witness wonders whether loyalty to the law firm limits her testimony",
+"Must be independent and objective"
+],
+[
+"RULE",
+"Wealth manager tells the fund PM they \"share a responsibility\" to the client",
+"Only she owes the duty of loyalty to her client"
+],
+[
+"OK",
+"Performance analyst reports a missed trade, correction costs a client, firm at risk",
+"Withholding the error would not serve the client"
+],
+[
+"DO / REQUIRED",
+"Execution-only broker asks if he has a fiduciary duty",
+"Duty limited to best execution within the client's parameters"
+],
+[
+"VIOLATION",
+"Which client brokerage use violates: operating expenses of the manager",
+"Client brokerage may not pay the manager's operating expenses"
+],
+[
+"OK",
+"Profit-sharing manager pressed to vote for management; investigates independently",
+"Acted for plan participants"
+],
+[
+"RULE",
+"To whom does a pension manager owe loyalty, prudence and care",
+"Participants and beneficiaries, not management or shareholders"
+],
+[
+"OK",
+"Execution-only trades credited to a soft-dollar commitment",
+"Fine if execution good, fees comparable, no extra cost; no churning"
+],
+[
+"VIOLATION",
+"Soft dollars pay CFA registration and exam fees",
+"Personal/firm expense; disclosure does not cure"
+],
+[
+"OK",
+"ESOP trustee analyzes the takeover independently",
+"Put participants ahead of the firm"
+],
+[
+"VIOLATION",
+"Asset manager always trades through the research firm's broker",
+"Must seek best price and execution for every trade"
+],
+[
+"VIOLATION",
+"Quant disables risk factors to postpone a model error fix",
+"Not acting for clients' sole benefit; fix at once"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Client with a capital-preservation goal and low risk tolerance; a trustee asks for a trendy startup stock",
+"First identify the client; manage to the client's stated goal and risk tolerance (kq41-79)"
+],
+[
+"DO / REQUIRED",
+"Clients complain they paid management fees on cash held as bank deposits",
+"Reimburse past fees and stop future fees: clients' interests first (kq41-121)"
+],
+[
+"VIOLATION",
+"Manager uses clients' directed-brokerage commissions to buy services for herself (soft dollars)",
+"Commissions are the client's asset: client-directed brokerage may benefit that client only, not the manager (kq41-133)"
+],
+[
+"VIOLATION",
+"Adviser ignores a client's request until it suits his own job move",
+"Client interests come before the employer's and your own (kq41-183)"
+],
+[
+"RULE",
+"Order of priority when interests compete",
+"Clients first, then the employer, then yourself (kq41-184)"
+],
+[
+"DO / REQUIRED",
+"Pension trustees ask a member to direct soft dollars to research that benefits the trustees",
+"Soft dollars are client brokerage: spend them for the clients (beneficiaries), not the trustees (kq41-213)"
+],
+[
+"OK",
+"Client tells the analyst to keep using a broker that does not give best execution",
+"Client-directed brokerage: following the client's instruction is not a violation (kq41-255)"
+],
+[
+"VIOLATION",
+"Manager takes a new client who directs his own broker and does not say best execution may be lost",
+"In directed brokerage tell the client he may not get best execution (Mock B2)"
+],
+[
+"OK",
+"Fund company rebates fees to the adviser, used for reporting systems that benefit all clients, disclosed at account opening",
+"Meets the soft-dollar tests: benefits clients and is disclosed (Mock C2)"
+],
+[
+"VIOLATION",
+"Manager always votes non-routine governance proposals with management's recommendation",
+"Not consistent with loyalty, prudence and care: consider each issue for the client's benefit (Mock E1)"
+],
+[
+"OK",
+"Manager owes his duty to a trust's beneficiaries, not the person who hired him; uses a pricier broker whose research benefits clients",
+"Consistent: duty is to the beneficiaries; research that benefits clients is acceptable soft-dollar use (Mock E1)"
+]
+]
+},
+{
+"std": "III(B) Fair Dealing",
+"rows": [
+[
+"VIOLATION",
+"Buy report tipped to several clients during the factual review",
+"Select clients before all"
+],
+[
+"VIOLATION",
+"Manager buys new recommendations for her own fund first by policy",
+"Execute systematically and fairly; disclosure would not cure"
+],
+[
+"VIOLATION",
+"Banker keeps IPO options and cuts institutional allocations",
+"Prorate shares, take none, disclose"
+],
+[
+"VIOLATION",
+"CIO under pressure from a large client does not allocate before executing",
+"Allocate before executing or pro rata soon after"
+],
+[
+"VIOLATION",
+"Analyst keeps $1.16 in the report but tells select clients the upside",
+"Not sharing the upside with all clients"
+],
+[
+"OK",
+"New recommendation emailed to all, then calls to three large clients",
+"Extra personal service is acceptable after all got it"
+],
+[
+"OK",
+"$55,000 bond across five clients with a $5,000 minimum lot",
+"Minimum lot justifies not strictly pro rata"
+],
+[
+"VIOLATION",
+"Manager over-trades other accounts to generate free research for a preferred plan",
+"Disadvantages other clients"
+],
+[
+"VIOLATION",
+"Junior analyst sends first report to personal contacts before clients",
+"Select group before all clients (IV(C) for the supervisor)"
+],
+[
+"OK",
+"Performance reports for the CIO monitoring fair treatment",
+"After-the-fact oversight tool"
+],
+[
+"DO / REQUIRED",
+"Recommendation changed Wednesday; client orders 500 shares Thursday",
+"Advise the client of the change, then follow the client's decision"
+],
+[
+"RULE",
+"Fair treatment on a new recommendation: minimize the number of people told in advance",
+"Telling more people raises leakage; institution-first discriminates"
+],
+[
+"VIOLATION",
+"IPO allocated to managers rather than clients",
+"IPOs should be pro rata to clients"
+],
+[
+"VIOLATION",
+"IPO allocation tied to the client staying",
+"Treats clients unequally"
+],
+[
+"OK",
+"Revised IPS and buys for one client but not the other",
+"Assessed suitability; reason not to buy for the other"
+],
+[
+"VIOLATION",
+"CEO sells a premium subscription only to clients who can afford it",
+"Service levels must be disclosed and available to everyone"
+],
+[
+"VIOLATION",
+"Broker/dealer president tells a research CEO about a coming buy and builds a position",
+"Both violate III(B) (and I(A) for her)"
+],
+[
+"OK",
+"Two PMs call their largest clients after changes are posted publicly",
+"Already public; larger clients may get more service"
+],
+[
+"OK",
+"Roadshow invites to the two largest clients only",
+"No special IPO priority"
+],
+[
+"OK",
+"Institutional-only model not mentioned to retail clients",
+"Not every opportunity is suitable for every client"
+],
+[
+"OK",
+"Brochure shows highest fee while referred clients get a discount",
+"Fee not misrepresented; no evidence others disadvantaged"
+],
+[
+"VIOLATION",
+"Adviser offers his crypto tokens only to larger clients",
+"Other clients economically disadvantaged"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Analyst changes a buy to a sell; she runs a free newsletter read by non-clients and manages client money",
+"Clients first: give asset-management clients the change before newsletter readers (kq41-55)"
+],
+[
+"RULE",
+"Policy: make 'reasonable efforts' to notify all clients of a condensed recommendation posted on social media",
+"Not fully compliant: every effort should be made to treat clients fairly (kq41-61)"
+],
+[
+"DO / REQUIRED",
+"Block trades: same execution price and commission for all accounts, orders first-in first-out",
+"Consistent with fair-dealing procedures (kq41-88)"
+],
+[
+"VIOLATION",
+"Firm asks every client to sign a waiver that fair dealing is impossible for illiquid shares (first-come first-served)",
+"A waiver cannot replace fair treatment; use a fair allocation policy and disclose it (kq41-98)"
+],
+[
+"DO / REQUIRED",
+"Oversubscribed IPO shared among several groups of clients",
+"Allocate pro rata across all eligible groups; no group is skipped or capped (kq41-132)"
+],
+[
+"VIOLATION",
+"Analyst phones institutional clients about a new rating before emailing retail clients",
+"No group may get the recommendation first (kq41-140)"
+],
+[
+"RULE",
+"Recommendation changes",
+"Notify all clients, with priority to those who acted on the earlier advice (kq41-192)"
+],
+[
+"OK",
+"Hot IPO offered to all clients first, then to the firm's internal portfolio managers",
+"Not a violation: clients came first (kq41-214)"
+],
+[
+"VIOLATION",
+"Allocates an oversubscribed IPO fairly but tells only the clients who take part in IPOs about the firm's allocation policy",
+"Disclose the trade allocation policy to ALL clients (Mock F1)"
+]
+]
+},
+{
+"std": "III(C) Suitability",
+"rows": [
+[
+"VIOLATION",
+"Same aggressive strategy for a 60-year-old and a 40-year-old wanting steady returns",
+"Violation for the 40-year-old only"
+],
+[
+"OK",
+"Covered calls for a risk-averse client, all outcomes explained",
+"Judged on the entire portfolio"
+],
+[
+"DO / REQUIRED",
+"Client's net worth rises fourfold after an inheritance",
+"Update the IPS"
+],
+[
+"VIOLATION",
+"High-income fund buys a zero-dividend growth stock",
+"Unless it fits the fund's mandate"
+],
+[
+"VIOLATION",
+"Insurance IPS requires liquidity; CIO invests in private equity with 3–5 year lockup",
+"III(C) and III(A)"
+],
+[
+"VIOLATION",
+"Subadviser picked on lowest fees",
+"Possible violation: due diligence on clients' risk profiles"
+],
+[
+"VIOLATION",
+"PM buys high-beta stocks for long-term accounts to win a quarterly bonus",
+"IPS ignored for own reward (also VI(A))"
+],
+[
+"VIOLATION",
+"New fund accepts every client without an IPS",
+"Set an IPS per client"
+],
+[
+"DO / REQUIRED",
+"Counselor recommends a stock after a few minutes with a new client",
+"Determine needs, objectives and risk tolerance first"
+],
+[
+"OK",
+"CEO with severance wants more aggressive; manager updates IPS",
+"Update for changed circumstances"
+],
+[
+"VIOLATION",
+"3% crypto position for all clients",
+"Assess each client's risk tolerance, goals and constraints"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Before recommending private equity to a fund: which step has the lowest priority",
+"Check the client's risk tolerance and IPS limits first; return analysis comes after suitability (kq41-48)"
+],
+[
+"VIOLATION",
+"Adviser instantly reassures a client that the existing product is still suitable after the client's circumstances changed",
+"Learn the new circumstances first, then judge suitability (kq41-69)"
+],
+[
+"VIOLATION",
+"Draft asset allocation produced before the client answers the questionnaire on demographics",
+"Need age profile, liquidity needs and constraints first (kq41-124)"
+],
+[
+"VIOLATION",
+"High-risk turnaround stock bought for every account in one block trade, including conservative retirement mandates",
+"The block trade is fair; buying it for accounts it does not suit breaches suitability (kq41-157, kq41-101)"
+],
+[
+"OK",
+"Analyst recommends a small-cap stock to university students who are not clients",
+"No advisory relationship, so no suitability duty (Mock E2)"
+],
+[
+"OK",
+"Client insists on buying a small structured-note position his IPS says is unsuitable; adviser explains it and executes",
+"Explain and educate; executing the client's informed instruction is not a violation (Mock F1)"
+]
+]
+},
+{
+"std": "III(D) Performance Presentation",
+"rows": [
+[
+"VIOLATION",
+"Brochure: \"expect steady 25% annual growth\" after one good year",
+"One year, one account category; also I(C)"
+],
+[
+"VIOLATION",
+"GIPS claim with composites not asset weighted",
+"False compliance claim"
+],
+[
+"VIOLATION",
+"Prior-firm equity record in an ad without saying where earned",
+"Only allowed if clearly identified as prior-firm results"
+],
+[
+"VIOLATION",
+"Simulated results advertised without saying simulated",
+"Must be clearly identified, with source and method"
+],
+[
+"VIOLATION",
+"Composite with few accounts and undisclosed exclusions",
+"Distorted record"
+],
+[
+"VIOLATION",
+"Attribution method changed to improve apparent skill",
+"Unless clients are notified; report both calculations"
+],
+[
+"VIOLATION",
+"Time-weighted vs money-weighted figure left unlabeled",
+"Withholds information clients need"
+],
+[
+"OK",
+"Measurement dates changed without disclosure; analyst questions it",
+"No violation by the analyst; she was right to question it"
+],
+[
+"VIOLATION",
+"New accounts added after first month; deviates from policy to capture a gain",
+"Inaccurate result"
+],
+[
+"VIOLATION",
+"Fired team member shows the fund's history without saying he was one of a team",
+"Disclose team role"
+],
+[
+"VIOLATION",
+"Quotes independent service's 12% vs 2.7% in promotion",
+"Must verify it is fair, accurate and complete"
+],
+[
+"OK",
+"Brochure shows actual and simulated returns, clearly distinguished",
+"Both may be shown if clearly distinguished"
+],
+[
+"VIOLATION",
+"Previous employer's five-year performance used without saying where earned",
+"Disclose where earned and his role; need permission"
+]
+],
+"new": [
+[
+"OK",
+"Adviser quotes historical returns of similar investments and promises no specific return",
+"Not a performance-presentation violation (kq41-64)"
+],
+[
+"VIOLATION",
+"Composite performance report does not give termination dates of closed accounts",
+"Disclose the termination date; omitting it is not fair, accurate and complete (kq41-131)"
+],
+[
+"VIOLATION",
+"Job-candidate profile cites a team's long top-quartile record and omits its latest fourth-quartile year",
+"Fair, accurate and complete: selective periods are also a misrepresentation (I(C)) (kq41-143)"
+],
+[
+"RULE",
+"Prospect asks for individual client results beyond what the firm presents",
+"Decline individual client data (confidential); present fair, accurate and complete firm performance (kq41-229)"
+],
+[
+"VIOLATION",
+"Firm shows only its best accounts and does not say whether returns are gross or net of fees",
+"Cherry-picking and unclear fees make performance unfair and incomplete (kq41-254)"
+],
+[
+"VIOLATION",
+"Analyst's outstanding record comes from strategies that do not match the firm's stated strategy",
+"Performance must be fair and relate to the strategy actually offered (kq41-262)"
+],
+[
+"VIOLATION",
+"Performance presentation shows only the top and bottom deciles of accounts",
+"Not fair, accurate and complete: use a weighted composite of similar portfolios (Mock B2)"
+],
+[
+"VIOLATION",
+"Composite shown with a labelled simulated backtest, but all closed accounts are excluded",
+"Simulated results may be shown if labelled; excluding closed accounts overstates results (Mock D1)"
+],
+[
+"RULE",
+"Brief presentation of performance to a prospect",
+"Add a disclaimer that details are available on request: best practice (Mock E1)"
+]
+]
+},
+{
+"std": "III(E) Preservation of Confidentiality",
+"rows": [
+[
+"DO / REQUIRED",
+"Businessman asks an analyst for the hospital's internal renovation reports",
+"Refuse; confidential within the advisory relationship"
+],
+[
+"VIOLATION",
+"Officer tells a charity VP to call on a client who is considering a gift",
+"Revealed confidential client information"
+],
+[
+"DO / REQUIRED",
+"Pension manager learns of a tax audit and possible illegal activity",
+"Inform supervisor and seek legal advice; illegal activity is an exception"
+],
+[
+"DO / REQUIRED",
+"Manager suspects a family company's CFO is committing fraud",
+"Check with compliance or legal counsel before disclosing"
+],
+[
+"OK",
+"Client-only social media group; a client discloses accidentally",
+"Reasonable steps taken and prompt action"
+],
+[
+"VIOLATION",
+"Client CEO's takeover remarks and a family trust's votes shared",
+"Confidentiality about a current client's holdings"
+],
+[
+"DO / REQUIRED",
+"Alumnus asks the endowment's adviser for comprehensive information",
+"Do not send without the fund's permission"
+],
+[
+"OK",
+"Board member includes a fundraising campaign in the client newsletter",
+"No client information given to the program"
+],
+[
+"OK",
+"Research CEO tells a client a coming recommendation",
+"III(E) concerns client confidentiality; her violation is III(B) and I(A)"
+],
+[
+"VIOLATION",
+"Advisers swap clients' accountants' tax returns and statements without approval",
+"Get the client's approval (written recommended)"
+],
+[
+"VIOLATION",
+"Prop desk on the same floor hears client orders",
+"Need-to-know; whether they acted is irrelevant"
+]
+],
+"new": [
+[
+"OK",
+"Member submits client-related evidence to CFA Institute's Professional Conduct Program in his own defence",
+"Information given to the Program is kept in the strictest confidence: no violation (kq41-92)"
+],
+[
+"VIOLATION",
+"Regulator staff cite the name of a person under current investigation; his earlier public CFA sanction is also mentioned",
+"Naming the person under investigation breaches confidentiality; a public sanction may be mentioned (kq41-120)"
+],
+[
+"VIOLATION",
+"Adviser emails all internal staff about one client's suspected tax fraud",
+"Share confidential client information only with those who need it; broad email breaches confidentiality (kq41-138)"
+],
+[
+"DO / REQUIRED",
+"Colleague told to answer a reporter truthfully without details of past incidents",
+"Truthful answers avoid misrepresentation; withholding details protects confidentiality (kq41-201)"
+],
+[
+"RULE",
+"Exceptions to client confidentiality",
+"Illegal activity by the client, disclosure required by law, defending a PCP claim, client permission; NOT a well-known client used to win business (kq41-271)"
+],
+[
+"RULE",
+"Whose information is confidential",
+"Former, current and prospective clients (kq41-252)"
+],
+[
+"VIOLATION",
+"At a family picnic confirms that a famous actor is a former client, and describes current clients only in general terms",
+"Confidentiality continues after the relationship ends: the former client breach is the violation (Mock B1)"
+],
+[
+"VIOLATION",
+"Former department manager leaves a departed analyst's access to the client database open; she checks her client list against it",
+"Both violate: he failed to protect the data, she used confidential client information (Mock C1)"
+]
+]
+},
+{
+"std": "IV(A) Loyalty",
+"rows": [
+[
+"VIOLATION",
+"Pension manager asks accounts to leave before resigning",
+"Owes duty to employer while employed"
+],
+[
+"VIOLATION",
+"PM plans to copy client list and statements before leaving",
+"Employer property in any medium, even records he prepared"
+],
+[
+"DO / REQUIRED",
+"Employee-led buyout when management is suspected untruthful",
+"Only with employer and client permission; consult counsel"
+],
+[
+"VIOLATION",
+"Unemployed analyst's flat-fee study; later takes a job offer",
+"Owes the asset manager the first chance to act on the study"
+],
+[
+"VIOLATION",
+"Unpaid intern copies the GIPS software to a new firm",
+"Intern counts as employee; misappropriated property"
+],
+[
+"VIOLATION",
+"New adviser contacts former clients after leaving a competitor",
+"If he uses client lists or records taken without permission"
+],
+[
+"OK",
+"Analyst registers a competing company without telling employer; no solicitation",
+"Own time, outside the office, no solicitation"
+],
+[
+"VIOLATION",
+"Employees about to leave respond to an RFP the employer will bid for",
+"Direct competition unless employer and issuer permit"
+],
+[
+"DO / REQUIRED",
+"Analyst also works part-time as paid mayor",
+"Discuss with employer only if duties may detract"
+],
+[
+"OK",
+"Banker with no noncompete calls former clients using public records",
+"No employer information or records used"
+],
+[
+"DO / REQUIRED",
+"Trader reports suspected performance misreporting",
+"Follow the whistleblowing policy; not disloyal"
+],
+[
+"VIOLATION",
+"Banker contacts former clients after joining a competitor",
+"Violation if she uses client records kept from the bank"
+],
+[
+"OK",
+"New trader prepared to use the whistleblower process on a CDO team",
+"Complies; clients' interests first"
+],
+[
+"OK",
+"Analyst with non-solicitation clause updates LinkedIn after the employer notified clients",
+"Waited until employer notified clients and employment ended"
+],
+[
+"VIOLATION",
+"Public personal blog reveals firm research and disagreements",
+"Confidential firm information used for personal advantage"
+],
+[
+"RULE",
+"Independent practice question",
+"Competing practice needs employer consent"
+],
+[
+"OK",
+"Former hedge fund manager offers $10,000 to advisers who join",
+"Offer itself is not a violation; soliciting clients while employed is"
+],
+[
+"DO / REQUIRED",
+"PM told a client will pay extra for appreciation",
+"Written employer permission first (IV(B))"
+],
+[
+"VIOLATION",
+"Employee keeps client files from home and uses them after being laid off",
+"Files created in professional activity belong to the firm"
+],
+[
+"OK",
+"Quant builds StockStar model on own time for personal portfolios",
+"Own time, personal use, unpaid"
+],
+[
+"OK",
+"Adviser contacts clients through his personal social media after resigning",
+"Employer permitted; no confidential information"
+]
+],
+"new": [
+[
+"OK",
+"Leaving employee shows the new employer a model he built on his own time before joining the old firm",
+"Not employer property: not made for the employer in the course of the job (kq41-46)"
+],
+[
+"VIOLATION",
+"Leaving employee takes an internal sales-strategy analysis, then contacts clients found on the internet",
+"Records and work done for the employer stay with it; contacts from public sources are fine, the taken analysis is the violation (kq41-58)"
+],
+[
+"OK",
+"Employee changing jobs uses skills and experience gained at the old employer",
+"Allowed: general know-how is not the employer's property (kq41-68)"
+],
+[
+"DO / REQUIRED",
+"Prospective client asks a partner to take an assignment personally",
+"Protect the firm and the partners: raise it with the partners rather than taking it alone (kq41-107)"
+],
+[
+"DO / REQUIRED",
+"Regulator asks the firm to put investors ahead of service providers when trading",
+"Insist service providers give preference to investors: loyalty and market integrity (kq41-109)"
+],
+[
+"DO / REQUIRED",
+"Press release about a client and firm before anyone is charged: wording",
+"Do not name them or imply guilt; refer to alleged activity pending investigation (kq41-112)"
+],
+[
+"OK",
+"New employee shows a prospective firm names of potential clients she knew at her former employer",
+"Not a violation if no records, lists or confidential files were taken (kq41-115)"
+],
+[
+"DO / REQUIRED",
+"Former colleague's client asks about the departed adviser",
+"Give the client the name of the new firm; the client decides whether to contact her (kq41-116)"
+],
+[
+"VIOLATION",
+"Employee agrees to send a competitor daily commentary on her firm's market handling in return for a future equity stake",
+"Mutually beneficial arrangement against her employer; also an independence conflict (IV(A), I(B)) (kq41-117)"
+],
+[
+"OK",
+"Employee leaves with no noncompete and knows who the firm's clients were",
+"Knowing that clients exist is generally not confidential; client records are (kq41-178/179)"
+],
+[
+"OK",
+"Skills and experience gained at the former employer",
+"Belong to the employee after leaving; only confidential information stays with the firm (kq41-180)"
+],
+[
+"VIOLATION",
+"While still employed, personally steers a firm client to a former colleague's competing firm",
+"Diverting business from the employer; merely giving the new firm's name when asked is fine (kq41-182)"
+],
+[
+"VIOLATION",
+"Analyst tells an outsider that 'primary research suggests the stock will rise short term'",
+"Sharing the employer's research externally harms it; a general conclusion is not MNPI (kq41-222)"
+],
+[
+"RULE",
+"Full-time analyst also works 30 hours a week in a non-competing job",
+"Not prohibited, but the workload can deprive the employer of her best work (kq41-225)"
+],
+[
+"OK",
+"Employee planning a move lists what he did for firm A on a personal laptop after hours",
+"Fine if the list holds no confidential employer information (kq41-247)"
+],
+[
+"OK",
+"Member keeps using a standard, widely known dividend model at his own business after leaving",
+"Not employer property: a generally known method (kq41-266)"
+],
+[
+"VIOLATION",
+"Recommending securities the employer specifically says not to trade",
+"Ignoring the employer's explicit restriction breaches loyalty (kq41-269)"
+],
+[
+"VIOLATION",
+"Before leaving, asks her brother to move his account to her future firm and texts a friend 'glad I won't be here for the merger'",
+"Soliciting clients while employed and hinting at confidential merger plans breach loyalty (Mock C1)"
+],
+[
+"OK",
+"Leaving partner forwards a colleague's published industry report to a client unchanged, without claiming it as hers",
+"Work done at the firm belongs to the firm; sharing it with attribution is fine (Mock E2)"
+],
+[
+"VIOLATION",
+"During her notice period, updates her public social media profile with her new firm's products",
+"Harms the current employer; notifying clients as the exit policy requires is fine (Mock E2)"
+]
+]
+},
+{
+"std": "IV(B) Additional Compensation Arrangements",
+"rows": [
+[
+"VIOLATION",
+"Client offers a Monaco trip and condo if returns are at least 15%",
+"Written notice and employer consent needed"
+],
+[
+"VIOLATION",
+"Fitness-company board seat in return for family memberships; employer not told",
+"Nonmonetary benefits are like pay"
+],
+[
+"OK",
+"CEO visit: approved, declined flight and hotel, disclosed the dinner",
+"Prior approval, declined travel, disclosed"
+],
+[
+"DO / REQUIRED",
+"Client offers extra pay based on annual appreciation",
+"Disclose in writing and get permission first"
+],
+[
+"VIOLATION",
+"Two PMs with beach-house and hotel perks documented in the IPS, employer unaware",
+"Employer's written consent needed; IPS documentation does not substitute"
+],
+[
+"VIOLATION",
+"Adviser mines tokens at home that compete with the bank's services",
+"Disclose and get written consent"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Runs a fee-earning part-time consulting business and never tells the employer, even though it is done outside work hours",
+"Disclose any paid work the employer could bill for, whatever the hours (kq41-41)"
+],
+[
+"DO / REQUIRED",
+"Manager runs a family investment pool for fees and sits on a golf-equipment board, tells his employer nothing",
+"Disclose the pool and its fees (competing financial work); an unrelated board seat need not be disclosed (kq41-57)"
+],
+[
+"RULE",
+"Agreement with the previous employer on extra pay: 'both of you sign it'",
+"Not enough: the current employer must be told and consent in writing (kq41-118)"
+],
+[
+"VIOLATION",
+"Adviser accepts a gift and a consulting fee from a client; employer has not agreed",
+"Monetary and non-monetary extra compensation both need the employer's written consent (kq41-134)"
+],
+[
+"DO / REQUIRED",
+"Written consent for an outside paid arrangement",
+"From all parties involved, including the current employer (kq41-187)"
+],
+[
+"RULE",
+"What the IV(B) written agreement should state",
+"Nature, approximate amount and duration of the compensation (kq41-188)"
+],
+[
+"OK",
+"Member takes a paid job or small side job that does not compete with the employer",
+"No need to disclose: no conflict with the employer (kq41-227/228)"
+],
+[
+"OK",
+"Employee teaches an unpaid evening law course in flexible time at his old university",
+"No permission or disclosure needed: no pay and no impact on duties (Mock C2)"
+],
+[
+"DO / REQUIRED",
+"Paid treasurer role at a CFA society and an unpaid company board seat paid in free movie tickets",
+"Written permission from the employer is needed for both (Mock D1)"
+],
+[
+"VIOLATION",
+"Client offers three days on his yacht if returns beat the benchmark by 5%; manager has only verbal employer approval",
+"Written consent from all parties is required, not verbal (Mock E1)"
+],
+[
+"VIOLATION",
+"Prospect offers a week at his vacation home whenever she beats the index; compliance only agrees verbally",
+"Written consent from all parties is required; the cheap cafe bill is a modest gift and fine (Mock F1)"
+]
+]
+},
+{
+"std": "IV(C) Responsibilities of Supervisors",
+"rows": [
+[
+"VIOLATION",
+"Research head orally tells executives of a rating change before publishing",
+"No reasonable procedures to prevent dissemination and trading"
+],
+[
+"VIOLATION",
+"Research director passes a merger-rumor memo to PMs without checking",
+"Must verify reasonable basis and no MNPI"
+],
+[
+"VIOLATION",
+"VP approves a trainee's large trades without review",
+"Failed to investigate and supervise"
+],
+[
+"VIOLATION",
+"President assigns a PM 20% of profit sharing and does not supervise futures trading",
+"No procedures or records to detect violations"
+],
+[
+"VIOLATION",
+"Head of trading brushes off a trader's performance concern",
+"Review concerns and encourage an ethical culture"
+],
+[
+"DO / REQUIRED",
+"Contracted analyst's work not reviewed at a research firm",
+"Set up a review process with management"
+],
+[
+"VIOLATION",
+"CIO changes advisers arbitrarily",
+"Needs policies and procedures at all levels"
+],
+[
+"VIOLATION",
+"Supervisor with no social media experience encourages the junior analyst",
+"No procedures against unauthorized dissemination; no training"
+],
+[
+"VIOLATION",
+"Research head skips the review for time pressure",
+"Procedures must be followed"
+],
+[
+"VIOLATION",
+"CEO learns of investigations into his controller",
+"Set procedures, enforce them, investigate thoroughly"
+],
+[
+"RULE",
+"Compliance manual excerpts on supervision",
+"Supervise anyone under your control or influence"
+],
+[
+"VIOLATION",
+"PM files personal reports only in no-trade months",
+"Her violations plus the supervisor's failure to enforce reporting"
+],
+[
+"VIOLATION",
+"Proprietary desk seated with the main desk",
+"IV(C) (and likely I(C)); separate the desks"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Offered a supervisory role where seminar ads hide that products are sold and promise quick riches",
+"Decline the position until adequate procedures and compliant marketing exist; accepting exposes her to a violation (kq41-50)"
+],
+[
+"DO / REQUIRED",
+"Supervisor's compliance program: how to keep it adequate",
+"Review and update the procedures periodically so they stay adequate under the law (kq41-99)"
+],
+[
+"RULE",
+"Policy sends investment-club reminders only to employees who failed to report",
+"Insufficient: send reminders and an outline of permissible conduct to ALL employees (kq41-105)"
+],
+[
+"DO / REQUIRED",
+"Proposed sanction for an adviser who breached the Standards",
+"Hire an independent compliance consultant to assess and recommend processes to prevent and detect violations (kq41-122)"
+],
+[
+"DO / REQUIRED",
+"Supervisor learns of a possible violation",
+"Investigate promptly; increase supervision or restrict the person until it is resolved (kq41-165)"
+],
+[
+"RULE",
+"Staff must report membership of an investment club before joining",
+"Reasonable preventive step: helps prevent and detect violations (kq41-207)"
+],
+[
+"RULE",
+"New anti-money-laundering laws: training only client-service staff",
+"Too narrow: train all relevant staff and learn of legal changes promptly (kq41-212)"
+],
+[
+"OK",
+"Supervisor in a large department delegates supervision and rewards ethical behaviour with bonuses",
+"Incentives for ethical behaviour are allowed and delegating to a trained deputy is reasonable (Mock B1)"
+],
+[
+"RULE",
+"Firm reviews its code of ethics against the Standards",
+"A stand-alone code uses plain language and general fiduciary principles; detailed compliance procedures belong in separate documents (Mock D1)"
+],
+[
+"OK",
+"Head of a new firm validated sources and had a compliance process; an employee's data-entry error slips through",
+"Reasonable supervision was in place: no violation (Mock E2)"
+]
+]
+},
+{
+"std": "V(A) Diligence and Reasonable Basis",
+"rows": [
+[
+"VIOLATION",
+"Firm pushes many companies to issue equity at once without resources",
+"Take only work it can handle; pricing by size alone"
+],
+[
+"VIOLATION",
+"Banker presents maximum production as the likely scenario",
+"Show a range of scenarios with probabilities"
+],
+[
+"VIOLATION",
+"Part-time analyst writes from a few news articles and conventional wisdom",
+"Not a reasonable and adequate basis"
+],
+[
+"VIOLATION",
+"Consultant delivers a manager-screen report 10 days later without updating",
+"Update for new information"
+],
+[
+"OK",
+"Committee changes the junior's forecast",
+"Firm may issue it with a reasonable basis; she can ask to remove her name"
+],
+[
+"OK",
+"Two-person firm relies on a large research service",
+"If it regularly performs due diligence"
+],
+[
+"VIOLATION",
+"Subadviser picked on lowest fees",
+"Review services, performance and cost"
+],
+[
+"VIOLATION",
+"CIO replaces the real estate adviser without a solicitation",
+"Appears arbitrary"
+],
+[
+"VIOLATION",
+"Adviser relies on friendship and prior performance for a combined fund",
+"Review operations, reporting, transparency"
+],
+[
+"OK",
+"Analyst insists on a worst-case housing scenario",
+"Sound basis to test beyond history"
+],
+[
+"VIOLATION",
+"Derivatives salesperson reviews outsourced components only individually",
+"Understand results; review the whole strategy"
+],
+[
+"OK",
+"Hedge fund analyzed thoroughly then falls",
+"A reasonable basis does not guarantee no downside"
+],
+[
+"VIOLATION",
+"Quant adds factors from a blog without researching them",
+"No reasonable basis"
+],
+[
+"VIOLATION",
+"Attribution system chosen from one conference booth",
+"Did not review the other four or the fit"
+],
+[
+"VIOLATION",
+"Hedge fund subadviser picked on GIPS claims and returns",
+"Need a thorough review"
+],
+[
+"VIOLATION",
+"Manager model fed only RFP questionnaire data",
+"Must verify beyond submitted information"
+],
+[
+"VIOLATION",
+"Fund manager follows a credit model he barely understands",
+"Understand technical aspects and the data"
+],
+[
+"OK",
+"New analyst uses old reports as a guide with a complete analysis",
+"Reasonable basis; multifactor analysis not critical"
+],
+[
+"OK",
+"Firm lists all analysts' names on each report",
+"Group consensus; need not dissociate if reasonable basis"
+],
+[
+"VIOLATION",
+"Analyst changes rating after overhearing another analyst at lunch",
+"Another analyst's opinion is not a reasonable basis"
+],
+[
+"VIOLATION",
+"Quant reviews the overall model only annually",
+"Review all components and the overall model regularly"
+],
+[
+"VIOLATION",
+"Crypto recommended after two weekends of research",
+"Rudimentary, cursory, rushed"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Mentor says a research report should be written every week, easy for equities since the process is the same",
+"Reports need a reasonable basis each time, not a quota; process differs by security (kq41-67)"
+],
+[
+"VIOLATION",
+"PM sells small-cap shares through brokers the firm has not approved, in a hurry",
+"Unapproved brokers have not been through due diligence and may not give best execution (kq41-97)"
+],
+[
+"RULE",
+"Research-process procedures: measurable quality criteria; supervisory analyst approval before release; written due-diligence procedures",
+"Compensation = measurable criteria; Distribution = supervisory approval; Reasonable basis = due diligence (kq41-155/156)"
+],
+[
+"RULE",
+"Using a machine learning model: variables added raised forecast accuracy",
+"Review the factors and parameters to understand assumptions and limits; not required to become an expert on the programming (Mock E2)"
+],
+[
+"OK",
+"Analyst uses her firm's proprietary model; she lacks programming skills but understands its limits; the firm verifies the third-party data",
+"Reasonable basis: understand assumptions and limits; not required to be an expert or re-verify (Mock F2)"
+]
+]
+},
+{
+"std": "V(B) Communication with Clients and Prospective Clients",
+"rows": [
+[
+"VIOLATION",
+"PE fund keeps restructuring fees when the investment rises, undisclosed",
+"Compensation must be disclosed"
+],
+[
+"OK",
+"Search shows highest-fee manager with gross returns, fees disclosed uniformly",
+"Uniform comparison and disclosed costs"
+],
+[
+"VIOLATION",
+"Fee method changed to end-of-period value including cash",
+"Clients must be told unless they are"
+],
+[
+"VIOLATION",
+"Advice letter does not describe the technical trading rules at all",
+"Give the basic process and logic"
+],
+[
+"VIOLATION",
+"Reserve estimate written as fact",
+"Quantitative opinion, not fact"
+],
+[
+"VIOLATION",
+"Structured-product report omits leverage and rising-rate risk",
+"Describe characteristics and actual and implied risks"
+],
+[
+"VIOLATION",
+"Small-cap ceiling raised from $250M to $500M, marketing updated only",
+"Existing clients must be notified too"
+],
+[
+"DO / REQUIRED",
+"Small-cap manager extends to non-US companies",
+"Notify clients"
+],
+[
+"DO / REQUIRED",
+"New dividend discount valuation model",
+"President must tell clients"
+],
+[
+"VIOLATION",
+"Redirects resources to passive index-tracking without telling clients",
+"Substantial change in process"
+],
+[
+"DO / REQUIRED",
+"Stock selection moves to a committee",
+"Tell all clients"
+],
+[
+"OK",
+"Staff departures; outside managers hired for small and mid- cap",
+"Communicated with relevant information"
+],
+[
+"VIOLATION",
+"CIO discloses the adviser change only in the annual report's list",
+"Tried to hide the change"
+],
+[
+"VIOLATION",
+"Material error in the investment process not disclosed",
+"Disclose the error and corrective action"
+],
+[
+"VIOLATION",
+"Capacity limit of a small-cap quant strategy not disclosed",
+"Significant even if far from the limit"
+],
+[
+"VIOLATION",
+"VaR described as \"extremely effective\" without inputs and limits",
+"Disclose inputs, limitations and risks"
+],
+[
+"VIOLATION",
+"\"Well respected in the industry... clients sure to benefit\"",
+"Opinion presented as fact, no basis"
+],
+[
+"VIOLATION",
+"Dividend increase depends on pending legislation",
+"Failed to separate fact from opinion"
+],
+[
+"DO / REQUIRED",
+"Frontier fund makes three changes",
+"Disclose mandate change and process change; not a change within the mandate"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Adviser starts using AI in the process and does not tell clients about the change and its new risks and limits",
+"Keep clients informed of changes to the investment process and new significant risks (kq41-127)"
+],
+[
+"VIOLATION",
+"A 2012 'buy' recommendation based on 2008-2010 data and a CAGR",
+"Relies on dated information; use current data or say clearly that it is old (kq41-246)"
+],
+[
+"RULE",
+"Firm changes its investment process",
+"Disclose material changes; it need not supply the previous details for comparison (kq41-265)"
+],
+[
+"VIOLATION",
+"Memo says an ESG screen 'will guarantee superior returns' while also describing its risks",
+"Opinion presented as a guarantee: separate fact from opinion (Mock D2)"
+],
+[
+"VIOLATION",
+"Structured-product report shows expected performance only if volatility rises, the client's main worry",
+"Show performance for both an increase and a decrease; disclose the risks of complex instruments (Mock E2)"
+],
+[
+"VIOLATION",
+"Email says a structured note 'provides the index return with no downside risk' while it can lose 15%",
+"A false statement about risk; the 'in my view' sentence is a properly labelled opinion (Mock F1)"
+]
+]
+},
+{
+"std": "V(C) Record Retention",
+"rows": [
+[
+"DO / REQUIRED",
+"Client complains about 35% technology in a benchmark portfolio",
+"Records protect the manager: benchmark, IPS, explanation, updates"
+],
+[
+"DO / REQUIRED",
+"Analyst uses interviews, site visits and third-party research",
+"Document and keep copies of all information"
+],
+[
+"VIOLATION",
+"Analyst takes copies of model records to a competitor",
+"Records belong to the former firm; re-create them"
+],
+[
+"VIOLATION",
+"Laid-off employee keeps files and uses them",
+"Needed her employer's permission"
+]
+],
+"new": [
+[
+"RULE",
+"What records to keep",
+"Conversations and the research reports behind client communications, electronic or hard copy (kq41-220)"
+],
+[
+"RULE",
+"Records kept electronically; local law requires 5 years",
+"Hard copy or electronic is fine; follow the regulatory period; 7 years applies only without regulation or firm policy (Mock B1)"
+],
+[
+"RULE",
+"Record policy: informal blog and short-message posts sourced from the internet need not be preserved",
+"Must be amended: keep records supporting the analysis, including such sources (Mock C2)"
+],
+[
+"VIOLATION",
+"Manager keeps no records for automated sell trades but writes notes for the manual buys",
+"Records must support every investment action, even automated ones (Mock D2)"
+]
+]
+},
+{
+"std": "VI(A) Disclosure of Conflicts",
+"rows": [
+[
+"DO / REQUIRED",
+"Report on a conglomerate the firm has advised for 20 years",
+"Disclose the special relationship in the report"
+],
+[
+"DO / REQUIRED",
+"Firm sells 25% to a bank holding company, then upgrades the bank's stock",
+"Best practice is to stop coverage; at minimum disclose to all clients"
+],
+[
+"DO / REQUIRED",
+"Wife inherits the covered company's stock",
+"Disclose to employer and in the report; best to reassign"
+],
+[
+"DO / REQUIRED",
+"Analyst owns penny mining stock before a report is assigned",
+"Disclose to employer; consider declining; disclose her holding"
+],
+[
+"VIOLATION",
+"PM gets quarterly bonus on peer performance and buys high- beta stocks",
+"Failed to inform clients of the compensation arrangement"
+],
+[
+"VIOLATION",
+"Representative takes extra pay from a promoter without telling anyone",
+"Must at least disclose; best to refuse"
+],
+[
+"VIOLATION",
+"CIO moves the allocation to a classmate's firm without disclosing",
+"Relationship must be disclosed to the employer"
+],
+[
+"DO / REQUIRED",
+"Junior analyst asked to write on the conglomerate",
+"Best practice: avoid the conflict; otherwise disclose both relationships"
+],
+[
+"RULE",
+"Which conflict to disclose: the firm's substantial stock position",
+"Position must be disclosed; buying its products or a distant supplier link is too tangential"
+],
+[
+"VIOLATION",
+"Report on a firm owned by the CEO's husband's family; analysts unaware",
+"CEO should have told them and disclosed the interest"
+],
+[
+"VIOLATION",
+"Adviser holds and sells the crypto he recommends",
+"Disclose ownership and sale prominently; best to avoid"
+],
+[
+"VIOLATION",
+"Due-diligence head has undisclosed investments in competitors",
+"Divest or disclose to the employer"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Analyst at a pension consultant plans to recommend her father's hedge fund strategy, which fits the plan's criteria",
+"May recommend it if she truly thinks it is best, but must disclose the relationship (kq41-42)"
+],
+[
+"OK",
+"Year-end bonus pool shared by analysts; part-time work policy",
+"Fine: not tied to short-term actions with little long-term value (kq41-78)"
+],
+[
+"DO / REQUIRED",
+"Fund manager sits on the board of a company he recommends",
+"Board membership creates MNPI access: disclose it (kq41-80)"
+],
+[
+"DO / REQUIRED",
+"Adviser's LinkedIn update says she joined a charity board that takes many evenings and weekends",
+"Disclose outside roles that take time or could conflict; she did (kq41-95)"
+],
+[
+"VIOLATION",
+"Adviser is appointed to the investment committee of a company pension plan and tells no clients",
+"New duties can create conflicts: disclose to clients and prospects (kq41-129)"
+],
+[
+"DO / REQUIRED",
+"Employee's outside paid arrangement could affect clients",
+"Firm should also disclose it to clients and prospects (kq41-189)"
+],
+[
+"DO / REQUIRED",
+"Member recommends A's stock; A's CEO is also his client; he joins an unpaid committee of A",
+"Disclose the committee seat; the CEO's client status is confidential and need not be disclosed (kq41-256)"
+],
+[
+"VIOLATION",
+"$60,000 bonus if his monthly results beat the firm's other portfolios, disclosed to clients but not to prospects",
+"Disclose the compensation arrangement to prospective clients too (Mock C2)"
+],
+[
+"VIOLATION",
+"Unpaid but time-consuming university board seat not disclosed; compensation approved separately",
+"Disclose outside roles that could affect duties; investing a mandated retirement plan in a competitor's diversified fund needs no disclosure (Mock D2)"
+]
+]
+},
+{
+"std": "VI(B) Priority of Transactions",
+"rows": [
+[
+"VIOLATION",
+"Analyst delays his firm's recommendation to buy first",
+"Used knowledge before clients could benefit"
+],
+[
+"VIOLATION",
+"PM buys hot issues in her husband's account first",
+"Fund first, husband's account after; disclose"
+],
+[
+"VIOLATION",
+"Parents' retirement account gets only the remainder of an IPO",
+"Fee-paying client must be treated like other clients"
+],
+[
+"VIOLATION",
+"Entry-level employee's lucrative personal trades",
+"Personal trades ahead of clients; supervisor violates IV(C)"
+],
+[
+"VIOLATION",
+"Firm trades seven minutes after the analyst's broadcast",
+"Traded before clients could act"
+],
+[
+"RULE",
+"Which conflicts with recommended compliance procedures",
+"Compare employees' personal transactions with clients' regularly"
+],
+[
+"DO / REQUIRED",
+"PM plans to sell personal holdings after an upgrade",
+"May sell once the firm is informed"
+]
+],
+"new": [
+[
+"RULE",
+"Adviser recommends banning employees from all equity-related securities to stop front-running",
+"Too restrictive and not required; use pre-clearance, blackout periods and reporting (kq41-51)"
+],
+[
+"DO / REQUIRED",
+"Firm keeps its employee personal-trading policy confidential",
+"Inconsistent with recommended procedures: disclose the policy to investors when asked (kq41-102)"
+],
+[
+"OK",
+"Employee places a trade in his cousin's account",
+"Priority of transactions covers accounts where he is the beneficial owner; a cousin's account is not (kq41-103)"
+],
+[
+"VIOLATION",
+"Policy: do not trade for client accounts of staff relatives at the same time as other clients",
+"Family client accounts get no special treatment and no disadvantage; the policy disadvantages them (kq41-114)"
+],
+[
+"OK",
+"Adviser buys a stock for his own account without trading ahead of or against any client",
+"No priority-of-transactions violation if clients were not disadvantaged (kq41-130)"
+],
+[
+"RULE",
+"Recommended procedures for priority of transactions",
+"Blackout periods around client trades, IPO and private-placement limits, pre-clearance, holdings reports, disclose the policy on request (kq41-160)"
+],
+[
+"RULE",
+"When does VI(B) apply",
+"Only when the member is a beneficial owner of the account; talking about trades is a loyalty/confidentiality issue (kq41-161)"
+],
+[
+"OK",
+"Firm bans staff from private placements completely",
+"Consistent: VI(B) recommends strict limits and a full ban is allowed (kq41-177)"
+],
+[
+"OK",
+"Manager sells a stock for all clients before selling her own holding",
+"Clients first: consistent with III(A) and VI(B) (kq41-197)"
+],
+[
+"RULE",
+"Why restrict employees from buying IPOs",
+"Staff could take deals from clients or look like favours from the issuer or broker (kq41-204)"
+],
+[
+"RULE",
+"Firm only time-stamps employees' transactions to stop trading ahead of clients",
+"Inadequate: it only records; use pre-clearance or blackout periods (kq41-237)"
+],
+[
+"OK",
+"Member buys for his own account a stock that is unsuitable for a client",
+"Not a violation: suitability applies to client recommendations; clients' trades just need to come first (kq41-238)"
+],
+[
+"VIOLATION",
+"Member trades personal shares in a thinly traded frontier market while clients are being filled",
+"Client trades first: an illiquid market means his order could move the price against clients (kq41-248)"
+],
+[
+"OK",
+"Manager sells his personal stake in an actively traded stock after the fund already bought",
+"Clients had priority and were not disadvantaged: no violation (Mock B1)"
+],
+[
+"RULE",
+"Compliance manual caps private-placement purchases and sets a value limit on business entertainment",
+"Consistent with the Standards: strict limits on private placements and gifts (Mock C1)"
+],
+[
+"OK",
+"Manager obtains pre-clearance for an IPO; it is fully subscribed and allocated pro rata between clients and himself",
+"No client disadvantaged: no violation (Mock C2)"
+],
+[
+"OK",
+"PM buys for her own account a stock held in no firm portfolio that she judged too risky for her fund",
+"Pre-approval applies only to securities held in firm portfolios; fund style does not limit personal trades (Mock E2)"
+]
+]
+},
+{
+"std": "VI(C) Referral Fees",
+"rows": [
+[
+"VIOLATION",
+"Broker/dealer refers tax-exempt accounts for research and reviews",
+"Failed to inform the prospect of the referral fee"
+],
+[
+"VIOLATION",
+"Employee paid per referral to bank brokerage; clients not told",
+"Internal payments covered; disclose at referral"
+],
+[
+"VIOLATION",
+"PM directs commissions to a classmate's broker in return for recommendations",
+"Failed to inform employer (and clients)"
+],
+[
+"OK",
+"PM donates part of fees from school referrals, with approvals",
+"Permission obtained and disclosed at the IPS stage"
+],
+[
+"VIOLATION",
+"Consultant takes manager kickbacks without disclosure",
+"Did not disclose the fee; objectivity questioned"
+],
+[
+"RULE",
+"Purpose of VI(C) disclosure",
+"Let clients evaluate partiality and full cost"
+],
+[
+"OK",
+"CEO encourages clients to use an approved broker; arrangement disclosed",
+"Arrangement disclosed and brokers named"
+],
+[
+"VIOLATION",
+"PMs give referring law firms football tickets and dinners",
+"Disclose to employer, clients, prospects (also I(A))"
+],
+[
+"VIOLATION",
+"Founder shares fees with referring lawyers; lawyers disclose",
+"Disclose before the formal agreement; referrers' disclosure not enough"
+],
+[
+"VIOLATION",
+"Small institutions referred in return for trading business",
+"Disclose regardless of execution quality"
+],
+[
+"OK",
+"New firm pays $500 per client brought over",
+"Employer-paid compensation, not a referral fee"
+]
+],
+"new": [
+[
+"VIOLATION",
+"Adviser steers a client to real estate and receives a benefit for it without telling anyone",
+"Disclose any benefit received or paid for a referral before the service starts (kq41-65)"
+],
+[
+"RULE",
+"Firm must tell clients its finder's-fee policy: how often",
+"At least quarterly, not semiannually (kq41-77)"
+],
+[
+"OK",
+"Adviser's proposal states that referral fees will be disclosed",
+"No violation: disclosed up front (kq41-125)"
+],
+[
+"VIOLATION",
+"Adviser's referral source gets plane tickets from him each year; clients are not told",
+"Tell referred clients about ALL compensation to the referrer, including travel (kq41-128)"
+],
+[
+"OK",
+"Two firms exchange client referrals",
+"Complies if disclosed to clients and prospects (kq41-231)"
+],
+[
+"DO / REQUIRED",
+"A friend refers clients; the member says 'I'll at least pay for our holiday'",
+"Disclose the paid travel to both the clients and the employer (kq41-257)"
+],
+[
+"VIOLATION",
+"Conference arrangement gives a referring firm free advertising in return for referrals; clients not told",
+"A benefit need not be cash: disclose it to clients (Mock B1)"
+],
+[
+"DO / REQUIRED",
+"Research-for-distribution deal: research worth $100,000 a year, continuing as long as the funds are distributed",
+"Disclose the value and the nature of the benefit, including that it is ongoing (Mock F1)"
+]
+]
+},
+{
+"std": "VII(A) Conduct as Participants in CFA Institute Programs",
+"rows": [
+[
+"VIOLATION",
+"Proctor gives exam question details to two candidates",
+"Unfair advantage; proctor and both candidates"
+],
+[
+"VIOLATION",
+"Candidate writes a formula on his palm",
+"Took CBOK information into the exam room"
+],
+[
+"VIOLATION",
+"Candidate keeps writing after time is called",
+"Unfair advantage"
+],
+[
+"VIOLATION",
+"Blog: difficult but fair, 18 derivatives questions, no IPO allocation",
+"Difficulty and own performance fine; topics tested are not"
+],
+[
+"VIOLATION",
+"Forum on the hardest Level I questions",
+"Provides and solicits confidential exam information"
+],
+[
+"VIOLATION",
+"Candidate emails her hardest questions to a prep company",
+"Exam content confidential until released"
+],
+[
+"VIOLATION",
+"Grader tells colleague-candidates which question he graded",
+"Broke the Grader Agreement"
+],
+[
+"VIOLATION",
+"IR consultant as program chair schedules only his clients",
+"Used volunteer position for himself and clients"
+],
+[
+"VIOLATION",
+"GIPS committee member tells clients her membership lets her help them",
+"Strategic business advantage and implied confidential use"
+],
+[
+"VIOLATION",
+"Candidate posts that the provider covered inventories and taxes thinly",
+"Which topics were tested is confidential; difficulty opinions are allowed"
+],
+[
+"DO / REQUIRED",
+"Executive under investigation receives the Professional Conduct Statement",
+"Self-disclose his own investigation, not another person's"
+],
+[
+"VIOLATION",
+"Level III passer's three chatroom comments",
+"Comment 2 only: specific question details and topic area"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Study group pledges not to discuss the particulars of the topics tested",
+"Required: confidential exam content must not be shared (kq41-62)"
+],
+[
+"OK",
+"Candidate gives his own opinion on the readings; another cites a practice exam question",
+"Opinions on the readings and practice exams are not confidential exam content (kq41-63)"
+],
+[
+"VIOLATION",
+"Candidate posts online that accounting 'must have been 25% of the exam'",
+"Compromises the integrity and security of the exam (kq41-86)"
+],
+[
+"DO / REQUIRED",
+"Firm has filed a complaint with CFA Institute's Professional Conduct Program",
+"Consult its own legal and compliance advisers; the process is confidential and the complainant gets no updates (kq41-166)"
+],
+[
+"OK",
+"Member under investigation by the Professional Conduct Program: must he tell clients about possible sanctions?",
+"No: sanctions are not official until the process ends (kq41-217)"
+],
+[
+"VIOLATION",
+"Naming a charterholder under CFA Institute investigation before the case is announced",
+"Professional Conduct Program matters are confidential until announced (kq41-259)"
+],
+[
+"RULE",
+"Member learns another member or candidate has done wrong",
+"Self-disclosure of your own conduct is required; reporting others is encouraged, not required (kq41-270)"
+],
+[
+"OK",
+"Member criticises CFA Institute material on his blog and tells a friend which topics and formulas he thinks will be tested",
+"Opinion and disagreement are allowed; no confidential exam content is revealed (Mock E1)"
+]
+]
+},
+{
+"std": "VII(B) Reference to CFA Institute, the CFA Designation, and the CFA Program",
+"rows": [
+[
+"VIOLATION",
+"Ad: principals passed all exams on the first try, linked to fund performance",
+"Allowed if true, but not if it implies superior results"
+],
+[
+"VIOLATION",
+"Charterholder stopped dues and PCS, prints \"CFA\" on cards",
+"Right to use the designation suspended"
+],
+[
+"VIOLATION",
+"Retiree keeps \"CFA\" on a plain business card",
+"Membership suspended; retired status is available"
+],
+[
+"OK",
+"Charterholder tells a friend what she learned and would recommend it",
+"Facts, not guarantees"
+],
+[
+"OK",
+"Charterholder with a PhD lists both on a card",
+"Order is personal preference; separate with a comma"
+],
+[
+"VIOLATION",
+"Blog run by \"Expert CFA\"",
+"Online comments need the full name with any designation reference"
+],
+[
+"VIOLATION",
+"Card \"CFA Level II\" vs promotion \"participates and has completed Levels I and II\"",
+"First implies a partial designation; second is fine"
+],
+[
+"VIOLATION",
+"Resume: \"finishing the program... eligible for the charter\" before results",
+"Call himself a candidate"
+],
+[
+"VIOLATION",
+"Supervisor introduces a new passer as \"newest CFA\"",
+"Only those who earned the right are charterholders"
+]
+],
+"new": [
+[
+"DO / REQUIRED",
+"Passed Level II in 2009, not enrolled now: how to describe it",
+"'Passed Level II of the CFA exam in 2009' is fine; no designation exists for passing a level, 'candidate' only while enrolled, never 'CFA (expected 2014)' (kq41-47)"
+],
+[
+"VIOLATION",
+"'Becoming a charterholder shows you are more professional than people without it'",
+"Overstates the meaning of the designation (kq41-70)"
+],
+[
+"VIOLATION",
+"Manager defends himself to a client by citing his designation as proof of competence",
+"Overstating competence or implying superior performance is not allowed (kq41-82)"
+],
+[
+"VIOLATION",
+"Hiring announcement: a charterholder 'has superior qualities to manage investments'",
+"Implies superior ability or performance (kq41-87)"
+],
+[
+"OK",
+"Brochure says 'Henrik Vass is a CFA charterholder'",
+"Stating the designation is fine; implying superior skill or performance is not (kq41-142)"
+],
+[
+"OK",
+"Referring to the rigor of the CFA Program and the skills it develops",
+"Allowed; claims of superiority or better performance are not (kq41-198)"
+],
+[
+"RULE",
+"Using the CFA designation",
+"Pay dues annually and complete the professional conduct statement; the personal development record is voluntary (kq41-239)"
+],
+[
+"VIOLATION",
+"'I have passed Level I and am likely to acquire the CFA charter in the next two years'",
+"'Passed Level I' is fine; an expected completion date is not permitted (Mock C2)"
+],
+[
+"OK",
+"'I passed all three levels on my first attempt' and 'the CFA Program enhanced my portfolio management skills'",
+"Factual statements about passing and about the program's benefit are allowed (Mock F1)"
+]
+]
+}
+]

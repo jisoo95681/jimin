@@ -1,0 +1,15 @@
+NR=[
+("III(D)","R","Brief presentation of performance to a prospect","Add a disclaimer that details are available on request: best practice (Mock E1)"),
+("IV(B)","V","Client offers three days on his yacht if returns beat the benchmark by 5%; manager has only verbal employer approval","Written consent from all parties is required, not verbal (Mock E1)"),
+("III(A)","V","Manager always votes non-routine governance proposals with management's recommendation","Not consistent with loyalty, prudence and care: consider each issue for the client's benefit (Mock E1)"),
+("III(A)","OK","Manager owes his duty to a trust's beneficiaries, not the person who hired him; uses a pricier broker whose research benefits clients","Consistent: duty is to the beneficiaries; research that benefits clients is acceptable soft-dollar use (Mock E1)"),
+("VII(A)","OK","Member criticises CFA Institute material on his blog and tells a friend which topics and formulas he thinks will be tested","Opinion and disagreement are allowed; no confidential exam content is revealed (Mock E1)"),
+("V(A)","R","Using a machine learning model: variables added raised forecast accuracy","Review the factors and parameters to understand assumptions and limits; not required to become an expert on the programming (Mock E2)"),
+("IV(A)","OK","Leaving partner forwards a colleague's published industry report to a client unchanged, without claiming it as hers","Work done at the firm belongs to the firm; sharing it with attribution is fine (Mock E2)"),
+("IV(A)","V","During her notice period, updates her public social media profile with her new firm's products","Harms the current employer; notifying clients as the exit policy requires is fine (Mock E2)"),
+("IV(C)","OK","Head of a new firm validated sources and had a compliance process; an employee's data-entry error slips through","Reasonable supervision was in place: no violation (Mock E2)"),
+("VI(B)","OK","PM buys for her own account a stock held in no firm portfolio that she judged too risky for her fund","Pre-approval applies only to securities held in firm portfolios; fund style does not limit personal trades (Mock E2)"),
+("V(B)","V","Structured-product report shows expected performance only if volatility rises, the client's main worry","Show performance for both an increase and a decrease; disclose the risks of complex instruments (Mock E2)"),
+("III(C)","OK","Analyst recommends a small-cap stock to university students who are not clients","No advisory relationship, so no suitability duty (Mock E2)"),
+("II(A)","OK","PM trades on and shares a respected biotech analyst's view about a late-stage drug trial","Not material nonpublic: a reasoned view from an analyst source, not reliable inside information (Mock E2)"),
+]
