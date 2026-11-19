@@ -1440,7 +1440,7 @@
   },
   {
    "id": "rq3_fi",
-   "rev": 1,
+   "rev": 2,
    "feedback": true,
    "resetHl": [],
    "title": "Incorrect: Fixed Income",
@@ -1486,7 +1486,7 @@
     },
     {
      "topic": "FI",
-     "body": "Source: Mock B · Paper 2 · Vignette 5\n\nUsing the spot curve, Li computes forward rates. He then forecasts that in three years the 2-year spot rate will equal 2.20%, the current 2-year spot rate, but that the remainder of the spot rate curve will be consistent with current forward rates. Li evaluates what his forecast implies about the valuation of a 5-year zero-coupon bond today.\n\nLi studies the characteristics and effects of yield curve volatility. He uses the 3.25% monthly standard deviation of the 15-year government-bond yield to estimate an annual yield volatility of 11.26%. Li also calculates key rate durations for various maturities. He concludes that the higher key rate durations associated with longer-term rates leads to higher long-term annualized term structure volatility.",
+     "body": "Source: Mock B · Paper 2 · Vignette 5\n\nExhibit 1\n\n# Maturity | Spot Rate\n\n1-year | 2.02%\n\n2-year | 2.20%\n\n3-year | 2.38%\n\n4-year | 2.52%\n\n5-year | 2.64%\n\nUsing the spot curve, Li computes forward rates. He then forecasts that in three years the 2-year spot rate will equal 2.20%, the current 2-year spot rate, but that the remainder of the spot rate curve will be consistent with current forward rates. Li evaluates what his forecast implies about the valuation of a 5-year zero-coupon bond today.\n\nLi studies the characteristics and effects of yield curve volatility. He uses the 3.25% monthly standard deviation of the 15-year government-bond yield to estimate an annual yield volatility of 11.26%. Li also calculates key rate durations for various maturities. He concludes that the higher key rate durations associated with longer-term rates leads to higher long-term annualized term structure volatility.",
      "questions": [
       {
        "q": "Given his forecast, Li should consider a 5-year zero-coupon bond today to be:",
@@ -1616,7 +1616,7 @@
     },
     {
      "topic": "FI",
-     "body": "Source: Mock D · Paper 1 · Vignette 10\n\nLiying Wang manages her firm's investment-grade bond portfolio. She considers purchasing a senior unsecured bond issued by AHM Manufacturing (the AHM01 bond) for the portfolio. This bond is rated BBB, has a 2-year maturity, and has a 5% annual coupon. Wang assumes a recovery rate of 40% and uses a government yield binomial interest rate model to estimate the fair value of the AHM01 bond. Selected information for the bond is presented in Exhibit 1. Given no default, the value of the AHM01 bond is 100.46.\n\nBased on her assumptions and the information in Exhibit 1, Wang purchases the AHM01 bond at a price equal to its fair value.\n\nWang’s junior analyst estimates that the recovery rate for the AHM01 bond will be 30%. Holding all else equal, Wang considers how this estimate would affect her valuation of the bond.\n\nWang purchases protection on the AHM01 bond using a single-name CDS. The counterparty for the transaction is XRM Bank. The CDS has a standard annual coupon of 100 basis points and the current market spread on AHM01 bonds is 150 basis points. The initial value of the CDS contract is set to zero.",
+     "body": "Source: Mock D · Paper 1 · Vignette 10\n\nLiying Wang manages her firm's investment-grade bond portfolio. She considers purchasing a senior unsecured bond issued by AHM Manufacturing (the AHM01 bond) for the portfolio. This bond is rated BBB, has a 2-year maturity, and has a 5% annual coupon. Wang assumes a recovery rate of 40% and uses a government yield binomial interest rate model to estimate the fair value of the AHM01 bond. Selected information for the bond is presented in Exhibit 1. Given no default, the value of the AHM01 bond is 100.46.\n\nBased on her assumptions and the information in Exhibit 1, Wang purchases the AHM01 bond at a price equal to its fair value.\n\nExhibit 1\n\n# Year | Expected Exposure | Probability of Default | Discount Factor\n\n1 | 105.49 | 2.25% | 0.9524\n\n2 | 105.00 | 2.20% | 0.9115\n\nWang’s junior analyst estimates that the recovery rate for the AHM01 bond will be 30%. Holding all else equal, Wang considers how this estimate would affect her valuation of the bond.\n\nWang purchases protection on the AHM01 bond using a single-name CDS. The counterparty for the transaction is XRM Bank. The CDS has a standard annual coupon of 100 basis points and the current market spread on AHM01 bonds is 150 basis points. The initial value of the CDS contract is set to zero.",
      "questions": [
       {
        "q": "Based on the recovery rate estimated by the junior analyst, the probability of default of the AHM01 bond would be:",

@@ -83,7 +83,7 @@ for top in ORDER:
                 if hl: hints[f'{sid}:{nq}']=dict(hl=hl,rule=d['rule'])
         vigs.append(dict(topic=top,body=body,questions=qs))
     desc=f'{NAMES[top]}: the questions you got wrong or asked about in the real Mocks B, C, D, E and F ({nq} questions), one block per original vignette with only the parts the questions use (word for word). Questions, options and explanations are unchanged.'
-    sets.append(dict(id=sid,rev=1,feedback=True,resetHl=[],title=f'Incorrect: {NAMES[top]}',kind='practice',minutes=3*nq,desc=desc,vignettes=vigs))
+    sets.append(dict(id=sid,rev=(2 if sid=='rq3_fi' else 1),feedback=True,resetHl=[],title=f'Incorrect: {NAMES[top]}',kind='practice',minutes=3*nq,desc=desc,vignettes=vigs))
     allk+=''.join('ABC'[q['answer']] for v in vigs for q in v['questions'])
     print(sid,nq,len(vigs))
 assert sum(len(v['questions']) for s_ in sets for v in s_['vignettes'])==171

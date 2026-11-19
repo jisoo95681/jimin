@@ -64,7 +64,7 @@ w(36,["Francis is looking for potential carry trades"],["potential carry trades"
  ["Low market volatility → the gradual interest income is not wiped out by an adverse exchange rate move (answer A).",
   "Option B: wrong parity. Carry trades need UNCOVERED interest rate parity to fail, not covered parity.",
   "Your pick (C): wrong. The interest differential is locked in when the trade starts, so a later widening or narrowing does not matter for the carry itself."])
-w(38,["Liying Wang manages her firm","Based on her assumptions and the information in Exhibit 1","junior analyst estimates"],["recovery rate of 40%","recovery rate for the AHM01 bond will be 30%","Holding all else equal"],
+w(38,["Liying Wang manages her firm","Based on her assumptions and the information in Exhibit 1","@Exhibit 1","junior analyst estimates"],["recovery rate of 40%","recovery rate for the AHM01 bond will be 30%","Holding all else equal"],
  "Price is fixed (= VND − CVA). A LOWER recovery rate raises the loss given default, so to keep the same price the probability of default must be LOWER.",
  ["F: CVA = Σ POD(t) × (1 − RR) × Exposure(t) × DF(t)",
   "F: Price = VND − CVA",
