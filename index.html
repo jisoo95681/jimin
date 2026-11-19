@@ -783,7 +783,7 @@
   const LETTERS = ["A", "B", "C", "D"];
   const STORE_KEY = "cfa-quiz-wrong";
   const PREFS_KEY = "cfa-quiz-prefs";
-  const APP_VERSION = "v252 · 2026-11-18";
+  const APP_VERSION = "v253 · 2026-11-19";
   const TOPICS = [
     "Quantitative Methods", "Economics", "Financial Statement Analysis", "Corporate Issuers", "Equity Valuation",
     "Fixed Income", "Derivatives", "Alternative Investments", "Portfolio Management", "Ethical and Professional Standards"
@@ -1592,7 +1592,10 @@
     const esc = t => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const isN = t => /^[(–−+-]*[$€£¥]?[\d,.]+\s?%?\)?(\s?[A-Za-z%]{1,6})?$/.test(t.trim()) || t.trim() === "" || /^[-–—]+$/.test(t.trim());
     let h = "";
-    body.split(/\n\s*\n/).forEach(par => {
+    // table rows separated by blank lines belong to one table (otherwise every row gets its own column widths)
+    const pars = [];
+    body.split(/\n\s*\n/).forEach(p => { const isT = x => x.split("\n").every(l => l.includes(" | ")); if (pars.length && isT(p) && isT(pars[pars.length - 1])) pars[pars.length - 1] += "\n" + p; else pars.push(p); });
+    pars.forEach(par => {
       const lines = par.split("\n");
       let rows = [];
       const flush = () => {
