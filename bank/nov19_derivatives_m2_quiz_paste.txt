@@ -1,0 +1,3533 @@
+Practice Topics
+CFA-26-11-LII-A: Derivatives
+Module 2: Valuation of Contingent Claims
+Quiz review. You scored 16 percent, 16 out of 99 points
+Review
+
+16%
+16 out of 99 points
+Out of 99 points
+16
+Average time per question: 8 seconds
+Avg Time Per Question
+0:08
+Your Answers:
+Vignette
+Bruno Sousa has been hired recently to work with senior analyst Camila Rocha. Rocha gives him three option valuation tasks.
+
+Alpha Company
+
+Sousa’s first task is to illustrate how to value a call option on Alpha Company with a one-period binomial option pricing model. It is a non-dividend-paying stock, and the inputs are as follows.
+
+The current stock price is 50, and the call option exercise price is 50.
+
+In one period, the stock price will either rise to 56 or decline to 46.
+
+The risk-free rate of return is 5% per period.
+
+Based on the model, Rocha asks Sousa to estimate the hedge ratio, the risk-neutral probability of an up move, and the price of the call option. In the illustration, Sousa is also asked to describe related arbitrage positions to use if the call option is overpriced relative to the model.
+
+Beta Company
+
+Next, Sousa uses the two-period binomial model to estimate the value of a European-style call option on Beta Company’s common shares. The inputs are as follows.
+
+The current stock price is 38, and the call option exercise price is 40.
+
+The up factor (u) is 1.300, and the down factor (d) is 0.800.
+
+The risk-free rate of return is 3% per period.
+
+Sousa then analyzes a put option on the same stock. All of the inputs, including the exercise price, are the same as for the call option. He estimates that the value of a European-style put option is 4.53. Exhibit 1 summarizes his analysis. Sousa next must determine whether an American-style put option would have the same value.
+
+Exhibit 1
+Two-Period Binomial European-Style Put Option on Beta Company
+Two-period binomial mode at time periods at time = 0, 1, 2. At T = 0, Item, underlying. Value, 38; Item, put. Value, 4.5346; Item, Hedge ratio. Value, negative 0.4307. This is followed by further time periods.
+Expand / Collapse Extended Description
+Sousa makes two statements with regard to the valuation of a European-style option under the expectations approach.
+
+Statement 1:
+The calculation involves discounting at the risk-free rate.
+
+Statement 2:
+The calculation uses risk-neutral probabilities instead of true probabilities.
+
+Rocha asks Sousa whether it is ever profitable to exercise American options prior to maturity. Sousa answers, “I can think of two possible cases. The first case is the early exercise of an American call option on a dividend-paying stock. The second case is the early exercise of an American put option.”
+
+Interest Rate Option
+
+The final option valuation task involves an interest rate option. Sousa must value a two-year, European-style call option on a one-year spot rate. The notional value of the option is 1 million, and the exercise rate is 2.75%. The risk-neutral probability of an up move is 0.50. The current and expected one-year interest rates are shown in Exhibit 2, along with the values of a one-year zero-coupon bond of 1 notional value for each interest rate.
+
+Exhibit 2
+Two-Year Interest Rate Lattice for an Interest Rate Option
+Two year binomial interest rate tree at t = 0, 1, 2. t = 0. Maturity, 1. Value, 0.970874. Rate, 3%.  This is followed by two nodes at time 1.
+Expand / Collapse Extended Description
+Rocha asks Sousa why the value of a similar in-the-money interest rate call option decreases if the exercise price is higher. Sousa provides two reasons.
+
+Reason 1:
+The exercise value of the call option is lower.
+
+Reason 2:
+The risk-neutral probabilities are changed.
+
+1Multiple Choice0 / 1 point
+The optimal hedge ratio for the Alpha Company call option using the one-period binomial model is closest to:
+
+
+A. 0.60.
+Not Selected
+
+B. 0.67.
+Not Selected
+
+C. 1.67.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 0.60.
+Feedback
+A is correct. The hedge ratio requires the underlying stock and call option values for the up move and down move. S+ = 56, and S– = 46. c+ = Max(0,S+ – X) = Max(0,56 – 50) = 6, and c– = Max(0,S– – X) = Max(0,46 – 50) = 0. The hedge ratio is
+
+h
+=
+c
++
+−
+c
+−
+S
++
+−
+S
+−
+=
+6
+−
+0
+56
+−
+46
+=
+6
+10
+=
+0.60
+2Multiple Choice0 / 1 point
+The risk-neutral probability of the up move for the Alpha Company stock is closest to:
+
+
+A. 0.06.
+Not Selected
+
+B. 0.40.
+Not Selected
+
+C. 0.65.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 0.65.
+Feedback
+C is correct. For this approach, the risk-free rate is r = 0.05, the up factor is u = S+/S = 56/50 = 1.12, and the down factor is d = S–/S = 46/50 = 0.92. The risk-neutral probability of an up move is
+
+π = [FV(1) – d]/(u – d) = (1 + r – d]/(u – d)
+π = (1 + 0.05 – 0.92)/(1.12 – 0.92) = 0.13/0.20 = 0.65
+3Multiple Choice0 / 1 point
+The value of the Alpha Company call option is closest to:
+
+
+A. 3.71.
+Not Selected
+
+B. 5.71.
+Not Selected
+
+C. 6.19.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 3.71.
+Feedback
+A is correct. The call option can be estimated using the no-arbitrage approach or the expectations approach. With the no-arbitrage approach, the value of the call option is
+
+c = hS + PV(–hS– + c–).
+h = (c+ – c–)/(S+ – S–) = (6 – 0)/(56 – 46) = 0.60.
+c = (0.60 × 50) + (1/1.05) × [(–0.60 × 46) + 0].
+c = 30 – [(1/1.05) × 27.6] = 30 – 26.286 = 3.714.
+Using the expectations approach, the risk-free rate is r = 0.05, the up factor is u = S+/S = 56/50 = 1.12, and the down factor is d = S–/S = 46/50 = 0.92. The value of the call option is
+
+c = PV × [πc+ + (1 – π)c–].
+π = [FV(1) – d]/(u – d) = (1.05 – 0.92)/(1.12 – 0.92) = 0.65.
+c = (1/1.05) × [0.65(6) + (1 – 0.65)(0)] = (1/1.05)(3.9) = 3.714.
+Both approaches are logically consistent and yield identical values.
+
+4Multiple Choice0 / 1 point
+For the Alpha Company option, the positions to take advantage of the arbitrage opportunity are to write the call and:
+
+
+A. short shares of Alpha stock and lend.
+Not Selected
+
+B. buy shares of Alpha stock and borrow.
+Not Selected
+
+C. short shares of Alpha stock and borrow.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. buy shares of Alpha stock and borrow.
+Feedback
+B is correct. You should sell (write) the overpriced call option and then go long (buy) the replicating portfolio for a call option. The replicating portfolio for a call option is to buy h shares of the stock and borrow the present value of (hS– – c–).
+
+c = hS + PV(–hS– + c–).
+h = (c+ – c–)/(S+ – S–) = (6 – 0)/(56 – 46) = 0.60.
+For the example in this case, the value of the call option is 3.714. If the option is overpriced at, say, 4.50, you short the option and have a cash flow at Time 0 of +4.50. You buy the replicating portfolio of 0.60 shares at 50 per share (giving you a cash flow of –30) and borrow (1/1.05) × [(0.60 × 46) – 0] = (1/1.05) × 27.6 = 26.287. Your cash flow for buying the replicating portfolio is –30 + 26.287 = –3.713. Your net cash flow at Time 0 is +4.50 – 3.713 = 0.787. Your net cash flow at Time 1 for either the up move or down move is zero. You have made an arbitrage profit of 0.787.
+
+In tabular form, the cash flows are as follows:
+
+Transaction	Time Step 0	Time Step 1 Down Occurs	Time Step 1 Up Occurs
+Sell the call option	4.50	0	–6.00
+Buy h shares	–0.6 × 50 = –30	0.6 × 46 = 27.6	0.6 × 56 = 33.6
+Borrow –PV(–hS– + c–)	–(1/1.05) × [(–0.6 × 46) + 0] = 26.287	–0.6 × 46 = –27.6	–0.6 × 46 = –27.6
+Net cash flow	0.787	0	0
+5Multiple Choice0 / 1 point
+The value of the European-style call option on Beta Company shares is closest to:
+
+
+A. 4.83.
+Not Selected
+
+B. 5.12.
+Not Selected
+
+C. 7.61.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 4.83.
+Feedback
+A is correct. Using the expectations approach, the risk-neutral probability of an up move is
+
+π = [FV(1) – d]/(u – d) = (1.03 – 0.800)/(1.300 – 0.800) = 0.46.
+The terminal value calculations for the exercise values at Time Step 2 are
+
+c++ = Max(0,u2S – X) = Max[0,1.302(38) – 40] = Max(0,24.22) = 24.22.
+c–+ = Max(0,udS – X) = Max[0,1.30(0.80)(38) – 40] = Max(0,–0.48) = 0.
+c– – = Max(0,d2S – X) = Max[0,0.802(38) – 40] = Max(0,–15.68) = 0.
+Discounting back for two years, the value of the call option at Time Step 0 is
+
+c = PV[π2c++ + 2π(1 – π)c–+ + (1 – π)2c– –].
+c = [1/(1.03)]2[0.462(24.22) + 2(0.46)(0.54)(0) + 0.542(0)].
+c = [1/(1.03)]2[5.1250] = 4.8308.
+6Multiple Choice0 / 1 point
+The value of the American-style put option on Beta Company shares is closest to:
+
+
+A. 4.53.
+Not Selected
+
+B. 5.15.
+Not Selected
+
+C. 9.32.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 5.15.
+Feedback
+B is correct. Using the expectations approach, the risk-neutral probability of an up move is
+
+π = [FV(1) – d]/(u – d) = (1.03 – 0.800)/(1.300 – 0.800) = 0.46.
+An American-style put can be exercised early. At Time Step 1, for the up move, p+ is 0.2517 and the put is out of the money and should not be exercised early (X < S, 40 < 49.4). However, at Time Step 1, p– is 8.4350 and the put is in the money by 9.60 (X – S = 40 – 30.40). So, the put is exercised early, and the value of early exercise (9.60) replaces the value of not exercising early (8.4350) in the binomial tree. The value of the put at Time Step 0 is now
+
+p = PV[πp+ + (1 – π)p–] = [1/(1.03)][0.46(0.2517) + 0.54(9.60)] = 5.145.
+Following is a supplementary note regarding Exhibit 1: These computations refer to European-style put options.
+
+The values in Exhibit 1 are calculated as follows.
+
+At Time Step 2:
+
+p++ = Max(0,X – u2S) = Max[0,40 – 1.3002(38)] = Max(0,40 – 64.22) = 0.
+p–+ = Max(0,X – udS) = Max[0,40 – 1.300(0.800)(38)] = Max(0,40 – 39.52) = 0.48.
+p– – = Max(0,X – d2S) = Max[0,40 – 0.8002(38)] = Max(0,40 – 24.32) = 15.68.
+At Time Step 1:
+
+p+ = PV[πp++ + (1 – π)p–+] = [1/(1.03)][0.46(0) + 0.54(0.48)] = 0.2517.
+p– = PV[πp–+ + (1 – π)p– –] = [1/(1.03)][0.46(0.48) + 0.54(15.68)] = 8.4350.
+At Time Step 0:
+
+p = PV[πp+ + (1 – π)p–] = [1/(1.03)][0.46(0.2517) + 0.54(9.60)] = 5.145.
+7Multiple Choice0 / 1 point
+Which of Sousa’s statements about binomial models is correct?
+
+
+A. Statement 1 only
+Not Selected
+
+B. Statement 2 only
+Not Selected
+
+C. Both Statement 1 and Statement 2
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. Both Statement 1 and Statement 2
+Feedback
+C is correct. Both statements are correct. The expected future payoff is calculated using risk-neutral probabilities, and the expected payoff is discounted at the risk-free rate.
+
+8Multiple Choice0 / 1 point
+Based on Exhibit 2 and the parameters used by Sousa, the value of the interest rate option is closest to:
+
+
+A. 5,251.
+Not Selected
+
+B. 6,236.
+Not Selected
+
+C. 6,429.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 6,429.
+Feedback
+C is correct. Using the expectations approach, per 1 of notional value, the values of the call option at Time Step 2 are
+
+c++ = Max(0,S++ – X) = Max(0,0.050 – 0.0275) = 0.0225.
+c+– = Max(0,S+– – X) = Max(0,0.030 – 0.0275) = 0.0025.
+c– – = Max(0,S– – – X) = Max(0,0.010 – 0.0275) = 0.
+At Time Step 1, the call values are
+
+c+ = PV[πc++ + (1 – π)c+–] .
+c+ = 0.961538[0.50(0.0225) + (1 – 0.50)(0.0025)] = 0.012019.
+c– = PV[πc+– + (1 – π)c– –].
+c– = 0.980392[0.50(0.0025) + (1 – 0.50)(0)] = 0.001225.
+At Time Step 0, the call option value is
+
+c = PV[πc+ + (1 – π)c–].
+c = 0.970874[0.50(0.012019) + (1 – 0.50)(0.001225)] = 0.006429.
+The value of the call option is this amount multiplied by the notional value, or 0.006429 × 1,000,000 = 6,429.
+
+9Multiple Choice0 / 1 point
+Which of Sousa’s reasons for the decrease in the value of the interest rate option is correct?
+
+
+A. Reason 1 only
+Not Selected
+
+B. Reason 2 only
+Not Selected
+
+C. Both Reason 1 and Reason 2
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. Reason 1 only
+Feedback
+A is correct. Reason 1 is correct: A higher exercise price does lower the exercise value (payoff) at Time 2. Reason 2 is not correct because the risk-neutral probabilities are based on the paths that interest rates take, which are determined by the market and not the details of a particular option contract.
+
+Vignette
+Trident Advisory Group manages assets for high-net-worth individuals and family trusts.
+
+Alice Lee, chief investment officer, is meeting with a client, Noah Solomon, to discuss risk management strategies for his portfolio. Solomon is concerned about recent volatility and has asked Lee to explain options valuation and the use of options in risk management.
+
+Options on Stock
+
+Lee uses the BSM model to price TCB, which is one of Solomon’s holdings. Exhibit 1 provides the current stock price (S), exercise price (X), risk-free interest rate (r), volatility (σ), and time to expiration (T) in years as well as selected outputs from the BSM model. TCB does not pay a dividend.
+
+Exhibit 1
+BSM Model for European Options on TCB
+BSM Inputs
+S	X	r	σ	T	 
+$57.03	55	0.22%	32%	0.25	 
+BSM Outputs
+d1	N(d1)	d2	N(d2)	BSM
+
+Call Price	BSM
+
+Put Price
+0.3100	0.6217	0.1500	0.5596	$4.695	$2.634
+Options on Futures
+
+The Black model valuation and selected outputs for options on another of Solomon’s holdings, the GPX 500 Index (GPX), are shown in Exhibit 2. The spot index level for the GPX is 187.95, and the index is assumed to pay a continuous dividend at a rate of 2.2% (δ) over the life of the options being valued, which expire in 0.36 years. A futures contract on the GPX also expiring in 0.36 years is currently priced at 186.73.
+
+Exhibit 2
+Black Model for European Options on the GPX Index
+Black Model Inputs
+GPX Index	X	r	σ	T	δ Yield
+187.95	180	0.39%	24%	0.36	2.2%
+Black Model Call Value	Black Model
+
+Put Value	Market
+
+Call Price	Market
+
+Put Price
+$14.2089	$7.4890	$14.26	$7.20
+Option Greeks
+Delta (call)	Delta (put)	Gamma
+
+(call or put)	Theta
+
+(call) daily	Rho (call)
+
+per %	Vega per %
+
+(call or put)
+0.6232	–0.3689	0.0139	–0.0327	0.3705	0.4231
+After reviewing Exhibit 2, Solomon asks Lee which option Greek letter best describes the changes in an option’s value as time to expiration declines.
+
+Solomon observes that the market price of the put option in Exhibit 2 is $7.20. Lee responds that she used the historical volatility of the GPX of 24% as an input to the BSM model, and she explains the implications for the implied volatility for the GPX.
+
+Options on Interest Rates
+
+Solomon forecasts the three-month MRR will exceed 0.85% in six months and is considering using options to reduce the risk of rising rates. He asks Lee to value an interest rate call with a strike price of 0.85%. The current three-month MRR is 0.60%, and an FRA for a three-month MRR loan beginning in six months is currently 0.75%.
+
+Hedging Strategy for the Equity Index
+
+Solomon’s portfolio currently holds 10,000 shares of an exchange-traded fund (ETF) that tracks the GPX. He is worried the index will decline. He remarks to Lee, “You have told me how the BSM model can provide useful information for reducing the risk of my GPX position.” Lee suggests a delta hedge as a strategy to protect against small moves in the GPX Index.
+
+Lee also indicates that a long position in puts could be used to hedge larger moves in the GPX. She notes that although hedging with either puts or calls can result in a delta-neutral position, they would need to consider the resulting gamma.
+
+10Multiple Choice0 / 1 point
+Based on Exhibit 1 and the BSM valuation approach, the initial portfolio required to replicate the long call option payoff is:
+
+
+A. long 0.3100 shares of TCB stock and short 0.5596 shares of a zero-coupon bond.
+Not Selected
+
+B. long 0.6217 shares of TCB stock and short 0.1500 shares of a zero-coupon bond.
+Not Selected
+
+C. long 0.6217 shares of TCB stock and short 0.5596 shares of a zero-coupon bond.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. long 0.6217 shares of TCB stock and short 0.5596 shares of a zero-coupon bond.
+Feedback
+C is correct. The no-arbitrage approach to creating a call option involves buying Delta = N(d1) = 0.6217 shares of the underlying stock and financing with –N(d2) = –0.5596 shares of a risk-free bond priced at exp(–rt)(X) = exp(–0.0022 × 0.25)(55) = $54.97 per bond. Note that the value of this replicating portfolio is nSS + nBB = 0.6217(57.03) – 0.5596(54.97) = $4.6943 (the value of the call option with slight rounding error).
+
+11Multiple Choice0 / 1 point
+To determine the long put option value on TCB stock in Exhibit 1, the correct BSM valuation approach is to compute:
+
+
+A. 0.4404 times the present value of the exercise price minus 0.6217 times the price of TCB stock.
+Not Selected
+
+B. 0.4404 times the present value of the exercise price minus 0.3783 times the price of TCB stock.
+Not Selected
+
+C. 0.5596 times the present value of the exercise price minus 0.6217 times the price of TCB stock.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. 0.4404 times the present value of the exercise price minus 0.3783 times the price of TCB stock.
+Feedback
+B is correct. The formula for the BSM price of a put option is p = e–rtXN(–d2) – SN(–d1). N(–d1) = 1 – N(d1) = 1 – 0.6217 = 0.3783, and N(–d2) = 1 – N(d2) = 1 – 0.5596 = 0.4404.
+
+Note that the BSM model can be represented as a portfolio of the stock (nSS) and zero-coupon bonds (nBB). For a put, the number of shares is nS = –N(–d1) < 0 and the number of bonds is nB = –N(d2) > 0. The value of the replicating portfolio is nSS + nBB = –0.3783(57.03) + 0.4404(54.97) = $2.6343 (the value of the put option with slight rounding error). B is a risk-free bond priced at exp(–rt)(X) = exp(–0.0022 × 0.25)(55) = $54.97.
+
+12Multiple Choice0 / 1 point
+What are the correct spot value (S) and the risk-free rate (r) that Lee should use as inputs for the Black model?
+
+
+A. 186.73 and 0.39%, respectively
+Not Selected
+
+B. 186.73 and 2.20%, respectively
+Not Selected
+
+C. 187.95 and 2.20%, respectively
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. 186.73 and 0.39%, respectively
+Feedback
+A is correct. Black’s model to value a call option on a futures contract is
+
+c = e–rT[F0(T)N(d1) – XN(d2)]. The underlying F0 is the futures price (186.73). The correct discount rate is the risk-free rate, r = 0.39%.
+
+13Multiple Choice0 / 1 point
+Which of the following is the correct answer to Solomon’s question regarding the option Greek letter?
+
+
+A. Vega
+Not Selected
+
+B. Theta
+Not Selected
+
+C. Gamma
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. Theta
+Feedback
+B is correct. Lee is pointing out the option price’s sensitivity to small changes in time. In the BSM approach, option price sensitivity to changes in time is given by the option Greek theta.
+
+14Multiple Choice0 / 1 point
+Based on Solomon’s observation about the model price and market price for the put option in Exhibit 2, the implied volatility for the GPX is most likely:
+
+
+A. less than the historical volatility.
+Not Selected
+
+B. equal to the historical volatility.
+Not Selected
+
+C. greater than the historical volatility.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+A. less than the historical volatility.
+Feedback
+A is correct. The put is priced at $7.4890 by the BSM model when using the historical volatility input of 24%. The market price is $7.20. The BSM model overpricing suggests the implied volatility of the put must be lower than 24%.
+
+15Multiple Choice0 / 1 point
+The valuation inputs used by Lee to price a call reflecting Solomon’s interest rate views should include an underlying FRA rate of:
+
+
+A. 0.60% with six months to expiration.
+Not Selected
+
+B. 0.75% with nine months to expiration.
+Not Selected
+
+C. 0.75% with six months to expiration.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. 0.75% with six months to expiration.
+Feedback
+C is correct. Solomon’s forecast is for the three-month MRR to exceed 0.85% in six months. The correct option valuation inputs use the six-month FRA rate as the underlying, which currently has a rate of 0.75%.
+
+16Multiple Choice0 / 1 point
+The strategy suggested by Lee for hedging small moves in Solomon’s ETF position would most likely involve:
+
+
+A. selling put options.
+Not Selected
+
+B. selling call options.
+Not Selected
+
+C. buying call options.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+B. selling call options.
+Feedback
+B is correct because selling call options creates a short position in the ETF that would hedge his current long position in the ETF.
+
+Exhibit 2 could also be used to answer the question. Solomon owns 10,000 shares of the GPX, each with a delta of +1; by definition, his portfolio delta is +10,000. A delta hedge could be implemented by selling enough calls to make the portfolio delta neutral:
+
+N
+H
+=
+−
+Portfolio delta
+Delta
+H
+=
+−
++
+10
+,
+000
++
+0.6232
+=
+−
+16
+,
+046
+ calls
+.
+17Multiple Choice0 / 1 point
+Lee’s put-based hedge strategy for Solomon’s ETF position would most likely result in a portfolio gamma that is:
+
+
+A. negative.
+Not Selected
+
+B. neutral.
+Not Selected
+
+C. positive.
+Not Selected
+Incorrect answer:
+(no answer)
+Correct Answer:
+C. positive.
+Feedback
+C is correct. Because the gamma of the stock position is 0 and the put gamma is always non-negative, adding a long position in put options would most likely result in a positive portfolio gamma.
+
+Gamma is the change in delta from a small change in the stock’s value. A stock position always has a delta of +1. Because the delta does not change, gamma equals 0.
+
+The gamma of a call equals the gamma of a similar put, which can be proven using put–call parity.
+
+Vignette
+Arnie Burr is CEO and chief investment officer of Princeton Capital, a registered investment advisory firm. He is working with Tom Jeffinsin, head trader, and Jim Madisox, a new analyst. They meet to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.
+
+Burr begins the discussion by stating that the Black–Scholes–Merton (BSM) model is a relatively straightforward tool for valuing options despite its rigorous computational components. Burr writes the BSM model on the firm’s whiteboard, presented as Exhibit 1.
+
+Exhibit 1 BSM Model for Options on Non-Dividend Paying Stocks
+c = SN(d1) – e–rTXN(d2),
+and
+p = e–rTXN(–d2) – SN(–d1),
+where
+d
+1
+=
+ln
+(
+S
+X
+)
++
+(
+r
+-
+γ
++
+σ
+2
+2
+)
+T
+σ
+T
+d
+2
+=
+d
+1
+-
+σ
+T
+Burr wants to assess Madisox’s comprehension of the components of the BSM. Madisox states that a call option can be viewed as a leveraged position in the underlying stock. To replicate a call option, the appropriate strategy is to purchase N(d1) shares and simultaneously borrow an amount e–rTXN(–d2).
+
+Jeffinsin introduces option Greeks into the conversation, stating, “The BSM model contains six inputs: the stock price, the option’s exercise price, dividends, the risk-free interest rate, time to maturity, and implied volatility. The effect of the BSM model inputs on the price of an option can be measured by the option Greeks. Delta and gamma are measures of the relationship between a change in the stock price and the option price. Theta is a measure that typically approaches zero at an increasing rate as the option approaches maturity. Holding all other factors constant, Vega is a measure that typically is higher whenever an option is “out of the money.”
+
+Burr states that a client would like to sell calls on 1,000 shares of Weehawkin stock. Stock and option information on Weehawkin stock is presented in Exhibit 2.
+
+Exhibit 2 Option Information on Weehawkin Corporation Stock
+Stock Price	$100
+Call Option Exercise Price	$100
+Call Option Value	$9.23
+Call Option Delta	0.587
+Call Option Gamma	0.019
+Burr asks Madisox to outline an appropriate hedging strategy. Madisox replies that to be fully hedged, an option trader will need to consider how changes in the stock price relative to the option exercise price affect the value of the call options. To be fully hedged against a small change in the stock price, Madisox suggests that the proper strategy to construct the hedge is to use call option delta and add the call option gamma to arrive at the number of shares required.
+
+Madisox notes that the implied volatility for the Weehawkin call option outlined in Exhibit 2 is 30%. With respect to other call options on Weehawkin stock, Madisox states the volatility surface provides a visualization of how implied volatility varies across both exercise price and time to maturity. Burr adds that implied volatility is useful in assessing the market price of risk since it is calculated on the basis of the historical volatility in the stock price. Jeffinsin concurs and adds that the volatility smile and skew typically have identical shapes whenever the market price of hedging is rising.
+
+18Multiple Choice0 / 1 point
+Madisox’s statement about the BSM model is least likely correct with respect to:
+
+purchasing 
+N
+(d1) shares.
+Incorrect Answer Feedback: Incorrect. Madisox’s statement that the purchase of N(d1) shares is correct in terms of replicating a call option.
+
+the leveraged position in a stock.
+Incorrect Answer Feedback: Incorrect. Madisox’s statement that a call option can be viewed as a leveraged position in a stock is correct.
+Correct answer:
+
+borrowing an amount e–rTXN(–d2).
+Correct Answer Feedback: Correct. With respect to a call option, Madisox is incorrect with respect to his comment to simultaneously borrow an amount e–rTXN(–d2). To create a leveraged position in a stock, the correct components are to purchase N(d1) shares by borrowing an amount e–rTXN(d2). The term e–rTXN(–d2) represents the amount lent when purchasing a put option.
+Incorrect answer:
+(no answer)
+Correct Answer:
+borrowing an amount e–rTXN(–d2).
+19Multiple Choice0 / 1 point
+Jeffinsin’s statement about option Greeks is least likely correct with respect to:
+Correct answer:
+
+vega.
+Correct Answer Feedback: Correct. Jeffinsin’s statement regarding vega is not correct. Vega measures the effect of changes in implied volatility on the price of an option, holding all other factors constant. Vega is high whenever an option trades 'near or at the money.' Vega is lower whenever an option is trading 'out of the money.'
+
+theta.
+Incorrect Answer Feedback: Incorrect. Jeffinsin’s statement with respect to theta is correct. Theta measures the effect of time erosion of an option, holding all other factors constant.
+
+delta and gamma.
+Incorrect Answer Feedback: Incorrect. Jeffinsin’s statement with respect to delta and gamma is correct. Delta and gamma measure the effect of a change in the stock price on an option, holding all other factors constant.
+Incorrect answer:
+(no answer)
+Correct Answer:
+vega.
+20Multiple Choice0 / 1 point
+Is Madisox’s suggested hedging strategy for Weehawkin options most likely correct?
+Correct answer:
+
+Yes
+Correct Answer Feedback: Correct. Madisox’s statement is correct. To be fully hedged against a small change in the stock price, the proper strategy to construct the hedge is to use call option delta and add the call option gamma to arrive at the number of shares required. The number of shares required is 0.606, based on the option delta of 0.587 plus the option gamma of 0.019.
+
+No, he should only use delta
+Incorrect Answer Feedback: Incorrect. To be fully hedged against a small change in the stock price, the proper strategy to construct the hedge is to use call option delta and add the call option gamma to arrive at the number of shares required.
+
+No, he should subtract gamma
+Incorrect Answer Feedback: Incorrect. You need to add, not subtract, option gamma to the option delta.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Yes
+21Multiple Choice0 / 1 point
+Whose comment regarding implied volatility is most likely correct?
+
+Burr’s
+Incorrect Answer Feedback: Incorrect. Burr’s statement is incorrect. Implied volatility is a measure of estimated future volatility, not historical volatility. Implied volatility is not calculated on the basis of historical volatility. Rather, implied volatility is a component of an option pricing model.
+Correct answer:
+
+Madisox’s
+Correct Answer Feedback: Correct. Madisox’s statement is correct. Implied volatility is a measure of future estimated volatility, which varies across both exercise price and time to expiration for various options. Accordingly, implied volatility is a measure of the market price of risk.
+
+Jeffinsin’s
+Incorrect Answer Feedback: Incorrect. Jeffinsin’s statement is incorrect. Volatility skew tends to steepen whenever the market price of hedging is rising, which causes its shape to be different from the volatility smile.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Madisox’s
+Vignette
+High Street Investment Management is an investment subadvisory firm partnering with Registered Investment Advisors to provide counsel for options trading strategies. Scott Cummins is High Street’s CEO and chief investment officer. Phyllis Schwartz leads the client relationship team. David Spelding is a recent college graduate, who just joined the firm as an analyst. Cummings and Schwartz are conducting an introductory training session on options pricing, focusing on the binomial option valuation model (i.e., the binomial model).
+
+Cummins begins the session by listing, in Exhibit 1, variables and values for a binomial model to illustrate an outcome.
+Exhibit 1 Binomial Model Variables and Values
+Variable	Value
+Stock price (S)	US$100
+Exercise price (X)	US$100
+Up factor (U)	1.35
+Down factor (D)	.75
+Risk-free rate (r)	2.00%
+ 
+Schwartz states, “The one-period binomial model is based on the no-arbitrage approach in which an investor does not take any risk or use his own money. Based on the information in Exhibit 1, the probability of an up move is 45%. For an investor, the no-arbitrage approach is similar to both the expectations approach and the discounted cash flow approach. Each approach is based on the investor’s expectation regarding the future course of the underlying stock price.”
+
+Schwartz then introduces the two-period binomial model. He states that the two-period binomial lattice can be viewed as three one-period binomial lattices and that each lattice may be used to value a call option. Schwartz instructs Spelding to use the two-period binomial model and the information in Exhibit 1 to calculate the value of a two-year European-style call option.
+
+Cummins states that long-/short-hedge fund managers seek to identify and exploit any mispricing that may exist between the price of an option and the price of its underlying stock, utilizing a replicating strategy. Cummins asks Spelding to assess the three scenarios outlined in Exhibit 2, based on the information in Exhibit 1 and assuming that the price of a one-year European-style call option is $19.25.
+
+Exhibit 2 Scenarios and Replicating Strategies
+Replicating Strategy
+Options Trade	Stock Trade	Financing
+Scenario 1	Sell	Buy	Lend
+Scenario 2	Sell	Buy	Borrow
+Scenario 3	Buy	Sell	Lend
+ 
+Schwartz then asks Spelding to use the information in Exhibit 1 to calculate the no-arbitrage value of a two-year US-style put option, assuming that the option may be exercised in one year.
+
+22Multiple Choice0 / 1 point
+Is Schwartz’s statement about the one-period binomial model most likely correct?
+
+Yes
+Incorrect Answer Feedback: Incorrect. Schwartz’s statement is incorrect. The expectations approach is a variation of the no-arbitrage approach to the binomial model. The results of each are identical. Under the no-arbitrage approach and the expectations approach, expected options payoffs are a function of a risk-neutral probability. The investor’s outlook with respect to the future course of the stock price is not a relevant consideration for the no-arbitrage approach or the expectations approach. The investor’s outlook with respect to the future course of the stock price is a relevant consideration for the discounted cash flow approach to securities valuation.
+
+No, she is incorrect about the probability of an up move
+Incorrect Answer Feedback: Incorrect. Schwartz’s statement with respect to the probability of an up move is correct. The calculation follows:
+π
+=
+[
+F
+V
+(
+1
+)
+−
+d
+]
+/
+(
+u
+−
+d
+)
+=
+[
+1.02
+−
+.75
+]
+/
+(
+1.35
+−
+.75
+)
+=
+.27
+/
+.60
+=
+.45
+=
+45
+%
+Correct answer:
+
+No, she is incorrect about expectations of future stock prices
+Correct Answer Feedback: Correct. Schwartz’s statement is incorrect. The expectations approach is a variation of the no-arbitrage approach to the binomial model. The results of each are identical. Under the no-arbitrage approach and the expectations approach, expected options payoffs are a function of a risk-neutral probability. The investor’s outlook with respect to the future course of the stock price is not a relevant consideration for the no-arbitrage approach or the expectations approach. The investor’s outlook with respect to the future course of the stock price is a relevant consideration for the discounted cash flow approach to securities valuation.
+Incorrect answer:
+(no answer)
+Correct Answer:
+No, she is incorrect about expectations of future stock prices
+23Multiple Choice0 / 1 point
+According to Schwartz’s instructions to Spelding, the value of a two-year European-style call option is closest to:
+Correct answer:
+
+$16.60.
+Correct Answer Feedback: Correct. The correct calculations follow:
+RN Probability equation:
+π
+=
+[
+F
+V
+(
+1
+)
+−
+d
+]
+/
+(
+u
+−
+d
+)
+=
+[
+1.02
+−
+.75
+]
+/
+(
+1.35
+−
+.75
+)
+=
+.45
+Call Option equation:
+c
++
++
+=
+Max
+(
+0
+,
+u
+2
+S
+−
+X
+)
+=
+Max
+[
+0
+,
+1.35
+2
+(
+100
+)
+−
+100
+]
+=
+82.25
+c
++
+−
+=
+c
++
+−
+=
+Max
+(
+0
+,
+u
+d
+S
+−
+X
+)
+=
+Max
+[
+0
+,
+(
+1.35
+×
+.75
+×
+100
+)
+−
+100
+]
+=
+1.25
+c
+−
+−
+=
+Max
+(
+0
+,
+d
+2
+S
+−
+X
+)
+=
+Max
+[
+0
+,
+(
+.75
+2
+×
+100
+)
+−
+100
+]
+=
+0
+c
+=
+PV
+[
+(
+π
+2
+c
++
++
+)
++
+(
+2
+π
+(
+1
+−
+π
+)
+c
+−
++
+)
++
+(
+1
+−
+π
+)
+2
+c
+−
+−
+]
+c
+=
+(
+1
+1
++
+.02
+)
+2
+[
+(
+.45
+2
+×
+82.25
+)
++
+(
+2
+(
+.45
+)
+×
+(
+1
+−
+.45
+)
+1.25
+)
++
+(
+1
+−
+π
+2
+×
+0
+)
+]
+c
+=
+.961169
+×
+[
+16.6556
++
+.61875
++
+0
+]
+=
+$
+16.604
+Note: Not tested but provided for learning purposes:
+Put Option equation (Put-Call Parity):
+p = c + PV(X) – S
+p
+=
+16.604
++
+100
+/
+[
+1
+1
++
+.02
+]
+2
+−
+100
+=
+$
+12.720
+
+$29.04.
+Incorrect Answer Feedback: Incorrect. The .60 probability of an up move is incorrectly calculated. The incorrect call option calculation follows:
+Incorrect probability of an upmove calculation:
+π
+=
+[
+u
+−
+d
+]
+/
+1.0
+=
+[
+1.357
+−
+.75
+]
+/
+1.00
+=
+.60
+c
+=
+PV
+[
+(
+π
+2
+c
++
++
+)
++
+(
+2
+π
+(
+1
+−
+π
+)
+c
+−
++
+)
++
+(
+1
+−
+π
+)
+2
+c
+−
+−
+]
+c
+=
+(
+1
+1
++
+.02
+)
+2
+[
+(
+.60
+2
+×
+82.25
+)
++
+(
+2
+(
+.60
+)
+×
+(
+1
+−
+.60
+)
+1.25
+)
++
+(
+1
+−
+π
+2
+×
+0
+)
+]
+c
+=
+.9611688
+×
+[
+29.61
++
+0.60
++
+0
+]
+=
+29.037
+=
+$
+29.04
+c
+=
+.9611688
+×
+[
+29.61
++
+0.60
++
+0
+]
+=
+29.037
+=
+$
+29.04
+
+$32.66.
+Incorrect Answer Feedback: Incorrect. The 
+c
++
+-
+ figure of 35 is incorrectly calculated and used. The incorrect call option calculation follows:
+RN Probability of .45 is correct.
+c
+=
+PV
+[
+(
+π
+2
+c
++
++
+)
++
+(
+2
+π
+(
+1
+−
+π
+)
+c
+−
++
+)
++
+(
+1
+−
+π
+)
+2
+c
+−
+−
+]
+c
+=
+(
+1
+1
++
+.02
+)
+2
+[
+(
+.45
+2
+×
+82.25
+)
++
+(
+2
+(
+.45
+)
+×
+(
+1
+−
+.45
+)
+35
+)
++
+(
+1
+−
+π
+2
+×
+0
+)
+]
+c
+=
+.961169
+×
+[
+16.6556
++
+17.325
++
+0
+]
+=
+$
+32.66
+Incorrect answer:
+(no answer)
+Correct Answer:
+$16.60.
+24Multiple Choice0 / 1 point
+With respect to the replicating strategies, which scenario is most likely correct?
+
+Scenario 1
+Incorrect Answer Feedback: Incorrect. The $19.25 price of the call option exceeds its value of $15.44, as calculated based on both the no-arbitrage approach and the expectations approach. Accordingly, the replicating strategy per 100 shares is to (1) sell 1 option, (2) buy h shares, and (3) borrow h * (up/down factor price + up/down call payoff).
+Correct answer:
+
+Scenario 2
+Correct Answer Feedback: Correct. The $19.25 price of the call option exceeds its value of $15.44, as calculated based on both the no-arbitrage approach and the expectations approach. Accordingly, the replicating strategy per 100 shares is to (1) sell 1 option, (2) buy h shares, and (3) borrow h * (up/down factor price + up/down call payoff).
+The call option calculations follow:
+No-arbitrage approach:
+Hedge ratio 
+h
+=
+c
++
++
+c
+−
+S
++
+−
+S
+−
+=
+35
+−
+0
+135
+−
+75
+=
+35
+60
+=
+.5833
+Call Option value 
+c
+=
+h
+S
++
+(
+P
+V
+(
+−
+h
+S
+−
++
+c
+−
+)
+)
+=
+.5833
+×
+100
++
+(
+−
+.5833
+×
+75
++
+0
+)
+/
+1.02
+=
+52.33
++
+(
+−
+42.89
+)
+=
+$
+15.44
+Expectations approach:
+Probability of an up move 
+π
+=
+[
+F
+V
+(
+1
+)
+−
+d
+]
+/
+(
+u
+−
+d
+)
+=
+[
+1.02
+−
+.75
+]
+/
+(
+1.35
+−
+.75
+)
+=
+.45
+Call Option value 
+c
+=
+P
+V
+[
+π
+c
++
++
+(
+1
+−
+π
+)
+c
+−
+]
+=
+(
+.45
+×
+35
++
+.55
+×
+0
+)
+/
+1.02
+=
+15.75
+/
+1.02
+=
+$
+15.44
+
+Scenario 3
+Incorrect Answer Feedback: Incorrect. The $19.25 price of the call option exceeds its value of $15.44, as calculated based on both the no-arbitrage approach and the expectations approach. Accordingly, the replicating strategy per 100 shares is to (1) sell 1 option, (2) buy h shares, and (3) borrow h * (up/down factor price + up/down call payoff).
+Incorrect answer:
+(no answer)
+Correct Answer:
+Scenario 2
+25Multiple Choice0 / 1 point
+The no-arbitrage value of a two-year American-style put option is most likely closest to:
+
+$12.72.
+Incorrect Answer Feedback: Incorrect. $12.72 represents the value of a two-year European-style put option. The no-arbitrage approach to calculating the early exercise premium follows. Note that the two-period binomial model is used to calculate (for purposes of comparison) the value of the European-style put option and the American-style put option. The value of the European-style put option is $12.72. The value of the American-style put option is $13.48. Accordingly, the early exercise premium is $.76.
+Correct answer:
+
+$13.48.
+Correct Answer Feedback: Correct. The no-arbitrage approach to calculating the early exercise premium follows. Note that the two-period binomial model is used to calculate (for purposes of comparison) the value of the European-style put option and the American-style put option. The value of the European-style put option is $12.72. The value of the American-style put option is $13.48. Accordingly, the early exercise premium is $.76. The calculations follow.
+ 
+Component Terms	Denoted	Value	Put Value: Two-Period Binomial Model
+Stock Price	S	100	Early Exercise Premium	---	0.760
+Exercise Price	X	100	European Style	p	12.720
+Up Factor	u	1.35	American Style	p	13.480
+Down Factor	d	0.75	Put Up	p+	0.000
+Interest Rate	r	2.00%	Put Down (European Style)	p-	23.591
+Probability of Up Move	π	0.4500	Put Down (American Style)	p-	25.000
+ 	Stock Up	S+	135.000
+ 	Stock Down	S-	75.000
+ 	Put Up Up	p++	0.000
+ 	Put Up Down	p+-	0.000
+ 	Put Down Down	p--	13.750
+ 	Stock Up Up	S++	182.250
+ 	Stock Up Down	S+-	101.250
+ 	Stock Down Down	S--	56.250
+ 
+European Style
+---	---	---	---	Item	Value
+---	---	Item	Value	Stock	182.250
+---	---	Stock	135.0000	Put	0.000
+---	---	Put	0.000	---	---
+Item	Value	HR	0	Item	Value
+Stock	100	---	---	Stock	101.250
+Put	12.720	Item	Value	Put	0.000
+HR	–0.39318	Stock	75.0000	---	---
+---	---	Put	23.591	Item	Value
+---	---	HR	–0.97	Stock	56.250
+---	---	---	---	Put	43.750
+American Style
+---	---	---	---	Item	Value
+---	---	Item	Value	Stock	182.250
+---	---	Stock	135.000	Put	0.000
+---	---	Put	0.000	---	---
+Item	Value	HR	0	Item	Value
+Stock	100.000	---	---	Stock	101.250
+Put	13.480	Item	Value	Put	0.000
+HR	–0.41667	Stock	75.000	---	---
+---	---	Put	25.000	Item	Value
+---	---	HR	–0.97	Stock	56.250
+---	---	---	---	Put	43.750
+ 
+
+$13.75.
+Incorrect Answer Feedback: Incorrect. $13.75 represents the intrinsic value of the put option at year 1 ($25.00) times the probability of a down move (1 – .45 = .55). $25.00 × .55 = $13.75. This is not correct. The no-arbitrage approach to calculating the early exercise premium follows. Note that the two-period binomial model is used to calculate (for purposes of comparison) the value of the European-style put option and the American-style put option. The value of the European-style put option is $12.72. The value of the American-style put option is $13.48. Accordingly, the early exercise premium is $.76.
+Incorrect answer:
+(no answer)
+Correct Answer:
+$13.48.
+Vignette
+Eagle Investment Management is a subadvisory investment firm partnering with Registered Investment Advisors to provide investment counsel for options trading strategies. Howard Fish is Eagle’s CEO. Keegan Shannon is Eagle’s chief investment officer and strategist. Douglas Lane is a prospective client who is considering using derivatives for his portfolio. Fish, Shannon, and Lane are meeting to discuss options valuations models.
+
+Fish begins the discussion by stating that the Black-Scholes-Merton (BSM) model is a relatively straightforward tool for valuing options, despite its mathematical rigor. Fish displays the BSM model parameters (inputs) and components for ABC stock, which are presented as Exhibit 1 and Exhibit 2, respectively.
+
+Exhibit 1 BSM Model Parameters for ABC Stock
+Stock Price (S)	Exercise Price (X)	Interest Rate (r)	Time to Expiration (T)	Volatility (σ)	Dividend (γ)
+105	100	1.0%	1 year	.30	0
+ 
+Exhibit 2 BSM Model Components for ABC Stock
+d1	d2	N (d1)	N (d2)	N (–d1)	N (–d2)
+.346	.046	.637	.520	.363	.480
+Shannon explains that the BSM model is a continuous time version of the binomial option pricing model in which the value of an option is equal to the value of two components: a stock component and a zero-coupon bond component. Traders use a replicating strategy to continuously rebalance the stock and zero-coupon bond components such that that no arbitrage opportunities are available. Shannon outlines a no-arbitrage trading strategy for call options.
+
+Fish then responds with three comments regarding put options:
+
+Comment 1: The value of the put option is 9.42.
+Comment 2: The probability of the put option expiring out of the money is 48%.
+Comment 3: A component of the replicating strategy is to buy .363 xero-coupon bonds.
+Fish asks Shannon to describe an options delta hedge. Shannon replies that the delta hedge ratio is used to maintain a “delta-neutral portfolio,” which, in theory, does not change in value following small changes in the underlying stock. Shannon uses the information from Exhibits 1 and 2 to calculate the appropriate delta hedge for a one-year put option written on 1,000 shares of ABC stock.
+
+Fish states that delta is just one of several measures referred to as “option Greeks.” Option Greeks address how the movement of BSM model parameters affects the value of options. Other option Greeks are Rho, Vega, and Theta. Fish explains that option Greeks are static risk measures that capture the impact of small changes in BSM model parameters on the value of options, holding all other BSM model parameters constant. Fish displays a chart, shown as Exhibit 3, which illustrates the relationship among option Greeks, the parameters they measure, and the directional change in value of call options and put options.
+
+Exhibit 3 Relationship among Options Greeks, Measured Parameters, Call Options, and Put Options
+Option Greeks	Measured Parameter Is:	Call Value Is:	Put Value
+Rho	Higher | Lower	Higher | Lower	Lower | Higher
+Vega	Higher | Lower	Higher | Lower	Higher | Lower
+Theta	More | Less	Higher | Lower	Lower | Higher
+26Multiple Choice0 / 1 point
+Based on the information in Exhibits 1 and 2, the initial no-arbitrage trading strategy to replicate buying a call option on ABC stock is most likely to:
+
+buy .346 ABC shares; short sell .046 zero-coupon bonds.
+Incorrect Answer Feedback: Incorrect. .346 and .046 are 
+d
+1
+ and 
+d
+2
+values, respectively, which are not correct. The BSM is an option valuation model that may be replicated by the continuous trading of the underlying stock and a zero-coupon bond, in a theoretical environment in which (1) there are no arbitrage opportunities, (2) borrowing and lending occurs at a risk-free interest rate that compounds continuously, and (3) there are no trading restrictions. A call option can be viewed as a leveraged position in the underlying stock, in which N (
+d
+1
+) shares (.637) are purchased/financed by the short selling of N (
+d
+2
+) zero-coupon bonds (.520). 
+d
+1
+ 
+and 
+d
+2
+ are derived from the components of the BSM and are applied to the standard normal distribution.
+Correct answer:
+
+buy .637 ABC shares; short sell .520 zero-coupon bonds.
+Correct Answer Feedback: Correct. The BSM is an option valuation model that may be replicated by the continuous trading of the underlying stock and a zero-coupon bond, in a theoretical environment in which (1) there are no arbitrage opportunities, (2) borrowing and lending occurs at a risk-free interest rate that compounds continuously, and (3) there are no trading restrictions. A call option can be viewed as a leveraged position in the underlying stock, in which N (
+d
+1
+) shares (.637) are purchased/financed by the short selling of N (
+d
+2
+) zero-coupon bonds (.520). 
+d
+1
+ 
+and 
+d
+2
+ are derived from the components of the BSM and are applied to the standard normal distribution.
+Calculations of 
+d
+1
+, 
+d
+2
+, N (
+d
+1
+), N (
+d
+2
+) are not required to answer this question but are provided for learning perspective.
+BSM model for nondividend stocks:
+c
+=
+S
+N
+(
+d
+1
+)
+−
+e
+−
+r
+T
+X
+N
+(
+d
+1
+)
+and:
+p
+=
+e
+−
+r
+T
+X
+N
+(
+−
+d
+2
+)
+−
+S
+N
+(
+−
+d
+1
+)
+where:
+d
+1
+=
+ln
+(
+S
+X
+)
++
+(
+r
++
+σ
+2
+/
+2
+)
+T
+σ
+T
+d
+2
+=
+d
+1
+−
+σ
+T
+Standard Normal Distribution
+X	0	0.1	0.2	0.3	0.4	0.5	0.6	0.7	0.8	0.9	1.0
+N(x)	0	.0398	.0793	.1179	.1554	.1915	.2257	.2580	.2881	.3159	.3413
+ 
+d
+1
+=
+ln
+(
+S
+X
+)
++
+(
+r
++
+σ
+2
+/
+2
+)
+T
+σ
+T
+d
+2
+=
+d
+1
+−
+σ
+T
+d
+=
+.0488
++
+(
+.01
++
+.045
+)
+1
+.3
+=
+.346
+d
+2
+=
+.346
+−
+.30
+=
+.046
+N (
+d
+1
+) = .6367 = .637. From the standard normal distribution for 
+d
+1
+ of .346, N (
+d
+1
+) = .6367, which is approximated by .1367 (midpoint between .1179 and .1554) + .50 (midpoint of the normal distribution)
+N (
+d
+2
+) = .5199 = .520. From the standard normal distribution for 
+d
+2
+ of .046, N (
+d
+2
+) = .5199, which is approximated by .0199 (midpoint between .0 and .0398) + .50 (midpoint of the normal distribution).
+
+buy .363 ABC shares; short sell .480 zero-coupon bonds.
+Incorrect Answer Feedback: Incorrect. .363 and .480 are N(
+-
+d
+1
+) and N(
+-
+d
+2
+) values, respectively, which are not correct. The BSM is an option valuation model that may be replicated by the continuous trading of the underlying stock and a zero-coupon bond, in a theoretical environment in which (1) there are no arbitrage opportunities, (2) borrowing and lending occurs at a risk-free interest rate that compounds continuously, and (3) there are no trading restrictions. A call option can be viewed as a leveraged position in the underlying stock, in which N (
+d
+1
+) shares (.637) are purchased/financed by the short selling of N (
+d
+2
+) zero-coupon bonds (.520). 
+d
+1
+ 
+and 
+d
+2
+ are derived from the components of the BSM and are applied to the standard normal distribution.
+Incorrect answer:
+(no answer)
+Correct Answer:
+buy .637 ABC shares; short sell .520 zero-coupon bonds.
+27Multiple Choice0 / 1 point
+Based on the information in Exhibits 1 and 2, which comment by Fish regarding put options is most likely correct?
+Correct answer:
+
+Comment 1
+Correct Answer Feedback: Correct. The BSM value of a put option on ABC stock is 9.42. The BSM components and figures follow:
+p = 
+e
+-
+r
+T
+ XN(
+-
+d
+2
+) 
+-
+ SN(
+-
+d
+1
+) = ( 
+2.718282
+(
+-
+.
+01
+)
+(
+1
+)
+ × 100 × .4801) – (105 × .363) = (.99 × 47.53) – (105 × .363) = 47.530 – 38.115 = 9.415 = 9.42
+
+Comment 2
+Incorrect Answer Feedback: Incorrect. Comment 2 is incorrect. The N(
+-
+d
+2
+) term with respect to put options represents the probability that a put option will expire in the money, not out of the money.
+
+Comment 3
+Incorrect Answer Feedback: Incorrect. The replicating strategy for the put option is to sell short N(
+d
+1
+) = .363 shares of ABC stock and buy N(
+d
+2
+) = .4801 shares of zero-coupon bonds.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Comment 1
+28Multiple Choice0 / 1 point
+What transaction in shares of ABC is most likely appropriate for Shannon’s delta hedge calculation?
+Correct answer:
+
+Short sell 363 shares
+Correct Answer Feedback: Correct. The appropriate delta hedge for a written put option position is to short N(
+-
+d
+1
+) shares. In this example, the appropriate delta hedge for a one-year put option written on 1,000 shares of ABC stock is to short sell 363 shares. Delta measures the change in an options price from small changes in the underlying stock price, holding all other factors equal. The calculation follows:
+The delta for a put option position = 
+-
+e
+T
+ N(
+-
+d
+1
+) × 1,000 shares = (
+-
+1 × .3630) × 1,000 shares = 
+-
+.3630 × 1,000 shares = 
+-
+363 shares = sell short 363 shares
+
+Purchase 480 shares
+Incorrect Answer Feedback: Incorrect. Purchasing 480 shares is based on applying the BSM component N(
+-
+d
+2
+), which is not correct. The appropriate delta hedge for a written put option position is to short N(
+-
+d
+1
+) shares. In this example, the appropriate delta hedge for a one-year put option written on 1,000 shares of ABC stock is to short sell 363 shares. Delta measures the change in an options price from small changes in the underlying stock price, holding all other factors equal.
+The delta for a put option position = 
+-
+e
+T
+ N(
+-
+d
+1
+) × 1,000 shares = (
+-
+1 × .3630) × 1,000 shares = 
+-
+.3630 × 1,000 shares = 
+-
+363 shares = sell short 363 shares
+
+Short sell 637 shares
+Incorrect Answer Feedback: Incorrect. Selling short 637 shares is based on applying the BSM component N (
+d
+1
+), which is not correct. The appropriate delta hedge for a written put option position is to short N(
+-
+d
+1
+) shares. In this example, the appropriate delta hedge for a one-year put option written on 1,000 shares of ABC stock is to short sell 363 shares. Delta measures the change in an options price from small changes in the underlying stock price, holding all other factors equal. The delta for a put option position = 
+-
+e
+T
+ N(
+-
+d
+1
+) × 1,000 shares = (
+-
+1 × .3630) × 1,000 shares = 
+-
+.3630 × 1,000 shares = 
+-
+363 shares = sell short 363 shares
+Incorrect answer:
+(no answer)
+Correct Answer:
+Short sell 363 shares
+29Multiple Choice0 / 1 point
+In Exhibit 3, with respect to measured parameter, call value, and put value, Fish is least likely correct about:
+
+rho.
+Incorrect Answer Feedback: Incorrect. Fish’s illustration of rho is correct. Rho is a measure of the impact of interest rates on an options value. For call options, the directional relationship between interest rates and the option value is positive because the call value reflects the benefit of not having a higher financing cost from the replicating transaction (long stock, financed by borrowing) should rates be higher. For put options, the directional relationship between interest rates and the option value is negative (opposite) because the put value reflects the higher investment income forgone (by not selling stock) compared with the replicating transaction (short stock, invest the proceeds) should rates be higher.
+
+vega.
+Incorrect Answer Feedback: Incorrect. Fish’s illustration of vega is correct. Vega is defined as a change in the value of an option for a given small change in volatility, holding everything else (all other parameters) constant. The value of both call options and put options have a positive relationship with respect to vega — the higher volatility, the higher the value of both call options and put options holding all other parameters constant. Unlike each of the BSM model parameters, vega is unobservable. The parameter vega is an assessment of future volatility. Vega is an “implied” parameter, based on the observed price of the option and the five other parameters of the BSM model.
+Correct answer:
+
+theta.
+Correct Answer Feedback: Correct. Fish’s illustration of theta is not correct. Theta is defined as a change in the value of an option for a given small change in calendar time holding everything else (all other parameters) constant. The value of both call options and put options have a positive relationship with respect to theta — the more the time to expiration, the higher the value of both call options and put options holding all other parameters constant. Theta is a measure of an option’s “time decay.”
+Incorrect answer:
+(no answer)
+Correct Answer:
+theta.
+Vignette
+Alfred Hamilton is CEO and CIO of Nevis Capital, a Registered Investment Advisory firm. He is meeting with Phil Burr, head trader, and Jon Laurens, a recently hired analyst, to discuss option valuation methodologies in the context of the firm’s use of derivatives to manage client portfolios.
+
+Hamilton begins by stating that the binomial option valuation (binomial) model and the Black-Scholes-Merton (BSM) model are each useful in understanding option valuation approaches. Hamilton compares the binomial model to the BSM model, stating that “both the binomial model and the BSM model are dependent on the path of the underlying security price during the term of the option. In addition, both models assume the investor is not taking price risk and the risk-free interest rate is used to discount future outcomes that are probabilistic.”
+
+Burr describes the two-period binomial model to Laurens and provides information related to Lafayette Corporation’s common stock and options on that stock (presented in Exhibit 1). Lafayette stock does not pay a dividend.
+
+Exhibit 1 Information on Lafayette Corporation Stock and Options
+Stock price	$100
+Call strike	$100
+Lafayette bond rate	7.00%
+Risk-free interest rate	5.00%
+Up factor	1.25
+Down factor	0.85
+The price of a one-year call option on Lafayette Corporation common stock is $15.28. Based on this price and on information provided in Exhibit 1, Hamilton, Laurens, and Burr believe that an arbitrage opportunity may exist, which arbitrageurs could exploit based on the binomial model no-arbitrage approach. Hamilton states the arbitrageurs should buy call options using borrowed funds. Laurens disagrees, stating that arbitrageurs should short-sell shares and lend the proceeds. Burr also disagrees, stating that arbitrageurs should buy shares using borrowed funds.
+
+Laurens discusses European-style and American-style call options in the context of the multiperiod binomial model. Laurens states that “by dividing the time steps of the two-period binomial model into a larger number of shorter and equal length time steps, the expectations approach can be applied to a European-style call option to calculate its value based on the present value of expected future cash flows. For a non-dividend-paying stock, an American-style call option’s value can be calculated based on the present value of expected future cash flows because American-style call options and European-style call options can be described and interpreted similarly and because the no-arbitrage approach applies to each.”
+
+30Multiple Choice0 / 1 point
+Hamilton’s comparison of the binomial model and the BSM model is least likely correct with respect to:
+
+price risk.
+Incorrect Answer Feedback: Incorrect. Hamilton’s reference to not taking price risk for both the binomial model and the BSM model is correct.
+
+future outcomes.
+Incorrect Answer Feedback: Incorrect. Hamilton’s statement regarding future outcomes is correct. The risk-free interest rate is utilized to discount probabilistic future outcomes for the binomial model and the BSM model.
+Correct answer:
+
+path-dependency.
+Correct Answer Feedback: Correct. Hamilton’s comment about the both the binomial model and BSM model being dependent on the path of the underlying stock price (path-dependency) is not correct. The binomial model is path dependent, whereas the BSM model is not path dependent.
+Incorrect answer:
+(no answer)
+Correct Answer:
+path-dependency.
+31Multiple Choice0 / 1 point
+The value of a two-year European call option on Lafayette Corporation shares is likely closest to:
+
+$14.17.
+Incorrect Answer Feedback: Incorrect. The calculations are incorrect.
+The term 
+(
+1
+−
+π
+)
+2
+ is incorrectly incorporated into the calculation subcomponent (2p(1 
+-
+ p)
+ 
+c
+-
++
+ ).
+c
+=
+(
+1
+1
++
+.05
+)
+2
+[
+(
+.05
+2
+×
+56.25
+)
++
+(
+2
+(
+.50
+2
+)
+6.25
+)
++
+(
+1
+−
+π
+2
+×
+0
+)
+]
+c
+=
+.9070
+×
+[
+14.0625
++
+1.56
++
+0
+]
+=
+14.17
+Correct answer:
+
+$15.59.
+Correct Answer Feedback: Correct. The options calculation process follows:
+RN Probability equation:
+π
+=
+[
+F
+V
+(
+1
+)
+−
+d
+/
+(
+u
+−
+d
+)
+]
+=
+[
+1.05
+−
+.85
+]
+/
+(
+1.25
+−
+.85
+)
+=
+.50
+Call Option equation:
+c
++
++
+=
+Max
+(
+0
+,
+s
++
++
+−
+X
+)
+=
+Max
+[
+0
+,
+1.25
+2
+(
+100
+)
+−
+100
+]
+=
+56.25
+c
++
+−
+=
+Max
+(
+0
+,
+s
++
+−
+−
+X
+)
+=
+Max
+[
+0
+,
+(
+1.25
+×
+.85
+×
+100
+)
+−
+100
+]
+=
+6.25
+c
+−
+−
+=
+Max
+(
+0
+,
+s
+−
+−
+−
+X
+)
+=
+Max
+[
+0
+,
+(
+.85
+2
+×
+100
+)
+−
+100
+]
+=
+0
+c
+=
+PV
+[
+(
+π
+2
+c
++
++
+)
++
+(
+2
+p
+(
+1
+−
+p
+)
+c
+−
++
+)
++
+(
+1
+−
+π
+)
+2
+c
+−
+−
+]
+c
+=
+(
+1
+1
++
+.05
+)
+2
+[
+(
+.05
+2
+×
+56.25
+)
++
+(
+2
+(
+.05
+)
+×
+(
+1
+−
+.5
+)
+6.25
+)
++
+(
+1
+−
+π
+2
+×
+0
+)
+]
+c
+=
+.9070
+×
+[
+14.0625
++
+3.125
++
+0
+]
+=
+15.59
+
+$17.56.
+Incorrect Answer Feedback: Incorrect. The calculations are incorrectly based on a 7% interest rate (5% is the correct rate).
+Incorrect answer:
+(no answer)
+Correct Answer:
+$15.59.
+32Multiple Choice0 / 1 point
+With respect to the one-year call option on Lafayette stock, whose strategy is most likely correct?
+Correct answer:
+
+Burr’s
+Correct Answer Feedback: Correct. Burr’s strategy is correct. The one-year call option price of $15.28 exceeds its fair value of $11.90. Whenever a call option is overpriced relative to its fair value, the appropriate no-arbitrage strategy is to short the overpriced call option and synthetically replicate an offsetting long-call position by buying underlying shares using partially borrowed funds. The arbitrage profit opportunity follows:
+Hedge ratio h = ( ) / ( ) = (25 – 0) / (125 – 85) = .625
+Call value:
+c = hS + –PV(–hS– + c–) = (–0.625 × $100) + ((–0.625 × $85) + $0)/–1.05 = –$62.50 + $50.60 = $11.90
+Where:
+S = stock price;
+= stock price up move = u x S;
+= stock price down move = d x S;
+= call value up move = Max(0, u x S – X); and
+= call value down move = Max(0, d x S – X).
+Any price above $11.90 for a one-year option on Lafayette stock will create an arbitrage profit opportunity, which may be eliminated by the no-arbitrage strategy outlined by Burr.
+
+Laurens’s
+Incorrect Answer Feedback: Incorrect. Laurens’s strategy is incorrect. The correct no-arbitrage strategy is to borrow, buy shares and sell calls.
+
+Hamilton’s
+Incorrect Answer Feedback: Incorrect. Hamilton’s strategy is incorrect. The correct no-arbitrage strategy is to borrow, buy shares and sell calls.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Burr’s
+33Multiple Choice0 / 1 point
+Is Laurens’s statement about European-style and American-style call options most likely correct?
+Correct answer:
+
+Yes
+Correct Answer Feedback: Correct. Laurens’s statement about the no-arbitrage approach is correct in its reference to both European-style options and American-style options. Under the binomial models, an option’s value is equal to the present value of expected future payoffs under a risk neutral probability with the discount factor being the risk free interest rate. The multiperiod binomial model approaches equivalency to the BSM model as the time steps shorten (i.e., a large number of short and equal time steps)
+
+No, regarding European-style call options
+Incorrect Answer Feedback: Incorrect. Laurens’s statement about the no-arbitrage approach is correct.
+
+No, regarding American-style call options
+Incorrect Answer Feedback: Incorrect. Laurens’s statement about the no-arbitrage approach is correct.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Yes
+Vignette
+Athena Advisors Inc. offers portfolio replication services to pension funds and insurance companies through the use of options. Clients are typically able to replicate market exposures with smaller than normal investments of funds. Athena manages exposures for its client Wertfin Insurance Company related to annuities indexed to the German Blue Chip Equity Index. Athena portfolio manager Hannes Messer is meeting with Wertfin’s risk manager, Jens Szillat, who has asked to learn more about the principles behind the option strategies being employed.
+
+Szillat tells Messer, “I am somewhat familiar with option valuation models; however, I would like to learn more about Athena’s methodologies with respect to the index options you are managing for our portfolio.”
+
+Messer replies, “The binomial valuation model can be applied to the two-year European style index call options we purchased one year ago. The applicable underlying instrument is the German Blue Chip Equity price index, which excludes dividends. Exhibit 1 shows the option’s characteristics at the time of purchase.”
+
+Exhibit 1 Binomial Model Variables
+u	1.15
+d	0.90
+π	0.52
+Index price	EUR 720
+Strike price	EUR 750
+Hedge ratio	.5697
+1-year interest rate	3%
+S–	648
+C–	0
+Messer explains, “Of course, with the index moving down 10% in the last 12 months, the payoffs with these options could have been replicated without using options.” Szillat responds, “My understanding is that the payoff would have been the same as the call option if you had purchased 0.5697 index units and lent EUR 356.79 at the one-year interest rate.”
+
+Messer continues, “Twelve months ago, I noted that two-year puts with a strike price of EUR750 cost EUR38.48. Using the information in Exhibit 1 and today’s index value, the binomial valuation model calculates the current price of the put as EUR80.15. It is actually trading now above that price at EUR92.”
+
+Szillat responds, “I am curious whether you also use the Black–Scholes–Merton (BSM) model for valuation. I understand the BSM and binomial models both have the following three assumptions in common.
+
+Assumption 1: Trading is possible at every instant.
+Assumption 2: Volatility can be predicted with certainty.
+Assumption 3: The annualized returns on the underlying follow a normal distribution.
+Szillat then asks, “How do you utilize the BSM model?”
+
+Messer answers, “We use the BSM model to calculate estimates on a wide array of comparative option variables, such as how much the option value will change for a change in a particular parameter. For example, we can estimate how the rate of change of an option price speeds up or slows down for a given change in the price of the underlying index.”
+
+Messer concludes, “We also use the BSM model to calculate the implied volatility. The implied volatilities of the index options expiring in one year are shown in Exhibit 2.”
+
+Exhibit 2 Implied Volatility Curve
+Strike Price	Implied Volatility
+700	18.7
+710	17.98
+720	17.38
+730	16.69
+740	15.83
+750	15.40
+760	14.50
+770	14.03
+780	13.21
+790	12.11
+800	11.09
+34Multiple Choice0 / 1 point
+Using the binomial valuation method and the data in Exhibit 1, the price Messer paid one year ago for the call option with a strike price of EUR750 is closest to:
+
+EUR47.57.
+Incorrect Answer Feedback: Incorrect. It represents the calculated call value reversing the probabilities of C+ and C–.
+Correct answer:
+
+EUR51.54.
+Correct Answer Feedback: Correct. The price of the call option at time 0 was EUR51.5363. The following is the two-step binomial tree:
+A tree diagram with one box to the left, then two boxes in the center, and three boxes to the right. Each box has the column heads Item and Value, then row heads Underlying, Call, and Hedge Ratio.
+Expand / Collapse Extended Description
+
+EUR102.08.
+Incorrect Answer Feedback: Incorrect. It is the value of C+.
+Incorrect answer:
+(no answer)
+Correct Answer:
+EUR51.54.
+35Multiple Choice0 / 1 point
+With respect to his assessment of replicating the option payoff, Szillat is least likely correct about:
+Correct answer:
+
+lending EUR358.41.
+Correct Answer Feedback: Correct. Szillat is incorrect in his method of replicating the call option. It can be replicated by purchasing the amount of the underlying shares designated by the hedge ratio and then borrowing (not lending) an amount equal to the present value of (hedge ratio × S– + C–) or (1/1.03) × [(.5697 × 648) + 0] = 358.41.
+
+purchasing 0.5697 index units.
+Incorrect Answer Feedback: Incorrect. Szillat is incorrect in his method of replicating the call option. It can be replicated by purchasing the amount of the underlying shares designated by the hedge ratio and then borrowing (not lending) an amount equal to the present value of (hedge ratio × S– + C–) or (1/1.03) × [(.5697 × 648) + 0] = 358.41.
+
+using the one-year interest rate.
+Incorrect Answer Feedback: Incorrect. Szillat is incorrect in his method of replicating the call option. It can be replicated by purchasing the amount of the underlying shares designated by the hedge ratio and then borrowing (not lending) an amount equal to the present value of (hedge ratio × S– + C–) or (1/1.03) × [(.5697 × 648) + 0] = 358.41.
+Incorrect answer:
+(no answer)
+Correct Answer:
+lending EUR358.41.
+36Multiple Choice0 / 1 point
+Does the put option with a strike price of EUR750 currently offer an arbitrage opportunity?
+Correct answer:
+
+Yes
+Correct Answer Feedback: Correct. An arbitrage opportunity does exist. The underlying index has fallen 10% to 648, and the exercise value of the American-style index option with a strike price of EUR750 is EUR102 (750 – 648). If the option costs less than EUR102, the holder has an arbitrage opportunity by purchasing and exercising the option and simultaneously purchasing the underlying for a net positive cash flow of 10.
+
+No, because the put is deep in the money
+Incorrect Answer Feedback: Incorrect. The exercise value is the criteria to judge whether there is an arbitrage opportunity.
+
+No, because the market has bid up the price of the put
+Incorrect Answer Feedback: Incorrect. The price of the put is only 92, which is still less than 102.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Yes
+37Multiple Choice0 / 1 point
+Which of Szillat’s assumptions is least consistent with the BSM model?
+
+Assumption 1
+Incorrect Answer Feedback: Incorrect. Assumption 1 is a part of the BSM model.
+
+Assumption 2
+Incorrect Answer Feedback: Incorrect. Assumption 2 is a part of the BSM model.
+Correct answer:
+
+Assumption 3
+Correct Answer Feedback: Correct. Assumption 3 is not consistent with the BSM model. The BSM model assumes that the continuously compounded return (or the logarithmic return), not the annualized return, is normally distributed.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Assumption 3
+38Multiple Choice0 / 1 point
+In describing how call option prices change, Messer is most likely referring to:
+
+vega.
+Incorrect Answer Feedback: Incorrect. Vega is the change in the option’s volatility for a change in the underlying.
+
+delta.
+Incorrect Answer Feedback: Incorrect. Delta is the option price’s rate of change for a change in the underlying.
+Correct answer:
+
+gamma.
+Correct Answer Feedback: Correct. Gamma is the change in an instrument’s delta, which is the rate at which an instrument’s price changes as the price of the underlying asset changes.
+Incorrect answer:
+(no answer)
+Correct Answer:
+gamma.
+39Multiple Choice0 / 1 point
+Which of the following would Messer most likely conclude from the implied volatility data in Exhibit 2 if he excludes the effects of moneyness and time to expiration?
+
+Using out-of-the-money call or put options to establish either long or short positions is more expensive than using at-the-money options
+Incorrect Answer Feedback: Incorrect. This is only the case if implied volatility is higher for out-of-the-money options than for at-the-money, as in a normal skew (volatility smile).
+Correct answer:
+
+Using out-of-the-money put options to hedge is more expensive than establishing a long position with out-of-the-money call options
+Correct Answer Feedback: Correct. Implied volatility is higher for lower strike prices than for higher strike prices; therefore, out-of-the-money put options will generally be more expensive than out-of-the-money call options. Implied volatilities of options with lower strike prices are higher than those with higher strike prices.
+
+Using out-of-the-money call options to establish a long position is more expensive than establishing a short position using out-of-the-money put options
+Incorrect Answer Feedback: Incorrect. Implied volatility is higher for lower strike prices than for higher strike prices; therefore, out-of-the-money put options will generally be more expensive than out-of-the-money call options. Implied volatilities of options with lower strike prices are higher than those with higher strike prices.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Using out-of-the-money put options to hedge is more expensive than establishing a long position with out-of-the-money call options
+Vignette
+IST Risk Solutions provides institutional financial risk management advisory and brokerage services. Clients seek IST’s services when evaluating whether to hedge interest rate, currency, or equity market risks. Simon Weber, senior adviser at IST, is discussing a new client with analyst Noel Franco.
+
+Weber states: “Newport State College plans a $10 million laboratory renovation for its science center and has engaged IST to implement options strategies in order to manage the risk of rising interest rates. The renovation is to be completed in 12 months, in time for the start of the school year. To minimize disruption to its academic schedule, however, Newport will not begin the work until six months from now. State funding will not be received until the beginning of the next school year, so a six-month variable interest rate loan will finance the renovation.”
+
+Franco comments: “I think six-month call options on the six-month forward rate would probably be the cheapest solution. The price of the European-style option can be evaluated as the present value of the expected terminal option’s payoffs using the risk-adjusted periodic rate. Because Newport has indicated that its goal is to pay a maximum interest rate of 1.25% on the loan, we could also use interest rate put and call options. I believe the binomial model can be used to value interest rate options. Exhibit 1 shows the current interest rate information.”
+
+Exhibit 1
+Current six-month MRR	1.00%
+Six-month forward rate in six months	1.15%
+Weber comments: “We can also consider options on swaps, which the Black model views as having a bond component and a swap component. The swaption, used to hedge against rising interest rates, can be evaluated as the swap component minus the bond component.”
+
+Newport has an endowment that helps support the school financially. The school has learned the endowment will be receiving a gift of 100,000 shares of Global Industries (GI) stock in one month. IST recommends the use of a one-month options position to hedge against a material price decline on the stock during this period. Exhibit 2 lists the relevant GI stock and option characteristics.
+
+Exhibit 2 GI Stock and Option Information
+Stock price	$77
+Call and put options strike price	$75
+Delta call	0.5952
+Delta put	–0.4010
+40Multiple Choice0 / 1 point
+Franco’s understanding of the valuation of the European style six-month call option is most likely:
+
+correct with respect to the payoffs and the discount rate.
+Incorrect Answer Feedback: Incorrect. The stated discount rate is correct.
+Correct answer:
+
+correct with respect to the payoffs but incorrect about the discount rate.
+Correct Answer Feedback: Correct. According to the expectations approach of options valuation, option values are simply the present value of the expected terminal option payoffs (based on risk-neutral probabilities) discounted at the estimated risk-free interest rate, rather than the risk-adjusted periodic rate.
+
+incorrect with respect to the payoffs but correct about the discount rate.
+Incorrect Answer Feedback: Incorrect. The valuation method approach is correct.
+Incorrect answer:
+(no answer)
+Correct Answer:
+correct with respect to the payoffs but incorrect about the discount rate.
+41Multiple Choice0 / 1 point
+Based on the information shown in Exhibit 1 and using a two-step binomial model to value the current at-the-money interest rate call option, the value of the underlying instrument at Node 0 would most likely be:
+Correct answer:
+
+1.00%.
+Correct Answer Feedback: Correct. When using the two-period binomial model to value interest rate options, the value of the underlying instrument at Node 0 is the spot rate. The spot rate (and the at-the-money strike price) is the current MRR rate of 1.00%.
+
+1.15%.
+Incorrect Answer Feedback: Incorrect. The value of the underlying instrument is the spot rate, not the forward rate.
+
+1.25%.
+Incorrect Answer Feedback: Incorrect. The value of the underlying instrument is 1.00%; 1.25% is the client’s upper tolerance bound.
+Incorrect answer:
+(no answer)
+Correct Answer:
+1.00%.
+42Multiple Choice0 / 1 point
+Is Weber’s description of the swaption used for the hedge most likely correct?
+Correct answer:
+
+Yes
+Correct Answer Feedback: Correct. A payer swaption would hedge against rising interest rates. According to the Black model, the value of a payer swaption can be described as the swap component minus the bond component.
+
+No, because he is describing a receiver swaption
+Incorrect Answer Feedback: Incorrect. A receiver swaption hedges against falling interest rates and Weber is describing a payer swaption.
+
+No, because it would be correctly evaluated as the bond component minus the swap component
+Incorrect Answer Feedback: Incorrect. The receiver swaption is evaluated as the bond component minus the swap component.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Yes
+43Multiple Choice0 / 1 point
+Assuming one option per share, an appropriate delta hedge for the GI stock would most likely be to:
+
+buy 40,100 puts.
+Incorrect Answer Feedback: Incorrect. The correct number of puts to purchase is calculated as 1/Delta put or 249,376 puts.
+
+sell 148,428 calls.
+Incorrect Answer Feedback: Incorrect. This assumes DeltaH (used when selling calls against 100,000 short puts) should be used. The portfolio delta is 1 and the put delta is –0.4010 and DeltaH = –0.6737 (or –0.4010/0.5952), which would be used when hedging a short position of puts on 100,000 shares of stock. Using calls, the number of hedging units is 1/–0.6737; 1/0.6737 = 148,428.
+Correct answer:
+
+sell 168,010 calls.
+Correct Answer Feedback: Correct. The call delta is 0.5952. The number of calls to hedge 100,000 shares is calculated as 1/0.5952 = 168,010. An appropriate hedge for 100,000 shares of stock with a delta of 1 would be to sell 168,010 calls.
+Incorrect answer:
+(no answer)
+Correct Answer:
+sell 168,010 calls.
+44Multiple Choice0 / 1 point
+If the price of GI stock approaches $75 over the next 30 days, which of the following changes in option parameter measures will most likely be observed?
+
+Decreases in vega and the absolute value of theta
+Incorrect Answer Feedback: Incorrect. Typically, theta is negative for options. The speed of the option value decline increases, however, as time to expiration decreases. Vega is high when options are at or near the money. During the next 30 days, the options will approach expiration and approach being at the money.
+Correct answer:
+
+Increases in vega and the absolute value of theta
+Correct Answer Feedback: Correct. Typically, theta is negative for options. The speed of the option value decline increases, however, as time to expiration decreases. Vega is high when options are at or near the money. During the next 30 days, the options will approach expiration and approach being at the money.
+
+A decrease in vega and an increase in the absolute value of theta
+Incorrect Answer Feedback: Incorrect. Vega increases as the options become closer to at-the-money.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Increases in vega and the absolute value of theta
+45Multiple Choice0 / 1 point
+An analyst gathers the following information about a put option on a non-dividend-paying stock:
+Strike price	50.00
+Underlying stock price at Time 0	52.00
+Underlying stock price at Time 1 when an up move occurs	76.24
+Underlying stock price at Time 1 when a down move occurs	34.12
+European-style put value at Time 1 when an up move occurs	0.00
+European-style put value at Time 1 when a down move occurs	14.88
+Time steps	2
+Risk-free interest rate per period	2.05%
+The American-style put option value at Time 0 is closest to:
+
+8.02.
+Incorrect Answer Feedback: Incorrect because this uses the European-style put value at Time 1 when a down move occurs, rather than using the exercise value at Time 1. This generates the European-style option price rather than the American-style option price.
+p = PV [πp+ + (1 – π)p–] = (1/1.0205) × [(0.4498 × 0) + ((1 – 0.4498) × 14.88)] ≈ 8.02
+Correct answer:
+
+8.56.
+Correct Answer Feedback: Correct because the American-style put option value at Time 0 is calculated as 
+p = PV [πp+ + (1 – π)p–] = (1/1.0205) × [(0.4498 × 0) + ((1 – 0.4498) × 15.88)] ≈ 8.56
+where:
+PV = present value factor = 1 / (1 + r) = 1 / 1.0205 ≈ 0.9799
+π = probability of up move = [ FV(1) – d ] / (u – d)  = (1.0205 – 0.6562) / (1.4662 – 0.6562) ≈ 0.4498
+p+ = put exercise value at Time 1 with up move = Max [0, Strike – Underlying stock price at Time 1 with up move] = Max [0, 50.00 – 76.24] = 0
+p– = put exercise value at Time 1 with down move = Max [0, Strike – Underlying stock price at Time 1 with down move] = Max [0, 50.00 – 34.12] = 15.88where:
+u = up factor (total return) = S+ / S =  76.24 / 52.00 ≈ 1.4662
+d = down factor (total return) = S- / S = 34.12 / 52.00 ≈ 0.6562
+where:
+FV(1) = future value at Time 1 = 1 / PV(1) = 1 + r = 1.0205
+S+ = value of underlying at Time 1 when an up move occurs = 76.24
+S- = value of underlying at Time 1 when a down move occurs = 34.12
+S = value of underlying at Time 0 = 52.00
+
+9.32.
+Incorrect Answer Feedback: Incorrect because this uses the strike price rather than the Time 0 underlying price to calculate the up and down factors.
+p = PV [πp+ + (1 – π)p–] = (1/1.0205) × [(0.40135 × 0) + ((1 – 0.40135) × 15.88)] ≈ 9.32
+where:
+π = probability of up move = [ FV(1) – d ] / (u – d)  = (1.0205 – 0.6824) / (1.5248 – 0.6824) ≈ 0.40135
+where:
+u = up factor (total return) = S+ / X =  76.24 / 50.00 ≈ 1.5248
+d = down factor (total return) = S- / X = 34.12 / 50.00 ≈ 0.6824
+where:
+X = strike price = 50.00
+Incorrect answer:
+(no answer)
+Correct Answer:
+8.56.
+46Multiple Choice0 / 1 point
+An investor seeks to replicate the payoff of a long position in a 1-year European-style call option. The hedge ratio is h. The call values and stock values are described in the table below.
+c+	Call value if the price of the underlying goes up
+c–	Call value if the price of the underlying goes down
+S+	Stock value if the price of the underlying goes up
+S–	Stock value if the price of the underlying goes down
+Within a single-period binomial framework, the investor should:
+Correct answer:
+
+buy h = (c+ – c–)/(S+ – S–) units of the underlying and borrow the present value of (–hS– + c–).
+Correct Answer Feedback: Correct because c = hS + PV(–hS– +c–) or, equivalently, c = hS + PV(–hS+ + c+). In words, going long a call option is equal to owning h shares of stock partially financed, where the financed amount is PV(–hS– + c–), or using the per period rate, (–hS– + c–)/(1 + r). Where at Time 1, there are only two possible outcomes and two resulting values of the under- lying, S+ (up occurs) and S− (down occurs).
+The hedge ratio is: h = (c+– c–)/(S+ – S–) 0
+A simple rule for remembering this formula is that the hedge ratio is the value of the call if the underlying goes up minus the value of the call if the underlying goes down divided by the value of the underlying if it goes up minus the value of the underlying if it goes down. Further, Recall that by design, h is selected such that –hS– + c– = –hS+ + c+ or h = (c+ – c–)/(S+ – S–). Therefore, a call option can be replicated with (going long) the underlying and financing. Specifically, the call option is equivalent to a leveraged position in the underlying.
+
+buy h = (c+ + c–)/(S+ + S–) units of the underlying and borrow the present value of (–hS– + c–).
+Incorrect Answer Feedback: Incorrect because the hedge ratio (h) is inaccurate. The accurate hedge ratio is h = (c+– c–)/(S+ – S–) 0, not h = (c+ + c–)/(S+ + S–).
+A simple rule for remembering this formula is that the hedge ratio is the value of the call if the underlying goes up minus the value of the call if the underlying goes down divided by the value of the underlying if it goes up minus the value of the underlying if it goes down.
+
+short sell h = (c+ – c–)/(S+ – S–) units of the underlying and lend the present value of (–hS– + c–).
+Incorrect Answer Feedback: Incorrect because short selling h units of the underlying is incorrect. Instead, c = hS + PV(–hS– +c–) or, equivalently, c = hS + PV(–hS+ + c+). In other words, long a call option is equal to owning h shares of stock partially financed, where the financed amount is PV(–hS– + c–), or using the per period rate, (–hS– + c–)/(1 + r).
+Incorrect answer:
+(no answer)
+Correct Answer:
+buy h = (c+ – c–)/(S+ – S–) units of the underlying and borrow the present value of (–hS– + c–).
+47Multiple Choice0 / 1 point
+In the two-period binomial option valuation model, dynamic replication:
+Correct answer:
+
+is intended to exactly match the exercise value of the option at each time node.
+Correct Answer Feedback: Correct because dynamic replication means that the payoffs from the option can be exactly replicated through a planned trading. In the context of options trading in the two-period binomial model, it involves buying and selling underlying assets to ensure that the portfolio's value aligns with the option's potential exercise value over time.
+
+results in the value of options at Time 1 driven by arbitrage transactions at Time 0.
+Incorrect Answer Feedback: Incorrect because the binomial model follows a backward induction process, where the option values at Time 0 are determined based on the arbitrage transactions and option values at Time 1. At Time 0, the option values are driven by the arbitrage transactions that synthetically replicate the value of the options at Time 1.
+
+computes the value of options at Time 2 based on the option values at Time 1 using the no-arbitrage approach.
+Incorrect Answer Feedback: Incorrect because in the two-period binomial option valuation model, we can compute the option values at Time 1 (not 2) based on the option values at Time 2 (not 1) using the no-arbitrage approach.
+Incorrect answer:
+(no answer)
+Correct Answer:
+is intended to exactly match the exercise value of the option at each time node.
+48Multiple Choice0 / 1 point
+A trader has a long position in two options on the same underlying stock:
+ 	Put/Call	
+Remaining
+Maturity
+Strike	Contract
+Option 1	Call	1 month	100	1,000 shares
+Option 2	Put	1 month	100	1,000 shares
+The gamma of Option 1 is:
+
+less than Option 2.
+Incorrect Answer Feedback: Incorrect because the features of both options are identical except that one is a call and one is a put. Therefore the gamma of both options is the same.
+Correct answer:
+
+equal to Option 2.
+Correct Answer Feedback: Correct because gamma is defined as the change in a given instrument’s delta for a given small change in the stock’s value, holding everything else constant. The gamma of a call equals the gamma of a similar put (i.e., with the same strike) based on put–call parity or c – p = S0 – e–rTX. The gamma of a call must equal the gamma of a put. Gamma is always non-negative.
+
+greater than Option 2.
+Incorrect Answer Feedback: Incorrect because the features of both options are identical except that one is a call and one is a put. Therefore the gamma of both options is the same.
+Incorrect answer:
+(no answer)
+Correct Answer:
+equal to Option 2.
+49Multiple Choice0 / 1 point
+A trader has a long call option on a stock. Which of the following transactions allows the trader to make the position gamma neutral?
+
+Sell shares of the stock
+Incorrect Answer Feedback: Incorrect because underlying stock does not have gamma: options have gamma but a stock does not. Thus, in order to modify gamma, one has to include additional option trades in the portfolio.
+
+Buy a put option on the stock
+Incorrect Answer Feedback: Incorrect because the trader must sell an option to neutralize the gamma, not buy one. The trader's long option position is long gamma, which can be neutralized only by selling options: buying options (calls or puts) will always increase net gamma. We can only become gamma neutral from a short gamma position by purchasing options. Since buying options increases gamma, that gamma can be neutralized only by selling options, regardless of whether they are calls or puts.
+Correct answer:
+
+Sell a put option on the stock
+Correct Answer Feedback: Correct because options have gamma but a stock does not. Thus, in order to modify gamma, one has to include additional option trades in the portfolio. The trader's long option position is long gamma, which can be neutralized only by selling options: buying options (calls or puts) will always increase net gamma. We can only become gamma neutral from a short gamma position by purchasing options. Since buying options increases gamma, that gamma can be neutralized only by selling options, regardless of whether they are calls or puts.
+Incorrect answer:
+(no answer)
+Correct Answer:
+Sell a put option on the stock
+50Multiple Choice0 / 1 point
+An analyst values a 2-year, European-style call option on a 1-year spot rate. The notional value of the option is $10,000,000, and the exercise rate is 3.50% of par. The risk-neutral probability of an up move is 0.50. Annually compounded 1-year interest rates, along with the corresponding zero-coupon bond values, are shown below. The value of the interest rate option is closest to:
+zero-coupon bond value.png
+
+$34,118.
+Incorrect Answer Feedback: Incorrect because it subtracts (instead of adds) the components at Time Step 1 and 0. Accordingly, using the expectations approach, per 1 of notional value, the call values at Time Step 2 are
+c++ = Max(0,S++ – X) = Max(0,0.060 – 0.0350) = 0.0250
+c+– = Max(0,S+– – X) = Max(0,0.040 – 0.0350) = 0.0050
+c– – = Max(0,S– – – X) = Max(0,0.020 – 0.0350) = 0
+At Time Step 1, the call values are
+c+ = PV[πc++ – (1 – π)c+–]
+c+ = 0.952381[0.50(0.0250) – (1 – 0.50)(0.0050)] = 0.009524
+c– = PV[πc+– – (1 – π)c– –]
+c– = 0.970874[0.50(0.0050) – (1 – 0.50)(0)] = 0.002427
+At Time Step 0, the call option value is
+c = PV[πc+ – (1 – π)c–]
+c = 0.961538[0.50(0.009524) – (1 – 0.50)(0.002427)] = 0.003412
+The value of the call option is this amount multiplied by the notional value, or 0.003412 × 10,000,000 = 34,118.
+
+$45,343.
+Incorrect Answer Feedback: Incorrect because it does not take the Maximum into account at Time step 2. Accordingly, using the expectations approach, per 1 of notional value, the call values at Time Step 2 are
+c++ = Max(0,S++ – X) = Max(0,0.060 – 0.0350) = 0.0250
+c+– = Max(0,S+– – X) = Max(0,0.040 – 0.0350) = 0.0050
+c– – = Max(0,S– – – X) = Max(0,0.020 – 0.0350) = –0.0150
+At Time Step 1, the call values are
+c+ = PV[πc++ + (1 – π)c+–]
+c+ = 0.952381[0.50(0.0250) + (1 – 0.50)(0.0050)] = 0.014286
+c– = PV[πc+– + (1 – π)c– –]
+c– = 0.970874[0.50(0.0050) + (1 – 0.50)(–0.0150)] = –0.004854
+At Time Step 0, the call option value is
+c = PV[πc+ + (1 – π)c–]
+c = 0.961538[0.50(0.014286) + (1 – 0.50)(–0.004854)] = 0.004534.
+The value of the call option is this amount multiplied by the notional value, or 0.004534 × 10,000,000 = 45,343.
+Correct answer:
+
+$80,350.
+Correct Answer Feedback: Correct because, using the expectations approach, per 1 of notional value, the call values at Time Step 2 are
+c++ = Max(0,S++ – X) = Max(0,0.060 – 0.0350) = 0.0250
+c+– = Max(0,S+– – X) = Max(0,0.040 – 0.0350) = 0.0050
+c– – = Max(0,S– – – X) = Max(0,0.020 – 0.0350) = 0
+At Time Step 1, the call values are
+c+ = PV[πc++ + (1 – π)c+–]
+c+ = 0.952381[0.50(0.0250) + (1 – 0.50)(0.0050)] = 0.014286
+c– = PV[πc+– + (1 – π)c– –]
+c– = 0.970874[0.50(0.0050) + (1 – 0.50)(0)] = 0.002427
+At Time Step 0, the call option value is
+c = PV[πc+ + (1 – π)c–]
+c = 0.961538[0.50(0.014286) + (1 – 0.50)(0.002427)] = 0.008035
+The value of the call option is this amount multiplied by the notional value, or 0.008035 × 10,000,000 = 80,350.
+Incorrect answer:
+(no answer)
+Correct Answer:
+$80,350.
+51Multiple Choice0 / 1 point
+An investor holds a long put position on a stock. As the option moves deeper in the money and approaches expiration, the closer the option's delta moves toward:
+Correct answer:
+
+–1.
+Correct Answer Feedback: Correct because delta is a negative value for short stocks, short calls and long puts. The deeper a long put option moves in the money, the closer the option's delta moves toward –1. Delta is defined as the change in a given instrument for a given small change in the value of the stock, holding everything else constant. Thus, the delta of long one share of stock is by definition +1.0, and the delta of short one share of stock is by definition –1.0. The delta of an option answers the question of how much the option will change for a given change in the stock, holding everything else constant. Thus, the range of call delta is 0 and e–δT and the range of put delta is –e–δT and 0. As the stock price increases, the call option goes deeper in the money and the value of N(d1) is moving toward 1. As the stock price decreases, the call option goes deeper out of the money and the value of N(d1) is moving toward zero. When the option gets closer to maturity, the delta will drift either toward 0 if it is out of the money or drift toward 1 if it is in the money. Clearly, as the stock price changes and as time to maturity changes, the deltas are also changing.
+
+0.
+Incorrect Answer Feedback: Incorrect because delta is a negative value for short stocks, short calls and long puts. The deeper a long put option moves in the money (and will behave like a short stock) and gets closer to maturity, the closer the option's delta moves toward –1.
+
++1.
+Incorrect Answer Feedback: Incorrect because delta is a negative value for short stocks, short calls and long puts. The deeper a long put option moves in the money (and will behave like a short stock) and gets closer to maturity, the closer the option's delta moves toward –1.
+Incorrect answer:
+(no answer)
+Correct Answer:
+–1.
+52Multiple Choice0 / 1 point
+Under the Black–Scholes–Merton option valuation model, for equity options with an exercise price equal to the current stock price, an increase in a stock's dividend yield will:
+
+lower the value of a call option and lower the value of a put option.
+Incorrect Answer Feedback: Incorrect because carry benefits will have the effect of lowering the expected future value of the underlying. The carry benefit adjusted BSM model can be described as having two components, a stock component and a bond component. For call options, the stock component is Se–γTN(d1) and the bond component is again e–rTXN(d2). For put options, the stock component is Se–γTN(–d1) and the bond component is again e–rTXN(–d2). Although both d1 and d2 are reduced by carry benefits, the general approach to valuation remains the same. An increase in carry benefits will lower the value of the call option and raise, not lower, the value of the put option.
+Correct answer:
+
+lower the value of a call option and raise the value of a put option.
+Correct Answer Feedback: Correct because carry benefits will have the effect of lowering the expected future value of the underlying. The carry benefit adjusted BSM model can be described as having two components, a stock component and a bond component. For call options, the stock component is Se–γTN(d1) and the bond component is again e–rTXN(d2). For put options, the stock component is Se–γTN(–d1) and the bond component is again e–rTXN(–d2). Although both d1 and d2 are reduced by carry benefits, the general approach to valuation remains the same. An increase in carry benefits will lower the value of the call option and raise the value of the put option.
+
+lower the value of a put option and raise the value of a call option.
+Incorrect Answer Feedback: Incorrect because carry benefits will have the effect of lowering the expected future value of the underlying. The carry benefit adjusted BSM model can be described as having two components, a stock component and a bond component. For call options, the stock component is Se–γTN(d1) and the bond component is again e–rTXN(d2). For put options, the stock component is Se–γTN(–d1) and the bond component is again e–rTXN(–d2). Although both d1 and d2 are reduced by carry benefits, the general approach to valuation remains the same. An increase in carry benefits will lower, not raise, the value of the call option and raise, not lower, the value of the put option.
+Incorrect answer:
+(no answer)
+Correct Answer:
+lower the value of a call option and raise the value of a put option.
+53Multiple Choice0 / 1 point
+Implied volatility of an option varies across:
+
+exercise prices only.
+Incorrect Answer Feedback: Incorrect because implied volatility also varies across time to expiration as well as across exercise prices.
+
+time to expiration only.
+Incorrect Answer Feedback: Incorrect because implied volatility also varies across time to expiration as well as across exercise prices.
+Correct answer:
+
+both exercise prices and time to expiration.
+Correct Answer Feedback: Correct because implied volatility also varies across time to expiration as well as across exercise prices. The implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price is known as the volatility smile or sometimes skew depending on the particular shape.
+Incorrect answer:
+(no answer)
+Correct Answer:
+both exercise prices and time to expiration.
+54Multiple Choice0 / 1 point
+The expectations approach to the valuation of European options assumes that:
+
+the discount rate is risk-adjusted.
+Incorrect Answer Feedback: Incorrect because the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. The discount rate is not risk-adjusted. The discount rate is simply based on the risk-free interest rate.
+Correct answer:
+
+investors' beliefs about the future course of the underlying are irrelevant.
+Correct Answer Feedback: Correct because the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. The expectation is not based on the investor’s beliefs regarding the future course of the underlying.
+
+the probability of an up or down move in the underlying is subjectively determined.
+Incorrect Answer Feedback: Incorrect because the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. The probability, π, is objectively determined and not based on the investor’s personal view. This probability has taken several different names, including risk-neutral (RN) probability.
+Incorrect answer:
+(no answer)
+Correct Answer:
+investors' beliefs about the future course of the underlying are irrelevant.
+55Multiple Choice0 / 1 point
+According to the Black–Scholes–Merton model, an investor who wishes to replicate the equity option payoff of a long put using zero-coupon bonds and the underlying stock should:
+Correct answer:
+
+short sell the stock and buy bonds.
+Correct Answer Feedback: Correct because the BSM model can be described as having two components: a stock component and a bond component. The BSM model put value is the bond component minus the stock component. To replicate a put option, we short the stock and buy zero-coupon bonds.
+
+buy the stock and short sell bonds.
+Incorrect Answer Feedback: Incorrect because the BSM model call value is the stock component minus the bond component. This position would be used to replicate the value of a call.
+
+short sell the stock and short sell the bonds.
+Incorrect Answer Feedback: Incorrect because this position would not replicate a long position in either a call or a put.
+Incorrect answer:
+(no answer)
+Correct Answer:
+short sell the stock and buy bonds.
+56Multiple Choice0 / 1 point
+The Black–Scholes–Merton option valuation model assumes that:
+Incorrect answer:
+
+both short selling and early exercise are permitted.
+Incorrect Answer Feedback: Incorrect because although the BSM model assumes that short selling of the underlying instrument with full use of proceeds is permitted. It also assumes that the options are European-style, meaning that early exercise is not allowed.
+Correct answer:
+
+short selling is permitted but early exercise is not permitted.
+Correct Answer Feedback: Correct because the BSM model assumes that short selling of the underlying instrument with full use of proceeds is permitted. In addition, it assumes that the options are European-style, meaning that early exercise is not allowed.
+
+early exercise is permitted but short selling is not permitted.
+Incorrect Answer Feedback: Incorrect because the BSM model assumes that the options are European-style, meaning that early exercise is not allowed.
+57Multiple Choice0 / 1 point
+To hedge against a rise in interest rates, a company purchases an interest rate call option and sells short an interest rate put option with exercise rates equal to the current forward rate agreement (FRA) rate. The company's option position is equivalent to a:
+Incorrect answer:
+
+receive-fixed, pay-floating FRA.
+Incorrect Answer Feedback: Incorrect because if the exercise rate is selected so it is equal to the current FRA rate, then long an interest rate put option and short an interest rate call option is equivalent to a receive-fixed, pay-floating FRA.
+Correct answer:
+
+receive-floating, pay-fixed FRA.
+Correct Answer Feedback: Correct because if the exercise rate is selected so as to equal the current FRA rate, then long an interest rate call option and short an interest rate put option is equivalent to a receive-floating, pay-fixed FRA.
+
+receive-fixed, pay-floating swap.
+Incorrect Answer Feedback: Incorrect because a receive-fixed, pay-floating swap structure would be created by being long an interest rate cap and short an interest rate floor with the exercise prices set at the swap rate.
+58Multiple Choice1 / 1 point
+In the Black model for valuing European call options on futures, the call price is the:
+
+futures component plus the bond component.
+Incorrect Answer Feedback: Incorrect because the Black call model is simply the futures component minus the bond component.
+
+bond component minus the futures component.
+Incorrect Answer Feedback: Incorrect because the Black call model is simply the futures component minus the bond component.
+Correct answer:
+
+futures component minus the bond component.
+Correct Answer Feedback: Correct because the Black model has two components, a futures component and a bond component. For call options, the futures component is F0(T)e–rTN(d1) and the bond component is again e–rTXN(d2). The Black call model is simply the futures component minus the bond component.
+59Multiple Choice0 / 1 point
+An investor is short at-the-money call options with a delta of 0.607 on 500,000 shares of stock. At-the-money put options with the same maturity have a delta of –0.434. Assuming an option contract is for 100 shares, the most appropriate action to achieve a delta neutral position is to:
+
+sell 303,500 shares.
+Incorrect Answer Feedback: Incorrect because if the investor executed a delta hedge using shares as the hedging instrument, the shares would have to be bought, rather than sold. Since the call delta is 0.607, the short call delta is –0.607. Portfolio delta therefore = 500,000(–0.607) = –303,500 but now the delta of the hedging instrument (DeltaH) = 1. Therefore NH = –(–303,500/1.0) = 303,500. The investor must purchase 303,500 shares of Company Y to hedge the delta of the short call option position.
+Correct answer:
+
+sell 6,993 put option contracts.
+Correct Answer Feedback: Correct because NH = (–Portfolio delta/DeltaH). Since the call delta is 0.607, the short call delta is –0.607. Portfolio delta therefore = 500,000(–0.607) = –303,500 and the delta of the hedging instrument (DeltaH) = –0.434. Therefore NH = –(–303,500/–0.434) = –699,308.76. Because NH is negative, the hedging instrument must be sold short, rather than purchased. The investor must sell short put options on 699,300 shares of Company Y. Since each option contract is for 100 shares, the number of contract to be sold short = 699,300/100 = 6,993.
+
+purchase 6,993 put option contracts.
+Incorrect Answer Feedback: Incorrect because since the call delta is 0.607 the short call delta is –0.607. Portfolio delta therefore = 500,000(–0.607) = –303,500 and the delta of the hedging instrument (DeltaH) = –0.434. Therefore NH = –(–303,500/–0.434) = –699,308.76. Because NH is negative, the hedging instrument must be sold short, rather than purchased.
+Incorrect answer:
+(no answer)
+Correct Answer:
+sell 6,993 put option contracts.
+60Multiple Choice0 / 1 point
+An analyst obtains the following information about a European option on a non-dividend paying stock:
+Stock price	$100
+Call option price	$5
+Exercise price	$100
+Up factor (u)	1.1
+Down factor (d)	0.8
+Risk-free rate	5%
+Using the single-period binomial model, the analyst should:
+Correct answer:
+
+buy the call. 
+Correct Answer Feedback: Correct because the call is undervalued based on the calculation below. Therefore, the arbitrageur should buy the undervalued call, and make replicating trades for an arbitrage.
+First, we will start by calculating the option value. The option value can be calculated using both the no arbitrage approach.
+The no-arbitrage approach leads to the following single-period call option valuation equation: 
+c = hS + PV(–hS– +c–) 
+or, equivalently, c = hS + PV(–hS+ + c+). In words, long a call option is equal to owning h shares of stock partially financed.
+Hedge ratio = h = ( C+ – C–) / (S+ – S–) = (10 – 0) / (1.1 x 100 – 0.8 x 100) = 10 /30 = 0.33333
+Call = hS + PV(–hS– + c–)
+= (0.333333 x 100) + 0.95238095 (–0.3333333 x 80 + 0 )
+= 33.33333 + 0.95238095 (– 26.666664)
+= 33.33333 – 25.3968228
+= 7.936507
+The call value is shown to be $7.936507, i.e., greater than the option price of $5.00. Because call option is currently being priced at $5, it is undervalued. Therefore, the arbitrageur should buy the call option in the market. 
+Incorrect answer:
+
+sell the call.
+Incorrect Answer Feedback: Incorrect because the call is undervalued as discussed in the correct answer. Therefore, the arbitrageur should buy, rather than sell, the undervalued call, and make replicating trades for an arbitrage.
+
+take no action.
+Incorrect Answer Feedback: Incorrect because an arbitrage opportunity exists as described in the correct answer. 
+61Multiple Choice0 / 1 point
+A non-dividend-paying stock is currently trading at $50. A call option with an exercise price of $55 has one month until maturity. Using a single-period binomial option valuation model, if the up factor (u) is equal to 1.25 and the down factor (d) is equal to 0.70, the optimal hedge ratio is closest to:
+
+–0.73.
+Incorrect Answer Feedback: Incorrect because it wrongly calculates the call values by mixing up calls with puts. 
+S+ = uS = 1.25(50) = 62.5
+S– = dS = 0.70(50) = 35
+where u is an up factor, d is a down factor, S+ denotes the outcome when the underlying goes up, S– denotes the outcome when the underlying goes down.
+c+ = Max(0, X – uS) = Max(0, 55 – 62.5) = 0
+c– = Max(0, X – dS) = Max(0, 55 – 35) = 20
+where c+   is the call price when underlying goes up, c–  is the call price when underlying is down.
+The hedge ratio is: h = (0 − 20)/(62.5 − 35) = - 20/27.5 = –0.73.
+Correct answer:
+
+0.27.
+Correct Answer Feedback: Correct because:
+S+ = uS = 1.25(50) = 62.5
+S– = dS = 0.70(50) = 35
+where u is an up factor, d is a down factor, S+ denotes the outcome when the underlying goes up, S– denotes the outcome when the underlying goes down.
+c+ = Max(0,uS – X) = Max(0,62.5 – 55) = 7.5
+c– = Max(0,dS – X) = Max(0,35 – 55) = 0
+where c+ is the call price when underlying goes up, c–  is the call price when underlying is down.
+The hedge ratio is: h = (7.5 − 0)/(62.5 − 35) = 7.5/27.5 = 0.27
+Incorrect answer:
+
+0.73.
+Incorrect Answer Feedback: Incorrect because it mixes up values for the formula for outcomes when underlying goes up and down.
+S+ = uS = 0.70(50) = 35
+S– = dS = 1.25(50) = 62.5
+where u is an up factor, d is a down factor, S+ denotes the outcome when the underlying goes up, S– denotes the outcome when the underlying goes down.
+c+ = Max(0, X – uS) = Max(0, 55 – 35) = 20
+c– = Max(0, X – dS) = Max(0, 55 – 62.5) = 0
+where c+   is the call price when underlying goes up, c–  is the call price when underlying is down.
+The hedge ratio is: h = (20 − 0)/(62.5 − 35) = 20/27.5 = 0.73.
+62Multiple Choice0 / 1 point
+An analyst gathers the following information about a call option on a non-dividend-paying stock:
+Strike price	55.00
+Stock price	50.00
+Annual total return when an up move occurs	1.373
+Annual total return when a down move occurs	0.727
+Maturity	2 years
+Annual risk-free interest rate	5.00%
+The current value of the European-style call option is closest to:
+
+6.50.
+Incorrect Answer Feedback: Incorrect because this uses a one-period instead of a two-period calculation, incorrectly calculated as c = PV[πc+ + (1 – π)c–] = (1/1.05) × [0.50 × 13.65 + (1 – 0.5) × 0] = 6.50
+where:
+c+ = Max (0, uS – X) = Max [0, 1.373 × 50 – 55] = 13.65
+c-- = Max (0, dS – X) = Max [0, 0.727 × 50 – 55] = Max [0, –18.65] = 0
+Correct answer:
+
+8.90.
+Correct Answer Feedback: Correct because the European-style call option value at Time 0 is the two-period binomial option value, i.e. the present value of the expected terminal option payoffs, expressed as c = PV[π2c++ + 2π(1 – π)c+– + (1 – π)2c– –] = (1/1.05)2 × [0.502 × 39.2565) + (2 × 0.5 × (1 – 0.5) × 0 + (1 – 0.5)2 × 0] ≈ 8.90.
+where:
+PV = two-period present value factor = (1 / (1 + r))2 = (1 / 1.05)2
+π = probability of up move = [ FV(1) – d ] / (u – d)  = (1.05 – 0.727) / (1.373 – 0.727) = 0.5
+c++ = Max (0, u2S – X) = Max [0, 1.3732 × 50 – 55] = 39.2565
+c+- = c-+ = Max (0, udS – X) = Max [0, 1.373 × 0.727 × 50 – 55] = Max [0, –5.09] = 0
+c-- = Max (0, d2S – X) = Max [0, 0.7272 × 50 – 55] = Max [0, –28.57] = 0
+Incorrect answer:
+
+9.35.
+Incorrect Answer Feedback: Incorrect because this uses a one-period present value instead of a two-period present value, calculated incorrectly as (1 / (1 + r)) = (1 / 1.05). This leads to an incorrect result for the European-style call option value of c = PV[π2c++ + 2π(1 – π)c+– + (1 – π)2c– –] = (1/1.05) × [0.502 × 39.2565) + (2 × 0.5 × (1 – 0.5) × 0 + (1 – 0.5)2 × 0] ≈ 9.35.
+63Multiple Choice1 / 1 point
+An analyst gathers the following information about a 2-year European-style call option on the periodically compounded 1-year spot interest rate:
+Call exercise rate	3.1000%
+Risk-neutral probability of an up move	50%
+1-year spot interest rate at Time 0	3.0454%
+1-year spot interest rate at Time 2 after two up moves occur	3.9706%
+1-year spot interest rate at Time 2 after up and down moves occur	3.2542%
+Call option value at Time 1 when an up move occurs	0.4209%
+Call option value at Time 1 when a down move occurs	0.0751%
+If the option is cash settled at Time 2 based on the observed rate, the option value as a percentage of the notional amount at Time 0 is closest to:
+
+0.15%.
+Incorrect Answer Feedback: Incorrect because this is the option value, c+-, at Time Step 2 after an up move and a down move, calculated as c+- = Max [0, S+ – X] = Max[0, 3.2542% – 3.10%] ≈ 0.15%.
+Correct answer:
+
+0.24%.
+Correct Answer Feedback: Correct because the option value, c, at Time 0 is given by c = PVrf,0,1[πc+ + (1 – π)c–] = (1/1.030454) × [(0.5 × 0.4209%) + (1 – 0.5) × 0.0751%] ≈ 0.24%
+where:
+PVrf,0,1 = present value factor (from Time 1 to Time 0) = 1 / (1+r) = 1 / (1.030454)
+π = risk-neutral probability of an up move (given) = 0.5
+c+ = call option value at Time 1 when an up move occurs (given) = 0.4209%
+c- = call option value at Time 1 when a down move occurs (given) = 0.0751%
+
+0.87%.
+Incorrect Answer Feedback: Incorrect because this is the option value, c++, at Time Step 2 after two up moves, calculated as c++ = Max [0, S++ – X] = Max[0, 3.9706% – 3.10%] ≈ 0.87%.
+64Multiple Choice0 / 1 point
+A trader engages in a strategy that replicates the payoff of a long position in a put option within a single-period binomial framework. At time step 0, the cash flow is:
+
+negative.
+Incorrect Answer Feedback: Incorrect because the trading strategy that will generate the payoff of taking a long position in a put option is to short sell -h=-(p+-p-)/(S+-S-) units of the underlying and financing of -PV(-hS-+p-). Because p+ is less than p-, the hedge ratio is negative. With h negative, the trade is a short sale, and because -h is positive, the value -hS results in a positive cash flow at Time Step 0. Therefore, the cash flow is not negative.
+Incorrect answer:
+
+zero.
+Incorrect Answer Feedback: Incorrect because the trading strategy that will generate the payoff of taking a long position in a put option is to short sell the underlying and financing, therefore, the cash flow is not zero.
+Correct answer:
+
+positive.
+Correct Answer Feedback: Correct because the trading strategy that will generate the payoff of taking a long position in a put option is to short sell -h=-(p+-p-)/(S+-S-) units of the underlying and financing of -PV(-hS-+p-). Because p+ is less than p-, the hedge ratio is negative. With h negative, the trade is a short sale, and because -h is positive, the value -hS results in a positive cash flow at Time Step 0.
+65Multiple Choice1 / 1 point
+Within the no-arbitrage single-period binomial framework, which of the following trading strategies replicates the payoff of a short call option?
+
+Going long the underlying and borrow cash
+Incorrect Answer Feedback: Incorrect because under the no-arbitrage approach, for writing a call option, the writer will be selling stock short and investing proceeds (i.e. lending), to generate the payoff of taking a short position in a call option. Longing the underlying and borrowing will generate the payoffs of writing a put option.
+
+Going long the underlying and investing proceeds
+Incorrect Answer Feedback: Incorrect because under the no-arbitrage approach, for writing a call option, the writer will be selling stock short and investing proceeds (i.e. lending), to generate the payoff of taking a short position in a call option.
+Correct answer:
+
+Going short the underlying and investing proceeds
+Correct Answer Feedback: Correct because the no-arbitrage approach is a replicating strategy: A call option is synthetically replicated with the underlying and financing.  For writing a call option, the writer will be selling stock short and investing proceeds (i.e. lending). If the value of the net portfolio at Time Step 0 is not zero, the strategy of short selling the underling and lending, will push the call price up and the underlying price down until the net cash flow at Time 0 is zero.
+66Multiple Choice0 / 1 point
+An analyst uses the two-period binomial model to estimate the value of a European-style call option on a stock. The current stock price is €45, and the call option exercise price is €50. The up factor (u) is 1.25, and the down factor (d) is 0.75. The risk-free rate of return is 4% per period. At time step 0, the value of the European-style call option on the stock is closest to:
+Correct answer:
+
+6.32.
+Correct Answer Feedback: Correct because using the expectations approach, the risk-neutral probability of an up move is
+π = [FV(1) – d]/(u – d) = (1.04 – 0.75)/(1.25 – 0.75) = 0.58.
+The terminal value calculations for the exercise values at Time Step 2 are
+c++ = Max(0,u2S – X) = Max[0,1.252(45) – 50] = Max(0,20.3125) = 20.3125
+c–+ = Max(0,udS – X) = Max[0,1.25(0.75)(45) – 50] = Max(0,–7.8125) = 0
+c– – = Max(0,d2S – X) = Max[0,0.752(45) – 50] = Max(0,–24.125) = 0
+Discounting back two years, the value of the call option at Time Step 0 is
+c = PV[π2c++ + 2π(1 – π)c–+ + (1 – π)2c– –].
+c = [1/(1.04)]2[0.582(20.3125) + 2(0.58)(0.42)(0) + 0.422(0)].
+c = [1/(1.04)]2[6.833125] =6.3176
+
+6.57.
+Incorrect Answer Feedback: Incorrect because the payoff is calculated incorrectly by discounting back one year, instead of two years.
+The risk-neutral probability of an up move is
+π = [FV(1) – d]/(u – d) = (1.04 – 0.75)/(1.25 – 0.75) = 0.58.
+The terminal value calculations for the exercise values at Time Step 2 are
+c++ = Max(0,u2S – X) = Max[0,1.252(45) – 50] = Max(0,20.3125) = 20.3125
+c–+ = Max(0,udS – X) = Max[0,1.25(0.75)(45) – 50] = Max(0,–7.8125) = 0
+c– – = Max(0,d2S – X) = Max[0,0.752(45) – 50] = Max(0,–24.125) = 0
+Discounting back only one year, the value of the call option at Time Step 0 is
+c = PV[π2c++ + 2π(1 – π)c–+ + (1 – π)2c– –].
+c = [1/(1.04)][0.582(20.3125) + 2(0.58)(0.42)(0) + 0.422(0)].
+c = [1/(1.04)][6.833125] =6.5703
+Incorrect answer:
+
+6.83.
+Incorrect Answer Feedback: Incorrect because the payoff is not discounted back for two years:
+π = [FV(1) – d]/(u – d) = (1.04 – 0.75)/(1.25 – 0.75) = 0.58.
+The terminal value calculations for the exercise values at Time Step 2 are
+c++ = Max(0,u2S – X) = Max[0,1.252(45) – 50] = Max(0,20.3125) = 20.3125
+c–+ = Max(0,udS – X) = Max[0,1.25(0.75)(45) – 50] = Max(0,–7.8125) = 0.
+c– – = Max(0,d2S – X) = Max[0,0.752(45) – 50] = Max(0,–24.125) = 0.
+Discounting back two years, the value of the call option at Time Step 0 is
+c = [π2c++ + 2π(1 – π)c–+ + (1 – π)2c– –].
+c = 0.582(20.3125) + 2(0.58)(0.42)(0) + 0.422(0)].
+c = 6.833125
+67Multiple Choice1 / 1 point
+Using the two-period binomial model, an analyst estimates the value of an American-style put option on a stock that pays no dividend. The current stock price is €65, and the put option exercise price is €63. The up factor (u) is 1.20, and the down factor (d) is 0.85. The risk-free rate of return is 5% per period. The binomial tree analysis for an European-style put option is shown in the exhibit below.
+Time zero: Item, Underlying; Value, 65 point zero zero. Item, Put; Value 2 point 6 7 1 8. Arrow upward, Time 1, Underlying 78 point zero zero; Put zero. Arrow downward, Time 1, Underlying 55 point 2 5; Put 6 point 5 4 5 9. Top box: Arrow upward, Time 2, Underlying 93 point 6; Put zero. Arrow down, Time 2, Underlying 66 point 3; Put zero. Bottom box: Arrow upward, Time 2, Underlying 46 point 9 6; Put 16 point zero 3 7 5.
+ 
+At Time Step 0, the value of the American-style put option is closest to:
+
+2.67.
+Incorrect Answer Feedback: Incorrect because it is the value of the European-style put option, according to the exhibit.
+Correct answer:
+
+3.16.
+Correct Answer Feedback: Correct because using the expectations approach, the risk-neutral probability of an up move is:
+π = [FV(1) – d]/(u – d) = (1.05 – 0.85)/(1.20 – 0.85) = 0.5714
+The exercise value at Time 1 with a down move is:
+Max(0,63-55.25)=7.75. Thus, we replace this value in the binomial tree and compute the put option value at Time 0.
+The resulting put option value at Time 0 is thus:
+p = PV [πp+ + (1 – π)p–]
+=[1/(1+0.05)] [0.5714*0+(1-0.5714)*7.75]
+=3.1632
+
+4.22.
+Incorrect Answer Feedback: Incorrect because the put option value at Time 0 was calculated incorrectly by using the π, instead if (1-π):
+p = PV [πp+ + (1 – π)p–]
+=4.2176
+68Multiple Choice0 / 1 point
+An analyst is valuing a 2-year, European-style call option on a 1-year spot rate. The notional value of the option is $1 million, and the exercise rate is 3.5%. The risk-neutral probability of an up move is 0.50. The current and expected 1-year interest rates are shown in the exhibit below, along with the values of a 1-year zero-coupon bond of $1 notional value for each interest rate.
+A binomial diagram with three column heads: Time zero, Time 1, Time 2.
+Expand / Collapse Extended Description
+At time step 0, the value of the interest rate option is closest to:
+Correct answer:
+
+$8,035.
+Correct Answer Feedback: Correct because using the expectations approach, per $1 of notional value, the values of the call option at Time Step 2 are:
+c++ = Max(0,S++ – X) = Max(0,0.060 – 0.035) = 0.025
+c+– = Max(0,S+– – X) = Max(0,0.040 – 0.035) = 0.005
+c– – = Max(0,S– – – X) = Max(0,0.020 – 0.035) = 0
+At Time Step 1, the call values are:
+c+ = PV[πc++ + (1 – π)c+–] .
+c+ = 0.952381[0.50(0.025) + (1 – 0.50)(0.005)] =0.01429
+c– = PV[πc+– + (1 – π)c– –].
+c– = 0.970874[0.50(0.005) + (1 – 0.50)(0)] = 0.002427
+At Time Step 0, the call option value is:
+c = PV[πc+ + (1 – π)c–].
+c = 0.961538[0.50(0.01429) + (1 – 0.50)(0.002427)] = 0.008035
+The value of the call option is:
+0.008035 x 1,000,000 = 8,035
+
+$8,356.
+Incorrect Answer Feedback: Incorrect because the Time Step 1 call value is not discounted to Time Step 0:
+At Time Step 2 are:
+c++ = Max(0,S++ – X) = Max(0,0.060 – 0.035) = 0.025
+c+– = Max(0,S+– – X) = Max(0,0.040 – 0.035) = 0.005
+c– – = Max(0,S– – – X) = Max(0,0.020 – 0.035) = 0
+At Time Step 1, the call values are:
+c+ = PV[πc++ + (1 – π)c+–] .
+c+ = 0.952381[0.50(0.025) + (1 – 0.50)(0.005)] =0.01429
+c– = PV[πc+– + (1 – π)c– –].
+c– = 0.970874[0.50(0.005) + (1 – 0.50)(0)] = 0.002427
+At Time Step 0, the call option value (without discounting) is:
+c = [πc+ + (1 – π)c–].
+c = [0.50(0.01429) + (1 – 0.50)(0.002427)] = 0.008356
+The value of the call option is:
+0.008356 x 1,000,000 = 8,356
+
+$9,615.
+Incorrect Answer Feedback: Incorrect because the value to calculate PV at Time Step 0 is incorrectly used to calculate and the unit is also incorrect.
+0.961538 x 1,000,000 = 96,1538
+Incorrect answer:
+(no answer)
+Correct Answer:
+$8,035.
+69Multiple Choice0 / 1 point
+An analyst gathers the following information about a non-dividend-paying stock:
+Stock price	$50.00
+Periodically compounded 1-year risk-free interest rate	5.00%
+Total return when an up move occurs (1+ return)	1.25
+Total return when a down move occurs (1 + return)	0.85
+Using a single-period binomial option valuation model and a strike price of $50.00, the value of a 1-year call option on the stock is closest to:
+Correct answer:
+
+$5.95.
+Correct Answer Feedback: Correct because this is the call value for a strike of $50, calculated using the expectations approach. The risk-neutral probability of an up move is π = [FV(1) – d]/(u – d) = (1.05 – 0.85)/(1.25 – 0.85) = 0.50, where FV(1) = (1 + r) = 1.05. Thus the call value by the expectations approach is c = PV[πc+ + (1 – π)c–] = (1/1.05) [(0.5)12.5 + (1–0.5)0] = 5.9525 ≈ 5.95, where:
+c+ = Max(0, uS - X) = Max(0, 50 × 1.25 – 50) = Max(0, 12.5) = 12.5
+c- = Max(0, dS - X) = Max(0, 50 × 0.85 – 50) = Max(0, –7.5) = 0
+
+$6.25.
+Incorrect Answer Feedback: Incorrect because this answer fails to discount the expected value of the call option, or c = [πc+ + (1 – π)c–] = [(0.5)12.5 + (1–0.5)0] = 6.25.
+Incorrect answer:
+
+$6.56.
+Incorrect Answer Feedback: Incorrect because this answer takes the future value of the call option rather than the present value, or c = FV[πc+ + (1 – π)c–] = (1.05)[(0.5)12.5 + (1–0.5)0] = 6.5625 ≈ 6.56.
+70Multiple Choice0 / 1 point
+The expectations approach to option valuation:
+
+employs a risk-adjusted discount rate.
+Incorrect Answer Feedback: Incorrect because the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. Secondly, the discount rate is not risk adjusted.
+Correct answer:
+
+uses a risk-neutral probability of a move in the underlying.
+Correct Answer Feedback: Correct because the probability of an up move is π and the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. The probability, π, is objectively determined and not based on the investor’s personal view. This probability has taken several different names, including risk-neutral (RN) probability.
+Incorrect answer:
+
+is based on the investor’s beliefs regarding the future course of the underlying.
+Incorrect Answer Feedback: Incorrect because the expectations approach to option valuation differs in two significant ways from the discounted cash flow approach to securities valuation. First, the expectation is not based on the investor’s beliefs regarding the future course of the underlying.
+71Multiple Choice1 / 1 point
+An analyst gathers the following Black–Scholes–Merton option valuation model outputs for a call option on a non-dividend-paying stock:
+Output	Value
+d1	0.230
+d2	0.053
+N(d1)	0.591
+N(d2)	0.521
+N(–d1)	0.409
+N(–d2)	0.479
+To replicate the call option payoffs for a buyer, the initial trading strategy required by the no-arbitrage approach is to:
+
+buy 0.230 shares of stock and short sell 0.053 shares of zero-coupon bonds.
+Incorrect Answer Feedback: Incorrect because the replicating strategy requires buying N(d1) rather than d1 shares of stock, and short selling N(d2) rather than d2 shares of zero-coupon bonds.
+Correct answer:
+
+buy 0.591 shares of stock and short sell 0.521 shares of zero-coupon bonds.
+Correct Answer Feedback: Correct because the no-arbitrage approach to replicate the call option involves  purchasing N(d1) = 0.591 shares of stock partially financed with –N(d2) = –0.521 shares of zero-coupon bonds. Replicating strategy cost = nSS + nBB where the equivalent number of underlying shares is nS = N(d1) > 0 for calls and nS = –N(–d1) < 0 for puts. The equivalent number of bonds is nB = –N(d2) < 0 for calls and nB = N(–d2) > 0 for puts. Note, if n is positive, we are buying the underlying and if n is negative we are selling (short selling) the underlying.
+
+short sell 0.409 shares of stock and buy 0.479 shares of zero-coupon bonds.
+Incorrect Answer Feedback: Incorrect because the replicating strategy requires buying rather than selling shares of stock, and short selling rather than buying shares of zero-coupon bonds.
+72Multiple Choice0 / 1 point
+An analyst gathers the following Black–Scholes–Merton option valuation model outputs for a call option on a non-dividend-paying stock:
+Output	Value
+d1	0.488
+d2	0.238
+N(d1)	0.687
+N(d2)	0.594
+N(–d1)	0.313
+N(–d2)	0.406
+The probability that the call option expires in the money is:
+
+40.6%.
+Incorrect Answer Feedback: Incorrect because N(−d2), or 40.6%, is the probability that the put option expires in the money, not the call option.
+Incorrect answer:
+
+48.8%.
+Incorrect Answer Feedback: Incorrect because N(d2) is the probability that the call option expires in the money, not d1. N(x) denotes the standard normal cumulative distribution function, which is the probability of obtaining a value of less than x based on a standard normal distribution. Also, x will have the value of d1 or d2. N(x) reflects the likelihood of observing values less than x from a random sample of observations taken from the standard normal distribution.
+Correct answer:
+
+59.4%.
+Correct Answer Feedback: Correct because the N(d2) term (being 59.4%) has an additional important interpretation. It is a unique measure of the probability that the call option expires in the money, and correspondingly, 1 – N(d2) = N(−d2) is the probability that the put option expires in the money. Specifically, the probability based on the RN probability of being in the money, not one’s own estimate of the probability of being in the money nor the market’s estimate. That is, N(d2) = Prob(ST > X) based on the unique RN probability.
+73Multiple Choice0 / 1 point
+In the Black model for valuing European put options on futures, the put price is the:
+
+futures component plus the bond component.
+Incorrect Answer Feedback: Incorrect because the Black put model is simply the bond component minus the futures component.
+Incorrect answer:
+
+futures component minus the bond component.
+Incorrect Answer Feedback: Incorrect because the Black put model is simply the bond component minus the futures component.
+Correct answer:
+
+bond component minus the futures component.
+Correct Answer Feedback: Correct because the Black model has two components, a futures component and a bond component. For put options, the futures component is F0(T)e–rTN(–d1) and the bond component is again e–rTXN(–d2). The Black put model is simply the bond component minus the futures component.
+74Multiple Choice0 / 1 point
+A trader has a long position in two options on the same underlying:
+ 	Put/Call	
+Remaining
+Maturity
+Strike	Contract
+Option 1	Call	1 month	100	1,000 shares
+Option 2	Put	1 month	100	1,000 shares
+The vega of Option 1 is:
+Incorrect answer:
+
+less than Option 2.
+Incorrect Answer Feedback: Incorrect because the features of both options are identical except that one is a call and one is a put. Therefore the vega of both options is the same.
+Correct answer:
+
+equal to Option 2.
+Correct Answer Feedback: Correct because vega is defined as the change in a given portfolio for a given small change in volatility, holding everything else constant. Vega measures the sensitivity of a given portfolio to volatility. The vega of an option is positive. An increase in volatility results in an increase in the option value for both calls and puts. The vega of a call equals the vega of a similar put (i.e. with the same strike) based on put–call parity or
+c – p = S0 – e–rTX. Note that neither S0 nor e–rTX is a direct function of volatility. Therefore, the vega of a call must offset the vega of a put so that the vega of the right-hand side is zero.
+
+greater than Option 2.
+Incorrect Answer Feedback: Incorrect because the features of both options are identical except that one is a call and one is a put. Therefore the vega of both options is the same.
+75Multiple Choice0 / 1 point
+An analyst values a 2-year, European-style put option on a 1-year spot rate. The notional value of the option is $2,000,000, and the exercise rate is 2.50% of par. The risk-neutral probability of an up move is 0.50. Annually compounded 1-year interest rates, along with the corresponding zero-coupon bond values, are shown below.
+Question 2.png
+The value of the interest rate option is closest to:
+Correct answer:
+
+$7,139.
+Correct Answer Feedback: Correct because, using the expectations approach, per 1 of notional value, the values of the put option at Time Step 2 are
+p++ = Max(0,X – S++) = Max(0,0.0250 – 0.0500) = 0
+p+– = Max(0,X – S+–) = Max(0,0.0250 – 0.0300) = 0
+p– – = Max(0,X – S– –) = Max(0,0.0250 – 0.0100) = 0.0150
+At Time Step 1, the put values are
+p+ = PV[πp++ + (1 – π)p+–]
+p+ = 0.961538[0.50(0) + (1 – 0.50)(0)] = 0
+p– = PV[πp+– + (1 – π)p– –]
+p– = 0.980392[0.50(0) + (1 – 0.50)(0.01500)] = 0.007353
+At Time Step 0, the put option value is
+p = PV[πp+ + (1 – π)p–]
+p = 0.970874[0.50(0) + (1 – 0.50)(0.007353)] = 0.003569
+The value of the put option is this amount multiplied by the notional value, or 0.003569 × 2,000,000 = 7,139.
+
+$14,706.
+Incorrect Answer Feedback: Incorrect because it does not take into account the calculations at Time Step 0. Accordingly, using the expectations approach, per 1 of notional value, the values of the put option at Time Step 2 are
+p++ = Max(0,X – S++) = Max(0,0.0250 – 0.0500) = 0
+p+– = Max(0,X – S+–) = Max(0,0.0250 – 0.0300) = 0
+p– – = Max(0,X – S– –) = Max(0,0.0250 – 0.0100) = 0.0150
+At Time Step 1, the put values are
+p+ = PV[πp++ + (1 – π)p+–]
+p+ = 0.961538[0.50(0) + (1 – 0.50)(0)] = 0
+p– = PV[πp+– + (1 – π)p– –]
+p– = 0.980392[0.50(0) + (1 – 0.50)(0.01500)] = 0.007353
+The value of the put option = 0.007353 × 2,000,000 = 14,706.
+
+$16,383.
+Incorrect Answer Feedback: Incorrect because it calculates the value of the call (instead of put) option. Accordingly, using the expectations approach, per 1 of notional value, the call values at Time Step 2 are
+c++ = Max(0,S++ – X) = Max(0,0.050 – 0.0250) = 0.0250
+c+– = Max(0,S+– – X) = Max(0,0.030 – 0.0250) = 0.0050
+c– – = Max(0,S– – – X) = Max(0,0.010 – 0.0250) = 0
+At Time Step 1, the call values are
+c+ = PV[πc++ + (1 – π)c+–]
+c+ = 0.961538[0.50(0.0250) + (1 – 0.50)(0.0050)] = 0.014423
+c– = PV[πc+– + (1 – π)c– –]
+c– = 0.980392[0.50(0.0050) + (1 – 0.50)(0)] = 0.002451
+At Time Step 0, the call option value is
+c = PV[πc+ + (1 – π)c–]
+c = 0.970874[0.50(0.014423) + (1 – 0.50)(0.002451)] = 0.008191
+The value of the call option is this amount multiplied by the notional value, or 0.008191 × 2,000,000 = 16,383.
+Incorrect answer:
+(no answer)
+Correct Answer:
+$7,139.
+76Multiple Choice1 / 1 point
+Under the Black–Scholes–Merton option valuation model, short selling of the underlying instrument is:
+
+not permitted.
+Incorrect Answer Feedback: Incorrect because one of the specific assumptions of the BSM model is that short selling of the underlying instrument with full use of the proceeds is permitted.
+Correct answer:
+
+permitted with full use of proceeds.
+Correct Answer Feedback: Correct because one of the specific assumptions of the BSM model is that short selling of the underlying instrument with full use of the proceeds is permitted.
+
+permitted with restricted use of proceeds.
+Incorrect Answer Feedback: Incorrect because one of the specific assumptions of the BSM model is that short selling of the underlying instrument with full use of the proceeds is permitted.
+77Multiple Choice0 / 1 point
+An arbitrageur dynamically manages a portfolio of options on a single stock. Using the Black–Scholes–Merton model, when the dividend yield on the stock increases, the arbitrageur should:
+
+lower the number of stocks to buy for calls and lower the number of stocks to short sell for puts.
+Incorrect Answer Feedback: Incorrect because with dividend paying stocks, the arbitrageur is able to receive the benefits of dividend payments when long the stock and has to pay dividends when short the stock. Thus, the burden of carrying the stock is diminished for a long position. The key insight is that dividends influence the dynamically managed portfolio by lowering the number of shares to buy for calls and also lowering, not raising, the number of shares to short sell for puts.
+Correct answer:
+
+lower the number of stocks to buy for calls and raise the number of stocks to short sell for puts.
+Correct Answer Feedback: Correct because with dividend paying stocks, the arbitrageur is able to receive the benefits of dividend payments when long the stock and has to pay dividends when short the stock. Thus, the burden of carrying the stock is diminished for a long position. The key insight is that dividends influence the dynamically managed portfolio by lowering the number of shares to buy for calls and raising the number of shares to short sell for puts.
+Incorrect answer:
+
+lower the number of stocks to short sell for puts and raise the number of stocks to buy for calls.
+Incorrect Answer Feedback: Incorrect because with dividend paying stocks, the arbitrageur is able to receive the benefits of dividend payments when long the stock and has to pay dividends when short the stock. Thus, the burden of carrying the stock is diminished for a long position. The key insight is that dividends influence the dynamically managed portfolio by lowering (not: raising) the number of shares to buy for calls and lowering, not raising, the number of shares to short sell for puts.
+78Multiple Choice0 / 1 point
+An interest rate call option on a 3-month MRR has one year to expiration. The underlying interest rate is a forward rate agreement (FRA) rate used in the Black model to value the interest rate option. The underlying rate of the FRA is a 3-month MRR deposit that is:
+
+investable in 3 months and matures in 12 months.
+Incorrect Answer Feedback: Incorrect because for an interest rate call option on three-month MRR with one year to expiration, the underlying interest rate is a forward rate agreement (FRA) rate that expires in one year. This FRA is observed today and is the underlying rate used in the Black model. The underlying rate of the FRA is a 3-month MRR deposit that is investable in 12, not 3, months and matures in 15, not 12, months. Thus, in one year, the FRA rate typically converges to the three-month spot MRR.
+Incorrect answer:
+
+investable in 9 months and matures in 12 months.
+Incorrect Answer Feedback: Incorrect because for an interest rate call option on three-month MRR with one year to expiration, the underlying interest rate is a forward rate agreement (FRA) rate that expires in one year. This FRA is observed today and is the underlying rate used in the Black model. The underlying rate of the FRA is a 3-month MRR deposit that is investable in 12, not 9, months and matures in 15, not 12, months. Thus, in one year, the FRA rate typically converges to the three-month spot MRR.
+Correct answer:
+
+investable in 12 months and matures in 15 months.
+Correct Answer Feedback: Correct because for an interest rate call option on three-month MRR with one year to expiration, the underlying interest rate is a forward rate agreement (FRA) rate that expires in one year. This FRA is observed today and is the underlying rate used in the Black model. The underlying rate of the FRA is a 3-month MRR deposit that is investable in 12 months and matures in 15 months. Thus, in one year, the FRA rate typically converges to the three-month spot MRR.
+79Multiple Choice1 / 1 point
+Compared to the Black model to value European interest rate options, the standard market model assumes that the:
+
+underlying is a futures price.
+Incorrect Answer Feedback: Incorrect because the standard market model looks very similar to the Black model, but there are important but subtle differences. Rather than the underlying being a futures price, the underlying is an interest rate, specifically a forward rate based on a forward rate agreement or FRA(0,tj–1,tm).
+
+discount factor applies to the option expiration.
+Incorrect Answer Feedback: Incorrect because the standard market model looks very similar to the Black model, but there are important but subtle differences. The discount factor, e−r (tj−1+tm), does not apply to the option expiration, tj–1. Rather, the discount factor is applied to the maturity date of the FRA or tj (= tj–1 + tm).
+Correct answer:
+
+actual option premium needs to be adjusted for the accrual period.
+Correct Answer Feedback: Correct because the standard market model requires an adjustment when compared with the Black model for the accrual period. In other words, a value such as FRA(0,tj–1,tm) or the strike rate, Rx, is stated on an annual basis, as are interest rates in general. The actual option premium would have to be adjusted for the accrual period.
+80Multiple Choice0 / 1 point
+Market participants use the term volatility smile to describe the implied volatility of a stock option with respect to the:
+
+dividend yield.
+Incorrect Answer Feedback: Incorrect because the implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price, not dividend yield, is known as the volatility smile or sometimes skew depending on the particular shape.
+Correct answer:
+
+exercise price.
+Correct Answer Feedback: Correct because the implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price is known as the volatility smile or sometimes skew depending on the particular shape.
+Incorrect answer:
+
+time to expiration.
+Incorrect Answer Feedback: Incorrect because the implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price, not time to expiration, is known as the volatility smile or sometimes skew depending on the particular shape.
+81Multiple Choice0 / 1 point
+The expectations approach values an option as:
+Correct answer:
+
+the present value of the expected payoff at expiration.
+Correct Answer Feedback: Correct because using the expectations approach, the option values are simply the present value of the expected terminal option payoffs.
+
+the expected current payoff from exercising the option before expiration.
+Incorrect Answer Feedback: Incorrect because using the expectations approach, the option values are simply the present value of the expected terminal option payoffs. The valuation does not depend on or make any assumption about whether the option will or should be exercised.
+Incorrect answer:
+
+dependent on the investors' expectation for the price of the underlying at expiration.
+Incorrect Answer Feedback: Incorrect because using the expectations approach, the option values are simply the present value of the expected terminal option payoffs. The valuation does not depend on the investors expectation. Using the expectations model, both the subjective future expectation as well as the subjective risk-adjusted discount rate have been replaced with more objective measures.
+82Multiple Choice1 / 1 point
+An analyst gathers the following information about a futures contract expiring in six months:
+Calls	Puts
+N(d1) = 0.45	N(–d1) = 0.55
+N(d2) = 0.41	N(–d2) = 0.58
+The exercise price is $100 and the futures contract is priced at $101.25. Using the Black model, the value of a European call on the futures contract is the present value of:
+
+the difference between ($100×0.45) and ($101.25×0.41).
+Incorrect Answer Feedback: Incorrect because it reverses the futures price and the exercise price.
+
+the difference between ($101.25×0.41) and ($100×0.45).
+Incorrect Answer Feedback: Incorrect because it reverses N(d1) and N(d2). 
+Correct answer:
+
+the difference between ($101.25×0.45) and ($100×0.41).
+Correct Answer Feedback: Correct because the Black model for calls values the call as: c = e–rT[F0(T)N(d1) – XN(d2)]. Alternatively, futures option valuation, based on the Black model, is simply computing the present value of the difference between the futures price and the exercise price. The futures price and exercise price are appropriately adjusted by the N(d) functions. For call options, the futures price is adjusted by N(d1) and the exercise price is adjusted by –N(d2) to arrive at difference.
+83Multiple Choice1 / 1 point
+An investor wishes to replicate the value of a long European put on a futures contract using a bond component and a futures component. According to the Black model, which of the following combinations will replicate the put value?
+
+The futures component plus the bond component
+Incorrect Answer Feedback: Incorrect because a long position in both the futures contract and bonds does not replicate either a put or a call.
+Correct answer:
+
+The bond component minus the futures component
+Correct Answer Feedback: Correct because the Black model can be described in a similar way to the BSM model. The Black model has two components, a futures component and a bond component. The Black put model is simply the bond component minus the futures component.
+
+The futures component minus the bond component
+Incorrect Answer Feedback: Incorrect because this is the value of a call on a futures contract. The Black call model is simply the futures component minus the bond component.
+84Multiple Choice1 / 1 point
+A trader gathers the following information on three long call option positions for a stock where the futures contract currently trades at $58.00:
+ 	Exercise Price
+Option 1	$47.00
+Option 2	$59.00
+Option 3	$68.00
+The option with the highest gamma is:
+
+Option 1.
+Incorrect Answer Feedback: Incorrect because Option 1 is deep in the money and Gamma is largest for options near the money. 
+Correct answer:
+
+Option 2.
+Correct Answer Feedback: Correct because Gamma is defined as the change in a given instrument’s delta for a given small change in the stock’s value, holding everything else constant. And, gamma takes on its largest value near at the money. Options deltas do not change much for small changes in the stock price if the option is either deep in or deep out of the money. Of the three options, Option 2 is the closest to being at the money.
+
+Option 3.
+Incorrect Answer Feedback: Incorrect because Option 3 is deep out of the money. Gamma is largest for options near the money.
+85Multiple Choice0 / 1 point
+A decrease in the value of the risk-free interest rate will:
+
+decrease the value of a long put.
+Incorrect Answer Feedback: Incorrect because purchasing a put option rather than selling the stock deprives an investor of the potential interest that would have been earned from the proceeds of selling the stock. The higher the interest rate, the lower the put value. Interest rates (rho) are inversely related to the value of a put. A decrease in rho, rather than an increase, will increase the value of a long put position. Conversely a decrease in rho will increase the value of a long put position.
+Correct answer:
+
+increase the value of a long put.
+Correct Answer Feedback: Correct because rho is defined as the change in a given portfolio for a given small change in the risk-free interest rate, holding everything else constant. Thus, rho measures the sensitivity of the portfolio to the risk-free interest rate. And the rho of a put is negative. Intuitively, the option to sell the stock delays the opportunity to earn interest on the proceeds from the sale. For example, purchasing a put option rather than selling the stock deprives an investor of the potential interest that would have been earned from the proceeds of selling the stock. The higher the interest rate, the lower the put value. Interest rates (rho) are inversely related to the value of a put. A decrease in rho will increase the value of a long put.
+Incorrect answer:
+
+increase the value of long call.
+Incorrect Answer Feedback: Incorrect because the rho of a call is positive. Intuitively, buying an option avoids the financing costs involved with purchasing the stock. In other words, purchasing a call option allows an investor to earn interest on the money that otherwise would have gone to purchasing the stock. The higher the interest rate, the higher the call value. Interest rates (rho) are positively related to the value of the call. Thus an increase in rho, rather than a decrease, would increase the value of a long call.
+86Multiple Choice1 / 1 point
+Which of the following is an assumption of the Black–Scholes–Merton option valuation model?
+
+The underlying must pay a dividend
+Incorrect Answer Feedback: Incorrect because the BSM model allows for no dividends. An assumption of the BSM is that if the underlying instrument pays a yield, it is expressed as a continuous known and constant yield at an annualized rate.
+
+Asset prices are normally distributed
+Incorrect Answer Feedback: Incorrect because the BSM model assumes that returns, not asset prices, are normally distributed. An assumption of the BSM model is that the underlying follows a statistical process called geometric Brownian motion, which implies that the continuously compounded return is normally distributed.
+Correct answer:
+
+Borrowing and lending is allowed at the risk-free rate
+Correct Answer Feedback: Correct because a specific assumption of the BSM model is that the continuously compounded risk-free interest rate is known and constant; borrowing and lending is allowed at the risk-free rate.
+87Multiple Choice0 / 1 point
+An investment manager sells 6-month put options on a company's shares. Two months later, the company announces a special dividend payable to shareholders at the end of the month. Based on the Black–Scholes–Merton model, the special dividend will:
+Correct answer:
+
+reduce the return on the put option position.
+Correct Answer Feedback: Correct because the special dividend occurs during the holding period of the option and therefore represents an increase in the carry benefits. An increase in carry benefits will lower the value of the call option and raise the value of the put option. The manager is short the put option and therefore an increase in its value will reduce the value of the option position from the manager's perspective. Conversely, the investor that purchased the put options will see an increase in the value of their position.
+Incorrect answer:
+
+not impact the return on the put option position.
+Incorrect Answer Feedback: Incorrect because the special dividend represents an increase in the carry benefits. An increase in carry benefits will lower the value of the call option and raise the value of the put option. The manager is short the put option and therefore an increase in its value will reduce the value of the option position from the manager's perspective.
+
+increase the return on the put option position.
+Incorrect Answer Feedback: Incorrect because the special dividend represents an increase in the carry benefits. An increase in carry benefits will lower the value of the call option and raise the value of the put option. The manager is short the put option and therefore an increase in its value will reduce the value of the option position from the manager's perspective.
+88Multiple Choice0 / 1 point
+Who would most likely benefit if interest rates increase? An investor that is:
+Correct answer:
+
+long a payer swaption.
+Correct Answer Feedback: Correct because a payer swaption is an option on a swap to pay fixed, receive floating. Therefore, a payer swaption buyer hopes the fixed rate goes up before the swaption expires. When exercised, the payer swaption buyer is able to enter into a pay-fixed, receive-floating swap at the predetermined exercise rate. The buyer can then immediately enter an offsetting at-market receive-fixed, pay-floating swap at the current fixed swap rate. The floating legs of both swaps will offset, leaving the payer swaption buyer with an annuity of the difference between the current fixed swap rate and the swaption exercise rate. 
+Incorrect answer:
+
+short a payer swaption.
+Incorrect Answer Feedback: Incorrect because in this instance the option to enter the swap was sold to a buyer, creating an obligation for the investor to pay floating rate and receive fixed in the event the option on the swap is exercised. A payer swaption buyer hopes the fixed rate goes up before the swaption expires. When exercised, the payer swaption buyer is able to enter into a pay-fixed, receive-floating swap at the predetermined exercise rate. The buyer can then immediately enter an offsetting at-market receive-fixed, pay-floating swap at the current fixed swap rate. The floating legs of both swaps will offset, leaving the payer swaption buyer with an annuity of the difference between the current fixed swap rate and the swaption exercise rate.
+
+long a receiver swaption.
+Incorrect Answer Feedback: Incorrect because a receiver swaption gives the buyer the right to receive a fixed rate. Hence, the seller will have to pay the fixed rate when this right is exercised in a lower rate environment. Therefore, a receiver swaption buyer hopes the fixed rate goes down before the swaption expires. When exercised, the receiver swaption buyer is able to enter into a receive-fixed, pay-floating swap at the predetermined exercise rate. The buyer can then immediately enter an offsetting at-market pay-fixed, receive-floating swap at the current fixed swap rate. The floating legs of both swaps will offset, leaving the receiver swaption buyer with an annuity of the difference between the swaption exercise rate and the current fixed swap rate.
+89Multiple Choice0 / 1 point
+An investor is short put options on 100,000 shares of stock and the put delta is –0.455. To delta hedge the option position using shares, the investor should:
+
+sell short 54,500 shares.
+Incorrect Answer Feedback: Incorrect because the number of shares the investor must sell short is: NH = (–Portfolio delta/DeltaH). In this case, Portfolio delta is incorrectly calculated as = 100,000(1 – 0.455) = 100,000(0.545) = 54,500. Delta of the hedging instrument (shares of Company X) equals 1. Therefore NH = –54,500/1 = –54,500.
+Correct answer:
+
+sell short 45,500 shares.
+Correct Answer Feedback: Correct because if NH is negative, then one must short the hedging instrument to delta hedge. The number of shares the investor must sell short is: NH = (–Portfolio delta/DeltaH). Since put delta is –0.455 the short put delta is 0.455 and therefore Portfolio delta = 100,000(0.455) = 45,500. DeltaH, the delta of the hedging instrument shares of stock equals 1. Therefore NH = –45,500/1 = –45,500. The investor must sell short 45,500 shares to delta hedge the option position.
+Incorrect answer:
+
+purchase 45,500 shares.
+Incorrect Answer Feedback: Incorrect because if we sell puts, we need to short sell the stock to delta hedge, rather than purchase the stock.
+90Multiple Choice1 / 1 point
+Which of the following statements about implied volatility is least accurate? In practice, the implied volatility of options:
+Correct answer:
+
+is constant across exercise price and time to expiration.
+Correct Answer Feedback: Correct because this statement is false. In practice, it is very common to observe different implied volatilities for different exercise prices and observe different implied volatilities for calls and puts with the same terms. Implied volatility also varies across time to expiration as well as across exercise prices. Furthermore, implied volatility is also not constant through calendar time.
+
+may be used to revalue existing option positions over time.
+Incorrect Answer Feedback: Incorrect because this is an accurate statement. If the implied volatility of an existing option position changes over time, the investor may use that information to revalue those positions. Regulators, banks, compliance officers, and most option traders use implied volatilities to communicate information related to options portfolios. This is because implied volatilities, together with standard pricing models, give the market consensus valuation, in the same way that other assets are valued using market prices.
+
+makes it easier to understand the current market price of various risk exposures.
+Incorrect Answer Feedback: Incorrect because this is an accurate statement. The benefit of quoting via implied volatility (or simply volatility), rather than price, is that it allows volatility to be traded in its own right. Thus, by converting the quoted price to implied volatility, it is easier to understand the current market price of various risk exposures.
+91Multiple Choice0 / 1 point
+An options trader gathers the following data for 1-year call options on three stocks:
+ 	Implied Volatility	Trader's Expected Volatility
+Stock 1	25%	20%
+Stock 2	30%	30%
+Stock 3	22%	28%
+Based only on this information, which of the following actions is most appropriate for the trader?
+Incorrect answer:
+
+Buy calls on Stock 2
+Incorrect Answer Feedback: Incorrect because of the relationship between implied volatility and option prices. Higher implied volatility results in a higher option price for both calls and puts. Therefore, to the extent expected volatility differs from implied volatility, the option will be viewed as overpriced, fairly priced, or underpriced. Options will be perceived to be underpriced if expected volatility is above implied volatility and overpriced if expected volatility is below implied volatility. If expected volatility equals implied volatility, the option will be considered fairly priced. On this basis, the call options of Stock 1 should be sold, and the call options of Stock 3 should be bought. The call options for Stock 2 are fairly priced since expected volatility equals implied volatility.
+
+Buy calls on Stock 1 and sell calls on Stock 3
+Incorrect Answer Feedback: Incorrect because of the relationship between implied volatility and option prices. Higher implied volatility results in a higher option price for both calls and puts. Therefore, to the extent expected volatility differs from implied volatility, the option will be viewed as overpriced, fairly priced, or underpriced. Options will be perceived to be underpriced if expected volatility is above implied volatility and overpriced if expected volatility is below implied volatility. If expected volatility equals implied volatility, the option will be considered fairly priced. On this basis, the call options of Stock 1 should be sold, and the call options of Stock 3 should be bought.
+Correct answer:
+
+Sell calls on Stock 1 and buy calls on Stock 3
+Correct Answer Feedback: Correct because options will be perceived to be under(over) priced if expected volatility is (above)below implied volatility. If expected volatility equals implied volatility, the option will be considered fairly priced. Since the expected volatility of call options for Company 1 is below the implied volatility, the investor would expect the call option to fall in value over time and should sell the option. Conversely, the higher expected volatility for calls of Company 3 suggests the calls should be bought. Much like yield to maturity with bonds, volatility can be inferred from option prices. This inferred volatility is called the implied volatility. Implied volatility varies across time to expiration as well as across exercise prices. The implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price is known as the volatility smile or sometimes skew depending on the particular shape Implied volatility is also not constant through calendar time. As implied volatility increases, market participants are communicating an increased market price of risk. Whereas implied volatility can be interpreted as the market’s view of the underlying's future volatility, expected volatility is the view of a particular investor.
+92Multiple Choice1 / 1 point
+In options trading, gamma measures the rate of change of:
+Correct answer:
+
+delta as the stock price changes.
+Correct Answer Feedback: Correct because gamma measures the rate of change of delta as the stock changes. Gamma is defined as the change in a given instrument’s delta for a given small change in the stock’s value, holding everything else constant.
+
+the option price for a given small change in volatility.
+Incorrect Answer Feedback: Incorrect because this is the definition of vega, not gamma. Vega is defined as the change in a given portfolio for a given small change in volatility, holding everything else constant. Vega measures the sensitivity of a given portfolio to volatility.
+
+the option price for a given small change in the value of the stock.
+Incorrect Answer Feedback: Incorrect because this is the definition of delta, not gamma. Delta is defined as the change in a given instrument for a given small change in the value of the stock, holding everything else constant.
+93Multiple Choice1 / 1 point
+An option trader holds a short call position that is delta hedged by holding stock. Which of the following best measures the risk of non-linearity of the option price with respect to the stock?
+
+Rho
+Incorrect Answer Feedback: Incorrect because rho is defined as the change in a given portfolio for a given small change in the risk-free interest rate, holding everything else constant. Thus, rho measures the sensitivity of the portfolio to the risk-free interest rate.
+
+Vega
+Incorrect Answer Feedback: Incorrect because vega is defined as the change in a given portfolio for a given small change in volatility, holding everything else constant. Vega measures the sensitivity of a given portfolio to volatility.
+Correct answer:
+
+Gamma
+Correct Answer Feedback: Correct because gamma measures the rate of change of delta as the stock changes. Gamma approximates the estimation error in delta for options because the option price with respect to the stock is non-linear and delta is a linear approximation. Thus, gamma is a risk measure; specifically, gamma measures the non-linearity risk or the risk that remains once the portfolio is delta neutral.
+94Multiple Choice1 / 1 point
+An at-the-money long call option is delta hedged using stock. If the price of the stock increases by a large amount, the value of the combined option and delta hedge position:
+
+decreases.
+Incorrect Answer Feedback: Incorrect because a large up move in the stock will see the actual value of the call option increase by more than the delta estimated value; it will not decrease by more than the delta estimated value. Therefore the value of the total position will increase rather than decrease.
+
+remains the same.
+Incorrect Answer Feedback: Incorrect because the value of a delta hedged position will only remain the same for a small move in the underlying, not a large move in the underlying. For very small changes in the stock (i.e., the underlying), the delta approximation is fairly accurate, but the delta approximation is biased low for both a down move and an up move.
+Correct answer:
+
+increases.
+Correct Answer Feedback: Correct because a delta hedged call option position is a long call option position and a short position in the underlying stock in a quantity prescribed by the option delta. The delta approximation is biased low for both a down move and an up move. Delta hedging is imperfect and gets worse as the underlying moves further away from its original value. In this case, a large up move in the stock will see the actual value of the call option increase by more than the delta estimated value. Therefore the value of the total position will increase, and the size of the short position in the underlying stock will need to be increased to retain the delta hedge.
+95Multiple Choice0 / 1 point
+An analyst gathers the following information about a non-dividend paying stock:
+Current stock price	€60
+Call option exercise price	€60
+Periodically compounded risk-free interest rate	4%
+In one period, the stock price will either rise to €66 or decline to €54. Based on the one-period binomial option pricing model, the value of the call option is closest to:
+Incorrect answer:
+
+€2.88.
+Incorrect Answer Feedback: Incorrect because the FV is omitted when calculating π, or π = [1 – d]/(u – d) = (1 – 0.90)/(1.10 – 0.90) = 0.10/0.20  = 0.50. Accordingly, c = PV[πc+ + (1 – π)c–] = (1/1.04) × [0.50(6) + (1 – 0.50)(0)] = (1/1.04) × (3.00) = 2.8846 ≈ 2.88.
+Correct answer:
+
+€4.04.
+Correct Answer Feedback: Correct because, using the expectations approach, the risk-free rate is r = 0.04, the up factor is u = S+/S = 66/60 = 1.10, and the down factor is d = S–/S = 54/60 = 0.90. The value of the call option is c = PV[πc+ + (1 – π)c–] and the risk-neutral probability of an up move is π = [FV(1) – d]/(u – d) = (1.04 – 0.90)/(1.10 – 0.90) = 0.14/0.20  = 0.70. In addition, c+ = Max(0, uS – X) = Max(0, 66 – 60) = 6 and c– = Max(0, dS – X) = Max(0, 54 – 60) = 0. Accordingly, c = (1/1.04) × [0.70(6) + (1 – 0.70)(0)] = (1/1.04) × (4.20) = 4.0385 ≈ 4.04.
+
+€4.37.
+Incorrect Answer Feedback: Incorrect because the value of the call option is calculated using the FV instead of PV. Accordingly, the value of the call option is c = FV[πc+ + (1 – π)c–] = 1.04 × [0.70(6) + (1 – 0.70)(0)] = 1.04 × (4.20) = 4.3680 ≈ 4.37.
+96Multiple Choice0 / 1 point
+An investor has a long put option on 5,000 shares of stock and plans to delta hedge this position using stock. If Deltac = 0.450, and Deltap = –0.350, which of the following is the appropriate delta hedge?
+Correct answer:
+
+Buy 1,750 shares of stock
+Correct Answer Feedback: Correct because delta hedging an option is the process of establishing a position in the underlying stock of a quantity that is prescribed by the option delta so as to have no exposure to very small moves up or down in the stock price.
+The optimal number of hedging units, NH = – (Portfolio delta)/DeltaH, where DeltaH is the delta of the hedging instrument, which could be the underlying stock, call options, or put options.
+The delta of the hedging instrument, stock, is +1, and if NH is negative, then one must short the hedging instrument, and if NH is positive, then one must go long the hedging instrument.
+Given portfolio delta = 5,000 × (–0.350) = –1,750, NH = – (–1750)/1 = 1,750. Thus, the investor needs to buy 1,750 shares of stock to implement delta hedging. 
+Incorrect answer:
+
+Short sell 1,750 shares of stock
+Incorrect Answer Feedback: Incorrect because given portfolio delta (delta of the put options position) is negative, to implement delta hedge the investor needs to buy (not short sell) the shares of stock (which have positive delta). 
+
+Short sell 2,250 shares of stock
+Incorrect Answer Feedback: Incorrect because it uses Deltac instead of Deltap to calculate the portfolio delta as 5,000 × (0.450) = 2,250, and respectively NH = –(2,250)/1 = –2,250.
+97Multiple Choice0 / 1 point
+Which of the following statements about implied volatility is most accurate?
+
+Implied volatility remains constant across time to expiration as well as across exercise prices
+Incorrect Answer Feedback: Incorrect because implied volatility varies across time to expiration as well as across exercise prices. The implied volatility with respect to time to expiration is known as the term structure of volatility, whereas the implied volatility with respect to the exercise price is known as the volatility smile or sometimes skew depending on the particular shape.
+Incorrect answer:
+
+Current implied volatility provides information regarding the perceived uncertainty for the historical time period
+Incorrect Answer Feedback: Incorrect because implied volatility provides information regarding the perceived uncertainty going forward, rather than the historical periods, and thereby allows us to gain an understanding of the collective opinions of investors on the volatility of the underlying and the demand for options.
+Correct answer:
+
+Implied volatility can be used to assess the relative value of different options, neutralizing the moneyness and time to expiration effects
+Correct Answer Feedback: Correct because this is a true statement. Implied volatility can be used to assess the relative value of different options, neutralizing the moneyness and time to expiration effects. Also, implied volatility is useful for revaluing existing positions over time.
+98Multiple Choice1 / 1 point
+Which of the following is an assumption of the Black–Scholes–Merton model?
+
+Options are American-style which allow early exercise
+Incorrect Answer Feedback: Incorrect because an assumption of the BSM model is the options are European-style, meaning that early exercise is not allowed.
+
+Short selling of the underlying security is not permitted
+Incorrect Answer Feedback: Incorrect because an assumption of the BSM model is short selling of the underlying instrument with full use of the proceeds is permitted.
+Correct answer:
+
+No arbitrage opportunities are available in the marketplace
+Correct Answer Feedback: Correct because the BSM model assumes no arbitrage opportunities are available. The specific assumptions of the BSM model are as follows: No arbitrage opportunities are available in the marketplace.
+99Multiple Choice0 / 1 point
+The N(d2) component of the Black–Scholes–Merton model of a call option is most accurately interpreted as:
+
+the stock component of the model.
+Incorrect Answer Feedback: Incorrect because for a call option, the term e-rTXN(d2) is the bond component of the model. The BSM model can be described as having two components: a stock component and a bond component. For call options, the stock component is SN(d1) and the bond component is e–rTXN(d2).
+Incorrect answer:
+
+bought shares of a zero-coupon bond trading at e–rTX.
+Incorrect Answer Feedback: Incorrect because this is the (negative) interpretation of a put option, not a call option. Note for call options, –N(d2) implies borrowing money or short selling N(d2) shares of a zero-coupon bond trading at e–rTX. For put options, N(–d2) implies lending money or buying N(–d2) shares of a zero-coupon bond trading at e–rTX.
+Correct answer:
+
+the probability that the call option expires in the money.
+Correct Answer Feedback: Correct because the N(d2) term has an important interpretation. It is a unique measure of the probability that the call option expires in the money.
